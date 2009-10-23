@@ -781,7 +781,7 @@
             <para>Default: Add</para>
 
             <para>Asks: ___ extra information to items automatically added to
-            serials. </para>
+            serials.</para>
 
             <para>Values:</para>
 
@@ -803,7 +803,7 @@
 
             <para>Asks: ___ authors from the UNIMARC ___ tags (separated by
             commas) to the correct author tags when importing a record using
-            Z39.50. </para>
+            Z39.50.</para>
 
             <para>Values for z3950NormalizeAuthor:</para>
 
@@ -833,92 +833,294 @@
           <section>
             <title>AllowNotForLoanOverride</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ staff to override and check out items that are
+            marked as not for loan.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>AllowRenewalLimitOverride</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ staff to manually override the renewal limit and
+            renew a checkout when it would go over the renewal limit.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>AutomaticItemReturn</title>
 
-            <para></para>
+            <para>Default: Do</para>
+
+            <para>Asks: ___ automatically transfer items to their home branch
+            when they are returned.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>ceilingDueDate</title>
 
-            <para></para>
+            <para>Default: no value</para>
+
+            <para>Asks: Make all checkouts due on or before ___</para>
+
+            <para><emphasis>TIP: Enter the date to match the format you set in
+            your localization preferences (iso = YYYY-MM-DD or metric =
+            MM/DD/YYYY)</emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Get there:</emphasis> More &gt; Administration
+                &gt; Global system preferences &gt; I18N/L10N &gt;
+                dateformat</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>CircControl</title>
 
-            <para></para>
+            <para>Default: the library the item is from</para>
+
+            <para>Asks: Use the checkout and fines rules of ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>the library the item is from</para>
+              </listitem>
+
+              <listitem>
+                <para>the library the patron is from</para>
+              </listitem>
+
+              <listitem>
+                <para>the library you are logged in at</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>globalDueDate</title>
 
-            <para></para>
+            <para>Default: no value</para>
+
+            <para>Asks: Make all checkouts have a due date of ___</para>
+
+            <para><emphasis>TIP: Enter the date to match the format you set in
+            your localization preferences (iso = YYYY-MM-DD or metric =
+            MM/DD/YYYY)</emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Get there:</emphasis> More &gt; Administration
+                &gt; Global system preferences &gt; I18N/L10N &gt;
+                dateformat</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>HomeOrHoldingBranch</title>
 
-            <para></para>
+            <para>Default: the library the item was checked out from</para>
+
+            <para>Asks: Use the checkout and fines rules of ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>the library the item is from</para>
+              </listitem>
+
+              <listitem>
+                <para>the library the item was checked out from</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>IssuingInProcess</title>
 
-            <para></para>
+            <para>Default: Don't prevent</para>
+
+            <para>Asks: ___ patrons from checking out an item whose rental
+            charge would take them over the limit.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't prevent</para>
+              </listitem>
+
+              <listitem>
+                <para>Prevent</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>maxoutstanding</title>
 
-            <para></para>
+            <para>Default: 5</para>
+
+            <para>Asks: Prevent patrons from making holds on the OPAC if they
+            owe more than ___ USD in fines.</para>
           </section>
 
           <section>
             <title>noissuescharge</title>
 
-            <para></para>
+            <para>Default: 5</para>
+
+            <para>Asks: Prevent patrons from checking out books if they have
+            more than ___ USD in fines.</para>
           </section>
 
           <section>
             <title>RenewalPeriodBase</title>
 
-            <para></para>
+            <para>Default: the old due date of the checkout</para>
+
+            <para>Asks: When renewing checkouts, base the new due date on
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>the old due date of the checkout</para>
+              </listitem>
+
+              <listitem>
+                <para>the current date</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>ReturnBeforeExpiry</title>
 
-            <para></para>
+            <para>Default: Don't require</para>
+
+            <para>Asks: ___ patrons to return books before their accounts
+            expire (by restricting due dates to before the patron's expiration
+            date).</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't require</para>
+              </listitem>
+
+              <listitem>
+                <para>Require</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>TransfersMaxDaysWarning</title>
 
-            <para></para>
+            <para>Default: 3</para>
+
+            <para>Asks: Show a warning on the "Transfers to Recieve" screen if
+            the transfer has not been received ___ days after it is
+            sent.</para>
           </section>
 
           <section>
-            <title>UseBranchTransferLimits &amp; BranchTransferLimitsType
-            </title>
+            <title>UseBranchTransferLimits &amp;
+            BranchTransferLimitsType</title>
 
-            <para></para>
+            <para>Defaults: Don't enforce &amp; collection code</para>
+
+            <para>Asks: ___ branch transfer limits based on ___</para>
+
+            <para>UseBranchTransferLimits Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't enforce</para>
+              </listitem>
+
+              <listitem>
+                <para>Enforce</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>BranchTransferLimitsType Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>collection code</para>
+              </listitem>
+
+              <listitem>
+                <para>item type</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>useDaysMode</title>
 
-            <para></para>
+            <para>Default: Don't include</para>
+
+            <para>Asks: ___ days when the library in closed when calculating
+            due dates.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't include</para>
+              </listitem>
+
+              <listitem>
+                <para>Include</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -930,13 +1132,49 @@
           <section>
             <title>finesCalendar</title>
 
-            <para></para>
+            <para>Default: not including the days the library is closed</para>
+
+            <para>Asks: Calculate fines based on days overdue ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>directly</para>
+              </listitem>
+
+              <listitem>
+                <para>not including the days the library is closed</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>finesMode</title>
 
-            <para></para>
+            <para>Default: Calculate (but only for mailing to the
+            admin)</para>
+
+            <para>Asks: ___ fines</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Calculate (but only for mailing to the admin)</para>
+              </listitem>
+
+              <listitem>
+                <para>Calculate and charge</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't calculate</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that you have the
+            fines cron job running (misc/cronjobs/fines.pl)</emphasis></para>
           </section>
         </section>
 
@@ -948,44 +1186,137 @@
           <section>
             <title>AllowHoldsOnDamagedItems</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ hold requests to be placed on damaged items.
+            </para>
+
+            <para>Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>AllowHoldPolicyOverride</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ staff to override hold policies when placing
+            holds. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>AllowOnShelfHolds</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ hold requests to be placed on items that are not
+            checked out. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't Allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>canreservefromotherbranches</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ a user from one library to place a hold on an item
+            from another library </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow (with independant branches)</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>maxreserves </title>
+            <title>maxreserves</title>
 
-            <para></para>
+            <para>Default: 50</para>
+
+            <para>Asks: Patrons can only have ___ holds at once. </para>
           </section>
 
           <section>
             <title>ReservesNeedReturns</title>
 
-            <para></para>
+            <para>Default: Don't automatically</para>
+
+            <para>Asks: ___ mark holds as found and waiting when a hold is
+            placed specifically on them and they are already checked in.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Automatically</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't automatically</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title> StaticHoldsQueueWeight &amp;
+            <title>StaticHoldsQueueWeight &amp;
             RandomizeHoldsQueueWeight</title>
 
-            <para></para>
+            <para>Defaults: 0 &amp; in that order</para>
+
+            <para>Asks: Satisfy holds from the libraries ___ (as branchcodes,
+            separated by commas; if empty, uses all libraries) ___</para>
+
+            <para>RandomizeHoldsQueueWeight Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>in random order</para>
+              </listitem>
+
+              <listitem>
+                <para>in that order</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -997,43 +1328,135 @@
           <section>
             <title>CircAutocompl</title>
 
-            <para></para>
+            <para>Default: Try</para>
+
+            <para>Asks: ___ to automatically fill in the member when entering
+            a patron search on the circulation screen.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't try</para>
+              </listitem>
+
+              <listitem>
+                <para>Try</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>FilterBeforeOverdueReport</title>
 
-            <para></para>
+            <para>Default: Don't require</para>
+
+            <para>Asks: ___ staff to choose which checkouts to show before
+            running the overdues report. Save All </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't require</para>
+              </listitem>
+
+              <listitem>
+                <para>Require</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>itemBarcodeInputFilter</title>
 
-            <para></para>
+            <para>Default: Don't filter</para>
+
+            <para>Asks: ___ scanned patron barcodes. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Convert from CueCat format</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't filter</para>
+              </listitem>
+
+              <listitem>
+                <para>Remove spaces from</para>
+              </listitem>
+
+              <listitem>
+                <para>Remove the first number from T-prefix style</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>numReturnedItemsToShow</title>
 
-            <para></para>
+            <para>Default: 20</para>
+
+            <para>Asks : Show the ___ last returned items on the checkin
+            screen. </para>
           </section>
 
           <section>
             <title>previousIssuesDefaultSortOrder</title>
 
-            <para></para>
+            <para>Default: earliest to latest</para>
+
+            <para>Asks: Sort previous checkouts on the circulation page from
+            ___ due date. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>earliest to latest</para>
+              </listitem>
+
+              <listitem>
+                <para>latest to earliest</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
             <title>ReservesMaxPickUpDelay</title>
 
-            <para></para>
+            <para>Default: 7</para>
+
+            <para>Asks: Mark a hold as problematic if it has been waiting for
+            more than ___ days. </para>
           </section>
 
           <section>
             <title>SpecifyDueDate</title>
 
-            <para></para>
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ staff to specify a due date for a checkout.
+            </para>
+
+            <para>Due dates are calculated using your circulation and fines
+            rules, but staff can override that if you allow them to specific a
+            due date at checkout.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
       </section>
