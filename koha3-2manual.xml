@@ -975,6 +975,22 @@
                 <para>the library the item was checked out from</para>
               </listitem>
             </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: It is not recommend that
+            this setting be changed after initial setup of Koha
+            </emphasis></para>
+
+            <para><emphasis role="bold">IMPORTANT: This preference does
+            nothing unless the IndependantBranchespreference is turned
+            ON.</emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Get there: </emphasis>More &gt; Administration
+                &gt; Global System Preferences &gt; Admin &gt;
+                IndependantBranches</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -996,6 +1012,14 @@
                 <para>Prevent</para>
               </listitem>
             </itemizedlist>
+
+            <para>Example: Your library has a $5 limit set for 'fines' (ie,
+            after incurring $5 in fines, a patron can no longer check out
+            items). A patron comes to the desk with 5 items to check out (4
+            books and a video) The patron has $4 in charges already on their
+            account. One of the videos has a rental charge of $1, therefore
+            making the total fines on the patron's account suddenly $5 (the
+            limit). </para>
           </section>
 
           <section>
@@ -1188,10 +1212,10 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ hold requests to be placed on damaged items.
-            </para>
+            <para>Asks: ___ hold requests to be placed on damaged
+            items.</para>
 
-            <para>Values: </para>
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -1210,7 +1234,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ staff to override hold policies when placing
-            holds. </para>
+            holds.</para>
 
             <para>Values:</para>
 
@@ -1231,7 +1255,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ hold requests to be placed on items that are not
-            checked out. </para>
+            checked out.</para>
 
             <para>Values:</para>
 
@@ -1252,7 +1276,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ a user from one library to place a hold on an item
-            from another library </para>
+            from another library</para>
 
             <para>Values:</para>
 
@@ -1272,7 +1296,7 @@
 
             <para>Default: 50</para>
 
-            <para>Asks: Patrons can only have ___ holds at once. </para>
+            <para>Asks: Patrons can only have ___ holds at once.</para>
           </section>
 
           <section>
@@ -1281,8 +1305,8 @@
             <para>Default: Don't automatically</para>
 
             <para>Asks: ___ mark holds as found and waiting when a hold is
-            placed specifically on them and they are already checked in.
-            </para>
+            placed specifically on them and they are already checked
+            in.</para>
 
             <para>Values:</para>
 
@@ -1306,7 +1330,7 @@
             <para>Asks: Satisfy holds from the libraries ___ (as branchcodes,
             separated by commas; if empty, uses all libraries) ___</para>
 
-            <para>RandomizeHoldsQueueWeight Values: </para>
+            <para>RandomizeHoldsQueueWeight Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -1342,6 +1366,17 @@
 
               <listitem>
                 <para>Try</para>
+
+                <screenshot>
+                  <screeninfo>When CircAutocompl is turned on search results
+                  will appear below the search box</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/CircAutocompl.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </section>
@@ -1352,7 +1387,7 @@
             <para>Default: Don't require</para>
 
             <para>Asks: ___ staff to choose which checkouts to show before
-            running the overdues report. Save All </para>
+            running the overdues report. Save All</para>
 
             <para>Values:</para>
 
@@ -1372,7 +1407,7 @@
 
             <para>Default: Don't filter</para>
 
-            <para>Asks: ___ scanned patron barcodes. </para>
+            <para>Asks: ___ scanned patron barcodes.</para>
 
             <para>Values:</para>
 
@@ -1401,7 +1436,7 @@
             <para>Default: 20</para>
 
             <para>Asks : Show the ___ last returned items on the checkin
-            screen. </para>
+            screen.</para>
           </section>
 
           <section>
@@ -1410,7 +1445,7 @@
             <para>Default: earliest to latest</para>
 
             <para>Asks: Sort previous checkouts on the circulation page from
-            ___ due date. </para>
+            ___ due date.</para>
 
             <para>Values:</para>
 
@@ -1431,7 +1466,7 @@
             <para>Default: 7</para>
 
             <para>Asks: Mark a hold as problematic if it has been waiting for
-            more than ___ days. </para>
+            more than ___ days.</para>
           </section>
 
           <section>
@@ -1439,8 +1474,7 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ staff to specify a due date for a checkout.
-            </para>
+            <para>Asks: ___ staff to specify a due date for a checkout.</para>
 
             <para>Due dates are calculated using your circulation and fines
             rules, but staff can override that if you allow them to specific a
