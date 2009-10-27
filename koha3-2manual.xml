@@ -201,6 +201,21 @@
             <para>Asks: ___ staff to log in from a computer in the IP address
             range specified by their library (if any).</para>
 
+            <itemizedlist>
+              <listitem>
+                <para>Set IP address range in the library administration
+                area</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><emphasis>Get there:</emphasis> More &gt;
+                    Administration &gt; Basic Parameters &gt; Libraries &amp;
+                    Groups</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
             <para>Values:</para>
 
             <itemizedlist>
@@ -234,6 +249,10 @@
                 circulation)</para>
               </listitem>
             </itemizedlist>
+
+            <para>If set to general modules, administrators will be allowed to
+            control what pages staff members have access to on a more granular
+            level.</para>
           </section>
 
           <section>
@@ -306,8 +325,8 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para><emphasis role="bold">IMPORTANT: Not
-                    supported.</emphasis></para>
+                    <para><emphasis role="bold">IMPORTANT: PostgreSQL is not
+                    yet supported.</emphasis></para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1019,7 +1038,7 @@
             books and a video) The patron has $4 in charges already on their
             account. One of the videos has a rental charge of $1, therefore
             making the total fines on the patron's account suddenly $5 (the
-            limit). </para>
+            limit).</para>
           </section>
 
           <section>
@@ -1498,7 +1517,321 @@
       <section>
         <title>Enhanced Content</title>
 
-        <para></para>
+        <para><emphasis>TIP: if you have more than one source of cover images
+        set up, Koha will use the first available. </emphasis></para>
+
+        <section>
+          <title>All</title>
+
+          <para></para>
+
+          <section>
+            <title>FRBRizeEditions</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ other editions of an item on the staff
+            client</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>This preference pulls all editions of the same title
+            available in your collection regardless of material type. Items
+            will appear under an 'Editions' tab on the detail page for the
+            title in question.</para>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that you turn on
+            one or more of the ISBN services (ThingISNBN, XISBN,
+            PinesISBN)</emphasis></para>
+          </section>
+
+          <section>
+            <title>OPACFRBRizeEditions</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ other editions of an item on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>This preference pulls all editions of the same title
+            available in your collection regardless of material type. Items
+            will appear under an 'Editions' tab on the detail page for the
+            title in question.</para>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that you turn on
+            one or more of the ISBN services (ThingISNBN, XISBN,
+            PinesISBN)</emphasis></para>
+          </section>
+        </section>
+
+        <section>
+          <title>Amazon</title>
+
+          <para></para>
+
+          <section>
+            <title>AmazonEnabled</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ data from Amazon on the staff interface (including
+            reviews and "Search Inside" links on item detail pages). </para>
+
+            <para>Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: This requires that you have
+            signed up for and entered an access key. </emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Sign up at: <ulink
+                url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+              </listitem>
+
+              <listitem>
+                <para>Set your enter your key in the AWSAccessKeyID system
+                preference</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><emphasis>Get there: </emphasis>More &gt;
+                    Administration &gt; Global system preferences &gt;
+                    Enhanced Content &gt; Amazon &gt; AWSAccessKeyID</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACAmazonEnabled</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ data from Amazon on the OPAC (including reviews
+            and "Search Inside" links on item detail pages).</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: This requires that you have
+            signed up for and entered an access key. </emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Sign up at: <ulink
+                url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+              </listitem>
+
+              <listitem>
+                <para>Set your enter your key in the AWSAccessKeyID system
+                preference</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><emphasis>Get there: </emphasis>More &gt;
+                    Administration &gt; Global system preferences &gt;
+                    Enhanced Content &gt; Amazon &gt; AWSAccessKeyID</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>AmazonLocale</title>
+
+            <para>Default: American</para>
+
+            <para>Asks: Use Amazon data from its ___ website.</para>
+
+            <para>Value: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>American</para>
+              </listitem>
+
+              <listitem>
+                <para>British</para>
+              </listitem>
+
+              <listitem>
+                <para>Canadian</para>
+              </listitem>
+
+              <listitem>
+                <para>French</para>
+              </listitem>
+
+              <listitem>
+                <para>German</para>
+              </listitem>
+
+              <listitem>
+                <para>Japanese</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>AWSAccessKeyID</title>
+
+            <para>Asks: Access Amazon content using the access key ___</para>
+
+            <para>Sign up at: <ulink
+            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+          </section>
+
+          <section>
+            <title>AmazonAssocTag</title>
+
+            <para>Asks: Put the associate tag ___ on links to Amazon. </para>
+
+            <para><emphasis>TIP: This can net your library referral fees if a
+            patron decides to buy an item after clicking through to Amazon
+            from your site.</emphasis></para>
+
+            <para>Sign up at: <ulink
+            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+          </section>
+        </section>
+
+        <section>
+          <title>Babelthèque</title>
+
+          <para></para>
+
+          <section>
+            <title>Babeltheque</title>
+
+            <para>Default: Don't</para>
+
+            <para>Asks: ___ include information (such as reviews and
+            citations) from Babelthèque in item detail pages on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+
+                <screenshot>
+                  <screeninfo>Data from Babelthèque on the bib
+                  record</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Babeltheque.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Baker &amp; Taylor</title>
+
+          <para></para>
+        </section>
+
+        <section>
+          <title>Google</title>
+
+          <para></para>
+
+          <section>
+            <title>GoogleJackets</title>
+
+            <para>Default: Don't add</para>
+
+            <para>Asks: ___ cover images from Google Books to search results
+            and item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't add</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>LibraryThing</title>
+
+          <para></para>
+        </section>
+
+        <section>
+          <title>OCLC</title>
+
+          <para></para>
+        </section>
+
+        <section>
+          <title>Syndetics</title>
+
+          <para></para>
+        </section>
+
+        <section>
+          <title>Tagging</title>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
