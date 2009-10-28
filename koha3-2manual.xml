@@ -558,8 +558,21 @@
               <listitem>
                 <para>Hide -- will not show items in OPAC search results if
                 they're marked as suppressed</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Each bib record with items you want to hide from the
+                    OPAC simply need to have the 942n field set to 1. The
+                    index then hides it from display in OPAC but will still
+                    display it in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: If this preference is set
+            to 'hide' and you have the 942n field set to 1, it will hide the
+            entire bib record - not just an individual item.</emphasis></para>
 
             <para><emphasis role="bold">IMPORTANT: You must have the Suppress
             index set up in Zebra and at least one suppressed item, or your
@@ -1560,7 +1573,7 @@
 
             <para>Default: Don't show</para>
 
-            <para>Asks: ___ other editions of an item on the OPAC. </para>
+            <para>Asks: ___ other editions of an item on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -1596,9 +1609,9 @@
             <para>Default: Don't use</para>
 
             <para>Asks: ___ data from Amazon on the staff interface (including
-            reviews and "Search Inside" links on item detail pages). </para>
+            reviews and "Search Inside" links on item detail pages).</para>
 
-            <para>Values: </para>
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -1685,7 +1698,7 @@
 
             <para>Asks: Use Amazon data from its ___ website.</para>
 
-            <para>Value: </para>
+            <para>Value:</para>
 
             <itemizedlist>
               <listitem>
@@ -1726,7 +1739,7 @@
           <section>
             <title>AmazonAssocTag</title>
 
-            <para>Asks: Put the associate tag ___ on links to Amazon. </para>
+            <para>Asks: Put the associate tag ___ on links to Amazon.</para>
 
             <para><emphasis>TIP: This can net your library referral fees if a
             patron decides to buy an item after clicking through to Amazon
@@ -1748,8 +1761,8 @@
             <para>Default: Don't</para>
 
             <para>Asks: ___ include information (such as reviews and
-            citations) from Babelthèque in item detail pages on the OPAC.
-            </para>
+            citations) from Babelthèque in item detail pages on the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -1793,7 +1806,7 @@
             <para>Default: Don't add</para>
 
             <para>Asks: ___ cover images from Google Books to search results
-            and item detail pages on the OPAC. </para>
+            and item detail pages on the OPAC.</para>
 
             <para>Values:</para>
 
