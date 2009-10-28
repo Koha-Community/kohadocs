@@ -1530,7 +1530,11 @@
       <section>
         <title>Enhanced Content</title>
 
-        <para><emphasis>TIP: if you have more than one source of cover images
+        <para><emphasis role="bold">IMPORTANT: Always read the terms of
+        service associated with external data sources to be sure that you are
+        using the products within the allowed limits.</emphasis></para>
+
+        <para><emphasis>TIP: If you have more than one source of cover images
         set up, Koha will use the first available. </emphasis></para>
 
         <section>
@@ -1748,6 +1752,168 @@
             <para>Sign up at: <ulink
             url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
           </section>
+
+          <section>
+            <title>AmazonCoverImages</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ cover images from Amazon on search results and
+            item detail pages on the staff interface.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that AmazonEnabled
+            is set to 'Use'</emphasis></para>
+          </section>
+
+          <section>
+            <title>AmazonReviews</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ reviews from Amazon on item detail pages on the
+            staff interface.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that AmazonEnabled
+            is set to 'Use'</emphasis></para>
+          </section>
+
+          <section>
+            <title>AmazonSimilarItems</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ similar items, as determined by Amazon, on item
+            detail pages on the staff interface.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>This will use Amazon data to determine if you have
+                    similar items in your collection - it will not show items
+                    that you do not already have cataloged at your
+                    library.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that AmazonEnabled
+            is set to 'Use'</emphasis></para>
+          </section>
+
+          <section>
+            <title>OPACAmazonCoverImages</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ cover images from Amazon on search results and
+            item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that
+            OPACAmazonEnabled is set to 'Use'</emphasis></para>
+          </section>
+
+          <section>
+            <title>OPACAmazonSimilarItems</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ similar items, as determined by Amazon, on item
+            detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>This will use Amazon data to determine if you have
+                    similar items in your collection - it will not show items
+                    that you do not already have cataloged at your
+                    library.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that
+            OPACAmazonEnabled is set to 'Use'</emphasis></para>
+          </section>
+
+          <section>
+            <title>OPACAmazonReviews</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ reviews from Amazon on item detail pages on the
+            OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that
+            OPACAmazonEnabled is set to 'Use'</emphasis></para>
+          </section>
         </section>
 
         <section>
@@ -1792,7 +1958,63 @@
         <section>
           <title>Baker &amp; Taylor</title>
 
-          <para></para>
+          <para><emphasis role="bold">IMPORTANT: This is a pay service, you
+          must contact Baker &amp; Taylor to subscribe to this service before
+          setting these options.</emphasis></para>
+
+          <section>
+            <title>BakerTaylorEnabled</title>
+
+            <para>Default: Don't add</para>
+
+            <para>Asks: ___ Baker and Taylor links and cover images to the
+            OPAC and staff client. This requires that you have entered in a
+            username and password (which can be seen in image links). </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't add</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: To use this you will need
+            to also set the BakerTaylorUsername &amp; BakerTaylorPassword
+            system preferences</emphasis></para>
+          </section>
+
+          <section>
+            <title>BakerTaylorBookstoreURL</title>
+
+            <para>Asks: Baker and Taylor "My Library Bookstore" links should
+            be accessed at https:// ___ isbn </para>
+
+            <para>This should be filled in with something like
+            ocls.mylibrarybookstore.com/MLB/actions/searchHandler.do?nextPage=bookDetails&amp;parentNum=10923&amp;key=</para>
+
+            <para><emphasis>TIP: Leave it blank to disable these links.
+            </emphasis></para>
+
+            <para><emphasis role="bold">IMPORTANT: Be sure to get this
+            information from Baker &amp; Taylor when
+            subscribing.</emphasis></para>
+          </section>
+
+          <section>
+            <title>BakerTaylorUsername &amp; BakerTaylorPassword</title>
+
+            <para>Asks: Access Baker and Taylor using username ___ and
+            password ___</para>
+
+            <para><emphasis role="bold">IMPORTANT: Be sure to get this
+            information from Baker &amp; Taylor when
+            subscribing.</emphasis></para>
+          </section>
         </section>
 
         <section>
@@ -1825,7 +2047,83 @@
         <section>
           <title>LibraryThing</title>
 
-          <para></para>
+          <para>LibraryThing for Libraries is a pay service. You must first
+          contact LibraryThing directly for pricing and subscription
+          information. Learn more at <ulink
+          url="http://www.librarything.com/forlibraries">http://www.librarything.com/forlibraries</ulink></para>
+
+          <section>
+            <title>ThingISBN</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ the ThingISBN service to show other editions of a
+            title</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires FRBRizeEditions
+            and/or OPACFRBRizeEditions set to 'show'</emphasis></para>
+
+            <para><emphasis role="bold">IMPORTANT: This is separate from
+            Library Thing for Libraries and does not have a cost associated
+            with it.</emphasis></para>
+          </section>
+
+          <section>
+            <title>LibraryThingForLibrariesEnabled</title>
+
+            <para>Deault: Don't show</para>
+
+            <para>Asks: ___ reviews, similar items, and tags from Library
+            Thing for Libraries on item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: If this is set to 'show'
+            you will need to enter a value in the 'LibraryThingForLibrariesID'
+            system preference.</emphasis></para>
+          </section>
+
+          <section>
+            <title>LibraryThingForLibrariesTabbedView</title>
+
+            <para>Default: in line with bibliographic information</para>
+
+            <para>Asks: Show Library Thing for Libraries content ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>in line with bibliographic information</para>
+              </listitem>
+
+              <listitem>
+                <para>in tabs</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section>
