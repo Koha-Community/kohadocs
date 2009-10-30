@@ -1840,7 +1840,7 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ cover images from Amazon on search results and
-            item detail pages on the OPAC. </para>
+            item detail pages on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -1864,7 +1864,7 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ similar items, as determined by Amazon, on item
-            detail pages on the OPAC. </para>
+            detail pages on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -1897,7 +1897,7 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ reviews from Amazon on item detail pages on the
-            OPAC. </para>
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -1969,7 +1969,7 @@
 
             <para>Asks: ___ Baker and Taylor links and cover images to the
             OPAC and staff client. This requires that you have entered in a
-            username and password (which can be seen in image links). </para>
+            username and password (which can be seen in image links).</para>
 
             <para>Values:</para>
 
@@ -1992,7 +1992,7 @@
             <title>BakerTaylorBookstoreURL</title>
 
             <para>Asks: Baker and Taylor "My Library Bookstore" links should
-            be accessed at https:// ___ isbn </para>
+            be accessed at https:// ___ isbn</para>
 
             <para>This should be filled in with something like
             ocls.mylibrarybookstore.com/MLB/actions/searchHandler.do?nextPage=bookDetails&amp;parentNum=10923&amp;key=</para>
@@ -2086,7 +2086,7 @@
             <para>Deault: Don't show</para>
 
             <para>Asks: ___ reviews, similar items, and tags from Library
-            Thing for Libraries on item detail pages on the OPAC. </para>
+            Thing for Libraries on item detail pages on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -2130,12 +2130,301 @@
           <title>OCLC</title>
 
           <para></para>
+
+          <section>
+            <title>XISBN</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ the OCLC xISBN service to show other editions of a
+            title</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires FRBRizeEditions
+            and/or OPACFRBRizeEditions set to 'show'</emphasis></para>
+          </section>
+
+          <section>
+            <title>OCLCAffiliateID</title>
+
+            <para>Asks: Use the OCLC affiliate ID ___ to access the xISBN
+            service. </para>
+
+            <para><emphasis role="bold">IMPORTANT: Unless you have signed up
+            for an ID with OCLC, you are limited to 500 requests per day.
+            Available at: <ulink
+            url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></emphasis></para>
+          </section>
+
+          <section>
+            <title>XISBNDailyLimit</title>
+
+            <para>Default: 499</para>
+
+            <para>Asks: Only use the xISBN service ___ times a day. </para>
+
+            <para><emphasis role="bold">IMPORTANT: Unless you have signed up
+            for an ID with OCLC, you are limited to 500 requests per day.
+            Available at: <ulink
+            url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></emphasis></para>
+          </section>
         </section>
 
         <section>
           <title>Syndetics</title>
 
-          <para></para>
+          <para>Syndetics is a pay service. You must first contact Syndetics
+          directly for pricing and subscription information.</para>
+
+          <section>
+            <title>SyndeticsEnabled</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ content from Syndetics.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that you enter
+            your SyndeticsClientCode before this content will
+            appear.</emphasis></para>
+          </section>
+
+          <section>
+            <title>SyndeticsClientCode</title>
+
+            <para>Asks: Use the client code ___ to access Syndetics. </para>
+
+            <para><emphasis role="bold">IMPORTANT: You will need to get your
+            client code directly from Syndetics.</emphasis></para>
+          </section>
+
+          <section>
+            <title>SyndeticsCoverImages &amp; SyndeticsCoverImageSize </title>
+
+            <para>SyndeticsCoverImages Default: Don't show</para>
+
+            <para>SyndeticsCoverImageSize Default: medium</para>
+
+            <para>Asks: ___ cover images from Syndetics on search results and
+            item detail pages on the OPAC in a ___ size. </para>
+
+            <para>SyndeticsCoverImages Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>SyndeticsCoverImageSize Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>medium</para>
+              </listitem>
+
+              <listitem>
+                <para>large</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsAuthorNotes</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ notes about the author of a title from Syndetics
+            on item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsAwards</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ information from Syndetics about the awards a
+            title has won on item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsEditions</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ information about other editions of a title from
+            Syndetics on item detail pages on the OPAC</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires
+            OPACFRBRizeEditions set to 'show'</emphasis></para>
+          </section>
+
+          <section>
+            <title>SyndeticsExcerpt</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ excerpts from of a title from Syndetics on item
+            detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsReviews</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ reviews of a title from Syndetics on item detail
+            pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsSeries</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ information on other books in a title's series
+            from Syndetics on item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsSummary</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ a summary of a title from Syndetics on item detail
+            pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SyndeticsTOC</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ the table of contents of a title from Syndetics on
+            item detail pages on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section>
