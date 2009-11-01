@@ -3277,6 +3277,247 @@
           <title>Features</title>
 
           <para></para>
+
+          <section>
+            <title>OpacAuthorities</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to search your authority records. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>A link to Browse by Subject will appear at the top
+                    of your OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>opacbookbag</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to store items in a temporary "Cart" on
+            the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OpacPasswordChange</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to change their own password on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Enabling this will break
+            LDAP authentication.</emphasis></para>
+          </section>
+
+          <section>
+            <title>opacreadinghistory</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to see what books they have checked out in
+            the past. </para>
+
+            <para><emphasis role="bold">IMPORTANT: Enabling this will make it
+            so that circulation history will be stored in the library
+            database.</emphasis></para>
+          </section>
+
+          <section>
+            <title>OPACShelfBrowser</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ a shelf browser on item details pages, allowing
+            patrons to see what's near that item on the shelf. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: This uses up a fairly large
+            amount of resources on your server, and should be avoided if your
+            collection has a large number of items.</emphasis></para>
+          </section>
+
+          <section>
+            <title>OpacTopissue</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to access a list of the most checked out
+            items on the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>A link to Most Popular will appear at the top of
+                    your OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: This is somewhat
+            experimental, and should be avoided if your collection has a large
+            number of items.</emphasis></para>
+          </section>
+
+          <section>
+            <title>opacuserlogin</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to log in to their accounts on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>The OPAC will still be searchable if patrons can't
+                    log in, this just disables the patron account access via
+                    the OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>RequestOnOpac</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to place holds on items from the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>reviewson</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to make comments on items on the
+            OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Patrons comments/reviews all require moderation
+                    before they appear in the OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>suggestion</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to make purchase suggestions on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section>
