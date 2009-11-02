@@ -3280,7 +3280,7 @@
                 <itemizedlist>
                   <listitem>
                     <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results and detail pages in the OPAC</para>
+                    on the detail pages in the OPAC</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -3751,7 +3751,7 @@
 
           <para>Default: specific categories</para>
 
-          <para>Asks: List ___ under the new patron menu. </para>
+          <para>Asks: List ___ under the new patron menu.</para>
 
           <para>Values:</para>
 
@@ -3774,7 +3774,7 @@
           <para>AutoEmailPrimaryAddress Default: alternate</para>
 
           <para>Asks: ___ an email to newly created patrons with their account
-          details at their ___ email address. </para>
+          details at their ___ email address.</para>
 
           <para>AutoEmailOpacUser Values:</para>
 
@@ -3844,7 +3844,7 @@
           <para>Default: surname|cardnumber|barcode</para>
 
           <para>Asks: The following database columns must be filled in on the
-          patron entry screen ___ </para>
+          patron entry screen ___</para>
 
           <para><emphasis role="bold">IMPORTANT: Separate columns with |
           </emphasis></para>
@@ -3860,7 +3860,7 @@
           <para>Default: father|mother</para>
 
           <para>Asks: Guarantors can be the following of those they guarantee
-          ___ </para>
+          ___</para>
 
           <para><emphasis role="bold">IMPORTANT: Input multiple choices
           separated by | </emphasis></para>
@@ -3883,7 +3883,7 @@
           <para>Default: Don't</para>
 
           <para>Asks: ___ check and construct borrower card numbers in the
-          Katipo style. </para>
+          Katipo style.</para>
 
           <para>Values:</para>
 
@@ -3907,7 +3907,7 @@
           <para>Default: Allow</para>
 
           <para>Asks: ___ patrons to choose which notices they recive and when
-          they receive them. </para>
+          they receive them.</para>
 
           <para>Values:</para>
 
@@ -3932,7 +3932,7 @@
           <para>Default: Enable</para>
 
           <para>Asks: ___ searching, editing and display of custom attributes
-          on patrons. </para>
+          on patrons.</para>
 
           <para>Values:</para>
 
@@ -3980,7 +3980,7 @@
           <para>Default: 9999</para>
 
           <para>Asks: The late fine for a specific checkout will only go up to
-          ___ USD. </para>
+          ___ USD.</para>
         </section>
 
         <section>
@@ -3988,7 +3988,7 @@
 
           <para>Default: Don't</para>
 
-          <para>Asks: ___ allow patrons to be linked to institutions </para>
+          <para>Asks: ___ allow patrons to be linked to institutions</para>
 
           <para>Values:</para>
 
@@ -4013,7 +4013,7 @@
           <para>Default: 3</para>
 
           <para>Asks: Login passwords for staff and patrons must be at least
-          ___ characters long. </para>
+          ___ characters long.</para>
 
           <para><emphasis role="bold">IMPORTANT: This applies to both the
           staff login and the patron OPAC login.</emphasis></para>
@@ -4025,7 +4025,7 @@
           <para>Default: 30</para>
 
           <para>Asks: Show a notice that a patron is about to expire ___ days
-          beforehand. </para>
+          beforehand.</para>
 
           <para><emphasis role="bold">IMPORTANT: This notice will appear on
           the patron's record in the staff client.</emphasis></para>
@@ -4037,7 +4037,7 @@
           <para>Default: Allow</para>
 
           <para>Asks: ___ images to be uploaded and shown for patrons on the
-          staff client. </para>
+          staff client.</para>
 
           <para>Values:</para>
 
@@ -4058,20 +4058,20 @@
           <para>Default: 20</para>
 
           <para>Asks: By default, show ___ results per page in the staff
-          client. </para>
+          client.</para>
         </section>
 
         <section>
           <title>SMSSendDriver</title>
 
-          <para>Asks: Use the SMS::Send:: ___ driver to send SMS messages.
-          </para>
+          <para>Asks: Use the SMS::Send:: ___ driver to send SMS
+          messages.</para>
 
           <para>Some examples of values are:</para>
 
           <itemizedlist>
             <listitem>
-              <para>SMS::Send::Us::Ipipi </para>
+              <para>SMS::Send::Us::Ipipi</para>
             </listitem>
 
             <listitem>
@@ -4079,7 +4079,7 @@
             </listitem>
 
             <listitem>
-              <para>SMS::Send::US::Verizon </para>
+              <para>SMS::Send::US::Verizon</para>
             </listitem>
           </itemizedlist>
 
@@ -4094,7 +4094,7 @@
             <listitem>
               <para><emphasis>Get there:</emphasis> More &gt; Administration
               &gt; Global system preferences &gt; Patrons &gt;
-              EnhancedMessagingPreferences </para>
+              EnhancedMessagingPreferences</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -4105,7 +4105,7 @@
           <para>Default: Don't</para>
 
           <para>Asks: ___ store and display surnames (last names) in upper
-          case. </para>
+          case.</para>
 
           <para>Values:</para>
 
@@ -4125,6 +4125,432 @@
         <title>Searching</title>
 
         <para></para>
+
+        <section>
+          <title>Features</title>
+
+          <para></para>
+
+          <section>
+            <title>OpacGroupResults</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ PazPar2 to group similar results on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: This requires that <ulink
+            url="http://www.indexdata.com/pazpar2">PazPar2</ulink> is set up
+            and running. </emphasis></para>
+          </section>
+
+          <section>
+            <title>QueryAutoTruncate</title>
+
+            <para><emphasis role="bold">*** Waiting for Bug Fix - Bug
+            3748</emphasis></para>
+          </section>
+
+          <section>
+            <title>QueryFuzzy</title>
+
+            <para>Default: Try</para>
+
+            <para>Asks: ___ to match similarly spelled words in a search (for
+            example, a search for flang would also match flange and
+            fang)</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't try</para>
+              </listitem>
+
+              <listitem>
+                <para>Try</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that NoZebra is
+            set to 'Use'</emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Get there:</emphasis> More &gt; Administration
+                &gt; Global System Preferences &gt; Cataloging &gt;
+                NoZebra</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>QueryRemoveStopwords</title>
+
+            <para>Default: Don't remove</para>
+
+            <para>Asks: ___ stopwords specified in Koha from searches. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't remove</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><emphasis role="bold">IMPORTANT: If NoZebra is set
+                    to 'Use' leave this preference set to 'Don't
+                    remove'</emphasis></para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Remove</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Requires that you have updated your Koha stopwords
+                    list</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis>Get there:</emphasis> More &gt;
+                        Administration &gt; Stop Words</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that NoZebra is
+            set to 'Don't use'</emphasis></para>
+
+            <para><emphasis role="bold">IMPORTANT: Zebra, on its own, handles
+            a few of the most common stopwords</emphasis></para>
+          </section>
+
+          <section>
+            <title>QueryStemming</title>
+
+            <para>Default: Try</para>
+
+            <para>Asks: ___ to match words of the same base in a search</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't try</para>
+              </listitem>
+
+              <listitem>
+                <para>Try</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>A search for enabling would also match enable and
+                    enabled</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that NoZebra is
+            set to 'Use'</emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Get there:</emphasis> More &gt; Administration
+                &gt; Global System Preferences &gt; Cataloging &gt;
+                NoZebra</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>QueryWeightFields</title>
+
+            <para>Default: Enable</para>
+
+            <para>Asks: ___ ranking of search results by relevance</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis role="bold">IMPORTANT: Requires that NoZebra is
+            set to 'Use'</emphasis></para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Get there:</emphasis> More &gt; Administration
+                &gt; Global System Preferences &gt; Cataloging &gt;
+                NoZebra</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Results Display</title>
+
+          <para></para>
+
+          <section>
+            <title>defaultSortField &amp; defaultSortOrder </title>
+
+            <para>defaultSortField Default: author</para>
+
+            <para>defaultSortOrder Default: ascending</para>
+
+            <para>Asks: By default, sort search results in the staff client by
+            ___, ____</para>
+
+            <para>defaultSortField Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>author</para>
+              </listitem>
+
+              <listitem>
+                <para>call number</para>
+              </listitem>
+
+              <listitem>
+                <para>date added</para>
+              </listitem>
+
+              <listitem>
+                <para>date of publication</para>
+              </listitem>
+
+              <listitem>
+                <para>relevance</para>
+              </listitem>
+
+              <listitem>
+                <para>title</para>
+              </listitem>
+
+              <listitem>
+                <para>total number of checkouts</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>defaultSortOrder Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ascending</para>
+              </listitem>
+
+              <listitem>
+                <para>descending</para>
+              </listitem>
+
+              <listitem>
+                <para>from A to Z</para>
+              </listitem>
+
+              <listitem>
+                <para>from Z to A</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>numSearchResults</title>
+
+            <para>Default: 20</para>
+
+            <para>Asks: By default, show ___ results per page in the staff
+            client. </para>
+          </section>
+
+          <section>
+            <title>OPACdefaultSortField</title>
+
+            <para>Default: ascending</para>
+
+            <para>Asks: By default, sort search results in the OPAC by
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ascending</para>
+              </listitem>
+
+              <listitem>
+                <para>author</para>
+              </listitem>
+
+              <listitem>
+                <para>call number</para>
+              </listitem>
+
+              <listitem>
+                <para>date added</para>
+              </listitem>
+
+              <listitem>
+                <para>date of publication</para>
+              </listitem>
+
+              <listitem>
+                <para>descending</para>
+              </listitem>
+
+              <listitem>
+                <para>from A to Z</para>
+              </listitem>
+
+              <listitem>
+                <para>from Z to A</para>
+              </listitem>
+
+              <listitem>
+                <para>relevance</para>
+              </listitem>
+
+              <listitem>
+                <para>title</para>
+              </listitem>
+
+              <listitem>
+                <para>total number of checkouts</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACItemsResultsDisplay</title>
+
+            <para>Default: 20</para>
+
+            <para>Asks: By default, show ___ results per page in the OPAC.
+            </para>
+          </section>
+
+          <section>
+            <title>OPACnumSearchResults</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ an item's branch, location and call number in OPAC
+            search results. </para>
+
+            <para>Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show search results ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Search Form</title>
+
+          <section>
+            <title>AdvancedSearchTypes</title>
+
+            <para>Default: itemtype</para>
+
+            <para>Asks: Show checkboxes to search by ___ on the OPAC and staff
+            advanced search pages.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>collection code</para>
+              </listitem>
+
+              <listitem>
+                <para>itemtype</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>expandedSearchOption</title>
+
+            <para>Default: don't show</para>
+
+            <para>Asks: By default, ___ "More options" on the OPAC and staff
+            advanced search pages.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
       </section>
 
       <section>
