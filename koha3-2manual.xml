@@ -3157,7 +3157,7 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ the name of the patron that has an item checked
-            out on item detail pages on the OPAC. </para>
+            out on item detail pages on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -3177,7 +3177,7 @@
 
             <para>Asks: Use the image at ___ in the OPAC header, instead of
             the Koha logo. If this image is a different size than the Koha
-            logo, you will need to customize the CSS. </para>
+            logo, you will need to customize the CSS.</para>
 
             <para><emphasis role="bold">IMPORTANT: This should be a complete
             URL, starting with http://</emphasis></para>
@@ -3187,7 +3187,7 @@
             <title>opacstylesheet</title>
 
             <para>Asks: Use the remote CSS stylesheet /css/ ___ on all pages
-            in the OPAC, instead of the default. </para>
+            in the OPAC, instead of the default.</para>
 
             <para><emphasis role="bold">IMPORTANT: This should be a complete
             URL, starting with http://</emphasis></para>
@@ -3198,7 +3198,7 @@
 
             <para>Default: prog</para>
 
-            <para>Asks: Use the ___ theme on the OPAC. </para>
+            <para>Asks: Use the ___ theme on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -3216,7 +3216,7 @@
 
             <para>Asks: When patrons click on a link to another website from
             your OPAC (like Amazon or OCLC), ___ open the website in a new
-            window. </para>
+            window.</para>
 
             <para>Values:</para>
 
@@ -3283,7 +3283,7 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ patrons to search your authority records. </para>
+            <para>Asks: ___ patrons to search your authority records.</para>
 
             <para>Values:</para>
 
@@ -3311,7 +3311,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ patrons to store items in a temporary "Cart" on
-            the OPAC. </para>
+            the OPAC.</para>
 
             <para>Values:</para>
 
@@ -3331,8 +3331,8 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ patrons to change their own password on the OPAC.
-            </para>
+            <para>Asks: ___ patrons to change their own password on the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3356,7 +3356,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ patrons to see what books they have checked out in
-            the past. </para>
+            the past.</para>
 
             <para><emphasis role="bold">IMPORTANT: Enabling this will make it
             so that circulation history will be stored in the library
@@ -3369,7 +3369,7 @@
             <para>Default: Show</para>
 
             <para>Asks: ___ a shelf browser on item details pages, allowing
-            patrons to see what's near that item on the shelf. </para>
+            patrons to see what's near that item on the shelf.</para>
 
             <para>Values:</para>
 
@@ -3394,7 +3394,7 @@
             <para>Default: Don't allow</para>
 
             <para>Asks: ___ patrons to access a list of the most checked out
-            items on the OPAC. </para>
+            items on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -3425,8 +3425,8 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ patrons to log in to their accounts on the OPAC.
-            </para>
+            <para>Asks: ___ patrons to log in to their accounts on the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3454,8 +3454,8 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ patrons to place holds on items from the OPAC.
-            </para>
+            <para>Asks: ___ patrons to place holds on items from the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3503,8 +3503,8 @@
 
             <para>Default: Allow</para>
 
-            <para>Asks: ___ patrons to make purchase suggestions on the OPAC.
-            </para>
+            <para>Asks: ___ patrons to make purchase suggestions on the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3524,6 +3524,203 @@
           <title>Policy</title>
 
           <para></para>
+
+          <section>
+            <title>AnonSuggestions</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons that aren't logged in to make purchase
+            suggestions. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACAllowHoldDateInFuture</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to place holds that don't enter the
+            waiting list until a certain future date (if AllowHoldDateInFuture
+            is also on).</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACFineNoRenewals</title>
+
+            <para>Default: 99999</para>
+
+            <para>Asks: Only allow patrons to renew their own books on the
+            OPAC if they have less than ___ USD in fines</para>
+
+            <para><emphasis>TIP: Leave this field blank to
+            disable</emphasis></para>
+          </section>
+
+          <section>
+            <title>OPACItemHolds</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to place holds on specific items in the
+            OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Patrons can place holds on specific items as well as
+                    the next available item.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>If this is disabled, users can only put a hold on
+                    the next available item. </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OpacRenewalAllowed</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to renew their own books on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Staff will still be able to renew items for patrons
+                    via the staf client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACViewOthersSuggestions</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ purchase suggestions from other patrons on the
+            OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SearchMyLibraryFirst</title>
+
+            <para>Default: Don't limit</para>
+
+            <para>Asks: ___ patrons' searches to the library they are
+            registered at. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't limit</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Searching the OPAC will show results from all
+                    libraries</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Limit</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Patrons will still be able to search other libraries
+                    via the Advanced search page - but will be limited to
+                    searches for their library only from the basic search
+                    box</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>singleBranchMode</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to select their branch on the OPAC.
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
       </section>
 
