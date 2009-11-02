@@ -3062,6 +3062,21 @@
             <para>Default: English</para>
 
             <para>Asks: Enable the following languages on the OPAC</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>English</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>To install additional languages you need to run
+            misc/translation/install-code.pl. For example, to install French
+            you would run the following command <emphasis>install-code.pl
+            fr-FR</emphasis> to make the templates, once they exist and are in
+            the right place then they will show up as an option in this
+            preference.</para>
           </section>
 
           <section>
@@ -3359,8 +3374,11 @@
             the past.</para>
 
             <para><emphasis role="bold">IMPORTANT: Enabling this will make it
-            so that circulation history will be stored in the library
-            database.</emphasis></para>
+            so that patrons can view their circulation history in the
+            OPAC.</emphasis></para>
+
+            <para><emphasis role="bold">IMPORTANT: This data is stored in the
+            system regardless of your choice.</emphasis></para>
           </section>
 
           <section>
@@ -3531,7 +3549,7 @@
             <para>Default: Don't allow</para>
 
             <para>Asks: ___ patrons that aren't logged in to make purchase
-            suggestions. </para>
+            suggestions.</para>
 
             <para>Values:</para>
 
@@ -3586,7 +3604,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ patrons to place holds on specific items in the
-            OPAC. </para>
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3608,7 +3626,7 @@
                 <itemizedlist>
                   <listitem>
                     <para>If this is disabled, users can only put a hold on
-                    the next available item. </para>
+                    the next available item.</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -3620,8 +3638,8 @@
 
             <para>Default: Don't allow</para>
 
-            <para>Asks: ___ patrons to renew their own books on the OPAC.
-            </para>
+            <para>Asks: ___ patrons to renew their own books on the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3649,7 +3667,7 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ purchase suggestions from other patrons on the
-            OPAC. </para>
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -3670,7 +3688,7 @@
             <para>Default: Don't limit</para>
 
             <para>Asks: ___ patrons' searches to the library they are
-            registered at. </para>
+            registered at.</para>
 
             <para>Values:</para>
 
@@ -3706,8 +3724,7 @@
 
             <para>Default: Don't allow</para>
 
-            <para>Asks: ___ patrons to select their branch on the OPAC.
-            </para>
+            <para>Asks: ___ patrons to select their branch on the OPAC.</para>
 
             <para>Values:</para>
 
@@ -3728,6 +3745,380 @@
         <title>Patrons</title>
 
         <para></para>
+
+        <section>
+          <title>AddPatronLists</title>
+
+          <para>Default: specific categories</para>
+
+          <para>Asks: List ___ under the new patron menu. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>general patron types</para>
+            </listitem>
+
+            <listitem>
+              <para>specific categories</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>AutoEmailOpacUser &amp; AutoEmailPrimaryAddress</title>
+
+          <para>AutoEmailOpacUser Default: Don't send</para>
+
+          <para>AutoEmailPrimaryAddress Default: alternate</para>
+
+          <para>Asks: ___ an email to newly created patrons with their account
+          details at their ___ email address. </para>
+
+          <para>AutoEmailOpacUser Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Don't send</para>
+            </listitem>
+
+            <listitem>
+              <para>Send</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>AutoEmailPrimaryAddress Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>alternate</para>
+            </listitem>
+
+            <listitem>
+              <para>first valid</para>
+            </listitem>
+
+            <listitem>
+              <para>home</para>
+            </listitem>
+
+            <listitem>
+              <para>work</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>autoMemberNum</title>
+
+          <para>Default: Do</para>
+
+          <para>Asks: ___ default the card number field on the patron addition
+          screen to the next available card number</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Do</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>If the largest currently used card number is
+                  26345000012941, then this field will default to
+                  26345000012942 for the next patron</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Don't</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>BorrowerMandatoryField</title>
+
+          <para>Default: surname|cardnumber|barcode</para>
+
+          <para>Asks: The following database columns must be filled in on the
+          patron entry screen ___ </para>
+
+          <para><emphasis role="bold">IMPORTANT: Separate columns with |
+          </emphasis></para>
+
+          <para><emphasis>TIP: For help with field names, ask your system
+          administrator or view the database structure associated with the
+          borrowers table.</emphasis></para>
+        </section>
+
+        <section>
+          <title>borrowerRelationship</title>
+
+          <para>Default: father|mother</para>
+
+          <para>Asks: Guarantors can be the following of those they guarantee
+          ___ </para>
+
+          <para><emphasis role="bold">IMPORTANT: Input multiple choices
+          separated by | </emphasis></para>
+        </section>
+
+        <section>
+          <title>BorrowersTitles</title>
+
+          <para>Default: Mr|Mrs|Miss|Ms</para>
+
+          <para>Asks: Borrowers can have the following titles ___</para>
+
+          <para><emphasis role="bold">IMPORTANT: Input multiple choices
+          separated by | </emphasis></para>
+        </section>
+
+        <section>
+          <title>checkdigit</title>
+
+          <para>Default: Don't</para>
+
+          <para>Asks: ___ check and construct borrower card numbers in the
+          Katipo style. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Do</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis role="bold">IMPORTANT: This overrides autoMemberNum
+          if on. </emphasis></para>
+        </section>
+
+        <section>
+          <title>EnhancedMessagingPreferences</title>
+
+          <para>Default: Allow</para>
+
+          <para>Asks: ___ patrons to choose which notices they recive and when
+          they receive them. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Allow</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't allow</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis role="bold">IMPORTANT: This only applies to certain
+          kinds of notices, overdue notices will be sent based on the
+          library's rules, not the patron's choice.</emphasis></para>
+        </section>
+
+        <section>
+          <title>ExtendedPatronAttributes</title>
+
+          <para>Default: Enable</para>
+
+          <para>Asks: ___ searching, editing and display of custom attributes
+          on patrons. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Don't enable</para>
+            </listitem>
+
+            <listitem>
+              <para>Enable</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis>TIP: Use custom attirbutes for fields that the
+          default patron record does not support such as driver's license
+          number or student ID number.</emphasis></para>
+        </section>
+
+        <section>
+          <title>intranetreadinghistory</title>
+
+          <para>Default: Allow</para>
+
+          <para>Asks: ___ staff to access a patron's checkout history</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Allow</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't allow</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis role="bold">IMPORTANT: This data is stored in the
+          system regardless of your choice.</emphasis></para>
+        </section>
+
+        <section>
+          <title>MaxFine</title>
+
+          <para>Default: 9999</para>
+
+          <para>Asks: The late fine for a specific checkout will only go up to
+          ___ USD. </para>
+        </section>
+
+        <section>
+          <title>memberofinstitution</title>
+
+          <para>Default: Don't</para>
+
+          <para>Asks: ___ allow patrons to be linked to institutions </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Do</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis role="bold">IMPORTANT: In order to allow this, the
+          library must have Institution patrons to link members
+          to</emphasis></para>
+        </section>
+
+        <section>
+          <title>minPasswordLength</title>
+
+          <para>Default: 3</para>
+
+          <para>Asks: Login passwords for staff and patrons must be at least
+          ___ characters long. </para>
+
+          <para><emphasis role="bold">IMPORTANT: This applies to both the
+          staff login and the patron OPAC login.</emphasis></para>
+        </section>
+
+        <section>
+          <title>NotifyBorrowerDeparture</title>
+
+          <para>Default: 30</para>
+
+          <para>Asks: Show a notice that a patron is about to expire ___ days
+          beforehand. </para>
+
+          <para><emphasis role="bold">IMPORTANT: This notice will appear on
+          the patron's record in the staff client.</emphasis></para>
+        </section>
+
+        <section>
+          <title>patronimages</title>
+
+          <para>Default: Allow</para>
+
+          <para>Asks: ___ images to be uploaded and shown for patrons on the
+          staff client. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Allow</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't allow</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>PatronsPerPage</title>
+
+          <para>Default: 20</para>
+
+          <para>Asks: By default, show ___ results per page in the staff
+          client. </para>
+        </section>
+
+        <section>
+          <title>SMSSendDriver</title>
+
+          <para>Asks: Use the SMS::Send:: ___ driver to send SMS messages.
+          </para>
+
+          <para>Some examples of values are:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>SMS::Send::Us::Ipipi </para>
+            </listitem>
+
+            <listitem>
+              <para>SMS::Send::US::TMobile</para>
+            </listitem>
+
+            <listitem>
+              <para>SMS::Send::US::Verizon </para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Additional values can be found here: <ulink
+          url="http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all">http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all
+          </ulink></para>
+
+          <para><emphasis role="bold">IMPORTANT: You must allow
+          EnhancedMessagingPreferences for this to work.</emphasis></para>
+
+          <itemizedlist>
+            <listitem>
+              <para><emphasis>Get there:</emphasis> More &gt; Administration
+              &gt; Global system preferences &gt; Patrons &gt;
+              EnhancedMessagingPreferences </para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>uppercasesurnames</title>
+
+          <para>Default: Don't</para>
+
+          <para>Asks: ___ store and display surnames (last names) in upper
+          case. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Do</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't</para>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section>
