@@ -5711,6 +5711,312 @@
   </appendix>
 
   <appendix>
+    <title>Using Koha as a Content Management System (CMS)</title>
+
+    <para></para>
+
+    <section>
+      <title>Setup</title>
+
+      <para>These are instructions for taking a default install of Koha 3.0
+      and allowing it to function as a little content management system. This
+      will allow a library to publish an arbitrary number of pages based on a
+      template. This example uses the template for the main opac page, but you
+      could just as well use any template you wish with a bit more editing.
+      This may be appropriate if you have a small library, want to allow
+      librarians to easily add pages, and do not want to support a complete
+      CMS. </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Copy /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to
+          /usr/share/koha/opac/cgi-bin/opac/pages.pl (in the same
+          directory)</para>
+        </listitem>
+
+        <listitem>
+          <para>Edit pages.pl in an editor</para>
+        </listitem>
+
+        <listitem>
+          <para>At approximately line 32 add:</para>
+
+          <para><emphasis>my $cgi = new CGI; </emphasis></para>
+        </listitem>
+
+        <listitem>
+          <para>At approximately line 36 change this code:</para>
+
+          <para><emphasis>template_name =&gt;
+          "opac-main.tmpl",</emphasis></para>
+
+          <para>To this code: </para>
+
+          <para><emphasis>template_name =&gt; "pages.tmpl",</emphasis></para>
+        </listitem>
+
+        <listitem>
+          <para>At approximately line 54 change this code:</para>
+
+          <para><emphasis>$template-&gt;param( </emphasis></para>
+
+          <para><emphasis>koha_news =&gt; $all_koha_news, </emphasis></para>
+
+          <para><emphasis>koha_news_count =&gt; $koha_news_count
+          </emphasis></para>
+
+          <para><emphasis>); </emphasis></para>
+
+          <para>To this:</para>
+
+          <para><emphasis>my $page = "page_" . $cgi-&gt;param("p");
+          </emphasis></para>
+
+          <para><emphasis>$template-&gt;param( </emphasis></para>
+
+          <para><emphasis>koha_news =&gt; $all_koha_news, </emphasis></para>
+
+          <para><emphasis>koha_news_count =&gt; $koha_news_count,
+          </emphasis></para>
+
+          <para><emphasis>local_page =&gt; "" .
+          C4::Context-&gt;preference($page) </emphasis></para>
+
+          <para><emphasis>); </emphasis></para>
+        </listitem>
+
+        <listitem>
+          <para> Copy
+          /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tmpl
+          to /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tmpl
+          </para>
+        </listitem>
+
+        <listitem>
+          <para>At approximately line 38, change this:</para>
+
+          <para><emphasis>&lt;!-- TMPL_IF NAME="OpacMainUserBlock"
+          --&gt;&lt;div id="opacmainuserblock" class="container"&gt;&lt;!--
+          TMPL_VAR NAME="OpacMainUserBlock" --&gt;&lt;/div&gt;&lt;!-- /TMPL_IF
+          --&gt; </emphasis></para>
+
+          <para>To this:</para>
+
+          <para><emphasis>&lt;!-- TMPL_IF NAME="local_page" --&gt;&lt;div
+          id="opacmainuserblock" class="container"&gt;&lt;!-- TMPL_VAR
+          NAME="local_page" --&gt;&lt;/div&gt;&lt;!-- /TMPL_IF
+          --&gt;</emphasis></para>
+        </listitem>
+
+        <listitem>
+          <para>In system preferences in the staff client, click the button
+          for “New Preference” under "Local Use"</para>
+        </listitem>
+
+        <listitem>
+          <para>Fill it out as so</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Explanation: test page for pages tiny cms</para>
+            </listitem>
+
+            <listitem>
+              <para>Variable: page_test</para>
+            </listitem>
+
+            <listitem>
+              <para>Value: Lorem ipsum</para>
+            </listitem>
+
+            <listitem>
+              <para>Click the TextArea link (or enter “TextArea” into the
+              input field below it)</para>
+            </listitem>
+
+            <listitem>
+              <para>variable options (last field): 80|50</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>In a browser go to
+          http://youraddress/cgi-bin/koha/pages.pl?p=test The page should come
+          up with the words “Lorem ipsum” in the main content area of the
+          page. (replace “youraddress” with localhost, 127.0.0.1, or your
+          domain name depending on how you have Apache set up.)</para>
+        </listitem>
+
+        <listitem>
+          <para>To add more pages simply create a system preference where the
+          title begins with “page_” followed by any arbitrary letters. You can
+          add any markup you want as the value of the field. Reference the new
+          page by changing the value of the “p” parameter in the URL.</para>
+        </listitem>
+      </itemizedlist>
+
+      <section>
+        <title>Troubleshooting</title>
+
+        <para>If you have problems check file permissions on pages.pl and
+        pages.tmpl. They should have the same user and group as other Koha
+        files like opac-main.pl. </para>
+      </section>
+
+      <section>
+        <title>Bonus Points</title>
+
+        <para>Instead of using the address
+        http://youraddress/cgi-bin/koha/pages.pl?p=test you can shorten it to
+        http://youraddress/pages.pl?p=test Just open up
+        /etc/koha/koha-httpd.conf and add the follow at about line 13: </para>
+
+        <para><emphasis>ScriptAlias /pages.pl
+        "/usr/share/koha/opac/cgi-bin/opac/pages.pl" </emphasis></para>
+
+        <para>Then restart Apache. </para>
+      </section>
+    </section>
+
+    <section>
+      <title>Usage</title>
+
+      <para>After setting up Koha as a CMS you can create new pages following
+      these instructions: </para>
+
+      <section>
+        <title>Adding Pages</title>
+
+        <para>To add a new page you need to add a system preference under
+        Local Use.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Get there: More &gt; Administration &gt; Global System
+            Preferences &gt; Local Use</para>
+          </listitem>
+
+          <listitem>
+            <para>Click 'New Preference'</para>
+          </listitem>
+
+          <listitem>
+            <para>Enter in a description in the Explanation field</para>
+          </listitem>
+
+          <listitem>
+            <para>Enter a value that starts with 'page_' in the Variable
+            field</para>
+          </listitem>
+
+          <listitem>
+            <para>Enter starting HTML in the Value field</para>
+
+            <screenshot>
+              <screeninfo>Add a new preference </screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/appendix-cms/newpreference.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+
+          <listitem>
+            <para>Set the Variable Type to Textarea</para>
+          </listitem>
+
+          <listitem>
+            <para>Set the Variable options to something like 20|20 for 20 rows
+            and 20 columns</para>
+
+            <screenshot>
+              <screeninfo>Settings for the new preference</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/appendix-cms/newpref-settings.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Viewing your page</title>
+
+        <para>You can view your new page at
+        http://YOUR-OPAC/cgi-bin/koha/pages.pl?p=PAGENAME where PAGENAME is
+        the part you entered after 'page_' in the Variable field.</para>
+      </section>
+
+      <section>
+        <title>Example</title>
+
+        <para>This process can be used to create recommended reading lists
+        within Koha. So once the code changes have been made per the
+        instructions on 'Koha as a CMS' you go through the 'Adding a New Page'
+        instructions above to great a page for 'Recommended Reading Lists'
+        </para>
+
+        <screenshot>
+          <screeninfo>Create page by modifying a system
+          preference</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-cms/recommendedreading.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Next we need to create pages for our various classes (or
+        categories). To do this, return to the 'Adding a New Page' section and
+        create a preference for the first class. </para>
+
+        <screenshot>
+          <screeninfo>Add a new sys pref for another page</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-cms/class101-pref.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Next you'll want to link your first page to your new second
+        page, go to the page_recommend preference and click 'Edit.' Now you
+        want to edit the HTML to include a link to your newest page: </para>
+
+        <screenshot>
+          <screeninfo>Edit original preference to add new page</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-cms/editrecommendpref.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Live Examples</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The Crawford Library at Dallas Christian College is using
+            this method for their recommended reading lists: <ulink
+            url="http://opac.dallas.edu/">http://opac.dallas.edu/</ulink></para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+  </appendix>
+
+  <appendix>
     <title>Important Links</title>
 
     <para></para>
