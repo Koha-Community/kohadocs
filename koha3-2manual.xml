@@ -4594,7 +4594,7 @@
           <title>intranetcolorstylesheet</title>
 
           <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
-          on all pages in the staff interface. </para>
+          on all pages in the staff interface.</para>
 
           <para><emphasis role="bold">IMPORTANT: Leave this field blank to
           disable.</emphasis></para>
@@ -4632,7 +4632,7 @@
           <title>intranetstylesheet</title>
 
           <para>Asks: Include the stylesheet at ___ on all pages in the staff
-          interface, instead of the default. </para>
+          interface, instead of the default.</para>
 
           <para><emphasis role="bold">IMPORTANT: This should be a complete
           URL, starting with http://</emphasis></para>
@@ -4702,7 +4702,7 @@
 
           <para>Default: prog</para>
 
-          <para>Asks: Use the ___ theme on the staff interface. </para>
+          <para>Asks: Use the ___ theme on the staff interface.</para>
 
           <para>Values:</para>
 
@@ -4719,7 +4719,7 @@
           <para>Default: Allow</para>
 
           <para>Asks: ___ staff to view records in ISBD form on the staff
-          client. </para>
+          client.</para>
 
           <para>Values:</para>
 
@@ -4740,7 +4740,7 @@
           <para>Default: Allow</para>
 
           <para>Asks: ___ staff to view records in labeled MARC form on the
-          staff client. </para>
+          staff client.</para>
 
           <para>Values:</para>
 
@@ -4761,7 +4761,7 @@
           <para>Default: Allow</para>
 
           <para>Asks: ___ staff to view records in plain MARC form on the
-          staff client. </para>
+          staff client.</para>
 
           <para>Values:</para>
 
@@ -4827,13 +4827,189 @@
       <section>
         <title>Libraries &amp; Groups</title>
 
-        <para></para>
+        <para>When setting up your Koha system you will want to add
+        information for every library that will be sharing your system. This
+        data is used in several areas of Koha.</para>
+
+        <para>When visiting this page you are presented with a list of the
+        libraries and groups that have already been added to the
+        system.</para>
+
+        <screenshot>
+          <screeninfo>Library List</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/basicparams/librarylist.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <screenshot>
+          <screeninfo>Group Lists</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/basicparams/grouplists.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <section>
+          <title>Adding a Library</title>
+
+          <para>To add a new library:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click 'New Library'</para>
+            </listitem>
+
+            <listitem>
+              <para>Fill in the data requested on the form that follows</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Of the fields listed, only 'Library code' and 'Name'
+                  are required</para>
+                </listitem>
+
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: Be sure to enter a
+                  library email address to make sure that notices are sent to
+                  and from the right address</emphasis></para>
+                </listitem>
+
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: An IP address is
+                  required if you have enabled AutoLocation</emphasis></para>
+                </listitem>
+              </itemizedlist>
+
+              <screenshot>
+                <screeninfo>New Library Form</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/newlibrary.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Editing/Deleting a Library</title>
+
+          <para>You will be unable to delete any library that has patrons or
+          items attached to it.</para>
+
+          <screenshot>
+            <screeninfo>Staff will be presented with a warning when trying to
+            delete a library that is being used</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/cannotdeletelibrary.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Each library will have an 'Edit' link to the right of it.
+          Click this link to edit/alter details associated with the library in
+          question.</para>
+
+          <para><emphasis role="bold">IMPORTANT: You will be unable to edit
+          the 'Library code'</emphasis></para>
+        </section>
+
+        <section>
+          <title>Adding a group</title>
+
+          <para>To add a Search Domain or Library Property Group click the
+          'New Group' button at the top of the screen</para>
+
+          <screenshot>
+            <screeninfo>Add group form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/addlibgroup.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Of the fields on the group form, 'Category code' and 'Name'
+          are the only required fields</para>
+
+          <section>
+            <title>Search Domain Groups</title>
+
+            <para>Search Domain Groups allow you to search a group of
+            libraries at the same time instead of searching just one library
+            or all libraries.</para>
+
+            <screenshot>
+              <screeninfo>Search Domain Groups</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/basicparams/searchgroup.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>To see Search Domain Groups in action visit the staff client
+            advanced search page in your Koha system:</para>
+
+            <screenshot>
+              <screeninfo>Library group search on staff client</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/basicparams/stafflibgroupsearch.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </section>
+
+          <section>
+            <title>Library Property Groups</title>
+
+            <para>You can assign specific categories to your libraries by
+            adding groups for them </para>
+
+            <screenshot>
+              <screeninfo>Library Property Groups</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/basicparams/groupproperties.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>Properties are then applied to libraries via the add or edit
+            library form</para>
+
+            <screenshot>
+              <screeninfo>Groups on the Add/Modify library form</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/basicparams/addlibrarytogroup.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </section>
+        </section>
       </section>
 
       <section>
         <title>Funds &amp; Budgets</title>
 
-        <para><emphasis></emphasis><emphasis></emphasis></para>
+        <para><emphasis></emphasis></para>
       </section>
 
       <section>
@@ -4936,7 +5112,8 @@
       <section>
         <title>Stop Words</title>
 
-        <para></para>
+        <para><emphasis role="bold">IMPORTANT: If NoZebra is set to 'Use' this
+        option will not appear on the administration menu</emphasis></para>
       </section>
 
       <section>
@@ -5725,7 +5902,7 @@
       could just as well use any template you wish with a bit more editing.
       This may be appropriate if you have a small library, want to allow
       librarians to easily add pages, and do not want to support a complete
-      CMS. </para>
+      CMS.</para>
 
       <itemizedlist>
         <listitem>
@@ -5750,7 +5927,7 @@
           <para><emphasis>template_name =&gt;
           "opac-main.tmpl",</emphasis></para>
 
-          <para>To this code: </para>
+          <para>To this code:</para>
 
           <para><emphasis>template_name =&gt; "pages.tmpl",</emphasis></para>
         </listitem>
@@ -5786,10 +5963,10 @@
         </listitem>
 
         <listitem>
-          <para> Copy
+          <para>Copy
           /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tmpl
-          to /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tmpl
-          </para>
+          to
+          /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tmpl</para>
         </listitem>
 
         <listitem>
@@ -5861,7 +6038,7 @@
 
         <para>If you have problems check file permissions on pages.pl and
         pages.tmpl. They should have the same user and group as other Koha
-        files like opac-main.pl. </para>
+        files like opac-main.pl.</para>
       </section>
 
       <section>
@@ -5870,12 +6047,12 @@
         <para>Instead of using the address
         http://youraddress/cgi-bin/koha/pages.pl?p=test you can shorten it to
         http://youraddress/pages.pl?p=test Just open up
-        /etc/koha/koha-httpd.conf and add the follow at about line 13: </para>
+        /etc/koha/koha-httpd.conf and add the follow at about line 13:</para>
 
         <para><emphasis>ScriptAlias /pages.pl
         "/usr/share/koha/opac/cgi-bin/opac/pages.pl" </emphasis></para>
 
-        <para>Then restart Apache. </para>
+        <para>Then restart Apache.</para>
       </section>
     </section>
 
@@ -5883,7 +6060,7 @@
       <title>Usage</title>
 
       <para>After setting up Koha as a CMS you can create new pages following
-      these instructions: </para>
+      these instructions:</para>
 
       <section>
         <title>Adding Pages</title>
@@ -5914,7 +6091,7 @@
             <para>Enter starting HTML in the Value field</para>
 
             <screenshot>
-              <screeninfo>Add a new preference </screeninfo>
+              <screeninfo>Add a new preference</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -5959,8 +6136,8 @@
         <para>This process can be used to create recommended reading lists
         within Koha. So once the code changes have been made per the
         instructions on 'Koha as a CMS' you go through the 'Adding a New Page'
-        instructions above to great a page for 'Recommended Reading Lists'
-        </para>
+        instructions above to great a page for 'Recommended Reading
+        Lists'</para>
 
         <screenshot>
           <screeninfo>Create page by modifying a system
@@ -5975,7 +6152,7 @@
 
         <para>Next we need to create pages for our various classes (or
         categories). To do this, return to the 'Adding a New Page' section and
-        create a preference for the first class. </para>
+        create a preference for the first class.</para>
 
         <screenshot>
           <screeninfo>Add a new sys pref for another page</screeninfo>
@@ -5989,7 +6166,7 @@
 
         <para>Next you'll want to link your first page to your new second
         page, go to the page_recommend preference and click 'Edit.' Now you
-        want to edit the HTML to include a link to your newest page: </para>
+        want to edit the HTML to include a link to your newest page:</para>
 
         <screenshot>
           <screeninfo>Edit original preference to add new page</screeninfo>
