@@ -3258,6 +3258,38 @@
 
             <para>Asks: Include the following JavaScript on all pages in the
             OPAC</para>
+
+            <screenshot>
+              <screeninfo>OPAC login box before opacuserjs edit</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/opacuserjs-before.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <screenshot>
+              <screeninfo>JavaScript in opacuserjs to change the OPAC login
+              box</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/opacuserjs.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <screenshot>
+              <screeninfo>New Opac login box after editing
+              opacuserjs</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/opacuserjs-after.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </section>
 
           <section>
@@ -4136,8 +4168,8 @@
 
             <para>Default: Don't use</para>
 
-            <para>Asks: ___ PazPar2 to group similar results on the OPAC.
-            </para>
+            <para>Asks: ___ PazPar2 to group similar results on the
+            OPAC.</para>
 
             <para>Values:</para>
 
@@ -4201,7 +4233,7 @@
 
             <para>Default: Don't remove</para>
 
-            <para>Asks: ___ stopwords specified in Koha from searches. </para>
+            <para>Asks: ___ stopwords specified in Koha from searches.</para>
 
             <para>Values:</para>
 
@@ -4320,7 +4352,7 @@
           <para></para>
 
           <section>
-            <title>defaultSortField &amp; defaultSortOrder </title>
+            <title>defaultSortField &amp; defaultSortOrder</title>
 
             <para>defaultSortField Default: author</para>
 
@@ -4388,7 +4420,7 @@
             <para>Default: 20</para>
 
             <para>Asks: By default, show ___ results per page in the staff
-            client. </para>
+            client.</para>
           </section>
 
           <section>
@@ -4453,8 +4485,8 @@
 
             <para>Default: 20</para>
 
-            <para>Asks: By default, show ___ results per page in the OPAC.
-            </para>
+            <para>Asks: By default, show ___ results per page in the
+            OPAC.</para>
           </section>
 
           <section>
@@ -4463,9 +4495,9 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ an item's branch, location and call number in OPAC
-            search results. </para>
+            search results.</para>
 
-            <para>Values: </para>
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -4557,6 +4589,226 @@
         <title>Staff Client</title>
 
         <para></para>
+
+        <section>
+          <title>intranetcolorstylesheet</title>
+
+          <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
+          on all pages in the staff interface. </para>
+
+          <para><emphasis role="bold">IMPORTANT: Leave this field blank to
+          disable.</emphasis></para>
+        </section>
+
+        <section>
+          <title>IntranetmainUserblock</title>
+
+          <para>Asks: Show the following HTML in its own column on the main
+          page of the staff client</para>
+
+          <screenshot>
+            <screeninfo>Sample HTML for IntranetmainUserblock</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/IntranetmainUserblock-html.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Message from IntranetmainUserblock as it appears on
+            the Staff Client main page</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/IntranetmainUserblock.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+
+        <section>
+          <title>intranetstylesheet</title>
+
+          <para>Asks: Include the stylesheet at ___ on all pages in the staff
+          interface, instead of the default. </para>
+
+          <para><emphasis role="bold">IMPORTANT: This should be a complete
+          URL, starting with http://</emphasis></para>
+        </section>
+
+        <section>
+          <title>intranetuserjs</title>
+
+          <para>Asks: Include the following JavaScript on all pages in the
+          staff interface</para>
+
+          <screenshot>
+            <screeninfo>Sample JavaScript to alter the staff client
+            login</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/intranetuserjs-code.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Link to Self Checkout appears on staff client login
+            because of Javascript</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/intranetuserjs.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+
+        <section>
+          <title>language</title>
+
+          <para>Default: English</para>
+
+          <para>Asks: Enable the following languages on the staff
+          interface</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>English</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>To install additional languages you need to run
+          misc/translation/install-code.pl. For example, to install French you
+          would run the following command <emphasis>install-code.pl
+          fr-FR</emphasis> to make the templates, once they exist and are in
+          the right place then they will show up as an option in this
+          preference.</para>
+        </section>
+
+        <section>
+          <title>staffClientBaseURL</title>
+
+          <para>Asks: The staff client is located at http:// ___</para>
+        </section>
+
+        <section>
+          <title>template</title>
+
+          <para>Default: prog</para>
+
+          <para>Asks: Use the ___ theme on the staff interface. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>prog</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>viewISBD</title>
+
+          <para>Default: Allow</para>
+
+          <para>Asks: ___ staff to view records in ISBD form on the staff
+          client. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Allow</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't allow</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>viewLabeledMARC</title>
+
+          <para>Default: Allow</para>
+
+          <para>Asks: ___ staff to view records in labeled MARC form on the
+          staff client. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Allow</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't allow</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>viewMARC</title>
+
+          <para>Default: Allow</para>
+
+          <para>Asks: ___ staff to view records in plain MARC form on the
+          staff client. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Allow</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't allow</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>yuipath</title>
+
+          <para>Default: included with Koha</para>
+
+          <para>Asks: Use the Yahoo UI libraries ___</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>from Yahoo's servers</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>With this option there is less demand on your servers,
+                  but if the Internet goes down there will be issues</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>included with Koha</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>With this option calls are made faster, and they will
+                  still work if the Internet goes down</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section>
