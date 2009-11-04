@@ -4978,7 +4978,7 @@
             <title>Library Property Groups</title>
 
             <para>You can assign specific categories to your libraries by
-            adding groups for them </para>
+            adding groups for them</para>
 
             <screenshot>
               <screeninfo>Library Property Groups</screeninfo>
@@ -5017,7 +5017,7 @@
 
         <para>If you place orders from more than one country you will want to
         input currency exchange rates so that your acquisitions module will
-        properly calculate totals. </para>
+        properly calculate totals.</para>
 
         <screenshot>
           <screeninfo>Currencies</screeninfo>
@@ -5036,7 +5036,177 @@
       <section>
         <title>Item Types</title>
 
-        <para></para>
+        <para>Koha allows you to organize your collection by item types and
+        collection codes. Item types typically refer to the material type
+        (book, cd, dvd, etc), but can be used in any way that works for your
+        library.</para>
+
+        <screenshot>
+          <screeninfo>Item Types</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/basicparams/itemtypes.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <section>
+          <title>Adding Item Types</title>
+
+          <para>To add a new item type, simply click the 'New Item Type'
+          button at the top of the Item Types page.</para>
+
+          <screenshot>
+            <screeninfo>Sample DVD Item Type</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/additemtype.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>In the 'Item Type' field, enter a short code for your item
+              type</para>
+            </listitem>
+
+            <listitem>
+              <para>The description is the plain text definition of the item
+              type</para>
+            </listitem>
+
+            <listitem>
+              <para>You can choose to have an image associated with your item
+              type</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You can choose from a series of image
+                  collections</para>
+                </listitem>
+
+                <listitem>
+                  <para>You can link to a remote image</para>
+                </listitem>
+
+                <listitem>
+                  <para>Or you can just have no image associated with the item
+                  type</para>
+                </listitem>
+
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: To have your item
+                  type images appear in the OPAC you need to set
+                  noItemTypeImages to 'Show'</emphasis></para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para><emphasis>Get there: </emphasis>More &gt;
+                      Administration &gt; Global System Preferences &gt;
+                      Admin</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>For items that do not circulate, check the 'Not for loan'
+              options</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Items marked 'Not for loan' will appear in the
+                  catalog, but cannot be checked out to patrons</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Enter the total number of renewals allowed for the item
+              type in the 'Renewals' box</para>
+            </listitem>
+
+            <listitem>
+              <para>For items that you charge a rental fee for, enter the
+              total fee you charge in the 'Rental charge' field</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: Do not enter symbols
+                  in this field, only numbers and decimal points (ex. $5.00
+                  should be entered as 5 or 5.00)</emphasis></para>
+                </listitem>
+
+                <listitem>
+                  <para>This will charge the patron on checkout</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>When finished, click 'Save Changes'</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis>TIP: All fields, with the exception of the
+                  'Item Type' will be editable from the Item Types
+                  list</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Your new item type will now appear on the list</para>
+
+              <screenshot>
+                <screeninfo>New DVD Item Type</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/newitemtype.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Editing Item Types</title>
+
+          <para>Each item type has an Edit button beside it. To edit an item
+          simply click the 'Edit' link. </para>
+
+          <para><emphasis role="bold">IMPORTANT: You will not be able to edit
+          the code you assigned as the 'Item Type' but you will be able to
+          edit the description for the item.</emphasis></para>
+        </section>
+
+        <section>
+          <title>Deleting Item Types</title>
+
+          <para>Each item has a Delete button beside it. To delete an item,
+          simply click the 'Delete' link. </para>
+
+          <para><emphasis role="bold">IMPORTANT: You will not be able to
+          delete item types that are being used by items within your
+          system.</emphasis></para>
+
+          <screenshot>
+            <screeninfo>Warning when you try to delete an item that is in
+            use</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/nodeleteitemtype.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section>
@@ -5051,6 +5221,137 @@
 
       <para>Settings for controlling circulation and patron
       information.</para>
+
+      <section>
+        <title>Patron Categories</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Cities and Towns</title>
+
+        <para>To standardize patron input you can define cities or towns
+        withing your region so that when new patrons are added librarians
+        simply have to select the town from a list instead of having to type
+        the town and zip (or postal) code information.</para>
+
+        <section>
+          <title>Adding a City</title>
+
+          <para>To add a new city, click the 'New City' button at the top of
+          the page and enter the city name and zip/postal code.</para>
+
+          <screenshot>
+            <screeninfo>New city entry form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/newcity.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>One you click Submit, your city will be saved and will be
+          listed on the Cities and Towns page</para>
+
+          <screenshot>
+            <screeninfo>List of Cities</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/cities.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Cities can be edited or deleted at any time.</para>
+        </section>
+
+        <section>
+          <title>Viewing Cities on Patron Add Form</title>
+
+          <para>If you have defined local cities using the New city form, then
+          when adding or editing a patron record you will see those cities in
+          a pull down menu to make city selection easy.</para>
+
+          <screenshot>
+            <screeninfo>Cities pull down on the patron record</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/patroncity.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>This will allow for easy entry of local cities into the patron
+          record without risking the potential for typos or mistaken
+          zip/postal codes.</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Road Types</title>
+
+        <para>To standardize patron input you can define road types withing
+        your region so that when new patrons are added librarians simply have
+        to select the road from a list instead of having to type it in.
+        </para>
+
+        <para><emphasis>TIP: If you want your patrons to have their road types
+        abbreviated all of the time then you can enter the appropriate
+        abbreviations here, if you'd like the road types to always be spelled
+        out you can do that here as well.</emphasis></para>
+
+        <section>
+          <title>Adding Road Types</title>
+
+          <para>To add a road type, click 'New Road Type' and then enter the
+          road type the way you'd like it displayed.</para>
+
+          <screenshot>
+            <screeninfo>New Road</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/newroad.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once you submit the form, your new road type will be listed on
+          the Road Types page</para>
+
+          <screenshot>
+            <screeninfo>Roads in Koha</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/roads.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+
+        <section>
+          <title>Viewing Road Types on Patron Add form</title>
+
+          <para>When adding or editing a patron, if you have road types
+          defined, there will be a pull down to choose the road type
+          from.</para>
+
+          <screenshot>
+            <screeninfo>Road types on patron record</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/basicparams/patronroad.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+      </section>
 
       <section>
         <title>Patron Attribute Types</title>
@@ -5129,6 +5430,39 @@
 
         <para><emphasis role="bold">IMPORTANT: If NoZebra is set to 'Use' this
         option will not appear on the administration menu</emphasis></para>
+
+        <para><emphasis role="bold"><emphasis>Stop words are words that you
+        want the search system to ignore. Koha comes with a standard list of
+        stop words that can be edited by visiting the Stop Word administration
+        area.</emphasis></emphasis></para>
+
+        <screenshot>
+          <screeninfo>Stop word list</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/additional/stopwords.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para><emphasis role="bold"><emphasis>To add a new stop word to the
+        list, click the 'New Stop Word' button and add the word you'd like
+        ignored</emphasis></emphasis></para>
+
+        <screenshot>
+          <screeninfo>New stop word</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/additional/newstop.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para><emphasis role="bold"><emphasis role="bold">IMPORTANT: If you
+        change something in this table, ask your administrator to run
+        misc/batchRebuildBiblioTables.pl script.</emphasis></emphasis></para>
       </section>
 
       <section>
@@ -5146,7 +5480,7 @@
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="images/admin/basicparams/z39list.png" />
+              <imagedata fileref="images/admin/additional/z39list.png" />
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -5174,7 +5508,7 @@
 
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="images/admin/basicparams/newz39.png" />
+                    <imagedata fileref="images/admin/additional/newz39.png" />
                   </imageobject>
                 </mediaobject>
               </screenshot>
