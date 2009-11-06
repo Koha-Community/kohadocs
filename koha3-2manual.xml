@@ -5808,6 +5808,210 @@
         and experience the same results.</emphasis></para>
 
         <para></para>
+
+        <section>
+          <title>Default Issuing Rules</title>
+
+          <para>Using the issuing rules matrix you can defien rules that
+          depend on patron/item type combos. To set your rules, choose a
+          library from the pull down: </para>
+
+          <screenshot>
+            <screeninfo>Libraries to apply the rules to</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/selectissuinglibrary.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para><emphasis>TIP: If you leave this set to 'Default' it will
+          apply the rules to all libraries</emphasis></para>
+
+          <para>From the matrix you can choose any combination of patron
+          categories and item types to apply the rules to</para>
+
+          <screenshot>
+            <screeninfo>Setting issuing rules for your libraries</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/addcircrule.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>First choose which patron category you'd like the rule to
+              be applied to. If you leave this to 'Default' it will apply to
+              all patron categories</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose the 'Item Type' you would like this rule to apply
+              to. If you leave this to 'Default' it will apply to all item
+              types</para>
+            </listitem>
+
+            <listitem>
+              <para>'Fine Amount' should have the amount you would like to
+              charge for overdue items</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: Enter only numbers
+                  and decimal points.</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>The 'Fine Grace Period' is the period of time an item can
+              be overdue before you start charging fines.</para>
+            </listitem>
+
+            <listitem>
+              <para>Enter the 'Fine Charging Interval' in days (ex. charge
+              fines every 1 day, or every 2 days)</para>
+            </listitem>
+
+            <listitem>
+              <para>Limit the number of items a patron can have checked out at
+              the same time by entering a number in the 'Current Checkouts
+              Allowed' field</para>
+            </listitem>
+
+            <listitem>
+              <para>Define the period of time and item can be checked out to a
+              patron by entering the number of days in the 'Loan Period'
+              box.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>When finished, click 'Add to save your changed.</para>
+
+          <para><emphasis role="bold">IMPORTANT: To modify a rule, create a
+          new one with the same patron type and item type.</emphasis></para>
+        </section>
+
+        <section>
+          <title>Default Checkouts and Hold Policy</title>
+
+          <para>You can set a default maximum number of checkouts and hold
+          policy that will be used if none is defined below for a particular
+          item type or category.</para>
+
+          <screenshot>
+            <screeninfo>Default Checkouts and Hold Policy</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/defaultcheckholds.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>From this menu you can set a default to apply to all item
+          types and patrons in the library.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>In 'Total Current Checkouts Allowed' enter the totall
+              number of items patrons can have checked out at one time</para>
+            </listitem>
+
+            <listitem>
+              <para>Control where patrons can place holds from using the 'Hold
+              Policy' menu</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>From Any Library: Patrons from any library may put
+                  this item on hold. (default if none is defined)</para>
+                </listitem>
+
+                <listitem>
+                  <para>From Home Library: Only patrons from the item's home
+                  library may put this book on hold.</para>
+                </listitem>
+
+                <listitem>
+                  <para>No Holds Allowed: No patron may put this book on
+                  hold.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Checkouts Per Patron</title>
+
+          <para>For this library, you can specify the maximum number of loans
+          that a patron of a given category can make, regardless of the item
+          type. </para>
+
+          <screenshot>
+            <screeninfo>Set default checkouts per patron category</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/checkoutsperpatron.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para><emphasis>TIP: If the total amount loanable for a given patron
+          category is left blank, no limit applies, except possibly for a
+          limit you define for a specific item type. </emphasis></para>
+        </section>
+
+        <section>
+          <title>Item Hold Polcies</title>
+
+          <para> For this library, you can edit rules for given itemtypes,
+          regardless of the patron's category. Currently, this means hold
+          policies. </para>
+
+          <screenshot>
+            <screeninfo>Hold policies per item type</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/holdsperitem.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The various policies have the following effects:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>From Any Library: Patrons from any library may put this
+              item on hold. (default if none is defined)</para>
+            </listitem>
+
+            <listitem>
+              <para>From Home Library: Only patrons from the item's home
+              library may put this book on hold.</para>
+            </listitem>
+
+            <listitem>
+              <para>No Holds Allowed: No patron may put this book on
+              hold.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis role="bold">IMPORTANT: Note that if the system
+          preference AllowHoldPolicyOverride set to 'allow', these policies
+          can be overridden by your circulation staff. </emphasis></para>
+
+          <para><emphasis role="bold">IMPORTANT: These policies are based on
+          the patron's home branch, not the branch that the reserving staff
+          member is from. </emphasis></para>
+        </section>
       </section>
 
       <section>
@@ -7198,6 +7402,25 @@
             the OPAC and the intranet).</emphasis></para>
           </listitem>
         </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>Cataloging</title>
+
+      <para></para>
+
+      <section>
+        <title>Authority Fields</title>
+
+        <para><emphasis role="bold">Question: </emphasis>Why can't I edit 1xx,
+        6xx, or 7xx fields in my catalog record?</para>
+
+        <para><emphasis role="bold">Answer:</emphasis> These fields are
+        authority controlled and you probably have the BiblioAddsAuthorities
+        set to 'allow'. When it is set to 'don't allow' these fields will be
+        locked and require you to search for an exisiting authority
+        record.</para>
       </section>
     </section>
 
