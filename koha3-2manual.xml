@@ -5426,7 +5426,7 @@
 
             <listitem>
               <para>Check the box next to 'Repeatable' to let a patron record
-              have multiple values of this attribute. </para>
+              have multiple values of this attribute.</para>
 
               <itemizedlist>
                 <listitem>
@@ -5452,12 +5452,12 @@
 
             <listitem>
               <para>Check 'Allow password' to make it possible to associate a
-              password with this attribute. </para>
+              password with this attribute.</para>
             </listitem>
 
             <listitem>
               <para>Check 'Display in OPAC' to display this attribute on a
-              patron's details page in the OPAC. </para>
+              patron's details page in the OPAC.</para>
             </listitem>
 
             <listitem>
@@ -5468,12 +5468,12 @@
             <listitem>
               <para>Authorized value category; if one is selected, the patron
               record input page will only allow values to be chosen from the
-              authorized value list. </para>
+              authorized value list.</para>
 
               <itemizedlist>
                 <listitem>
                   <para>You will first need to add an authorized value list
-                  for it to appear in this menu </para>
+                  for it to appear in this menu</para>
 
                   <itemizedlist>
                     <listitem>
@@ -5511,10 +5511,92 @@
             </mediaobject>
           </screenshot>
         </section>
+
+        <section>
+          <title>Editing/Deleting Patron Attributes</title>
+
+          <para>Each patron attribute has an edit and a delete link beside it
+          on the list of attributes.</para>
+
+          <para>Some fields in the attribute will not be editable once
+          created:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Patron attribute type code</para>
+            </listitem>
+
+            <listitem>
+              <para>Repeatable</para>
+            </listitem>
+
+            <listitem>
+              <para>Unique identifier</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>You will be unable to delete an attribute if it's in
+          use.</para>
+
+          <screenshot>
+            <screeninfo>Warning when trying to delete an attribute that is in
+            use</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/deletepatronattr.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section>
         <title>Circulation &amp; Fine Rules</title>
+
+        <para>These rules define how your items are circulated, how/when fines
+        are calcuated and how holds are handled. The rules are applied from
+        most specific to less specific, using the first found in this
+        order:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>same library, same patron type, same item type</para>
+          </listitem>
+
+          <listitem>
+            <para>same library, same patron type, default item type</para>
+          </listitem>
+
+          <listitem>
+            <para>same library, default patron type, same item type</para>
+          </listitem>
+
+          <listitem>
+            <para>same library, default patron type, default item type</para>
+          </listitem>
+
+          <listitem>
+            <para>default library, same patron type, same item type</para>
+          </listitem>
+
+          <listitem>
+            <para>default library, same patron type, default item type</para>
+          </listitem>
+
+          <listitem>
+            <para>default library, default patron type, same item type</para>
+          </listitem>
+
+          <listitem>
+            <para>default library, default patron type, default item
+            type</para>
+          </listitem>
+        </itemizedlist>
+
+        <para><emphasis>TIP: If you are a single library system, you can leave
+        your library selection to 'default library' or choose your branch name
+        and experience the same results.</emphasis></para>
 
         <para></para>
       </section>
@@ -6882,6 +6964,123 @@
     <title>FAQs</title>
 
     <para></para>
+
+    <section>
+      <title>Reports</title>
+
+      <para></para>
+
+      <section>
+        <title>Define Codes Stored in DB</title>
+
+        <para> </para>
+
+        <section>
+          <title>Fines Table</title>
+
+          <para><emphasis role="bold">Question:</emphasis> What do the codes
+          in the accounttype field in the accountlines table stand for?</para>
+
+          <para><emphasis role="bold">Answer:</emphasis></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>A = acc't management fee</para>
+            </listitem>
+
+            <listitem>
+              <para>C = credit</para>
+            </listitem>
+
+            <listitem>
+              <para>F = overdue fine</para>
+            </listitem>
+
+            <listitem>
+              <para>FOR =forgiven</para>
+            </listitem>
+
+            <listitem>
+              <para>FU = overdue, still acccruing</para>
+            </listitem>
+
+            <listitem>
+              <para>L = Lost Item</para>
+            </listitem>
+
+            <listitem>
+              <para>M = Sundry </para>
+            </listitem>
+
+            <listitem>
+              <para>N = New Card</para>
+            </listitem>
+
+            <listitem>
+              <para>PAY = payment </para>
+            </listitem>
+
+            <listitem>
+              <para>W = writeoff</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Statistics Table</title>
+
+          <para><emphasis role="bold">Question: </emphasis>What are the
+          possible codes for the type field in the statistics table?</para>
+
+          <para><emphasis role="bold">Answer:</emphasis></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>localuse</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Registers if an item that had been checked out to a
+                  statistics patron (category type = 'X') is returned</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>issue</para>
+            </listitem>
+
+            <listitem>
+              <para>return</para>
+            </listitem>
+
+            <listitem>
+              <para>renew</para>
+            </listitem>
+
+            <listitem>
+              <para>writeoff</para>
+            </listitem>
+
+            <listitem>
+              <para>payment</para>
+            </listitem>
+
+            <listitem>
+              <para>CreditXXX</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>stores different types of fee credits, so a query to
+                  catch them all would include a clause like "type like
+                  'Credit%'" </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+    </section>
 
     <section>
       <title>Enhanced Content</title>
