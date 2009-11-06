@@ -5240,7 +5240,216 @@
       <section>
         <title>Patron Categories</title>
 
-        <para></para>
+        <para>Patron categories allow you to organize your patrons into
+        different roles, age groups, and patron types. </para>
+
+        <screenshot>
+          <screeninfo>Patron category list</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/patroncatlist.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Patrons are assigned to one of six main categories:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Adult</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Most common patron type, usually used for a general
+                'Patron' category.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Child</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Children patrons can have a guardian to be attached to
+                them.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Staff</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Patrons within the staff category will have access to
+                the staff client.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Organizational</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Organizational patrons are organizations. Organizations
+                can be used as guarantors for Professional patrons.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Professional</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Professional patrons can be linked to Organizational
+                patrons</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Statistical</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This patron type is used strictly for statistical
+                purposes, such as in house use of items.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <section>
+          <title>Adding a patron category</title>
+
+          <para>To add a new patron category click 'New Category' at the top
+          of the page</para>
+
+          <screenshot>
+            <screeninfo>New patron category form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/newpatroncat.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The 'Category Code' is an identifier for your new code.
+              </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: The category code is
+                  limited to 10 characters (numbers and
+                  letters)</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Enter a plain text version of the category in the
+              'Description' field.</para>
+            </listitem>
+
+            <listitem>
+              <para>Enrollment period should be filled in if you have a
+              limited enrollment period for your patrons (eg. Student cards
+              expire after 9 months)</para>
+            </listitem>
+
+            <listitem>
+              <para>Some patron categories can have a minimum age requirement
+              associated with them, enter this age in the 'Age
+              required'</para>
+            </listitem>
+
+            <listitem>
+              <para>Patron categories can also have a maximum age associated
+              with them (such as children), enter this age in the 'Upperage
+              limit'</para>
+            </listitem>
+
+            <listitem>
+              <para>If you charge a membership fee for your patrons (such as
+              those who live in another region) you can enter that in the
+              'Enrollment fee' field.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: Only enter numbers
+                  and decimals in this field</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>If you want your patron to receive overdue notices, set
+              the 'Overdue notice required' to 'Yes'</para>
+            </listitem>
+
+            <listitem>
+              <para>If you charge patrons for placing holds on items, enter
+              the fee amount in the 'Hold fee' field.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: Only enter numbers
+                  and decimals in this field</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>In the 'Category type' field choose one of the six main
+              parent categories</para>
+
+              <screenshot>
+                <screeninfo>Six main patron categories</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/patroncirc/patroncatpulldown.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Finally you can assign advanced messaging preferences by
+              default to a patron category</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: Requires that you
+                  have EnhancedMessagingPreferences turned
+                  on</emphasis></para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para><emphasis>Get there:</emphasis> More &gt;
+                      Administration &gt; Global system preferences &gt;
+                      Patrons &gt; EnhancedMessagingPreferences</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: These can be changed
+                  for individual patrons, this setting is just a default to
+                  make it easier to set up messages for an entire
+                  category</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section>
@@ -6964,6 +7173,33 @@
     <title>FAQs</title>
 
     <para></para>
+
+    <section>
+      <title>Display</title>
+
+      <para></para>
+
+      <section>
+        <title>Custom Item Type/Authorized Value Icons</title>
+
+        <para><emphasis role="bold">Question:</emphasis> Can I have my own set
+        of item type images (or authorized value icons)?</para>
+
+        <para><emphasis role="bold">Answer: </emphasis>Absoltuley. To add
+        additional icons to your system you simply add a new directory to
+        koha-tmpl/intranet-tmpl/prog/img/itemtypeimg/ and to
+        koha-tmpl/opac-tmpl/prog/itemtypeimg and put your icons in the new
+        directory. Your icons will show up in a new tab as soon as they are in
+        the folders.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>TIP: Remember to put the icons in both places (on
+            the OPAC and the intranet).</emphasis></para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
 
     <section>
       <title>Reports</title>
