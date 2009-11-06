@@ -2922,6 +2922,21 @@
             <para><emphasis role="bold">IMPORTANT: This must be filled in
             correctly for RSS, unAPI, and search plugins to
             work.</emphasis></para>
+
+            <para><emphasis role="bold">IMPORTANT: This must be filled in to
+            show 'OPAC View' links from bib records in the staff
+            client:</emphasis></para>
+
+            <screenshot>
+              <screeninfo>With OPACBaseURL set, links to the OPAC will appear
+              on each individual bib record in the staff client</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/OPACBaseURL.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </section>
 
           <section>
@@ -5179,7 +5194,7 @@
           <title>Editing Item Types</title>
 
           <para>Each item type has an Edit button beside it. To edit an item
-          simply click the 'Edit' link. </para>
+          simply click the 'Edit' link.</para>
 
           <para><emphasis role="bold">IMPORTANT: You will not be able to edit
           the code you assigned as the 'Item Type' but you will be able to
@@ -5190,7 +5205,7 @@
           <title>Deleting Item Types</title>
 
           <para>Each item has a Delete button beside it. To delete an item,
-          simply click the 'Delete' link. </para>
+          simply click the 'Delete' link.</para>
 
           <para><emphasis role="bold">IMPORTANT: You will not be able to
           delete item types that are being used by items within your
@@ -5247,7 +5262,7 @@
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/basicparams/newcity.png" />
+                <imagedata fileref="images/admin/patroncirc/newcity.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -5260,7 +5275,7 @@
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/basicparams/cities.png" />
+                <imagedata fileref="images/admin/patroncirc/cities.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -5280,7 +5295,7 @@
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/basicparams/patroncity.png" />
+                <imagedata fileref="images/admin/patroncirc/patroncity.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -5296,8 +5311,7 @@
 
         <para>To standardize patron input you can define road types withing
         your region so that when new patrons are added librarians simply have
-        to select the road from a list instead of having to type it in.
-        </para>
+        to select the road from a list instead of having to type it in.</para>
 
         <para><emphasis>TIP: If you want your patrons to have their road types
         abbreviated all of the time then you can enter the appropriate
@@ -5315,7 +5329,7 @@
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/basicparams/newroad.png" />
+                <imagedata fileref="images/admin/patroncirc/newroad.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -5328,7 +5342,7 @@
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/basicparams/roads.png" />
+                <imagedata fileref="images/admin/patroncirc/roads.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -5346,7 +5360,7 @@
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/basicparams/patronroad.png" />
+                <imagedata fileref="images/admin/patroncirc/patronroad.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -5356,7 +5370,147 @@
       <section>
         <title>Patron Attribute Types</title>
 
-        <para></para>
+        <para>Patron attributes can be used to define custom fields to
+        associate with your patron records. A common use for this field would
+        be for a student ID number or a Driver's license number.</para>
+
+        <screenshot>
+          <screeninfo>List of Patron Attributes</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/attributes.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <section>
+          <title>Adding Patron Attributes</title>
+
+          <para>To add a new Patron Attribute Type, click the 'New Patron
+          Attribute Type' button at the top of the page</para>
+
+          <screenshot>
+            <screeninfo>Add Patron Attribute Type form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/addattribute.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>In the 'Patron attribute type code', enter a short code to
+              identifty this field</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: This field is limited
+                  to 10 characters (numbers and letters
+                  only)</emphasis></para>
+                </listitem>
+
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: This setting cannot
+                  be changed after an attribute is defined</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>In the 'Description' field, enter a longer (plain text)
+              explanation of what this field will contain</para>
+            </listitem>
+
+            <listitem>
+              <para>Check the box next to 'Repeatable' to let a patron record
+              have multiple values of this attribute. </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: This setting cannot
+                  be changed after an attribute is defined</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>If 'Unique identifier' is checked, the attribute will be a
+              unique identifier which means, if a value is given to a patron
+              record, the same value cannot be given to a different
+              record.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: This setting cannot
+                  be changed after an attribute is defined</emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Check 'Allow password' to make it possible to associate a
+              password with this attribute. </para>
+            </listitem>
+
+            <listitem>
+              <para>Check 'Display in OPAC' to display this attribute on a
+              patron's details page in the OPAC. </para>
+            </listitem>
+
+            <listitem>
+              <para>Check 'Searchable' to make this attribute searchable in
+              the staff patron search.</para>
+            </listitem>
+
+            <listitem>
+              <para>Authorized value category; if one is selected, the patron
+              record input page will only allow values to be chosen from the
+              authorized value list. </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You will first need to add an authorized value list
+                  for it to appear in this menu </para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para><emphasis>Get there: </emphasis>More &gt;
+                      Administration &gt; Catalog &gt; Authorized
+                      Values</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para><emphasis role="bold">IMPORTANT: an authorized value
+                  list is not enforced during batch patron import.
+                  </emphasis></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Click Save to save your new attribute</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Once added your attibute will appear on the list of attributes
+          and also on the patron record add/edit form</para>
+
+          <screenshot>
+            <screeninfo>Patron Attributes list on the Patron add/edit
+            form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/patronattribute.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section>
@@ -6728,6 +6882,28 @@
     <title>FAQs</title>
 
     <para></para>
+
+    <section>
+      <title>Enhanced Content</title>
+
+      <para></para>
+
+      <section>
+        <title>FRBRizing Content</title>
+
+        <para><emphasis role="bold">Question: </emphasis>At our public library
+        we are running a Koha installation and we've tried to turn on all the
+        nice functionalities in Koha such as the frbrising tool, but do not
+        get the same result as Nelsonville public library.</para>
+
+        <para><emphasis role="bold">Answer: </emphasis>In fact, this feature
+        is quite tricky to make that right. First it looks at xisbn service.
+        And then search in your database for that isbn. So both xisbn and your
+        internal isbn (in biblio table) have to be normalized. You could
+        therefore use the script misc/batchupdateISBNs.pl (it removes all the
+        - in your local ISBNs)</para>
+      </section>
+    </section>
   </appendix>
 
   <appendix>
