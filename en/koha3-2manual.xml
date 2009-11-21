@@ -5241,7 +5241,7 @@
         <title>Patron Categories</title>
 
         <para>Patron categories allow you to organize your patrons into
-        different roles, age groups, and patron types. </para>
+        different roles, age groups, and patron types.</para>
 
         <screenshot>
           <screeninfo>Patron category list</screeninfo>
@@ -5341,8 +5341,8 @@
 
           <itemizedlist>
             <listitem>
-              <para>The 'Category Code' is an identifier for your new code.
-              </para>
+              <para>The 'Category Code' is an identifier for your new
+              code.</para>
 
               <itemizedlist>
                 <listitem>
@@ -5814,7 +5814,7 @@
 
           <para>Using the issuing rules matrix you can defien rules that
           depend on patron/item type combos. To set your rules, choose a
-          library from the pull down: </para>
+          library from the pull down:</para>
 
           <screenshot>
             <screeninfo>Libraries to apply the rules to</screeninfo>
@@ -5951,7 +5951,7 @@
 
           <para>For this library, you can specify the maximum number of loans
           that a patron of a given category can make, regardless of the item
-          type. </para>
+          type.</para>
 
           <screenshot>
             <screeninfo>Set default checkouts per patron category</screeninfo>
@@ -5971,9 +5971,9 @@
         <section>
           <title>Item Hold Polcies</title>
 
-          <para> For this library, you can edit rules for given itemtypes,
+          <para>For this library, you can edit rules for given itemtypes,
           regardless of the patron's category. Currently, this means hold
-          policies. </para>
+          policies.</para>
 
           <screenshot>
             <screeninfo>Hold policies per item type</screeninfo>
@@ -7432,7 +7432,7 @@
       <section>
         <title>Define Codes Stored in DB</title>
 
-        <para> </para>
+        <para></para>
 
         <section>
           <title>Fines Table</title>
@@ -7468,7 +7468,7 @@
             </listitem>
 
             <listitem>
-              <para>M = Sundry </para>
+              <para>M = Sundry</para>
             </listitem>
 
             <listitem>
@@ -7476,7 +7476,7 @@
             </listitem>
 
             <listitem>
-              <para>PAY = payment </para>
+              <para>PAY = payment</para>
             </listitem>
 
             <listitem>
@@ -7532,7 +7532,7 @@
                 <listitem>
                   <para>stores different types of fee credits, so a query to
                   catch them all would include a clause like "type like
-                  'Credit%'" </para>
+                  'Credit%'"</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -7560,6 +7560,162 @@
         internal isbn (in biblio table) have to be normalized. You could
         therefore use the script misc/batchupdateISBNs.pl (it removes all the
         - in your local ISBNs)</para>
+      </section>
+    </section>
+
+    <section>
+      <title>System Administration</title>
+
+      <para></para>
+
+      <section>
+        <title>Errors in Zebra Cron</title>
+
+        <para><emphasis role="bold">Question</emphasis>: I am noticing some
+        errors in the koha-zebradaemon-output.log file. When new records are
+        added it takes a bit longer to index than we think they should.
+        Running rebuild zebra is often faster. Zebra ends up indexing and
+        search works, but I am concerned about the errors. Any ideas?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Rebuild_zebra.pl -r
+        deletes all of the files in the Zebra db directories (such as
+        reci-0.mf) and then recreates them. Thus, permissions will be lost,
+        and the files will be owned by the user who ran rebuild_zebra.pl. If
+        one rebuilds the zebra indexes as root, the daemons, which typically
+        run under the user koha, will not be able to update the indexes. Thus,
+        it's important then that the zebra rebuilds are put in the cronjob
+        file of the user koha, and not root. Also important is that other
+        users, such as root, don't manually execute rebuilds. </para>
+
+        <para>If one desires that another user be able to execute
+        rebuild_zebra.pl, he should be given the permission to execute 'sudo
+        -u Koha .../rebuild_zebra.pl,' (if you want to do this, you also have
+        to edit the sudoers file to pass the PERL5LIB variable with the
+        env_keep option as by default sudo strips away almost all environment
+        variables). Or, as root user, one can use a simple 'su koha' and then
+        the rebuild_zebra.pl command. </para>
+
+        <para>I've also tried to set the sticky bit on rebuild_zebra.pl, but
+        for whatever reason it didn't seem to work due to some problem with
+        the PERL5LIB variable that I wasn't able to figure. That seems to me
+        the easiest thing to do, if anybody has any idea how to make it work.
+        If it worked and were the default, I think it would help folks to
+        avoid a great deal of the problems that come up with zebra. </para>
+      </section>
+    </section>
+
+    <section>
+      <title>Hardware</title>
+
+      <para></para>
+
+      <section>
+        <title>Barcode Scanners</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What barcode scanners
+        have been known to work with Koha?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: The simple rule of
+        thumb is, does it act like a keyboard device?, if so, it will work.
+        (i.e. can you take the scanner, scan a barcode and have it show up in
+        a text editor, if so, it will work.)</para>
+
+        <para>The main points to check are that it connects to your PC
+        conveniently (can be USB or "keyboard wedge" which means it connects
+        in line with the keyboard, which is useful with older computers), and
+        that it scans the barcode type that you are using. </para>
+
+        <para> It is a good idea to test some 'used' barcodes if you have any,
+        to see whether the scanner can read scuffed or slightly wrinkled ones
+        successfully. Most scanners are capable of reading several barcode
+        types - there are many, and the specification should list the ones it
+        can read. You may need to adjust settings slightly, such as prefix and
+        suffix characters, or whether you want to send an 'enter' character or
+        not. </para>
+
+        <para>One more tip - some can be set 'always on' and may come with a
+        stand, some have triggers under the handle, some have buttons on top,
+        some are held like a pen. Think about the staff working position
+        before choosing, as a button in the wrong place can be very awkward to
+        use.</para>
+
+        <section>
+          <title>Scanners used by Koha libraries</title>
+
+          <itemizedlist>
+            <listitem>
+              <para>MS9590 VoyagerGS (more here: <ulink
+              url="http://wiki.koha.org/doku.php?id=en:documentation:barcode_scanners:ms9590_voyagergs&amp;s[]=barcode&amp;s[]=scanner">http://wiki.koha.org/doku.php?id=en:documentation:barcode_scanners:ms9590_voyagergs&amp;s[]=barcode&amp;s[]=scanner</ulink>)</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+
+      <section>
+        <title>Printers</title>
+
+        <para></para>
+
+        <section>
+          <title>Printers used by Koha libraries</title>
+
+          <itemizedlist>
+            <listitem>
+              <para>POS-X receipt printer</para>
+            </listitem>
+
+            <listitem>
+              <para>Star Micronics printer (exact model unknown) with a
+              generic/plain text driver.</para>
+            </listitem>
+
+            <listitem>
+              <para>Star SP2000 (Nelsonville) </para>
+            </listitem>
+
+            <listitem>
+              <para>Star TSP-100 futurePRINT (Geauga) </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>"I know there have been a lot of questions on receipt
+                  printers so I thought I'd pass on my findings. We have been
+                  testing the Star TSP-100 futurePRINT. I found this print to
+                  be VERY easy to configure for Koha. I was even able to
+                  customize the print job by adding our system logo (a .gif)
+                  to the top of every receipt. Also with a bitmap created in
+                  Paint was able to add a message at the bottom of each
+                  receipt with the contact information, hours and website for
+                  the library that the materials were checked out at."</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Epson TM 88 IIIP thermal receipt printers</para>
+            </listitem>
+
+            <listitem>
+              <para>Epson TM-T88IV </para>
+            </listitem>
+
+            <listitem>
+              <para>1x1 labels using a Dymolabelwriter printer</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Braille Support</title>
+
+          <para><emphasis role="bold">Question</emphasis>: Are there any
+          braille embosser or printer which has inbuilt braille converter and
+          it is accessible with UNIX environment?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>: You may want to look
+          into BRLTTY (<ulink
+          url="http://www.emptech.info/product_details.php?ID=1232">http://www.emptech.info/product_details.php?ID=1232</ulink>).</para>
+        </section>
       </section>
     </section>
   </appendix>
