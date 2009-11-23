@@ -5365,7 +5365,7 @@
           <title>Existing Values</title>
 
           <para>Koha installs with pre-defined values that your library is
-          likely to use, for instance 'Lost'. </para>
+          likely to use, for instance 'Lost'.</para>
 
           <itemizedlist>
             <listitem>
@@ -5425,7 +5425,7 @@
               <itemizedlist>
                 <listitem>
                   <para>is the shelving cart location, used by
-                  InProcessingToShelvingCart and ReturnToShelvingCart </para>
+                  InProcessingToShelvingCart and ReturnToShelvingCart</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5523,7 +5523,7 @@
               <itemizedlist>
                 <listitem>
                   <para>descriptions for the items marked as lost (appears
-                  when adding or editing an item) </para>
+                  when adding or editing an item)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5543,7 +5543,7 @@
 
               <itemizedlist>
                 <listitem>
-                  <para>reasons why a title is not for loan </para>
+                  <para>reasons why a title is not for loan</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5555,7 +5555,7 @@
                 <listitem>
                   <para>the location to be used for NewItemsDefaultLocation
                   (change description as desired), also the location expected
-                  by InProcessingToShelvingCart. </para>
+                  by InProcessingToShelvingCart.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5587,7 +5587,7 @@
               <itemizedlist>
                 <listitem>
                   <para>description of a withdrawn item (appears when adding
-                  or editing an item) </para>
+                  or editing an item)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5634,7 +5634,7 @@
 
                 <listitem>
                   <para>Use the Description field for the actual value that
-                  will be entered </para>
+                  will be entered</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -6538,7 +6538,7 @@
           <listitem>
             <para><emphasis>Get there:</emphasis> More &gt; Administration
             &gt; General System Preferences &gt; Circulation &gt;
-            UseBranchTransferLimits </para>
+            UseBranchTransferLimits</para>
           </listitem>
         </itemizedlist>
 
@@ -6590,7 +6590,63 @@
       <section>
         <title>Item Circulation Alerts</title>
 
-        <para></para>
+        <para>Libraries can decide if they want to have patrons automatically
+        notified of circulation events (check ins and check outs). These
+        preferences are set based on patron types and item types.</para>
+
+        <important>
+          <para>These preference can be overwritten by changes in the
+          individual patron's messaging preferences.</para>
+        </important>
+
+        <para>To set up circulation alerts:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Choose your library from the pull down at the top of the
+            screen</para>
+
+            <screenshot>
+              <screeninfo>Libraries to set Circulation Alerts</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/patroncirc/librariesforalert.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>To set preferences for all libraries, keep the menu set
+                to 'Default'</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>By default all item types and all patrons are notified of
+            check ins and check outs. To change this, click on the item/patron
+            type combo that you would like to stop notices for.</para>
+
+            <screenshot>
+              <screeninfo>Ciculation Alert Matrix</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/patroncirc/alertmatrix.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>In the above example, Juveniles and Kids will not
+                receive circulation notices.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
       </section>
     </section>
 
@@ -8335,7 +8391,7 @@
 
         <para><emphasis role="bold">Question</emphasis>: When editing an item,
         the new shelving location I created is not showing up by default in
-        the items where I assigned it to. </para>
+        the items where I assigned it to.</para>
 
         <para><emphasis role="bold">Answer</emphasis>: This is because you
         created the new shelving location with a code value of 0 (zero) Just
@@ -8350,7 +8406,7 @@
         <title>Why do I need Authorized Values?</title>
 
         <para><emphasis role="bold">Question</emphasis>: Why would I want to
-        define authorized values for MARC tags? </para>
+        define authorized values for MARC tags?</para>
 
         <para><emphasis role="bold">Answer</emphasis>: Authorized Values
         create a 'controlled vocabulary' for your staff. As an example, let us
@@ -8359,12 +8415,14 @@
         the institution codes for just those libraries. In that case, you
         could define an authorized values category (perhaps called "INST") and
         enter the institution codes as the authorized values for that
-        category. </para>
+        category.</para>
 
-        <tip><para>Koha automatically sets up authorized value categories for
-        your item types and branch codes, and you can link these authorized
-        values to MARC subfields when you set up your MARC tag
-        structure.</para></tip>
+        <tip>
+          <para>Koha automatically sets up authorized value categories for
+          your item types and branch codes, and you can link these authorized
+          values to MARC subfields when you set up your MARC tag
+          structure.</para>
+        </tip>
       </section>
     </section>
 
