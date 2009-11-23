@@ -5420,6 +5420,17 @@
             </listitem>
 
             <listitem>
+              <para>CART</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>is the shelving cart location, used by
+                  InProcessingToShelvingCart and ReturnToShelvingCart </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
               <para>CCODE</para>
 
               <itemizedlist>
@@ -5448,7 +5459,7 @@
                 <listitem>
                   <para>General Holdings: Acquisition Status Designator ::
                   This data element specifies acquisition status for the unit
-                  at the time of the holdings report.</para>
+                  at the time of the holdings report.a</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5538,6 +5549,18 @@
             </listitem>
 
             <listitem>
+              <para>PROC</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>the location to be used for NewItemsDefaultLocation
+                  (change description as desired), also the location expected
+                  by InProcessingToShelvingCart. </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
               <para>RESTRICTED</para>
 
               <itemizedlist>
@@ -5572,9 +5595,123 @@
         </section>
 
         <section>
-          <title>Add new Authorized Values</title>
+          <title>Add new Authorized Value Category</title>
 
-          <para></para>
+          <para>In addition to the exisiting categories that come by default
+          with Koha, librarians can add their own authorized value categories
+          to control data that is entered into the system. To add a new
+          category:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click 'New Category'</para>
+
+              <screenshot>
+                <screeninfo>New Authorized Category form</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/addauthcat.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Limit your Category to 11 characters (something short to
+              make it clear what the category is for)</para>
+            </listitem>
+
+            <listitem>
+              <para>When adding a new category you're asked to create at least
+              one authorized value</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Enter a code for your Authorized Value into the
+                  'Authorized value' field</para>
+                </listitem>
+
+                <listitem>
+                  <para>Use the Description field for the actual value that
+                  will be entered </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Click 'Save'</para>
+            </listitem>
+
+            <listitem>
+              <para>Your new category and value will appear on the list of
+              Authorized Values</para>
+
+              <screenshot>
+                <screeninfo>Custom Authorized Value on list of
+                values</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/authvallist.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Add new Authorized Value</title>
+
+          <para>New authorized values can be added to any exisiting or new
+          category. To add a value:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click 'New authorized value for ...'</para>
+
+              <screenshot>
+                <screeninfo>New Authorized Value form</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/addauthvalue.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Enter a code for your Authorized Value into the
+              'Authorized value' field</para>
+            </listitem>
+
+            <listitem>
+              <para>Use the Description field for the actual value that will
+              be entered</para>
+            </listitem>
+
+            <listitem>
+              <para>Click 'Save'</para>
+            </listitem>
+
+            <listitem>
+              <para>The new value will appear in the list along with existing
+              values</para>
+
+              <screenshot>
+                <screeninfo>List of authorized values in MARC504
+                category</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/authvals.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
     </section>
@@ -8191,6 +8328,43 @@
         the easiest thing to do, if anybody has any idea how to make it work.
         If it worked and were the default, I think it would help folks to
         avoid a great deal of the problems that come up with zebra.</para>
+      </section>
+
+      <section>
+        <title>Shelving Location Authorized Values</title>
+
+        <para><emphasis role="bold">Question</emphasis>: When editing an item,
+        the new shelving location I created is not showing up by default in
+        the items where I assigned it to. </para>
+
+        <para><emphasis role="bold">Answer</emphasis>: This is because you
+        created the new shelving location with a code value of 0 (zero) Just
+        FYI the system interprets authorized values of 0 as equaling a null so
+        when you edit a record in cataloging where the authorized value in a
+        field was assigned where the code was 0, the value displays as null in
+        the item editor (or MARC editor) instead of the value the library
+        meant it to be.</para>
+      </section>
+
+      <section>
+        <title>Why do I need Authorized Values?</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Why would I want to
+        define authorized values for MARC tags? </para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Authorized Values
+        create a 'controlled vocabulary' for your staff. As an example, let us
+        assume that your Koha installation is used by several libraries, and
+        you use MARC 21. You might want to restrict the 850a MARC subfield to
+        the institution codes for just those libraries. In that case, you
+        could define an authorized values category (perhaps called "INST") and
+        enter the institution codes as the authorized values for that
+        category. </para>
+
+        <tip><para>Koha automatically sets up authorized value categories for
+        your item types and branch codes, and you can link these authorized
+        values to MARC subfields when you set up your MARC tag
+        structure.</para></tip>
       </section>
     </section>
 
