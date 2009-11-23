@@ -5355,7 +5355,7 @@
       </section>
 
       <section>
-        <title>Authorized Values</title>
+        <title id="authorizedvalues">Authorized Values</title>
 
         <para></para>
       </section>
@@ -6174,7 +6174,62 @@
       <section>
         <title>Library Transfer Limits</title>
 
-        <para></para>
+        <para>Limit the ability to transfer items between libraries based on
+        the library sending, the library receiving, and the collection code
+        involved. These rules only go into effect if the preference
+        UseBranchTransferLimits is set to 'enforce'.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration
+            &gt; General System Preferences &gt; Circulation &gt;
+            UseBranchTransferLimits </para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Transfer limits are set based on the collections codes you have
+        applied via the <link linkend="authorizedvalues">Authorized
+        Value</link> administration area.</para>
+
+        <screenshot>
+          <screeninfo>Collection Code values assigned in the Authorized Value
+          area</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/collectcodes.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Collection codes will appear as tabs above the matrix:</para>
+
+        <screenshot>
+          <screeninfo>Collection Code tabs</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/limittocollcode.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Check the boxes for the items that should not be
+        transferable</para>
+
+        <screenshot>
+          <screeninfo>Example transfer limits set up</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/transferlimits.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>In the above example no items from the Fiction collection can be
+        transfered from FRL. In addition no Fiction collection items can be
+        transferred from CPL to FFL, FPL or FRL.</para>
       </section>
 
       <section>
