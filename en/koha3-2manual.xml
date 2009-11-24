@@ -7009,7 +7009,193 @@
     <section>
       <title>Calendar &amp; Holidays</title>
 
-      <para></para>
+      <para>Libraries can define library closings and holidays to be used when
+      calculating due dates. You can make use of the Calendar by turning on
+      the proper system preferences:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Get there: </emphasis>More &gt; Administration &gt;
+          Global System Preferences &gt; Circulation &gt; useDaysMode</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose the method for calculating due date - either
+              include days the library is closed in the calculation or don't
+              include them.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+          Global System Preferences &gt; Circulation &gt; finescalendar</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This will check the holiday calendar before charging
+              fines</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+
+      <screenshot>
+        <screeninfo>Calendar &amp; Holidays Tools</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/calendar.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <section>
+        <title>Adding Events</title>
+
+        <para>Before adding events, choose the library you would like to apply
+        the closings to. When adding events you will be asked if you would
+        like to apply the event to one branch or all branches. To add events,
+        simply</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click on the date on the calendar that you would like to
+            apply the closing to</para>
+
+            <screenshot>
+              <screeninfo>Calendar Add Form</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/calendaradd.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+
+          <listitem>
+            <para>In the form that appears above the calendar, enter the
+            closing information</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Library will be filled in automatically based on the
+                library you chose from the pull down at the top of the
+                page</para>
+              </listitem>
+
+              <listitem>
+                <para>The day information will also be filled in automatically
+                based on the date you clicked on the calendar</para>
+              </listitem>
+
+              <listitem>
+                <para>In the description enter the reason the library is
+                closed</para>
+              </listitem>
+
+              <listitem>
+                <para>Next you can choose if this event is a one time event or
+                if it is repeatable.</para>
+              </listitem>
+
+              <listitem>
+                <para>Finally decide if this event should be applied to all
+                libraries or just the one you have originally selected</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>After saving you will see the event listed in the summary
+            below the calendar</para>
+
+            <screenshot>
+              <screeninfo>Calendar Summary</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/calendarsummary.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Editing Events</title>
+
+        <para>To edit events </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click on the event on the calendar that you want to change
+            (do this by clicking on the date on the calendar, not the event
+            listed in the summary)</para>
+
+            <screenshot>
+              <screeninfo>Edit holiday form</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/calendaredit.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+
+          <listitem>
+            <para>From this form you can make edits to the holiday or deleete
+            the holiday completely. Both actions require that you click 'Save'
+            before the change will be made.</para>
+          </listitem>
+
+          <listitem>
+            <para>Clicking on repeatable events will offer slightly different
+            options</para>
+
+            <screenshot>
+              <screeninfo>Edit repeatable event</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/calendarexception.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>In the form above you will note that there is now an
+                option to 'Generate an exception for this repeated holiday,'
+                choosing this option will allow you to make it so that this
+                date is not closed even though the library is usually closed
+                on this date.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Additional Help</title>
+
+        <para>When adding or editing events you can get additional help by
+        clicking on the blue plus sign next to various different options on
+        the form</para>
+
+        <screenshot>
+          <screeninfo>Additional Calendar Help Buttons</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/tools/calendarhelp.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
     </section>
 
     <section>
@@ -8505,7 +8691,7 @@
               <itemizedlist>
                 <listitem>
                   <para>stores different types of fee credits, so a query to
-                  catch them all would include a clause like "type like
+                  catch them all would include a clause like "type LIKE
                   'Credit%'"</para>
                 </listitem>
               </itemizedlist>
@@ -8575,6 +8761,28 @@
         the easiest thing to do, if anybody has any idea how to make it work.
         If it worked and were the default, I think it would help folks to
         avoid a great deal of the problems that come up with zebra.</para>
+      </section>
+
+      <section>
+        <title>Making Z39.50 Target Public</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Could someone tell me
+        the exact steps I need to take to configure Zebra to expose my Koha 3
+        db as a public Z39.50 service?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Edit the KOHA_CONF file
+        that your Koha is using. Uncomment the publicserver line like:</para>
+
+        <para>&lt;!-- &lt;listen id="publicserver"
+        &gt;tcp:@:9999&lt;/listen&gt; --&gt;</para>
+
+        <para>to be:</para>
+
+        <para>&lt;listen id="publicserver"
+        &gt;tcp:@:9999&lt;/listen&gt;</para>
+
+        <para>Then restart zebasrv and connect on the port specified
+        (9999).</para>
       </section>
 
       <section>
