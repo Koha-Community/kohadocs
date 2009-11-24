@@ -7371,7 +7371,121 @@
     <section>
       <title>Export Bibliographic &amp; Holdings Data (MARC Export)</title>
 
-      <para></para>
+      <para>Koha comes with a tool that will allow you to export your
+      bibliographic and/or holdings data in bulk. This can be used to send
+      your records to fellow libraries, organizations or services; or simply
+      for backup purposes. </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Fill in the form in order to limit your export to a specific
+          range (all fields are optional)</para>
+
+          <screenshot>
+            <screeninfo>Select Records to Export</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/marcexport-pt1.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose to limit your export by any one or more of the
+              following options</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Limit to a bib number range</para>
+                </listitem>
+
+                <listitem>
+                  <para>Limit to a specific item type</para>
+                </listitem>
+
+                <listitem>
+                  <para>Limit to a specific library</para>
+                </listitem>
+
+                <listitem>
+                  <para>Limit to a call number range</para>
+                </listitem>
+
+                <listitem>
+                  <para>Limit to an acquisition date range</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Next choose what to skip when exporting </para>
+
+              <screenshot>
+                <screeninfo>Export options</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/marcexport-pt2.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>By default items will be exported, if you would like
+                  to only export bibliographic data, check the 'Don't export
+                  items' box</para>
+                </listitem>
+
+                <listitem>
+                  <para>To limit your export only to items from the library
+                  you're logged in as (if you leave the 'Library' field set to
+                  'All') or to the library you selected above check the
+                  'Remove non-local items' box</para>
+                </listitem>
+
+                <listitem>
+                  <para>You can also choose what fields you don't want to
+                  export. This can be handy if you're sharing your data, you
+                  can remove all local fields before sending your data to
+                  another library</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Finally choose the file type and file name</para>
+
+              <screenshot>
+                <screeninfo>File export format</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/marcexport-pt3.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Choose to export your data in marc or marcxml
+                  format</para>
+                </listitem>
+
+                <listitem>
+                  <para>Choose the name you want your file to save as</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Click 'Export'</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
@@ -7506,6 +7620,19 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>A matching record is found using the field you chose for
+                matching criteria to prevent duplication</para>
+              </listitem>
+
+              <listitem>
+                <para>If you included patron attributes in your file you can
+                decide whether to add your values to existing values or erase
+                existing values and enter only your new values.</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
         </itemizedlist>
 
