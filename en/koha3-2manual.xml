@@ -6730,7 +6730,7 @@
       </section>
 
       <section>
-        <title>Record Matching Rules</title>
+        <title id="recordmatchingrules">Record Matching Rules</title>
 
         <para></para>
       </section>
@@ -7357,15 +7357,243 @@
     </section>
 
     <section>
-      <title>Stage MARC Records for Import</title>
+      <title id="stagemarc">Stage MARC Records for Import</title>
 
-      <para></para>
+      <para>Importing records into Koha includes two steps. The first is to
+      stage records for import.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>First find the MARC file on your computer</para>
+
+          <screenshot>
+            <screeninfo>Stage MARC Records for Import</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/stagemarc-pt1.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Next you will be presented with options for record matching
+          and item imports</para>
+
+          <screenshot>
+            <screeninfo>Upload options</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/stagemarc-pt2.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Enter 'Comments about this file' to identify your upload
+              when going to the 'Manage Staged MARC Records' tool</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose the character encoding</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose whether or not you want to look for matching
+              records</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You can set up <link
+                  linkend="recordmatchingrules">record matching rules</link>
+                  through the administration area</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Next choose what to do with matching records if they are
+              found</para>
+            </listitem>
+
+            <listitem>
+              <para>Finally choose what to do with records that are
+              unique</para>
+            </listitem>
+
+            <listitem>
+              <para>Next you can choose whether or not to import the item data
+              found in the MARC records</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Stage for import'</para>
+        </listitem>
+
+        <listitem>
+          <para>You will be presented with a confirmation of your MARC
+          import</para>
+
+          <screenshot>
+            <screeninfo>MARC Import Confirmation</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/stagemarc-results.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>To complete the process continue to the <link
+          linkend="managestaged">Managed Staged MARC Records
+          Tool</link></para>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
-      <title>Manage Staged MARC Records</title>
+      <title id="managestaged">Manage Staged MARC Records</title>
 
-      <para></para>
+      <para>Once you have <link linkend="stagemarc">staged</link> your records
+      for import you can complete the import using this tool.</para>
+
+      <screenshot>
+        <screeninfo>List of Staged MARC Records</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/managestaged.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <itemizedlist>
+        <listitem>
+          <para>From the list of staged records, click on the file name that
+          you want to finish importing</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>You will note that records that have already been imported
+              will say so under 'Status'</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>A summary of your import will appear along with the option to
+          change your matching rules</para>
+
+          <screenshot>
+            <screeninfo>Manage Staged Records Batch</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/managestagedrecords.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Below the summary there will be a list of the records that
+          will be imported</para>
+
+          <screenshot>
+            <screeninfo>List of Staged Records</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/stagedrecords.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Review your summary before completing your import to make
+              sure that your matching rule worked and that the records appear
+              as you expect them to</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Import into catalog' to complete the import</para>
+
+          <screenshot>
+            <screeninfo>Import summary</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/importedrecords.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Once your import is complete a link to the new bib records
+          will appear to the right of each title that was imported</para>
+        </listitem>
+
+        <listitem>
+          <para>You can also undo your import by clicking the 'Undo import
+          into catalog' button</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Records imported using this tool remain in the 'reservior' until
+      they are cleaned. To clean items out of the 'reservoir':</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Visit the main screen of the Manage Staged MARC Records
+          tool</para>
+
+          <screenshot>
+            <screeninfo>List of Staged MARC Records</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/managestaged.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>To clean a batch, click the 'Clean' button to the right</para>
+        </listitem>
+
+        <listitem>
+          <para>You will be presented with a confirmation message</para>
+
+          <screenshot>
+            <screeninfo>Clean MARC Records Confirmation</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/cleanbatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Accept the deletion and the records will be removed from
+              the reservoir and the status will be changed to 'cleaned'</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
@@ -7374,7 +7602,7 @@
       <para>Koha comes with a tool that will allow you to export your
       bibliographic and/or holdings data in bulk. This can be used to send
       your records to fellow libraries, organizations or services; or simply
-      for backup purposes. </para>
+      for backup purposes.</para>
 
       <itemizedlist>
         <listitem>
@@ -7420,7 +7648,7 @@
             </listitem>
 
             <listitem>
-              <para>Next choose what to skip when exporting </para>
+              <para>Next choose what to skip when exporting</para>
 
               <screenshot>
                 <screeninfo>Export options</screeninfo>
