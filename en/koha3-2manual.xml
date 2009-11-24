@@ -2482,7 +2482,7 @@
         </section>
 
         <section>
-          <title>Tagging</title>
+          <title id="taggingprefs">Tagging</title>
 
           <section>
             <title>TagsEnabled</title>
@@ -2602,7 +2602,7 @@
           </section>
 
           <section>
-            <title>TagsExternalDictionary</title>
+            <title id="TagsExternalDictionary">TagsExternalDictionary</title>
 
             <para>Asks: Allow tags in the dictionary of the ispell executable
             ___ on the server to be approved without moderation.</para>
@@ -7231,9 +7231,82 @@
     </section>
 
     <section>
-      <title>Tags</title>
+      <title>Tag Moderation</title>
 
-      <para></para>
+      <para>Depending on your <link linkend="taggingprefs">tagging system
+      preferences</link>, librarians may need to approve tags before they are
+      published on the OPAC. This is done via the Tag Moderation Tool.</para>
+
+      <para>When first visiting the tool, you will be presented with a list of
+      tags that are pending approval or rejection by a librarian</para>
+
+      <screenshot>
+        <screeninfo>Tags pending moderation</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/tagpending.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <itemizedlist>
+        <listitem>
+          <para>To approve a tag, you can either click the 'Approve' button
+          inline with the term, or check all terms you want to approve and
+          click 'Approve' below the table.</para>
+        </listitem>
+
+        <listitem>
+          <para>To reject a tag, you can either click the 'Reject' button
+          inline with the term, or check all terms you want to approve and
+          click 'Reject' below the table.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Once a tag has been approved or rejected it will be moved to the
+      appropriate list of tags. A summary of all tags will appear on the right
+      of the screen.</para>
+
+      <screenshot>
+        <screeninfo>Summary of tags</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/tagsummary.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Even though a tag is approved or rejected, it can still be moved
+      to another list. When viewing approved tags each tag has the option to
+      reject:</para>
+
+      <screenshot>
+        <screeninfo>Approved Tags</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/tagapproved.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>To check terms against the approved and rejected lists (and
+      possibly against <link linkend="TagsExternalDictionary">the
+      dictionary</link> you have assigned for tag moderation) simply enter the
+      term into the search box on the bottom right of the screen to see the
+      status of the term</para>
+
+      <screenshot>
+        <screeninfo>Sample Blacklist/Whitelist test search</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/tagblacklisttest-neither.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section>
@@ -7362,7 +7435,7 @@
 
           <listitem>
             <para>Next you can choose default values to apply to all patrons
-            you are importing </para>
+            you are importing</para>
 
             <itemizedlist>
               <listitem>
