@@ -2621,7 +2621,7 @@
         <para></para>
 
         <section>
-          <title>dateformat</title>
+          <title id="dateformat">dateformat</title>
 
           <para>Default: mm/dd/yyyy</para>
 
@@ -6069,7 +6069,7 @@
       </section>
 
       <section>
-        <title>Patron Attribute Types</title>
+        <title id="patronattributetypes">Patron Attribute Types</title>
 
         <para>Patron attributes can be used to define custom fields to
         associate with your patron records. A common use for this field would
@@ -7127,7 +7127,7 @@
       <section>
         <title>Editing Events</title>
 
-        <para>To edit events </para>
+        <para>To edit events</para>
 
         <itemizedlist>
           <listitem>
@@ -7257,7 +7257,140 @@
     <section>
       <title>Patron Import</title>
 
-      <para></para>
+      <para>The patron import tool can be used at any time to add patrons in
+      bulk. It is commonly used in universities and schools when a new batch
+      of students registers.</para>
+
+      <section>
+        <title>Creating Patron File</title>
+
+        <para>Your Koha installation comes with a blank CSV file that you can
+        use as a template for your patron records. If you would like to create
+        the file yourself, make sure that your fields match the following
+        order:</para>
+
+        <para>borrowernumber, cardnumber, surname, firstname, title,
+        othernames, initials, streetnumber, streettype, address, address2,
+        city, zipcode, country, email, phone, mobile, fax, emailpro, phonepro,
+        B_streetnumber, B_streettype, B_address, B_address2, B_city,
+        B_zipcode, B_country, B_email, B_phone, dateofbirth, branchcode,
+        categorycode, dateenrolled, dateexpiry, gonenoaddress, lost, debarred,
+        contactname, contactfirstname, contacttitle, guarantorid,
+        borrowernotes, relationship, ethnicity, ethnotes, sex, password,
+        flags, userid, opacnote, contactnote, sort1, sort2,
+        altcontactfirstname, altcontactsurname, altcontactaddress1,
+        altcontactaddress2, altcontactaddress3, altcontactzipcode,
+        altcontactcountry, altcontactphone, smsalertnumber,
+        patron_attributes</para>
+
+        <important>
+          <para>The 'password' value should be stored in plain text, and will
+          be converted to a md5 hash (which is an encrypted version of the
+          password).</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If your passwords are already encrypted, talk to your
+              systems administrator about options</para>
+            </listitem>
+          </itemizedlist>
+        </important>
+
+        <important>
+          <para>Date formats should match your <link
+          linkend="dateformat">system preference</link>, and must be
+          zero-padded, e.g. '01/02/2008'.</para>
+        </important>
+
+        <important>
+          <para>The fields 'branchcode' and 'categorycode' are required and
+          must match valid entries in your database.</para>
+        </important>
+
+        <tip>
+          <para>If loading <link linkend="patronattributetypes">patron
+          attributes</link>, the 'patron_attributes' field should contain a
+          comma-separated list of attribute types and values.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The attribute type code and a ':' should precede each
+              value.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>For example: "INSTID:12345,LANG:fr"</para>
+                </listitem>
+
+                <listitem>
+                  <para>If entering more than one patron attribute make sure
+                  you wrap the field in quotation marks (as shown
+                  above)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </tip>
+
+        <tip>
+          <para>You may optionally include a header row, defining which
+          columns you are supplying in the import file.</para>
+        </tip>
+      </section>
+
+      <section>
+        <title>Importing Patrons</title>
+
+        <para>Once you have created your file, you can use the Patron Import
+        Tool to bring the data into Koha.</para>
+
+        <screenshot>
+          <screeninfo>Import Patron Form</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/tools/importpatrons.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Choose your CSV file and choose to match on 'Cardnumber' to
+            prevent adding of duplicate card numbers to the system</para>
+          </listitem>
+
+          <listitem>
+            <para>Next you can choose default values to apply to all patrons
+            you are importing </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ex. If you're importing patrons specific to one branch
+                you can use the field on the Import form to apply the branche
+                code to all those you are importing.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Finally you need to decide on what data you want to replace
+            if there are duplicates.</para>
+
+            <screenshot>
+              <screeninfo>Record matching options</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/patronmatching.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+        </itemizedlist>
+
+        <para></para>
+      </section>
     </section>
 
     <section>
@@ -8562,6 +8695,30 @@
             </tip>
           </listitem>
         </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>Circulation</title>
+
+      <para></para>
+
+      <section>
+        <title>Dropbox Date</title>
+
+        <para><emphasis role="bold">Question</emphasis>: How is the dropbox
+        date is determined? Is it the last open date for the checkout branch?
+        Is it today's date minus one? Can the dropbox checkin date be
+        set?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: If the library is cHow
+        is the dropbox date is determined?losed for four days for renovations,
+        for example, there would be more than one day needed for the dropbox
+        date. You will only have one dropbox date and that will be the last
+        day that the library open (determined by the holiday calendar) because
+        there is no real way to know what day the books were dropped into the
+        box during the 4 closed days. The only way to change the effective
+        checkin date in dropbox mode is to modify the calendar.</para>
       </section>
     </section>
 
