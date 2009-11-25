@@ -608,7 +608,7 @@
           <para></para>
 
           <section>
-            <title>advancedMARCeditor</title>
+            <title id="advancedMARCeditor" lang="">advancedMARCeditor</title>
 
             <para>Default: Don't display</para>
 
@@ -747,9 +747,10 @@
 
             <para>Asks: Map the MARC subfield to an item's callnumber.</para>
 
-            <para><emphasis>Tip: This can contain multiple subfields to look
-            in; for instance 082ab would look in 082 subfields a and
-            b.</emphasis></para>
+            <tip>
+              <para>This can contain multiple subfields to look in; for
+              instance 082ab would look in 082 subfields a and b.</para>
+            </tip>
 
             <para>Examples: Dewey: 082ab or 092ab; LOC: 050ab or 090ab; from
             the item record: 852hi</para>
@@ -6697,12 +6698,516 @@
     <section>
       <title>Catalog Administration</title>
 
-      <para></para>
+      <para>Set these controls before you start cataloging on your Koha
+      system.</para>
 
       <section>
         <title>MARC Bibliographic Frameworks</title>
 
-        <para></para>
+        <para>Think of Frameworks as templates for creating new bibliographic
+        records. Koha comes with some predefined frameworks that can be edited
+        or deleted, and librarians can create their own frameworks for content
+        specific to their libraries.</para>
+
+        <screenshot>
+          <screeninfo>Frameworks List</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/frameworks.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <important>
+          <para>Do not delete or edit the Default Framework since this will
+          cause problems with your cataloging records - always create a new
+          template based on the Default Framework, or alter the other
+          Frameworks.</para>
+        </important>
+
+        <section>
+          <title>Add New Framework</title>
+
+          <para>To add a new framework</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click 'New Framework'</para>
+
+              <screenshot>
+                <screeninfo>Add Framework Form</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/addframework.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Enter a code of 4 or fewer characters</para>
+                </listitem>
+
+                <listitem>
+                  <para>Use the Description field to enter a more detailed
+                  definition of your framework</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Click 'Submit'</para>
+            </listitem>
+
+            <listitem>
+              <para>Once your Framework is added click 'MARC structure' to the
+              right of it on the list of Frameworks</para>
+
+              <screenshot>
+                <screeninfo>Choose basis for new Framework</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/startnewframework.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You will be asked to choose a Framework to base your
+                  new Framework off of, this will make it easier than starting
+                  from scratch</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Once your Framework appears on the screen you can edit or
+              delete each field by following the instructions for <link
+              linkend="editsubfields">editing subfields</link></para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Edit Existing Frameworks</title>
+
+          <para>Clicking 'Edit' to the right of a Framework will only allow
+          you to edit the Description for the Framework:</para>
+
+          <screenshot>
+            <screeninfo>Edit Framework</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/editframework.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To make edits to the fields associated with the Framework you
+          must first click 'MARC Structure' and then follow the instructions
+          for <link linkend="editsubfields">editing subfields</link></para>
+        </section>
+
+        <section>
+          <title id="editsubfields">Edit Framework Subfields</title>
+
+          <para>Frameworks are made up of MARC fields and subfields. To make
+          edits to most Frameworks you must edit the fields and subfields.
+          Clicking 'Edit' to the right of each subfield will allow you to make
+          changes to the text associated with the field</para>
+
+          <screenshot>
+            <screeninfo>Modify MARC Field</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/editfield.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Each field has a tag (which is the MARC tag)</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>The 'Label for lib' is what will show in the staff
+                  client if you have <link
+                  linkend="advancedMARCeditor">advancedMARCeditor</link> set
+                  to display labels</para>
+                </listitem>
+
+                <listitem>
+                  <para>The 'Label for opac' is what will show on the MARC
+                  view in the OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para>If you check 'Repeatable' then the field will have a
+                  plus sign next to it allowing you to add multiples of that
+                  tag</para>
+                </listitem>
+
+                <listitem>
+                  <para>If you check 'Mandatory' the record will not be
+                  allowed to save unless you have a value assigned to this
+                  tag</para>
+                </listitem>
+
+                <listitem>
+                  <para>'Authorized value' is where you define an <link
+                  linkend="authorizedvalues">authorized value</link> that your
+                  catalogers can choose from a pull down to fill this field
+                  in</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>To edit the subfields associated with the tag, click
+          'Subfields' to the right of the tag on the 'MARC Structure'
+          listing</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>From the list of subfields you can click 'Delete' to the
+              right of each to delete the subfields</para>
+            </listitem>
+
+            <listitem>
+              <para>To edit the subfields click 'Edit Subfields'</para>
+
+              <screenshot>
+                <screeninfo>Editing the 504 Subfield</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/editsubfield.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>For each subfield you can set the following values</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Text for librarian</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>what appears before the subfield in the librarian
+                      interface</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Text for OPAC</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>what appears before the field in the OPAC.</para>
+
+                      <itemizedlist>
+                        <listitem>
+                          <para>If left empty, the text for librarian is used
+                          instead</para>
+                        </listitem>
+                      </itemizedlist>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Repeatable</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>the field will have a plus sign next to it
+                      allowing you to add multiples of that tag</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Mandatory</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>the record will not be allowed to save unless you
+                      have a value assigned to this tag</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Managed in tab</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>defines the tab where the subfield is shown. All
+                      subfields of a given field must be in the same tab or
+                      ignored. Ignore means that the subfield is not
+                      managed.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>hidden</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>allows you to select from 19 possible visibility
+                      conditions, 17 of which are implemented. They are the
+                      following:</para>
+
+                      <itemizedlist>
+                        <listitem>
+                          <para>-9 =&gt; Future use</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-8 =&gt; Flag</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-7 =&gt; OPAC !Intranet !Editor
+                          Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-6 =&gt; OPAC Intranet !Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-5 =&gt; OPAC Intranet !Editor
+                          Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-4 =&gt; OPAC !Intranet !Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-3 =&gt; OPAC !Intranet Editor
+                          Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-2 =&gt; OPAC !Intranet Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>-1 =&gt; OPAC Intranet Editor Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>0 =&gt; OPAC Intranet Editor !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>1 =&gt; !OPAC Intranet Editor Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>2 =&gt; !OPAC !Intranet Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>3 =&gt; !OPAC !Intranet Editor
+                          Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>4 =&gt; !OPAC Intranet Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>5 =&gt; !OPAC !Intranet !Editor
+                          Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>6 =&gt; !OPAC Intranet !Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>7 =&gt; !OPAC Intranet !Editor
+                          Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>8 =&gt; !OPAC !Intranet !Editor
+                          !Collapsed</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>9 =&gt; Future use • URL : if checked, the
+                          subfield is an URL, and can be clicked</para>
+                        </listitem>
+                      </itemizedlist>
+                    </listitem>
+
+                    <listitem>
+                      <para>( ! means 'not visible' or in the case of
+                      Collapsed 'not Collapsed')</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Is a URL</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>if checked, it means that the subfield is a URL
+                      and can be clicked</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Link</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>If you enter a field/subfield here (200b), a link
+                      appears after the subfield in the MARC Detail view. This
+                      view is present only in the staff client, not the OPAC.
+                      If the librarian clicks on the link, a search is done on
+                      the databse for the field/subfield with the same value.
+                      This can be used for 2 main topics :</para>
+
+                      <itemizedlist>
+                        <listitem>
+                          <para>on a field like author (200f in UNIMARC), put
+                          200f here, you will be able to see all bib records
+                          with the same author.</para>
+                        </listitem>
+
+                        <listitem>
+                          <para>on a field that is a link (4xx) to reach
+                          another bib record. For example, put 011a in 464$x,
+                          will find the serials that are with this
+                          ISSN.</para>
+                        </listitem>
+                      </itemizedlist>
+                    </listitem>
+
+                    <listitem>
+                      <warning>
+                        <para>This value should not change after data has been
+                        added to your catalog</para>
+                      </warning>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Koha link</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>Koha is multi-MARC compliant. So, it does not know
+                      what the 245$a means, neither what 200$f (those 2 fields
+                      being both the title in MARC21 and UNIMARC). So, in this
+                      list you can "map" a MARC subfield to its meaning. Koha
+                      constantly maintains consistency between a subfield and
+                      its meaning. When the user want to search on "title",
+                      this link is used to find what is searched (245 if
+                      you're MARC21, 200 if you're UNIMARC).</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Authorized value</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>means the value cannot by typed by the librarian,
+                      but must be chosen from a pull down genereated by the
+                      <link linkend="authorizedvalues">authorized value</link>
+                      list</para>
+                    </listitem>
+
+                    <listitem>
+                      <para>In the example above, the 504a field will show the
+                      MARC504 Authorized Values when cataloging</para>
+
+                      <screenshot>
+                        <screeninfo>Example of an Authorized
+                        Subfield</screeninfo>
+
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/admin/cataloging/504auth.png" />
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Thesaurus</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>means that the value is not free test, but must be
+                      searched in the authority/thesaurus of the selected
+                      category</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Plugin</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>means the value is calculated or managed by a
+                      plugin. Plugins can do almost anything.</para>
+                    </listitem>
+
+                    <listitem>
+                      <para>For example, in UNIMARC there are plugins for
+                      every 1xx fields that are coded fields. The plugin is a
+                      huge help for cataloger ! There are also two plugins
+                      (unimarc_plugin_210c and unimarc_plugin_225a that can
+                      "magically" find the editor from an ISBN, and the
+                      collection list for the editor)</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>To save your changes simply click the 'Save Changes'
+              button at the top of the screen</para>
+            </listitem>
+          </itemizedlist>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
@@ -8043,60 +8548,187 @@
       to prevent system errors should a message try to send without a
       template.</para>
 
-      <para>To add a new notice</para>
+      <section>
+        <title>Adding Notices</title>
 
-      <itemizedlist>
-        <listitem>
-          <para>Click 'New Notice'</para>
+        <para>To add a new notice</para>
 
-          <screenshot>
-            <screeninfo>New Notice Form</screeninfo>
+        <itemizedlist>
+          <listitem>
+            <para>Click 'New Notice'</para>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/tools/newnotice.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </listitem>
+            <screenshot>
+              <screeninfo>New Notice Form</screeninfo>
 
-        <listitem>
-          <para>Choose the module this notice is related to</para>
-        </listitem>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/newnotice.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
 
-        <listitem>
-          <para>The Code is limited to 20 characters</para>
-        </listitem>
+          <listitem>
+            <para>Choose the module this notice is related to</para>
+          </listitem>
 
-        <listitem>
-          <para>Use the name field to expand on your Code</para>
-        </listitem>
+          <listitem>
+            <para>The Code is limited to 20 characters</para>
+          </listitem>
 
-        <listitem>
-          <para>Mesage Subject is what will appear in the subject line of the
-          email</para>
-        </listitem>
+          <listitem>
+            <para>Use the name field to expand on your Code</para>
+          </listitem>
 
-        <listitem>
-          <para>In the message body feel free to type whatever message you
-          feel is best, use the fields on the left hand side to enter
-          individualized data from the from database.</para>
+          <listitem>
+            <para>Mesage Subject is what will appear in the subject line of
+            the email</para>
+          </listitem>
 
-          <itemizedlist>
-            <listitem>
-              <important><para>On Overdue Notices make sure to use
-              &lt;&lt;items.content&gt;&gt; to print out the data related to
-              all items that are overdue, using &lt;&lt;biblio.title&gt;&gt;
-              and &lt;&lt;biblio.author&gt;&gt;. The latter will not
-              work.</para></important>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-      </itemizedlist>
+          <listitem>
+            <para>In the message body feel free to type whatever message you
+            feel is best, use the fields on the left hand side to enter
+            individualized data from the from database.</para>
+
+            <itemizedlist>
+              <listitem>
+                <important>
+                  <para>On Overdue Notices make sure to use
+                  &lt;&lt;items.content&gt;&gt; to print out the data related
+                  to all items that are overdue, using
+                  &lt;&lt;biblio.title&gt;&gt; and
+                  &lt;&lt;biblio.author&gt;&gt;. The latter will not
+                  work.</para>
+                </important>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Existing Notices</title>
+
+        <para>Among the default notices are notices for several common actions
+        within Koha, here are some of what those notices do</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ACQCLAIM (Acquisition Claim)</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used in the claim acquisition module</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Get there:</emphasis> More &gt; Acquisitions
+                &gt; Late issues</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>HOLD (Hold Available for Pickup)</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This notice is used if two criteria are met:</para>
+
+                <orderedlist>
+                  <listitem>
+                    <para>The EnhancedMessagingPreferences is turned ON</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis>Get there: </emphasis>More &gt;
+                        Administration &gt; Global System Preferences &gt;
+                        Patrons &gt; <link
+                        linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+
+                  <listitem>
+                    <para>The patron has requested to receive this
+                    notice</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis>Get there: </emphasis>OPAC &gt; Login
+                        &gt; my messaging</para>
+                      </listitem>
+
+                      <listitem>
+                        <para><emphasis>Get there: </emphasis>Staff Client
+                        &gt; Patron Record &gt; Messaging</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </orderedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>ODUE (Overdue Notice)</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This notice is used to send Overdue Notices to
+                Patrons</para>
+              </listitem>
+
+              <listitem>
+                <para>See a <link linkend="samplenotice">Sample Overdue
+                Notice</link></para>
+              </listitem>
+
+              <listitem>
+                <para>Requires that you set <link
+                linkend="noticetriggers">Overdue Notice/Status
+                Triggers</link></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>RLIST (Routing List)</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used in the serials module to notify patrons/staff of
+                new issues of a serial</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><emphasis>Get there:</emphasis> More &gt; Serials
+                    &gt; New Subscription</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>You have the option to select the 'Routing List' notice
+                when creating a new subscription (Choose from the 'Patron
+                notification' dropdown).</para>
+              </listitem>
+
+              <listitem>
+                <tip>
+                  <para>Notice also that if you'd like to notify patrons of
+                  new serial issues, you can click on 'define a notice' which
+                  will take you to the 'Notices' tool</para>
+                </tip>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
     </section>
 
     <section>
-      <title>Overdue Notice/Status Triggers</title>
+      <title id="noticetriggers">Overdue Notice/Status Triggers</title>
 
       <para>In order to send the overdue notices that you defined using the
       <link linkend="notices" os="">Notices</link> tool, you need to first set
@@ -8147,6 +8779,11 @@
           because of their overdue items, check the 'Debar' box, this will put
           a notice on the patron's record at checkout informing the librarian
           that the patron cannot check out due to overdue items.</para>
+        </listitem>
+
+        <listitem>
+          <para>See a <link linkend="samplenotice">Sample Overdue
+          Notice</link></para>
         </listitem>
       </itemizedlist>
     </section>
@@ -8889,6 +9526,36 @@
   </appendix>
 
   <appendix>
+    <title id="samplenotice">Sample Notice</title>
+
+    <para>Nicole Engard</para>
+
+    <para>410 Library Rd.</para>
+
+    <para>Philadelphia, PA 19107</para>
+
+    <para>Dear Nicole Engard (23529000035726),</para>
+
+    <para>According to our records, at the time of this notice, you have items
+    that are overdue. Please return or renew them as soon as possible to avoid
+    increasing late fines.</para>
+
+    <para>If you have registered a password with the library, you may use it
+    with your library card number to renew online.</para>
+
+    <para>If you believe you have returned the items below please call at and
+    library staff will be happy to help resolve the issue.</para>
+
+    <para>The following item(s) are currently overdue:</para>
+
+    <para>07/08/2008 Creating drug-free schools and communities : 502326000054
+    Fox, C. Lynn.</para>
+
+    <para>06/27/2008 Eating fractions / 502326000022 McMillan, Bruce.
+    Sincerely, Library Staff</para>
+  </appendix>
+
+  <appendix>
     <title>Using Koha as a Content Management System (CMS)</title>
 
     <para></para>
@@ -9401,6 +10068,19 @@
         there is no real way to know what day the books were dropped into the
         box during the 4 closed days. The only way to change the effective
         checkin date in dropbox mode is to modify the calendar.</para>
+      </section>
+
+      <section>
+        <title>Duplicate Overdue Notices</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Why are patrons
+        getting two overdue notices?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: This tool takes all
+        branches in the overdue rules and sent notifications to them. So, if
+        you have a default rule &amp; a branch rule, the notification will be
+        generated twice. A quick fix is to discard "default rule" for
+        instance.</para>
       </section>
     </section>
 
