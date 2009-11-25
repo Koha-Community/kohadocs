@@ -5850,7 +5850,7 @@
         </itemizedlist>
 
         <section>
-          <title>Adding a patron category</title>
+          <title id="addingpatroncat">Adding a patron category</title>
 
           <para>To add a new patron category click 'New Category' at the top
           of the page</para>
@@ -7872,7 +7872,7 @@
       <para>This tool allows you to bulk anonymize circulation histories (this
       means that you keep records of how many times items were checked out -
       but not the patrons who checked the items out) or bulk delete patrons
-      (remove them from the system completely). </para>
+      (remove them from the system completely).</para>
 
       <screenshot>
         <screeninfo>Patron Anonymize/Bulk Delete Tool</screeninfo>
@@ -8023,24 +8023,141 @@
     </section>
 
     <section>
-      <title>Notices</title>
+      <title id="notices">Notices</title>
 
-      <para></para>
+      <para>All notices sent by Koha can be customized using the Notices Tool.
+      The system comes with several predefined templates that will appear when
+      you first visit the Notices Tool</para>
+
+      <screenshot>
+        <screeninfo>Notices Tool</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/notices.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Each notice can be editied, but only a few can be deleted, this is
+      to prevent system errors should a message try to send without a
+      template.</para>
+
+      <para>To add a new notice</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Click 'New Notice'</para>
+
+          <screenshot>
+            <screeninfo>New Notice Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/newnotice.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Choose the module this notice is related to</para>
+        </listitem>
+
+        <listitem>
+          <para>The Code is limited to 20 characters</para>
+        </listitem>
+
+        <listitem>
+          <para>Use the name field to expand on your Code</para>
+        </listitem>
+
+        <listitem>
+          <para>Mesage Subject is what will appear in the subject line of the
+          email</para>
+        </listitem>
+
+        <listitem>
+          <para>In the message body feel free to type whatever message you
+          feel is best, use the fields on the left hand side to enter
+          individualized data from the from database.</para>
+
+          <itemizedlist>
+            <listitem>
+              <important><para>On Overdue Notices make sure to use
+              &lt;&lt;items.content&gt;&gt; to print out the data related to
+              all items that are overdue, using &lt;&lt;biblio.title&gt;&gt;
+              and &lt;&lt;biblio.author&gt;&gt;. The latter will not
+              work.</para></important>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
       <title>Overdue Notice/Status Triggers</title>
 
-      <para></para>
+      <para>In order to send the overdue notices that you defined using the
+      <link linkend="notices" os="">Notices</link> tool, you need to first set
+      the triggers to have these messages.</para>
+
+      <important>
+        <para>In order to have overdue notices sent to your patrons, you need
+        to <link linkend="addingpatroncat">set that patron category</link> to
+        require overdue notices.</para>
+      </important>
+
+      <para>The Overdue Notice/Status Triggers tool gives the librarian the
+      power to send up to three notices to each patron type notifiying them of
+      overdue items</para>
+
+      <screenshot>
+        <screeninfo>Overdue Notice/Status Triggers Tool</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/triggers.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <itemizedlist>
+        <listitem>
+          <para>Delay is the number of days after an issue is due before an
+          action is triggered.</para>
+
+          <itemizedlist>
+            <listitem>
+              <important>
+                <para>If you want Koha to trigger an action (send a letter or
+                debar member), a delay value is required.</para>
+              </important>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>To send additional notices, click on the tabs for 'Second' and
+          'Third' notice</para>
+        </listitem>
+
+        <listitem>
+          <para>If you would like to prevent a patron from checking items out
+          because of their overdue items, check the 'Debar' box, this will put
+          a notice on the patron's record at checkout informing the librarian
+          that the patron cannot check out due to overdue items.</para>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
       <title>Log Viewer</title>
 
       <para>Actions within the Koha system are tracked in log files. Your
-      <link lang="" linkend="log">system preferences</link> can be changed to
+      <link lang="" linkend="logs">system preferences</link> can be changed to
       prevent the logging of different actions. These logs can be viewed using
-      the Log Viewer Tool. </para>
+      the Log Viewer Tool.</para>
 
       <screenshot>
         <screeninfo>Log Viewer</screeninfo>
@@ -8053,7 +8170,7 @@
       </screenshot>
 
       <para>Choosing different combinations of menu options will produce the
-      log file for that query. </para>
+      log file for that query.</para>
 
       <screenshot>
         <screeninfo>A query for all logs related to the Circulation module
