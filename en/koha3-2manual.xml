@@ -2705,7 +2705,7 @@
       </section>
 
       <section>
-        <title>Logs</title>
+        <title id="logs">Logs</title>
 
         <para>Logs keep track of transaction on the system. You can decide
         which actions you want to log and which you don't using these
@@ -7863,15 +7863,72 @@
             </itemizedlist>
           </listitem>
         </itemizedlist>
-
-        <para></para>
       </section>
     </section>
 
     <section>
-      <title>Patrons (anonomize, bulk-delete)</title>
+      <title>Patrons (anonymize, bulk-delete)</title>
 
-      <para></para>
+      <para>This tool allows you to bulk anonymize circulation histories (this
+      means that you keep records of how many times items were checked out -
+      but not the patrons who checked the items out) or bulk delete patrons
+      (remove them from the system completely). </para>
+
+      <screenshot>
+        <screeninfo>Patron Anonymize/Bulk Delete Tool</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/patronbulkdelete.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>To either delete or anonymize patrons</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Check the task you would like to perform (Delete or
+          Anonymize)</para>
+        </listitem>
+
+        <listitem>
+          <para>Enter a date before which you want to alter the data</para>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Next'</para>
+        </listitem>
+
+        <listitem>
+          <para>A confirmation will appear asking if you're sure this is what
+          you want to happen</para>
+
+          <screenshot>
+            <screeninfo>Patron Anonymize/Bulk Delete Confirmation</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patronanonconfirm.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Clicking 'Finish' will delete or anonymize your data</para>
+
+          <screenshot>
+            <screeninfo>Completed Process</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patronanoncomplete.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
@@ -7980,7 +8037,38 @@
     <section>
       <title>Log Viewer</title>
 
-      <para></para>
+      <para>Actions within the Koha system are tracked in log files. Your
+      <link lang="" linkend="log">system preferences</link> can be changed to
+      prevent the logging of different actions. These logs can be viewed using
+      the Log Viewer Tool. </para>
+
+      <screenshot>
+        <screeninfo>Log Viewer</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/logviewer.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Choosing different combinations of menu options will produce the
+      log file for that query. </para>
+
+      <screenshot>
+        <screeninfo>A query for all logs related to the Circulation module
+        produces a result like this</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/logresults.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You will note that real names do not appear on the log, only
+      identifying numbers. You need to use the identifying numbers when
+      searching the logs as well.</para>
     </section>
 
     <section>
