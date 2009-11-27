@@ -3982,7 +3982,7 @@
         </section>
 
         <section>
-          <title>autoMemberNum</title>
+          <title id="autoMemberNum">autoMemberNum</title>
 
           <para>Default: Do</para>
 
@@ -4011,7 +4011,7 @@
         </section>
 
         <section>
-          <title>BorrowerMandatoryField</title>
+          <title id="BorrowerMandatoryField">BorrowerMandatoryField</title>
 
           <para>Default: surname|cardnumber|barcode</para>
 
@@ -4030,7 +4030,8 @@
         </section>
 
         <section>
-          <title>borrowerRelationship</title>
+          <title id="borrowerRelationship"
+          lang="">borrowerRelationship</title>
 
           <para>Default: father|mother</para>
 
@@ -5759,13 +5760,13 @@
     </section>
 
     <section>
-      <title>Patrons &amp; Circulation</title>
+      <title id="patcats">Patrons &amp; Circulation</title>
 
       <para>Settings for controlling circulation and patron
       information.</para>
 
       <section>
-        <title>Patron Categories</title>
+        <title id="patcats">Patron Categories</title>
 
         <para>Patron categories allow you to organize your patrons into
         different roles, age groups, and patron types.</para>
@@ -8898,24 +8899,274 @@
   <chapter>
     <title>Patrons</title>
 
-    <para></para>
+    <para>Before importing and/or adding patrons be sure to set up your <link
+    linkend="patcats" os="">patron categories</link>.</para>
 
     <section>
       <title>Add a new patron</title>
 
-      <para></para>
-    </section>
+      <para>Patrons are added by going to the 'Patrons' module.</para>
 
-    <section>
-      <title>Add a Staff Patron</title>
+      <itemizedlist>
+        <listitem>
+          <para>Click 'New'</para>
 
-      <para></para>
-    </section>
+          <screenshot>
+            <screeninfo>Choose patron type</screeninfo>
 
-    <section>
-      <title>Add a Statistical Patron</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/newpatron.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
 
-      <para></para>
+        <listitem>
+          <para>First enter the identifying information regarding your
+          patron</para>
+
+          <screenshot>
+            <screeninfo>Add Patron Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addpatronform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Required fields are defined in the <link
+              linkend="BorrowerMandatoryField">BorrowerMandatoryField</link>
+              system preference</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Next enter the contact information</para>
+
+          <screenshot>
+            <screeninfo>Patron Contact Information</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addcontact.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>If this patron is a child, you will be asked to attach the
+          child patron to an adult patron</para>
+
+          <screenshot>
+            <screeninfo>Guarantor Linking</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addGuarantor.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click 'Set to Patron' to search your system for an
+              existing patron</para>
+            </listitem>
+
+            <listitem>
+              <para>If the Guarantor is not in the system, you can enter the
+              first and last name in the fields available</para>
+            </listitem>
+
+            <listitem>
+              <para>The relationships are set using the <link
+              linkend="borrowerRelationship">borrowerRelationship</link>
+              system preference</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>If this patron is a professional, you will be asked to attach
+          the patron to an organizational patron</para>
+
+          <screenshot>
+            <screeninfo>Organization Linking</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addOrg.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click 'Set to Patron to search your system for an existing
+              patron </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Each patron can have an alternate contact </para>
+
+          <screenshot>
+            <screeninfo>Alternate Contact</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addaltcontact.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>An alternate contact could be a parent or guardian. It can
+              also be used in academic settings to store the patron's home
+              address.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>The library management section includes values that are used
+          within the library</para>
+
+          <screenshot>
+            <screeninfo>Library Management</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addlibmanagement.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The card number field is automatically calculated if you
+              have the <link linkend="autoMemberNum">autoMemberNum</link>
+              system preference set that way</para>
+            </listitem>
+
+            <listitem>
+              <para>If you accidentally chose the wrong patron category at the
+              beginning you can fix that here</para>
+            </listitem>
+
+            <listitem>
+              <para>Sort 1 and 2 are used for statistical purposes within your
+              library</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Next, the Library Setup section includes additional library
+          settings</para>
+
+          <screenshot>
+            <screeninfo>Library set-up options</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addlibsetup.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The registration date will automatically be filled in with
+              today's date</para>
+            </listitem>
+
+            <listitem>
+              <para>If your patron cards expire (based on your <link
+              linkend="patcats">patron category settings</link>) the Expiry
+              date will automatically be calculated</para>
+            </listitem>
+
+            <listitem>
+              <para>The OPAC Note is a note for the patron - it will appear in
+              the OPAC on the patron's record</para>
+            </listitem>
+
+            <listitem>
+              <para>The Circulation Note is meant soley for your library staff
+              and will appear when the circulation staff goes to check an item
+              out to the patron</para>
+
+              <screenshot>
+                <screeninfo>Sample Circulation Note</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/patrons/circnote.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>The OPAC Login and Password are used by the patron to log
+              into their account in the OPAC. They are also used for staff
+              accounts to provide them access to the staff client.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>If you have set <link
+          linkend="patronattributetypes">additional patron attributes</link>
+          up, these will appear next</para>
+
+          <screenshot>
+            <screeninfo>Additional Patron Attributes</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addattributes.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Finally you can choose the messaging preferences for this
+          patron. </para>
+
+          <screenshot>
+            <screeninfo>Patron Messaging Settings</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/addpatronmsg.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>These preferences will override any you set via the <link
+              linkend="addingpatroncat">patron categories</link></para>
+            </listitem>
+
+            <listitem>
+              <para>These preference can be altered by the patron via the
+              OPAC</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section>
