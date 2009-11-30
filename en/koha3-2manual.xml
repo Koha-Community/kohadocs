@@ -230,7 +230,7 @@
           </section>
 
           <section>
-            <title>GranularPermissions</title>
+            <title id="GranularPermissions">GranularPermissions</title>
 
             <para>Default: the specific page</para>
 
@@ -5760,7 +5760,7 @@
     </section>
 
     <section>
-      <title id="patcats">Patrons &amp; Circulation</title>
+      <title id="patscirc">Patrons &amp; Circulation</title>
 
       <para>Settings for controlling circulation and patron
       information.</para>
@@ -7430,7 +7430,7 @@
     <para></para>
 
     <section>
-      <title>News</title>
+      <title id="newstool">News</title>
 
       <para>Koha's news module allows librarians to post news to the OPAC and
       the staff interface.</para>
@@ -7525,13 +7525,13 @@
     </section>
 
     <section>
-      <title>Label Creator</title>
+      <title id="labelcreator" lang="">Label Creator</title>
 
       <para></para>
     </section>
 
     <section>
-      <title>Quick Spine Label Creator</title>
+      <title id="quicklabelcreator" lang="">Quick Spine Label Creator</title>
 
       <para>To use this tool you simply need the barcode for the book you'd
       like to print the spine label for.</para>
@@ -7568,7 +7568,7 @@
     </section>
 
     <section>
-      <title>Calendar &amp; Holidays</title>
+      <title id="calholidays">Calendar &amp; Holidays</title>
 
       <para>Libraries can define library closings and holidays to be used when
       calculating due dates. You can make use of the Calendar by turning on
@@ -7762,7 +7762,7 @@
     </section>
 
     <section>
-      <title>Comments/Reviews</title>
+      <title id="comments">Comments/Reviews</title>
 
       <para>All comments added by patrons via the OPAC to bibliographic
       records require moderation by the librarians. To moderate comments
@@ -8113,7 +8113,8 @@
     </section>
 
     <section>
-      <title>Export Bibliographic &amp; Holdings Data (MARC Export)</title>
+      <title id="exportbibs">Export Bibliographic &amp; Holdings Data (MARC
+      Export)</title>
 
       <para>Koha comes with a tool that will allow you to export your
       bibliographic and/or holdings data in bulk. This can be used to send
@@ -8233,7 +8234,7 @@
     </section>
 
     <section>
-      <title>Patron Import</title>
+      <title id="patronimport">Patron Import</title>
 
       <para>The patron import tool can be used at any time to add patrons in
       bulk. It is commonly used in universities and schools when a new batch
@@ -8383,7 +8384,7 @@
     </section>
 
     <section>
-      <title>Patrons (anonymize, bulk-delete)</title>
+      <title id="anonpatrons" lang="">Patrons (anonymize, bulk-delete)</title>
 
       <para>This tool allows you to bulk anonymize circulation histories (this
       means that you keep records of how many times items were checked out -
@@ -8448,7 +8449,7 @@
     </section>
 
     <section>
-      <title>Upload Patron Images</title>
+      <title id="uploadpatronimages">Upload Patron Images</title>
 
       <para>Patron images can be uploaded in bulk if you are <link
       linkend="patronimages">allowing patron images</link> to be attached to
@@ -8533,7 +8534,7 @@
     </section>
 
     <section>
-      <title>Task Scheduler</title>
+      <title id="taskscheduler" lang="">Task Scheduler</title>
 
       <para></para>
     </section>
@@ -8800,7 +8801,7 @@
     </section>
 
     <section>
-      <title>Log Viewer</title>
+      <title id="logviewer">Log Viewer</title>
 
       <para>Actions within the Koha system are tracked in log files. Your
       <link lang="" linkend="logs">system preferences</link> can be changed to
@@ -8837,7 +8838,7 @@
     </section>
 
     <section>
-      <title>Inventory/Stocktaking</title>
+      <title id="inventory">Inventory/Stocktaking</title>
 
       <para>Koha's Inventory Tool can be used in one of two ways, the first is
       by printing out a shelf list that you can then mark items off on, or by
@@ -8903,7 +8904,7 @@
     linkend="patcats" os="">patron categories</link>.</para>
 
     <section>
-      <title>Add a new patron</title>
+      <title id="addnewpatron">Add a new patron</title>
 
       <para>Patrons are added by going to the 'Patrons' module.</para>
 
@@ -9009,13 +9010,13 @@
           <itemizedlist>
             <listitem>
               <para>Click 'Set to Patron to search your system for an existing
-              patron </para>
+              patron</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Each patron can have an alternate contact </para>
+          <para>Each patron can have an alternate contact</para>
 
           <screenshot>
             <screeninfo>Alternate Contact</screeninfo>
@@ -9142,7 +9143,7 @@
 
         <listitem>
           <para>Finally you can choose the messaging preferences for this
-          patron. </para>
+          patron.</para>
 
           <screenshot>
             <screeninfo>Patron Messaging Settings</screeninfo>
@@ -9170,15 +9171,634 @@
     </section>
 
     <section>
-      <title>Editing Patrons</title>
+      <title id="addstaffpatron">Add a Staff Patron</title>
 
-      <para></para>
+      <para>All staff members must be entered into Koha as patrons of the
+      'Staff' type. Follow the steps in <link linkend="addnewpatron">Add a
+      Patron</link> to add a staff member. To give the staff member
+      permissions to access the staff client, follow the steps in <link
+      linkend="patronpermissions">Patron Permissions</link></para>
+
+      <important>
+        <para>Remember to assign your staff secure usernames and passwords
+        since these will be used to log into the staff client.</para>
+      </important>
     </section>
 
     <section>
-      <title>Patron Permissions</title>
+      <title>Editing Patrons</title>
 
-      <para></para>
+      <para>Patrons in Koha can be edited using one of many edit
+      buttons.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>To edit the entire patron record simply click the 'Edit'
+          button at the top of the patron record.</para>
+
+          <screenshot>
+            <screeninfo>Main Patron Edit Menu</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/patronedit.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>To only change the patron's password, click the 'Change
+          Password' button</para>
+
+          <screenshot>
+            <screeninfo>Patron Password Change Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/patronpassword.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Patron passwords are encrypted and cannot be recovered by
+              the library staff</para>
+            </listitem>
+
+            <listitem>
+              <para>This form will automatically generate a random password,
+              this password is not the patron's current password, just a new
+              random password</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>To edit a specific section of the patron record (for example
+          the Library Use section) click the 'Edit' link below the
+          section</para>
+
+          <screenshot>
+            <screeninfo>Library Use Section of Patron Record</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/patroneditsection.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>A patron image can be added by browsing for the image on your
+          machine from the 'Manage Patron Image' section</para>
+
+          <screenshot>
+            <screeninfo>Manage Patron Image Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/patronaddimage.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>This form will not appear if you have the <link
+              linkend="patronimages">patronimages</link> system preference to
+              allow patron images</para>
+            </listitem>
+
+            <listitem>
+              <para>To add patron images in bulk, use the <link
+              linkend="uploadpatronimages">Upload Patron Images</link>
+              Tool</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title id="patronpermissions" lang="">Patron Permissions</title>
+
+      <para>Patron Permissions are used to allow staff members access to the
+      staff client.</para>
+
+      <important>
+        <para>In order for a staff member to log into the staff interface they
+        must have (at the very least) 'catalogue' permissions which allow them
+        to view the staff interface.</para>
+      </important>
+
+      <section>
+        <title>Setting Patron Permissions</title>
+
+        <para>To set patron permissions, you must first <link
+        linkend="addstaffpatron">have a patron of the 'Staff' type</link>
+        open</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>On the patron record click More and choose Set Permissions
+            to alter patron permissions</para>
+
+            <screenshot>
+              <screeninfo>Set Patron Permissions</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/patrons/editpatronpermissions.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+
+          <listitem>
+            <para>Depending on your setting for the <link
+            linkend="GranularPermissions">GranularPermissions</link> system
+            preference you may see one of two menus</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If GranularPermissions is set to 'the specific page' you
+                will see permissions based on the various main pages in the
+                staff client</para>
+
+                <screenshot>
+                  <screeninfo>Patron Permissions based on specific
+                  pages</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/patrons/patronpermissions.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>If GranularPermissions is set to 'the individual
+                modules' you will see a more granular permissions menu</para>
+
+                <screenshot>
+                  <screeninfo>Patron Permissions set in a more granular
+                  manner</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/patrons/GranularPermissions.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Patron Permissions Defined</title>
+
+        <para></para>
+
+        <itemizedlist>
+          <listitem>
+            <para>superlibrarian</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Access to all functions within the staff client</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>circulate</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Ability to check (issue) books out and in and access the
+                'Circulation' page in the staff client</para>
+              </listitem>
+
+              <listitem>
+                <para>With <link
+                linkend="GranularPermissions">GranularPermissions</link> is
+                set to 'the individual modules' this section will be expanded
+                (<link linkend="circpermissions">Learn more</link>)</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>catalogue</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allows staff members to search the catalog via the staff
+                client</para>
+              </listitem>
+
+              <listitem>
+                <para>Must be given to all staff members to allow them to
+                login to the staff client</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>parameters</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Provides access to all areas of the Administration
+                menu</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>borrowers</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allows staff members to add or modify patrons (with the
+                exception of setting permissions)</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>permissions</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Ability to set patron permissions</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>reserveforothers</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Ability to place holds on books for patrons via the
+                staff interface</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>borrow</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Grants staff members the rights to borrow books from the
+                library</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>editcatalogue</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Ability to catalog items (add and edit bibliographic and
+                holdings data)</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>updatecharges</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Manage patron accounts (including paying fines, adding
+                credits, and creating invoices) </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>acquisition</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Provides access to the acquisitions and patron purchase
+                suggestion modules</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>management</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>No longer in use</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>tools</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Access to all items in the Tools section of the staff
+                client</para>
+              </listitem>
+
+              <listitem>
+                <para>With <link
+                linkend="GranularPermissions">GranularPermissions</link> is
+                set to 'the individual modules' this section will be expanded
+                (<link linkend="toolspermissions">Learn more</link>)</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>editauthorities</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Provides access to edit the authority record</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>serials</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allows access to the serials module</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>reports</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow access to the Reports module (ability to create,
+                edit and run all reports)</para>
+              </listitem>
+
+              <listitem>
+                <para>Reports found on the Circulation page are not controlled
+                by this permission</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>staffaccess</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Provides the ability to modify login / permissions for
+                staff users</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <section>
+          <title id="circpermissions" lang="">Granular Circulate Permissions
+          </title>
+
+          <para>If the staff member has 'circulate' permissions they have the
+          ability to perform all of these actions. If you would like to
+          control circulation permissions on a more granular level set the
+          <link linkend="GranularPermissions">GranularPermissions</link>
+          system preference to 'the individual modules' and choose from these
+          options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>circulate_remaining_permissions</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>All circulation rights except override
+                  permissions</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>override_renewals</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Override blocked renewals </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title id="toolspermissions">Granular Tools Permissions</title>
+
+          <para>If the staff member has 'tools' permissions they have the
+          ability to access and use all items under the Tools menu. If you
+          would like to control which tools staff members have access to on a
+          more granular level set the <link
+          linkend="GranularPermissions">GranularPermissions</link> system
+          preference to 'the individual modules' and choose from these
+          options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>batch_upload_patron_images</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Upload patron images in batch or one at a time (Access
+                  to the <link linkend="uploadpatronimages">Image Upload
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>delete_anonymize_patrons</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Delete old borrowers and anonymize circulation/reading
+                  history (Access to the <link linkend="anonpatrons">Anonymize
+                  Patron Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>edit_calendar</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Define days when the library is closed (Access to the
+                  <link linkend="calholidays">Calendar/Holidays
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>edit_news</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Write news for the OPAC and staff interfaces (Access
+                  to the <link linkend="newstool">News Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>edit_notice_status_triggers</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Set notice/status triggers for overdue items (Access
+                  to the <link linkend="noticetriggers">Overdue Notice
+                  Status/Triggers Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>edit_notices</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Define notices (Access to the <link lang=""
+                  linkend="notices">Notices Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>export_catalog</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Export bibliographic and holdings data (Access to the
+                  <link linkend="exportbibs">Export Bibliographic &amp;
+                  Holdings Data Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>import_patrons</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Import patron data (Access to the <link
+                  linkend="patronimport">Import Patrons Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>inventory</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Perform inventory (stocktaking) of your catalog
+                  (Access to the <link linkend="inventory">Inventory
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>label_creator</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Create printable labels and barcodes from catalog and
+                  patron data (Access to the <link
+                  linkend="labelcreator">Label Creator</link> and <link
+                  linkend="quicklabelcreator">Quick Label Creator</link>
+                  Tools)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>manage_staged_marc</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Managed staged MARC records, including completing and
+                  reversing imports (Access to the <link
+                  linkend="managestaged">Manage Staged MARC Records
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>moderate_comments</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Moderate patron comments (Access to the <link
+                  linkend="comments">Comments Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>schedule_tasks</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Schedule tasks to run (Access to the <link
+                  linkend="taskscheduler">Task Scheduler Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>stage_marc_import</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Stage MARC records into the reservoir (Access to the
+                  <link linkend="stagemarc">Stage MARC Records
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>view_system_logs </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Browse the system logs (Access to the <link
+                  linkend="logviewer">Log Viewer Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
     </section>
 
     <section>
