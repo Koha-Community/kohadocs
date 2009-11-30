@@ -1223,7 +1223,7 @@
           </section>
 
           <section>
-            <title>finesMode</title>
+            <title id="finesMode">finesMode</title>
 
             <para>Default: Calculate (but only for mailing to the
             admin)</para>
@@ -3531,7 +3531,7 @@
           </section>
 
           <section>
-            <title>opacreadinghistory</title>
+            <title id="opacreadinghistory">opacreadinghistory</title>
 
             <para>Default: Allow</para>
 
@@ -4136,7 +4136,7 @@
         </section>
 
         <section>
-          <title>intranetreadinghistory</title>
+          <title id="intranetreadinghistory">intranetreadinghistory</title>
 
           <para>Default: Allow</para>
 
@@ -5215,7 +5215,7 @@
       </section>
 
       <section>
-        <title>Item Types</title>
+        <title id="itemtypeadmin">Item Types</title>
 
         <para>Koha allows you to organize your collection by item types and
         collection codes. Item types typically refer to the material type
@@ -5572,7 +5572,7 @@
             </listitem>
 
             <listitem>
-              <para>MANUAL_INV</para>
+              <para id="manualinvvals">MANUAL_INV</para>
 
               <itemizedlist>
                 <listitem>
@@ -6306,7 +6306,7 @@
       </section>
 
       <section>
-        <title>Circulation &amp; Fine Rules</title>
+        <title id="circfinerules">Circulation &amp; Fine Rules</title>
 
         <para>These rules define how your items are circulated, how/when fines
         are calcuated and how holds are handled. The rules are applied from
@@ -9481,7 +9481,7 @@
             <itemizedlist>
               <listitem>
                 <para>Manage patron accounts (including paying fines, adding
-                credits, and creating invoices) </para>
+                credits, and creating invoices)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -9574,8 +9574,8 @@
         </itemizedlist>
 
         <section>
-          <title id="circpermissions" lang="">Granular Circulate Permissions
-          </title>
+          <title id="circpermissions" lang="">Granular Circulate
+          Permissions</title>
 
           <para>If the staff member has 'circulate' permissions they have the
           ability to perform all of these actions. If you would like to
@@ -9601,7 +9601,7 @@
 
               <itemizedlist>
                 <listitem>
-                  <para>Override blocked renewals </para>
+                  <para>Override blocked renewals</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -9758,7 +9758,8 @@
               <itemizedlist>
                 <listitem>
                   <para>Moderate patron comments (Access to the <link
-                  linkend="comments">Comments Tool</link>)</para>
+                  linkend="comments">Comments</link> and <link
+                  linkend="tagsmoderation">Tags</link> Tools)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -9787,7 +9788,7 @@
             </listitem>
 
             <listitem>
-              <para>view_system_logs </para>
+              <para>view_system_logs</para>
 
               <itemizedlist>
                 <listitem>
@@ -9804,7 +9805,218 @@
     <section>
       <title>Patron Information</title>
 
-      <para></para>
+      <para>When viewing a patron record you have the option to view
+      information from one of many tabs found on the left hand side of the
+      record.</para>
+
+      <section>
+        <title>Check Out</title>
+
+        <para>For instruction on checking items out, view the <link
+        linkend="checkingout">Checking Out</link> section of this
+        manual.</para>
+      </section>
+
+      <section>
+        <title>Details</title>
+
+        <para>All patron information will appear on the Details tab. This
+        includes all the contact information, notes, messaging preferences,
+        etc entered when adding the patron.</para>
+      </section>
+
+      <section>
+        <title>Fines</title>
+
+        <para>The patron's complete accounting history will appear on the
+        Fines tab. Contrary to its name, the Fines tab does not just show fine
+        data, it also shows membership fees, rental fees, reserve fees and any
+        other charge you may have for patrons.</para>
+
+        <screenshot>
+          <screeninfo>Patron Accounting Summary</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/patronaccount.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <section>
+          <title>Charging Fines/Fees</title>
+
+          <para>Most fees and fines will be charged automatically if the <link
+          linkend="finescronjob">fines cron job</link> is running:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>FInes will be charged based on your <link
+              linkend="circfinerules">Circulation &amp; Fines
+              Rules</link></para>
+            </listitem>
+
+            <listitem>
+              <para>Hold fees will be charged based on the rules you set in
+              the <link linkend="patcats">Patron Types &amp; Categories</link>
+              administration area</para>
+            </listitem>
+
+            <listitem>
+              <para>Rental fees will be charged based on the settings in your
+              <link linkend="itemtypeadmin">Item Types</link> administration
+              area</para>
+            </listitem>
+
+            <listitem>
+              <para>Marking an item 'Lost' via the cataloging module will
+              automatically charge the patron the replacement cost for that
+              item</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Pay Fines</title>
+
+          <para>Each line item can be paid in full (or written off) using the
+          'Pay Fines' tab.</para>
+
+          <screenshot>
+            <screeninfo>Paying Fines</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/makepayment.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose the payment type (Unpaid, Paid, Writeoff) from the
+              pull down menu</para>
+            </listitem>
+
+            <listitem>
+              <para>Click 'Make Payment'</para>
+            </listitem>
+
+            <listitem>
+              <para>A line item will be added to the account information
+              showing the fee paid in full (or written off)</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Creating Manual Invoices</title>
+
+          <para>For fees that are not automatically charged, librarians can
+          create a manual invoice</para>
+
+          <screenshot>
+            <screeninfo>Create Manual Invoice</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/manualinvoice.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>First choose the type of invoice you would like to
+              create</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>To add additional values to the manual invoice type
+                  pull down menu, add them to the <link
+                  linkend="manualinvvals">MANUAL_INV</link> Authorized
+                  Value</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>If the fee is associated with an item you can enter its
+              barcode so that the line item shows a link to that item</para>
+            </listitem>
+
+            <listitem>
+              <para>The description field is where you will enter the
+              description of the charge</para>
+            </listitem>
+
+            <listitem>
+              <para>In the amount field, do not enter currency symbols, only
+              numbers and decimals</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Creating Manual Credits</title>
+
+          <para>Manual credits can be used to pay off parts of fines, or to
+          forgive a fine amount.</para>
+
+          <screenshot>
+            <screeninfo>Create Manual Credit</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/manualcredit.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>First choose the type of credit you'd like to apply</para>
+            </listitem>
+
+            <listitem>
+              <para>If this credit is associated with an item you can enter
+              that item's barcode so that the line item links to the right
+              item</para>
+            </listitem>
+
+            <listitem>
+              <para>The description field is where you will enter the
+              description of the credit</para>
+            </listitem>
+
+            <listitem>
+              <para>In the amount field, do not enter currency symbols, only
+              numbers and decimals</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+
+      <section>
+        <title>Circulation History</title>
+
+        <para></para>
+
+        <para><link
+        linkend="intranetreadinghistory">intranetreadinghistory</link></para>
+      </section>
+
+      <section>
+        <title>Modification Log</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Messaging</title>
+
+        <para></para>
+      </section>
     </section>
   </chapter>
 
@@ -9820,7 +10032,7 @@
     </section>
 
     <section>
-      <title>Checking out (Issuing)</title>
+      <title id="checkingout">Checking out (Issuing)</title>
 
       <para></para>
     </section>
@@ -11551,6 +11763,17 @@
       <title>Cron Jobs</title>
 
       <para></para>
+
+      <section>
+        <title id="finescronjob">Fines</title>
+
+        <para>Script path: misc/cronjobs/fines.pl </para>
+
+        <para>Required by: <link linkend="finesMode">finesMode</link> system
+        preference </para>
+
+        <para>Frequency suggestion: nightly</para>
+      </section>
     </section>
 
     <section>
