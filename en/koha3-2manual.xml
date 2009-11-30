@@ -2713,7 +2713,7 @@
         preferences.</para>
 
         <section>
-          <title>BorrowersLog</title>
+          <title id="BorrowersLog">BorrowersLog</title>
 
           <para>Default: Log</para>
 
@@ -10000,22 +10000,68 @@
       <section>
         <title>Circulation History</title>
 
-        <para></para>
+        <para>The circulation history tab will appear if you have set the
+        <link linkend="intranetreadinghistory">intranetreadinghistory</link>
+        preference to allow it to appear.</para>
 
-        <para><link
-        linkend="intranetreadinghistory">intranetreadinghistory</link></para>
+        <screenshot>
+          <screeninfo>Patron Circulation History</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/readinghistory.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
         <title>Modification Log</title>
 
-        <para></para>
+        <para>If you have set your <link
+        linkend="BorrowersLog">BorrowersLog</link> to track changes to patron
+        records, then this tab will appear. The Modification Log will show all
+        changes made to the patron record.</para>
+
+        <screenshot>
+          <screeninfo>Changes to Patron #51</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/borrowerlog.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>The Librarian fiels shows the patron number for the
+            librarian who made the changes</para>
+          </listitem>
+
+          <listitem>
+            <para>The Object field lists the patron that is being modified (in
+            the example above, it was my changing my own record)</para>
+          </listitem>
+        </itemizedlist>
       </section>
 
       <section>
         <title>Messaging</title>
 
-        <para></para>
+        <para>The patron's messaging preferences are set when editing the
+        patron. This tab will show the messages that have been sent and those
+        that are queued to be sent:</para>
+
+        <screenshot>
+          <screeninfo>Message Queue</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/msgqueue.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
     </section>
   </chapter>
@@ -11767,10 +11813,10 @@
       <section>
         <title id="finescronjob">Fines</title>
 
-        <para>Script path: misc/cronjobs/fines.pl </para>
+        <para>Script path: misc/cronjobs/fines.pl</para>
 
         <para>Required by: <link linkend="finesMode">finesMode</link> system
-        preference </para>
+        preference</para>
 
         <para>Frequency suggestion: nightly</para>
       </section>
