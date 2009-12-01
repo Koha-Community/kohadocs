@@ -10312,10 +10312,38 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>If there are notes on the patron record these will appear to the
+        right of the checkout box</para>
+
+        <screenshot>
+          <screeninfo>Patron notes on check out screen</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/patronnotes.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If the patron has a hold waiting at the library that too will
+        appear to the right of the check out box making it easy for the
+        circulation librarian to see that there is another item to give the
+        patron</para>
+
+        <screenshot>
+          <screeninfo>Hold waiting message on check out screen</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/holdwaiting.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
-        <title>Check Out Warnings</title>
+        <title>Check Out Messages</title>
 
         <para>There are times when Koha will prevent the librarian from being
         able to check out items to a patron. When this happens a warning will
@@ -10417,7 +10445,244 @@
     <section>
       <title id="checkingout">Check In (Returning)</title>
 
-      <para></para>
+      <para>Checking in items can be performed from various different
+      locations</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>The check in link on main staff client</para>
+
+          <screenshot>
+            <screeninfo>Check out box on main Koha Staff Client
+            page</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/checkoutmain.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>The check in option on the quick search bar on the Circulation
+          page<screenshot>
+              <screeninfo>Check in tab on quick search bar</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/checkinquickbox.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+        </listitem>
+
+        <listitem>
+          <para>The check in link on the patron's checkout summary (and on the
+          checkout summary page)</para>
+
+          <screenshot>
+            <screeninfo>Patron checkout summary includes 'Check In'
+            link</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/checkinlink.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+
+      <section>
+        <title>Checking Items In</title>
+
+        <para>To check an item in scan the barcode for the item into the box
+        provided. A summary of all items checked in will appear below the
+        checkin box</para>
+
+        <screenshot>
+          <screeninfo>Check In Summary</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/checkin.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you are checking items in that were put in the dropbox while
+        the library was closed you can check the 'Dropbox mode' box before
+        scanning items. This will effectively roll back the returned date to
+        the last date the library was open.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>This requires that you have your closings added to the <link
+            linkend="calholidays">Holidays &amp; Calendar Tool </link></para>
+          </listitem>
+        </itemizedlist>
+
+        <para>You can also choose to forgive all overdue charges for items you
+        are checking in by checking the 'Forgive overdue charges' box before
+        scanning items.</para>
+      </section>
+
+      <section>
+        <title>Check In Messages</title>
+
+        <para>There are several messages that can appear when checking items
+        in:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>If you are checking an item in at a library other than the
+            home branch, a message will appear asking you to transfer the book
+            to the home library</para>
+
+            <screenshot>
+              <screeninfo>Check in Transfer Message</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/checkintransfer.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>After this item is checked in the status of the item
+                will be changed in the catalog to 'in transit'</para>
+
+                <screenshot>
+                  <screeninfo>In Transit Status</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/transferstatus.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>To mark an item as back at the home branch, check the
+                item in at the home branch</para>
+
+                <screenshot>
+                  <screeninfo>Check In Transferred Item</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/transfercheckin.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>A message will appear tell you that the item is not
+                    checked out, but the status will now say available in the
+                    catalog. This step is necessary to mark items as receieved
+                    by the home branch.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you're checking an item in that has a hold on it, you
+            will be prompted to confirm the hold</para>
+
+            <screenshot>
+              <screeninfo>Hold Found Check In Message</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/holdfound.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Clicking the Confirm hold button will mark the item as
+                waiting for pickup from the library</para>
+
+                <screenshot>
+                  <screeninfo>Hold waiting at the library</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/waitingstatus.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Clicking the Print Slip and Confirm button will mark the
+                item as waiting for pickup at the library and present the
+                library with a receipt to print and place on the book with the
+                patron's information</para>
+              </listitem>
+
+              <listitem>
+                <para>Ignoring the hold will leave the item on hold, but leave
+                its status as Available (it will not cancel the hold)</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you're checking in an item that has a hold on it at
+            another branch you will be prompted to confirm and transfer the
+            item</para>
+
+            <screenshot>
+              <screeninfo>Hold found for another branch</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/holdconfirmtransfer.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Clicking the Confirm hold and Transfer button will mark
+                the item as in transit to the library where the hold was
+                placed</para>
+
+                <screenshot>
+                  <screeninfo>In transit hold status</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/intransithold.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Clicking the Print Slip, Transfer and Confirm button
+                will mark the item as in transit to the library where the hold
+                was placed and present the library with a receipt to print and
+                place on the book with the patron's information</para>
+              </listitem>
+
+              <listitem>
+                <para>Ignoring the hold will leave the item on hold, but leave
+                its status as Available (it will not cancel the hold)</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
     </section>
 
     <section>
