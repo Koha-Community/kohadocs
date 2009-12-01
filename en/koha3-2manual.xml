@@ -1081,7 +1081,7 @@
           </section>
 
           <section>
-            <title>noissuescharge</title>
+            <title id="noissuescharge">noissuescharge</title>
 
             <para>Default: 5</para>
 
@@ -1524,7 +1524,7 @@
           </section>
 
           <section>
-            <title>SpecifyDueDate</title>
+            <title id="SpecifyDueDate">SpecifyDueDate</title>
 
             <para>Default: Allow</para>
 
@@ -9279,6 +9279,48 @@
             </listitem>
           </itemizedlist>
         </listitem>
+
+        <listitem>
+          <para id="patronflags">Patrons can also be blocked from checking
+          items out by setting Patron Flags</para>
+
+          <screenshot>
+            <screeninfo>Patron Warning Flags</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/patronflags.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>If you would like your circulation staff to confirm a
+              patron's address before checking items out to the patron, you
+              can se the 'Gone no Address' flag </para>
+            </listitem>
+
+            <listitem>
+              <para>If you would like to bar a patron from the library you can
+              set the 'Debarred' flag</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>This flag can automatically be set with the <link
+                  linkend="noticetriggers">Overdue/Notice Status
+                  Triggers</link></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>If the patron reports that they have lost their card you
+              can set the 'Lost Card' flag to prevent someone else from using
+              that card to check items out</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
       </itemizedlist>
     </section>
 
@@ -9830,7 +9872,7 @@
 
         <itemizedlist>
           <listitem>
-            <para>A child patron will list their Guarantor </para>
+            <para>A child patron will list their Guarantor</para>
 
             <screenshot>
               <screeninfo>Guarantor listed and linked from the child
@@ -10154,7 +10196,222 @@
     <section>
       <title>Check Out (Issuing)</title>
 
-      <para></para>
+      <para>To begin the checkout process you must enter the patron barcode or
+      part of their name. The checkout option appears in three main
+      places:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Check out option on main staff client</para>
+
+          <screenshot>
+            <screeninfo>Check out box on main Koha Staff Client
+            page</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/checkoutmain.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Check out option on the patron record</para>
+
+          <screenshot>
+            <screeninfo>Check out tab on a patron record</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/checkoutpatron.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Check out option on the quick search bar</para>
+
+          <screenshot>
+            <screeninfo>Check out tab on quick search bar</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/circquickbox.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+
+      <section>
+        <title>Checking Items Out</title>
+
+        <para>To check an item out to a patron, first search for that patron
+        using one of the many options listed above.</para>
+
+        <screenshot>
+          <screeninfo>Check Out Screen</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/checkingout.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>At the top of the Check Out screen is a box for you to type or
+        scan the item's barcode into.</para>
+
+        <itemizedlist>
+          <listitem>
+            <important>
+              <para>Many modern barcode scanners will send a 'return' to the
+              browser, making it so that the 'Check Out' button is
+              automatically clicked</para>
+            </important>
+          </listitem>
+        </itemizedlist>
+
+        <para>Below the box for the barcode there may be options for you to
+        override the default due date for the item.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>This option will only appear if you have set the <link
+            linkend="SpecifyDueDate">SpecifyDueDate</link> system preference
+            to allow staff to override the due date</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>At the bottom of the page there is a summary of the patron's
+        current checked out items along with the due date and the list of
+        items the patron has on hold</para>
+
+        <screenshot>
+          <screeninfo>Holds summary on check out screen</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/holdssummary.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once you have checked out all of the items for the patron you
+        can print them a receipt by clicking the Print buton at the top of the
+        screen and choosing 'Print Slip'</para>
+
+        <screenshot>
+          <screeninfo>Print receipt to slip printer</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/printslip.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Check Out Warnings</title>
+
+        <para>There are times when Koha will prevent the librarian from being
+        able to check out items to a patron. When this happens a warning will
+        appear notifying the librarian of why the patron cannot check items
+        out.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Patron owes too much in fines</para>
+
+            <screenshot>
+              <screeninfo>Patron owes too much in fines</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/fineswarning.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>You can set the amount at which patron checkouts are
+                blocked with the <link
+                linkend="noissuescharge">noissuescharge</link> system
+                preference</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Patron has been barred from the library</para>
+
+            <screenshot>
+              <screeninfo>Patron account barred</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/debarwarning.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>This can be set by the librarian editing a patron record
+                and adding a <link linkend="patronflags">flag</link> or by the
+                <link linkend="noticetriggers">Overdue/Notice Status
+                Triggers</link></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Patron needs to confirm their address</para>
+
+            <screenshot>
+              <screeninfo>Patron's address warning</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/addresswarning.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>This can be set by the librarian editing a patron record
+                and adding a <link linkend="patronflags">flag</link> </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Patrons has lost their library card</para>
+
+            <screenshot>
+              <screeninfo>Lost patron card warning</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/lostcardwarning.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>This can be set by the librarian editing a patron record
+                and adding a <link linkend="patronflags">flag</link> </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
     </section>
 
     <section>
