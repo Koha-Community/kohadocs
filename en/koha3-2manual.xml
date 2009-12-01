@@ -22,7 +22,7 @@
     <title>Administration</title>
 
     <section>
-      <title>Global System Preferences</title>
+      <title id="globalsysprefs" lang="">Global System Preferences</title>
 
       <para>Global system preferences control the way your Koha system works
       in general. Set these preferences before anything else in Koha.</para>
@@ -4992,7 +4992,7 @@
     </section>
 
     <section>
-      <title>Basic Parameters</title>
+      <title id="basicparams">Basic Parameters</title>
 
       <important>
         <para>Configure all 'parameters' in the order they appear.</para>
@@ -9823,6 +9823,43 @@
         <para>All patron information will appear on the Details tab. This
         includes all the contact information, notes, messaging preferences,
         etc entered when adding the patron.</para>
+
+        <para>In the case of patrons who are marked as 'Child' or
+        'Professional' and their Guarantors additional information will appear
+        on their record.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A child patron will list their Guarantor </para>
+
+            <screenshot>
+              <screeninfo>Guarantor listed and linked from the child
+              record</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/patrons/child.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+
+          <listitem>
+            <para>On the Guarantor's record, all children and/or professionals
+            will be listed</para>
+
+            <screenshot>
+              <screeninfo>Guarantees listed on the Guarantor's
+              profile</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/patrons/parent.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+        </itemizedlist>
       </section>
 
       <section>
@@ -9877,7 +9914,7 @@
         </section>
 
         <section>
-          <title>Pay Fines</title>
+          <title>Pay/Reverse Fines</title>
 
           <para>Each line item can be paid in full (or written off) using the
           'Pay Fines' tab.</para>
@@ -9905,6 +9942,39 @@
             <listitem>
               <para>A line item will be added to the account information
               showing the fee paid in full (or written off)</para>
+            </listitem>
+
+            <listitem>
+              <para>If you accidentally mark and item as paid, you can reverse
+              that line item by clicking 'Reverse' to the right of the
+              line</para>
+
+              <screenshot>
+                <screeninfo>Reverse Link</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/patrons/reverselink.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Once clicked a new line item will be added to the
+                  account, showing the payment as reversed</para>
+
+                  <screenshot>
+                    <screeninfo>Reversed Payment</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/patrons/reversed.png" />
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+              </itemizedlist>
             </listitem>
           </itemizedlist>
         </section>
@@ -10069,16 +10139,26 @@
   <chapter>
     <title>Circulation</title>
 
-    <para></para>
+    <para>Circulation functions can be accessed in several different ways. On
+    the main page of the staff client there are some quick links in the center
+    of the page to check items out, in or transfer them. For a complete
+    listing of Circulation functions you can visit the Circulation page which
+    is linked from the top left of every page or from the center of the main
+    page.</para>
+
+    <para>Before circulating your collectiion you will want to set your <link
+    linkend="globalsysprefs">Global System Preferences</link>, <link
+    linkend="basicparams">Basic Parameters</link> and <link
+    linkend="patscirc">Patrons &amp; Circulation Rules</link>.</para>
 
     <section>
-      <title>Checking in (Returning)</title>
+      <title>Check Out (Issuing)</title>
 
       <para></para>
     </section>
 
     <section>
-      <title id="checkingout">Checking out (Issuing)</title>
+      <title id="checkingout">Check In (Returning)</title>
 
       <para></para>
     </section>
