@@ -5186,35 +5186,6 @@
       </section>
 
       <section>
-        <title>Funds &amp; Budgets</title>
-
-        <para><emphasis></emphasis></para>
-      </section>
-
-      <section>
-        <title>Currencies &amp; Exchange Rates</title>
-
-        <para>If you place orders from more than one country you will want to
-        input currency exchange rates so that your acquisitions module will
-        properly calculate totals.</para>
-
-        <screenshot>
-          <screeninfo>Currencies</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/basicparams/currencies.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <tip>
-          <para>This data is not automatically updated, so be sure to keep it
-          up to date so that your accounting is kept correct.</para>
-        </tip>
-      </section>
-
-      <section>
         <title id="itemtypeadmin">Item Types</title>
 
         <para>Koha allows you to organize your collection by item types and
@@ -7216,6 +7187,12 @@
       </section>
 
       <section>
+        <title>Keywords to MARC Mapping</title>
+
+        <para></para>
+      </section>
+
+      <section>
         <title>MARC Bibliographic Framework Test</title>
 
         <para>Checks the MARC structure. If you change your MARC Bibliographic
@@ -7247,6 +7224,47 @@
 
       <section>
         <title id="recordmatchingrules">Record Matching Rules</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>Acquisitions</title>
+
+      <para></para>
+
+      <section>
+        <title>Currencies &amp; Exchange Rates</title>
+
+        <para>If you place orders from more than one country you will want to
+        input currency exchange rates so that your acquisitions module will
+        properly calculate totals.</para>
+
+        <screenshot>
+          <screeninfo>Currencies</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/basicparams/currencies.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <tip>
+          <para>This data is not automatically updated, so be sure to keep it
+          up to date so that your accounting is kept correct.</para>
+        </tip>
+      </section>
+
+      <section>
+        <title>Budgets, periods, planning</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Root Budgets</title>
 
         <para></para>
       </section>
@@ -7870,6 +7888,12 @@
           </imageobject>
         </mediaobject>
       </screenshot>
+    </section>
+
+    <section>
+      <title>CSV Profiles</title>
+
+      <para></para>
     </section>
 
     <section>
@@ -8895,6 +8919,18 @@
       <para>Choose the text file and the date you want to mark all times as
       seen and click 'Submit.'</para>
     </section>
+
+    <section>
+      <title>Modify a queryset of items</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Delete a queryset of items</title>
+
+      <para></para>
+    </section>
   </chapter>
 
   <chapter>
@@ -9298,7 +9334,7 @@
             <listitem>
               <para>If you would like your circulation staff to confirm a
               patron's address before checking items out to the patron, you
-              can se the 'Gone no Address' flag </para>
+              can se the 'Gone no Address' flag</para>
             </listitem>
 
             <listitem>
@@ -9387,8 +9423,8 @@
                 modules' you will see a more granular permissions menu</para>
 
                 <screenshot>
-                  <screeninfo>Patron Permissions set in a more granular
-                  manner</screeninfo>
+                  <screeninfo>Patron Permissions set in a more granular manner
+                  (not all shown)</screeninfo>
 
                   <mediaobject>
                     <imageobject>
@@ -9651,6 +9687,155 @@
         </section>
 
         <section>
+          <title>Granular Cataloging Permissions</title>
+
+          <para>If the staff member has 'editcatalogue' permissions they have
+          the ability to perform all of these actions. If you would like to
+          control cataloging permissions on a more granular level set the
+          <link linkend="GranularPermissions">GranularPermissions</link>
+          system preference to 'the individual modules' and choose from these
+          options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>edit_catalogue</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>All cataloging permissions with the exception of using
+                  the Fast Add Framework</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>fast_cataloging </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>The ability to catalog using only the Fast Add
+                  Framework</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Granular Acquisitions Permissions</title>
+
+          <para>If the staff member has 'acquisition' permissions they have
+          the ability to perform all of these actions. If you would like to
+          control acquisitions permissions on a more granular level set the
+          <link linkend="GranularPermissions">GranularPermissions</link>
+          system preference to 'the individual modules' and choose from these
+          options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>budget_add_del</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Ability to add and delete budgets (not modify()</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>budget_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage budgets</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>budget_modify</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Ability to edit existing budgets (not to add or
+                  delete)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>contracts_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage contracts</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>group_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage orders and basket groups</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>order_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage orders and baskets</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>order_receive</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage orders and baskets</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>period_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage periods</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>planning_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage budget plannings</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>vendors_manage</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Manage vendors</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
           <title id="toolspermissions">Granular Tools Permissions</title>
 
           <para>If the staff member has 'tools' permissions they have the
@@ -9836,6 +10021,41 @@
                 <listitem>
                   <para>Browse the system logs (Access to the <link
                   linkend="logviewer">Log Viewer Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>Granular Reports Permissions</title>
+
+          <para>If the staff member has 'reports' permissions they have the
+          ability to perform all of these actions. If you would like to
+          control reports permissions on a more granular level set the <link
+          linkend="GranularPermissions">GranularPermissions</link> system
+          preference to 'the individual modules' and choose from these
+          options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>create_reports</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>The ability to create and edit but not run SQL
+                  reports</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>execute_reports</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>The ability to run but not create or edit SQL
+                  reports</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10413,7 +10633,7 @@
             <itemizedlist>
               <listitem>
                 <para>This can be set by the librarian editing a patron record
-                and adding a <link linkend="patronflags">flag</link> </para>
+                and adding a <link linkend="patronflags">flag</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -10434,7 +10654,7 @@
             <itemizedlist>
               <listitem>
                 <para>This can be set by the librarian editing a patron record
-                and adding a <link linkend="patronflags">flag</link> </para>
+                and adding a <link linkend="patronflags">flag</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -10704,7 +10924,7 @@
     </section>
 
     <section>
-      <title>Reports</title>
+      <title>Circulation Reports</title>
 
       <para></para>
     </section>
