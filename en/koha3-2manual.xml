@@ -7891,7 +7891,7 @@
     </section>
 
     <section>
-      <title>CSV Profiles</title>
+      <title id="csvprofiles">CSV Profiles</title>
 
       <para></para>
     </section>
@@ -8921,13 +8921,13 @@
     </section>
 
     <section>
-      <title>Modify a queryset of items</title>
+      <title id="batchmodifyitems">Modify a queryset of items</title>
 
       <para></para>
     </section>
 
     <section>
-      <title>Delete a queryset of items</title>
+      <title id="batchdeleteitems">Delete a queryset of items</title>
 
       <para></para>
     </section>
@@ -9550,6 +9550,13 @@
                 <para>Ability to catalog items (add and edit bibliographic and
                 holdings data)</para>
               </listitem>
+
+              <listitem>
+                <para>With <link
+                linkend="GranularPermissions">GranularPermissions</link> is
+                set to 'the individual modules' this section will be expanded
+                (<link linkend="catpermissions">Learn more</link>)</para>
+              </listitem>
             </itemizedlist>
           </listitem>
 
@@ -9571,6 +9578,13 @@
               <listitem>
                 <para>Provides access to the acquisitions and patron purchase
                 suggestion modules</para>
+              </listitem>
+
+              <listitem>
+                <para>With <link
+                linkend="GranularPermissions">GranularPermissions</link> is
+                set to 'the individual modules' this section will be expanded
+                (<link linkend="acqpermissions">Learn more</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -9636,6 +9650,13 @@
                 <para>Reports found on the Circulation page are not controlled
                 by this permission</para>
               </listitem>
+
+              <listitem>
+                <para>With <link
+                linkend="GranularPermissions">GranularPermissions</link> is
+                set to 'the individual modules' this section will be expanded
+                (<link linkend="reportpermissions">Learn more</link>)</para>
+              </listitem>
             </itemizedlist>
           </listitem>
 
@@ -9687,7 +9708,7 @@
         </section>
 
         <section>
-          <title>Granular Cataloging Permissions</title>
+          <title id="catpermissions">Granular Cataloging Permissions</title>
 
           <para>If the staff member has 'editcatalogue' permissions they have
           the ability to perform all of these actions. If you would like to
@@ -9709,7 +9730,7 @@
             </listitem>
 
             <listitem>
-              <para>fast_cataloging </para>
+              <para>fast_cataloging</para>
 
               <itemizedlist>
                 <listitem>
@@ -9722,7 +9743,7 @@
         </section>
 
         <section>
-          <title>Granular Acquisitions Permissions</title>
+          <title id="acqpermissions">Granular Acquisitions Permissions</title>
 
           <para>If the staff member has 'acquisition' permissions they have
           the ability to perform all of these actions. If you would like to
@@ -9860,6 +9881,30 @@
             </listitem>
 
             <listitem>
+              <para>batchdel</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Batch delete items from Koha (Access to the <link
+                  linkend="batchedititems">Modify a queryset of items
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>batchmod</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Batch modify items in Koha (Access to the <link
+                  linkend="batchdeleteitems">Delete a queryset of items
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
               <para>delete_anonymize_patrons</para>
 
               <itemizedlist>
@@ -9967,6 +10012,17 @@
             </listitem>
 
             <listitem>
+              <para>manage_csv_profiles</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Create and edit CSV profiles (Access to the <link
+                  linkend="csvprofiles">CSV Profiles Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
               <para>manage_staged_marc</para>
 
               <itemizedlist>
@@ -10028,7 +10084,7 @@
         </section>
 
         <section>
-          <title>Granular Reports Permissions</title>
+          <title id="reportpermissions">Granular Reports Permissions</title>
 
           <para>If the staff member has 'reports' permissions they have the
           ability to perform all of these actions. If you would like to
