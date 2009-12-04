@@ -9723,19 +9723,21 @@
 
               <itemizedlist>
                 <listitem>
-                  <para>All cataloging permissions with the exception of using
-                  the Fast Add Framework</para>
+                  <para>Ability to access all cataloging functions via the
+                  <link linkend="cataloging">Cataloging</link> page</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>fast_cataloging</para>
+              <para id="fastaddpermissions">fast_cataloging</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to catalog using only the Fast Add
-                  Framework</para>
+                  <para>The ability to catalog using only the <link
+                  linkend="fastaddcat">Fast Add Framework</link> found on the
+                  <link lang="" linkend="circulation">Circulation</link>
+                  page</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10455,7 +10457,7 @@
   </chapter>
 
   <chapter>
-    <title>Circulation</title>
+    <title id="circulation">Circulation</title>
 
     <para>Circulation functions can be accessed in several different ways. On
     the main page of the staff client there are some quick links in the center
@@ -10974,9 +10976,48 @@
     </section>
 
     <section>
-      <title>Patron Fines</title>
+      <title>Set Library</title>
 
       <para></para>
+    </section>
+
+    <section>
+      <title id="fastaddcat">Fast Add Cataloging</title>
+
+      <para>Sometimes cicruclation librarians need to quickly add a record to
+      the system for an item they are about to check out. This is called 'Fast
+      Add.' To allow circulation librarians access to the Fast Add Cataloging
+      tool, simply make sure they have the <link
+      linkend="fastaddpermissions">fast_cataloging</link> permissions. To add
+      a title with the fast add framework, click the Fast Cataloging option on
+      the Circulation page</para>
+
+      <screenshot>
+        <screeninfo>Circulation Menu</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/circmenu.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>The cataloging interface will open up with the short cataloging
+      record:</para>
+
+      <screenshot>
+        <screeninfo>Fast Add Framework</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/fastadd.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>After adding your cataloging data you will be asked to enter item
+      data. Enter the items barcode, collection code, etc and save the item
+      before checking it out.</para>
     </section>
 
     <section>
@@ -10987,12 +11028,6 @@
 
     <section>
       <title>Tracking Inhouse Use</title>
-
-      <para></para>
-    </section>
-
-    <section>
-      <title>Set Library</title>
 
       <para></para>
     </section>
