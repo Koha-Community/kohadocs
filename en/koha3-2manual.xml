@@ -7319,7 +7319,7 @@
       </section>
 
       <section>
-        <title>Z39.50 Servers</title>
+        <title id="z3950admin">Z39.50 Servers</title>
 
         <para>Koha has a powerful copy cataloging tool. Using Koha you can
         connect to any Z39.50 target that is publically available or that you
@@ -7932,7 +7932,7 @@
                 <itemizedlist>
                   <listitem>
                     <para>Define which fields or subfields you want to export,
-                    separated by pipes. Example : 200|210$a|301 </para>
+                    separated by pipes. Example : 200|210$a|301</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -11070,7 +11070,37 @@
     <section>
       <title>Set Library</title>
 
-      <para></para>
+      <para>By default you will enter the staff client as if you are at your
+      home library. This library will appear in the top right of the Staff
+      Client.</para>
+
+      <screenshot>
+        <screeninfo>My Library</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/mylibrary.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>This is the library that all circulation transactions will take
+      place at. If you are at another library (or on a bookmobile) you will
+      want to set your library before you start circulating items. To do this
+      you can click 'Set' at the top right or on the Circulation page.</para>
+
+      <screenshot>
+        <screeninfo>Set Library Form</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/setlibrary.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Once you have saved your changes you new library will appear in
+      the top right.</para>
     </section>
 
     <section>
@@ -11149,21 +11179,209 @@
     <para></para>
 
     <section>
-      <title>Adding Records</title>
+      <title>Bibliographic Records</title>
 
       <para></para>
+
+      <section>
+        <title>Adding Records</title>
+
+        <para>Records can be added to Koha via original or copy cataloging. If
+        you would like to catalog a record using a blank template</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click 'New Record'</para>
+
+            <screenshot>
+              <screeninfo>New Record Menu</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/newfromframework.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Choose the framework you would like to base your record
+                off of</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>If you want to catalog a record based on an existing record at
+        another library</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click 'z39.50 Search'</para>
+
+            <screenshot>
+              <screeninfo>Z39.50 Search</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/zsearch.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Search for the item you would like to catalog</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <tip>
+                      <para>If no results are found, try searching for fewer
+                      fields, not all Z39.50 targets can search all of the
+                      fields above.</para>
+                    </tip>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Search targets can be altered by using the <link
+                linkend="z3950admin">Z39.50 Admin</link> area.</para>
+              </listitem>
+
+              <listitem>
+                <para>From the results you can view the MARC or Card view for
+                the records or choose to Import them into Koha</para>
+
+                <screenshot>
+                  <screeninfo>Z39.50 Search Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/cataloging/zsearchresults.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>Once you've opened a blank framework or imported a record via
+        Z39.50 you will be presented with the form to continue
+        cataloging</para>
+
+        <screenshot>
+          <screeninfo>Add MARC Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/addmarc.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>To exapand a collapsed tag click on the tag number</para>
+          </listitem>
+
+          <listitem>
+            <para>To duplicate a field click on the + (plus sign) to the right
+            of the tag</para>
+
+            <screenshot>
+              <screeninfo>Duplicate a Field</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/dupfield.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>To move subfields in to the right order, click the up
+                arrow to the left of the field</para>
+              </listitem>
+
+              <listitem>
+                <para>To remove a subfield (if there is more than one of the
+                same type), click the - (minus sign) to the right of the
+                field</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>To use a plugin click on the ... (ellipse) to the right of
+            the filed</para>
+
+            <screenshot>
+              <screeninfo>Leader Builder Plugin</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/leaderbuilder.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </listitem>
+
+          <listitem>
+            <para>Once you've finished, click the 'Save' button at the
+            top</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you are about to add a duplicate record to the system
+                you will be warned before saving</para>
+
+                <screenshot>
+                  <screeninfo>Duplicate Record Warning</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/cataloging/duprecordwarn.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Editing Records</title>
+
+        <para></para>
+      </section>
     </section>
 
     <section>
-      <title>Editing Records</title>
+      <title>Item Records</title>
 
       <para></para>
-    </section>
 
-    <section>
-      <title>Adding and Deleting Items</title>
+      <section>
+        <title>Adding Items</title>
 
-      <para></para>
+        <para></para>
+      </section>
+
+      <section>
+        <title>Editing Items</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Moving Items</title>
+
+        <para></para>
+      </section>
     </section>
 
     <section>
@@ -11192,7 +11410,7 @@
   </chapter>
 
   <chapter>
-    <title>Lists</title>
+    <title>Lists &amp; Cart</title>
 
     <para></para>
   </chapter>
