@@ -11483,10 +11483,10 @@
       addition to the <link linkend="intranetuserjs">intranetuserjs</link>
       system preference can add one.</para>
 
-      <para>$(document).ready(function(){ $("#login
+      <programlisting>$(document).ready(function(){ $("#login
       #submit").parent().after("&lt;p&gt;&lt;a
       href=\"http://YOUR_KOHA_URL/cgi-bin/koha/sco/sco-main.pl\"
-      target=\"_blank\"&gt;Self-Checkout&lt;/a&gt;&lt;/p&gt;"); }); </para>
+      target=\"_blank\"&gt;Self-Checkout&lt;/a&gt;&lt;/p&gt;"); }); </programlisting>
 
       <para>The link will then appear at the bottom of the log in page:</para>
 
@@ -12527,48 +12527,37 @@
         <listitem>
           <para>At approximately line 32 add:</para>
 
-          <para><emphasis>my $cgi = new CGI; </emphasis></para>
+          <programlisting>my $cgi = new CGI;</programlisting>
         </listitem>
 
         <listitem>
           <para>At approximately line 36 change this code:</para>
 
-          <para><emphasis>template_name =&gt;
-          "opac-main.tmpl",</emphasis></para>
+          <programlisting>template_name =&gt;
+          "opac-main.tmpl",</programlisting>
 
           <para>To this code:</para>
 
-          <para><emphasis>template_name =&gt; "pages.tmpl",</emphasis></para>
+          <programlisting>template_name =&gt; "pages.tmpl",</programlisting>
         </listitem>
 
         <listitem>
           <para>At approximately line 54 change this code:</para>
 
-          <para><emphasis>$template-&gt;param( </emphasis></para>
-
-          <para><emphasis>koha_news =&gt; $all_koha_news, </emphasis></para>
-
-          <para><emphasis>koha_news_count =&gt; $koha_news_count
-          </emphasis></para>
-
-          <para><emphasis>); </emphasis></para>
+          <programlisting>$template-&gt;param( 
+          koha_news =&gt; $all_koha_news, 
+          koha_news_count =&gt; $koha_news_count
+          ); </programlisting>
 
           <para>To this:</para>
 
-          <para><emphasis>my $page = "page_" . $cgi-&gt;param("p");
-          </emphasis></para>
-
-          <para><emphasis>$template-&gt;param( </emphasis></para>
-
-          <para><emphasis>koha_news =&gt; $all_koha_news, </emphasis></para>
-
-          <para><emphasis>koha_news_count =&gt; $koha_news_count,
-          </emphasis></para>
-
-          <para><emphasis>local_page =&gt; "" .
-          C4::Context-&gt;preference($page) </emphasis></para>
-
-          <para><emphasis>); </emphasis></para>
+          <programlisting>my $page = "page_" . $cgi-&gt;param("p");
+          $template-&gt;param( 
+          koha_news =&gt; $all_koha_news, 
+          koha_news_count =&gt; $koha_news_count,
+          local_page =&gt; "" .
+          C4::Context-&gt;preference($page) 
+          ); </programlisting>
         </listitem>
 
         <listitem>
@@ -12581,17 +12570,17 @@
         <listitem>
           <para>At approximately line 38, change this:</para>
 
-          <para><emphasis>&lt;!-- TMPL_IF NAME="OpacMainUserBlock"
+          <programlisting>&lt;!-- TMPL_IF NAME="OpacMainUserBlock"
           --&gt;&lt;div id="opacmainuserblock" class="container"&gt;&lt;!--
           TMPL_VAR NAME="OpacMainUserBlock" --&gt;&lt;/div&gt;&lt;!-- /TMPL_IF
-          --&gt; </emphasis></para>
+          --&gt; </programlisting>
 
           <para>To this:</para>
 
-          <para><emphasis>&lt;!-- TMPL_IF NAME="local_page" --&gt;&lt;div
+          <programlisting>&lt;!-- TMPL_IF NAME="local_page" --&gt;&lt;div
           id="opacmainuserblock" class="container"&gt;&lt;!-- TMPL_VAR
           NAME="local_page" --&gt;&lt;/div&gt;&lt;!-- /TMPL_IF
-          --&gt;</emphasis></para>
+          --&gt;</programlisting>
         </listitem>
 
         <listitem>
@@ -12656,10 +12645,8 @@
         <para>Instead of using the address
         http://youraddress/cgi-bin/koha/pages.pl?p=test you can shorten it to
         http://youraddress/pages.pl?p=test Just open up
-        /etc/koha/koha-httpd.conf and add the follow at about line 13:</para>
-
-        <para><emphasis>ScriptAlias /pages.pl
-        "/usr/share/koha/opac/cgi-bin/opac/pages.pl" </emphasis></para>
+        /etc/koha/koha-httpd.conf and add the follow at about line
+        13:<programlisting>ScriptAlias /pages.pl "/usr/share/koha/opac/cgi-bin/opac/pages.pl" </programlisting></para>
 
         <para>Then restart Apache.</para>
       </section>
