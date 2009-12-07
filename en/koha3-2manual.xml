@@ -4812,7 +4812,7 @@
         </section>
 
         <section>
-          <title>intranetuserjs</title>
+          <title id="intranetuserjs">intranetuserjs</title>
 
           <para>Asks: Include the following JavaScript on all pages in the
           staff interface</para>
@@ -11468,7 +11468,96 @@
     <section>
       <title>Self Checkout</title>
 
-      <para></para>
+      <para>Koha comes with a very basic self checkout module. To use this
+      module you have to log in as a <link linkend="addstaffpatron">staff
+      member</link> with <link linkend="patronpermissions">circulation
+      permissions</link>.</para>
+
+      <tip>
+        <para>Create a <link linkend="addstaffpatron">staff patron</link>
+        specifically for this action so that you don't leave a real staff
+        client logged into a computer all day</para>
+      </tip>
+
+      <para>There is no link to the Self Checkout module, but a simple
+      addition to the <link linkend="intranetuserjs">intranetuserjs</link>
+      system preference can add one.</para>
+
+      <para>$(document).ready(function(){ $("#login
+      #submit").parent().after("&lt;p&gt;&lt;a
+      href=\"http://YOUR_KOHA_URL/cgi-bin/koha/sco/sco-main.pl\"
+      target=\"_blank\"&gt;Self-Checkout&lt;/a&gt;&lt;/p&gt;"); }); </para>
+
+      <para>The link will then appear at the bottom of the log in page:</para>
+
+      <screenshot>
+        <screeninfo>Self Checkout Link on Staff Login</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/selfcheckoutlink.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You can also access this module by going to :
+      http://YOUR_KOHA_URL/cgi-bin/koha/sco/sco-main.pl</para>
+
+      <para>When on the self checkout page you will be asked to enter your
+      patron card number:</para>
+
+      <screenshot>
+        <screeninfo>Self Checkout Patron Card Number</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/selfcheckout.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Once your card number is entered you will be asked to scan the
+      items you are checking out</para>
+
+      <screenshot>
+        <screeninfo>Self Checkout</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/selfcheckoutuser.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>As you scan items they will appear below the barcode box</para>
+
+      <screenshot>
+        <screeninfo>Self Checkout Summary</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/selfcheckoutsummary.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>When you are finished scanning items it is important to click the
+      'Click here if done' button to log the patron out and prepare for the
+      next patron.</para>
+
+      <para>When attempting to check items out there are some instances where
+      error messages will appear and the patron will be directed to the
+      librarian.</para>
+
+      <screenshot>
+        <screeninfo>Self Checkout Error Message</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/selfcheckoutfines.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section>
@@ -13361,6 +13450,24 @@
         InProcessingToShelvingCart, &amp; ReturnToShelvingCart</para>
 
         <para>Frequency suggestion: hourly</para>
+      </section>
+
+      <section>
+        <title>Deprecated scripts</title>
+
+        <para>These should not be run without modification:</para>
+
+        <para>Script path: misc/cronjobs/update_items.pl</para>
+
+        <para>Script path:misc/cronjobs/smsoverdues.pl</para>
+
+        <para>Script path:misc/cronjobs/notifyMailsOp.pl</para>
+
+        <para>Script path:misc/cronjobs/reservefix.pl</para>
+
+        <para>Script path:misc/cronjobs/zebraqueue_start.pl</para>
+
+        <para>Script path:misc/cronjobs/j2a.pl</para>
       </section>
     </section>
 
