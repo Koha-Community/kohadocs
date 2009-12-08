@@ -12087,7 +12087,33 @@
   <chapter>
     <title>Lists &amp; Cart</title>
 
-    <para></para>
+    <para>Lists are a way to save a collection of content on a specific topic
+    or for a specific purpose. The Cart is a session specific storage
+    space.</para>
+
+    <section>
+      <title>Lists</title>
+
+      <para></para>
+
+      <section>
+        <title>Add to a List</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Viewing Lists</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>Cart</title>
+
+      <para></para>
+    </section>
   </chapter>
 
   <chapter>
@@ -12197,7 +12223,7 @@ $dsn = 'mysql://scas_user:scas_pass@localhost/scas';</programlisting>
         <programlisting># nano /usr/local/lib/insurge/config/insurge.ini</programlisting>
 
         <para>The variables in insurge.ini are empty. The default values are
-        too long and cause MySQL errors. </para>
+        too long and cause MySQL errors.</para>
 
         <para>Here is a sample of insurge.ini</para>
 
@@ -12231,7 +12257,7 @@ group_key = ""</programlisting>
 # mkdir /usr/local/var
 # mkdir /usr/local/var/log</programlisting>
 
-        <para>Configure the DSN: </para>
+        <para>Configure the DSN:</para>
 
         <programlisting>[locum_config]
 dsn_file = "/usr/local/etc/locum_insurge_dsn.php"</programlisting>
@@ -12261,8 +12287,8 @@ ils_harvest_port = "80"</programlisting>
       <title>Harvest Records</title>
 
       <para>Now that the connector is in place, we will be able to launch
-      harvest.php, a tool that will reap Locum DB Koha and fill the locum.
-      </para>
+      harvest.php, a tool that will reap Locum DB Koha and fill the
+      locum.</para>
 
       <para>Start by configuring harvest.php:</para>
 
@@ -12274,7 +12300,7 @@ ils_harvest_port = "80"</programlisting>
 $last_record = 30;</programlisting>
 
       <para>These are the minimum and maximum biblionumbers from your Koha
-      install. </para>
+      install.</para>
 
       <para>Then start the harvest:</para>
 
@@ -12358,9 +12384,9 @@ mv tmpfile /usr/local/sphinx/etc/sphinx.conf
         <title>Indexing documents</title>
 
         <para>Indexing is necessary if you want to use the search features of
-        SOPAC. </para>
+        SOPAC.</para>
 
-        <para>You must first complete the Insurge table index </para>
+        <para>You must first complete the Insurge table index</para>
 
         <programlisting># chmod +x /usr/local/lib/insurge/tools/update-index.php
 $ /usr/local/lib/insurge/tools/update-index.php</programlisting>
@@ -12422,7 +12448,7 @@ $ svn co http://dobby.darienlibrary.org/svn/sopac/trunk/ sopac</programlisting>
       <section>
         <title>Configuration</title>
 
-        <para>Then go into the settings of SOPAC. </para>
+        <para>Then go into the settings of SOPAC.</para>
 
         <itemizedlist>
           <listitem>
@@ -12442,7 +12468,7 @@ print theme('pages_catalog');</programlisting>
 
         <itemizedlist>
           <listitem>
-            <para>Check the Input Format "PHP Code" </para>
+            <para>Check the Input Format "PHP Code"</para>
           </listitem>
 
           <listitem>
@@ -12455,10 +12481,10 @@ print theme('pages_catalog');</programlisting>
           </listitem>
         </itemizedlist>
 
-        <para>Go to the root of Drupal, a search form will appear. </para>
+        <para>Go to the root of Drupal, a search form will appear.</para>
 
         <para>Thinking to empty the cache of Drupal when something does not
-        work. </para>
+        work.</para>
 
         <para>Drupal offers a few blocks, not configured by default. Must
         specify on which page they should appear.</para>
@@ -13439,6 +13465,165 @@ print theme('pages_catalog');</programlisting>
         </listitem>
       </itemizedlist>
     </section>
+  </appendix>
+
+  <appendix>
+    <title>Koha Embedded Holdings Data</title>
+
+    <para>This table represents a subset of the default embedded holdings data
+    in Koha 3.0 , namely those subfields that are required or commonly filled
+    on data import, or of interest to book &amp; materials vendors providing
+    MARC data for Koha libraries.</para>
+
+    <table border="1">
+      <caption>Koha Embedded Holdings Data</caption>
+
+      <tr>
+        <th>MARC21 Tag/subfield</th>
+
+        <th>Data Element</th>
+
+        <th>Description</th>
+
+        <th>Notes</th>
+      </tr>
+
+      <tr>
+        <td>952a</td>
+
+        <td>branchcode</td>
+
+        <td>Owning Library</td>
+
+        <td>Code must be defined in <link linkend="libsgroups">Libraries,
+        Branches and Groups</link></td>
+      </tr>
+
+      <tr>
+        <td>952‡b</td>
+
+        <td><strong>branchcode</strong></td>
+
+        <td>holding library (usu. the same as 952$a )</td>
+
+        <td>“</td>
+      </tr>
+
+      <tr>
+        <td>952‡c</td>
+
+        <td>Shelving location code</td>
+
+        <td></td>
+
+        <td>Coded value, matching <link lang=""
+        linkend="authorizedvalues">Authorized Value</link> category ('LOC' in
+        default installation)</td>
+      </tr>
+
+      <tr>
+        <td>952‡d</td>
+
+        <td>Date acquired</td>
+
+        <td>YYYY-MM-DD</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡e</td>
+
+        <td>Source of acquisition</td>
+
+        <td>coded value or vendor string</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡g</td>
+
+        <td>Purchase price</td>
+
+        <td>decimal number, no currency symbol</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡h</td>
+
+        <td>Serial enumeration caption</td>
+
+        <td></td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡o</td>
+
+        <td>Koha full call number</td>
+
+        <td></td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡p</td>
+
+        <td><em>barcode *</em></td>
+
+        <td>max 20 characters</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡v</td>
+
+        <td>Replacement price</td>
+
+        <td>decimal number, no currency symbol</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡w</td>
+
+        <td>Price effective from</td>
+
+        <td>YYYY-MM-DD</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>952‡y</td>
+
+        <td>Koha item type *</td>
+
+        <td>coded value, required field for circulation</td>
+
+        <td>Coded value, must be defined in <link linkend="itemtypeadmin">Item
+        types</link></td>
+      </tr>
+
+      <tr>
+        <td>952‡z</td>
+
+        <td>Public note</td>
+
+        <td></td>
+
+        <td></td>
+      </tr>
+    </table>
+
+    <para>* - required for circulation</para>
   </appendix>
 
   <appendix>
