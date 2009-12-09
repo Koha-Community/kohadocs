@@ -649,7 +649,8 @@
           </section>
 
           <section>
-            <title>DefaultClassificationSource</title>
+            <title
+            id="DefaultClassificationSource">DefaultClassificationSource</title>
 
             <para>Default: Dewey Decimal System</para>
 
@@ -2972,7 +2973,7 @@
           </section>
 
           <section>
-            <title>hidelostitems</title>
+            <title id="hidelostitems">hidelostitems</title>
 
             <para>Default: Don't show</para>
 
@@ -12100,7 +12101,7 @@
         <title>Create a List</title>
 
         <para>A list can be created by visiting the Lists page and clicking
-        'New List' </para>
+        'New List'</para>
 
         <screenshot>
           <screeninfo>New List Button</screeninfo>
@@ -12324,7 +12325,7 @@
       </screenshot>
 
       <para>Clicking on the Cart icon will provide you with the contents of
-      the cart </para>
+      the cart</para>
 
       <screenshot>
         <screeninfo>Cart Contents</screeninfo>
@@ -13723,10 +13724,9 @@ print theme('pages_catalog');</programlisting>
   <appendix>
     <title>Koha Embedded Holdings Data</title>
 
-    <para>This table represents a subset of the default embedded holdings data
-    in Koha 3.0 , namely those subfields that are required or commonly filled
-    on data import, or of interest to book &amp; materials vendors providing
-    MARC data for Koha libraries.</para>
+    <para>This table represents the default embedded holdings data in Koha
+    3.0. This information can be used for migration or importing data
+    purposes</para>
 
     <table border="1">
       <caption>Koha Embedded Holdings Data</caption>
@@ -13739,6 +13739,107 @@ print theme('pages_catalog');</programlisting>
         <th>Description</th>
 
         <th>Notes</th>
+      </tr>
+
+      <tr>
+        <td>9520</td>
+
+        <td>Withdrawn status</td>
+
+        <td>Default values: 0 = Not withdrawn / 1 = Withdrawn</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>9521</td>
+
+        <td>Lost status</td>
+
+        <td>Default values: 0 = Available / 1 = Lost / 2= Long Overdue (Lost)
+        / 3 = Lost and Paid For / 4 = Missing in Inventory / 5 = Missing in
+        Hold Queue </td>
+
+        <td>It’s possible to configure OPAC so that lost items don’t display
+        with the <link linkend="hidelostitems">hidelostitems</link> system
+        preference.</td>
+      </tr>
+
+      <tr>
+        <td>9522</td>
+
+        <td>Classification</td>
+
+        <td>Classification scheme that defines filing rules used for sorting
+        call numbers.</td>
+
+        <td>If no classification scheme is entered, the system will use the
+        value entered in the <link
+        linkend="DefaultClassificationSource">DefaultClassificationSource</link>
+        preference.</td>
+      </tr>
+
+      <tr>
+        <td>9523</td>
+
+        <td>Materials specified</td>
+
+        <td>Specific issues of serials or multi-part items. </td>
+
+        <td>Copy/volume data is stored in 952h and t for display in Normal
+        views. 3 isn't displayed anywhere except the MARC view.</td>
+      </tr>
+
+      <tr>
+        <td>9524</td>
+
+        <td>Damaged status</td>
+
+        <td>Default values: 0 = Not damaged / 1 = Damaged</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>9525</td>
+
+        <td>Use restrictions</td>
+
+        <td>Default values: 0 = No use restrictions / 1 = Restricted
+        Access</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>9527</td>
+
+        <td>Not for loan</td>
+
+        <td>Default values: -1 = Ordered / 0 = Available for loans / 1 = Not
+        for Loan / 2 = Staff Collection</td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>9528</td>
+
+        <td>Collection code</td>
+
+        <td></td>
+
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>9529</td>
+
+        <td>Item number</td>
+
+        <td>System-generated item number.</td>
+
+        <td>Does not display in the item record.</td>
       </tr>
 
       <tr>
@@ -13780,7 +13881,9 @@ print theme('pages_catalog');</programlisting>
 
         <td>YYYY-MM-DD</td>
 
-        <td></td>
+        <td>Date formats in the 952 subfields are required to be in the system
+        internal format for data loading and subsequent item editing:
+        YYYY-MM-DD </td>
       </tr>
 
       <tr>
