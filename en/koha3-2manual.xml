@@ -11580,7 +11580,9 @@
       <para>The Offline Circulation Utility can be downloaded at: <ulink
       url="http://kylehall.info/index.php/projects/koha-tools/koha-offline-circulation/">http://kylehall.info/index.php/projects/koha-tools/koha-offline-circulation/</ulink></para>
 
-      <para></para>
+      <para>There is also a plugin for FIrefox that can be used for Offline
+      Circulation: <ulink
+      url="https://addons.mozilla.org/en-US/firefox/addon/14399">https://addons.mozilla.org/en-US/firefox/addon/14399</ulink></para>
     </section>
   </chapter>
 
@@ -12390,7 +12392,23 @@
 
   <chapter>
     <title>SOPAC2 Installation</title>
+	<chapterinfo>    
+		<author>
+	      <firstname>Jean-André</firstname>
 
+    	  <surname>Santoni</surname>
+
+	      <affiliation>
+    	    <orgname>BibLibre</orgname>
+	      </affiliation>
+    	</author>
+
+	    <pubdate>2009</pubdate>
+    	<othercredit role='translator'>
+			<firstname>Nicole C.</firstname> 
+			<surname>Engard</surname> 
+		</othercredit>
+	</chapterinfo>
     <para><note>
         <para>The following documentation was translated using Google
         Translate from French to English and may have some language
@@ -13758,7 +13776,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>Default values: 0 = Available / 1 = Lost / 2= Long Overdue (Lost)
         / 3 = Lost and Paid For / 4 = Missing in Inventory / 5 = Missing in
-        Hold Queue </td>
+        Hold Queue</td>
 
         <td>It’s possible to configure OPAC so that lost items don’t display
         with the <link linkend="hidelostitems">hidelostitems</link> system
@@ -13784,7 +13802,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>Materials specified</td>
 
-        <td>Specific issues of serials or multi-part items. </td>
+        <td>Specific issues of serials or multi-part items.</td>
 
         <td>Copy/volume data is stored in 952h and t for display in Normal
         views. 3 isn't displayed anywhere except the MARC view.</td>
@@ -13883,7 +13901,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>Date formats in the 952 subfields are required to be in the system
         internal format for data loading and subsequent item editing:
-        YYYY-MM-DD </td>
+        YYYY-MM-DD</td>
       </tr>
 
       <tr>
@@ -14505,4 +14523,207 @@ print theme('pages_catalog');</programlisting>
       url="http://wiki.koha.org/doku.php?id=en:development:cronjobs">http://wiki.koha.org/doku.php?id=en:development:cronjobs</ulink></para>
     </section>
   </appendix>
+  <appendix>
+    <title>Using the SRU server</title>
+
+	<appendixinfo>    
+		<author>
+	      <firstname>Nicolas</firstname>
+
+    	  <surname>Morin</surname>
+
+	      <affiliation>
+    	    <orgname>BibLibre</orgname>
+	      </affiliation>
+    	</author>
+
+	    <pubdate>2009</pubdate>
+	</appendixinfo>
+
+    <section>
+      <title>Using the SRU server</title>
+  
+        <para>Koha implements the Search/Retrieve via URL (SRU) protocol. More information about the protocol itself can be found at <ulink
+      url="http://www.loc.gov/standards/sru/">http://www.loc.gov/standards/sru/</ulink>. The version implemented is version 1.1.</para>
+
+      <section>
+        <title id="sru_explain">Explain</title>
+        <para>If you want to have informations about the implementation of SRU on a given server, you should have access to the Explain file using a request to the server without any parameter. Like http://myserver.com:9999/biblios/The response from the server is an xml file that should look like the following and will give you information about the default settings of the SRU server.</para>
+          <programlisting><![CDATA[
+               <zs:explainResponse>
+                    <zs:version>1.1</zs:version>
+                    <zs:record>
+                         <zs:recordSchema>http://explain.z3950.org/dtd/2.0/</zs:recordSchema>
+                         <zs:recordPacking>xml</zs:recordPacking>
+                         <zs:recordData>
+                         <explain xml:base="zebradb/explain-biblios.xml">
+                         <!--
+                         try stylesheet url: http://./?stylesheet=docpath/sru2.xsl
+                         -->
+                    <serverInfo protocol="SRW/SRU/Z39.50">
+                         <host>biblibre</host>
+                         <port>9999</port>
+                         <database>biblios</database>
+                    </serverInfo>
+                    <databaseInfo>
+                         <title lang="en" primary="true">Koha 3 Bibliographic SRU/SRW/Z39.50 server</title>
+                         <description lang="en" primary="true">Koha 3 Bibliographic Server</description>
+                         <links>
+                              <sru>http://biblibre:9999</sru>
+                         </links>
+                    </databaseInfo>
+                    <indexInfo>
+                         <set name="cql" identifier="info:srw/cql-context-set/1/cql-v1.1">
+                              <title>CQL Standard Set</title>
+                         </set>
+                         <index search="true" scan="true" sort="false">
+                         <title lang="en">CQL Server Choice</title>
+                         <map>
+                              <name set="cql">serverChoice</name>
+                         </map>
+                    <map>
+                       <attr type="1" set="bib1">text</attr>
+                       </map>
+                  </index>
+              <index search="true" scan="true" sort="false">
+                 <title lang="en">CQL All</title>
+                     <map>
+        <name set="cql">all</name>
+        </map>
+        <map>
+        <attr type="1" set="bib1">text</attr>
+        </map>
+        </index>
+        <!-- Record ID index -->
+        <index search="true" scan="true" sort="false">
+        <title lang="en">Record ID</title>
+        <map>
+        <name set="rec">id</name>
+        </map>
+        <map>
+        <attr type="1" set="bib1">rec:id</attr>
+        <attr type="4" set="bib1">3</attr>
+        </map>
+        </index>]]>
+          </programlisting>
+      </section>
+
+      <section>
+        <title id="sru_search">Search</title>
+
+        <para>This url : http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=reefs is composed of the following elements:</para>
+        <itemizedlist>
+            <listitem>
+              <para>base url of the SRU server : http://myserver.com:9999/biblios?</para>
+            </listitem>
+
+            <listitem>
+              <para>search part with the 3 required parameters : version, operation and query. The parameters within the search part should be of the key=value form, and can be combined with the &amp; character.</para>
+            </listitem>
+          </itemizedlist>
+
+        <para>One can add optional parameters to the query, for instance maximumRecords indicating the maximum number of records to be returned by the server. So http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=reefs&amp;maximumRecords=5 will only get the first 5 results results from the server.</para>
+
+        <para><ulink url="http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html">http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html</ulink> gives more details about the search operations and in particular the list of optional parameters for searching.</para>
+        
+        <section>
+             <title id="sru_search_more_details">More details about Search</title>
+             
+             <para>The "operation" key can take two values: scan or searchRetrieve.</para>
+             
+             <para>If operation=searchRetrieve, then the search key should be query. As in : operation=searchRetrieve&amp;query=reefs</para>
+
+               <para>If operation=scan, then the search key should be scanClause. As in : operation=scan&amp;scanClause=reefs</para>
+                    
+               <para>etc/zebradb/biblios/etc/bib1.att defines Zebra/3950 indexes that exist on your system. For instance you'll see that we have indexes for Subject and for Title: att 21 Subject and att 4 Title respectively.</para>
+
+               <para>In the pqf.properties file located under etc/zebradb/pqf.properties I see that an access point already uses my Subject index (index.dc.subject = 1=21) while another uses my Title index (index.dc.title = 1=4)
+I know this is my Subject index because as I've seen just before in my bib1.att file, it's called with =1=21 in Z3950: so index.dc.subject = 1=21 correctly points to my Subject index. And Title was called with 1=4 so index.dc.title = 1=4 correctly points to my Title index.
+I can now construct my query just like I would in a search box, just preceding it with the "query" key: query=Subject=reefs and Title=coral searches "reefs" in the subject and "coral" in the title. The full url would be http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Subject=reefs and Title=coral
+If I want to limit the result set to just 5 records, I can do http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Subject=reefs and Title=coral&amp;maximumRecords=5</para>
+                     
+                <para>I can also play with truncate, relations, etc. Those are also defined in my pqf.properties file. I can see for instance the position properties defined as: </para>
+
+                <programlisting>
+               position.first              = 3=1 6=1
+              # "first in field"
+               position.any                = 3=3 6=1
+                 # "any position in field"
+               </programlisting>
+
+               <para>So as an example if I want "coral" to be at the beginning of the title, I can do this query : http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Title=coral first</para>
+          </section>
+          </section>
+          <section>
+        <title id="sru_retrieve">Retrieve</title>          
+          
+          <para>My search for http://univ_lyon3.biblibre.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=coral reefs&amp;maximumRecords=1 retrieves just on record. The response looks like this:</para>
+          
+          <programlisting><![CDATA[
+          <zs:searchRetrieveResponse>
+<zs:version>1.1</zs:version>
+<zs:numberOfRecords>1</zs:numberOfRecords>
+<zs:records>
+<zs:record>
+<zs:recordPacking>xml</zs:recordPacking>
+<zs:recordData>
+<record xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/ standards/marcxml/schema/MARC21slim.xsd">
+<leader> cam a22 4500</leader>
+<datafield tag="010" ind1=" " ind2=" ">
+<subfield code="a">2-603-01193-6</subfield>
+<subfield code="b">rel.</subfield>
+<subfield code="d">159 F</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">FR</subfield>
+<subfield code="b">00065351</subfield>
+</datafield>
+<datafield tag="101" ind1="1" ind2=" ">
+<subfield code="c">ita</subfield>
+</datafield>
+<datafield tag="105" ind1=" " ind2=" ">
+<subfield code="a">a z 00|y|</subfield>
+</datafield>
+<datafield tag="106" ind1=" " ind2=" ">
+<subfield code="a">r</subfield>
+</datafield>
+<datafield tag="100" ind1=" " ind2=" ">
+<subfield code="a">20091130 frey50 </subfield>
+</datafield>
+<datafield tag="200" ind1="1" ind2=" ">
+<subfield code="a">Guide des r√©cifs coralliens / A Guide to Coral Reefs</subfield>
+<subfield code="b">Texte imprim√©</subfield>
+<subfield code="e">la faune sous-marine des coraux</subfield>
+<subfield code="f">A. et A. Ferrari</subfield>
+</datafield>
+<datafield tag="210" ind1=" " ind2=" ">
+<subfield code="a">Lausanne</subfield>
+<subfield code="a">Paris</subfield>
+<subfield code="c">Delachaux et Niestl√©</subfield>
+<subfield code="d">cop. 2000</subfield>
+<subfield code="e">impr. en Espagne</subfield>
+</datafield>
+<datafield tag="215" ind1=" " ind2=" ">
+<subfield code="a">287 p.</subfield>
+<subfield code="c">ill. en coul., couv. ill. en coul.</subfield>
+<subfield code="d">20 cm</subfield>
+</datafield>
+......
+<idzebra>
+<size>4725</size>
+<localnumber>2</localnumber>
+<filename>/tmp/nw10BJv9Pk/upd_biblio/exported_records</filename>
+</idzebra>
+</record>
+</zs:recordData>
+<zs:recordPosition>1</zs:recordPosition>
+</zs:record>
+</zs:records>
+</zs:searchRetrieveResponse>
+]]>
+          </programlisting>
+      </section>
+</section>
+  </appendix>
+
 </book>
