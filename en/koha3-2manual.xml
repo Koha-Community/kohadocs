@@ -42,7 +42,7 @@
       </screenshot>
 
       <section>
-        <title>Acquisitions</title>
+        <title id="acqprefs">Acquisitions</title>
 
         <para></para>
 
@@ -7231,12 +7231,12 @@
     </section>
 
     <section>
-      <title>Acquisitions</title>
+      <title id="acqadmin">Acquisitions</title>
 
       <para></para>
 
       <section>
-        <title>Currencies &amp; Exchange Rates</title>
+        <title id="currexchangeadmin">Currencies &amp; Exchange Rates</title>
 
         <para>If you place orders from more than one country you will want to
         input currency exchange rates so that your acquisitions module will
@@ -11580,7 +11580,7 @@
       <para>The Offline Circulation Utility can be downloaded at: <ulink
       url="http://kylehall.info/index.php/projects/koha-tools/koha-offline-circulation/">http://kylehall.info/index.php/projects/koha-tools/koha-offline-circulation/</ulink></para>
 
-      <para>There is also a plugin for FIrefox that can be used for Offline
+      <para>There is also a plugin for Firefox that can be used for Offline
       Circulation: <ulink
       url="https://addons.mozilla.org/en-US/firefox/addon/14399">https://addons.mozilla.org/en-US/firefox/addon/14399</ulink></para>
     </section>
@@ -12085,6 +12085,181 @@
     <title>Acquisitions</title>
 
     <para></para>
+
+    <section>
+      <title>Setup</title>
+
+      <para>Before using the Acquisitions Module you will want to make sure
+      that you have completed all of the set up.</para>
+
+      <para>First, set your <link linkend="acqprefs">Acquisitions System
+      Preferences</link> and <link linkend="acqadmin">Acquisitions
+      Administration</link> to match your library's workflow.</para>
+    </section>
+
+    <section>
+      <title>Vendors</title>
+
+      <para>Before any orders can be places you must first enter at least one
+      vendor.</para>
+
+      <section>
+        <title>Add a Vendor</title>
+
+        <para>To add a vendor click the 'New Vendor' button on the
+        Acquisitions page</para>
+
+        <screenshot>
+          <screeninfo>New Vendor Button on Acquisitions</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/newvendbutton.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The vendor add form is broken into three pieces</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The first section is for basic information about the
+            Vendor</para>
+
+            <screenshot>
+              <screeninfo>Basic Vendor Information</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/newvendor1.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Of these fields, only the Vendor name is required, the
+                rest of the information should be added to help with
+                generating claim letters and invoices</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>The second section is for information regarding your contact
+            at the Vendor's office</para>
+
+            <screenshot>
+              <screeninfo>Vendor Contact Details</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/newvendor2.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>None of these fields are required, they should only be
+                entered if you want to keep track of your contact's
+                information within Koha</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>The final section is for billing information</para>
+
+            <screenshot>
+              <screeninfo>Vendor Ordering/Billing Information</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/newvendor3.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>To be able to order from a vendor you must make them
+                'Active'</para>
+              </listitem>
+
+              <listitem>
+                <para>For List Prices and Invoice Prices choose the
+                currency</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Currencies are assigned in the <link
+                    linkend="currexchangeadmin">Currencies &amp; Exchange
+                    Rates</link> admin area</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>If the vendor offers a consistent blank discount, enter
+                that in the 'Discount' field</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>You can enter item specific discounts when placing
+                    an order </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>GST rate is for any tax the vendor may charge</para>
+              </listitem>
+
+              <listitem>
+                <para>Notes are for internal use</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>View/Edit a Vendor</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Vendor Contracts</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>Managing Suggestions</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Placing Orders</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Receiving Orders</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Claims &amp; Late Orders</title>
+
+      <para></para>
+    </section>
   </chapter>
 
   <chapter>
@@ -12392,28 +12567,34 @@
 
   <chapter>
     <title>SOPAC2 Installation</title>
-	<chapterinfo>    
-		<author>
-	      <firstname>Jean-André</firstname>
 
-    	  <surname>Santoni</surname>
+    <chapterinfo>
+      <author>
+        <firstname>Jean-André</firstname>
 
-	      <affiliation>
-    	    <orgname>BibLibre</orgname>
-	      </affiliation>
-    	</author>
+        <surname>Santoni</surname>
 
-	    <pubdate>2009</pubdate>
-    	<othercredit role='translator'>
-			<firstname>Nicole C.</firstname> 
-			<surname>Engard</surname> 
-		</othercredit>
-	</chapterinfo>
-    <para><note>
+        <affiliation>
+          <orgname>BibLibre</orgname>
+        </affiliation>
+      </author>
+
+      <pubdate>2009</pubdate>
+
+      <othercredit role="translator">
+        <firstname>Nicole C.</firstname>
+
+        <surname>Engard</surname>
+      </othercredit>
+    </chapterinfo>
+
+    <para>
+      <note>
         <para>The following documentation was translated using Google
         Translate from French to English and may have some language
         errors.</para>
-      </note></para>
+      </note>
+    </para>
 
     <section>
       <title>Introduction</title>
@@ -14523,207 +14704,258 @@ print theme('pages_catalog');</programlisting>
       url="http://wiki.koha.org/doku.php?id=en:development:cronjobs">http://wiki.koha.org/doku.php?id=en:development:cronjobs</ulink></para>
     </section>
   </appendix>
+
   <appendix>
     <title>Using the SRU server</title>
 
-	<appendixinfo>    
-		<author>
-	      <firstname>Nicolas</firstname>
+    <appendixinfo>
+      <author>
+        <firstname>Nicolas</firstname>
 
-    	  <surname>Morin</surname>
+        <surname>Morin</surname>
 
-	      <affiliation>
-    	    <orgname>BibLibre</orgname>
-	      </affiliation>
-    	</author>
+        <affiliation>
+          <orgname>BibLibre</orgname>
+        </affiliation>
+      </author>
 
-	    <pubdate>2009</pubdate>
-	</appendixinfo>
+      <pubdate>2009</pubdate>
+    </appendixinfo>
 
     <section>
       <title>Using the SRU server</title>
-  
-        <para>Koha implements the Search/Retrieve via URL (SRU) protocol. More information about the protocol itself can be found at <ulink
-      url="http://www.loc.gov/standards/sru/">http://www.loc.gov/standards/sru/</ulink>. The version implemented is version 1.1.</para>
+
+      <para>Koha implements the Search/Retrieve via URL (SRU) protocol. More
+      information about the protocol itself can be found at <ulink
+      url="http://www.loc.gov/standards/sru/">http://www.loc.gov/standards/sru/</ulink>.
+      The version implemented is version 1.1.</para>
 
       <section>
         <title id="sru_explain">Explain</title>
-        <para>If you want to have informations about the implementation of SRU on a given server, you should have access to the Explain file using a request to the server without any parameter. Like http://myserver.com:9999/biblios/The response from the server is an xml file that should look like the following and will give you information about the default settings of the SRU server.</para>
-          <programlisting><![CDATA[
-               <zs:explainResponse>
-                    <zs:version>1.1</zs:version>
-                    <zs:record>
-                         <zs:recordSchema>http://explain.z3950.org/dtd/2.0/</zs:recordSchema>
-                         <zs:recordPacking>xml</zs:recordPacking>
-                         <zs:recordData>
-                         <explain xml:base="zebradb/explain-biblios.xml">
-                         <!--
+
+        <para>If you want to have informations about the implementation of SRU
+        on a given server, you should have access to the Explain file using a
+        request to the server without any parameter. Like
+        http://myserver.com:9999/biblios/The response from the server is an
+        xml file that should look like the following and will give you
+        information about the default settings of the SRU server.</para>
+
+        <programlisting>
+               &lt;zs:explainResponse&gt;
+                    &lt;zs:version&gt;1.1&lt;/zs:version&gt;
+                    &lt;zs:record&gt;
+                         &lt;zs:recordSchema&gt;http://explain.z3950.org/dtd/2.0/&lt;/zs:recordSchema&gt;
+                         &lt;zs:recordPacking&gt;xml&lt;/zs:recordPacking&gt;
+                         &lt;zs:recordData&gt;
+                         &lt;explain xml:base="zebradb/explain-biblios.xml"&gt;
+                         &lt;!--
                          try stylesheet url: http://./?stylesheet=docpath/sru2.xsl
-                         -->
-                    <serverInfo protocol="SRW/SRU/Z39.50">
-                         <host>biblibre</host>
-                         <port>9999</port>
-                         <database>biblios</database>
-                    </serverInfo>
-                    <databaseInfo>
-                         <title lang="en" primary="true">Koha 3 Bibliographic SRU/SRW/Z39.50 server</title>
-                         <description lang="en" primary="true">Koha 3 Bibliographic Server</description>
-                         <links>
-                              <sru>http://biblibre:9999</sru>
-                         </links>
-                    </databaseInfo>
-                    <indexInfo>
-                         <set name="cql" identifier="info:srw/cql-context-set/1/cql-v1.1">
-                              <title>CQL Standard Set</title>
-                         </set>
-                         <index search="true" scan="true" sort="false">
-                         <title lang="en">CQL Server Choice</title>
-                         <map>
-                              <name set="cql">serverChoice</name>
-                         </map>
-                    <map>
-                       <attr type="1" set="bib1">text</attr>
-                       </map>
-                  </index>
-              <index search="true" scan="true" sort="false">
-                 <title lang="en">CQL All</title>
-                     <map>
-        <name set="cql">all</name>
-        </map>
-        <map>
-        <attr type="1" set="bib1">text</attr>
-        </map>
-        </index>
-        <!-- Record ID index -->
-        <index search="true" scan="true" sort="false">
-        <title lang="en">Record ID</title>
-        <map>
-        <name set="rec">id</name>
-        </map>
-        <map>
-        <attr type="1" set="bib1">rec:id</attr>
-        <attr type="4" set="bib1">3</attr>
-        </map>
-        </index>]]>
+                         --&gt;
+                    &lt;serverInfo protocol="SRW/SRU/Z39.50"&gt;
+                         &lt;host&gt;biblibre&lt;/host&gt;
+                         &lt;port&gt;9999&lt;/port&gt;
+                         &lt;database&gt;biblios&lt;/database&gt;
+                    &lt;/serverInfo&gt;
+                    &lt;databaseInfo&gt;
+                         &lt;title lang="en" primary="true"&gt;Koha 3 Bibliographic SRU/SRW/Z39.50 server&lt;/title&gt;
+                         &lt;description lang="en" primary="true"&gt;Koha 3 Bibliographic Server&lt;/description&gt;
+                         &lt;links&gt;
+                              &lt;sru&gt;http://biblibre:9999&lt;/sru&gt;
+                         &lt;/links&gt;
+                    &lt;/databaseInfo&gt;
+                    &lt;indexInfo&gt;
+                         &lt;set name="cql" identifier="info:srw/cql-context-set/1/cql-v1.1"&gt;
+                              &lt;title&gt;CQL Standard Set&lt;/title&gt;
+                         &lt;/set&gt;
+                         &lt;index search="true" scan="true" sort="false"&gt;
+                         &lt;title lang="en"&gt;CQL Server Choice&lt;/title&gt;
+                         &lt;map&gt;
+                              &lt;name set="cql"&gt;serverChoice&lt;/name&gt;
+                         &lt;/map&gt;
+                    &lt;map&gt;
+                       &lt;attr type="1" set="bib1"&gt;text&lt;/attr&gt;
+                       &lt;/map&gt;
+                  &lt;/index&gt;
+              &lt;index search="true" scan="true" sort="false"&gt;
+                 &lt;title lang="en"&gt;CQL All&lt;/title&gt;
+                     &lt;map&gt;
+        &lt;name set="cql"&gt;all&lt;/name&gt;
+        &lt;/map&gt;
+        &lt;map&gt;
+        &lt;attr type="1" set="bib1"&gt;text&lt;/attr&gt;
+        &lt;/map&gt;
+        &lt;/index&gt;
+        &lt;!-- Record ID index --&gt;
+        &lt;index search="true" scan="true" sort="false"&gt;
+        &lt;title lang="en"&gt;Record ID&lt;/title&gt;
+        &lt;map&gt;
+        &lt;name set="rec"&gt;id&lt;/name&gt;
+        &lt;/map&gt;
+        &lt;map&gt;
+        &lt;attr type="1" set="bib1"&gt;rec:id&lt;/attr&gt;
+        &lt;attr type="4" set="bib1"&gt;3&lt;/attr&gt;
+        &lt;/map&gt;
+        &lt;/index&gt;
           </programlisting>
       </section>
 
       <section>
         <title id="sru_search">Search</title>
 
-        <para>This url : http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=reefs is composed of the following elements:</para>
+        <para>This url :
+        http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=reefs
+        is composed of the following elements:</para>
+
         <itemizedlist>
-            <listitem>
-              <para>base url of the SRU server : http://myserver.com:9999/biblios?</para>
-            </listitem>
+          <listitem>
+            <para>base url of the SRU server :
+            http://myserver.com:9999/biblios?</para>
+          </listitem>
 
-            <listitem>
-              <para>search part with the 3 required parameters : version, operation and query. The parameters within the search part should be of the key=value form, and can be combined with the &amp; character.</para>
-            </listitem>
-          </itemizedlist>
+          <listitem>
+            <para>search part with the 3 required parameters : version,
+            operation and query. The parameters within the search part should
+            be of the key=value form, and can be combined with the &amp;
+            character.</para>
+          </listitem>
+        </itemizedlist>
 
-        <para>One can add optional parameters to the query, for instance maximumRecords indicating the maximum number of records to be returned by the server. So http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=reefs&amp;maximumRecords=5 will only get the first 5 results results from the server.</para>
+        <para>One can add optional parameters to the query, for instance
+        maximumRecords indicating the maximum number of records to be returned
+        by the server. So
+        http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=reefs&amp;maximumRecords=5
+        will only get the first 5 results results from the server.</para>
 
-        <para><ulink url="http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html">http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html</ulink> gives more details about the search operations and in particular the list of optional parameters for searching.</para>
-        
+        <para><ulink
+        url="http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html">http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html</ulink>
+        gives more details about the search operations and in particular the
+        list of optional parameters for searching.</para>
+
         <section>
-             <title id="sru_search_more_details">More details about Search</title>
-             
-             <para>The "operation" key can take two values: scan or searchRetrieve.</para>
-             
-             <para>If operation=searchRetrieve, then the search key should be query. As in : operation=searchRetrieve&amp;query=reefs</para>
+          <title id="sru_search_more_details">More details about
+          Search</title>
 
-               <para>If operation=scan, then the search key should be scanClause. As in : operation=scan&amp;scanClause=reefs</para>
-                    
-               <para>etc/zebradb/biblios/etc/bib1.att defines Zebra/3950 indexes that exist on your system. For instance you'll see that we have indexes for Subject and for Title: att 21 Subject and att 4 Title respectively.</para>
+          <para>The "operation" key can take two values: scan or
+          searchRetrieve.</para>
 
-               <para>In the pqf.properties file located under etc/zebradb/pqf.properties I see that an access point already uses my Subject index (index.dc.subject = 1=21) while another uses my Title index (index.dc.title = 1=4)
-I know this is my Subject index because as I've seen just before in my bib1.att file, it's called with =1=21 in Z3950: so index.dc.subject = 1=21 correctly points to my Subject index. And Title was called with 1=4 so index.dc.title = 1=4 correctly points to my Title index.
-I can now construct my query just like I would in a search box, just preceding it with the "query" key: query=Subject=reefs and Title=coral searches "reefs" in the subject and "coral" in the title. The full url would be http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Subject=reefs and Title=coral
-If I want to limit the result set to just 5 records, I can do http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Subject=reefs and Title=coral&amp;maximumRecords=5</para>
-                     
-                <para>I can also play with truncate, relations, etc. Those are also defined in my pqf.properties file. I can see for instance the position properties defined as: </para>
+          <para>If operation=searchRetrieve, then the search key should be
+          query. As in : operation=searchRetrieve&amp;query=reefs</para>
 
-                <programlisting>
+          <para>If operation=scan, then the search key should be scanClause.
+          As in : operation=scan&amp;scanClause=reefs</para>
+
+          <para>etc/zebradb/biblios/etc/bib1.att defines Zebra/3950 indexes
+          that exist on your system. For instance you'll see that we have
+          indexes for Subject and for Title: att 21 Subject and att 4 Title
+          respectively.</para>
+
+          <para>In the pqf.properties file located under
+          etc/zebradb/pqf.properties I see that an access point already uses
+          my Subject index (index.dc.subject = 1=21) while another uses my
+          Title index (index.dc.title = 1=4) I know this is my Subject index
+          because as I've seen just before in my bib1.att file, it's called
+          with =1=21 in Z3950: so index.dc.subject = 1=21 correctly points to
+          my Subject index. And Title was called with 1=4 so index.dc.title =
+          1=4 correctly points to my Title index. I can now construct my query
+          just like I would in a search box, just preceding it with the
+          "query" key: query=Subject=reefs and Title=coral searches "reefs" in
+          the subject and "coral" in the title. The full url would be
+          http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Subject=reefs
+          and Title=coral If I want to limit the result set to just 5 records,
+          I can do
+          http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Subject=reefs
+          and Title=coral&amp;maximumRecords=5</para>
+
+          <para>I can also play with truncate, relations, etc. Those are also
+          defined in my pqf.properties file. I can see for instance the
+          position properties defined as:</para>
+
+          <programlisting>
                position.first              = 3=1 6=1
               # "first in field"
                position.any                = 3=3 6=1
                  # "any position in field"
                </programlisting>
 
-               <para>So as an example if I want "coral" to be at the beginning of the title, I can do this query : http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Title=coral first</para>
-          </section>
-          </section>
-          <section>
-        <title id="sru_retrieve">Retrieve</title>          
-          
-          <para>My search for http://univ_lyon3.biblibre.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=coral reefs&amp;maximumRecords=1 retrieves just on record. The response looks like this:</para>
-          
-          <programlisting><![CDATA[
-          <zs:searchRetrieveResponse>
-<zs:version>1.1</zs:version>
-<zs:numberOfRecords>1</zs:numberOfRecords>
-<zs:records>
-<zs:record>
-<zs:recordPacking>xml</zs:recordPacking>
-<zs:recordData>
-<record xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/ standards/marcxml/schema/MARC21slim.xsd">
-<leader> cam a22 4500</leader>
-<datafield tag="010" ind1=" " ind2=" ">
-<subfield code="a">2-603-01193-6</subfield>
-<subfield code="b">rel.</subfield>
-<subfield code="d">159 F</subfield>
-</datafield>
-<datafield tag="020" ind1=" " ind2=" ">
-<subfield code="a">FR</subfield>
-<subfield code="b">00065351</subfield>
-</datafield>
-<datafield tag="101" ind1="1" ind2=" ">
-<subfield code="c">ita</subfield>
-</datafield>
-<datafield tag="105" ind1=" " ind2=" ">
-<subfield code="a">a z 00|y|</subfield>
-</datafield>
-<datafield tag="106" ind1=" " ind2=" ">
-<subfield code="a">r</subfield>
-</datafield>
-<datafield tag="100" ind1=" " ind2=" ">
-<subfield code="a">20091130 frey50 </subfield>
-</datafield>
-<datafield tag="200" ind1="1" ind2=" ">
-<subfield code="a">Guide des r√©cifs coralliens / A Guide to Coral Reefs</subfield>
-<subfield code="b">Texte imprim√©</subfield>
-<subfield code="e">la faune sous-marine des coraux</subfield>
-<subfield code="f">A. et A. Ferrari</subfield>
-</datafield>
-<datafield tag="210" ind1=" " ind2=" ">
-<subfield code="a">Lausanne</subfield>
-<subfield code="a">Paris</subfield>
-<subfield code="c">Delachaux et Niestl√©</subfield>
-<subfield code="d">cop. 2000</subfield>
-<subfield code="e">impr. en Espagne</subfield>
-</datafield>
-<datafield tag="215" ind1=" " ind2=" ">
-<subfield code="a">287 p.</subfield>
-<subfield code="c">ill. en coul., couv. ill. en coul.</subfield>
-<subfield code="d">20 cm</subfield>
-</datafield>
+          <para>So as an example if I want "coral" to be at the beginning of
+          the title, I can do this query :
+          http://myserver.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=Title=coral
+          first</para>
+        </section>
+      </section>
+
+      <section>
+        <title id="sru_retrieve">Retrieve</title>
+
+        <para>My search for
+        http://univ_lyon3.biblibre.com:9999/biblios?version=1.1&amp;operation=searchRetrieve&amp;query=coral
+        reefs&amp;maximumRecords=1 retrieves just on record. The response
+        looks like this:</para>
+
+        <programlisting>
+          &lt;zs:searchRetrieveResponse&gt;
+&lt;zs:version&gt;1.1&lt;/zs:version&gt;
+&lt;zs:numberOfRecords&gt;1&lt;/zs:numberOfRecords&gt;
+&lt;zs:records&gt;
+&lt;zs:record&gt;
+&lt;zs:recordPacking&gt;xml&lt;/zs:recordPacking&gt;
+&lt;zs:recordData&gt;
+&lt;record xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/ standards/marcxml/schema/MARC21slim.xsd"&gt;
+&lt;leader&gt; cam a22 4500&lt;/leader&gt;
+&lt;datafield tag="010" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;2-603-01193-6&lt;/subfield&gt;
+&lt;subfield code="b"&gt;rel.&lt;/subfield&gt;
+&lt;subfield code="d"&gt;159 F&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="020" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;FR&lt;/subfield&gt;
+&lt;subfield code="b"&gt;00065351&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="101" ind1="1" ind2=" "&gt;
+&lt;subfield code="c"&gt;ita&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="105" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;a z 00|y|&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="106" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;r&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="100" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;20091130 frey50 &lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="200" ind1="1" ind2=" "&gt;
+&lt;subfield code="a"&gt;Guide des r√©cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
+&lt;subfield code="b"&gt;Texte imprim√©&lt;/subfield&gt;
+&lt;subfield code="e"&gt;la faune sous-marine des coraux&lt;/subfield&gt;
+&lt;subfield code="f"&gt;A. et A. Ferrari&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="210" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;Lausanne&lt;/subfield&gt;
+&lt;subfield code="a"&gt;Paris&lt;/subfield&gt;
+&lt;subfield code="c"&gt;Delachaux et Niestl√©&lt;/subfield&gt;
+&lt;subfield code="d"&gt;cop. 2000&lt;/subfield&gt;
+&lt;subfield code="e"&gt;impr. en Espagne&lt;/subfield&gt;
+&lt;/datafield&gt;
+&lt;datafield tag="215" ind1=" " ind2=" "&gt;
+&lt;subfield code="a"&gt;287 p.&lt;/subfield&gt;
+&lt;subfield code="c"&gt;ill. en coul., couv. ill. en coul.&lt;/subfield&gt;
+&lt;subfield code="d"&gt;20 cm&lt;/subfield&gt;
+&lt;/datafield&gt;
 ......
-<idzebra>
-<size>4725</size>
-<localnumber>2</localnumber>
-<filename>/tmp/nw10BJv9Pk/upd_biblio/exported_records</filename>
-</idzebra>
-</record>
-</zs:recordData>
-<zs:recordPosition>1</zs:recordPosition>
-</zs:record>
-</zs:records>
-</zs:searchRetrieveResponse>
-]]>
+&lt;idzebra&gt;
+&lt;size&gt;4725&lt;/size&gt;
+&lt;localnumber&gt;2&lt;/localnumber&gt;
+&lt;filename&gt;/tmp/nw10BJv9Pk/upd_biblio/exported_records&lt;/filename&gt;
+&lt;/idzebra&gt;
+&lt;/record&gt;
+&lt;/zs:recordData&gt;
+&lt;zs:recordPosition&gt;1&lt;/zs:recordPosition&gt;
+&lt;/zs:record&gt;
+&lt;/zs:records&gt;
+&lt;/zs:searchRetrieveResponse&gt;
+
           </programlisting>
       </section>
-</section>
+    </section>
   </appendix>
-
 </book>
