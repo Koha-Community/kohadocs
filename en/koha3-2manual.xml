@@ -6675,7 +6675,7 @@
       system.</para>
 
       <section>
-        <title>MARC Bibliographic Frameworks</title>
+        <title id="marcbibframeworks">MARC Bibliographic Frameworks</title>
 
         <para>Think of Frameworks as templates for creating new bibliographic
         records. Koha comes with some predefined frameworks that can be edited
@@ -7214,11 +7214,18 @@
       <section>
         <title>Authority Types</title>
 
-        <para></para>
+        <para>Authority Types are basically MARC Frameworks for Authority
+        records and because of that they follow the same editing rules found
+        in the <link linkend="marcbibframeworks">MARC BIbliographic
+        Frameworks</link> section of this manual. Koha comes with many of the
+        necessary Authority frameworks already installed. To learn how to add
+        and edit Authory Types, simply review the <link
+        linkend="marcbibframeworks">MARC BIbliographic Frameworks</link>
+        section of this manual.</para>
       </section>
 
       <section>
-        <title>Classificiation Sources</title>
+        <title>Classification Sources</title>
 
         <para></para>
       </section>
@@ -12067,12 +12074,6 @@
 
       <para></para>
     </section>
-
-    <section>
-      <title>Item Fields Data Migration</title>
-
-      <para></para>
-    </section>
   </chapter>
 
   <chapter>
@@ -12446,7 +12447,7 @@
       </screenshot>
 
       <para>From the page that opens up you can click 'Edit Serial' with the
-      issue you want to receive checked. </para>
+      issue you want to receive checked.</para>
 
       <screenshot>
         <screeninfo>Edit Issues</screeninfo>
@@ -12474,13 +12475,13 @@
       <itemizedlist>
         <listitem>
           <para>Choose 'Arrived' from the status pull down to mark a serial as
-          received. </para>
+          received.</para>
         </listitem>
 
         <listitem>
           <para>If you have decided to have an item record created for each
           issue an <link linkend="addingitems">item add form</link> will
-          appear </para>
+          appear</para>
         </listitem>
 
         <listitem>
@@ -12530,7 +12531,7 @@
       <title>Subscriptions in OPAC</title>
 
       <para>When viewing the subscription in the OPAC there will be several
-      options. </para>
+      options.</para>
 
       <para>Like in the staff client, there will be a Subscriptions tab on the
       bibliographic record.</para>
@@ -12550,7 +12551,7 @@
       system preference. Clicking the 'More details' link will provide you
       with additional information about the serial history. You can set the
       default view of a serial in the OPAC with the SubscriptionHistory system
-      preference. </para>
+      preference.</para>
 
       <para>There are two views, compact and full. The compact serial
       subscription will show basic information regarding the
@@ -12567,7 +12568,7 @@
       </screenshot>
 
       <para>Whereas the full view shows extensive details, broken out by year,
-      regarding the subscription </para>
+      regarding the subscription</para>
 
       <screenshot>
         <screeninfo>Full Serial View</screeninfo>
@@ -12761,12 +12762,16 @@
       <section>
         <title>Vendor Contracts</title>
 
-        <para></para>
+        <para>You can define contracts (with a start and enddate) and attach
+        it to a vendor. This is used so that at the end of the year you can
+        see how much you spent on a specific contract with a vnedor. In some
+        places, contracts are set up with a minimum and maximum yearly
+        amount.</para>
       </section>
     </section>
 
     <section>
-      <title>Managing Suggestions</title>
+      <title id="managesuggest">Managing Suggestions</title>
 
       <para>Depending on your settings in the <link
       linkend="suggestionspref">suggestion</link> system preference, patrons
@@ -12776,7 +12781,310 @@
     <section>
       <title>Placing Orders</title>
 
-      <para></para>
+      <para>To place an order you must first search for the vendor or
+      bookseller you want to send the order to. </para>
+
+      <section>
+        <title>Create a basket</title>
+
+        <para>To create a basket you have several options from the vendor
+        search results page:</para>
+
+        <screenshot>
+          <screeninfo>New Basket / Add Basket Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/addbasketbutton.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From here you can choose to create a new basket by clicking 'New
+        basket' under 'Manage orders' or by clicking 'Add basket'</para>
+
+        <screenshot>
+          <screeninfo>Add Basket Form</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/addbasket.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When adding a basket you want to give it a name that will help
+        you identify it later. The notes fields are optional and can contain
+        any type of information. When finished, click 'Save'</para>
+
+        <screenshot>
+          <screeninfo>New Empty Basket</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/basket.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once your basket is created you are presented with several
+        options for adding items to the order. </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>If you are ordering another copy of an existing item, you
+            can simply search for the record in your system</para>
+
+            <screenshot>
+              <screeninfo>Search for existing records</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/orderfromexisting.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>From the results, simply click 'Order' to be brought to
+                the order form</para>
+
+                <screenshot>
+                  <screeninfo>Order form</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/acquisitions/existingitemorder.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>All of the details associated with the item will
+                    already be listed under 'Catalog details'</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you allow patrons to make purchase suggestions (learn
+            more in the <link linkend="managesuggest">Managing
+            Suggestions</link> section of this manual) then you can place
+            orders from those suggestions</para>
+
+            <screenshot>
+              <screeninfo>Approved Suggestions to Order From</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/orderfromsuggest.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>From the results, click 'Order' next to the item you
+                want to order and you will be presented with the order form
+                </para>
+
+                <screenshot>
+                  <screeninfo>Order from a Suggestion</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/acquisitions/orderfromsuggestform.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>From this form you can make changes to the Catalog
+                    Details if necessary</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>To order from a record that can't be found anywhere else,
+            choose the 'From a new (empty) record'</para>
+
+            <screenshot>
+              <screeninfo>Order a new record</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/fromnewemptyrecord.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>You will be presented with an empty form to fill in all
+                of the necessary details about the item you are
+                ordering</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you want to search other libraries for an item to
+            purchase you can use the 'From an external source' option which
+            will allow you to order from a MARC record found via a Z39.50
+            search</para>
+
+            <screenshot>
+              <screeninfo>Search for record to add</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/orderz39.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>From the results click the Order link next to the item
+                you want to purchase</para>
+
+                <screenshot>
+                  <screeninfo>Search Results to Order From</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/acquisitions/orderz39results.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>In the order form that pops up you will not be able to
+                edit the catalog details</para>
+
+                <screenshot>
+                  <screeninfo>New order from Z39.50 Search</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/acquisitions/orderz39form.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>The final option for ordering is to order from a staged
+            record (<link linkend="stagemarc">learn more about staging
+            records</link>)</para>
+
+            <screenshot>
+              <screeninfo>Staged Files to Order From</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/stagedfiles.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>From the list of files you are presented with, choose
+                the 'Add orders' link </para>
+
+                <screenshot>
+                  <screeninfo>Records in the staged file</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/acquisitions/stagedrecords.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>From the list of records, click 'Add order' next to
+                    the item you want to add to your order</para>
+
+                    <screenshot>
+                      <screeninfo>New order from Staged Record</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/acquisitions/stagedorder.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>From the order form you will not be able to edit
+                        the catalog details.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>Once an item is added to the basket you will be presented with a
+        basket summary</para>
+
+        <screenshot>
+          <screeninfo>Basket with item info</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/finalbasket.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From here you can edit the items you have added or remove them.
+        Once you're sure your basket is complete you can click 'Close this
+        basket' button</para>
+
+        <screenshot>
+          <screeninfo>Basket Buttons</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/basketbuttons.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Create a basket group</title>
+
+        <para>A basket group is simply a group of baskets. In some libraries,
+        you have several staff members that create baskets, and, at the end of
+        a period of time, someone then groups them together to send to the
+        vendor in bulk. That said, it is possible to have one basket in a
+        basket group if that's the workflow used in your library.</para>
+      </section>
+
+      <section>
+        <title>Printing baskets</title>
+
+        <para></para>
+      </section>
     </section>
 
     <section>
