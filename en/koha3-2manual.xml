@@ -381,7 +381,7 @@
         </section>
 
         <section>
-          <title>dontmerge</title>
+          <title id="dontmerge">dontmerge</title>
 
           <para>Default: Don't</para>
 
@@ -15487,7 +15487,22 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>Cron Jobs</title>
 
-      <para></para>
+      <para>The locations below assume a dev install which puts the crons in
+      misc/, if you have a standard install you may want to look in bin/ for
+      these files if you cannot find them in misc/</para>
+
+      <section>
+        <title>Search</title>
+
+        <para>Script path: misc/migration_tools/rebuild_zebra.pl </para>
+
+        <para>Does: Updates Zebra indexes with recently changed data. </para>
+
+        <para>Required by: Zebra </para>
+
+        <para>Frequency suggestion: every x minutes, (between 5-15 minutes)
+        depending on performance needs</para>
+      </section>
 
       <section>
         <title id="finescronjob">Fines</title>
@@ -15501,6 +15516,85 @@ print theme('pages_catalog');</programlisting>
       </section>
 
       <section>
+        <title>Circulation</title>
+
+        <section>
+          <title>Holds Queue</title>
+
+          <para>Script path: misc/cronjobs/holds/build_holds_queue.pl</para>
+
+          <para>Does: Updates holds queue report</para>
+
+          <para>Required by: Circulation &gt;&gt; Holds Queue</para>
+
+          <para>Frequency suggestion: every 1-4 hours</para>
+        </section>
+
+        <section>
+          <title>Long Overdues</title>
+
+          <para>Script path: misc/cronjobs/longoverdue.pl</para>
+
+          <para>Does: allows one to specify delays for changing items to
+          different lost statuses, and optionally charge for them.</para>
+
+          <para>Required by: Frequency suggestion: nightly</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Notices</title>
+
+        <para></para>
+
+        <section>
+          <title>Message Queue</title>
+
+          <para>Script path: misc/cronjobs/process_message_queue.pl </para>
+
+          <para>Does: processes the message queue to send emails and SMS
+          messages to users. sends outgoing emails to patrons. </para>
+
+          <para>Frequency suggestion: nightly</para>
+        </section>
+
+        <section>
+          <title>Advanced Notice</title>
+
+          <para>Script path: misc/cronjobs/advance_notices.pl</para>
+
+          <para>Does: prepares "pre-due" notices and "item due" notices for
+          patrons who request them prepares notices for patrons for items just
+          due or coming due soon. requires <link
+          linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+          to be on</para>
+
+          <para>Frequency suggestion: nightly</para>
+
+          <note>
+            <para>This script does not actually send the notices. It queues
+            them in the message queue for later</para>
+          </note>
+        </section>
+
+        <section>
+          <title>Overdue Notice</title>
+
+          <para>Script path: misc/cronjobs/overdue_notices.pl </para>
+
+          <para>Does: prepares messages to alert patrons of overdue messages
+          </para>
+
+          <para>Frequency suggestion: nightly </para>
+
+          <note>
+            <para>This script does not actually send the notices. It queues
+            them in the message queue for later</para>
+          </note>
+        </section>
+      </section>
+
+      <section>
         <title id="proccartcron">In Processing/Book Cart</title>
 
         <para>Script path: misc/cronjobs/cart_to_shelf.pl</para>
@@ -15508,10 +15602,82 @@ print theme('pages_catalog');</programlisting>
         <para>Does: Updates all items with a location of CART to the item's
         permanent location.</para>
 
-        <para>Required by: sys prefs: NewItemsDefaultLocation,
-        InProcessingToShelvingCart, &amp; ReturnToShelvingCart</para>
+        <para>Required by: NewItemsDefaultLocation,
+        InProcessingToShelvingCart, &amp; ReturnToShelvingCart system
+        preferences</para>
 
         <para>Frequency suggestion: hourly</para>
+      </section>
+
+      <section>
+        <title>Catalog</title>
+
+        <para></para>
+
+        <section>
+          <title>Check URLs</title>
+
+          <para>Script path: misc/cronjobs/check-url.pl </para>
+
+          <para>Does: checks URLs in 856$u field. Script output can now be
+          formatted in CSV or HTML. The HTML version links directly to MARC
+          biblio record editor. </para>
+
+          <para>Frequency suggestion: monthly</para>
+        </section>
+
+        <section>
+          <title>Merge Authorities</title>
+
+          <para>Script path: misc/migration_tools/merge_authorities.pl </para>
+
+          <para>Does: Updates biblio data with changes to authorities records
+          </para>
+
+          <para>Required by: <link linkend="dontmerge">dontmerge</link> system
+          preference </para>
+
+          <para>Frequency suggestion: nightly</para>
+        </section>
+
+        <section>
+          <title>Serials Update</title>
+
+          <para>Script path: misc/cronjobs/serialsUpdate.pl </para>
+
+          <para>Does: checks if there is a "late" issue on active
+          subscriptions, and if there is, the script will set it as late, and
+          add the next one as expected. </para>
+
+          <para>Frequency suggestion: nightly</para>
+        </section>
+      </section>
+
+      <section>
+        <title>OPAC</title>
+
+        <para></para>
+
+        <section>
+          <title>RSS Feeds</title>
+
+          <para>Script path: misc/cronjobs/rss/rss.pl </para>
+
+          <para>Does: Produces an RSS XML document for any SQL query (not used
+          for search results RSS feed) </para>
+
+          <para>Frequency suggestion: hourly</para>
+        </section>
+
+        <section>
+          <title>Authorities Browser</title>
+
+          <para>Script path: misc/cronjobs/build_browser_and_cloud.pl</para>
+
+          <para>Does: Generate content for authories browse in OPAC</para>
+
+          <para>Required by: OpacBrowser system preference</para>
+        </section>
       </section>
 
       <section>
