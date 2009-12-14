@@ -8673,7 +8673,90 @@
     <section>
       <title id="taskscheduler" lang="">Task Scheduler</title>
 
-      <para></para>
+      <para>The task scheduler is a way to schedule reports to run whenever
+      you want.</para>
+
+      <para>To schedule a task, visit the Task Scheduler and fill in the
+      form</para>
+
+      <screenshot>
+        <screeninfo>Task Scheduler</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/taskscheduler.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <itemizedlist>
+        <listitem>
+          <para>Current Server Time shows the time on your server (schedule
+          all of your reports to run based on that time - not on your local
+          time)</para>
+        </listitem>
+
+        <listitem>
+          <para>Time should be entered as hh:mm (2 digit hour, 2 digit
+          minute)</para>
+        </listitem>
+
+        <listitem>
+          <para>Date should be entered using the calendar pop up</para>
+        </listitem>
+
+        <listitem>
+          <para>From Report choose the report you want to schedule</para>
+        </listitem>
+
+        <listitem>
+          <para>Choose whether to receive the text of or a link to the
+          results</para>
+        </listitem>
+
+        <listitem>
+          <para>In the Email filed enter the email of the person you want to
+          receive your report</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Below the task scheduler form, there is a list of scheduled
+      reports</para>
+
+      <screenshot>
+        <screeninfo>Scheduled Tasks</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/scheduledreports.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You can also schedule reports directly from the list of saved
+      reports by clicking the 'Schedule' link</para>
+
+      <screenshot>
+        <screeninfo>Saved Reports List</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tools/savedreports.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <section>
+        <title>Troubleshooting</title>
+
+        <para>Task scheduler will not work if the user the webserver runs as
+        doesn't have the permission to use it. To find out if the right user
+        has the permissions necessary, check /etc/at.allow to see what users
+        are in it. If you don't have that file, check etc/at.deny. If at.deny
+        exists but is blank, then every user can use it. Talk to your system
+        admin about adding the user to the right place to make the task
+        scheduler work.</para>
+      </section>
     </section>
 
     <section>
@@ -11370,6 +11453,48 @@
       <title>Circulation Reports</title>
 
       <para></para>
+
+      <section id="holdsqueue">
+        <title>Holds Queue</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Holds to pull</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Holds awaiting pickup</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Hold ratios</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Transfers to receive</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Overdues</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Overdues with fines</title>
+
+        <para></para>
+      </section>
     </section>
 
     <section>
@@ -13389,6 +13514,102 @@
     <title>Reports</title>
 
     <para></para>
+
+    <section>
+      <title>Custom Reports</title>
+
+      <para></para>
+
+      <section>
+        <title>Add Custom Report</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Edit Custom Reports</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>Statistics Reports</title>
+
+      <para></para>
+
+      <section>
+        <title>Acquisitions Statistics</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Patron Statistics</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Catalog Statistics</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Serials Statistics</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Patrons with the most checkouts</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Most Circulated Items</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Patrons with no checkouts</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title> Items with no checkouts</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Catalog by Item Type</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Lost Items </title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Average Loan Time</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>Report Dictionary</title>
+
+      <para></para>
+    </section>
   </chapter>
 
   <chapter>
@@ -15525,7 +15746,8 @@ print theme('pages_catalog');</programlisting>
 
           <para>Does: Updates holds queue report</para>
 
-          <para>Required by: Circulation &gt;&gt; Holds Queue</para>
+          <para>Required by: <link linkend="holdsqueue">Holds Queue
+          Report</link></para>
 
           <para>Frequency suggestion: every 1-4 hours</para>
         </section>
