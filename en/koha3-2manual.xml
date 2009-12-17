@@ -11463,8 +11463,10 @@
       <section id="holdsqueue">
         <title>Holds Queue</title>
 
-        <para>This report will show you all of the holds at your
-        library.</para>
+        <para>This report will show you all of the holds at your library. To
+        generate this report, you must have the <link
+        linkend="buildholdscron">Build Holds Queue cron job</link>
+        running.</para>
 
         <screenshot>
           <screeninfo>Sample Holds Queue</screeninfo>
@@ -11606,7 +11608,7 @@
 
         <para><important>
             <para>For libraries with a large patron base, this report may take
-            a significant amount of time to run. </para>
+            a significant amount of time to run.</para>
           </important>This report will list all items that are overdue at your
         library.</para>
 
@@ -13650,7 +13652,7 @@
     <para></para>
 
     <section>
-      <title>Custom Reports</title>
+      <title id="customreports">Custom Reports</title>
 
       <para></para>
 
@@ -13658,6 +13660,18 @@
         <title>Add Custom Report</title>
 
         <para></para>
+
+        <section>
+          <title id="quidedreportwizard">Guided Report Wizard</title>
+
+          <para></para>
+        </section>
+
+        <section>
+          <title>Report from SQL</title>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
@@ -13670,30 +13684,201 @@
     <section>
       <title>Statistics Reports</title>
 
-      <para></para>
+      <para>Statistic reports will show you counts and sums. These reports are
+      all about numbers and statistics, for reports that return more detailed
+      data, use the <link linkend="quidedreportwizard">Guided Report
+      Wizard</link>.</para>
 
       <section>
         <title>Acquisitions Statistics</title>
 
-        <para></para>
+        <para>Using the form provided, choose which value you would like to
+        appear in the Column and which will appear in the Row.</para>
+
+        <screenshot>
+          <screeninfo>Acquisitions Statistics</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/acqform.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you choose to output to the browser your results will print
+        to the screen. </para>
+
+        <screenshot>
+          <screeninfo>Acquisitions Statistics Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/acqnumbers.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can also choose to export to a file that you can manipulate
+        to your needs.</para>
+
+        <para>When generating your report, note that you get to choose between
+        counting or summing the values. </para>
+
+        <screenshot>
+          <screeninfo>Acquisitions Stats Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/acqtotal.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Choosing amount will change your results to appear as the sum of
+        the amounts spent.</para>
+
+        <screenshot>
+          <screeninfo>Acquisitions statistics with totals</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/acqamounts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
         <title>Patron Statistics</title>
 
-        <para></para>
+        <para>Using the form provided, choose which value you would like to
+        appear in the Column and which will appear in the Row.</para>
+
+        <screenshot>
+          <screeninfo>Patron Statistics Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/patronform.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you choose to output to the browser your results will print
+        to the screen.</para>
+
+        <screenshot>
+          <screeninfo>Patron Statistics Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/patronresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Based on your selections, you may see some query information
+        above your results table. You can also choose to export to a file that
+        you can manipulate to your needs.</para>
       </section>
 
       <section>
         <title>Catalog Statistics</title>
 
-        <para></para>
+        <para>Using the form provided, choose which value you would like to
+        appear in the Column and which will appear in the Row.</para>
+
+        <screenshot>
+          <screeninfo>Catalog Statistics Form</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/catalogform.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you choose to output to the browser your results will print
+        to the screen.</para>
+
+        <screenshot>
+          <screeninfo>Catalog Statistic Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/catalogresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can also choose to export to a file that you can manipulate
+        to your needs.</para>
+      </section>
+
+      <section>
+        <title>Circulation Statistics</title>
+
+        <para>Using the form provided, choose which value you would like to
+        appear in the Column and which will appear in the Row.</para>
+
+        <screenshot>
+          <screeninfo>Circulation Statistics</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/circform.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you choose to output to the browser your results will print
+        to the screen.</para>
+
+        <screenshot>
+          <screeninfo>Circulation Statistic Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/circresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can also choose to export to a file that you can manipulate
+        to your needs.</para>
       </section>
 
       <section>
         <title>Serials Statistics</title>
 
-        <para></para>
+        <para>Using the form provided, choose how you would like to list the
+        serials in your system.</para>
+
+        <screenshot>
+          <screeninfo>Serials Statistics</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/serialsform.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you choose to output to the browser your results will print
+        to the screen.</para>
+
+        <screenshot>
+          <screeninfo>Serials Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/serialsresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can also choose to export to a file that you can manipulate
+        to your needs.</para>
       </section>
 
       <section>
@@ -15874,7 +16059,7 @@ print theme('pages_catalog');</programlisting>
         <title>Circulation</title>
 
         <section>
-          <title>Holds Queue</title>
+          <title id="buildholdscron">Holds Queue</title>
 
           <para>Script path: misc/cronjobs/holds/build_holds_queue.pl</para>
 
