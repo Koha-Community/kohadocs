@@ -12819,7 +12819,9 @@
     <section>
       <title id="routinglist">Create a Routing List</title>
 
-      <para></para>
+      <para>If RoutingListAddReserves is set to on then patrons listed in the
+      routing list will automatically be added to the holds list for the
+      issue.</para>
     </section>
 
     <section>
@@ -13708,7 +13710,9 @@
     <section>
       <title id="customreports">Custom Reports</title>
 
-      <para></para>
+      <para>Koha's data is stored in a MySQL database which means that
+      librarians can generate nearly any report they would like by either
+      using the Guided Reports Wizard or writing their own SQL query.</para>
 
       <section>
         <title>Add Custom Report</title>
@@ -13724,14 +13728,56 @@
         <section>
           <title>Report from SQL</title>
 
-          <para></para>
+          <para>In addition to the report wizard, you have the option to write
+          your own queries using SQL. To find reports written by other Koha
+          users, visit the Koha Wiki: <ulink
+          url="http://wiki.koha.org/doku.php?id=sql_library">http://wiki.koha.org/doku.php?id=sql_library</ulink>.
+          You can also find your database structure in
+          /installer/data/mysql/kohastructure.sql or online at: <ulink
+          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
+
+          <para>To add your query, simply fill in the form presented</para>
+
+          <screenshot>
+            <screeninfo>Create Report from SQL</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/reports/reportfromsql.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
       <section>
         <title>Edit Custom Reports</title>
 
-        <para></para>
+        <para>Every report can be edited from the reports lists. To see the
+        list of reports already stored in Koha, click 'Use Saved.' </para>
+
+        <screenshot>
+          <screeninfo>Saved Reports</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/savedreports.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From this list you can edit any custom report by clicking 'Edit
+        SQL'</para>
+
+        <screenshot>
+          <screeninfo>Edit SQL Form</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/editreport.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
     </section>
 
