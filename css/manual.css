@@ -81,36 +81,54 @@ H2
         font-style: italic;
         BACKGROUND-color: #27AC00;
         BORDER: solid 3px #2FB900;
-        PADDING: 1px
+        PADDING: 1px;
 }
 
 IMG 
 {
         BORDER: 1px solid #666666;
 } 
+
+div.author h3 
+{ 
+        display: inline;
+        font-size: 12px;
+        font-weight: bold;
+}
+
 div.important h3
 {
-        color: #440000;
+        color: #990000;
         font-weight: bold;
         font-variant: small-caps;
+        font-size: 12px;
+        display: inline;
 }
+
 div.tip
 {
         font-style: italic;
 }
+
 div.tip h3
 {
         color: #000099;
         font-weight: bold;
         font-style: italic;
         font-variant: small-caps;
+        font-size: 12px;
+        display: inline;
 }
+
 div.note h3
 {
         color: #81A594;
         font-weight: bold;
         font-variant: small-caps;
+        font-size: 12px;
+        display: inline;
 }
+
 TABLE.IMPORTANT
 {
         font-style:italic;
@@ -147,7 +165,6 @@ TABLE.WARNING
         font-style:italic;
         font-weight: bold;
         border: ridge 4px #ff0000;
-        
         width: 70%;
         margin-left: 15%;       
 }
@@ -167,7 +184,6 @@ DIV.VARIABLELIST {
         BORDER: solid 1px #606090;
         PADDING: 1px
 }
-
 
 P 
 {
@@ -223,15 +239,10 @@ a[href$=".rtf"] {
         padding-right: 12px;
 }
 
-
-/* ...but not to absolute links in this domain... */
-a[href^="http://www.karakas-online.de"] {
-        background: transparent;
-        padding-right: 0px;
-}
-
-a[href^="http://www.karakas-online.de"]:hover {
-        background: transparent;
+/* Add an icon to XLS links */
+a[href$=".xls"] {
+        background: url(icons/mime_xls.png) right center no-repeat;
+        padding-right: 12px;
 }
 
 /* ...or to the translation links on each page */
