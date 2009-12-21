@@ -14402,6 +14402,350 @@
     <title>Searching</title>
 
     <para></para>
+
+    <section>
+      <title>Advanced Search Prefixes</title>
+
+      <para>The following prefixes can be added to search terms in the keyword
+      search box to limit items returned</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>ti: title search</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. ti:hamlet</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>su: subject search</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. su:cookery</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>pb: publisher search</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. pb:penguin</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>au: author search</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. au:rowling</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>su-geo: geographic subjects</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. su-geo:wales and kw:description and kw:travel</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>bc: barcode</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. bc:502326000912</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>lex: lexile</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>levels lex:510</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+
+      <para></para>
+    </section>
+
+    <section>
+      <sectioninfo>
+        <author>
+          <firstname>Becky</firstname>
+
+          <surname>Bell</surname>
+
+          <affiliation>
+            <orgname>WALDO</orgname>
+          </affiliation>
+        </author>
+
+        <pubdate>October 2008</pubdate>
+
+        <othercredit role="editor">
+          <firstname>Nicole C.</firstname>
+
+          <surname>Engard</surname>
+        </othercredit>
+      </sectioninfo>
+
+      <title>Guide to Searching</title>
+
+      <para>This brief guide will explain a chart that shows a sample of how a
+      MARC21 database can be configured, as well as a brief introductory
+      searching guide. The indexing fields described in this document relate
+      to the bibliographic data and does not address authority database
+      indexing.</para>
+
+      <section>
+        <title>Indexing and Searching Description</title>
+
+        <para>Koha’s databases are indexed by the Zebra open-source software.
+        The overview to the documentation describes Zebra as:</para>
+
+        <blockquote>
+          <para>“…Zebra is a high-performance, general-purpose structured text
+          indexing and retrieval engine. It reads records in a variety of
+          input formats (eg. email, XML, MARC) and provides access to them
+          through a powerful combination of Boolean search expressions and
+          relevance-ranked free-text queries.</para>
+
+          <para>Zebra supports large databases (tens of millions of records,
+          tens of gigabytes of data). It allows safe, incremental database
+          updates on live systems. Because Zebra supports the
+          industry-standard information retrieval protocol, Z39.50, you can
+          search Zebra databases using an enormous variety of programs and
+          toolkits, both commercial and free, which understands this
+          protocol…” Zebra - User’s Guide and Reference, p. 1, <ulink
+          url="http://www.indexdata.dk/zebra/doc/zebra.pdf">http://www.indexdata.dk/zebra/doc/zebra.pdf</ulink></para>
+        </blockquote>
+
+        <para>This brief guide will explain a chart that shows a sample of how
+        a MARC21 database can be configured, as well as a brief introductory
+        searching guide. The indexing fields described in this document relate
+        to the bibliographic data and does not address authority database
+        indexing.</para>
+
+        <note>
+          <para>The indexing described in this document is the set used by
+          SouthEastern University. Your local indexing may vary.</para>
+        </note>
+      </section>
+
+      <section>
+        <title>Indexing Configuration</title>
+
+        <para>There are three configuration files that Koha uses while
+        indexing. </para>
+
+        <para>The first configuration file (etc/zebradb/biblios/etc/bib1.att)
+        contains the Z39.50 bib-1 attribute list, plus the Koha local use
+        attributes for Biblio Indexes, Items Index, and Fixed Fields and other
+        special indexes. The Z39.50 Bib-1 profile is made up of several
+        different types of attributes: Use, Relation, Position, Structure,
+        Truncation, and Completeness. The bib-1 ‘Use’ attribute is represented
+        on the chart; the other attributes are used primarily when doing
+        searches. While there are over 150+ use attributes that could be used
+        to define your indexing set, it’s unlikely that you will choose to use
+        them all. The attributes you elect to use are those that become the
+        indexing rules for your database. The other five attribute sets define
+        the various ways that a search can be further defined, and will not
+        specifically be addressed in this document. For a complete list of the
+        standard Bib-1 attributes, go to <ulink
+        url="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</ulink>.
+        </para>
+
+        <para>The second file
+        (etc/zebradb/marc_defs/[marc21|unimarc]/biblios/record.abs) contains
+        the abstract syntax which maps the MARC21 tags to the set of Use
+        Attributes you choose to use. The rules established in this file
+        provides a passable Bath level 0 and 1 service, which includes author,
+        title, subject, keyword and exact services such as standard
+        identifiers (LCCN, ISBN, ISSN, etc.) </para>
+
+        <para>The third file (etc/zebradb/ccl.properties) is the Common
+        Command Language (CCL) field mappings. This file combines the bib-1
+        attribute set file and the abstract file and adds the qualifiers,
+        usually known as index names. The qualifiers, or indexes, for this
+        database are: pn, cpn, cfn, ti, se, ut, nb, ns, sn, lcn, callnum, su,
+        su-to, su-geo, su-ut, yr,pubdate, acqdate, ln, pl, ab, nt, rtype,
+        mc-rtype, mus, au, su-na, kw, pb, ctype, and an. </para>
+
+        <para>The Koha Indexing Chart summarizes the contents of all three of
+        these files in a more readable format. The first two columns labeled
+        Z39.50 attribute and Z39.50 name matches the Z39.50 bib-1 attributes
+        file. The third column labeled MARC tags indexed is where you find
+        which MARC tags are mapped to an attribute. The fourth column labeled
+        Qualifiers identifies the search abbreviations used in the internal
+        CCL query. The following description provides a definition for the
+        word ‘qualifiers’. </para>
+
+        <para><emphasis>Qualifiers are used to direct the search to a
+        particular searchable index, such as title (ti) and author indexes
+        (au). The CCL standard itself doesn’t specify a particular set of
+        qualifiers, but it does suggest a few shorthand notations. You can
+        customize the CCL parser to support a particular set of qualifiers to
+        reflect the current target profile. Traditionally, a qualifier would
+        map to a particular use-attribute within the BIB-1attribute set. It is
+        also possible to set other attributes, such as the structure
+        attribute.</emphasis> </para>
+
+        <para>In the MARC tags indexed column, there are some conventions used
+        that have specific meanings. They are: </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A three digit tag (100) means that all subfields in the tag
+            can be used in a search query. So, if you enter a search for
+            ‘Jackson’ as an author, you will retrieve records where Jackson
+            could be the last name or the first name.</para>
+          </listitem>
+
+          <listitem>
+            <para>A three digit tag that has a ‘$’ followed by a letter
+            (600$a) means that a search query will only search the ‘a’
+            subfield.</para>
+          </listitem>
+
+          <listitem>
+            <para>A three digit tag that is followed by a ‘:’ and a letter
+            (240:w) means that a search query can be further qualified. The
+            letter following the ‘:’ identifies how to conduct the search. The
+            most common values you’ll see are ‘w’ (word), ‘p’ (phrase), ‘s’
+            (sort), and ‘n’ (numeric). </para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The contents of the MARC tags, subfields, and/or fixed field
+        elements that are listed in this chart are all indexed. You’ll see
+        that every attribute line is not mapped to a specific qualifier
+        (index)—LC card number, line 9 is one example. However, every indexed
+        word (a string of characters preceded and succeeded by a space) can be
+        searched using a keyword (kw) search. So, although an LC card number
+        specific index doesn’t exist, you can still search by the LCCN since
+        tag 010 is assigned to the LC-card-number attribute. To verify this,
+        enter 72180055 in the persistent search box. You should retrieve The
+        gods themselves, by Isaac Asimov. </para>
+
+        <para>Examples of fixed field elements indexing can be seen on the
+        chart between Attribute 8822 and Attribute 8703. These attributes are
+        most commonly used for limiting. The fixed field attributes currently
+        represent the BK codes. Other format codes, if needed, could be
+        defined.</para>
+      </section>
+
+      <section>
+        <title>Basic Searching</title>
+
+        <para>The search box that library staff and library patrons will see
+        most often is the persistent search box at the top of the page. Koha
+        interprets the searches as keyword searches. </para>
+
+        <screenshot>
+          <screeninfo>Koha search box</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/searchbox.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>To start a search, you enter a word or multiple words in the
+        search box. When a single word is entered, a keyword search is
+        performed. You can check this out by typing one word into the form and
+        note the number of results located. Then, repeat the search with a
+        minor change. In front of the search word, type ‘kw=’ followed by the
+        same search term. The results will be identical. </para>
+
+        <para>When you have more than one word in the search box, Koha will
+        still do a keyword search, but a bit differently. Each word will be
+        searched on its own, then the Boolean connector ‘and’ will narrow your
+        search to those items with all words contained in matching records.
+        </para>
+
+        <para>Suppose you want to find material about how libraries are using
+        mashups. You’ll select the major words and enter them into the
+        persistent search box. </para>
+
+        <screenshot>
+          <screeninfo>Keyword Search</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/searchterms.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The response to this search is: </para>
+
+        <screenshot>
+          <screeninfo>Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/resultssummary.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The order of the words does not affect the retrieval results, so
+        you could also enter the search as “mashups library”. The response to
+        this search is results </para>
+
+        <screenshot>
+          <screeninfo>Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/resultssummary2.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Too many words in the search box will find very few matches, as
+        the following example illustrates:</para>
+
+        <screenshot>
+          <screeninfo>No results found</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/noresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Advanced Searching</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Common Command Language Searching</title>
+
+        <para></para>
+      </section>
+    </section>
   </chapter>
 
   <chapter>
