@@ -4524,7 +4524,8 @@
           <para></para>
 
           <section>
-            <title>defaultSortField &amp; defaultSortOrder</title>
+            <title id="defaultSortField">defaultSortField &amp;
+            defaultSortOrder</title>
 
             <para>defaultSortField Default: author</para>
 
@@ -4735,7 +4736,7 @@
           </section>
 
           <section>
-            <title>expandedSearchOption</title>
+            <title id="expandedSearchOption">expandedSearchOption</title>
 
             <para>Default: don't show</para>
 
@@ -14500,8 +14501,11 @@
 
         <othercredit role="copyeditor">
           <firstname>Nicole C.</firstname>
+
           <surname>Engard</surname>
-           <contrib>Fixed typos, changed content where necessary and added new screenshots.</contrib>
+
+          <contrib>Fixed typos, changed content where necessary and added new
+          screenshots.</contrib>
         </othercredit>
       </sectioninfo>
 
@@ -14552,7 +14556,7 @@
         <title>Indexing Configuration</title>
 
         <para>There are three configuration files that Koha uses while
-        indexing. </para>
+        indexing.</para>
 
         <para>The first configuration file (etc/zebradb/biblios/etc/bib1.att)
         contains the Z39.50 bib-1 attribute list, plus the Koha local use
@@ -14568,8 +14572,7 @@
         the various ways that a search can be further defined, and will not
         specifically be addressed in this document. For a complete list of the
         standard Bib-1 attributes, go to <ulink
-        url="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</ulink>.
-        </para>
+        url="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</ulink>.</para>
 
         <para>The second file
         (etc/zebradb/marc_defs/[marc21|unimarc]/biblios/record.abs) contains
@@ -14577,7 +14580,7 @@
         Attributes you choose to use. The rules established in this file
         provides a passable Bath level 0 and 1 service, which includes author,
         title, subject, keyword and exact services such as standard
-        identifiers (LCCN, ISBN, ISSN, etc.) </para>
+        identifiers (LCCN, ISBN, ISSN, etc.)</para>
 
         <para>The third file (etc/zebradb/ccl.properties) is the Common
         Command Language (CCL) field mappings. This file combines the bib-1
@@ -14585,7 +14588,7 @@
         usually known as index names. The qualifiers, or indexes, for this
         database are: pn, cpn, cfn, ti, se, ut, nb, ns, sn, lcn, callnum, su,
         su-to, su-geo, su-ut, yr,pubdate, acqdate, ln, pl, ab, nt, rtype,
-        mc-rtype, mus, au, su-na, kw, pb, ctype, and an. </para>
+        mc-rtype, mus, au, su-na, kw, pb, ctype, and an.</para>
 
         <para>The Koha Indexing Chart summarizes the contents of all three of
         these files in a more readable format. The first two columns labeled
@@ -14594,7 +14597,7 @@
         which MARC tags are mapped to an attribute. The fourth column labeled
         Qualifiers identifies the search abbreviations used in the internal
         CCL query. The following description provides a definition for the
-        word ‘qualifiers’. </para>
+        word ‘qualifiers’.</para>
 
         <para><emphasis>Qualifiers are used to direct the search to a
         particular searchable index, such as title (ti) and author indexes
@@ -14604,10 +14607,10 @@
         reflect the current target profile. Traditionally, a qualifier would
         map to a particular use-attribute within the BIB-1attribute set. It is
         also possible to set other attributes, such as the structure
-        attribute.</emphasis> </para>
+        attribute.</emphasis></para>
 
         <para>In the MARC tags indexed column, there are some conventions used
-        that have specific meanings. They are: </para>
+        that have specific meanings. They are:</para>
 
         <itemizedlist>
           <listitem>
@@ -14628,7 +14631,7 @@
             (240:w) means that a search query can be further qualified. The
             letter following the ‘:’ identifies how to conduct the search. The
             most common values you’ll see are ‘w’ (word), ‘p’ (phrase), ‘s’
-            (sort), and ‘n’ (numeric). </para>
+            (sort), and ‘n’ (numeric).</para>
           </listitem>
         </itemizedlist>
 
@@ -14641,7 +14644,7 @@
         specific index doesn’t exist, you can still search by the LCCN since
         tag 010 is assigned to the LC-card-number attribute. To verify this,
         enter 72180055 in the persistent search box. You should retrieve The
-        gods themselves, by Isaac Asimov. </para>
+        gods themselves, by Isaac Asimov.</para>
 
         <para>Examples of fixed field elements indexing can be seen on the
         chart between Attribute 8822 and Attribute 8703. These attributes are
@@ -14655,7 +14658,7 @@
 
         <para>The search box that library staff and library patrons will see
         most often is the persistent search box at the top of the page. Koha
-        interprets the searches as keyword searches. </para>
+        interprets the searches as keyword searches.</para>
 
         <screenshot>
           <screeninfo>Koha search box</screeninfo>
@@ -14672,17 +14675,17 @@
         performed. You can check this out by typing one word into the form and
         note the number of results located. Then, repeat the search with a
         minor change. In front of the search word, type ‘kw=’ followed by the
-        same search term. The results will be identical. </para>
+        same search term. The results will be identical.</para>
 
         <para>When you have more than one word in the search box, Koha will
         still do a keyword search, but a bit differently. Each word will be
         searched on its own, then the Boolean connector ‘and’ will narrow your
-        search to those items with all words contained in matching records.
-        </para>
+        search to those items with all words contained in matching
+        records.</para>
 
         <para>Suppose you want to find material about how libraries are using
         mashups. You’ll select the major words and enter them into the
-        persistent search box. </para>
+        persistent search box.</para>
 
         <screenshot>
           <screeninfo>Keyword Search</screeninfo>
@@ -14694,7 +14697,7 @@
           </mediaobject>
         </screenshot>
 
-        <para>The response to this search is: </para>
+        <para>The response to this search is:</para>
 
         <screenshot>
           <screeninfo>Results</screeninfo>
@@ -14708,7 +14711,7 @@
 
         <para>The order of the words does not affect the retrieval results, so
         you could also enter the search as “mashups library”. The response to
-        this search is results </para>
+        this search is results</para>
 
         <screenshot>
           <screeninfo>Results</screeninfo>
@@ -14737,13 +14740,704 @@
       <section>
         <title>Advanced Searching</title>
 
-        <para></para>
+        <para>When you can’t find the most appropriate material with a general
+        search, you can move to the Advanced Search page by clicking on the
+        Search option on the persistent toolbar.</para>
+
+        <screenshot>
+          <screeninfo>Koha Menu</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/menubar.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The Advanced Search page offers many ways to limit the results
+        of your search. You can search using the Boolean operators AND, OR,
+        and NOT; limit by item type; limit by year and language; limit by
+        subtypes audience, content, format, or additional content types; by
+        location and by availability.</para>
+
+        <para>The first limiting section on the Advanced Search page provides
+        a quick and simple way to use the Boolean operators in your search.
+        Note that this display depends on a system preference setting. This
+        option can be found on the Administration &gt; System Preferences &gt;
+        Searching page. The option called <link
+        linkend="expandedSearchOption">expandedSearchOption</link> must be set
+        to 'show' to see the following display.</para>
+
+        <screenshot>
+          <screeninfo>Advanced Search Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/searchoptions.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>In this section you can choose among the many indexes by
+        clicking on the arrow in the first box. The blank box that follows is
+        where you enter your first search term or terms. On the second line,
+        you can choose the Boolean operator you want to use in your search.
+        The options are ‘and’, ‘or’, and ‘not’. Then, you would again choose
+        the index to search, followed by the second term or terms. If you have
+        more concepts you want to include in your search, you can click the
+        [+] to add another line for your search.</para>
+
+        <para>A sample search is shown next, followed by its results:</para>
+
+        <screenshot>
+          <screeninfo>Advanced Search</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/advsearch.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <screenshot>
+          <screeninfo>Results from Advanced Search</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/numresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When you use the Boolean operators to broaden or narrow a
+        search, remember the action of each operator. The ‘and’ operator
+        narrows the results you’ll retrieve because the search will retrieve
+        the records that include all your search terms. The ‘or’ operator
+        expands the results because the search will look for occurrences of
+        all of your search terms. The ‘not’ operator excludes records with the
+        term that follows the operator.</para>
+
+        <para>Note: If you leave this <link
+        linkend="expandedSearchOption">expandedSearchOption</link> set to
+        'don't show', this is the display you will see:</para>
+
+        <screenshot>
+          <screeninfo>Fewer Search Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/feweropts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The Advanced Search page then shows the multiple kinds of limits
+        that can be applied to your search results. Either check a box or
+        select from the drop down menus to narrow your search. You will type
+        the year, year range, or a ‘greater than (&gt;)’ or ‘less than (&lt;)’
+        year.</para>
+
+        <screenshot>
+          <screeninfo>Other Advanced Search Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/advoptions.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Finally, you can choose how the results will be sorted. The
+        pre-defined sort options are in the final area of the Advanced Search
+        screen. search limits</para>
+
+        <screenshot>
+          <screeninfo>Sort Results By</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/searching/advsortby.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The default sort is by relevance, although you can choose to
+        sort by author, by title, by call number, by dates, or by popularity.
+        If you would prefer a different default sort, you can set <link
+        linkend="defaultSortField">defaultSortField</link> to one of the other
+        choices in Administration &gt; System Preferences &gt;
+        Searching.</para>
       </section>
 
       <section>
         <title>Common Command Language Searching</title>
 
-        <para></para>
+        <para>Koha uses the Common Command Language (CCL) (ISO 8777) as its
+        internal search protocol. Searches initiated in the graphical
+        interface use this protocol as well, although the searcher doesn’t
+        know which indexes, operators and limiters are available and being
+        used to conduct their search. The searcher can use the Advanced Search
+        when more precise results set are desired and where the search indexes
+        are somewhat known. However, some library users and many library staff
+        prefer using a command based structure. This part of the document will
+        present and explain the use of the Koha command based structure. The
+        indexes, operators, and limiters used are identical to those used in
+        the graphical interface.</para>
+
+        <section>
+          <title>Indexes</title>
+
+          <para>The CCL standard itself doesn't specify a particular set of
+          qualifiers (indexes), but it does suggest a few short-hand notations
+          such as ‘ti’, ‘au’, and ‘su’. Koha has a default set of indexes;
+          it’s possible to customize that set by adding needed indexes based
+          on local requirements. A qualifier (index) maps to a particular
+          use-attribute within the Z39.50 BIB-1 attribute set. The complete
+          Z39.50 Bib-1 Attribute can be viewed at <ulink
+          url="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</ulink>.</para>
+
+          <para>The standard Koha set of indexes is a fairly common example of
+          MARC21 indexing rules. The indexes that are defined in Koha are
+          indexes typically used by other integrated library systems. The
+          defined Z39.50 Bib-1 Attribute mapped to the indexes are:</para>
+
+          <table>
+            <tr>
+              <th>Bib-1 Attribute</th>
+
+              <th>Qualifier (index)</th>
+            </tr>
+
+            <tr>
+              <td>Personal-name</td>
+
+              <td>pn</td>
+            </tr>
+
+            <tr>
+              <td>Corporate-name</td>
+
+              <td>cpn</td>
+            </tr>
+
+            <tr>
+              <td>Conference-name</td>
+
+              <td>cfn</td>
+            </tr>
+
+            <tr>
+              <td>Title</td>
+
+              <td>ti</td>
+            </tr>
+
+            <tr>
+              <td>Title-series</td>
+
+              <td>se</td>
+            </tr>
+
+            <tr>
+              <td>Title-uniform</td>
+
+              <td>ut</td>
+            </tr>
+
+            <tr>
+              <td>ISBN</td>
+
+              <td>nb</td>
+            </tr>
+
+            <tr>
+              <td>ISSN</td>
+
+              <td>ns</td>
+            </tr>
+
+            <tr>
+              <td>Local number</td>
+
+              <td>sn</td>
+            </tr>
+
+            <tr>
+              <td>Local-classification</td>
+
+              <td>lcn and callnum</td>
+            </tr>
+
+            <tr>
+              <td>Subject</td>
+
+              <td>su, su-to, su-geo, su-ut</td>
+            </tr>
+
+            <tr>
+              <td>Pubdate</td>
+
+              <td>yr,pubdate</td>
+            </tr>
+
+            <tr>
+              <td>Date-of-Acquisition</td>
+
+              <td>acqdate</td>
+            </tr>
+
+            <tr>
+              <td>Language</td>
+
+              <td>ln</td>
+            </tr>
+
+            <tr>
+              <td>Place-of-publication</td>
+
+              <td>pl</td>
+            </tr>
+
+            <tr>
+              <td>Abstract</td>
+
+              <td>ab</td>
+            </tr>
+
+            <tr>
+              <td>Notes</td>
+
+              <td>nt</td>
+            </tr>
+
+            <tr>
+              <td>Record-type</td>
+
+              <td>rtype, mc-rtype, mus</td>
+            </tr>
+
+            <tr>
+              <td>Author</td>
+
+              <td>au, aut</td>
+            </tr>
+
+            <tr>
+              <td>Subject-person-name</td>
+
+              <td>su-na</td>
+            </tr>
+
+            <tr>
+              <td>Any (keyword)</td>
+
+              <td>kw</td>
+            </tr>
+
+            <tr>
+              <td>Publisher</td>
+
+              <td>pb</td>
+            </tr>
+
+            <tr>
+              <td>Content-type</td>
+
+              <td>ctype</td>
+            </tr>
+
+            <tr>
+              <td>Koha-Auth-Number</td>
+
+              <td>an</td>
+            </tr>
+
+            <tr>
+              <td>Author-personal-bibliography</td>
+
+              <td>aub</td>
+            </tr>
+
+            <tr>
+              <td>Author-in-order</td>
+
+              <td>auo</td>
+            </tr>
+          </table>
+
+          <para>The three lines above with green type are used primarily as
+          limiters. Refer to the Koha Indexing Chart for the MARC21 tags
+          mapped to each Bib-1 Attribute and index combination.</para>
+
+          <section>
+            <title>Audience Examples</title>
+
+            <itemizedlist>
+              <listitem>
+                <para>aud:a Easy</para>
+              </listitem>
+
+              <listitem>
+                <para>aud:cc Juvenile</para>
+              </listitem>
+
+              <listitem>
+                <para>aud:d Young adult</para>
+              </listitem>
+
+              <listitem>
+                <para>aud:e Adult</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>Contents Examples</title>
+
+            <itemizedlist>
+              <listitem>
+                <para>fic:1 Fiction</para>
+              </listitem>
+
+              <listitem>
+                <para>fic:0 Non Fiction</para>
+              </listitem>
+
+              <listitem>
+                <para>bio:b Biography</para>
+              </listitem>
+
+              <listitem>
+                <para>mus:j Musical recording</para>
+              </listitem>
+
+              <listitem>
+                <para>mus:I Non musical record</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Search Syntax</title>
+
+          <para>In the persistent search box, single words generally retrieve
+          large sets. To narrow a search, you can use multiple words. Koha
+          automatically uses the ‘and’ Boolean operator to create a set of
+          records matching your input. When you want to narrow the search to
+          an author or a title or a subject or some other specific field or
+          use a Boolean operator, there isn’t an obvious way to accomplish
+          that specificity. The library user can, of course, go to the
+          Advanced Search page; however, if you know how to construct a CCL
+          search, you can achieve more specificity while using the persistent
+          search box on any page. </para>
+
+          <para>There is a specific order to the CCL search syntax. Although
+          it can be used for simple searches, it is an especially effective
+          way to perform complex searches, as it affords you a great deal of
+          control over your search results. To construct a CCL search, first
+          enter a desired index code, then an equal sign, followed by your
+          search word(s). Following are examples of simple CCL
+          searches.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ti=principles of accounting </para>
+            </listitem>
+
+            <listitem>
+              <para>au=brown joseph</para>
+            </listitem>
+
+            <listitem>
+              <para>su=poetry</para>
+            </listitem>
+
+            <listitem>
+              <para>su-na=Shakespeare</para>
+            </listitem>
+
+            <listitem>
+              <para>kw=marlin</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>You can refine your search by combining search terms with
+          Boolean operators ‘and’, ‘or’, or ‘not’. Following are examples of
+          searches using Boolean operators.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ti=principles of accounting and au=brown joseph</para>
+            </listitem>
+
+            <listitem>
+              <para>su=poetry not su-na=Shakespeare</para>
+            </listitem>
+
+            <listitem>
+              <para>kw=communication and su=debate</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Using specific indexes and Boolean operators are not the only
+          way a search can be refined. You can also refine your search as a
+          phrase when looking for a title, author, or subject. The syntax for
+          this search is <emphasis>index,phr=search words</emphasis>. </para>
+
+          <para>To illustrate the results of various search types, a search
+          was done for the words ‘supreme court’. The results illustrate that
+          the search index and the word order make a difference in search
+          results. Only the results count and the search itself is in these
+          examples. The search executed will always be between the single
+          quotes.</para>
+
+          <screenshot>
+            <screeninfo>Sample Search 1</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex1.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 2</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex2.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 3</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex3.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 4</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex4.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 5</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex5.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 6</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex6.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 7</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex7.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 8</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex8.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <screenshot>
+            <screeninfo>Sample Search 9</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex9.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>You can also choose to use limiters in your search query. Some
+          common limiters include dates, languages, record types, and item
+          types. In the Advance Search, you can either click a box or key in
+          data to limit your search. You can also apply the same limits with
+          CCL by using the syntax in the following examples. In all </para>
+
+          <para><emphasis>By Date: su=supreme court and
+          yr,st-numeric=&gt;2000</emphasis></para>
+
+          <screenshot>
+            <screeninfo>Sample Search 10</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex10.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>When you limit by date, you can use the ‘&gt;’ (greater than),
+          ‘&lt;’ (less than), ‘=’ (equal), or ‘yyyy-yyyy’ (range)
+          symbols.</para>
+
+          <para><emphasis>By Item Type: su=nursing and
+          itype:BK</emphasis></para>
+
+          <screenshot>
+            <screeninfo>Sample Search 11</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex11.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Each library will have a different set of item types defined
+          in their circulation configuration. When you set up item types, you
+          define a code and a name for each one. The name will appear on the
+          Advance Search page. The code you assigned is used as a CCL search
+          limit, formatted as ‘itype:x’, where ‘x’ is the assigned code. The
+          initial set of item types in Koha will usually be edited to reflect
+          your collections, so your item type limiters may be different than
+          the initial ones. The initial item type limiters follow.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>itype:BKS Books, Booklets, Workbooks</para>
+            </listitem>
+
+            <listitem>
+              <para>itype:SR Audio Cassettes, CDs </para>
+            </listitem>
+
+            <listitem>
+              <para>itype:IR Binders</para>
+            </listitem>
+
+            <listitem>
+              <para>itype:CF CD-ROMs, DVD-ROMs, General Online
+              Resources</para>
+            </listitem>
+
+            <listitem>
+              <para>itype:VR DVDs, VHS</para>
+            </listitem>
+
+            <listitem>
+              <para>itype:KT Kit</para>
+            </listitem>
+
+            <listitem>
+              <para>itype:AR Models</para>
+            </listitem>
+
+            <listitem>
+              <para>itype:SER Serials</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis>By format: su=supreme court not
+          l-format:sr</emphasis></para>
+
+          <screenshot>
+            <screeninfo>Sample Search 12</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex12.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The format limiters are derived from a combination of LDR, 006
+          and 007 positions. The formats that are currently defined are the
+          following.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>l-format:ta Regular print</para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:tb Large print </para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:fk Braille</para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:sd CD audio</para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:ss Cassette recording </para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:vf VHS tape</para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:vd DVD video</para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:co CD software </para>
+            </listitem>
+
+            <listitem>
+              <para>l-format:cr Website</para>
+            </listitem>
+          </itemizedlist>
+
+          <para><emphasis>By content type: su=supreme court not
+          ctype:l</emphasis></para>
+
+          <screenshot>
+            <screeninfo>Sample Search 13</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/searching/ex13.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The content types are taken from the 008 MARC tag, positions
+          24-27. </para>
+
+          <para>There are two other limiter types that are not described in
+          this document. They are: Audience and Content. The only difference
+          in the syntax of the CCL is the actual limiter. They are reproduced
+          here just in case you would like to use these limiters.</para>
+        </section>
       </section>
     </section>
   </chapter>
@@ -14766,8 +15460,8 @@
         <firstname>Nicole C.</firstname>
 
         <surname>Engard</surname>
-        <contrib>Translation</contrib>
 
+        <contrib>Translation</contrib>
       </othercredit>
     </chapterinfo>
 
