@@ -5101,8 +5101,8 @@
             <para>Default: includes</para>
 
             <para>Asks: Use include files from the ___ directory in the
-            template directory, instead of includes/. (Leave blank to disable)
-            </para>
+            template directory, instead of includes/. (Leave blank to
+            disable)</para>
           </section>
 
           <section>
@@ -5347,9 +5347,9 @@
             <para>Default: Show</para>
 
             <para>Asks: ___ the names of patrons that have items checked out
-            or on hold on detail pages or the "Place Hold" screen. </para>
+            or on hold on detail pages or the "Place Hold" screen.</para>
 
-            <para>Values: </para>
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -16837,6 +16837,276 @@ print theme('pages_catalog');</programlisting>
       <para>'an' =&gt; '6009,6109,6119',</para>
 
       <para>'homebranch' =&gt; '952a,952c'</para>
+    </section>
+  </appendix>
+
+  <appendix>
+    <appendixinfo>
+      <corpauthor>NEKLS
+
+      </corpauthor>
+
+      <pubdate>2008</pubdate>
+      <bibliosource>http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/</bibliosource>
+    </appendixinfo>
+    <title>Configuring Receipt Printers</title>
+
+    <para>The following instructions are for specific receipt printers, but
+    can probably be used to help with setup of other brands as well.</para>
+
+    <section>
+      <title>For Epson TM-T88III (3) &amp; TM-T88IV (4) Printers</title>
+
+      <para></para>
+
+      <section>
+        <title>In the Print Driver</title>
+
+        <para>For these instructions, we are using version 5,0,3,0 of the
+        Epson TM-T88III print driver; the EPSON TM-T88IV version is ReceiptE4.
+        Register at the <ulink
+        url="https://www.epsonexpert.com/login">EpsonExpert Technical Resource
+        Center website</ulink> to gain access to the drivers; go to Technical
+        Resources, then choose the printer model from the Printers drop-down
+        list.</para>
+
+        <para>Click Start » Printers and Faxes » Right click the receipt
+        printer » Properties:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Advanced Tab, click Printing Defaults button</para>
+          </listitem>
+
+          <listitem>
+            <para>Layout Tab: Paper size: Roll Paper 80 x 297mm</para>
+          </listitem>
+
+          <listitem>
+            <para>TM-T88III: Layout Tab: Check Reduce Printing and Fit to
+            Printable Width</para>
+          </listitem>
+
+          <listitem>
+            <para>TM-T88IV: Check Reduced Size Print; Click OK on the popup
+            window that appears. Fit to Printable Width should be
+            automatically selected.</para>
+          </listitem>
+
+          <listitem>
+            <para>OK your way out of there.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>In Firefox</title>
+
+        <para>Under File » Page Setup: </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Shrink to fit page on Format &amp; Options tab </para>
+          </listitem>
+
+          <listitem>
+            <para>0,0,0,0 for Margins on Margins &amp; Header/Footer Tab. This
+            makes the receipts use all available space on the paper
+            roll.</para>
+          </listitem>
+
+          <listitem>
+            <para>Set all Headers/Footers to –blank–. This removes all of the
+            gunk you might normally find on a print from firefox, such as the
+            URL, number of pages, etc.</para>
+          </listitem>
+
+          <listitem>
+            <para>Click OK</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Set the default printer settings in Firefox so you don’t see a
+        “Print” dialog: </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to File -&gt; Print </para>
+          </listitem>
+
+          <listitem>
+            <para>Set the Printer to the receipt printer.</para>
+          </listitem>
+
+          <listitem>
+            <para>Click the Advanced (or Properties) button</para>
+          </listitem>
+
+          <listitem>
+            <para>Layout Tab: Paper size: Roll Paper 80 x 297mm</para>
+          </listitem>
+
+          <listitem>
+            <para>TM-T88III: Layout Tab: Check Reduce Printing and Fit to
+            Printable Width</para>
+          </listitem>
+
+          <listitem>
+            <para>TM-T88IV: Check Reduced Size Print; click OK on the popup
+            window that appears. Fit to Printable Width should be
+            automatically selected.</para>
+          </listitem>
+
+          <listitem>
+            <para>OK your way out, go ahead and print whatever page you are
+            on.</para>
+          </listitem>
+
+          <listitem>
+            <para>Type about:config, in the address bar. Click “I’ll be
+            careful, I promise!” on the warning message.</para>
+          </listitem>
+
+          <listitem>
+            <para>Type, print.always in Filter.</para>
+          </listitem>
+
+          <listitem>
+            <para>Look for print.always_print_silent.</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If the preference is there then set the value to
+                true.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para> If the preference is not there (and it shouldn’t be in most
+            browsers) you have to add the preference. </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Right click the preference area and select New –&gt;
+                Boolean</para>
+              </listitem>
+
+              <listitem>
+                <para>Type print.always_print_silent in the dialog box and set
+                the value to True. This sets the print settings in Firefox to
+                always use the same settings and print without showing a
+                dialog box. </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <warning>
+            <para>Setting the print.always_print_silent setting in
+            about:config DISABLES the ability to choose a printer in
+            Firefox.</para>
+          </warning>
+      </section>
+    </section>
+
+    <section>
+      <title>For Epson TM-T88II (2) Printers</title>
+
+      <para>Register at the <ulink
+      url="https://www.epsonexpert.com/login">EpsonExpert Technical Resource
+      Center website</ulink> to gain access to the drivers; go to Technical
+      Resources, then choose the printer model from the Printers drop-down
+      list.</para>
+
+      <section>
+        <title>In Firefox</title>
+
+        <para>Under File » Page Setup:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Shrink to fit page on Format &amp; Options tab</para>
+          </listitem>
+
+          <listitem>
+            <para>0,0,0,0 for Margins on Margins &amp; Header/Footer Tab. This
+            makes the receipts use all available space on the paper
+            roll.</para>
+          </listitem>
+
+          <listitem>
+            <para>Set all Headers/Footers to –blank–. This removes all of the
+            gunk you might normally find on a print from firefox, such as the
+            URL, number of pages, etc.</para>
+          </listitem>
+
+          <listitem>
+            <para>Click OK</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Set the default printer settings in Firefox so you don’t see a
+        “Print” dialog:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to File -&gt; Print</para>
+          </listitem>
+
+          <listitem>
+            <para>Set the Printer to the receipt printer.</para>
+          </listitem>
+
+          <listitem>
+            <para>Print whatever page you are on.</para>
+          </listitem>
+
+          <listitem>
+            <para>Type about:config, in the address bar. Click “I’ll be
+            careful, I promise!” on the warning message.</para>
+          </listitem>
+
+          <listitem>
+            <para>Type, print.always in Filter.</para>
+          </listitem>
+
+          <listitem>
+            <para>Look for, print.always_print_silent. </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If the preference is there then set the value to
+                true.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If the preference is not there (and it shouldn’t be in most
+            browsers) you have to add the preference.</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Right click the preference area and select New –&gt;
+                Boolean</para>
+              </listitem>
+
+              <listitem>
+                <para>Type, print.always_print_silent in the dialog box and
+                set the value to True. This sets the print settings in Firefox
+                to always use the same settings and print without showing a
+                dialog box. </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+        <warning>
+            <para>Setting the print.always_print_silent setting in
+            about:config DISABLES the ability to choose a printer in
+            Firefox.</para>
+          </warning>
+      </section>
     </section>
   </appendix>
 
