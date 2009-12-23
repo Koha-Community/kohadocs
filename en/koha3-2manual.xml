@@ -69,7 +69,7 @@
       </section>
 
       <section>
-        <title id="adminprefs">Admin</title>
+        <title id="adminprefs">Administration</title>
 
         <para>These preferences are general settings for your system.</para>
 
@@ -143,6 +143,17 @@
                 <para>tabs</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title>KohaAdminEmailAddress</title>
+
+            <para>This is the default From: address for emails unless there is
+            one for the particular branch, and is referred to when an internal
+            error occurs.</para>
+
+            <para>Asks: Use ___ as the email address for the administrator of
+            Koha.</para>
           </section>
 
           <section>
@@ -334,6 +345,15 @@
               </listitem>
             </itemizedlist>
           </section>
+
+          <section>
+            <title>timeout</title>
+
+            <para>Default: 12000000</para>
+
+            <para>Asks: Automatically log out users after ___ seconds of
+            inactivity.</para>
+          </section>
         </section>
       </section>
 
@@ -416,6 +436,15 @@
           <title>Display</title>
 
           <para></para>
+
+          <section>
+            <title>authoritysep</title>
+
+            <para>Default: --</para>
+
+            <para>Asks: Separate multiple displayed authors, series or
+            subjects with ___.</para>
+          </section>
 
           <section>
             <title>hide_marc</title>
@@ -545,6 +574,15 @@
           </section>
 
           <section>
+            <title>OPACSerialIssueDisplayCount</title>
+
+            <para>Default: 3</para>
+
+            <para>Asks: Show the ___ previous issues of a serial on the
+            OPAC.</para>
+          </section>
+
+          <section>
             <title>OpacSuppression</title>
 
             <para>Default: Don't hide</para>
@@ -586,6 +624,36 @@
               least one suppressed item, or your searches will be
               broken.</para>
             </important>
+          </section>
+
+          <section>
+            <title>StaffSerialIssueDisplayCount</title>
+
+            <para>Default: 3</para>
+
+            <para>Asks: Show the ___ previous issues of a serial on the staff
+            client.</para>
+          </section>
+
+          <section>
+            <title>SubscriptionHistory</title>
+
+            <para>Default: a full list</para>
+
+            <para>Asks: When showing the subscription information for a
+            biblio, show ___ of the serial issues.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>a full list</para>
+              </listitem>
+
+              <listitem>
+                <para>a summary</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -792,55 +860,6 @@
           </section>
 
           <section>
-            <title id="NoZebra">NoZebra</title>
-
-            <para>Default: Use</para>
-
-            <para>Asks: ___ the Zebra search engine. Searches are very slow on
-            even modest sized collections when Zebra is off.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't use</para>
-              </listitem>
-
-              <listitem>
-                <para>Use</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title>NoZebraIndexes</title>
-
-            <para>Default: <link linkend="nozebradefault">See Appendix A -
-            Section 2</link></para>
-          </section>
-
-          <section>
-            <title>RoutingSerials</title>
-
-            <para>Default: Add</para>
-
-            <para>Asks: ___ extra information to items automatically added to
-            serials.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Add</para>
-              </listitem>
-
-              <listitem>
-                <para>Don't add</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
             <title>z3950NormalizeAuthor &amp; z3950AuthorAuthFields</title>
 
             <para>Defaults: Don't copy &amp; 701,702,700</para>
@@ -860,6 +879,43 @@
                 <para>Don't copy</para>
               </listitem>
             </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Spine Labels</title>
+
+          <para></para>
+
+          <section>
+            <title>SpineLabelAutoPrint</title>
+
+            <para>Default: don't</para>
+
+            <para>Asks: When using the quick spine label printer, ___
+            automatically pop up a print dialog.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>do</para>
+              </listitem>
+
+              <listitem>
+                <para>don't</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>SpineLabelFormat</title>
+
+            <para>Default: &lt;itemcallnumber&gt;&lt;copynumber&gt;</para>
+
+            <para>Asks: Include the following fields on a quick-printed spine
+            label: (Enter in columns from the biblio, biblioitems or items
+            tables, surrounded by &lt; and &gt;.)</para>
           </section>
         </section>
       </section>
@@ -1044,6 +1100,28 @@
           </section>
 
           <section>
+            <title
+            id="InProcessingToShelvingCart">InProcessingToShelvingCart</title>
+
+            <para>Default: Don't move</para>
+
+            <para>Asks: ___ items that have the location PROC to the location
+            CART when they are checked in.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't move</para>
+              </listitem>
+
+              <listitem>
+                <para>Move</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>IssuingInProcess</title>
 
             <para>Default: Don't prevent</para>
@@ -1079,6 +1157,14 @@
 
             <para>Asks: Prevent patrons from making holds on the OPAC if they
             owe more than ___ USD in fines.</para>
+          </section>
+
+          <section>
+            <title>NewItemsDefaultLocation</title>
+
+            <para>Asks: When items are created, give them the temporary
+            location of ___ (should be a location code, or blank to
+            disable).</para>
           </section>
 
           <section>
@@ -1129,6 +1215,27 @@
 
               <listitem>
                 <para>Require</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title id="ReturnToShelvingCart">ReturnToShelvingCart</title>
+
+            <para>Default: Don't move</para>
+
+            <para>Asks: ___ all items to the location CART when they are
+            checked in.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't move</para>
+              </listitem>
+
+              <listitem>
+                <para>Move</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -1260,6 +1367,27 @@
           <para></para>
 
           <section>
+            <title id="AllowHoldDateInFuture">AllowHoldDateInFuture</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ hold requests to be placed that do not enter the
+            waiting list until a certain future date.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>AllowHoldsOnDamagedItems</title>
 
             <para>Default: Allow</para>
@@ -1355,6 +1483,35 @@
           </section>
 
           <section>
+            <title>OPACAllowHoldDateInFuture</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to place holds that don't enter the
+            waiting list until a certain future date.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><link
+                    linkend="AllowHoldDateInFuture">AllowHoldDateInFuture</link>
+                    must also be enabled for this to work</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>ReservesNeedReturns</title>
 
             <para>Default: Don't automatically</para>
@@ -1405,6 +1562,27 @@
           <para></para>
 
           <section>
+            <title>AllowAllMessageDeletion</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ staff to delete messages added from other
+            libraries.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>CircAutocompl</title>
 
             <para>Default: Try</para>
@@ -1437,14 +1615,18 @@
           </section>
 
           <section>
-            <title>FilterBeforeOverdueReport</title>
+            <title>FilterBeforeOverdueReport &amp;
+            DisplayClearScreenButton</title>
 
-            <para>Default: Don't require</para>
+            <para>FilterBeforeOverdueReport Default: Don't require</para>
+
+            <para>DisplayClearScreenButton Default: Show</para>
 
             <para>Asks: ___ staff to choose which checkouts to show before
-            running the overdues report. Save All</para>
+            running the overdues report. ___ a button to clear the current
+            patron from the screen on the circulation screen.</para>
 
-            <para>Values:</para>
+            <para>FilterBeforeOverdueReport Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -1453,6 +1635,18 @@
 
               <listitem>
                 <para>Require</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>DisplayClearScreenButton Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -1544,6 +1738,54 @@
 
               <listitem>
                 <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>todaysIssuesDefaultSortOrder</title>
+
+            <para>Default: latest to earliest</para>
+
+            <para>Asks: Sort today's checkouts on the circulation page from
+            ___ due date.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>earliest to latest</para>
+              </listitem>
+
+              <listitem>
+                <para>latest to earliest</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Self Checkout</title>
+
+          <para></para>
+
+          <section>
+            <title>ShowPatronImageInWebBasedSelfCheck</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks ___ the patron's picture (if one has been added) when
+            they use the web-based self checkout.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2707,6 +2949,12 @@
       </section>
 
       <section>
+        <title>Local Use</title>
+
+        <para></para>
+      </section>
+
+      <section>
         <title id="logs">Logs</title>
 
         <para>Logs keep track of transaction on the system. You can decide
@@ -2867,53 +3115,6 @@
       </section>
 
       <section>
-        <title>OAI-PMH</title>
-
-        <para></para>
-
-        <section>
-          <title>OAI-PMH</title>
-
-          <para>Default: Disable</para>
-
-          <para>Asks: ___ Koha's OAI-PMH server.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Disable</para>
-            </listitem>
-
-            <listitem>
-              <para>Enable</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Learn more about OAI-PMH at: <ulink
-          url="http://www.openarchives.org/pmh/">http://www.openarchives.org/pmh/</ulink></para>
-        </section>
-
-        <section>
-          <title>OAI-PMH:archiveID</title>
-
-          <para>Default: KOHA-OAI-TEST</para>
-
-          <para>Asks: Identify records at this site with the prefix ___
-          :</para>
-        </section>
-
-        <section>
-          <title>OAI-PMH:MaxCount</title>
-
-          <para>Default: 50</para>
-
-          <para>Asks: Only return ___ records at a time in response to a
-          ListRecords or ListIdentifiers query.</para>
-        </section>
-      </section>
-
-      <section>
         <title>OPAC</title>
 
         <para></para>
@@ -2968,6 +3169,27 @@
 
               <listitem>
                 <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>DisplayOPACiconsXSLT</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: On pages displayed with XSLT stylesheets on the OPAC,
+            ___ icons for itemtype and authorized values.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -3254,6 +3476,26 @@
           </section>
 
           <section>
+            <title>OpacMaintenance</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title id="OpacMainUserBlock">OpacMainUserBlock</title>
 
             <para>Default: Welcome to Koha... &lt;hr&gt;</para>
@@ -3293,6 +3535,28 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+          </section>
+
+          <section>
+            <title>OPACSearchForTitleIn</title>
+
+            <para>Default: &lt;li&gt;&lt;a
+            href="http://worldcat.org/search?q={TITLE}"
+            target="_blank"&gt;Other Libraries (WorldCat)&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a
+            href="http://www.scholar.google.com/scholar?q={TITLE}"
+            target="_blank"&gt;Other Databases (Google
+            Scholar)&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a
+            href="http://www.bookfinder.com/search/?author={AUTHOR}&amp;title={TITLE}&amp;st=xl&amp;ac=qr"
+            target="_blank"&gt;Online Stores
+            (Bookfinder.com)&lt;/a&gt;&lt;/li&gt;</para>
+
+            <para>Asks: Include a "More Searches" box on the detail pages of
+            items on the OPAC, with the following HTML (leave blank to
+            disable)<note>
+                <para>The placeholders {TITLE}, {ISBN} and {AUTHOR} will be
+                replaced with information from the displayed record.</para>
+              </note></para>
           </section>
 
           <section>
@@ -3507,6 +3771,27 @@
           </section>
 
           <section>
+            <title>OPACFinesTab</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to access the Fines tab on the My Account
+            page on the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>OpacPasswordChange</title>
 
             <para>Default: Allow</para>
@@ -3529,6 +3814,27 @@
             <important>
               <para>Enabling this will break LDAP authentication.</para>
             </important>
+          </section>
+
+          <section>
+            <title>OPACPatronDetails</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to notify the library of changes to their
+            contact information from the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -3722,28 +4028,6 @@
 
             <para>Asks: ___ patrons that aren't logged in to make purchase
             suggestions.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Allow</para>
-              </listitem>
-
-              <listitem>
-                <para>Don't allow</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title>OPACAllowHoldDateInFuture</title>
-
-            <para>Default: Allow</para>
-
-            <para>Asks: ___ patrons to place holds that don't enter the
-            waiting list until a certain future date (if AllowHoldDateInFuture
-            is also on).</para>
 
             <para>Values:</para>
 
@@ -4326,6 +4610,34 @@
           <para></para>
 
           <section>
+            <title id="NoZebra">NoZebra</title>
+
+            <para>Default: Use</para>
+
+            <para>Asks: ___ the Zebra search engine. Searches are very slow on
+            even modest sized collections when Zebra is off.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>NoZebraIndexes</title>
+
+            <para>Default: <link linkend="nozebradefault">See Appendix A -
+            Section 2</link></para>
+          </section>
+
+          <section>
             <title>OpacGroupResults</title>
 
             <para>Default: Don't use</para>
@@ -4355,8 +4667,23 @@
           <section>
             <title>QueryAutoTruncate</title>
 
-            <para><emphasis role="bold">*** Waiting for Bug Fix - Bug
-            3748</emphasis></para>
+            <para>Default: automatically</para>
+
+            <para>Asks: Perform wildcard searching (where, for example, Har
+            would match Harry and harp) ___ (The * character would be used
+            like so: Har* or *logging.)</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>automatically</para>
+              </listitem>
+
+              <listitem>
+                <para>only if * is added</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -4764,232 +5091,330 @@
         <para></para>
 
         <section>
-          <title>intranetcolorstylesheet</title>
+          <title>Appearance</title>
 
-          <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
-          on all pages in the staff interface.</para>
+          <para></para>
 
-          <important>
-            <para>Leave this field blank to disable.</para>
-          </important>
+          <section>
+            <title>intranet_includes</title>
+
+            <para>Default: includes</para>
+
+            <para>Asks: Use include files from the ___ directory in the
+            template directory, instead of includes/. (Leave blank to disable)
+            </para>
+          </section>
+
+          <section>
+            <title>intranetcolorstylesheet</title>
+
+            <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
+            on all pages in the staff interface.</para>
+
+            <important>
+              <para>Leave this field blank to disable.</para>
+            </important>
+          </section>
+
+          <section>
+            <title>IntranetmainUserblock</title>
+
+            <para>Asks: Show the following HTML in its own column on the main
+            page of the staff client</para>
+
+            <screenshot>
+              <screeninfo>Sample HTML for IntranetmainUserblock</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/IntranetmainUserblock-html.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <screenshot>
+              <screeninfo>Message from IntranetmainUserblock as it appears on
+              the Staff Client main page</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/IntranetmainUserblock.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </section>
+
+          <section>
+            <title>IntranetNav</title>
+
+            <para>Asks: Show the following HTML in the More menu at the top of
+            each page on the staff client (should be a list of links or
+            blank)</para>
+          </section>
+
+          <section>
+            <title>intranetstylesheet</title>
+
+            <para>Asks: Include the stylesheet at ___ on all pages in the
+            staff interface, instead of the default.</para>
+
+            <important>
+              <para>This should be a complete URL, starting with
+              http://</para>
+            </important>
+          </section>
+
+          <section>
+            <title id="intranetuserjs">intranetuserjs</title>
+
+            <para>Asks: Include the following JavaScript on all pages in the
+            staff interface</para>
+
+            <screenshot>
+              <screeninfo>Sample JavaScript to alter the staff client
+              login</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/intranetuserjs-code.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <screenshot>
+              <screeninfo>Link to Self Checkout appears on staff client login
+              because of Javascript</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/intranetuserjs.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </section>
+
+          <section>
+            <title>language</title>
+
+            <para>Default: English</para>
+
+            <para>Asks: Enable the following languages on the staff
+            interface</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>English</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>To install additional languages you need to run
+            misc/translation/install-code.pl. For example, to install French
+            you would run the following command <emphasis>install-code.pl
+            fr-FR</emphasis> to make the templates, once they exist and are in
+            the right place then they will show up as an option in this
+            preference.</para>
+          </section>
+
+          <section>
+            <title>staffClientBaseURL</title>
+
+            <para>Asks: The staff client is located at http:// ___</para>
+          </section>
+
+          <section>
+            <title>template</title>
+
+            <para>Default: prog</para>
+
+            <para>Asks: Use the ___ theme on the staff interface.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>prog</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>yuipath</title>
+
+            <para>Default: included with Koha</para>
+
+            <para>Asks: Use the Yahoo UI libraries ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>from Yahoo's servers</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>With this option there is less demand on your
+                    servers, but if the Internet goes down there will be
+                    issues</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>included with Koha</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>With this option calls are made faster, and they
+                    will still work if the Internet goes down</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section>
-          <title>IntranetmainUserblock</title>
+          <title>Options</title>
 
-          <para>Asks: Show the following HTML in its own column on the main
-          page of the staff client</para>
+          <section>
+            <title>viewISBD</title>
 
-          <screenshot>
-            <screeninfo>Sample HTML for IntranetmainUserblock</screeninfo>
+            <para>Default: Allow</para>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/IntranetmainUserblock-html.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
+            <para>Asks: ___ staff to view records in ISBD form on the staff
+            client.</para>
 
-          <screenshot>
-            <screeninfo>Message from IntranetmainUserblock as it appears on
-            the Staff Client main page</screeninfo>
+            <para>Values:</para>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/IntranetmainUserblock.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
 
-        <section>
-          <title>intranetstylesheet</title>
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
-          <para>Asks: Include the stylesheet at ___ on all pages in the staff
-          interface, instead of the default.</para>
+          <section>
+            <title>viewLabeledMARC</title>
 
-          <important>
-            <para>This should be a complete URL, starting with http://</para>
-          </important>
-        </section>
+            <para>Default: Allow</para>
 
-        <section>
-          <title id="intranetuserjs">intranetuserjs</title>
+            <para>Asks: ___ staff to view records in labeled MARC form on the
+            staff client.</para>
 
-          <para>Asks: Include the following JavaScript on all pages in the
-          staff interface</para>
+            <para>Values:</para>
 
-          <screenshot>
-            <screeninfo>Sample JavaScript to alter the staff client
-            login</screeninfo>
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/intranetuserjs-code.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
-          <screenshot>
-            <screeninfo>Link to Self Checkout appears on staff client login
-            because of Javascript</screeninfo>
+          <section>
+            <title>viewMARC</title>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/intranetuserjs.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
+            <para>Default: Allow</para>
 
-        <section>
-          <title>language</title>
+            <para>Asks: ___ staff to view records in plain MARC form on the
+            staff client.</para>
 
-          <para>Default: English</para>
+            <para>Values:</para>
 
-          <para>Asks: Enable the following languages on the staff
-          interface</para>
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
 
-          <para>Values:</para>
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
-          <itemizedlist>
-            <listitem>
-              <para>English</para>
-            </listitem>
-          </itemizedlist>
+          <section>
+            <title>HidePatronName</title>
 
-          <para>To install additional languages you need to run
-          misc/translation/install-code.pl. For example, to install French you
-          would run the following command <emphasis>install-code.pl
-          fr-FR</emphasis> to make the templates, once they exist and are in
-          the right place then they will show up as an option in this
-          preference.</para>
-        </section>
+            <para>Default: Show</para>
 
-        <section>
-          <title>staffClientBaseURL</title>
+            <para>Asks: ___ the names of patrons that have items checked out
+            or on hold on detail pages or the "Place Hold" screen. </para>
 
-          <para>Asks: The staff client is located at http:// ___</para>
-        </section>
+            <para>Values: </para>
 
-        <section>
-          <title>template</title>
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
 
-          <para>Default: prog</para>
-
-          <para>Asks: Use the ___ theme on the staff interface.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>prog</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section>
-          <title>viewISBD</title>
-
-          <para>Default: Allow</para>
-
-          <para>Asks: ___ staff to view records in ISBD form on the staff
-          client.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section>
-          <title>viewLabeledMARC</title>
-
-          <para>Default: Allow</para>
-
-          <para>Asks: ___ staff to view records in labeled MARC form on the
-          staff client.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section>
-          <title>viewMARC</title>
-
-          <para>Default: Allow</para>
-
-          <para>Asks: ___ staff to view records in plain MARC form on the
-          staff client.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section>
-          <title>yuipath</title>
-
-          <para>Default: included with Koha</para>
-
-          <para>Asks: Use the Yahoo UI libraries ___</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>from Yahoo's servers</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>With this option there is less demand on your servers,
-                  but if the Internet goes down there will be issues</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>included with Koha</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>With this option calls are made faster, and they will
-                  still work if the Internet goes down</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
       </section>
 
       <section>
-        <title>Local Use</title>
+        <title>Web Services</title>
 
         <para></para>
+
+        <section>
+          <title>OAI-PMH</title>
+
+          <para></para>
+
+          <section>
+            <title>OAI-PMH</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ Koha's OAI-PMH server.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Learn more about OAI-PMH at: <ulink
+            url="http://www.openarchives.org/pmh/">http://www.openarchives.org/pmh/</ulink></para>
+          </section>
+
+          <section>
+            <title>OAI-PMH:archiveID</title>
+
+            <para>Default: KOHA-OAI-TEST</para>
+
+            <para>Asks: Identify records at this site with the prefix ___
+            :</para>
+          </section>
+
+          <section>
+            <title>OAI-PMH:MaxCount</title>
+
+            <para>Default: 50</para>
+
+            <para>Asks: Only return ___ records at a time in response to a
+            ListRecords or ListIdentifiers query.</para>
+          </section>
+        </section>
       </section>
     </section>
 
@@ -5440,8 +5865,10 @@
 
               <itemizedlist>
                 <listitem>
-                  <para>is the shelving cart location, used by
-                  InProcessingToShelvingCart and ReturnToShelvingCart</para>
+                  <para>is the shelving cart location, used by <link
+                  linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>
+                  and <link linkend="ReturnToShelvingCart"
+                  os="">ReturnToShelvingCart</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5571,7 +5998,8 @@
                 <listitem>
                   <para>the location to be used for NewItemsDefaultLocation
                   (change description as desired), also the location expected
-                  by InProcessingToShelvingCart.</para>
+                  by <link
+                  linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -11810,8 +12238,9 @@
 
           <orderedlist>
             <listitem>
-              <para>Turn on the InProcessingToShelvingCart system
-              preference</para>
+              <para>Turn on the <link
+              linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>
+              system preference</para>
             </listitem>
 
             <listitem>
@@ -11831,10 +12260,11 @@
               <itemizedlist>
                 <listitem>
                   <tip>
-                    <para>If the syspref ReturnToShelvingCart system
-                    preference is turned on, any newly-checked-in item is also
-                    automatically put into the shelving cart, to be covered by
-                    the same script run.</para>
+                    <para>If the syspref <link
+                    linkend="ReturnToShelvingCart">ReturnToShelvingCart</link>
+                    system preference is turned on, any newly-checked-in item
+                    is also automatically put into the shelving cart, to be
+                    covered by the same script run.</para>
                   </tip>
                 </listitem>
 
@@ -16907,17 +17337,17 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;0</td>
+        <td>9520</td>
 
         <td>Withdrawn status</td>
 
         <td>Default values: 0 = Not withdrawn / 1 = Withdrawn</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;1</td>
+        <td>9521</td>
 
         <td>Lost status</td>
 
@@ -16931,7 +17361,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;2</td>
+        <td>9522</td>
 
         <td>Classification</td>
 
@@ -16945,60 +17375,60 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;3</td>
+        <td>9523</td>
 
         <td>Materials specified</td>
 
         <td>Specific issues of serials or multi-part items.</td>
 
-        <td>Copy/volume data is stored in 952&#135;h and &#135;t for display in Normal
-        views. &#135;3 isn't displayed anywhere except the MARC view.</td>
+        <td>Copy/volume data is stored in 952h and t for display in Normal
+        views. 3 isn't displayed anywhere except the MARC view.</td>
       </tr>
 
       <tr>
-        <td>952&#135;4</td>
+        <td>9524</td>
 
         <td>Damaged status</td>
 
         <td>Default values: 0 = Not damaged / 1 = Damaged</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;5</td>
+        <td>9525</td>
 
         <td>Use restrictions</td>
 
         <td>Default values: 0 = No use restrictions / 1 = Restricted
         Access</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;7</td>
+        <td>9527</td>
 
         <td>Not for loan</td>
 
         <td>Default values: -1 = Ordered / 0 = Available for loans / 1 = Not
         for Loan / 2 = Staff Collection</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;8</td>
+        <td>9528</td>
 
         <td>Collection code</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;9</td>
+        <td>9529</td>
 
         <td>Item number</td>
 
@@ -17008,7 +17438,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;a</td>
+        <td>952a</td>
 
         <td>branchcode</td>
 
@@ -17019,28 +17449,28 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;b</td>
+        <td>952b</td>
 
         <td>branchcode</td>
 
         <td>holding library (usu. the same as 952$a )</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;c</td>
+        <td>952c</td>
 
         <td>Shelving location code</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
 
         <td>Coded value, matching <link linkend="authorizedvalues">Authorized
         Value</link> category ('LOC' in default installation)</td>
       </tr>
 
       <tr>
-        <td>952&#135;d</td>
+        <td>952d</td>
 
         <td>Date acquired</td>
 
@@ -17052,77 +17482,77 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;e</td>
+        <td>952e</td>
 
         <td>Source of acquisition</td>
 
         <td>coded value or vendor string</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;g</td>
+        <td>952g</td>
 
         <td>Purchase price</td>
 
         <td>decimal number, no currency symbol</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;h</td>
+        <td>952h</td>
 
         <td>Serial enumeration caption</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;o</td>
+        <td>952o</td>
 
         <td>Koha full call number</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;p</td>
+        <td>952p</td>
 
         <td>Barcode *</td>
 
         <td>max 20 characters</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;v</td>
+        <td>952v</td>
 
         <td>Replacement price</td>
 
         <td>decimal number, no currency symbol</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;w</td>
+        <td>952w</td>
 
         <td>Price effective from</td>
 
         <td>YYYY-MM-DD</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
 
       <tr>
-        <td>952&#135;y</td>
+        <td>952y</td>
 
         <td>Koha item type *</td>
 
@@ -17133,13 +17563,13 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;z</td>
+        <td>952z</td>
 
         <td>Public note</td>
 
-        <td>&nbsp;</td>
+        <td> </td>
 
-        <td>&nbsp;</td>
+        <td> </td>
       </tr>
     </table>
 
@@ -17733,8 +18163,10 @@ print theme('pages_catalog');</programlisting>
         <para>Does: Updates all items with a location of CART to the item's
         permanent location.</para>
 
-        <para>Required by: NewItemsDefaultLocation,
-        InProcessingToShelvingCart, &amp; ReturnToShelvingCart system
+        <para>Required by: NewItemsDefaultLocation, <link lang=""
+        linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>,
+        &amp; <link lang=""
+        linkend="ReturnToShelvingCart">ReturnToShelvingCart</link> system
         preferences</para>
 
         <para>Frequency suggestion: hourly</para>
