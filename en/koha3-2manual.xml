@@ -9508,9 +9508,10 @@
         </mediaobject>
       </screenshot>
 
-      <para>Choose which library, item type, barcode rance, and when the item
-      was last seen to generate a shelf list that you can then print to use
-      while walking around the library checking your collection</para>
+      <para>Choose which library, shelving location, call number range, item
+      status and when the item was last seen to generate a shelf list that you
+      can then print to use while walking around the library checking your
+      collection</para>
 
       <screenshot>
         <screeninfo>Shelf List</screeninfo>
@@ -9521,6 +9522,10 @@
           </imageobject>
         </mediaobject>
       </screenshot>
+
+      <para>Alternatively you can export the list to a CSV file for altering
+      in an application on your desktop. Simply check the box next to 'Export
+      to csv file' to generate this file.</para>
 
       <para>Once you have found the items on your shelves you can return to
       this list and check off the items you found to have the system update
@@ -14586,7 +14591,39 @@
         </screenshot>
 
         <para>You can also choose to export to a file that you can manipulate
-        to your needs.</para>
+        to your needs.<tip>
+            <para>To get a complete picture of your monthly or daily
+            circulation, you can run the report twice, once for 'Type' of
+            'Checkout' and again for 'Renewal.'</para>
+
+            <para>This report uses 'Period,' or date, filtering that allows
+            you to limit to a month by simply selecting the first day of the
+            first month through the first day of the next month.  For example,
+            10/1 to 11/1 to find statistics for the month of October.</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>To find daily statistics, set your date
+                range.&lt;/br&gt; Example: "I want circulation data starting
+                with date XXX up to, but not including, date XXX."</para>
+              </listitem>
+
+              <listitem>
+                <para>For a whole month, an example range would be: 11/01/2009
+                to 12/01/2009</para>
+              </listitem>
+
+              <listitem>
+                <para>For a whole year, an example range would be: 01/01/2009
+                to 01/01/2010</para>
+              </listitem>
+
+              <listitem>
+                <para>For a single day, an example would be: 11/15/2009 to
+                11/16/2009 to find what circulated on the 15th</para>
+              </listitem>
+            </itemizedlist>
+          </tip></para>
       </section>
 
       <section>
@@ -16842,13 +16879,13 @@ print theme('pages_catalog');</programlisting>
 
   <appendix>
     <appendixinfo>
-      <corpauthor>NEKLS
-
-      </corpauthor>
+      <corpauthor>NEKLS</corpauthor>
 
       <pubdate>2008</pubdate>
-      <bibliosource>http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/</bibliosource>
+
+      <bibliosource><ulink>http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/</ulink></bibliosource>
     </appendixinfo>
+
     <title>Configuring Receipt Printers</title>
 
     <para>The following instructions are for specific receipt printers, but
@@ -16902,11 +16939,11 @@ print theme('pages_catalog');</programlisting>
       <section>
         <title>In Firefox</title>
 
-        <para>Under File » Page Setup: </para>
+        <para>Under File » Page Setup:</para>
 
         <itemizedlist>
           <listitem>
-            <para>Shrink to fit page on Format &amp; Options tab </para>
+            <para>Shrink to fit page on Format &amp; Options tab</para>
           </listitem>
 
           <listitem>
@@ -16927,11 +16964,11 @@ print theme('pages_catalog');</programlisting>
         </itemizedlist>
 
         <para>Set the default printer settings in Firefox so you don’t see a
-        “Print” dialog: </para>
+        “Print” dialog:</para>
 
         <itemizedlist>
           <listitem>
-            <para>Go to File -&gt; Print </para>
+            <para>Go to File -&gt; Print</para>
           </listitem>
 
           <listitem>
@@ -16983,8 +17020,8 @@ print theme('pages_catalog');</programlisting>
           </listitem>
 
           <listitem>
-            <para> If the preference is not there (and it shouldn’t be in most
-            browsers) you have to add the preference. </para>
+            <para>If the preference is not there (and it shouldn’t be in most
+            browsers) you have to add the preference.</para>
 
             <itemizedlist>
               <listitem>
@@ -16996,17 +17033,16 @@ print theme('pages_catalog');</programlisting>
                 <para>Type print.always_print_silent in the dialog box and set
                 the value to True. This sets the print settings in Firefox to
                 always use the same settings and print without showing a
-                dialog box. </para>
+                dialog box.</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
         <warning>
-            <para>Setting the print.always_print_silent setting in
-            about:config DISABLES the ability to choose a printer in
-            Firefox.</para>
-          </warning>
+          <para>Setting the print.always_print_silent setting in about:config
+          DISABLES the ability to choose a printer in Firefox.</para>
+        </warning>
       </section>
     </section>
 
@@ -17072,7 +17108,7 @@ print theme('pages_catalog');</programlisting>
           </listitem>
 
           <listitem>
-            <para>Look for, print.always_print_silent. </para>
+            <para>Look for, print.always_print_silent.</para>
 
             <itemizedlist>
               <listitem>
@@ -17096,16 +17132,16 @@ print theme('pages_catalog');</programlisting>
                 <para>Type, print.always_print_silent in the dialog box and
                 set the value to True. This sets the print settings in Firefox
                 to always use the same settings and print without showing a
-                dialog box. </para>
+                dialog box.</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
+
         <warning>
-            <para>Setting the print.always_print_silent setting in
-            about:config DISABLES the ability to choose a printer in
-            Firefox.</para>
-          </warning>
+          <para>Setting the print.always_print_silent setting in about:config
+          DISABLES the ability to choose a printer in Firefox.</para>
+        </warning>
       </section>
     </section>
   </appendix>
