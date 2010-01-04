@@ -574,7 +574,8 @@
           </section>
 
           <section>
-            <title>OPACSerialIssueDisplayCount</title>
+            <title
+            id="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</title>
 
             <para>Default: 3</para>
 
@@ -627,7 +628,8 @@
           </section>
 
           <section>
-            <title>StaffSerialIssueDisplayCount</title>
+            <title
+            id="StaffSerialIssueDisplayCount">StaffSerialIssueDisplayCount</title>
 
             <para>Default: 3</para>
 
@@ -636,7 +638,7 @@
           </section>
 
           <section>
-            <title>SubscriptionHistory</title>
+            <title id="SubscriptionHistory">SubscriptionHistory</title>
 
             <para>Default: a full list</para>
 
@@ -909,7 +911,7 @@
           </section>
 
           <section>
-            <title>SpineLabelFormat</title>
+            <title id="SpineLabelFormat">SpineLabelFormat</title>
 
             <para>Default: &lt;itemcallnumber&gt;&lt;copynumber&gt;</para>
 
@@ -5830,7 +5832,7 @@
             </listitem>
 
             <listitem>
-              <para>BOR_NOTES</para>
+              <para id="bornotes">BOR_NOTES</para>
 
               <itemizedlist>
                 <listitem>
@@ -5950,7 +5952,7 @@
             </listitem>
 
             <listitem>
-              <para>LOC</para>
+              <para id="shelvelocvals">LOC</para>
 
               <itemizedlist>
                 <listitem>
@@ -6399,7 +6401,7 @@
           <title>Adding a City</title>
 
           <para>To add a new city, click the 'New City' button at the top of
-          the page and enter the city name and zip/postal code.</para>
+          the page and enter the city name, state and zip/postal code.</para>
 
           <screenshot>
             <screeninfo>New city entry form</screeninfo>
@@ -8004,15 +8006,8 @@
       <itemizedlist>
         <listitem>
           <para>Define the fields you want to print on the spine label in the
-          SpineLabelFormat system preference</para>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>Get there: </emphasis>More &gt; Administration
-              &gt; Global System Preferences &gt; Cataloging &gt;
-              SpineLabelFormat</para>
-            </listitem>
-          </itemizedlist>
+          <link linkend="SpineLabelFormat">SpineLabelFormat</link> system
+          preference</para>
         </listitem>
 
         <listitem>
@@ -8463,7 +8458,8 @@
           <itemizedlist>
             <listitem>
               <para>Enter 'Comments about this file' to identify your upload
-              when going to the 'Manage Staged MARC Records' tool</para>
+              when going to the '<link linkend="managestaged">Manage Staged
+              MARC Records</link>' tool</para>
             </listitem>
 
             <listitem>
@@ -9322,7 +9318,8 @@
 
                       <listitem>
                         <para><emphasis>Get there: </emphasis>Staff Client
-                        &gt; Patron Record &gt; Messaging</para>
+                        &gt; Patron Record &gt; <link
+                        linkend="patronmessaging">Messaging</link></para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -9364,7 +9361,8 @@
                 <itemizedlist>
                   <listitem>
                     <para><emphasis>Get there:</emphasis> More &gt; Serials
-                    &gt; New Subscription</para>
+                    &gt; <link linkend="newsubscription">New
+                    Subscription</link></para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -11157,7 +11155,7 @@
       </section>
 
       <section>
-        <title>Messaging</title>
+        <title id="patronmessaging">Messaging</title>
 
         <para>The patron's messaging preferences are set when editing the
         patron. This tab will show the messages that have been sent and those
@@ -11751,7 +11749,8 @@
 
         <para>Circulation messages are set up as <link
         linkend="authorizedvalues">Authorized Values</link>. To add or edit
-        Circulation Messages you want to work with the BOR_NOTES value.</para>
+        Circulation Messages you want to work with the <link
+        linkend="bornotes">BOR_NOTES</link> value.</para>
 
         <screenshot>
           <screeninfo>BOR_NOTES Authorized Values</screeninfo>
@@ -12428,8 +12427,9 @@
       <para>Koha allows for handling temporary locations like the processing
       center and/or book carts throughout the library. For this feature to
       work you must first make sure you have <link
-      linkend="authorizedvalues">authorized values</link> set in the LOC
-      category for PROC (Processing Center) and CART (Book Cart).</para>
+      linkend="authorizedvalues">authorized values</link> set in the <link
+      linkend="shelvelocvals">LOC</link> category for PROC (Processing Center)
+      and CART (Book Cart).</para>
 
       <screenshot>
         <screeninfo>CART &amp; PROC values in LOC</screeninfo>
@@ -13132,7 +13132,7 @@
     <para></para>
 
     <section>
-      <title>Add a subscription</title>
+      <title id="newsubscription">Add a subscription</title>
 
       <para>Subscriptions can be added by clicking the 'New' button on any
       bibliographic record</para>
@@ -13302,7 +13302,10 @@
           <itemizedlist>
             <listitem>
               <para>If no values are entered in these fields, they will use
-              the OPACSerialIssueDisplayCount and StaffSerialIssueDisplayCount
+              the <link
+              linkend="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</link>
+              and <link
+              linkend="StaffSerialIssueDisplayCount">StaffSerialIssueDisplayCount</link>
               system preference values</para>
             </listitem>
           </itemizedlist>
@@ -13599,10 +13602,12 @@
       </screenshot>
 
       <para>Under this tab will appear the number of issues you chose when
-      setting up the subscription or in your OPACSerialIssueDisplayCount
+      setting up the subscription or in your <link
+      linkend="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</link>
       system preference. Clicking the 'More details' link will provide you
       with additional information about the serial history. You can set the
-      default view of a serial in the OPAC with the SubscriptionHistory system
+      default view of a serial in the OPAC with the <link
+      linkend="SubscriptionHistory">SubscriptionHistory</link> system
       preference.</para>
 
       <para>There are two views, compact and full. The compact serial
@@ -14447,7 +14452,9 @@
 
       <para>Koha's data is stored in a MySQL database which means that
       librarians can generate nearly any report they would like by either
-      using the Guided Reports Wizard or writing their own SQL query.</para>
+      using the <link linkend="quidedreportwizard">Guided Reports
+      Wizard</link> or writing their own <link linkend="reportfromsql">SQL
+      query</link>.</para>
 
       <section>
         <title>Add Custom Report</title>
@@ -14587,7 +14594,7 @@
         </section>
 
         <section>
-          <title>Report from SQL</title>
+          <title id="reportfromsql">Report from SQL</title>
 
           <para>In addition to the report wizard, you have the option to write
           your own queries using SQL. To find reports written by other Koha
