@@ -18549,6 +18549,22 @@ print theme('pages_catalog');</programlisting>
           structure.</para>
         </tip>
       </section>
+
+      <section>
+        <title>How do I clean up the sessions table?</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Is there a periodic
+        job that can be run to cull old sessions from the table? We don't want
+        to backup all the useless session data every night. </para>
+
+        <para><emphasis role="bold">Answer</emphasis>: You can run <link
+        linkend="cleandbcron">cleanup database cron job</link>.</para>
+
+        <para>Or just before doing a backup command (mysqldump), you can
+        truncate session table:   </para>
+
+        <para><programlisting>mysql -u&lt;kohauser -p&lt;password &lt;koha-db-name -e 'TRUNCATE TABLE sessions'</programlisting></para>
+      </section>
     </section>
 
     <section>
@@ -18884,6 +18900,21 @@ print theme('pages_catalog');</programlisting>
           <para>Does: Generate content for authories browse in OPAC</para>
 
           <para>Required by: OpacBrowser system preference</para>
+        </section>
+      </section>
+
+      <section>
+        <title>System Administration</title>
+
+        <para></para>
+
+        <section>
+          <title id="cleandbcron">Clean up Database</title>
+
+          <para>Script path: misc/cronjobs/cleanup_database.pl</para>
+
+          <para>Does: Truncates the sessions table and cleans out old
+          zebraqueue entries.</para>
         </section>
       </section>
 
