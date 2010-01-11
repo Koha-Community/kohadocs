@@ -6980,16 +6980,9 @@
 
         <para>Limit the ability to transfer items between libraries based on
         the library sending, the library receiving, and the collection code
-        involved. These rules only go into effect if the preference
-        UseBranchTransferLimits is set to 'enforce'.</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; General System Preferences &gt; Circulation &gt; <link
-            linkend="UseBranchTransferLimits">UseBranchTransferLimits</link></para>
-          </listitem>
-        </itemizedlist>
+        involved. These rules only go into effect if the preference <link
+        linkend="UseBranchTransferLimits">UseBranchTransferLimits</link> is
+        set to 'enforce'.</para>
 
         <para>Transfer limits are set based on the collections codes you have
         applied via the <link linkend="authorizedvalues">Authorized
@@ -18747,7 +18740,7 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section>
-          <title>Fines</title>
+          <title id="finescronjob">Fines</title>
 
           <para>Script path: misc/cronjobs/fines.pl</para>
 
@@ -19293,11 +19286,11 @@ print theme('pages_catalog');</programlisting>
       <title>Keyword Clouds</title>
 
       <para>In addition to the traditional tag cloud availabe in Koha, there
-      is a way to generate clouds for popular subjects within Koha. </para>
+      is a way to generate clouds for popular subjects within Koha.</para>
 
       <para>The <link linkend="keywordclouds">Author/Subject Cloud cron
       job</link> is used to help with this process. This cron job sends its
-      output to files. </para>
+      output to files.</para>
 
       <itemizedlist>
         <listitem>
@@ -19314,7 +19307,7 @@ print theme('pages_catalog');</programlisting>
       on zebra indexes, it is quick, even on large DBs. Tags clouds are sent
       to files. It's up to library webmaster to deal with those files in order
       to include them in OPACMainUserBlock, or include them into their library
-      CMS. </para>
+      CMS.</para>
 
       <para>Some libraries even send the file into a Samba shared folder where
       webmaster take them, eventually clean them a little bit before
