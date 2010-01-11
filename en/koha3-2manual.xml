@@ -18555,13 +18555,13 @@ print theme('pages_catalog');</programlisting>
 
         <para><emphasis role="bold">Question</emphasis>: Is there a periodic
         job that can be run to cull old sessions from the table? We don't want
-        to backup all the useless session data every night. </para>
+        to backup all the useless session data every night.</para>
 
         <para><emphasis role="bold">Answer</emphasis>: You can run <link
         linkend="cleandbcron">cleanup database cron job</link>.</para>
 
         <para>Or just before doing a backup command (mysqldump), you can
-        truncate session table:   </para>
+        truncate session table:  </para>
 
         <para><programlisting>mysql -u&lt;kohauser -p&lt;password &lt;koha-db-name -e 'TRUNCATE TABLE sessions'</programlisting></para>
       </section>
@@ -18714,25 +18714,20 @@ print theme('pages_catalog');</programlisting>
       <section>
         <title>Search</title>
 
-        <para>Script path: misc/migration_tools/rebuild_zebra.pl</para>
+        <para></para>
 
-        <para>Does: Updates Zebra indexes with recently changed data.</para>
+        <section>
+          <title>Rebuild Index</title>
 
-        <para>Required by: Zebra</para>
+          <para>Script path: misc/migration_tools/rebuild_zebra.pl</para>
 
-        <para>Frequency suggestion: every x minutes, (between 5-15 minutes)
-        depending on performance needs</para>
-      </section>
+          <para>Does: Updates Zebra indexes with recently changed data.</para>
 
-      <section>
-        <title id="finescronjob">Fines</title>
+          <para>Required by: Zebra</para>
 
-        <para>Script path: misc/cronjobs/fines.pl</para>
-
-        <para>Required by: <link linkend="finesMode">finesMode</link> system
-        preference</para>
-
-        <para>Frequency suggestion: nightly</para>
+          <para>Frequency suggestion: every x minutes, (between 5-15 minutes)
+          depending on performance needs</para>
+        </section>
       </section>
 
       <section>
@@ -18749,6 +18744,17 @@ print theme('pages_catalog');</programlisting>
           Report</link></para>
 
           <para>Frequency suggestion: every 1-4 hours</para>
+        </section>
+
+        <section>
+          <title>Fines</title>
+
+          <para>Script path: misc/cronjobs/fines.pl</para>
+
+          <para>Required by: <link linkend="finesMode">finesMode</link> system
+          preference</para>
+
+          <para>Frequency suggestion: nightly</para>
         </section>
 
         <section>
@@ -18900,6 +18906,20 @@ print theme('pages_catalog');</programlisting>
           <para>Does: Generate content for authories browse in OPAC</para>
 
           <para>Required by: OpacBrowser system preference</para>
+        </section>
+
+        <section>
+          <title id="keywordclouds">Subject/Author Clouds</title>
+
+          <para>Script path: misc/cronjobs/cloud-kw.pl</para>
+
+          <para>Does: Generates HTML keywords clouds from Koha Zebra indexes.
+          misc/cronjobs/cloud-sample.conf has a sample of how this script
+          operates.</para>
+
+          <para>Frequency: This is the type of script you can run once a month
+          or so, the content generated isn't going to change very much over
+          time.</para>
         </section>
       </section>
 
@@ -19267,6 +19287,38 @@ print theme('pages_catalog');</programlisting>
       to search for related titles, custom messages based on the status of
       items (on order, on hold, etc.), ... just search the UserScripts site
       for Amazon + library. For a later date!</para>
+    </section>
+
+    <section>
+      <title>Keyword Clouds</title>
+
+      <para>In addition to the traditional tag cloud availabe in Koha, there
+      is a way to generate clouds for popular subjects within Koha. </para>
+
+      <para>The <link linkend="keywordclouds">Author/Subject Cloud cron
+      job</link> is used to help with this process. This cron job sends its
+      output to files. </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>/home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html</para>
+        </listitem>
+
+        <listitem>
+          <para>/home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>This means that you can produce clouds for authors, collective
+      author, all kind of subjects, classifications, etc. And since it works
+      on zebra indexes, it is quick, even on large DBs. Tags clouds are sent
+      to files. It's up to library webmaster to deal with those files in order
+      to include them in OPACMainUserBlock, or include them into their library
+      CMS. </para>
+
+      <para>Some libraries even send the file into a Samba shared folder where
+      webmaster take them, eventually clean them a little bit before
+      integrating them into navigation widgets or pages.</para>
     </section>
   </appendix>
 </book>
