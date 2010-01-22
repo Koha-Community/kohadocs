@@ -7798,21 +7798,21 @@
         <para>Les types d'autorité sont des grilles MARC pour les autorités,
         et par conséquent suivent les mêmes règles d'édition que celles
         décrites dans la section <link linkend="marcbibframeworks">Grilles de
-        catalogage MARC</link> de ce manuel. Plusieurs grilles d'autorités
-        sont pré-définies lorsque vous installez Koha. Pour voir comment
-        ajouter et modifier des types d'autorité, reportez-vous à la section
-        <link linkend="marcbibframeworks">Grilles de catalogage MARC</link> de
-        ce manuel.</para>
+        catalogage MARC</link> de ce manuel. Koha comes with many of the
+        necessary Authority frameworks already installed. To learn how to add
+        and edit Authory Types, simply review the <link
+        linkend="marcbibframeworks">MARC BIbliographic Frameworks</link>
+        section of this manual.</para>
       </section>
 
       <section>
-        <title>Sources de classification</title>
+        <title>Classification Sources</title>
 
         <para></para>
       </section>
 
       <section>
-        <title id="recordmatchingrules">Règles de concordance</title>
+        <title id="recordmatchingrules">Record Matching Rules</title>
 
         <para></para>
       </section>
@@ -7824,14 +7824,14 @@
       <para></para>
 
       <section>
-        <title id="currexchangeadmin">Devises et taux de change</title>
+        <title id="currexchangeadmin">Currencies &amp; Exchange Rates</title>
 
-        <para>Si vous passez des commandes à partir de plusieurs pays vous
-        allez pouvoir saisir les taux de change entre devises pour que le
-        module d'acquisitions calcule correctement les sommes.</para>
+        <para>If you place orders from more than one country you will want to
+        input currency exchange rates so that your acquisitions module will
+        properly calculate totals.</para>
 
         <screenshot>
-          <screeninfo>Devises</screeninfo>
+          <screeninfo>Currencies</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -7841,45 +7841,44 @@
         </screenshot>
 
         <tip>
-          <para>Ces données ne sont pas mises à jour automatiquement, donc
-          veillez à les maintenir à jour afin que vos comptes soient
-          corrects</para>
+          <para>This data is not automatically updated, so be sure to keep it
+          up to date so that your accounting is kept correct.</para>
         </tip>
       </section>
 
       <section>
-        <title>Budgets, périodes budgétaires, planning</title>
+        <title>Budgets, periods, planning</title>
 
         <para></para>
       </section>
 
       <section>
-        <title>Budget racine</title>
+        <title>Root Budgets</title>
 
         <para></para>
       </section>
     </section>
 
     <section>
-      <title>Paramètres divers</title>
+      <title>Additional Parameters</title>
 
       <para></para>
 
       <section>
-        <title>Mots vides</title>
+        <title>Stop Words</title>
 
         <important>
-          <para>Si NoZebra est positionné sur 'Use' cette option n'apparaîtra
-          pas dans le menu</para>
+          <para>If NoZebra is set to 'Use' this option will not appear on the
+          administration menu</para>
         </important>
 
-        <para><emphasis role="bold"><emphasis>Les mots vides dont les mots que
-        vous souhaitez voir ignorés par la recherche. Koha possède une liste
-        pré-définie de mots vides que vous pouvez modifier dans le menu Mots
-        vides du module administration.</emphasis></emphasis></para>
+        <para><emphasis role="bold"><emphasis>Stop words are words that you
+        want the search system to ignore. Koha comes with a standard list of
+        stop words that can be edited by visiting the Stop Word administration
+        area.</emphasis></emphasis></para>
 
         <screenshot>
-          <screeninfo>Liste des mots vides</screeninfo>
+          <screeninfo>Stop word list</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -7888,12 +7887,12 @@
           </mediaobject>
         </screenshot>
 
-        <para><emphasis role="bold"><emphasis>Pour ajouter un nouveau mot vide
-        à la liste, cliquez le bouton 'Ajouter mot vide' et ajouter le terme
-        que vous souhaitez ignorer.</emphasis></emphasis></para>
+        <para><emphasis role="bold"><emphasis>To add a new stop word to the
+        list, click the 'New Stop Word' button and add the word you'd like
+        ignored</emphasis></emphasis></para>
 
         <screenshot>
-          <screeninfo>Nouveau mot vide</screeninfo>
+          <screeninfo>New stop word</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -7903,24 +7902,23 @@
         </screenshot>
 
         <important>
-          <para>Si vous apportez des modifications à cette table, demandez à
-          votre administrateur de lancer le script
-          misc/batchRebuildBiblioTables.pl .</para>
+          <para>If you change something in this table, ask your administrator
+          to run misc/batchRebuildBiblioTables.pl script.</para>
         </important>
       </section>
 
       <section>
-        <title id="z3950admin">Serveurs Z39.50</title>
+        <title id="z3950admin">Z39.50 Servers</title>
 
-        <para>Koha possède un puissant outil d'import de notice au catalogage.
-        Via Koha vous pouvez vous connecter à tout serveur Z39.50 accessible
-        publiquement ou pour lequel vous avez les droits de connection.</para>
+        <para>Koha has a powerful copy cataloging tool. Using Koha you can
+        connect to any Z39.50 target that is publically available or that you
+        have the log in information to.</para>
 
-        <para>Koha est installé avec une liste par défaut de serveurs Z39.50
-        que vous pouvez compléter, modifier ou supprimer. </para>
+        <para>Koha comes with a default list of Z39.50 targets set up that you
+        can add to, edit or delete</para>
 
         <screenshot>
-          <screeninfo>Liste de serveurs Z39.50 dans Koha</screeninfo>
+          <screeninfo>List of Z39.50 Servers in Koha</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -7929,29 +7927,26 @@
           </mediaobject>
         </screenshot>
 
-        <para>Pour trouver des serveurs additionnels vous pouvez utiliser
-        IndexData's IRSpy: <ulink
+        <para>To find additional targets you use IndexData's IRSpy: <ulink
         url="http://irspy.indexdata.com/find.html">http://irspy.indexdata.com/find.html</ulink></para>
 
         <section>
-          <title>Ajouter un serveur Z39.50</title>
+          <title>Add a Z39.50 Target</title>
 
           <itemizedlist>
             <listitem>
-              <para>A partir de la page Serveurs Z39.50, cliquez 'Ajouter
-              serveur Z39.50'</para>
+              <para>From the main Z39.50 page, click 'New Z39.50
+              Server'</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>Identifiant et Mote de passe sont nécessaires
-                  uniquement pour les serveurs protégés par mot de
-                  passe</para>
+                  <para>Userid and Password are only required for servers that
+                  are password protected</para>
                 </listitem>
               </itemizedlist>
 
               <screenshot>
-                <screeninfo>Formulaire d'ajout d'un serveur
-                Z39.50</screeninfo>
+                <screeninfo>New Z39.50 Server Form</screeninfo>
 
                 <mediaobject>
                   <imageobject>
@@ -7964,22 +7959,10 @@
         </section>
 
         <section>
-          <title>Quelques serveurs</title>
+          <title>Suggested Targets</title>
 
-          <para>Quelques serveurs Z39.50 : </para>
-
-          <itemizedlist>
-            <listitem>
-              <para>BNF z3950.bnf.fr:2211 TOUT</para>
-            </listitem>
-
-            <listitem>
-              <para>SUDOC carmin.sudoc.abes.fr:10646 abes-z39-public</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Les serveurs suivants sont utilisés par d'autres bibliothèques
-          avec Koha (en Amérique) :</para>
+          <para>The following targets have been used successfully by other
+          Koha libraries (in the Americas):</para>
 
           <itemizedlist>
             <listitem>
@@ -8049,18 +8032,18 @@
   </chapter>
 
   <chapter>
-    <title>Outils</title>
+    <title>Tools</title>
 
     <para></para>
 
     <section>
-      <title id="newstool">Nouvelles</title>
+      <title id="newstool">News</title>
 
-      <para>L'outil 'Nouvelles' permet aux bibliothécaires de poster des
-      nouvelles à l'OPAC et en interface professionnelle.</para>
+      <para>Koha's news module allows librarians to post news to the OPAC and
+      the staff interface.</para>
 
       <screenshot>
-        <screeninfo>Outil Nouvelle de Koha</screeninfo>
+        <screeninfo>Koha News Module</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8069,12 +8052,11 @@
         </mediaobject>
       </screenshot>
 
-      <para>Pour ajouter des nouvelles soit à l'OPAC soit en interface
-      professionnelle : </para>
+      <para>To add news to either the OPAC or the Staff Client:</para>
 
       <itemizedlist>
         <listitem>
-          <para>Cliquez 'Ajouter entrée'</para>
+          <para>Click 'New Entry'</para>
 
           <screenshot>
             <screeninfo>Add Koha News Form</screeninfo>
@@ -8088,42 +8070,41 @@
 
           <itemizedlist>
             <listitem>
-              <para>Dans 'Affiché sur' choisissez de publier la nouvelle soit
-              à l'OPAC soit sur l'interface bibliothécaire.</para>
+              <para>Under 'Display Location' choose whether to put the news on
+              the OPAC or the Librarian (Staff) Interface.</para>
             </listitem>
 
             <listitem>
-              <para>Saisissez un titre pour la nouvelle</para>
+              <para>Choose a title for your entry</para>
             </listitem>
 
             <listitem>
-              <para>Grâce aux champs Date de publication et Date d'expiration
-              vous pouvez déterminer la durée de visibilité de la
-              nouvelle</para>
+              <para>Using the publication and expiration date fields you can
+              control how long your item appears</para>
             </listitem>
 
             <listitem>
-              <para>'S'affiche en position' vous permet de décider l'ordre
-              d'affichage des nouvelles</para>
+              <para>'Appear in position' lets you decide what order your news
+              items appear in</para>
             </listitem>
 
             <listitem>
-              <para>Le champ 'Nouvelle' contient le texte de la nouvelle et
-              vous permet l'usage de HTML pour la mettre en forme</para>
+              <para>The 'News' box allows for the use of HTML for formatting
+              of your news item</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Après avoir rempli les champs, cliquez 'Valider'</para>
+          <para>After filling in all of the fields, click 'Submit'</para>
         </listitem>
 
         <listitem>
-          <para>Les nouvelles à l'OPAC apparaissent au-dessus de <link
+          <para>News in the OPAC will appear above the <link
           linkend="OpacMainUserBlock">OpacMainUserBlock</link></para>
 
           <screenshot>
-            <screeninfo>Nouvelles à l'OPAC</screeninfo>
+            <screeninfo>News in the OPAC</screeninfo>
 
             <mediaobject>
               <imageobject>
@@ -8134,11 +8115,11 @@
         </listitem>
 
         <listitem>
-          <para>Les nouvelles en interface professionnelle apparaissent tout à
-          gauche de l'écran.</para>
+          <para>News in the Staff Client will appear on the far left of the
+          screen</para>
 
           <screenshot>
-            <screeninfo>Nouvelles sur l'interface professionnelle</screeninfo>
+            <screeninfo>News in the Staff Client</screeninfo>
 
             <mediaobject>
               <imageobject>
@@ -8151,21 +8132,19 @@
     </section>
 
     <section>
-      <title id="labelcreator" lang="">Créateur d'étiquettes</title>
+      <title id="labelcreator" lang="">Label Creator</title>
 
       <para></para>
     </section>
 
     <section>
-      <title id="quicklabelcreator" lang="">Créateur rapide d'étiquette de
-      couverture</title>
+      <title id="quicklabelcreator" lang="">Quick Spine Label Creator</title>
 
-      <para>Pour utiliser cet outil vous n'avez besoin que du code barre du
-      livre pour lequel vous souhaitez imprimer une étiquette pour la
-      tranche.</para>
+      <para>To use this tool you simply need the barcode for the book you'd
+      like to print the spine label for.</para>
 
       <screenshot>
-        <screeninfo>Créateur rapide d'étiquette</screeninfo>
+        <screeninfo>Quick Spine Label Creator</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8176,64 +8155,63 @@
 
       <itemizedlist>
         <listitem>
-          <para>Définissez les champs que vous voulez imprimer sur l'étiquette
-          dans la préférence système SpineLabelFormat system preference</para>
+          <para>Define the fields you want to print on the spine label in the
+          SpineLabelFormat system preference</para>
 
           <itemizedlist>
             <listitem>
-              <para><emphasis>Aller dans: </emphasis>Plus &gt; Administration
-              &gt; Préférences système &gt; Catalogage &gt;
+              <para><emphasis>Get there: </emphasis>More &gt; Administration
+              &gt; Global System Preferences &gt; Cataloging &gt;
               SpineLabelFormat</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Formatez votre impression en éditant spinelabel.css qui se
-          trouve dans koha-tmpl/intranet-tmpl/prog/en/css/</para>
+          <para>Format your label printing by editing spinelabel.css found in
+          koha-tmpl/intranet-tmpl/prog/en/css/</para>
         </listitem>
       </itemizedlist>
     </section>
 
     <section>
-      <title id="calholidays">Calendrier</title>
+      <title id="calholidays">Calendar &amp; Holidays</title>
 
-      <para>Les bibliothèques peuvent définir les jours de fermeture et les
-      vacances à prendre en compte dans le calcul des dates de retour. Vous
-      pouvez utiliser le Calendrier de la façon souhaitée en activant les
-      préférences système appropriées : </para>
+      <para>Libraries can define library closings and holidays to be used when
+      calculating due dates. You can make use of the Calendar by turning on
+      the proper system preferences:</para>
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Aller dans : </emphasis>Plus &gt; Administration
-          &gt; Préférences système &gt; Circulation &gt; <link
+          <para><emphasis>Get there: </emphasis>More &gt; Administration &gt;
+          Global System Preferences &gt; Circulation &gt; <link
           linkend="useDaysMode">useDaysMode</link></para>
 
           <itemizedlist>
             <listitem>
-              <para>Choisissez la façon de calculer les ldates de retour -
-              soit inclure les jours de fermeture de la bibliothèque dans le
-              calcul, ou ne pas les inclure</para>
+              <para>Choose the method for calculating due date - either
+              include days the library is closed in the calculation or don't
+              include them.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>Aller dans :</emphasis> Plus &gt; Administration
-          &gt; Préférences système &gt; Circulation &gt; <link
+          <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+          Global System Preferences &gt; Circulation &gt; <link
           linkend="finesCalendar">finescalendar</link></para>
 
           <itemizedlist>
             <listitem>
-              <para>Ceci vérifiera les dates de vacances avant de calculer les
-              amendes</para>
+              <para>This will check the holiday calendar before charging
+              fines</para>
             </listitem>
           </itemizedlist>
         </listitem>
       </itemizedlist>
 
       <screenshot>
-        <screeninfo>Calendrier</screeninfo>
+        <screeninfo>Calendar &amp; Holidays Tools</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8243,21 +8221,20 @@
       </screenshot>
 
       <section>
-        <title>Ajouter des événements</title>
+        <title>Adding Events</title>
 
-        <para>Avant d'ajouter des événements; choisissez le site auquel vont
-        s'appliquer les fermetures. Lors de l'ajout d'un événément vous
-        pourrez choisir si vous souhaitez appliquer cette fermeture à un seul
-        site ou à tous les sites. Pour ajouter une fermeture, simplement :
-        </para>
+        <para>Before adding events, choose the library you would like to apply
+        the closings to. When adding events you will be asked if you would
+        like to apply the event to one branch or all branches. To add events,
+        simply</para>
 
         <itemizedlist>
           <listitem>
-            <para>Cliquez dans le calendrier sur la date à laquelle vous
-            voulez appliquer la fermeture</para>
+            <para>Click on the date on the calendar that you would like to
+            apply the closing to</para>
 
             <screenshot>
-              <screeninfo>Formulaire d'ajout d'un jour fermé</screeninfo>
+              <screeninfo>Calendar Add Form</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -8268,42 +8245,41 @@
           </listitem>
 
           <listitem>
-            <para>Dans le formulaire qui apparaît au-dessus du calendrier,
-            saisissez les informations relatives à la fermeture</para>
+            <para>In the form that appears above the calendar, enter the
+            closing information</para>
 
             <itemizedlist>
               <listitem>
-                <para>Le Site est rempli automatiquement à partir de la
-                bibliothèque que vous avez choisie dans le menu déroulant en
-                haut de page</para>
+                <para>Library will be filled in automatically based on the
+                library you chose from the pull down at the top of the
+                page</para>
               </listitem>
 
               <listitem>
-                <para>Le nom du jour est également rempli automatiquement à
-                partir du jour cliqué sur le calendrier</para>
+                <para>The day information will also be filled in automatically
+                based on the date you clicked on the calendar</para>
               </listitem>
 
               <listitem>
-                <para>Dans la description saisissez la raison pour laquelle le
-                site est fermé</para>
+                <para>In the description enter the reason the library is
+                closed</para>
               </listitem>
 
               <listitem>
-                <para>Ensuite vous pouvez choisir si ce jour fermé est unique
-                ou répété</para>
+                <para>Next you can choose if this event is a one time event or
+                if it is repeatable.</para>
               </listitem>
 
               <listitem>
-                <para>Enfin décidez si ce jour fermé s'applique à toutes les
-                bibliothèques ou uniquement à celle que vous avez précédemment
-                choisie</para>
+                <para>Finally decide if this event should be applied to all
+                libraries or just the one you have originally selected</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Après avoir enregistré vous voyez l'événement listé dans le
-            récapitulatif en-dessous du calendrier.</para>
+            <para>After saving you will see the event listed in the summary
+            below the calendar</para>
 
             <screenshot>
               <screeninfo>Calendar Summary</screeninfo>
@@ -8319,18 +8295,18 @@
       </section>
 
       <section>
-        <title>Modifier des fermetures</title>
+        <title>Editing Events</title>
 
-        <para>Pour modifier un événement : </para>
+        <para>To edit events</para>
 
         <itemizedlist>
           <listitem>
-            <para>Cliquez sur le jour que vous voulez modifier dans le
-            calendrier (en cliquant la date dans le calendrier, pas dans le
-            récapitulatif)</para>
+            <para>Click on the event on the calendar that you want to change
+            (do this by clicking on the date on the calendar, not the event
+            listed in the summary)</para>
 
             <screenshot>
-              <screeninfo>Modification d'un jour de fermeture</screeninfo>
+              <screeninfo>Edit holiday form</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -8341,19 +8317,17 @@
           </listitem>
 
           <listitem>
-            <para>A partir de ce formulaire vous pouvez modifier ce jour de
-            fermeture ou le supprimer complètement. Ces deux actions
-            nécessitent que vous cliquiez le bouton 'Enregistrer' pour prendre
-            en compte les changements.</para>
+            <para>From this form you can make edits to the holiday or deleete
+            the holiday completely. Both actions require that you click 'Save'
+            before the change will be made.</para>
           </listitem>
 
           <listitem>
-            <para>Cliquer sur des jours de fermeture répétables propose des
-            options légèrement différentes : </para>
+            <para>Clicking on repeatable events will offer slightly different
+            options</para>
 
             <screenshot>
-              <screeninfo>Modification d'un jour de fermeture
-              répété</screeninfo>
+              <screeninfo>Edit repeatable event</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -8364,11 +8338,11 @@
 
             <itemizedlist>
               <listitem>
-                <para>Dans le formulaire ci-dessus vous remarquez qu'il y a
-                maintenant une option 'Créer une exception à ce jour de
-                fermeture' ; choisir cette option vous permet d'indiquer que
-                ce jour n'est pas fermé alors que la bibliothèque est
-                ordinairement fermée à cette date.</para>
+                <para>In the form above you will note that there is now an
+                option to 'Generate an exception for this repeated holiday,'
+                choosing this option will allow you to make it so that this
+                date is not closed even though the library is usually closed
+                on this date.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -8376,14 +8350,14 @@
       </section>
 
       <section>
-        <title>Aide additionnelle</title>
+        <title>Additional Help</title>
 
-        <para>A l'ajout ou modification d'un événement vous pouvez obtenir une
-        aide en cliquant le signe plus bleu à côté des différentes options du
-        formulaire.</para>
+        <para>When adding or editing events you can get additional help by
+        clicking on the blue plus sign next to various different options on
+        the form</para>
 
         <screenshot>
-          <screeninfo>Boutons d'aide du calendrier</screeninfo>
+          <screeninfo>Additional Calendar Help Buttons</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -8395,15 +8369,15 @@
     </section>
 
     <section>
-      <title id="comments">Commentaires</title>
+      <title id="comments">Comments/Reviews</title>
 
-      <para>Tous les commentaires ajoutés par les lecteurs aux notices
-      bibliographiques à l'OPAC requièrent une modération par la bibliothèque.
-      Pour modérer un commentaire cliquez simplement 'Approuver' ou
-      'Supprimer' à droite du commentaire en attente de modération.</para>
+      <para>All comments added by patrons via the OPAC to bibliographic
+      records require moderation by the librarians. To moderate comments
+      simply click 'Approve' or 'Delete' to the right of the comments awaiting
+      moderation.</para>
 
       <screenshot>
-        <screeninfo>Commentaire en attente de modération</screeninfo>
+        <screeninfo>Comment awaiting moderation</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8412,15 +8386,15 @@
         </mediaobject>
       </screenshot>
 
-      <para>S'il n'y a pas de commentaire à modérer, vous verrez un message
-      disant juste : </para>
+      <para>If there are no comments to moderate you will see a message saying
+      just that</para>
 
       <screenshot>
-        <screeninfo>Pas de commentaire à modérer</screeninfo>
+        <screeninfo>No comments to moderate</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../fr/images/tools/pas_de_commentaire.png" />
+            <imagedata fileref="../en/images/tools/nocomments.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
@@ -8429,17 +8403,15 @@
     <section>
       <title id="tagsmoderation">Tag Moderation</title>
 
-      <para>En fonction des <link linkend="taggingprefs">préférences système
-      pour les tags</link>, les bibliothécaires peuvent avoir besoin
-      d'approuver les tags avant qu'ils soient publiés à l'OPAC. Ceci est fait
-      via l'outil Tags.</para>
+      <para>Depending on your <link linkend="taggingprefs">tagging system
+      preferences</link>, librarians may need to approve tags before they are
+      published on the OPAC. This is done via the Tag Moderation Tool.</para>
 
-      <para>La première fois que vous allez sur cette page, vous avez accès à
-      une liste de tags en attente d'approbation ou de rejet par la
-      bibliothèque.</para>
+      <para>When first visiting the tool, you will be presented with a list of
+      tags that are pending approval or rejection by a librarian</para>
 
       <screenshot>
-        <screeninfo>Tags en attente de modération</screeninfo>
+        <screeninfo>Tags pending moderation</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8450,26 +8422,24 @@
 
       <itemizedlist>
         <listitem>
-          <para>Pour approuver un tag, vous pouvez soit cliquer le bouton
-          'Approuver' au niveau du terme, soit cocher tous les termes que vous
-          souhaitez approuver et cliquer 'Approuver' en-dessous de la
-          table.</para>
+          <para>To approve a tag, you can either click the 'Approve' button
+          inline with the term, or check all terms you want to approve and
+          click 'Approve' below the table.</para>
         </listitem>
 
         <listitem>
-          <para>Pour rejeter un tag, vous pouvez soit cliquer le bouton
-          'Rejeter' au niveau du terme, soit cocher tous les termes que vous
-          souhaitez rejeter et cliquer 'Rejeter' en-dessous de la
-          table.</para>
+          <para>To reject a tag, you can either click the 'Reject' button
+          inline with the term, or check all terms you want to approve and
+          click 'Reject' below the table.</para>
         </listitem>
       </itemizedlist>
 
-      <para>Une fois qu'un tag a été approuvé ou rejeté, il sera déplacé dans
-      la liste de tags appropriée. Un récapitulatif de tous les tags est
-      visible sur la droite de l'écran.</para>
+      <para>Once a tag has been approved or rejected it will be moved to the
+      appropriate list of tags. A summary of all tags will appear on the right
+      of the screen.</para>
 
       <screenshot>
-        <screeninfo>Récapitulatif des tags</screeninfo>
+        <screeninfo>Summary of tags</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8478,12 +8448,12 @@
         </mediaobject>
       </screenshot>
 
-      <para>Même une fois approuvé ou rejeté, un tag peut toujours être
-      déplacé vers une autre liste. En regardant la liste des tags approuvés,
-      chaque tag a la possibilité d'être rejeté : </para>
+      <para>Even though a tag is approved or rejected, it can still be moved
+      to another list. When viewing approved tags each tag has the option to
+      reject:</para>
 
       <screenshot>
-        <screeninfo>Tags approuvés</screeninfo>
+        <screeninfo>Approved Tags</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8492,15 +8462,14 @@
         </mediaobject>
       </screenshot>
 
-      <para>Pour vérifier si un terme est dans la liste 'approuvé' ou 'rejeté'
-      (et éventuellement dans le <link
-      linkend="TagsExternalDictionary">dictionnaire</link> que vous avez
-      ajouté pour la modération des tags), entrez simplement le terme dans le
-      formulaire de recherche à droite de l'écran pour voir le statut du
-      tag.</para>
+      <para>To check terms against the approved and rejected lists (and
+      possibly against <link linkend="TagsExternalDictionary">the
+      dictionary</link> you have assigned for tag moderation) simply enter the
+      term into the search box on the bottom right of the screen to see the
+      status of the term</para>
 
       <screenshot>
-        <screeninfo>Recherche dans la liste blanche/noire</screeninfo>
+        <screeninfo>Sample Blacklist/Whitelist test search</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -8511,7 +8480,7 @@
     </section>
 
     <section>
-      <title id="csvprofiles">Profils CVS</title>
+      <title id="csvprofiles">CSV Profiles</title>
 
       <para>CSV Profiles are created to define how you would like your cart or
       list to export.</para>
