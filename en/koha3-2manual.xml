@@ -1328,7 +1328,8 @@
           </section>
 
           <section>
-            <title>TransfersMaxDaysWarning</title>
+            <title
+            id="TransfersMaxDaysWarning">TransfersMaxDaysWarning</title>
 
             <para>Default: 3</para>
 
@@ -3578,6 +3579,24 @@
 
               <listitem>
                 <para>Show</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>When this preference is set to show the maintenance
+                    message the ability to search the OPAC is disabled and a
+                    message appears</para>
+
+                    <screenshot>
+                      <screeninfo>OPAC Maintenance Message</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/opacmaintenance.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </section>
@@ -5798,8 +5817,9 @@
             </listitem>
 
             <listitem>
-              <para>For items that you charge a rental fee for, enter the
-              total fee you charge in the 'Rental charge' field</para>
+              <para id="rentalcharge">For items that you charge a rental fee
+              for, enter the total fee you charge in the 'Rental charge'
+              field</para>
 
               <itemizedlist>
                 <listitem>
@@ -6902,6 +6922,18 @@
             </listitem>
 
             <listitem>
+              <para>Limit the number of items a patron can have checked out at
+              the same time by entering a number in the 'Current Checkouts
+              Allowed' field</para>
+            </listitem>
+
+            <listitem>
+              <para>Define the period of time and item can be checked out to a
+              patron by entering the number of days in the 'Loan Period'
+              box.</para>
+            </listitem>
+
+            <listitem>
               <para>'Fine Amount' should have the amount you would like to
               charge for overdue items</para>
 
@@ -6925,24 +6957,63 @@
             </listitem>
 
             <listitem>
-              <para>Limit the number of items a patron can have checked out at
-              the same time by entering a number in the 'Current Checkouts
-              Allowed' field</para>
+              <para>If your library 'fines' patrons by suspending their
+              account you can enter the number of days their fine should be
+              suspended in the 'Suspension in Days' field</para>
             </listitem>
 
             <listitem>
-              <para>Define the period of time and item can be checked out to a
-              patron by entering the number of days in the 'Loan Period'
-              box.</para>
+              <para>Next decide if the patron can renew this item type and if
+              so, enter how many times they can renew it in the 'Renewals
+              Allowed' box</para>
+            </listitem>
+
+            <listitem>
+              <para>If the patron can place holds on this item type, enter the
+              total numbers of items (of this type) that can be put on hold in
+              the 'Holds Allowed' field</para>
+            </listitem>
+
+            <listitem>
+              <para>Finally, if you charge a <link
+              linkend="rentalcharge">rental fee</link> for the item type and
+              want to give a specific patron type a discount on that fee,
+              enter the percentage discount (without the % symbol) in the
+              'Rental Discount' field</para>
             </listitem>
           </itemizedlist>
 
-          <para>When finished, click 'Add to save your changed.</para>
+          <para>When finished, click 'Add' to save your changes. To modify a
+          rule, create a new one with the same patron type and item type. If
+          you would like to delete your rule, simply click the 'Delete' link
+          to the right of the rule.</para>
 
-          <important>
-            <para>To modify a rule, create a new one with the same patron type
-            and item type.</para>
-          </important>
+          <para>To save time you can clone rules from one library to another
+          by choosing the clone option above the rules matrix.</para>
+
+          <screenshot>
+            <screeninfo>Circulation &amp; Fine Rules Clone Tool</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/clonerules.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>After choosing to clone you will be presented with a
+          confirmation message.</para>
+
+          <screenshot>
+            <screeninfo>Circulation &amp; Fine Rules Successfully Cloned
+            Message</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/rulescloned.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
 
         <section>
@@ -6991,6 +7062,11 @@
                   hold.</para>
                 </listitem>
               </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Once your policy is set, you can unset it by clicking the
+              'Unset' link to the right of the rule</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -8511,12 +8587,6 @@
           </mediaobject>
         </screenshot>
       </section>
-    </section>
-
-    <section>
-      <title>Rotating Collections</title>
-
-      <para></para>
     </section>
 
     <section>
@@ -12448,6 +12518,26 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>If your transfers are late in arriving at your library you will
+        see a message stating how late your items are.</para>
+
+        <screenshot>
+          <screeninfo>Late transfers include warning messages</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/transferlate.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <important>
+          <para>An item is considered late based on the number of days you
+          have entered in the <link
+          linkend="TransfersMaxDaysWarning">TransfersMaxDaysWarning</link>
+          system preference.</para>
+        </important>
       </section>
 
       <section>

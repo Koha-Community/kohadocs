@@ -1328,7 +1328,8 @@
           </section>
 
           <section>
-            <title>TransfersMaxDaysWarning</title>
+            <title
+            id="TransfersMaxDaysWarning">TransfersMaxDaysWarning</title>
 
             <para>Default: 3</para>
 
@@ -3578,6 +3579,24 @@
 
               <listitem>
                 <para>Show</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>When this preference is set to show the maintenance
+                    message the ability to search the OPAC is disabled and a
+                    message appears</para>
+
+                    <screenshot>
+                      <screeninfo>OPAC Maintenance Message</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/opacmaintenance.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </section>
@@ -6383,9 +6402,9 @@
               <itemizedlist>
                 <listitem>
                   <important>
-                      <para>You cannot enter both a month limit and a date
-                      until. Choose to enter either one or the other.</para>
-                    </important>
+                    <para>You cannot enter both a month limit and a date
+                    until. Choose to enter either one or the other.</para>
+                  </important>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -11296,6 +11315,20 @@
         </mediaobject>
       </screenshot>
 
+      <para>If you want to search for more than just a part of a patron name
+      or number, you can click the plus sign [+] to the right of the search
+      box.</para>
+
+      <screenshot>
+        <screeninfo>Advanced Patron Search</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/patrons/patronfilter.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
       <para>You can also browse through the patron records by clicking on the
       linked letters across the top.</para>
 
@@ -11308,8 +11341,6 @@
           </imageobject>
         </mediaobject>
       </screenshot>
-
-
     </section>
   </chapter>
 
@@ -12436,6 +12467,26 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>If your transfers are late in arriving at your library you will
+        see a message stating how late your items are. </para>
+
+        <screenshot>
+          <screeninfo>Late transfers include warning messages</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/transferlate.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <important>
+          <para>An item is considered late based on the number of days you
+          have entered in the <link
+          linkend="TransfersMaxDaysWarning">TransfersMaxDaysWarning</link>
+          system preference.</para>
+        </important>
       </section>
 
       <section>
