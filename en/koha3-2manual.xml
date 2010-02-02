@@ -3,7 +3,7 @@
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book>
   <bookinfo>
-    <title>cKoha 3.2 Manual (en)</title>
+    <title>Koha 3.2 Manual (en)</title>
 
     <author>
       <firstname>Nicole C.</firstname>
@@ -8527,6 +8527,39 @@
               </listitem>
 
               <listitem>
+                <para>The 'CSV separator' is the character used to separate
+                values and value groups</para>
+              </listitem>
+
+              <listitem>
+                <para>The 'Field separator' is the character used to seperate
+                duplicate fields</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Example: You may have multiple 650 fields</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>The 'Subfield separator' is the character used to
+                separate duplicate subfields</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Example: You may have multiple $a subfields in a
+                    field</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>The 'Encoding' field lets you define the encoding used
+                when saving the file</para>
+              </listitem>
+
+              <listitem>
                 <para>Finally format your CSV file using the 'Profile
                 marcfields' fields</para>
 
@@ -8534,6 +8567,15 @@
                   <listitem>
                     <para>Define which fields or subfields you want to export,
                     separated by pipes. Example : 200|210$a|301</para>
+                  </listitem>
+
+                  <listitem>
+                    <tip>
+                      <para>You can also use your own headers (instead of the
+                      ones from koha) by prefixing the field number with an
+                      header, followed by the equal sign. Example : Personal
+                      name=200|Entry element=210$a|300|009</para>
+                    </tip>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -8545,8 +8587,8 @@
       <section>
         <title>Modify CSV Profiles</title>
 
-        <para>Once you have created at least one CSV Profile an option to
-        'Modify CSV Profiles' will appear below the Add form</para>
+        <para>Once you have created at least one CSV Profile an 'Edit profile'
+        tab will appear next to the 'New profile' button.</para>
 
         <screenshot>
           <screeninfo>Modify CSV Profiles</screeninfo>
@@ -8567,6 +8609,16 @@
           <listitem>
             <para>To delete a profile, check the 'Delete selelcted profile'
             option before clicking 'Submit Query'</para>
+
+            <screenshot>
+              <screeninfo>Delete an existing CSV Profile</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/deletecsv.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </listitem>
         </itemizedlist>
       </section>
