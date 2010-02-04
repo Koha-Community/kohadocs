@@ -8353,7 +8353,7 @@
         not it can usually be found on the vendor's website.</para>
 
         <section>
-          <title>Add a Template</title>
+          <title id="addcardtemplate" lang="">Add a Template</title>
 
           <para>To add a new template, you want to click on the 'Templates'
           button at the top of your page and choose 'New Template'</para>
@@ -8368,7 +8368,92 @@
             </mediaobject>
           </screenshot>
 
-          <para></para>
+          <para>Using the form that appears you can define the template for
+          your sheet of labels or cards.</para>
+
+          <screenshot>
+            <screeninfo>Add Patron Card Template</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/edittemplate.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Template ID will be automatically generated after saving
+              your template, this is simply a system genereated unique
+              id</para>
+            </listitem>
+
+            <listitem>
+              <para>Template Code should be something you can use to identify
+              your template on a list of templates</para>
+            </listitem>
+
+            <listitem>
+              <para>You can use the Template Description to add additional
+              information about the template</para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for the template. This should
+              probably match the unit of measurement used on the template
+              description provided by the product vendor.</para>
+
+              <screenshot>
+                <screeninfo>Measurement Units</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>The measurements can be found on the vendor product
+              packaging or website.</para>
+            </listitem>
+
+            <listitem>
+              <para>A profile is a set of “adjustments” applied to a given
+              template just prior to printing which compensates for anomalies
+              unique and peculiar to a given printer (to which the profile is
+              assigned). </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Before picking a profile try printing some sample
+                  cards so that you can easily define a profile that is right
+                  for your printer/template combination.</para>
+                </listitem>
+
+                <listitem>
+                  <para>After finding any anomolies in the printed document,
+                  <link linkend="addcardprofile">create a profile</link> and
+                  assign it to the template.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your templates will appear on the 'Manage
+          Templates' page.</para>
+
+          <screenshot>
+            <screeninfo>Manage Templates</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/managetemplates.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
@@ -8384,15 +8469,113 @@
         each printer to make up for the differences in printing styles, such
         as the shifting of text to the left, right, top or bottom.</para>
 
-        <section>
-          <title>Add a Profile</title>
+        <para>If your cards are printing just the way you want, you will not
+        need a profile.</para>
 
-          <para></para>
+        <section>
+          <title id="addcardprofile" lang="">Add a Profile</title>
+
+          <para>To add a new profile, you want to click on the 'Profiles'
+          button at the top of your page and choose 'New Profile'</para>
+
+          <screenshot>
+            <screeninfo>New Profile Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/newprofile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Add Printer Profile</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/addprofile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The Printer Name and Paper Bin do not have to match your
+              printer exactly, they are for your reference so you can remember
+              what printer you have set the profile for. So if you want to use
+              the Printer model number in printer name or you can call it 'the
+              printer on my desk'</para>
+            </listitem>
+
+            <listitem>
+              <para>Template will be filled in once you have chosen which
+              template to apply the profile to on the <link
+              linkend="addcardtemplate">template edit form</link></para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for your profile. </para>
+
+              <screenshot>
+                <screeninfo>Units of Measurement</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Offset describes what happens when the entire image is off
+              center either vertically or horzontally and creep describes a
+              condition where the distance between the labels changes across
+              the page or up and down the page </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>For these values, negative numbers move the error up
+                  and to the left and positive numbers move the error down and
+                  to the right </para>
+                </listitem>
+
+                <listitem>
+                  <para>Example: the text is .25” from the left edge of the
+                  first label, .28” from the left edge of the second label and
+                  .31” from the left edge of the third label. This means the
+                  horizontal creep should be set to .03" to make up for this
+                  difference.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your profiles will appear on the 'Manage
+          Profiles' page.</para>
+
+          <screenshot>
+            <screeninfo>Manage Profiles</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/manageprofiles.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once you have saved your new profile, you can return to the
+          list of templates and choose to edit the template that this profile
+          is for.</para>
         </section>
       </section>
 
       <section>
-        <title>Layouts</title>
+        <title id="cardlayouts">Layouts</title>
 
         <para>A layout defines the text and images that will be printed on to
         the card and where it will appear.</para>
@@ -8400,23 +8583,161 @@
         <section>
           <title>Add a Layout</title>
 
-          <para></para>
+          <para>To add a new layout, you want to click on the 'Layouts' button
+          at the top of your page and choose 'New Layout'</para>
+
+          <screenshot>
+            <screeninfo>New Layout Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/newlayout.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Add New Layout</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/addlayout.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The name you assign to the layout is for your benefit,
+              name it something that will be easy to identify at a later
+              date</para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for your layout.</para>
+
+              <screenshot>
+                <screeninfo>Units of Measurement</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Next note if this layout is for the front or the back of
+              the patron card </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You will need a layout for both the front and back of
+                  your card if you have 2-sided library cards</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>You have the option of adding up to 3 lines of text to
+              your card. Your text can be static text of your choosing and/or
+              fields from the patron record. If you want to print fields from
+              the patron record you want to put the field names in brackets
+              like so - &lt;firstname&gt;</para>
+            </listitem>
+
+            <listitem>
+              <para>For each line of text, you can choose your font, font size
+              and the location of the text on the card using the lower X and Y
+              coordinates</para>
+            </listitem>
+
+            <listitem>
+              <para>In order to show the barcode and the patron card number
+              you will need to check the 'Print Card Number as Barcode'
+              option. This will turn the patron card number into a barcode. If
+              you want the number to print in human readable format you will
+              need to check the 'Print Card Number as Text Under Barcode'
+              option.</para>
+            </listitem>
+
+            <listitem>
+              <para>Finally you can choose up to two images to print on the
+              card. </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>One can be the <link
+                  linkend="uploadpatronimages">patron image</link> which you
+                  can resize to meet your needs.</para>
+                </listitem>
+
+                <listitem>
+                  <para>The other image can be something like a library logo
+                  or symbol that you uploaded using the '<link
+                  linkend="managecardimages" os="">Manage Images</link>'
+                  module of the Patron Card Creator Tool.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your layouts will appear on the 'Manage Layouts'
+          page.</para>
+
+          <screenshot>
+            <screeninfo>Manage Layouts</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/managelayouts.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
       <section>
         <title>Batches</title>
 
-        <para>A batch is a collection of patrons for whom we want to generate
+        <para>A batch is a collection of patrons for whom you want to generate
         cards.</para>
+
+        <section>
+          <title>Add a Batch</title>
+
+          <para>To add a new batch, you want to click on the 'Batches' button
+          at the top of your page and choose 'New Batch'</para>
+
+          <screenshot>
+            <screeninfo>New Batch Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/newbatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
-        <title>Manage Images</title>
+        <title id="managecardimages">Manage Images</title>
 
-        <para>You are limited in how many images you can upload (not counting
-        patron images) by the <link linkend="ImageLimit">ImageLimit</link>
-        system preference.</para>
+        <para>Images uploaded using this tool will appear on the menu when
+        creating <link lang="" linkend="cardlayouts">patron card
+        layouts</link>. You are limited in how many images you can upload (not
+        counting patron images) by the <link
+        linkend="ImageLimit">ImageLimit</link> system preference. Pictures
+        uploaded with this tool should be at least 300dpi which is the minimum
+        quality for a printable image. </para>
       </section>
     </section>
 
