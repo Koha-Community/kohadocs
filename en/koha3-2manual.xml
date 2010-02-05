@@ -132,24 +132,75 @@
         <para></para>
 
         <section>
-          <title>RenewSerialAddsSuggestion</title>
+          <title>Policy</title>
 
-          <para>Default: Don't add</para>
+          <section>
+            <title>AcqCreateItem</title>
 
-          <para>Asks: ___ a suggestion for a biblio when its attached serial
-          is renewed.</para>
+            <para>Default: placing an order</para>
 
-          <para>Values:</para>
+            <para>Asks: Create an item when ___.</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>Add</para>
-            </listitem>
+            <para>Values:</para>
 
-            <listitem>
-              <para>Don't add</para>
-            </listitem>
-          </itemizedlist>
+            <itemizedlist>
+              <listitem>
+                <para>cataloging a record</para>
+              </listitem>
+
+              <listitem>
+                <para>placing an order</para>
+              </listitem>
+
+              <listitem>
+                <para>receiving an order</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>CurrencyFormat</title>
+
+            <para>Default: 360,000.00 (US)</para>
+
+            <para>Asks: Display currencies using the following format
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>360,000.00 (US)</para>
+              </listitem>
+
+              <listitem>
+                <para>360 000,00 (FR)</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>gist</title>
+
+            <para>Default: 0</para>
+
+            <para>Asks: The default tax rate is ___<tip>
+                <para>Enter this value as a number (.06) versus a precent
+                (6%). </para>
+              </tip></para>
+          </section>
+        </section>
+
+        <section>
+          <title>Printing</title>
+
+          <section>
+            <title>OrderPdfFormat</title>
+
+            <para>Default: pdfformat::layout2pages</para>
+
+            <para>Asks: Use ___ when printing basket groups.</para>
+          </section>
         </section>
       </section>
 
@@ -157,6 +208,37 @@
         <title id="adminprefs">Administration</title>
 
         <para>These preferences are general settings for your system.</para>
+
+        <section>
+          <title>CAS Authentication</title>
+
+          <para>The Central Authentication Service (CAS) is a single sign-on
+          protocol for the web. If you don't know what this is, leave these
+          preferences set to their defaults.</para>
+
+          <section>
+            <title>casAuthentication</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ CAS for login authentication. </para>
+          </section>
+
+          <section>
+            <title>casLogout</title>
+
+            <para>Default: Don't logout</para>
+
+            <para>Asks: ___ of CAS when logging out of Koha. </para>
+          </section>
+
+          <section>
+            <title>casServerUrl</title>
+
+            <para>Asks: The CAS Authentication Server can be found at
+            ___</para>
+          </section>
+        </section>
 
         <section>
           <title>Interface options</title>
@@ -1004,6 +1086,27 @@
             label: (Enter in columns from the biblio, biblioitems or items
             tables, surrounded by &lt; and &gt;.)</para>
           </section>
+
+          <section>
+            <title>SpineLabelShowPrintOnBibDetails</title>
+
+            <para>Default: Don't display</para>
+
+            <para>Asks: ___ buttons on the bib details page to print item
+            spine labels.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Display</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't display</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
       </section>
 
@@ -1600,6 +1703,27 @@
           </section>
 
           <section>
+            <title> ReservesControlBranch </title>
+
+            <para>Default: item's home library</para>
+
+            <para>Asks: Check the ___ to see if the patron can place a hold on
+            the item. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>item's home library.</para>
+              </listitem>
+
+              <listitem>
+                <para>patron's home library.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>ReservesNeedReturns</title>
 
             <para>Default: Don't automatically</para>
@@ -1876,6 +2000,29 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title id="WebBasedSelfCheck">WebBasedSelfCheck</title>
+
+            <para>Default: Don't enable</para>
+
+            <para>Asks: ___ the web-based self checkout system.</para>
+
+            <para>Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't enable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Enabling this preference will allow access to the <link
+            linkend="selfcheckout">self checkout</link> module in Koha.</para>
           </section>
         </section>
       </section>
@@ -3588,7 +3735,10 @@
 
             <para>Default: Don't show</para>
 
-            <para>Asks: ___</para>
+            <para>Asks: ___ a warning that the OPAC is under maintenance,
+            instead of the OPAC itself. Note: this shows the same warning as
+            when the database needs to be upgraded, but unconditionally.
+            </para>
 
             <para>Values:</para>
 
@@ -4308,6 +4458,53 @@
             <para>Default: Don't allow</para>
 
             <para>Asks: ___ patrons to select their branch on the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Privacy</title>
+
+          <para></para>
+
+          <section>
+            <title>EnableOpacSearchHistory</title>
+
+            <para>Default: Keep</para>
+
+            <para>Asks: ___ patron search history in the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't keep</para>
+              </listitem>
+
+              <listitem>
+                <para>Keep</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OpacPrivacy </title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to opt-in/opt-out of saving their
+            reading/circulation history. Save all OPAC preferences </para>
 
             <para>Values:</para>
 
@@ -5208,6 +5405,74 @@
               </listitem>
             </itemizedlist>
           </section>
+        </section>
+      </section>
+
+      <section>
+        <title>Serials</title>
+
+        <para></para>
+
+        <section>
+          <title>RenewSerialAddsSuggestion </title>
+
+          <para>Default: Don't add</para>
+
+          <para>Asks: ___ a suggestion for a biblio when its attached serial
+          is renewed. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Add</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>RoutingSerials </title>
+
+          <para>Default: Don't add</para>
+
+          <para>Asks: ___ received serials to the routing list. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Add</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>RoutingListAddReserves </title>
+
+          <para>Default: Place</para>
+
+          <para>Asks: ___ received serials on hold if they are on a routing
+          list. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Place</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't place</para>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
 
@@ -8424,7 +8689,7 @@
               <para>A profile is a set of “adjustments” applied to a given
               template just prior to printing which compensates for anomalies
               unique and peculiar to a given printer (to which the profile is
-              assigned). </para>
+              assigned).</para>
 
               <itemizedlist>
                 <listitem>
@@ -8518,7 +8783,7 @@
 
             <listitem>
               <para>The Units pull down is used to define what measurement
-              scale you're going to be using for your profile. </para>
+              scale you're going to be using for your profile.</para>
 
               <screenshot>
                 <screeninfo>Units of Measurement</screeninfo>
@@ -8535,13 +8800,13 @@
               <para>Offset describes what happens when the entire image is off
               center either vertically or horzontally and creep describes a
               condition where the distance between the labels changes across
-              the page or up and down the page </para>
+              the page or up and down the page</para>
 
               <itemizedlist>
                 <listitem>
                   <para>For these values, negative numbers move the error up
                   and to the left and positive numbers move the error down and
-                  to the right </para>
+                  to the right</para>
                 </listitem>
 
                 <listitem>
@@ -8633,7 +8898,7 @@
 
             <listitem>
               <para>Next note if this layout is for the front or the back of
-              the patron card </para>
+              the patron card</para>
 
               <itemizedlist>
                 <listitem>
@@ -8668,7 +8933,7 @@
 
             <listitem>
               <para>Finally you can choose up to two images to print on the
-              card. </para>
+              card.</para>
 
               <itemizedlist>
                 <listitem>
@@ -8735,9 +9000,18 @@
         creating <link lang="" linkend="cardlayouts">patron card
         layouts</link>. You are limited in how many images you can upload (not
         counting patron images) by the <link
-        linkend="ImageLimit">ImageLimit</link> system preference. Pictures
-        uploaded with this tool should be at least 300dpi which is the minimum
-        quality for a printable image. </para>
+        linkend="ImageLimit">ImageLimit</link> system preference.</para>
+
+        <important>
+          <para>Images must be under 500k in size.</para>
+        </important>
+
+        <tip>
+          <para>Pictures uploaded with this tool should be at least 300dpi
+          which is the minimum quality for a printable image.</para>
+        </tip>
+
+        <para></para>
       </section>
     </section>
 
@@ -13302,9 +13576,11 @@
     </section>
 
     <section>
-      <title>Self Checkout</title>
+      <title id="selfcheckout">Self Checkout</title>
 
-      <para>Koha comes with a very basic self checkout module. To use this
+      <para>Koha comes with a very basic self checkout module. To enable this
+      module you need to set the <link linkend="WebBasedSelfCheck"
+      os="">WebBasedSelfCheck</link> preference to 'Enable.' To use this
       module you have to log in as a <link linkend="addstaffpatron">staff
       member</link> with <link linkend="patronpermissions">circulation
       permissions</link>.</para>
