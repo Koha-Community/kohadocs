@@ -1367,6 +1367,16 @@
           </section>
 
           <section>
+            <title> OverdueNoticeBcc </title>
+
+            <para>Asks: Send all notices as a BCC to this email address
+            ___</para>
+
+            <para>This preference makes it so that a librarian can get a copy
+            of every notice sent out to patrons.</para>
+          </section>
+
+          <section>
             <title>RenewalPeriodBase</title>
 
             <para>Default: the old due date of the checkout</para>
@@ -3494,6 +3504,47 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+          </section>
+
+          <section>
+            <title>OpacAddMastheadLibraryPulldown </title>
+
+            <para>Default: Don't add</para>
+
+            <para>Asks: ___ a library select pulldown menu on the OPAC
+            masthead. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add</para>
+
+                <screenshot>
+                  <screeninfo>Library select box on Koha OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacAddMastheadLibraryPulldown-add.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't Add</para>
+
+                <screenshot>
+                  <screeninfo>No library select box on Koha OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacAddMastheadLibraryPulldown-dontadd.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -5670,6 +5721,47 @@
           <title>Options</title>
 
           <section>
+            <title>HidePatronName</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ the names of patrons that have items checked out
+            or on hold on detail pages or the "Place Hold" screen.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title id="intranetbookbag">intranetbookbag</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ the cart option in the staff client. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>viewISBD</title>
 
             <para>Default: Allow</para>
@@ -5728,27 +5820,6 @@
 
               <listitem>
                 <para>Don't allow</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title id="HidePatronName">HidePatronName</title>
-
-            <para>Default: Show</para>
-
-            <para>Asks: ___ the names of patrons that have items checked out
-            or on hold on detail pages or the "Place Hold" screen.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -15683,9 +15754,11 @@
     <section>
       <title>Cart</title>
 
-      <para>To add things to the cart, search the catalog and select the items
-      you would like added to your cart and choose 'Cart' from the 'Add to'
-      menu</para>
+      <para>If you would like to enable the cart in the staff client, you need
+      to set the <link linkend="intranetbookbag">intranetbookbag</link> system
+      preference to 'Show.' To add things to the cart, search the catalog and
+      select the items you would like added to your cart and choose 'Cart'
+      from the 'Add to' menu</para>
 
       <screenshot>
         <screeninfo>Add to Cart</screeninfo>
