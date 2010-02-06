@@ -132,24 +132,75 @@
         <para></para>
 
         <section>
-          <title>RenewSerialAddsSuggestion</title>
+          <title>Policy</title>
 
-          <para>Default: Don't add</para>
+          <section>
+            <title>AcqCreateItem</title>
 
-          <para>Asks: ___ a suggestion for a biblio when its attached serial
-          is renewed.</para>
+            <para>Default: placing an order</para>
 
-          <para>Values:</para>
+            <para>Asks: Create an item when ___.</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>Add</para>
-            </listitem>
+            <para>Values:</para>
 
-            <listitem>
-              <para>Don't add</para>
-            </listitem>
-          </itemizedlist>
+            <itemizedlist>
+              <listitem>
+                <para>cataloging a record</para>
+              </listitem>
+
+              <listitem>
+                <para>placing an order</para>
+              </listitem>
+
+              <listitem>
+                <para>receiving an order</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>CurrencyFormat</title>
+
+            <para>Default: 360,000.00 (US)</para>
+
+            <para>Asks: Display currencies using the following format
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>360,000.00 (US)</para>
+              </listitem>
+
+              <listitem>
+                <para>360 000,00 (FR)</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>gist</title>
+
+            <para>Default: 0</para>
+
+            <para>Asks: The default tax rate is ___<tip>
+                <para>Enter this value as a number (.06) versus a precent
+                (6%). </para>
+              </tip></para>
+          </section>
+        </section>
+
+        <section>
+          <title>Printing</title>
+
+          <section>
+            <title>OrderPdfFormat</title>
+
+            <para>Default: pdfformat::layout2pages</para>
+
+            <para>Asks: Use ___ when printing basket groups.</para>
+          </section>
         </section>
       </section>
 
@@ -157,6 +208,37 @@
         <title id="adminprefs">Administration</title>
 
         <para>These preferences are general settings for your system.</para>
+
+        <section>
+          <title>CAS Authentication</title>
+
+          <para>The Central Authentication Service (CAS) is a single sign-on
+          protocol for the web. If you don't know what this is, leave these
+          preferences set to their defaults.</para>
+
+          <section>
+            <title>casAuthentication</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ CAS for login authentication. </para>
+          </section>
+
+          <section>
+            <title>casLogout</title>
+
+            <para>Default: Don't logout</para>
+
+            <para>Asks: ___ of CAS when logging out of Koha. </para>
+          </section>
+
+          <section>
+            <title>casServerUrl</title>
+
+            <para>Asks: The CAS Authentication Server can be found at
+            ___</para>
+          </section>
+        </section>
 
         <section>
           <title>Interface options</title>
@@ -1011,7 +1093,7 @@
             <para>Default: Don't display</para>
 
             <para>Asks: ___ buttons on the bib details page to print item
-            spine labels. </para>
+            spine labels.</para>
 
             <para>Values:</para>
 
@@ -1282,6 +1364,16 @@
 
             <para>Asks: Prevent patrons from checking out books if they have
             more than ___ USD in fines.</para>
+          </section>
+
+          <section>
+            <title> OverdueNoticeBcc </title>
+
+            <para>Asks: Send all notices as a BCC to this email address
+            ___</para>
+
+            <para>This preference makes it so that a librarian can get a copy
+            of every notice sent out to patrons.</para>
           </section>
 
           <section>
@@ -1621,6 +1713,27 @@
           </section>
 
           <section>
+            <title> ReservesControlBranch </title>
+
+            <para>Default: item's home library</para>
+
+            <para>Asks: Check the ___ to see if the patron can place a hold on
+            the item. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>item's home library.</para>
+              </listitem>
+
+              <listitem>
+                <para>patron's home library.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>ReservesNeedReturns</title>
 
             <para>Default: Don't automatically</para>
@@ -1897,6 +2010,29 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title id="WebBasedSelfCheck">WebBasedSelfCheck</title>
+
+            <para>Default: Don't enable</para>
+
+            <para>Asks: ___ the web-based self checkout system.</para>
+
+            <para>Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't enable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Enabling this preference will allow access to the <link
+            linkend="selfcheckout">self checkout</link> module in Koha.</para>
           </section>
         </section>
       </section>
@@ -3371,6 +3507,47 @@
           </section>
 
           <section>
+            <title>OpacAddMastheadLibraryPulldown </title>
+
+            <para>Default: Don't add</para>
+
+            <para>Asks: ___ a library select pulldown menu on the OPAC
+            masthead. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add</para>
+
+                <screenshot>
+                  <screeninfo>Library select box on Koha OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacAddMastheadLibraryPulldown-add.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't Add</para>
+
+                <screenshot>
+                  <screeninfo>No library select box on Koha OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacAddMastheadLibraryPulldown-dontadd.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>OPACBaseURL</title>
 
             <para>Asks: The OPAC is located at http:// ___</para>
@@ -3609,7 +3786,10 @@
 
             <para>Default: Don't show</para>
 
-            <para>Asks: ___</para>
+            <para>Asks: ___ a warning that the OPAC is under maintenance,
+            instead of the OPAC itself. Note: this shows the same warning as
+            when the database needs to be upgraded, but unconditionally.
+            </para>
 
             <para>Values:</para>
 
@@ -4329,6 +4509,53 @@
             <para>Default: Don't allow</para>
 
             <para>Asks: ___ patrons to select their branch on the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section>
+          <title>Privacy</title>
+
+          <para></para>
+
+          <section>
+            <title>EnableOpacSearchHistory</title>
+
+            <para>Default: Keep</para>
+
+            <para>Asks: ___ patron search history in the OPAC. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't keep</para>
+              </listitem>
+
+              <listitem>
+                <para>Keep</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OpacPrivacy </title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to opt-in/opt-out of saving their
+            reading/circulation history. Save all OPAC preferences </para>
 
             <para>Values:</para>
 
@@ -5233,6 +5460,74 @@
       </section>
 
       <section>
+        <title>Serials</title>
+
+        <para></para>
+
+        <section>
+          <title>RenewSerialAddsSuggestion </title>
+
+          <para>Default: Don't add</para>
+
+          <para>Asks: ___ a suggestion for a biblio when its attached serial
+          is renewed. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Add</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>RoutingSerials </title>
+
+          <para>Default: Don't add</para>
+
+          <para>Asks: ___ received serials to the routing list. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Add</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>RoutingListAddReserves </title>
+
+          <para>Default: Place</para>
+
+          <para>Asks: ___ received serials on hold if they are on a routing
+          list. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Place</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't place</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+
+      <section>
         <title>Staff Client</title>
 
         <para></para>
@@ -5426,6 +5721,47 @@
           <title>Options</title>
 
           <section>
+            <title>HidePatronName</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ the names of patrons that have items checked out
+            or on hold on detail pages or the "Place Hold" screen.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title id="intranetbookbag">intranetbookbag</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ the cart option in the staff client. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>viewISBD</title>
 
             <para>Default: Allow</para>
@@ -5484,27 +5820,6 @@
 
               <listitem>
                 <para>Don't allow</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title id="HidePatronName">HidePatronName</title>
-
-            <para>Default: Show</para>
-
-            <para>Asks: ___ the names of patrons that have items checked out
-            or on hold on detail pages or the "Place Hold" screen.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -13332,9 +13647,11 @@
     </section>
 
     <section>
-      <title>Self Checkout</title>
+      <title id="selfcheckout">Self Checkout</title>
 
-      <para>Koha comes with a very basic self checkout module. To use this
+      <para>Koha comes with a very basic self checkout module. To enable this
+      module you need to set the <link linkend="WebBasedSelfCheck"
+      os="">WebBasedSelfCheck</link> preference to 'Enable.' To use this
       module you have to log in as a <link linkend="addstaffpatron">staff
       member</link> with <link linkend="patronpermissions">circulation
       permissions</link>.</para>
@@ -15437,9 +15754,11 @@
     <section>
       <title>Cart</title>
 
-      <para>To add things to the cart, search the catalog and select the items
-      you would like added to your cart and choose 'Cart' from the 'Add to'
-      menu</para>
+      <para>If you would like to enable the cart in the staff client, you need
+      to set the <link linkend="intranetbookbag">intranetbookbag</link> system
+      preference to 'Show.' To add things to the cart, search the catalog and
+      select the items you would like added to your cart and choose 'Cart'
+      from the 'Add to' menu</para>
 
       <screenshot>
         <screeninfo>Add to Cart</screeninfo>
