@@ -186,7 +186,7 @@
 
             <para>Asks: The default tax rate is ___<tip>
                 <para>Enter this value as a number (.06) versus a precent
-                (6%). </para>
+                (6%).</para>
               </tip></para>
           </section>
         </section>
@@ -221,7 +221,7 @@
 
             <para>Default: Don't use</para>
 
-            <para>Asks: ___ CAS for login authentication. </para>
+            <para>Asks: ___ CAS for login authentication.</para>
           </section>
 
           <section>
@@ -229,7 +229,7 @@
 
             <para>Default: Don't logout</para>
 
-            <para>Asks: ___ of CAS when logging out of Koha. </para>
+            <para>Asks: ___ of CAS when logging out of Koha.</para>
           </section>
 
           <section>
@@ -1088,7 +1088,8 @@
           </section>
 
           <section>
-            <title>SpineLabelShowPrintOnBibDetails</title>
+            <title
+            id="SpineLabelShowPrintOnBibDetails">SpineLabelShowPrintOnBibDetails</title>
 
             <para>Default: Don't display</para>
 
@@ -1100,6 +1101,17 @@
             <itemizedlist>
               <listitem>
                 <para>Display</para>
+
+                <screenshot>
+                  <screeninfo>'Print Label' link appears on bibliographic
+                  record in the staff client</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/SpineLabelShowPrintOnBibDetails.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
 
               <listitem>
@@ -1367,7 +1379,7 @@
           </section>
 
           <section>
-            <title> OverdueNoticeBcc </title>
+            <title>OverdueNoticeBcc</title>
 
             <para>Asks: Send all notices as a BCC to this email address
             ___</para>
@@ -1713,12 +1725,12 @@
           </section>
 
           <section>
-            <title> ReservesControlBranch </title>
+            <title>ReservesControlBranch</title>
 
             <para>Default: item's home library</para>
 
             <para>Asks: Check the ___ to see if the patron can place a hold on
-            the item. </para>
+            the item.</para>
 
             <para>Values:</para>
 
@@ -2019,7 +2031,7 @@
 
             <para>Asks: ___ the web-based self checkout system.</para>
 
-            <para>Values: </para>
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -3507,12 +3519,12 @@
           </section>
 
           <section>
-            <title>OpacAddMastheadLibraryPulldown </title>
+            <title>OpacAddMastheadLibraryPulldown</title>
 
             <para>Default: Don't add</para>
 
             <para>Asks: ___ a library select pulldown menu on the OPAC
-            masthead. </para>
+            masthead.</para>
 
             <para>Values:</para>
 
@@ -3788,8 +3800,8 @@
 
             <para>Asks: ___ a warning that the OPAC is under maintenance,
             instead of the OPAC itself. Note: this shows the same warning as
-            when the database needs to be upgraded, but unconditionally.
-            </para>
+            when the database needs to be upgraded, but
+            unconditionally.</para>
 
             <para>Values:</para>
 
@@ -4534,7 +4546,7 @@
 
             <para>Default: Keep</para>
 
-            <para>Asks: ___ patron search history in the OPAC. </para>
+            <para>Asks: ___ patron search history in the OPAC.</para>
 
             <para>Values:</para>
 
@@ -4550,12 +4562,12 @@
           </section>
 
           <section>
-            <title>OpacPrivacy </title>
+            <title>OpacPrivacy</title>
 
             <para>Default: Don't allow</para>
 
             <para>Asks: ___ patrons to opt-in/opt-out of saving their
-            reading/circulation history. Save all OPAC preferences </para>
+            reading/circulation history. Save all OPAC preferences</para>
 
             <para>Values:</para>
 
@@ -5465,12 +5477,12 @@
         <para></para>
 
         <section>
-          <title>RenewSerialAddsSuggestion </title>
+          <title>RenewSerialAddsSuggestion</title>
 
           <para>Default: Don't add</para>
 
           <para>Asks: ___ a suggestion for a biblio when its attached serial
-          is renewed. </para>
+          is renewed.</para>
 
           <para>Values:</para>
 
@@ -5486,11 +5498,11 @@
         </section>
 
         <section>
-          <title>RoutingSerials </title>
+          <title>RoutingSerials</title>
 
           <para>Default: Don't add</para>
 
-          <para>Asks: ___ received serials to the routing list. </para>
+          <para>Asks: ___ received serials to the routing list.</para>
 
           <para>Values:</para>
 
@@ -5506,12 +5518,12 @@
         </section>
 
         <section>
-          <title>RoutingListAddReserves </title>
+          <title>RoutingListAddReserves</title>
 
           <para>Default: Place</para>
 
           <para>Asks: ___ received serials on hold if they are on a routing
-          list. </para>
+          list.</para>
 
           <para>Values:</para>
 
@@ -5746,7 +5758,7 @@
 
             <para>Default: Show</para>
 
-            <para>Asks: ___ the cart option in the staff client. </para>
+            <para>Asks: ___ the cart option in the staff client.</para>
 
             <para>Values:</para>
 
@@ -14184,6 +14196,34 @@
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/cataloging/items.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Your items will also appear below the bibliographic details on
+        the bib record display. </para>
+
+        <screenshot>
+          <screeninfo>List of Items on the Bib Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/items-withoutlabelprint.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you have SpineLabelShowPrintOnBibDetails set to 'Display'
+        then there will also be a link to print a quick spine label next to
+        each item.</para>
+
+        <screenshot>
+          <screeninfo>List of Items on the Bib Record with a Print Label
+          link</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/items-withlabelprint.png" />
             </imageobject>
           </mediaobject>
         </screenshot>
