@@ -2004,6 +2004,44 @@
           <para></para>
 
           <section>
+            <title>AutoSelfCheckAllowed, AutoSelfCheckID &amp;
+            AutoSelfCheckPass </title>
+
+            <important>
+              <para>Most libraries will want to leave this set to 'Don't
+              allow.' This preference turns off the requirement to log into
+              the self checkout machine with a staff username and password by
+              storing the username and password for automatic login.</para>
+            </important>
+
+            <para>AutoSelfCheckAllowed Default: Don't allow</para>
+
+            <para>Asks: ___ the web-based self checkout system to
+            automatically login with this staff login ___ and this password
+            ___ . </para>
+
+            <para>AutoSelfCheckAllowed Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>AutoSelfCheckID needs to be set to the username of a staff
+            member with 'circulate' <link
+            linkend="patronpermissions">permissions</link>.</para>
+
+            <para>AutoSelfCheckPass needs to be set to the password of a staff
+            member with 'circulate' <link
+            linkend="patronpermissions">permissions</link>.</para>
+          </section>
+
+          <section>
             <title>ShowPatronImageInWebBasedSelfCheck</title>
 
             <para>Default: Don't show</para>
@@ -5733,7 +5771,7 @@
           <title>Options</title>
 
           <section>
-            <title>HidePatronName</title>
+            <title id="HidePatronName" lang="">HidePatronName</title>
 
             <para>Default: Show</para>
 
@@ -9554,12 +9592,6 @@
     </section>
 
     <section>
-      <title>Rotating Collections</title>
-
-      <para></para>
-    </section>
-
-    <section>
       <title id="stagemarc">Stage MARC Records for Import</title>
 
       <para>Importing records into Koha includes two steps. The first is to
@@ -10229,7 +10261,7 @@
       </itemizedlist>
 
       <important>
-        <para>There is a limit of 200K on the size of the picture uploaded and
+        <para>There is a limit of 520K on the size of the picture uploaded and
         it is recommended that the image be 200x300 pixels, but smaller images
         will work as well.</para>
       </important>
@@ -14201,7 +14233,7 @@
         </screenshot>
 
         <para>Your items will also appear below the bibliographic details on
-        the bib record display. </para>
+        the bib record display.</para>
 
         <screenshot>
           <screeninfo>List of Items on the Bib Record</screeninfo>
@@ -19563,6 +19595,18 @@ print theme('pages_catalog');</programlisting>
             </tip>
           </listitem>
         </itemizedlist>
+      </section>
+
+      <section>
+        <title>Customizing Koha Images</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Can I customize the
+        images in the OPAC?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Absolutely. Koha comes
+        with a series of original images that you can alter to meet your
+        needs. The originals can be found in the misc/interface_customization/
+        directory.</para>
       </section>
     </section>
 
