@@ -4094,7 +4094,7 @@
           </section>
 
           <section>
-            <title>OPACXSLTResultsDisplay </title>
+            <title>OPACXSLTResultsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -5462,11 +5462,11 @@
           </section>
 
           <section>
-            <title>XSLTResultsDisplay</title>
+            <title>XSLTDetailsDisplay</title>
 
-            <para>Default: using XSLT stylesheets</para>
+            <para>Default: normally</para>
 
-            <para>Asks: Show search results ___</para>
+            <para>Asks: Show item details pages in the staff client ___</para>
 
             <para>Values:</para>
 
@@ -5481,11 +5481,43 @@
                 <itemizedlist>
                   <listitem>
                     <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the OPAC</para>
+                    on the bibliographic records in the Staff Client</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show biblio records on result page in the staff client
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference isn't currently functional.</para>
+            </important>
           </section>
         </section>
 
@@ -8215,7 +8247,7 @@
       </section>
 
       <section>
-        <title>Keywords to MARC Mapping</title>
+        <title id="keywordmapping">Keywords to MARC Mapping</title>
 
         <para></para>
       </section>
@@ -15750,6 +15782,11 @@
         <title id="mergebibrecs" lang="">Merging Bibliographic Records Via
         Lists</title>
 
+        <important>
+          <para>Merging will only work with two items that use the same
+          bibliographic framework.</para>
+        </important>
+
         <para>The easiest way to merge together duplicate bibliographic
         records is to add them to a list and use the Merge Tool from
         there.</para>
@@ -19635,6 +19672,21 @@ print theme('pages_catalog');</programlisting>
         needs. The originals can be found in the misc/interface_customization/
         directory.</para>
       </section>
+
+      <section>
+        <title>Subtitle Display on Bib Records</title>
+
+        <para><emphasis role="bold">Question</emphasis>: How do I get the
+        subtitle to display on the detail pages for my bib records?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Subtitle display now
+        depends on there being a <link linkend="keywordmapping">keyword
+        mapping</link> for the MARC field in question. Adding a mapping for
+        "subtitle" -&gt; "245b" for an item's framework results in display of
+        the subtitle in OPAC and staff client search and detail pages
+        (although not in all instances where subtitles might be displayed,
+        e.g. the Cart).</para>
+      </section>
     </section>
 
     <section>
@@ -20236,6 +20288,9 @@ print theme('pages_catalog');</programlisting>
           biblio record editor.</para>
 
           <para>Frequency suggestion: monthly</para>
+
+          <para>Learn more: <ulink
+          url="http://wiki.koha.org/doku.php?id=en:development:check-url_enhancements">http://wiki.koha.org/doku.php?id=en:development:check-url_enhancements</ulink></para>
         </section>
 
         <section>

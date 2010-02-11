@@ -1193,6 +1193,9 @@
                 <para>Don't</para>
               </listitem>
             </itemizedlist>
+            <tip>
+                <para>Change</para>
+              </tip>
           </section>
 
           <section>
@@ -2005,7 +2008,7 @@
 
           <section>
             <title>AutoSelfCheckAllowed, AutoSelfCheckID &amp;
-            AutoSelfCheckPass </title>
+            AutoSelfCheckPass</title>
 
             <important>
               <para>Most libraries will want to leave this set to 'Don't
@@ -2018,7 +2021,7 @@
 
             <para>Asks: ___ the web-based self checkout system to
             automatically login with this staff login ___ and this password
-            ___ . </para>
+            ___ .</para>
 
             <para>AutoSelfCheckAllowed Values:</para>
 
@@ -4067,7 +4070,7 @@
           </section>
 
           <section>
-            <title>XSLTDetailsDisplay</title>
+            <title>OPACXSLTDetailsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -4087,6 +4090,33 @@
                   <listitem>
                     <para>XSLT stylesheets enable more detail to be displayed
                     on the detail pages in the OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACXSLTResultsDisplay</title>
+
+            <para>Default: normally</para>
+
+            <para>Asks: Show biblio records on OPAC result page ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results pages in the OPAC</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -5435,11 +5465,11 @@
           </section>
 
           <section>
-            <title>XSLTResultsDisplay</title>
+            <title>XSLTDetailsDisplay </title>
 
-            <para>Default: using XSLT stylesheets</para>
+            <para>Default: normally</para>
 
-            <para>Asks: Show search results ___</para>
+            <para>Asks: Show item details pages in the staff client ___</para>
 
             <para>Values:</para>
 
@@ -5454,11 +5484,43 @@
                 <itemizedlist>
                   <listitem>
                     <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the OPAC</para>
+                    on the bibliographic records in the Staff Client</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show biblio records on result page in the staff client
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+                <para>This preference isn't currently functional.</para>
+              </important>
           </section>
         </section>
 
@@ -15722,6 +15784,11 @@
       <section>
         <title id="mergebibrecs" lang="">Merging Bibliographic Records Via
         Lists</title>
+
+        <important>
+          <para>Merging will only work with two items that use the same
+          bibliographic framework.</para>
+        </important>
 
         <para>The easiest way to merge together duplicate bibliographic
         records is to add them to a list and use the Merge Tool from
