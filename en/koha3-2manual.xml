@@ -8249,7 +8249,57 @@
       <section>
         <title id="keywordmapping">Keywords to MARC Mapping</title>
 
-        <para></para>
+        <para>This tool will allow you to map MARC fields to a set of
+        predefined keywords. </para>
+
+        <para>At this time the only keyword in use is 'subtitle.' </para>
+
+        <para>Using this tool you can define what MARC field prints to the
+        detail screen of the bibliographic record using keywords. The
+        following example will use the subtitle field.</para>
+
+        <para>Using the Framework pull down menu, choose the <link
+        linkend="marcbibframeworks">Framework</link> you would like to apply
+        this rule to. For example, the subtitle for books can be found in the
+        245$b field.</para>
+
+        <screenshot>
+          <screeninfo>Assigning Book Subtitle</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/subtitlebookmapping.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>However the subtitle for DVDs appears in 245$p</para>
+
+        <screenshot>
+          <screeninfo>Assigning DVD Subtitle</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/subtitledvdmapping.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Using this tool you can tell Koha to print the right field as
+        the subtitle when viewing the bibliographic record in the OPAC.</para>
+
+        <screenshot>
+          <screeninfo>Subtitle display in the OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/subtitlebookinopac.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Future developments will include additional keyword assigned
+        fields.</para>
       </section>
 
       <section>
@@ -15879,10 +15929,10 @@
         <para>Once you have completed your selections click the 'merge'
         button. The primary record will now show the data you chose for it,
         and the second record will be deleted.<important>
-            <para>It is important to rebuild your zebra index after merging
-            records. If a search is performed for a record which has been
-            deleted Koha will present the patrons with an error in the
-            OPAC.</para>
+            <para>It is important to rebuild your zebra index immediately
+            after merging records. If a search is performed for a record which
+            has been deleted Koha will present the patrons with an error in
+            the OPAC.</para>
           </important></para>
       </section>
     </section>
