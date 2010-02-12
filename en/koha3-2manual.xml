@@ -8250,9 +8250,9 @@
         <title id="keywordmapping">Keywords to MARC Mapping</title>
 
         <para>This tool will allow you to map MARC fields to a set of
-        predefined keywords. </para>
+        predefined keywords.</para>
 
-        <para>At this time the only keyword in use is 'subtitle.' </para>
+        <para>At this time the only keyword in use is 'subtitle.'</para>
 
         <para>Using this tool you can define what MARC field prints to the
         detail screen of the bibliographic record using keywords. The
@@ -20229,6 +20229,124 @@ print theme('pages_catalog');</programlisting>
           Report</link></para>
 
           <para>Frequency suggestion: every 1-4 hours</para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis
+            role="bold">GetBibsWithPendingHoldRequests</emphasis></para>
+
+            <para>my $biblionumber_aref =
+            GetBibsWithPendingHoldRequests();</para>
+
+            <para>Return an arrayref of the biblionumbers of all bibs that
+            have one or more unfilled hold requests.</para>
+
+            <para><emphasis
+            role="bold">GetPendingHoldRequestsForBib</emphasis></para>
+
+            <para>my $requests =
+            GetPendingHoldRequestsForBib($biblionumber);</para>
+
+            <para>Returns an arrayref of hashrefs to pending, unfilled hold
+            requests on</para>
+
+            <para>the bib identified by $biblionumber. The following keys are
+            present in each hashref:</para>
+
+            <itemizedlist>
+              <listitem>
+                 biblionumber 
+              </listitem>
+
+              <listitem>
+                 borrowernumber 
+              </listitem>
+
+              <listitem>
+                 itemnumber 
+              </listitem>
+
+              <listitem>
+                 priority 
+              </listitem>
+
+              <listitem>
+                 branchcode 
+              </listitem>
+
+              <listitem>
+                 reservedate 
+              </listitem>
+
+              <listitem>
+                 reservenotes 
+              </listitem>
+
+              <listitem>
+                 borrowerbranch 
+              </listitem>
+            </itemizedlist>
+
+            <para>The arrayref is sorted in order of increasing
+            priority.</para>
+
+            <para><emphasis
+            role="bold">GetItemsAvailableToFillHoldRequestsForBib</emphasis></para>
+
+            <para>my $available_items =</para>
+
+            <para>GetItemsAvailableToFillHoldRequestsForBib($biblionumber);</para>
+
+            <para>Returns an arrayref of items available to fill hold requests
+            for the bib identified by $biblionumber. An item is available to
+            fill a hold</para>
+
+            <para>request if and only if:</para>
+
+            <itemizedlist>
+              <listitem>
+                 it is not on loan 
+              </listitem>
+
+              <listitem>
+                 it is not withdrawn 
+              </listitem>
+
+              <listitem>
+                 it is not marked notforloan 
+              </listitem>
+
+              <listitem>
+                 it is not currently in transit 
+              </listitem>
+
+              <listitem>
+                 it is not lost 
+              </listitem>
+
+              <listitem>
+                 it is not sitting on the hold shelf 
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis
+            role="bold">MapItemsToHoldRequests</emphasis></para>
+
+            <para>MapItemsToHoldRequests($hold_requests,
+            $available_items);</para>
+
+            <para><emphasis
+            role="bold">CreatePickListFromItemMap</emphasis></para>
+
+            <para><emphasis role="bold">AddToHoldTargetMap</emphasis></para>
+
+            <para><emphasis
+            role="bold">_get_branches_to_pull_from</emphasis></para>
+
+            <para>Query system preferences to get ordered list of branches to
+            use to fill hold requests.</para>
+          </section>
         </section>
 
         <section>
@@ -20251,6 +20369,15 @@ print theme('pages_catalog');</programlisting>
           different lost statuses, and optionally charge for them.</para>
 
           <para>Required by: Frequency suggestion: nightly</para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>longoverdue.pl cron script to set lost statuses on overdue
+            materials. Execute without options for help.</para>
+          </section>
         </section>
       </section>
 
@@ -20287,6 +20414,33 @@ print theme('pages_catalog');</programlisting>
             <para>This script does not actually send the notices. It queues
             them in the message queue for later</para>
           </note>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>advance_notices.pl - cron script to put item due reminders
+            into message queue</para>
+
+            <para><emphasis role="bold">SYNOPSIS</emphasis></para>
+
+            <para>./advance_notices.pl -c</para>
+
+            <para>or, in crontab: 0 1 * * * advance_notices.pl -c</para>
+
+            <para><emphasis role="bold">DESCRIPTION</emphasis></para>
+
+            <para>This script prepares pre-due and item due reminders to be
+            sent to patrons. It queues them in the message queue, which is
+            processed by the process_message_queue.pl cronjob. The type and
+            timing of the messages can be configured by the patrons in their
+            "My Alerts" tab in the OPAC.</para>
+
+            <para><emphasis role="bold">METHODS</emphasis></para>
+
+            <para>parse_letter</para>
+          </section>
         </section>
 
         <section>
@@ -20303,6 +20457,249 @@ print theme('pages_catalog');</programlisting>
             <para>This script does not actually send the notices. It queues
             them in the message queue for later</para>
           </note>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>overdue_notices.pl - prepare messages to be sent to patrons
+            for overdue items</para>
+
+            <para><emphasis role="bold">SYNOPSIS</emphasis></para>
+
+            <para>overdue_notices.pl [ -n ] [ -library &lt;branchcode&gt; ] [
+            -library &lt;branchcode&gt;...] [ -max &lt;number of days&gt; ] [
+            -csv [ &lt;filename&gt; ] ] [-itemscontent &lt;field list&gt;
+            ]</para>
+
+            <para>Options:</para>
+
+            <para>-help brief help message</para>
+
+            <para>-man full documentation</para>
+
+            <para>-n No email will be sent</para>
+
+            <para>-max &lt;days&gt; maximum days overdue to deal with</para>
+
+            <para>-library &lt;branchname&gt; only deal with overdues from
+            this library (repeatable : several libraries can be given)</para>
+
+            <para>-csv &lt;filename&gt; populate CSV file</para>
+
+            <para>-itemscontent &lt;list of fields&gt; item information in
+            templates</para>
+
+            <para>-borcat &lt;categorycode&gt; category code that must be
+            included</para>
+
+            <para>-borcatout &lt;categorycode&gt; category code that must be
+            excluded</para>
+
+            <para><emphasis role="bold">OPTIONS</emphasis></para>
+
+            <para>-help Print a brief help message and exits.</para>
+
+            <para>-man Prints the manual page and exits.</para>
+
+            <para>-v Verbose. Without this flag set, only fatal errors are
+            reported.</para>
+
+            <para>-n Do not send any email. Overdue notices that would have
+            been sent to the patrons or to the admin are printed to standard
+            out. CSV data (if the -csv flag is set) is written to standard out
+            or to any csv filename given.</para>
+
+            <para>-max Items older than max days are assumed to be handled
+            somewhere else, probably the longoverdues.pl script. They are
+            therefore ignored by this program. No notices are sent for them,
+            and they are not added to any CSV files. Defaults to 90 to match
+            longoverdues.pl.</para>
+
+            <para>-library</para>
+
+            <para>select overdues for one specific library. Use the value in
+            the branches.branchcode table. This option can be repeated in
+            order to select overdues for a group of libraries.</para>
+
+            <para>-csv Produces CSV data. if -n (no mail) flag is set, then
+            this CSV data is sent to standard out or to a filename if
+            provided. Otherwise, only overdues that could not be emailed are
+            sent in CSV format to the admin.</para>
+
+            <para>-itemscontent</para>
+
+            <para>comma separated list of fields that get substituted into
+            templates in places of the &lt;&lt;items.content&gt;&gt;
+            placeholder. This defaults to
+            issuedate,title,barcode,author</para>
+
+            <para>Other possible values come from fields in the biblios,
+            items, and issues tables.</para>
+
+            <para>-borcat Repetable field, that permit to select only few of
+            patrons categories.</para>
+
+            <para>-borcatout</para>
+
+            <para>Repetable field, permis to exclude some patrons
+            categories.</para>
+
+            <para>-t | --triggered</para>
+
+            <para>This option causes a notice to be generated if and only if
+            an item is overdue by the number of days defined in a notice
+            trigger.</para>
+
+            <para>By default, a notice is sent each time the script runs,
+            which is suitable for less frequent run cron script, but requires
+            syncing notice triggers with the cron schedule to ensure proper
+            behavior. Add the --triggered option for daily cron, at the risk
+            of no notice being generated if the cron fails to run on
+            time.</para>
+
+            <para>-list-all</para>
+
+            <para>Default items.content lists only those items that fall in
+            the range of the currently processing notice. Choose list-all to
+            include all overdue items in the list (limited by –max
+            setting).</para>
+
+            <para><emphasis role="bold">DESCRIPTION</emphasis></para>
+
+            <para>This script is designed to alert patrons and administrators
+            of overdue items.</para>
+
+            <para>Configuration</para>
+
+            <para>This script pays attention to the overdue notice
+            configuration performed in the "Overdue notice/status triggers"
+            section of the "Tools" area of the staff interface to Koha. There,
+            you can choose which letter templates are sent out after a
+            configurable number of days to patrons of each library. More
+            information about the use of this section of Koha is available in
+            the Koha manual.</para>
+
+            <para>The templates used to craft the emails are defined in the
+            "Tools: Notices" section of the staff interface to Koha.</para>
+
+            <para>Outgoing emails</para>
+
+            <para>Typically, messages are prepared for each patron with
+            overdue items. Messages for whom there is no email address on file
+            are collected and sent as attachments in a single email to each
+            library administrator, or if that is not set, then to the email
+            address in the "KohaAdminEmailAddress" system preference.</para>
+
+            <para>These emails are staged in the outgoing message queue, as
+            are messages produced by other features of Koha. This message
+            queue must be processed regularly by the
+            misc/cronjobs/process_message_queue.pl program.</para>
+
+            <para>In the event that the "-n" flag is passed to this program,
+            no emails are sent. Instead, messages are sent on standard output
+            from this program. They may be redirected to a file if
+            desired.</para>
+
+            <para>Templates</para>
+
+            <para>Templates can contain variables enclosed in double angle
+            brackets like &lt;&lt;this&gt;&gt;. Those variables will be
+            replaced with values specific to the overdue items or relevant
+            patron. Available variables are:</para>
+
+            <para>&lt;&lt;bib&gt;&gt;</para>
+
+            <para>the name of the library</para>
+
+            <para>&lt;&lt;items.content&gt;&gt;</para>
+
+            <para>one line for each item, each line containing a tab separated
+            list of title, author, barcode, issuedate</para>
+
+            <para>&lt;&lt;borrowers.*&gt;&gt;</para>
+
+            <para>any field from the borrowers table</para>
+
+            <para>&lt;&lt;branches.*&gt;&gt;</para>
+
+            <para>any field from the branches table</para>
+
+            <para>CSV output</para>
+
+            <para>The "-csv" command line option lets you specify a file to
+            which overdues data should be output in CSV format.</para>
+
+            <para>With the "-n" flag set, data about all overdues is written
+            to the file. Without that flag, only information about overdues
+            that were unable to be sent directly to the patrons will be
+            written. In other words, this CSV file replaces the data that is
+            typically sent to the administrator email address.</para>
+
+            <para><emphasis role="bold">USAGE EXAMPLES</emphasis></para>
+
+            <para>"overdue_notices.pl" - In this most basic usage, with no
+            command line arguments, all libraries are procesed individually,
+            and notices are prepared for all patrons with overdue items for
+            whom we have email addresses. Messages for those patrons for whom
+            we have no email address are sent in a single attachment to the
+            library administrator’s email address, or to the address in the
+            KohaAdminEmailAddress system preference.</para>
+
+            <para>"overdue_notices.pl -n -csv /tmp/overdues.csv" - sends no
+            email and populates /tmp/overdues.csv with information about all
+            overdue items.</para>
+
+            <para>"overdue_notices.pl -library MAIN max 14" - prepare notices
+            of overdues in the last 2 weeks for the MAIN library.</para>
+
+            <para><emphasis role="bold">SEE ALSO</emphasis></para>
+
+            <para>The misc/cronjobs/advance_notices.pl program allows you to
+            send messages to patrons in advance of thier items becoming due,
+            or to alert them of items that have just become due.</para>
+
+            <para><emphasis role="bold">INTERNAL METHODS</emphasis></para>
+
+            <para>These methods are internal to the operation of
+            overdue_notices.pl.</para>
+
+            <para>parse_letter</para>
+
+            <para>parses the letter template, replacing the placeholders with
+            data specific to this patron, biblio, or item</para>
+
+            <para>named parameters:</para>
+
+            <para>letter - required hashref</para>
+
+            <para>borrowernumber - required integer</para>
+
+            <para>substitute - optional hashref of other key/value pairs that
+            should be substituted in the letter content</para>
+
+            <para>returns the "letter" hashref, with the content updated to
+            reflect the substituted keys and values.</para>
+
+            <para>prepare_letter_for_printing</para>
+
+            <para>returns a string of text appropriate for printing in the
+            event that an overdue notice will not be sent to the patron’s
+            email address. Depending on the desired output format, this may be
+            a CSV string, or a human-readable representation of the
+            notice.</para>
+
+            <para>required parameters:</para>
+
+            <para>letter</para>
+
+            <para>borrowernumber</para>
+
+            <para>optional parameters:</para>
+
+            <para>outputformat</para>
+          </section>
         </section>
       </section>
 
@@ -20321,6 +20718,16 @@ print theme('pages_catalog');</programlisting>
         preferences</para>
 
         <para>Frequency suggestion: hourly</para>
+
+        <section>
+          <title>Perl Documentation</title>
+
+          <para><emphasis role="bold">NAME</emphasis></para>
+
+          <para>cart_to_shelf.pl cron script to set items with location of
+          CART to original shelving location after X hours. Execute without
+          options for help.</para>
+        </section>
       </section>
 
       <section>
@@ -20341,6 +20748,101 @@ print theme('pages_catalog');</programlisting>
 
           <para>Learn more: <ulink
           url="http://wiki.koha.org/doku.php?id=en:development:check-url_enhancements">http://wiki.koha.org/doku.php?id=en:development:check-url_enhancements</ulink></para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>C4::URL::Checker - base object for checking URL stored in
+            Koha DB</para>
+
+            <para><emphasis role="bold">SYNOPSIS</emphasis></para>
+
+            <programlisting>use C4::URL::Checker;
+
+        my $checker = C4::URL::Checker-&gt;new( );
+        $checker-&gt;{ host_default } = 'http://mylib.kohalibrary.com';
+        my $checked_urls = $checker-&gt;check_biblio( 123 );
+        foreach my $url ( @$checked_urls ) {
+            print "url:        ", $url-&gt;{ url       A }, "\n",
+                  "is_success: ", $url-&gt;{ is_success }, "\n",
+                  "status:     ", $url-&gt;{ status     }, "\n";
+        } </programlisting>
+
+            <para><emphasis role="bold">FUNCTIONS</emphasis></para>
+
+            <para>new</para>
+
+            <para>Create a URL Checker. The returned object can be used to set
+            default host variable :</para>
+
+            <programlisting>my $checker = C4::URL::Checker-&gt;new( );
+        $checker-&gt;{ host_default } = 'http://mylib.kohalibrary.com'; </programlisting>
+
+            <para>check_biblio</para>
+
+            <para>Check all URL from a biblio record. Returns a pointer to an
+            array containing all URLs with checking for each of them.</para>
+
+            <programlisting> my $checked_urls = $checker-&gt;check_biblio( 123 ); </programlisting>
+
+            <para>With 2 URLs, the returned array will look like that:</para>
+
+            <programlisting>     [
+           {
+             'url' =&gt; 'http://mylib.tamil.fr/img/62265_0055B.JPG',
+             'is_success' =&gt; 1,
+             'status' =&gt; 'ok'
+           },
+           {
+             'url' =&gt; 'http://mylib.tamil.fr//img/62265_0055C.JPG',
+             'is_success' =&gt; 0,
+             'status' =&gt; '404 - Page not found'
+           }
+         ], </programlisting>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>check-url.pl - Check URLs from 856$u field.</para>
+
+            <para><emphasis role="bold">USAGE</emphasis></para>
+
+            <para>check-url.pl [--verbose|--help]
+            [--host=http://default.tld]</para>
+
+            <para>Scan all URLs found in 856$u of bib records and display if
+            resources are available or not.</para>
+
+            <para><emphasis role="bold">PARAMETERS</emphasis></para>
+
+            <para>--host=http://default.tld</para>
+
+            <para>Server host used when URL doesn’t have one, ie doesn’t begin
+            with ’http:’. For example, if --host=http://www.mylib.com, then
+            when 856$u contains ’img/image.jpg’, the url checked is:
+            http://www.mylib.com/image.jpg’.</para>
+
+            <para>--verbose|-v</para>
+
+            <para>Outputs both successful and failed URLs.</para>
+
+            <para>--html</para>
+
+            <para>Formats output in HTML. The result can be redirected to a
+            file accessible by http. This way, it’s possible to link directly
+            to biblio record in edit mode. With this parameter --host-pro is
+            required.</para>
+
+            <para>--host-pro=http://koha-pro.tld</para>
+
+            <para>Server host used to link to biblio record editing
+            page.</para>
+
+            <para>--help|-h</para>
+
+            <para>Print this help page.</para>
+          </section>
         </section>
 
         <section>
@@ -20408,6 +20910,91 @@ print theme('pages_catalog');</programlisting>
           <para>Frequency: This is the type of script you can run once a month
           or so, the content generated isn't going to change very much over
           time.</para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>cloud-kw.pl - Creates HTML keywords clouds from Koha Zebra
+            Indexes</para>
+
+            <para><emphasis role="bold">USAGE</emphasis></para>
+
+            <para>cloud-kw.pl [--verbose|--help] --conf=cloud.conf</para>
+
+            <para>Creates multiple HTML files containing kewords cloud with
+            top terms sorted by their logarithmic weight. cloud.conf is a YAML
+            configuration file driving cloud generation process.</para>
+
+            <para><emphasis role="bold">PARAMETERS</emphasis></para>
+
+            <para>--conf=configuration file</para>
+
+            <para>Specify configuration file name</para>
+
+            <para>--verbose|-v</para>
+
+            <para>Enable script verbose mode.</para>
+
+            <para>--help|-h</para>
+
+            <para>Print this help page.</para>
+
+            <para><emphasis role="bold">CONFIGURATION</emphasis></para>
+
+            <para>Configuration file looks like that:</para>
+
+            <para><programlisting>  ---
+         # Koha configuration file for a specific installation
+         # If not present, defaults to KOHA_CONF
+         KohaConf: /home/koha/mylibray/etc/koha-conf.xml
+         # Zebra index to scan
+         ZebraIndex: Author
+         # Koha index used to link found kewords with an opac search URL
+         KohaIndex: au
+         # Number of top keyword to use for the cloud
+         Count: 50
+         # Include CSS style directives with the cloud
+         # This could be used as a model and then CSS directives are
+         # put in the appropriate CSS file directly.
+         Withcss: Yes
+         # HTML file where to output the cloud
+         Output: /home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html
+        ---
+         KohaConf: /home/koha/yourlibray/etc/koha-conf.xml
+         ZebraIndex: Subject
+         KohaIndex: su
+         Count: 200
+         Withcss: no
+         Output: /home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html</programlisting><emphasis
+            role="bold">IMPROVEMENTS</emphasis></para>
+
+            <para>Generated top terms have more informations than those
+            outputted from the time beeing. Some parameters could be easily
+            added to improve this script:</para>
+
+            <para>WithCount</para>
+
+            <para>In order to output terms with the number of occurences they
+            have been found in Koha Catalogue by Zebra.</para>
+
+            <para>CloudLevels</para>
+
+            <para>Number of levels in the cloud. Now 24 levels are
+            hardcoded.</para>
+
+            <para>Weighting</para>
+
+            <para>Weighting method used to distribute terms in the cloud. We
+            could have two values: Logarithmic and Linear. Now it’s
+            Logarithmic by default.</para>
+
+            <para>Order</para>
+
+            <para>Now terms are outputted in the lexical order. They could be
+            sorted by their weight.</para>
+          </section>
         </section>
       </section>
 
