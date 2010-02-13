@@ -20914,27 +20914,38 @@ print theme('pages_catalog');</programlisting>
           <section>
             <title>Perl Documentation</title>
 
-            <para>NAME</para>
-<para>       cloud-kw.pl - Creates HTML keywords clouds from Koha Zebra Indexes</para>
+            <para><emphasis role="bold">NAME</emphasis></para>
 
-<para>USAGE</para>
-<para>       cloud-kw.pl [--verbose|--help] --conf=cloud.conf</para>
-<para>           Creates multiple HTML files containing kewords cloud with top terms sorted by their logarithmic weight.  cloud.conf is a YAML configuration file driving cloud generation process.</para>
+            <para>cloud-kw.pl - Creates HTML keywords clouds from Koha Zebra
+            Indexes</para>
 
-<para>PARAMETERS</para>
-<para>       --conf=configuration file</para>
-<para>           Specify configuration file name</para>
+            <para><emphasis role="bold">USAGE</emphasis></para>
 
-<para>       --verbose|-v</para>
-<para>           Enable script verbose mode.</para>
+            <para>cloud-kw.pl [--verbose|--help] --conf=cloud.conf</para>
 
-<para>       --help|-h</para>
-<para>           Print this help page.</para>
+            <para>Creates multiple HTML files containing kewords cloud with
+            top terms sorted by their logarithmic weight. cloud.conf is a YAML
+            configuration file driving cloud generation process.</para>
 
-<para>CONFIGURATION</para>
-<para>       Configuration file looks like that:</para>
-<para>
-      <programlisting>  ---
+            <para><emphasis role="bold">PARAMETERS</emphasis></para>
+
+            <para>--conf=configuration file</para>
+
+            <para>Specify configuration file name</para>
+
+            <para>--verbose|-v</para>
+
+            <para>Enable script verbose mode.</para>
+
+            <para>--help|-h</para>
+
+            <para>Print this help page.</para>
+
+            <para><emphasis role="bold">CONFIGURATION</emphasis></para>
+
+            <para>Configuration file looks like that:</para>
+
+            <para><programlisting>  ---
          # Koha configuration file for a specific installation
          # If not present, defaults to KOHA_CONF
          KohaConf: /home/koha/mylibray/etc/koha-conf.xml
@@ -20956,24 +20967,33 @@ print theme('pages_catalog');</programlisting>
          KohaIndex: su
          Count: 200
          Withcss: no
-         Output: /home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html</programlisting>
+         Output: /home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html</programlisting><emphasis
+            role="bold">IMPROVEMENTS</emphasis></para>
 
-IMPROVEMENTS</para>
-<para>       Generated top terms have more informations than those outputted from the time beeing. Some parameters could be easily added to improve this script:</para>
+            <para>Generated top terms have more informations than those
+            outputted from the time beeing. Some parameters could be easily
+            added to improve this script:</para>
 
-<para>       WithCount</para>
-<para>           In order to output terms with the number of occurences they have been found in Koha Catalogue by Zebra.</para>
+            <para>WithCount</para>
 
-<para>       CloudLevels</para>
-<para>           Number of levels in the cloud. Now 24 levels are hardcoded.</para>
+            <para>In order to output terms with the number of occurences they
+            have been found in Koha Catalogue by Zebra.</para>
 
-<para> Weighting </para>
-<para>           Weighting method used to distribute terms in the cloud. We could have two values: Logarithmic and Linear. Now it’s Logarithmic by default.</para>
+            <para>CloudLevels</para>
 
-<para>       Order</para>
-<para>           Now terms are outputted in the lexical order. They could be sorted by their weight.</para>
+            <para>Number of levels in the cloud. Now 24 levels are
+            hardcoded.</para>
 
+            <para>Weighting</para>
 
+            <para>Weighting method used to distribute terms in the cloud. We
+            could have two values: Logarithmic and Linear. Now it’s
+            Logarithmic by default.</para>
+
+            <para>Order</para>
+
+            <para>Now terms are outputted in the lexical order. They could be
+            sorted by their weight.</para>
           </section>
         </section>
       </section>
