@@ -1849,8 +1849,8 @@
           </section>
 
           <section>
-            <title>FilterBeforeOverdueReport &amp;
-            DisplayClearScreenButton</title>
+            <title id="FilterBeforeOverdueReport">FilterBeforeOverdueReport
+            &amp; DisplayClearScreenButton</title>
 
             <para>FilterBeforeOverdueReport Default: Don't require</para>
 
@@ -4185,6 +4185,32 @@
           </section>
 
           <section>
+            <title id="OpacBrowser">OpacBrowser</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to browse subject authorities on OPAC
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><important>
+                <para>run the <link linkend="authbrowsercron">Authorities
+                Browser Cron Job</link> to create the browser list</para>
+              </important></para>
+          </section>
+
+          <section>
             <title>OPACFinesTab</title>
 
             <para>Default: Allow</para>
@@ -4822,7 +4848,8 @@
           </itemizedlist>
 
           <important>
-            <para>This overrides autoMemberNum if on.</para>
+            <para>This overrides <link
+            linkend="autoMemberNum">autoMemberNum</link> if on.</para>
           </important>
         </section>
 
@@ -13665,10 +13692,19 @@
       <section>
         <title>Overdues</title>
 
-        <para><important>
-            <para>For libraries with a large patron base, this report may take
-            a significant amount of time to run.</para>
-          </important>This report will list all items that are overdue at your
+        <important>
+          <para>For libraries with a large patron base, this report may take a
+          significant amount of time to run.</para>
+        </important>
+
+        <tip>
+          <para>Large libraries can choose to filter the report before it runs
+          by setting the <link
+          linkend="FilterBeforeOverdueReport">FilterBeforeOverdueReport</link>
+          system preference to 'Require'.</para>
+        </tip>
+
+        <para>This report will list all items that are overdue at your
         library.</para>
 
         <screenshot>
@@ -19954,13 +19990,13 @@ print theme('pages_catalog');</programlisting>
           <para><emphasis role="bold">Question</emphasis>: Why do I need the
           <link linkend="AWSPrivateKey">AWSPrivateKey</link> as well as the
           <link linkend="AWSAccessKeyID">AWSAccessKeyID</link> to use Amazon
-          Content? </para>
+          Content?</para>
 
           <para><emphasis role="bold">Answer</emphasis>: After 2009-08-15,
           Amazon Web Services will expect that all requests to the Product
           Advertising API, which is what Koha uses for retrieving reviews and
           other enhanced content from Amazon, include signatures. This patch
-          and subsequenct patches implement this functionality. </para>
+          and subsequenct patches implement this functionality.</para>
 
           <para>What this means in practice (assuming the user has elected to
           use any enhanced content from Amazon) is that</para>
@@ -19976,7 +20012,7 @@ print theme('pages_catalog');</programlisting>
 
             <listitem>
               <para>The contents of the Secret Access Key should then be
-              entered into the new AWSPrivateKey system preference. </para>
+              entered into the new AWSPrivateKey system preference.</para>
             </listitem>
           </orderedlist>
 
@@ -19984,7 +20020,7 @@ print theme('pages_catalog');</programlisting>
           Amazon should work as normal. If the user doesn't do this before
           2009-08-15, reviews and TOCs will no longer be supplied from Amazon,
           although there should be no crashes - the content will simply not
-          show up. </para>
+          show up.</para>
 
           <para>Note that the requirement to sign requests does *NOT* appear
           to apply to simply displaying book covers from Amazon.</para>
@@ -20947,13 +20983,14 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section>
-          <title>Authorities Browser</title>
+          <title id="authbrowsercron">Authorities Browser</title>
 
           <para>Script path: misc/cronjobs/build_browser_and_cloud.pl</para>
 
           <para>Does: Generate content for authories browse in OPAC</para>
 
-          <para>Required by: OpacBrowser system preference</para>
+          <para>Required by: <link linkend="OpacBrowser">OpacBrowser</link>
+          system preference</para>
         </section>
 
         <section>
