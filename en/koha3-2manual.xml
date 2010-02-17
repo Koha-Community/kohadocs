@@ -2040,7 +2040,7 @@
       </section>
 
       <section>
-        <title>Enhanced Content</title>
+        <title id="enhancedcontent">Enhanced Content</title>
 
         <important>
           <para>Always read the terms of service associated with external data
@@ -3431,7 +3431,7 @@
           </section>
 
           <section>
-            <title>DisplayOPACiconsXSLT</title>
+            <title id="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</title>
 
             <para>Default: Don't show</para>
 
@@ -4009,7 +4009,7 @@
           </section>
 
           <section>
-            <title>OPACXSLTDetailsDisplay</title>
+            <title id="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -4036,7 +4036,7 @@
           </section>
 
           <section>
-            <title>OPACXSLTResultsDisplay</title>
+            <title id="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -5344,20 +5344,19 @@
           </section>
 
           <section>
-            <title>OPACdefaultSortField</title>
+            <title id="opacdefaultsort">OPACdefaultSortField &amp;
+            OPACdefaultSortOrder</title>
 
-            <para>Default: ascending</para>
+            <para>OPACdefaultSortField Default: relevance</para>
 
-            <para>Asks: By default, sort search results in the OPAC by
+            <para>OPACdefaultSortOrder Default: ascending</para>
+
+            <para>Asks: By default, sort search results in the OPAC by ___,
             ___</para>
 
-            <para>Values:</para>
+            <para>OPACdefaultSortField Values:</para>
 
             <itemizedlist>
-              <listitem>
-                <para>ascending</para>
-              </listitem>
-
               <listitem>
                 <para>author</para>
               </listitem>
@@ -5375,18 +5374,6 @@
               </listitem>
 
               <listitem>
-                <para>descending</para>
-              </listitem>
-
-              <listitem>
-                <para>from A to Z</para>
-              </listitem>
-
-              <listitem>
-                <para>from Z to A</para>
-              </listitem>
-
-              <listitem>
                 <para>relevance</para>
               </listitem>
 
@@ -5398,6 +5385,28 @@
                 <para>total number of checkouts</para>
               </listitem>
             </itemizedlist>
+
+            <para>OPACdefaultSortOrder Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ascending</para>
+              </listitem>
+
+              <listitem>
+                <para>descending</para>
+              </listitem>
+
+              <listitem>
+                <para>from A to Z</para>
+              </listitem>
+
+              <listitem>
+                <para>from Z to A</para>
+              </listitem>
+            </itemizedlist>
+
+            <para></para>
           </section>
 
           <section>
@@ -14460,7 +14469,7 @@
         </screenshot>
 
         <para>The form that appears will allow you to enter all of the
-        necessary details regarding your authority record. </para>
+        necessary details regarding your authority record.</para>
 
         <screenshot>
           <screeninfo>New Authority Record</screeninfo>
@@ -14997,7 +15006,7 @@
       </screenshot>
 
       <para>When on the subscription page you will see a link to the left that
-      reads 'Create Routing List.' </para>
+      reads 'Create Routing List.'</para>
 
       <screenshot>
         <screeninfo>Subscription Routing List Link</screeninfo>
@@ -15039,7 +15048,7 @@
 
       <para>Clicking 'Add' to the right of each name will add them to the
       routing list. When you have chosen all of the people for the list, click
-      the 'Close' link to be redirected to the routing list. </para>
+      the 'Close' link to be redirected to the routing list.</para>
 
       <screenshot>
         <screeninfo>Routing List</screeninfo>
@@ -16917,11 +16926,221 @@
   <chapter>
     <title>OPAC</title>
 
-    <para></para>
+    <para>This chapter assumes that you have the following preferences set as
+    follows:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para><link
+        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> = using
+        XSLT stylesheets</para>
+      </listitem>
+
+      <listitem>
+        <para><link
+        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> = using
+        XSLT stylesheets</para>
+      </listitem>
+
+      <listitem>
+        <para><link linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link>
+        = show</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>If your system preferences are set differently your displays may
+    differ.</para>
+
+    <section>
+      <title>Search Results</title>
+
+      <para>To search the OPAC you can either choose to enter your search
+      words in the box at the top of the OPAC or click on the 'Advanced
+      Search' link to perform a more detailed search. </para>
+
+      <screenshot>
+        <screeninfo>OPAC Search Box</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/searchbox.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>For more on searching check the '<link
+      linkend="searching">Searching</link>' chapter in this manual.</para>
+
+      <section>
+        <title>Results Overview</title>
+
+        <para>After performing a search the number of results found for your
+        search will appear above the results</para>
+
+        <screenshot>
+          <screeninfo>Total Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/totalresults-rss.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>By default your search results will be sorted based on your
+        <link linkend="opacdefaultsort">OPACdefaultSortField and
+        OPACdefaultSortOrder</link> system preference values. To change this
+        you can choose another sorting method from the pull down on the
+        right.</para>
+
+        <screenshot>
+          <screeninfo>Results Sorting Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/sortingresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Under each title on your results list a series of values from
+        your leader will appear. It is important to note that this has nothing
+        to do with the item types or collection codes you have applied to your
+        records, this data is all pulled from your leader.</para>
+
+        <screenshot>
+          <screeninfo>Leader Visualization</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/leader.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Below each title you will see the availability for the items
+        attached to the record. Note that even if you filtered on one library
+        location all locations that hold the item will appear on the search
+        results.</para>
+
+        <screenshot>
+          <screeninfo>Holdings Information</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/holdings-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you have turned on <link linkend="enhancedcontent">Enhanced
+        Content</link> preferences you may have book jackets on your search
+        results.</para>
+
+        <screenshot>
+          <screeninfo>Book Jacket on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/coverresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Filters</title>
+
+        <para>To filter your results click on the links below the 'Refine Your
+        Search' menu on the left of your screen</para>
+
+        <screenshot>
+          <screeninfo>Refine Your Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/refineresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Search RSS Feeds</title>
+
+        <para>You will be able to subscribe to your search results as an RSS
+        feed by clicking the RSS icon in your address bar or next to the
+        number of results. To learn more about what RSS feeds are check out
+        <ulink url="http://www.youtube.com/watch?v=0klgLsSxGsU">this tutorial
+        video</ulink>. </para>
+
+        <screenshot>
+          <screeninfo>RSS Feed Icon</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/totalresults-rss.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Subscribing to search results as RSS feeds will allow you to see
+        when a new item is added to the catalog in your area of
+        interest.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Bibliographic Record</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Lists &amp; Cart</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Enhanced Content</title>
+
+      <para></para>
+
+      <section>
+        <title>Tagging</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Comments</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Zotero</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Custom RSS Feeds</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>My Account</title>
+
+      <para></para>
+    </section>
   </chapter>
 
   <chapter>
-    <title>Searching</title>
+    <title id="searching">Searching</title>
 
     <para></para>
 
