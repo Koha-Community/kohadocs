@@ -3024,7 +3024,7 @@
           <title id="taggingprefs">Tagging</title>
 
           <section>
-            <title>TagsEnabled</title>
+            <title id="TagsEnabled">TagsEnabled</title>
 
             <para>Default: Allow</para>
 
@@ -3075,7 +3075,7 @@
           </section>
 
           <section>
-            <title>TagsShowOnList</title>
+            <title id="TagsShowOnList">TagsShowOnList</title>
 
             <para>Default: 6</para>
 
@@ -3087,7 +3087,7 @@
           </section>
 
           <section>
-            <title>TagsInputOnList</title>
+            <title id="TagsInputOnList" lang="">TagsInputOnList</title>
 
             <para>Default: Allow</para>
 
@@ -3108,7 +3108,7 @@
           </section>
 
           <section>
-            <title>TagsShowOnDetail</title>
+            <title id="TagsShowOnDetail">TagsShowOnDetail</title>
 
             <para>Default: 10</para>
 
@@ -3120,7 +3120,7 @@
           </section>
 
           <section>
-            <title>TagsInputOnDetail</title>
+            <title id="TagsInputOnDetail">TagsInputOnDetail</title>
 
             <para>Default: Allow</para>
 
@@ -15801,7 +15801,7 @@
   </chapter>
 
   <chapter>
-    <title>Lists &amp; Cart</title>
+    <title id="stafflists" lang="">Lists &amp; Cart</title>
 
     <para>Lists are a way to save a collection of content on a specific topic
     or for a specific purpose. The Cart is a session specific storage
@@ -17099,7 +17099,97 @@
     <section>
       <title>Lists &amp; Cart</title>
 
-      <para></para>
+      <para>A cart is a temporary holding place for records you're interested
+      in finding during this session. That means that once you log out of the
+      OPAC or close the browser you lose the items in your cart. A list is a
+      more permanent location for saving items. To learn more about lists,
+      check the <link linkend="stafflists">Lists in the Staff Client</link>
+      chapter of this manual.</para>
+
+      <section>
+        <title>Lists</title>
+
+        <para></para>
+
+        <section>
+          <title>Adding items to Lists</title>
+
+          <para>Items can be added to lists from the search results and/or
+          from the bibliographic record. On the search results options to add
+          items to the list appear below each result and across the top of the
+          results page</para>
+
+          <screenshot>
+            <screeninfo>Add to Lists from Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtolistcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To add a single item to a list, click the 'Save to Lists'
+          option and then choose the list you'd like to add the item to. To
+          add multiple items to a list check the boxes on the left of the
+          items you want to add and then choose the list you want to add the
+          items to from the 'Add too' pull down at the top of the
+          screen.</para>
+        </section>
+
+        <section>
+          <title>Managing Lists</title>
+
+          <para></para>
+        </section>
+      </section>
+
+      <section>
+        <title>Cart</title>
+
+        <para></para>
+
+        <section>
+          <title>Adding items to the Cart</title>
+
+          <para>Items can be added to the cart from the search results and/or
+          from the bibliographic record. On the search results options to add
+          items to the cart appear below each result and across the top of the
+          results page</para>
+
+          <screenshot>
+            <screeninfo>Add to Cart on Search Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtolistcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Clicking the 'Add to Cart' button will add the one item to
+          your cart. To add multiple items at once, check the box to the left
+          of each result and the choose 'Cart' from the 'Add to' pull down at
+          the top of the screen. Once items are added to the cart you will be
+          presented with a confirmation</para>
+
+          <screenshot>
+            <screeninfo>Items added to Cart</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addedtocart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+
+        <section>
+          <title>Managing the Cart</title>
+
+          <para></para>
+        </section>
+      </section>
     </section>
 
     <section>
@@ -17110,7 +17200,53 @@
       <section>
         <title>Tagging</title>
 
-        <para></para>
+        <para>Depending on your settings for the <link
+        linkend="TagsEnabled">TagsEnabled</link>, <link
+        linkend="TagsInputOnList">TagsInputOnList</link> and <link
+        linkend="TagsInputOnDetail">TagsInputOnDetail</link> preferences you
+        may be able to add tags to bibliographic records from the search
+        results and/or bibliographic records. If you are allowing patrons to
+        add tags from the search results screen you will see an input box
+        below each result and a 'Tag' option at the top of the screen.</para>
+
+        <screenshot>
+          <screeninfo>Tagging Options on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tags-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>To add a tag to one item, type the tabs (seperated by commas) in
+        the 'New tag' box and click 'Add'. You will be presented with a
+        confirmation of your tags being added.</para>
+
+        <screenshot>
+          <screeninfo>Tags Added on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tagsadded-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From the results you can also tag items in bulk by clicking the
+        checkboxes on the left and then clicking the 'Tag' button at the top.
+        After clicking the button it will change into an input box for you to
+        add tags to all of the items you have selected.</para>
+
+        <screenshot>
+          <screeninfo>Add Tags to Multiple Items</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tagaddmultiple-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
