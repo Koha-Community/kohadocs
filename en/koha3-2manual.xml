@@ -5981,6 +5981,21 @@
           </section>
 
           <section>
+            <title>OAI-PMH:ConfFile</title>
+
+            <para>If this preference is left empty, Koha's OAI Server operates
+            in normal mode, otherwise it operates in extended mode. In
+            extended mode, it's possible to parameter other formats than
+            marcxml or Dublin Core. OAI-PMH:ConfFile specify a YAML
+            configuration file which list available metadata formats and XSL
+            file used to create them from marcxml records. </para>
+
+            <para>For more information, see the <link
+            linkend="oaiconfsample">sample conf file</link> in the
+            appendix.</para>
+          </section>
+
+          <section>
             <title>OAI-PMH:MaxCount</title>
 
             <para>Default: 50</para>
@@ -13224,6 +13239,14 @@
           <listitem>
             <para>If the patron wants the hold to start on a date other than
             today, enter that in the 'Hold starts on date' field</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This option will only appear if the <link
+                linkend="AllowHoldDateInFuture">AllowHoldDateInFuture</link>
+                system preference is set to 'Allow'</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
 
           <listitem>
@@ -13231,6 +13254,14 @@
             after a certain date, or if you have limits on hold lengths, you
             can enter an expiration date for the hold in the 'Hold expires on
             date'</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>To have expired holds canceled automatically you will
+                need to have the <link linkend="expiredholdscron">Expired
+                Holds</link> cron job set to run on a regular basis.</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
 
           <listitem>
@@ -21000,7 +21031,7 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section>
-          <title>Expired Holds</title>
+          <title id="expiredholdscron">Expired Holds</title>
 
           <para>Script path:
           misc/cronjobs/holds/cancel_expired_holds.pl</para>
@@ -21699,6 +21730,41 @@ print theme('pages_catalog');</programlisting>
 
       <para><ulink
       url="http://wiki.koha.org/doku.php?id=en:development:cronjobs">http://wiki.koha.org/doku.php?id=en:development:cronjobs</ulink></para>
+    </section>
+  </appendix>
+
+  <appendix>
+    <title>Web Services</title>
+
+    <para></para>
+
+    <section>
+      <title>OAI-PMH</title>
+
+      <para></para>
+
+      <section>
+        <title id="oaiconfsample">Sample OAI Conf File</title>
+
+        <para><programlisting>       format:
+         vs:
+           metadataPrefix: vs
+           metadataNamespace: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs
+           schema: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs.xsd
+           xsl_file: /usr/local/koha/xslt/vs.xsl
+         marcxml:
+           metadataPrefix: marxml
+           metadataNamespace: http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim
+           schema: http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
+         oai_dc:
+           metadataPrefix: oai_dc
+           metadataNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/
+           schema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd
+           xsl_file:
+/usr/local/koha/koha-tmpl/intranet-tmpl/xslt/UNIMARCslim2OAIDC.xsl</programlisting></para>
+      </section>
     </section>
   </appendix>
 
