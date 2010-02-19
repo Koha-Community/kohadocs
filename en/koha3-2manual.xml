@@ -1678,6 +1678,15 @@
           </section>
 
           <section>
+            <title>ReservesMaxPickUpDelay</title>
+
+            <para>Default: 7</para>
+
+            <para>Asks: Mark a hold as problematic if it has been waiting for
+            more than ___ days.</para>
+          </section>
+
+          <section>
             <title>ReservesNeedReturns</title>
 
             <para>Default: Don't automatically</para>
@@ -1873,15 +1882,6 @@
                 <para>latest to earliest</para>
               </listitem>
             </itemizedlist>
-          </section>
-
-          <section>
-            <title>ReservesMaxPickUpDelay</title>
-
-            <para>Default: 7</para>
-
-            <para>Asks: Mark a hold as problematic if it has been waiting for
-            more than ___ days.</para>
           </section>
 
           <section>
@@ -20988,6 +20988,17 @@ print theme('pages_catalog');</programlisting>
             <para>Query system preferences to get ordered list of branches to
             use to fill hold requests.</para>
           </section>
+        </section>
+
+        <section>
+          <title>Expired Holds</title>
+
+          <para>Script path:
+          misc/cronjobs/holds/cancel_expired_holds.pl</para>
+
+          <para>Does: Cancels holds that have past their expiration.</para>
+
+          <para>Frequency suggestion: daily</para>
         </section>
 
         <section>
