@@ -9147,64 +9147,68 @@
       </section>
 
       <section>
-        <title>Importing Patrons</title>
+        <title>Importer les adhérents</title>
 
-        <para>Once you have created your file, you can use the Patron Import
-        Tool to bring the data into Koha.</para>
+        <para>Une fois que vous avez créé votre fichier, vous pouvez utiliser
+        l'outil Importation des données adhérents pour charger les données
+        dans Koha.</para>
 
         <screenshot>
-          <screeninfo>Import Patron Form</screeninfo>
+          <screeninfo>Formulaire d'import</screeninfo>
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="../en/images/tools/importpatrons.png" />
+              <imagedata fileref="../fr/images/tools/importpatrons.png" />
             </imageobject>
           </mediaobject>
         </screenshot>
 
         <itemizedlist>
           <listitem>
-            <para>Choose your CSV file and choose to match on 'Cardnumber' to
-            prevent adding of duplicate card numbers to the system</para>
+            <para>Choisissez votre fichier CSV et choisissez de tester la
+            concordance sur le 'Numéro de carte' pour éviter d'ajouter des
+            numéros de carte en doublon dans le système</para>
           </listitem>
 
           <listitem>
-            <para>Next you can choose default values to apply to all patrons
-            you are importing</para>
+            <para>Ensuite vous pouvez choisir d'appliquer des valeurs par
+            défaut à tous les adhérents que vous importez</para>
 
             <itemizedlist>
               <listitem>
-                <para>ex. If you're importing patrons specific to one branch
-                you can use the field on the Import form to apply the branche
-                code to all those you are importing.</para>
+                <para>ex. Si vous importez des adhérents spécifiquement dans
+                une branche vous pouvez utiliser le champ du formulaire
+                d'import pour appliquer le branchcode à tous les comptes que
+                vous importez.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Finally you need to decide on what data you want to replace
-            if there are duplicates.</para>
+            <para>Enfin vous devez décider que faire dans le cas de
+            doublons.</para>
 
             <screenshot>
-              <screeninfo>Record matching options</screeninfo>
+              <screeninfo>Options de concordance entre comptes</screeninfo>
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="../en/images/tools/patronmatching.png" />
+                  <imagedata fileref="../fr/images/tools/patronmatching.png" />
                 </imageobject>
               </mediaobject>
             </screenshot>
 
             <itemizedlist>
               <listitem>
-                <para>A matching record is found using the field you chose for
-                matching criteria to prevent duplication</para>
+                <para>Une notice doublon est détectée en utilisant le champ
+                que vous avez choisi comme concordance</para>
               </listitem>
 
               <listitem>
-                <para>If you included patron attributes in your file you can
-                decide whether to add your values to existing values or erase
-                existing values and enter only your new values.</para>
+                <para>Si vous incluez des attributs adhérent dans votre
+                fichier vous pouvez décider si vous ajoutez vos valeurs aux
+                valeurs existantes ou si vous effacez les valeurs existantes
+                pour ne garder que les nouvelles.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -9213,63 +9217,70 @@
     </section>
 
     <section>
-      <title id="anonpatrons" lang="">Patrons (anonymize, bulk-delete)</title>
+      <title id="anonpatrons" lang="">Adhérents (rendre anonyme et
+      supprimer)</title>
 
-      <para>This tool allows you to bulk anonymize circulation histories (this
-      means that you keep records of how many times items were checked out -
-      but not the patrons who checked the items out) or bulk delete patrons
-      (remove them from the system completely).</para>
+      <para>Cet outil vous permet de rendre anonyme de façon massive les
+      historiques de circulation (ceci signifie que vous conservez les
+      informations du nombre de fois où un exemplaire a été prêté - mais pas
+      celles concernant les lecteurs qui ont emprunté les documents) ou de
+      supprimer les adhérents par lot (les supprimer définitivement du
+      système) .</para>
 
       <screenshot>
-        <screeninfo>Patron Anonymize/Bulk Delete Tool</screeninfo>
+        <screeninfo>Outil anonymiser / supprimer les lecteurs par
+        lot</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/patronbulkdelete.png" />
+            <imagedata fileref="../fr/images/tools/patronbulkdelete.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>To either delete or anonymize patrons</para>
+      <para>Pour anonymiser ou supprimer des adhérents</para>
 
       <itemizedlist>
         <listitem>
-          <para>Check the task you would like to perform (Delete or
-          Anonymize)</para>
+          <para>Cochez l'action que vous souhaitez exécuter (Supprimer ou
+          Rendre anonyme)</para>
         </listitem>
 
         <listitem>
-          <para>Enter a date before which you want to alter the data</para>
+          <para>Saisissez une date avant laquelle vous souhaitez modifier les
+          données</para>
         </listitem>
 
         <listitem>
-          <para>Click 'Next'</para>
+          <para>Cliquez 'Suivant'</para>
         </listitem>
 
         <listitem>
-          <para>A confirmation will appear asking if you're sure this is what
-          you want to happen</para>
+          <para>Un message de confirmation apparaît vous demandant si vous
+          êtes sûr que c'est bien ce que vous voulez faire</para>
 
           <screenshot>
-            <screeninfo>Patron Anonymize/Bulk Delete Confirmation</screeninfo>
+            <screeninfo>Confirmation anonymiser / supprimer les lecteurs par
+            lot</screeninfo>
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="../en/images/tools/patronanonconfirm.png" />
+                <imagedata fileref="../fr/images/tools/patronanonconfirm.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
         </listitem>
 
         <listitem>
-          <para>Clicking 'Finish' will delete or anonymize your data</para>
+          <para>Cliquez 'Terminer' va supprimer ou rendre anonyme vos
+          données</para>
 
           <screenshot>
-            <screeninfo>Completed Process</screeninfo>
+            <screeninfo>Action terminée</screeninfo>
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="../en/images/tools/patronanoncomplete.png" />
+                <imagedata fileref="../fr/images/tools/patronanoncomplete.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -9278,77 +9289,80 @@
     </section>
 
     <section>
-      <title id="uploadpatronimages">Upload Patron Images</title>
+      <title id="uploadpatronimages">Chargement de photos d'adhérents</title>
 
-      <para>Patron images can be uploaded in bulk if you are <link
-      linkend="patronimages">allowing patron images</link> to be attached to
-      patron records.</para>
+      <para>Des photos des adhérents peuvent être chargées par lot si vous
+      avez permis l'attachement de <link linkend="patronimages">photographies
+      d'adhérents</link> aux fiches lecteurs.</para>
 
       <itemizedlist>
         <listitem>
-          <para>Create a txt file and title it "DATALINK.TXT" or
+          <para>Créer un fichier texte et appelez-le "DATALINK.TXT" ou
           "IDLINK.TXT"</para>
         </listitem>
 
         <listitem>
-          <para>On each line in the text file enter the patron's card number
-          followed by comma (or tab) and then the image file name</para>
+          <para>Sur chaque ligne du fichier saisissez le numéro de carte
+          adhérent suivi d'une virgule (ou d'une tabulation) et du nom du
+          fichier image</para>
 
           <screenshot>
-            <screeninfo>Sample file and image</screeninfo>
+            <screeninfo>Exemple de fichier pour les photos</screeninfo>
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="../en/images/tools/uploadphotosfile.png" />
+                <imagedata fileref="../fr/images/tools/uploadphotosfile.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
 
           <itemizedlist>
             <listitem>
-              <para>Make sure that your TXT file is a plain text document, not
-              RTF.</para>
+              <para>Assurez-vous que votre fichier TXT est un document texte
+              brut, pas RTF.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Zip up the text file and the image files</para>
+          <para>Compressez les fichier texte et les fichiers image</para>
         </listitem>
 
         <listitem>
-          <para>Go to the Upload Patron Images Tool</para>
+          <para>Allez dans l'outil Chargement de photos d'adhérents</para>
 
           <screenshot>
-            <screeninfo>Upload Image Tool for Single Image</screeninfo>
+            <screeninfo>Outil de chargement d'image pour une seule
+            photo</screeninfo>
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="../en/images/tools/uploadimagetool.png" />
+                <imagedata fileref="../fr/images/tools/uploadimagetool.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
         </listitem>
 
         <listitem>
-          <para>For a single image, simply point to the image file and enter
-          the patron card number</para>
+          <para>Pour une seule photo, sélectionnez simplement le fichier image
+          et saisissez le numéro de carte de l'adhérent</para>
         </listitem>
 
         <listitem>
-          <para>For multiple images, choose to upload a zip file</para>
+          <para>Pour plusieurs photos, choisissez de charger un fichier
+          zip</para>
         </listitem>
 
         <listitem>
-          <para>After uploading you will be presented with a
+          <para>Après le chargement vous aurez un message de
           confirmation</para>
 
           <screenshot>
-            <screeninfo>Image Upload Confirmation</screeninfo>
+            <screeninfo>Confirmation de chargement de photos</screeninfo>
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="../en/images/tools/imageuploadconfirm.png" />
+                <imagedata fileref="../fr/images/tools/imageuploadconfirm.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -9356,173 +9370,177 @@
       </itemizedlist>
 
       <important>
-        <para>There is a limit of 100K on the size of the picture uploaded and
-        it is recommended that the image be 120x200 pixels, but smaller images
-        will work as well.</para>
+        <para>Il y a une limite à 100K pour la taille des images chargées, et
+        il est recommandé que les images aient une taille 120x200 pixels, mais
+        de plus petites photos sont possibles également.</para>
       </important>
     </section>
 
     <section>
-      <title id="taskscheduler" lang="">Task Scheduler</title>
+      <title id="taskscheduler" lang="">Planificateur de tâches</title>
 
-      <para>The task scheduler is a way to schedule reports to run whenever
-      you want.</para>
+      <para>Le planificateur de tâches permet de programmer l'exécution de
+      rapports quand vous voulez</para>
 
-      <para>To schedule a task, visit the Task Scheduler and fill in the
-      form</para>
+      <para>Pour programmer une tâche, allez dans le Planificateur de tâches
+      et remplissez le formulaire</para>
 
       <screenshot>
-        <screeninfo>Task Scheduler</screeninfo>
+        <screeninfo>Planificateur de tâches</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/taskscheduler.png" />
+            <imagedata fileref="../fr/images/tools/taskscheduler.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
       <itemizedlist>
         <listitem>
-          <para>Current Server Time shows the time on your server (schedule
-          all of your reports to run based on that time - not on your local
-          time)</para>
+          <para>L'heure du serveur montre l'heure sur votre serveur
+          (programmez tous vos rapports por s'exécuter en fonction de cette
+          heure - pas sur votre heure locale)</para>
         </listitem>
 
         <listitem>
-          <para>Time should be entered as hh:mm (2 digit hour, 2 digit
-          minute)</para>
+          <para>L'heure doit être saisie sous la forme hh:mm (2 chiffres pour
+          l'heure, 2 chiffres pour les minutes)</para>
         </listitem>
 
         <listitem>
-          <para>Date should be entered using the calendar pop up</para>
+          <para>La date doit être entrée à l'aide du popup calendrier</para>
         </listitem>
 
         <listitem>
-          <para>From Report choose the report you want to schedule</para>
+          <para>Choisissez le rapport à programmer dans la liste des
+          rapports</para>
         </listitem>
 
         <listitem>
-          <para>Choose whether to receive the text of or a link to the
-          results</para>
+          <para>Choisissez si vous souhaitez recevoir le texte ou un lien vers
+          les résultats</para>
         </listitem>
 
         <listitem>
-          <para>In the Email filed enter the email of the person you want to
-          receive your report</para>
+          <para>Dans le champ Email saisissez l'adresse mail de la personne
+          qui recevra le rapport</para>
         </listitem>
       </itemizedlist>
 
-      <para>Below the task scheduler form, there is a list of scheduled
-      reports</para>
+      <para>En-dessous du formulaire de planification des tâches, se trouve
+      une liste des rapports programmés</para>
 
       <screenshot>
-        <screeninfo>Scheduled Tasks</screeninfo>
+        <screeninfo>Tâches planifiées</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/scheduledreports.png" />
+            <imagedata fileref="../fr/images/tools/scheduledreports.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>You can also schedule reports directly from the list of saved
-      reports by clicking the 'Schedule' link</para>
+      <para>Vous pouvez aussi programmer des rapports directement à partir de
+      la liste des rapports sauvegardés en cliquant le lien 'Planifier'</para>
 
       <screenshot>
-        <screeninfo>Saved Reports List</screeninfo>
+        <screeninfo>Liste des rapports sauvegardés</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/savedreports.png" />
+            <imagedata fileref="../fr/images/tools/savedreports.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
       <section>
-        <title>Troubleshooting</title>
+        <title>Résolution de problèmes</title>
 
-        <para>Task scheduler will not work if the user the webserver runs as
-        doesn't have the permission to use it. To find out if the right user
-        has the permissions necessary, check /etc/at.allow to see what users
-        are in it. If you don't have that file, check etc/at.deny. If at.deny
-        exists but is blank, then every user can use it. Talk to your system
-        admin about adding the user to the right place to make the task
-        scheduler work.</para>
+        <para>Le planificateur de tâches ne fonctionnera pas si l'utilisateur
+        avec lequel tourne le serveur web n'a pas la permission de l'utiliser.
+        Pour voir si l'utilisateur en question a les permissions nécessaires,
+        verifiez /etc/at.allow pour voir quels sont les utilisateurs présents
+        dedans. Si vous n'avez pas ce fichier, vérifiez /etc/at.deny. Si
+        at.deny existe mais est vide, alors tout utilisateur peut l'utiliser.
+        Voyez avec votre administrateur système pour ajouter l'utilisateur au
+        bon endroit pour que le planificateur de tâches fonctionne.</para>
       </section>
     </section>
 
     <section>
-      <title id="notices">Notices</title>
+      <title id="notices">Messages</title>
 
-      <para>All notices sent by Koha can be customized using the Notices Tool.
-      The system comes with several predefined templates that will appear when
-      you first visit the Notices Tool</para>
+      <para>Tous les messages envoyés par Koha peuvent être personnalisés en
+      utilisant l'outil Messages. Plusieurs modèles prédéfinis sont installés
+      dans Koha, qui sont visibles lorsque vous allez la première fois dans
+      l'outil Messages.</para>
 
       <screenshot>
-        <screeninfo>Notices Tool</screeninfo>
+        <screeninfo>Outil Messages</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/notices.png" />
+            <imagedata fileref="../fr/images/tools/notices.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>Each notice can be editied, but only a few can be deleted, this is
-      to prevent system errors should a message try to send without a
-      template.</para>
+      <para>Chaque message peut être modifié, mais seuls quelques uns peuvent
+      être supprimés, ceci afin d'éviter les erreurs système si une
+      notification devait être envoyée sans modèle associé.</para>
 
       <section>
-        <title>Adding Notices</title>
+        <title>Ajouter des messages</title>
 
-        <para>To add a new notice</para>
+        <para>Pour ajouter un nouveau message</para>
 
         <itemizedlist>
           <listitem>
-            <para>Click 'New Notice'</para>
+            <para>Cliquez 'Ajouter notification'</para>
 
             <screenshot>
-              <screeninfo>New Notice Form</screeninfo>
+              <screeninfo>Formulaire d'ajout d'une notification</screeninfo>
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="../en/images/tools/newnotice.png" />
+                  <imagedata fileref="../fr/images/tools/newnotice.png" />
                 </imageobject>
               </mediaobject>
             </screenshot>
           </listitem>
 
           <listitem>
-            <para>Choose the module this notice is related to</para>
+            <para>Choisissez le module auquel cette notification est
+            rattachée</para>
           </listitem>
 
           <listitem>
-            <para>The Code is limited to 20 characters</para>
+            <para>Le Code est limité à 20 caractères</para>
           </listitem>
 
           <listitem>
-            <para>Use the name field to expand on your Code</para>
+            <para>Utilisez le champ Nom pour préciser plus
+            d'information</para>
           </listitem>
 
           <listitem>
-            <para>Mesage Subject is what will appear in the subject line of
-            the email</para>
+            <para>Le Sujet du message est ce qui apparaîtra dans le sujet du
+            mail</para>
           </listitem>
 
           <listitem>
-            <para>In the message body feel free to type whatever message you
-            feel is best, use the fields on the left hand side to enter
-            individualized data from the from database.</para>
+            <para>Dans le Corps du message tapez le message qui vous convient,
+            utilisez les champs sur la gauche pour entrer les données
+            individuelles à partir de la base de données.</para>
 
             <itemizedlist>
               <listitem>
                 <important>
-                  <para>On Overdue Notices make sure to use
-                  &lt;&lt;items.content&gt;&gt; to print out the data related
-                  to all items that are overdue, using
-                  &lt;&lt;biblio.title&gt;&gt; and
-                  &lt;&lt;biblio.author&gt;&gt;. The latter will not
-                  work.</para>
+                  <para>Pour les messages de retard (pour la circulation),
+                  assurez-vous d'utiliser &lt;&lt;items.content&gt;&gt; pour
+                  obtenir les données concernant tous les documents en retard,
+                  plutôt que &lt;&lt;biblio.title&gt;&gt; et
+                  &lt;&lt;biblio.author&gt;&gt;.</para>
                 </important>
               </listitem>
             </itemizedlist>
@@ -9531,61 +9549,66 @@
       </section>
 
       <section>
-        <title>Existing Notices</title>
+        <title>Messages existants</title>
 
-        <para>Among the default notices are notices for several common actions
-        within Koha, here are some of what those notices do</para>
+        <para>Parmi les messages par défaut il y a des messages pour plusieurs
+        actions fréquentes dans Koha, voici un exemple de ce que ces messages
+        font</para>
 
         <itemizedlist>
           <listitem>
-            <para>ACQCLAIM (Acquisition Claim)</para>
+            <para>ACQCLAIM (Réclamation acquisistions)</para>
 
             <itemizedlist>
               <listitem>
-                <para>Used in the claim acquisition module</para>
+                <para>Utilisé dans le module de réclamation des
+                acquisitions</para>
               </listitem>
 
               <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Acquisitions
-                &gt; Late issues</para>
+                <para><emphasis>Allez dans :</emphasis> Plus &gt; Acquisitions
+                &gt; Commandes en retard</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>HOLD (Hold Available for Pickup)</para>
+            <para>HOLD (Réservations mises de côté)</para>
 
             <itemizedlist>
               <listitem>
-                <para>This notice is used if two criteria are met:</para>
+                <para>Ce message est utilisé si deux conditions sont remplies
+                :</para>
 
                 <orderedlist>
                   <listitem>
-                    <para>The EnhancedMessagingPreferences is turned ON</para>
+                    <para>La préférence EnhancedMessagingPreferences est
+                    activée (ON)</para>
 
                     <itemizedlist>
                       <listitem>
-                        <para><emphasis>Get there: </emphasis>More &gt;
-                        Administration &gt; Global System Preferences &gt;
-                        Patrons &gt; <link
+                        <para><emphasis>Allez dans :</emphasis>Plus &gt;
+                        Administration &gt; Préférences système &gt; Adhérents
+                        &gt; <link
                         linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
 
                   <listitem>
-                    <para>The patron has requested to receive this
-                    notice</para>
+                    <para>L'adhérent a demandé à recevoir cette
+                    notification</para>
 
                     <itemizedlist>
                       <listitem>
-                        <para><emphasis>Get there: </emphasis>OPAC &gt; Login
-                        &gt; my messaging</para>
+                        <para><emphasis>Aller dans :</emphasis>OPAC &gt; Login
+                        &gt; Mes notifications</para>
                       </listitem>
 
                       <listitem>
-                        <para><emphasis>Get there: </emphasis>Staff Client
-                        &gt; Patron Record &gt; Messaging</para>
+                        <para><emphasis>Aller dans :</emphasis>Interface
+                        professionnelle &gt; Fiche adhérent &gt;
+                        Notifications</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -9595,54 +9618,57 @@
           </listitem>
 
           <listitem>
-            <para>ODUE (Overdue Notice)</para>
+            <para>ODUE (Message de retard)</para>
 
             <itemizedlist>
               <listitem>
-                <para>This notice is used to send Overdue Notices to
-                Patrons</para>
+                <para>Ce message est utilisé pour envoyé des notifications de
+                retard aux adhérents</para>
               </listitem>
 
               <listitem>
-                <para>See a <link linkend="samplenotice">Sample Overdue
-                Notice</link></para>
+                <para>Voir un <link linkend="samplenotice">Exemple de message
+                de retard</link></para>
               </listitem>
 
               <listitem>
-                <para>Requires that you set <link
-                linkend="noticetriggers">Overdue Notice/Status
-                Triggers</link></para>
+                <para>Nécessite que vous paramétriez le <link
+                linkend="noticetriggers">Déclencheur de
+                notification</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>RLIST (Routing List)</para>
+            <para>RLIST (Liste de circulation)</para>
 
             <itemizedlist>
               <listitem>
-                <para>Used in the serials module to notify patrons/staff of
-                new issues of a serial</para>
+                <para>Utilisé dans le module Périodiques pour notifier les
+                adhérents / les professionnels de la parution d'un nouveau
+                numéro de périodique</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para><emphasis>Get there:</emphasis> More &gt; Serials
-                    &gt; New Subscription</para>
+                    <para><emphasis>Allez dans :</emphasis> Plus &gt;
+                    Périodiques &gt; Nouvel abonnement</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
 
               <listitem>
-                <para>You have the option to select the 'Routing List' notice
-                when creating a new subscription (Choose from the 'Patron
-                notification' dropdown).</para>
+                <para>Vous avez la possibilité de choisir le message 'Liste de
+                circulation' à la création d'un nouvel abonnement (Choix à
+                partir du menu déroulant 'Notifications de
+                l'adhérent').</para>
               </listitem>
 
               <listitem>
                 <tip>
-                  <para>Notice also that if you'd like to notify patrons of
-                  new serial issues, you can click on 'define a notice' which
-                  will take you to the 'Notices' tool</para>
+                  <para>Notez aussi que si vous souhaitez nitifier les
+                  lecteurs de la parution d'un nouveau numéro de périodique,
+                  vous pouvez cliquer sur 'définir un message', ce qui vous
+                  amène à l'outil 'Messages'</para>
                 </tip>
               </listitem>
             </itemizedlist>
@@ -9652,24 +9678,25 @@
     </section>
 
     <section>
-      <title id="noticetriggers">Overdue Notice/Status Triggers</title>
+      <title id="noticetriggers">Déclencheur de notification</title>
 
-      <para>In order to send the overdue notices that you defined using the
-      <link linkend="notices" os="">Notices</link> tool, you need to first set
-      the triggers to have these messages.</para>
+      <para>Afin d'envoyer les messages de retard que vous avez définis dans
+      l'outil Messages, vous devez d'abord paramétrer le déclencheur de
+      notifications pour avoir ces messages.</para>
 
       <important>
-        <para>In order to have overdue notices sent to your patrons, you need
-        to <link linkend="addingpatroncat">set that patron category</link> to
-        require overdue notices.</para>
+        <para>Afin que des message de retard puissent être envoyés à vos
+        adhérents, vous devez <link linkend="addingpatroncat">paramétrer les
+        catégories adhérent</link> pour qu'elles puissent recevoir des
+        messages de retard.</para>
       </important>
 
-      <para>The Overdue Notice/Status Triggers tool gives the librarian the
-      power to send up to three notices to each patron type notifiying them of
-      overdue items</para>
+      <para>L'outil Déclencheur de notification donne la possibilité au
+      bibliothécaire d'envoyer jusqu'à trois messages pour chaque type
+      d'adhérent les notifiant de documents en retard.</para>
 
       <screenshot>
-        <screeninfo>Overdue Notice/Status Triggers Tool</screeninfo>
+        <screeninfo>Outil Déclencheur de notification</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -9680,200 +9707,211 @@
 
       <itemizedlist>
         <listitem>
-          <para>Delay is the number of days after an issue is due before an
-          action is triggered.</para>
+          <para>Le Délai est le nombre de jours de retard avant qu'une action
+          soit programmée.</para>
 
           <itemizedlist>
             <listitem>
               <important>
-                <para>If you want Koha to trigger an action (send a letter or
-                debar member), a delay value is required.</para>
+                <para>Si vous souhaitez que Koha programme une action (envoyer
+                un message ou suspendre un lecteur), une valeur pour le délai
+                est nécessaire .</para>
               </important>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>To send additional notices, click on the tabs for 'Second' and
-          'Third' notice</para>
+          <para>Pour envoyer des messages additionnels, cliquez sur les
+          onglets pour un 'Deuxième' et 'Troisième' message</para>
         </listitem>
 
         <listitem>
-          <para>If you would like to prevent a patron from checking items out
-          because of their overdue items, check the 'Debar' box, this will put
-          a notice on the patron's record at checkout informing the librarian
-          that the patron cannot check out due to overdue items.</para>
+          <para>Si vous souhaitez empêcher vos adhérents d'emprunter des
+          documents en raison de leurs documents en retard, cochez la case
+          'Suspendu' ; ceci affichera un message sur la fiche adhérent lors du
+          prêt informant le bibliothécaire que le lecteur ne peut pas
+          emprunter à cause de documents en retard.</para>
         </listitem>
 
         <listitem>
-          <para>See a <link linkend="samplenotice">Sample Overdue
-          Notice</link></para>
+          <para>Voir un <link linkend="samplenotice">Exemple de message de
+          retard</link></para>
         </listitem>
       </itemizedlist>
     </section>
 
     <section>
-      <title id="logviewer">Log Viewer</title>
+      <title id="logviewer">Visualiseur des logs</title>
 
-      <para>Actions within the Koha system are tracked in log files. Your
-      <link lang="" linkend="logs">system preferences</link> can be changed to
-      prevent the logging of different actions. These logs can be viewed using
-      the Log Viewer Tool.</para>
+      <para>Les actions dans Koha sont tracées dans des fichiers de log. Vos
+      <link lang="" linkend="logs">préférences système</link> peuvent être
+      modifiées pour empêcher les logs pour différentes actions. Les logs
+      peuvent être consultés grâce à l'outil Visualiseur des logs.</para>
 
       <screenshot>
-        <screeninfo>Log Viewer</screeninfo>
+        <screeninfo>Visualiseur des logs</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/logviewer.png" />
+            <imagedata fileref="../fr/images/tools/logviewer.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>Choosing different combinations of menu options will produce the
-      log file for that query.</para>
+      <para>Choisir différents critères parmi les options fournira le fichier
+      de log correspondant à cette requête</para>
 
       <screenshot>
-        <screeninfo>A query for all logs related to the Circulation module
-        produces a result like this</screeninfo>
+        <screeninfo>Une requête pour tous les logs reliés au module
+        Circulation donne un résultat comme celui-ci</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/logresults.png" />
+            <imagedata fileref="../fr/images/tools/logresults.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>You will note that real names do not appear on the log, only
-      identifying numbers. You need to use the identifying numbers when
-      searching the logs as well.</para>
+      <para>Notez que les noms n'apparaissent pas dans le log, uniquement les
+      numéros identifiants. De même, vous devez utiliser ces numéros
+      identifiants lorsque vous recherchez dans les logs.</para>
     </section>
 
     <section>
-      <title id="inventory">Inventory/Stocktaking</title>
+      <title id="inventory">Inventaire / Récolement</title>
 
-      <para>Koha's Inventory Tool can be used in one of two ways, the first is
-      by printing out a shelf list that you can then mark items off on, or by
-      uploading a text files of barcodes gathered by a portable
-      scanner.</para>
+      <para>L'outil Inventaire de Koha peut être utilisé de deux façons, l'une
+      en sortant une liste à partir de laquelle vous pouvez marquer les
+      exemplaires, l'autre en chargeant un fichier texte de codes barres
+      collectés à l'aide d'un lecteur de codes barres portable.</para>
 
-      <para>If you do not have the ability to use your barcode scanner on the
-      floor of the library, the first option available to you is to generate a
-      shelf list based on criteria you enter.</para>
+      <para>Si vous n'avez pas la possibilité d'utiliser votre lecteur de
+      codes barres partout dans la bibliothèque, la première option disponible
+      pour vous est de générer une liste basée sur des critères que vous
+      définissez.</para>
 
       <screenshot>
-        <screeninfo>Inventory &amp; Stocktaking Tool</screeninfo>
+        <screeninfo>Outil Inventaire / Récolement</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/generateshelflist.png" />
+            <imagedata fileref="../fr/images/tools/generateshelflist.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>Choose which library, shelving location, call number range, item
-      status and when the item was last seen to generate a shelf list that you
-      can then print to use while walking around the library checking your
-      collection</para>
+      <para>Choisissez quelle bibliothèque, quelle localisation, intervalle de
+      cotes, statut d'exemplaire, et date à laquelle l'exemplaire a été vu
+      pour la dernière fois, pour générer une liste de documents que vous
+      pouvez ensuite imprimer et utiliser dans les rayons de votre
+      bibliothèque pour vérifier votre collection.</para>
 
       <screenshot>
-        <screeninfo>Shelf List</screeninfo>
+        <screeninfo>Liste de documents</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/shelflist.png" />
+            <imagedata fileref="../fr/images/tools/shelflist.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>Alternatively you can export the list to a CSV file for altering
-      in an application on your desktop. Simply check the box next to 'Export
-      to csv file' to generate this file.</para>
+      <para>De façon alternative vous pouvez exporter la liste vers un fichier
+      CSV pour modification dans une application sur votre poste de travail.
+      Cochez simplement la case 'Exporter vers fichier csv' pour générer ce
+      fichier.</para>
 
-      <para>Once you have found the items on your shelves you can return to
-      this list and check off the items you found to have the system update
-      the last seen date to today.</para>
+      <para>Une fois que vous avez trouvé les exemplaires sur les étagères
+      vous pouvez retourner sur la liste et cocher les exemplaires que vous
+      avez trouvés, afin que le système mette à jour la date 'Pas vu depuis' à
+      la date du jour.</para>
 
-      <para>If you have a portable scanner (or a laptop and USB scanner) you
-      can walk through the library with the scanner in hand and scan barcodes
-      as you come across them. Once finished you can then upload the text file
-      generated by the scanner to Koha</para>
+      <para>Si vous avez un lecteur de codes barres (ou un ordinateur portable
+      et une douchette USB) vous pouvez vous déplacer dans la bibliothèque et
+      scanner les codes barres au fur et à mesure. Lorsque vous avez terminé
+      vous pouvez charger dans Koha le fichier texte ainsi créé.</para>
 
       <screenshot>
-        <screeninfo>Barcode Import for Inventory Tool</screeninfo>
+        <screeninfo>Import de codes barres dans l'outil
+        Inventaire</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/importbarcodes.png" />
+            <imagedata fileref="../fr/images/tools/importbarcodes.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>Choose the text file and the date you want to mark all times as
-      seen and click 'Submit.'</para>
+      <para>Choisissez le fichier texte et la date avec laquelle vous
+      souhaitez marquer les exemplaires comme 'vus', et cliquez
+      'Valider'.</para>
     </section>
 
     <section>
-      <title id="batchmodifyitems">Modify a queryset of items</title>
+      <title id="batchmodifyitems">Modifier un lot d'exemplaires</title>
 
       <para></para>
     </section>
 
     <section>
-      <title id="batchdeleteitems">Delete a queryset of items</title>
+      <title id="batchdeleteitems">Supprimer un lot d'exemplaires</title>
 
-      <para>This tool will allow you to delete a batch of item records from
+      <para>Cet outil vous permet de supprimer un lot d'exemplaires de
       Koha.</para>
 
       <screenshot>
-        <screeninfo>Batch Deletion Tool</screeninfo>
+        <screeninfo>Outil de suppression d'exemplaires par lot</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/batchdel.png" />
+            <imagedata fileref="../fr/images/tools/batchdel.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>From the tool you can choose to upload a file of barcodes or item
-      ids, or you can scan items one by one into the box below the upload
-      tool. Once you have your file uploaded or the barcodes listed you can
-      click 'Continue.'</para>
+      <para>A partir de cet outil vous pouvez choisir de charger un fichier de
+      codes barres ou d'id d'exemplaires, ou vous pouvez scanner les codes
+      barres un par un dans la zone en-dessous de l'outil de chargement de
+      fichier. Une fois que vous avez chargé le fichier ou fait la liste de
+      codes barres, vous pouvez cliquer 'Suivant'</para>
 
       <screenshot>
-        <screeninfo>Confirm Deletion</screeninfo>
+        <screeninfo>Confirmer la suppression</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/confirmbatchdel.png" />
+            <imagedata fileref="../fr/images/tools/confirmbatchdel.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>You will be presented with a confirmation screen. From here you
-      can uncheck the items you don't want to delete before clicking 'Go.' If
-      the items are checked out you will be presented with an error after
-      clicking 'Go' and the items will not be deleted.</para>
+      <para>Un écran de confirmation s'affiche. A partir de là vous pouvez
+      décocher les exemplaires que vous ne souhaitez pas supprimer, avant de
+      cliquer 'Valider'. Si les exemplaires sont en prêt un message d'erreur
+      s'affiche après avoir cliqué 'Valider' et les exemplaires ne sont pas
+      supprimés.</para>
 
       <screenshot>
-        <screeninfo>Items not Deleted</screeninfo>
+        <screeninfo>Exemplaires non supprimés</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/nobatchdel.png" />
+            <imagedata fileref="../fr/images/tools/nobatchdel.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
 
-      <para>If the items can be deleted they will be and you will be presented
-      with a confirmation of your deletion.</para>
+      <para>Si les exemplaires peuvent être supprimés ils le seront, et une
+      confirmation de la suppression s'affiche.</para>
 
       <screenshot>
-        <screeninfo>Batch Deletion Confirmation</screeninfo>
+        <screeninfo>Confirmation de suppression d'un lot
+        d'exemplaires</screeninfo>
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="../en/images/tools/batchdeldone.png" />
+            <imagedata fileref="../fr/images/tools/batchdeldone.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
@@ -19200,7 +19238,8 @@ print theme('pages_catalog');</programlisting>
       </section>
     </section>
   </appendix>
-    <appendix id="gpl">
+
+  <appendix id="gpl">
     <appendixinfo>
       <title>GNU General Public License</title>
 
