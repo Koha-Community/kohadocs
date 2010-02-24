@@ -5988,7 +5988,7 @@
             extended mode, it's possible to parameter other formats than
             marcxml or Dublin Core. OAI-PMH:ConfFile specify a YAML
             configuration file which list available metadata formats and XSL
-            file used to create them from marcxml records. </para>
+            file used to create them from marcxml records.</para>
 
             <para>For more information, see the <link
             linkend="oaiconfsample">sample conf file</link> in the
@@ -10564,21 +10564,20 @@
           <title>Notice Markup</title>
 
           <para>When creating your notice there are two tags in addition to
-          the various database fields that you can use in your notices.
-          </para>
+          the various database fields that you can use in your notices.</para>
 
           <itemizedlist>
             <listitem>
               <para>&lt;item&gt;&lt;/item&gt; which should enclose all fields
-              from the biblio, biblioitems, and items tables. </para>
+              from the biblio, biblioitems, and items tables.</para>
             </listitem>
 
             <listitem>
               <para>&lt;fine&gt;&lt;/fine&gt; which should be enclosed by the
               item tag and should enclose a currency identifier per ISO 4217.
               If this tag is present with a proper identifier, the fine for
-              that item will be displayed in the proper currency format.
-              </para>
+              that item will be displayed in the proper currency
+              format.</para>
 
               <itemizedlist>
                 <listitem>
@@ -10586,14 +10585,14 @@
                   currencies may not be supported. If you find one that is not
                   supported, please file a bug with the
                   Locale::Currency::Format author Tan D Nguyen &lt;tnguyen at
-                  cpan doe org&gt;. </para>
+                  cpan doe org&gt;.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
           </itemizedlist>
 
           <para>An example of using these two tags in a notice template might
-          be like: </para>
+          be like:</para>
 
           <programlisting>   The following item(s) is/are currently overdue:
 
@@ -12735,7 +12734,7 @@
 
         <para>Once you have checked out all of the items for the patron you
         can print them a receipt by clicking the Print button at the top of
-        the screen and choosing 'Print Slip'</para>
+        the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
 
         <screenshot>
           <screeninfo>Print receipt to slip printer</screeninfo>
@@ -12746,6 +12745,11 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>If you choose 'Print Slip' it will print all of the items the
+        patron has checked out, including those they checked out at an earlier
+        date. Choosing 'Quick Slip' will print only the items that were
+        checked out today.</para>
 
         <para>If there are notes on the patron record these will appear to the
         right of the checkout box</para>
@@ -13369,7 +13373,7 @@
 
         <para>To rearrange or delete holds, simply make a selection from the
         'Priority' pull down or click the arrows to the right of the priority
-        pull down. </para>
+        pull down.</para>
 
         <screenshot>
           <screeninfo>Hold Priority Menu</screeninfo>
