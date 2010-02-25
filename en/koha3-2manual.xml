@@ -8419,6 +8419,12 @@
 
           <para></para>
         </section>
+
+        <section>
+          <title>Budget Planning</title>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
@@ -8536,6 +8542,13 @@
               </imageobject>
             </mediaobject>
           </screenshot>
+
+          <para>To the right of each fund you will find the 'Edit,' 'Delete,'
+          and 'Add Child Fund' options. A child fund simply a sub-fund of the
+          fund listed. An example would be to have a fund for 'Fiction' and
+          under that have a fund for 'New Releases' and a fund for 'Science
+          Fiction.' It is an optional way to further organize your
+          finances.</para>
         </section>
       </section>
     </section>
@@ -8875,25 +8888,284 @@
       <section>
         <title>Templates</title>
 
-        <para></para>
+        <para>A template is the label/card stock you are using. This might be
+        Avery 5160 for address labels, Gaylord 47-284 for spine labels or
+        Avery 28371 for your patron cards, just to give a couple of examples.
+        These labels will include all of the information you will need for
+        setting up a Koha, this information may be on the packaging, and if
+        not it can usually be found on the vendor's website.</para>
+
+        <section>
+          <title id="addlabeltemplate" lang="">Add a Template</title>
+
+          <para>To add a new template, you want to click on the 'Templates'
+          button at the top of your page and choose 'New Template'</para>
+
+          <screenshot>
+            <screeninfo>New Label Template Option</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newtemplate.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can define the template for
+          your sheet of labels or cards.</para>
+
+          <screenshot>
+            <screeninfo>Label Template Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/labelform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Template ID will be automatically generated after saving
+              your template, this is simply a system genereated unique
+              id</para>
+            </listitem>
+
+            <listitem>
+              <para>Template Code should be something you can use to identify
+              your template on a list of templates</para>
+            </listitem>
+
+            <listitem>
+              <para>You can use the Template Description to add additional
+              information about the template</para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for the template. This should
+              probably match the unit of measurement used on the template
+              description provided by the product vendor.</para>
+
+              <screenshot>
+                <screeninfo>Measurement Units</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>The measurements, number of columns and number of rows can
+              be found on the vendor product packaging or website.</para>
+            </listitem>
+
+            <listitem>
+              <para>A profile is a set of “adjustments” applied to a given
+              template just prior to printing which compensates for anomalies
+              unique and peculiar to a given printer (to which the profile is
+              assigned).</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Before picking a profile try printing some sample
+                  labels so that you can easily define a profile that is right
+                  for your printer/template combination.</para>
+                </listitem>
+
+                <listitem>
+                  <para>After finding any anomolies in the printed document,
+                  <link linkend="addlabelprofile">create a profile</link> and
+                  assign it to the template.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your templates will appear on the 'Manage
+          Templates' page.</para>
+
+          <screenshot>
+            <screeninfo>List of label templates</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/labeltemplates.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section>
         <title>Profiles</title>
 
-        <para></para>
+        <para>A profile is a set of “adjustments” applied to a given <link
+        linkend="addlabeltemplate">template</link> just prior to printing
+        which compensates for anomalies unique and peculiar to a given printer
+        (to which the profile is assigned). This means if you set a template
+        up and then print a sample set of data and find that the items are not
+        all aligned the same on each label, you need to set up a profile for
+        each printer to make up for the differences in printing styles, such
+        as the shifting of text to the left, right, top or bottom.</para>
+
+        <para>If your labels are printing just the way you want, you will not
+        need a profile.</para>
+
+        <section>
+          <title id="addlabelprofile">Add a Profile</title>
+
+          <para>To add a new profile, you want to click on the 'Profiles'
+          button at the top of your page and choose 'New Profile'</para>
+
+          <screenshot>
+            <screeninfo>New Profile Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newprofile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Create a Printer Profile</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newprofileform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The Printer Name and Paper Bin do not have to match your
+              printer exactly, they are for your reference so you can remember
+              what printer you have set the profile for. So if you want to use
+              the Printer model number in printer name or you can call it 'the
+              printer on my desk'</para>
+            </listitem>
+
+            <listitem>
+              <para>Template will be filled in once you have chosen which
+              template to apply the profile to on the <link
+              linkend="addlabeltemplate">template edit form</link></para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for your profile.</para>
+
+              <screenshot>
+                <screeninfo>Units of Measurement</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Offset describes what happens when the entire image is off
+              center either vertically or horzontally and creep describes a
+              condition where the distance between the labels changes across
+              the page or up and down the page</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>For these values, negative numbers move the error up
+                  and to the left and positive numbers move the error down and
+                  to the right</para>
+                </listitem>
+
+                <listitem>
+                  <para>Example: the text is .25” from the left edge of the
+                  first label, .28” from the left edge of the second label and
+                  .31” from the left edge of the third label. This means the
+                  horizontal creep should be set to .03" to make up for this
+                  difference.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your profiles will appear on the 'Manage
+          Profiles' page.</para>
+
+          <screenshot>
+            <screeninfo>List of Profiles</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/profiles.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once you have saved your new profile, you can return to the
+          list of templates and choose to edit the template that this profile
+          is for.</para>
+        </section>
       </section>
 
       <section>
         <title>Layouts</title>
 
         <para></para>
+
+        <section>
+          <title>Add a Layout</title>
+
+          <para>To add a new layout, you want to click on the 'Layouts' button
+          at the top of your page and choose 'New Layout'</para>
+
+          <screenshot>
+            <screeninfo>New Layout Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newlayout.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Add New Layout</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/layoutform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>After saving, your layouts will appear on the 'Manage Layouts'
+          page.</para>
+        </section>
       </section>
 
       <section>
         <title>Batches</title>
 
         <para></para>
+
+        <section>
+          <title>Add a Batch</title>
+
+          <para></para>
+        </section>
       </section>
     </section>
 
@@ -9096,7 +9368,7 @@
         compensates for anomalies unique and peculiar to a given printer (to
         which the profile is assigned). This means if you set a template up
         and then print a sample set of data and find that the items are not
-        all aligned the same on each label, you need to set up a profile for
+        all aligned the same on each card, you need to set up a profile for
         each printer to make up for the differences in printing styles, such
         as the shifting of text to the left, right, top or bottom.</para>
 
@@ -10271,18 +10543,34 @@
 
           <itemizedlist>
             <listitem>
-              <para>The attribute type code and a ':' should precede each
+              <para>The attribute type code and a colon should precede each
               value.</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>For example: "INSTID:12345,LANG:fr"</para>
+                  <para>For example: <emphasis
+                  role="bold">INSTID:12345,LANG:fr</emphasis> or <emphasis
+                  role="bold">STARTDATE:January 1 2010,TRACK:Day</emphasis>
+                  </para>
                 </listitem>
 
                 <listitem>
-                  <para>If entering more than one patron attribute make sure
-                  you wrap the field in quotation marks (as shown
-                  above)</para>
+                  <para>If an input record has more than one attribute, the
+                  fields should either be entered as an unquoted string
+                  (previous examples), or with each field wrapped in separate
+                  double quotes and delimited by a comma:</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para><emphasis role="bold">"STARTDATE:January 1,
+                      2010","TRACK:Day"</emphasis></para>
+                    </listitem>
+
+                    <listitem>
+                      <para>This syntax would be required if the data might
+                      have a comma in it, like a date string. </para>
+                    </listitem>
+                  </itemizedlist>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -20664,13 +20952,13 @@ print theme('pages_catalog');</programlisting>
         <para><emphasis role="bold">Answer</emphasis>: When you plan in
         advance for the way your budget is going to be spent, you initially
         plan for how it's going to be spent over time, that's the most natural
-        thing to do. </para>
+        thing to do.</para>
 
         <para>So you plan for $1000 in Jan. $1000 in Feb., $3000 in March,
         etc. You can basically do the same thing with a list of values in lieu
-        of the months. </para>
+        of the months.</para>
 
-        <para>Say you have a list like this one: </para>
+        <para>Say you have a list like this one:</para>
 
         <itemizedlist>
           <listitem>
@@ -20701,7 +20989,7 @@ print theme('pages_catalog');</programlisting>
         <para>The list is meant to represent when the books acquired where
         published. Then you plan for it, saying: we went to spend at list 40%
         of our budgets on books published less than a year ago, 10% on books
-        more than 10 years old, etc. </para>
+        more than 10 years old, etc.</para>
 
         <para>Upon acquiring new material, you'll be able to select, for a
         given item, a value from this list in a drop down. Then, after the
