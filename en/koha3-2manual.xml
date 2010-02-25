@@ -8413,12 +8413,130 @@
         <title id="budgetplanning">Budgets</title>
 
         <para></para>
+
+        <section>
+          <title id="addbudget">Add a budget</title>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
         <title id="rootbudgets" lang="">Funds</title>
 
-        <para>A budget is broken down into funds.</para>
+        <para></para>
+
+        <section>
+          <title>Add a Fund</title>
+
+          <para>A fund is added to a budget.</para>
+
+          <para><important>
+              <para>A <link linkend="addbudget">budget</link> must be defined
+              before a fund can be created.</para>
+            </important>To add a new fund click the New button and then choose
+          which Budget you would like to add the fund to.</para>
+
+          <screenshot>
+            <screeninfo>Choose which budget to add a fund to</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/newfund.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>In the form that appears you wan to enter the basics about
+          your fund.</para>
+
+          <screenshot>
+            <screeninfo>New Fund Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/newfundform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The three first fields are required, the rest are
+          optional</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Fund Code is a unique identifer for your fund</para>
+            </listitem>
+
+            <listitem>
+              <para>The Fund Name should be something that librarians will
+              understand</para>
+            </listitem>
+
+            <listitem>
+              <para>Amount should be entered with only numbers and decimals,
+              no other characters</para>
+            </listitem>
+
+            <listitem>
+              <para><emphasis>Encumbrance ??</emphasis></para>
+            </listitem>
+
+            <listitem>
+              <para><emphasis>Expenditure ??</emphasis></para>
+            </listitem>
+
+            <listitem>
+              <para>You can choose to assign this fund to a librarian. Doing
+              so will make it so that only that librarian can make changes to
+              the Fund</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose which library will be using this fund</para>
+            </listitem>
+
+            <listitem>
+              <para>You can restrict who can order from this fund by choosing
+              either the owner or the library from the 'Restrict access to'
+              menu</para>
+
+              <screenshot>
+                <screeninfo>Restrict Fund Access</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/acquisitions/restrictfund.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Notes are simply for any descriptive notes you might want
+              to add so that librarians know when to use this fund</para>
+            </listitem>
+
+            <listitem>
+              <para>Planning categories are used for statistical purposes. To
+              learn more about planning categories, check out the <link
+              linkend="planningcatfaq">Planning Category FAQ</link>.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>When complete, click 'Submit' and you will be brought to a
+          list of all of the funds for the budget.</para>
+
+          <screenshot>
+            <screeninfo>List of funds</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/fundlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
     </section>
 
@@ -15536,6 +15654,24 @@
         see how much you spent on a specific contract with a vendor. In some
         places, contracts are set up with a minimum and maximum yearly
         amount.</para>
+
+        <section>
+          <title>Add a Contract</title>
+
+          <para>At the top of a vendor search results page with only result or
+          at the top of a vendor information page you will see a 'New
+          Contract' button.</para>
+
+          <screenshot>
+            <screeninfo>New Contract Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/newcontract.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
     </section>
 
@@ -20511,6 +20647,66 @@ print theme('pages_catalog');</programlisting>
         set to 'allow'. When it is set to 'don't allow' these fields will be
         locked and require you to search for an exisiting authority
         record.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Acquisitions</title>
+
+      <para></para>
+
+      <section>
+        <title id="planningcatfaq">Planning Categories</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What is a planning
+        category?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: When you plan in
+        advance for the way your budget is going to be spent, you initially
+        plan for how it's going to be spent over time, that's the most natural
+        thing to do. </para>
+
+        <para>So you plan for $1000 in Jan. $1000 in Feb., $3000 in March,
+        etc. You can basically do the same thing with a list of values in lieu
+        of the months. </para>
+
+        <para>Say you have a list like this one: </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>&lt; 1 month</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 6 months</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 1 year</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 3 years</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 10 years</para>
+          </listitem>
+
+          <listitem>
+            <para>&gt; 10 years</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The list is meant to represent when the books acquired where
+        published. Then you plan for it, saying: we went to spend at list 40%
+        of our budgets on books published less than a year ago, 10% on books
+        more than 10 years old, etc. </para>
+
+        <para>Upon acquiring new material, you'll be able to select, for a
+        given item, a value from this list in a drop down. Then, after the
+        material has been acquired, at the end of the year, you'll be able to
+        compare the goals set, with what's been achieved.</para>
       </section>
     </section>
 
