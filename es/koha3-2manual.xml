@@ -3,7 +3,7 @@
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book>
   <bookinfo>
-    <title>Koha 3.2 Manual (en)</title>
+    <title>Koha 3.2 Manual (es)</title>
 
     <author>
       <firstname>Nicole C.</firstname>
@@ -34,19 +34,6 @@
 
       <holder>Nicole C. Engard/ByWater Solutions/BibLibre</holder>
     </copyright>
-
-    <legalnotice>
-      <para>This manual is licensed under the <ulink
-      url="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public
-      License, version 2</ulink></para>
-
-      <para>Learn more about this license in the <link linkend="gpl">GPL2
-      Appendix</link></para>
-    </legalnotice>
-
-    <pubdate>2009/2010</pubdate>
-  </bookinfo>
-
   <chapter>
     <title>Administration</title>
 
@@ -76,24 +63,75 @@
         <para></para>
 
         <section>
-          <title>RenewSerialAddsSuggestion</title>
+          <title>Policy</title>
 
-          <para>Default: Don't add</para>
+          <section>
+            <title>AcqCreateItem</title>
 
-          <para>Asks: ___ a suggestion for a biblio when its attached serial
-          is renewed.</para>
+            <para>Default: placing an order</para>
 
-          <para>Values:</para>
+            <para>Asks: Create an item when ___.</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>Add</para>
-            </listitem>
+            <para>Values:</para>
 
-            <listitem>
-              <para>Don't add</para>
-            </listitem>
-          </itemizedlist>
+            <itemizedlist>
+              <listitem>
+                <para>cataloging a record</para>
+              </listitem>
+
+              <listitem>
+                <para>placing an order</para>
+              </listitem>
+
+              <listitem>
+                <para>receiving an order</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>CurrencyFormat</title>
+
+            <para>Default: 360,000.00 (US)</para>
+
+            <para>Asks: Display currencies using the following format
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>360,000.00 (US)</para>
+              </listitem>
+
+              <listitem>
+                <para>360 000,00 (FR)</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>gist</title>
+
+            <para>Default: 0</para>
+
+            <para>Asks: The default tax rate is ___<tip>
+                <para>Enter this value as a number (.06) versus a precent
+                (6%).</para>
+              </tip></para>
+          </section>
+        </section>
+
+        <section>
+          <title>Printing</title>
+
+          <section>
+            <title>OrderPdfFormat</title>
+
+            <para>Default: pdfformat::layout2pages</para>
+
+            <para>Asks: Use ___ when printing basket groups.</para>
+          </section>
         </section>
       </section>
 
@@ -101,6 +139,37 @@
         <title id="adminprefs">Administration</title>
 
         <para>These preferences are general settings for your system.</para>
+
+        <section>
+          <title>CAS Authentication</title>
+
+          <para>The Central Authentication Service (CAS) is a single sign-on
+          protocol for the web. If you don't know what this is, leave these
+          preferences set to their defaults.</para>
+
+          <section>
+            <title>casAuthentication</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ CAS for login authentication.</para>
+          </section>
+
+          <section>
+            <title>casLogout</title>
+
+            <para>Default: Don't logout</para>
+
+            <para>Asks: ___ of CAS when logging out of Koha.</para>
+          </section>
+
+          <section>
+            <title>casServerUrl</title>
+
+            <para>Asks: The CAS Authentication Server can be found at
+            ___</para>
+          </section>
+        </section>
 
         <section>
           <title>Interface options</title>
@@ -948,6 +1017,39 @@
             label: (Enter in columns from the biblio, biblioitems or items
             tables, surrounded by &lt; and &gt;.)</para>
           </section>
+
+          <section>
+            <title
+            id="SpineLabelShowPrintOnBibDetails">SpineLabelShowPrintOnBibDetails</title>
+
+            <para>Default: Don't display</para>
+
+            <para>Asks: ___ buttons on the bib details page to print item
+            spine labels.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Display</para>
+
+                <screenshot>
+                  <screeninfo>'Print Label' link appears on bibliographic
+                  record in the staff client</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/SpineLabelShowPrintOnBibDetails.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't display</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
       </section>
 
@@ -1205,6 +1307,16 @@
 
             <para>Asks: Prevent patrons from checking out books if they have
             more than ___ USD in fines.</para>
+          </section>
+
+          <section>
+            <title>OverdueNoticeBcc</title>
+
+            <para>Asks: Send all notices as a BCC to this email address
+            ___</para>
+
+            <para>This preference makes it so that a librarian can get a copy
+            of every notice sent out to patrons.</para>
           </section>
 
           <section>
@@ -1544,6 +1656,36 @@
           </section>
 
           <section>
+            <title>ReservesControlBranch</title>
+
+            <para>Default: item's home library</para>
+
+            <para>Asks: Check the ___ to see if the patron can place a hold on
+            the item.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>item's home library.</para>
+              </listitem>
+
+              <listitem>
+                <para>patron's home library.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>ReservesMaxPickUpDelay</title>
+
+            <para>Default: 7</para>
+
+            <para>Asks: Mark a hold as problematic if it has been waiting for
+            more than ___ days.</para>
+          </section>
+
+          <section>
             <title>ReservesNeedReturns</title>
 
             <para>Default: Don't automatically</para>
@@ -1647,8 +1789,8 @@
           </section>
 
           <section>
-            <title>FilterBeforeOverdueReport &amp;
-            DisplayClearScreenButton</title>
+            <title id="FilterBeforeOverdueReport">FilterBeforeOverdueReport
+            &amp; DisplayClearScreenButton</title>
 
             <para>FilterBeforeOverdueReport Default: Don't require</para>
 
@@ -1742,12 +1884,28 @@
           </section>
 
           <section>
-            <title>ReservesMaxPickUpDelay</title>
+            <title>soundon</title>
 
-            <para>Default: 7</para>
+            <para>Default: Don't enable</para>
 
-            <para>Asks: Mark a hold as problematic if it has been waiting for
-            more than ___ days.</para>
+            <para>Asks: ___ circulation sounds during checkin and checkout in
+            the staff interface.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't enable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><important>
+                <para>This feature is not supported by all browsers.</para>
+              </important></para>
           </section>
 
           <section>
@@ -1802,6 +1960,44 @@
           <para></para>
 
           <section>
+            <title>AutoSelfCheckAllowed, AutoSelfCheckID &amp;
+            AutoSelfCheckPass</title>
+
+            <important>
+              <para>Most libraries will want to leave this set to 'Don't
+              allow.' This preference turns off the requirement to log into
+              the self checkout machine with a staff username and password by
+              storing the username and password for automatic login.</para>
+            </important>
+
+            <para>AutoSelfCheckAllowed Default: Don't allow</para>
+
+            <para>Asks: ___ the web-based self checkout system to
+            automatically login with this staff login ___ and this password
+            ___ .</para>
+
+            <para>AutoSelfCheckAllowed Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>AutoSelfCheckID needs to be set to the username of a staff
+            member with 'circulate' <link
+            linkend="patronpermissions">permissions</link>.</para>
+
+            <para>AutoSelfCheckPass needs to be set to the password of a staff
+            member with 'circulate' <link
+            linkend="patronpermissions">permissions</link>.</para>
+          </section>
+
+          <section>
             <title>ShowPatronImageInWebBasedSelfCheck</title>
 
             <para>Default: Don't show</para>
@@ -1820,6 +2016,29 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title id="WebBasedSelfCheck">WebBasedSelfCheck</title>
+
+            <para>Default: Don't enable</para>
+
+            <para>Asks: ___ the web-based self checkout system.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't enable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Enabling this preference will allow access to the <link
+            linkend="selfcheckout">self checkout</link> module in Koha.</para>
           </section>
         </section>
       </section>
@@ -1845,7 +2064,7 @@
       </section>
 
       <section>
-        <title>Enhanced Content</title>
+        <title id="enhancedcontent">Enhanced Content</title>
 
         <important>
           <para>Always read the terms of service associated with external data
@@ -2064,6 +2283,16 @@
             <title id="AWSAccessKeyID">AWSAccessKeyID</title>
 
             <para>Asks: Access Amazon content using the access key ___</para>
+
+            <para>Sign up at: <ulink
+            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+          </section>
+
+          <section>
+            <title id="AWSPrivateKey">AWSPrivateKey</title>
+
+            <para>Asks: Access Amazon content (other than book jackets) using
+            the private key ___</para>
 
             <para>Sign up at: <ulink
             url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
@@ -2819,7 +3048,7 @@
           <title id="taggingprefs">Tagging</title>
 
           <section>
-            <title>TagsEnabled</title>
+            <title id="TagsEnabled">TagsEnabled</title>
 
             <para>Default: Allow</para>
 
@@ -2870,7 +3099,7 @@
           </section>
 
           <section>
-            <title>TagsShowOnList</title>
+            <title id="TagsShowOnList">TagsShowOnList</title>
 
             <para>Default: 6</para>
 
@@ -2882,7 +3111,7 @@
           </section>
 
           <section>
-            <title>TagsInputOnList</title>
+            <title id="TagsInputOnList" lang="">TagsInputOnList</title>
 
             <para>Default: Allow</para>
 
@@ -2903,7 +3132,7 @@
           </section>
 
           <section>
-            <title>TagsShowOnDetail</title>
+            <title id="TagsShowOnDetail">TagsShowOnDetail</title>
 
             <para>Default: 10</para>
 
@@ -2915,7 +3144,7 @@
           </section>
 
           <section>
-            <title>TagsInputOnDetail</title>
+            <title id="TagsInputOnDetail">TagsInputOnDetail</title>
 
             <para>Default: Allow</para>
 
@@ -3226,7 +3455,7 @@
           </section>
 
           <section>
-            <title>DisplayOPACiconsXSLT</title>
+            <title id="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</title>
 
             <para>Default: Don't show</para>
 
@@ -3291,6 +3520,47 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+          </section>
+
+          <section>
+            <title>OpacAddMastheadLibraryPulldown</title>
+
+            <para>Default: Don't add</para>
+
+            <para>Asks: ___ a library select pulldown menu on the OPAC
+            masthead.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add</para>
+
+                <screenshot>
+                  <screeninfo>Library select box on Koha OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacAddMastheadLibraryPulldown-add.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't Add</para>
+
+                <screenshot>
+                  <screeninfo>No library select box on Koha OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacAddMastheadLibraryPulldown-dontadd.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -3532,7 +3802,10 @@
 
             <para>Default: Don't show</para>
 
-            <para>Asks: ___</para>
+            <para>Asks: ___ a warning that the OPAC is under maintenance,
+            instead of the OPAC itself. Note: this shows the same warning as
+            when the database needs to be upgraded, but
+            unconditionally.</para>
 
             <para>Values:</para>
 
@@ -3760,7 +4033,7 @@
           </section>
 
           <section>
-            <title>XSLTDetailsDisplay</title>
+            <title id="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -3780,6 +4053,33 @@
                   <listitem>
                     <para>XSLT stylesheets enable more detail to be displayed
                     on the detail pages in the OPAC</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title id="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</title>
+
+            <para>Default: normally</para>
+
+            <para>Asks: Show biblio records on OPAC result page ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results pages in the OPAC</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -3838,6 +4138,32 @@
                 <para>Don't allow</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title id="OpacBrowser">OpacBrowser</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to browse subject authorities on
+            OPAC</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><important>
+                <para>run the <link linkend="authbrowsercron">Authorities
+                Browser Cron Job</link> to create the browser list</para>
+              </important></para>
           </section>
 
           <section>
@@ -4266,6 +4592,53 @@
             </itemizedlist>
           </section>
         </section>
+
+        <section>
+          <title>Privacy</title>
+
+          <para></para>
+
+          <section>
+            <title>EnableOpacSearchHistory</title>
+
+            <para>Default: Keep</para>
+
+            <para>Asks: ___ patron search history in the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't keep</para>
+              </listitem>
+
+              <listitem>
+                <para>Keep</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OpacPrivacy</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to opt-in/opt-out of saving their
+            reading/circulation history. Save all OPAC preferences</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
       </section>
 
       <section>
@@ -4431,7 +4804,8 @@
           </itemizedlist>
 
           <important>
-            <para>This overrides autoMemberNum if on.</para>
+            <para>This overrides <link
+            linkend="autoMemberNum">autoMemberNum</link> if on.</para>
           </important>
         </section>
 
@@ -4994,20 +5368,19 @@
           </section>
 
           <section>
-            <title>OPACdefaultSortField</title>
+            <title id="opacdefaultsort">OPACdefaultSortField &amp;
+            OPACdefaultSortOrder</title>
 
-            <para>Default: ascending</para>
+            <para>OPACdefaultSortField Default: relevance</para>
 
-            <para>Asks: By default, sort search results in the OPAC by
+            <para>OPACdefaultSortOrder Default: ascending</para>
+
+            <para>Asks: By default, sort search results in the OPAC by ___,
             ___</para>
 
-            <para>Values:</para>
+            <para>OPACdefaultSortField Values:</para>
 
             <itemizedlist>
-              <listitem>
-                <para>ascending</para>
-              </listitem>
-
               <listitem>
                 <para>author</para>
               </listitem>
@@ -5025,18 +5398,6 @@
               </listitem>
 
               <listitem>
-                <para>descending</para>
-              </listitem>
-
-              <listitem>
-                <para>from A to Z</para>
-              </listitem>
-
-              <listitem>
-                <para>from Z to A</para>
-              </listitem>
-
-              <listitem>
                 <para>relevance</para>
               </listitem>
 
@@ -5048,6 +5409,28 @@
                 <para>total number of checkouts</para>
               </listitem>
             </itemizedlist>
+
+            <para>OPACdefaultSortOrder Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ascending</para>
+              </listitem>
+
+              <listitem>
+                <para>descending</para>
+              </listitem>
+
+              <listitem>
+                <para>from A to Z</para>
+              </listitem>
+
+              <listitem>
+                <para>from Z to A</para>
+              </listitem>
+            </itemizedlist>
+
+            <para></para>
           </section>
 
           <section>
@@ -5081,11 +5464,11 @@
           </section>
 
           <section>
-            <title>XSLTResultsDisplay</title>
+            <title>XSLTDetailsDisplay</title>
 
-            <para>Default: using XSLT stylesheets</para>
+            <para>Default: normally</para>
 
-            <para>Asks: Show search results ___</para>
+            <para>Asks: Show item details pages in the staff client ___</para>
 
             <para>Values:</para>
 
@@ -5100,11 +5483,43 @@
                 <itemizedlist>
                   <listitem>
                     <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the OPAC</para>
+                    on the bibliographic records in the Staff Client</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show biblio records on result page in the staff client
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference isn't currently functional.</para>
+            </important>
           </section>
         </section>
 
@@ -5152,6 +5567,74 @@
               </listitem>
             </itemizedlist>
           </section>
+        </section>
+      </section>
+
+      <section>
+        <title>Serials</title>
+
+        <para></para>
+
+        <section>
+          <title>RenewSerialAddsSuggestion</title>
+
+          <para>Default: Don't add</para>
+
+          <para>Asks: ___ a suggestion for a biblio when its attached serial
+          is renewed.</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Add</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title>RoutingSerials</title>
+
+          <para>Default: Don't add</para>
+
+          <para>Asks: ___ received serials to the routing list.</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Add</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title id="RoutingListAddReserves">RoutingListAddReserves</title>
+
+          <para>Default: Place</para>
+
+          <para>Asks: ___ received serials on hold if they are on a routing
+          list.</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Place</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't place</para>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
 
@@ -5349,6 +5832,47 @@
           <title>Options</title>
 
           <section>
+            <title id="HidePatronName" lang="">HidePatronName</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ the names of patrons that have items checked out
+            or on hold on detail pages or the "Place Hold" screen.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title id="intranetbookbag">intranetbookbag</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ the cart option in the staff client.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title>viewISBD</title>
 
             <para>Default: Allow</para>
@@ -5410,27 +5934,6 @@
               </listitem>
             </itemizedlist>
           </section>
-
-          <section>
-            <title id="HidePatronName">HidePatronName</title>
-
-            <para>Default: Show</para>
-
-            <para>Asks: ___ the names of patrons that have items checked out
-            or on hold on detail pages or the "Place Hold" screen.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-              </listitem>
-            </itemizedlist>
-          </section>
         </section>
       </section>
 
@@ -5474,6 +5977,21 @@
 
             <para>Asks: Identify records at this site with the prefix ___
             :</para>
+          </section>
+
+          <section>
+            <title>OAI-PMH:ConfFile</title>
+
+            <para>If this preference is left empty, Koha's OAI Server operates
+            in normal mode, otherwise it operates in extended mode. In
+            extended mode, it's possible to parameter other formats than
+            marcxml or Dublin Core. OAI-PMH:ConfFile specify a YAML
+            configuration file which list available metadata formats and XSL
+            file used to create them from marcxml records.</para>
+
+            <para>For more information, see the <link
+            linkend="oaiconfsample">sample conf file</link> in the
+            appendix.</para>
           </section>
 
           <section>
@@ -7746,9 +8264,59 @@
       </section>
 
       <section>
-        <title>Keywords to MARC Mapping</title>
+        <title id="keywordmapping">Keywords to MARC Mapping</title>
 
-        <para></para>
+        <para>This tool will allow you to map MARC fields to a set of
+        predefined keywords.</para>
+
+        <para>At this time the only keyword in use is 'subtitle.'</para>
+
+        <para>Using this tool you can define what MARC field prints to the
+        detail screen of the bibliographic record using keywords. The
+        following example will use the subtitle field.</para>
+
+        <para>Using the Framework pull down menu, choose the <link
+        linkend="marcbibframeworks">Framework</link> you would like to apply
+        this rule to. For example, the subtitle for books can be found in the
+        245$b field.</para>
+
+        <screenshot>
+          <screeninfo>Assigning Book Subtitle</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/subtitlebookmapping.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>However the subtitle for DVDs appears in 245$p</para>
+
+        <screenshot>
+          <screeninfo>Assigning DVD Subtitle</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/subtitledvdmapping.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Using this tool you can tell Koha to print the right field as
+        the subtitle when viewing the bibliographic record in the OPAC.</para>
+
+        <screenshot>
+          <screeninfo>Subtitle display in the OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/subtitlebookinopac.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Future developments will include additional keyword assigned
+        fields.</para>
       </section>
 
       <section>
@@ -7844,12 +8412,130 @@
         <title id="budgetplanning">Budgets</title>
 
         <para></para>
+
+        <section>
+          <title id="addbudget">Add a budget</title>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
         <title id="rootbudgets" lang="">Funds</title>
 
-        <para>A budget is broken down into funds.</para>
+        <para></para>
+
+        <section>
+          <title>Add a Fund</title>
+
+          <para>A fund is added to a budget.</para>
+
+          <para><important>
+              <para>A <link linkend="addbudget">budget</link> must be defined
+              before a fund can be created.</para>
+            </important>To add a new fund click the New button and then choose
+          which Budget you would like to add the fund to.</para>
+
+          <screenshot>
+            <screeninfo>Choose which budget to add a fund to</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/newfund.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>In the form that appears you wan to enter the basics about
+          your fund.</para>
+
+          <screenshot>
+            <screeninfo>New Fund Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/newfundform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The three first fields are required, the rest are
+          optional</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Fund Code is a unique identifer for your fund</para>
+            </listitem>
+
+            <listitem>
+              <para>The Fund Name should be something that librarians will
+              understand</para>
+            </listitem>
+
+            <listitem>
+              <para>Amount should be entered with only numbers and decimals,
+              no other characters</para>
+            </listitem>
+
+            <listitem>
+              <para><emphasis>Encumbrance ??</emphasis></para>
+            </listitem>
+
+            <listitem>
+              <para><emphasis>Expenditure ??</emphasis></para>
+            </listitem>
+
+            <listitem>
+              <para>You can choose to assign this fund to a librarian. Doing
+              so will make it so that only that librarian can make changes to
+              the Fund</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose which library will be using this fund</para>
+            </listitem>
+
+            <listitem>
+              <para>You can restrict who can order from this fund by choosing
+              either the owner or the library from the 'Restrict access to'
+              menu</para>
+
+              <screenshot>
+                <screeninfo>Restrict Fund Access</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/acquisitions/restrictfund.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Notes are simply for any descriptive notes you might want
+              to add so that librarians know when to use this fund</para>
+            </listitem>
+
+            <listitem>
+              <para>Planning categories are used for statistical purposes. To
+              learn more about planning categories, check out the <link
+              linkend="planningcatfaq">Planning Category FAQ</link>.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>When complete, click 'Submit' and you will be brought to a
+          list of all of the funds for the budget.</para>
+
+          <screenshot>
+            <screeninfo>List of funds</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/fundlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
     </section>
 
@@ -8297,7 +8983,7 @@
         not it can usually be found on the vendor's website.</para>
 
         <section>
-          <title>Add a Template</title>
+          <title id="addcardtemplate" lang="">Add a Template</title>
 
           <para>To add a new template, you want to click on the 'Templates'
           button at the top of your page and choose 'New Template'</para>
@@ -8312,7 +8998,92 @@
             </mediaobject>
           </screenshot>
 
-          <para></para>
+          <para>Using the form that appears you can define the template for
+          your sheet of labels or cards.</para>
+
+          <screenshot>
+            <screeninfo>Add Patron Card Template</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/edittemplate.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Template ID will be automatically generated after saving
+              your template, this is simply a system genereated unique
+              id</para>
+            </listitem>
+
+            <listitem>
+              <para>Template Code should be something you can use to identify
+              your template on a list of templates</para>
+            </listitem>
+
+            <listitem>
+              <para>You can use the Template Description to add additional
+              information about the template</para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for the template. This should
+              probably match the unit of measurement used on the template
+              description provided by the product vendor.</para>
+
+              <screenshot>
+                <screeninfo>Measurement Units</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>The measurements can be found on the vendor product
+              packaging or website.</para>
+            </listitem>
+
+            <listitem>
+              <para>A profile is a set of “adjustments” applied to a given
+              template just prior to printing which compensates for anomalies
+              unique and peculiar to a given printer (to which the profile is
+              assigned).</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Before picking a profile try printing some sample
+                  cards so that you can easily define a profile that is right
+                  for your printer/template combination.</para>
+                </listitem>
+
+                <listitem>
+                  <para>After finding any anomolies in the printed document,
+                  <link linkend="addcardprofile">create a profile</link> and
+                  assign it to the template.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your templates will appear on the 'Manage
+          Templates' page.</para>
+
+          <screenshot>
+            <screeninfo>Manage Templates</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/managetemplates.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
@@ -8328,15 +9099,113 @@
         each printer to make up for the differences in printing styles, such
         as the shifting of text to the left, right, top or bottom.</para>
 
-        <section>
-          <title>Add a Profile</title>
+        <para>If your cards are printing just the way you want, you will not
+        need a profile.</para>
 
-          <para></para>
+        <section>
+          <title id="addcardprofile" lang="">Add a Profile</title>
+
+          <para>To add a new profile, you want to click on the 'Profiles'
+          button at the top of your page and choose 'New Profile'</para>
+
+          <screenshot>
+            <screeninfo>New Profile Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/newprofile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Add Printer Profile</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/addprofile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The Printer Name and Paper Bin do not have to match your
+              printer exactly, they are for your reference so you can remember
+              what printer you have set the profile for. So if you want to use
+              the Printer model number in printer name or you can call it 'the
+              printer on my desk'</para>
+            </listitem>
+
+            <listitem>
+              <para>Template will be filled in once you have chosen which
+              template to apply the profile to on the <link
+              linkend="addcardtemplate">template edit form</link></para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for your profile.</para>
+
+              <screenshot>
+                <screeninfo>Units of Measurement</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Offset describes what happens when the entire image is off
+              center either vertically or horzontally and creep describes a
+              condition where the distance between the labels changes across
+              the page or up and down the page</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>For these values, negative numbers move the error up
+                  and to the left and positive numbers move the error down and
+                  to the right</para>
+                </listitem>
+
+                <listitem>
+                  <para>Example: the text is .25” from the left edge of the
+                  first label, .28” from the left edge of the second label and
+                  .31” from the left edge of the third label. This means the
+                  horizontal creep should be set to .03" to make up for this
+                  difference.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your profiles will appear on the 'Manage
+          Profiles' page.</para>
+
+          <screenshot>
+            <screeninfo>Manage Profiles</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/manageprofiles.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once you have saved your new profile, you can return to the
+          list of templates and choose to edit the template that this profile
+          is for.</para>
         </section>
       </section>
 
       <section>
-        <title>Layouts</title>
+        <title id="cardlayouts">Layouts</title>
 
         <para>A layout defines the text and images that will be printed on to
         the card and where it will appear.</para>
@@ -8344,23 +9213,170 @@
         <section>
           <title>Add a Layout</title>
 
-          <para></para>
+          <para>To add a new layout, you want to click on the 'Layouts' button
+          at the top of your page and choose 'New Layout'</para>
+
+          <screenshot>
+            <screeninfo>New Layout Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/newlayout.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Add New Layout</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/addlayout.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The name you assign to the layout is for your benefit,
+              name it something that will be easy to identify at a later
+              date</para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for your layout.</para>
+
+              <screenshot>
+                <screeninfo>Units of Measurement</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Next note if this layout is for the front or the back of
+              the patron card</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You will need a layout for both the front and back of
+                  your card if you have 2-sided library cards</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>You have the option of adding up to 3 lines of text to
+              your card. Your text can be static text of your choosing and/or
+              fields from the patron record. If you want to print fields from
+              the patron record you want to put the field names in brackets
+              like so - &lt;firstname&gt;</para>
+            </listitem>
+
+            <listitem>
+              <para>For each line of text, you can choose your font, font size
+              and the location of the text on the card using the lower X and Y
+              coordinates</para>
+            </listitem>
+
+            <listitem>
+              <para>In order to show the barcode and the patron card number
+              you will need to check the 'Print Card Number as Barcode'
+              option. This will turn the patron card number into a barcode. If
+              you want the number to print in human readable format you will
+              need to check the 'Print Card Number as Text Under Barcode'
+              option.</para>
+            </listitem>
+
+            <listitem>
+              <para>Finally you can choose up to two images to print on the
+              card.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>One can be the <link
+                  linkend="uploadpatronimages">patron image</link> which you
+                  can resize to meet your needs.</para>
+                </listitem>
+
+                <listitem>
+                  <para>The other image can be something like a library logo
+                  or symbol that you uploaded using the '<link
+                  linkend="managecardimages" os="">Manage Images</link>'
+                  module of the Patron Card Creator Tool.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your layouts will appear on the 'Manage Layouts'
+          page.</para>
+
+          <screenshot>
+            <screeninfo>Manage Layouts</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/managelayouts.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
       <section>
         <title>Batches</title>
 
-        <para>A batch is a collection of patrons for whom we want to generate
+        <para>A batch is a collection of patrons for whom you want to generate
         cards.</para>
+
+        <section>
+          <title>Add a Batch</title>
+
+          <para>To add a new batch, you want to click on the 'Batches' button
+          at the top of your page and choose 'New Batch'</para>
+
+          <screenshot>
+            <screeninfo>New Batch Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/newbatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para></para>
+        </section>
       </section>
 
       <section>
-        <title>Manage Images</title>
+        <title id="managecardimages">Manage Images</title>
 
-        <para>You are limited in how many images you can upload (not counting
-        patron images) by the <link linkend="ImageLimit">ImageLimit</link>
-        system preference.</para>
+        <para>Images uploaded using this tool will appear on the menu when
+        creating <link lang="" linkend="cardlayouts">patron card
+        layouts</link>. You are limited in how many images you can upload (not
+        counting patron images) by the <link
+        linkend="ImageLimit">ImageLimit</link> system preference.</para>
+
+        <important>
+          <para>Images must be under 500k in size.</para>
+        </important>
+
+        <tip>
+          <para>Pictures uploaded with this tool should be at least 300dpi
+          which is the minimum quality for a printable image.</para>
+        </tip>
+
+        <para></para>
       </section>
     </section>
 
@@ -8817,12 +9833,6 @@
           </mediaobject>
         </screenshot>
       </section>
-    </section>
-
-    <section>
-      <title>Rotating Collections</title>
-
-      <para></para>
     </section>
 
     <section>
@@ -9495,7 +10505,7 @@
       </itemizedlist>
 
       <important>
-        <para>There is a limit of 200K on the size of the picture uploaded and
+        <para>There is a limit of 520K on the size of the picture uploaded and
         it is recommended that the image be 200x300 pixels, but smaller images
         will work as well.</para>
       </important>
@@ -9658,15 +10668,59 @@
                 <important>
                   <para>On Overdue Notices make sure to use
                   &lt;&lt;items.content&gt;&gt; to print out the data related
-                  to all items that are overdue, using
-                  &lt;&lt;biblio.title&gt;&gt; and
-                  &lt;&lt;biblio.author&gt;&gt;. The latter will not
-                  work.</para>
+                  to all items that are overdue. The other option is to use
+                  the &lt;item&gt;&lt;/item&gt; tags to span the line so that
+                  it will print out multiple lines</para>
                 </important>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
+
+        <section>
+          <title>Notice Markup</title>
+
+          <para>When creating your notice there are two tags in addition to
+          the various database fields that you can use in your notices.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>&lt;item&gt;&lt;/item&gt; which should enclose all fields
+              from the biblio, biblioitems, and items tables.</para>
+            </listitem>
+
+            <listitem>
+              <para>&lt;fine&gt;&lt;/fine&gt; which should be enclosed by the
+              item tag and should enclose a currency identifier per ISO 4217.
+              If this tag is present with a proper identifier, the fine for
+              that item will be displayed in the proper currency
+              format.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Note: ISO 4217 changes from time to time therefore all
+                  currencies may not be supported. If you find one that is not
+                  supported, please file a bug with the
+                  Locale::Currency::Format author Tan D Nguyen &lt;tnguyen at
+                  cpan doe org&gt;.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>An example of using these two tags in a notice template might
+          be like:</para>
+
+          <programlisting>   The following item(s) is/are currently overdue:
+
+   &lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by &lt;&lt;biblio.author&gt;&gt;, &lt;&lt;items.itemcallnumber&gt;&gt;, Barcode: &lt;&lt;items.barcode&gt;&gt; Fine: &lt;fine&gt;GBP&lt;/fine&gt;&lt;/item&gt;</programlisting>
+
+          <para>Which, assuming two items were overdue, would result in a
+          notice like:<programlisting>   The following item(s) is/are currently overdue:
+
+   "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: £3.50
+   "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: £3.50</programlisting></para>
+        </section>
       </section>
 
       <section>
@@ -10180,6 +11234,19 @@
               <para>The card number field is automatically calculated if you
               have the <link linkend="autoMemberNum">autoMemberNum</link>
               system preference set that way</para>
+
+              <itemizedlist>
+                <listitem>
+                  <note>
+                    <para>For a newly installed system this preference will
+                    start at 1 and increment by 1 each time after. To have it
+                    start with the starting number of your barcodes, enter the
+                    first barcode by hand in the patron record and save the
+                    patron. After that the field will increment that number by
+                    1.</para>
+                  </note>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -10548,7 +11615,7 @@
 
                 <screenshot>
                   <screeninfo>Patron Permissions set in a more granular manner
-                  (not all shown)</screeninfo>
+                  ( all expanded options are not shown)</screeninfo>
 
                   <mediaobject>
                     <imageobject>
@@ -10651,6 +11718,13 @@
               <listitem>
                 <para>Ability to place holds on books for patrons via the
                 staff interface</para>
+              </listitem>
+
+              <listitem>
+                <para>With <link
+                linkend="GranularPermissions">GranularPermissions</link> is
+                set to 'the individual modules' this section will be expanded
+                (<link linkend="reservepermissions">Learn more</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -10825,6 +11899,41 @@
               <itemizedlist>
                 <listitem>
                   <para>Override blocked renewals</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section>
+          <title id="reservepermissions">Granular Holds Permissions</title>
+
+          <para>If the staff member has 'reserveforothers' permissions they
+          have the ability to perform all of these actions. If you would like
+          to control holds permissions on a more granular level set the <link
+          linkend="GranularPermissions">GranularPermissions</link> system
+          preference to 'the individual modules' and choose from these
+          options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>modify_holds_priority</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Allow staff members to alter the holds priority
+                  (moving patrons up and down the queue)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>place_holds</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>All staff members to place holds for patrons via the
+                  staff interface</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -11755,7 +12864,7 @@
 
         <para>Once you have checked out all of the items for the patron you
         can print them a receipt by clicking the Print button at the top of
-        the screen and choosing 'Print Slip'</para>
+        the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
 
         <screenshot>
           <screeninfo>Print receipt to slip printer</screeninfo>
@@ -11766,6 +12875,11 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>If you choose 'Print Slip' it will print all of the items the
+        patron has checked out, including those they checked out at an earlier
+        date. Choosing 'Quick Slip' will print only the items that were
+        checked out today.</para>
 
         <para>If there are notes on the patron record these will appear to the
         right of the checkout box</para>
@@ -12304,6 +13418,29 @@
           <listitem>
             <para>If the patron wants the hold to start on a date other than
             today, enter that in the 'Hold starts on date' field</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This option will only appear if the <link
+                linkend="AllowHoldDateInFuture">AllowHoldDateInFuture</link>
+                system preference is set to 'Allow'</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If the patron has specified that they don't want the item
+            after a certain date, or if you have limits on hold lengths, you
+            can enter an expiration date for the hold in the 'Hold expires on
+            date'</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>To have expired holds canceled automatically you will
+                need to have the <link linkend="expiredholdscron">Expired
+                Holds</link> cron job set to run on a regular basis.</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
 
           <listitem>
@@ -12314,7 +13451,8 @@
         </itemizedlist>
 
         <para>If you're placing a hold on multiple items you will be presented
-        with the next available option for both titles.</para>
+        with the next available option for all titles. If no items are
+        available for hold it will say so on the confirmation screen.</para>
 
         <screenshot>
           <screeninfo>Place multiple items on hold</screeninfo>
@@ -12364,8 +13502,8 @@
         </note>
 
         <para>To rearrange or delete holds, simply make a selection from the
-        'Priority' pull down. To delete or cancel a hold, choose 'del' from
-        the menu.</para>
+        'Priority' pull down or click the arrows to the right of the priority
+        pull down.</para>
 
         <screenshot>
           <screeninfo>Hold Priority Menu</screeninfo>
@@ -12377,7 +13515,32 @@
           </mediaobject>
         </screenshot>
 
-        <para>Once you have made your chances, click the 'Update hold(s)'
+        <para>To delete or cancel a hold, choose 'del' from the menu or click
+        the red 'X' to the right of the hold line.</para>
+
+        <para>Clicking the down arrow to the right of the hold will stick the
+        the hold at the bottom of the list even if more requsts are
+        made.</para>
+
+        <para>For example, your library has home-bound patrons that are
+        allowed to keep books out for months at a time. It would not be fair
+        to other patrons if a home-bound patron were able to check out a brand
+        new book and keep it for months. For this reason, the home-bound
+        patron's hold request would stay at the bottom of the queue until
+        everyone else who wanted to read that book has already done so.</para>
+
+        <screenshot>
+          <screeninfo>Lowest Priority &amp; Delete Options for
+          Holds</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/lowestpriority.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once you have made your changes, click the 'Update hold(s)'
         button and your changes will be saved.</para>
       </section>
 
@@ -12780,10 +13943,19 @@
       <section>
         <title>Overdues</title>
 
-        <para><important>
-            <para>For libraries with a large patron base, this report may take
-            a significant amount of time to run.</para>
-          </important>This report will list all items that are overdue at your
+        <important>
+          <para>For libraries with a large patron base, this report may take a
+          significant amount of time to run.</para>
+        </important>
+
+        <tip>
+          <para>Large libraries can choose to filter the report before it runs
+          by setting the <link
+          linkend="FilterBeforeOverdueReport">FilterBeforeOverdueReport</link>
+          system preference to 'Require'.</para>
+        </tip>
+
+        <para>This report will list all items that are overdue at your
         library.</para>
 
         <screenshot>
@@ -12925,9 +14097,11 @@
     </section>
 
     <section>
-      <title>Self Checkout</title>
+      <title id="selfcheckout">Self Checkout</title>
 
-      <para>Koha comes with a very basic self checkout module. To use this
+      <para>Koha comes with a very basic self checkout module. To enable this
+      module you need to set the <link linkend="WebBasedSelfCheck"
+      os="">WebBasedSelfCheck</link> preference to 'Enable.' To use this
       module you have to log in as a <link linkend="addstaffpatron">staff
       member</link> with <link linkend="patronpermissions">circulation
       permissions</link>.</para>
@@ -13463,6 +14637,34 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>Your items will also appear below the bibliographic details on
+        the bib record display.</para>
+
+        <screenshot>
+          <screeninfo>List of Items on the Bib Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/items-withoutlabelprint.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you have SpineLabelShowPrintOnBibDetails set to 'Display'
+        then there will also be a link to print a quick spine label next to
+        each item.</para>
+
+        <screenshot>
+          <screeninfo>List of Items on the Bib Record with a Print Label
+          link</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/items-withlabelprint.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
@@ -13556,7 +14758,114 @@
     <section>
       <title>Authorities</title>
 
-      <para></para>
+      <para>Authority records are a way of controlling fields in your MARC
+      records. Using authority records will provide you with control over
+      subject headings, personal names and places.</para>
+
+      <section>
+        <title>Adding Authorities</title>
+
+        <para>To add a new authority record, choose the authority type from
+        the 'New Authority' button.</para>
+
+        <screenshot>
+          <screeninfo>New Authority Record Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/newauthtypes.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The form that appears will allow you to enter all of the
+        necessary details regarding your authority record.</para>
+
+        <screenshot>
+          <screeninfo>New Authority Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/newauthrec.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>To expand collapsed values simply click on the title and the
+        subfields will appear.</para>
+      </section>
+
+      <section>
+        <title>Searching Authorities</title>
+
+        <para>From the authorites page you can search for exisiting terms and
+        the bibliographic records they are attached to.</para>
+
+        <screenshot>
+          <screeninfo>Authority Search</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/authoritysearch.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From the results you will see the authority record, how many
+        bibliographic records it is attached to, and a delete link (if there
+        are not bibliographic records attached).</para>
+
+        <screenshot>
+          <screeninfo>Authority Search Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/authorityresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Clicking on the authority record summary will open the full
+        record and the option to edit the record.</para>
+
+        <screenshot>
+          <screeninfo>Authority Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/authrecord.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Editing Authorities</title>
+
+        <para>Authorities can be edited by clicking on the authority summary
+        from the search results and then clicking the 'Edit' button above the
+        record.</para>
+
+        <screenshot>
+          <screeninfo>Edit Authority Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/editauthority.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once you've made the necessary edits, simply click 'Save' and
+        all of the records that use this authority record will be
+        updated.</para>
+
+        <para>To delete an authority record you first must make sure it's not
+        linked to any bibliographic records. If it is not used by any
+        bibliographic records a 'Delete' link will appear to the right of the
+        record on the search results and as a button that appears after
+        clicking on the summary of the authority record.</para>
+      </section>
     </section>
   </chapter>
 
@@ -13991,9 +15300,95 @@
     <section>
       <title id="routinglist">Create a Routing List</title>
 
-      <para>If RoutingListAddReserves is set to on then patrons listed in the
-      routing list will automatically be added to the holds list for the
-      issue.</para>
+      <para>A routing list is a list of people who receive the serial before
+      it goes to the shelf. When setting up your serial subscription you want
+      to be sure to pick 'Routing List' from the 'Patron Notification' pull
+      down.</para>
+
+      <screenshot>
+        <screeninfo>Patron Notification Option</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/serialnotification.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>When on the subscription page you will see a link to the left that
+      reads 'Create Routing List.'</para>
+
+      <screenshot>
+        <screeninfo>Subscription Routing List Link</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/createroutinglink.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Clicking that link will bring you to the menu to add a new routing
+      list.</para>
+
+      <screenshot>
+        <screeninfo>Routing List Creation</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/createroutinglist.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>From here you want to click 'Add recipients' in order to add
+      people to the routing list. In the menu that appears you can filter
+      patrons by part of their name, their library and/or patron
+      category.</para>
+
+      <screenshot>
+        <screeninfo>Add Members to Routing List</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/addtorouting.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Clicking 'Add' to the right of each name will add them to the
+      routing list. When you have chosen all of the people for the list, click
+      the 'Close' link to be redirected to the routing list.</para>
+
+      <screenshot>
+        <screeninfo>Routing List</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/editroutinglist.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If the list looks the way you expect it to, then click 'Save'.
+      Next you will be brought to a preview of the routing list. To print the
+      list click 'Save and preview routing slip.' This will open a printable
+      version of the list.</para>
+
+      <screenshot>
+        <screeninfo>Preview Routing List</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/previewroutinglist.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If <link
+      linkend="RoutingListAddReserves">RoutingListAddReserves</link> is set to
+      on then patrons listed in the routing list will automatically be added
+      to the holds list for the issue.</para>
     </section>
 
     <section>
@@ -14258,6 +15653,24 @@
         see how much you spent on a specific contract with a vendor. In some
         places, contracts are set up with a minimum and maximum yearly
         amount.</para>
+
+        <section>
+          <title>Add a Contract</title>
+
+          <para>At the top of a vendor search results page with only result or
+          at the top of a vendor information page you will see a 'New
+          Contract' button.</para>
+
+          <screenshot>
+            <screeninfo>New Contract Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/newcontract.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
     </section>
 
@@ -14268,7 +15681,7 @@
       linkend="suggestionspref">suggestion</link> system preference, patrons
       may be able to make purchase suggestions via the OPAC. When a suggestion
       is waiting for library review, it will appear on the Acquisitions home
-      page below the Vendor search box.</para>
+      page in the list of links on the left of the page.</para>
 
       <screenshot>
         <screeninfo>Pending suggestions on Acquisitions</screeninfo>
@@ -14716,7 +16129,7 @@
   </chapter>
 
   <chapter>
-    <title>Lists &amp; Cart</title>
+    <title id="stafflists" lang="">Lists &amp; Cart</title>
 
     <para>Lists are a way to save a collection of content on a specific topic
     or for a specific purpose. The Cart is a session specific storage
@@ -14927,6 +16340,11 @@
         <title id="mergebibrecs" lang="">Merging Bibliographic Records Via
         Lists</title>
 
+        <important>
+          <para>Merging will only work with two items that use the same
+          bibliographic framework.</para>
+        </important>
+
         <para>The easiest way to merge together duplicate bibliographic
         records is to add them to a list and use the Merge Tool from
         there.</para>
@@ -15019,10 +16437,10 @@
         <para>Once you have completed your selections click the 'merge'
         button. The primary record will now show the data you chose for it,
         and the second record will be deleted.<important>
-            <para>It is important to rebuild your zebra index after merging
-            records. If a search is performed for a record which has been
-            deleted Koha will present the patrons with an error in the
-            OPAC.</para>
+            <para>It is important to rebuild your zebra index immediately
+            after merging records. If a search is performed for a record which
+            has been deleted Koha will present the patrons with an error in
+            the OPAC.</para>
           </important></para>
       </section>
     </section>
@@ -15030,9 +16448,11 @@
     <section>
       <title>Cart</title>
 
-      <para>To add things to the cart, search the catalog and select the items
-      you would like added to your cart and choose 'Cart' from the 'Add to'
-      menu</para>
+      <para>If you would like to enable the cart in the staff client, you need
+      to set the <link linkend="intranetbookbag">intranetbookbag</link> system
+      preference to 'Show.' To add things to the cart, search the catalog and
+      select the items you would like added to your cart and choose 'Cart'
+      from the 'Add to' menu</para>
 
       <screenshot>
         <screeninfo>Add to Cart</screeninfo>
@@ -15834,11 +17254,357 @@
   <chapter>
     <title>OPAC</title>
 
-    <para></para>
+    <para>This chapter assumes that you have the following preferences set as
+    follows:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para><link
+        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> = using
+        XSLT stylesheets</para>
+      </listitem>
+
+      <listitem>
+        <para><link
+        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> = using
+        XSLT stylesheets</para>
+      </listitem>
+
+      <listitem>
+        <para><link linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link>
+        = show</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>If your system preferences are set differently your displays may
+    differ.</para>
+
+    <section>
+      <title>Search Results</title>
+
+      <para>To search the OPAC you can either choose to enter your search
+      words in the box at the top of the OPAC or click on the 'Advanced
+      Search' link to perform a more detailed search.</para>
+
+      <screenshot>
+        <screeninfo>OPAC Search Box</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/searchbox.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>For more on searching check the '<link
+      linkend="searching">Searching</link>' chapter in this manual.</para>
+
+      <section>
+        <title>Results Overview</title>
+
+        <para>After performing a search the number of results found for your
+        search will appear above the results</para>
+
+        <screenshot>
+          <screeninfo>Total Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/totalresults-rss.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>By default your search results will be sorted based on your
+        <link linkend="opacdefaultsort">OPACdefaultSortField and
+        OPACdefaultSortOrder</link> system preference values. To change this
+        you can choose another sorting method from the pull down on the
+        right.</para>
+
+        <screenshot>
+          <screeninfo>Results Sorting Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/sortingresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Under each title on your results list a series of values from
+        your leader will appear. It is important to note that this has nothing
+        to do with the item types or collection codes you have applied to your
+        records, this data is all pulled from your leader.</para>
+
+        <screenshot>
+          <screeninfo>Leader Visualization</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/leader.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Below each title you will see the availability for the items
+        attached to the record. Note that even if you filtered on one library
+        location all locations that hold the item will appear on the search
+        results.</para>
+
+        <screenshot>
+          <screeninfo>Holdings Information</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/holdings-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you have turned on <link linkend="enhancedcontent">Enhanced
+        Content</link> preferences you may have book jackets on your search
+        results.</para>
+
+        <screenshot>
+          <screeninfo>Book Jacket on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/coverresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Filters</title>
+
+        <para>To filter your results click on the links below the 'Refine Your
+        Search' menu on the left of your screen</para>
+
+        <screenshot>
+          <screeninfo>Refine Your Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/refineresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Search RSS Feeds</title>
+
+        <para>You will be able to subscribe to your search results as an RSS
+        feed by clicking the RSS icon in your address bar or next to the
+        number of results. To learn more about what RSS feeds are check out
+        <ulink url="http://www.youtube.com/watch?v=0klgLsSxGsU">this tutorial
+        video</ulink>.</para>
+
+        <screenshot>
+          <screeninfo>RSS Feed Icon</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/totalresults-rss.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Subscribing to search results as RSS feeds will allow you to see
+        when a new item is added to the catalog in your area of
+        interest.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Bibliographic Record</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Lists &amp; Cart</title>
+
+      <para>A cart is a temporary holding place for records you're interested
+      in finding during this session. That means that once you log out of the
+      OPAC or close the browser you lose the items in your cart. A list is a
+      more permanent location for saving items. To learn more about lists,
+      check the <link linkend="stafflists">Lists in the Staff Client</link>
+      chapter of this manual.</para>
+
+      <section>
+        <title>Lists</title>
+
+        <para></para>
+
+        <section>
+          <title>Adding items to Lists</title>
+
+          <para>Items can be added to lists from the search results and/or
+          from the bibliographic record. On the search results options to add
+          items to the list appear below each result and across the top of the
+          results page</para>
+
+          <screenshot>
+            <screeninfo>Add to Lists from Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtolistcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To add a single item to a list, click the 'Save to Lists'
+          option and then choose the list you'd like to add the item to. To
+          add multiple items to a list check the boxes on the left of the
+          items you want to add and then choose the list you want to add the
+          items to from the 'Add too' pull down at the top of the
+          screen.</para>
+        </section>
+
+        <section>
+          <title>Managing Lists</title>
+
+          <para></para>
+        </section>
+      </section>
+
+      <section>
+        <title>Cart</title>
+
+        <para></para>
+
+        <section>
+          <title>Adding items to the Cart</title>
+
+          <para>Items can be added to the cart from the search results and/or
+          from the bibliographic record. On the search results options to add
+          items to the cart appear below each result and across the top of the
+          results page</para>
+
+          <screenshot>
+            <screeninfo>Add to Cart on Search Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtolistcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Clicking the 'Add to Cart' button will add the one item to
+          your cart. To add multiple items at once, check the box to the left
+          of each result and the choose 'Cart' from the 'Add to' pull down at
+          the top of the screen. Once items are added to the cart you will be
+          presented with a confirmation</para>
+
+          <screenshot>
+            <screeninfo>Items added to Cart</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addedtocart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+
+        <section>
+          <title>Managing the Cart</title>
+
+          <para></para>
+        </section>
+      </section>
+    </section>
+
+    <section>
+      <title>Enhanced Content</title>
+
+      <para></para>
+
+      <section>
+        <title>Tagging</title>
+
+        <para>Depending on your settings for the <link
+        linkend="TagsEnabled">TagsEnabled</link>, <link
+        linkend="TagsInputOnList">TagsInputOnList</link> and <link
+        linkend="TagsInputOnDetail">TagsInputOnDetail</link> preferences you
+        may be able to add tags to bibliographic records from the search
+        results and/or bibliographic records. If you are allowing patrons to
+        add tags from the search results screen you will see an input box
+        below each result and a 'Tag' option at the top of the screen.</para>
+
+        <screenshot>
+          <screeninfo>Tagging Options on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tags-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>To add a tag to one item, type the tabs (seperated by commas) in
+        the 'New tag' box and click 'Add'. You will be presented with a
+        confirmation of your tags being added.</para>
+
+        <screenshot>
+          <screeninfo>Tags Added on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tagsadded-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From the results you can also tag items in bulk by clicking the
+        checkboxes on the left and then clicking the 'Tag' button at the top.
+        After clicking the button it will change into an input box for you to
+        add tags to all of the items you have selected.</para>
+
+        <screenshot>
+          <screeninfo>Add Tags to Multiple Items</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tagaddmultiple-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Comments</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Zotero</title>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title>Custom RSS Feeds</title>
+
+        <para></para>
+      </section>
+    </section>
+
+    <section>
+      <title>My Account</title>
+
+      <para></para>
+    </section>
   </chapter>
 
   <chapter>
-    <title>Searching</title>
+    <title id="searching">Searching</title>
 
     <para></para>
 
@@ -18798,6 +20564,33 @@ print theme('pages_catalog');</programlisting>
           </listitem>
         </itemizedlist>
       </section>
+
+      <section>
+        <title>Customizing Koha Images</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Can I customize the
+        images in the OPAC?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Absolutely. Koha comes
+        with a series of original images that you can alter to meet your
+        needs. The originals can be found in the misc/interface_customization/
+        directory.</para>
+      </section>
+
+      <section>
+        <title>Subtitle Display on Bib Records</title>
+
+        <para><emphasis role="bold">Question</emphasis>: How do I get the
+        subtitle to display on the detail pages for my bib records?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Subtitle display now
+        depends on there being a <link linkend="keywordmapping">keyword
+        mapping</link> for the MARC field in question. Adding a mapping for
+        "subtitle" -&gt; "245b" for an item's framework results in display of
+        the subtitle in OPAC and staff client search and detail pages
+        (although not in all instances where subtitles might be displayed,
+        e.g. the Cart).</para>
+      </section>
     </section>
 
     <section>
@@ -18853,6 +20646,66 @@ print theme('pages_catalog');</programlisting>
         set to 'allow'. When it is set to 'don't allow' these fields will be
         locked and require you to search for an exisiting authority
         record.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Acquisitions</title>
+
+      <para></para>
+
+      <section>
+        <title id="planningcatfaq">Planning Categories</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What is a planning
+        category?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: When you plan in
+        advance for the way your budget is going to be spent, you initially
+        plan for how it's going to be spent over time, that's the most natural
+        thing to do. </para>
+
+        <para>So you plan for $1000 in Jan. $1000 in Feb., $3000 in March,
+        etc. You can basically do the same thing with a list of values in lieu
+        of the months. </para>
+
+        <para>Say you have a list like this one: </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>&lt; 1 month</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 6 months</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 1 year</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 3 years</para>
+          </listitem>
+
+          <listitem>
+            <para>&lt; 10 years</para>
+          </listitem>
+
+          <listitem>
+            <para>&gt; 10 years</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The list is meant to represent when the books acquired where
+        published. Then you plan for it, saying: we went to spend at list 40%
+        of our budgets on books published less than a year ago, 10% on books
+        more than 10 years old, etc. </para>
+
+        <para>Upon acquiring new material, you'll be able to select, for a
+        given item, a value from this list in a drop down. Then, after the
+        material has been acquired, at the end of the year, you'll be able to
+        compare the goals set, with what's been achieved.</para>
       </section>
     </section>
 
@@ -18992,6 +20845,54 @@ print theme('pages_catalog');</programlisting>
         internal isbn (in biblio table) have to be normalized. You could
         therefore use the script misc/batchupdateISBNs.pl (it removes all the
         - in your local ISBNs)</para>
+      </section>
+
+      <section>
+        <title>Amazon</title>
+
+        <para></para>
+
+        <section>
+          <title>Amazon Private Key</title>
+
+          <para><emphasis role="bold">Question</emphasis>: Why do I need the
+          <link linkend="AWSPrivateKey">AWSPrivateKey</link> as well as the
+          <link linkend="AWSAccessKeyID">AWSAccessKeyID</link> to use Amazon
+          Content?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>: After 2009-08-15,
+          Amazon Web Services will expect that all requests to the Product
+          Advertising API, which is what Koha uses for retrieving reviews and
+          other enhanced content from Amazon, include signatures. This patch
+          and subsequenct patches implement this functionality.</para>
+
+          <para>What this means in practice (assuming the user has elected to
+          use any enhanced content from Amazon) is that</para>
+
+          <orderedlist>
+            <listitem>
+              <para>The user must get a Amazon Secret Access Key. This can be
+              done by logging in to the user's AWS account at (e.g.)
+              http://aws.amazon.com/, going to the 'Access Identifiers' page,
+              and from there retrieving and/or creating a new Secret Access
+              Key.</para>
+            </listitem>
+
+            <listitem>
+              <para>The contents of the Secret Access Key should then be
+              entered into the new AWSPrivateKey system preference.</para>
+            </listitem>
+          </orderedlist>
+
+          <para>Once that is done, grabbing reviews and table of contents from
+          Amazon should work as normal. If the user doesn't do this before
+          2009-08-15, reviews and TOCs will no longer be supplied from Amazon,
+          although there should be no crashes - the content will simply not
+          show up.</para>
+
+          <para>Note that the requirement to sign requests does *NOT* appear
+          to apply to simply displaying book covers from Amazon.</para>
+        </section>
       </section>
     </section>
 
@@ -19290,6 +21191,135 @@ print theme('pages_catalog');</programlisting>
           Report</link></para>
 
           <para>Frequency suggestion: every 1-4 hours</para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis
+            role="bold">GetBibsWithPendingHoldRequests</emphasis></para>
+
+            <para>my $biblionumber_aref =
+            GetBibsWithPendingHoldRequests();</para>
+
+            <para>Return an arrayref of the biblionumbers of all bibs that
+            have one or more unfilled hold requests.</para>
+
+            <para><emphasis
+            role="bold">GetPendingHoldRequestsForBib</emphasis></para>
+
+            <para>my $requests =
+            GetPendingHoldRequestsForBib($biblionumber);</para>
+
+            <para>Returns an arrayref of hashrefs to pending, unfilled hold
+            requests on</para>
+
+            <para>the bib identified by $biblionumber. The following keys are
+            present in each hashref:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>biblionumber</para>
+              </listitem>
+
+              <listitem>
+                <para>borrowernumber</para>
+              </listitem>
+
+              <listitem>
+                <para>itemnumber</para>
+              </listitem>
+
+              <listitem>
+                <para>priority</para>
+              </listitem>
+
+              <listitem>
+                <para>branchcode</para>
+              </listitem>
+
+              <listitem>
+                <para>reservedate</para>
+              </listitem>
+
+              <listitem>
+                <para>reservenotes</para>
+              </listitem>
+
+              <listitem>
+                <para>borrowerbranch</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>The arrayref is sorted in order of increasing
+            priority.</para>
+
+            <para><emphasis
+            role="bold">GetItemsAvailableToFillHoldRequestsForBib</emphasis></para>
+
+            <para>my $available_items =</para>
+
+            <para>GetItemsAvailableToFillHoldRequestsForBib($biblionumber);</para>
+
+            <para>Returns an arrayref of items available to fill hold requests
+            for the bib identified by $biblionumber. An item is available to
+            fill a hold</para>
+
+            <para>request if and only if:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>it is not on loan</para>
+              </listitem>
+
+              <listitem>
+                <para>it is not withdrawn</para>
+              </listitem>
+
+              <listitem>
+                <para>it is not marked notforloan</para>
+              </listitem>
+
+              <listitem>
+                <para>it is not currently in transit</para>
+              </listitem>
+
+              <listitem>
+                <para>it is not lost</para>
+              </listitem>
+
+              <listitem>
+                <para>it is not sitting on the hold shelf</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><emphasis
+            role="bold">MapItemsToHoldRequests</emphasis></para>
+
+            <para>MapItemsToHoldRequests($hold_requests,
+            $available_items);</para>
+
+            <para><emphasis
+            role="bold">CreatePickListFromItemMap</emphasis></para>
+
+            <para><emphasis role="bold">AddToHoldTargetMap</emphasis></para>
+
+            <para><emphasis
+            role="bold">_get_branches_to_pull_from</emphasis></para>
+
+            <para>Query system preferences to get ordered list of branches to
+            use to fill hold requests.</para>
+          </section>
+        </section>
+
+        <section>
+          <title id="expiredholdscron">Expired Holds</title>
+
+          <para>Script path:
+          misc/cronjobs/holds/cancel_expired_holds.pl</para>
+
+          <para>Does: Cancels holds that have past their expiration.</para>
+
+          <para>Frequency suggestion: daily</para>
         </section>
 
         <section>
@@ -19312,6 +21342,15 @@ print theme('pages_catalog');</programlisting>
           different lost statuses, and optionally charge for them.</para>
 
           <para>Required by: Frequency suggestion: nightly</para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>longoverdue.pl cron script to set lost statuses on overdue
+            materials. Execute without options for help.</para>
+          </section>
         </section>
       </section>
 
@@ -19348,6 +21387,33 @@ print theme('pages_catalog');</programlisting>
             <para>This script does not actually send the notices. It queues
             them in the message queue for later</para>
           </note>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>advance_notices.pl - cron script to put item due reminders
+            into message queue</para>
+
+            <para><emphasis role="bold">SYNOPSIS</emphasis></para>
+
+            <para>./advance_notices.pl -c</para>
+
+            <para>or, in crontab: 0 1 * * * advance_notices.pl -c</para>
+
+            <para><emphasis role="bold">DESCRIPTION</emphasis></para>
+
+            <para>This script prepares pre-due and item due reminders to be
+            sent to patrons. It queues them in the message queue, which is
+            processed by the process_message_queue.pl cronjob. The type and
+            timing of the messages can be configured by the patrons in their
+            "My Alerts" tab in the OPAC.</para>
+
+            <para><emphasis role="bold">METHODS</emphasis></para>
+
+            <para>parse_letter</para>
+          </section>
         </section>
 
         <section>
@@ -19364,6 +21430,249 @@ print theme('pages_catalog');</programlisting>
             <para>This script does not actually send the notices. It queues
             them in the message queue for later</para>
           </note>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>overdue_notices.pl - prepare messages to be sent to patrons
+            for overdue items</para>
+
+            <para><emphasis role="bold">SYNOPSIS</emphasis></para>
+
+            <para>overdue_notices.pl [ -n ] [ -library &lt;branchcode&gt; ] [
+            -library &lt;branchcode&gt;...] [ -max &lt;number of days&gt; ] [
+            -csv [ &lt;filename&gt; ] ] [-itemscontent &lt;field list&gt;
+            ]</para>
+
+            <para>Options:</para>
+
+            <para>-help brief help message</para>
+
+            <para>-man full documentation</para>
+
+            <para>-n No email will be sent</para>
+
+            <para>-max &lt;days&gt; maximum days overdue to deal with</para>
+
+            <para>-library &lt;branchname&gt; only deal with overdues from
+            this library (repeatable : several libraries can be given)</para>
+
+            <para>-csv &lt;filename&gt; populate CSV file</para>
+
+            <para>-itemscontent &lt;list of fields&gt; item information in
+            templates</para>
+
+            <para>-borcat &lt;categorycode&gt; category code that must be
+            included</para>
+
+            <para>-borcatout &lt;categorycode&gt; category code that must be
+            excluded</para>
+
+            <para><emphasis role="bold">OPTIONS</emphasis></para>
+
+            <para>-help Print a brief help message and exits.</para>
+
+            <para>-man Prints the manual page and exits.</para>
+
+            <para>-v Verbose. Without this flag set, only fatal errors are
+            reported.</para>
+
+            <para>-n Do not send any email. Overdue notices that would have
+            been sent to the patrons or to the admin are printed to standard
+            out. CSV data (if the -csv flag is set) is written to standard out
+            or to any csv filename given.</para>
+
+            <para>-max Items older than max days are assumed to be handled
+            somewhere else, probably the longoverdues.pl script. They are
+            therefore ignored by this program. No notices are sent for them,
+            and they are not added to any CSV files. Defaults to 90 to match
+            longoverdues.pl.</para>
+
+            <para>-library</para>
+
+            <para>select overdues for one specific library. Use the value in
+            the branches.branchcode table. This option can be repeated in
+            order to select overdues for a group of libraries.</para>
+
+            <para>-csv Produces CSV data. if -n (no mail) flag is set, then
+            this CSV data is sent to standard out or to a filename if
+            provided. Otherwise, only overdues that could not be emailed are
+            sent in CSV format to the admin.</para>
+
+            <para>-itemscontent</para>
+
+            <para>comma separated list of fields that get substituted into
+            templates in places of the &lt;&lt;items.content&gt;&gt;
+            placeholder. This defaults to
+            issuedate,title,barcode,author</para>
+
+            <para>Other possible values come from fields in the biblios,
+            items, and issues tables.</para>
+
+            <para>-borcat Repetable field, that permit to select only few of
+            patrons categories.</para>
+
+            <para>-borcatout</para>
+
+            <para>Repetable field, permis to exclude some patrons
+            categories.</para>
+
+            <para>-t | --triggered</para>
+
+            <para>This option causes a notice to be generated if and only if
+            an item is overdue by the number of days defined in a notice
+            trigger.</para>
+
+            <para>By default, a notice is sent each time the script runs,
+            which is suitable for less frequent run cron script, but requires
+            syncing notice triggers with the cron schedule to ensure proper
+            behavior. Add the --triggered option for daily cron, at the risk
+            of no notice being generated if the cron fails to run on
+            time.</para>
+
+            <para>-list-all</para>
+
+            <para>Default items.content lists only those items that fall in
+            the range of the currently processing notice. Choose list-all to
+            include all overdue items in the list (limited by –max
+            setting).</para>
+
+            <para><emphasis role="bold">DESCRIPTION</emphasis></para>
+
+            <para>This script is designed to alert patrons and administrators
+            of overdue items.</para>
+
+            <para>Configuration</para>
+
+            <para>This script pays attention to the overdue notice
+            configuration performed in the "Overdue notice/status triggers"
+            section of the "Tools" area of the staff interface to Koha. There,
+            you can choose which letter templates are sent out after a
+            configurable number of days to patrons of each library. More
+            information about the use of this section of Koha is available in
+            the Koha manual.</para>
+
+            <para>The templates used to craft the emails are defined in the
+            "Tools: Notices" section of the staff interface to Koha.</para>
+
+            <para>Outgoing emails</para>
+
+            <para>Typically, messages are prepared for each patron with
+            overdue items. Messages for whom there is no email address on file
+            are collected and sent as attachments in a single email to each
+            library administrator, or if that is not set, then to the email
+            address in the "KohaAdminEmailAddress" system preference.</para>
+
+            <para>These emails are staged in the outgoing message queue, as
+            are messages produced by other features of Koha. This message
+            queue must be processed regularly by the
+            misc/cronjobs/process_message_queue.pl program.</para>
+
+            <para>In the event that the "-n" flag is passed to this program,
+            no emails are sent. Instead, messages are sent on standard output
+            from this program. They may be redirected to a file if
+            desired.</para>
+
+            <para>Templates</para>
+
+            <para>Templates can contain variables enclosed in double angle
+            brackets like &lt;&lt;this&gt;&gt;. Those variables will be
+            replaced with values specific to the overdue items or relevant
+            patron. Available variables are:</para>
+
+            <para>&lt;&lt;bib&gt;&gt;</para>
+
+            <para>the name of the library</para>
+
+            <para>&lt;&lt;items.content&gt;&gt;</para>
+
+            <para>one line for each item, each line containing a tab separated
+            list of title, author, barcode, issuedate</para>
+
+            <para>&lt;&lt;borrowers.*&gt;&gt;</para>
+
+            <para>any field from the borrowers table</para>
+
+            <para>&lt;&lt;branches.*&gt;&gt;</para>
+
+            <para>any field from the branches table</para>
+
+            <para>CSV output</para>
+
+            <para>The "-csv" command line option lets you specify a file to
+            which overdues data should be output in CSV format.</para>
+
+            <para>With the "-n" flag set, data about all overdues is written
+            to the file. Without that flag, only information about overdues
+            that were unable to be sent directly to the patrons will be
+            written. In other words, this CSV file replaces the data that is
+            typically sent to the administrator email address.</para>
+
+            <para><emphasis role="bold">USAGE EXAMPLES</emphasis></para>
+
+            <para>"overdue_notices.pl" - In this most basic usage, with no
+            command line arguments, all libraries are procesed individually,
+            and notices are prepared for all patrons with overdue items for
+            whom we have email addresses. Messages for those patrons for whom
+            we have no email address are sent in a single attachment to the
+            library administrator’s email address, or to the address in the
+            KohaAdminEmailAddress system preference.</para>
+
+            <para>"overdue_notices.pl -n -csv /tmp/overdues.csv" - sends no
+            email and populates /tmp/overdues.csv with information about all
+            overdue items.</para>
+
+            <para>"overdue_notices.pl -library MAIN max 14" - prepare notices
+            of overdues in the last 2 weeks for the MAIN library.</para>
+
+            <para><emphasis role="bold">SEE ALSO</emphasis></para>
+
+            <para>The misc/cronjobs/advance_notices.pl program allows you to
+            send messages to patrons in advance of thier items becoming due,
+            or to alert them of items that have just become due.</para>
+
+            <para><emphasis role="bold">INTERNAL METHODS</emphasis></para>
+
+            <para>These methods are internal to the operation of
+            overdue_notices.pl.</para>
+
+            <para>parse_letter</para>
+
+            <para>parses the letter template, replacing the placeholders with
+            data specific to this patron, biblio, or item</para>
+
+            <para>named parameters:</para>
+
+            <para>letter - required hashref</para>
+
+            <para>borrowernumber - required integer</para>
+
+            <para>substitute - optional hashref of other key/value pairs that
+            should be substituted in the letter content</para>
+
+            <para>returns the "letter" hashref, with the content updated to
+            reflect the substituted keys and values.</para>
+
+            <para>prepare_letter_for_printing</para>
+
+            <para>returns a string of text appropriate for printing in the
+            event that an overdue notice will not be sent to the patron’s
+            email address. Depending on the desired output format, this may be
+            a CSV string, or a human-readable representation of the
+            notice.</para>
+
+            <para>required parameters:</para>
+
+            <para>letter</para>
+
+            <para>borrowernumber</para>
+
+            <para>optional parameters:</para>
+
+            <para>outputformat</para>
+          </section>
         </section>
       </section>
 
@@ -19382,6 +21691,16 @@ print theme('pages_catalog');</programlisting>
         preferences</para>
 
         <para>Frequency suggestion: hourly</para>
+
+        <section>
+          <title>Perl Documentation</title>
+
+          <para><emphasis role="bold">NAME</emphasis></para>
+
+          <para>cart_to_shelf.pl cron script to set items with location of
+          CART to original shelving location after X hours. Execute without
+          options for help.</para>
+        </section>
       </section>
 
       <section>
@@ -19399,6 +21718,104 @@ print theme('pages_catalog');</programlisting>
           biblio record editor.</para>
 
           <para>Frequency suggestion: monthly</para>
+
+          <para>Learn more: <ulink
+          url="http://wiki.koha.org/doku.php?id=en:development:check-url_enhancements">http://wiki.koha.org/doku.php?id=en:development:check-url_enhancements</ulink></para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>C4::URL::Checker - base object for checking URL stored in
+            Koha DB</para>
+
+            <para><emphasis role="bold">SYNOPSIS</emphasis></para>
+
+            <programlisting>use C4::URL::Checker;
+
+        my $checker = C4::URL::Checker-&gt;new( );
+        $checker-&gt;{ host_default } = 'http://mylib.kohalibrary.com';
+        my $checked_urls = $checker-&gt;check_biblio( 123 );
+        foreach my $url ( @$checked_urls ) {
+            print "url:        ", $url-&gt;{ url       A }, "\n",
+                  "is_success: ", $url-&gt;{ is_success }, "\n",
+                  "status:     ", $url-&gt;{ status     }, "\n";
+        } </programlisting>
+
+            <para><emphasis role="bold">FUNCTIONS</emphasis></para>
+
+            <para>new</para>
+
+            <para>Create a URL Checker. The returned object can be used to set
+            default host variable :</para>
+
+            <programlisting>my $checker = C4::URL::Checker-&gt;new( );
+        $checker-&gt;{ host_default } = 'http://mylib.kohalibrary.com'; </programlisting>
+
+            <para>check_biblio</para>
+
+            <para>Check all URL from a biblio record. Returns a pointer to an
+            array containing all URLs with checking for each of them.</para>
+
+            <programlisting> my $checked_urls = $checker-&gt;check_biblio( 123 ); </programlisting>
+
+            <para>With 2 URLs, the returned array will look like that:</para>
+
+            <programlisting>     [
+           {
+             'url' =&gt; 'http://mylib.tamil.fr/img/62265_0055B.JPG',
+             'is_success' =&gt; 1,
+             'status' =&gt; 'ok'
+           },
+           {
+             'url' =&gt; 'http://mylib.tamil.fr//img/62265_0055C.JPG',
+             'is_success' =&gt; 0,
+             'status' =&gt; '404 - Page not found'
+           }
+         ], </programlisting>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>check-url.pl - Check URLs from 856$u field.</para>
+
+            <para><emphasis role="bold">USAGE</emphasis></para>
+
+            <para>check-url.pl [--verbose|--help]
+            [--host=http://default.tld]</para>
+
+            <para>Scan all URLs found in 856$u of bib records and display if
+            resources are available or not.</para>
+
+            <para><emphasis role="bold">PARAMETERS</emphasis></para>
+
+            <para>--host=http://default.tld</para>
+
+            <para>Server host used when URL doesn’t have one, ie doesn’t begin
+            with ’http:’. For example, if --host=http://www.mylib.com, then
+            when 856$u contains ’img/image.jpg’, the url checked is:
+            http://www.mylib.com/image.jpg’.</para>
+
+            <para>--verbose|-v</para>
+
+            <para>Outputs both successful and failed URLs.</para>
+
+            <para>--html</para>
+
+            <para>Formats output in HTML. The result can be redirected to a
+            file accessible by http. This way, it’s possible to link directly
+            to biblio record in edit mode. With this parameter --host-pro is
+            required.</para>
+
+            <para>--host-pro=http://koha-pro.tld</para>
+
+            <para>Server host used to link to biblio record editing
+            page.</para>
+
+            <para>--help|-h</para>
+
+            <para>Print this help page.</para>
+          </section>
         </section>
 
         <section>
@@ -19445,13 +21862,14 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section>
-          <title>Authorities Browser</title>
+          <title id="authbrowsercron">Authorities Browser</title>
 
           <para>Script path: misc/cronjobs/build_browser_and_cloud.pl</para>
 
           <para>Does: Generate content for authories browse in OPAC</para>
 
-          <para>Required by: OpacBrowser system preference</para>
+          <para>Required by: <link linkend="OpacBrowser">OpacBrowser</link>
+          system preference</para>
         </section>
 
         <section>
@@ -19466,6 +21884,91 @@ print theme('pages_catalog');</programlisting>
           <para>Frequency: This is the type of script you can run once a month
           or so, the content generated isn't going to change very much over
           time.</para>
+
+          <section>
+            <title>Perl Documentation</title>
+
+            <para><emphasis role="bold">NAME</emphasis></para>
+
+            <para>cloud-kw.pl - Creates HTML keywords clouds from Koha Zebra
+            Indexes</para>
+
+            <para><emphasis role="bold">USAGE</emphasis></para>
+
+            <para>cloud-kw.pl [--verbose|--help] --conf=cloud.conf</para>
+
+            <para>Creates multiple HTML files containing kewords cloud with
+            top terms sorted by their logarithmic weight. cloud.conf is a YAML
+            configuration file driving cloud generation process.</para>
+
+            <para><emphasis role="bold">PARAMETERS</emphasis></para>
+
+            <para>--conf=configuration file</para>
+
+            <para>Specify configuration file name</para>
+
+            <para>--verbose|-v</para>
+
+            <para>Enable script verbose mode.</para>
+
+            <para>--help|-h</para>
+
+            <para>Print this help page.</para>
+
+            <para><emphasis role="bold">CONFIGURATION</emphasis></para>
+
+            <para>Configuration file looks like that:</para>
+
+            <para><programlisting>  ---
+         # Koha configuration file for a specific installation
+         # If not present, defaults to KOHA_CONF
+         KohaConf: /home/koha/mylibray/etc/koha-conf.xml
+         # Zebra index to scan
+         ZebraIndex: Author
+         # Koha index used to link found kewords with an opac search URL
+         KohaIndex: au
+         # Number of top keyword to use for the cloud
+         Count: 50
+         # Include CSS style directives with the cloud
+         # This could be used as a model and then CSS directives are
+         # put in the appropriate CSS file directly.
+         Withcss: Yes
+         # HTML file where to output the cloud
+         Output: /home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html
+        ---
+         KohaConf: /home/koha/yourlibray/etc/koha-conf.xml
+         ZebraIndex: Subject
+         KohaIndex: su
+         Count: 200
+         Withcss: no
+         Output: /home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html</programlisting><emphasis
+            role="bold">IMPROVEMENTS</emphasis></para>
+
+            <para>Generated top terms have more informations than those
+            outputted from the time beeing. Some parameters could be easily
+            added to improve this script:</para>
+
+            <para>WithCount</para>
+
+            <para>In order to output terms with the number of occurences they
+            have been found in Koha Catalogue by Zebra.</para>
+
+            <para>CloudLevels</para>
+
+            <para>Number of levels in the cloud. Now 24 levels are
+            hardcoded.</para>
+
+            <para>Weighting</para>
+
+            <para>Weighting method used to distribute terms in the cloud. We
+            could have two values: Logarithmic and Linear. Now it’s
+            Logarithmic by default.</para>
+
+            <para>Order</para>
+
+            <para>Now terms are outputted in the lexical order. They could be
+            sorted by their weight.</para>
+          </section>
         </section>
       </section>
 
@@ -19508,6 +22011,41 @@ print theme('pages_catalog');</programlisting>
 
       <para><ulink
       url="http://wiki.koha.org/doku.php?id=en:development:cronjobs">http://wiki.koha.org/doku.php?id=en:development:cronjobs</ulink></para>
+    </section>
+  </appendix>
+
+  <appendix>
+    <title>Web Services</title>
+
+    <para></para>
+
+    <section>
+      <title>OAI-PMH</title>
+
+      <para></para>
+
+      <section>
+        <title id="oaiconfsample">Sample OAI Conf File</title>
+
+        <para><programlisting>       format:
+         vs:
+           metadataPrefix: vs
+           metadataNamespace: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs
+           schema: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs.xsd
+           xsl_file: /usr/local/koha/xslt/vs.xsl
+         marcxml:
+           metadataPrefix: marxml
+           metadataNamespace: http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim
+           schema: http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
+         oai_dc:
+           metadataPrefix: oai_dc
+           metadataNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/
+           schema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd
+           xsl_file:
+/usr/local/koha/koha-tmpl/intranet-tmpl/xslt/UNIMARCslim2OAIDC.xsl</programlisting></para>
+      </section>
     </section>
   </appendix>
 
@@ -19867,7 +22405,8 @@ print theme('pages_catalog');</programlisting>
       integrating them into navigation widgets or pages.</para>
     </section>
   </appendix>
-    <appendix id="gpl">
+
+  <appendix id="gpl">
     <appendixinfo>
       <title>GNU General Public License</title>
 
