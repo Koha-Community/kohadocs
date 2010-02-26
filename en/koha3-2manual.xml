@@ -16159,12 +16159,12 @@
 
         <para>When adding a basket you want to give it a name that will help
         you identify it later. The notes fields are optional and can contain
-        any type of information. </para>
+        any type of information.</para>
 
         <para>If you have <link linkend="addvendorcontract">added
         contracts</link> to the vendor you're ordering from, you will also
         have an option to choose which contract you're ordering these items
-        under. </para>
+        under.</para>
 
         <screenshot>
           <screeninfo>Basket with contract options</screeninfo>
@@ -16404,10 +16404,7 @@
         </itemizedlist>
 
         <para>Once you have entered the info about the item you need to enter
-        the Accounting information. The list of budgets is populated by the
-        <link linkend="budgetplanning">budgets</link> you have assigned in the
-        <link linkend="acqadmin">Acquisitions Administration</link>
-        area.</para>
+        the Accounting information. </para>
 
         <screenshot>
           <screeninfo>Accounting Details</screeninfo>
@@ -16418,6 +16415,39 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para></para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Quantity is populated by the number of items you've added to
+            the order above</para>
+          </listitem>
+
+          <listitem>
+            <para>The list of budgets is populated by the <link
+            linkend="budgetplanning">budgets</link> you have assigned in the
+            <link linkend="acqadmin">Acquisitions Administration</link>
+            area.</para>
+          </listitem>
+
+          <listitem>
+            <para>The vendor price will be used to calculate the rest of the
+            amount fields below</para>
+          </listitem>
+
+          <listitem>
+            <para>If the price is uncertain, check the uncertain price
+            box.</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>A basket with at least one uncertain price can't be
+                closed </para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
 
         <para>Once an item is added to the basket you will be presented with a
         basket summary</para>
@@ -16432,8 +16462,8 @@
           </mediaobject>
         </screenshot>
 
-        <para>From here you can edit or remove the items you have added.
-        </para>
+        <para>From here you can edit or remove the items you have
+        added.</para>
 
         <screenshot>
           <screeninfo>Basket Buttons</screeninfo>
@@ -16453,7 +16483,42 @@
 
         <para>Once you're sure your basket is complete you can click 'Close
         this basket' button to indicate that this basket is complete and has
-        been sent to the vendor.</para>
+        been sent to the vendor.<important>
+            <para>A basket with at least one items marked as 'uncertain price'
+            will not be able to be closed</para>
+
+            <screenshot>
+              <screeninfo>A basket with items where the price is
+              uncertain</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/basketuncertain.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </important></para>
+
+        <para>Clicking the 'Uncertain Prices' button will up a list of items
+        with uncertain prices to quick editing</para>
+
+        <screenshot>
+          <screeninfo>Uncertain Prices</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/uncertainprices.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <important>
+          <para>The Uncertain Prices page is independant of the basket, it is
+          linked to the vendor, so you will see all items on order for this
+          vendor with undertain prices.</para>
+        </important>
+
+        <para></para>
       </section>
 
       <section>
