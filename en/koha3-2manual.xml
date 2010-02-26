@@ -10550,8 +10550,8 @@
                 <listitem>
                   <para>For example: <emphasis
                   role="bold">INSTID:12345,LANG:fr</emphasis> or <emphasis
-                  role="bold">STARTDATE:January 1 2010,TRACK:Day</emphasis>
-                  </para>
+                  role="bold">STARTDATE:January 1
+                  2010,TRACK:Day</emphasis></para>
                 </listitem>
 
                 <listitem>
@@ -10568,7 +10568,7 @@
 
                     <listitem>
                       <para>This syntax would be required if the data might
-                      have a comma in it, like a date string. </para>
+                      have a comma in it, like a date string.</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -15935,7 +15935,7 @@
       </section>
 
       <section>
-        <title>Vendor Contracts</title>
+        <title id="vendorcontracts">Vendor Contracts</title>
 
         <para>You can define contracts (with a start and enddate) and attach
         it to a vendor. This is used so that at the end of the year you can
@@ -15944,7 +15944,7 @@
         amount.</para>
 
         <section>
-          <title>Add a Contract</title>
+          <title id="addvendorcontract">Add a Contract</title>
 
           <para>At the top of a vendor search results page with only result or
           at the top of a vendor information page you will see a 'New
@@ -15956,6 +15956,49 @@
             <mediaobject>
               <imageobject>
                 <imagedata fileref="images/acquisitions/newcontract.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The contract form will ask for some very basic information
+          about the contract</para>
+
+          <screenshot>
+            <screeninfo>New Contract Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/newcontractform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <important>
+            <para>You will not be able to enter a contract retrospectively,
+            the end date must be before today's date.</para>
+          </important>
+
+          <para>Once the contract is saved it will appear below the vendor
+          information.</para>
+
+          <screenshot>
+            <screeninfo>Vendor with contracts</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/contractdisplay.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>It will also be an option when creating a basket</para>
+
+          <screenshot>
+            <screeninfo>Contract Pull Down on New Basket Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/contractonbasket.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -16116,7 +16159,24 @@
 
         <para>When adding a basket you want to give it a name that will help
         you identify it later. The notes fields are optional and can contain
-        any type of information. When finished, click 'Save'</para>
+        any type of information. </para>
+
+        <para>If you have <link linkend="addvendorcontract">added
+        contracts</link> to the vendor you're ordering from, you will also
+        have an option to choose which contract you're ordering these items
+        under. </para>
+
+        <screenshot>
+          <screeninfo>Basket with contract options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/basketwithcontracts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When finished, click 'Save'</para>
 
         <screenshot>
           <screeninfo>New Empty Basket</screeninfo>
@@ -16372,9 +16432,8 @@
           </mediaobject>
         </screenshot>
 
-        <para>From here you can edit the items you have added or remove them.
-        Once you're sure your basket is complete you can click 'Close this
-        basket' button</para>
+        <para>From here you can edit or remove the items you have added.
+        </para>
 
         <screenshot>
           <screeninfo>Basket Buttons</screeninfo>
@@ -16385,6 +16444,16 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>Also on the summary page you have the option to edit the
+        information you entered about the basket by clicking the 'Edit basket
+        header information' button, deleting the basket alltogether by
+        clicking the 'Delete this basket' button, or exporting your basket as
+        a CSV file by clicking the 'Export this basket as CSV' button.</para>
+
+        <para>Once you're sure your basket is complete you can click 'Close
+        this basket' button to indicate that this basket is complete and has
+        been sent to the vendor.</para>
       </section>
 
       <section>
