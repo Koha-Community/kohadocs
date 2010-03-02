@@ -8261,6 +8261,49 @@
       <section>
         <title>Koha to MARC Mapping</title>
 
+        <para>While Koha stores the entire MARC record, it also stores common
+        fields for easy access in various tables in the database. Koha to MARC
+        Mapping is used to tell Koha where to find these values in the MARC
+        record. In many cases you will not have to change the default values
+        set by in this tool on installation, but it is important to know that
+        the tool is here and can be used at any time.</para>
+
+        <para>The Koha to MARC Mapping page offers you the option of choosing
+        from one of three tables in the database to assign values to.</para>
+
+        <screenshot>
+          <screeninfo>Koha to MARC Mapping Table Pull Down</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/kohamarcmapping.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>After choosing the table you would like to view, click 'OK.' To
+        edit any mapping click on the 'Koha Filed' or the 'Edit' link.</para>
+
+        <screenshot>
+          <screeninfo>Map MARC Field to Koha Field</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/mapmarc.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Choose which MARC field you would like to map to this Koha Field
+        and click the 'OK' button. If you would like to clear all mappings,
+        click the 'Click to "Unmap"' button.</para>
+
+        <important>
+          <para>At this time you can map only 1 MARC field to 1 Koha field.
+          This means that you won't be able to map both the 100a and the 700a
+          to the author field, you need to choose one or the other.</para>
+        </important>
+
         <para></para>
       </section>
 
@@ -8412,18 +8455,68 @@
       <section>
         <title id="budgetplanning">Budgets</title>
 
-        <para></para>
+        <para>Budgets are the top level used for tracking accounting values
+        related to acquisitions. An example would be to create a budget for
+        the current year and then breaking that into Funds for different areas
+        of the library.</para>
 
         <section>
           <title id="addbudget">Add a budget</title>
 
-          <para></para>
-        </section>
+          <para>To add a budget click the 'New Budget' button.</para>
 
-        <section>
-          <title>Budget Planning</title>
+          <screenshot>
+            <screeninfo>New Budget Form</screeninfo>
 
-          <para></para>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/newbudgetform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose the time period this budget is for, whether it's an
+              academic year, a fiscal year, a quarter, etc.</para>
+            </listitem>
+
+            <listitem>
+              <para>The Description should be something that will help you
+              identify the budget when ordering</para>
+            </listitem>
+
+            <listitem>
+              <para>In the amount box do not use any symbols, simply enter the
+              amount of the budget with numbers and decimals.</para>
+            </listitem>
+
+            <listitem>
+              <para>Marking a budget active makes it usable when placing
+              orders in the acquisitions module, even if the order is placed
+              after the budget end date. This will allow you to record orders
+              that were places in a previous budget period.</para>
+            </listitem>
+
+            <listitem>
+              <para>Locking a budget means that Funds will not be able to be
+              modified by librarians</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Once you have made your edits, click the 'Save Changes'
+          button. You will be brought to a list of your existing
+          budgets.</para>
+
+          <screenshot>
+            <screeninfo>List of Budgets</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/budgetlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
@@ -8549,6 +8642,67 @@
           under that have a fund for 'New Releases' and a fund for 'Science
           Fiction.' It is an optional way to further organize your
           finances.</para>
+        </section>
+
+        <section>
+          <title>Budget Planning</title>
+
+          <para>When viewing the list of funds click the 'Planning' button and
+          choose how you would like to plan to spend your budget.</para>
+
+          <screenshot>
+            <screeninfo>Planning pull down menu</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/planningpulldown.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>If you choose 'Plan by MONTHS' you will see the budgeted
+          amount broken down by months:</para>
+
+          <screenshot>
+            <screeninfo>Budget Planning Formula</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/planningbymonths.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>From here you can plan your budget spending by manually
+          entering values or by clicking the 'Auto-fill row' button. If you
+          choose to auto-fill the form the system will try to divide the
+          amount accordingly, you may have to make some edits to split things
+          more accurately.</para>
+
+          <screenshot>
+            <screeninfo>Auto-filled columns</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/autofill.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once your changes are made, click the 'Save' button. If you
+          would like to export your data as a CSV file you can do so by
+          entering a file name in the 'Output to a file named' field and
+          clicking the 'Output' button.</para>
+
+          <screenshot>
+            <screeninfo>Export planning as CSV</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/planningcsv.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
     </section>
@@ -16404,7 +16558,7 @@
         </itemizedlist>
 
         <para>Once you have entered the info about the item you need to enter
-        the Accounting information. </para>
+        the Accounting information.</para>
 
         <screenshot>
           <screeninfo>Accounting Details</screeninfo>
@@ -16441,7 +16595,7 @@
             <itemizedlist>
               <listitem>
                 <para>A basket with at least one uncertain price can't be
-                closed </para>
+                closed</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -16545,7 +16699,7 @@
     <section>
       <title>Receiving Orders</title>
 
-      <para>Orders can be received from the vendor information page </para>
+      <para>Orders can be received from the vendor information page</para>
 
       <screenshot>
         <screeninfo>Receive from Vendor Information</screeninfo>
@@ -21162,6 +21316,21 @@ print theme('pages_catalog');</programlisting>
         set to 'allow'. When it is set to 'don't allow' these fields will be
         locked and require you to search for an exisiting authority
         record.</para>
+      </section>
+
+      <section>
+        <title>Koha to MARC Mapping</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What's the
+        relationship between 'Koha to MARC Mapping' and 'MARC Bibliographic
+        Frameworks'?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Mapping can be defined
+        through 'MARC Bibliographic Frameworks' OR 'Koha to MARC Mapping'.
+        'Koha to MARC Mapping' is just a shortcut to speed up linkage. If you
+        change a mapping in one of these modules, the mapping will change in
+        the other as well. (In other words, the two modules 'overwrite' each
+        other in order to prevent conflicts from existing in Koha).</para>
       </section>
     </section>
 
