@@ -21514,6 +21514,78 @@ print theme('pages_catalog');</programlisting>
     </section>
 
     <section>
+      <title>Serials</title>
+
+      <para></para>
+
+      <section>
+        <title>Advanced Patterns</title>
+
+        <para>Question: What is the 'inner counter' on the advanced serials
+        pattern interface?</para>
+
+        <para>Answer: I think it is better to give an example to understand
+        this : </para>
+
+        <para>Example for a monthly subscription : </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>First issue publication date : april 2010</para>
+          </listitem>
+
+          <listitem>
+            <para>Numbering : No {X}, year {Y}</para>
+          </listitem>
+
+          <listitem>
+            <para>First issue : No 4, year 2010</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>For the year Y : you will want the year change on january 2011
+        </para>
+
+        <para>So, the advanced pattern for Y will be :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Add : 1 </para>
+          </listitem>
+
+          <listitem>
+            <para>once every : 12</para>
+          </listitem>
+
+          <listitem>
+            <para>When more than 9999999</para>
+          </listitem>
+
+          <listitem>
+            <para>inner counter : 3</para>
+          </listitem>
+
+          <listitem>
+            <para>Set back to 0 </para>
+          </listitem>
+
+          <listitem>
+            <para>Begins with 2010</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Year is going to change after 12 received issues from april
+        2010, that is in April 2011 if you don't set inner counter. Set inner
+        counter to 3 will say to Koha : change year after 12-3 = 9 received
+        issues. </para>
+
+        <para>Inner counter says to koha to take into account the first issues
+        of the year, even if they are not received with Koha. If you begin
+        with first issue of the year write nothing or 0.</para>
+      </section>
+    </section>
+
+    <section>
       <title>Reports</title>
 
       <para></para>
@@ -21626,6 +21698,33 @@ print theme('pages_catalog');</programlisting>
               </itemizedlist>
             </listitem>
           </itemizedlist>
+        </section>
+      </section>
+    </section>
+
+    <section>
+      <title>Searching</title>
+
+      <para></para>
+
+      <section>
+        <title>Advanced Search</title>
+
+        <para></para>
+
+        <section>
+          <title>Scan Indexes</title>
+
+          <para><emphasis role="bold">Question</emphasis>: What does 'scan
+          indexes' on the advanced search page mean?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>: When you choose an
+          index, enter a term, click 'scan indexes' and do the search, Koha
+          displays the searched term and the following terms found in this
+          index with the number of corresponding records That is search is not
+          made directly in the catalog, but first in the indexes It works only
+          for one index at once, and only with no limit in Location (All
+          libraries needed)</para>
         </section>
       </section>
     </section>
