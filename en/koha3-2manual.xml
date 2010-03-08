@@ -15756,7 +15756,8 @@
       </itemizedlist>
 
       <para>Click 'Save Subscription' to save the information you have
-      entered.</para>
+      entered. <link linkend="sampleserialsapp">Find sample serial examples in
+      the appendix</link>.</para>
     </section>
 
     <section>
@@ -20617,6 +20618,81 @@ print theme('pages_catalog');</programlisting>
   </appendix>
 
   <appendix>
+    <title id="sampleserialsapp">Sample Serials</title>
+
+    <para></para>
+
+    <section>
+      <title>Reader's Digest (0034-0375)</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>Published 12 times a year (monthly)</para>
+        </listitem>
+
+        <listitem>
+          <para>The Volume number changes every 6 months and the the numbers
+          continues on (requires an advanced pattern).</para>
+
+          <screenshot>
+            <screeninfo>Sample Reader's Digest Subscription</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/serialssamples/readersserial.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>People Weekly (1076-0091)</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>Published weekly</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The website says "on Saturday except the first week of
+              August, Thanksgiving week, the first and last weeks of the year"
+              but this does not match the pattern for 2007 or 2008</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>In the Jul-Dec there are 26 issues</para>
+        </listitem>
+
+        <listitem>
+          <para>In the Jan-Jun there are 25 issues (no issue for the first
+          week of January)</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Since the irregularity on the first # 26 does not skip a week,
+      this would be set up as to roll over on issue 25. The 26th issue in the
+      second half of the year would have to be received as a supplemental.
+      </para>
+
+      <para>The irregularity check will complain that 52 issues were expected,
+      but 25 entered. The current irregularity check can only check that the
+      first position of the numbering pattern matches the expected issue count
+      of the periodicity. But we do need to trigger the rollover on the
+      volume, so we need to define the last two weeks of the year as
+      irregularities. So we receive 50 issues the first 50 weeks, then one
+      supplemental issue in week 51, which we have to define the enumeration
+      for, then the next predicted issue will be the following year's first
+      week.</para>
+    </section>
+  </appendix>
+
+  <appendix>
     <title>Using Koha as a Content Management System (CMS)</title>
 
     <para></para>
@@ -21521,11 +21597,11 @@ print theme('pages_catalog');</programlisting>
       <section>
         <title>Advanced Patterns</title>
 
-        <para>Question: What is the 'inner counter' on the advanced serials
-        pattern interface?</para>
+        <para><emphasis role="bold">Question</emphasis>: What is the 'inner
+        counter' on the advanced serials pattern interface?</para>
 
-        <para>Answer: I think it is better to give an example to understand
-        this : </para>
+        <para><emphasis role="bold">Answer</emphasis>: I think it is better to
+        give an example to understand this : </para>
 
         <para>Example for a monthly subscription : </para>
 
