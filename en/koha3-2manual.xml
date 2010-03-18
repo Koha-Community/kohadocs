@@ -1321,6 +1321,24 @@
           </section>
 
           <section>
+            <title id="PrintNoticesMaxLines">PrintNoticesMaxLines</title>
+
+            <para>Asks: Include up to ___ item lines in a printed overdue
+            notice.</para>
+
+            <note>
+              <para>If the number of items is greater than this number, the
+              notice will end with a warning asking the borrower to check
+              their online account for a full list of overdue items.</para>
+            </note>
+
+            <tip>
+              <para>Set to 0 to include all overdue items in the notice, no
+              matter how many there are.</para>
+            </tip>
+          </section>
+
+          <section>
             <title>RenewalPeriodBase</title>
 
             <para>Default: the old due date of the checkout</para>
@@ -20677,8 +20695,8 @@ print theme('pages_catalog');</programlisting>
 
       <para>Since the irregularity on the first # 26 does not skip a week,
       this would be set up as to roll over on issue 25. The 26th issue in the
-      second half of the year would have to be received as a supplemental.
-      </para>
+      second half of the year would have to be received as a
+      supplemental.</para>
 
       <para>The irregularity check will complain that 52 issues were expected,
       but 25 entered. The current irregularity check can only check that the
@@ -21493,6 +21511,46 @@ print theme('pages_catalog');</programlisting>
         generated twice. A quick fix is to discard "default rule" for
         instance.</para>
       </section>
+
+      <section>
+        <title>Printing Overdue Notices</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Can I print overdue
+        notices for patrons without email addresses on file?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Yes. The <link
+        linkend="overduenoticecron">overdue notice cron job</link> has a
+        setting to generate the overdue notices as HTML for printing. An
+        example of this useage would be:</para>
+
+        <para><programlisting>overdue_notices.pl -t -html /tmp/noticedir -itemscontent issuedate,date_due,title,barcode,author </programlisting>In
+        this example, we wanted to use only certain item fields in our
+        notices, so we specified itemscontent fields in the cron entry; that's
+        not a requirement for the feature.</para>
+
+        <para>The command line needs to specify a web-accessible directory
+        where the print notices will go -- they get a filename like
+        notices-2009-11-24.html (or holdnotices-2009-11-24.html). The overdue
+        notice itself can be formatted to fit a Z-mailer. Within the notice
+        file, the text is spaced down or over to where it will print properly
+        on the form. The script has code that wraps around the notice file to
+        tell the HTML to obey the formatting, and to do a page break between
+        notices. That's so that when staff print it out, they get one per
+        page. We had to add an extra syspref (<link
+        linkend="PrintNoticesMaxLines">PrintNoticesMaxLines</link>) to specify
+        page length because our client allows a _lot_ of checkouts which meant
+        some notices were running onto multiple pages. That syspref says to
+        truncate the print notice at that page length and put in a message
+        about go check your OPAC account for the full list. </para>
+
+        <para>The print and email overdues use the same notice file. The print
+        notices for holds are different -- there's a separate HOLD_PRINT
+        notice file and the system uses it if there's no email address. Then a
+        nightly cron job runs to gather those up from the message queue and
+        put them in an HTML file in the notice directory, as above. </para>
+
+        <para>The cron entry is gather_print_notices.pl /tmp/noticedir </para>
+      </section>
     </section>
 
     <section>
@@ -21601,9 +21659,9 @@ print theme('pages_catalog');</programlisting>
         counter' on the advanced serials pattern interface?</para>
 
         <para><emphasis role="bold">Answer</emphasis>: I think it is better to
-        give an example to understand this : </para>
+        give an example to understand this :</para>
 
-        <para>Example for a monthly subscription : </para>
+        <para>Example for a monthly subscription :</para>
 
         <itemizedlist>
           <listitem>
@@ -21619,14 +21677,14 @@ print theme('pages_catalog');</programlisting>
           </listitem>
         </itemizedlist>
 
-        <para>For the year Y : you will want the year change on january 2011
-        </para>
+        <para>For the year Y : you will want the year change on january
+        2011</para>
 
         <para>So, the advanced pattern for Y will be :</para>
 
         <itemizedlist>
           <listitem>
-            <para>Add : 1 </para>
+            <para>Add : 1</para>
           </listitem>
 
           <listitem>
@@ -21642,7 +21700,7 @@ print theme('pages_catalog');</programlisting>
           </listitem>
 
           <listitem>
-            <para>Set back to 0 </para>
+            <para>Set back to 0</para>
           </listitem>
 
           <listitem>
@@ -21653,7 +21711,7 @@ print theme('pages_catalog');</programlisting>
         <para>Year is going to change after 12 received issues from april
         2010, that is in April 2011 if you don't set inner counter. Set inner
         counter to 3 will say to Koha : change year after 12-3 = 9 received
-        issues. </para>
+        issues.</para>
 
         <para>Inner counter says to koha to take into account the first issues
         of the year, even if they are not received with Koha. If you begin
@@ -22396,7 +22454,7 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section>
-          <title>Overdue Notice</title>
+          <title id="overduenoticecron">Overdue Notice</title>
 
           <para>Script path: misc/cronjobs/overdue_notices.pl</para>
 
@@ -22407,7 +22465,8 @@ print theme('pages_catalog');</programlisting>
 
           <note>
             <para>This script does not actually send the notices. It queues
-            them in the message queue for later</para>
+            them in the message queue for later or generates the HTML for
+            later printing</para>
           </note>
 
           <section>
@@ -22439,6 +22498,8 @@ print theme('pages_catalog');</programlisting>
             this library (repeatable : several libraries can be given)</para>
 
             <para>-csv &lt;filename&gt; populate CSV file</para>
+
+            <para>-html &lt;filename&gt; Output html to file</para>
 
             <para>-itemscontent &lt;list of fields&gt; item information in
             templates</para>
@@ -22652,6 +22713,18 @@ print theme('pages_catalog');</programlisting>
 
             <para>outputformat</para>
           </section>
+        </section>
+
+        <section>
+          <title>Print Hold Notices</title>
+
+          <para>Script path: misc/cronjobs/gather_print_notices.pl</para>
+
+          <para>Does: looks through the message queue for hold notices that
+          didn't go through because the patron didn't have an email address
+          and generates a print notice</para>
+
+          <para>Frequency suggestion: nightly</para>
         </section>
       </section>
 
