@@ -1336,6 +1336,11 @@
               <para>Set to 0 to include all overdue items in the notice, no
               matter how many there are.</para>
             </tip>
+
+            <important>
+              <para>This preference only refers to the print notices, not
+              those sent via email.</para>
+            </important>
           </section>
 
           <section>
@@ -5960,6 +5965,38 @@
         <title>Web Services</title>
 
         <para></para>
+
+        <section>
+          <title>ILS-DI</title>
+
+          <para></para>
+
+          <section>
+            <title>ILS-DI</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ ILS-DI services for OPAC users</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>ILS-DI:Authorized_IPs</title>
+
+            <para>Asks: ___ allowed IPs to use the ILS-DI services </para>
+          </section>
+        </section>
 
         <section>
           <title>OAI-PMH</title>
@@ -21541,15 +21578,15 @@ print theme('pages_catalog');</programlisting>
         page length because our client allows a _lot_ of checkouts which meant
         some notices were running onto multiple pages. That syspref says to
         truncate the print notice at that page length and put in a message
-        about go check your OPAC account for the full list. </para>
+        about go check your OPAC account for the full list.</para>
 
         <para>The print and email overdues use the same notice file. The print
         notices for holds are different -- there's a separate HOLD_PRINT
         notice file and the system uses it if there's no email address. Then a
         nightly cron job runs to gather those up from the message queue and
-        put them in an HTML file in the notice directory, as above. </para>
+        put them in an HTML file in the notice directory, as above.</para>
 
-        <para>The cron entry is gather_print_notices.pl /tmp/noticedir </para>
+        <para>The cron entry is gather_print_notices.pl /tmp/noticedir</para>
       </section>
     </section>
 
