@@ -4387,7 +4387,7 @@
           </section>
 
           <section>
-            <title>reviewson</title>
+            <title id="reviewson">reviewson</title>
 
             <para>Default: Allow</para>
 
@@ -8162,7 +8162,7 @@
                         </listitem>
 
                         <listitem>
-                          <para>9 =&gt; Future use &#149; URL : if checked, the
+                          <para>9 =&gt; Future use  URL : if checked, the
                           subfield is an URL, and can be clicked</para>
                         </listitem>
                       </itemizedlist>
@@ -18425,19 +18425,124 @@
       <section>
         <title>Comments</title>
 
-        <para></para>
+        <para>Patrons can leave comments in the OPAC if you have the <link
+        linkend="reviewson">reviewson</link> preference set to allow this.
+        Each bibliographic record has a comments tab below the bibliographic
+        information.</para>
+
+        <screenshot>
+          <screeninfo>Comments Tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentstab.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If the patron is logged in they will see a link to add a comment
+        to the item. Clicking this link will open a pop up window with a box
+        for their comments.</para>
+
+        <screenshot>
+          <screeninfo>Add a Comment</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/addcomment.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once the comment has been typed and the 'Submit' button clicked,
+        the patron will see their comment as pending and other patrons will
+        simply see that there are no comments on the item.</para>
+
+        <screenshot>
+          <screeninfo>Pending Comment</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentpending.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once the comment is approved the patron will see the comment
+        highlighted in yellow as their comment. </para>
+
+        <screenshot>
+          <screeninfo>Your Comments</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/yourcomment.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Other patrons will see the comment with the name of the patron
+        who left the comment.</para>
+
+        <screenshot>
+          <screeninfo>Comment by other patron</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentby.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
         <title>Zotero</title>
 
-        <para></para>
+        <para>Zotero is a Firefox add on that allows for the saving and
+        generating of a bibliography. Learn more about and download Zotero at
+        <ulink url="http://zotero.org">http://zotero.org</ulink>.</para>
       </section>
 
       <section>
-        <title>Custom RSS Feeds</title>
+        <title id="customrss">Custom RSS Feeds</title>
 
-        <para></para>
+        <para>Using misc/cronjobs/rss/rss.pl you can generate an RSS feed for
+        any SQL query (for example a new acquisitions RSS feed). rss.pl is run
+        on the command line to produce an RSS XML document. </para>
+
+        <para>The output should be placed in a directory accessible to the
+        OPAC (or staff) web interface so that users can download the RSS feed.
+        </para>
+
+        <para>An example of usage can be found at: misc/cronjobs/rss.pl
+        lastAcquired.conf </para>
+
+        <para>Normally rss.pl should be run periodically (e.g., daily) to keep
+        the feed up-to-date. </para>
+
+        <para>The configuration file (e.g., lastAcquired.conf) lists</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>name of the template file to use</para>
+          </listitem>
+
+          <listitem>
+            <para>path of output file</para>
+          </listitem>
+
+          <listitem>
+            <para>SQL query</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>rss.pl runs the SQL query, then feeds the output of the query
+        through the template to produce the output file.</para>
+
+        <para><important>
+            <para>To use custom RSS feeds you need to turn on the cron
+            job.</para>
+          </important></para>
       </section>
     </section>
 
@@ -18573,8 +18678,8 @@
         The overview to the documentation describes Zebra as:</para>
 
         <blockquote>
-          <para>"...Zebra is a high-performance, general-purpose structured text
-          indexing and retrieval engine. It reads records in a variety of
+          <para>"...Zebra is a high-performance, general-purpose structured
+          text indexing and retrieval engine. It reads records in a variety of
           input formats (eg. email, XML, MARC) and provides access to them
           through a powerful combination of Boolean search expressions and
           relevance-ranked free-text queries.</para>
@@ -20198,7 +20303,7 @@ print theme('pages_catalog');</programlisting>
         200i}|&lt;/h2&gt;</para>
 
         <para>#461|&lt;label class="ipt"&gt;A part of : &lt;/label&gt;|&lt;a
-        href="/cgi-bin/koha/catalogue/search.pl?op=do_search{&amp;q=461t&amp;idx=ti}"&gt;{461t}&lt;/a&gt;{N&#8734;
+        href="/cgi-bin/koha/catalogue/search.pl?op=do_search{&amp;q=461t&amp;idx=ti}"&gt;{461t}&lt;/a&gt;{N∞
         461h} {v. 461v}{(461d)}&lt;br/&gt;|</para>
 
         <para>#200b|&lt;label class="ipt"&gt;Material Designation :
@@ -21213,7 +21318,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;0</td>
+        <td>9520</td>
 
         <td>Withdrawn status</td>
 
@@ -21223,7 +21328,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;1</td>
+        <td>9521</td>
 
         <td>Lost status</td>
 
@@ -21237,7 +21342,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;2</td>
+        <td>9522</td>
 
         <td>Classification</td>
 
@@ -21251,18 +21356,18 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;3</td>
+        <td>9523</td>
 
         <td>Materials specified</td>
 
         <td>Specific issues of serials or multi-part items.</td>
 
-        <td>Copy/volume data is stored in 952&#135;h and &#135;t for display in Normal
-        views. &#135;3 isn't displayed anywhere except the MARC view.</td>
+        <td>Copy/volume data is stored in 952h and t for display in Normal
+        views. 3 isn't displayed anywhere except the MARC view.</td>
       </tr>
 
       <tr>
-        <td>952&#135;4</td>
+        <td>9524</td>
 
         <td>Damaged status</td>
 
@@ -21272,7 +21377,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;5</td>
+        <td>9525</td>
 
         <td>Use restrictions</td>
 
@@ -21283,7 +21388,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;7</td>
+        <td>9527</td>
 
         <td>Not for loan</td>
 
@@ -21294,7 +21399,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;8</td>
+        <td>9528</td>
 
         <td>Collection code</td>
 
@@ -21304,7 +21409,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;9</td>
+        <td>9529</td>
 
         <td>Item number</td>
 
@@ -21314,7 +21419,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;a</td>
+        <td>952a</td>
 
         <td>branchcode</td>
 
@@ -21325,7 +21430,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;b</td>
+        <td>952b</td>
 
         <td>branchcode</td>
 
@@ -21335,7 +21440,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;c</td>
+        <td>952c</td>
 
         <td>Shelving location code</td>
 
@@ -21346,7 +21451,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;d</td>
+        <td>952d</td>
 
         <td>Date acquired</td>
 
@@ -21358,7 +21463,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;e</td>
+        <td>952e</td>
 
         <td>Source of acquisition</td>
 
@@ -21368,7 +21473,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;g</td>
+        <td>952g</td>
 
         <td>Purchase price</td>
 
@@ -21378,7 +21483,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;h</td>
+        <td>952h</td>
 
         <td>Serial enumeration caption</td>
 
@@ -21388,7 +21493,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;o</td>
+        <td>952o</td>
 
         <td>Koha full call number</td>
 
@@ -21398,7 +21503,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;p</td>
+        <td>952p</td>
 
         <td>Barcode *</td>
 
@@ -21408,7 +21513,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;v</td>
+        <td>952v</td>
 
         <td>Replacement price</td>
 
@@ -21418,7 +21523,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;w</td>
+        <td>952w</td>
 
         <td>Price effective from</td>
 
@@ -21428,7 +21533,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;y</td>
+        <td>952y</td>
 
         <td>Koha item type *</td>
 
@@ -21439,7 +21544,7 @@ print theme('pages_catalog');</programlisting>
       </tr>
 
       <tr>
-        <td>952&#135;z</td>
+        <td>952z</td>
 
         <td>Public note</td>
 
@@ -21468,7 +21573,7 @@ print theme('pages_catalog');</programlisting>
         <para><emphasis role="bold">Question:</emphasis> Can I have my own set
         of item type images (or authorized value icons)?</para>
 
-        <para><emphasis role="bold">Answer: </emphasis>Absoltuley. To add
+        <para><emphasis role="bold">Answer: </emphasis>Absolutely. To add
         additional icons to your system you simply add a new directory to
         koha-tmpl/intranet-tmpl/prog/img/itemtypeimg/ and to
         koha-tmpl/opac-tmpl/prog/itemtypeimg and put your icons in the new
@@ -21526,14 +21631,14 @@ print theme('pages_catalog');</programlisting>
         Is it today's date minus one? Can the dropbox checkin date be
         set?</para>
 
-        <para><emphasis role="bold">Answer</emphasis>: If the library is cHow
-        is the dropbox date is determined?losed for four days for renovations,
-        for example, there would be more than one day needed for the dropbox
-        date. You will only have one dropbox date and that will be the last
-        day that the library open (determined by the holiday calendar) because
-        there is no real way to know what day the books were dropped into the
-        box during the 4 closed days. The only way to change the effective
-        checkin date in dropbox mode is to modify the calendar.</para>
+        <para><emphasis role="bold">Answer</emphasis>: If the library is
+        closed for four days for renovations, for example, there would be more
+        than one day needed for the dropbox date. You will only have one
+        dropbox date and that will be the last day that the library open
+        (determined by the holiday calendar) because there is no real way to
+        know what day the books were dropped into the box during the 4 closed
+        days. The only way to change the effective checkin date in dropbox
+        mode is to modify the calendar.</para>
       </section>
 
       <section>
@@ -21627,7 +21732,7 @@ print theme('pages_catalog');</programlisting>
         <title>Number of Items Per Bib Record</title>
 
         <para><emphasis role="bold">Question</emphasis>: Is there a limit on
-        the number of items I can attach to a bib record? </para>
+        the number of items I can attach to a bib record?</para>
 
         <para><emphasis role="bold">Answer</emphasis>: There is no explicit
         limit to the number of items you can attach to a bibliographic record,
@@ -22959,7 +23064,8 @@ print theme('pages_catalog');</programlisting>
           <para>Script path: misc/cronjobs/rss/rss.pl</para>
 
           <para>Does: Produces an RSS XML document for any SQL query (not used
-          for search results RSS feed)</para>
+          for search results RSS feed). <link linkend="customrss">Learn
+          more</link>.</para>
 
           <para>Frequency suggestion: hourly</para>
         </section>
@@ -23371,15 +23477,15 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
 &lt;subfield code="a"&gt;20091130 frey50 &lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="200" ind1="1" ind2=" "&gt;
-&lt;subfield code="a"&gt;Guide des r&#169;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
-&lt;subfield code="b"&gt;Texte imprim&#169;&lt;/subfield&gt;
+&lt;subfield code="a"&gt;Guide des r©cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
+&lt;subfield code="b"&gt;Texte imprim©&lt;/subfield&gt;
 &lt;subfield code="e"&gt;la faune sous-marine des coraux&lt;/subfield&gt;
 &lt;subfield code="f"&gt;A. et A. Ferrari&lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="210" ind1=" " ind2=" "&gt;
 &lt;subfield code="a"&gt;Lausanne&lt;/subfield&gt;
 &lt;subfield code="a"&gt;Paris&lt;/subfield&gt;
-&lt;subfield code="c"&gt;Delachaux et Niestl&#169;&lt;/subfield&gt;
+&lt;subfield code="c"&gt;Delachaux et Niestl©&lt;/subfield&gt;
 &lt;subfield code="d"&gt;cop. 2000&lt;/subfield&gt;
 &lt;subfield code="e"&gt;impr. en Espagne&lt;/subfield&gt;
 &lt;/datafield&gt;
