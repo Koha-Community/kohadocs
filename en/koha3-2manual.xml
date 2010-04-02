@@ -71,7 +71,7 @@
 
             <para>Default: placing an order</para>
 
-            <para>Asks: Create an item when ___. </para>
+            <para>Asks: Create an item when ___.</para>
 
             <para>Values:</para>
 
@@ -7409,7 +7409,14 @@
           experience the same results.</para>
         </tip>
 
-        <para></para>
+        <para><important>
+            <para>At the very least you will need to set an absolute default
+            circulation rule. This rule should be set for the default
+            itemtype, default branchcode and default patron category. That
+            will catch anyone who doesn't match a specific rule. Patrons who
+            do not match a specific rule will get blocked from placing holds,
+            since there was no baseline number of holds to utilize.</para>
+          </important></para>
 
         <section>
           <title>Default Issuing Rules</title>
@@ -21695,6 +21702,25 @@ print theme('pages_catalog');</programlisting>
 
         <para>The cron entry is gather_print_notices.pl /tmp/noticedir</para>
       </section>
+
+      <section>
+        <title>Unable to Renew Items</title>
+
+        <para><emphasis role="bold">Question</emphasis>: We&rsquor;re trying
+        to renew some items for our patron. One of the items is on hold and
+        ineligible for renewal, but the other two items refuse to renew even
+        though they should be eligible. When I try to use the override renewal
+        limit, it just returns a little message that says &ldquo;renewal
+        failed&rdquor;. Any idea what&rsquor;s going on here?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: At the very least you
+        will need to set an absolute <link linkend="circfinerules">default
+        circulation rule</link>. This rule should be set for the default
+        itemtype, default branchcode and default patron category. That will
+        catch anyone who doesn't match a specific rule. Patrons who do not
+        match a specific rule will get blocked from placing holds, since there
+        was no baseline number of holds to utilize.</para>
+      </section>
     </section>
 
     <section>
@@ -23479,15 +23505,15 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
 &lt;subfield code="a"&gt;20091130 frey50 &lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="200" ind1="1" ind2=" "&gt;
-&lt;subfield code="a"&gt;Guide des r&#233;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
-&lt;subfield code="b"&gt;Texte imprim&#233;&lt;/subfield&gt;
+&lt;subfield code="a"&gt;Guide des r&eacute;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
+&lt;subfield code="b"&gt;Texte imprim&eacute;&lt;/subfield&gt;
 &lt;subfield code="e"&gt;la faune sous-marine des coraux&lt;/subfield&gt;
 &lt;subfield code="f"&gt;A. et A. Ferrari&lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="210" ind1=" " ind2=" "&gt;
 &lt;subfield code="a"&gt;Lausanne&lt;/subfield&gt;
 &lt;subfield code="a"&gt;Paris&lt;/subfield&gt;
-&lt;subfield code="c"&gt;Delachaux et Niestl&#233;&lt;/subfield&gt;
+&lt;subfield code="c"&gt;Delachaux et Niestl&eacute;&lt;/subfield&gt;
 &lt;subfield code="d"&gt;cop. 2000&lt;/subfield&gt;
 &lt;subfield code="e"&gt;impr. en Espagne&lt;/subfield&gt;
 &lt;/datafield&gt;
