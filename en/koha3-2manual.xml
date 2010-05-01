@@ -5032,17 +5032,10 @@
           </ulink></para>
 
           <important>
-            <para>You must allow EnhancedMessagingPreferences for this to
-            work.</para>
+            <para>You must allow <link
+            linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+            for this to work.</para>
           </important>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Administration
-              &gt; Global system preferences &gt; Patrons &gt; <link
-              linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
-            </listitem>
-          </itemizedlist>
         </section>
 
         <section>
@@ -5176,16 +5169,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section>
@@ -5193,7 +5179,7 @@
 
             <para>Default: Don't remove</para>
 
-            <para>Asks: ___ stopwords specified in Koha from searches.</para>
+            <para>Asks: ___ stop words specified in Koha from searches.</para>
 
             <para>Values:</para>
 
@@ -5217,15 +5203,8 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>Requires that you have updated your Koha stopwords
-                    list</para>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para><emphasis>Get there:</emphasis> More &gt;
-                        Administration &gt; Stop Words</para>
-                      </listitem>
-                    </itemizedlist>
+                    <para>Requires that you have updated your Koha <link
+                    linkend="stopwordsadmin">Stop Words</link> list</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -5236,8 +5215,8 @@
             </important>
 
             <important>
-              <para>Zebra, on its own, handles a few of the most common
-              stopwords</para>
+              <para>Zebra, on its own, handles a few of the most common stop
+              words</para>
             </important>
           </section>
 
@@ -5268,16 +5247,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section>
@@ -5300,16 +5272,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
         </section>
 
@@ -5485,65 +5450,6 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
-          </section>
-
-          <section>
-            <title>XSLTDetailsDisplay</title>
-
-            <para>Default: normally</para>
-
-            <para>Asks: Show item details pages in the staff client ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the bibliographic records in the Staff Client</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title>XSLTResultsDisplay</title>
-
-            <para>Default: using XSLT stylesheets</para>
-
-            <para>Asks: Show biblio records on result page in the staff client
-            ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the Staff Client</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>This preference isn't currently functional.</para>
-            </important>
           </section>
         </section>
 
@@ -5814,6 +5720,87 @@
                 <para>prog</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTDetailsDisplay</title>
+
+            <para>Default: normally</para>
+
+            <para>Asks: Show item details pages in the staff client ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+
+                <screenshot>
+                  <screeninfo>Detail display without XSLT
+                  stylesheets</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the bibliographic records in the Staff Client</para>
+
+                    <screenshot>
+                      <screeninfo>Detail display using XSLT
+                      stylesheets</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show biblio records on result page in the staff client
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference isn't currently functional.</para>
+            </important>
           </section>
 
           <section>
@@ -8775,7 +8762,7 @@
       <para></para>
 
       <section>
-        <title>Stop Words</title>
+        <title id="stopwordsadmin">Stop Words</title>
 
         <important>
           <para>If NoZebra is set to 'Use' this option will not appear on the
