@@ -21207,6 +21207,61 @@ print theme('pages_catalog');</programlisting>
   </appendix>
 
   <appendix>
+    <title>Resetting the Koha Database</title>
+
+    <para>These notes on how to reset the database for Koha 3 were derived
+    from the following email thread: <ulink
+    url="http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html</ulink>
+    </para>
+
+    <para>Resetting the database may be useful if you install Koha with the
+    sample data, and then wish to use real data without reinstalling the
+    software. </para>
+
+    <section>
+      <title>Truncate Tables</title>
+
+      <para>Use your preferred MySQL client to <ulink
+      url="http://dev.mysql.com/doc/refman/5.0/en/truncate.html">truncate</ulink>
+      the following tables: </para>
+
+      <itemizedlist>
+        <listitem>
+          <para>bibio</para>
+        </listitem>
+
+        <listitem>
+          <para>biblioitems</para>
+        </listitem>
+
+        <listitem>
+          <para>items</para>
+        </listitem>
+
+        <listitem>
+          <para>auth_header</para>
+        </listitem>
+
+        <listitem>
+          <para>sessions</para>
+        </listitem>
+
+        <listitem>
+          <para>zebraqueue</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Reset the Zebra Index</title>
+
+      <para>Run the following commands to reset the authorities and biblios
+      Zebra indices. <programlisting>$ zebraidx -c /etc/koha/zebradb/zebra-authorities-dom.cfg -g iso2709 -d authorities init 
+$ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </programlisting></para>
+    </section>
+  </appendix>
+
+  <appendix>
     <title>Important Links</title>
 
     <para></para>
