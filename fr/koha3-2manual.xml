@@ -14365,6 +14365,62 @@
 
       <para></para>
     </section>
+        <section>
+      <title>Acquisition Searches</title>
+
+      <para>At the top of the various Acquisition pages there is a quick
+      search box where you can perform either a Vendor Search or an Order
+      Search.</para>
+
+      <screenshot>
+        <screeninfo>Acquisition Searches</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/acqsearches.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the Vendor Search you can enter any part of the vendor name to
+      get results.</para>
+
+      <screenshot>
+        <screeninfo>Vendor Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/vendorquicksearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Using the Order Search you can search for items that have been
+      ordered with or without the vendor.</para>
+
+      <screenshot>
+        <screeninfo>Order Search Box</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/ordersearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You can enter info in one or both fields and and you can enter any
+      part of the title and/or vendor name.</para>
+
+      <screenshot>
+        <screeninfo>Order Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/ordersearchresults.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
   </chapter>
 
   <chapter>
@@ -14810,7 +14866,7 @@
           url="http://wiki.koha.org/doku.php?id=sql_library">http://wiki.koha.org/doku.php?id=sql_library</ulink>.
           You can also find your database structure in
           /installer/data/mysql/kohastructure.sql or online at: <ulink
-          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
+          url="http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
 
           <para>To add your query, simply fill in the form presented</para>
 
@@ -17900,7 +17956,59 @@ print theme('pages_catalog');</programlisting>
       </section>
     </section>
   </appendix>
+  <appendix>
+    <title>Resetting the Koha Database</title>
 
+    <para>These notes on how to reset the database for Koha 3 were derived
+    from the following email thread: <ulink
+    url="http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html</ulink></para>
+
+    <para>Resetting the database may be useful if you install Koha with the
+    sample data, and then wish to use real data without reinstalling the
+    software.</para>
+
+    <section>
+      <title>Truncate Tables</title>
+
+      <para>Use your preferred MySQL client to <ulink
+      url="http://dev.mysql.com/doc/refman/5.0/en/truncate.html">truncate</ulink>
+      the following tables:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>bibio</para>
+        </listitem>
+
+        <listitem>
+          <para>biblioitems</para>
+        </listitem>
+
+        <listitem>
+          <para>items</para>
+        </listitem>
+
+        <listitem>
+          <para>auth_header</para>
+        </listitem>
+
+        <listitem>
+          <para>sessions</para>
+        </listitem>
+
+        <listitem>
+          <para>zebraqueue</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Reset the Zebra Index</title>
+
+      <para>Run the following commands to reset the authorities and biblios
+      Zebra indices. <programlisting>$ zebraidx -c /etc/koha/zebradb/zebra-authorities-dom.cfg -g iso2709 -d authorities init 
+$ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </programlisting></para>
+    </section>
+  </appendix>
   <appendix>
     <title>Important Links</title>
 
@@ -17917,12 +18025,12 @@ print theme('pages_catalog');</programlisting>
 
         <listitem>
           <para>Koha Versioning Control - <ulink
-          url="http://git.koha.org/">http://git.koha.org/</ulink></para>
+          url="http://git.koha-community.org/">http://git.koha-community.org/</ulink></para>
         </listitem>
 
         <listitem>
           <para>Database Structure - <ulink
-          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink></para>
+          url="http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink></para>
         </listitem>
 
         <listitem>
