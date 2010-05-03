@@ -83,7 +83,7 @@
 
             <para>Default: placing an order</para>
 
-            <para>Asks: Create an item when ___. </para>
+            <para>Asks: Create an item when ___.</para>
 
             <para>Values:</para>
 
@@ -222,7 +222,7 @@
             <para>This preference determines how reports exported from Koha
             will separate data.</para>
 
-            <para>Default: semincolons</para>
+            <para>Default: semicolons</para>
 
             <para>Asks: Separate columns in an exported report file with ___
             by default.</para>
@@ -243,7 +243,7 @@
               </listitem>
 
               <listitem>
-                <para>semincolons</para>
+                <para>semicolons</para>
               </listitem>
 
               <listitem>
@@ -259,9 +259,9 @@
           <section>
             <title>KohaAdminEmailAddress</title>
 
-            <para>This is the default From: address for emails unless there is
-            one for the particular branch, and is referred to when an internal
-            error occurs.</para>
+            <para>This is the default 'From' address for emails unless there
+            is one for the particular branch, and is referred to when an
+            internal error occurs.</para>
 
             <para>Asks: Use ___ as the email address for the administrator of
             Koha.</para>
@@ -613,6 +613,19 @@
               <listitem>
                 <para>ISBD form -- displays records in the staff client in the
                 old card catalog format</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>See <link linkend="isbdpref">ISBD</link> preference
+                    for more information</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Labelled MARC form -- displays records in the staff
+                client in MARC with text labels to explain the different
+                fields</para>
               </listitem>
 
               <listitem>
@@ -628,7 +641,7 @@
           </section>
 
           <section>
-            <title>ISBD</title>
+            <title id="isbdpref">ISBD</title>
 
             <para>Default: <link linkend="isbddefault">MARC21 Default
             Appendix</link> or <link linkend="unimarcdefault">UNIMARC Default
@@ -777,9 +790,9 @@
             <para>Asks: Show ___ as the text of links embedded in MARC
             records.</para>
 
-            <para>This value will show in place of the URL for data entered in
-            the 856$u field if no other label is defined in the 856
-            filed.</para>
+            <para>If the 856 field does not have a subfield 3 or y defined,
+            the OPAC will say 'Click here to access online.' If you would like
+            the field to say something else enter that in this field.</para>
           </section>
         </section>
 
@@ -2346,7 +2359,7 @@
             </tip>
 
             <para>Sign up at: <ulink
-            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+            url="https://affiliate-program.amazon.com/">https://affiliate-program.amazon.com/</ulink></para>
           </section>
 
           <section>
@@ -2807,7 +2820,7 @@
 
             <important>
               <para>Unless you have signed up for an ID with OCLC, you are
-              limited to 500 requests per day. Available at: <ulink
+              limited to 1000 requests per day. Available at: <ulink
               url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></para>
             </important>
           </section>
@@ -2815,13 +2828,13 @@
           <section>
             <title>XISBNDailyLimit</title>
 
-            <para>Default: 499</para>
+            <para>Default: 999</para>
 
             <para>Asks: Only use the xISBN service ___ times a day.</para>
 
             <important>
               <para>Unless you have signed up for an ID with OCLC, you are
-              limited to 500 requests per day. Available at: <ulink
+              limited to 1000 requests per day. Available at: <ulink
               url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></para>
             </important>
           </section>
@@ -5044,17 +5057,10 @@
           </ulink></para>
 
           <important>
-            <para>You must allow EnhancedMessagingPreferences for this to
-            work.</para>
+            <para>You must allow <link
+            linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+            for this to work.</para>
           </important>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Administration
-              &gt; Global system preferences &gt; Patrons &gt; <link
-              linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
-            </listitem>
-          </itemizedlist>
         </section>
 
         <section>
@@ -5188,16 +5194,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section>
@@ -5205,7 +5204,7 @@
 
             <para>Default: Don't remove</para>
 
-            <para>Asks: ___ stopwords specified in Koha from searches.</para>
+            <para>Asks: ___ stop words specified in Koha from searches.</para>
 
             <para>Values:</para>
 
@@ -5229,15 +5228,8 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>Requires that you have updated your Koha stopwords
-                    list</para>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para><emphasis>Get there:</emphasis> More &gt;
-                        Administration &gt; Stop Words</para>
-                      </listitem>
-                    </itemizedlist>
+                    <para>Requires that you have updated your Koha <link
+                    linkend="stopwordsadmin">Stop Words</link> list</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -5248,8 +5240,8 @@
             </important>
 
             <important>
-              <para>Zebra, on its own, handles a few of the most common
-              stopwords</para>
+              <para>Zebra, on its own, handles a few of the most common stop
+              words</para>
             </important>
           </section>
 
@@ -5280,16 +5272,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section>
@@ -5312,16 +5297,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
         </section>
 
@@ -5497,65 +5475,6 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
-          </section>
-
-          <section>
-            <title>XSLTDetailsDisplay</title>
-
-            <para>Default: normally</para>
-
-            <para>Asks: Show item details pages in the staff client ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the bibliographic records in the Staff Client</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title>XSLTResultsDisplay</title>
-
-            <para>Default: using XSLT stylesheets</para>
-
-            <para>Asks: Show biblio records on result page in the staff client
-            ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the Staff Client</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>This preference isn't currently functional.</para>
-            </important>
           </section>
         </section>
 
@@ -5826,6 +5745,87 @@
                 <para>prog</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTDetailsDisplay</title>
+
+            <para>Default: normally</para>
+
+            <para>Asks: Show item details pages in the staff client ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+
+                <screenshot>
+                  <screeninfo>Detail display without XSLT
+                  stylesheets</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the bibliographic records in the Staff Client</para>
+
+                    <screenshot>
+                      <screeninfo>Detail display using XSLT
+                      stylesheets</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show biblio records on result page in the staff client
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference isn't currently functional.</para>
+            </important>
           </section>
 
           <section>
@@ -7421,7 +7421,14 @@
           experience the same results.</para>
         </tip>
 
-        <para></para>
+        <para><important>
+            <para>At the very least you will need to set an absolute default
+            circulation rule. This rule should be set for the default
+            itemtype, default branchcode and default patron category. That
+            will catch anyone who doesn't match a specific rule. Patrons who
+            do not match a specific rule will get blocked from placing holds,
+            since there was no baseline number of holds to utilize.</para>
+          </important></para>
 
         <section>
           <title>Default Issuing Rules</title>
@@ -8780,7 +8787,7 @@
       <para></para>
 
       <section>
-        <title>Stop Words</title>
+        <title id="stopwordsadmin">Stop Words</title>
 
         <important>
           <para>If NoZebra is set to 'Use' this option will not appear on the
@@ -10360,7 +10367,7 @@
                   <listitem>
                     <tip>
                       <para>You can also use your own headers (instead of the
-                      ones from koha) by prefixing the field number with an
+                      ones from Koha) by prefixing the field number with an
                       header, followed by the equal sign. Example : Personal
                       name=200|Entry element=210$a|300|009</para>
                     </tip>
@@ -11968,7 +11975,24 @@
             </listitem>
           </itemizedlist>
         </listitem>
+
+        <listitem>
+          <para>Once finished, click 'Save'</para>
+        </listitem>
       </itemizedlist>
+
+      <para>If the system suspects this patron is a duplicate of another it
+      will warn you.</para>
+
+      <screenshot>
+        <screeninfo>Patron Duplicate Suspected</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/patrons/duplicatewarn.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section>
@@ -14938,6 +14962,26 @@
                     </imageobject>
                   </mediaobject>
                 </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>In addition to the Import link to the right of each
+                    title, you can click on the title you're interested in and
+                    a menu will pop up with links to preview the record and
+                    import it</para>
+
+                    <screenshot>
+                      <screeninfo>Import Link Popup on Z39.50 Search
+                      Results</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/cataloging/importz39.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -15006,8 +15050,20 @@
           </listitem>
 
           <listitem>
-            <para>Once you've finished, click the 'Save' button at the
-            top</para>
+            <para>Once you've finished, click the 'Save' button at the top and
+            choose whether you want to save and view the bib record you have
+            created or continue on to add/edit items attached to the
+            record</para>
+
+            <screenshot>
+              <screeninfo>Record save options</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/savecataloging.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
 
             <itemizedlist>
               <listitem>
@@ -15362,6 +15418,40 @@
         <para>If you want to move all items to a new record creating only one
         bibliographic record you can use the <link
         linkend="mergebibrecs">Merge Records tool</link> instead.</para>
+      </section>
+
+      <section>
+        <title>Item Specific Circulation History</title>
+
+        <para>Each bibliographic record keeps a circulation history (with or
+        without the patron information depending on your settings), but each
+        item also has its own circulation history page. To see this, click on
+        the 'Items' tab to the left of the record you are viewing.</para>
+
+        <screenshot>
+          <screeninfo>Items tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/itemstab-long.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Below the 'History' heading is a link to 'View item's checkout
+        history,' clicking that will open up the item's history which will
+        look slightly different from the bibliographic record's history
+        page.</para>
+
+        <screenshot>
+          <screeninfo>Item Specific Circulation History</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/itemspecifichistory.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
     </section>
 
@@ -16983,6 +17073,63 @@
 
       <para></para>
     </section>
+
+    <section>
+      <title>Acquisition Searches</title>
+
+      <para>At the top of the various Acquisition pages there is a quick
+      search box where you can perform either a Vendor Search or an Order
+      Search.</para>
+
+      <screenshot>
+        <screeninfo>Acquisition Searches</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/acqsearches.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the Vendor Search you can enter any part of the vendor name to
+      get results.</para>
+
+      <screenshot>
+        <screeninfo>Vendor Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/vendorquicksearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Using the Order Search you can search for items that have been
+      ordered with or without the vendor.</para>
+
+      <screenshot>
+        <screeninfo>Order Search Box</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/ordersearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You can enter info in one or both fields and and you can enter any
+      part of the title and/or vendor name.</para>
+
+      <screenshot>
+        <screeninfo>Order Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/ordersearchresults.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
   </chapter>
 
   <chapter>
@@ -17540,7 +17687,7 @@
           url="http://wiki.koha.org/doku.php?id=sql_library">http://wiki.koha.org/doku.php?id=sql_library</ulink>.
           You can also find your database structure in
           /installer/data/mysql/kohastructure.sql or online at: <ulink
-          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
+          url="http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
 
           <para>To add your query, simply fill in the form presented</para>
 
@@ -21159,6 +21306,60 @@ print theme('pages_catalog');</programlisting>
   </appendix>
 
   <appendix>
+    <title>Resetting the Koha Database</title>
+
+    <para>These notes on how to reset the database for Koha 3 were derived
+    from the following email thread: <ulink
+    url="http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html</ulink></para>
+
+    <para>Resetting the database may be useful if you install Koha with the
+    sample data, and then wish to use real data without reinstalling the
+    software.</para>
+
+    <section>
+      <title>Truncate Tables</title>
+
+      <para>Use your preferred MySQL client to <ulink
+      url="http://dev.mysql.com/doc/refman/5.0/en/truncate.html">truncate</ulink>
+      the following tables:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>bibio</para>
+        </listitem>
+
+        <listitem>
+          <para>biblioitems</para>
+        </listitem>
+
+        <listitem>
+          <para>items</para>
+        </listitem>
+
+        <listitem>
+          <para>auth_header</para>
+        </listitem>
+
+        <listitem>
+          <para>sessions</para>
+        </listitem>
+
+        <listitem>
+          <para>zebraqueue</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Reset the Zebra Index</title>
+
+      <para>Run the following commands to reset the authorities and biblios
+      Zebra indices. <programlisting>$ zebraidx -c /etc/koha/zebradb/zebra-authorities-dom.cfg -g iso2709 -d authorities init 
+$ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </programlisting></para>
+    </section>
+  </appendix>
+
+  <appendix>
     <title>Important Links</title>
 
     <para></para>
@@ -21174,12 +21375,12 @@ print theme('pages_catalog');</programlisting>
 
         <listitem>
           <para>Koha Versioning Control - <ulink
-          url="http://git.koha.org/">http://git.koha.org/</ulink></para>
+          url="http://git.koha-community.org/">http://git.koha-community.org/</ulink></para>
         </listitem>
 
         <listitem>
           <para>Database Structure - <ulink
-          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink></para>
+          url="http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink></para>
         </listitem>
 
         <listitem>
@@ -21241,7 +21442,7 @@ print theme('pages_catalog');</programlisting>
       <itemizedlist>
         <listitem>
           <para>Amazon Associates - <ulink
-          url="http://associates.amazon.com">http://associates.amazon.com</ulink></para>
+          url="https://affiliate-program.amazon.com/">https://affiliate-program.amazon.com</ulink></para>
         </listitem>
 
         <listitem>
@@ -21706,6 +21907,25 @@ print theme('pages_catalog');</programlisting>
         put them in an HTML file in the notice directory, as above.</para>
 
         <para>The cron entry is gather_print_notices.pl /tmp/noticedir</para>
+      </section>
+
+      <section>
+        <title>Unable to Renew Items</title>
+
+        <para><emphasis role="bold">Question</emphasis>: We&rsquor;re trying
+        to renew some items for our patron. One of the items is on hold and
+        ineligible for renewal, but the other two items refuse to renew even
+        though they should be eligible. When I try to use the override renewal
+        limit, it just returns a little message that says &ldquo;renewal
+        failed&rdquor;. Any idea what&rsquor;s going on here?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: At the very least you
+        will need to set an absolute <link linkend="circfinerules">default
+        circulation rule</link>. This rule should be set for the default
+        itemtype, default branchcode and default patron category. That will
+        catch anyone who doesn't match a specific rule. Patrons who do not
+        match a specific rule will get blocked from placing holds, since there
+        was no baseline number of holds to utilize.</para>
       </section>
     </section>
 
@@ -23491,15 +23711,15 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
 &lt;subfield code="a"&gt;20091130 frey50 &lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="200" ind1="1" ind2=" "&gt;
-&lt;subfield code="a"&gt;Guide des r&#233;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
-&lt;subfield code="b"&gt;Texte imprim&#233;&lt;/subfield&gt;
+&lt;subfield code="a"&gt;Guide des r&eacute;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
+&lt;subfield code="b"&gt;Texte imprim&eacute;&lt;/subfield&gt;
 &lt;subfield code="e"&gt;la faune sous-marine des coraux&lt;/subfield&gt;
 &lt;subfield code="f"&gt;A. et A. Ferrari&lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="210" ind1=" " ind2=" "&gt;
 &lt;subfield code="a"&gt;Lausanne&lt;/subfield&gt;
 &lt;subfield code="a"&gt;Paris&lt;/subfield&gt;
-&lt;subfield code="c"&gt;Delachaux et Niestl&#233;&lt;/subfield&gt;
+&lt;subfield code="c"&gt;Delachaux et Niestl&eacute;&lt;/subfield&gt;
 &lt;subfield code="d"&gt;cop. 2000&lt;/subfield&gt;
 &lt;subfield code="e"&gt;impr. en Espagne&lt;/subfield&gt;
 &lt;/datafield&gt;

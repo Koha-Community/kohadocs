@@ -34,6 +34,18 @@
 
       <holder>Nicole C. Engard/ByWater Solutions/BibLibre</holder>
     </copyright>
+
+    <legalnotice>
+      <para>This manual is licensed under the <ulink
+      url="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public
+      License, version 2</ulink></para>
+
+      <para>Learn more about this license in the <link linkend="gpl">GPL2
+      Appendix</link></para>
+    </legalnotice>
+
+    <pubdate>2009/2010</pubdate>
+  </bookinfo>
   <chapter>
     <title>Administration</title>
 
@@ -209,7 +221,7 @@
             <para>This preference determines how reports exported from Koha
             will separate data.</para>
 
-            <para>Default: semincolons</para>
+            <para>Default: semicolons</para>
 
             <para>Asks: Separate columns in an exported report file with ___
             by default.</para>
@@ -230,7 +242,7 @@
               </listitem>
 
               <listitem>
-                <para>semincolons</para>
+                <para>semicolons</para>
               </listitem>
 
               <listitem>
@@ -246,9 +258,9 @@
           <section>
             <title>KohaAdminEmailAddress</title>
 
-            <para>This is the default From: address for emails unless there is
-            one for the particular branch, and is referred to when an internal
-            error occurs.</para>
+            <para>This is the default 'From' address for emails unless there
+            is one for the particular branch, and is referred to when an
+            internal error occurs.</para>
 
             <para>Asks: Use ___ as the email address for the administrator of
             Koha.</para>
@@ -600,6 +612,19 @@
               <listitem>
                 <para>ISBD form -- displays records in the staff client in the
                 old card catalog format</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>See <link linkend="isbdpref">ISBD</link> preference
+                    for more information</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Labelled MARC form -- displays records in the staff
+                client in MARC with text labels to explain the different
+                fields</para>
               </listitem>
 
               <listitem>
@@ -615,7 +640,7 @@
           </section>
 
           <section>
-            <title>ISBD</title>
+            <title id="isbdpref">ISBD</title>
 
             <para>Default: <link linkend="isbddefault">MARC21 Default
             Appendix</link> or <link linkend="unimarcdefault">UNIMARC Default
@@ -764,9 +789,9 @@
             <para>Asks: Show ___ as the text of links embedded in MARC
             records.</para>
 
-            <para>This value will show in place of the URL for data entered in
-            the 856$u field if no other label is defined in the 856
-            filed.</para>
+            <para>If the 856 field does not have a subfield 3 or y defined,
+            the OPAC will say 'Click here to access online.' If you would like
+            the field to say something else enter that in this field.</para>
           </section>
         </section>
 
@@ -1317,6 +1342,29 @@
 
             <para>This preference makes it so that a librarian can get a copy
             of every notice sent out to patrons.</para>
+          </section>
+
+          <section>
+            <title id="PrintNoticesMaxLines">PrintNoticesMaxLines</title>
+
+            <para>Asks: Include up to ___ item lines in a printed overdue
+            notice.</para>
+
+            <note>
+              <para>If the number of items is greater than this number, the
+              notice will end with a warning asking the borrower to check
+              their online account for a full list of overdue items.</para>
+            </note>
+
+            <tip>
+              <para>Set to 0 to include all overdue items in the notice, no
+              matter how many there are.</para>
+            </tip>
+
+            <important>
+              <para>This preference only refers to the print notices, not
+              those sent via email.</para>
+            </important>
           </section>
 
           <section>
@@ -2310,7 +2358,7 @@
             </tip>
 
             <para>Sign up at: <ulink
-            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+            url="https://affiliate-program.amazon.com/">https://affiliate-program.amazon.com/</ulink></para>
           </section>
 
           <section>
@@ -2495,7 +2543,7 @@
         </section>
 
         <section>
-          <title>Babelthèque</title>
+          <title>Babelth&egrave;que</title>
 
           <para></para>
 
@@ -2505,7 +2553,7 @@
             <para>Default: Don't</para>
 
             <para>Asks: ___ include information (such as reviews and
-            citations) from Babelthèque in item detail pages on the
+            citations) from Babelth&egrave;que in item detail pages on the
             OPAC.</para>
 
             <para>Values:</para>
@@ -2515,7 +2563,7 @@
                 <para>Do</para>
 
                 <screenshot>
-                  <screeninfo>Data from Babelthèque on the bib
+                  <screeninfo>Data from Babelth&egrave;que on the bib
                   record</screeninfo>
 
                   <mediaobject>
@@ -2771,7 +2819,7 @@
 
             <important>
               <para>Unless you have signed up for an ID with OCLC, you are
-              limited to 500 requests per day. Available at: <ulink
+              limited to 1000 requests per day. Available at: <ulink
               url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></para>
             </important>
           </section>
@@ -2779,13 +2827,13 @@
           <section>
             <title>XISBNDailyLimit</title>
 
-            <para>Default: 499</para>
+            <para>Default: 999</para>
 
             <para>Asks: Only use the xISBN service ___ times a day.</para>
 
             <important>
               <para>Unless you have signed up for an ID with OCLC, you are
-              limited to 500 requests per day. Available at: <ulink
+              limited to 1000 requests per day. Available at: <ulink
               url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></para>
             </important>
           </section>
@@ -4363,7 +4411,7 @@
           </section>
 
           <section>
-            <title>reviewson</title>
+            <title id="reviewson">reviewson</title>
 
             <para>Default: Allow</para>
 
@@ -5008,17 +5056,10 @@
           </ulink></para>
 
           <important>
-            <para>You must allow EnhancedMessagingPreferences for this to
-            work.</para>
+            <para>You must allow <link
+            linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+            for this to work.</para>
           </important>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Administration
-              &gt; Global system preferences &gt; Patrons &gt; <link
-              linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
-            </listitem>
-          </itemizedlist>
         </section>
 
         <section>
@@ -5152,16 +5193,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section>
@@ -5169,7 +5203,7 @@
 
             <para>Default: Don't remove</para>
 
-            <para>Asks: ___ stopwords specified in Koha from searches.</para>
+            <para>Asks: ___ stop words specified in Koha from searches.</para>
 
             <para>Values:</para>
 
@@ -5193,15 +5227,8 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>Requires that you have updated your Koha stopwords
-                    list</para>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para><emphasis>Get there:</emphasis> More &gt;
-                        Administration &gt; Stop Words</para>
-                      </listitem>
-                    </itemizedlist>
+                    <para>Requires that you have updated your Koha <link
+                    linkend="stopwordsadmin">Stop Words</link> list</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -5212,8 +5239,8 @@
             </important>
 
             <important>
-              <para>Zebra, on its own, handles a few of the most common
-              stopwords</para>
+              <para>Zebra, on its own, handles a few of the most common stop
+              words</para>
             </important>
           </section>
 
@@ -5244,16 +5271,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section>
@@ -5276,16 +5296,9 @@
             </itemizedlist>
 
             <important>
-              <para>Requires that NoZebra is set to 'Use'</para>
+              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
+              set to 'Use'</para>
             </important>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global System Preferences &gt; Cataloging &gt; <link
-                linkend="NoZebra">NoZebra</link></para>
-              </listitem>
-            </itemizedlist>
           </section>
         </section>
 
@@ -5461,65 +5474,6 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
-          </section>
-
-          <section>
-            <title>XSLTDetailsDisplay</title>
-
-            <para>Default: normally</para>
-
-            <para>Asks: Show item details pages in the staff client ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the bibliographic records in the Staff Client</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title>XSLTResultsDisplay</title>
-
-            <para>Default: using XSLT stylesheets</para>
-
-            <para>Asks: Show biblio records on result page in the staff client
-            ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the Staff Client</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>This preference isn't currently functional.</para>
-            </important>
           </section>
         </section>
 
@@ -5793,6 +5747,87 @@
           </section>
 
           <section>
+            <title>XSLTDetailsDisplay</title>
+
+            <para>Default: normally</para>
+
+            <para>Asks: Show item details pages in the staff client ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+
+                <screenshot>
+                  <screeninfo>Detail display without XSLT
+                  stylesheets</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the bibliographic records in the Staff Client</para>
+
+                    <screenshot>
+                      <screeninfo>Detail display using XSLT
+                      stylesheets</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>XSLTResultsDisplay</title>
+
+            <para>Default: using XSLT stylesheets</para>
+
+            <para>Asks: Show biblio records on result page in the staff client
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>normally</para>
+              </listitem>
+
+              <listitem>
+                <para>using XSLT stylesheets</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>XSLT stylesheets enable more detail to be displayed
+                    on the search results in the Staff Client</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference isn't currently functional.</para>
+            </important>
+          </section>
+
+          <section>
             <title>yuipath</title>
 
             <para>Default: included with Koha</para>
@@ -5941,6 +5976,38 @@
         <title>Web Services</title>
 
         <para></para>
+
+        <section>
+          <title>ILS-DI</title>
+
+          <para></para>
+
+          <section>
+            <title>ILS-DI</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ ILS-DI services for OPAC users</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>ILS-DI:Authorized_IPs</title>
+
+            <para>Asks: ___ allowed IPs to use the ILS-DI services</para>
+          </section>
+        </section>
 
         <section>
           <title>OAI-PMH</title>
@@ -7353,7 +7420,14 @@
           experience the same results.</para>
         </tip>
 
-        <para></para>
+        <para><important>
+            <para>At the very least you will need to set an absolute default
+            circulation rule. This rule should be set for the default
+            itemtype, default branchcode and default patron category. That
+            will catch anyone who doesn't match a specific rule. Patrons who
+            do not match a specific rule will get blocked from placing holds,
+            since there was no baseline number of holds to utilize.</para>
+          </important></para>
 
         <section>
           <title>Default Issuing Rules</title>
@@ -8106,8 +8180,8 @@
                         </listitem>
 
                         <listitem>
-                          <para>9 =&gt; Future use &#149; URL : if checked, the
-                          subfield is an URL, and can be clicked</para>
+                          <para>9 =&gt; Future use &#149; URL : if checked,
+                          the subfield is an URL, and can be clicked</para>
                         </listitem>
                       </itemizedlist>
                     </listitem>
@@ -8218,7 +8292,7 @@
 
                   <itemizedlist>
                     <listitem>
-                      <para>means that the value is not free test, but must be
+                      <para>means that the value is not free text, but must be
                       searched in the authority/thesaurus of the selected
                       category</para>
                     </listitem>
@@ -8259,6 +8333,49 @@
 
       <section>
         <title>Koha to MARC Mapping</title>
+
+        <para>While Koha stores the entire MARC record, it also stores common
+        fields for easy access in various tables in the database. Koha to MARC
+        Mapping is used to tell Koha where to find these values in the MARC
+        record. In many cases you will not have to change the default values
+        set by in this tool on installation, but it is important to know that
+        the tool is here and can be used at any time.</para>
+
+        <para>The Koha to MARC Mapping page offers you the option of choosing
+        from one of three tables in the database to assign values to.</para>
+
+        <screenshot>
+          <screeninfo>Koha to MARC Mapping Table Pull Down</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/kohamarcmapping.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>After choosing the table you would like to view, click 'OK.' To
+        edit any mapping click on the 'Koha Filed' or the 'Edit' link.</para>
+
+        <screenshot>
+          <screeninfo>Map MARC Field to Koha Field</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/mapmarc.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Choose which MARC field you would like to map to this Koha Field
+        and click the 'OK' button. If you would like to clear all mappings,
+        click the 'Click to "Unmap"' button.</para>
+
+        <important>
+          <para>At this time you can map only 1 MARC field to 1 Koha field.
+          This means that you won't be able to map both the 100a and the 700a
+          to the author field, you need to choose one or the other.</para>
+        </important>
 
         <para></para>
       </section>
@@ -8411,12 +8528,68 @@
       <section>
         <title id="budgetplanning">Budgets</title>
 
-        <para></para>
+        <para>Budgets are the top level used for tracking accounting values
+        related to acquisitions. An example would be to create a budget for
+        the current year and then breaking that into Funds for different areas
+        of the library.</para>
 
         <section>
           <title id="addbudget">Add a budget</title>
 
-          <para></para>
+          <para>To add a budget click the 'New Budget' button.</para>
+
+          <screenshot>
+            <screeninfo>New Budget Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/newbudgetform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose the time period this budget is for, whether it's an
+              academic year, a fiscal year, a quarter, etc.</para>
+            </listitem>
+
+            <listitem>
+              <para>The Description should be something that will help you
+              identify the budget when ordering</para>
+            </listitem>
+
+            <listitem>
+              <para>In the amount box do not use any symbols, simply enter the
+              amount of the budget with numbers and decimals.</para>
+            </listitem>
+
+            <listitem>
+              <para>Marking a budget active makes it usable when placing
+              orders in the acquisitions module, even if the order is placed
+              after the budget end date. This will allow you to record orders
+              that were places in a previous budget period.</para>
+            </listitem>
+
+            <listitem>
+              <para>Locking a budget means that Funds will not be able to be
+              modified by librarians</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Once you have made your edits, click the 'Save Changes'
+          button. You will be brought to a list of your existing
+          budgets.</para>
+
+          <screenshot>
+            <screeninfo>List of Budgets</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/budgetlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
 
@@ -8426,7 +8599,7 @@
         <para></para>
 
         <section>
-          <title>Add a Fund</title>
+          <title id="addbudgetfund">Add a Fund</title>
 
           <para>A fund is added to a budget.</para>
 
@@ -8535,6 +8708,74 @@
               </imageobject>
             </mediaobject>
           </screenshot>
+
+          <para>To the right of each fund you will find the 'Edit,' 'Delete,'
+          and 'Add Child Fund' options. A child fund simply a sub-fund of the
+          fund listed. An example would be to have a fund for 'Fiction' and
+          under that have a fund for 'New Releases' and a fund for 'Science
+          Fiction.' It is an optional way to further organize your
+          finances.</para>
+        </section>
+
+        <section>
+          <title>Budget Planning</title>
+
+          <para>When viewing the list of funds click the 'Planning' button and
+          choose how you would like to plan to spend your budget.</para>
+
+          <screenshot>
+            <screeninfo>Planning pull down menu</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/planningpulldown.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>If you choose 'Plan by MONTHS' you will see the budgeted
+          amount broken down by months:</para>
+
+          <screenshot>
+            <screeninfo>Budget Planning Formula</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/planningbymonths.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>From here you can plan your budget spending by manually
+          entering values or by clicking the 'Auto-fill row' button. If you
+          choose to auto-fill the form the system will try to divide the
+          amount accordingly, you may have to make some edits to split things
+          more accurately.</para>
+
+          <screenshot>
+            <screeninfo>Auto-filled columns</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/autofill.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once your changes are made, click the 'Save' button. If you
+          would like to export your data as a CSV file you can do so by
+          entering a file name in the 'Output to a file named' field and
+          clicking the 'Output' button.</para>
+
+          <screenshot>
+            <screeninfo>Export planning as CSV</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/acquisitions/planningcsv.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
         </section>
       </section>
     </section>
@@ -8545,7 +8786,7 @@
       <para></para>
 
       <section>
-        <title>Stop Words</title>
+        <title id="stopwordsadmin">Stop Words</title>
 
         <important>
           <para>If NoZebra is set to 'Use' this option will not appear on the
@@ -8874,25 +9115,384 @@
       <section>
         <title>Templates</title>
 
-        <para></para>
+        <para>A template is the label/card stock you are using. This might be
+        Avery 5160 for address labels, Gaylord 47-284 for spine labels or
+        Avery 28371 for your patron cards, just to give a couple of examples.
+        These labels will include all of the information you will need for
+        setting up a Koha, this information may be on the packaging, and if
+        not it can usually be found on the vendor's website.</para>
+
+        <section>
+          <title id="addlabeltemplate" lang="">Add a Template</title>
+
+          <para>To add a new template, you want to click on the 'Templates'
+          button at the top of your page and choose 'New Template'</para>
+
+          <screenshot>
+            <screeninfo>New Label Template Option</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newtemplate.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can define the template for
+          your sheet of labels or cards.</para>
+
+          <screenshot>
+            <screeninfo>Label Template Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/labelform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Template ID will be automatically generated after saving
+              your template, this is simply a system genereated unique
+              id</para>
+            </listitem>
+
+            <listitem>
+              <para>Template Code should be something you can use to identify
+              your template on a list of templates</para>
+            </listitem>
+
+            <listitem>
+              <para>You can use the Template Description to add additional
+              information about the template</para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for the template. This should
+              probably match the unit of measurement used on the template
+              description provided by the product vendor.</para>
+
+              <screenshot>
+                <screeninfo>Measurement Units</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>The measurements, number of columns and number of rows can
+              be found on the vendor product packaging or website.</para>
+            </listitem>
+
+            <listitem>
+              <para>A profile is a set of "adjustments" applied to a given
+              template just prior to printing which compensates for anomalies
+              unique and peculiar to a given printer (to which the profile is
+              assigned).</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Before picking a profile try printing some sample
+                  labels so that you can easily define a profile that is right
+                  for your printer/template combination.</para>
+                </listitem>
+
+                <listitem>
+                  <para>After finding any anomolies in the printed document,
+                  <link linkend="addlabelprofile">create a profile</link> and
+                  assign it to the template.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your templates will appear on the 'Manage
+          Templates' page.</para>
+
+          <screenshot>
+            <screeninfo>List of label templates</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/labeltemplates.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section>
         <title>Profiles</title>
 
-        <para></para>
+        <para>A profile is a set of "adjustments" applied to a given <link
+        linkend="addlabeltemplate">template</link> just prior to printing
+        which compensates for anomalies unique and peculiar to a given printer
+        (to which the profile is assigned). This means if you set a template
+        up and then print a sample set of data and find that the items are not
+        all aligned the same on each label, you need to set up a profile for
+        each printer to make up for the differences in printing styles, such
+        as the shifting of text to the left, right, top or bottom.</para>
+
+        <para>If your labels are printing just the way you want, you will not
+        need a profile.</para>
+
+        <section>
+          <title id="addlabelprofile">Add a Profile</title>
+
+          <para>To add a new profile, you want to click on the 'Profiles'
+          button at the top of your page and choose 'New Profile'</para>
+
+          <screenshot>
+            <screeninfo>New Profile Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newprofile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Create a Printer Profile</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newprofileform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>The Printer Name and Paper Bin do not have to match your
+              printer exactly, they are for your reference so you can remember
+              what printer you have set the profile for. So if you want to use
+              the Printer model number in printer name or you can call it 'the
+              printer on my desk'</para>
+            </listitem>
+
+            <listitem>
+              <para>Template will be filled in once you have chosen which
+              template to apply the profile to on the <link
+              linkend="addlabeltemplate">template edit form</link></para>
+            </listitem>
+
+            <listitem>
+              <para>The Units pull down is used to define what measurement
+              scale you're going to be using for your profile.</para>
+
+              <screenshot>
+                <screeninfo>Units of Measurement</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/units.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Offset describes what happens when the entire image is off
+              center either vertically or horzontally and creep describes a
+              condition where the distance between the labels changes across
+              the page or up and down the page</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>For these values, negative numbers move the error up
+                  and to the left and positive numbers move the error down and
+                  to the right</para>
+                </listitem>
+
+                <listitem>
+                  <para>Example: the text is .25" from the left edge of the
+                  first label, .28" from the left edge of the second label and
+                  .31" from the left edge of the third label. This means the
+                  horizontal creep should be set to .03" to make up for this
+                  difference.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>After saving, your profiles will appear on the 'Manage
+          Profiles' page.</para>
+
+          <screenshot>
+            <screeninfo>List of Profiles</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/profiles.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once you have saved your new profile, you can return to the
+          list of templates and choose to edit the template that this profile
+          is for.</para>
+        </section>
       </section>
 
       <section>
         <title>Layouts</title>
 
         <para></para>
+
+        <section>
+          <title>Add a Layout</title>
+
+          <para>To add a new layout, you want to click on the 'Layouts' button
+          at the top of your page and choose 'New Layout'</para>
+
+          <screenshot>
+            <screeninfo>New Layout Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newlayout.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Using the form that appears you can create a profile to fix
+          any problems with your template.</para>
+
+          <screenshot>
+            <screeninfo>Add New Layout</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/layoutform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>After saving, your layouts will appear on the 'Manage Layouts'
+          page.</para>
+        </section>
       </section>
 
       <section>
         <title>Batches</title>
 
         <para></para>
+
+        <section>
+          <title>Add a Batch</title>
+
+          <para>Batches can be created in one of two ways. The first is to
+          click the 'Create Label Batch' link on the '<link
+          linkend="managestaged">Staged MARC Management</link>' page:</para>
+
+          <screenshot>
+            <screeninfo>Create Label Batch Link on Staged Records
+            List</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/labelfromstaged.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The other is to choose to create a new batch from the label
+          creator tool</para>
+
+          <screenshot>
+            <screeninfo>Create New Batch</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/newbatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>You will be brought to an empty batch with an 'Add item(s)'
+          button at the top of the page. Clicking 'Add item(s)' will open a
+          search window for you to find the items you want to add to the
+          batch.</para>
+
+          <screenshot>
+            <screeninfo>Search for items for a Batch</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/searchforbatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>From the search results, click the check box next to the items
+          you want to add to the batch and click the 'Add checked' button. You
+          can also add items one by one by clicking the 'Add' link to the left
+          of each item.</para>
+
+          <screenshot>
+            <screeninfo>Batch search results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/batchsearchresults.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Once you have added all of the items click the 'Done' button.
+          The resulting page will list the items you have selected.</para>
+
+          <screenshot>
+            <screeninfo>List of items in the batch</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/itemsinbarch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To print your labels, click the 'Export Batch' button. To
+          print only some of the labels, click the 'Export Item(s)' button.
+          Either way you will be presented with a confirmation screen where
+          you can choose your template and layout.</para>
+
+          <screenshot>
+            <screeninfo>Start batch export</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/exportbatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>You will then be presented with three download options: PDF,
+          Excel, and CSV.</para>
+
+          <screenshot>
+            <screeninfo>Batch save options</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/savebatch.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>After saving your file, simply print to the blank labels you
+          have in your library.</para>
+        </section>
       </section>
     </section>
 
@@ -9095,7 +9695,7 @@
         compensates for anomalies unique and peculiar to a given printer (to
         which the profile is assigned). This means if you set a template up
         and then print a sample set of data and find that the items are not
-        all aligned the same on each label, you need to set up a profile for
+        all aligned the same on each card, you need to set up a profile for
         each printer to make up for the differences in printing styles, such
         as the shifting of text to the left, right, top or bottom.</para>
 
@@ -9766,7 +10366,7 @@
                   <listitem>
                     <tip>
                       <para>You can also use your own headers (instead of the
-                      ones from koha) by prefixing the field number with an
+                      ones from Koha) by prefixing the field number with an
                       header, followed by the equal sign. Example : Personal
                       name=200|Entry element=210$a|300|009</para>
                     </tip>
@@ -10270,18 +10870,34 @@
 
           <itemizedlist>
             <listitem>
-              <para>The attribute type code and a ':' should precede each
+              <para>The attribute type code and a colon should precede each
               value.</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>For example: "INSTID:12345,LANG:fr"</para>
+                  <para>For example: <emphasis
+                  role="bold">INSTID:12345,LANG:fr</emphasis> or <emphasis
+                  role="bold">STARTDATE:January 1
+                  2010,TRACK:Day</emphasis></para>
                 </listitem>
 
                 <listitem>
-                  <para>If entering more than one patron attribute make sure
-                  you wrap the field in quotation marks (as shown
-                  above)</para>
+                  <para>If an input record has more than one attribute, the
+                  fields should either be entered as an unquoted string
+                  (previous examples), or with each field wrapped in separate
+                  double quotes and delimited by a comma:</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para><emphasis role="bold">"STARTDATE:January 1,
+                      2010","TRACK:Day"</emphasis></para>
+                    </listitem>
+
+                    <listitem>
+                      <para>This syntax would be required if the data might
+                      have a comma in it, like a date string.</para>
+                    </listitem>
+                  </itemizedlist>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10718,8 +11334,8 @@
           <para>Which, assuming two items were overdue, would result in a
           notice like:<programlisting>   The following item(s) is/are currently overdue:
 
-   "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: £3.50
-   "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: £3.50</programlisting></para>
+   "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: &pound;3.50
+   "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: &pound;3.50</programlisting></para>
         </section>
       </section>
 
@@ -11358,7 +11974,24 @@
             </listitem>
           </itemizedlist>
         </listitem>
+
+        <listitem>
+          <para>Once finished, click 'Save'</para>
+        </listitem>
       </itemizedlist>
+
+      <para>If the system suspects this patron is a duplicate of another it
+      will warn you.</para>
+
+      <screenshot>
+        <screeninfo>Patron Duplicate Suspected</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/patrons/duplicatewarn.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section>
@@ -14328,6 +14961,26 @@
                     </imageobject>
                   </mediaobject>
                 </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>In addition to the Import link to the right of each
+                    title, you can click on the title you're interested in and
+                    a menu will pop up with links to preview the record and
+                    import it</para>
+
+                    <screenshot>
+                      <screeninfo>Import Link Popup on Z39.50 Search
+                      Results</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/cataloging/importz39.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -14396,8 +15049,20 @@
           </listitem>
 
           <listitem>
-            <para>Once you've finished, click the 'Save' button at the
-            top</para>
+            <para>Once you've finished, click the 'Save' button at the top and
+            choose whether you want to save and view the bib record you have
+            created or continue on to add/edit items attached to the
+            record</para>
+
+            <screenshot>
+              <screeninfo>Record save options</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/savecataloging.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
 
             <itemizedlist>
               <listitem>
@@ -14752,6 +15417,40 @@
         <para>If you want to move all items to a new record creating only one
         bibliographic record you can use the <link
         linkend="mergebibrecs">Merge Records tool</link> instead.</para>
+      </section>
+
+      <section>
+        <title>Item Specific Circulation History</title>
+
+        <para>Each bibliographic record keeps a circulation history (with or
+        without the patron information depending on your settings), but each
+        item also has its own circulation history page. To see this, click on
+        the 'Items' tab to the left of the record you are viewing.</para>
+
+        <screenshot>
+          <screeninfo>Items tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/itemstab-long.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Below the 'History' heading is a link to 'View item's checkout
+        history,' clicking that will open up the item's history which will
+        look slightly different from the bibliographic record's history
+        page.</para>
+
+        <screenshot>
+          <screeninfo>Item Specific Circulation History</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/itemspecifichistory.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
     </section>
 
@@ -15157,8 +15856,27 @@
             </listitem>
 
             <listitem>
-              <para>In the 'Rollover at' field, enter the last issue number
+              <para>If you have chosen any 'Numbering Format' other than
+              'Number' in the 'Rollover at' field, enter the last issue number
               before the volume number changes</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>If you chose the 'Number' Numbering Format you will
+                  see 'issues expected' in which you will enter the total
+                  number of issues you expect to receive.</para>
+
+                  <screenshot>
+                    <screeninfo>Number as Numbering Pattern</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/serials/numberonly.png" />
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -15194,7 +15912,8 @@
       </itemizedlist>
 
       <para>Click 'Save Subscription' to save the information you have
-      entered.</para>
+      entered. <link linkend="sampleserialsapp">Find sample serial examples in
+      the appendix</link>.</para>
     </section>
 
     <section>
@@ -15646,7 +16365,7 @@
       </section>
 
       <section>
-        <title>Vendor Contracts</title>
+        <title id="vendorcontracts">Vendor Contracts</title>
 
         <para>You can define contracts (with a start and enddate) and attach
         it to a vendor. This is used so that at the end of the year you can
@@ -15655,7 +16374,7 @@
         amount.</para>
 
         <section>
-          <title>Add a Contract</title>
+          <title id="addvendorcontract">Add a Contract</title>
 
           <para>At the top of a vendor search results page with only result or
           at the top of a vendor information page you will see a 'New
@@ -15667,6 +16386,49 @@
             <mediaobject>
               <imageobject>
                 <imagedata fileref="images/acquisitions/newcontract.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The contract form will ask for some very basic information
+          about the contract</para>
+
+          <screenshot>
+            <screeninfo>New Contract Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/newcontractform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <important>
+            <para>You will not be able to enter a contract retrospectively,
+            the end date must be before today's date.</para>
+          </important>
+
+          <para>Once the contract is saved it will appear below the vendor
+          information.</para>
+
+          <screenshot>
+            <screeninfo>Vendor with contracts</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/contractdisplay.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>It will also be an option when creating a basket</para>
+
+          <screenshot>
+            <screeninfo>Contract Pull Down on New Basket Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/contractonbasket.png" />
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -15827,7 +16589,24 @@
 
         <para>When adding a basket you want to give it a name that will help
         you identify it later. The notes fields are optional and can contain
-        any type of information. When finished, click 'Save'</para>
+        any type of information.</para>
+
+        <para>If you have <link linkend="addvendorcontract">added
+        contracts</link> to the vendor you're ordering from, you will also
+        have an option to choose which contract you're ordering these items
+        under.</para>
+
+        <screenshot>
+          <screeninfo>Basket with contract options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/basketwithcontracts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When finished, click 'Save'</para>
 
         <screenshot>
           <screeninfo>New Empty Basket</screeninfo>
@@ -16055,10 +16834,7 @@
         </itemizedlist>
 
         <para>Once you have entered the info about the item you need to enter
-        the Accounting information. The list of budgets is populated by the
-        <link linkend="budgetplanning">budgets</link> you have assigned in the
-        <link linkend="acqadmin">Acquisitions Administration</link>
-        area.</para>
+        the Accounting information.</para>
 
         <screenshot>
           <screeninfo>Accounting Details</screeninfo>
@@ -16069,6 +16845,43 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Quantity is populated by the number of items you've added to
+            the order above</para>
+          </listitem>
+
+          <listitem>
+            <para>The list of budgets is populated by the <link
+            linkend="budgetplanning">budgets</link> you have assigned in the
+            <link linkend="acqadmin">Acquisitions Administration</link>
+            area.</para>
+          </listitem>
+
+          <listitem>
+            <para>The vendor price will be used to calculate the rest of the
+            amount fields below</para>
+          </listitem>
+
+          <listitem>
+            <para>If the price is uncertain, check the uncertain price
+            box.</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>A basket with at least one uncertain price can't be
+                closed</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you added Planning Values when <link
+            linkend="addbudgetfund">creating the Fund</link> those values will
+            appear in the two planning value fields</para>
+          </listitem>
+        </itemizedlist>
 
         <para>Once an item is added to the basket you will be presented with a
         basket summary</para>
@@ -16083,9 +16896,8 @@
           </mediaobject>
         </screenshot>
 
-        <para>From here you can edit the items you have added or remove them.
-        Once you're sure your basket is complete you can click 'Close this
-        basket' button</para>
+        <para>From here you can edit or remove the items you have
+        added.</para>
 
         <screenshot>
           <screeninfo>Basket Buttons</screeninfo>
@@ -16096,6 +16908,51 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>Also on the summary page you have the option to edit the
+        information you entered about the basket by clicking the 'Edit basket
+        header information' button, deleting the basket alltogether by
+        clicking the 'Delete this basket' button, or exporting your basket as
+        a CSV file by clicking the 'Export this basket as CSV' button.</para>
+
+        <para>Once you're sure your basket is complete you can click 'Close
+        this basket' button to indicate that this basket is complete and has
+        been sent to the vendor.<important>
+            <para>A basket with at least one items marked as 'uncertain price'
+            will not be able to be closed</para>
+
+            <screenshot>
+              <screeninfo>A basket with items where the price is
+              uncertain</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/acquisitions/basketuncertain.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </important></para>
+
+        <para>Clicking the 'Uncertain Prices' button will up a list of items
+        with uncertain prices to quick editing</para>
+
+        <screenshot>
+          <screeninfo>Uncertain Prices</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/acquisitions/uncertainprices.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <important>
+          <para>The Uncertain Prices page is independant of the basket, it is
+          linked to the vendor, so you will see all items on order for this
+          vendor with undertain prices.</para>
+        </important>
+
+        <para></para>
       </section>
 
       <section>
@@ -16118,13 +16975,159 @@
     <section>
       <title>Receiving Orders</title>
 
-      <para></para>
+      <para>Orders can be received from the vendor information page</para>
+
+      <screenshot>
+        <screeninfo>Receive from Vendor Information</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/receivefromvendor.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>or the vendor search results page</para>
+
+      <screenshot>
+        <screeninfo>Vendor Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/receivefromsearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>After clicking 'Receive shipment' you will be asked to enter a
+      vendor invoice number and a shipment received date.</para>
+
+      <screenshot>
+        <screeninfo>Receive Shipment</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/receive.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>The receive page will list all items still on order with the
+      vendor regardless of the basket the item is from.</para>
+
+      <screenshot>
+        <screeninfo>Receipt Summary</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/receiptsummary.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>To receive a specific item, click the 'Receive' link to the right
+      of the item.</para>
+
+      <screenshot>
+        <screeninfo>Receive Item Form</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/receiveitem.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>From this form you can alter the cost information. You can also
+      choose to only receive 1 of multiple items if only 1 arrived. Once you
+      have made any changes necessary, click 'Save' to mark the item as
+      received.</para>
+
+      <screenshot>
+        <screeninfo>Already Received Items</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/received.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You will also see that the item is received if you view the
+      basket</para>
+
+      <screenshot>
+        <screeninfo>One item marked (rcvd) in basket</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/basketwithreceived.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section>
       <title>Claims &amp; Late Orders</title>
 
       <para></para>
+    </section>
+
+    <section>
+      <title>Acquisition Searches</title>
+
+      <para>At the top of the various Acquisition pages there is a quick
+      search box where you can perform either a Vendor Search or an Order
+      Search.</para>
+
+      <screenshot>
+        <screeninfo>Acquisition Searches</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/acqsearches.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the Vendor Search you can enter any part of the vendor name to
+      get results.</para>
+
+      <screenshot>
+        <screeninfo>Vendor Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/vendorquicksearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Using the Order Search you can search for items that have been
+      ordered with or without the vendor.</para>
+
+      <screenshot>
+        <screeninfo>Order Search Box</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/ordersearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You can enter info in one or both fields and and you can enter any
+      part of the title and/or vendor name.</para>
+
+      <screenshot>
+        <screeninfo>Order Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/ordersearchresults.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
   </chapter>
 
@@ -16683,7 +17686,7 @@
           url="http://wiki.koha.org/doku.php?id=sql_library">http://wiki.koha.org/doku.php?id=sql_library</ulink>.
           You can also find your database structure in
           /installer/data/mysql/kohastructure.sql or online at: <ulink
-          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
+          url="http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink>.</para>
 
           <para>To add your query, simply fill in the form presented</para>
 
@@ -16901,8 +17904,9 @@
 
             <para>This report uses 'Period,' or date, filtering that allows
             you to limit to a month by simply selecting the first day of the
-            first month through the first day of the next month.  For example,
-            10/1 to 11/1 to find statistics for the month of October.</para>
+            first month through the first day of the next month. &nbsp;For
+            example, 10/1 to 11/1 to find statistics for the month of
+            October.</para>
 
             <itemizedlist>
               <listitem>
@@ -17580,19 +18584,124 @@
       <section>
         <title>Comments</title>
 
-        <para></para>
+        <para>Patrons can leave comments in the OPAC if you have the <link
+        linkend="reviewson">reviewson</link> preference set to allow this.
+        Each bibliographic record has a comments tab below the bibliographic
+        information.</para>
+
+        <screenshot>
+          <screeninfo>Comments Tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentstab.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If the patron is logged in they will see a link to add a comment
+        to the item. Clicking this link will open a pop up window with a box
+        for their comments.</para>
+
+        <screenshot>
+          <screeninfo>Add a Comment</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/addcomment.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once the comment has been typed and the 'Submit' button clicked,
+        the patron will see their comment as pending and other patrons will
+        simply see that there are no comments on the item.</para>
+
+        <screenshot>
+          <screeninfo>Pending Comment</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentpending.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once the comment is approved the patron will see the comment
+        highlighted in yellow as their comment.</para>
+
+        <screenshot>
+          <screeninfo>Your Comments</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/yourcomment.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Other patrons will see the comment with the name of the patron
+        who left the comment.</para>
+
+        <screenshot>
+          <screeninfo>Comment by other patron</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentby.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section>
         <title>Zotero</title>
 
-        <para></para>
+        <para>Zotero is a Firefox add on that allows for the saving and
+        generating of a bibliography. Learn more about and download Zotero at
+        <ulink url="http://zotero.org">http://zotero.org</ulink>.</para>
       </section>
 
       <section>
-        <title>Custom RSS Feeds</title>
+        <title id="customrss">Custom RSS Feeds</title>
 
-        <para></para>
+        <para>Using misc/cronjobs/rss/rss.pl you can generate an RSS feed for
+        any SQL query (for example a new acquisitions RSS feed). rss.pl is run
+        on the command line to produce an RSS XML document.</para>
+
+        <para>The output should be placed in a directory accessible to the
+        OPAC (or staff) web interface so that users can download the RSS
+        feed.</para>
+
+        <para>An example of usage can be found at: misc/cronjobs/rss.pl
+        lastAcquired.conf</para>
+
+        <para>Normally rss.pl should be run periodically (e.g., daily) to keep
+        the feed up-to-date.</para>
+
+        <para>The configuration file (e.g., lastAcquired.conf) lists</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>name of the template file to use</para>
+          </listitem>
+
+          <listitem>
+            <para>path of output file</para>
+          </listitem>
+
+          <listitem>
+            <para>SQL query</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>rss.pl runs the SQL query, then feeds the output of the query
+        through the template to produce the output file.</para>
+
+        <para><important>
+            <para>To use custom RSS feeds you need to turn on the cron
+            job.</para>
+          </important></para>
       </section>
     </section>
 
@@ -17728,8 +18837,8 @@
         The overview to the documentation describes Zebra as:</para>
 
         <blockquote>
-          <para>"...Zebra is a high-performance, general-purpose structured text
-          indexing and retrieval engine. It reads records in a variety of
+          <para>"...Zebra is a high-performance, general-purpose structured
+          text indexing and retrieval engine. It reads records in a variety of
           input formats (eg. email, XML, MARC) and provides access to them
           through a powerful combination of Boolean search expressions and
           relevance-ranked free-text queries.</para>
@@ -18651,7 +19760,7 @@
   <chapter>
     <chapterinfo>
       <author>
-        <firstname>Jean-André</firstname>
+        <firstname>Jean-Andr&eacute;</firstname>
 
         <surname>Santoni</surname>
 
@@ -19353,7 +20462,7 @@ print theme('pages_catalog');</programlisting>
         200i}|&lt;/h2&gt;</para>
 
         <para>#461|&lt;label class="ipt"&gt;A part of : &lt;/label&gt;|&lt;a
-        href="/cgi-bin/koha/catalogue/search.pl?op=do_search{&amp;q=461t&amp;idx=ti}"&gt;{461t}&lt;/a&gt;{N&#8734;
+        href="/cgi-bin/koha/catalogue/search.pl?op=do_search{&amp;q=461t&amp;idx=ti}"&gt;{461t}&lt;/a&gt;{N&infin;
         461h} {v. 461v}{(461d)}&lt;br/&gt;|</para>
 
         <para>#200b|&lt;label class="ipt"&gt;Material Designation :
@@ -19480,7 +20589,7 @@ print theme('pages_catalog');</programlisting>
 
         <para>#995||&lt;tr&gt;&lt;td&gt; {995k}&lt;/td&gt;&lt;td&gt;
         {995u}&lt;/td&gt;&lt;td&gt;
-        {995y}&lt;/td&gt;&lt;td&gt;{995e}  &lt;/td&gt;&lt;td&gt;
+        {995y}&lt;/td&gt;&lt;td&gt;{995e}&nbsp;&nbsp;&lt;/td&gt;&lt;td&gt;
         {995o}&lt;/td&gt;&lt;td&gt;{995f}&lt;/td&gt;&lt;/tr&gt;|&lt;/table&gt;</para>
       </section>
     </section>
@@ -19557,8 +20666,8 @@ print theme('pages_catalog');</programlisting>
         Resources, then choose the printer model from the Printers drop-down
         list.</para>
 
-        <para>Click Start » Printers and Faxes » Right click the receipt
-        printer » Properties:</para>
+        <para>Click Start &raquo; Printers and Faxes &raquo; Right click the
+        receipt printer &raquo; Properties:</para>
 
         <itemizedlist>
           <listitem>
@@ -19589,7 +20698,7 @@ print theme('pages_catalog');</programlisting>
       <section>
         <title>In Firefox</title>
 
-        <para>Under File » Page Setup:</para>
+        <para>Under File &raquo; Page Setup:</para>
 
         <itemizedlist>
           <listitem>
@@ -19708,7 +20817,7 @@ print theme('pages_catalog');</programlisting>
       <section>
         <title>In Firefox</title>
 
-        <para>Under File » Page Setup:</para>
+        <para>Under File &raquo; Page Setup:</para>
 
         <itemizedlist>
           <listitem>
@@ -19825,6 +20934,81 @@ print theme('pages_catalog');</programlisting>
     <para>06/27/2008 Eating fractions / 502326000022 McMillan, Bruce.</para>
 
     <para>Sincerely, Library Staff</para>
+  </appendix>
+
+  <appendix>
+    <title id="sampleserialsapp">Sample Serials</title>
+
+    <para></para>
+
+    <section>
+      <title>Reader's Digest (0034-0375)</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>Published 12 times a year (monthly)</para>
+        </listitem>
+
+        <listitem>
+          <para>The Volume number changes every 6 months and the the numbers
+          continues on (requires an advanced pattern).</para>
+
+          <screenshot>
+            <screeninfo>Sample Reader's Digest Subscription</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/serialssamples/readersserial.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>People Weekly (1076-0091)</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>Published weekly</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The website says "on Saturday except the first week of
+              August, Thanksgiving week, the first and last weeks of the year"
+              but this does not match the pattern for 2007 or 2008</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>In the Jul-Dec there are 26 issues</para>
+        </listitem>
+
+        <listitem>
+          <para>In the Jan-Jun there are 25 issues (no issue for the first
+          week of January)</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Since the irregularity on the first # 26 does not skip a week,
+      this would be set up as to roll over on issue 25. The 26th issue in the
+      second half of the year would have to be received as a
+      supplemental.</para>
+
+      <para>The irregularity check will complain that 52 issues were expected,
+      but 25 entered. The current irregularity check can only check that the
+      first position of the numbering pattern matches the expected issue count
+      of the periodicity. But we do need to trigger the rollover on the
+      volume, so we need to define the last two weeks of the year as
+      irregularities. So we receive 50 issues the first 50 weeks, then one
+      supplemental issue in week 51, which we have to define the enumeration
+      for, then the next predicted issue will be the following year's first
+      week.</para>
+    </section>
   </appendix>
 
   <appendix>
@@ -20121,6 +21305,60 @@ print theme('pages_catalog');</programlisting>
   </appendix>
 
   <appendix>
+    <title>Resetting the Koha Database</title>
+
+    <para>These notes on how to reset the database for Koha 3 were derived
+    from the following email thread: <ulink
+    url="http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html</ulink></para>
+
+    <para>Resetting the database may be useful if you install Koha with the
+    sample data, and then wish to use real data without reinstalling the
+    software.</para>
+
+    <section>
+      <title>Truncate Tables</title>
+
+      <para>Use your preferred MySQL client to <ulink
+      url="http://dev.mysql.com/doc/refman/5.0/en/truncate.html">truncate</ulink>
+      the following tables:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>bibio</para>
+        </listitem>
+
+        <listitem>
+          <para>biblioitems</para>
+        </listitem>
+
+        <listitem>
+          <para>items</para>
+        </listitem>
+
+        <listitem>
+          <para>auth_header</para>
+        </listitem>
+
+        <listitem>
+          <para>sessions</para>
+        </listitem>
+
+        <listitem>
+          <para>zebraqueue</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Reset the Zebra Index</title>
+
+      <para>Run the following commands to reset the authorities and biblios
+      Zebra indices. <programlisting>$ zebraidx -c /etc/koha/zebradb/zebra-authorities-dom.cfg -g iso2709 -d authorities init 
+$ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </programlisting></para>
+    </section>
+  </appendix>
+
+  <appendix>
     <title>Important Links</title>
 
     <para></para>
@@ -20136,12 +21374,12 @@ print theme('pages_catalog');</programlisting>
 
         <listitem>
           <para>Koha Versioning Control - <ulink
-          url="http://git.koha.org/">http://git.koha.org/</ulink></para>
+          url="http://git.koha-community.org/">http://git.koha-community.org/</ulink></para>
         </listitem>
 
         <listitem>
           <para>Database Structure - <ulink
-          url="http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha.org/cgi-bin/gitweb.cgi?p=Koha;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink></para>
+          url="http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD">http://git.koha-community.org/cgi-bin/gitweb.cgi?p=koha.git;a=blob_plain;f=installer/data/mysql/kohastructure.sql;hb=HEAD</ulink></para>
         </listitem>
 
         <listitem>
@@ -20203,7 +21441,7 @@ print theme('pages_catalog');</programlisting>
       <itemizedlist>
         <listitem>
           <para>Amazon Associates - <ulink
-          url="http://associates.amazon.com">http://associates.amazon.com</ulink></para>
+          url="https://affiliate-program.amazon.com/">https://affiliate-program.amazon.com</ulink></para>
         </listitem>
 
         <listitem>
@@ -20299,7 +21537,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>Default values: 0 = Not withdrawn / 1 = Withdrawn</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20337,8 +21575,9 @@ print theme('pages_catalog');</programlisting>
 
         <td>Specific issues of serials or multi-part items.</td>
 
-        <td>Copy/volume data is stored in 952&#135;h and &#135;t for display in Normal
-        views. &#135;3 isn't displayed anywhere except the MARC view.</td>
+        <td>Copy/volume data is stored in 952&#135;h and &#135;t for display
+        in Normal views. &#135;3 isn't displayed anywhere except the MARC
+        view.</td>
       </tr>
 
       <tr>
@@ -20348,7 +21587,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>Default values: 0 = Not damaged / 1 = Damaged</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20359,7 +21598,7 @@ print theme('pages_catalog');</programlisting>
         <td>Default values: 0 = No use restrictions / 1 = Restricted
         Access</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20370,7 +21609,7 @@ print theme('pages_catalog');</programlisting>
         <td>Default values: -1 = Ordered / 0 = Available for loans / 1 = Not
         for Loan / 2 = Staff Collection</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20378,9 +21617,9 @@ print theme('pages_catalog');</programlisting>
 
         <td>Collection code</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20411,7 +21650,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>holding library (usu. the same as 952$a )</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20419,7 +21658,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>Shelving location code</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
 
         <td>Coded value, matching <link linkend="authorizedvalues">Authorized
         Value</link> category ('LOC' in default installation)</td>
@@ -20444,7 +21683,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>coded value or vendor string</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20454,7 +21693,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>decimal number, no currency symbol</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20462,9 +21701,9 @@ print theme('pages_catalog');</programlisting>
 
         <td>Serial enumeration caption</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20472,9 +21711,9 @@ print theme('pages_catalog');</programlisting>
 
         <td>Koha full call number</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20484,7 +21723,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>max 20 characters</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20494,7 +21733,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>decimal number, no currency symbol</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20504,7 +21743,7 @@ print theme('pages_catalog');</programlisting>
 
         <td>YYYY-MM-DD</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
 
       <tr>
@@ -20523,9 +21762,9 @@ print theme('pages_catalog');</programlisting>
 
         <td>Public note</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
 
-        <td> </td>
+        <td>&nbsp;</td>
       </tr>
     </table>
 
@@ -20548,7 +21787,7 @@ print theme('pages_catalog');</programlisting>
         <para><emphasis role="bold">Question:</emphasis> Can I have my own set
         of item type images (or authorized value icons)?</para>
 
-        <para><emphasis role="bold">Answer: </emphasis>Absoltuley. To add
+        <para><emphasis role="bold">Answer: </emphasis>Absolutely. To add
         additional icons to your system you simply add a new directory to
         koha-tmpl/intranet-tmpl/prog/img/itemtypeimg/ and to
         koha-tmpl/opac-tmpl/prog/itemtypeimg and put your icons in the new
@@ -20606,14 +21845,14 @@ print theme('pages_catalog');</programlisting>
         Is it today's date minus one? Can the dropbox checkin date be
         set?</para>
 
-        <para><emphasis role="bold">Answer</emphasis>: If the library is cHow
-        is the dropbox date is determined?losed for four days for renovations,
-        for example, there would be more than one day needed for the dropbox
-        date. You will only have one dropbox date and that will be the last
-        day that the library open (determined by the holiday calendar) because
-        there is no real way to know what day the books were dropped into the
-        box during the 4 closed days. The only way to change the effective
-        checkin date in dropbox mode is to modify the calendar.</para>
+        <para><emphasis role="bold">Answer</emphasis>: If the library is
+        closed for four days for renovations, for example, there would be more
+        than one day needed for the dropbox date. You will only have one
+        dropbox date and that will be the last day that the library open
+        (determined by the holiday calendar) because there is no real way to
+        know what day the books were dropped into the box during the 4 closed
+        days. The only way to change the effective checkin date in dropbox
+        mode is to modify the calendar.</para>
       </section>
 
       <section>
@@ -20627,6 +21866,65 @@ print theme('pages_catalog');</programlisting>
         you have a default rule &amp; a branch rule, the notification will be
         generated twice. A quick fix is to discard "default rule" for
         instance.</para>
+      </section>
+
+      <section>
+        <title>Printing Overdue Notices</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Can I print overdue
+        notices for patrons without email addresses on file?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Yes. The <link
+        linkend="overduenoticecron">overdue notice cron job</link> has a
+        setting to generate the overdue notices as HTML for printing. An
+        example of this useage would be:</para>
+
+        <para><programlisting>overdue_notices.pl -t -html /tmp/noticedir -itemscontent issuedate,date_due,title,barcode,author </programlisting>In
+        this example, we wanted to use only certain item fields in our
+        notices, so we specified itemscontent fields in the cron entry; that's
+        not a requirement for the feature.</para>
+
+        <para>The command line needs to specify a web-accessible directory
+        where the print notices will go -- they get a filename like
+        notices-2009-11-24.html (or holdnotices-2009-11-24.html). The overdue
+        notice itself can be formatted to fit a Z-mailer. Within the notice
+        file, the text is spaced down or over to where it will print properly
+        on the form. The script has code that wraps around the notice file to
+        tell the HTML to obey the formatting, and to do a page break between
+        notices. That's so that when staff print it out, they get one per
+        page. We had to add an extra syspref (<link
+        linkend="PrintNoticesMaxLines">PrintNoticesMaxLines</link>) to specify
+        page length because our client allows a _lot_ of checkouts which meant
+        some notices were running onto multiple pages. That syspref says to
+        truncate the print notice at that page length and put in a message
+        about go check your OPAC account for the full list.</para>
+
+        <para>The print and email overdues use the same notice file. The print
+        notices for holds are different -- there's a separate HOLD_PRINT
+        notice file and the system uses it if there's no email address. Then a
+        nightly cron job runs to gather those up from the message queue and
+        put them in an HTML file in the notice directory, as above.</para>
+
+        <para>The cron entry is gather_print_notices.pl /tmp/noticedir</para>
+      </section>
+
+      <section>
+        <title>Unable to Renew Items</title>
+
+        <para><emphasis role="bold">Question</emphasis>: We&rsquor;re trying
+        to renew some items for our patron. One of the items is on hold and
+        ineligible for renewal, but the other two items refuse to renew even
+        though they should be eligible. When I try to use the override renewal
+        limit, it just returns a little message that says &ldquo;renewal
+        failed&rdquor;. Any idea what&rsquor;s going on here?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: At the very least you
+        will need to set an absolute <link linkend="circfinerules">default
+        circulation rule</link>. This rule should be set for the default
+        itemtype, default branchcode and default patron category. That will
+        catch anyone who doesn't match a specific rule. Patrons who do not
+        match a specific rule will get blocked from placing holds, since there
+        was no baseline number of holds to utilize.</para>
       </section>
     </section>
 
@@ -20644,8 +21942,37 @@ print theme('pages_catalog');</programlisting>
         <para><emphasis role="bold">Answer:</emphasis> These fields are
         authority controlled and you probably have the BiblioAddsAuthorities
         set to 'allow'. When it is set to 'don't allow' these fields will be
-        locked and require you to search for an exisiting authority
+        locked and require you to search for an existing authority
         record.</para>
+      </section>
+
+      <section>
+        <title>Koha to MARC Mapping</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What's the
+        relationship between 'Koha to MARC Mapping' and 'MARC Bibliographic
+        Frameworks'?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Mapping can be defined
+        through 'MARC Bibliographic Frameworks' OR 'Koha to MARC Mapping'.
+        'Koha to MARC Mapping' is just a shortcut to speed up linkage. If you
+        change a mapping in one of these modules, the mapping will change in
+        the other as well. (In other words, the two modules 'overwrite' each
+        other in order to prevent conflicts from existing in Koha).</para>
+      </section>
+
+      <section>
+        <title>Number of Items Per Bib Record</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Is there a limit on
+        the number of items I can attach to a bib record?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: There is no explicit
+        limit to the number of items you can attach to a bibliographic record,
+        but if you attach enough of them, your MARC record will exceed the
+        maximum file size limit for the ISO-2709 standard, which breaks
+        indexing for that record. I've found this occurs somewhere between 600
+        and 1000 items on a 'normal' bibliographic record.</para>
       </section>
     </section>
 
@@ -20663,13 +21990,13 @@ print theme('pages_catalog');</programlisting>
         <para><emphasis role="bold">Answer</emphasis>: When you plan in
         advance for the way your budget is going to be spent, you initially
         plan for how it's going to be spent over time, that's the most natural
-        thing to do. </para>
+        thing to do.</para>
 
         <para>So you plan for $1000 in Jan. $1000 in Feb., $3000 in March,
         etc. You can basically do the same thing with a list of values in lieu
-        of the months. </para>
+        of the months.</para>
 
-        <para>Say you have a list like this one: </para>
+        <para>Say you have a list like this one:</para>
 
         <itemizedlist>
           <listitem>
@@ -20700,12 +22027,84 @@ print theme('pages_catalog');</programlisting>
         <para>The list is meant to represent when the books acquired where
         published. Then you plan for it, saying: we went to spend at list 40%
         of our budgets on books published less than a year ago, 10% on books
-        more than 10 years old, etc. </para>
+        more than 10 years old, etc.</para>
 
         <para>Upon acquiring new material, you'll be able to select, for a
         given item, a value from this list in a drop down. Then, after the
         material has been acquired, at the end of the year, you'll be able to
         compare the goals set, with what's been achieved.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Serials</title>
+
+      <para></para>
+
+      <section>
+        <title>Advanced Patterns</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What is the 'inner
+        counter' on the advanced serials pattern interface?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: I think it is better to
+        give an example to understand this :</para>
+
+        <para>Example for a monthly subscription :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>First issue publication date : april 2010</para>
+          </listitem>
+
+          <listitem>
+            <para>Numbering : No {X}, year {Y}</para>
+          </listitem>
+
+          <listitem>
+            <para>First issue : No 4, year 2010</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>For the year Y : you will want the year change on january
+        2011</para>
+
+        <para>So, the advanced pattern for Y will be :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Add : 1</para>
+          </listitem>
+
+          <listitem>
+            <para>once every : 12</para>
+          </listitem>
+
+          <listitem>
+            <para>When more than 9999999</para>
+          </listitem>
+
+          <listitem>
+            <para>inner counter : 3</para>
+          </listitem>
+
+          <listitem>
+            <para>Set back to 0</para>
+          </listitem>
+
+          <listitem>
+            <para>Begins with 2010</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Year is going to change after 12 received issues from april
+        2010, that is in April 2011 if you don't set inner counter. Set inner
+        counter to 3 will say to Koha : change year after 12-3 = 9 received
+        issues.</para>
+
+        <para>Inner counter says to koha to take into account the first issues
+        of the year, even if they are not received with Koha. If you begin
+        with first issue of the year write nothing or 0.</para>
       </section>
     </section>
 
@@ -20822,6 +22221,33 @@ print theme('pages_catalog');</programlisting>
               </itemizedlist>
             </listitem>
           </itemizedlist>
+        </section>
+      </section>
+    </section>
+
+    <section>
+      <title>Searching</title>
+
+      <para></para>
+
+      <section>
+        <title>Advanced Search</title>
+
+        <para></para>
+
+        <section>
+          <title>Scan Indexes</title>
+
+          <para><emphasis role="bold">Question</emphasis>: What does 'scan
+          indexes' on the advanced search page mean?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>: When you choose an
+          index, enter a term, click 'scan indexes' and do the search, Koha
+          displays the searched term and the following terms found in this
+          index with the number of corresponding records That is search is not
+          made directly in the catalog, but first in the indexes It works only
+          for one index at once, and only with no limit in Location (All
+          libraries needed)</para>
         </section>
       </section>
     </section>
@@ -21008,7 +22434,7 @@ print theme('pages_catalog');</programlisting>
         linkend="cleandbcron">cleanup database cron job</link>.</para>
 
         <para>Or just before doing a backup command (mysqldump), you can
-        truncate session table:  </para>
+        truncate session table: &nbsp;</para>
 
         <para><programlisting>mysql -u&lt;kohauser -p&lt;password &lt;koha-db-name -e 'TRUNCATE TABLE sessions'</programlisting></para>
       </section>
@@ -21417,7 +22843,7 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section>
-          <title>Overdue Notice</title>
+          <title id="overduenoticecron">Overdue Notice</title>
 
           <para>Script path: misc/cronjobs/overdue_notices.pl</para>
 
@@ -21428,7 +22854,8 @@ print theme('pages_catalog');</programlisting>
 
           <note>
             <para>This script does not actually send the notices. It queues
-            them in the message queue for later</para>
+            them in the message queue for later or generates the HTML for
+            later printing</para>
           </note>
 
           <section>
@@ -21460,6 +22887,8 @@ print theme('pages_catalog');</programlisting>
             this library (repeatable : several libraries can be given)</para>
 
             <para>-csv &lt;filename&gt; populate CSV file</para>
+
+            <para>-html &lt;filename&gt; Output html to file</para>
 
             <para>-itemscontent &lt;list of fields&gt; item information in
             templates</para>
@@ -21674,6 +23103,18 @@ print theme('pages_catalog');</programlisting>
             <para>outputformat</para>
           </section>
         </section>
+
+        <section>
+          <title>Print Hold Notices</title>
+
+          <para>Script path: misc/cronjobs/gather_print_notices.pl</para>
+
+          <para>Does: looks through the message queue for hold notices that
+          didn't go through because the patron didn't have an email address
+          and generates a print notice</para>
+
+          <para>Frequency suggestion: nightly</para>
+        </section>
       </section>
 
       <section>
@@ -21856,7 +23297,8 @@ print theme('pages_catalog');</programlisting>
           <para>Script path: misc/cronjobs/rss/rss.pl</para>
 
           <para>Does: Produces an RSS XML document for any SQL query (not used
-          for search results RSS feed)</para>
+          for search results RSS feed). <link linkend="customrss">Learn
+          more</link>.</para>
 
           <para>Frequency suggestion: hourly</para>
         </section>
@@ -22268,15 +23710,15 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
 &lt;subfield code="a"&gt;20091130 frey50 &lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="200" ind1="1" ind2=" "&gt;
-&lt;subfield code="a"&gt;Guide des r&#233;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
-&lt;subfield code="b"&gt;Texte imprim&#233;&lt;/subfield&gt;
+&lt;subfield code="a"&gt;Guide des r&eacute;cifs coralliens / A Guide to Coral Reefs&lt;/subfield&gt;
+&lt;subfield code="b"&gt;Texte imprim&eacute;&lt;/subfield&gt;
 &lt;subfield code="e"&gt;la faune sous-marine des coraux&lt;/subfield&gt;
 &lt;subfield code="f"&gt;A. et A. Ferrari&lt;/subfield&gt;
 &lt;/datafield&gt;
 &lt;datafield tag="210" ind1=" " ind2=" "&gt;
 &lt;subfield code="a"&gt;Lausanne&lt;/subfield&gt;
 &lt;subfield code="a"&gt;Paris&lt;/subfield&gt;
-&lt;subfield code="c"&gt;Delachaux et Niestl&#233;&lt;/subfield&gt;
+&lt;subfield code="c"&gt;Delachaux et Niestl&eacute;&lt;/subfield&gt;
 &lt;subfield code="d"&gt;cop. 2000&lt;/subfield&gt;
 &lt;subfield code="e"&gt;impr. en Espagne&lt;/subfield&gt;
 &lt;/datafield&gt;
