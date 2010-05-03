@@ -601,6 +601,19 @@
               <listitem>
                 <para>ISBD form -- displays records in the staff client in the
                 old card catalog format</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>See <link linkend="isbdpref">ISBD</link> preference
+                    for more information</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Labelled MARC form -- displays records in the staff
+                client in MARC with text labels to explain the different
+                fields</para>
               </listitem>
 
               <listitem>
@@ -616,7 +629,7 @@
           </section>
 
           <section>
-            <title>ISBD</title>
+            <title id="isbdpref">ISBD</title>
 
             <para>Default: <link linkend="isbddefault">MARC21 Default
             Appendix</link> or <link linkend="unimarcdefault">UNIMARC Default
@@ -21211,19 +21224,18 @@ print theme('pages_catalog');</programlisting>
 
     <para>These notes on how to reset the database for Koha 3 were derived
     from the following email thread: <ulink
-    url="http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html</ulink>
-    </para>
+    url="http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha.org/pipermail/koha-devel/2009-January/008939.html</ulink></para>
 
     <para>Resetting the database may be useful if you install Koha with the
     sample data, and then wish to use real data without reinstalling the
-    software. </para>
+    software.</para>
 
     <section>
       <title>Truncate Tables</title>
 
       <para>Use your preferred MySQL client to <ulink
       url="http://dev.mysql.com/doc/refman/5.0/en/truncate.html">truncate</ulink>
-      the following tables: </para>
+      the following tables:</para>
 
       <itemizedlist>
         <listitem>
