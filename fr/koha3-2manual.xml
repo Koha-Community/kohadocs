@@ -15685,8 +15685,757 @@
   <chapter>
     <title>OPAC</title>
 
-    <para></para>
+    <para>This chapter assumes that you have the following preferences set as
+    follows:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para><link
+        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> = using
+        XSLT stylesheets</para>
+      </listitem>
+
+      <listitem>
+        <para><link
+        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> = using
+        XSLT stylesheets</para>
+      </listitem>
+
+      <listitem>
+        <para><link linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link>
+        = show</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>If your system preferences are set differently your displays may
+    differ.</para>
+
+    <section>
+      <title>Search Results</title>
+
+      <para>To search the OPAC you can either choose to enter your search
+      words in the box at the top of the OPAC or click on the 'Advanced
+      Search' link to perform a more detailed search.</para>
+
+      <screenshot>
+        <screeninfo>OPAC Search Box</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/searchbox.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>For more on searching check the '<link
+      linkend="searching">Searching</link>' chapter in this manual.</para>
+
+      <section>
+        <title>Results Overview</title>
+
+        <para>After performing a search the number of results found for your
+        search will appear above the results</para>
+
+        <screenshot>
+          <screeninfo>Total Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/totalresults-rss.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>By default your search results will be sorted based on your
+        <link linkend="opacdefaultsort">OPACdefaultSortField and
+        OPACdefaultSortOrder</link> system preference values. To change this
+        you can choose another sorting method from the pull down on the
+        right.</para>
+
+        <screenshot>
+          <screeninfo>Results Sorting Options</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/sortingresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Under each title on your results list a series of values from
+        your leader will appear. It is important to note that this has nothing
+        to do with the item types or collection codes you have applied to your
+        records, this data is all pulled from your leader.</para>
+
+        <screenshot>
+          <screeninfo>Leader Visualization</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/leader.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Below each title you will see the availability for the items
+        attached to the record. Note that even if you filtered on one library
+        location all locations that hold the item will appear on the search
+        results.</para>
+
+        <screenshot>
+          <screeninfo>Holdings Information</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/holdings-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you have turned on <link linkend="enhancedcontent">Enhanced
+        Content</link> preferences you may have book jackets on your search
+        results.</para>
+
+        <screenshot>
+          <screeninfo>Book Jacket on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/coverresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Filters</title>
+
+        <para>To filter your results click on the links below the 'Refine Your
+        Search' menu on the left of your screen</para>
+
+        <screenshot>
+          <screeninfo>Refine Your Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/refineresults.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Search RSS Feeds</title>
+
+        <para>You will be able to subscribe to your search results as an RSS
+        feed by clicking the RSS icon in your address bar or next to the
+        number of results. To learn more about what RSS feeds are check out
+        <ulink url="http://www.youtube.com/watch?v=0klgLsSxGsU">this tutorial
+        video</ulink>.</para>
+
+        <screenshot>
+          <screeninfo>RSS Feed Icon</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/totalresults-rss.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Subscribing to search results as RSS feeds will allow you to see
+        when a new item is added to the catalog in your area of
+        interest.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Bibliographic Record</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Lists &amp; Cart</title>
+
+      <para>A cart is a temporary holding place for records you're interested
+      in finding during this session. That means that once you log out of the
+      OPAC or close the browser you lose the items in your cart. A list is a
+      more permanent location for saving items. To learn more about lists,
+      check the <link linkend="stafflists">Lists in the Staff Client</link>
+      chapter of this manual.</para>
+
+      <section>
+        <title>Lists</title>
+
+        <para></para>
+
+        <section>
+          <title>Adding titles to Lists</title>
+
+          <para>Titles can be added to lists from the search results and/or
+          from the bibliographic record. On the search results options to add
+          items to the list appear below each result and across the top of the
+          results page</para>
+
+          <screenshot>
+            <screeninfo>Add to Lists from Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtolistcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To add a single title to a list, click the 'Save to Lists'
+          option and then choose the list you'd like to add the title to. To
+          add multiple titles to a list check the boxes on the left of the
+          titles you want to add and then choose the list you want to add the
+          titles to from the 'Add too' pull down at the top of the
+          screen.</para>
+        </section>
+
+        <section>
+          <title>Managing Lists</title>
+
+          <para></para>
+        </section>
+      </section>
+
+      <section>
+        <title>Cart</title>
+
+        <para></para>
+
+        <section>
+          <title>Adding titles to the Cart</title>
+
+          <para>Titles can be added to the cart from the search results and/or
+          from the bibliographic record. On the search results options to add
+          items to the cart appear below each result and across the top of the
+          results page</para>
+
+          <screenshot>
+            <screeninfo>Add to Cart on Search Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtolistcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Clicking the 'Add to Cart' button will add the one title to
+          your cart. To add multiple titles at once, check the box to the left
+          of each result and the choose 'Cart' from the 'Add to' pull down at
+          the top of the screen. Once titles are added to the cart you will be
+          presented with a confirmation</para>
+
+          <screenshot>
+            <screeninfo>Items added to Cart</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addedtocart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+
+        <section>
+          <title>Managing the Cart</title>
+
+          <para>Once you have titles in your cart you can manage the contents
+          by clicking on the 'Cart' button usually found at the top of the
+          screen to the right of the search box. Your cart will open in a new
+          window.</para>
+
+          <screenshot>
+            <screeninfo>Contents of your cart</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/cartcontents.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>From this window you are presented with several options.
+          Across the top of the cart are several buttons.</para>
+
+          <para>First is the 'More details' button. Clicking this will show
+          you additional information about the titles in your card (ISBNs,
+          Subjects, Publisher Info, Notes and more).</para>
+
+          <para>Next is the option to send the contents of your cart to an
+          email address. This is handy if you want to send the resources you
+          found at the library to your home email account to refer to later or
+          to send to a patron researching a specific topic. Clicking this link
+          will open up a new window that asks for the email address and
+          message to send.</para>
+
+          <screenshot>
+            <screeninfo>Email Cart</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/emailcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>In addition to sending your cart you can download the contents
+          of your cart in several pre-defined formats or using a <link
+          linkend="csvprofiles">CSV Profile</link> that you defined in the
+          Tools module.</para>
+
+          <screenshot>
+            <screeninfo>Download Cart</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/downloadcart.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Finally you can print out the contents of your cart by
+          choosing the 'Print' link.</para>
+
+          <para>In addition to the various different ways to save the contents
+          of your cart, there are ways to add value to the data in your cart.
+          By selecting one or more titles from the cart you can add them to a
+          list (click 'Add to a List'), place hold(s) (click 'Place hold'), or
+          tag them (click 'Tag'). All of these operations follow the same
+          procedure as they do when performing them in the OPAC.</para>
+        </section>
+      </section>
+    </section>
+
+    <section>
+      <title>Enhanced Content</title>
+
+      <para></para>
+
+      <section>
+        <title>Tagging</title>
+
+        <para>Depending on your settings for the <link
+        linkend="TagsEnabled">TagsEnabled</link>, <link
+        linkend="TagsInputOnList">TagsInputOnList</link> and <link
+        linkend="TagsInputOnDetail">TagsInputOnDetail</link> preferences you
+        may be able to add tags to bibliographic records from the search
+        results and/or bibliographic records. If you are allowing patrons to
+        add tags from the search results screen you will see an input box
+        below each result and a 'Tag' option at the top of the screen.</para>
+
+        <screenshot>
+          <screeninfo>Tagging Options on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tags-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>To add a tag to one item, type the tabs (seperated by commas) in
+        the 'New tag' box and click 'Add'. You will be presented with a
+        confirmation of your tags being added.</para>
+
+        <screenshot>
+          <screeninfo>Tags Added on Results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tagsadded-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From the results you can also tag items in bulk by clicking the
+        checkboxes on the left and then clicking the 'Tag' button at the top.
+        After clicking the button it will change into an input box for you to
+        add tags to all of the items you have selected.</para>
+
+        <screenshot>
+          <screeninfo>Add Tags to Multiple Items</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/tagaddmultiple-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Comments</title>
+
+        <para>Patrons can leave comments in the OPAC if you have the <link
+        linkend="reviewson">reviewson</link> preference set to allow this.
+        Each bibliographic record has a comments tab below the bibliographic
+        information.</para>
+
+        <screenshot>
+          <screeninfo>Comments Tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentstab.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If the patron is logged in they will see a link to add a comment
+        to the item. Clicking this link will open a pop up window with a box
+        for their comments.</para>
+
+        <screenshot>
+          <screeninfo>Add a Comment</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/addcomment.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once the comment has been typed and the 'Submit' button clicked,
+        the patron will see their comment as pending and other patrons will
+        simply see that there are no comments on the item.</para>
+
+        <screenshot>
+          <screeninfo>Pending Comment</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentpending.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once the comment is approved the patron will see the comment
+        highlighted in yellow as their comment.</para>
+
+        <screenshot>
+          <screeninfo>Your Comments</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/yourcomment.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Other patrons will see the comment with the name of the patron
+        who left the comment.</para>
+
+        <screenshot>
+          <screeninfo>Comment by other patron</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/commentby.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title>Zotero</title>
+
+        <para>Zotero is a Firefox add on that allows for the saving and
+        generating of a bibliography. Learn more about and download Zotero at
+        <ulink url="http://zotero.org">http://zotero.org</ulink>.</para>
+
+        <para>When on the search results in the Koha OPAC, if you have Zotero
+        installed, you will see a folder icon in the address bar to the right
+        of the URL. Clicking that folder will open up a list of titles on the
+        page for you to pick from to add to Zotero.</para>
+
+        <screenshot>
+          <screeninfo>Zotero pop up</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/zoteroaddressbar.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Select the titles you want to add to Zotero and then click the
+        'OK' button. This will add the title to Zotero. You can see the title
+        by opening your Zotero library.</para>
+
+        <screenshot>
+          <screeninfo>Ttle in the Zotero Library</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/zoterotitle.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section>
+        <title id="customrss">Custom RSS Feeds</title>
+
+        <para>Using misc/cronjobs/rss/rss.pl you can generate an RSS feed for
+        any SQL query (for example a new acquisitions RSS feed). rss.pl is run
+        on the command line to produce an RSS XML document.</para>
+
+        <para>The output should be placed in a directory accessible to the
+        OPAC (or staff) web interface so that users can download the RSS
+        feed.</para>
+
+        <para>An example of usage can be found at: misc/cronjobs/rss.pl
+        lastAcquired.conf</para>
+
+        <para>Normally rss.pl should be run periodically (e.g., daily) to keep
+        the feed up-to-date.</para>
+
+        <para>The configuration file (e.g., lastAcquired.conf) lists</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>name of the template file to use</para>
+          </listitem>
+
+          <listitem>
+            <para>path of output file</para>
+          </listitem>
+
+          <listitem>
+            <para>SQL query</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>rss.pl runs the SQL query, then feeds the output of the query
+        through the template to produce the output file.</para>
+
+        <para><important>
+            <para>To use custom RSS feeds you need to turn on the cron
+            job.</para>
+          </important></para>
+      </section>
+    </section>
+
+    <section>
+      <title>My Account</title>
+
+      <para>From the OPAC patrons can log in and access their account if you
+      have set the <link linkend="opacuserlogin">opacuserlogin</link>
+      preference to 'Allow'. Once logged in patrons are brought to their
+      account summary. If you would like to get from any other apge your
+      account in the OPAC, click on your name in the top right of the
+      OPAC.</para>
+
+      <screenshot>
+        <screeninfo>My Account</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myaccount.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>From the 'my summary' tab, patrons will see all of the items they
+      have checked out with the overdue items highlighted in red. If you have
+      <link linkend="OpacRenewalAllowed">OpacRenewalAllowed</link> set to
+      'Allow' then your patrons will be able to renew their books right from
+      the OPAC. Clicking on the 'Overdue' tab will show only the items that
+      are overdue.</para>
+
+      <screenshot>
+        <screeninfo>Overdue Items</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myoverdues.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>The 'Fines' tab will show just a total of what the patron owes.
+      Clicking on the total will take them to the 'my fines' tab where they
+      will see a complete breakdown of their fines and bills. If you don't
+      charge fines at your library you can turn the display of these tabs off
+      by setting the <link linkend="OPACFinesTab">OPACFinesTab</link>
+      preference to 'Don't Allow.'</para>
+
+      <screenshot>
+        <screeninfo>Patron Fines</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myfines.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Finally, clicking on the 'Holds' tab will show the patron the
+      status of all of the items they have on hold. Items that are ready for
+      pickup will be highlighted in yellow.</para>
+
+      <screenshot>
+        <screeninfo>Patron holds status</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myholds.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If your library charges fines the next tab on the left is 'my
+      fines.' Opening this tab will show the patron an entire history of their
+      accounting at the library.</para>
+
+      <screenshot>
+        <screeninfo>Library Fines &amp; Charges</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/mybilling.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If you have your <link
+      linkend="OPACPatronDetails">OPACPatronDetails</link> preference set to
+      'Allow', your patrons will see a form filled in with their contacting
+      information by clicking on the 'my personal details' tab.</para>
+
+      <screenshot>
+        <screeninfo>Patron's personal details</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myprofile.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Patrons can edit their details in this form and click 'Submit
+      Changes' to have their edits sent to the library for review before their
+      record is updated. If the <link
+      linkend="OPACPatronDetails">OPACPatronDetails</link> preference is set
+      to 'Don't allow' then patrons will simply see their details in plain
+      text.</para>
+
+      <screenshot>
+        <screeninfo>Patron's personal details with no edits</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myprofile-noedit.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If your library has <link linkend="TagsEnabled">TagsEnabled</link>
+      set to 'Allowed' then the next tab on the left will be 'my tags.' This
+      tab will show patrons all of the tags in the system as a cloud and then
+      all of the tags they have applied in a list format. From here patrons
+      have the ability to remove tags that they have added if they
+      want.</para>
+
+      <screenshot>
+        <screeninfo>Patron's tags</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/mytags.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Next, if you have <link
+      linkend="OpacPasswordChange">OpacPasswordChange</link> set to 'Allow'
+      the next tab will be 'change my password,' where patrons can change
+      their password for logging into the OPAC. Patrons will be presented with
+      a standard form asking them to enter their old password and then their
+      new password twice.</para>
+
+      <screenshot>
+        <screeninfo>Change your password</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/mypassword.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Depending on your library's setting for <link
+      linkend="OpacPrivacy">OpacPrivacy</link> and <link
+      linkend="opacreadinghistory">opacreadinghistory</link> you patrons may
+      see the 'my reading history' tab next. This will show the patron their
+      entire reading history.</para>
+
+      <screenshot>
+        <screeninfo>Patron reading history</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/myhistory.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If your library allows patrons to make purchase suggestions the
+      next tab will show all suggestions that the patron made to the library
+      and their statuses. To disable this tab and the suggestion functionality
+      set the <link linkend="suggestionspref" os="">suggestion</link>
+      preference to 'Don't allow.'</para>
+
+      <screenshot>
+        <screeninfo>Patron purchase suggestions</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/mysuggestions.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If your library as the <link
+      linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+      preference set to 'Allow' then your patrons will be able to choose which
+      messages they receive from the library (with the exception of overdue
+      notices which the library controls).</para>
+
+      <screenshot>
+        <screeninfo>Patron messaging preferences</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/mymessages.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Finally, if your library has the <link
+      linkend="virtualshelves">virtualshelves</link> set to 'Allow' then the
+      last tab will by 'my lists.' From here your patrons can review public
+      lists and create or edit their own private lists.</para>
+
+      <screenshot>
+        <screeninfo>Patron lists</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/mylists.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
   </chapter>
+
 
   <chapter>
     <title>Searching</title>
