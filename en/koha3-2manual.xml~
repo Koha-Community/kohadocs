@@ -2213,7 +2213,7 @@
 
             <important>
               <para>Requires that you turn on one or more of the ISBN services
-              (ThingISBN, XISBN, PinesISBN)</para>
+              (ThingISBN, XISBN)</para>
             </important>
           </section>
 
@@ -2243,7 +2243,7 @@
 
             <important>
               <para>Requires that you turn on one or more of the ISBN services
-              (ThingISBN, XISBN, PinesISBN)</para>
+              (ThingISBN, XISBN)</para>
             </important>
           </section>
         </section>
@@ -20161,6 +20161,57 @@
   </chapter>
 
   <chapter>
+    <title>About Koha</title>
+
+    <para>The 'About Koha' area will give you important server information as
+    well as general information about Koha.</para>
+
+    <section>
+      <title>Server Information</title>
+
+      <para>Under the 'Server Information' tab you will find information about
+      the Koha version and the machine you have installed Koha on. This
+      information is very important for debugging problems. When reporting
+      issues to your support provider or to the various other support avenues
+      (mailing lists, chat room, etc), it's always good to give the
+      information from this screen.</para>
+
+      <screenshot>
+        <screeninfo>Server Information on Koha</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/about/aboutserver.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
+
+    <section>
+      <title>Perl Modules</title>
+
+      <para>In order to take advantage of all of the functionalities of Koha,
+      you will need to keep your Perl modules up to date. The 'Perl Modules'
+      tab will show you all of the modules required by Koha, the version you
+      have installed and whether you need to upgrade certain modules.</para>
+
+      <screenshot>
+        <screeninfo>Perl Modules</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/about/aboutperlmodules.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Items listed in bold are required by Koha, items highlighed in red
+      are missing completely and items highlighted in yellow simply need to be
+      upgraded.</para>
+    </section>
+  </chapter>
+
+  <chapter>
     <chapterinfo>
       <author>
         <firstname>Jean-Andr&eacute;</firstname>
@@ -21037,7 +21088,60 @@ print theme('pages_catalog');</programlisting>
       <para>'homebranch' =&gt; '952a,952c'</para>
     </section>
   </appendix>
+<appendix>
+    <appendixinfo>
+      <corpauthor>VOKAL</corpauthor>
 
+      <pubdate>2010</pubdate>
+
+      <bibliosource><ulink
+      url="http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho">http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho</ulink></bibliosource>
+    </appendixinfo>
+<title>Handling On Order items and holds</title>
+<para>If you tend to import your MARC records when you have ordered the book (as opposed to when you receive the books), and allow patrons to place holds on those books, you may find Koha much more useful than Follett, even without using the Acquisitions module.</para>
+<para>The easiest way to import your latest order is to first run your records through MARCEdit. Download your MARC records, saving them to your desktop or some other location you use/will remember. Be sure you have MARCEdit installed on your computer (you should, from your importing process!); double click on your MARC records, and they will automatically open in MARCEdit.</para>
+<itemizedlist>
+<listitem><para>Your original file will automatically be in the input; ensure MARCBreaker is chosen, and then click "Execute"</para></listitem>
+<listitem><para>MARCEdit will ask you where you want to save the output file; name and save it with the .mrk extension. Click on "Execute" again, and, once you have received the message about how many records were edited, click on "Edit Records"</para></listitem>
+<listitem><para>Your screen will be replaced with a larger screen containing the MARC records</para></listitem>
+<listitem><para>Click on Tools > Edit Field Data</para></listitem>
+<listitem><para>In the field box, type 942, and \\$cBOOK -- make sure you put in the two \\ and use the appropriate item type code</para>
+<itemizedlist>
+<listitem><para>Click Add field</para></listitem>
+</itemizedlist>
+</listitem>
+<listitem><para>In the field box, type 952 -- this creates an item for your record</para></listitem>
+<listitem><para>In the field data box, type in $7-1$cNEW$eBrodart$yBOOK to have your item record be listed as "Ordered" in the Not for Loan status (Koha default); on the New Materials Shelf (Stowe's authorized value); the vendor as Brodart; the item type as book (Stowe's authorized value).</para> 
+<itemizedlist>
+<listitem><para>You may want to look at other subfields you would like data in -- for example, changing the collection code to put all the items in the same collection (8), automatically fill in the acquisition date (d), or put in a public note (z). </para></listitem>
+<listitem><para>Be sure you use the $ to separate subfields; adding each subfield on a separate line will cause that many items to be imported with your MARC record (in the example above, four items, each with one of those subfields corrected)</para></listitem>
+<listitem><para>Make sure you look at the Administration > Authorized Values in Koha to put the correct code into the field</para></listitem>
+<listitem><para>Click Add field</para></listitem>
+</itemizedlist>
+</listitem>
+<listitem><para>Click on File > Make Current File into MARC and save it in your preferred location</para></listitem>
+<listitem><para>Click on File > Save As and overwrite your .mrk file</para></listitem>
+<listitem><para>In Koha, go to Tools > Stage MARC records for import</para></listitem>
+<listitem><para>Browse to your saved file, and open the file with the .mrc extension</para></listitem>
+<listitem><para>Upload the file, and make any changes to the matching rules that you find necessary; finally, stage the records for import</para></listitem>
+<listitem><para>When done, click on Manage Staged Records, and Import into the catalog</para></listitem>
+<listitem><para>From here, you will have a list of the records imported, with a link to the item -- right click on the Bib number link and open it in a new window</para></listitem>
+<listitem><para>You will be taken to the normal view of the record -- from here, you may want to further edit your file in order to allow holds</para>
+<itemizedlist>
+<listitem><para>In the item, under the "Barcode" heading, click on [Edit items]</para></listitem>
+<listitem><para>Click in the barcode field to either type in a temporary barcode, or, if you have the preference set, clicking in the subfield will automatically generate a barcode</para></listitem>
+<itemizedlist>
+<listitem><para>To automatically generate a temporary barcode, you may want to ahead of time go to Administration GT Global System Preferences GT Cataloging and choose the format you want to use under autoBarcode</para>
+<itemizedlist>
+<listitem><para>You may want to edit the call number to reflect how you format your call numbers (for example, most of your fiction by American authors will still have a call number in 813.54, etc)</para></listitem>
+</itemizedlist></listitem>
+</itemizedlist>
+</itemizedlist></listitem>
+<listitem><para>Finally, if any of your ordered books already have hold requests, you should call up the book in the staff catalog and place a hold. Patrons should have the ability to place a hold on the item in the OPAC as well</para></listitem>
+</itemizedlist>
+<para>Once the item has come in, you will need to go to the item record and individually change the item to have the correct barcode, and manually change the status from Ordered to choosing a blank line in the Not for Loan line. If you purchase your cataloged item records, you may want to request your vendor put in the information you need into the MARC records for you; that way, you could import the edited-by-the-vendor file, overwriting the current record, automatically replacing the data with what you need.</para>
+
+</appendix>
   <appendix>
     <appendixinfo>
       <corpauthor>NEKLS</corpauthor>
