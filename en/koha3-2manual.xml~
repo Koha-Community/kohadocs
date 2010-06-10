@@ -21275,8 +21275,12 @@ print theme('pages_catalog');</programlisting>
   <appendix>
     <appendixinfo>
       <corpauthor>VOKAL</corpauthor>
-      
-      <editor>Nicole C. Engard</editor>
+
+      <editor>
+              <firstname>Nicole C.</firstname>
+
+      <surname>Engard</surname>
+      </editor>
 
       <pubdate>2010</pubdate>
 
@@ -21284,133 +21288,227 @@ print theme('pages_catalog');</programlisting>
       url="http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho">http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho</ulink></bibliosource>
     </appendixinfo>
 
-<title
->Handling On Order items and holds</title
-><para
->If you tend to import your MARC records when you have ordered the book (as opposed to when you receive the books), and allow patrons to place holds on those books, you may need to add item records to the *.mrc file before importing.</para
-><para
->The easiest way to import your latest order is to first run your records through <ulink
-url="http://people.oregonstate.edu/~reeset/marcedit/html/index.php"
->MARCEdit</ulink
->. Download your MARC records, saving them to your desktop or some other location you use/will remember. If you have MARCEdit already installed you should simply have to double click on your MARC records, and they will automatically open in MARCEdit.<important
-><para
->This tutorial was written with MARCEdit version 5.2.3769.41641 on Windows XP, instructions may be different if your version or operating system is different.</para
-></important
-></para
-><itemizedlist
-><listitem
-><para
->Your original file will automatically be in the input; ensure MARCBreaker is chosen, and then click "Execute"</para
-></listitem
-><listitem
-><para
->You will be presented with a summary of the records processed at the bottom of the screen</para
-></listitem
-><listitem
-><para
->Click 'Edit Records' to continue on to adding item records</para
-></listitem
-><listitem
-><para
->Your screen will be replaced with a larger screen containing the MARC records</para
-></listitem
-><listitem
-><para
->Click on Tools &gt; Add/Edit Field</para
-></listitem
-><listitem
-><para
->Enter in the Koha specific item info</para
-><itemizedlist
-><listitem
-><para
->In the Field box, type 942</para
-></listitem
-><listitem
-><para
->In the Field Data box, type \\$c and the item type code (\\$cBOOK in this example)</para
-></listitem
-><listitem
-><para
->Check the 'Insert last' option</para
-></listitem
-><listitem
-><para
->Click 'Add Field'</para
-></listitem
-></itemizedlist
-></listitem
-><listitem
-><para
->Enter in the item record data</para
-><itemizedlist
-><listitem
-><para
->In the Field box, type 952</para
-></listitem
-><listitem
-><para
->In the Field Data box, type $7ORDERED_STATUS$aPERM_LOC$bCURR_LOC$cSHELVING_LOCATION$eSOURCE_OF_ACQ$yITEM_TYPE</para
-><itemizedlist
-><listitem
-><para
->ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK</para
-><itemizedlist
-><listitem
-><para
->In a default install of Koha -1 is the value for the Ordered status</para
-></listitem
-></itemizedlist
-></listitem
-><listitem
-><para
->You may want to look at other subfields you would like data in -- for example, changing the collection code to put all the items in the same collection (8), automatically fill in the acquisition date (d), or put in a public note (z).</para
-></listitem
-><listitem
-><para
->Be sure you use the $ to separate subfields; adding each subfield on a separate line will cause that many items to be imported with your MARC record (in the example above, four items, each with one of those subfields corrected)</para
-></listitem
-><listitem
-><para
->Make sure you look at the Administration &gt; Authorized Values in Koha to put the correct code into the field</para
-></listitem
-></itemizedlist
-></listitem
-><listitem
-><para
->Check the 'Insert last' option</para
-></listitem
-><listitem
-><para
->Click 'Add Field'</para
-></listitem
-></itemizedlist
-></listitem
-><listitem
-><para
->Close the field editor window</para
-></listitem
-><listitem
-><para
->Click on File &gt; Compile into MARC</para
-></listitem
-><listitem
-><para
->Choose where to save your file</para
-></listitem
-></itemizedlist
-><para
->Now you want to go into your Koha system and follow the instructions for <link
-linkend="stagemarc"
->importing MARC records</link
->.</para
-><para
->Once the item has come in, you will need to go to the item record and individually change the item to have the correct barcode, and manually change the status from Ordered to the blank line in the Not for Loan field. </para
-><tip
-><para
->If you purchase your cataloged item records, you may want to request your vendor put in the information you need into the MARC records for you; that way, you could import the edited-by-the-vendor file, overwriting the current record, automatically replacing the data with what you need.</para
-></tip
->
+    <title>Handling On Order items and holds</title>
+
+    <para>If you tend to import your MARC records when you have ordered the
+    book (as opposed to when you receive the books), and allow patrons to
+    place holds on those books, you may need to add item records to the *.mrc
+    file before importing.</para>
+
+    <para>The easiest way to import your latest order is to first run your
+    records through <ulink
+    url="http://people.oregonstate.edu/~reeset/marcedit/html/index.php">MARCEdit</ulink>.
+    Download your MARC records, saving them to your desktop or some other
+    location you use/will remember. If you have MARCEdit already installed you
+    should simply have to double click on your MARC records, and they will
+    automatically open in MARCEdit.<important>
+        <para>This tutorial was written with MARCEdit version 5.2.3769.41641
+        on Windows XP, instructions may be different if your version or
+        operating system is different.</para>
+      </important></para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Your original file will automatically be in the input; ensure
+        MarcBreaker is chosen, and then click "Execute"</para>
+
+        <screenshot>
+          <screeninfo>MarcBreaker</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/marcbreaker.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+
+      <listitem>
+        <para>You will be presented with a summary of the records processed at
+        the bottom of the screen</para>
+
+        <screenshot>
+          <screeninfo>MarcBreaker Summary</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/marcbreaker-summary.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+
+      <listitem>
+        <para>Click 'Edit Records' to continue on to adding item
+        records</para>
+      </listitem>
+
+      <listitem>
+        <para>Your screen will be replaced with a larger screen containing the
+        MARC records</para>
+
+        <screenshot>
+          <screeninfo>MARC file for editing</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/editrecords.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+
+      <listitem>
+        <para>Click on Tools &gt; Add/Edit Field</para>
+
+        <screenshot>
+          <screeninfo>Add/Delete Field</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/addfield.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+
+      <listitem>
+        <para>Enter in the Koha specific item info</para>
+
+        <screenshot>
+          <screeninfo>Add 942 Field</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/add942.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>In the Field box, type 942</para>
+          </listitem>
+
+          <listitem>
+            <para>In the Field Data box, type \\$c and the item type code
+            (\\$cBOOK in this example)</para>
+          </listitem>
+
+          <listitem>
+            <para>Check the 'Insert last' option</para>
+          </listitem>
+
+          <listitem>
+            <para>Click 'Add Field'</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>Enter in the item record data</para>
+
+        <screenshot>
+          <screeninfo>Add 952 Field</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/add952.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>In the Field box, type 952</para>
+          </listitem>
+
+          <listitem>
+            <para>In the Field Data box, type
+            $7ORDERED_STATUS$aPERM_LOC$bCURR_LOC$cSHELVING_LOCATION$eSOURCE_OF_ACQ$yITEM_TYPE</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>In a default install of Koha -1 is the value for the
+                    Ordered status</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>You may want to look at other subfields you would like
+                data in -- for example, changing the collection code to put
+                all the items in the same collection (8), automatically fill
+                in the acquisition date (d), or put in a public note
+                (z).</para>
+              </listitem>
+
+              <listitem>
+                <para>Be sure you use the $ to separate subfields; adding each
+                subfield on a separate line will cause that many items to be
+                imported with your MARC record (in the example above, four
+                items, each with one of those subfields corrected)</para>
+              </listitem>
+
+              <listitem>
+                <para>Make sure you look at the Administration &gt; Authorized
+                Values in Koha to put the correct code into the field</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Check the 'Insert last' option</para>
+          </listitem>
+
+          <listitem>
+            <para>Click 'Add Field'</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+
+      <listitem>
+        <para>Close the field editor window</para>
+      </listitem>
+
+      <listitem>
+        <para>Click on File &gt; Compile into MARC</para>
+
+        <screenshot>
+          <screeninfo>Compile into MARC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-onorder/compile.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </listitem>
+
+      <listitem>
+        <para>Choose where to save your file</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Now you want to go into your Koha system and follow the instructions
+    for <link linkend="stagemarc">importing MARC records</link>.</para>
+
+    <para>Once the item has come in, you will need to go to the item record
+    and individually change the item to have the correct barcode, and manually
+    change the status from Ordered to the blank line in the Not for Loan
+    field.</para>
+
+    <tip>
+      <para>If you purchase your cataloged item records, you may want to
+      request your vendor put in the information you need into the MARC
+      records for you; that way, you could import the edited-by-the-vendor
+      file, overwriting the current record, automatically replacing the data
+      with what you need.</para>
+    </tip>
   </appendix>
 
   <appendix>

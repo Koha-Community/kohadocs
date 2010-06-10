@@ -21277,9 +21277,9 @@ print theme('pages_catalog');</programlisting>
       <corpauthor>VOKAL</corpauthor>
 
       <editor>
-              <firstname>Nicole C.</firstname>
+        <firstname>Nicole C.</firstname>
 
-      <surname>Engard</surname>
+        <surname>Engard</surname>
       </editor>
 
       <pubdate>2010</pubdate>
@@ -22640,6 +22640,80 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
     </table>
 
     <para>* - required for circulation</para>
+  </appendix>
+
+  <appendix>
+    <title>MarcEdit</title>
+
+    <para></para>
+
+    <section>
+
+      <title>Adding a prefix to call numbers</title>
+
+      <para>When bringing data into Koha, you may want to first clean it up.
+      One common action among Koha users is to add a prefix to the call
+      number.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Open MarcEdit</para>
+
+          <screenshot>
+            <screeninfo>MarcEdit</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-marcedit/marcedit.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Click 'MarcEditor'&#8232;&#8232; </para>
+        </listitem>
+
+        <listitem>
+          <para>Go to Tools &gt; Edit Subfield Data&#8232;&#8232;</para>
+
+          <screenshot>
+            <screeninfo>Edt subfield data</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-marcedit/marcedit-editsubfield.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>To prepend data the special character is: ^b&nbsp; To simply
+          prepend data to the beginning of a subfield, add ^b to the Field
+          Data: textbox and the data to be appended in the Replace</para>
+
+          <screenshot>
+            <screeninfo>Prepend data to a field</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-marcedit/editsubfield.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>To prepend data to the beginning of the subfield while
+              replacing a text string, add ^b[string to replace] to the Field
+              Data textbox and the data to be appended in the Replace With
+              textbox.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
   </appendix>
 
   <appendix>
