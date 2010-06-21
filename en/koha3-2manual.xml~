@@ -20347,1104 +20347,1480 @@
 
       <para>By default, not all fields are indexed in the Zebra search engine,
       but most are. Below are the fields that are indexed in Zebra.</para>
+
       <table border="1">
-      
-     <caption>Indexes</caption>
-     <tr>
-     <th>Field</th>
-     <th>Description</th>
-     </tr>
-<tr>
-<td>001</td>
-<td>Control-number</td>
-</tr>
-<tr>
-<td>005</td>
-<td>Date/time-last-modified</td>
-</tr>
-<tr>
-<td>007</td>
-<td>Microform-generation:n:range(data,11,1),
-Material-type,ff7-00:w:range(data,0,1),
-ff7-01:w:range(data,1,1),
-ff7-02:w:range(data,2,1),
-ff7-01-02:w:range(data,0,2)</td>
-</tr>
-<tr>
-<td>008</td>
-<td>date-entered-on-file:n:range(data,0,5),
-date-entered-on-file:s:range(data,0,5),
-pubdate:w:range(data,7,4),
-pubdate:n:range(data,7,4),
-pubdate:y:range(data,7,4),
-pubdate:s:range(data,7,4),
-pl:w:range(data,15,3),
-ta:w:range(data,22,1),
-ff8-23:w:range(data,23,1),
-ff8-29:w:range(data,29,1),
-lf:w:range(data,33,1),
-bio:w:range(data,34,1),
-ln:n:range(data,35,3),
-ctype:w:range(data,24,4),
-Record-source:w:range(data,39,0)</td>
-</tr>
-<tr>
-<td>010</td>
-<td>LC-card-number,Identifier-standard</td>
-</tr>
-<tr>
-<td>011</td>
+        <caption>Indexes</caption>
 
-<td>LC-card-number,Identifier-standard</td>
-</tr>
-<tr>
-<td>015</td>
-<td>BNB-card-number,
-BGF-number,
-Number-db,Number-natl-biblio,
-Identifier-standard</td>
-</tr>
-<tr>
-<td>017</td>
+        <tr>
+          <th>Field</th>
 
-<td>Number-legal-deposit,
-Identifier-standard</td>
-</tr>
-<tr>
-<td>018</td>
-<td>Identifier-standard</td>
-</tr>
-<tr>
-<td>020$a</td>
-<td>ISBN:w,
-Identifier-standard:w</td>
+          <th>Description</th>
+        </tr>
 
-</tr>
-<tr>
-<td>020</td>
-<td>Identifier-standard</td>
-</tr>
-<tr>
-<td>022$a</td>
-<td>ISSN:w,
-Identifier-standard:w</td>
-</tr>
-<tr>
-<td>022</td>
-<td>Identifier-standard</td>
-</tr>
-<tr>
-<td>023</td>
-<td>Identifier-standard</td>
-</tr>
-<tr>
-<td>024$a</td>
-<td>Identifier-other</td>
-</tr>
-<tr>
-<td>024</td>
-<td>Identifier-standard</td>
-</tr>
-<tr>
-<td>025</td>
-<td>Identifier-standard</td>
-</tr>
-<tr>
-<td>027</td>
-<td>Report-number,
-Identifier-standard</td>
-</tr>
-<tr>
-<td>028</td>
-<td>Number-music-publisher,
-Identifier-standard</td>
-</tr>
-<tr>
-<td>030</td>
-<td>CODEN,
-Identifier-standard</td>
-</tr>
-<tr>
-<td>034</td>
-<td>Map-scale</td>
-</tr>
-<tr>
-<td>037</td>
-<td>Identifier-standard,Stock-number</td>
-</tr>
-<tr>
-<td>040</td>
-<td>Code-institution,Record-source</td>
-</tr>
-<tr>
-<td>041</td>
-<td>ln</td>
-</tr>
-<tr>
-<td>043</td>
-<td>Code-geographic</td>
-</tr>
-<tr>
-<td>050$b</td>
-<td>LC-call-number:w,
-LC-call-number:p,
-LC-call-number:s</td>
-</tr>
-<tr>
-<td>050</td>
-<td>LC-call-number:w,
-LC-call-number:p,
-LC-call-number:s</td>
-</tr>
-<tr>
-<td>052</td>
-<td>Geographic-class</td>
-</tr>
-<tr>
-<td>060</td>
-<td>NLM-call-number</td>
-</tr>
-<tr>
-<td>070</td>
-<td>NAL-call-number</td>
-</tr>
-<tr>
-<td>080</td>
-<td>UDC-classification</td>
-</tr>
-<tr>
-<td>082</td>
-<td>Dewey-classification:w,
-Dewey-classification:s</td>
-</tr>
-<tr>
-<td>086</td>
-<td>Number-govt-pub</td>
-</tr>
-<tr>
-<td>100$9</td>
-<td>Cross-Reference:w,
-Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>100$a</td>
-<td>Author,Author:p,
-Author:s,Editor,
-Author-personal-bibliography,
-Author-personal-bibliography:p,
-Author-personal-bibliography:s</td>
-</tr>
-<tr>
-<td>100</td>
-<td>Author,
-Author-title,
-Author-name-personal,
-Name,
-Name-and-title,
-Personal-name</td>
-</tr>
-<tr>
-<td>110$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>110</td>
-<td>Author,
-Author-title,
-Author-name-corporate,
-Name,
-Name-and-title,
-Corporate-name</td>
-</tr>
-<tr>
-<td>111$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>111</td>
-<td>Author,
-Author-title,
-Author-name-corporate,
-Name,
-Name-and-title,
-Conference-name</td>
-</tr>
-<tr>
-<td>130$n</td>
-<td>Thematic-number</td>
-</tr>
-<tr>
-<td>130$r</td>
-<td>Music-key</td>
-</tr>
-<tr>
-<td>130$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>130</td>
-<td>Title,Title-uniform</td>
-</tr>
-<tr>
-<td>210</td>
-<td>Title,Title-abbreviated</td>
-</tr>
-<tr>
-<td>211</td>
-<td>Title,Title-abbreviated</td>
-</tr>
-<tr>
-<td>212</td>
-<td>Title,Title-other-variant</td>
-</tr>
-<tr>
-<td>214</td>
-<td>Title,
-Title-expanded</td>
-</tr>
-<tr>
-<td>222</td>
-<td>Title,Title-key</td>
-</tr>
-<tr>
-<td>240$r</td>
-<td>Music-key</td>
-</tr>
-<tr>
-<td>240$n</td>
-<td>Thematic-number</td>
-</tr>
-<tr>
-<td>240</td>
-<td>Title:w,
-Title:p,
-Title-uniform</td>
-</tr>
-<tr>
-<td>243$n</td>
-<td>Thematic-number</td>
-</tr>
-<tr>
-<td>243$r</td>
-<td>Music-key</td>
-</tr>
-<tr>
-<td>243</td>
-<td>Title:w,
-Title:p,
-Title-collective</td>
-</tr>
-<tr>
-<td>245$a</td>
-<td>Title-cover:w,
-Title-cover:p,
-Title-cover:s,
-Title:w,
-Title:p,
-Title:s</td>
-</tr>
-<tr>
-<td>245$c</td>
-<td>Author,
-Author-in-order:w,
-Author-in-order:p,
-Author-in-order:s</td>
-</tr>
-<tr>
-<td>245$9</td>
-<td>Cross-Reference:w,
-Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>245</td>
-<td>Title:w,
-Title:p</td>
-</tr>
-<tr>
-<td>246</td>
-<td>Title,
-Title:p,
-Title-abbreviated,
-Title-expanded,
-Title-former</td>
-</tr>
-<tr>
-<td>247</td>
-<td>Title,
-Title:p,
-Title-former,
-Title-other-variant,
-Related-periodical</td>
-</tr>
-<tr>
-<td>260$a</td>
-<td>pl:w,
-pl:p</td>
-</tr>
-<tr>
-<td>260$b</td>
-<td>Publisher:w,
-Publisher:p</td>
-</tr>
-<tr>
-<td>260$c</td>
-<td>copydate,
-copydate:s</td>
-</tr>
-<tr>
-<td>260</td>
-<td>pl</td>
-</tr>
-<tr>
-<td>300</td>
-<td>Extent:w,
-Extent:p</td>
-</tr>
-<tr>
-<td>400$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>400$t</td>
-<td>Author-title,
-Name-and-title,
-Title,
-Title-series</td>
-</tr>
-<tr>
-<td>400$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Author,
-Author-name-personal,
-Name,
-Personal-name</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Author,
-Corporate-name</td>
-</tr>
-<tr>
-<td>410$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>410$t</td>
-<td>Author-title,
-Title,
-Title-series</td>
-</tr>
-<tr>
-<td>410$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Author-name-corporate,
-Name</td>
-</tr>
-<tr>
-<td>411</td>
-<td>Author,
-Conference-name</td>
-</tr>
-<tr>
-<td>411$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>411$t</td>
-<td>Author-title,
-Title-series</td>
-</tr>
-<tr>
-<td>411</td>
-<td>Author-name-corporate,
-Name</td>
-</tr>
-<tr>
-<td>440$a</td>
-<td>Title-series:w,
-Title-series:p</td>
-</tr>
-<tr>
-<td>440$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>440</td>
-<td>Title-series:w,
-Title-series:p,
-Title,
-Title-series</td>
-</tr>
-<tr>
-<td>490$a</td>
-<td>Title-series:w,
-Title-series:p</td>
-</tr>
-<tr>
-<td>490</td>
-<td>Title,
-Title-series</td>
-</tr>
-<tr>
-<td>490$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Note:w,
-Note:p</td>
-</tr>
-<tr>
-<td>502</td>
-<td>Material-type</td>
-</tr>
-<tr>
-<td>505$r</td>
-<td>Author</td>
-</tr>
-<tr>
-<td>505$t</td>
-<td>Title</td>
-</tr>
-<tr>
-<td>505</td>
-<td>Note:w,
-Note:p</td>
-</tr>
+        <tr>
+          <td>001</td>
 
-<tr>
-<td>510</td>
-<td>Indexed-by</td>
-</tr>
-<tr>
-<td>520</td>
-<td>Abstract:w,
-Abstract:p</td>
-</tr>
-<tr>
-<td>521$a</td>
+          <td>Control-number</td>
+        </tr>
 
-<td>lex:n</td>
-</tr>
-<tr>
-<td>526$c</td>
-<td>arl,
-arl:n</td>
-</tr>
-<tr>
-<td>526$d</td>
-<td>arp,
-arp:n</td>
-</tr>
-<tr>
-<td>590</td>
-<td>Note:w,
-Note:p</td>
-</tr>
-<tr>
-<td>600$a</td>
-<td>Name-and-title,
-Name,
-Personal-name,
-Subject-name-personal,
-Subject</td>
-</tr>
-<tr>
-<td>600$t</td>
-<td>Name-and-title,
-Title,
-Subject</td>
-</tr>
-<tr>
-<td>600$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>600</td>
-<td>Name,
-Personal-name,
-Subject-name-personal,
-Subject</td>
-</tr>
-<tr>
-<td>610$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>610$t</td>
-<td>Name-and-title,
-Title</td>
-</tr>
-<tr>
-<td>610$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
+        <tr>
+          <td>005</td>
 
-<tr>
-<td>610</td>
-<td>Name,
-Subject,
-Corporate-name</td>
-</tr>
-<tr>
-<td>611</td>
-<td>Conference-name</td>
-</tr>
-<tr>
+          <td>Date/time-last-modified</td>
+        </tr>
 
-<td>611$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>611$t</td>
-<td>Name-and-title,
-Title</td>
-</tr>
-<tr>
-<td>611$9</td>
-<td>Koha-Auth-Number</td>
+        <tr>
+          <td>007</td>
 
-</tr>
-<tr>
-<td>611</td>
-<td>Name,
-Subject</td>
-</tr>
-<tr>
-<td>630$n</td>
-<td>Thematic-number</td>
-</tr>
-<tr>
-<td>630$r</td>
+          <td>Microform-generation:n:range(data,11,1),
+          Material-type,ff7-00:w:range(data,0,1),
+          ff7-01:w:range(data,1,1), 
+          ff7-02:w:range(data,2,1),
+          ff7-01-02:w:range(data,0,2)</td>
+        </tr>
 
-<td>Music-key</td>
-</tr>
-<tr>
-<td>630$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>630</td>
-<td>Subject</td>
-</tr>
-<tr>
-<td>650$9</td>
+        <tr>
+          <td>008</td>
 
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>650</td>
-<td>Subject,
-Subject:p</td>
-</tr>
-<tr>
-<td>651$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
+          <td>date-entered-on-file:n:range(data,0,5),
+          date-entered-on-file:s:range(data,0,5), pubdate:w:range(data,7,4),
+          pubdate:n:range(data,7,4), pubdate:y:range(data,7,4),
+          pubdate:s:range(data,7,4), pl:w:range(data,15,3),
+          ta:w:range(data,22,1), ff8-23:w:range(data,23,1),
+          ff8-29:w:range(data,29,1), lf:w:range(data,33,1),
+          bio:w:range(data,34,1), ln:n:range(data,35,3),
+          ctype:w:range(data,24,4), Record-source:w:range(data,39,0)</td>
+        </tr>
 
-<tr>
-<td>651</td>
-<td>Name-geographic,
-Subject,Subject:p</td>
-</tr>
-<tr>
-<td>652$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>653$9</td>
+        <tr>
+          <td>010</td>
 
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>653</td>
-<td>Subject,
-Subject:p</td>
-</tr>
-<tr>
-<td>654$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
+          <td>LC-card-number,
+          Identifier-standard</td>
+        </tr>
 
-<tr>
-<td>654</td>
-<td>Subject</td>
-</tr>
-<tr>
-<td>655$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>655</td>
-<td>Subject</td>
+        <tr>
+          <td>011</td>
 
-</tr>
-<tr>
-<td>656$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>656</td>
-<td>Subject</td>
-</tr>
-<tr>
-<td>657$9</td>
-<td>Koha-Auth-Number</td>
+          <td>LC-card-number,
+          Identifier-standard</td>
+        </tr>
 
-</tr>
-<tr>
-<td>657</td>
-<td>Subject</td>
-</tr>
-<tr>
-<td>690$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>690</td>
-<td>Subject,
+        <tr>
+          <td>015</td>
 
-Subject:p</td>
-</tr>
-<tr>
-<td>700$9</td>
-<td>Cross-Reference,
-Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>700$a</td>
-<td>Author,
-Author:p</td>
+          <td>BNB-card-number, 
+          BGF-number, Number-db,
+          Number-natl-biblio,
+          Identifier-standard</td>
+        </tr>
 
-</tr>
-<tr>
-<td>700$n</td>
-<td>Thematic-number</td>
-</tr>
-<tr>
-<td>700$r</td>
-<td>Music-key</td>
-</tr>
-<tr>
-<td>700$t</td>
-<td>Author-title,
+        <tr>
+          <td>017</td>
 
-Name-and-title,
-Title,
-Title-uniform</td>
-</tr>
-<tr>
-<td>700</td>
-<td>Author,
-Author-name-corporate,
-Author-name-personal,
-Name,
+          <td>Number-legal-deposit, 
+          Identifier-standard</td>
+        </tr>
 
-Editor,
-Personal-name</td>
-</tr>
-<tr>
-<td>710</td>
-<td>Author,
-Corporate-name</td>
-</tr>
-<tr>
-<td>710$t</td>
-<td>Author-title,
+        <tr>
+          <td>018</td>
 
-Name-and-title,
-Title,
-Title-uniform</td>
-</tr>
-<tr>
-<td>710$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>710$9</td>
-<td>Koha-Auth-Number</td>
+          <td>Identifier-standard</td>
+        </tr>
 
-</tr>
-<tr>
-<td>710</td>
-<td>Author,
-Name</td>
-</tr>
-<tr>
-<td>711$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>711$t</td>
+        <tr>
+          <td>020$a</td>
 
-<td>Author-title,
-Title,
-Title-uniform</td>
-</tr>
-<tr>
-<td>711$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>711</td>
-<td>Author-name-corporate,
+          <td>ISBN:w, 
+          Identifier-standard:w</td>
+        </tr>
 
-Name,
-Conference-name</td>
-</tr>
-<tr>
-<td>730$n</td>
-<td>Thematic-number</td>
-</tr>
-<tr>
-<td>730$r</td>
-<td>Music-key</td>
-</tr>
+        <tr>
+          <td>020</td>
 
-<tr>
-<td>730$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>730</td>
-<td>Title,
-Title-uniform</td>
-</tr>
-<tr>
-<td>740</td>
+          <td>Identifier-standard</td>
+        </tr>
 
-<td>Title,
-Title-other-variant</td>
-</tr>
-<tr>
-<td>773$t</td>
-<td>Host-item</td>
-</tr>
-<tr>
-<td>780$t</td>
-<td>Title</td>
-</tr>
+        <tr>
+          <td>022$a</td>
 
-<tr>
-<td>780</td>
-<td>Title,
-Title-former,
-Related-periodical</td>
-</tr>
-<tr>
-<td>785</td>
-<td>Related-periodical</td>
-</tr>
-<tr>
+          <td>ISSN:w, 
+          Identifier-standard:w</td>
+        </tr>
 
-<td>800$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>800$t</td>
-<td>Author-title,
-Name-and-title,
-Title,
-Title-series</td>
-</tr>
+        <tr>
+          <td>022</td>
 
-<tr>
-<td>800$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>800</td>
-<td>Author,
-Author-name-personal,
-Name,
-Personal-name</td>
+          <td>Identifier-standard</td>
+        </tr>
 
-</tr>
-<tr>
-<td>810$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>810$t</td>
-<td>Author-title,
-Name-and-title,
-Title,
-Title-series</td>
+        <tr>
+          <td>023</td>
 
-</tr>
-<tr>
-<td>810$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>810</td>
-<td>Author,
-Corporate-name,
-Author-name-corporate,
-Name</td>
+          <td>Identifier-standard</td>
+        </tr>
 
-</tr>
-<tr>
-<td>811$a</td>
-<td>Name-and-title</td>
-</tr>
-<tr>
-<td>811$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>811$t</td>
-<td>Author-title,
+        <tr>
+          <td>024$a</td>
 
-Name-and-title,
-Title,
-Title-series</td>
-</tr>
-<tr>
-<td>811</td>
-<td>Author,
-Author-name-corporate,
-Name,
-Conference-name</td>
+          <td>Identifier-other</td>
+        </tr>
 
-</tr>
-<tr>
-<td>830$9</td>
-<td>Koha-Auth-Number</td>
-</tr>
-<tr>
-<td>830</td>
-<td>Title,
-Title-series</td>
-</tr>
-<tr>
-<td>840</td>
+        <tr>
+          <td>024</td>
 
-<td>Title,
-Title-series</td>
-</tr>
-<tr>
-<td>999$c</td>
-<td>Local-Number:n,
-Local-Number:w,
-Local-Number:s</td>
-</tr>
-<tr>
-<td>999$d</td>
+          <td>Identifier-standard</td>
+        </tr>
 
-<td>biblioitemnumber:n,
-biblioitemnumber:w,
-biblioitemnumber:s</td>
-</tr>
-<tr>
-<td>942$0</td>
-<td>totalissues:n,
-totalissues:s</td>
-</tr>
-<tr>
-<td>942$2</td>
+        <tr>
+          <td>025</td>
 
-<td>cn-bib-source</td>
-</tr>
-<tr>
-<td>942$6</td>
-<td>cn-bib-sort:n,
-cn-bib-sort:s</td>
-</tr>
-<tr>
-<td>942$c</td>
-<td>itemtype:w</td>
-</tr>
+          <td>Identifier-standard</td>
+        </tr>
 
-<tr>
-<td>942$n</td>
-<td>Suppress:w,
-Suppress:n</td>
-</tr>
-<tr>
-<td>942$h</td>
-<td>cn-class</td>
-</tr>
-<tr>
-<td>942$i</td>
+        <tr>
+          <td>027</td>
 
-<td>cn-item</td>
-</tr>
-<tr>
-<td>942$k</td>
-<td>cn-prefix</td>
-</tr>
-<tr>
-<td>942$m</td>
-<td>cn-suffix</td>
-</tr>
-<tr>
-<td>952$0</td>
+          <td>Report-number, 
+          Identifier-standard</td>
+        </tr>
 
-<td>withdrawn:n,
-withdrawn:w</td>
-</tr>
-<tr>
-<td>952$1</td>
-<td>lost,
-lost:n</td>
-</tr>
-<tr>
-<td>952$2</td>
-<td>classification-source</td>
+        <tr>
+          <td>028</td>
 
-</tr>
-<tr>
-<td>952$3</td>
-<td>materials-specified</td>
-</tr>
-<tr>
-<td>952$4</td>
-<td>damaged:n,
-damaged:w</td>
-</tr>
-<tr>
-<td>952$5</td>
+          <td>Number-music-publisher, 
+          Identifier-standard</td>
+        </tr>
 
-<td>restricted:n,
-restricted:w</td>
-</tr>
-<tr>
-<td>952$6</td>
-<td>cn-sort:n,
-cn-sort:s</td>
-</tr>
-<tr>
-<td>952$7</td>
-<td>notforloan:n,
+        <tr>
+          <td>030</td>
 
-notforloan:w</td>
-</tr>
-<tr>
-<td>952$8</td>
-<td>ccode</td>
-</tr>
-<tr>
-<td>952$9</td>
-<td>itemnumber:n,
-itemnumber:s</td>
-</tr>
+          <td>CODEN, 
+          Identifier-standard</td>
+        </tr>
 
-<tr>
-<td>952$a</td>
-<td>homebranch</td>
-</tr>
-<tr>
-<td>952$b</td>
-<td>holdingbranch</td>
-</tr>
-<tr>
-<td>952$c</td>
-<td>location</td>
+        <tr>
+          <td>034</td>
 
-</tr>
-<tr>
-<td>952$d</td>
-<td>Date-of-acquisition,
-Date-of-acquisition:d,
-Date-of-acquisition:s</td>
-</tr>
-<tr>
-<td>952$e</td>
-<td>acqsource</td>
-</tr>
+          <td>Map-scale</td>
+        </tr>
 
-<tr>
-<td>952$f</td>
-<td>coded-location-qualifier</td>
-</tr>
-<tr>
-<td>952$g</td>
-<td>price</td>
-</tr>
-<tr>
-<td>952$j</td>
-<td>stack:n,
+        <tr>
+          <td>037</td>
 
-stack:w</td>
-</tr>
-<tr>
-<td>952$l</td>
-<td>issues:n,
-issues:w,
-issues:s</td>
-</tr>
-<tr>
-<td>952$m</td>
-<td>renewals:n,
+          <td>Identifier-standard,
+          Stock-number</td>
+        </tr>
 
-renewals:w</td>
-</tr>
-<tr>
-<td>952$n</td>
-<td>reserves:n,
-reserves:w</td>
-</tr>
-<tr>
-<td>952$o</td>
-<td>Local-classification:w,
-Local-classification:p,
+        <tr>
+          <td>040</td>
 
-Local-classification:s</td>
-</tr>
-<tr>
-<td>952$p</td>
-<td>barcode,
-barcode:n</td>
-</tr>
-<tr>
-<td>952$q</td>
-<td>onloan:n,
-onloan:w</td>
+          <td>Code-institution,
+          Record-source</td>
+        </tr>
 
-</tr>
-<tr>
-<td>952$r</td>
-<td>datelastseen</td>
-</tr>
-<tr>
-<td>952$s</td>
-<td>datelastborrowed</td>
-</tr>
-<tr>
-<td>952$t</td>
-<td>copynumber</td>
+        <tr>
+          <td>041</td>
 
-</tr>
-<tr>
-<td>952$u</td>
-<td>uri:u</td>
-</tr>
-<tr>
-<td>952$v</td>
-<td>replacementprice</td>
-</tr>
-<tr>
-<td>952$w</td>
-<td>replacementpricedate</td>
+          <td>ln</td>
+        </tr>
 
-</tr>
-<tr>
-<td>952$y</td>
-<td>itype:w</td>
-</tr>
-<tr>
-<td>952$z</td>
-<td>Note:w,
-Note:p</td>
-</tr>
-</table>
+        <tr>
+          <td>043</td>
+
+          <td>Code-geographic</td>
+        </tr>
+
+        <tr>
+          <td>050$b</td>
+
+          <td>LC-call-number:w, 
+          LC-call-number:p, 
+          LC-call-number:s</td>
+        </tr>
+
+        <tr>
+          <td>050</td>
+
+          <td>LC-call-number:w, 
+          LC-call-number:p, 
+          LC-call-number:s</td>
+        </tr>
+
+        <tr>
+          <td>052</td>
+
+          <td>Geographic-class</td>
+        </tr>
+
+        <tr>
+          <td>060</td>
+
+          <td>NLM-call-number</td>
+        </tr>
+
+        <tr>
+          <td>070</td>
+
+          <td>NAL-call-number</td>
+        </tr>
+
+        <tr>
+          <td>080</td>
+
+          <td>UDC-classification</td>
+        </tr>
+
+        <tr>
+          <td>082</td>
+
+          <td>Dewey-classification:w, 
+          Dewey-classification:s</td>
+        </tr>
+
+        <tr>
+          <td>086</td>
+
+          <td>Number-govt-pub</td>
+        </tr>
+
+        <tr>
+          <td>100$9</td>
+
+          <td>Cross-Reference:w, 
+          Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>100$a</td>
+
+          <td>Author,Author:p, 
+          Author:s,
+          Editor, 
+          Author-personal-bibliography,
+          Author-personal-bibliography:p, 
+          Author-personal-bibliography:s</td>
+        </tr>
+
+        <tr>
+          <td>100</td>
+
+          <td>Author, 
+          Author-title, 
+          Author-name-personal, 
+          Name,
+          Name-and-title, 
+          Personal-name</td>
+        </tr>
+
+        <tr>
+          <td>110$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>110</td>
+
+          <td>Author, 
+          Author-title, 
+          Author-name-corporate, 
+          Name,
+          Name-and-title, 
+          Corporate-name</td>
+        </tr>
+
+        <tr>
+          <td>111$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>111</td>
+
+          <td>Author, 
+          Author-title, 
+          Author-name-corporate, 
+          Name,
+          Name-and-title, 
+          Conference-name</td>
+        </tr>
+
+        <tr>
+          <td>130$n</td>
+
+          <td>Thematic-number</td>
+        </tr>
+
+        <tr>
+          <td>130$r</td>
+
+          <td>Music-key</td>
+        </tr>
+
+        <tr>
+          <td>130$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>130</td>
+
+          <td>Title,
+          Title-uniform</td>
+        </tr>
+
+        <tr>
+          <td>210</td>
+
+          <td>Title,
+          Title-abbreviated</td>
+        </tr>
+
+        <tr>
+          <td>211</td>
+
+          <td>Title,
+          Title-abbreviated</td>
+        </tr>
+
+        <tr>
+          <td>212</td>
+
+          <td>Title,
+          Title-other-variant</td>
+        </tr>
+
+        <tr>
+          <td>214</td>
+
+          <td>Title, 
+          Title-expanded</td>
+        </tr>
+
+        <tr>
+          <td>222</td>
+
+          <td>Title,
+          Title-key</td>
+        </tr>
+
+        <tr>
+          <td>240$r</td>
+
+          <td>Music-key</td>
+        </tr>
+
+        <tr>
+          <td>240$n</td>
+
+          <td>Thematic-number</td>
+        </tr>
+
+        <tr>
+          <td>240</td>
+
+          <td>Title:w, 
+          Title:p, 
+          Title-uniform</td>
+        </tr>
+
+        <tr>
+          <td>243$n</td>
+
+          <td>Thematic-number</td>
+        </tr>
+
+        <tr>
+          <td>243$r</td>
+
+          <td>Music-key</td>
+        </tr>
+
+        <tr>
+          <td>243</td>
+
+          <td>Title:w, 
+          Title:p, 
+          Title-collective</td>
+        </tr>
+
+        <tr>
+          <td>245$a</td>
+
+          <td>Title-cover:w, 
+          Title-cover:p, 
+          Title-cover:s, 
+          Title:w, 
+          Title:p,
+          Title:s</td>
+        </tr>
+
+        <tr>
+          <td>245$c</td>
+
+          <td>Author, 
+          Author-in-order:w, 
+          Author-in-order:p,
+          Author-in-order:s</td>
+        </tr>
+
+        <tr>
+          <td>245$9</td>
+
+          <td>Cross-Reference:w, 
+          Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>245</td>
+
+          <td>Title:w, 
+          Title:p</td>
+        </tr>
+
+        <tr>
+          <td>246</td>
+
+          <td>Title,
+          Title:p, 
+          Title-abbreviated, 
+          Title-expanded,
+          Title-former</td>
+        </tr>
+
+        <tr>
+          <td>247</td>
+
+          <td>Title, 
+          Title:p, 
+          Title-former, 
+          Title-other-variant,
+          Related-periodical</td>
+        </tr>
+
+        <tr>
+          <td>260$a</td>
+
+          <td>pl:w, 
+          pl:p</td>
+        </tr>
+
+        <tr>
+          <td>260$b</td>
+
+          <td>Publisher:w, 
+          Publisher:p</td>
+        </tr>
+
+        <tr>
+          <td>260$c</td>
+
+          <td>copydate, 
+          copydate:s</td>
+        </tr>
+
+        <tr>
+          <td>260</td>
+
+          <td>pl</td>
+        </tr>
+
+        <tr>
+          <td>300</td>
+
+          <td>Extent:w, 
+          Extent:p</td>
+        </tr>
+
+        <tr>
+          <td>400$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>400$t</td>
+
+          <td>Author-title, 
+          Name-and-title, 
+          Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>400$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>400</td>
+
+          <td>Author, 
+          Author-name-personal, 
+          Name, 
+          Personal-name</td>
+        </tr>
+
+        <tr>
+          <td>410</td>
+
+          <td>Author, 
+          Corporate-name</td>
+        </tr>
+
+        <tr>
+          <td>410$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>410$t</td>
+
+          <td>Author-title, 
+          Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>410$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>410</td>
+
+          <td>Author-name-corporate, 
+          Name</td>
+        </tr>
+
+        <tr>
+          <td>411</td>
+
+          <td>Author, 
+          Conference-name</td>
+        </tr>
+
+        <tr>
+          <td>411$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>411$t</td>
+
+          <td>Author-title,
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>411</td>
+
+          <td>Author-name-corporate, 
+          Name</td>
+        </tr>
+
+        <tr>
+          <td>440$a</td>
+
+          <td>Title-series:w, 
+          Title-series:p</td>
+        </tr>
+
+        <tr>
+          <td>440$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>440</td>
+
+          <td>Title-series:w, 
+          Title-series:p, 
+          Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>490$a</td>
+
+          <td>Title-series:w, 
+          Title-series:p</td>
+        </tr>
+
+        <tr>
+          <td>490</td>
+
+          <td>Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>490$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>500</td>
+
+          <td>Note:w, Note:p</td>
+        </tr>
+
+        <tr>
+          <td>502</td>
+
+          <td>Material-type</td>
+        </tr>
+
+        <tr>
+          <td>505$r</td>
+
+          <td>Author</td>
+        </tr>
+
+        <tr>
+          <td>505$t</td>
+
+          <td>Title</td>
+        </tr>
+
+        <tr>
+          <td>505</td>
+
+          <td>Note:w, 
+          Note:p</td>
+        </tr>
+
+        <tr>
+          <td>510</td>
+
+          <td>Indexed-by</td>
+        </tr>
+
+        <tr>
+          <td>520</td>
+
+          <td>Abstract:w, 
+          Abstract:p</td>
+        </tr>
+
+        <tr>
+          <td>521$a</td>
+
+          <td>lex:n</td>
+        </tr>
+
+        <tr>
+          <td>526$c</td>
+
+          <td>arl, 
+          arl:n</td>
+        </tr>
+
+        <tr>
+          <td>526$d</td>
+
+          <td>arp, 
+          arp:n</td>
+        </tr>
+
+        <tr>
+          <td>590</td>
+
+          <td>Note:w, 
+          Note:p</td>
+        </tr>
+
+        <tr>
+          <td>600$a</td>
+
+          <td>Name-and-title, 
+          Name, 
+          Personal-name, 
+          Subject-name-personal,
+          Subject</td>
+        </tr>
+
+        <tr>
+          <td>600$t</td>
+
+          <td>Name-and-title, 
+          Title, 
+          Subject</td>
+        </tr>
+
+        <tr>
+          <td>600$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>600</td>
+
+          <td>Name, 
+          Personal-name, 
+          Subject-name-personal, 
+          Subject</td>
+        </tr>
+
+        <tr>
+          <td>610$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>610$t</td>
+
+          <td>Name-and-title, 
+          Title</td>
+        </tr>
+
+        <tr>
+          <td>610$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>610</td>
+
+          <td>Name, 
+          Subject, 
+          Corporate-name</td>
+        </tr>
+
+        <tr>
+          <td>611</td>
+
+          <td>Conference-name</td>
+        </tr>
+
+        <tr>
+          <td>611$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>611$t</td>
+
+          <td>Name-and-title, 
+          Title</td>
+        </tr>
+
+        <tr>
+          <td>611$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>611</td>
+
+          <td>Name, 
+          Subject</td>
+        </tr>
+
+        <tr>
+          <td>630$n</td>
+
+          <td>Thematic-number</td>
+        </tr>
+
+        <tr>
+          <td>630$r</td>
+
+          <td>Music-key</td>
+        </tr>
+
+        <tr>
+          <td>630$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>630</td>
+
+          <td>Subject</td>
+        </tr>
+
+        <tr>
+          <td>650$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>650</td>
+
+          <td>Subject, 
+          Subject:p</td>
+        </tr>
+
+        <tr>
+          <td>651$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>651</td>
+
+          <td>Name-geographic, 
+          Subject,Subject:p</td>
+        </tr>
+
+        <tr>
+          <td>652$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>653$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>653</td>
+
+          <td>Subject, 
+          Subject:p</td>
+        </tr>
+
+        <tr>
+          <td>654$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>654</td>
+
+          <td>Subject</td>
+        </tr>
+
+        <tr>
+          <td>655$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>655</td>
+
+          <td>Subject</td>
+        </tr>
+
+        <tr>
+          <td>656$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>656</td>
+
+          <td>Subject</td>
+        </tr>
+
+        <tr>
+          <td>657$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>657</td>
+
+          <td>Subject</td>
+        </tr>
+
+        <tr>
+          <td>690$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>690</td>
+
+          <td>Subject, 
+          Subject:p</td>
+        </tr>
+
+        <tr>
+          <td>700$9</td>
+
+          <td>Cross-Reference, 
+          Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>700$a</td>
+
+          <td>Author, 
+          Author:p</td>
+        </tr>
+
+        <tr>
+          <td>700$n</td>
+
+          <td>Thematic-number</td>
+        </tr>
+
+        <tr>
+          <td>700$r</td>
+
+          <td>Music-key</td>
+        </tr>
+
+        <tr>
+          <td>700$t</td>
+
+          <td>Author-title, 
+          Name-and-title, 
+          Title, 
+          Title-uniform</td>
+        </tr>
+
+        <tr>
+          <td>700</td>
+
+          <td>Author, 
+          Author-name-corporate,
+          Author-name-personal, 
+          Name,
+          Editor, Personal-name</td>
+        </tr>
+
+        <tr>
+          <td>710</td>
+
+          <td>Author, 
+          Corporate-name</td>
+        </tr>
+
+        <tr>
+          <td>710$t</td>
+
+          <td>Author-title, 
+          Name-and-title, 
+          Title, 
+          Title-uniform</td>
+        </tr>
+
+        <tr>
+          <td>710$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>710$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>710</td>
+
+          <td>Author, 
+          Name</td>
+        </tr>
+
+        <tr>
+          <td>711$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>711$t</td>
+
+          <td>Author-title, 
+          Title, 
+          Title-uniform</td>
+        </tr>
+
+        <tr>
+          <td>711$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>711</td>
+
+          <td>Author-name-corporate, 
+          Name, 
+          Conference-name</td>
+        </tr>
+
+        <tr>
+          <td>730$n</td>
+
+          <td>Thematic-number</td>
+        </tr>
+
+        <tr>
+          <td>730$r</td>
+
+          <td>Music-key</td>
+        </tr>
+
+        <tr>
+          <td>730$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>730</td>
+
+          <td>Title, 
+          Title-uniform</td>
+        </tr>
+
+        <tr>
+          <td>740</td>
+
+          <td>Title, 
+          Title-other-variant</td>
+        </tr>
+
+        <tr>
+          <td>773$t</td>
+
+          <td>Host-item</td>
+        </tr>
+
+        <tr>
+          <td>780$t</td>
+
+          <td>Title</td>
+        </tr>
+
+        <tr>
+          <td>780</td>
+
+          <td>Title, 
+          Title-former, 
+          Related-periodical</td>
+        </tr>
+
+        <tr>
+          <td>785</td>
+
+          <td>Related-periodical</td>
+        </tr>
+
+        <tr>
+          <td>800$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>800$t</td>
+
+          <td>Author-title, 
+          Name-and-title, 
+          Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>800$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>800</td>
+
+          <td>Author, 
+          Author-name-personal, 
+          Name, 
+          Personal-name</td>
+        </tr>
+
+        <tr>
+          <td>810$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>810$t</td>
+
+          <td>Author-title, 
+          Name-and-title, 
+          Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>810$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>810</td>
+
+          <td>Author, 
+          Corporate-name, 
+          Author-name-corporate, 
+          Name</td>
+        </tr>
+
+        <tr>
+          <td>811$a</td>
+
+          <td>Name-and-title</td>
+        </tr>
+
+        <tr>
+          <td>811$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>811$t</td>
+
+          <td>Author-title, 
+          Name-and-title, 
+          Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>811</td>
+
+          <td>Author, 
+          Author-name-corporate, 
+          Name, 
+          Conference-name</td>
+        </tr>
+
+        <tr>
+          <td>830$9</td>
+
+          <td>Koha-Auth-Number</td>
+        </tr>
+
+        <tr>
+          <td>830</td>
+
+          <td>Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>840</td>
+
+          <td>Title, 
+          Title-series</td>
+        </tr>
+
+        <tr>
+          <td>999$c</td>
+
+          <td>Local-Number:n, 
+          Local-Number:w, 
+          Local-Number:s</td>
+        </tr>
+
+        <tr>
+          <td>999$d</td>
+
+          <td>biblioitemnumber:n, 
+          biblioitemnumber:w, 
+          biblioitemnumber:s</td>
+        </tr>
+
+        <tr>
+          <td>942$0</td>
+
+          <td>totalissues:n, 
+          totalissues:s</td>
+        </tr>
+
+        <tr>
+          <td>942$2</td>
+
+          <td>cn-bib-source</td>
+        </tr>
+
+        <tr>
+          <td>942$6</td>
+
+          <td>cn-bib-sort:n, 
+          cn-bib-sort:s</td>
+        </tr>
+
+        <tr>
+          <td>942$c</td>
+
+          <td>itemtype:w</td>
+        </tr>
+
+        <tr>
+          <td>942$n</td>
+
+          <td>Suppress:w, 
+          Suppress:n</td>
+        </tr>
+
+        <tr>
+          <td>942$h</td>
+
+          <td>cn-class</td>
+        </tr>
+
+        <tr>
+          <td>942$i</td>
+
+          <td>cn-item</td>
+        </tr>
+
+        <tr>
+          <td>942$k</td>
+
+          <td>cn-prefix</td>
+        </tr>
+
+        <tr>
+          <td>942$m</td>
+
+          <td>cn-suffix</td>
+        </tr>
+
+        <tr>
+          <td>952$0</td>
+
+          <td>withdrawn:n, 
+          withdrawn:w</td>
+        </tr>
+
+        <tr>
+          <td>952$1</td>
+
+          <td>lost, 
+          lost:n</td>
+        </tr>
+
+        <tr>
+          <td>952$2</td>
+
+          <td>classification-source</td>
+        </tr>
+
+        <tr>
+          <td>952$3</td>
+
+          <td>materials-specified</td>
+        </tr>
+
+        <tr>
+          <td>952$4</td>
+
+          <td>damaged:n, 
+          damaged:w</td>
+        </tr>
+
+        <tr>
+          <td>952$5</td>
+
+          <td>restricted:n, 
+          restricted:w</td>
+        </tr>
+
+        <tr>
+          <td>952$6</td>
+
+          <td>cn-sort:n, 
+          cn-sort:s</td>
+        </tr>
+
+        <tr>
+          <td>952$7</td>
+
+          <td>notforloan:n, 
+          notforloan:w</td>
+        </tr>
+
+        <tr>
+          <td>952$8</td>
+
+          <td>ccode</td>
+        </tr>
+
+        <tr>
+          <td>952$9</td>
+
+          <td>itemnumber:n, 
+          itemnumber:s</td>
+        </tr>
+
+        <tr>
+          <td>952$a</td>
+
+          <td>homebranch</td>
+        </tr>
+
+        <tr>
+          <td>952$b</td>
+
+          <td>holdingbranch</td>
+        </tr>
+
+        <tr>
+          <td>952$c</td>
+
+          <td>location</td>
+        </tr>
+
+        <tr>
+          <td>952$d</td>
+
+          <td>Date-of-acquisition, 
+          Date-of-acquisition:d,
+          Date-of-acquisition:s</td>
+        </tr>
+
+        <tr>
+          <td>952$e</td>
+
+          <td>acqsource</td>
+        </tr>
+
+        <tr>
+          <td>952$f</td>
+
+          <td>coded-location-qualifier</td>
+        </tr>
+
+        <tr>
+          <td>952$g</td>
+
+          <td>price</td>
+        </tr>
+
+        <tr>
+          <td>952$j</td>
+
+          <td>stack:n, 
+          stack:w</td>
+        </tr>
+
+        <tr>
+          <td>952$l</td>
+
+          <td>issues:n, 
+          issues:w, 
+          issues:s</td>
+        </tr>
+
+        <tr>
+          <td>952$m</td>
+
+          <td>renewals:n, 
+          renewals:w</td>
+        </tr>
+
+        <tr>
+          <td>952$n</td>
+
+          <td>reserves:n, 
+          reserves:w</td>
+        </tr>
+
+        <tr>
+          <td>952$o</td>
+
+          <td>Local-classification:w,
+          Local-classification:p,
+          Local-classification:s</td>
+        </tr>
+
+        <tr>
+          <td>952$p</td>
+
+          <td>barcode, 
+          barcode:n</td>
+        </tr>
+
+        <tr>
+          <td>952$q</td>
+
+          <td>onloan:n, 
+          onloan:w</td>
+        </tr>
+
+        <tr>
+          <td>952$r</td>
+
+          <td>datelastseen</td>
+        </tr>
+
+        <tr>
+          <td>952$s</td>
+
+          <td>datelastborrowed</td>
+        </tr>
+
+        <tr>
+          <td>952$t</td>
+
+          <td>copynumber</td>
+        </tr>
+
+        <tr>
+          <td>952$u</td>
+
+          <td>uri:u</td>
+        </tr>
+
+        <tr>
+          <td>952$v</td>
+
+          <td>replacementprice</td>
+        </tr>
+
+        <tr>
+          <td>952$w</td>
+
+          <td>replacementpricedate</td>
+        </tr>
+
+        <tr>
+          <td>952$y</td>
+
+          <td>itype:w</td>
+        </tr>
+
+        <tr>
+          <td>952$z</td>
+
+          <td>Note:w, 
+          Note:p</td>
+        </tr>
+      </table>
     </section>
   </chapter>
 
