@@ -340,30 +340,6 @@
           </section>
 
           <section>
-            <para>Default: the specific page</para>
-
-            <para>Asks: Control staff access to pages within Koha based on ___
-            .</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>the specific page</para>
-              </listitem>
-
-              <listitem>
-                <para>the general modules (such as administration or
-                circulation)</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>If set to general modules, administrators will be allowed to
-            control what pages staff members have access to on a more granular
-            level.</para>
-          </section>
-
-          <section>
             <title id="IndependantBranches">IndependantBranches</title>
 
             <para>Default: Don't prevent</para>
@@ -1514,18 +1490,23 @@
 
             <para>Default: Don't include</para>
 
-            <para>Asks: ___ days when the library in closed when calculating
-            due dates.</para>
+            <para>Asks: Calculate the due date using ___.</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Don't include</para>
+                <para>circulation rules only.</para>
               </listitem>
 
               <listitem>
-                <para>Include</para>
+                <para>the calendar to push the due date to the next open
+                day.</para>
+              </listitem>
+
+              <listitem>
+                <para>the calendar to skip all days the library is closed.
+                </para>
               </listitem>
             </itemizedlist>
           </section>
