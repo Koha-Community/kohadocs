@@ -1505,8 +1505,8 @@
               </listitem>
 
               <listitem>
-                <para>the calendar to skip all days the library is closed.
-                </para>
+                <para>the calendar to skip all days the library is
+                closed.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -24615,6 +24615,24 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
           <para>Note that the requirement to sign requests does *NOT* appear
           to apply to simply displaying book covers from Amazon.</para>
+        </section>
+
+        <section>
+          <title>All Amazon Content</title>
+
+          <para><emphasis role="bold">Question</emphasis>: I have all of the
+          Amazon preferences turned on and have entered both of my keys, but
+          none of the content appears in my system, why is that?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>: Amazon's API checks
+          your server time on all requests and if your server time is not set
+          properly requests will be denied. To resolve this issue be sure to
+          set your system time appropriately. Once that change in made Amazon
+          content should appear immediately. </para>
+
+          <para>On Debian the the command is <emphasis>date -s "2010-06-30
+          17:21"</emphasis> (with the proper date and time for your
+          timezone).</para>
         </section>
       </section>
     </section>
