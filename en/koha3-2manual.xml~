@@ -13611,8 +13611,53 @@
         </itemizedlist>
 
         <para>At the bottom of the page there is a summary of the patron's
-        current checked out items along with the due date and the list of
-        items the patron has on hold</para>
+        current checked out items along with the due date, items checked out
+        today will appear at the top.</para>
+
+        <screenshot>
+          <screeninfo>Patron's checkout summary</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/checkoutsummary.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>This screen will show whether an item is renewable and if
+            not, why not. </para>
+          </listitem>
+
+          <listitem>
+            <para>To override the renewal limits you can set the <link
+            linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
+            system preference to allow overrides and a checkbox will appear
+            below the list of checkouts that reads 'Override Renewal
+            Limit'</para>
+
+            <screenshot>
+              <screeninfo>Override Renewal Limit</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/overriderenewal.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Checking that box will add checkboxes in the renew
+                column above where before the item was not renewable.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>Also at the bottom of the page is the list of items the patron
+        has on hold</para>
 
         <screenshot>
           <screeninfo>Holds summary on check out screen</screeninfo>
@@ -24628,7 +24673,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           your server time on all requests and if your server time is not set
           properly requests will be denied. To resolve this issue be sure to
           set your system time appropriately. Once that change in made Amazon
-          content should appear immediately. </para>
+          content should appear immediately.</para>
 
           <para>On Debian the the command is <emphasis>date -s "2010-06-30
           17:21"</emphasis> (with the proper date and time for your
