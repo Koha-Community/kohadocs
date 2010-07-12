@@ -3282,48 +3282,123 @@
         <para></para>
 
         <section>
-          <title id="dateformat">dateformat</title>
+          <title id="generall18n">General</title>
 
-          <para>Default: mm/dd/yyyy</para>
+          <section>
+            <title id="dateformat">dateformat</title>
 
-          <para>Asks: Format dates like ___</para>
+            <para>Default: mm/dd/yyyy</para>
 
-          <para>Values:</para>
+            <para>Asks: Format dates like ___</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>dd/mm/yyyy</para>
-            </listitem>
+            <para>Values:</para>
 
-            <listitem>
-              <para>mm/dd/yyyy</para>
-            </listitem>
+            <itemizedlist>
+              <listitem>
+                <para>dd/mm/yyyy</para>
+              </listitem>
 
-            <listitem>
-              <para>yyyy/mm/dd</para>
-            </listitem>
-          </itemizedlist>
+              <listitem>
+                <para>mm/dd/yyyy</para>
+              </listitem>
+
+              <listitem>
+                <para>yyyy/mm/dd</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section>
-          <title>opaclanguagesdisplay</title>
+          <title>OPAC</title>
 
-          <para>Default: Don't allow</para>
+          <para></para>
 
-          <para>Asks: ___ patrons to change the language they see on the
-          OPAC.</para>
+          <section>
+            <title id="opaclanguagesdisplay">opaclanguagesdisplay</title>
 
-          <para>Values:</para>
+            <para>Default: Don't allow</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
+            <para>Asks: ___ patrons to select their language on the
+            OPAC.</para>
 
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <screenshot>
+                  <screeninfo>When this preference is on, patrons can choose
+                  their language from a list at the bottom of the
+                  OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/opaclanguagesdisplay.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title id="opaclanguages">opaclanguages</title>
+
+            <para>Default: English</para>
+
+            <para>Asks: Enable the following languages on the OPAC</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>English</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>To install additional languages you need to run
+            misc/translation/install-code.pl. For example, to install French
+            you would run the following command <emphasis>install-code.pl
+            fr-FR</emphasis> to make the templates, once they exist and are in
+            the right place then they will show up as an option in this
+            preference.</para>
+          </section>
+        </section>
+
+        <section>
+          <title>Staff Client</title>
+
+          <para></para>
+
+          <section>
+            <title id="languagepref">language</title>
+
+            <para>Default: English</para>
+
+            <para>Asks: Enable the following languages on the staff
+            interface</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>English</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>To install additional languages you need to run
+            misc/translation/install-code.pl. For example, to install French
+            you would run the following command <emphasis>install-code.pl
+            fr-FR</emphasis> to make the templates, once they exist and are in
+            the right place then they will show up as an option in this
+            preference.</para>
+          </section>
         </section>
       </section>
 
@@ -3822,62 +3897,6 @@
 
               <listitem>
                 <para>Highlight</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section>
-            <title>opaclanguages</title>
-
-            <para>Default: English</para>
-
-            <para>Asks: Enable the following languages on the OPAC</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>English</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>To install additional languages you need to run
-            misc/translation/install-code.pl. For example, to install French
-            you would run the following command <emphasis>install-code.pl
-            fr-FR</emphasis> to make the templates, once they exist and are in
-            the right place then they will show up as an option in this
-            preference.</para>
-          </section>
-
-          <section>
-            <title>opaclanguagesdisplay</title>
-
-            <para>Default: Don't allow</para>
-
-            <para>Asks: ___ patrons to select their language on the
-            OPAC.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Allow</para>
-
-                <screenshot>
-                  <screeninfo>When this preference is on, patrons can choose
-                  their language from a list at the bottom of the
-                  OPAC</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/opaclanguagesdisplay.png" />
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-
-              <listitem>
-                <para>Don't allow</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4871,7 +4890,7 @@
         </section>
 
         <section>
-          <title>BorrowersTitles</title>
+          <title id="BorrowersTitles">BorrowersTitles</title>
 
           <para>Default: Mr|Mrs|Miss|Ms</para>
 
@@ -4937,7 +4956,8 @@
         </section>
 
         <section>
-          <title>ExtendedPatronAttributes</title>
+          <title
+          id="ExtendedPatronAttributes">ExtendedPatronAttributes</title>
 
           <para>Default: Enable</para>
 
@@ -5749,30 +5769,6 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
-          </section>
-
-          <section>
-            <title>language</title>
-
-            <para>Default: English</para>
-
-            <para>Asks: Enable the following languages on the staff
-            interface</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>English</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>To install additional languages you need to run
-            misc/translation/install-code.pl. For example, to install French
-            you would run the following command <emphasis>install-code.pl
-            fr-FR</emphasis> to make the templates, once they exist and are in
-            the right place then they will show up as an option in this
-            preference.</para>
           </section>
 
           <section>
@@ -7234,8 +7230,13 @@
         <title id="patronattributetypes">Patron Attribute Types</title>
 
         <para>Patron attributes can be used to define custom fields to
-        associate with your patron records. A common use for this field would
-        be for a student ID number or a Driver's license number.</para>
+        associate with your patron records. In order to enable the use of
+        custom fields you need to set the <link
+        linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link>
+        system preference.</para>
+
+        <para>A common use for this field would be for a student ID number or
+        a Driver's license number.</para>
 
         <screenshot>
           <screeninfo>List of Patron Attributes</screeninfo>
@@ -11817,6 +11818,12 @@
               <para>Required fields are defined in the <link
               linkend="BorrowerMandatoryField">BorrowerMandatoryField</link>
               system preference</para>
+            </listitem>
+
+            <listitem>
+              <para>Salutation is populated by the <link
+              linkend="BorrowersTitles">BorrowersTitles</link> system
+              preference</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -22741,7 +22748,10 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>Data Migration</title>
 
-      <para></para>
+      <para>Before you can start using Koha you'll need to have some data.
+      This can be done by entering it all by hand, but most people already
+      have their data in electronic format of some sort and just need to
+      reformat it a bit for importing into Koha.</para>
 
       <itemizedlist>
         <listitem>
@@ -22764,6 +22774,14 @@ print theme('pages_catalog');</programlisting>
           <para>Enter any additional patron information fields you use in your
           library in the <link linkend="patronattributetypes">Patron
           Attributes</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Requires that you first set the <link
+              linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link>
+              system preference if you have custom fields</para>
+            </listitem>
+          </itemizedlist>
         </listitem>
 
         <listitem>
@@ -22814,9 +22832,47 @@ print theme('pages_catalog');</programlisting>
     </section>
 
     <section>
+      <title>Localization Configuration</title>
+
+      <para>Koha is used worldwide and so you need to make sure you set your
+      localization preferences so that options throughout Koha appear properly
+      for your location/language.</para>
+
+      <itemizedlist>
+        <listitem><para>Localization/Internationalization System Preferences</para>
+      <itemizedlist>
+        <listitem>
+          <para><link linkend="dateformat">dateformat</link> : Decide how
+          dates are displayed throughout Koha</para>
+        </listitem>
+
+        <listitem>
+          <para><link
+          linkend="opaclanguagesdisplay">opaclanguagesdisplay</link> : Decide
+          if patrons can choose what language the OPAC appears in </para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link linkend="opaclanguages">opaclanguages</link> :
+              Decide which languages the patrons can choose from</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="languagepref">language</link> : Decide which
+          langauges appear in the staff client</para>
+        </listitem>
+      </itemizedlist>
+      </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
       <title>Circulation Configuration</title>
 
-      <para></para>
+      <para>Before you start circulating your collection you'll need to set up
+      your rules and preferences for circulation.</para>
 
       <itemizedlist>
         <listitem>
@@ -23073,7 +23129,9 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>Patron Configuration</title>
 
-      <para></para>
+      <para>You have already imported patron data from your old system, but
+      there are plenty of options available to you regarding patrons and their
+      accounts.</para>
 
       <itemizedlist>
         <listitem>
@@ -23092,6 +23150,12 @@ print theme('pages_catalog');</programlisting>
           <para>Patron System Preferences</para>
 
           <itemizedlist>
+            <listitem>
+              <para><link linkend="autoMemberNum">autoMemberNum</link> :
+              Decide if the patrons barcodes are auto-generated or if you
+              enter them yourself</para>
+            </listitem>
+
             <listitem>
               <para><link linkend="MaxFine">MaxFine</link> : Determine the
               maximum amount that people can owe in fines</para>
@@ -23119,6 +23183,18 @@ print theme('pages_catalog');</programlisting>
             </listitem>
 
             <listitem>
+              <para><link linkend="BorrowersTitles">BorrowersTitles</link> :
+              Add or change the titles for your patrons</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="borrowerRelationship">borrowerRelationship</link> : Add
+              or change borrower relationships (child to adult and
+              professional to organization)</para>
+            </listitem>
+
+            <listitem>
               <para><link
               linkend="AutoEmailPrimaryAddress">AutoEmailPrimaryAddress</link>
               : Determine if the patrons get an email confirming the creation
@@ -23130,6 +23206,11 @@ print theme('pages_catalog');</programlisting>
               linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
               : Decide if patrons can choose from a series of notices (other
               than overdues)</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="patronimages">patronimages</link> : Decide
+              if you want to save patron images in your system</para>
             </listitem>
           </itemizedlist>
         </listitem>
