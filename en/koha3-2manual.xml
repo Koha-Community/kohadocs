@@ -1980,7 +1980,7 @@
           </section>
 
           <section>
-            <title>soundon</title>
+            <title id="soundon">soundon</title>
 
             <para>Default: Don't enable</para>
 
@@ -2000,7 +2000,8 @@
             </itemizedlist>
 
             <para><important>
-                <para>This feature is not supported by all browsers.</para>
+                <para>This feature is not supported by all browsers. Requires
+                an HTML5 compliant browser.</para>
               </important></para>
           </section>
 
@@ -4764,7 +4765,8 @@
         </section>
 
         <section>
-          <title>AutoEmailOpacUser &amp; AutoEmailPrimaryAddress</title>
+          <title id="AutoEmailPrimaryAddress">AutoEmailOpacUser &amp;
+          AutoEmailPrimaryAddress</title>
 
           <para>AutoEmailOpacUser Default: Don't send</para>
 
@@ -4987,7 +4989,7 @@
         </section>
 
         <section>
-          <title>MaxFine</title>
+          <title id="MaxFine">MaxFine</title>
 
           <para>Default: 9999</para>
 
@@ -5035,7 +5037,7 @@
         </section>
 
         <section>
-          <title>NotifyBorrowerDeparture</title>
+          <title id="NotifyBorrowerDeparture">NotifyBorrowerDeparture</title>
 
           <para>Default: 30</para>
 
@@ -6701,7 +6703,8 @@
 
               <itemizedlist>
                 <listitem>
-                  <para>the location to be used for NewItemsDefaultLocation
+                  <para>the location to be used for <link
+                  linkend="NewItemsDefaultLocation">NewItemsDefaultLocation</link>
                   (change description as desired), also the location expected
                   by <link
                   linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>.</para>
@@ -15016,9 +15019,10 @@
         </mediaobject>
       </screenshot>
 
-      <para>Next you need to set the NewItemsDefaultLocation system preference
-      to PROC. This will set the new items to the Processing Center as their
-      default location.</para>
+      <para>Next you need to set the <link
+      linkend="NewItemsDefaultLocation">NewItemsDefaultLocation</link> system
+      preference to PROC. This will set the new items to the Processing Center
+      as their default location.</para>
 
       <para>Create items with their desired final shelving location.</para>
 
@@ -22795,9 +22799,16 @@ print theme('pages_catalog');</programlisting>
         </listitem>
 
         <listitem>
-          <para><link linkend="kohamarcmapping">Map your data</link> from your
-          legacy system to Koha fields and migrate (remembering to use the
+          <para><link linkend="kohamarcmapping">Map your bibliographic
+          data</link> from your legacy system to Koha fields and migrate
+          (remembering to use the collection, shelving, item type and library
           codes you entered in the above setting areas)</para>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="patronimport">Map your patron data</link> from
+          your legacy system to the Koha fileds and migrate (remembering to
+          use the patron and library codes you defined above)</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -22886,10 +22897,10 @@ print theme('pages_catalog');</programlisting>
 
               <itemizedlist>
                 <listitem>
-                  <para> <link
+                  <para><link
                   linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
                   : Decide if you want the staff to be able to override the
-                  setting for the above</para>
+                  setting for the above at checkout</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22905,7 +22916,7 @@ print theme('pages_catalog');</programlisting>
                   <para><link
                   linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
                   : Decide if you want the staff to be able to override the
-                  setting for the above</para>
+                  setting for the above at checkout</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22919,7 +22930,7 @@ print theme('pages_catalog');</programlisting>
                   <para><link
                   linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
                   : Decide if you want the staff to be able to override the
-                  setting for the above</para>
+                  setting for the above at checkout</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22927,14 +22938,14 @@ print theme('pages_catalog');</programlisting>
             <listitem>
               <para><link linkend="maxoutstanding">maxoutstanding</link> :
               Define the maximum amount a patron can owe before holds are
-              blocked </para>
+              blocked</para>
 
               <itemizedlist>
                 <listitem>
                   <para><link
                   linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
                   : Decide if you want the staff to be able to override the
-                  setting for the above</para>
+                  setting for the above at checkout</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22955,7 +22966,7 @@ print theme('pages_catalog');</programlisting>
                 <listitem>
                   <para><link
                   linkend="AutoSelfCheckAllowed">AutoSelfCheckAllowed</link> :
-                  Decide if the self-checkout system requires login </para>
+                  Decide if the self-checkout system requires login</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22970,14 +22981,31 @@ print theme('pages_catalog');</programlisting>
             <listitem>
               <para><link
               linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
-              : Decide if you want staff to override the limit put on renewals
-              </para>
+              : Decide if you want staff to override the limit put on
+              renewals</para>
             </listitem>
 
             <listitem>
               <para><link linkend="finesMode">finesMode</link> : switch to
               &lsquo;Calculate and Charge&rsquor; before go live if you charge
               fines</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OverdueNoticeBcc">OverdueNoticeBcc</link> :
+              if you want to receive a copy of every overdue notice sent out,
+              enter your email address here</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="ReservesControlBranch">ReservesControlBranch</link> :
+              Decide which branch's hold rules are considered first</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="soundon">soundon</link> : Decide if you
+              want to have sounds on for circulation actions</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -22989,6 +23017,121 @@ print theme('pages_catalog');</programlisting>
         <listitem>
           <para>Define your <link linkend="noticetriggers">Overdue Notice
           Triggers</link></para>
+        </listitem>
+
+        <listitem>
+          <para>Set up your <link linkend="cronjobs">cron jobs</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Populate <link linkend="buildholdscron">your holds
+              queue</link> (every 1-4 hours)</para>
+            </listitem>
+
+            <listitem>
+              <para>Decide <link linkend="expiredholdscron">when holds
+              expire</link> (daily)</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="finescronjob">Calculate fines due</link>
+              (daily)</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="longoverduecron">Mark long overdue items as
+              lost</link> (daily)</para>
+            </listitem>
+
+            <listitem>
+              <para>Decide when the system <link linkend="msgqueuecron">sends
+              out messages</link> (1-4 hours)</para>
+            </listitem>
+
+            <listitem>
+              <para>Decide when the system <link
+              linkend="overduenoticecron">queues overdue notices</link>
+              (daily)</para>
+            </listitem>
+
+            <listitem>
+              <para>Set up <link linkend="printholdcron">hold notices that
+              didn't send for printing</link> (daily after overdues and
+              message queue)</para>
+            </listitem>
+
+            <listitem>
+              <para>Decide when the system <link
+              linkend="advnoticecron">queues the advanced notice of items
+              due</link> (daily)</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Patron Configuration</title>
+
+      <para></para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Enter your <link linkend="addstaffpatron">staff members as
+          patrons</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Define <link linkend="patronpermissions">staff members
+              access permissions</link></para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Patron System Preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link linkend="MaxFine">MaxFine</link> : Determine the
+              maximum amount that people can owe in fines</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="NotifyBorrowerDeparture">NotifyBorrowerDeparture</link>
+              : Decide when to warn staff that the patron account is about to
+              expire</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="intranetreadinghistory">intranetreadinghistory</link> :
+              Decide if the staff can see the patron's reading/checkout
+              history</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="BorrowerMandatoryField">BorrowerMandatoryField</link> :
+              List fields that you want to appear as mandatory on the patron
+              add/edit form</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="AutoEmailPrimaryAddress">AutoEmailPrimaryAddress</link>
+              : Determine if the patrons get an email confirming the creation
+              of their account</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+              : Decide if patrons can choose from a series of notices (other
+              than overdues)</para>
+            </listitem>
+          </itemizedlist>
         </listitem>
       </itemizedlist>
     </section>
@@ -25241,7 +25384,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
   </appendix>
 
   <appendix>
-    <title>Cron Jobs</title>
+    <title id="cronjobs">Cron Jobs</title>
 
     <para></para>
 
@@ -25428,7 +25571,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         </section>
 
         <section>
-          <title>Long Overdues</title>
+          <title id="longoverduecron">Long Overdues</title>
 
           <para>Script path: misc/cronjobs/longoverdue.pl</para>
 
@@ -25454,18 +25597,18 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         <para></para>
 
         <section>
-          <title>Message Queue</title>
+          <title id="msgqueuecron">Message Queue</title>
 
           <para>Script path: misc/cronjobs/process_message_queue.pl</para>
 
           <para>Does: processes the message queue to send emails and SMS
           messages to users. sends outgoing emails to patrons.</para>
 
-          <para>Frequency suggestion: nightly</para>
+          <para>Frequency suggestion: 1-4 hours</para>
         </section>
 
         <section>
-          <title>Advanced Notice</title>
+          <title id="advnoticecron">Advanced Notice</title>
 
           <para>Script path: misc/cronjobs/advance_notices.pl</para>
 
@@ -25479,7 +25622,8 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
           <note>
             <para>This script does not actually send the notices. It queues
-            them in the message queue for later</para>
+            them in the <link linkend="msgqueuecron">message queue</link> for
+            later</para>
           </note>
 
           <section>
@@ -25515,15 +25659,15 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
           <para>Script path: misc/cronjobs/overdue_notices.pl</para>
 
-          <para>Does: prepares messages to alert patrons of overdue
-          messages</para>
+          <para>Does: prepares messages to alert patrons of overdue messages
+          (both via email and print)</para>
 
           <para>Frequency suggestion: nightly</para>
 
           <note>
             <para>This script does not actually send the notices. It queues
-            them in the message queue for later or generates the HTML for
-            later printing</para>
+            them in the <link linkend="msgqueuecron">message queue</link> for
+            later or generates the HTML for later printing</para>
           </note>
 
           <section>
@@ -25773,7 +25917,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         </section>
 
         <section>
-          <title>Print Hold Notices</title>
+          <title id="printholdcron">Print Hold Notices</title>
 
           <para>Script path: misc/cronjobs/gather_print_notices.pl</para>
 
@@ -25793,7 +25937,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         <para>Does: Updates all items with a location of CART to the item's
         permanent location.</para>
 
-        <para>Required by: NewItemsDefaultLocation, <link lang=""
+        <para>Required by: <link
+        linkend="NewItemsDefaultLocation">NewItemsDefaultLocation</link>,
+        <link lang=""
         linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>,
         &amp; <link lang=""
         linkend="ReturnToShelvingCart">ReturnToShelvingCart</link> system
