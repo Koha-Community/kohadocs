@@ -670,7 +670,7 @@
           </section>
 
           <section>
-            <title>OpacSuppression</title>
+            <title id="OpacSuppression">OpacSuppression</title>
 
             <para>Default: Don't hide</para>
 
@@ -1707,6 +1707,28 @@
           </section>
 
           <section>
+            <title
+            id="emailLibrarianWhenHoldIsPlaced">emailLibrarianWhenHoldIsPlaced</title>
+
+            <para>Default: Don't enable</para>
+
+            <para>Asks: ___ sending an email to the Koha administrator email
+            address whenever a hold request is placed. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't enable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
             <title id="maxreserves">maxreserves</title>
 
             <para>Default: 50</para>
@@ -1900,7 +1922,8 @@
           </section>
 
           <section>
-            <title>DisplayClearScreenButton</title>
+            <title
+            id="DisplayClearScreenButton">DisplayClearScreenButton</title>
 
             <para>Default: Show</para>
 
@@ -2096,7 +2119,8 @@
           </section>
 
           <section>
-            <title>ShowPatronImageInWebBasedSelfCheck</title>
+            <title
+            id="ShowPatronImageInWebBasedSelfCheck">ShowPatronImageInWebBasedSelfCheck</title>
 
             <para>Default: Don't show</para>
 
@@ -4832,7 +4856,8 @@
           <para></para>
 
           <section>
-            <title>EnableOpacSearchHistory</title>
+            <title
+            id="EnableOpacSearchHistory">EnableOpacSearchHistory</title>
 
             <para>Default: Keep</para>
 
@@ -4887,7 +4912,7 @@
         <para></para>
 
         <section>
-          <title>AddPatronLists</title>
+          <title id="AddPatronLists">AddPatronLists</title>
 
           <para>Default: specific categories</para>
 
@@ -4898,10 +4923,32 @@
           <itemizedlist>
             <listitem>
               <para>general patron types</para>
+
+              <screenshot>
+                <screeninfo>Add patron optins with AddPatronLists set to
+                general patron types</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/AddPatronLists-category.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
             </listitem>
 
             <listitem>
               <para>specific categories</para>
+
+              <screenshot>
+                <screeninfo>Add patron options with AddPatronLists set to
+                specific categories</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/AddPatronLists-specific.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
             </listitem>
           </itemizedlist>
         </section>
@@ -5165,7 +5212,7 @@
         </section>
 
         <section>
-          <title>minPasswordLength</title>
+          <title id="minPasswordLength">minPasswordLength</title>
 
           <para>Default: 3</para>
 
@@ -23221,6 +23268,13 @@ print theme('pages_catalog');</programlisting>
                   linkend="AutoSelfCheckAllowed">AutoSelfCheckAllowed</link> :
                   Decide if the self-checkout system requires login</para>
                 </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="ShowPatronImageInWebBasedSelfCheck">ShowPatronImageInWebBasedSelfCheck</link>
+                  : Decide if you want patron images to show on the self
+                  checkout screen</para>
+                </listitem>
               </itemizedlist>
             </listitem>
 
@@ -23239,15 +23293,26 @@ print theme('pages_catalog');</programlisting>
             </listitem>
 
             <listitem>
-              <para><link linkend="finesMode">finesMode</link> : switch to
+              <para><link linkend="RenewalPeriodBase">RenewalPeriodBase</link>
+              : Decide what date renewals are based on</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="finesMode">finesMode</link> : Switch to
               &lsquo;Calculate and Charge&rsquor; before go live if you charge
               fines</para>
             </listitem>
 
             <listitem>
               <para><link linkend="OverdueNoticeBcc">OverdueNoticeBcc</link> :
-              if you want to receive a copy of every overdue notice sent out,
+              If you want to receive a copy of every overdue notice sent out,
               enter your email address here</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="emailLibrarianWhenHoldIsPlaced">emailLibrarianWhenHoldIsPlaced</link>
+              : Decide if you want an email every time a hold is placed</para>
             </listitem>
 
             <listitem>
@@ -23259,6 +23324,47 @@ print theme('pages_catalog');</programlisting>
             <listitem>
               <para><link linkend="soundon">soundon</link> : Decide if you
               want to have sounds on for circulation actions</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="AllowNotForLoanOverride">AllowNotForLoanOverride</link>
+              : Decide if you want staff to be able to override 'not for loan'
+              statuses</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="globalDueDate">globalDueDate</link> : If
+              you want all your books due on the same date, enter that
+              here</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="ceilingDueDate">ceilingDueDate</link> : If
+              you want all books due no later than a specific date (like the
+              end of a semester) enter a date here</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OverdueNoticeBcc">OverdueNoticeBcc</link> :
+              If you want to receive a copy of all overdue emails, enter your
+              address here</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="FilterBeforeOverdueReport">FilterBeforeOverdueReport</link>
+              : If you have a large amount of overdues, you might want to turn
+              this preference on so as to allow you to filter before results
+              appear</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="DisplayClearScreenButton">DisplayClearScreenButton</link>
+              : If you have a lot of staff members sharing one circ computer
+              you might want to enable this so that staff can clear the screen
+              in between checkouts to protect patron's privacy</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -23348,6 +23454,12 @@ print theme('pages_catalog');</programlisting>
 
           <itemizedlist>
             <listitem>
+              <para><link linkend="AddPatronLists">AddPatronLists</link> :
+              Decide how patron categories appear when creating a new
+              patron</para>
+            </listitem>
+
+            <listitem>
               <para><link linkend="autoMemberNum">autoMemberNum</link> :
               Decide if the patrons barcodes are auto-generated or if you
               enter them yourself</para>
@@ -23408,6 +23520,18 @@ print theme('pages_catalog');</programlisting>
             <listitem>
               <para><link linkend="patronimages">patronimages</link> : Decide
               if you want to save patron images in your system</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link>
+              : Decide if you want to enable custom patron fields</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="minPasswordLength">minPasswordLength</link>
+              : Enter the minimum number of characters you want passwords to
+              have</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -23517,6 +23641,12 @@ print theme('pages_catalog');</programlisting>
             <listitem>
               <para><link linkend="autoBarcode">autoBarcode</link> : Decide if
               Koha generates item barcodes for you</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OpacSuppression">OpacSuppression</link> :
+              Decide if you want to hide items marked as suppressed from the
+              OPAC search results</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -23845,6 +23975,19 @@ print theme('pages_catalog');</programlisting>
               linkend="OPACSearchForTitleIn">OPACSearchForTitleIn</link> :
               Choose which libraries you want patrons to be able to re-run
               their search in</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OpacAddMastheadLibraryPulldown">OpacAddMastheadLibraryPulldown</link>
+              : If you're a multi-branch system you can add a pull down to the
+              search bar for patrons to search which library to search</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="EnableOpacSearchHistory">EnableOpacSearchHistory</link>
+              : Decide if you want the system to keep a search history</para>
             </listitem>
           </itemizedlist>
         </listitem>
