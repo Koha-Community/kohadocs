@@ -2176,7 +2176,7 @@
         </tip>
 
         <section>
-          <title>All</title>
+          <title id="frbrenhancedprefs">All</title>
 
           <para></para>
 
@@ -2243,7 +2243,7 @@
         </section>
 
         <section>
-          <title>Amazon</title>
+          <title id="amazonprefs">Amazon</title>
 
           <para></para>
 
@@ -2593,7 +2593,7 @@
         </section>
 
         <section>
-          <title>Babelth&egrave;que</title>
+          <title id="Babelthequeprefs">Babelth&egrave;que</title>
 
           <para></para>
 
@@ -2632,7 +2632,7 @@
         </section>
 
         <section>
-          <title>Baker &amp; Taylor</title>
+          <title id="btcontentprefs">Baker &amp; Taylor</title>
 
           <important>
             <para>This is a pay service, you must contact Baker &amp; Taylor
@@ -2701,7 +2701,7 @@
         </section>
 
         <section>
-          <title>Google</title>
+          <title id="googleprefs">Google</title>
 
           <para></para>
 
@@ -2728,7 +2728,7 @@
         </section>
 
         <section>
-          <title>LibraryThing</title>
+          <title id="librarythingprefs">LibraryThing</title>
 
           <para>LibraryThing for Libraries is a pay service. You must first
           contact LibraryThing directly for pricing and subscription
@@ -2829,7 +2829,7 @@
         </section>
 
         <section>
-          <title>OCLC</title>
+          <title id="oclcprefs">OCLC</title>
 
           <para></para>
 
@@ -2890,7 +2890,7 @@
         </section>
 
         <section>
-          <title>Syndetics</title>
+          <title id="Syndeticsprefs">Syndetics</title>
 
           <para>Syndetics is a pay service. You must first contact Syndetics
           directly for pricing and subscription information.</para>
@@ -23600,7 +23600,8 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>OPAC Configuration</title>
 
-      <para></para>
+      <para>There are a lot of ways you can customize your OPAC in
+      Koha.</para>
 
       <itemizedlist>
         <listitem>
@@ -23859,6 +23860,133 @@ print theme('pages_catalog');</programlisting>
           </itemizedlist>
 
           <para></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Enhanded Content Configuration</title>
+
+      <para>Koha allows you to pull in content from outside sources to enhance
+      your bib records. All of this content can be toggled on and off using
+      the enhanced content system preferences.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><link linkend="frbrenhancedprefs">FRBR/Editions</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para> If you would like to have your OPAC and/or staff client
+              show an 'Editions' tab on the bib record, you want to enable one
+              or the other FRBR preferences and then either one or both of the
+              ISBN services (XISBN and ThingISBN).</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="amazonprefs">Amazon</link> : This service is
+          free and just requires that you visit <ulink
+          url="http://aws.amazon.com">http://aws.amazon.com</ulink> to sign
+          up</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Using the Amazon preferences you can choose to show
+              different types of content from Amazon. Before choosing which
+              types of content you would like to display you will need to
+              enable Amazon content for the staff client and/or the
+              OPAC.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link
+          linkend="Babelthequeprefs">Babelth&egrave;que</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service. Contact Babelth&egrave;que to learn
+              how to enable this content in the OPAC.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="btcontentprefs">Baker and Taylor</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service from Baker &amp; Taylor. Contact
+              Baker &amp; Taylor for the information to enter into these
+              preferences.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="googleprefs">Google</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This service is free and does not require registration,
+              simply enable GoogleJackets and you're set to go.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="librarythingprefs">LibraryThing</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>With the exception of ThingISBN, you will need to contact
+              LibraryThing for the information to enter into these
+              preferences</para>
+            </listitem>
+
+            <listitem>
+              <para>Enabling ThingISBN will help to populate the editions tab
+              on the bib record display if you have enabled FRBR.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="oclcprefs">OCLC</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>XISBN is used to populate the editions tab on the bib
+              record display if you have enabled FRBR. This service is free
+              for up to 999 queries a day.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="Syndeticsprefs">Syndetics</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service from Syndetics to add content for
+              your bib records. Contact Syndetics for the information to enter
+              into these preferences.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="taggingprefs">Tagging</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose whether or not you want to allow patrons to add
+              tags to records in Koha.</para>
+            </listitem>
+          </itemizedlist>
         </listitem>
       </itemizedlist>
     </section>
