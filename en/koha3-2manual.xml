@@ -67,7 +67,7 @@
           <title>Policy</title>
 
           <section>
-            <title>AcqCreateItem</title>
+            <title id="AcqCreateItem">AcqCreateItem</title>
 
             <para>Default: placing an order</para>
 
@@ -91,7 +91,7 @@
           </section>
 
           <section>
-            <title>CurrencyFormat</title>
+            <title id="CurrencyFormat">CurrencyFormat</title>
 
             <para>Default: 360,000.00 (US)</para>
 
@@ -112,7 +112,7 @@
           </section>
 
           <section>
-            <title>gist</title>
+            <title id="gist">gist</title>
 
             <para>Default: 0</para>
 
@@ -127,7 +127,7 @@
           <title>Printing</title>
 
           <section>
-            <title>OrderPdfFormat</title>
+            <title id="OrderPdfFormat">OrderPdfFormat</title>
 
             <para>Default: pdfformat::layout2pages</para>
 
@@ -5723,7 +5723,8 @@
         <para></para>
 
         <section>
-          <title>RenewSerialAddsSuggestion</title>
+          <title
+          id="RenewSerialAddsSuggestion">RenewSerialAddsSuggestion</title>
 
           <para>Default: Don't add</para>
 
@@ -5744,7 +5745,7 @@
         </section>
 
         <section>
-          <title>RoutingSerials</title>
+          <title id="RoutingSerials">RoutingSerials</title>
 
           <para>Default: Don't add</para>
 
@@ -16701,7 +16702,7 @@
     </section>
 
     <section>
-      <title>Vendors</title>
+      <title id="acqvendors">Vendors</title>
 
       <para>Before any orders can be places you must first enter at least one
       vendor.</para>
@@ -23576,11 +23577,12 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>Searchng Configuration</title>
 
-      <para>There are several system preferences related to searching, it
-      isn't recommended to make too many changes to these preferences since
-      they are set to get you the most relevant results. If you would like to
-      change the default way that Koha handles searching, view the <link
-      linkend="searchingprefs">Searching system preferences</link> tab.</para>
+      <para>There are several system preferences related to searching, it is
+      not always recommended to make too many changes to these preferences
+      since they are set to get you the most relevant results. If you would
+      like to change the default way that Koha handles searching, view the
+      <link linkend="searchingprefs">Searching system preferences</link>
+      tab.</para>
 
       <itemizedlist>
         <listitem>
@@ -23629,7 +23631,7 @@ print theme('pages_catalog');</programlisting>
         </listitem>
 
         <listitem>
-          <para>System Preferences</para>
+          <para>OPAC System preferences</para>
 
           <itemizedlist>
             <listitem>
@@ -23985,6 +23987,124 @@ print theme('pages_catalog');</programlisting>
             <listitem>
               <para>Choose whether or not you want to allow patrons to add
               tags to records in Koha.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Acquisitions Configuration</title>
+
+      <para>When using acquisitions in Koha you first need to define some
+      defaults.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Set up your <link linkend="budgetplanning">funds &amp;
+          budgets</link></para>
+        </listitem>
+
+        <listitem>
+          <para>Choose your <link linkend="currexchangeadmin">default
+          currency</link> and enter others if you order from multiple
+          countries</para>
+        </listitem>
+
+        <listitem>
+          <para>Enter in your <link linkend="acqvendors">vendor
+          information</link></para>
+        </listitem>
+
+        <listitem>
+          <para>Create an <link linkend="marcbibframeworks">Framework with the
+          code ACQ</link> (if you're going to enter item records at the time
+          of ordering or receiving)</para>
+        </listitem>
+
+        <listitem>
+          <para>Acquisitions System preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link linkend="AcqCreateItem">AcqCreateItem</link> :
+              Decide if an item record is created during acquisition</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="CurrencyFormat">CurrencyFormat</link> :
+              Decide how you want monetary amounts to display</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="gist">gist</link> : Enter your sales tax
+              (if you are billed for tax)</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OrderPdfFormat">OrderPdfFormat</link> :
+              Decide what format you want your print orders to use</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Serials Configuration</title>
+
+      <para>When you use serials there are a few options you can set before
+      hand.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Serials System Preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link
+              linkend="RenewSerialAddsSuggestion">RenewSerialAddsSuggestion</link>
+              : Decide if you want renewing serials to add a suggestion for
+              easy purchasing</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="RoutingSerials">RoutingSerials</link> :
+              Decide if you want to route serials around your library</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="RoutingListAddReserves">RoutingListAddReserves</link> :
+              Decide if holds are placed on serials when there is a routing
+              list in place</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Cataloging System Preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link
+              linkend="StaffSerialIssueDisplayCount">StaffSerialIssueDisplayCount</link>
+              : Decide how many of the most recent issues to display in the
+              staff client</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</link>
+              : Decide how many of the most recent issues to display in the
+              OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="SubscriptionHistory">SubscriptionHistory</link> :
+              Decide how you want the subscription information to display in
+              the OPAC</para>
             </listitem>
           </itemizedlist>
         </listitem>
