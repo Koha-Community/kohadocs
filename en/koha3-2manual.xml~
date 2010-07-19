@@ -67,7 +67,7 @@
           <title>Policy</title>
 
           <section>
-            <title>AcqCreateItem</title>
+            <title id="AcqCreateItem">AcqCreateItem</title>
 
             <para>Default: placing an order</para>
 
@@ -91,7 +91,7 @@
           </section>
 
           <section>
-            <title>CurrencyFormat</title>
+            <title id="CurrencyFormat">CurrencyFormat</title>
 
             <para>Default: 360,000.00 (US)</para>
 
@@ -112,7 +112,7 @@
           </section>
 
           <section>
-            <title>gist</title>
+            <title id="gist">gist</title>
 
             <para>Default: 0</para>
 
@@ -127,7 +127,7 @@
           <title>Printing</title>
 
           <section>
-            <title>OrderPdfFormat</title>
+            <title id="OrderPdfFormat">OrderPdfFormat</title>
 
             <para>Default: pdfformat::layout2pages</para>
 
@@ -2176,7 +2176,7 @@
         </tip>
 
         <section>
-          <title>All</title>
+          <title id="frbrenhancedprefs">All</title>
 
           <para></para>
 
@@ -2243,7 +2243,7 @@
         </section>
 
         <section>
-          <title>Amazon</title>
+          <title id="amazonprefs">Amazon</title>
 
           <para></para>
 
@@ -2593,7 +2593,7 @@
         </section>
 
         <section>
-          <title>Babelth&egrave;que</title>
+          <title id="Babelthequeprefs">Babelth&egrave;que</title>
 
           <para></para>
 
@@ -2632,7 +2632,7 @@
         </section>
 
         <section>
-          <title>Baker &amp; Taylor</title>
+          <title id="btcontentprefs">Baker &amp; Taylor</title>
 
           <important>
             <para>This is a pay service, you must contact Baker &amp; Taylor
@@ -2701,7 +2701,7 @@
         </section>
 
         <section>
-          <title>Google</title>
+          <title id="googleprefs">Google</title>
 
           <para></para>
 
@@ -2728,7 +2728,7 @@
         </section>
 
         <section>
-          <title>LibraryThing</title>
+          <title id="librarythingprefs">LibraryThing</title>
 
           <para>LibraryThing for Libraries is a pay service. You must first
           contact LibraryThing directly for pricing and subscription
@@ -2829,7 +2829,7 @@
         </section>
 
         <section>
-          <title>OCLC</title>
+          <title id="oclcprefs">OCLC</title>
 
           <para></para>
 
@@ -2890,7 +2890,7 @@
         </section>
 
         <section>
-          <title>Syndetics</title>
+          <title id="Syndeticsprefs">Syndetics</title>
 
           <para>Syndetics is a pay service. You must first contact Syndetics
           directly for pricing and subscription information.</para>
@@ -3580,7 +3580,7 @@
           OPAC.</para>
 
           <section>
-            <title>AuthorisedValueImages</title>
+            <title id="AuthorisedValueImages">AuthorisedValueImages</title>
 
             <para>Default: Don't show</para>
 
@@ -3606,7 +3606,7 @@
           </section>
 
           <section>
-            <title>BiblioDefaultView</title>
+            <title id="BiblioDefaultView">BiblioDefaultView</title>
 
             <para>Default: don't</para>
 
@@ -3696,7 +3696,8 @@
           </section>
 
           <section>
-            <title>OpacAddMastheadLibraryPulldown</title>
+            <title
+            id="OpacAddMastheadLibraryPulldown">OpacAddMastheadLibraryPulldown</title>
 
             <para>Default: Don't add</para>
 
@@ -3737,7 +3738,7 @@
           </section>
 
           <section>
-            <title>OPACBaseURL</title>
+            <title id="OPACBaseURL">OPACBaseURL</title>
 
             <para>Asks: The OPAC is located at http:// ___</para>
 
@@ -3764,7 +3765,7 @@
           </section>
 
           <section>
-            <title>opaccolorstylesheet</title>
+            <title id="opaccolorstylesheet">opaccolorstylesheet</title>
 
             <para>Default: colors.css</para>
 
@@ -3774,10 +3775,13 @@
             <tip>
               <para>Leave this field blank to disable it</para>
             </tip>
+
+            <para>This file will add to the existing default CSS, not replace
+            it.</para>
           </section>
 
           <section>
-            <title>opaccredits</title>
+            <title id="opaccredits">opaccredits</title>
 
             <para>Asks: Include the following HTML in the footer of all pages
             in the OPAC:</para>
@@ -3810,7 +3814,8 @@
           </section>
 
           <section>
-            <title>OPACDisplayRequestPriority</title>
+            <title
+            id="OPACDisplayRequestPriority">OPACDisplayRequestPriority</title>
 
             <para>Default: Don't</para>
 
@@ -3837,12 +3842,19 @@
                     </imageobject>
                   </mediaobject>
                 </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </section>
 
           <section>
-            <title>opacheader</title>
+            <title id="opacheader">opacheader</title>
 
             <para>Asks: Include the following HTML in the header of all pages
             in the OPAC</para>
@@ -3881,7 +3893,7 @@
           </section>
 
           <section>
-            <title>OpacHighlightedWords</title>
+            <title id="OpacHighlightedWords">OpacHighlightedWords</title>
 
             <para>Default: Don't highlight</para>
 
@@ -3902,7 +3914,7 @@
           </section>
 
           <section>
-            <title>opaclayoutstylesheet</title>
+            <title id="opaclayoutstylesheet">opaclayoutstylesheet</title>
 
             <para>Default: opac.css</para>
 
@@ -3910,12 +3922,13 @@
             OPAC, instead of the default</para>
 
             <tip>
-              <para>Leave this field blank to disable it</para>
+              <para>Leave this field blank to disable it and let Koha use the
+              default file instead</para>
             </tip>
           </section>
 
           <section>
-            <title>OpacMaintenance</title>
+            <title id="OpacMaintenance">OpacMaintenance</title>
 
             <para>Default: Don't show</para>
 
@@ -3979,7 +3992,7 @@
           </section>
 
           <section>
-            <title>OpacNav</title>
+            <title id="OpacNav">OpacNav</title>
 
             <para>Default: Important links here.</para>
 
@@ -3998,7 +4011,7 @@
           </section>
 
           <section>
-            <title>OPACSearchForTitleIn</title>
+            <title id="OPACSearchForTitleIn">OPACSearchForTitleIn</title>
 
             <para>Default: &lt;li&gt;&lt;a
             href="http://worldcat.org/search?q={TITLE}"
@@ -4020,7 +4033,7 @@
           </section>
 
           <section>
-            <title>OPACShowCheckoutName</title>
+            <title id="OPACShowCheckoutName">OPACShowCheckoutName</title>
 
             <para>Default: Don't show</para>
 
@@ -4041,7 +4054,7 @@
           </section>
 
           <section>
-            <title>opacsmallimage</title>
+            <title id="opacsmallimage">opacsmallimage</title>
 
             <para>Asks: Use the image at ___ in the OPAC header, instead of
             the Koha logo. If this image is a different size than the Koha
@@ -4054,10 +4067,15 @@
           </section>
 
           <section>
-            <title>opacstylesheet</title>
+            <title id="opacstylesheet">opacstylesheet</title>
 
-            <para>Asks: Use the remote CSS stylesheet /css/ ___ on all pages
-            in the OPAC, instead of the default.</para>
+            <para>Asks: Use the remote CSS stylesheet ___ on all pages in the
+            OPAC, instead of the default. </para>
+
+            <tip>
+              <para>Leave this field blank to disable it and let Koha use the
+              default file instead</para>
+            </tip>
 
             <important>
               <para>This should be a complete URL, starting with
@@ -4082,7 +4100,7 @@
           </section>
 
           <section>
-            <title>OPACURLOpenInNewWindow</title>
+            <title id="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</title>
 
             <para>Default: don't</para>
 
@@ -4104,10 +4122,16 @@
           </section>
 
           <section>
-            <title>OPACUserCSS</title>
+            <title id="OPACUserCSS">OPACUserCSS</title>
 
             <para>Asks: Include the following CSS on all pages in the
             OPAC</para>
+
+            <para>Unlike <link
+            linkend="opaccolorstylesheet">opaccolorstylesheet</link>, <link
+            linkend="opaclayoutstylesheet">opaclayoutstylesheet</link> and
+            <link linkend="opacstylesheet">opacstylesheet</link> this
+            preference will embed the CSS directly on your OPAC pages.</para>
           </section>
 
           <section>
@@ -4210,7 +4234,7 @@
           <para></para>
 
           <section>
-            <title>OpacAuthorities</title>
+            <title id="OpacAuthorities">OpacAuthorities</title>
 
             <para>Default: Allow</para>
 
@@ -4237,7 +4261,7 @@
           </section>
 
           <section>
-            <title>opacbookbag</title>
+            <title id="opacbookbag">opacbookbag</title>
 
             <para>Default: Allow</para>
 
@@ -4249,19 +4273,19 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
                 <para>Don't allow</para>
               </listitem>
             </itemizedlist>
-
-           
           </section>
 
           <section>
@@ -4303,11 +4327,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4329,11 +4355,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4359,11 +4387,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4392,7 +4422,7 @@
           </section>
 
           <section>
-            <title>OPACShelfBrowser</title>
+            <title id="OPACShelfBrowser">OPACShelfBrowser</title>
 
             <para>Default: Show</para>
 
@@ -4481,7 +4511,7 @@
           </section>
 
           <section>
-            <title>RequestOnOpac</title>
+            <title id="RequestOnOpac">RequestOnOpac</title>
 
             <para>Default: Allow</para>
 
@@ -4493,11 +4523,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4525,11 +4557,11 @@
                     <para>Patrons comments/reviews all require moderation
                     before they appear in the OPAC</para>
                   </listitem>
-                 
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem>
+
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
                 </itemizedlist>
               </listitem>
 
@@ -4552,11 +4584,15 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow' unless <link linkend="AnonSuggestions">AnonSuggestions</link> is set to 'allow'</para>
-            </listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow' unless <link
+                    linkend="AnonSuggestions">AnonSuggestions</link> is set to
+                    'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4593,7 +4629,7 @@
           </section>
 
           <section>
-            <title>OPACFineNoRenewals</title>
+            <title id="OPACFineNoRenewals">OPACFineNoRenewals</title>
 
             <para>Default: 99999</para>
 
@@ -4603,14 +4639,16 @@
             <tip>
               <para>Leave this field blank to disable</para>
             </tip>
+
             <important>
-              <para>To allow renewals in the OPAC, <link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
+              <para>To allow renewals in the OPAC, <link
+              linkend="opacuserlogin">opacuserlogin</link> needs to be set to
+              'allow'</para>
             </important>
           </section>
 
           <section>
-            <title>OPACItemHolds</title>
+            <title id="OPACItemHolds">OPACItemHolds</title>
 
             <para>Default: Allow</para>
 
@@ -4628,11 +4666,11 @@
                     <para>Patrons can place holds on specific items as well as
                     the next available item.</para>
                   </listitem>
-                  
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem>
+
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
                 </itemizedlist>
               </listitem>
 
@@ -4662,11 +4700,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4683,7 +4723,8 @@
           </section>
 
           <section>
-            <title>OPACViewOthersSuggestions</title>
+            <title
+            id="OPACViewOthersSuggestions">OPACViewOthersSuggestions</title>
 
             <para>Default: Don't show</para>
 
@@ -4699,17 +4740,19 @@
 
               <listitem>
                 <para>Show</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </section>
 
           <section>
-            <title>SearchMyLibraryFirst</title>
+            <title id="SearchMyLibraryFirst">SearchMyLibraryFirst</title>
 
             <para>Default: Don't limit</para>
 
@@ -4727,6 +4770,11 @@
                     <para>Searching the OPAC will show results from all
                     libraries</para>
                   </listitem>
+
+                  <listitem>
+                    <para>If you're a one branch system, choose 'Don't
+                    limit'</para>
+                  </listitem>
                 </itemizedlist>
               </listitem>
 
@@ -4740,11 +4788,11 @@
                     searches for their library only from the basic search
                     box</para>
                   </listitem>
-                
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem>
+
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow' </para>
+                  </listitem>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
@@ -4762,11 +4810,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -4814,11 +4864,13 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
                 <itemizedlist>
-              <listitem>
-              <para><link linkend="opacuserlogin">opacuserlogin</link> needs
-              to be set to 'allow'</para>
-</listitem></itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
@@ -5671,7 +5723,8 @@
         <para></para>
 
         <section>
-          <title>RenewSerialAddsSuggestion</title>
+          <title
+          id="RenewSerialAddsSuggestion">RenewSerialAddsSuggestion</title>
 
           <para>Default: Don't add</para>
 
@@ -5692,7 +5745,7 @@
         </section>
 
         <section>
-          <title>RoutingSerials</title>
+          <title id="RoutingSerials">RoutingSerials</title>
 
           <para>Default: Don't add</para>
 
@@ -16649,7 +16702,7 @@
     </section>
 
     <section>
-      <title>Vendors</title>
+      <title id="acqvendors">Vendors</title>
 
       <para>Before any orders can be places you must first enter at least one
       vendor.</para>
@@ -22964,6 +23017,12 @@ print theme('pages_catalog');</programlisting>
             </listitem>
           </itemizedlist>
         </listitem>
+
+        <listitem>
+          <para>Go through the <link linkend="logs">Log System
+          Preferences</link> and decide which actions you want to keep track
+          of in the logs</para>
+        </listitem>
       </itemizedlist>
     </section>
 
@@ -23524,11 +23583,12 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>Searchng Configuration</title>
 
-      <para>There are several system preferences related to searching, it
-      isn't recommended to make too many changes to these preferences since
-      they are set to get you the most relevant results. If you would like to
-      change the default way that Koha handles searching, view the <link
-      linkend="searchingprefs">Searching system preferences</link> tab.</para>
+      <para>There are several system preferences related to searching, it is
+      not always recommended to make too many changes to these preferences
+      since they are set to get you the most relevant results. If you would
+      like to change the default way that Koha handles searching, view the
+      <link linkend="searchingprefs">Searching system preferences</link>
+      tab.</para>
 
       <itemizedlist>
         <listitem>
@@ -23548,20 +23608,8 @@ print theme('pages_catalog');</programlisting>
     <section>
       <title>OPAC Configuration</title>
 
-      <para>&bull; Enable &lsquo;Book Cart&rsquor; in OPAC (sys pref = )
-      &bull; Enable patrons to place holds in OPAC (sys pref = RequestOnOpac)
-      &bull; Enable item level holds in OPAC (sys pref = OPACItemHolds) &bull;
-      Enable or disable display of user login features (sys pref =
-      opacuserlogin) &bull; Enable patrons to change their password via OPAC
-      (sys pref = OpacPasswordChange) &bull; Enable patrons to renew items
-      from OPAC (sys pref = OpacRenewalAllowed) &bull; Enable display of
-      patron&rsquor;s circ history (sys pref = opacreadinghistory) &bull;
-      Enable patrons to submit reviews (sys pref = reviewson) &bull; Enable
-      patrons to submit reviews anonymously (sys pref = AnonSuggestions)
-      &bull; Enable patron created &lsquo;Lists&rsquor; in OPAC (sys pref =
-      virtualshelves) &bull; Enable patrons to submit purchase requests (sys
-      pref = suggestion) &bull; Enable public display of user&rsquor;s
-      purchase requests (sys pref = OPACViewOthersSuggestions) </para>
+      <para>There are a lot of ways you can customize your OPAC in
+      Koha.</para>
 
       <itemizedlist>
         <listitem>
@@ -23584,61 +23632,521 @@ print theme('pages_catalog');</programlisting>
         </listitem>
 
         <listitem>
-          <para>System Preferences</para>
+          <para>Create a custom XSLT stylesheet to change the way search
+          results and bib records appear in the OPAC</para>
+        </listitem>
+
+        <listitem>
+          <para>OPAC System preferences</para>
 
           <itemizedlist>
             <listitem>
-              <para>opacuserlogin : Decide if you want to allow patrons to
-              login to the OPAC to access customized functionality (searching
-              will be allowed without logging in)</para>
+              <para><link linkend="opacuserlogin">opacuserlogin</link> :
+              Decide if you want to allow patrons to login to the OPAC to
+              access customized functionality (searching will be allowed
+              without logging in)</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><link linkend="RequestOnOpac">RequestOnOpac</link> :
+                  Decide if patrons can place holds via the OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para><link linkend="OPACItemHolds">OPACItemHolds</link> :
+                  Decide if patrons can place holds on specific items (instead
+                  of just the next available item)</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="OpacPasswordChange">OpacPasswordChange</link> :
+                  Decide if patrons can change their password (don't allow
+                  this if you're using LDAP)</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="OpacRenewalAllowed">OpacRenewalAllowed</link> :
+                  Decide if patrons can renew their checked out items via the
+                  OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="opacreadinghistory">opacreadinghistory</link> :
+                  Decide if patrons can view their reading/checkout history
+                  via the OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para><link linkend="reviewson">reviewson</link> : Decide if
+                  you want to allow patrons to comment on bib records via the
+                  OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para><link linkend="virtualshelves">virtualshelves</link> :
+                  Decide if you want patrons to be able to create Lists</para>
+                </listitem>
+
+                <listitem>
+                  <para><link linkend="suggestionspref">suggestion</link> :
+                  Decide if you want patrons to be able to submit purchase
+                  suggestions</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="OPACViewOthersSuggestions">OPACViewOthersSuggestions</link>
+                  : Decide if you want patrons to be able to see purchase
+                  suggestions made by other patrons</para>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>opacbookbag : Decide if patrons can save items into their
-              cart</para>
+              <para><link linkend="opacbookbag">opacbookbag</link> : Decide if
+              patrons can save items into their cart</para>
             </listitem>
 
             <listitem>
-              <para>RequestOnOpac : Decide if patrons can place holds via the
+              <para><link linkend="AnonSuggestions">AnonSuggestions</link> :
+              Decide if you want non logged in users to be able to make
+              purchase suggestions</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> :
+              Decide if you want to use the XSLT stylesheets on the OPAC
+              search results</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> :
+              Decide if you want to use the XSLT stylesheets on the bib
+              records in the OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="LibraryName">LibraryName</link> : Enter
+              your library name for display in the &lt;title&gt; tag and on
+              the top of the OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="opacsmallimage">opacsmallimage</link> :
+              Choose a logo to replace the Koha logo</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="opaccredits">opaccredits</link> : Enter
+              HTML to appear at the bottom of every page in the OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OpacMainUserBlock">OpacMainUserBlock</link>
+              : Enter HTML that will appear in the center of the main OPAC
+              page</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OpacNav">OpacNav</link> : Enter HTML that
+              will apper to the left on the main OPAC page</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="opacheader">opacheader</link> : Enter the
+              HTML that will appear above the search box on the OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para>Customize your stylesheets:</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><link linkend="OPACUserCSS">OPACUserCSS</link> : Enter
+                  any additional fields you want to define styles for</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="opaclayoutstylesheet">opaclayoutstylesheet</link> :
+                  Point to a CSS file on your Koha server</para>
+                </listitem>
+
+                <listitem>
+                  <para><link linkend="opacstylesheet">opacstylesheet</link> :
+                  If you have a custom CSS enter the link to that file</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="opaccolorstylesheet">opaccolorstylesheet</link> :
+                  Point to a CSS file on your Koha server</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OpacHighlightedWords">OpacHighlightedWords</link> :
+              Decide if you want search terms to be highlighted on the search
+              results</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="hidelostitems">hidelostitems</link> :
+              Decide if you want to show patrons items you have marked as
+              lost</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="BiblioDefaultView">BiblioDefaultView</link>
+              : Decide what view is the default for bib records on the
               OPAC</para>
             </listitem>
 
             <listitem>
-              <para></para>
+              <para><link linkend="OPACShelfBrowser">OPACShelfBrowser</link> :
+              Decide if you want to enable the shelf browse
+              functionality</para>
             </listitem>
 
             <listitem>
-              <para></para>
+              <para><link
+              linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link> :
+              Decide if URLs clicked in the OPAC are opened in a new
+              window</para>
             </listitem>
 
             <listitem>
-              <para></para>
+              <para><link
+              linkend="SearchMyLibraryFirst">SearchMyLibraryFirst</link> : If
+              you have a multi-branch system decide if you want patrons to
+              search their library first</para>
             </listitem>
 
             <listitem>
-              <para></para>
+              <para><link linkend="OpacAuthorities">OpacAuthorities</link> :
+              Decide if you want patrons to be able to search your authority
+              file</para>
             </listitem>
 
             <listitem>
-              <para></para>
+              <para><link linkend="OpacBrowser">OpacBrowser</link> : Decide if
+              you want patrons to browse your authority file</para>
             </listitem>
 
             <listitem>
-              <para></para>
-            </listitem>
-
-            <listitem>
-              <para></para>
-            </listitem>
-
-            <listitem>
-              <para></para>
+              <para><link
+              linkend="OPACSearchForTitleIn">OPACSearchForTitleIn</link> :
+              Choose which libraries you want patrons to be able to re-run
+              their search in</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Cron Jobs</para>
+          <para>Set up your <link linkend="cronjobs">cron jobs</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If you have the <link
+              linkend="OpacBrowser">OpacBrowser</link> preference set decide
+              <link linkend="authbrowsercron">when you want the contents to
+              rebuild</link></para>
+            </listitem>
+
+            <listitem>
+              <para>If you have <link linkend="customrss">custom RSS
+              feeds</link>, decide when you want the <link
+              linkend="customrssfeedcron">feed to be populated</link></para>
+            </listitem>
+          </itemizedlist>
+
+          <para></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Enhanded Content Configuration</title>
+
+      <para>Koha allows you to pull in content from outside sources to enhance
+      your bib records. All of this content can be toggled on and off using
+      the enhanced content system preferences.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><link linkend="frbrenhancedprefs">FRBR/Editions</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para> If you would like to have your OPAC and/or staff client
+              show an 'Editions' tab on the bib record, you want to enable one
+              or the other FRBR preferences and then either one or both of the
+              ISBN services (XISBN and ThingISBN).</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="amazonprefs">Amazon</link> : This service is
+          free and just requires that you visit <ulink
+          url="http://aws.amazon.com">http://aws.amazon.com</ulink> to sign
+          up</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Using the Amazon preferences you can choose to show
+              different types of content from Amazon. Before choosing which
+              types of content you would like to display you will need to
+              enable Amazon content for the staff client and/or the
+              OPAC.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link
+          linkend="Babelthequeprefs">Babelth&egrave;que</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service. Contact Babelth&egrave;que to learn
+              how to enable this content in the OPAC.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="btcontentprefs">Baker and Taylor</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service from Baker &amp; Taylor. Contact
+              Baker &amp; Taylor for the information to enter into these
+              preferences.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="googleprefs">Google</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This service is free and does not require registration,
+              simply enable GoogleJackets and you're set to go.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="librarythingprefs">LibraryThing</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>With the exception of ThingISBN, you will need to contact
+              LibraryThing for the information to enter into these
+              preferences</para>
+            </listitem>
+
+            <listitem>
+              <para>Enabling ThingISBN will help to populate the editions tab
+              on the bib record display if you have enabled FRBR.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="oclcprefs">OCLC</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>XISBN is used to populate the editions tab on the bib
+              record display if you have enabled FRBR. This service is free
+              for up to 999 queries a day.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="Syndeticsprefs">Syndetics</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service from Syndetics to add content for
+              your bib records. Contact Syndetics for the information to enter
+              into these preferences.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="taggingprefs">Tagging</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choose whether or not you want to allow patrons to add
+              tags to records in Koha.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Acquisitions Configuration</title>
+
+      <para>When using acquisitions in Koha you first need to define some
+      defaults.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Set up your <link linkend="budgetplanning">funds &amp;
+          budgets</link></para>
+        </listitem>
+
+        <listitem>
+          <para>Choose your <link linkend="currexchangeadmin">default
+          currency</link> and enter others if you order from multiple
+          countries</para>
+        </listitem>
+
+        <listitem>
+          <para>Enter in your <link linkend="acqvendors">vendor
+          information</link></para>
+        </listitem>
+
+        <listitem>
+          <para>Create an <link linkend="marcbibframeworks">Framework with the
+          code ACQ</link> (if you're going to enter item records at the time
+          of ordering or receiving)</para>
+        </listitem>
+
+        <listitem>
+          <para>Acquisitions System preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link linkend="AcqCreateItem">AcqCreateItem</link> :
+              Decide if an item record is created during acquisition</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="CurrencyFormat">CurrencyFormat</link> :
+              Decide how you want monetary amounts to display</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="gist">gist</link> : Enter your sales tax
+              (if you are billed for tax)</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OrderPdfFormat">OrderPdfFormat</link> :
+              Decide what format you want your print orders to use</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Serials Configuration</title>
+
+      <para>When you use serials there are a few options you can set before
+      hand.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Serials System Preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link
+              linkend="RenewSerialAddsSuggestion">RenewSerialAddsSuggestion</link>
+              : Decide if you want renewing serials to add a suggestion for
+              easy purchasing</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="RoutingSerials">RoutingSerials</link> :
+              Decide if you want to route serials around your library</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="RoutingListAddReserves">RoutingListAddReserves</link> :
+              Decide if holds are placed on serials when there is a routing
+              list in place</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Cataloging System Preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link
+              linkend="StaffSerialIssueDisplayCount">StaffSerialIssueDisplayCount</link>
+              : Decide how many of the most recent issues to display in the
+              staff client</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</link>
+              : Decide how many of the most recent issues to display in the
+              OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="SubscriptionHistory">SubscriptionHistory</link> :
+              Decide how you want the subscription information to display in
+              the OPAC</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Planning for Go-Live</title>
+
+      <para>Once you have all of your settings ready, you need to prepare for
+      making your system live:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Decide if you need training by an outside service or if your
+          staff can do the trianing themselves.</para>
+        </listitem>
+
+        <listitem>
+          <para>Make sure that there is time for your staff to play with your
+          test system and get comfortable with it</para>
+        </listitem>
+
+        <listitem>
+          <para>If this is a migration, work with your previous company to
+          extract data right before you go live</para>
+        </listitem>
+
+        <listitem>
+          <para>Come up with URLs for your new Koha OPAC &amp; Staff
+          Client</para>
+        </listitem>
+
+        <listitem>
+          <para>Make sure that if you're hosting your own system you have a
+          backup plan</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -26627,7 +27135,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         <para></para>
 
         <section>
-          <title>RSS Feeds</title>
+          <title id="customrssfeedcron">RSS Feeds</title>
 
           <para>Script path: misc/cronjobs/rss/rss.pl</para>
 
