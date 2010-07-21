@@ -5854,7 +5854,8 @@
           </section>
 
           <section>
-            <title>intranetcolorstylesheet</title>
+            <title
+            id="intranetcolorstylesheet">intranetcolorstylesheet</title>
 
             <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
             on all pages in the staff interface.</para>
@@ -25837,6 +25838,112 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         the subtitle in OPAC and staff client search and detail pages
         (although not in all instances where subtitles might be displayed,
         e.g. the Cart).</para>
+      </section>
+
+      <section>
+        <sectioninfo>
+          <author>
+            <firstname>Owen</firstname>
+
+            <surname>Leonard</surname>
+
+            <affiliation>
+              <orgname>Athens County Public Library</orgname>
+            </affiliation>
+          </author>
+
+          <pubdate>July 2010</pubdate>
+        </sectioninfo>
+
+        <title>Customize Logo on Staff Client</title>
+
+        <para><emphasis role="bold">Question</emphasis>: How do I change the
+        Koha logo on the Staff Client login page?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: <link
+        linkend="opacsmallimage">Opacsmallimage</link> controls the display of
+        the Koha logo in the OPAC, but there is no system preference
+        controlling the logo on the staff client login page. Luckily the logo
+        is displayed via CSS so it can be easily customized through some
+        custom CSS.</para>
+
+        <para>These are the relevant parts of the staff client default CSS:
+        <programlisting>#login h1 {
+  background:url("../../img/koha-logo.gif") no-repeat scroll center
+top transparent;
+  margin-bottom:0.5em;
+  margin-top:0;
+}
+
+#login h1 a {
+  border-bottom:medium none;
+  display:block;
+  height:74px;
+  text-indent:-1000px;
+}</programlisting></para>
+
+        <para>If you have access to the file system on your Koha server you
+        can add a custom CSS file and specify that file using the <link
+        linkend="intranetcolorstylesheet">intranetcolorstylesheet</link>
+        system preference.</para>
+
+        <para>There is no analogue to the <link
+        linkend="OPACUserCSS">OPACUserCSS</link> preference in the staff
+        client, but you can get around this by putting this in the <link
+        linkend="intranetuserjs">intranetuserjs</link> preference:
+        <programlisting>//]]&gt;
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+ /* inline styles */
+ &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[</programlisting></para>
+
+        <para>In the above snippet where it says /* inline styles */ we'll
+        redeclare the relevant properties from the styles of the login
+        image:<programlisting>//]]&gt;
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+ /* inline styles */
+
+#login h1 {
+  background:url("../../img/koha-logo.gif") no-repeat scroll center
+top transparent;
+}
+
+#login h1 a {
+  height:74px;
+}
+ &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+</programlisting></para>
+
+        <para>I've only reproduced the properties necessary to make the change
+        we want. You can see that the "background:" property sets the path to
+        the default logo. You can change this to point to any image you want,
+        on the Koha server or anywhere else. Then you just need to change the
+        #login h1 a's "height" property to match the height of the image you
+        choose.</para>
+
+        <para>For example:</para>
+
+        <para><programlisting>//]]&gt;
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+ /* inline styles */
+
+#login h1 {
+  background:url("http://www.myacpl.org/sites/all/themes/npl/logo.png")
+no-repeat scroll center top transparent;
+}
+
+#login h1 a {
+  height:71px;
+}
+ &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[</programlisting></para>
       </section>
     </section>
 
