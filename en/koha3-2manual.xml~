@@ -5854,7 +5854,8 @@
           </section>
 
           <section>
-            <title>intranetcolorstylesheet</title>
+            <title
+            id="intranetcolorstylesheet">intranetcolorstylesheet</title>
 
             <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
             on all pages in the staff interface.</para>
@@ -8166,6 +8167,90 @@
           must first click 'MARC Structure' and then follow the instructions
           for <link linkend="editsubfields">editing subfields</link></para>
         </section>
+        
+        <section>
+          <title>Add subfields to Frameworks</title>
+
+          <para>To add a field to a Framework click the 'New Tag' button at
+          the top of the Framework definition</para>
+
+          <screenshot>
+            <screeninfo>New Tag Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newtag.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>This will open up a blank form for entering MARC field
+          data</para>
+
+          <screenshot>
+            <screeninfo>Add a new tag to framework</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newtagform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Enter the information about your new tag:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The 'Tag' is the MARC field number</para>
+            </listitem>
+
+            <listitem>
+              <para>The 'Label for lib' is the text that will appear in the
+              staff client when in the cataloging moduel</para>
+            </listitem>
+
+            <listitem>
+              <para>The 'Label for opac' is the text that will appear in the
+              OPAC when viewing the MARC version of the record</para>
+            </listitem>
+
+            <listitem>
+              <para>If this field can be repeated, check the 'Repeatable'
+              box</para>
+            </listitem>
+
+            <listitem>
+              <para>If this field is mandatory, check the 'Mandatory'
+              box</para>
+            </listitem>
+
+            <listitem>
+              <para>If you want this field to be a pull down with limited
+              possible answers, choose which 'Authorized value' list you want
+              to use</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>When you're finished, click 'Save Changes' and you will be
+          presented with your new field</para>
+
+          <screenshot>
+            <screeninfo>New tag and link to subfields</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/subfieldslink.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To the right of the new field is a link to 'Subfields,' you
+          will need to add subfields before this tag will appear in your MARC
+          editor. The process of entering the settings for the new subfield is
+          the same as those found in the <link linkend="editsubfields">editing
+          subfields in frameworks</link> section of this manual.</para>
+        </section>
+      
 
         <section>
           <title id="editsubfields">Edit Framework Subfields</title>
@@ -8560,42 +8645,7 @@
 
           <para></para>
         </section>
-
-        <section>
-          <title>Add subfields to Frameworks</title>
-
-          <para>To add a field to a Framework click the 'New Tag' button at
-          the top of the Framework definition</para>
-
-          <screenshot>
-            <screeninfo>New Tag Button</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/cataloging/newtag.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>This will open up a blank form for entering MARC field
-          data</para>
-
-          <screenshot>
-            <screeninfo>Add a new tag to framework</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/cataloging/newtagform.png" />
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>The process of entering the settings for the new field is the
-          same as those found in the <link linkend="editsubfields">editing
-          subfields in frameworks</link> section of this manual.</para>
-        </section>
-      </section>
-
+</section>
       <section>
         <title id="kohamarcmapping">Koha to MARC Mapping</title>
 
@@ -25840,29 +25890,31 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
       </section>
 
       <section>
-      <sectioninfo>
-        <author>
-          <firstname>Owen</firstname>
+        <sectioninfo>
+          <author>
+            <firstname>Owen</firstname>
 
-          <surname>Leonard</surname>
+            <surname>Leonard</surname>
 
-          <affiliation>
-            <orgname>Athens County Public Library</orgname>
-          </affiliation>
-        </author>
+            <affiliation>
+              <orgname>Athens County Public Library</orgname>
+            </affiliation>
+          </author>
 
-        <pubdate>July 2010</pubdate>
-
+          <pubdate>July 2010</pubdate>
         </sectioninfo>
+
         <title>Customize Logo on Staff Client</title>
 
-        <para>Question: How do I change the Koha logo on the Staff Client
-        login page?</para>
+        <para><emphasis role="bold">Question</emphasis>: How do I change the
+        Koha logo on the Staff Client login page?</para>
 
-        <para>Answer: OpacSmallImage controls the display of the Koha logo in
-        the OPAC, but there is no system preference controlling the logo on
-        the staff client login page. Luckily the logo is displayed via CSS so
-        it can be easily customized through some custom CSS. </para>
+        <para><emphasis role="bold">Answer</emphasis>: <link
+        linkend="opacsmallimage">Opacsmallimage</link> controls the display of
+        the Koha logo in the OPAC, but there is no system preference
+        controlling the logo on the staff client login page. Luckily the logo
+        is displayed via CSS so it can be easily customized through some
+        custom CSS.</para>
 
         <para>These are the relevant parts of the staff client default CSS:
         <programlisting>#login h1 {
@@ -25882,7 +25934,7 @@ top transparent;
         <para>If you have access to the file system on your Koha server you
         can add a custom CSS file and specify that file using the <link
         linkend="intranetcolorstylesheet">intranetcolorstylesheet</link>
-        system preference. </para>
+        system preference.</para>
 
         <para>There is no analogue to the <link
         linkend="OPACUserCSS">OPACUserCSS</link> preference in the staff
@@ -25921,9 +25973,9 @@ top transparent;
         the default logo. You can change this to point to any image you want,
         on the Koha server or anywhere else. Then you just need to change the
         #login h1 a's "height" property to match the height of the image you
-        choose. </para>
+        choose.</para>
 
-        <para>For example: </para>
+        <para>For example:</para>
 
         <para><programlisting>//]]&gt;
 &lt;/script&gt;
