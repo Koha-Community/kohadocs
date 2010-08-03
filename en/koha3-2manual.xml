@@ -5965,7 +5965,7 @@
           </section>
 
           <section>
-            <title>XSLTDetailsDisplay</title>
+            <title id="XSLTDetailsDisplay">XSLTDetailsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -6014,7 +6014,7 @@
           </section>
 
           <section>
-            <title>XSLTResultsDisplay</title>
+            <title id="XSLTResultsDisplay">XSLTResultsDisplay</title>
 
             <para>Default: using XSLT stylesheets</para>
 
@@ -8784,9 +8784,160 @@
       </section>
 
       <section>
+        <sectioninfo>
+          <author>
+            <firstname>Savitra</firstname>
+
+            <surname>Sirohi</surname>
+
+            <affiliation>
+              <orgname>Nucsoft OSS Labs</orgname>
+            </affiliation>
+          </author>
+
+          <pubdate>August 2010</pubdate>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Fixed typos, changed content where necessary and added
+            new screenshots.</contrib>
+          </othercredit>
+        </sectioninfo>
+
         <title id="classificationsources">Classification Sources</title>
 
+        <para>Source of classification or shelving scheme is an <link
+        linkend="authorizedvalues">Authorized Values</link> category that is
+        mapped to field 942$2 in Koha&rsquor;s MARC Bibliographic
+        frameworks.</para>
+
+        <screenshot>
+          <screeninfo>Classification Sources</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/classsources.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Commonly used values of this field are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ddc - Dewey Decimal Classification</para>
+          </listitem>
+
+          <listitem>
+            <para>lcc - Library of Congress Classification</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>If you chose to install classification sources during
+        Koha&rsquor;s installation, you would see other values too:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ANSCR (sound recordings)</para>
+          </listitem>
+
+          <listitem>
+            <para>SuDOC classification</para>
+          </listitem>
+
+          <listitem>
+            <para>Universal Decimal Classification</para>
+          </listitem>
+
+          <listitem>
+            <para>Other/Generic Classification</para>
+          </listitem>
+        </itemizedlist>
+
         <para></para>
+      </section>
+
+      <section>
+        <title id="addingclasssource">Adding/Editing Classification
+        Sources</title>
+
+        <para>You can add your own source of classification by using the New
+        Classification Source button. To edit use the Edit link.</para>
+
+        <screenshot>
+          <screeninfo>Add classification source</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/addclasssource.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When creating or editing:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>You will need to enter a code and a description.</para>
+          </listitem>
+
+          <listitem>
+            <para>Check the Source in use? check box if you want the value to
+            appear in the drop down list for this category.</para>
+          </listitem>
+
+          <listitem>
+            <para>Select the appropriate <link
+            linkend="classfilingrules">filing rule</link> from the drop down
+            list.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para></para>
+      </section>
+
+      <section>
+        <title id="classfilingrules">Classification Filing Rules</title>
+
+        <para>Filing rules determine the order in which items are placed on
+        shelves.</para>
+
+        <para>Values that are pre-configured in Koha are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Dewey</para>
+          </listitem>
+
+          <listitem>
+            <para>LCC</para>
+          </listitem>
+
+          <listitem>
+            <para>Generic</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Filing rules are mapped to <link
+        linkend="addingclasssource">Classification sources</link>. You can
+        setup new filing rules by using the New Filing Rule button. To edit
+        use the Edit link.</para>
+
+        <para>When creating or editing:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Enter a code and a description</para>
+          </listitem>
+
+          <listitem>
+            <para>Choose an appropriate filing routine - dewey, generic or
+            lcc</para>
+          </listitem>
+        </itemizedlist>
       </section>
 
       <section>
@@ -25923,7 +26074,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
     <itemizedlist>
       <listitem>
-        <para>Sound [MU] </para>
+        <para>Sound [MU]</para>
 
         <itemizedlist>
           <listitem>
@@ -25935,7 +26086,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </listitem>
 
           <listitem>
-            <para>leader6 = i </para>
+            <para>leader6 = i</para>
           </listitem>
 
           <listitem>
