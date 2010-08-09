@@ -5965,7 +5965,7 @@
           </section>
 
           <section>
-            <title>XSLTDetailsDisplay</title>
+            <title id="XSLTDetailsDisplay">XSLTDetailsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -6014,7 +6014,7 @@
           </section>
 
           <section>
-            <title>XSLTResultsDisplay</title>
+            <title id="XSLTResultsDisplay">XSLTResultsDisplay</title>
 
             <para>Default: using XSLT stylesheets</para>
 
@@ -8784,28 +8784,29 @@
       </section>
 
       <section>
-      <sectioninfo>
-        <author>
-          <firstname>Savitra</firstname>
+        <sectioninfo>
+          <author>
+            <firstname>Savitra</firstname>
 
-          <surname>Sirohi</surname>
+            <surname>Sirohi</surname>
 
-          <affiliation>
-            <orgname>Nucsoft OSS Labs</orgname>
-          </affiliation>
-        </author>
+            <affiliation>
+              <orgname>Nucsoft OSS Labs</orgname>
+            </affiliation>
+          </author>
 
-        <pubdate>August 2010</pubdate>
+          <pubdate>August 2010</pubdate>
 
-        <othercredit role="copyeditor">
-          <firstname>Nicole C.</firstname>
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
 
-          <surname>Engard</surname>
+            <surname>Engard</surname>
 
-          <contrib>Fixed typos, changed content where necessary and added new
-          screenshots.</contrib>
-        </othercredit>
-      </sectioninfo>
+            <contrib>Fixed typos, changed content where necessary and added
+            new screenshots.</contrib>
+          </othercredit>
+        </sectioninfo>
+
         <title id="classificationsources">Classification Sources</title>
 
         <para>Source of classification or shelving scheme is an <link
@@ -8902,9 +8903,9 @@
         <title id="classfilingrules">Classification Filing Rules</title>
 
         <para>Filing rules determine the order in which items are placed on
-        shelves. </para>
+        shelves.</para>
 
-        <para>Values that are pre-configured in Koha are: </para>
+        <para>Values that are pre-configured in Koha are:</para>
 
         <itemizedlist>
           <listitem>
@@ -8923,7 +8924,7 @@
         <para>Filing rules are mapped to <link
         linkend="addingclasssource">Classification sources</link>. You can
         setup new filing rules by using the New Filing Rule button. To edit
-        use the Edit link. </para>
+        use the Edit link.</para>
 
         <para>When creating or editing:</para>
 
@@ -8942,7 +8943,164 @@
       <section>
         <title id="recordmatchingrules">Record Matching Rules</title>
 
+        <para>Record matching rules are used when importing MARC records into
+        Koha. The rules that you set up here will be referenced with you <link
+        linkend="stagemarc">Stage MARC Records for Import</link>.</para>
+
+        <para>To create a new matching rule :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click 'New Record Matching Rule'</para>
+
+            <screenshot>
+              <screeninfo>Add record matching rule</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/newmatchrule.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Choose a unique name and enter it in the 'Matching rule
+                code' field</para>
+              </listitem>
+
+              <listitem>
+                <para>'Description' can be anything you want to make it clear
+                to you what rule you're picking</para>
+              </listitem>
+
+              <listitem>
+                <para>'Match threshold' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Match points are set up to determine what fields to
+                match on</para>
+              </listitem>
+
+              <listitem>
+                <para>'Search index' can be found by looking at the zebra.abs
+                file on your system which tells the zebra indexing what data
+                to extract from the MARC data</para>
+              </listitem>
+
+              <listitem>
+                <para>'Score' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Enter the MARC tag you want to match on in the 'Tag'
+                field</para>
+              </listitem>
+
+              <listitem>
+                <para>Enter the MARC tag subfield you want to match on in the
+                'Subfields' field</para>
+              </listitem>
+
+              <listitem>
+                <para>'Offset' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Length' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Normalization rule' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Required match checks' - ??</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para></para>
+          </listitem>
+        </itemizedlist>
+
         <para></para>
+
+        <section>
+          <title>Sample Record Matching Rule: Control Number</title>
+
+          <screenshot>
+            <screeninfo>LOC Matching Rule</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newmatchrule.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Match threshold: 100 </para>
+            </listitem>
+
+            <listitem>
+              <para>Matchpoints (just the one): </para>
+            </listitem>
+
+            <listitem>
+              <para>Search index: Control-number </para>
+            </listitem>
+
+            <listitem>
+              <para>Score: 101 </para>
+            </listitem>
+
+            <listitem>
+              <para>Tag: 001 </para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><tip>this field is for the control number assigned by
+                  the organization creating, using, or distributing the
+                  record</tip></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Subfields: a </para>
+            </listitem>
+
+            <listitem>
+              <para>Offset: 0 </para>
+            </listitem>
+
+            <listitem>
+              <para>Length: 0 </para>
+            </listitem>
+
+            <listitem>
+              <para>Normalization rule: Control-number </para>
+            </listitem>
+
+            <listitem>
+              <para>Required Match checks: none (remove the blank one)</para>
+
+              <screenshot>
+                <screeninfo>Remove match check</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/removematchcheck.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
     </section>
 

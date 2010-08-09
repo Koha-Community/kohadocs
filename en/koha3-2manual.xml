@@ -8943,7 +8943,166 @@
       <section>
         <title id="recordmatchingrules">Record Matching Rules</title>
 
+        <para>Record matching rules are used when importing MARC records into
+        Koha. The rules that you set up here will be referenced with you <link
+        linkend="stagemarc">Stage MARC Records for Import</link>.</para>
+
+        <para>To create a new matching rule :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click 'New Record Matching Rule'</para>
+
+            <screenshot>
+              <screeninfo>Add record matching rule</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/newmatchrule.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Choose a unique name and enter it in the 'Matching rule
+                code' field</para>
+              </listitem>
+
+              <listitem>
+                <para>'Description' can be anything you want to make it clear
+                to you what rule you're picking</para>
+              </listitem>
+
+              <listitem>
+                <para>'Match threshold' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Match points are set up to determine what fields to
+                match on</para>
+              </listitem>
+
+              <listitem>
+                <para>'Search index' can be found by looking at the zebra.abs
+                file on your system which tells the zebra indexing what data
+                to extract from the MARC data</para>
+              </listitem>
+
+              <listitem>
+                <para>'Score' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Enter the MARC tag you want to match on in the 'Tag'
+                field</para>
+              </listitem>
+
+              <listitem>
+                <para>Enter the MARC tag subfield you want to match on in the
+                'Subfields' field</para>
+              </listitem>
+
+              <listitem>
+                <para>'Offset' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Length' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Normalization rule' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Required match checks' - ??</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para></para>
+          </listitem>
+        </itemizedlist>
+
         <para></para>
+
+        <section>
+          <title>Sample Record Matching Rule: Control Number</title>
+
+          <screenshot>
+            <screeninfo>LOC Matching Rule</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newmatchrule.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Match threshold: 100</para>
+            </listitem>
+
+            <listitem>
+              <para>Matchpoints (just the one):</para>
+            </listitem>
+
+            <listitem>
+              <para>Search index: Control-number</para>
+            </listitem>
+
+            <listitem>
+              <para>Score: 101</para>
+            </listitem>
+
+            <listitem>
+              <para>Tag: 001</para>
+
+              <itemizedlist>
+                <listitem>
+                  <note>
+                      <para>this field is for the control number assigned by
+                      the organization creating, using, or distributing the
+                      record</para>
+                    </note>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Subfields: a</para>
+            </listitem>
+
+            <listitem>
+              <para>Offset: 0</para>
+            </listitem>
+
+            <listitem>
+              <para>Length: 0</para>
+            </listitem>
+
+            <listitem>
+              <para>Normalization rule: Control-number</para>
+            </listitem>
+
+            <listitem>
+              <para>Required Match checks: none (remove the blank one)</para>
+
+              <screenshot>
+                <screeninfo>Remove match check</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/removematchcheck.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
     </section>
 
