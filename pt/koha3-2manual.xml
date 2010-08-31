@@ -129,7 +129,7 @@
             <para>Default: 0</para>
 
             <para>Asks: The default tax rate is ___<tip>
-                <para>Enter this value as a number (.06) versus a precent
+                <para>Enter this value as a number (.06) versus a percent
                 (6%).</para>
               </tip></para>
           </section>
@@ -3716,8 +3716,9 @@
             </tip>
 
             <tip>
-              <para>Edit 'opacheader' if you'd like to add a library name
-              above your search box on the OPAC</para>
+              <para>Edit '<link linkend="opacheader">opacheader</link>' if
+              you'd like to add a library name above your search box on the
+              OPAC</para>
             </tip>
 
             <screenshot>
@@ -4198,7 +4199,7 @@
             </screenshot>
 
             <screenshot>
-              <screeninfo>New Opac login box after editing
+              <screeninfo>New OPAC login box after editing
               opacuserjs</screeninfo>
 
               <mediaobject>
@@ -4326,6 +4327,11 @@
 
           <section>
             <title id="OpacBrowser">OpacBrowser</title>
+
+            <important>
+              <para>This preference only applies to French systems at this
+              time.</para>
+            </important>
 
             <para>Default: Don't allow</para>
 
@@ -4937,7 +4943,7 @@
               <para>general patron types</para>
 
               <screenshot>
-                <screeninfo>Add patron optins with AddPatronLists set to
+                <screeninfo>Add patron options with AddPatronLists set to
                 general patron types</screeninfo>
 
                 <mediaobject>
@@ -5866,7 +5872,8 @@
           </section>
 
           <section>
-            <title>intranetcolorstylesheet</title>
+            <title
+            id="intranetcolorstylesheet">intranetcolorstylesheet</title>
 
             <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
             on all pages in the staff interface.</para>
@@ -5976,7 +5983,7 @@
           </section>
 
           <section>
-            <title>XSLTDetailsDisplay</title>
+            <title id="XSLTDetailsDisplay">XSLTDetailsDisplay</title>
 
             <para>Default: normally</para>
 
@@ -6025,7 +6032,7 @@
           </section>
 
           <section>
-            <title>XSLTResultsDisplay</title>
+            <title id="XSLTResultsDisplay">XSLTResultsDisplay</title>
 
             <para>Default: using XSLT stylesheets</para>
 
@@ -7175,9 +7182,9 @@
             </listitem>
 
             <listitem>
-              <para>Enrollment period should be filled in if you have a
-              limited enrollment period for your patrons (eg. Student cards
-              expire after 9 months or until a specific date)</para>
+              <para>Enrollment period (in months) should be filled in if you
+              have a limited enrollment period for your patrons (eg. Student
+              cards expire after 9 months or until a specific date)</para>
 
               <itemizedlist>
                 <listitem>
@@ -7190,15 +7197,15 @@
             </listitem>
 
             <listitem>
-              <para>Some patron categories can have a minimum age requirement
-              associated with them, enter this age in the 'Age
+              <para>Some patron categories can have a minimum age (in years)
+              requirement associated with them, enter this age in the 'Age
               required'</para>
             </listitem>
 
             <listitem>
-              <para>Patron categories can also have a maximum age associated
-              with them (such as children), enter this age in the 'Upperage
-              limit'</para>
+              <para>Patron categories can also have a maximum age (in years)
+              associated with them (such as children), enter this age in the
+              'Upperage limit'</para>
             </listitem>
 
             <listitem>
@@ -7255,18 +7262,10 @@
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Requires that you have EnhancedMessagingPreferences
+                    <para>Requires that you have <link
+                    linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
                     enabled</para>
                   </important>
-
-                  <itemizedlist>
-                    <listitem>
-                      <para><emphasis>Get there:</emphasis> More &gt;
-                      Administration &gt; Global system preferences &gt;
-                      Patrons &gt; <link
-                      linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
-                    </listitem>
-                  </itemizedlist>
                 </listitem>
 
                 <listitem>
@@ -7656,12 +7655,13 @@
         </tip>
 
         <para><important>
-            <para>At the very least you will need to set an absolute default
+            <para>At the very least you will need to set an default
             circulation rule. This rule should be set for the default
             itemtype, default branchcode and default patron category. That
-            will catch anyone who doesn't match a specific rule. Patrons who
-            do not match a specific rule will get blocked from placing holds,
-            since there was no baseline number of holds to utilize.</para>
+            will catch all instances that do not match a specific rule. When
+            checking out if you do not have a rule for the default branch,
+            default item and default patron category then you may see patrons
+            getting blocked from placing holds.</para>
           </important></para>
 
         <section>
@@ -8188,6 +8188,89 @@
         </section>
 
         <section>
+          <title>Add subfields to Frameworks</title>
+
+          <para>To add a field to a Framework click the 'New Tag' button at
+          the top of the Framework definition</para>
+
+          <screenshot>
+            <screeninfo>New Tag Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newtag.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>This will open up a blank form for entering MARC field
+          data</para>
+
+          <screenshot>
+            <screeninfo>Add a new tag to framework</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newtagform.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Enter the information about your new tag:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The 'Tag' is the MARC field number</para>
+            </listitem>
+
+            <listitem>
+              <para>The 'Label for lib' is the text that will appear in the
+              staff client when in the cataloging module</para>
+            </listitem>
+
+            <listitem>
+              <para>The 'Label for OPAC' is the text that will appear in the
+              OPAC when viewing the MARC version of the record</para>
+            </listitem>
+
+            <listitem>
+              <para>If this field can be repeated, check the 'Repeatable'
+              box</para>
+            </listitem>
+
+            <listitem>
+              <para>If this field is mandatory, check the 'Mandatory'
+              box</para>
+            </listitem>
+
+            <listitem>
+              <para>If you want this field to be a pull down with limited
+              possible answers, choose which 'Authorized value' list you want
+              to use</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>When you're finished, click 'Save Changes' and you will be
+          presented with your new field</para>
+
+          <screenshot>
+            <screeninfo>New tag and link to subfields</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/subfieldslink.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To the right of the new field is a link to 'Subfields,' you
+          will need to add subfields before this tag will appear in your MARC
+          editor. The process of entering the settings for the new subfield is
+          the same as those found in the <link linkend="editsubfields">editing
+          subfields in frameworks</link> section of this manual.</para>
+        </section>
+
+        <section>
           <title id="editsubfields">Edit Framework Subfields</title>
 
           <para>Frameworks are made up of MARC fields and subfields. To make
@@ -8218,7 +8301,7 @@
                 </listitem>
 
                 <listitem>
-                  <para>The 'Label for opac' is what will show on the MARC
+                  <para>The 'Label for OPAC' is what will show on the MARC
                   view in the OPAC</para>
                 </listitem>
 
@@ -8331,6 +8414,19 @@
                       subfields of a given field must be in the same tab or
                       ignored. Ignore means that the subfield is not
                       managed.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Default value</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>defines what you want to appear in the field by
+                      default, this will be editable, but it saves time if you
+                      use the same note over and over or the same value in a
+                      field often.</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -8720,15 +8816,328 @@
       </section>
 
       <section>
+        <sectioninfo>
+          <author>
+            <firstname>Savitra</firstname>
+
+            <surname>Sirohi</surname>
+
+            <affiliation>
+              <orgname>Nucsoft OSS Labs</orgname>
+            </affiliation>
+          </author>
+
+          <pubdate>August 2010</pubdate>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Fixed typos, changed content where necessary and added
+            new screenshots.</contrib>
+          </othercredit>
+        </sectioninfo>
+
         <title id="classificationsources">Classification Sources</title>
+
+        <para>Source of classification or shelving scheme is an <link
+        linkend="authorizedvalues">Authorized Values</link> category that is
+        mapped to field 942$2 in Koha&rsquor;s MARC Bibliographic
+        frameworks.</para>
+
+        <screenshot>
+          <screeninfo>Classification Sources</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/classsources.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Commonly used values of this field are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ddc - Dewey Decimal Classification</para>
+          </listitem>
+
+          <listitem>
+            <para>lcc - Library of Congress Classification</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>If you chose to install classification sources during
+        Koha&rsquor;s installation, you would see other values too:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ANSCR (sound recordings)</para>
+          </listitem>
+
+          <listitem>
+            <para>SuDOC classification</para>
+          </listitem>
+
+          <listitem>
+            <para>Universal Decimal Classification</para>
+          </listitem>
+
+          <listitem>
+            <para>Other/Generic Classification</para>
+          </listitem>
+        </itemizedlist>
 
         <para></para>
       </section>
 
       <section>
-        <title id="recordmatchingrules">Record Matching Rules</title>
+        <title id="addingclasssource">Adding/Editing Classification
+        Sources</title>
+
+        <para>You can add your own source of classification by using the New
+        Classification Source button. To edit use the Edit link.</para>
+
+        <screenshot>
+          <screeninfo>Add classification source</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/cataloging/addclasssource.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When creating or editing:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>You will need to enter a code and a description.</para>
+          </listitem>
+
+          <listitem>
+            <para>Check the 'Source in use?' checkbox if you want the value to
+            appear in the drop down list for this category.</para>
+          </listitem>
+
+          <listitem>
+            <para>Select the appropriate <link
+            linkend="classfilingrules">filing rule</link> from the drop down
+            list.</para>
+          </listitem>
+        </itemizedlist>
 
         <para></para>
+      </section>
+
+      <section>
+        <title id="classfilingrules">Classification Filing Rules</title>
+
+        <para>Filing rules determine the order in which items are placed on
+        shelves.</para>
+
+        <para>Values that are pre-configured in Koha are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Dewey</para>
+          </listitem>
+
+          <listitem>
+            <para>LCC</para>
+          </listitem>
+
+          <listitem>
+            <para>Generic</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Filing rules are mapped to <link
+        linkend="addingclasssource">Classification sources</link>. You can
+        setup new filing rules by using the New Filing Rule button. To edit
+        use the Edit link.</para>
+
+        <para>When creating or editing:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Enter a code and a description</para>
+          </listitem>
+
+          <listitem>
+            <para>Choose an appropriate filing routine - dewey, generic or
+            lcc</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title id="recordmatchingrules">Record Matching Rules</title>
+
+        <para>Record matching rules are used when importing MARC records into
+        Koha. The rules that you set up here will be referenced with you <link
+        linkend="stagemarc">Stage MARC Records for Import</link>.</para>
+
+        <para>To create a new matching rule :</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Click 'New Record Matching Rule'</para>
+
+            <screenshot>
+              <screeninfo>Add record matching rule</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/newmatchrule.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Choose a unique name and enter it in the 'Matching rule
+                code' field</para>
+              </listitem>
+
+              <listitem>
+                <para>'Description' can be anything you want to make it clear
+                to you what rule you're picking</para>
+              </listitem>
+
+              <listitem>
+                <para>'Match threshold' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Match points are set up to determine what fields to
+                match on</para>
+              </listitem>
+
+              <listitem>
+                <para>'Search index' can be found by looking at the
+                ccl.properties file on your system which tells the zebra
+                indexing what data to search for in the MARC data".</para>
+              </listitem>
+
+              <listitem>
+                <para>'Score' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Enter the MARC tag you want to match on in the 'Tag'
+                field</para>
+              </listitem>
+
+              <listitem>
+                <para>Enter the MARC tag subfield you want to match on in the
+                'Subfields' field</para>
+              </listitem>
+
+              <listitem>
+                <para>'Offset' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>'Length' - ??</para>
+              </listitem>
+
+              <listitem>
+                <para>Koha only has one 'Normalization rule' that removes
+                extra characters such as commas and semicolons. The value you
+                enter in this field is irrelevant to the normalization
+                process.</para>
+              </listitem>
+
+              <listitem>
+                <para>'Required match checks' - ??</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para></para>
+          </listitem>
+        </itemizedlist>
+
+        <para></para>
+
+        <section>
+          <title>Sample Record Matching Rule: Control Number</title>
+
+          <screenshot>
+            <screeninfo>LOC Matching Rule</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/cataloging/newmatchrule.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Match threshold: 100</para>
+            </listitem>
+
+            <listitem>
+              <para>Matchpoints (just the one):</para>
+            </listitem>
+
+            <listitem>
+              <para>Search index: Control-number</para>
+            </listitem>
+
+            <listitem>
+              <para>Score: 101</para>
+            </listitem>
+
+            <listitem>
+              <para>Tag: 001</para>
+
+              <itemizedlist>
+                <listitem>
+                  <note>
+                    <para>this field is for the control number assigned by the
+                    organization creating, using, or distributing the
+                    record</para>
+                  </note>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Subfields: a</para>
+            </listitem>
+
+            <listitem>
+              <para>Offset: 0</para>
+            </listitem>
+
+            <listitem>
+              <para>Length: 0</para>
+            </listitem>
+
+            <listitem>
+              <para>Normalization rule: Control-number</para>
+            </listitem>
+
+            <listitem>
+              <para>Required Match checks: none (remove the blank one)</para>
+
+              <screenshot>
+                <screeninfo>Remove match check</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/removematchcheck.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
     </section>
 
@@ -8889,7 +9298,7 @@
 
           <itemizedlist>
             <listitem>
-              <para>Fund Code is a unique identifer for your fund</para>
+              <para>Fund Code is a unique identifier for your fund</para>
             </listitem>
 
             <listitem>
@@ -9406,7 +9815,7 @@
           <itemizedlist>
             <listitem>
               <para>Template ID will be automatically generated after saving
-              your template, this is simply a system genereated unique
+              your template, this is simply a system generated unique
               id</para>
             </listitem>
 
@@ -9456,7 +9865,7 @@
                 </listitem>
 
                 <listitem>
-                  <para>After finding any anomolies in the printed document,
+                  <para>After finding any anomalies in the printed document,
                   <link linkend="addlabelprofile">create a profile</link> and
                   assign it to the template.</para>
                 </listitem>
@@ -9555,7 +9964,7 @@
 
             <listitem>
               <para>Offset describes what happens when the entire image is off
-              center either vertically or horzontally and creep describes a
+              center either vertically or horizontally and creep describes a
               condition where the distance between the labels changes across
               the page or up and down the page</para>
 
@@ -9866,7 +10275,7 @@
           <itemizedlist>
             <listitem>
               <para>Template ID will be automatically generated after saving
-              your template, this is simply a system genereated unique
+              your template, this is simply a system generated unique
               id</para>
             </listitem>
 
@@ -9916,7 +10325,7 @@
                 </listitem>
 
                 <listitem>
-                  <para>After finding any anomolies in the printed document,
+                  <para>After finding any anomalies in the printed document,
                   <link linkend="addcardprofile">create a profile</link> and
                   assign it to the template.</para>
                 </listitem>
@@ -10015,7 +10424,7 @@
 
             <listitem>
               <para>Offset describes what happens when the entire image is off
-              center either vertically or horzontally and creep describes a
+              center either vertically or horizontally and creep describes a
               condition where the distance between the labels changes across
               the page or up and down the page</para>
 
@@ -11234,7 +11643,12 @@
       <para>This tool allows you to bulk anonymize circulation histories (this
       means that you keep records of how many times items were checked out -
       but not the patrons who checked the items out) or bulk delete patrons
-      (remove them from the system completely).</para>
+      (remove them from the system completely).<important>
+          <para>Patrons with outstanding fines or items checked out are not
+          saved. They are not completely removed from the system (moved to the
+          delete_borrowers table), but this tool does not provide as many
+          checks as one may desire. </para>
+        </important></para>
 
       <screenshot>
         <screeninfo>Patron Anonymize/Bulk Delete Tool</screeninfo>
@@ -11458,7 +11872,7 @@
       <section>
         <title>Troubleshooting</title>
 
-        <para>Task scheduler will not work if the user the webserver runs as
+        <para>Task scheduler will not work if the user the web server runs as
         doesn't have the permission to use it. To find out if the right user
         has the permissions necessary, check /etc/at.allow to see what users
         are in it. If you don't have that file, check etc/at.deny. If at.deny
@@ -11741,7 +12155,7 @@
       </important>
 
       <para>The Overdue Notice/Status Triggers tool gives the librarian the
-      power to send up to three notices to each patron type notifiying them of
+      power to send up to three notices to each patron type notifying them of
       overdue items</para>
 
       <screenshot>
@@ -13401,7 +13815,7 @@
 
           <itemizedlist>
             <listitem>
-              <para>FInes will be charged based on your <link
+              <para>Fines will be charged based on your <link
               linkend="circfinerules">Circulation &amp; Fines
               Rules</link></para>
             </listitem>
@@ -14139,7 +14553,7 @@
 
             <itemizedlist>
               <listitem>
-                <para>This can be overriden with the <link
+                <para>This can be overridden with the <link
                 linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
                 system preference</para>
               </listitem>
@@ -14672,8 +15086,7 @@
         the red 'X' to the right of the hold line.</para>
 
         <para>Clicking the down arrow to the right of the hold will stick the
-        the hold at the bottom of the list even if more requsts are
-        made.</para>
+        hold at the bottom of the list even if more requests are made.</para>
 
         <para>For example, your library has home-bound patrons that are
         allowed to keep books out for months at a time. It would not be fair
@@ -15247,7 +15660,7 @@
               <itemizedlist>
                 <listitem>
                   <tip>
-                    <para>If the syspref <link
+                    <para>If the <link
                     linkend="ReturnToShelvingCart">ReturnToShelvingCart</link>
                     system preference is turned on, any newly-checked-in item
                     is also automatically put into the shelving cart, to be
@@ -15705,7 +16118,7 @@
         </screenshot>
 
         <para>This will open a new MARC record with the fields filled in with
-        the values from the original BIbliographic Record.</para>
+        the values from the original Bibliographic Record.</para>
 
         <screenshot>
           <screeninfo>New Duplicate Record</screeninfo>
@@ -16052,7 +16465,7 @@
       <section>
         <title>Searching Authorities</title>
 
-        <para>From the authorites page you can search for exisiting terms and
+        <para>From the authorities page you can search for existing terms and
         the bibliographic records they are attached to.</para>
 
         <screenshot>
@@ -16924,7 +17337,7 @@
       <section>
         <title id="vendorcontracts">Vendor Contracts</title>
 
-        <para>You can define contracts (with a start and enddate) and attach
+        <para>You can define contracts (with a start and end date) and attach
         it to a vendor. This is used so that at the end of the year you can
         see how much you spent on a specific contract with a vendor. In some
         places, contracts are set up with a minimum and maximum yearly
@@ -17468,9 +17881,9 @@
 
         <para>Also on the summary page you have the option to edit the
         information you entered about the basket by clicking the 'Edit basket
-        header information' button, deleting the basket alltogether by
-        clicking the 'Delete this basket' button, or exporting your basket as
-        a CSV file by clicking the 'Export this basket as CSV' button.</para>
+        header information' button, deleting the basket altogether by clicking
+        the 'Delete this basket' button, or exporting your basket as a CSV
+        file by clicking the 'Export this basket as CSV' button.</para>
 
         <para>Once you're sure your basket is complete you can click 'Close
         this basket' button to indicate that this basket is complete and has
@@ -17504,9 +17917,9 @@
         </screenshot>
 
         <important>
-          <para>The Uncertain Prices page is independant of the basket, it is
+          <para>The Uncertain Prices page is independent of the basket, it is
           linked to the vendor, so you will see all items on order for this
-          vendor with undertain prices.</para>
+          vendor with uncertain prices.</para>
         </important>
 
         <para></para>
@@ -17724,7 +18137,7 @@
         </mediaobject>
       </screenshot>
 
-      <para>You can enter info in one or both fields and and you can enter any
+      <para>You can enter info in one or both fields and you can enter any
       part of the title and/or vendor name.</para>
 
       <screenshot>
@@ -18544,7 +18957,7 @@
           <title>Tracking in house use</title>
 
           <para>Using the Circulation statistics reporting wizard you can run
-          reports on in house useage of items simply by choosing 'Local Use'
+          reports on in house usage of items simply by choosing 'Local Use'
           from the 'Type' pull down:</para>
 
           <screenshot>
@@ -19239,7 +19652,7 @@
           </mediaobject>
         </screenshot>
 
-        <para>To add a tag to one item, type the tabs (seperated by commas) in
+        <para>To add a tag to one item, type the tabs (separated by commas) in
         the 'New tag' box and click 'Add'. You will be presented with a
         confirmation of your tags being added.</para>
 
@@ -19369,7 +19782,7 @@
         by opening your Zotero library.</para>
 
         <screenshot>
-          <screeninfo>Ttle in the Zotero Library</screeninfo>
+          <screeninfo>Title in the Zotero Library</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -19428,7 +19841,7 @@
       <para>From the OPAC patrons can log in and access their account if you
       have set the <link linkend="opacuserlogin">opacuserlogin</link>
       preference to 'Allow'. Once logged in patrons are brought to their
-      account summary. If you would like to get from any other apge your
+      account summary. If you would like to get from any other page your
       account in the OPAC, click on your name in the top right of the
       OPAC.</para>
 
@@ -20085,7 +20498,7 @@
 
         <para>Finally, you can choose how the results will be sorted. The
         pre-defined sort options are in the final area of the Advanced Search
-        screen. search limits</para>
+        screen. </para>
 
         <screenshot>
           <screeninfo>Sort Results By</screeninfo>
@@ -23006,7 +23419,7 @@ print theme('pages_catalog');</programlisting>
 
         <listitem>
           <para><link linkend="patronimport">Map your patron data</link> from
-          your legacy system to the Koha fileds and migrate (remembering to
+          your legacy system to the Koha fields and migrate (remembering to
           use the patron and library codes you defined above)</para>
         </listitem>
       </itemizedlist>
@@ -23118,7 +23531,7 @@ print theme('pages_catalog');</programlisting>
 
             <listitem>
               <para><link linkend="languagepref">language</link> : Decide
-              which langauges appear in the staff client</para>
+              which languages appear in the staff client</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -23339,13 +23752,6 @@ print theme('pages_catalog');</programlisting>
             </listitem>
 
             <listitem>
-              <para><link
-              linkend="AllowNotForLoanOverride">AllowNotForLoanOverride</link>
-              : Decide if you want staff to be able to override 'not for loan'
-              statuses</para>
-            </listitem>
-
-            <listitem>
               <para><link linkend="globalDueDate">globalDueDate</link> : If
               you want all your books due on the same date, enter that
               here</para>
@@ -23355,12 +23761,6 @@ print theme('pages_catalog');</programlisting>
               <para><link linkend="ceilingDueDate">ceilingDueDate</link> : If
               you want all books due no later than a specific date (like the
               end of a semester) enter a date here</para>
-            </listitem>
-
-            <listitem>
-              <para><link linkend="OverdueNoticeBcc">OverdueNoticeBcc</link> :
-              If you want to receive a copy of all overdue emails, enter your
-              address here</para>
             </listitem>
 
             <listitem>
@@ -23723,7 +24123,7 @@ print theme('pages_catalog');</programlisting>
     </section>
 
     <section>
-      <title>Searchng Configuration</title>
+      <title>Searching Configuration</title>
 
       <para>There are several system preferences related to searching, it is
       not always recommended to make too many changes to these preferences
@@ -24028,7 +24428,7 @@ print theme('pages_catalog');</programlisting>
     </section>
 
     <section>
-      <title>Enhanded Content Configuration</title>
+      <title>Enhanced Content Configuration</title>
 
       <para>Koha allows you to pull in content from outside sources to enhance
       your bib records. All of this content can be toggled on and off using
@@ -24281,7 +24681,7 @@ print theme('pages_catalog');</programlisting>
       <itemizedlist>
         <listitem>
           <para>Decide if you need training by an outside service or if your
-          staff can do the trianing themselves.</para>
+          staff can do the training themselves.</para>
         </listitem>
 
         <listitem>
@@ -25693,6 +26093,232 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
   </appendix>
 
   <appendix>
+    <title>Koha XSLT Item Types</title>
+
+    <para>When you have any of the XSLT system preferences (<link
+    linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>, <link
+    linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link>, <link
+    linkend="XSLTDetailsDisplay">XSLTDetailsDisplay</link>, and/or <link
+    linkend="XSLTResultsDisplay">XSLTResultsDisplay</link>) turn on you will
+    see item type icons on the screen. These images are coming from values
+    found in your leader.</para>
+
+    <screenshot>
+      <screeninfo>Book image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/book.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Book [BK]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader6 = a (and one of the leader7 values below)</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>leader7 = a</para>
+              </listitem>
+
+              <listitem>
+                <para>leader7 = c</para>
+              </listitem>
+
+              <listitem>
+                <para>leader7 = d</para>
+              </listitem>
+
+              <listitem>
+                <para>leader7 = m</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = t</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <screenshot>
+      <screeninfo>Computer Image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/comp.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Computer File [CF]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader6 = m</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <screenshot>
+      <screeninfo>Continuing Resource Image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/cr.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Continuing Resource [CR]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader7 = b</para>
+          </listitem>
+
+          <listitem>
+            <para>leader7 = i</para>
+          </listitem>
+
+          <listitem>
+            <para>leader7 = s</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <screenshot>
+      <screeninfo>Map Image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/map.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Map [MP]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader6 = e</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = f</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <screenshot>
+      <screeninfo>Mixed Materials Image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/mixed.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Mixed [MX]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader6 = p</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <screenshot>
+      <screeninfo>Sound Image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/sound.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Sound [MU]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader6 = c</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = d</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = i</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = j</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <screenshot>
+      <screeninfo>Visual Material Image</screeninfo>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/appendix-xslt/visual.png" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <itemizedlist>
+      <listitem>
+        <para>Visual Material [VM]</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>leader6 = g</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = k</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = o</para>
+          </listitem>
+
+          <listitem>
+            <para>leader6 = r</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+
+    <para></para>
+  </appendix>
+
+  <appendix>
     <title>MarcEdit</title>
 
     <para></para>
@@ -25824,6 +26450,112 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         (although not in all instances where subtitles might be displayed,
         e.g. the Cart).</para>
       </section>
+
+      <section>
+        <sectioninfo>
+          <author>
+            <firstname>Owen</firstname>
+
+            <surname>Leonard</surname>
+
+            <affiliation>
+              <orgname>Athens County Public Library</orgname>
+            </affiliation>
+          </author>
+
+          <pubdate>July 2010</pubdate>
+        </sectioninfo>
+
+        <title>Customize Logo on Staff Client</title>
+
+        <para><emphasis role="bold">Question</emphasis>: How do I change the
+        Koha logo on the Staff Client login page?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: <link
+        linkend="opacsmallimage">Opacsmallimage</link> controls the display of
+        the Koha logo in the OPAC, but there is no system preference
+        controlling the logo on the staff client login page. Luckily the logo
+        is displayed via CSS so it can be easily customized through some
+        custom CSS.</para>
+
+        <para>These are the relevant parts of the staff client default CSS:
+        <programlisting>#login h1 {
+  background:url("../../img/koha-logo.gif") no-repeat scroll center
+top transparent;
+  margin-bottom:0.5em;
+  margin-top:0;
+}
+
+#login h1 a {
+  border-bottom:medium none;
+  display:block;
+  height:74px;
+  text-indent:-1000px;
+}</programlisting></para>
+
+        <para>If you have access to the file system on your Koha server you
+        can add a custom CSS file and specify that file using the <link
+        linkend="intranetcolorstylesheet">intranetcolorstylesheet</link>
+        system preference.</para>
+
+        <para>There is no analogue to the <link
+        linkend="OPACUserCSS">OPACUserCSS</link> preference in the staff
+        client, but you can get around this by putting this in the <link
+        linkend="intranetuserjs">intranetuserjs</link> preference:
+        <programlisting>//]]&gt;
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+ /* inline styles */
+ &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[</programlisting></para>
+
+        <para>In the above snippet where it says /* inline styles */ we'll
+        redeclare the relevant properties from the styles of the login
+        image:<programlisting>//]]&gt;
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+ /* inline styles */
+
+#login h1 {
+  background:url("../../img/koha-logo.gif") no-repeat scroll center
+top transparent;
+}
+
+#login h1 a {
+  height:74px;
+}
+ &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+</programlisting></para>
+
+        <para>I've only reproduced the properties necessary to make the change
+        we want. You can see that the "background:" property sets the path to
+        the default logo. You can change this to point to any image you want,
+        on the Koha server or anywhere else. Then you just need to change the
+        #login h1 a's "height" property to match the height of the image you
+        choose.</para>
+
+        <para>For example:</para>
+
+        <para><programlisting>//]]&gt;
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+ /* inline styles */
+
+#login h1 {
+  background:url("http://www.myacpl.org/sites/all/themes/npl/logo.png")
+no-repeat scroll center top transparent;
+}
+
+#login h1 a {
+  height:71px;
+}
+ &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[</programlisting></para>
+      </section>
     </section>
 
     <section>
@@ -25919,6 +26651,22 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         catch anyone who doesn't match a specific rule. Patrons who do not
         match a specific rule will get blocked from placing holds, since there
         was no baseline number of holds to utilize.</para>
+      </section>
+
+      <section>
+        <title>Unable to Place Holds</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Why can't I place
+        holds when I have all of the preferences turned on.</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: You probably need to
+        set a default circulation rule. At the very least you will need to set
+        an default circulation rule. This rule should be set for the default
+        itemtype, default branchcode and default patron category. That will
+        catch all instances that do not match a specific rule. When checking
+        out if you do not have a rule for the default branch, default item and
+        default patron category then you may see patrons getting blocked from
+        placing holds.</para>
       </section>
     </section>
 
