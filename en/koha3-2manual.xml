@@ -25901,10 +25901,19 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Withdrawn status</para></entry>
 
-            <entry><para>Default values: 0 = Not withdrawn / 1 =
-            Withdrawn</para></entry>
+            <entry><para>Default values: </para><itemizedlist>
+                <listitem>
+                  <para>0 = Not withdrawn</para>
+                </listitem>
 
-            <entry><para></para></entry>
+                <listitem>
+                  <para>1 = Withdrawn</para>
+                </listitem>
+              </itemizedlist></entry>
+
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('WITHDRAWN' in default installation)</para></entry>
           </row>
 
           <row>
@@ -25912,14 +25921,38 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Lost status</para></entry>
 
-            <entry><para>Default values: 0 = Available / 1 = Lost / 2= Long
-            Overdue (Lost) / 3 = Lost and Paid For / 4 = Missing in Inventory
-            / 5 = Missing in Hold Queue</para></entry>
+            <entry><para>Default values:</para><itemizedlist>
+                <listitem>
+                  <para>0 = Available</para>
+                </listitem>
+
+                <listitem>
+                  <para>1 = Lost</para>
+                </listitem>
+
+                <listitem>
+                  <para>2 = Long Overdue (Lost)</para>
+                </listitem>
+
+                <listitem>
+                  <para>3 = Lost and Paid For</para>
+                </listitem>
+
+                <listitem>
+                  <para>4 = Missing in Inventory</para>
+                </listitem>
+
+                <listitem>
+                  <para>5 = Missing in Hold Queue</para>
+                </listitem>
+              </itemizedlist></entry>
 
             <entry><para>It's possible to configure OPAC so that lost items
             don't display with the <link
-            linkend="hidelostitems">hidelostitems</link> system
-            preference.</para></entry>
+            linkend="hidelostitems">hidelostitems</link> system preference.
+            </para><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('LOST' in default installation)</para></entry>
           </row>
 
           <row>
@@ -25954,10 +25987,19 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Damaged status</para></entry>
 
-            <entry><para>Default values: 0 = Not damaged / 1 =
-            Damaged</para></entry>
+            <entry><para>Default values: </para><itemizedlist>
+                <listitem>
+                  <para>0 = Not damaged</para>
+                </listitem>
 
-            <entry><para></para></entry>
+                <listitem>
+                  <para>1 = Damaged</para>
+                </listitem>
+              </itemizedlist></entry>
+
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('DAMAGE' in default installation)</para></entry>
           </row>
 
           <row>
@@ -25965,10 +26007,19 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Use restrictions</para></entry>
 
-            <entry><para>Default values: 0 = No use restrictions / 1 =
-            Restricted Access</para></entry>
+            <entry><para>Default values:</para><itemizedlist>
+                <listitem>
+                  <para>0 = No use restrictions </para>
+                </listitem>
 
-            <entry><para></para></entry>
+                <listitem>
+                  <para>1 = Restricted Access</para>
+                </listitem>
+              </itemizedlist></entry>
+
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('RESTRICT' in default installation)</para></entry>
           </row>
 
           <row>
@@ -25976,10 +26027,27 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Not for loan</para></entry>
 
-            <entry><para>Default values: -1 = Ordered / 0 = Available for
-            loans / 1 = Not for Loan / 2 = Staff Collection</para></entry>
+            <entry><para>Default values:</para><itemizedlist>
+                <listitem>
+                  <para>-1 = Ordered</para>
+                </listitem>
 
-            <entry><para></para></entry>
+                <listitem>
+                  <para>0 = Available for loans</para>
+                </listitem>
+
+                <listitem>
+                  <para>1 = Not for Loan</para>
+                </listitem>
+
+                <listitem>
+                  <para>2 = Staff Collection</para>
+                </listitem>
+              </itemizedlist></entry>
+
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('NOT_LOAN' in default installation)</para></entry>
           </row>
 
           <row>
@@ -25987,9 +26055,11 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Collection code</para></entry>
 
-            <entry><para></para></entry>
+            <entry><para>Coded value</para></entry>
 
-            <entry><para></para></entry>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('CCODE' in default installation)</para></entry>
           </row>
 
           <row>
@@ -26005,9 +26075,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           <row>
             <entry><para>952&#135;a</para></entry>
 
-            <entry><para>branchcode</para></entry>
-
             <entry><para>Owning Library</para></entry>
+
+            <entry><para>Branch code</para></entry>
 
             <entry><para>Code must be defined in <link
             linkend="libsgroups">Libraries, Branches and
@@ -26017,12 +26087,14 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           <row>
             <entry><para>952&#135;b</para></entry>
 
-            <entry><para>branchcode</para></entry>
-
-            <entry><para>holding library (usu. the same as 952$a
+            <entry><para>Holding library (usually the same as 952$a
             )</para></entry>
 
-            <entry><para></para></entry>
+            <entry><para>Branch code</para></entry>
+
+            <entry><para>Code must be defined in <link
+            linkend="libsgroups">Libraries, Branches and
+            Groups</link></para></entry>
           </row>
 
           <row>
@@ -26054,7 +26126,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Source of acquisition</para></entry>
 
-            <entry><para>coded value or vendor string</para></entry>
+            <entry><para>Coded value or vendor string</para></entry>
 
             <entry><para></para></entry>
           </row>
@@ -26064,7 +26136,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Purchase price</para></entry>
 
-            <entry><para>decimal number, no currency symbol</para></entry>
+            <entry><para>Decimal number, no currency symbol</para></entry>
 
             <entry><para></para></entry>
           </row>
@@ -26094,7 +26166,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Barcode *</para></entry>
 
-            <entry><para>max 20 characters</para></entry>
+            <entry><para>Max 20 characters</para></entry>
 
             <entry><para></para></entry>
           </row>
@@ -26104,7 +26176,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Replacement price</para></entry>
 
-            <entry><para>decimal number, no currency symbol</para></entry>
+            <entry><para>Decimal number, no currency symbol</para></entry>
 
             <entry><para></para></entry>
           </row>
@@ -26116,7 +26188,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>YYYY-MM-DD</para></entry>
 
-            <entry><para></para></entry>
+            <entry>Date formats in the 952 subfields are required to be in the
+            system internal format for data loading and subsequent item
+            editing: YYYY-MM-DD</entry>
           </row>
 
           <row>
@@ -26124,7 +26198,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Koha item type *</para></entry>
 
-            <entry><para>coded value, required field for
+            <entry><para>Coded value, required field for
             circulation</para></entry>
 
             <entry><para>Coded value, must be defined in <link
