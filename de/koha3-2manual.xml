@@ -1522,6 +1522,11 @@
                 closed.</para>
               </listitem>
             </itemizedlist>
+
+            <para>The calendar is defined on a branch by branch basis. To
+            learn more about the calendar, check out the '<link
+            linkend="calholidays">Calendar &amp; Holidays</link>' section of
+            this manual.</para>
           </section>
         </section>
 
@@ -1548,6 +1553,11 @@
                 <para>not including the days the library is closed</para>
               </listitem>
             </itemizedlist>
+
+            <para>The calendar is defined on a branch by branch basis. To
+            learn more about the calendar, check out the '<link
+            linkend="calholidays">Calendar &amp; Holidays</link>' section of
+            this manual.</para>
           </section>
 
           <section>
@@ -11646,7 +11656,7 @@
           <para>Patrons with outstanding fines or items checked out are not
           saved. They are not completely removed from the system (moved to the
           delete_borrowers table), but this tool does not provide as many
-          checks as one may desire. </para>
+          checks as one may desire.</para>
         </important></para>
 
       <screenshot>
@@ -18924,9 +18934,8 @@
 
             <para>This report uses 'Period,' or date, filtering that allows
             you to limit to a month by simply selecting the first day of the
-            first month through the first day of the next month. &nbsp;For
-            example, 10/1 to 11/1 to find statistics for the month of
-            October.</para>
+            first month through the first day of the next month. For example,
+            10/1 to 11/1 to find statistics for the month of October.</para>
 
             <itemizedlist>
               <listitem>
@@ -20497,7 +20506,7 @@
 
         <para>Finally, you can choose how the results will be sorted. The
         pre-defined sort options are in the final area of the Advanced Search
-        screen. </para>
+        screen.</para>
 
         <screenshot>
           <screeninfo>Sort Results By</screeninfo>
@@ -20549,170 +20558,176 @@
           indexes typically used by other integrated library systems. The
           defined Z39.50 Bib-1 Attribute mapped to the indexes are:</para>
 
-          <table>
-            <caption>Attributes</caption>
+          <table cellpadding="4" cellspacing="4" frame="all">
+            <title>Attributes</title>
 
-            <tr>
-              <th>Bib-1 Attribute</th>
+            <tgroup align="left" cols="2" colsep="1" rowsep="1">
+              <thead>
+                <row>
+                  <entry>Bib-1 Attribute</entry>
 
-              <th>Qualifier (index)</th>
-            </tr>
+                  <entry>Qualifier (index)</entry>
+                </row>
+              </thead>
 
-            <tr>
-              <td>Personal-name</td>
+              <tbody>
+                <row>
+                  <entry>Personal-name</entry>
 
-              <td>pn</td>
-            </tr>
+                  <entry>pn</entry>
+                </row>
 
-            <tr>
-              <td>Corporate-name</td>
+                <row>
+                  <entry>Corporate-name</entry>
 
-              <td>cpn</td>
-            </tr>
+                  <entry>cpn</entry>
+                </row>
 
-            <tr>
-              <td>Conference-name</td>
+                <row>
+                  <entry>Conference-name</entry>
 
-              <td>cfn</td>
-            </tr>
+                  <entry>cfn</entry>
+                </row>
 
-            <tr>
-              <td>Title</td>
+                <row>
+                  <entry>Title</entry>
 
-              <td>ti</td>
-            </tr>
+                  <entry>ti</entry>
+                </row>
 
-            <tr>
-              <td>Title-series</td>
+                <row>
+                  <entry>Title-series</entry>
 
-              <td>se</td>
-            </tr>
+                  <entry>se</entry>
+                </row>
 
-            <tr>
-              <td>Title-uniform</td>
+                <row>
+                  <entry>Title-uniform</entry>
 
-              <td>ut</td>
-            </tr>
+                  <entry>ut</entry>
+                </row>
 
-            <tr>
-              <td>ISBN</td>
+                <row>
+                  <entry>ISBN</entry>
 
-              <td>nb</td>
-            </tr>
+                  <entry>nb</entry>
+                </row>
 
-            <tr>
-              <td>ISSN</td>
+                <row>
+                  <entry>ISSN</entry>
 
-              <td>ns</td>
-            </tr>
+                  <entry>ns</entry>
+                </row>
 
-            <tr>
-              <td>Local number</td>
+                <row>
+                  <entry>Local number</entry>
 
-              <td>sn</td>
-            </tr>
+                  <entry>sn</entry>
+                </row>
 
-            <tr>
-              <td>Local-classification</td>
+                <row>
+                  <entry>Local-classification</entry>
 
-              <td>lcn and callnum</td>
-            </tr>
+                  <entry>lcn and callnum</entry>
+                </row>
 
-            <tr>
-              <td>Subject</td>
+                <row>
+                  <entry>Subject</entry>
 
-              <td>su, su-to, su-geo, su-ut</td>
-            </tr>
+                  <entry>su, su-to, su-geo, su-ut</entry>
+                </row>
 
-            <tr>
-              <td>Pubdate</td>
+                <row>
+                  <entry>Pubdate</entry>
 
-              <td>yr,pubdate</td>
-            </tr>
+                  <entry>yr,pubdate</entry>
+                </row>
 
-            <tr>
-              <td>Date-of-Acquisition</td>
+                <row>
+                  <entry>Date-of-Acquisition</entry>
 
-              <td>acqdate</td>
-            </tr>
+                  <entry>acqdate</entry>
+                </row>
 
-            <tr>
-              <td>Language</td>
+                <row>
+                  <entry>Language</entry>
 
-              <td>ln</td>
-            </tr>
+                  <entry>ln</entry>
+                </row>
 
-            <tr>
-              <td>Place-of-publication</td>
+                <row>
+                  <entry>Place-of-publication</entry>
 
-              <td>pl</td>
-            </tr>
+                  <entry>pl</entry>
+                </row>
 
-            <tr>
-              <td>Abstract</td>
+                <row>
+                  <entry>Abstract</entry>
 
-              <td>ab</td>
-            </tr>
+                  <entry>ab</entry>
+                </row>
 
-            <tr>
-              <td>Notes</td>
+                <row>
+                  <entry>Notes</entry>
 
-              <td>nt</td>
-            </tr>
+                  <entry>nt</entry>
+                </row>
 
-            <tr>
-              <td>Record-type</td>
+                <row>
+                  <entry>Record-type</entry>
 
-              <td>rtype, mc-rtype, mus</td>
-            </tr>
+                  <entry>rtype, mc-rtype, mus</entry>
+                </row>
 
-            <tr>
-              <td>Author</td>
+                <row>
+                  <entry>Author</entry>
 
-              <td>au, aut</td>
-            </tr>
+                  <entry>au, aut</entry>
+                </row>
 
-            <tr>
-              <td>Subject-person-name</td>
+                <row>
+                  <entry>Subject-person-name</entry>
 
-              <td>su-na</td>
-            </tr>
+                  <entry>su-na</entry>
+                </row>
 
-            <tr>
-              <td>Any (keyword)</td>
+                <row>
+                  <entry>Any (keyword)</entry>
 
-              <td>kw</td>
-            </tr>
+                  <entry>kw</entry>
+                </row>
 
-            <tr>
-              <td>Publisher</td>
+                <row>
+                  <entry>Publisher</entry>
 
-              <td>pb</td>
-            </tr>
+                  <entry>pb</entry>
+                </row>
 
-            <tr>
-              <td>Content-type</td>
+                <row>
+                  <entry>Content-type</entry>
 
-              <td>ctype</td>
-            </tr>
+                  <entry>ctype</entry>
+                </row>
 
-            <tr>
-              <td>Koha-Auth-Number</td>
+                <row>
+                  <entry>Koha-Auth-Number</entry>
 
-              <td>an</td>
-            </tr>
+                  <entry>an</entry>
+                </row>
 
-            <tr>
-              <td>Author-personal-bibliography</td>
+                <row>
+                  <entry>Author-personal-bibliography</entry>
 
-              <td>aub</td>
-            </tr>
+                  <entry>aub</entry>
+                </row>
 
-            <tr>
-              <td>Author-in-order</td>
+                <row>
+                  <entry>Author-in-order</entry>
 
-              <td>auo</td>
-            </tr>
+                  <entry>auo</entry>
+                </row>
+              </tbody>
+            </tgroup>
           </table>
 
           <para>The three lines above with green type are used primarily as
@@ -21097,1308 +21112,1338 @@
       <para>By default, not all fields are indexed in the Zebra search engine,
       but most are. Below are the fields that are indexed in Zebra.</para>
 
-      <table border="1">
-        <caption>Indexes</caption>
+      <table cellpadding="4" cellspacing="4" frame="all">
+        <title>Indexes</title>
 
-        <tr>
-          <th>Field</th>
+        <tgroup align="left" cols="2" colsep="1" rowsep="1">
+          <thead>
+            <row>
+              <entry><para>Field</para></entry>
 
-          <th>Description</th>
-        </tr>
+              <entry><para>Description</para></entry>
+            </row>
+          </thead>
 
-        <tr>
-          <td>001</td>
+          <tbody>
+            <row>
+              <entry><para>001</para></entry>
 
-          <td>Control-number</td>
-        </tr>
+              <entry><para>Control-number</para></entry>
+            </row>
 
-        <tr>
-          <td>005</td>
+            <row>
+              <entry><para>005</para></entry>
 
-          <td>Date/time-last-modified</td>
-        </tr>
+              <entry><para>Date/time-last-modified</para></entry>
+            </row>
 
-        <tr>
-          <td>007</td>
+            <row>
+              <entry><para>007</para></entry>
 
-          <td>Microform-generation:n:range(data,11,1),
-          Material-type,ff7-00:w:range(data,0,1), ff7-01:w:range(data,1,1),
-          ff7-02:w:range(data,2,1), ff7-01-02:w:range(data,0,2)</td>
-        </tr>
+              <entry><para>Microform-generation:n:range(data,11,1),
+              Material-type,ff7-00:w:range(data,0,1),
+              ff7-01:w:range(data,1,1), ff7-02:w:range(data,2,1),
+              ff7-01-02:w:range(data,0,2)</para></entry>
+            </row>
 
-        <tr>
-          <td>008</td>
+            <row>
+              <entry><para>008</para></entry>
 
-          <td>date-entered-on-file:n:range(data,0,5),
-          date-entered-on-file:s:range(data,0,5), pubdate:w:range(data,7,4),
-          pubdate:n:range(data,7,4), pubdate:y:range(data,7,4),
-          pubdate:s:range(data,7,4), pl:w:range(data,15,3),
-          ta:w:range(data,22,1), ff8-23:w:range(data,23,1),
-          ff8-29:w:range(data,29,1), lf:w:range(data,33,1),
-          bio:w:range(data,34,1), ln:n:range(data,35,3),
-          ctype:w:range(data,24,4), Record-source:w:range(data,39,0)</td>
-        </tr>
+              <entry><para>date-entered-on-file:n:range(data,0,5),
+              date-entered-on-file:s:range(data,0,5),
+              pubdate:w:range(data,7,4), pubdate:n:range(data,7,4),
+              pubdate:y:range(data,7,4), pubdate:s:range(data,7,4),
+              pl:w:range(data,15,3), ta:w:range(data,22,1),
+              ff8-23:w:range(data,23,1), ff8-29:w:range(data,29,1),
+              lf:w:range(data,33,1), bio:w:range(data,34,1),
+              ln:n:range(data,35,3), ctype:w:range(data,24,4),
+              Record-source:w:range(data,39,0)</para></entry>
+            </row>
 
-        <tr>
-          <td>010</td>
+            <row>
+              <entry><para>010</para></entry>
 
-          <td>LC-card-number, Identifier-standard</td>
-        </tr>
+              <entry><para>LC-card-number, Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>011</td>
+            <row>
+              <entry><para>011</para></entry>
 
-          <td>LC-card-number, Identifier-standard</td>
-        </tr>
+              <entry><para>LC-card-number, Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>015</td>
+            <row>
+              <entry><para>015</para></entry>
 
-          <td>BNB-card-number, BGF-number, Number-db, Number-natl-biblio,
-          Identifier-standard</td>
-        </tr>
+              <entry><para>BNB-card-number, BGF-number, Number-db,
+              Number-natl-biblio, Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>017</td>
+            <row>
+              <entry><para>017</para></entry>
 
-          <td>Number-legal-deposit, Identifier-standard</td>
-        </tr>
+              <entry><para>Number-legal-deposit,
+              Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>018</td>
+            <row>
+              <entry><para>018</para></entry>
 
-          <td>Identifier-standard</td>
-        </tr>
+              <entry><para>Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>020$a</td>
+            <row>
+              <entry><para>020$a</para></entry>
 
-          <td>ISBN:w, Identifier-standard:w</td>
-        </tr>
+              <entry><para>ISBN:w, Identifier-standard:w</para></entry>
+            </row>
 
-        <tr>
-          <td>020</td>
+            <row>
+              <entry><para>020</para></entry>
 
-          <td>Identifier-standard</td>
-        </tr>
+              <entry><para>Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>022$a</td>
+            <row>
+              <entry><para>022$a</para></entry>
 
-          <td>ISSN:w, Identifier-standard:w</td>
-        </tr>
+              <entry><para>ISSN:w, Identifier-standard:w</para></entry>
+            </row>
 
-        <tr>
-          <td>022</td>
+            <row>
+              <entry><para>022</para></entry>
 
-          <td>Identifier-standard</td>
-        </tr>
+              <entry><para>Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>023</td>
+            <row>
+              <entry><para>023</para></entry>
 
-          <td>Identifier-standard</td>
-        </tr>
+              <entry><para>Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>024$a</td>
+            <row>
+              <entry><para>024$a</para></entry>
 
-          <td>Identifier-other</td>
-        </tr>
+              <entry><para>Identifier-other</para></entry>
+            </row>
 
-        <tr>
-          <td>024</td>
+            <row>
+              <entry><para>024</para></entry>
 
-          <td>Identifier-standard</td>
-        </tr>
+              <entry><para>Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>025</td>
+            <row>
+              <entry><para>025</para></entry>
 
-          <td>Identifier-standard</td>
-        </tr>
+              <entry><para>Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>027</td>
+            <row>
+              <entry><para>027</para></entry>
 
-          <td>Report-number, Identifier-standard</td>
-        </tr>
+              <entry><para>Report-number, Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>028</td>
+            <row>
+              <entry><para>028</para></entry>
 
-          <td>Number-music-publisher, Identifier-standard</td>
-        </tr>
+              <entry><para>Number-music-publisher,
+              Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>030</td>
+            <row>
+              <entry><para>030</para></entry>
 
-          <td>CODEN, Identifier-standard</td>
-        </tr>
+              <entry><para>CODEN, Identifier-standard</para></entry>
+            </row>
 
-        <tr>
-          <td>034</td>
+            <row>
+              <entry><para>034</para></entry>
 
-          <td>Map-scale</td>
-        </tr>
+              <entry><para>Map-scale</para></entry>
+            </row>
 
-        <tr>
-          <td>037</td>
+            <row>
+              <entry><para>037</para></entry>
 
-          <td>Identifier-standard, Stock-number</td>
-        </tr>
+              <entry><para>Identifier-standard, Stock-number</para></entry>
+            </row>
 
-        <tr>
-          <td>040</td>
+            <row>
+              <entry><para>040</para></entry>
 
-          <td>Code-institution, Record-source</td>
-        </tr>
+              <entry><para>Code-institution, Record-source</para></entry>
+            </row>
 
-        <tr>
-          <td>041</td>
+            <row>
+              <entry><para>041</para></entry>
 
-          <td>ln</td>
-        </tr>
+              <entry><para>ln</para></entry>
+            </row>
 
-        <tr>
-          <td>043</td>
+            <row>
+              <entry><para>043</para></entry>
 
-          <td>Code-geographic</td>
-        </tr>
+              <entry><para>Code-geographic</para></entry>
+            </row>
 
-        <tr>
-          <td>050$b</td>
+            <row>
+              <entry><para>050$b</para></entry>
 
-          <td>LC-call-number:w, LC-call-number:p, LC-call-number:s</td>
-        </tr>
+              <entry><para>LC-call-number:w, LC-call-number:p,
+              LC-call-number:s</para></entry>
+            </row>
 
-        <tr>
-          <td>050</td>
+            <row>
+              <entry><para>050</para></entry>
 
-          <td>LC-call-number:w, LC-call-number:p, LC-call-number:s</td>
-        </tr>
+              <entry><para>LC-call-number:w, LC-call-number:p,
+              LC-call-number:s</para></entry>
+            </row>
 
-        <tr>
-          <td>052</td>
+            <row>
+              <entry><para>052</para></entry>
 
-          <td>Geographic-class</td>
-        </tr>
+              <entry><para>Geographic-class</para></entry>
+            </row>
 
-        <tr>
-          <td>060</td>
+            <row>
+              <entry><para>060</para></entry>
 
-          <td>NLM-call-number</td>
-        </tr>
+              <entry><para>NLM-call-number</para></entry>
+            </row>
 
-        <tr>
-          <td>070</td>
+            <row>
+              <entry><para>070</para></entry>
 
-          <td>NAL-call-number</td>
-        </tr>
+              <entry><para>NAL-call-number</para></entry>
+            </row>
 
-        <tr>
-          <td>080</td>
+            <row>
+              <entry><para>080</para></entry>
 
-          <td>UDC-classification</td>
-        </tr>
+              <entry><para>UDC-classification</para></entry>
+            </row>
 
-        <tr>
-          <td>082</td>
+            <row>
+              <entry><para>082</para></entry>
 
-          <td>Dewey-classification:w, Dewey-classification:s</td>
-        </tr>
+              <entry><para>Dewey-classification:w,
+              Dewey-classification:s</para></entry>
+            </row>
 
-        <tr>
-          <td>086</td>
+            <row>
+              <entry><para>086</para></entry>
 
-          <td>Number-govt-pub</td>
-        </tr>
+              <entry><para>Number-govt-pub</para></entry>
+            </row>
 
-        <tr>
-          <td>100$9</td>
+            <row>
+              <entry><para>100$9</para></entry>
 
-          <td>Cross-Reference:w, Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Cross-Reference:w, Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>100$a</td>
+            <row>
+              <entry><para>100$a</para></entry>
 
-          <td>Author,Author:p, Author:s, Editor, Author-personal-bibliography,
-          Author-personal-bibliography:p, Author-personal-bibliography:s</td>
-        </tr>
+              <entry><para>Author,Author:p, Author:s, Editor,
+              Author-personal-bibliography, Author-personal-bibliography:p,
+              Author-personal-bibliography:s</para></entry>
+            </row>
 
-        <tr>
-          <td>100</td>
+            <row>
+              <entry><para>100</para></entry>
 
-          <td>Author, Author-title, Author-name-personal, Name,
-          Name-and-title, Personal-name</td>
-        </tr>
+              <entry><para>Author, Author-title, Author-name-personal, Name,
+              Name-and-title, Personal-name</para></entry>
+            </row>
 
-        <tr>
-          <td>110$9</td>
+            <row>
+              <entry><para>110$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>110</td>
+            <row>
+              <entry><para>110</para></entry>
 
-          <td>Author, Author-title, Author-name-corporate, Name,
-          Name-and-title, Corporate-name</td>
-        </tr>
+              <entry><para>Author, Author-title, Author-name-corporate, Name,
+              Name-and-title, Corporate-name</para></entry>
+            </row>
 
-        <tr>
-          <td>111$9</td>
+            <row>
+              <entry><para>111$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>111</td>
+            <row>
+              <entry><para>111</para></entry>
 
-          <td>Author, Author-title, Author-name-corporate, Name,
-          Name-and-title, Conference-name</td>
-        </tr>
+              <entry><para>Author, Author-title, Author-name-corporate, Name,
+              Name-and-title, Conference-name</para></entry>
+            </row>
 
-        <tr>
-          <td>130$n</td>
+            <row>
+              <entry><para>130$n</para></entry>
 
-          <td>Thematic-number</td>
-        </tr>
+              <entry><para>Thematic-number</para></entry>
+            </row>
 
-        <tr>
-          <td>130$r</td>
+            <row>
+              <entry><para>130$r</para></entry>
 
-          <td>Music-key</td>
-        </tr>
+              <entry><para>Music-key</para></entry>
+            </row>
 
-        <tr>
-          <td>130$9</td>
+            <row>
+              <entry><para>130$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>130</td>
+            <row>
+              <entry><para>130</para></entry>
 
-          <td>Title, Title-uniform</td>
-        </tr>
+              <entry><para>Title, Title-uniform</para></entry>
+            </row>
 
-        <tr>
-          <td>210</td>
+            <row>
+              <entry><para>210</para></entry>
 
-          <td>Title, Title-abbreviated</td>
-        </tr>
+              <entry><para>Title, Title-abbreviated</para></entry>
+            </row>
 
-        <tr>
-          <td>211</td>
+            <row>
+              <entry><para>211</para></entry>
 
-          <td>Title, Title-abbreviated</td>
-        </tr>
+              <entry><para>Title, Title-abbreviated</para></entry>
+            </row>
 
-        <tr>
-          <td>212</td>
+            <row>
+              <entry><para>212</para></entry>
 
-          <td>Title, Title-other-variant</td>
-        </tr>
+              <entry><para>Title, Title-other-variant</para></entry>
+            </row>
 
-        <tr>
-          <td>214</td>
+            <row>
+              <entry><para>214</para></entry>
 
-          <td>Title, Title-expanded</td>
-        </tr>
+              <entry><para>Title, Title-expanded</para></entry>
+            </row>
 
-        <tr>
-          <td>222</td>
+            <row>
+              <entry><para>222</para></entry>
 
-          <td>Title, Title-key</td>
-        </tr>
+              <entry><para>Title, Title-key</para></entry>
+            </row>
 
-        <tr>
-          <td>240$r</td>
+            <row>
+              <entry><para>240$r</para></entry>
 
-          <td>Music-key</td>
-        </tr>
+              <entry><para>Music-key</para></entry>
+            </row>
 
-        <tr>
-          <td>240$n</td>
+            <row>
+              <entry><para>240$n</para></entry>
 
-          <td>Thematic-number</td>
-        </tr>
+              <entry><para>Thematic-number</para></entry>
+            </row>
 
-        <tr>
-          <td>240</td>
+            <row>
+              <entry><para>240</para></entry>
 
-          <td>Title:w, Title:p, Title-uniform</td>
-        </tr>
+              <entry><para>Title:w, Title:p, Title-uniform</para></entry>
+            </row>
 
-        <tr>
-          <td>243$n</td>
+            <row>
+              <entry><para>243$n</para></entry>
 
-          <td>Thematic-number</td>
-        </tr>
+              <entry><para>Thematic-number</para></entry>
+            </row>
 
-        <tr>
-          <td>243$r</td>
+            <row>
+              <entry><para>243$r</para></entry>
 
-          <td>Music-key</td>
-        </tr>
+              <entry><para>Music-key</para></entry>
+            </row>
 
-        <tr>
-          <td>243</td>
+            <row>
+              <entry><para>243</para></entry>
 
-          <td>Title:w, Title:p, Title-collective</td>
-        </tr>
+              <entry><para>Title:w, Title:p, Title-collective</para></entry>
+            </row>
 
-        <tr>
-          <td>245$a</td>
+            <row>
+              <entry><para>245$a</para></entry>
 
-          <td>Title-cover:w, Title-cover:p, Title-cover:s, Title:w, Title:p,
-          Title:s</td>
-        </tr>
+              <entry><para>Title-cover:w, Title-cover:p, Title-cover:s,
+              Title:w, Title:p, Title:s</para></entry>
+            </row>
 
-        <tr>
-          <td>245$c</td>
+            <row>
+              <entry><para>245$c</para></entry>
 
-          <td>Author, Author-in-order:w, Author-in-order:p,
-          Author-in-order:s</td>
-        </tr>
+              <entry><para>Author, Author-in-order:w, Author-in-order:p,
+              Author-in-order:s</para></entry>
+            </row>
 
-        <tr>
-          <td>245$9</td>
+            <row>
+              <entry><para>245$9</para></entry>
 
-          <td>Cross-Reference:w, Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Cross-Reference:w, Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>245</td>
+            <row>
+              <entry><para>245</para></entry>
 
-          <td>Title:w, Title:p</td>
-        </tr>
+              <entry><para>Title:w, Title:p</para></entry>
+            </row>
 
-        <tr>
-          <td>246</td>
+            <row>
+              <entry><para>246</para></entry>
 
-          <td>Title, Title:p, Title-abbreviated, Title-expanded,
-          Title-former</td>
-        </tr>
+              <entry><para>Title, Title:p, Title-abbreviated, Title-expanded,
+              Title-former</para></entry>
+            </row>
 
-        <tr>
-          <td>247</td>
+            <row>
+              <entry><para>247</para></entry>
 
-          <td>Title, Title:p, Title-former, Title-other-variant,
-          Related-periodical</td>
-        </tr>
+              <entry><para>Title, Title:p, Title-former, Title-other-variant,
+              Related-periodical</para></entry>
+            </row>
 
-        <tr>
-          <td>260$a</td>
+            <row>
+              <entry><para>260$a</para></entry>
 
-          <td>pl:w, pl:p</td>
-        </tr>
+              <entry><para>pl:w, pl:p</para></entry>
+            </row>
 
-        <tr>
-          <td>260$b</td>
+            <row>
+              <entry><para>260$b</para></entry>
 
-          <td>Publisher:w, Publisher:p</td>
-        </tr>
+              <entry><para>Publisher:w, Publisher:p</para></entry>
+            </row>
 
-        <tr>
-          <td>260$c</td>
+            <row>
+              <entry><para>260$c</para></entry>
 
-          <td>copydate, copydate:s</td>
-        </tr>
+              <entry><para>copydate, copydate:s</para></entry>
+            </row>
 
-        <tr>
-          <td>260</td>
+            <row>
+              <entry><para>260</para></entry>
 
-          <td>pl</td>
-        </tr>
+              <entry><para>pl</para></entry>
+            </row>
 
-        <tr>
-          <td>300</td>
+            <row>
+              <entry><para>300</para></entry>
 
-          <td>Extent:w, Extent:p</td>
-        </tr>
+              <entry><para>Extent:w, Extent:p</para></entry>
+            </row>
 
-        <tr>
-          <td>400$a</td>
+            <row>
+              <entry><para>400$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>400$t</td>
+            <row>
+              <entry><para>400$t</para></entry>
 
-          <td>Author-title, Name-and-title, Title, Title-series</td>
-        </tr>
+              <entry><para>Author-title, Name-and-title, Title,
+              Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>400$9</td>
+            <row>
+              <entry><para>400$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>400</td>
+            <row>
+              <entry><para>400</para></entry>
 
-          <td>Author, Author-name-personal, Name, Personal-name</td>
-        </tr>
+              <entry><para>Author, Author-name-personal, Name,
+              Personal-name</para></entry>
+            </row>
 
-        <tr>
-          <td>410</td>
+            <row>
+              <entry><para>410</para></entry>
 
-          <td>Author, Corporate-name</td>
-        </tr>
+              <entry><para>Author, Corporate-name</para></entry>
+            </row>
 
-        <tr>
-          <td>410$a</td>
+            <row>
+              <entry><para>410$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>410$t</td>
+            <row>
+              <entry><para>410$t</para></entry>
 
-          <td>Author-title, Title, Title-series</td>
-        </tr>
+              <entry><para>Author-title, Title, Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>410$9</td>
+            <row>
+              <entry><para>410$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>410</td>
+            <row>
+              <entry><para>410</para></entry>
 
-          <td>Author-name-corporate, Name</td>
-        </tr>
+              <entry><para>Author-name-corporate, Name</para></entry>
+            </row>
 
-        <tr>
-          <td>411</td>
+            <row>
+              <entry><para>411</para></entry>
 
-          <td>Author, Conference-name</td>
-        </tr>
+              <entry><para>Author, Conference-name</para></entry>
+            </row>
 
-        <tr>
-          <td>411$a</td>
+            <row>
+              <entry><para>411$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>411$t</td>
+            <row>
+              <entry><para>411$t</para></entry>
 
-          <td>Author-title, Title-series</td>
-        </tr>
+              <entry><para>Author-title, Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>411</td>
+            <row>
+              <entry><para>411</para></entry>
 
-          <td>Author-name-corporate, Name</td>
-        </tr>
+              <entry><para>Author-name-corporate, Name</para></entry>
+            </row>
 
-        <tr>
-          <td>440$a</td>
+            <row>
+              <entry><para>440$a</para></entry>
 
-          <td>Title-series:w, Title-series:p</td>
-        </tr>
+              <entry><para>Title-series:w, Title-series:p</para></entry>
+            </row>
 
-        <tr>
-          <td>440$9</td>
+            <row>
+              <entry><para>440$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>440</td>
+            <row>
+              <entry><para>440</para></entry>
 
-          <td>Title-series:w, Title-series:p, Title, Title-series</td>
-        </tr>
+              <entry><para>Title-series:w, Title-series:p, Title,
+              Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>490$a</td>
+            <row>
+              <entry><para>490$a</para></entry>
 
-          <td>Title-series:w, Title-series:p</td>
-        </tr>
+              <entry><para>Title-series:w, Title-series:p</para></entry>
+            </row>
 
-        <tr>
-          <td>490</td>
+            <row>
+              <entry><para>490</para></entry>
 
-          <td>Title, Title-series</td>
-        </tr>
+              <entry><para>Title, Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>490$9</td>
+            <row>
+              <entry><para>490$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>500</td>
+            <row>
+              <entry><para>500</para></entry>
 
-          <td>Note:w, Note:p</td>
-        </tr>
+              <entry><para>Note:w, Note:p</para></entry>
+            </row>
 
-        <tr>
-          <td>502</td>
+            <row>
+              <entry><para>502</para></entry>
 
-          <td>Material-type</td>
-        </tr>
+              <entry><para>Material-type</para></entry>
+            </row>
 
-        <tr>
-          <td>505$r</td>
+            <row>
+              <entry><para>505$r</para></entry>
 
-          <td>Author</td>
-        </tr>
+              <entry><para>Author</para></entry>
+            </row>
 
-        <tr>
-          <td>505$t</td>
+            <row>
+              <entry><para>505$t</para></entry>
 
-          <td>Title</td>
-        </tr>
+              <entry><para>Title</para></entry>
+            </row>
 
-        <tr>
-          <td>505</td>
+            <row>
+              <entry><para>505</para></entry>
 
-          <td>Note:w, Note:p</td>
-        </tr>
+              <entry><para>Note:w, Note:p</para></entry>
+            </row>
 
-        <tr>
-          <td>510</td>
+            <row>
+              <entry><para>510</para></entry>
 
-          <td>Indexed-by</td>
-        </tr>
+              <entry><para>Indexed-by</para></entry>
+            </row>
 
-        <tr>
-          <td>520</td>
+            <row>
+              <entry><para>520</para></entry>
 
-          <td>Abstract:w, Abstract:p</td>
-        </tr>
+              <entry><para>Abstract:w, Abstract:p</para></entry>
+            </row>
 
-        <tr>
-          <td>521$a</td>
+            <row>
+              <entry><para>521$a</para></entry>
 
-          <td>lex:n</td>
-        </tr>
+              <entry><para>lex:n</para></entry>
+            </row>
 
-        <tr>
-          <td>526$c</td>
+            <row>
+              <entry><para>526$c</para></entry>
 
-          <td>arl, arl:n</td>
-        </tr>
+              <entry><para>arl, arl:n</para></entry>
+            </row>
 
-        <tr>
-          <td>526$d</td>
+            <row>
+              <entry><para>526$d</para></entry>
 
-          <td>arp, arp:n</td>
-        </tr>
+              <entry><para>arp, arp:n</para></entry>
+            </row>
 
-        <tr>
-          <td>590</td>
+            <row>
+              <entry><para>590</para></entry>
 
-          <td>Note:w, Note:p</td>
-        </tr>
+              <entry><para>Note:w, Note:p</para></entry>
+            </row>
 
-        <tr>
-          <td>600$a</td>
+            <row>
+              <entry><para>600$a</para></entry>
 
-          <td>Name-and-title, Name, Personal-name, Subject-name-personal,
-          Subject</td>
-        </tr>
+              <entry><para>Name-and-title, Name, Personal-name,
+              Subject-name-personal, Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>600$t</td>
+            <row>
+              <entry><para>600$t</para></entry>
 
-          <td>Name-and-title, Title, Subject</td>
-        </tr>
+              <entry><para>Name-and-title, Title, Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>600$9</td>
+            <row>
+              <entry><para>600$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>600</td>
+            <row>
+              <entry><para>600</para></entry>
 
-          <td>Name, Personal-name, Subject-name-personal, Subject</td>
-        </tr>
+              <entry><para>Name, Personal-name, Subject-name-personal,
+              Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>610$a</td>
+            <row>
+              <entry><para>610$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>610$t</td>
+            <row>
+              <entry><para>610$t</para></entry>
 
-          <td>Name-and-title, Title</td>
-        </tr>
+              <entry><para>Name-and-title, Title</para></entry>
+            </row>
 
-        <tr>
-          <td>610$9</td>
+            <row>
+              <entry><para>610$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>610</td>
+            <row>
+              <entry><para>610</para></entry>
 
-          <td>Name, Subject, Corporate-name</td>
-        </tr>
+              <entry><para>Name, Subject, Corporate-name</para></entry>
+            </row>
 
-        <tr>
-          <td>611</td>
+            <row>
+              <entry><para>611</para></entry>
 
-          <td>Conference-name</td>
-        </tr>
+              <entry><para>Conference-name</para></entry>
+            </row>
 
-        <tr>
-          <td>611$a</td>
+            <row>
+              <entry><para>611$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>611$t</td>
+            <row>
+              <entry><para>611$t</para></entry>
 
-          <td>Name-and-title, Title</td>
-        </tr>
+              <entry><para>Name-and-title, Title</para></entry>
+            </row>
 
-        <tr>
-          <td>611$9</td>
+            <row>
+              <entry><para>611$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>611</td>
+            <row>
+              <entry><para>611</para></entry>
 
-          <td>Name, Subject</td>
-        </tr>
+              <entry><para>Name, Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>630$n</td>
+            <row>
+              <entry><para>630$n</para></entry>
 
-          <td>Thematic-number</td>
-        </tr>
+              <entry><para>Thematic-number</para></entry>
+            </row>
 
-        <tr>
-          <td>630$r</td>
+            <row>
+              <entry><para>630$r</para></entry>
 
-          <td>Music-key</td>
-        </tr>
+              <entry><para>Music-key</para></entry>
+            </row>
 
-        <tr>
-          <td>630$9</td>
+            <row>
+              <entry><para>630$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>630</td>
+            <row>
+              <entry><para>630</para></entry>
 
-          <td>Subject</td>
-        </tr>
+              <entry><para>Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>650$9</td>
+            <row>
+              <entry><para>650$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>650</td>
+            <row>
+              <entry><para>650</para></entry>
 
-          <td>Subject, Subject:p</td>
-        </tr>
+              <entry><para>Subject, Subject:p</para></entry>
+            </row>
 
-        <tr>
-          <td>651$9</td>
+            <row>
+              <entry><para>651$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>651</td>
+            <row>
+              <entry><para>651</para></entry>
 
-          <td>Name-geographic, Subject,Subject:p</td>
-        </tr>
+              <entry><para>Name-geographic, Subject,Subject:p</para></entry>
+            </row>
 
-        <tr>
-          <td>652$9</td>
+            <row>
+              <entry><para>652$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>653$9</td>
+            <row>
+              <entry><para>653$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>653</td>
+            <row>
+              <entry><para>653</para></entry>
 
-          <td>Subject, Subject:p</td>
-        </tr>
+              <entry><para>Subject, Subject:p</para></entry>
+            </row>
 
-        <tr>
-          <td>654$9</td>
+            <row>
+              <entry><para>654$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>654</td>
+            <row>
+              <entry><para>654</para></entry>
 
-          <td>Subject</td>
-        </tr>
+              <entry><para>Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>655$9</td>
+            <row>
+              <entry><para>655$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>655</td>
+            <row>
+              <entry><para>655</para></entry>
 
-          <td>Subject</td>
-        </tr>
+              <entry><para>Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>656$9</td>
+            <row>
+              <entry><para>656$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>656</td>
+            <row>
+              <entry><para>656</para></entry>
 
-          <td>Subject</td>
-        </tr>
+              <entry><para>Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>657$9</td>
+            <row>
+              <entry><para>657$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>657</td>
+            <row>
+              <entry><para>657</para></entry>
 
-          <td>Subject</td>
-        </tr>
+              <entry><para>Subject</para></entry>
+            </row>
 
-        <tr>
-          <td>690$9</td>
+            <row>
+              <entry><para>690$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>690</td>
+            <row>
+              <entry><para>690</para></entry>
 
-          <td>Subject, Subject:p</td>
-        </tr>
+              <entry><para>Subject, Subject:p</para></entry>
+            </row>
 
-        <tr>
-          <td>700$9</td>
+            <row>
+              <entry><para>700$9</para></entry>
 
-          <td>Cross-Reference, Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Cross-Reference, Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>700$a</td>
+            <row>
+              <entry><para>700$a</para></entry>
 
-          <td>Author, Author:p</td>
-        </tr>
+              <entry><para>Author, Author:p</para></entry>
+            </row>
 
-        <tr>
-          <td>700$n</td>
+            <row>
+              <entry><para>700$n</para></entry>
 
-          <td>Thematic-number</td>
-        </tr>
+              <entry><para>Thematic-number</para></entry>
+            </row>
 
-        <tr>
-          <td>700$r</td>
+            <row>
+              <entry><para>700$r</para></entry>
 
-          <td>Music-key</td>
-        </tr>
+              <entry><para>Music-key</para></entry>
+            </row>
 
-        <tr>
-          <td>700$t</td>
+            <row>
+              <entry><para>700$t</para></entry>
 
-          <td>Author-title, Name-and-title, Title, Title-uniform</td>
-        </tr>
+              <entry><para>Author-title, Name-and-title, Title,
+              Title-uniform</para></entry>
+            </row>
 
-        <tr>
-          <td>700</td>
+            <row>
+              <entry><para>700</para></entry>
 
-          <td>Author, Author-name-corporate, Author-name-personal, Name,
-          Editor, Personal-name</td>
-        </tr>
+              <entry><para>Author, Author-name-corporate,
+              Author-name-personal, Name, Editor, Personal-name</para></entry>
+            </row>
 
-        <tr>
-          <td>710</td>
+            <row>
+              <entry><para>710</para></entry>
 
-          <td>Author, Corporate-name</td>
-        </tr>
+              <entry><para>Author, Corporate-name</para></entry>
+            </row>
 
-        <tr>
-          <td>710$t</td>
+            <row>
+              <entry><para>710$t</para></entry>
 
-          <td>Author-title, Name-and-title, Title, Title-uniform</td>
-        </tr>
+              <entry><para>Author-title, Name-and-title, Title,
+              Title-uniform</para></entry>
+            </row>
 
-        <tr>
-          <td>710$a</td>
+            <row>
+              <entry><para>710$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>710$9</td>
+            <row>
+              <entry><para>710$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>710</td>
+            <row>
+              <entry><para>710</para></entry>
 
-          <td>Author, Name</td>
-        </tr>
+              <entry><para>Author, Name</para></entry>
+            </row>
 
-        <tr>
-          <td>711$a</td>
+            <row>
+              <entry><para>711$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>711$t</td>
+            <row>
+              <entry><para>711$t</para></entry>
 
-          <td>Author-title, Title, Title-uniform</td>
-        </tr>
+              <entry><para>Author-title, Title, Title-uniform</para></entry>
+            </row>
 
-        <tr>
-          <td>711$9</td>
+            <row>
+              <entry><para>711$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>711</td>
+            <row>
+              <entry><para>711</para></entry>
 
-          <td>Author-name-corporate, Name, Conference-name</td>
-        </tr>
+              <entry><para>Author-name-corporate, Name,
+              Conference-name</para></entry>
+            </row>
 
-        <tr>
-          <td>730$n</td>
+            <row>
+              <entry><para>730$n</para></entry>
 
-          <td>Thematic-number</td>
-        </tr>
+              <entry><para>Thematic-number</para></entry>
+            </row>
 
-        <tr>
-          <td>730$r</td>
+            <row>
+              <entry><para>730$r</para></entry>
 
-          <td>Music-key</td>
-        </tr>
+              <entry><para>Music-key</para></entry>
+            </row>
 
-        <tr>
-          <td>730$9</td>
+            <row>
+              <entry><para>730$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>730</td>
+            <row>
+              <entry><para>730</para></entry>
 
-          <td>Title, Title-uniform</td>
-        </tr>
+              <entry><para>Title, Title-uniform</para></entry>
+            </row>
 
-        <tr>
-          <td>740</td>
+            <row>
+              <entry><para>740</para></entry>
 
-          <td>Title, Title-other-variant</td>
-        </tr>
+              <entry><para>Title, Title-other-variant</para></entry>
+            </row>
 
-        <tr>
-          <td>773$t</td>
+            <row>
+              <entry><para>773$t</para></entry>
 
-          <td>Host-item</td>
-        </tr>
+              <entry><para>Host-item</para></entry>
+            </row>
 
-        <tr>
-          <td>780$t</td>
+            <row>
+              <entry><para>780$t</para></entry>
 
-          <td>Title</td>
-        </tr>
+              <entry><para>Title</para></entry>
+            </row>
 
-        <tr>
-          <td>780</td>
+            <row>
+              <entry><para>780</para></entry>
 
-          <td>Title, Title-former, Related-periodical</td>
-        </tr>
+              <entry><para>Title, Title-former,
+              Related-periodical</para></entry>
+            </row>
 
-        <tr>
-          <td>785</td>
+            <row>
+              <entry><para>785</para></entry>
 
-          <td>Related-periodical</td>
-        </tr>
+              <entry><para>Related-periodical</para></entry>
+            </row>
 
-        <tr>
-          <td>800$a</td>
+            <row>
+              <entry><para>800$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>800$t</td>
+            <row>
+              <entry><para>800$t</para></entry>
 
-          <td>Author-title, Name-and-title, Title, Title-series</td>
-        </tr>
+              <entry><para>Author-title, Name-and-title, Title,
+              Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>800$9</td>
+            <row>
+              <entry><para>800$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>800</td>
+            <row>
+              <entry><para>800</para></entry>
 
-          <td>Author, Author-name-personal, Name, Personal-name</td>
-        </tr>
+              <entry><para>Author, Author-name-personal, Name,
+              Personal-name</para></entry>
+            </row>
 
-        <tr>
-          <td>810$a</td>
+            <row>
+              <entry><para>810$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>810$t</td>
+            <row>
+              <entry><para>810$t</para></entry>
 
-          <td>Author-title, Name-and-title, Title, Title-series</td>
-        </tr>
+              <entry><para>Author-title, Name-and-title, Title,
+              Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>810$9</td>
+            <row>
+              <entry><para>810$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>810</td>
+            <row>
+              <entry><para>810</para></entry>
 
-          <td>Author, Corporate-name, Author-name-corporate, Name</td>
-        </tr>
+              <entry><para>Author, Corporate-name, Author-name-corporate,
+              Name</para></entry>
+            </row>
 
-        <tr>
-          <td>811$a</td>
+            <row>
+              <entry><para>811$a</para></entry>
 
-          <td>Name-and-title</td>
-        </tr>
+              <entry><para>Name-and-title</para></entry>
+            </row>
 
-        <tr>
-          <td>811$9</td>
+            <row>
+              <entry><para>811$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>811$t</td>
+            <row>
+              <entry><para>811$t</para></entry>
 
-          <td>Author-title, Name-and-title, Title, Title-series</td>
-        </tr>
+              <entry><para>Author-title, Name-and-title, Title,
+              Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>811</td>
+            <row>
+              <entry><para>811</para></entry>
 
-          <td>Author, Author-name-corporate, Name, Conference-name</td>
-        </tr>
+              <entry><para>Author, Author-name-corporate, Name,
+              Conference-name</para></entry>
+            </row>
 
-        <tr>
-          <td>830$9</td>
+            <row>
+              <entry><para>830$9</para></entry>
 
-          <td>Koha-Auth-Number</td>
-        </tr>
+              <entry><para>Koha-Auth-Number</para></entry>
+            </row>
 
-        <tr>
-          <td>830</td>
+            <row>
+              <entry><para>830</para></entry>
 
-          <td>Title, Title-series</td>
-        </tr>
+              <entry><para>Title, Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>840</td>
+            <row>
+              <entry><para>840</para></entry>
 
-          <td>Title, Title-series</td>
-        </tr>
+              <entry><para>Title, Title-series</para></entry>
+            </row>
 
-        <tr>
-          <td>999$c</td>
+            <row>
+              <entry><para>999$c</para></entry>
 
-          <td>Local-Number:n, Local-Number:w, Local-Number:s</td>
-        </tr>
+              <entry><para>Local-Number:n, Local-Number:w,
+              Local-Number:s</para></entry>
+            </row>
 
-        <tr>
-          <td>999$d</td>
+            <row>
+              <entry><para>999$d</para></entry>
 
-          <td>biblioitemnumber:n, biblioitemnumber:w, biblioitemnumber:s</td>
-        </tr>
+              <entry><para>biblioitemnumber:n, biblioitemnumber:w,
+              biblioitemnumber:s</para></entry>
+            </row>
 
-        <tr>
-          <td>942$0</td>
+            <row>
+              <entry><para>942$0</para></entry>
 
-          <td>totalissues:n, totalissues:s</td>
-        </tr>
+              <entry><para>totalissues:n, totalissues:s</para></entry>
+            </row>
 
-        <tr>
-          <td>942$2</td>
+            <row>
+              <entry><para>942$2</para></entry>
 
-          <td>cn-bib-source</td>
-        </tr>
+              <entry><para>cn-bib-source</para></entry>
+            </row>
 
-        <tr>
-          <td>942$6</td>
+            <row>
+              <entry><para>942$6</para></entry>
 
-          <td>cn-bib-sort:n, cn-bib-sort:s</td>
-        </tr>
+              <entry><para>cn-bib-sort:n, cn-bib-sort:s</para></entry>
+            </row>
 
-        <tr>
-          <td>942$c</td>
+            <row>
+              <entry><para>942$c</para></entry>
 
-          <td>itemtype:w</td>
-        </tr>
+              <entry><para>itemtype:w</para></entry>
+            </row>
 
-        <tr>
-          <td>942$n</td>
+            <row>
+              <entry><para>942$n</para></entry>
 
-          <td>Suppress:w, Suppress:n</td>
-        </tr>
+              <entry><para>Suppress:w, Suppress:n</para></entry>
+            </row>
 
-        <tr>
-          <td>942$h</td>
+            <row>
+              <entry><para>942$h</para></entry>
 
-          <td>cn-class</td>
-        </tr>
+              <entry><para>cn-class</para></entry>
+            </row>
 
-        <tr>
-          <td>942$i</td>
+            <row>
+              <entry><para>942$i</para></entry>
 
-          <td>cn-item</td>
-        </tr>
+              <entry><para>cn-item</para></entry>
+            </row>
 
-        <tr>
-          <td>942$k</td>
+            <row>
+              <entry><para>942$k</para></entry>
 
-          <td>cn-prefix</td>
-        </tr>
+              <entry><para>cn-prefix</para></entry>
+            </row>
 
-        <tr>
-          <td>942$m</td>
+            <row>
+              <entry><para>942$m</para></entry>
 
-          <td>cn-suffix</td>
-        </tr>
+              <entry><para>cn-suffix</para></entry>
+            </row>
 
-        <tr>
-          <td>952$0</td>
+            <row>
+              <entry><para>952$0</para></entry>
 
-          <td>withdrawn:n, withdrawn:w</td>
-        </tr>
+              <entry><para>withdrawn:n, withdrawn:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$1</td>
+            <row>
+              <entry><para>952$1</para></entry>
 
-          <td>lost, lost:n</td>
-        </tr>
+              <entry><para>lost, lost:n</para></entry>
+            </row>
 
-        <tr>
-          <td>952$2</td>
+            <row>
+              <entry><para>952$2</para></entry>
 
-          <td>classification-source</td>
-        </tr>
+              <entry><para>classification-source</para></entry>
+            </row>
 
-        <tr>
-          <td>952$3</td>
+            <row>
+              <entry><para>952$3</para></entry>
 
-          <td>materials-specified</td>
-        </tr>
+              <entry><para>materials-specified</para></entry>
+            </row>
 
-        <tr>
-          <td>952$4</td>
+            <row>
+              <entry><para>952$4</para></entry>
 
-          <td>damaged:n, damaged:w</td>
-        </tr>
+              <entry><para>damaged:n, damaged:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$5</td>
+            <row>
+              <entry><para>952$5</para></entry>
 
-          <td>restricted:n, restricted:w</td>
-        </tr>
+              <entry><para>restricted:n, restricted:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$6</td>
+            <row>
+              <entry><para>952$6</para></entry>
 
-          <td>cn-sort:n, cn-sort:s</td>
-        </tr>
+              <entry><para>cn-sort:n, cn-sort:s</para></entry>
+            </row>
 
-        <tr>
-          <td>952$7</td>
+            <row>
+              <entry><para>952$7</para></entry>
 
-          <td>notforloan:n, notforloan:w</td>
-        </tr>
+              <entry><para>notforloan:n, notforloan:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$8</td>
+            <row>
+              <entry><para>952$8</para></entry>
 
-          <td>ccode</td>
-        </tr>
+              <entry><para>ccode</para></entry>
+            </row>
 
-        <tr>
-          <td>952$9</td>
+            <row>
+              <entry><para>952$9</para></entry>
 
-          <td>itemnumber:n, itemnumber:s</td>
-        </tr>
+              <entry><para>itemnumber:n, itemnumber:s</para></entry>
+            </row>
 
-        <tr>
-          <td>952$a</td>
+            <row>
+              <entry><para>952$a</para></entry>
 
-          <td>homebranch</td>
-        </tr>
+              <entry><para>homebranch</para></entry>
+            </row>
 
-        <tr>
-          <td>952$b</td>
+            <row>
+              <entry><para>952$b</para></entry>
 
-          <td>holdingbranch</td>
-        </tr>
+              <entry><para>holdingbranch</para></entry>
+            </row>
 
-        <tr>
-          <td>952$c</td>
+            <row>
+              <entry><para>952$c</para></entry>
 
-          <td>location</td>
-        </tr>
+              <entry><para>location</para></entry>
+            </row>
 
-        <tr>
-          <td>952$d</td>
+            <row>
+              <entry><para>952$d</para></entry>
 
-          <td>Date-of-acquisition, Date-of-acquisition:d,
-          Date-of-acquisition:s</td>
-        </tr>
+              <entry><para>Date-of-acquisition, Date-of-acquisition:d,
+              Date-of-acquisition:s</para></entry>
+            </row>
 
-        <tr>
-          <td>952$e</td>
+            <row>
+              <entry><para>952$e</para></entry>
 
-          <td>acqsource</td>
-        </tr>
+              <entry><para>acqsource</para></entry>
+            </row>
 
-        <tr>
-          <td>952$f</td>
+            <row>
+              <entry><para>952$f</para></entry>
 
-          <td>coded-location-qualifier</td>
-        </tr>
+              <entry><para>coded-location-qualifier</para></entry>
+            </row>
 
-        <tr>
-          <td>952$g</td>
+            <row>
+              <entry><para>952$g</para></entry>
 
-          <td>price</td>
-        </tr>
+              <entry><para>price</para></entry>
+            </row>
 
-        <tr>
-          <td>952$j</td>
+            <row>
+              <entry><para>952$j</para></entry>
 
-          <td>stack:n, stack:w</td>
-        </tr>
+              <entry><para>stack:n, stack:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$l</td>
+            <row>
+              <entry><para>952$l</para></entry>
 
-          <td>issues:n, issues:w, issues:s</td>
-        </tr>
+              <entry><para>issues:n, issues:w, issues:s</para></entry>
+            </row>
 
-        <tr>
-          <td>952$m</td>
+            <row>
+              <entry><para>952$m</para></entry>
 
-          <td>renewals:n, renewals:w</td>
-        </tr>
+              <entry><para>renewals:n, renewals:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$n</td>
+            <row>
+              <entry><para>952$n</para></entry>
 
-          <td>reserves:n, reserves:w</td>
-        </tr>
+              <entry><para>reserves:n, reserves:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$o</td>
+            <row>
+              <entry><para>952$o</para></entry>
 
-          <td>Local-classification:w, Local-classification:p,
-          Local-classification:s</td>
-        </tr>
+              <entry><para>Local-classification:w, Local-classification:p,
+              Local-classification:s</para></entry>
+            </row>
 
-        <tr>
-          <td>952$p</td>
+            <row>
+              <entry><para>952$p</para></entry>
 
-          <td>barcode, barcode:n</td>
-        </tr>
+              <entry><para>barcode, barcode:n</para></entry>
+            </row>
 
-        <tr>
-          <td>952$q</td>
+            <row>
+              <entry><para>952$q</para></entry>
 
-          <td>onloan:n, onloan:w</td>
-        </tr>
+              <entry><para>onloan:n, onloan:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$r</td>
+            <row>
+              <entry><para>952$r</para></entry>
 
-          <td>datelastseen</td>
-        </tr>
+              <entry><para>datelastseen</para></entry>
+            </row>
 
-        <tr>
-          <td>952$s</td>
+            <row>
+              <entry><para>952$s</para></entry>
 
-          <td>datelastborrowed</td>
-        </tr>
+              <entry><para>datelastborrowed</para></entry>
+            </row>
 
-        <tr>
-          <td>952$t</td>
+            <row>
+              <entry><para>952$t</para></entry>
 
-          <td>copynumber</td>
-        </tr>
+              <entry><para>copynumber</para></entry>
+            </row>
 
-        <tr>
-          <td>952$u</td>
+            <row>
+              <entry><para>952$u</para></entry>
 
-          <td>uri:u</td>
-        </tr>
+              <entry><para>uri:u</para></entry>
+            </row>
 
-        <tr>
-          <td>952$v</td>
+            <row>
+              <entry><para>952$v</para></entry>
 
-          <td>replacementprice</td>
-        </tr>
+              <entry><para>replacementprice</para></entry>
+            </row>
 
-        <tr>
-          <td>952$w</td>
+            <row>
+              <entry><para>952$w</para></entry>
 
-          <td>replacementpricedate</td>
-        </tr>
+              <entry><para>replacementpricedate</para></entry>
+            </row>
 
-        <tr>
-          <td>952$y</td>
+            <row>
+              <entry><para>952$y</para></entry>
 
-          <td>itype:w</td>
-        </tr>
+              <entry><para>itype:w</para></entry>
+            </row>
 
-        <tr>
-          <td>952$z</td>
+            <row>
+              <entry><para>952$z</para></entry>
 
-          <td>Note:w, Note:p</td>
-        </tr>
+              <entry><para>Note:w, Note:p</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
       </table>
     </section>
   </chapter>
@@ -25837,255 +25882,351 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
     3.0. This information can be used for migration or importing data
     purposes</para>
 
-    <table border="1">
-      <caption>Koha Embedded Holdings Data</caption>
+    <table border="1" cellpadding="4" cellspacing="4" frame="all">
+      <title>Koha Embedded Holdings Data</title>
 
-      <tr>
-        <th>MARC21 Tag/subfield</th>
+      <tgroup align="left" cols="4" colsep="1" rowsep="1">
+        <colspec colname="tag" colnum="1" />
 
-        <th>Data Element</th>
+        <colspec colname="data" colnum="2" />
 
-        <th>Description</th>
+        <colspec colname="desc" colnum="3" />
 
-        <th>Notes</th>
-      </tr>
+        <colspec colname="note" colnum="4" />
 
-      <tr>
-        <td>952&#135;0</td>
+        <thead>
+          <row>
+            <entry><para>MARC21 Tag/subfield</para></entry>
 
-        <td>Withdrawn status</td>
+            <entry><para>Data Element</para></entry>
 
-        <td>Default values: 0 = Not withdrawn / 1 = Withdrawn</td>
+            <entry><para>Description</para></entry>
 
-        <td>&nbsp;</td>
-      </tr>
+            <entry><para>Notes</para></entry>
+          </row>
+        </thead>
 
-      <tr>
-        <td>952&#135;1</td>
+        <tbody>
+          <row>
+            <entry><para>952&#135;0</para></entry>
 
-        <td>Lost status</td>
+            <entry><para>Withdrawn status</para></entry>
 
-        <td>Default values: 0 = Available / 1 = Lost / 2= Long Overdue (Lost)
-        / 3 = Lost and Paid For / 4 = Missing in Inventory / 5 = Missing in
-        Hold Queue</td>
+            <entry><para>Default values: </para><itemizedlist>
+                <listitem>
+                  <para>0 = Not withdrawn</para>
+                </listitem>
 
-        <td>It's possible to configure OPAC so that lost items don't display
-        with the <link linkend="hidelostitems">hidelostitems</link> system
-        preference.</td>
-      </tr>
+                <listitem>
+                  <para>1 = Withdrawn</para>
+                </listitem>
+              </itemizedlist></entry>
 
-      <tr>
-        <td>952&#135;2</td>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('WITHDRAWN' in default installation)</para></entry>
+          </row>
 
-        <td>Classification</td>
+          <row>
+            <entry><para>952&#135;1</para></entry>
 
-        <td>Classification scheme that defines filing rules used for sorting
-        call numbers.</td>
+            <entry><para>Lost status</para></entry>
 
-        <td>If no classification scheme is entered, the system will use the
-        value entered in the <link
-        linkend="DefaultClassificationSource">DefaultClassificationSource</link>
-        preference.</td>
-      </tr>
+            <entry><para>Default values:</para><itemizedlist>
+                <listitem>
+                  <para>0 = Available</para>
+                </listitem>
 
-      <tr>
-        <td>952&#135;3</td>
+                <listitem>
+                  <para>1 = Lost</para>
+                </listitem>
 
-        <td>Materials specified</td>
+                <listitem>
+                  <para>2 = Long Overdue (Lost)</para>
+                </listitem>
 
-        <td>Specific issues of serials or multi-part items.</td>
+                <listitem>
+                  <para>3 = Lost and Paid For</para>
+                </listitem>
 
-        <td>Copy/volume data is stored in 952&#135;h and &#135;t for display
-        in Normal views. &#135;3 isn't displayed anywhere except the MARC
-        view.</td>
-      </tr>
+                <listitem>
+                  <para>4 = Missing in Inventory</para>
+                </listitem>
 
-      <tr>
-        <td>952&#135;4</td>
+                <listitem>
+                  <para>5 = Missing in Hold Queue</para>
+                </listitem>
+              </itemizedlist></entry>
 
-        <td>Damaged status</td>
+            <entry><para>It's possible to configure OPAC so that lost items
+            don't display with the <link
+            linkend="hidelostitems">hidelostitems</link> system preference.
+            </para><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('LOST' in default installation)</para></entry>
+          </row>
 
-        <td>Default values: 0 = Not damaged / 1 = Damaged</td>
+          <row>
+            <entry><para>952&#135;2</para></entry>
 
-        <td>&nbsp;</td>
-      </tr>
+            <entry><para>Classification</para></entry>
 
-      <tr>
-        <td>952&#135;5</td>
+            <entry><para>Classification scheme that defines filing rules used
+            for sorting call numbers.</para></entry>
 
-        <td>Use restrictions</td>
+            <entry><para>If no classification scheme is entered, the system
+            will use the value entered in the <link
+            linkend="DefaultClassificationSource">DefaultClassificationSource</link>
+            preference.</para></entry>
+          </row>
 
-        <td>Default values: 0 = No use restrictions / 1 = Restricted
-        Access</td>
+          <row>
+            <entry><para>952&#135;3</para></entry>
 
-        <td>&nbsp;</td>
-      </tr>
+            <entry><para>Materials specified</para></entry>
 
-      <tr>
-        <td>952&#135;7</td>
+            <entry><para>Specific issues of serials or multi-part
+            items.</para></entry>
 
-        <td>Not for loan</td>
+            <entry><para>Copy/volume data is stored in 952&#135;h and &#135;t
+            for display in Normal views. &#135;3 isn't displayed anywhere
+            except the MARC view.</para></entry>
+          </row>
 
-        <td>Default values: -1 = Ordered / 0 = Available for loans / 1 = Not
-        for Loan / 2 = Staff Collection</td>
+          <row>
+            <entry><para>952&#135;4</para></entry>
 
-        <td>&nbsp;</td>
-      </tr>
+            <entry><para>Damaged status</para></entry>
 
-      <tr>
-        <td>952&#135;8</td>
+            <entry><para>Default values: </para><itemizedlist>
+                <listitem>
+                  <para>0 = Not damaged</para>
+                </listitem>
 
-        <td>Collection code</td>
+                <listitem>
+                  <para>1 = Damaged</para>
+                </listitem>
+              </itemizedlist></entry>
 
-        <td>&nbsp;</td>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('DAMAGE' in default installation)</para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;5</para></entry>
 
-      <tr>
-        <td>952&#135;9</td>
+            <entry><para>Use restrictions</para></entry>
 
-        <td>Item number</td>
+            <entry><para>Default values:</para><itemizedlist>
+                <listitem>
+                  <para>0 = No use restrictions </para>
+                </listitem>
 
-        <td>System-generated item number.</td>
+                <listitem>
+                  <para>1 = Restricted Access</para>
+                </listitem>
+              </itemizedlist></entry>
 
-        <td>Does not display in the item record.</td>
-      </tr>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('RESTRICT' in default installation)</para></entry>
+          </row>
 
-      <tr>
-        <td>952&#135;a</td>
+          <row>
+            <entry><para>952&#135;7</para></entry>
 
-        <td>branchcode</td>
+            <entry><para>Not for loan</para></entry>
 
-        <td>Owning Library</td>
+            <entry><para>Default values:</para><itemizedlist>
+                <listitem>
+                  <para>-1 = Ordered</para>
+                </listitem>
 
-        <td>Code must be defined in <link linkend="libsgroups">Libraries,
-        Branches and Groups</link></td>
-      </tr>
+                <listitem>
+                  <para>0 = Available for loans</para>
+                </listitem>
 
-      <tr>
-        <td>952&#135;b</td>
+                <listitem>
+                  <para>1 = Not for Loan</para>
+                </listitem>
 
-        <td>branchcode</td>
+                <listitem>
+                  <para>2 = Staff Collection</para>
+                </listitem>
+              </itemizedlist></entry>
 
-        <td>holding library (usu. the same as 952$a )</td>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('NOT_LOAN' in default installation)</para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;8</para></entry>
 
-      <tr>
-        <td>952&#135;c</td>
+            <entry><para>Collection code</para></entry>
 
-        <td>Shelving location code</td>
+            <entry><para>Coded value</para></entry>
 
-        <td>&nbsp;</td>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category
+            ('CCODE' in default installation)</para></entry>
+          </row>
 
-        <td>Coded value, matching <link linkend="authorizedvalues">Authorized
-        Value</link> category ('LOC' in default installation)</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;9</para></entry>
 
-      <tr>
-        <td>952&#135;d</td>
+            <entry><para>Item number</para></entry>
 
-        <td>Date acquired</td>
+            <entry><para>System-generated item number.</para></entry>
 
-        <td>YYYY-MM-DD</td>
+            <entry><para>Does not display in the item record.</para></entry>
+          </row>
 
-        <td>Date formats in the 952 subfields are required to be in the system
-        internal format for data loading and subsequent item editing:
-        YYYY-MM-DD</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;a</para></entry>
 
-      <tr>
-        <td>952&#135;e</td>
+            <entry><para>Owning Library</para></entry>
 
-        <td>Source of acquisition</td>
+            <entry><para>Branch code</para></entry>
 
-        <td>coded value or vendor string</td>
+            <entry><para>Code must be defined in <link
+            linkend="libsgroups">Libraries, Branches and
+            Groups</link></para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;b</para></entry>
 
-      <tr>
-        <td>952&#135;g</td>
+            <entry><para>Holding library (usually the same as 952$a
+            )</para></entry>
 
-        <td>Purchase price</td>
+            <entry><para>Branch code</para></entry>
 
-        <td>decimal number, no currency symbol</td>
+            <entry><para>Code must be defined in <link
+            linkend="libsgroups">Libraries, Branches and
+            Groups</link></para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;c</para></entry>
 
-      <tr>
-        <td>952&#135;h</td>
+            <entry><para>Shelving location code</para></entry>
 
-        <td>Serial enumeration caption</td>
+            <entry><para></para></entry>
 
-        <td>&nbsp;</td>
+            <entry><para>Coded value, matching <link
+            linkend="authorizedvalues">Authorized Value</link> category ('LOC'
+            in default installation)</para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;d</para></entry>
 
-      <tr>
-        <td>952&#135;o</td>
+            <entry><para>Date acquired</para></entry>
 
-        <td>Koha full call number</td>
+            <entry><para>YYYY-MM-DD</para></entry>
 
-        <td>&nbsp;</td>
+            <entry><para>Date formats in the 952 subfields are required to be
+            in the system internal format for data loading and subsequent item
+            editing: YYYY-MM-DD</para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;e</para></entry>
 
-      <tr>
-        <td>952&#135;p</td>
+            <entry><para>Source of acquisition</para></entry>
 
-        <td>Barcode *</td>
+            <entry><para>Coded value or vendor string</para></entry>
 
-        <td>max 20 characters</td>
+            <entry><para></para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;g</para></entry>
 
-      <tr>
-        <td>952&#135;v</td>
+            <entry><para>Purchase price</para></entry>
 
-        <td>Replacement price</td>
+            <entry><para>Decimal number, no currency symbol</para></entry>
 
-        <td>decimal number, no currency symbol</td>
+            <entry><para></para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;h</para></entry>
 
-      <tr>
-        <td>952&#135;w</td>
+            <entry><para>Serial enumeration caption</para></entry>
 
-        <td>Price effective from</td>
+            <entry><para></para></entry>
 
-        <td>YYYY-MM-DD</td>
+            <entry><para></para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;o</para></entry>
 
-      <tr>
-        <td>952&#135;y</td>
+            <entry><para>Koha full call number</para></entry>
 
-        <td>Koha item type *</td>
+            <entry><para></para></entry>
 
-        <td>coded value, required field for circulation</td>
+            <entry><para></para></entry>
+          </row>
 
-        <td>Coded value, must be defined in <link linkend="itemtypeadmin">Item
-        types</link></td>
-      </tr>
+          <row>
+            <entry><para>952&#135;p</para></entry>
 
-      <tr>
-        <td>952&#135;z</td>
+            <entry><para>Barcode *</para></entry>
 
-        <td>Public note</td>
+            <entry><para>Max 20 characters</para></entry>
 
-        <td>&nbsp;</td>
+            <entry><para></para></entry>
+          </row>
 
-        <td>&nbsp;</td>
-      </tr>
+          <row>
+            <entry><para>952&#135;v</para></entry>
+
+            <entry><para>Replacement price</para></entry>
+
+            <entry><para>Decimal number, no currency symbol</para></entry>
+
+            <entry><para></para></entry>
+          </row>
+
+          <row>
+            <entry><para>952&#135;w</para></entry>
+
+            <entry><para>Price effective from</para></entry>
+
+            <entry><para>YYYY-MM-DD</para></entry>
+
+            <entry>Date formats in the 952 subfields are required to be in the
+            system internal format for data loading and subsequent item
+            editing: YYYY-MM-DD</entry>
+          </row>
+
+          <row>
+            <entry><para>952&#135;y</para></entry>
+
+            <entry><para>Koha item type *</para></entry>
+
+            <entry><para>Coded value, required field for
+            circulation</para></entry>
+
+            <entry><para>Coded value, must be defined in <link
+            linkend="itemtypeadmin">Item types</link></para></entry>
+          </row>
+
+          <row>
+            <entry><para>952&#135;z</para></entry>
+
+            <entry><para>Public note</para></entry>
+
+            <entry><para></para></entry>
+
+            <entry><para></para></entry>
+          </row>
+        </tbody>
+      </tgroup>
     </table>
 
     <para>* - required for circulation</para>
