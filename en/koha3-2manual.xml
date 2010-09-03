@@ -1736,6 +1736,11 @@
                 <para>Enable</para>
               </listitem>
             </itemizedlist>
+
+            <para><tip>
+                <para>This notice can be customized by editing the HOLDPLACED
+                notice.</para>
+              </tip></para>
           </section>
 
           <section>
@@ -12034,16 +12039,9 @@
 
                 <orderedlist>
                   <listitem>
-                    <para>The EnhancedMessagingPreferences is turned ON</para>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para><emphasis>Get there: </emphasis>More &gt;
-                        Administration &gt; Global System Preferences &gt;
-                        Patrons &gt; <link
-                        linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
-                      </listitem>
-                    </itemizedlist>
+                    <para>The <link
+                    linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+                    is set to 'Allow'</para>
                   </listitem>
 
                   <listitem>
@@ -12064,6 +12062,19 @@
                     </itemizedlist>
                   </listitem>
                 </orderedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>HOLDPLACED (a notice to the library staff that a hold has
+            been placed)</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This notice requires the <link
+                linkend="emailLibrarianWhenHoldIsPlaced">emailLibrarianWhenHoldIsPlaced</link>
+                system preference to be set to 'Enable'</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -26009,7 +26020,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
             <entry><para>Default values:</para><itemizedlist>
                 <listitem>
-                  <para>0 = No use restrictions </para>
+                  <para>0 = No use restrictions</para>
                 </listitem>
 
                 <listitem>
