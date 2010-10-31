@@ -36,7 +36,7 @@
   </bookinfo>
 
   <chapter>
-    <title>Administration </title>
+    <title>Administration</title>
 
     <section>
       <title id="globalsysprefs">Global System Preferences</title>
@@ -15294,6 +15294,12 @@
         </listitem>
 
         <listitem>
+          <para>When the item arrives at the other branch the librarian must
+          check the item in to acknowledge that it is no longer in
+          transit</para>
+        </listitem>
+
+        <listitem>
           <para>The item will not be permanently moved to the new
           library</para>
 
@@ -15310,7 +15316,7 @@
           <itemizedlist>
             <listitem>
               <para>The item shows the same 'Home Library' but has updated the
-              'Current Location'</para>
+              'Current Location' to note where it resides at this time</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -22589,35 +22595,39 @@
   </chapter>
 
   <chapter>
-    <chapterinfo>
-      <author>
-        <firstname>Jean-André</firstname>
-
-        <surname>Santoni</surname>
-
-        <affiliation>
-          <orgname>BibLibre</orgname>
-        </affiliation>
-      </author>
-
-      <pubdate>August 2009</pubdate>
-
-      <othercredit role="translator">
-        <firstname>Nicole C.</firstname>
-
-        <surname>Engard</surname>
-
-        <contrib>Translation</contrib>
-      </othercredit>
-    </chapterinfo>
-
     <title>SOPAC2 Installation</title>
 
-    <para><note>
-        <para>The following documentation was translated using Google
-        Translate from French to English and may have some language
-        errors.</para>
-      </note></para>
+    <section>
+      <sectioninfo>
+        <author>
+          <firstname>Jean-André</firstname>
+
+          <surname>Santoni</surname>
+
+          <affiliation>
+            <orgname>BibLibre</orgname>
+          </affiliation>
+        </author>
+
+        <pubdate>August 2009</pubdate>
+
+        <othercredit role="translator">
+          <firstname>Nicole C.</firstname>
+
+          <surname>Engard</surname>
+
+          <contrib>Translation</contrib>
+        </othercredit>
+      </sectioninfo>
+
+      <title>SOPAC2 Introduction</title>
+
+      <para><note>
+          <para>The following documentation was translated using Google
+          Translate from French to English and may have some language
+          errors.</para>
+        </note></para>
+    </section>
 
     <section>
       <title>Introduction</title>
@@ -24839,260 +24849,267 @@ print theme('pages_catalog');</programlisting>
   </appendix>
 
   <appendix>
-    <appendixinfo>
-      <corpauthor>VOKAL</corpauthor>
+    <title>Handling On Order Items and Holds</title>
 
-      <editor>
-        <firstname>Nicole C.</firstname>
+    <section>
+      <sectioninfo>
+        <corpauthor>VOKAL</corpauthor>
 
-        <surname>Engard</surname>
-      </editor>
+        <editor>
+          <firstname>Nicole C.</firstname>
 
-      <pubdate>2010</pubdate>
+          <surname>Engard</surname>
+        </editor>
 
-      <bibliosource><ulink
-      url="http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho">http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho</ulink></bibliosource>
-    </appendixinfo>
+        <pubdate>2010</pubdate>
 
-    <title>Handling On Order items and holds</title>
+        <bibliosource><ulink
+        url="http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho">http://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Handling_On_Order_items_and_ho</ulink></bibliosource>
+      </sectioninfo>
 
-    <para>If you tend to import your MARC records when you have ordered the
-    book (as opposed to when you receive the books), and allow patrons to
-    place holds on those books, you may need to add item records to the *.mrc
-    file before importing.</para>
+      <title>On Order Items and Holds</title>
 
-    <para>The easiest way to import your latest order is to first run your
-    records through <ulink
-    url="http://people.oregonstate.edu/~reeset/marcedit/html/index.php">MARCEdit</ulink>.
-    Download your MARC records, saving them to your desktop or some other
-    location you use/will remember. If you have MARCEdit already installed you
-    should simply have to double click on your MARC records, and they will
-    automatically open in MARCEdit.<important>
-        <para>This tutorial was written with MARCEdit version 5.2.3769.41641
-        on Windows XP, instructions may be different if your version or
-        operating system is different.</para>
-      </important></para>
+      <para>If you tend to import your MARC records when you have ordered the
+      book (as opposed to when you receive the books), and allow patrons to
+      place holds on those books, you may need to add item records to the
+      *.mrc file before importing.</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Your original file will automatically be in the input; ensure
-        MarcBreaker is chosen, and then click "Execute"</para>
+      <para>The easiest way to import your latest order is to first run your
+      records through <ulink
+      url="http://people.oregonstate.edu/~reeset/marcedit/html/index.php">MARCEdit</ulink>.
+      Download your MARC records, saving them to your desktop or some other
+      location you use/will remember. If you have MARCEdit already installed
+      you should simply have to double click on your MARC records, and they
+      will automatically open in MARCEdit.<important>
+          <para>This tutorial was written with MARCEdit version 5.2.3769.41641
+          on Windows XP, instructions may be different if your version or
+          operating system is different.</para>
+        </important></para>
 
-        <screenshot>
-          <screeninfo>MarcBreaker</screeninfo>
+      <itemizedlist>
+        <listitem>
+          <para>Your original file will automatically be in the input; ensure
+          MarcBreaker is chosen, and then click "Execute"</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/marcbreaker.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </listitem>
+          <screenshot>
+            <screeninfo>MarcBreaker</screeninfo>
 
-      <listitem>
-        <para>You will be presented with a summary of the records processed at
-        the bottom of the screen</para>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/marcbreaker.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
 
-        <screenshot>
-          <screeninfo>MarcBreaker Summary</screeninfo>
+        <listitem>
+          <para>You will be presented with a summary of the records processed
+          at the bottom of the screen</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/marcbreaker-summary.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </listitem>
+          <screenshot>
+            <screeninfo>MarcBreaker Summary</screeninfo>
 
-      <listitem>
-        <para>Click 'Edit Records' to continue on to adding item
-        records</para>
-      </listitem>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/marcbreaker-summary.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
 
-      <listitem>
-        <para>Your screen will be replaced with a larger screen containing the
-        MARC records</para>
+        <listitem>
+          <para>Click 'Edit Records' to continue on to adding item
+          records</para>
+        </listitem>
 
-        <screenshot>
-          <screeninfo>MARC file for editing</screeninfo>
+        <listitem>
+          <para>Your screen will be replaced with a larger screen containing
+          the MARC records</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/editrecords.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </listitem>
+          <screenshot>
+            <screeninfo>MARC file for editing</screeninfo>
 
-      <listitem>
-        <para>Click on Tools &gt; Add/Edit Field</para>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/editrecords.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
 
-        <screenshot>
-          <screeninfo>Add/Delete Field</screeninfo>
+        <listitem>
+          <para>Click on Tools &gt; Add/Edit Field</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/addfield.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </listitem>
+          <screenshot>
+            <screeninfo>Add/Delete Field</screeninfo>
 
-      <listitem>
-        <para>Enter in the Koha specific item info</para>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/addfield.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
 
-        <screenshot>
-          <screeninfo>Add 942 Field</screeninfo>
+        <listitem>
+          <para>Enter in the Koha specific item info</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/add942.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
+          <screenshot>
+            <screeninfo>Add 942 Field</screeninfo>
 
-        <itemizedlist>
-          <listitem>
-            <para>In the Field box, type 942</para>
-          </listitem>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/add942.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
 
-          <listitem>
-            <para>In the Field Data box, type \\$c and the item type code
-            (\\$cBOOK in this example)</para>
-          </listitem>
+          <itemizedlist>
+            <listitem>
+              <para>In the Field box, type 942</para>
+            </listitem>
 
-          <listitem>
-            <para>Check the 'Insert last' option</para>
-          </listitem>
+            <listitem>
+              <para>In the Field Data box, type \\$c and the item type code
+              (\\$cBOOK in this example)</para>
+            </listitem>
 
-          <listitem>
-            <para>Click 'Add Field'</para>
-          </listitem>
-        </itemizedlist>
-      </listitem>
+            <listitem>
+              <para>Check the 'Insert last' option</para>
+            </listitem>
 
-      <listitem>
-        <para>Enter in the item record data</para>
+            <listitem>
+              <para>Click 'Add Field'</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
 
-        <screenshot>
-          <screeninfo>Add 952 Field</screeninfo>
+        <listitem>
+          <para>Enter in the item record data</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/add952.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
+          <screenshot>
+            <screeninfo>Add 952 Field</screeninfo>
 
-        <itemizedlist>
-          <listitem>
-            <para>In the Field box, type 952</para>
-          </listitem>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/add952.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
 
-          <listitem>
-            <para>In the Field Data box, type
-            $7ORDERED_STATUS$aPERM_LOC$bCURR_LOC$cSHELVING_LOCATION$eSOURCE_OF_ACQ$yITEM_TYPE</para>
+          <itemizedlist>
+            <listitem>
+              <para>In the Field box, type 952</para>
+            </listitem>
 
-            <itemizedlist>
-              <listitem>
-                <para>ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK</para>
+            <listitem>
+              <para>In the Field Data box, type
+              $7ORDERED_STATUS$aPERM_LOC$bCURR_LOC$cSHELVING_LOCATION$eSOURCE_OF_ACQ$yITEM_TYPE</para>
 
-                <itemizedlist>
-                  <listitem>
-                    <para>In a default install of Koha -1 is the value for the
-                    Ordered status</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
+              <itemizedlist>
+                <listitem>
+                  <para>ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK</para>
 
-              <listitem>
-                <para>You may want to look at other subfields you would like
-                data in -- for example, changing the collection code to put
-                all the items in the same collection (8), automatically fill
-                in the acquisition date (d), or put in a public note
-                (z).</para>
-              </listitem>
+                  <itemizedlist>
+                    <listitem>
+                      <para>In a default install of Koha -1 is the value for
+                      the Ordered status</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
 
-              <listitem>
-                <para>Be sure you use the $ to separate subfields; adding each
-                subfield on a separate line will cause that many items to be
-                imported with your MARC record (in the example above, four
-                items, each with one of those subfields corrected)</para>
-              </listitem>
+                <listitem>
+                  <para>You may want to look at other subfields you would like
+                  data in -- for example, changing the collection code to put
+                  all the items in the same collection (8), automatically fill
+                  in the acquisition date (d), or put in a public note
+                  (z).</para>
+                </listitem>
 
-              <listitem>
-                <para>Make sure you look at the Administration &gt; Authorized
-                Values in Koha to put the correct code into the field</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
+                <listitem>
+                  <para>Be sure you use the $ to separate subfields; adding
+                  each subfield on a separate line will cause that many items
+                  to be imported with your MARC record (in the example above,
+                  four items, each with one of those subfields
+                  corrected)</para>
+                </listitem>
 
-          <listitem>
-            <para>Check the 'Insert last' option</para>
-          </listitem>
+                <listitem>
+                  <para>Make sure you look at the Administration &gt;
+                  Authorized Values in Koha to put the correct code into the
+                  field</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
 
-          <listitem>
-            <para>Click 'Add Field'</para>
-          </listitem>
-        </itemizedlist>
-      </listitem>
+            <listitem>
+              <para>Check the 'Insert last' option</para>
+            </listitem>
 
-      <listitem>
-        <para>Close the field editor window</para>
-      </listitem>
+            <listitem>
+              <para>Click 'Add Field'</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
 
-      <listitem>
-        <para>Click on File &gt; Compile into MARC</para>
+        <listitem>
+          <para>Close the field editor window</para>
+        </listitem>
 
-        <screenshot>
-          <screeninfo>Compile into MARC</screeninfo>
+        <listitem>
+          <para>Click on File &gt; Compile into MARC</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/appendix-onorder/compile.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </listitem>
+          <screenshot>
+            <screeninfo>Compile into MARC</screeninfo>
 
-      <listitem>
-        <para>Choose where to save your file</para>
-      </listitem>
-    </itemizedlist>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-onorder/compile.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
 
-    <para>Now you want to go into your Koha system and follow the instructions
-    for <link linkend="stagemarc">importing MARC records</link>.</para>
+        <listitem>
+          <para>Choose where to save your file</para>
+        </listitem>
+      </itemizedlist>
 
-    <para>Once the item has come in, you will need to go to the item record
-    and individually change the item to have the correct barcode, and manually
-    change the status from Ordered to the blank line in the Not for Loan
-    field.</para>
+      <para>Now you want to go into your Koha system and follow the
+      instructions for <link linkend="stagemarc">importing MARC
+      records</link>.</para>
 
-    <tip>
-      <para>If you purchase your cataloged item records, you may want to
-      request your vendor put in the information you need into the MARC
-      records for you; that way, you could import the edited-by-the-vendor
-      file, overwriting the current record, automatically replacing the data
-      with what you need.</para>
-    </tip>
+      <para>Once the item has come in, you will need to go to the item record
+      and individually change the item to have the correct barcode, and
+      manually change the status from Ordered to the blank line in the Not for
+      Loan field.</para>
+
+      <tip>
+        <para>If you purchase your cataloged item records, you may want to
+        request your vendor put in the information you need into the MARC
+        records for you; that way, you could import the edited-by-the-vendor
+        file, overwriting the current record, automatically replacing the data
+        with what you need.</para>
+      </tip>
+    </section>
   </appendix>
 
   <appendix>
-    <appendixinfo>
-      <corpauthor>NEKLS</corpauthor>
-
-      <pubdate>2008</pubdate>
-
-      <bibliosource><ulink
-      url="http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/">http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/</ulink></bibliosource>
-    </appendixinfo>
-
     <title>Configuring Receipt Printers</title>
 
     <para>The following instructions are for specific receipt printers, but
     can probably be used to help with setup of other brands as well.</para>
 
     <section>
+      <sectioninfo>
+        <corpauthor>NEKLS</corpauthor>
+
+        <pubdate>2008</pubdate>
+
+        <bibliosource><ulink
+        url="http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/">http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/</ulink></bibliosource>
+      </sectioninfo>
+
       <title>For Epson TM-T88III (3) &amp; TM-T88IV (4) Printers</title>
 
       <para></para>
@@ -25248,6 +25265,15 @@ print theme('pages_catalog');</programlisting>
     </section>
 
     <section>
+      <sectioninfo>
+        <corpauthor>NEKLS</corpauthor>
+
+        <pubdate>2008</pubdate>
+
+        <bibliosource><ulink
+        url="http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/">http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/</ulink></bibliosource>
+      </sectioninfo>
+
       <title>For Epson TM-T88II (2) Printers</title>
 
       <para>Register at the <ulink
@@ -25392,6 +25418,100 @@ print theme('pages_catalog');</programlisting>
         <para>A reboot may be required, even if not indicated by the
         installation software or the operating system.</para>
       </section>
+    </section>
+
+    <section>
+      <sectioninfo>
+        <corpauthor>VOKAL</corpauthor>
+
+        <editor>
+          <firstname>Nicole C.</firstname>
+
+          <surname>Engard</surname>
+        </editor>
+
+        <pubdate>2010</pubdate>
+
+        <bibliosource><ulink
+        url="https://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Setting_up_your_SLIP_printer_1_18087191815760117">https://docs.google.com/View?id=dcccx9zm_3htvhwzgc#Setting_up_your_SLIP_printer_1_18087191815760117</ulink></bibliosource>
+      </sectioninfo>
+
+      <title>Configuring Firefox to Print to Receipt Printer</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>Open File &gt; Page Setup</para>
+        </listitem>
+
+        <listitem>
+          <para>Make all the headers and footers blank</para>
+        </listitem>
+
+        <listitem>
+          <para>Set the margins to 0 (zero)</para>
+        </listitem>
+
+        <listitem>
+          <para>In the address bar of Firefox, type about:config</para>
+        </listitem>
+
+        <listitem>
+          <para>Search for print.always_print_silent and double click
+          it</para>
+        </listitem>
+
+        <listitem>
+          <para>Change it from false to true</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This lets you skip the Print pop up box that comes up, as
+              well as skipping the step where you have to click OK,
+              automatically printing the right sized slip.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>If print.always_print_silent does not come up</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Right click on a blank area of the preference
+              window</para>
+            </listitem>
+
+            <listitem>
+              <para>Select new &gt; Boolean</para>
+            </listitem>
+
+            <listitem>
+              <para>Enter "print.always_print_silent" as the name (without
+              quotes)</para>
+            </listitem>
+
+            <listitem>
+              <para>Click OK</para>
+            </listitem>
+
+            <listitem>
+              <para>Select true for the value</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>You may also want to check what is listed for
+          print.print_printer</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>You may have to choose Generic/Text Only (or whatever your
+              receipt printer might be named)</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
     </section>
   </appendix>
 
@@ -28537,23 +28657,23 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
   </appendix>
 
   <appendix>
-    <appendixinfo>
-      <author>
-        <firstname>Nicolas</firstname>
-
-        <surname>Morin</surname>
-
-        <affiliation>
-          <orgname>BibLibre</orgname>
-        </affiliation>
-      </author>
-
-      <pubdate>December 2009</pubdate>
-    </appendixinfo>
-
     <title>Using the SRU server</title>
 
     <section>
+      <sectioninfo>
+        <author>
+          <firstname>Nicolas</firstname>
+
+          <surname>Morin</surname>
+
+          <affiliation>
+            <orgname>BibLibre</orgname>
+          </affiliation>
+        </author>
+
+        <pubdate>December 2009</pubdate>
+      </sectioninfo>
+
       <title>Using the SRU server</title>
 
       <para>Koha implements the Search/Retrieve via URL (SRU) protocol. More
