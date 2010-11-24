@@ -11938,11 +11938,20 @@
             <itemizedlist>
               <listitem>
                 <important>
-                  <para>On Overdue Notices make sure to use
+                  <para>On overdue notices make sure to use
                   &lt;&lt;items.content&gt;&gt; to print out the data related
                   to all items that are overdue. The other option is to use
                   the &lt;item&gt;&lt;/item&gt; tags to span the line so that
                   it will print out multiple lines</para>
+                </important>
+              </listitem>
+
+              <listitem>
+                <important>
+                  <para>Only the overdue notices take advantage of the
+                  &lt;item&gt;&lt;/item&gt; tags, all other notices
+                  referencing items need to use
+                  &lt;&lt;items.content&gt;&gt;</para>
                 </important>
               </listitem>
             </itemizedlist>
@@ -24840,7 +24849,770 @@ print theme('pages_catalog');</programlisting>
       </itemizedlist>
     </section>
   </appendix>
+          <appendix>
+    <title>Cataloging Cheat Sheet</title>
 
+    <para></para>
+
+    <section>
+      <sectioninfo>
+        <author>
+          <firstname>Jared</firstname>
+
+          <surname>Camins-Esakov</surname>
+        </author>
+
+        <affiliation>
+          <orgname>American Numismatic Society</orgname>
+        </affiliation>
+
+        <pubdate>2010</pubdate>
+      </sectioninfo>
+
+      <title>Cataloging Cheat Sheet</title>
+
+      <table cellpadding="4" cellspacing="4" frame="all">
+        <title>Cataloging Guide</title>
+
+        <tgroup align="left" cols="4" colsep="1" rowsep="1">
+          <thead>
+            <row>
+              <entry><para>Tag</para></entry>
+
+              <entry><para>Label</para></entry>
+
+              <entry><para>Description</para></entry>
+
+              <entry><para>Instructions</para></entry>
+            </row>
+          </thead>
+
+          <tbody>
+            <row>
+              <entry><para>000</para></entry>
+
+              <entry><para>LEADER</para></entry>
+
+              <entry><para>Describes the record(i.e. surrogate) -- is it a
+              record for a monograph? A serial?</para></entry>
+
+              <entry><para>Click in this field to fill it in. Then set
+              "Bibliographic level" to 'a' for articles or 's' for serials.
+              Otherwise, leave everything as is.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>001</para></entry>
+
+              <entry><para>CONTROL NUMBER</para></entry>
+
+              <entry><para>Accession number.</para></entry>
+
+              <entry><para>Enter the accession number written inside the item
+              here. For articles and items which do not have accession
+              numbers, leave blank.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>003</para></entry>
+
+              <entry><para>CONTROL NUMBER IDENTIFIER</para></entry>
+
+              <entry><para>Your MARC Organizational Code</para></entry>
+
+              <entry><para>Click in this field to fill it in (will auto fill
+              if you have your <link linkend="MARCOrgCode">MARCOrgCode</link>
+              preference set).</para></entry>
+            </row>
+
+            <row>
+              <entry><para>005</para></entry>
+
+              <entry><para>D &amp; T LATEST TRANSACTION</para></entry>
+
+              <entry><para>Current date and time.</para></entry>
+
+              <entry><para>Click in this field to fill it in.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>008</para></entry>
+
+              <entry><para>FIXED-LENGTH DATA ELEMENTS</para></entry>
+
+              <entry><para>Field containing computer-readable representations
+              of a number of things.</para></entry>
+
+              <entry><para>Generally you will only use 's' (single) or 'm'
+              (multiple) options for position 06- use the former when the item
+              was published in a single year, the latter when it was published
+              over the course of several. If there is a single date, only
+              enter a date in the first date field (positions 07-10). Enter
+              the three-digit country code in positions 15-17, being sure to
+              add spaces if the country code is fewer than three characters
+              long. If there is an index, note that fact in position 31. Enter
+              the three-letter language code in positions
+              35-37.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>010</para></entry>
+
+              <entry><para>LCCN</para></entry>
+
+              <entry><para>A number assigned by the Library of Congress to
+              uniquely identify the work.</para></entry>
+
+              <entry><para>Check on the copyright page of the book (if it was
+              published in the US) or the LC catalog for this number. If you
+              can't find it, don't worry about it.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>020</para></entry>
+
+              <entry><para>ISBN</para></entry>
+
+              <entry><para>Unique number used by publishers to identify
+              books.</para></entry>
+
+              <entry><para>If this number isn't listed on the book, there
+              probably isn't one.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>022</para></entry>
+
+              <entry><para>ISSN</para></entry>
+
+              <entry><para>Unique number used by publishers to identify
+              serials.</para></entry>
+
+              <entry><para>If this number isn't listed on the book, there
+              probably isn't one.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>033</para></entry>
+
+              <entry><para>DATE/TIME OF EVENT</para></entry>
+
+              <entry><para>Used for auction dates. Required for auction
+              catalogs.</para></entry>
+
+              <entry><para>For auctions that took place on only one day, enter
+              the date of the auction in the format YYYYMMDD in the subfield
+              'a' and a '0' in the first indicator. For auctions that took
+              place over two consecutive days or any number of non-consecutive
+              days, create a subfield 'a' for each day with the date in the
+              format YYYYMMDD, and put a '1' in the first indicator. For
+              auctions that took place over more than two consecutive days,
+              create a subfield 'a' (in format YYYYMMDD) for the first day and
+              a subfield 'a' (also in format YYYYMMDD) for the last day, and
+              put a '2' in the first indicator.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>040</para></entry>
+
+              <entry><para>CATALOGING SOURCE</para></entry>
+
+              <entry><para>Identifies which libraries created and modified the
+              record.</para></entry>
+
+              <entry><para>For imported records, add a subfield 'd' with the
+              text 'NNAN'. For new records, make sure that the subfield 'c'
+              says 'NNAN'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>041</para></entry>
+
+              <entry><para>LANGUAGE CODE</para></entry>
+
+              <entry><para>Identifies all the languages used in an item, when
+              two or more languages are present.</para></entry>
+
+              <entry><para>For significant portions of a text in a given
+              language, there should be a subfield 'a' with that language
+              code. If there are only summaries or abstracts in a specific
+              language, create a subfield 'b' with that language
+              code.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>100</para></entry>
+
+              <entry><para>MAIN ENTRY--PERSONAL</para></entry>
+
+              <entry><para>Authorized form of the main author's
+              name</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. The first
+              indicator should generally be a '1', to indicate that the entry
+              is surname first. If the name consists only of a forename,
+              however, the first indicator should be '0'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>110</para></entry>
+
+              <entry><para>MAIN ENTRY--CORPORATE</para></entry>
+
+              <entry><para>Authorized form of the name of the main corporate
+              author. Required for auction catalogs.</para></entry>
+
+              <entry><para>Auction catalogs should use a 110 field rather than
+              a 100 field. See Authorized headings sheet and AACR2. Set the
+              first indicator to '2'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>111</para></entry>
+
+              <entry><para>MAIN ENTRY--MEETING</para></entry>
+
+              <entry><para>Authorized form of the name of a meeting which
+              acted as a main offer (e.g. conference
+              proceedings)</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to '2'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>245</para></entry>
+
+              <entry><para>TITLE STATEMENT</para></entry>
+
+              <entry><para>Transcription of the title statement from the title
+              page (or chief source of information)</para></entry>
+
+              <entry><para>Enter the title in subfield 'a', the subtitle in
+              subfield 'b', and the statement of responsibility in subfield
+              'c'. If you are creating a record for a single volume or part of
+              a multi-part item, you should put the part number in subfield
+              'n' and the part title in subfield 'p.' For auction catalogs,
+              the date (in 'MM/DD/YYYY' format) should be listed in square
+              brackets in subfield 'f'. See ISBD punctuation sheet. Set the
+              first indicator to '0' if there is no author, otherwise set it
+              to '1'. Set the second indicator to the number of non-filing
+              characters (i.e. characters in an initial articles plus the
+              space... for "The " set the second indicator to
+              '4').</para></entry>
+            </row>
+
+            <row>
+              <entry><para>246</para></entry>
+
+              <entry><para>VARYING FORM OF TITLE</para></entry>
+
+              <entry><para>Alternate form of title for searching and filing
+              purposes</para></entry>
+
+              <entry><para>If the patron might look for the work under a
+              different title, enter it here. Do not include initial articles.
+              The first indicator should be '3', unless the title is merely a
+              variant spelling, in which case the first indicator should be
+              '1'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>250</para></entry>
+
+              <entry><para>EDITION STATEMENT</para></entry>
+
+              <entry><para>Transcription of the edition statement from the
+              title page (or chief source of information)</para></entry>
+
+              <entry><para>Transcribe the edition statement exactly as it
+              appears on the title-page. You may abbreviate if the edition
+              statement is very long.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>260</para></entry>
+
+              <entry><para>PUBLICATION (IMPRINT)</para></entry>
+
+              <entry><para>Publication information.</para></entry>
+
+              <entry><para>Put the location of publication in subfield 'a',
+              the publisher in subfield 'b', and the year (or probable year)
+              in subfield 'c'. See ISBD punctuation sheet.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>300</para></entry>
+
+              <entry><para>PHYSICAL DESCRIPTION</para></entry>
+
+              <entry><para>Physical description</para></entry>
+
+              <entry><para>Enter the pagination statement in subfield 'a', a
+              brief description of "special" contents such as illustrations or
+              maps in subfield 'b' (see AACR2), and the size of the item in
+              subfield 'c'. See ISBD punctuation sheet.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>490</para></entry>
+
+              <entry><para>SERIES STATEMENT</para></entry>
+
+              <entry><para>Shows the series statement exactly as it appears on
+              the item.</para></entry>
+
+              <entry><para>Transcribe the series statement into subfield 'a'
+              with the volume number in subfield 'v'. See ISBD punctuation
+              sheet. Set the first indicator to '1' if you are using an 830.
+              As a general rule, you should do so.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>500</para></entry>
+
+              <entry><para>GENERAL NOTE</para></entry>
+
+              <entry><para>Notes that don't fit anywhere else.</para></entry>
+
+              <entry><para>Enter notes as full sentences, with a separate 500
+              field for each distinct topic.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>501</para></entry>
+
+              <entry><para>WITH NOTE</para></entry>
+
+              <entry><para>Notes whether the work is bound with the works
+              described by other records.</para></entry>
+
+              <entry><para>Put description of relationship in subfield
+              'a'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>504</para></entry>
+
+              <entry><para>BIBLIOGRAPHY, ETC. NOTE</para></entry>
+
+              <entry><para>Indicates whether the work includes a
+              bibliography.</para></entry>
+
+              <entry><para>If the work includes a bibliography and index, put
+              the text "Includes bibliographical references (p. XXX-XXX) and
+              index." in subfield 'a'. If the work does not include an index,
+              remove that part of the sentence. If the references are
+              scattered throughout the work and not gathered into a distinct
+              sentence, remove the parenthetical statement.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>505</para></entry>
+
+              <entry><para>FORMATTED CONTENTS</para></entry>
+
+              <entry><para>List of contents in a standard format. Unformatted
+              contents can be listed in a 500 (General Note)
+              field.</para></entry>
+
+              <entry><para>See ISBD punctuation sheet. Set the first indicator
+              to '0'. If you are separately coding authors and titles, set the
+              second indicator to '0'. Otherwise, leave the second indicator
+              blank.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>518</para></entry>
+
+              <entry><para>DATE/TIME OF EVENT NOTE</para></entry>
+
+              <entry><para>Used for auction dates.</para></entry>
+
+              <entry><para>For auction catalogs, enter the date of the auction
+              in the format 'January 2, 1984' in the subfield
+              'a'</para></entry>
+            </row>
+
+            <row>
+              <entry><para>520</para></entry>
+
+              <entry><para>SUMMARY, ETC.</para></entry>
+
+              <entry><para>A brief summary or abstract of the book or
+              article.</para></entry>
+
+              <entry><para>In general you do not need to write a summary. A
+              summary might be called for, however, with items that cannot be
+              easily reviewed by a patron, such as books with highly acidic
+              paper or CD-ROMs.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>546</para></entry>
+
+              <entry><para>LANGUAGE NOTE</para></entry>
+
+              <entry><para>Note describing the languages used in the
+              work</para></entry>
+
+              <entry><para>Only needed for works in multiple languages. See
+              ISBD punctuation sheet.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>561</para></entry>
+
+              <entry><para>PROVENANCE INFORMATION</para></entry>
+
+              <entry><para>Describes the previous ownership of the
+              item.</para></entry>
+
+              <entry><para>Use only for rare books.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>563</para></entry>
+
+              <entry><para>BINDING INFORMATION</para></entry>
+
+              <entry><para>Describes the binding of the item.</para></entry>
+
+              <entry><para>Use only for rare books.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>590</para></entry>
+
+              <entry><para>LOCAL NOTE</para></entry>
+
+              <entry><para>Local notes. Required for auction
+              catalogs.</para></entry>
+
+              <entry><para>Used for auction catalogs to indicate what types of
+              coins are sold in the auction- Roman, Greek, etc.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>600</para></entry>
+
+              <entry><para>SUBJECT ADDED--PERSONAL</para></entry>
+
+              <entry><para>Authorized form of personal names for people
+              discussed in the work</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. The first
+              indicator should generally be a '1', to indicate that the entry
+              is surname first. If the name consists only of a forename,
+              however, the first indicator should be '0'. If you found the
+              name in the LC authority file, set the second indicator to '0'.
+              Otherwise set the second indicator to '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>610</para></entry>
+
+              <entry><para>SUBJECT ADDED--CORPORATE</para></entry>
+
+              <entry><para>Authorized form of corporate names for
+              organizations discussed in the work</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to '2'. If you found the name in the LC
+              authority file, set the second indicator to '0'. Otherwise set
+              the second indicator to '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>611</para></entry>
+
+              <entry><para>SUBJECT ADDED--MEETING</para></entry>
+
+              <entry><para>Authorized form of meeting names for meetings
+              discussed in the work</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to '2'. If you found the name in the LC
+              authority file, set the second indicator to '0'. Otherwise set
+              the second indicator to '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>630</para></entry>
+
+              <entry><para>SUBJECT ADDED--UNIFORM TITLE</para></entry>
+
+              <entry><para>Authorized form of titles for other works discussed
+              in the work</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to the number of non-filing characters (i.e.
+              characters in an initial articles plus the space... for "The "
+              set the first indicator to '4'). If you found the name in the LC
+              authority file, set the second indicator to '0'. Otherwise set
+              the second indicator to '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>650</para></entry>
+
+              <entry><para>SUBJECT ADDED--TOPICAL</para></entry>
+
+              <entry><para>Library of Congress Subject Heading terms
+              describing the subject of the work</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. If you
+              found the name in the LC authority file, set the second
+              indicator to '0'. Otherwise set the second indicator to
+              '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>651</para></entry>
+
+              <entry><para>SUBJECT ADDED--GEOGRAPHICAL</para></entry>
+
+              <entry><para>Library of Congress Subject Heading geographical
+              terms describing the subject of the work</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. If you
+              found the name in the LC authority file, set the second
+              indicator to '0'. Otherwise set the second indicator to
+              '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>655</para></entry>
+
+              <entry><para>INDEX TERM--GENRE/FORM</para></entry>
+
+              <entry><para>Describes what an item is as opposed to what the
+              item is about.</para></entry>
+
+              <entry><para>Generally used only for auction catalogs, which
+              should have the genre heading "Auction catalogs." (make sure to
+              find the authorized heading!) If you found the name in the LC
+              authority file, set the second indicator to '0'. If you are
+              using a term from a specific thesaurus, set the second indicator
+              to '7' and put the code for the thesaurus in subfield '2'.
+              Otherwise set the second indicator to '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>690</para></entry>
+
+              <entry><para>LOCAL SUBJECT ADDED--TOPICAL</para></entry>
+
+              <entry><para>Used for headings from the ANS custom subject
+              authority file.</para></entry>
+
+              <entry><para>If there is no appropriate LCSH term, you can use a
+              690 with subject headings you find on other items in the
+              catalog.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>691</para></entry>
+
+              <entry><para>LOCAL SUBJECT ADDED--GEOGRAPHICAL</para></entry>
+
+              <entry><para>Used for headings from the ANS custom subject
+              authority file.</para></entry>
+
+              <entry><para>If there is no appropriate LCSH term, you can use a
+              691 with subject headings you find on other items in the
+              catalog.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>693</para></entry>
+
+              <entry><para>ANS COLLECTION SOLD AT AUCTION</para></entry>
+
+              <entry><para>Used for named collections that are sold at
+              auction.</para></entry>
+
+              <entry><para>Enter the name of the collection's owner (in
+              inverted order for personal names and direct order for corporate
+              names) in the subfield 'a', leaving out the word "collection" if
+              the catalog includes it.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>700</para></entry>
+
+              <entry><para>ADDED ENTRY--PERSONAL</para></entry>
+
+              <entry><para>Used for second authors and other persons related
+              to the production of the work.</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. The first
+              indicator should generally be a '1', to indicate that the entry
+              is surname first. If the name consists only of a forename,
+              however, the first indicator should be '0'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>710</para></entry>
+
+              <entry><para>ADDED ENTRY--CORPORATE</para></entry>
+
+              <entry><para>Used for corporate bodies related to the production
+              of the work (e.g. publishers).</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to '2'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>711</para></entry>
+
+              <entry><para>ADDED ENTRY--MEETING</para></entry>
+
+              <entry><para>Used for meetings related to the production of the
+              work (e.g. symposia that contributed to the
+              work).</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to '2'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>730</para></entry>
+
+              <entry><para>ADDED ENTRY--UNIFORM TITLE</para></entry>
+
+              <entry><para>Used for uniform titles related to the production
+              of the work (e.g. a work that inspired the present
+              work)</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              first indicator to the number of non-filing characters (i.e.
+              characters in an initial articles plus the space... for "The "
+              set the first indicator to '4').</para></entry>
+            </row>
+
+            <row>
+              <entry><para>773</para></entry>
+
+              <entry><para>HOST ITEM ENTRY</para></entry>
+
+              <entry><para>Describes the larger bibliographic unit that
+              contains the work (e.g. book or journal containing the article
+              being described in the current record)</para></entry>
+
+              <entry><para>If the host publication is author main entry, enter
+              the authorized form of the author's name in subfield 'a'. Put
+              the title in subfield 't'. If the host publication is an
+              independent work, put publication information in subfield 'd'.
+              When available, ISSN and ISBN should always be used in, in
+              subfields 'x' and 'z' respectively. Relationship information
+              (e.g. volume number, page number, etc.) goes in subfield 'g'.
+              Subfield 'q' contains an encoded representation of the location
+              of the item: volume, issue, and section numbers are separated by
+              colons, and the first page is entered following a '&lt;' at the
+              end of the subfield. See ISBD punctuation sheet. Set the first
+              indicator to '0'. If you want the label "In:" to be generated,
+              leave the second indicator blank. If you want something else
+              displayed before the 773 text, set the second indicator to '8'
+              and add a subfield 'i' with the label you want at the beginning
+              of the field (e.g. "$iOffprint from:").</para></entry>
+            </row>
+
+            <row>
+              <entry><para>830</para></entry>
+
+              <entry><para>SERIES ENTRY--UNIFORM TITLE</para></entry>
+
+              <entry><para>Authorized form of the series name transcribed in
+              the 490 field. Often this will just be the same as the
+              490.</para></entry>
+
+              <entry><para>See Authorized headings sheet and AACR2. Set the
+              second indicator to the number of non-filing characters (i.e.
+              characters in an initial articles plus the space... for "The "
+              set the second indicator to '4').</para></entry>
+            </row>
+
+            <row>
+              <entry><para>852</para></entry>
+
+              <entry><para>LOCATION/CALL NUMBER</para></entry>
+
+              <entry><para>Provides the section name for pre-barcode books,
+              pamphlets, and some articles and serials.</para></entry>
+
+              <entry><para>Do not put anything in this field if you are
+              cataloging a volume which gets only one record and a barcode. If
+              the item does not get a barcode, or you are currently creating a
+              record for an article in a volume, put the section in subfield
+              'a' (see ANS cataloging documentation), and the call number in
+              subfield 'i'. Set the first indicator to '8'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>856</para></entry>
+
+              <entry><para>ELECTRONIC ACCESS</para></entry>
+
+              <entry><para>Links to material available online.</para></entry>
+
+              <entry><para>Put the URL of any electronic copies or summaries,
+              etc. in subfield 'u'. Set the first indicator to
+              '4'.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>942</para></entry>
+
+              <entry><para>ADDED ENTRY ELEMENTS (KOHA)</para></entry>
+
+              <entry><para>Used for Koha-specific data.</para></entry>
+
+              <entry><para>Set the subfield 'c' to the appropriate item
+              type.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>993</para></entry>
+
+              <entry><para>ANS PRE-KOHA CATALOGING NOTE</para></entry>
+
+              <entry><para>Used for notes concerning the record (i.e.
+              surrogate) written prior to the transition to
+              Koha.</para></entry>
+
+              <entry><para>See ANS cataloging documentation.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>996</para></entry>
+
+              <entry><para>ANS POST-KOHA CATALOGING NOTE</para></entry>
+
+              <entry><para>Used for notes concerning the record (i.e.
+              surrogate) written after the start of the transition to
+              Koha.</para></entry>
+
+              <entry><para>See ANS cataloging documentation.</para></entry>
+            </row>
+
+            <row>
+              <entry><para>997</para></entry>
+
+              <entry><para>ANS LEGACY METADATA</para></entry>
+
+              <entry><para>Used for bits and bobs stored in old LOAC
+              records.</para></entry>
+
+              <entry><para>See ANS cataloging documentation.</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+      </appendix>
   <appendix>
     <title>Handling On Order Items and Holds</title>
 
