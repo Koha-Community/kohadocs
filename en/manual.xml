@@ -898,7 +898,7 @@
                 value</link> for 942$n field should be set to eliminate
                 errors. One example would be to create an authorized value
                 titled SUPRESS with a value of 0 for don’t suppress and 1 for
-                suppress. </para>
+                suppress.</para>
               </listitem>
             </itemizedlist>
 
@@ -1120,11 +1120,11 @@
                 records automatically (952$o). The value is set by providing
                 the MARC field code (050, 082, 090, 852 are all common) and
                 the subfield codes without the delimiters ($a, $b would be
-                ab). </para>
+                ab).</para>
               </listitem>
             </itemizedlist>
 
-            <para>Examples: </para>
+            <para>Examples:</para>
 
             <itemizedlist>
               <listitem>
@@ -1434,7 +1434,7 @@
                 which case the new location will be marked as a holding
                 location) or returned. Setting it to “Do” will ensure that
                 items checked in at a branch other than their home branch will
-                be sent to that home branch. </para>
+                be sent to that home branch.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -1446,7 +1446,7 @@
 
             <para>Asks: Make all checkouts due on or before ___</para>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -1528,7 +1528,7 @@
 
             <para>Asks: Make all checkouts have a due date of ___</para>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -1575,7 +1575,7 @@
                 from a different branch. Essentially it decides whether a
                 library may check the borrowed item back out to its patron or
                 if it must immediately send the item back to the owning
-                location. </para>
+                location.</para>
               </listitem>
             </itemizedlist>
 
@@ -1699,7 +1699,7 @@
                 items. This also coincides with <link
                 linkend="maxoutstanding">maxoutstanding</link> that limits
                 patrons from placing holds when the maximum amount is owed to
-                the library. </para>
+                the library.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -1824,6 +1824,20 @@
                 <para>Require</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This is preference may prevent a patron from having
+                items checked out after their library card has expired. If
+                this is set to “Require”, then a due date of any checked out
+                item can not be set for a date which falls after the patron’s
+                card expiration. If the setting is left “Don't require” then
+                item check out dates may exceed the expiration date for the
+                patron’s library card.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -1856,6 +1870,20 @@
             <para>Asks: Show a warning on the "Transfers to Receive" screen if
             the transfer has not been received ___ days after it is
             sent.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The TransferMaxDaysWarning preference is set at a
+                default number of days. This preference allows for a warning
+                to appear after a set amount of time if an item being
+                transferred between library branches has not been received.
+                The warning will appear in the <link
+                linkend="transferstoreceive">Transfers to Receive</link>
+                report.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -1928,6 +1956,40 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference controls how scheduled library closures
+                affect the due date of a material. The 'the calendar to skip
+                all days the library is closed' setting allows for a scheduled
+                closure not to count as a day in the loan period, the
+                'circulation rules only' setting would not consider the
+                scheduled closure at all, and 'the calendar to push the due
+                date to the next open day' would only effect the due date if
+                the day the item is due would fall specifically on the day of
+                closure. </para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Example:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The library has put December 24th and 25th in as
+                closures on the calendar. A book checked out by a patron has a
+                due date of December 25th according to the circulation and
+                fine rules. If this preference is set to 'circulation rules
+                only' then the item will remain due on the 25th. If the
+                preference is set to 'the calendar to push the due date to the
+                next open day' then the due date will be December 26th. If the
+                preference is set to 'the calendar to skip all days the
+                library is closed' then the due date will be pushed to the
+                26th of December to accommodate for the two closed
+                days.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>The calendar is defined on a branch by branch basis. To
             learn more about the calendar, check out the '<link
             linkend="calholidays">Calendar &amp; Holidays</link>' section of
@@ -1971,8 +2033,8 @@
                 linkend="calholidays">Calendar</link> module and be
                 considerate of dates when the library is closed. To make use
                 of this setting the administrator must first access Koha’s
-                calendar and mark certain days as “holidays” ahead of time.
-                </para>
+                calendar and mark certain days as “holidays” ahead of
+                time.</para>
               </listitem>
             </itemizedlist>
 
@@ -2334,6 +2396,18 @@
 
             <para>Asks: Mark a hold as problematic if it has been waiting for
             more than ___ days.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference puts an expiration date on an item a
+                patron has on hold. After this expiration date the staff will
+                have the option to release the unclaimed hold which then may
+                be returned to the library shelf or issued to the next patron
+                on the item’s hold list. </para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -2356,6 +2430,21 @@
                 <para>Don't automatically</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference refers to ‘item specific’ holds where
+                the item is currently on the library shelf. This preference
+                allows a library to decide whether an ‘item specific’ hold is
+                marked as “Waiting” at the time the hold is placed or if the
+                item will be marked as “Waiting” after the item is checked in.
+                This preference will tell the patron that their item is
+                ‘Waiting’ for them at their library and ready for check out.
+                </para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -2366,6 +2455,37 @@
 
             <para>Asks: Satisfy holds from the libraries ___ (as branchcodes,
             separated by commas; if empty, uses all libraries) ___</para>
+
+            <para>Descriptions:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>RandomizeHoldsQueueWeight randomizes the libraries to
+                which hold requests are sent. All available libraries may be
+                randomized or only those libraries listed in the
+                StaticHoldsQueueWeight preference. RandomizeHoldsQueueWeight
+                can work with StaticHoldsQueueWeight to determine which
+                libraries (branch or consortium library) will be targets for
+                items on holds list. This hold list is produced when patron’s
+                requests for items are generated on a libraries to which holds
+                are sent. RandomizeHoldsQueueWeight will or will not randomize
+                the list of libraries that in the StaticHoldsQueueWeight list.
+                If the RandomizeHoldsQueueWeight is set as “in random order”
+                the hold requests will be sent randomly to the libraries on
+                the StaticHoldsQueueWeight list. If RandomizeHoldsQueueWeight
+                is set as "in that order”, hold requests will be sent to the
+                libraries according to their order as designated in
+                StaticHoldsQueueWeight or according to their static ranking in
+                the database. The StaticHoldsQueueWeight works in conjunction
+                with the RandomHoldsQueueWeight preference. The
+                StaticHoldsQueueWeight preference allows for certain libraries
+                or branches to have a higher weight for holds fulfillment,
+                allowing these libraries to receive holds before other branch
+                libraries. Previously set library codes are entered into the
+                preference box, separated by commas, and these libraries would
+                receive holds before libraries not listed.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>RandomizeHoldsQueueWeight Values:</para>
 
@@ -2600,6 +2720,20 @@
             <para>Due dates are calculated using your circulation and fines
             rules, but staff can override that if you allow them to specify a
             due date at checkout.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows for circulation staff to change a
+                due date from the automatic due date to another calendar date.
+                This option would be used for circumstances in which the due
+                date may need to be decreased or extended in a specific
+                circumstance. The “Allow” setting would allow for this option
+                to be utilized by staff, the “Don't allow” setting would bar
+                staff from changing the due date on materials.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Values:</para>
 
@@ -2871,17 +3005,30 @@
               </listitem>
 
               <listitem>
-                <para>Enter your key in the AWSAccessKeyID system
+                <para>Enter your key in the <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> system
                 preference</para>
+              </listitem>
+            </itemizedlist>
 
-                <itemizedlist>
-                  <listitem>
-                    <para><emphasis>Get there: </emphasis>More &gt;
-                    Administration &gt; Global system preferences &gt;
-                    Enhanced Content &gt; Amazon &gt; <link
-                    linkend="AWSAccessKeyID">AWSAccessKeyID</link></para>
-                  </listitem>
-                </itemizedlist>
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference does not display any content but instead
+                enables other Amazon-related preferences (<link
+                linkend="AmazonCoverImages">AmazonCoverImages</link>, <link
+                linkend="AmazonSimilarItems">AmazonSimilarItems</link>, <link
+                linkend="AmazonReviews">AmazonReviews</link>). Before turning
+                this feature to ”Use”, the library must first set <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Furthermore, if
+                Amazon content is enabled, other jacket services should be
+                diabled to avoid interference. This preference applies only to
+                the Staff Client. In order to display Amazon content on the
+                OPAC, please set the <link
+                linkend="OPACAmazonEnabled">OPACAmazonEnabled</link>
+                preference.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2976,6 +3123,20 @@
 
             <para>Sign up at: <ulink
             url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+
+            <para>Once signed up your keys can be accessed by logging into
+            your account and going to the 'Security Credentials' page. Your
+            Access Key will be listed next to the date it was created.</para>
+
+            <screenshot>
+              <screeninfo>Amazon Access Keys</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/amazonkeys.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </section>
 
           <section>
@@ -2986,6 +3147,21 @@
 
             <para>Sign up at: <ulink
             url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+
+            <para>Once signed up your keys can be accessed by logging into
+            your account and going to the 'Security Credentials' page. Next to
+            your Access key is a link that says 'Show,' clicking this will
+            open up your secret access key or your AWSPrivateKey.</para>
+
+            <screenshot>
+              <screeninfo>Amazon Private Key</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/amazonkeys.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </section>
 
           <section>
@@ -2998,6 +3174,25 @@
               decides to buy an item after clicking through to Amazon from
               your site.</para>
             </tip>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>An Amazon Associates Tag allows a library to earn a
+                percentage of all purchases made on Amazon when a patron
+                accesses Amazon’s site via links on the library’s website.
+                More information about the Amazon Associates program is
+                available at Amazon’s Affiliate Program’s website, <ulink
+                url="https://affiliate-program.amazon.com/">https://affiliate-program.amazon.com/</ulink>.
+                Before a tag can be obtained, however, the library must first
+                apply for an Amazon Web Services (AWS) account. Applications
+                are free of charge and can be made at <ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>.
+                Once an AWS account has been established, the library can then
+                obtain the Amazon Associates Tag.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Sign up at: <ulink
             url="https://affiliate-program.amazon.com/">https://affiliate-program.amazon.com/</ulink></para>
@@ -3020,6 +3215,30 @@
 
               <listitem>
                 <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to either allow or
+                prevent Amazon cover images from being displayed in the Staff
+                Client. Cover images are retrieved by Amazon, which pulls the
+                content based on the first ISBN number in the item’s MARC
+                record. Amazon offers this service free of charge, but
+                interested libraries must first establish an Amazon Web
+                Services (AWS) account (<ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
+                the value for this preference is set to ”Show”, the cover
+                images will appear in the Staff Client, and if it is set to
+                ”Don't show”, the images will not appear. If activating this
+                feature, the library must first set <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
+                you're using Amazon cover images, all other cover image
+                services must be disabled. If they are not disabled, they will
+                prevent AmazonCoverImages from functioning properly.</para>
               </listitem>
             </itemizedlist>
 
@@ -3047,6 +3266,26 @@
 
               <listitem>
                 <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to either allow or
+                prevent Amazon reviews from being displayed in the Staff
+                Client. Amazon offers this service free of charge, but
+                interested libraries must first establish an Amazon Web
+                Services (AWS) account (<ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
+                the value is set to ”Show”, the reviews will appear in the
+                Staff Client, and if it is set to ”Don't show”, the reviews
+                will not appear. Before setting this to ”Show”, the library
+                must first set <link linkend="???">AWSAccessKeyID</link> and
+                <link linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally,
+                if AmazonReviews is enabled, all other review services should
+                be disabled to avoid interference.</para>
               </listitem>
             </itemizedlist>
 
@@ -3083,6 +3322,27 @@
                     library.</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to either allow or
+                prevent Amazon’s suggestions for Similar Items from being
+                displayed in the Staff Client. Amazon offers this service free
+                of charge, but interested libraries must first establish an
+                Amazon Web Services (AWS) account (<ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
+                the value is set to ”Show”, the Similar Items suggestions will
+                appear in the Staff Client, and if it is set to ”Don't show”,
+                the suggestions will not appear. Before enabling this
+                preference, the library must first set <link
+                linkend="???">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
+                AmazonSimilarItems is enabled, all other similar item services
+                should be disabled to avoid interference.</para>
               </listitem>
             </itemizedlist>
 
@@ -16184,7 +16444,7 @@
       </section>
 
       <section>
-        <title>Transfers to receive</title>
+        <title id="transferstoreceive">Transfers to receive</title>
 
         <para>This report will list all of the items that Koha thinks are in
         transit to your library.</para>
