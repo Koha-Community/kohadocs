@@ -42,6 +42,39 @@
       <para>Global system preferences control the way your Koha system works
       in general. Set these preferences before anything else in Koha.</para>
 
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+          Global System Preferences</para>
+        </listitem>
+      </itemizedlist>
+
+      <screenshot>
+        <screeninfo>Global System Preferences Link and Search</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/admin/globalprefs/prefsearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>System preferences can be searched (using any part of the
+      preference name or description) using the search box on the
+      'Administration' page or the search box at the top of each system
+      preferences page.</para>
+
+      <screenshot>
+        <screeninfo>Preferences search at the top of System Preference
+        page</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/admin/globalprefs/prefsearch1.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
       <para>When editing preferences a '(modified)' tag will appear next to
       items you change until you click the 'Save All' button:</para>
 
@@ -59,7 +92,8 @@
       <section>
         <title id="acqprefs">Acquisitions</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Acquisitions</para>
 
         <section>
           <title>Policy</title>
@@ -114,7 +148,19 @@
 
             <para>Default: 0</para>
 
-            <para>Asks: The default tax rate is ___<tip>
+            <para>Asks: The default tax rate is ___</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference will allow the library to define a
+                default Goods and Services Tax rate. The default of value of 0
+                will disable this preference.</para>
+              </listitem>
+            </itemizedlist>
+
+            <para><tip>
                 <para>Enter this value as a number (.06) versus a percent
                 (6%).</para>
               </tip></para>
@@ -138,6 +184,9 @@
         <title id="adminprefs">Administration</title>
 
         <para>These preferences are general settings for your system.</para>
+
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Administration</para>
 
         <section>
           <title id="casauthentication">CAS Authentication</title>
@@ -200,6 +249,22 @@
                 available</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference determines how much information will be
+                sent to the user’s screen when the system encounters an error.
+                The most detail will be sent when the value level is set at 2,
+                some detail will be sent when the value is set at 1, and only
+                a basic error message will display when the value is set at 0.
+                This setting is especially important when a system is new and
+                the administration is interested in working out the bugs
+                (errors or problems) quickly. Having detailed error messages
+                makes quick fixes more likely in problem areas.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -251,6 +316,22 @@
 
             <para>Asks: Use ___ as the email address for the administrator of
             Koha.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows one email address to be used in
+                warning messages set to the OPAC. If no email address is set
+                for the branch this address will receive messages from patrons
+                regarding modification requests, purchase suggestions, and
+                questions or information regarding overdue notices. It is
+                recommended that a email address that can be accessed by
+                multiple staff members be used for this purpose so that if one
+                librarian is out the others can address these requests. This
+                email address can be changed when needed.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -269,6 +350,20 @@
 
               <listitem>
                 <para>Don't show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the system administrator to
+                determine if users will be able to set and see an <link
+                linkend="itemtypeadmin">item type icon</link> the catalog on
+                both the OPAC and the Staff Client. The images will display in
+                both the OPAC and the Staff Client/Intranet. If images of item
+                types are disabled, text labels for item types will still
+                appear in the OPAC and Staff Client.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -335,6 +430,22 @@
                 <para>Require</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference protects the system by blocking
+                unauthorized users from accessing the staff client program and
+                settings. Authorized and unauthorized users are determined by
+                their computer’s IP addresses. When the preference is set to
+                'Require', IP authorization is in effect and unauthorized IP
+                addresses will be blocked. This means that staff cannot work
+                from home unless their IP address has been authorized. When
+                set to 'Don't require', anyone with a staff client login will
+                have access no matter which IP address they are using.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -357,6 +468,35 @@
                 <para>Prevent</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference should only be used by library systems
+                which are sharing a single Koha installation among multiple
+                branches but are considered independent organizations, meaning
+                they do not share material or patrons with other branches and
+                do not plan to change that in the future. If set to 'Prevent'
+                it increases the security between library branches by:
+                prohibiting staff users from logging into another branch from
+                within the staff client, filtering out patrons from patron
+                searches who are not a part of the login branch conducting the
+                search, limiting the location choices to the login branch when
+                adding or modifying an item record, preventing users from
+                other branch locations from placing holds or checking out
+                materials from library branches other than their own, and
+                preventing staff from editing item records which belong to
+                other library branches. All of these security safeguards can
+                be overridden only by the superlibrarian, the highest level of
+                privileges.</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>It is important that this value be set before going live
+              and that it NOT be changed</para>
+            </important>
           </section>
 
           <section>
@@ -366,6 +506,18 @@
 
             <para>Asks: ___ staff to access the staff client without logging
             in.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference controls whether or not authentication
+                (user login) will be required to gain access to the staff
+                client. If set to 'Allow', all authentication is bypassed. If
+                set to 'Don't allow' authentication (login) on the staff
+                client is required.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Values:</para>
 
@@ -409,10 +561,19 @@
                 <itemizedlist>
                   <listitem>
                     <important>
-                      <para>PostgreSQL is not yet supported.</para>
+                      <para>PostgreSQL is not yet supported</para>
                     </important>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows administrators to choose what
+                format session data is stored in during web sessions.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -424,6 +585,18 @@
 
             <para>Asks: Automatically log out users after ___ seconds of
             inactivity.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference sets the length of time the Staff Client
+                or OPAC accounts can be left inactive before re-logging in is
+                necessary. The value of this preference is in seconds. At this
+                time, the amount of time before a session times out must be
+                the same for both the Staff Client and the OPAC.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
       </section>
@@ -431,7 +604,8 @@
       <section>
         <title>Authorities</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Authorities</para>
 
         <section>
           <title id="BiblioAddsAuthorities">BiblioAddsAuthorities</title>
@@ -501,7 +675,8 @@
       <section>
         <title>Cataloging</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Cataloging</para>
 
         <section>
           <title>Display</title>
@@ -598,6 +773,20 @@
                 the average person)</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting determines the bibliographic record display
+                when searching the catalog on the staff client. This setting
+                does not affect the display in the OPAC which is changed using
+                the <link linkend="BiblioDefaultView">BiblioDefaultView</link>
+                preference under the OPAC preference tab. This setting changes
+                the look of the record when first displayed. The MARC and ISBD
+                views can still be seen by clicking in the sidebar.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -609,7 +798,20 @@
 
             <para>Asks: Use the following as the ISBD template:</para>
 
-            <para>Allows you to customize ISBD view for your system.</para>
+            <para>Descripton:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This determines how the ISBD information will display.
+                Elements in the list can be reordered to produce a different
+                ISBD view. ISBD, the International Standard Bibliographic
+                Description, was first introduced by IFLA (International
+                Federation of Library Associations) in 1969 in order to
+                provide guidelines for descriptive cataloging. The purpose of
+                ISBD is to aid the international exchange of bibliographic
+                records for a variety of materials. </para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -728,6 +930,16 @@
             <para>Asks: ___ descriptions of fields and subfields in the MARC
             editor.</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference determines whether or not MARC field
+                names will be present when editing or creating MARC
+                records.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>Values:</para>
 
             <itemizedlist>
@@ -831,6 +1043,16 @@
                 <para>not generated automatically</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting is for libraries wishing to generate
+                barcodes from within Koha (as opposed to scanning in
+                pre-printed barcodes or manually assigning them).</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -905,6 +1127,15 @@
           </section>
 
           <section>
+            <title
+            id="NewItemsDefaultLocation">NewItemsDefaultLocation</title>
+
+            <para>Asks: When items are created, give them the temporary
+            location of ___ (should be a location code, or blank to
+            disable).</para>
+          </section>
+
+          <section>
             <title>z3950NormalizeAuthor &amp; z3950AuthorAuthFields</title>
 
             <para>Defaults: Don't copy &amp; 701,702,700</para>
@@ -925,13 +1156,6 @@
               </listitem>
             </itemizedlist>
           </section>
-        </section>
-
-        <section>
-          <title id="NewItemsDefaultLocation">NewItemsDefaultLocation</title>
-
-          <para>Asks: When items are created, give them the temporary location
-          of ___ (should be a location code, or blank to disable).</para>
         </section>
 
         <section>
@@ -1008,7 +1232,8 @@
       <section>
         <title>Circulation</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Circulation</para>
 
         <section>
           <title>Checkout Policy</title>
@@ -2138,7 +2363,10 @@
       <section>
         <title>Creators</title>
 
-        <para>These preferences have to do with creating content</para>
+        <para>These preferences have to do with creating content.</para>
+
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Creators</para>
 
         <section>
           <title>Patron Cards</title>
@@ -2157,6 +2385,9 @@
 
       <section>
         <title id="enhancedcontent">Enhanced Content</title>
+
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Enhanced Content</para>
 
         <important>
           <para>Always read the terms of service associated with external data
@@ -3273,7 +3504,12 @@
       <section>
         <title>I18N/L10N</title>
 
-        <para></para>
+        <para><emphasis><emphasis>These preferences control your
+        Internationalization and Localization
+        settings.</emphasis></emphasis></para>
+
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; I18N/L10N</para>
 
         <section>
           <title id="dateformat">dateformat</title>
@@ -3382,7 +3618,15 @@
       <section>
         <title>Local Use</title>
 
-        <para></para>
+        <para><emphasis><emphasis>These preferences are defined
+        locally.</emphasis></emphasis></para>
+
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Local Use<tip>
+            <para>Sometimes preferences which are either new or outdated will
+            appear in this tab, if you didn't add any preferences to this tab
+            then it's best to ignore preferences listed here.</para>
+          </tip></para>
       </section>
 
       <section>
@@ -3391,6 +3635,9 @@
         <para>Logs keep track of transaction on the system. You can decide
         which actions you want to log and which you don't using these
         preferences.</para>
+
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Logs</para>
 
         <section>
           <title id="BorrowersLog">BorrowersLog</title>
@@ -3548,7 +3795,8 @@
       <section>
         <title>OPAC</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; OPAC</para>
 
         <section>
           <title>Appearance</title>
@@ -3926,6 +4174,18 @@
                 <para>this shows the same warning as when the database needs
                 to be upgraded, but unconditionally.</para>
               </note></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the system administrator to turn
+                off the OPAC during maintenance and display a message to
+                users. When this preference is switched to “Show” the OPAC is
+                not usable. The text of this message is not editable at this
+                time.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Values:</para>
 
@@ -4824,6 +5084,21 @@
                 <para>Don't allow</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference is for libraries that have branches but
+                do not want to share their items among other branches within
+                their system. If the preference is set to “Don't allow” then
+                holdings will be shown for all branches within a system. On
+                the “Home” screen of the OPAC users have the choice of
+                narrowing down results by item location. Setting this
+                preference to “Allow” will display only one branch’s
+                holdings.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -4858,7 +5133,8 @@
       <section>
         <title>Patrons</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Patrons</para>
 
         <section>
           <title id="AddPatronLists">AddPatronLists</title>
@@ -5276,7 +5552,8 @@
       <section>
         <title id="searchingprefs">Searching</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Searching</para>
 
         <section>
           <title>Features</title>
@@ -5716,7 +5993,8 @@
       <section>
         <title>Serials</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Serials</para>
 
         <section>
           <title
@@ -5826,7 +6104,8 @@
       <section>
         <title>Staff Client</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Staff Client</para>
 
         <section>
           <title>Appearance</title>
@@ -6183,7 +6462,8 @@
       <section>
         <title>Web Services</title>
 
-        <para></para>
+        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
+        Global System Preferences &gt; Web Services</para>
 
         <section>
           <title>ILS-DI</title>
@@ -6283,6 +6563,8 @@
 
     <section>
       <title id="basicparams">Basic Parameters</title>
+
+      <para><emphasis>Get there:</emphasis> More &gt; Administration</para>
 
       <important>
         <para>Configure all 'parameters' in the order they appear.</para>
