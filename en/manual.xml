@@ -923,9 +923,16 @@
             <para>Asks: Show ___ as the text of links embedded in MARC
             records.</para>
 
-            <para>If the 856 field does not have a subfield 3 or y defined,
-            the OPAC will say 'Click here to access online.' If you would like
-            the field to say something else enter that in this field.</para>
+            <para>Description: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If the 856 field does not have a subfield 3 or y
+                defined, the OPAC will say 'Click here to access online.' If
+                you would like the field to say something else enter that in
+                this field.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -2936,7 +2943,7 @@
               </listitem>
             </itemizedlist>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -3937,7 +3944,7 @@
                 expanded information on catalog items such as book
                 recommendations. It also can offer advanced features like
                 tagged browsing, patron written reviews, and a virtual library
-                display accessed from the details tab. </para>
+                display accessed from the details tab.</para>
               </listitem>
             </itemizedlist>
 
@@ -3971,7 +3978,7 @@
                 items such as book recommendations and cover art. It also can
                 offer advanced features like tagged browsing, patron written
                 reviews, and a virtual library display accessed from the
-                details tab. </para>
+                details tab.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4005,7 +4012,7 @@
                 expanded information on catalog items such as book
                 recommendations and cover art. It also can offer advanced
                 features like tagged browsing, patron written reviews, and a
-                virtual library display accessed from the details tab. </para>
+                virtual library display accessed from the details tab.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4076,8 +4083,7 @@
                 <link linkend="XISBN">XISBN</link> settings are enabled. For
                 more information on this service please visit the OCLC
                 website: <ulink
-                url="http://www.worldcat.org/affiliate/default.jsp">http://www.worldcat.org/affiliate/default.jsp</ulink>.
-                </para>
+                url="http://www.worldcat.org/affiliate/default.jsp">http://www.worldcat.org/affiliate/default.jsp</ulink>.</para>
               </listitem>
             </itemizedlist>
 
@@ -4133,7 +4139,7 @@
             <itemizedlist>
               <listitem>
                 <para>When this option is enabled any of the Syndetics options
-                can be used. </para>
+                can be used.</para>
               </listitem>
             </itemizedlist>
 
@@ -4266,7 +4272,7 @@
                 linkend="SyndeticsClientCode">SyndeticsClientCode</link> must
                 be entered and the <link
                 linkend="SyndeticsEnabled">SyndeticsEnabled</link> option must
-                be activated before this service can be used. </para>
+                be activated before this service can be used.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4771,6 +4777,24 @@
               <para>yyyy/mm/dd</para>
             </listitem>
           </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference controls how the date is displayed. The
+              options are the United States method, mm/dd/yyyy (04/24/2010),
+              the metric method, dd/mm/yyyy (24/04/2010) or ISO, which is the
+              International Standard of Organization, yyyy/mm/dd (2010/04/24).
+              The International Standard of Organization would primarily be
+              used by libraries with locations in multiple nations that may
+              use different date formats, to have a single display type, or if
+              the library would be in a region that does not use the United
+              States or metric method. More information regarding the ISO date
+              format can be found at <ulink
+              url="http://www.iso.org/iso/iso_catalogue.htm">http://www.iso.org/iso/iso_catalogue.htm</ulink>.</para>
+            </listitem>
+          </itemizedlist>
         </section>
 
         <section>
@@ -5071,21 +5095,43 @@
           <section>
             <title id="BiblioDefaultView">BiblioDefaultView</title>
 
-            <para>Default: don't</para>
+            <para>Default: in simple form</para>
 
-            <para>Asks: When patrons click on a link to another website from
-            your OPAC (like Amazon or OCLC), ___ open the website in a new
-            window.</para>
+            <para>Asks: By default, show bib records ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Do</para>
+                <para>as specified in the ISBD template.</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>See <link linkend="isbdpref">ISBD</link> preference
+                    for more information</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
-                <para>Don't</para>
+                <para>in simple form.</para>
+              </listitem>
+
+              <listitem>
+                <para>in their MARC format.</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference determines the level of bibliographic
+                detail that the patron will see on the OPAC detail page. The
+                simple form displays the graphical interface; MARC format
+                displays the MARC21 cataloging view; ISBD displays the ISBD
+                (International Standard Bibliographic Description, AACR2)
+                view. </para>
               </listitem>
             </itemizedlist>
           </section>
@@ -5123,6 +5169,18 @@
 
             <para>Asks: ___ lost items on search and detail pages.</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Items that are marked lost by the library can either be
+                shown or not shown on the OPAC. By setting the value to “Don't
+                show,” the lost item is not shown on the OPAC. By setting the
+                value “Show,” the lost item is shown on the OPAC for patrons
+                to view with a status of 'lost.'</para>
+              </listitem>
+            </itemizedlist>
+
             <para>Values:</para>
 
             <itemizedlist>
@@ -5132,6 +5190,16 @@
 
               <listitem>
                 <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>Lost item showing in the OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/hidelostitems.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </section>
@@ -5241,12 +5309,32 @@
             <para>Asks: Include the additional CSS stylesheet /css/ ___ on all
             pages in the OPAC</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The preference looks for stylesheets in the template
+                directory for your OPAC language, for instance:
+                /koha-tmpl/opac-tmpl/prog/en/css. If you upload a custom file,
+                opac-mystyles.css to this directory, you can specify it by
+                entering opac-mystyles.css in your opaccolorstylesheet system
+                preference. This adds your custom stylesheet as a linked
+                stylesheet alongside the OPAC’s default CSS files. This method
+                is preferable because linked stylesheets are cached by the
+                user’s browser, meaning upon repeat visits to your site the
+                user’s browser will not have to re-download the stylesheet,
+                instead using the copy in the browser’s cache.</para>
+              </listitem>
+            </itemizedlist>
+
             <tip>
               <para>Leave this field blank to disable it</para>
             </tip>
 
-            <para>This file will add to the existing default CSS, not replace
-            it.</para>
+            <para><note>
+                <para>This file will add a linked CSS, not replace the
+                existing default CSS.</para>
+              </note></para>
           </section>
 
           <section>
@@ -5280,6 +5368,18 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting is for credits that will appear at the
+                bottom of your OPAC pages. Credits traditionally encompass
+                copyright information, last date updated, hyperlinks or other
+                information represented in an HTML format. This is static
+                information and any updates must be entered manually.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Learn more in the <link linkend="editableopac">OPAC Editable
             Regions</link> section.</para>
@@ -5395,6 +5495,24 @@
 
             <para>Asks: Use the CSS stylesheet /css/ ___ on all pages in the
             OPAC, instead of the default</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting’s function is to point to the *.css file
+                used to define the OPAC layout. A *.css file is a cascading
+                stylesheet which is used in conjunction with HTML to set how
+                the HTML page is formatted and will look on the OPAC. There
+                are two stylesheets that come with the system; opac.css and
+                opac2.css. A custom stylesheet may also be used. A style sheet
+                designated in the <link
+                linkend="opacstylesheet">opacstylesheet</link> preference will
+                override the stylesheet listed here. The stylesheets listed in
+                the opaclayoutstylesheet preference are held on the Koha
+                server.</para>
+              </listitem>
+            </itemizedlist>
 
             <tip>
               <para>Leave this field blank to disable it and let Koha use the
@@ -5545,6 +5663,20 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows all patrons to see who has the
+                item checked out if it is checked out. In small corporate
+                libraries (where the OPAC is behind a firewall and not
+                publicly available) this can be helpful so coworkers can just
+                contact the patron with the book themselves. In larger public
+                and academic libraries setting this to 'Show' would pose
+                serious privacy issues.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -5553,6 +5685,19 @@
             <para>Asks: Use the image at ___ in the OPAC header, instead of
             the Koha logo. If this image is a different size than the Koha
             logo, you will need to customize the CSS.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The opacsmallimage system pref is a little tricky to
+                deal with because you really have to tweak some CSS at the
+                same time. The default CSS defines a region just large enough
+                to display the Koha logo, and if your logo doesn’t match the
+                Koha logo’s dimensions (120 pixels wide by 38 pixels high), it
+                won’t display correctly. </para>
+              </listitem>
+            </itemizedlist>
 
             <important>
               <para>This should be a complete URL, starting with
@@ -5565,6 +5710,25 @@
 
             <para>Asks: Use the remote CSS stylesheet ___ on all pages in the
             OPAC, instead of the default.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the administrator to completely
+                replace the default stylesheet with their own alternate
+                stylesheet. This allows the administrator to completely
+                customize the look of the OPAC. To change the stylesheet,
+                enter a complete URL, including the http:// to the custom
+                stylesheet. Content in the custom/alternate stylesheet will
+                overwrite any data in the default stylesheet defined in the
+                <link
+                linkend="opaclayoutstylesheet">opaclayoutstylesheet</link>
+                setting. The default stylesheet will likely be found at
+                http://your_koha_address/opac-
+                tmpl/prog/en/css/opac.css</para>
+              </listitem>
+            </itemizedlist>
 
             <tip>
               <para>Leave this field blank to disable it and let Koha use the
@@ -5613,6 +5777,17 @@
                 <para>don't</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference determines if URLs in the OPAC will open
+                in a new window or not. When clicking on a link in the OPAC, a
+                patron does not need to worry about navigating away from their
+                search results.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -5621,11 +5796,25 @@
             <para>Asks: Include the following CSS on all pages in the
             OPAC</para>
 
-            <para>Unlike <link
-            linkend="opaccolorstylesheet">opaccolorstylesheet</link>, <link
-            linkend="opaclayoutstylesheet">opaclayoutstylesheet</link> and
-            <link linkend="opacstylesheet">opacstylesheet</link> this
-            preference will embed the CSS directly on your OPAC pages.</para>
+            <para>Description: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>OPACUserCSS allows the administrator to enter styles
+                that will overwrite the OPAC’s default CSS as defined in
+                ‘opaclayoutstylesheet’or ‘opacstylesheet’. Styles may be
+                entered for any of the selectors found in the default style
+                sheet. The default stylesheet will likely be found at
+                http://your_koha_address/opac-tmpl/prog/en/css/opac.css.
+                Unlike <link
+                linkend="opaccolorstylesheet">opaccolorstylesheet</link>,
+                <link
+                linkend="opaclayoutstylesheet">opaclayoutstylesheet</link> and
+                <link linkend="opacstylesheet">opacstylesheet</link> this
+                preference will embed the CSS directly on your OPAC
+                pages.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -5665,6 +5854,20 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the administrator to enter
+                JavaScript or JQuery that will be embedded across all pages of
+                the OPAC. Administrators may use this preference to customize
+                some of the interactive sections of Koha, customizing the text
+                for the login prompts, for example. Sample JQuery scripts used
+                by Koha libraries can be found on the wiki: <ulink
+                url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -5734,6 +5937,32 @@
 
             <para>Asks: ___ patrons to search your authority records.</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference displays the link on the OPAC for the
+                authority search (titled 'Browse by Subject'). By setting the
+                preference to “Allow” patrons can use this search link of the
+                OPAC. </para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>While labeled 'Browse' it is important to note that this
+              is in fact an authority search, not an authority browse. </para>
+
+              <screenshot>
+                <screeninfo>Authority Search in the OPAC</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/authoritysearch.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </important>
+
             <para>Values:</para>
 
             <itemizedlist>
@@ -5742,8 +5971,19 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>A link to Browse by Subject will appear at the top
-                    of your OPAC</para>
+                    <para>A link labeled 'Browse by Subject' will appear at
+                    the top of your OPAC under the search box</para>
+
+                    <screenshot>
+                      <screeninfo>'Browse by Subject' link under search box on
+                      OPAC</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/OpacAuthorities.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -5767,17 +6007,23 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para><link linkend="opacuserlogin">opacuserlogin</link>
-                    needs to be set to 'allow'</para>
-                  </listitem>
-                </itemizedlist>
               </listitem>
 
               <listitem>
                 <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the user to temporarily save a
+                list of items found on the catalog. By using the Book Bag, or
+                Cart, the user can print out or email a list of items found.
+                The user does not need to be logged in. This list is temporary
+                and will be emptied, or cleared, at the end of the session.
+                </para>
               </listitem>
             </itemizedlist>
           </section>
@@ -5937,6 +6183,31 @@
 
               <listitem>
                 <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>OPACShelfBrowser</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACShelfBrowser.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows patrons to view what is located
+                on the shelf near the item they looked up. The shelf browser
+                option appears on the details page to the right of each items'
+                call number. Clicking the 'Browse Shelf' link allows for a
+                virtual shelf browsing experience via the OPAC and lets
+                patrons see other books that may relate to their search and
+                items that sit on the shelf near the item they are looking at.
+                </para>
               </listitem>
             </itemizedlist>
 
@@ -5963,8 +6234,19 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>A link to Most Popular will appear at the top of
+                    <para>A link to 'Most Popular' will appear at the top of
                     your OPAC</para>
+
+                    <screenshot>
+                      <screeninfo>'Most Popular' link under the search
+                      box</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/OpacTopissue.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -5974,10 +6256,32 @@
               </listitem>
             </itemizedlist>
 
-            <important>
-              <para>This is somewhat experimental, and should be avoided if
-              your collection has a large number of items.</para>
-            </important>
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the administrator to choose to
+                show the “Most Popular” link at the top of the OPAC under the
+                search box. The “Most Popular” page shows the top circulated
+                items in the library, as determined by the number of times a
+                title has been circulated. This allows users to see what
+                titles are popular in their community. It is recommended that
+                you leave this preference set to 'Don't allow' until you have
+                been live on Koha for a couple of months, otherwise the data
+                that it shows will not be an accurate portrayal of what's
+                popular in your library.</para>
+
+                <screenshot>
+                  <screeninfo>Sample top issues page</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/topissues.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -6066,6 +6370,21 @@
 
               <listitem>
                 <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This button allows the patrons to submit comments on
+                books they have read via the OPAC. If this preference is set
+                to “'Allow” reviews are first sent to the staff client for
+                staff approval before the review is displayed in the OPAC. The
+                staff member who reviews and approves comments may find the
+                pending comments on the <link
+                linkend="comments">Comments</link> tool. The staff member can
+                then choose to approve or delete the comments.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6217,6 +6536,18 @@
                     via the staff client</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Descriptions:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the administration to choose if
+                patrons can renew their checked out materials via their
+                checked out history in the OPAC. It allows patrons to renew
+                their materials without having to contact the library or
+                having to return to the library.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6427,6 +6758,23 @@
           <para>Asks: ___ an email to newly created patrons with their account
           details at their ___ email address.</para>
 
+          <para>Descriptions:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>AutoEmailOpacUser allows library users to be notified by
+              email of their account details when a new account is opened. The
+              email will be sent to the address specified in
+              AutoEmailPrimaryAddress. If you choose 'first valid' as the
+              value for AutoEmailPrimaryAddress the system will check the
+              email fields in this order: home, work, then alternate. The
+              email contains the username and password given to or chosen by
+              the patron when signing up for their account and can be
+              customized by editing the <link
+              linkend="ACCTDETAILS">ACCTDETAILS</link> notice.</para>
+            </listitem>
+          </itemizedlist>
+
           <para>AutoEmailOpacUser Values:</para>
 
           <itemizedlist>
@@ -6487,6 +6835,19 @@
               <para>Don't</para>
             </listitem>
           </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference determines if the patron’s barcode is
+              automatically calculated. This prevents the person setting up
+              the library card account from having to assign a number to the
+              new card. If set to 'Do' the system will calculate a new patron
+              barcode by adding 1 to the maximum barcode already present in
+              the database.</para>
+            </listitem>
+          </itemizedlist>
         </section>
 
         <section>
@@ -6496,6 +6857,19 @@
 
           <para>Asks: The following database columns must be filled in on the
           patron entry screen ___</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference enables the system administrator to choose
+              which fields your library would like required for patron
+              accounts. Enter field names separated by | (bar). This ensures
+              that basic information is included in each patron record. If a
+              patron leaves one of the required fields blank an error message
+              will issue and the account will not be created.</para>
+            </listitem>
+          </itemizedlist>
 
           <important>
             <para>Separate columns with |</para>
@@ -6516,6 +6890,20 @@
           <para>Asks: Guarantors can be the following of those they guarantee
           ___</para>
 
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference enables the system administrator to define
+              valid relationships between a guarantor (usually a parent) &amp;
+              a guarantee (usually a child). Defining values for this field
+              does not make the guarantor field required when adding a
+              guarantee type patron. This preference creates a dropdown list
+              identifying the relationship of the guarantor to the guarantee.
+              </para>
+            </listitem>
+          </itemizedlist>
+
           <important>
             <para>Input multiple choices separated by |</para>
           </important>
@@ -6528,13 +6916,23 @@
 
           <para>Asks: Borrowers can have the following titles ___</para>
 
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference allows the staff to choose the titles that
+              can be assigned to patrons. The choices present as a dropdown
+              list when creating a patron record. </para>
+            </listitem>
+          </itemizedlist>
+
           <important>
             <para>Input multiple choices separated by |</para>
           </important>
         </section>
 
         <section>
-          <title>checkdigit</title>
+          <title id="checkdigit">checkdigit</title>
 
           <para>Default: Don't</para>
 
@@ -6605,6 +7003,27 @@
 
             <listitem>
               <para>Enable</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Define attributes in Koha administration</para>
+                </listitem>
+
+                <listitem>
+                  <para>Get there: More &gt; Administration &gt; <link
+                  linkend="patronattributetypes">Patron Attribute
+                  Types</link></para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Patron attributes are library-defined custom fields that
+              can be applied to patron records. </para>
             </listitem>
           </itemizedlist>
 
@@ -6695,6 +7114,17 @@
 
           <para>Asks: Show a notice that a patron is about to expire ___ days
           beforehand.</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>When the patron attempts to check out materials, a warning
+              will appear in the check out window of the Staff Client telling
+              the librarian that the patrons account is about to
+              expire.</para>
+            </listitem>
+          </itemizedlist>
 
           <important>
             <para>This notice will appear on the patron's record in the staff
@@ -6873,6 +7303,25 @@
                 <para>only if * is added</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting allows for searches to be automatically
+                truncated or for additional characters to be added to the end
+                of a search string. When set to ”automatically” the search
+                string automatically ends with a wildcard function. For
+                example, a search for the word “invent” with auto truncation
+                enabled will also retrieve results for inventor, invention,
+                inventory, etc. If you don't want this to happen automatically
+                you can still be perform wildecard searches manually by adding
+                an asterisk (*). Typing “invent*” even with auto truncation
+                disabled will retrieve the same inventor, invention, inventory
+                results. Auto truncation bypasses the necessity to type long
+                search strings in their entirety.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -6893,6 +7342,18 @@
 
               <listitem>
                 <para>Try</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference enables “fuzzy” searching, in which the
+                search engine returns results that are similar to, but not
+                exactly matching, the word or words entered by the user. This
+                preference enables the search function to compensate for
+                slightly misspelled names or phrases.</para>
               </listitem>
             </itemizedlist>
 
@@ -6974,6 +7435,17 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference enables word stemming. Stemming allows
+                the search function to return multiple versions of the same
+                word, as well as related terms (i.e., both fish and fishing
+                would be returned).</para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>Requires that <link linkend="NoZebra">NoZebra</link> is
               set to 'Use'</para>
@@ -7021,6 +7493,17 @@
 
             <para>Asks: By default, sort search results in the staff client by
             ___, ____</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>These preferences set the default sort field and sort
+                order for searches on the staff side. Regardless of your
+                choice, the other sort options are still available in the drop
+                down list on the advanced search page.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>defaultSortField Values:</para>
 
@@ -7095,6 +7578,17 @@
             <para>Asks: By default, sort search results in the OPAC by ___,
             ___</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>These preferences set the default sort field and sort
+                order for searches on the OPAC. Regardless of your choice, the
+                other sort options are still available in the drop down list
+                on the advanced search page.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>OPACdefaultSortField Values:</para>
 
             <itemizedlist>
@@ -7153,19 +7647,10 @@
           <section>
             <title>OPACItemsResultsDisplay</title>
 
-            <para>Default: 20</para>
-
-            <para>Asks: By default, show ___ results per page in the
-            OPAC.</para>
-          </section>
-
-          <section>
-            <title>OPACnumSearchResults</title>
-
             <para>Default: Don't show</para>
 
             <para>Asks: ___ an item's branch, location and call number in OPAC
-            search results.</para>
+            search results. </para>
 
             <para>Values:</para>
 
@@ -7178,6 +7663,29 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting selects the information about an item that
+                will display in the search results page of the OPAC. The
+                results can display the status of an item and/or full details
+                including branch, location, and call number. While the 'Show'
+                option allows for more information to be displayed on the
+                search results page, the information can be overwhelming for
+                large collections with multiple branches.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section>
+            <title>OPACnumSearchResults</title>
+
+            <para>Default: 20</para>
+
+            <para>Asks: By default, show ___ results per page in the OPAC.
+            </para>
           </section>
         </section>
 
@@ -7242,6 +7750,17 @@
 
           <para>Asks: Show the ___ previous issues of a serial on the
           OPAC.</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference allows the administrator to select the
+              number of recent issues for each serial which appear in the OPAC
+              when the serial is accessed. This is just the default value,
+              patrons can always click to see a full list of serials.</para>
+            </listitem>
+          </itemizedlist>
         </section>
 
         <section>
@@ -7262,6 +7781,18 @@
 
             <listitem>
               <para>Don't add</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If set to ”Add”, this preference will automatically add a
+              serial to the Acquisitions Purchase Suggestions menu when
+              clicking the 'renew' option. If you don't use the Acquisitions
+              module to manage serials purchases it's best to leave this set
+              as 'Don't add.'</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -7332,6 +7863,18 @@
 
           <para>Asks: Show the ___ previous issues of a serial on the staff
           client.</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference allows the administrator to select the
+              number of recent issues for each serial which appear in the
+              Staff Client when the serial is accessed. This is just the
+              default value, staff members can always click to see a full list
+              of serials.</para>
+            </listitem>
+          </itemizedlist>
         </section>
 
         <section>
@@ -7351,6 +7894,20 @@
 
             <listitem>
               <para>a summary</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference determines what information appears in the
+              OPAC when the user clicks the More Details option. The ‘summary’
+              option displays a one-line summary of the volume and issue
+              numbers of all issues of that serial held by the library. The
+              ‘full list’ option displays a more detailed breakdown of issues
+              per year, including information such as the issue date and the
+              status of each issue.</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -7383,6 +7940,17 @@
 
             <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
             on all pages in the staff interface.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference is used to set the background color and
+                style of the Staff Client. The value is a .css file. The
+                system administrator should determine which file is
+                appropriate. </para>
+              </listitem>
+            </itemizedlist>
 
             <important>
               <para>Leave this field blank to disable.</para>
@@ -7431,6 +7999,19 @@
             <para>Asks: Include the stylesheet at ___ on all pages in the
             staff interface, instead of the default.</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The Intranetstylesheet preference is a layout and design
+                feature for the intranet or staff client. To change the
+                stylesheet from the original, place in this preference the
+                file path to the style sheet - include the entire url starting
+                with http://. This preference allows a library to customize
+                the appearance of the Staff Client. </para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>This should be a complete URL, starting with
               http://</para>
@@ -7464,6 +8045,22 @@
                 </imageobject>
               </mediaobject>
             </screenshot>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the administrator to enter
+                JavaScript or JQuery that will be embedded across all pages of
+                the Staff Client. Administrators may use this preference to
+                customize some of the interactive sections of Koha,
+                customizing the text for the login prompts, for example.
+                Sample JQuery scripts used by Koha libraries can be found on
+                the wiki: <ulink
+                url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.
+                </para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -7600,6 +8197,19 @@
                     will still work if the Internet goes down</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The yuipath preference allows for the user to define a
+                local path or web URL to the Yahoo User Interface Library
+                (<ulink
+                url="http://developer.yahoo.com/yui/2/">http://developer.yahoo.com/yui/2/</ulink>).
+                This library is a resource of developer tools including
+                JavaScript and style sheets. </para>
               </listitem>
             </itemizedlist>
           </section>
@@ -7776,6 +8386,30 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>For the Open Archives Initiative-Protocol for Metadata
+                Harvesting (OAI-PMH) there are two groups of ‘participants’:
+                Data Providers and Service Providers. Data Providers (open
+                archives, repositories) provide free access to metadata, and
+                may, but do not necessarily, offer free access to full texts
+                or other resources. OAI-PMH provides an easy to implement, low
+                barrier solution for Data Providers. Service Providers use the
+                OAI interfaces of the Data Providers to harvest and store
+                metadata. Note that this means that there are no live search
+                requests to the Data Providers; rather, services are based on
+                the harvested data via OAI-PMH. Koha at present can only act
+                as a Data Provider. It can not harvest from other
+                repositories. The biggest stumbling block to having Koha
+                harvest from other repositories is that MARC is the only
+                metadata format that Koha indexes natively. Visit <ulink
+                url="http://www.oaforum.org/tutorial/english/page3.htm">http://www.oaforum.org/tutorial/english/page3.htm</ulink>
+                for diagrams of how OAI-PMH works.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>Learn more about OAI-PMH at: <ulink
             url="http://www.openarchives.org/pmh/">http://www.openarchives.org/pmh/</ulink></para>
           </section>
@@ -7811,6 +8445,18 @@
 
             <para>Asks: Only return ___ records at a time in response to a
             ListRecords or ListIdentifiers query.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This is the maximum number of records that would be
+                returned based on ListRecord or ListIdentifier queries from
+                harvesters. ListRecords harvest the entire records while the
+                ListIdentifier is an abbreviated form of ListRecords,
+                retrieving only headers rather than records.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
       </section>
@@ -13534,6 +14180,19 @@
         within Koha, here are some of what those notices do</para>
 
         <itemizedlist>
+          <listitem>
+            <para id="ACCTDETAILS">ACCTDETAILS</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Sent to patrons when their account is set up if the
+                <link
+                linkend="AutoEmailPrimaryAddress">AutoEmailOPACUser</link>
+                preference is set to 'Send'</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
           <listitem>
             <para>ACQCLAIM (Acquisition Claim)</para>
 
@@ -29897,6 +30556,22 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         <listitem>
           <para>LibraryThing for Libraries - <ulink
           url="http://www.librarything.com/forlibraries">http://www.librarything.com/forlibraries</ulink></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>OPAC Related</title>
+
+      <itemizedlist>
+        <listitem>
+          <para>JQuery Library - <ulink
+          url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink></para>
+        </listitem>
+
+        <listitem>
+          <para>Owen Leonard's Koha Blog - <ulink
+          url="http://www.myacpl.org/koha">http://www.myacpl.org/koha</ulink></para>
         </listitem>
       </itemizedlist>
     </section>
