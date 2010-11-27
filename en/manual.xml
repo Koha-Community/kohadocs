@@ -1968,7 +1968,7 @@
                 scheduled closure at all, and 'the calendar to push the due
                 date to the next open day' would only effect the due date if
                 the day the item is due would fall specifically on the day of
-                closure. </para>
+                closure.</para>
               </listitem>
             </itemizedlist>
 
@@ -2405,7 +2405,7 @@
                 patron has on hold. After this expiration date the staff will
                 have the option to release the unclaimed hold which then may
                 be returned to the library shelf or issued to the next patron
-                on the item’s hold list. </para>
+                on the item’s hold list.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2441,8 +2441,8 @@
                 marked as “Waiting” at the time the hold is placed or if the
                 item will be marked as “Waiting” after the item is checked in.
                 This preference will tell the patron that their item is
-                ‘Waiting’ for them at their library and ready for check out.
-                </para>
+                ‘Waiting’ for them at their library and ready for check
+                out.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2923,13 +2923,46 @@
 
               <listitem>
                 <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>Editions tab in staff client</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/editionstab.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
 
-            <para>This preference pulls all editions of the same title
-            available in your collection regardless of material type. Items
-            will appear under an 'Editions' tab on the detail page for the
-            title in question.</para>
+            <para>Description: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Using the rules set forth in the Functional Requirements
+                for Bibliographic records, this option, when enabled, pulls
+                all editions of the same title available in your collection
+                regardless of material type. Items will appear under an
+                'Editions' tab on the detail page for the title in question..
+                According to <emphasis>Libraries Unlimited’s Online Dictionary
+                for Library and Information Science</emphasis> (<ulink
+                url="http://lu.com/odlis/">http://lu.com/odlis/</ulink>),
+                FRBRizing the catalog involves collating MARC records of
+                similar materials. FRBRization brings together entities (sets
+                of Works, Expressions, or Manifestations), rather than just
+                sets of Items. It can aid patrons in selecting related items,
+                expressions, and manifestations that will serve their needs.
+                When it is set to ”Show”, the OPAC will query one or more ISBN
+                web services for associated ISBNs and display an Editions tab
+                on the details pages. Once this preference is enabled, the
+                library must select one of the ISBN options (<link
+                linkend="ThingISBN">ThingISBN</link> or <link
+                linkend="XISBN">XISBN</link>). This option is only for the
+                Staff Client; the OPACFRBRizeEditions option must be enabled
+                to have the Editions tab appear on the OPAC.</para>
+              </listitem>
+            </itemizedlist>
 
             <important>
               <para>Requires that you turn on one or more of the ISBN services
@@ -2944,6 +2977,34 @@
 
             <para>Asks: ___ other editions of an item on the OPAC.</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Using the rules set forth in the Functional Requirements
+                for Bibliographic records, this option, when enabled, pulls
+                all editions of the same title available in your collection
+                regardless of material type. Items will appear under an
+                'Editions' tab on the detail page for the title in question..
+                According to <emphasis>Libraries Unlimited’s Online Dictionary
+                for Library and Information Science</emphasis> (<ulink
+                url="http://lu.com/odlis/">http://lu.com/odlis/</ulink>),
+                FRBRizing the catalog involves collating MARC records of
+                similar materials. FRBRization brings together entities (sets
+                of Works, Expressions, or Manifestations), rather than just
+                sets of Items. It can aid patrons in selecting related items,
+                expressions, and manifestations that will serve their needs.
+                When it is set to ”Show”, the OPAC will query one or more ISBN
+                web services for associated ISBNs and display an Editions tab
+                on the details pages. Once this preference is enabled, the
+                library must select one of the ISBN options (<link
+                linkend="ThingISBN">ThingISBN</link> or <link
+                linkend="XISBN">XISBN</link>). This option is only for the
+                OPAC; the 'FRBRizeEditions' option must be turned “On” to have
+                the Editions tab appear on the Staff Client.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>Values:</para>
 
             <itemizedlist>
@@ -2953,6 +3014,16 @@
 
               <listitem>
                 <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>Editions tab in the OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/editions.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
 
@@ -3065,17 +3136,30 @@
               </listitem>
 
               <listitem>
-                <para>Set your enter your key in the AWSAccessKeyID system
+                <para>Set your enter your key in the <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> system
                 preference</para>
+              </listitem>
+            </itemizedlist>
 
-                <itemizedlist>
-                  <listitem>
-                    <para><emphasis>Get there: </emphasis>More &gt;
-                    Administration &gt; Global system preferences &gt;
-                    Enhanced Content &gt; Amazon &gt; <link
-                    linkend="AWSAccessKeyID">AWSAccessKeyID</link></para>
-                  </listitem>
-                </itemizedlist>
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference does not display any content but instead
+                enables other Amazon-related preferences (<link
+                linkend="AmazonCoverImages">AmazonCoverImages</link>, <link
+                linkend="AmazonSimilarItems">AmazonSimilarItems</link>, <link
+                linkend="AmazonReviews">AmazonReviews</link>). Before turning
+                this feature to ”Use”, the library must first set <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Furthermore, if
+                Amazon content is enabled, other jacket services should be
+                diabled to avoid interference. This preference applies only to
+                the OPAC. In order to display Amazon content on the Staff
+                Client, please set the <link
+                linkend="AmazonEnabled">AmazonEnabled</link>
+                preference.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -3124,6 +3208,18 @@
             <para>Sign up at: <ulink
             url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If the library has signed up for an Amazon Web Services
+                (AWS) account, it will be assigned an Access Key ID. In order
+                to enable Amazon content, cover images, reviews, and similar
+                item suggestions, the library’s Access Key ID must be entered
+                here.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>Once signed up your keys can be accessed by logging into
             your account and going to the 'Security Credentials' page. Your
             Access Key will be listed next to the date it was created.</para>
@@ -3147,6 +3243,17 @@
 
             <para>Sign up at: <ulink
             url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If the library has signed up for an Amazon Web Services
+                (AWS) account, it will be assigned a Secret Access Key. In
+                order to enable Amazon reviews and similar item suggestions,
+                the library’s Secret Access Key must be entered here.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Once signed up your keys can be accessed by logging into
             your account and going to the 'Security Credentials' page. Next to
@@ -3199,7 +3306,7 @@
           </section>
 
           <section>
-            <title>AmazonCoverImages</title>
+            <title id="AmazonCoverImages">AmazonCoverImages</title>
 
             <para>Default: Don't show</para>
 
@@ -3250,7 +3357,7 @@
           </section>
 
           <section>
-            <title>AmazonReviews</title>
+            <title id="AmazonReviews">AmazonReviews</title>
 
             <para>Default: Don't show</para>
 
@@ -3282,10 +3389,11 @@
                 the value is set to ”Show”, the reviews will appear in the
                 Staff Client, and if it is set to ”Don't show”, the reviews
                 will not appear. Before setting this to ”Show”, the library
-                must first set <link linkend="???">AWSAccessKeyID</link> and
-                <link linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally,
-                if AmazonReviews is enabled, all other review services should
-                be disabled to avoid interference.</para>
+                must first set <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
+                AmazonReviews is enabled, all other review services should be
+                disabled to avoid interference.</para>
               </listitem>
             </itemizedlist>
 
@@ -3297,7 +3405,7 @@
           </section>
 
           <section>
-            <title>AmazonSimilarItems</title>
+            <title id="AmazonSimilarItems">AmazonSimilarItems</title>
 
             <para>Default: Don't show</para>
 
@@ -3339,7 +3447,7 @@
                 appear in the Staff Client, and if it is set to ”Don't show”,
                 the suggestions will not appear. Before enabling this
                 preference, the library must first set <link
-                linkend="???">AWSAccessKeyID</link> and <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
                 linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
                 AmazonSimilarItems is enabled, all other similar item services
                 should be disabled to avoid interference.</para>
@@ -3354,7 +3462,7 @@
           </section>
 
           <section>
-            <title>OPACAmazonCoverImages</title>
+            <title id="OPACAmazonCoverImages">OPACAmazonCoverImages</title>
 
             <para>Default: Don't show</para>
 
@@ -3373,6 +3481,30 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to either allow or
+                prevent Amazon cover images from being displayed in the OPAC.
+                Cover images are retrieved by Amazon, which pulls the content
+                based on the first ISBN number in the item’s MARC record.
+                Amazon offers this service free of charge, but interested
+                libraries must first establish an Amazon Web Services (AWS)
+                account (<ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
+                the value for this preference is set to ”Show”, the cover
+                images will appear in the OPAC, and if it is set to ”Don't
+                show”, the images will not appear. If activating this feature,
+                the library must first set <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
+                you're using Amazon cover images, all other cover image
+                services must be disabled. If they are not disabled, they will
+                prevent AmazonCoverImages from functioning properly.</para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>Requires that <link
               linkend="OPACAmazonEnabled">OPACAmazonEnabled</link> is set to
@@ -3381,7 +3513,7 @@
           </section>
 
           <section>
-            <title>OPACAmazonSimilarItems</title>
+            <title id="OPACAmazonSimilarItems">OPACAmazonSimilarItems</title>
 
             <para>Default: Don't show</para>
 
@@ -3409,6 +3541,27 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to either allow or
+                prevent Amazon’s suggestions for Similar Items from being
+                displayed in the OPAC. Amazon offers this service free of
+                charge, but interested libraries must first establish an
+                Amazon Web Services (AWS) account (<ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
+                the value is set to ”Show”, the Similar Items suggestions will
+                appear in the OPAC, and if it is set to ”Don't show”, the
+                suggestions will not appear. Before enabling this preference,
+                the library must first set <link
+                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
+                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
+                AmazonSimilarItems is enabled, all other similar item services
+                should be disabled to avoid interference.</para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>Requires that <link
               linkend="OPACAmazonEnabled">OPACAmazonEnabled</link> is set to
@@ -3417,7 +3570,7 @@
           </section>
 
           <section>
-            <title>OPACAmazonReviews</title>
+            <title id="OPACAmazonReviews">OPACAmazonReviews</title>
 
             <para>Default: Don't show</para>
 
@@ -3433,6 +3586,26 @@
 
               <listitem>
                 <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to either allow or
+                prevent Amazon reviews from being displayed in the OPAC.
+                Amazon offers this service free of charge, but interested
+                libraries must first establish an Amazon Web Services (AWS)
+                account (<ulink
+                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
+                the value is set to ”Show”, the reviews will appear in the
+                OPAC, and if it is set to ”Don't show”, the reviews will not
+                appear. Before setting this to ”Show”, the library must first
+                set <link linkend="AWSAccessKeyID">AWSAccessKeyID</link> and
+                <link linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally,
+                if AmazonReviews is enabled, all other review services should
+                be disabled to avoid interference.</para>
               </listitem>
             </itemizedlist>
 
@@ -3457,6 +3630,28 @@
             <para>Asks: ___ include information (such as reviews and
             citations) from Babelthèque in item detail pages on the
             OPAC.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to display a
+                Babeltheque tab in the OPAC, allowing patrons to access tags,
+                reviews, and additional title information provided by
+                Babeltheque. The information which Babeltheque supplies is
+                drawn from the French language-based <ulink
+                url="http://www.babelio.com/">Babelio.com</ulink>, a French
+                service similar to LibraryThing for Libraries. More
+                information about Babeltheque is available through its
+                website, <ulink
+                url="http://www.babeltheque.com/">http://www.babeltheque.com</ulink>.
+                Libraries that wish to allow access to this information must
+                first register for the service at <ulink
+                url="http://www.babeltheque.com">http://www.babeltheque.com</ulink>.
+                Please note that this information is only provided in
+                French.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Values:</para>
 
@@ -3492,7 +3687,7 @@
           </important>
 
           <section>
-            <title>BakerTaylorEnabled</title>
+            <title id="BakerTaylorEnabled">BakerTaylorEnabled</title>
 
             <para>Default: Don't add</para>
 
@@ -3512,6 +3707,22 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference makes it possible to display Baker &amp;
+                Taylor content (book reviews, descriptions, cover images,
+                etc.) in both the Staff Client and the OPAC. Libraries that
+                wish to display Baker &amp; Taylor content must first register
+                and pay for this service with Baker &amp; Taylor (<ulink
+                url="http://www.btol.com">http://www.btol.com</ulink>). If
+                Baker &amp; Taylor content is enabled be sure to turn off
+                other cover and review services to prevent
+                interference.</para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>To use this you will need to also set the <link
               linkend="btuserpass">BakerTaylorUsername &amp;
@@ -3520,13 +3731,41 @@
           </section>
 
           <section>
-            <title>BakerTaylorBookstoreURL</title>
+            <title
+            id="BakerTaylorBookstoreURL">BakerTaylorBookstoreURL</title>
 
             <para>Asks: Baker and Taylor "My Library Bookstore" links should
             be accessed at https:// ___ isbn</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Some libraries generate additional funding for the
+                library by selling books and other materials that are
+                purchased from or have been previously leased from Baker &amp;
+                Taylor. These materials can be accessed via a link on the
+                library’s website. This service is often referred to as “My
+                Library Bookstore.” In order to participate in this program,
+                the library must first register and pay for the service with
+                Baker &amp; Taylor. Additional information about this and
+                other services provided by Baker &amp; Taylor is available at
+                the Baker &amp; Taylor website, <ulink
+                url="http://www.btol.com">http://www.btol.com</ulink>. The
+                BakerTaylorBookstoreURL preference establishes the URL in
+                order to link to the library’s Baker &amp; Taylor-backed
+                online bookstore, if such a bookstore has been established.
+                The default for this field is left blank; if no value is
+                entered, the links to My Library Bookstore will remain
+                inactive. If enabling this preference, enter the library’s
+                Hostname and Parent Number in the appropriate location within
+                the URL. The “key” value (key=) should be appended to the URL,
+                and https:// should be prepended.</para>
+              </listitem>
+            </itemizedlist>
+
             <para>This should be filled in with something like
-            ocls.mylibrarybookstore.com/MLB/actions/searchHandler.do?nextPage=bookDetails&amp;parentNum=10923&amp;key=</para>
+            koha.mylibrarybookstore.com/MLB/actions/searchHandler.do?nextPage=bookDetails&amp;parentNum=10923&amp;key=</para>
 
             <tip>
               <para>Leave it blank to disable these links.</para>
@@ -3544,6 +3783,27 @@
 
             <para>Asks: Access Baker and Taylor using username ___ and
             password ___</para>
+
+            <para>Descriptions:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting in only applicable if the library has a
+                paid subscription to the external Content Café service from
+                Baker &amp; Taylor. Use the box provided to enter in the
+                library’s Content Café username and password. Also, ensure
+                that the <link
+                linkend="BakerTaylorBookstoreURL">BakerTaylorBookstoreURL</link>
+                and <link
+                linkend="BakerTaylorEnabled">BakerTaylorEnabled</link>
+                settings are properly set. The Content Café service is a feed
+                of enhanced content such as cover art, professional reviews,
+                and summaries that is displayed along with Staff Client/OPAC
+                search results. For more information on this service please
+                see the Baker &amp; Taylor website: <ulink
+                url="http://www.btol.com">http://www.btol.com</ulink></para>
+              </listitem>
+            </itemizedlist>
 
             <important>
               <para>Be sure to get this information from Baker &amp; Taylor
@@ -3576,6 +3836,17 @@
                 <para>Don't add</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting controls the display of applicable cover
+                art from the free Google Books database, via the Google Books
+                API. Please note that to use this feature, all other cover
+                services should be turned off.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -3585,10 +3856,13 @@
           <para>LibraryThing for Libraries is a pay service. You must first
           contact LibraryThing directly for pricing and subscription
           information. Learn more at <ulink
-          url="http://www.librarything.com/forlibraries">http://www.librarything.com/forlibraries</ulink></para>
+          url="http://www.librarything.com/forlibraries">http://www.librarything.com/forlibraries</ulink>.
+          Also, for further configuration instructions please see the
+          LibraryThing Wiki: <ulink
+          url="http://www.librarything.com/wiki/index.php/Koha">http://www.librarything.com/wiki/index.php/Koha</ulink></para>
 
           <section>
-            <title>ThingISBN</title>
+            <title id="ThingISBN">ThingISBN</title>
 
             <para>Default: Don't use</para>
 
@@ -3604,6 +3878,19 @@
 
               <listitem>
                 <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Set to 'Use' to display an “Editions” tab on the item’s
+                detail page. Editions are listed, complete with cover art (if
+                you have one of the cover services enabled) and bibliographic
+                information. The feed comes from LibraryThing’s ThingISBN web
+                service. This is a free service to non-commercial sites with
+                fewer than 1,000 requests per day.</para>
               </listitem>
             </itemizedlist>
 
@@ -3640,6 +3927,20 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting is only applicable if the library has a
+                paid subscription to the external LibraryThing for Libraries
+                service. This service can provide patrons with the display of
+                expanded information on catalog items such as book
+                recommendations. It also can offer advanced features like
+                tagged browsing, patron written reviews, and a virtual library
+                display accessed from the details tab. </para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>If this is set to 'show' you will need to enter a value in
               the '<link
@@ -3655,8 +3956,24 @@
             <para>Asks: Access Library Thing for Libraries using the customer
             ID ___</para>
 
-            <para>This value is provided to you when you sign up for
-            LibraryThing for Libraries.</para>
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting is only applicable if the library has a
+                paid subscription to the external LibraryThing for Libraries
+                service. Use the box provided to enter in the library’s
+                LibraryThing for Libraries ID as provided to the library by
+                LibraryThing. The ID number is a series of numbers in the form
+                ###-#########, and can be found on the library’s account page
+                at LibraryThing for Libraries. This service can provide
+                patrons with the display of expanded information on catalog
+                items such as book recommendations and cover art. It also can
+                offer advanced features like tagged browsing, patron written
+                reviews, and a virtual library display accessed from the
+                details tab. </para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
@@ -3677,6 +3994,20 @@
                 <para>in tabs</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting is only applicable if the library has a
+                paid subscription to the external LibraryThing for Libraries
+                service. This service can provide patrons with the display of
+                expanded information on catalog items such as book
+                recommendations and cover art. It also can offer advanced
+                features like tagged browsing, patron written reviews, and a
+                virtual library display accessed from the details tab. </para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -3686,12 +4017,24 @@
           <para></para>
 
           <section>
-            <title>XISBN</title>
+            <title id="XISBN">XISBN</title>
 
             <para>Default: Don't use</para>
 
             <para>Asks: ___ the OCLC xISBN service to show other editions of a
             title</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Set to 'Use' to display an “Editions” tab on the item’s
+                detail page. Editions are listed, complete with cover art and
+                bibliographic information. The feed comes from OCLC’s xISBN
+                web service. The feed limit for non-commercial sites is 1000
+                requests per day.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Values:</para>
 
@@ -3719,6 +4062,25 @@
             <para>Asks: Use the OCLC affiliate ID ___ to access the xISBN
             service.</para>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting is only applicable if the library has an
+                OCLC Affiliate ID. This allows WorldCat searching in the OPAC
+                via the XISBN programming interface. Simply enter the
+                library’s OCLC Affiliate ID in the box provided. Please note
+                that using this data is only necessary if <link
+                linkend="FRBRizeEditions">FRBRizeEditions</link> and/or <link
+                linkend="OPACFRBRizeEditions">OPACFRBRizeEditions</link> and
+                <link linkend="XISBN">XISBN</link> settings are enabled. For
+                more information on this service please visit the OCLC
+                website: <ulink
+                url="http://www.worldcat.org/affiliate/default.jsp">http://www.worldcat.org/affiliate/default.jsp</ulink>.
+                </para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>Unless you have signed up for an ID with OCLC, you are
               limited to 1000 requests per day. Available at: <ulink
@@ -3727,7 +4089,7 @@
           </section>
 
           <section>
-            <title>XISBNDailyLimit</title>
+            <title id="XISBNDailyLimit">XISBNDailyLimit</title>
 
             <para>Default: 999</para>
 
@@ -3748,7 +4110,7 @@
           directly for pricing and subscription information.</para>
 
           <section>
-            <title>SyndeticsEnabled</title>
+            <title id="SyndeticsEnabled">SyndeticsEnabled</title>
 
             <para>Default: Don't use</para>
 
@@ -3766,6 +4128,15 @@
               </listitem>
             </itemizedlist>
 
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this option is enabled any of the Syndetics options
+                can be used. </para>
+              </listitem>
+            </itemizedlist>
+
             <important>
               <para>Requires that you enter your <link
               linkend="SyndeticsClientCode">SyndeticsClientCode</link> before
@@ -3777,6 +4148,24 @@
             <title id="SyndeticsClientCode">SyndeticsClientCode</title>
 
             <para>Asks: Use the client code ___ to access Syndetics.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Once the library signs up for Syndetics’ services,
+                Syndetics will provide the library with an access code. (Visit
+                the Syndetics homepage at <ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>
+                for more information.) This is the code that must be entered
+                to access Syndetics’ subscription services. Syndetics is a
+                paid subscription service. This value must be entered before
+                <link linkend="SyndeticsEditions">SyndeticsEditions</link> can
+                be enabled. If the code is lost, corrupted, or forgotten, a
+                new one can be obtained from <ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>.</para>
+              </listitem>
+            </itemizedlist>
 
             <important>
               <para>You will need to get your client code directly from
@@ -3793,6 +4182,29 @@
 
             <para>Asks: ___ cover images from Syndetics on search results and
             item detail pages on the OPAC in a ___ size.</para>
+
+            <para>Descriptions:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When enabled, SyndeticsCoverImages, allows libraries to
+                display Syndetics’ collection of full-color cover images for
+                books, videos, DVDs and CDs on their OPAC. For each book or
+                item that comes up during a user search, the cover image for
+                that title will be displayed. Since these cover images come in
+                three sizes, the optimum size must be selected using the
+                SyndeticsCoverImageSize preference after SyndeticsCoverImages
+                are enabled. Syndetics cover images come in two sizes:
+                mid-size (187 x 187 pixels), and large (400 x 400 pixels).
+                Syndetics is a paid subscription service. The <link
+                linkend="SyndeticsClientCode">SyndeticsClientCode</link> must
+                be entered and the <link
+                linkend="SyndeticsEnabled">SyndeticsEnabled</link> option must
+                be activated before this service can be used. Other cover
+                image preferences should also be disabled to avoid
+                interference.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>SyndeticsCoverImages Values:</para>
 
@@ -3820,7 +4232,7 @@
           </section>
 
           <section>
-            <title>SyndeticsAuthorNotes</title>
+            <title id="SyndeticsAuthorNotes">SyndeticsAuthorNotes</title>
 
             <para>Default: Don't show</para>
 
@@ -3838,10 +4250,29 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this option is set to "Show", Syndetics provides
+                notes and short author biographies for more that 300,000
+                authors, in both fiction and nonfiction. With this option
+                enabled the library can display Syndetics Author Notes on the
+                OPAC. According to the Syndetics Solutions website (<ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>),
+                Author Notes include lists of contributors for many
+                multi-author texts and compilations. The <link
+                linkend="SyndeticsClientCode">SyndeticsClientCode</link> must
+                be entered and the <link
+                linkend="SyndeticsEnabled">SyndeticsEnabled</link> option must
+                be activated before this service can be used. </para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>SyndeticsAwards</title>
+            <title id="SyndeticsAwards">SyndeticsAwards</title>
 
             <para>Default: Don't show</para>
 
@@ -3859,15 +4290,51 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this option is set to "Show", Syndetics provides
+                its clients with a list of awards that any title has won. With
+                this service enabled the library can display those awards for
+                each book on its website. For each book or item that comes up
+                during a user search, the list of awards for that title will
+                be displayed. When a user clicks on a given award, information
+                about that award is presented along with a list of the other
+                titles that have won that award. If the user clicks on any
+                title in the list, they will see holdings information about
+                that title in their region. This option is a paid subscription
+                service. The <link
+                linkend="SyndeticsClientCode">SyndeticsClientCode</link> must
+                be entered and the <link
+                linkend="SyndeticsEnabled">SyndeticsEnabled</link> option must
+                be activated before this service can be used.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>SyndeticsEditions</title>
+            <title id="SyndeticsEditions">SyndeticsEditions</title>
 
             <para>Default: Don't show</para>
 
             <para>Asks: ___ information about other editions of a title from
             Syndetics on item detail pages on the OPAC</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When enabled this option shows information on other
+                editions of a title from Syndetics on the item detail pages of
+                the OPAC. Syndetics is a paid subscription service. The <link
+                linkend="SyndeticsClientCode">SyndeticsClientCode</link> must
+                be entered and the <link
+                linkend="SyndeticsEnabled">SyndeticsEnabled</link> option must
+                be activated before this service can be used.</para>
+              </listitem>
+            </itemizedlist>
 
             <para>Values:</para>
 
@@ -3889,7 +4356,7 @@
           </section>
 
           <section>
-            <title>SyndeticsExcerpt</title>
+            <title id="SyndeticsExcerpt">SyndeticsExcerpt</title>
 
             <para>Default: Don't show</para>
 
@@ -3907,10 +4374,26 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows Syndetics to display excerpts
+                given to them from selected publishers. The excerpts are
+                available from prominently reviewed new titles, both fiction
+                and non-fiction. The excerpts include poems, essays, recipes,
+                forwards and prefaces. Automatic links provided by the ISBNs
+                within local MARC records are required to integrate Syndetics
+                secured, high-speed Internet servers to the library OPACs. For
+                more information see (<ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>).</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>SyndeticsReviews</title>
+            <title id="SyndeticsReviews">SyndeticsReviews</title>
 
             <para>Default: Don't show</para>
 
@@ -3928,10 +4411,28 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Syndetics Reviews is an accumulation of book reviews
+                available from a variety of journals and serials. The reviews
+                page displays colored images of reviewed books dust jackets,
+                partnered with the names of the journal or serial providing
+                the review. Clicking on an icon opens a window revealing the
+                book title, author’s name, book cover icon and the critic’s
+                opinion of the book. Automatic links provided by the ISBNs
+                within local MARC records are required to integrate Syndetics
+                secured, high-speed Internet servers to the library OPACs. For
+                more information see (<ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>).</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>SyndeticsSeries</title>
+            <title id="SyndeticsSeries">SyndeticsSeries</title>
 
             <para>Default: Don't show</para>
 
@@ -3949,10 +4450,26 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Each fiction title within a series is linked to the
+                complete series record. The record displays each title in
+                reading order and also displays the publication order, if
+                different. Alternate series titles are also displayed.
+                Automatic links provided by the ISBNs within local MARC
+                records are required to integrate Syndetics secured, high-
+                speed Internet servers to the library OPACs. For more
+                information see (<ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>).</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>SyndeticsSummary</title>
+            <title id="SyndeticsSummary">SyndeticsSummary</title>
 
             <para>Default: Don't show</para>
 
@@ -3970,10 +4487,24 @@
                 <para>Show</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Providing more than 5.6 million summaries and
+                annotations derived from book jackets, edited publisher copy,
+                or independently written annotations from Book News, Inc.
+                Covering fiction and non-fiction, this summaries option
+                provides annotations on both trade and scholarly titles. For
+                more information see (<ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>).</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>SyndeticsTOC</title>
+            <title id="SyndeticsTOC">SyndeticsTOC</title>
 
             <para>Default: Don't show</para>
 
@@ -3989,6 +4520,25 @@
 
               <listitem>
                 <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows staff and patrons to review the
+                Table of Contents from a wide variety of publications from
+                popular self-help books to conference proceedings. Specific
+                Information access is the main purpose for this option,
+                allowing patrons guidance to their preferred section of the
+                book. Special arrangements with selected book services is used
+                to obtain the table of contents for new publications each
+                year. Automatic links provided by the ISBNs within local MARC
+                records are required to integrate Syndetics secured,
+                high-speed Internet servers to the library OPACs. For more
+                information see (<ulink
+                url="http://www.bowker.com/syndetics/">http://www.bowker.com/syndetics/</ulink>).</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4015,10 +4565,22 @@
                 <para>Don't allow</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Set to 'Allow' enable tagging. A tag is metadata, a word
+                added to identify an item. Tags allow patrons to classify
+                materials on their own. TagsEnabled is the main switch that
+                permits the tagging features. TagsEnable must be set to
+                'Allow' to allow for other tagging features.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section>
-            <title>TagsModeration</title>
+            <title id="TagsModeration">TagsModeration</title>
 
             <para>Default: Don't require</para>
 
@@ -4034,6 +4596,21 @@
 
               <listitem>
                 <para>Require</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When set to 'Require,' all tags to be first filtered by
+                the tag moderator. Only approved tags will be visible to
+                patrons. When set to 'Don't require' tags will bypass the tag
+                moderator and patrons’ tags to be immediately visible. When
+                this preference is enabled the moderator, a staff member,
+                would approve the tag in the Staff Client. The moderator will
+                have the option to approve or reject each pending tag
+                suggestion.</para>
               </listitem>
             </itemizedlist>
 
@@ -4073,6 +4650,16 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
+                <screenshot>
+                  <screeninfo>Tags on Search Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/TagsInputOnList.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
 
               <listitem>
@@ -4106,6 +4693,16 @@
             <itemizedlist>
               <listitem>
                 <para>Allow</para>
+
+                <screenshot>
+                  <screeninfo>Add Tags on Detail</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/TagsInputOnDetail.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
 
               <listitem>
@@ -4120,10 +4717,24 @@
             <para>Asks: Allow tags in the dictionary of the ispell executable
             ___ on the server to be approved without moderation.</para>
 
-            <para>Enter the path on your server to a local ispell executable,
-            used to set $Lingua::Ispell::path.</para>
+            <para>Description:</para>
 
-            <para>An example would be /usr/bin/ispell</para>
+            <itemizedlist>
+              <listitem>
+                <para>The dictionary includes a “whitelist” and a “blacklist”
+                of tags. The whitelist includes all the tags that have been
+                pre-allowed. The blacklist includes tags that are not allowed.
+                This preference identifies the “whitelist” dictionary used.
+                Ispell is an open source dictionary which can be used as the
+                “whitelist”. Since the dictionary allows for accurately
+                spelled obscenities, the libraries policy may dictate that
+                modifications are made to the Ispell dictionary if this
+                preference is use. For more information about Ispell <ulink
+                url="http://www.gnu.org/software/ispell/ispell.html">http://www.gnu.org/software/ispell/ispell.html</ulink>.
+                Enter the path on your server to a local ispell executable,
+                used to set $Lingua::Ispell::path.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
       </section>
