@@ -923,7 +923,7 @@
             <para>Asks: Show ___ as the text of links embedded in MARC
             records.</para>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -5131,7 +5131,7 @@
                 simple form displays the graphical interface; MARC format
                 displays the MARC21 cataloging view; ISBD displays the ISBD
                 (International Standard Bibliographic Description, AACR2)
-                view. </para>
+                view.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -5695,7 +5695,7 @@
                 same time. The default CSS defines a region just large enough
                 to display the Koha logo, and if your logo doesn’t match the
                 Koha logo’s dimensions (120 pixels wide by 38 pixels high), it
-                won’t display correctly. </para>
+                won’t display correctly.</para>
               </listitem>
             </itemizedlist>
 
@@ -5796,7 +5796,7 @@
             <para>Asks: Include the following CSS on all pages in the
             OPAC</para>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -5944,13 +5944,13 @@
                 <para>This preference displays the link on the OPAC for the
                 authority search (titled 'Browse by Subject'). By setting the
                 preference to “Allow” patrons can use this search link of the
-                OPAC. </para>
+                OPAC.</para>
               </listitem>
             </itemizedlist>
 
             <important>
               <para>While labeled 'Browse' it is important to note that this
-              is in fact an authority search, not an authority browse. </para>
+              is in fact an authority search, not an authority browse.</para>
 
               <screenshot>
                 <screeninfo>Authority Search in the OPAC</screeninfo>
@@ -6022,8 +6022,8 @@
                 list of items found on the catalog. By using the Book Bag, or
                 Cart, the user can print out or email a list of items found.
                 The user does not need to be logged in. This list is temporary
-                and will be emptied, or cleared, at the end of the session.
-                </para>
+                and will be emptied, or cleared, at the end of the
+                session.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6206,8 +6206,8 @@
                 call number. Clicking the 'Browse Shelf' link allows for a
                 virtual shelf browsing experience via the OPAC and lets
                 patrons see other books that may relate to their search and
-                items that sit on the shelf near the item they are looking at.
-                </para>
+                items that sit on the shelf near the item they are looking
+                at.</para>
               </listitem>
             </itemizedlist>
 
@@ -6899,8 +6899,8 @@
               a guarantee (usually a child). Defining values for this field
               does not make the guarantor field required when adding a
               guarantee type patron. This preference creates a dropdown list
-              identifying the relationship of the guarantor to the guarantee.
-              </para>
+              identifying the relationship of the guarantor to the
+              guarantee.</para>
             </listitem>
           </itemizedlist>
 
@@ -6922,7 +6922,7 @@
             <listitem>
               <para>This preference allows the staff to choose the titles that
               can be assigned to patrons. The choices present as a dropdown
-              list when creating a patron record. </para>
+              list when creating a patron record.</para>
             </listitem>
           </itemizedlist>
 
@@ -7023,7 +7023,7 @@
           <itemizedlist>
             <listitem>
               <para>Patron attributes are library-defined custom fields that
-              can be applied to patron records. </para>
+              can be applied to patron records.</para>
             </listitem>
           </itemizedlist>
 
@@ -7650,7 +7650,7 @@
             <para>Default: Don't show</para>
 
             <para>Asks: ___ an item's branch, location and call number in OPAC
-            search results. </para>
+            search results.</para>
 
             <para>Values:</para>
 
@@ -7684,8 +7684,8 @@
 
             <para>Default: 20</para>
 
-            <para>Asks: By default, show ___ results per page in the OPAC.
-            </para>
+            <para>Asks: By default, show ___ results per page in the
+            OPAC.</para>
           </section>
         </section>
 
@@ -7948,7 +7948,7 @@
                 <para>This preference is used to set the background color and
                 style of the Staff Client. The value is a .css file. The
                 system administrator should determine which file is
-                appropriate. </para>
+                appropriate.</para>
               </listitem>
             </itemizedlist>
 
@@ -8008,7 +8008,7 @@
                 stylesheet from the original, place in this preference the
                 file path to the style sheet - include the entire url starting
                 with http://. This preference allows a library to customize
-                the appearance of the Staff Client. </para>
+                the appearance of the Staff Client.</para>
               </listitem>
             </itemizedlist>
 
@@ -8057,8 +8057,7 @@
                 customizing the text for the login prompts, for example.
                 Sample JQuery scripts used by Koha libraries can be found on
                 the wiki: <ulink
-                url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.
-                </para>
+                url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -8209,7 +8208,7 @@
                 (<ulink
                 url="http://developer.yahoo.com/yui/2/">http://developer.yahoo.com/yui/2/</ulink>).
                 This library is a resource of developer tools including
-                JavaScript and style sheets. </para>
+                JavaScript and style sheets.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -19501,7 +19500,7 @@
       </section>
 
       <section>
-        <title>Item Record Cataloging Guide</title>
+        <title>Item/Holdings Record Cataloging Guide</title>
 
         <para>This table represents the default embedded holdings data in Koha
         3.2. This information can be used for migration or importing data
@@ -19712,26 +19711,26 @@
               <row>
                 <entry><para>952$a</para></entry>
 
-                <entry><para>Owning Library</para></entry>
+                <entry><para>Owning Library **</para></entry>
 
                 <entry><para>Branch code</para></entry>
 
-                <entry><para>Code must be defined in <link
-                linkend="libsgroups">Libraries, Branches and
-                Groups</link></para></entry>
+                <entry><para><emphasis role="bold">Required</emphasis>. Code
+                must be defined in <link linkend="libsgroups">Libraries,
+                Branches and Groups</link></para></entry>
               </row>
 
               <row>
                 <entry><para>952$b</para></entry>
 
-                <entry><para>Holding library (usually the same as 952$a
+                <entry><para>Holding library ** (usually the same as 952$a
                 )</para></entry>
 
                 <entry><para>Branch code</para></entry>
 
-                <entry><para>Code must be defined in <link
-                linkend="libsgroups">Libraries, Branches and
-                Groups</link></para></entry>
+                <entry><para><emphasis role="bold">Required</emphasis>. Code
+                must be defined in <link linkend="libsgroups">Libraries,
+                Branches and Groups</link></para></entry>
               </row>
 
               <row>
@@ -19833,13 +19832,14 @@
               <row>
                 <entry><para>952$y</para></entry>
 
-                <entry><para>Koha item type *</para></entry>
+                <entry><para>Koha item type **</para></entry>
 
                 <entry><para>Coded value, required field for
                 circulation</para></entry>
 
-                <entry><para>Coded value, must be defined in <link
-                linkend="itemtypeadmin">Item types</link></para></entry>
+                <entry><para><emphasis role="bold">Required</emphasis>. Coded
+                value, must be defined in <link linkend="itemtypeadmin">Item
+                types</link></para></entry>
               </row>
 
               <row>
@@ -19856,6 +19856,8 @@
         </table>
 
         <para>* - required for circulation</para>
+
+        <para>** - required by Koha</para>
       </section>
 
       <section>
