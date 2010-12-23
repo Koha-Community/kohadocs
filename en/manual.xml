@@ -3108,8 +3108,8 @@
                 linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
                 linkend="AWSPrivateKey">AWSPrivateKey</link>. Furthermore, if
                 Amazon content is enabled, other jacket services should be
-                disabled to avoid interference. This preference applies only to
-                the Staff Client. In order to display Amazon content on the
+                disabled to avoid interference. This preference applies only
+                to the Staff Client. In order to display Amazon content on the
                 OPAC, please set the <link
                 linkend="OPACAmazonEnabled">OPACAmazonEnabled</link>
                 preference.</para>
@@ -3168,8 +3168,8 @@
                 linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
                 linkend="AWSPrivateKey">AWSPrivateKey</link>. Furthermore, if
                 Amazon content is enabled, other jacket services should be
-                disabled to avoid interference. This preference applies only to
-                the OPAC. In order to display Amazon content on the Staff
+                disabled to avoid interference. This preference applies only
+                to the OPAC. In order to display Amazon content on the Staff
                 Client, please set the <link
                 linkend="AmazonEnabled">AmazonEnabled</link>
                 preference.</para>
@@ -14317,8 +14317,12 @@
         <section>
           <title>Notice Markup</title>
 
-          <para>When creating your notice there are two tags in addition to
-          the various database fields that you can use in your notices.</para>
+          <para>When creating your overdue notices there are two tags in
+          addition to the various database fields that you can use in your
+          notices.<important>
+              <para>These new tags only work on the overdue notices, not other
+              circulation related notices at this time.</para>
+            </important></para>
 
           <itemizedlist>
             <listitem>
@@ -18447,7 +18451,7 @@
             linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link>
             system preference. If you have this preference set to not allow
             catalogers to type in fields controlled by authorities you may see
-            a lock symbol to the left of the field. </para>
+            a lock symbol to the left of the field.</para>
 
             <screenshot>
               <screeninfo>Authority fields locked against editing</screeninfo>
