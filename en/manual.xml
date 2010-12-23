@@ -18424,7 +18424,21 @@
 
           <listitem>
             <para>To get help from the Library of Congress on a Marc tag click
-            the question mark (?)</para>
+            the question mark (?) to the right of each field number</para>
+
+            <itemizedlist>
+              <listitem>
+                <tip>
+                  <para>If you think this is an unwanted feature, you could
+                  add the following JavaScript to your <link
+                  linkend="intranetuserjs">intranetuserjs</link> system
+                  preference: <programlisting>
+                $(document).ready(function(){
+                 $(".tagnum a").hide();
+                });</programlisting></para>
+                </tip>
+              </listitem>
+            </itemizedlist>
           </listitem>
 
           <listitem>
