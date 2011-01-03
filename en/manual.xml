@@ -31243,6 +31243,336 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         </listitem>
       </itemizedlist>
     </section>
+
+    <section>
+    <sectioninfo>
+          <author>
+          <firstname>Kanika</firstname>
+
+          <surname>Goyal</surname>
+
+          <affiliation>
+            <orgname>Delhi Technological University</orgname>
+          </affiliation>
+        </author>
+
+          <editor>
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+          </editor>
+
+          <pubdate>2010</pubdate>
+
+          <bibliosource><ulink
+          url="http://www.botskool.com/geeks/how-import-excel-data-koha">http://www.botskool.com/geeks/how-import-excel-data-koha</ulink></bibliosource>
+        </sectioninfo>
+      <title>Importing Excel data into Koha</title>
+
+      <para>Suppose you have records of your library in excel data sheet
+      format and want them to import into Koha. But how will you do this? Koha
+      will not let you import excel records directly. Well here is a very
+      simple solution for you which will let you import your excel records in
+      Koha easily. First, we will convert excel file into Marc file and then
+      will import it into Koha. </para>
+
+      <para>Follow the given steps to import your excel records into
+      Koha</para>
+
+      <section>
+        <title>Converting from Excel format into .mrk format</title>
+
+        <para>First, we will convert excel format into .mrk format. For this
+        we will use MarcEdit. You can download it from <ulink
+        url="http://people.oregonstate.edu/~reeset/marcedit/html/downloads.html">http://people.oregonstate.edu/~reeset/marcedit/html/downloads.html</ulink>.
+        </para>
+
+        <para>Now open it and select Add-ins--&gt;Delimited Text
+        Translator.</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-1.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Click Next when the following window appears.</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-2.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Browse for your excel file. </para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-3.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Locate your excel file by choosing the format Excel
+        File(*.xls).</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-4.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Similarly, fill all the other entries such as Output File, Excel
+        Sheet Name and check UTF-8 Encoded (if required) and Click
+        Next.</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-5.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Now you will be prompted for mapping the fields to recognise the
+        fields by standard marc format. </para>
+
+        <para>Suppose for Field 0 that is first column I entered Map to:
+        022$a( Valid ISSN for the continuing resource) and then click on
+        Apply.</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-6.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <note>
+          <para>You can customize Indicators and all other things, for more
+          information on marc21 format visit the <ulink
+          url="http://www.loc.gov/marc/bibliographic/">official library of
+          congress site</ulink>.</para>
+        </note>
+
+        <para>Similarly map all other fields and then Click on Finish.</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-7.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>And then a window will appear indicating that your Marc Text
+        File(*.mrk) has been created.</para>
+
+        <screenshot>
+          <screeninfo>Delimited Text Translator</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-8.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Click Close and we have created a .mrk file from .xls file in
+        this step. You can view the file by double clicking on it.</para>
+      </section>
+
+      <section>
+        <title>Convert .mrk file to .mrc</title>
+
+        <para>We will convert .mrk file that we have created in the above step
+        into raw Marc format that can be directly imported into Koha. </para>
+
+        <para>For this again open MarcEdit and Select MARC Tools.</para>
+
+        <screenshot>
+          <screeninfo>MARC Tools</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-9.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Next Select MarcMaker to convert .mrk file into .mrc
+        format.</para>
+
+        <screenshot>
+          <screeninfo>MarcMaker</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-10.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Locate your input file and name your output file. Then Click
+        Execute.</para>
+
+        <screenshot>
+          <screeninfo>MarcMaker</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-11.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>And it will show you the Result.</para>
+
+        <screenshot>
+          <screeninfo>MarcMaker</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-12.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Click Close and now we have raw Marc records wih us (.mrc file).
+        </para>
+      </section>
+
+      <section>
+        <title>Import .mrc into Koha</title>
+
+        <para>More information on importing records into Koha can be found in
+        the '<link linkend="stagemarc">Stage MARC Records for Import</link>'
+        section of this manual.</para>
+
+        <para>Finally we will import above created .mrc file into Koha.
+        </para>
+
+        <para>Click on Tools in your Koha staff client. </para>
+
+        <screenshot>
+          <screeninfo>Koha Staff Client</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-13.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Next Click on Stage MARC Records for Import.</para>
+
+        <screenshot>
+          <screeninfo>Stage MARC Records for Import</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-14.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>After this, choose your previously created .mrc file and click
+        on Upload.</para>
+
+        <screenshot>
+          <screeninfo>Stage File</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-15.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can also add comment about file and finally click on Stage
+        For Import.</para>
+
+        <screenshot>
+          <screeninfo>Stage for Import</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-17.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When the import is done, you will get a result something like
+        this</para>
+
+        <screenshot>
+          <screeninfo>Staged Records Summary</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-18.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Next, click on Manage staged records. </para>
+
+        <para>Here you can even change matching rules. </para>
+
+        <screenshot>
+          <screeninfo>Manage Staged Records</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-19.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Click on Import this batch into catalog when you are done.
+        </para>
+
+        <para>Thats it. After all the records get imported, check Status and
+        it should read "imported"</para>
+
+        <screenshot>
+          <screeninfo>Finalize Import</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-marcedit/excelimport/step-20.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can even undo the Import operation. </para>
+
+        <para>And within few minutes, we have imported around 10,000 records
+        in Koha</para>
+      </section>
+    </section>
   </appendix>
 
   <appendix>
