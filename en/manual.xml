@@ -18382,7 +18382,14 @@
   <chapter>
     <title id="cataloging">Cataloging</title>
 
-    <para></para>
+    <para>Before you start cataloging in Koha you're going to want to do some
+    basic setup. Refer to the <link linkend="implementation">Implementation
+    Checklist</link> for a full list of these things. Most importantly you're
+    going to want to make sure that your <link
+    linkend="marcbibframeworks">Frameworks</link> are all defined the way you
+    want. Once in the cataloging module you will not be able to add or remove
+    fields and subfields so your frameworks must be ready before you start
+    cataloging. </para>
 
     <section>
       <title>Bibliographic Records</title>
@@ -26520,7 +26527,7 @@
   </chapter>
 
   <chapter>
-    <title>Implementation Checklist</title>
+    <title id="implementation">Implementation Checklist</title>
 
     <para>The following guide will walk you through the areas of Koha you need
     to look at in order to prepare to start using the system.</para>
@@ -31333,8 +31340,8 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
     </section>
 
     <section>
-    <sectioninfo>
-          <author>
+      <sectioninfo>
+        <author>
           <firstname>Kanika</firstname>
 
           <surname>Goyal</surname>
@@ -31344,17 +31351,18 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </affiliation>
         </author>
 
-          <editor>
-            <firstname>Nicole C.</firstname>
+        <editor>
+          <firstname>Nicole C.</firstname>
 
-            <surname>Engard</surname>
-          </editor>
+          <surname>Engard</surname>
+        </editor>
 
-          <pubdate>2010</pubdate>
+        <pubdate>2010</pubdate>
 
-          <bibliosource><ulink
-          url="http://www.botskool.com/geeks/how-import-excel-data-koha">http://www.botskool.com/geeks/how-import-excel-data-koha</ulink></bibliosource>
-        </sectioninfo>
+        <bibliosource><ulink
+        url="http://www.botskool.com/geeks/how-import-excel-data-koha">http://www.botskool.com/geeks/how-import-excel-data-koha</ulink></bibliosource>
+      </sectioninfo>
+
       <title>Importing Excel data into Koha</title>
 
       <para>Suppose you have records of your library in excel data sheet
@@ -31362,7 +31370,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
       will not let you import excel records directly. Well here is a very
       simple solution for you which will let you import your excel records in
       Koha easily. First, we will convert excel file into Marc file and then
-      will import it into Koha. </para>
+      will import it into Koha.</para>
 
       <para>Follow the given steps to import your excel records into
       Koha</para>
@@ -31372,8 +31380,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
         <para>First, we will convert excel format into .mrk format. For this
         we will use MarcEdit. You can download it from <ulink
-        url="http://people.oregonstate.edu/~reeset/marcedit/html/downloads.html">http://people.oregonstate.edu/~reeset/marcedit/html/downloads.html</ulink>.
-        </para>
+        url="http://people.oregonstate.edu/~reeset/marcedit/html/downloads.html">http://people.oregonstate.edu/~reeset/marcedit/html/downloads.html</ulink>.</para>
 
         <para>Now open it and select Add-ins--&gt;Delimited Text
         Translator.</para>
@@ -31400,7 +31407,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </mediaobject>
         </screenshot>
 
-        <para>Browse for your excel file. </para>
+        <para>Browse for your excel file.</para>
 
         <screenshot>
           <screeninfo>Delimited Text Translator</screeninfo>
@@ -31440,7 +31447,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         </screenshot>
 
         <para>Now you will be prompted for mapping the fields to recognise the
-        fields by standard marc format. </para>
+        fields by standard marc format.</para>
 
         <para>Suppose for Field 0 that is first column I entered Map to:
         022$a( Valid ISSN for the continuing resource) and then click on
@@ -31496,7 +31503,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         <title>Convert .mrk file to .mrc</title>
 
         <para>We will convert .mrk file that we have created in the above step
-        into raw Marc format that can be directly imported into Koha. </para>
+        into raw Marc format that can be directly imported into Koha.</para>
 
         <para>For this again open MarcEdit and Select MARC Tools.</para>
 
@@ -31548,8 +31555,8 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </mediaobject>
         </screenshot>
 
-        <para>Click Close and now we have raw Marc records wih us (.mrc file).
-        </para>
+        <para>Click Close and now we have raw Marc records wih us (.mrc
+        file).</para>
       </section>
 
       <section>
@@ -31559,10 +31566,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         the '<link linkend="stagemarc">Stage MARC Records for Import</link>'
         section of this manual.</para>
 
-        <para>Finally we will import above created .mrc file into Koha.
-        </para>
+        <para>Finally we will import above created .mrc file into Koha.</para>
 
-        <para>Click on Tools in your Koha staff client. </para>
+        <para>Click on Tools in your Koha staff client.</para>
 
         <screenshot>
           <screeninfo>Koha Staff Client</screeninfo>
@@ -31625,9 +31631,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </mediaobject>
         </screenshot>
 
-        <para>Next, click on Manage staged records. </para>
+        <para>Next, click on Manage staged records.</para>
 
-        <para>Here you can even change matching rules. </para>
+        <para>Here you can even change matching rules.</para>
 
         <screenshot>
           <screeninfo>Manage Staged Records</screeninfo>
@@ -31639,8 +31645,8 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </mediaobject>
         </screenshot>
 
-        <para>Click on Import this batch into catalog when you are done.
-        </para>
+        <para>Click on Import this batch into catalog when you are
+        done.</para>
 
         <para>Thats it. After all the records get imported, check Status and
         it should read "imported"</para>
@@ -31655,7 +31661,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           </mediaobject>
         </screenshot>
 
-        <para>You can even undo the Import operation. </para>
+        <para>You can even undo the Import operation.</para>
 
         <para>And within few minutes, we have imported around 10,000 records
         in Koha</para>
