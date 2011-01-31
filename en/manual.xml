@@ -6207,25 +6207,6 @@
             </itemizedlist>
           </section>
 
-          <section id="opacreadinghistory">
-            <title>opacreadinghistory</title>
-
-            <para>Default: Allow</para>
-
-            <para>Asks: ___ patrons to see what books they have checked out in
-            the past.</para>
-
-            <important>
-              <para>Enabling this will make it so that patrons can view their
-              circulation history in the OPAC.</para>
-            </important>
-
-            <important>
-              <para>This data is stored in the system regardless of your
-              choice.</para>
-            </important>
-          </section>
-
           <section id="OPACShelfBrowser">
             <title>OPACShelfBrowser</title>
 
@@ -6485,27 +6466,6 @@
 
           <para></para>
 
-          <section id="AnonSuggestions">
-            <title>AnonSuggestions</title>
-
-            <para>Default: Don't allow</para>
-
-            <para>Asks: ___ patrons that aren't logged in to make purchase
-            suggestions.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Allow</para>
-              </listitem>
-
-              <listitem>
-                <para>Don't allow</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
           <section id="OPACFineNoRenewals">
             <title>OPACFineNoRenewals</title>
 
@@ -6735,6 +6695,46 @@
 
           <para></para>
 
+          <section id="AnonSuggestions">
+            <title>AnonSuggestions</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons that aren't logged in to make purchase
+            suggestions. <important>
+                <para>If set to 'Allow', suggestions are connected to the
+                <link linkend="AnonymousPatron">AnonymousPatron</link></para>
+              </important></para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="AnonymousPatron">
+            <title>AnonymousPatron</title>
+
+            <para>Default: 0</para>
+
+            <para>Asks: Use borrowernumber ___ as the Anonymous Patron (for
+            anonymous suggestions and reading history) <tip>
+                <para>Before setting this preference <link
+                linkend="addnewpatron">create a patron</link> to be used for
+                all anonymous suggestions and/or reading history items. This
+                patron can be any type and should be named something to make
+                it clear to you that they're anonymous (ex. Anonymous
+                Patron).</para>
+              </tip></para>
+          </section>
+
           <section id="EnableOpacSearchHistory">
             <title>EnableOpacSearchHistory</title>
 
@@ -6753,6 +6753,54 @@
                 <para>Keep</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section id="OPACPrivacy">
+            <title>OPACPrivacy</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to choose their own privacy settings for
+            their reading history. <important>
+                <para>This requires <link
+                linkend="opacreadinghistory">opacreadinghistory</link> set to
+                'Allow' and <link
+                linkend="AnonymousPatron">AnonymousPatron</link> to be set to
+                your anonymous patron's borrowernumber.</para>
+              </important></para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="opacreadinghistory">
+            <title>opacreadinghistory</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ patrons to see what books they have checked out in
+            the past.</para>
+
+            <important>
+              <para>Enabling this will make it so that patrons can view their
+              circulation history in the OPAC unless you have OPACPrivacy set
+              to 'Allow.'</para>
+            </important>
+
+            <important>
+              <para>This data is stored in the system regardless of your
+              choice, unless your patrons have chosen to never have their
+              reading history kept.</para>
+            </important>
           </section>
         </section>
       </section>
@@ -7094,7 +7142,13 @@
 
           <para>Default: Allow</para>
 
-          <para>Asks: ___ staff to access a patron's checkout history</para>
+          <para>Asks: ___ staff to access a patron's checkout
+          history<important>
+              <para>If you have the <link
+              linkend="OPACPrivacy">OPACPrivacy</link> preference set to
+              'Allow' and the patron has decided to not have their history
+              kept staff will only see currently checked out items.</para>
+            </important></para>
 
           <para>Values:</para>
 
@@ -16830,7 +16884,11 @@
 
         <para>The circulation history tab will appear if you have set the
         <link linkend="intranetreadinghistory">intranetreadinghistory</link>
-        preference to allow it to appear.</para>
+        preference to allow it to appear. If you have the <link
+        linkend="OPACPrivacy">OPACPrivacy</link> system preference set to
+        'Allow' and the patron has decided that the library cannot keep this
+        information this tab will only show currently checked out
+        items.</para>
 
         <screenshot>
           <screeninfo>Patron Circulation History</screeninfo>
@@ -24402,7 +24460,10 @@
         <para>Depending on your library's setting for <link
         linkend="opacreadinghistory">opacreadinghistory</link> your patrons
         may see the 'my reading history' tab next. This will show the patron
-        their entire reading history.</para>
+        their entire reading history unless they have asked the library to not
+        keep that information via the 'my privacy' tab which will appear if
+        you have the <link linkend="OPACPrivacy">OPACPrivacy</link> preference
+        set to 'Allow.'</para>
 
         <screenshot>
           <screeninfo>Patron reading history</screeninfo>
@@ -24413,6 +24474,70 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+      </section>
+
+      <section id="opacmyprivacy">
+        <title>My Privacy</title>
+
+        <para>The 'my privacy' tab will appear if you have both the <link
+        linkend="opacreadinghistory">opacreadinghistory</link> and the <link
+        linkend="OPACPrivacy">OPACPrivacy</link> preferences set to 'Allow.'
+        This tab will allow the patrons to decide how the library keeps their
+        circulation history data.</para>
+
+        <screenshot>
+          <screeninfo>my privacy tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/myprivacy.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The patron can choose from three options:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Forever: keep my reading history without limit. This is the
+            option for users who want to keep track of what they are
+            reading.</para>
+          </listitem>
+
+          <listitem>
+            <para>Default: keep my reading history according to local laws.
+            This is the default option : the library will keep your reading
+            history for the duration permitted by local laws.</para>
+          </listitem>
+
+          <listitem>
+            <para>Never: Delete my reading history immediately. This will
+            delete all record of the item that was checked-out upon
+            check-in.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Depending on the patron's suggestions the contents of the '<link
+        linkend="opacmyhistory">my reading history</link>' tab and the '<link
+        linkend="circhistory">Circulation History</link>' tab in the staff
+        client may change.</para>
+
+        <para>Regardless of the patron's choice they can delete their reading
+        history in bulk at any time by clicking the 'Immediate deletion'
+        button.</para>
+
+        <screenshot>
+          <screeninfo>Delete Circulation History</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/deletecirchistory.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Clicking this button will not delete items that are currently
+        checked out, but will clear the patron's past reading history.</para>
       </section>
 
       <section id="opacmysuggestions">
