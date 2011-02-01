@@ -6208,58 +6208,6 @@
             </itemizedlist>
           </section>
 
-          <section id="OPACShelfBrowser">
-            <title>OPACShelfBrowser</title>
-
-            <para>Default: Show</para>
-
-            <para>Asks: ___ a shelf browser on item details pages, allowing
-            patrons to see what's near that item on the shelf.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-
-                <screenshot>
-                  <screeninfo>OPACShelfBrowser</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACShelfBrowser.png" />
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference allows patrons to view what is located
-                on the shelf near the item they looked up. The shelf browser
-                option appears on the details page to the right of each items'
-                call number. Clicking the 'Browse Shelf' link allows for a
-                virtual shelf browsing experience via the OPAC and lets
-                patrons see other books that may relate to their search and
-                items that sit on the shelf near the item they are looking
-                at.</para>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>This uses up a fairly large amount of resources on your
-              server, and should be avoided if your collection has a large
-              number of items.</para>
-            </important>
-          </section>
-
           <section id="OpacTopissue">
             <title>OpacTopissue</title>
 
@@ -6802,6 +6750,160 @@
               choice, unless your patrons have chosen to never have their
               reading history kept.</para>
             </important>
+          </section>
+        </section>
+
+        <section id="shelfbrowseprefs">
+          <title>Shelf Browser</title>
+
+          <para></para>
+
+          <section id="OPACShelfBrowser">
+            <title>OPACShelfBrowser</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ a shelf browser on item details pages, allowing
+            patrons to see what's near that item on the shelf.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>OPACShelfBrowser</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACShelfBrowser.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows patrons to view what is located
+                on the shelf near the item they looked up. The shelf browser
+                option appears on the details page to the right of each items'
+                call number. Clicking the 'Browse Shelf' link allows for a
+                virtual shelf browsing experience via the OPAC and lets
+                patrons see other books that may relate to their search and
+                items that sit on the shelf near the item they are looking
+                at.</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This uses up a fairly large amount of resources on your
+              server, and should be avoided if your collection has a large
+              number of items.</para>
+            </important>
+          </section>
+
+          <section id="ShelfBrowserUsesCcode">
+            <title>ShelfBrowserUsesCcode</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ the item collection code when finding items for
+            the shelf browser. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If your library uses collection codes then you might
+                want the shelf browser to take into consideration what
+                collection the books belong to when populating the virtual
+                shelf browser.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="ShelfBrowserUsesHomeBranch">
+            <title>ShelfBrowserUsesHomeBranch</title>
+
+            <para>Default: Use</para>
+
+            <para>Asks: ___ the item home branch when finding items for the
+            shelf browser. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you have a multiple branch system you may want to
+                make sure that Koha takes into consideration what branch owns
+                the books when populating the virtual shelf browser for
+                accuracy.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="ShelfBrowserUsesLocation">
+            <title>ShelfBrowserUsesLocation</title>
+
+            <para>Default: Use</para>
+
+            <para>Asks: ___ the item location when finding items for the shelf
+            browser. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If your library uses shelving locations then you might
+                want the shelf browser to take into consideration what
+                shelving location the books belong to when populating the
+                virtual shelf browser.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
       </section>
@@ -7673,8 +7775,8 @@
 
             <para>Default: 20</para>
 
-            <para>Asks: Show up to ___ items per biblio in the search results
-            </para>
+            <para>Asks: Show up to ___ items per biblio in the search
+            results</para>
 
             <para>Description:</para>
 
