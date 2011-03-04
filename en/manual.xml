@@ -1367,8 +1367,8 @@
             <para>Default: Require</para>
 
             <para>Asks: ___ staff to manually override all fines, even fines
-            less than <link linkend="noissuescharge">noissuescharge</link>.
-            </para>
+            less than <link
+            linkend="noissuescharge">noissuescharge</link>.</para>
 
             <para>Values:</para>
 
@@ -1402,7 +1402,7 @@
 
             <para>Asks: ___ staff to manually override and check out items to
             patrons who have more than <link
-            linkend="noissuescharge">noissuescharge</link> in fines. </para>
+            linkend="noissuescharge">noissuescharge</link> in fines.</para>
 
             <para>Values:</para>
 
@@ -23426,6 +23426,56 @@
               </imageobject>
             </mediaobject>
           </screenshot>
+
+          <para>If you feel that your report might be too resource intesive
+          you might want to consider using runtime parameters to your query.
+          Runtime parameters basically make a filter appear before the report
+          is run to save your system resources.</para>
+
+          <para>There is a specific syntax that Koha will understand as 'ask
+          for values when running the report'. The syntax is &lt;&lt;Question
+          to ask|authorized_value&gt;&gt;. </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>The &lt;&lt; and &gt;&gt; are just delimiters. You must
+              put &lt;&lt; at the beginning and &gt;&gt; at the end of your
+              parameter </para>
+            </listitem>
+
+            <listitem>
+              <para>The 'Question to ask' will be displayed on the left of the
+              string to enter.</para>
+            </listitem>
+
+            <listitem>
+              <para>The authorized_value can be omitted if not applicable. If
+              it contains an authorized value category, or branches or
+              itemtype or categorycode, a list with the Koha authorized values
+              will be displayed instead of a free field Note that you can have
+              more than one parameter in a given SQL Note that entering
+              nothing at run time won't probably work as you expect. It will
+              be considered as "value empty" not as "ignore this parameter".
+              For example entering nothing for : "title=&lt;&lt;Enter
+              title&gt;&gt;" will display results with title='' (no title). If
+              you want to have to have something not mandatory, use "title
+              like &lt;&lt;Enter title&gt;&gt;" and enter a % at run time
+              instead of nothing</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Example:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>SELECT surname,firstname FROM borrowers WHERE
+              branchcode=&lt;&lt;Enter patrons library|branches&gt;&gt; AND
+              surname like &lt;&lt;Enter filter for patron surname (% if
+              none)&gt;&gt; </para>
+            </listitem>
+          </itemizedlist>
+
+          <para></para>
         </section>
       </section>
 
@@ -33320,6 +33370,61 @@ no-repeat scroll center top transparent;
             </listitem>
           </itemizedlist>
         </section>
+      </section>
+
+      <section id="runtimefaq">
+        <title>Runtime Parameters</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Is there a way to
+        filter my custom SQL reports before they run?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: If you feel that your
+        report might be too resource intesive you might want to consider using
+        runtime parameters to your query. Runtime parameters basically make a
+        filter appear before the report is run to save your system
+        resources.</para>
+
+        <para>There is a specific syntax that Koha will understand as 'ask for
+        values when running the report'. The syntax is &lt;&lt;Question to
+        ask|authorized_value&gt;&gt;.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The &lt;&lt; and &gt;&gt; are just delimiters. You must put
+            &lt;&lt; at the beginning and &gt;&gt; at the end of your
+            parameter</para>
+          </listitem>
+
+          <listitem>
+            <para>The 'Question to ask' will be displayed on the left of the
+            string to enter.</para>
+          </listitem>
+
+          <listitem>
+            <para>The authorized_value can be omitted if not applicable. If it
+            contains an authorized value category, or branches or itemtype or
+            categorycode, a list with the Koha authorized values will be
+            displayed instead of a free field Note that you can have more than
+            one parameter in a given SQL Note that entering nothing at run
+            time won't probably work as you expect. It will be considered as
+            "value empty" not as "ignore this parameter". For example entering
+            nothing for : "title=&lt;&lt;Enter title&gt;&gt;" will display
+            results with title='' (no title). If you want to have to have
+            something not mandatory, use "title like &lt;&lt;Enter
+            title&gt;&gt;" and enter a % at run time instead of nothing</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Example:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>SELECT surname,firstname FROM borrowers WHERE
+            branchcode=&lt;&lt;Enter patrons library|branches&gt;&gt; AND
+            surname like &lt;&lt;Enter filter for patron surname (% if
+            none)&gt;&gt;</para>
+          </listitem>
+        </itemizedlist>
       </section>
     </section>
 
