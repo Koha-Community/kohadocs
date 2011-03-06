@@ -15779,6 +15779,74 @@
       fields, the correct library and nothing else.</para>
     </section>
 
+    <section id="duplicatepatron">
+      <title>Duplicate a Patron</title>
+
+      <para>Sometimes when you're adding a new family to your system you don't
+      want to type the contact information over and over. Koha allows for you
+      to duplicate a patron and change only the parts you want to (or need to)
+      change.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Open the patron you want to use as your base (the patron you
+          want to duplicate information from)</para>
+        </listitem>
+
+        <listitem>
+          <para>Click the 'Duplicate' button at the top of their record</para>
+
+          <screenshot>
+            <screeninfo>The Duplicate Button is the 3rd one in</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/duplicatepatron.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>All of the fields with the exception of first name, card
+          number, opac login and opac password have been duplicated. Fill in
+          the missing pieces and click 'Save'</para>
+
+          <screenshot>
+            <screeninfo>Duplicating Patron Form</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/duplicatedpatron.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <tip><para>Clicking in a field that is already populated with data
+              will clear that field of all information (making it easier for
+              you to type in something different)</para></tip>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>You will be brought to your new patron</para>
+
+          <screenshot>
+            <screeninfo>Newly created patron</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/duplicatedpatronfinal.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+    </section>
+
     <section id="editpatrons">
       <title>Editing Patrons</title>
 
@@ -23434,13 +23502,13 @@
 
           <para>There is a specific syntax that Koha will understand as 'ask
           for values when running the report'. The syntax is &lt;&lt;Question
-          to ask|authorized_value&gt;&gt;. </para>
+          to ask|authorized_value&gt;&gt;.</para>
 
           <itemizedlist>
             <listitem>
               <para>The &lt;&lt; and &gt;&gt; are just delimiters. You must
               put &lt;&lt; at the beginning and &gt;&gt; at the end of your
-              parameter </para>
+              parameter</para>
             </listitem>
 
             <listitem>
@@ -23471,7 +23539,7 @@
               <para>SELECT surname,firstname FROM borrowers WHERE
               branchcode=&lt;&lt;Enter patrons library|branches&gt;&gt; AND
               surname like &lt;&lt;Enter filter for patron surname (% if
-              none)&gt;&gt; </para>
+              none)&gt;&gt;</para>
             </listitem>
           </itemizedlist>
 
