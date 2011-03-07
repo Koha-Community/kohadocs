@@ -11026,6 +11026,14 @@
           </mediaobject>
         </screenshot>
 
+        <para>This tool can be used to chain together pieces of the record as
+        well. If you want the series number to show in the title on your
+        search results you simply have to map 490 $v to 'subtitle' along with
+        the 245 $b. <tip>
+            <para>Chain together the fields you want to show after the item
+            title in the order in which you want them to appear.</para>
+          </tip></para>
+
         <para>Future developments will include additional keyword assigned
         fields.</para>
       </section>
@@ -24769,7 +24777,7 @@
         the various ways that a search can be further defined, and will not
         specifically be addressed in this document. For a complete list of the
         standard Bib-1 attributes, go to <ulink
-        url="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</ulink>.</para>
+        url="http://www.loc.gov/z3950/agency/defns/bib1.html">http://www.loc.gov/z3950/agency/defns/bib1.html</ulink>.</para>
 
         <para>The second file
         (etc/zebradb/marc_defs/[marc21|unimarc]/biblios/record.abs) contains
@@ -25091,7 +25099,7 @@
           on local requirements. A qualifier (index) maps to a particular
           use-attribute within the Z39.50 BIB-1 attribute set. The complete
           Z39.50 Bib-1 Attribute can be viewed at <ulink
-          url="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</ulink>.</para>
+          url="http://www.loc.gov/z3950/agency/defns/bib1.html">http://www.loc.gov/z3950/agency/defns/bib1.html</ulink>.</para>
 
           <para>The standard Koha set of indexes is a fairly common example of
           MARC21 indexing rules. The indexes that are defined in Koha are
@@ -31466,6 +31474,11 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
           <para>Search for Canadian MARC Codes - <ulink
           url="http://www.collectionscanada.gc.ca/illcandir-bin/illsear/l=0/c=1">http://www.collectionscanada.gc.ca/illcandir-bin/illsear/l=0/c=1</ulink>
           </para>
+        </listitem>
+
+        <listitem>
+          <para>Z39.50 Bib-1 Attribute - <ulink
+          url="http://www.loc.gov/z3950/agency/defns/bib1.html">http://www.loc.gov/z3950/agency/defns/bib1.html</ulink></para>
         </listitem>
       </itemizedlist>
     </section>
