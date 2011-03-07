@@ -23533,7 +23533,7 @@
             </listitem>
           </itemizedlist>
 
-          <para>Example:</para>
+          <para>Examples:</para>
 
           <itemizedlist>
             <listitem>
@@ -23542,9 +23542,24 @@
               surname like &lt;&lt;Enter filter for patron surname (% if
               none)&gt;&gt;</para>
             </listitem>
+
+            <listitem>
+              <para>SELECT * FROM items WHERE homebranch = &lt;&lt;Pick your
+              branch|branches&gt;&gt; and barcode like &lt;&lt;Partial barcode
+              value here&gt;&gt;</para>
+            </listitem>
           </itemizedlist>
 
-          <para></para>
+          <tip>
+            <para>You have to put "%" in a text box to 'leave it blank'.
+            Otherwise, it literally looks for "" (empty string) as the value
+            for the field.</para>
+          </tip>
+
+          <para><important>
+              <para>The only supported dropdowns at this time are Branches,
+              Item Types and Patron Categories.</para>
+            </important></para>
         </section>
       </section>
 
@@ -33484,7 +33499,7 @@ no-repeat scroll center top transparent;
           </listitem>
         </itemizedlist>
 
-        <para>Example:</para>
+        <para>Examples:</para>
 
         <itemizedlist>
           <listitem>
@@ -33493,7 +33508,24 @@ no-repeat scroll center top transparent;
             surname like &lt;&lt;Enter filter for patron surname (% if
             none)&gt;&gt;</para>
           </listitem>
+
+          <listitem>
+            <para>SELECT * FROM items WHERE homebranch = &lt;&lt;Pick your
+            branch|branches&gt;&gt; and barcode like &lt;&lt;Partial barcode
+            value here&gt;&gt;</para>
+          </listitem>
         </itemizedlist>
+
+        <tip>
+          <para>You have to put "%" in a text box to 'leave it blank'.
+          Otherwise, it literally looks for "" (empty string) as the value for
+          the field.</para>
+        </tip>
+
+        <para><important>
+            <para>The only supported dropdowns at this time are Branches, Item
+            Types and Patron Categories.</para>
+          </important></para>
       </section>
     </section>
 
