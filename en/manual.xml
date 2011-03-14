@@ -698,6 +698,57 @@
             administrator to enable the merge_authorities.pl cronjob.</para>
           </important>
         </section>
+
+        <section id="UseAuthoritiesForTracings">
+          <title>UseAuthoritiesForTracings</title>
+
+          <para>Default: Don't use</para>
+
+          <para>Asks: ___ authority record numbers instead of text strings for
+          searches from subject tracings. </para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Don't use</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Search links look for subject/author keywords
+                  (example: opac-search.pl?q=su:Business%20networks)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Use</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Search links look for an authority record (example:
+                  opac-search.pl?q=an:354)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>For libraries that have authority files, they may want to
+              make it so that when a link to an authorized subject or author
+              is clicked on the OPAC or staff client it takes the searcher
+              only to a list of results with that authority record. Most
+              libraries do not have complete authority files and so setting
+              this preference to 'Don't use' will allow searchers to click on
+              links to authors and subject headings and perform a keyword
+              search against those fields, finding all possible relevant
+              results instead.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section id="catprefs">
