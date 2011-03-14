@@ -2536,7 +2536,7 @@
             <para>Default: Allow</para>
 
             <para>Asks: ___ a user to choose the branch to pick up a hold
-            from. </para>
+            from.</para>
 
             <para>Values:</para>
 
@@ -7890,6 +7890,53 @@
               <para>Requires that <link linkend="NoZebra">NoZebra</link> is
               set to 'Use'</para>
             </important>
+          </section>
+
+          <section id="TraceCompleteSubfields">
+            <title>TraceCompleteSubfields</title>
+
+            <para>Default: Force</para>
+
+            <para>Asks: ___ subject tracings in the OPAC and Staff Client to
+            search only for complete-subfield matches. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't force</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Searches for subject keywords (example:
+                    opac-search.pl?q=su:World%20Wide%20Web)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Force</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Searches for complete subject fields (example:
+                    opac-search.pl?q=su,complete-subfield:World%20Wide%20Web)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When TraceCompleteSubfields is set to "force," clicking
+                on links in non-authority controlled subject tracings will
+                only find other records where the entire subfields match.
+                Leaving it at "don't force" does a keyword search of the
+                subject indexes.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
