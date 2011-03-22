@@ -6617,6 +6617,38 @@
 
           <para></para>
 
+          <section id="AllowPurchaseSuggestionBranchChoice">
+            <title>AllowPurchaseSuggestionBranchChoice</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to select branch when making a purchase
+            suggestion</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If your library system lets patrons make purchase
+                suggestions for a specific branch you can set this preference
+                to 'Allow' to add a branch selection option to the purchase
+                suggestion form.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OPACFineNoRenewals">
             <title>OPACFineNoRenewals</title>
 
@@ -25604,11 +25636,27 @@
         </mediaobject>
       </screenshot>
 
-      <para>From the form on the 'Title' is required by the library. If you
-      would like the 'Reason for suggestion' menu shown in the screenshot
-      above to appear on your suggestions list you need to add an <link
-      linkend="authorizedvalues">authorized value</link> category titled
-      'OPAC_SUG' and include reasons as values in that list.</para>
+      <itemizedlist>
+        <listitem>
+          <para>From the form on the 'Title' is required by the
+          library.</para>
+        </listitem>
+
+        <listitem>
+          <para>If you would like the 'Reason for suggestion' menu shown in
+          the screenshot above to appear on your suggestions list you need to
+          add an <link linkend="authorizedvalues">authorized value</link>
+          category titled 'OPAC_SUG' and include reasons as values in that
+          list.</para>
+        </listitem>
+
+        <listitem>
+          <para>If you would like the patron to be able to choose which branch
+          they are making a suggestion for you need to set the <link
+          linkend="AllowPurchaseSuggestionBranchChoice">AllowPurchaseSuggestionBranchChoice</link>
+          preference to 'Allow'</para>
+        </listitem>
+      </itemizedlist>
 
       <para>Once the form is submitted the data will be saved to the <link
       linkend="managesuggest">Acquisitions</link> module for the librarians to
