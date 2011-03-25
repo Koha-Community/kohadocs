@@ -33449,6 +33449,157 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         directory.</para>
       </section>
 
+      <section id="opacdisplayfaq">
+        <title>OPAC Display Fields</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What MARC fields
+        print to the different OPAC screens in Koha?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: The XSLT preference
+        must be set as follows for the following fields to show</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><link
+            linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> =
+            using XSLT stylesheets</para>
+          </listitem>
+
+          <listitem>
+            <para><link
+            linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> =
+            using XSLT stylesheets</para>
+          </listitem>
+
+          <listitem>
+            <para><link
+            linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link> =
+            show</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The OPAC Results page shows:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>245</para>
+          </listitem>
+
+          <listitem>
+            <para>100, 110, 111</para>
+          </listitem>
+
+          <listitem>
+            <para>700, 710, 711</para>
+          </listitem>
+
+          <listitem>
+            <para>250</para>
+          </listitem>
+
+          <listitem>
+            <para>260</para>
+          </listitem>
+
+          <listitem>
+            <para>246</para>
+          </listitem>
+
+          <listitem>
+            <para>856</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The OPAC Details page shows:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>245</para>
+          </listitem>
+
+          <listitem>
+            <para>100, 110, 111</para>
+          </listitem>
+
+          <listitem>
+            <para>700, 710, 711</para>
+          </listitem>
+
+          <listitem>
+            <para>440, 490</para>
+          </listitem>
+
+          <listitem>
+            <para>260</para>
+          </listitem>
+
+          <listitem>
+            <para>250</para>
+          </listitem>
+
+          <listitem>
+            <para>300</para>
+          </listitem>
+
+          <listitem>
+            <para>020</para>
+          </listitem>
+
+          <listitem>
+            <para>022</para>
+          </listitem>
+
+          <listitem>
+            <para>246</para>
+          </listitem>
+
+          <listitem>
+            <para>130, 240</para>
+          </listitem>
+
+          <listitem>
+            <para>6xx</para>
+          </listitem>
+
+          <listitem>
+            <para>856</para>
+          </listitem>
+
+          <listitem>
+            <para>505</para>
+          </listitem>
+
+          <listitem>
+            <para>773</para>
+          </listitem>
+
+          <listitem>
+            <para>520</para>
+          </listitem>
+
+          <listitem>
+            <para>866</para>
+          </listitem>
+
+          <listitem>
+            <para>775</para>
+          </listitem>
+
+          <listitem>
+            <para>780</para>
+          </listitem>
+
+          <listitem>
+            <para>785</para>
+          </listitem>
+
+          <listitem>
+            <para>plus all of the 5xx fields in the Notes tab at the
+            bottom</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
       <section id="displaysubtitle">
         <title>Subtitle Display on Bib Records</title>
 
