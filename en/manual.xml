@@ -3005,6 +3005,38 @@
 
           <para></para>
 
+          <section id="AllowSelfCheckReturns">
+            <title>AllowSelfCheckReturns</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to return items through web-based self
+            checkout system.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference is used to determine if you want patrons
+                to be allowed to return items through your self check
+                machines. By default Koha's self check interface is simply for
+                checking items out.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="AutoSelfCheckAllowed">
             <title>AutoSelfCheckAllowed, AutoSelfCheckID &amp;
             AutoSelfCheckPass</title>
@@ -3043,12 +3075,82 @@
             linkend="patronpermissions">permissions</link>.</para>
           </section>
 
+          <section id="SelfCheckHelpMessage">
+            <title>SelfCheckHelpMessage</title>
+
+            <para>Asks: Include the following HTML in the Help page of the
+            web-based self checkout system</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Clicking the 'Help' link in the top right of the self
+                checkout interface opens up a three step process for using the
+                self check interface. Adding HTML to this system preference
+                will print that additional help text above what's already
+                included.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SelfCheckoutByLogin">
+            <title>SelfCheckoutByLogin</title>
+
+            <para>Default: Barcode</para>
+
+            <para>Asks: Have patrons login into the web-based self checkout
+            system with their ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Barcode</para>
+              </listitem>
+
+              <listitem>
+                <para>Username and password</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference lets you decide how your patrons will
+                log in to the self checkout machine. Barcode is the patron's
+                card number and their username and password is set using the
+                opac login and password fields on the patron record.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SelfCheckTimeout">
+            <title>SelfCheckTimeout</title>
+
+            <para>Default: 120</para>
+
+            <para>Asks: Time out the current patron's web-based self checkout
+            system login after ___ seconds.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>After the machine is idle for the time entered in this
+                preference the self check out system will log out the current
+                patron and return to the starting screen.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="ShowPatronImageInWebBasedSelfCheck">
             <title>ShowPatronImageInWebBasedSelfCheck</title>
 
             <para>Default: Don't show</para>
 
-            <para>Asks ___ the patron's picture (if one has been added) when
+            <para>Asks: ___ the patron's picture (if one has been added) when
             they use the web-based self checkout.</para>
 
             <para>Values:</para>
@@ -5377,6 +5479,57 @@
             </itemizedlist>
           </section>
 
+          <section id="COinSinOPACResults">
+            <title>COinSinOPACResults</title>
+
+            <para>Default: Include</para>
+
+            <para>Asks: ___ COinS / OpenURL / Z39.88 in OPAC search
+            results.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't include</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>If you choose not to include COinS on the search
+                    results, it will still be loaded on the individual
+                    bibliographic records.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Include</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Enabling this feature will slow OPAC search response
+                    times.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>COinS stands for ContextObjects in Spans. COinS is a
+                method to embed bibliographic metadata in the HTML code of web
+                pages. This allows bibliographic software to publish
+                machine-readable bibliographic items and client reference
+                management software (such as Zotero) to retrieve bibliographic
+                metadata. The metadata can also be sent to an OpenURL
+                resolver. This allows, for instance, searching for a copy of a
+                book in one's own library.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="DisplayOPACiconsXSLT">
             <title>DisplayOPACiconsXSLT</title>
 
@@ -6648,6 +6801,36 @@
                 the pending comments on the <link
                 linkend="comments">Comments</link> tool. The staff member can
                 then choose to approve or delete the comments.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="ShowReviewer">
+            <title>ShowReviewer</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ reviewer's name above comments in OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Hide</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to protect your patron's privacy in
+                the OPAC you can choose to hide their names from any of the
+                comments they leave on bib records in your system.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -8830,6 +9013,27 @@
                 Sample JQuery scripts used by Koha libraries can be found on
                 the wiki: <ulink
                 url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="StaffAuthorisedValueImages">
+            <title>StaffAuthorisedValueImages</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ images for authorized values (such as lost
+            statuses and locations) in search results.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -12085,8 +12289,7 @@
               </listitem>
 
               <listitem>
-                <para>'Match threshold' - The total number of 'points' a
-                biblio must earn to be considered a 'match'</para>
+                <para>'Match threshold' - ??</para>
               </listitem>
 
               <listitem>
@@ -12101,10 +12304,7 @@
               </listitem>
 
               <listitem>
-                <para>'Score' - The number of 'points' a match on this field
-                is worth. If the sum of each score is greater than the match
-                threshold, the incoming record is a match to the existing
-                record</para>
+                <para>'Score' - ??</para>
               </listitem>
 
               <listitem>
@@ -12118,11 +12318,11 @@
               </listitem>
 
               <listitem>
-                <para>'Offset' - For use with control fields, 001-009</para>
+                <para>'Offset' - ??</para>
               </listitem>
 
               <listitem>
-                <para>'Length' - For use with control fields, 001-009</para>
+                <para>'Length' - ??</para>
               </listitem>
 
               <listitem>
