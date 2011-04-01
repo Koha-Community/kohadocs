@@ -1152,6 +1152,49 @@
             </itemizedlist>
           </section>
 
+          <section id="AlternateHoldingsField">
+            <title>AlternateHoldingsField &amp;
+            AlternateHoldingsSeparator</title>
+
+            <para>Asks: Display MARC subfield ___ as holdings information for
+            records that do not have items, with the subfields separated by
+            ___. </para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Sometimes libraries migrate to Koha with their holding
+                info in the 852 field (OCLC holdings information field) and
+                choose not to transfer that information into the 952 (Koha
+                holdings information field) because they don't plan on
+                circulating those items. For those libraries or other
+                libraries that have data in the 852 fields of their records
+                that they want to display, these preferences let you choose to
+                display holdings info from a field other than the 952 field.
+                The AlternateHoldingsField preference can contain multiple
+                subfields to look in; for instance 852abhi would look in 852
+                subfields a, b, h, and i. </para>
+              </listitem>
+
+              <listitem>
+                <para>With AlternateHoldingsField set to 852abhi and
+                AlternateHoldingsSeparator set to a space the holdings would
+                look like the following:</para>
+
+                <screenshot>
+                  <screeninfo>Alternate Holdings Display</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AlternateHoldingsField.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="item-level_itypes">
             <title>item-level_itypes</title>
 
