@@ -1013,6 +1013,73 @@
               </listitem>
             </itemizedlist>
           </section>
+
+          <section id="UseControlNumber">
+            <title>UseControlNumber</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ record control number ($w subfields) and control
+            number (001) for linking of bibliographic records.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>When clicking on links to titles that appear next to
+                    'Continues' and 'Continued by' in the detail display Koha
+                    will perform a title search</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>When clicking on links to titles that appear next to
+                    'Continues' and 'Continued by' in the detail display Koha
+                    will perform a control number (MARC field 001)
+                    search</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you have a serial called "Journal of Interesting
+                Things" which has a separate record from when it was called
+                "Transactions of the Interesting Stuff Society," you could add
+                linking fields to indicate the relationship between the two
+                records. UseControlNumber allows you to use your local
+                accession numbers for those links. In MARC21, the relevant
+                sections of the two records might look like
+                this:<programlisting>    =001    12345
+    =110  2_$aInteresting Stuff Society.
+    =245  10$aTransactions of the Interesting Stuff Society.
+    =785  00$aInteresting Stuff Society$tJournal of Interesting Things.$w12346
+     
+    =001    12346
+    =110  2_$aInteresting Stuff Society.
+    =245  10$aJournal of Interesting Things.
+    =780  00$aInteresting Stuff Society$tTransactions of the Interesting Stuff Society.$w12345</programlisting></para>
+
+                <para>With UseControlNumber set to 'Use', the 78x links will
+                use the Control Numbers is subfield $w, instead of doing a
+                title search on "Journal of Interesting Things" and
+                "Transactions of the Interesting Stuff Society"
+                respectively.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section id="catinterfaceprefs">
