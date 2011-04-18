@@ -5834,16 +5834,14 @@
           <section id="opaccolorstylesheet">
             <title>opaccolorstylesheet</title>
 
-            <para>Default: colors.css</para>
-
-            <para>Asks: Include the additional CSS stylesheet /css/ ___ on all
-            pages in the OPAC</para>
+            <para>Asks: Include the additional CSS stylesheet ___ to override
+            specified settings from the default stylesheet. </para>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>The preference looks for stylesheets in the template
+                <para>The preference can look for stylesheets in the template
                 directory for your OPAC language, for instance:
                 /koha-tmpl/opac-tmpl/prog/en/css. If you upload a custom file,
                 opac-mystyles.css to this directory, you can specify it by
@@ -5854,6 +5852,12 @@
                 user's browser, meaning upon repeat visits to your site the
                 user's browser will not have to re-download the stylesheet,
                 instead using the copy in the browser's cache.</para>
+              </listitem>
+
+              <listitem>
+                <para>If you would rather, you can upload your CSS to another
+                server and enter the full URL pointing to it's location
+                remember to begin the URL with http://</para>
               </listitem>
             </itemizedlist>
 
