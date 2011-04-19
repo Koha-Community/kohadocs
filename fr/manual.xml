@@ -16,12 +16,12 @@
     </author>
 
     <othercredit role="translator">
-      <firstname>Laurence</firstname>
+      <firstname>FIRST NAME</firstname>
 
-      <surname>Lefaucheur</surname>
+      <surname>LAST NAME</surname>
 
       <affiliation>
-        <orgname>BibLibre</orgname>
+        <orgname>ORGANIZATION</orgname>
       </affiliation>
 
       <contrib>Translation to French</contrib>
@@ -46,6 +46,7 @@
 
     <pubdate>2011</pubdate>
   </bookinfo>
+
   <chapter id="administration">
     <title>Administration</title>
 
@@ -1026,6 +1027,73 @@
               </listitem>
             </itemizedlist>
           </section>
+
+          <section id="UseControlNumber">
+            <title>UseControlNumber</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ record control number ($w subfields) and control
+            number (001) for linking of bibliographic records.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>When clicking on links to titles that appear next to
+                    'Continues' and 'Continued by' in the detail display Koha
+                    will perform a title search</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>When clicking on links to titles that appear next to
+                    'Continues' and 'Continued by' in the detail display Koha
+                    will perform a control number (MARC field 001)
+                    search</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you have a serial called "Journal of Interesting
+                Things" which has a separate record from when it was called
+                "Transactions of the Interesting Stuff Society," you could add
+                linking fields to indicate the relationship between the two
+                records. UseControlNumber allows you to use your local
+                accession numbers for those links. In MARC21, the relevant
+                sections of the two records might look like
+                this:<programlisting>    =001    12345
+    =110  2_$aInteresting Stuff Society.
+    =245  10$aTransactions of the Interesting Stuff Society.
+    =785  00$aInteresting Stuff Society$tJournal of Interesting Things.$w12346
+     
+    =001    12346
+    =110  2_$aInteresting Stuff Society.
+    =245  10$aJournal of Interesting Things.
+    =780  00$aInteresting Stuff Society$tTransactions of the Interesting Stuff Society.$w12345</programlisting></para>
+
+                <para>With UseControlNumber set to 'Use', the 78x links will
+                use the Control Numbers is subfield $w, instead of doing a
+                title search on "Journal of Interesting Things" and
+                "Transactions of the Interesting Stuff Society"
+                respectively.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section id="catinterfaceprefs">
@@ -1125,6 +1193,49 @@
           <title>Record Structure</title>
 
           <para></para>
+
+          <section id="AlternateHoldingsField">
+            <title>AlternateHoldingsField &amp;
+            AlternateHoldingsSeparator</title>
+
+            <para>Asks: Display MARC subfield ___ as holdings information for
+            records that do not have items, with the subfields separated by
+            ___.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Sometimes libraries migrate to Koha with their holding
+                info in the 852 field (OCLC holdings information field) and
+                choose not to transfer that information into the 952 (Koha
+                holdings information field) because they don't plan on
+                circulating those items. For those libraries or other
+                libraries that have data in the 852 fields of their records
+                that they want to display, these preferences let you choose to
+                display holdings info from a field other than the 952 field.
+                The AlternateHoldingsField preference can contain multiple
+                subfields to look in; for instance 852abhi would look in 852
+                subfields a, b, h, and i.</para>
+              </listitem>
+
+              <listitem>
+                <para>With AlternateHoldingsField set to 852abhi and
+                AlternateHoldingsSeparator set to a space the holdings would
+                look like the following:</para>
+
+                <screenshot>
+                  <screeninfo>Alternate Holdings Display</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AlternateHoldingsField.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="autoBarcode">
             <title>autoBarcode</title>
@@ -2805,6 +2916,41 @@
             </itemizedlist>
           </section>
 
+          <section id="FineNotifyAtCheckin">
+            <title>FineNotifyAtCheckin</title>
+
+            <para>Default: Don't notify</para>
+
+            <para>Asks: ___ librarians of overdue fines on the items they are
+            checking in.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't notify</para>
+              </listitem>
+
+              <listitem>
+                <para>Notify</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>With this preference set to 'Notify' all books that have
+                overdue fines owed on them will pop up a warning when checking
+                them in. This warning will need to acknowledged before you can
+                continue checking items in. With this preference set to 'Don't
+                notify,' you will still see fines owed on the patron record,
+                you just won't have an additional notification at check
+                in.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="DisplayClearScreenButton">
             <title>DisplayClearScreenButton</title>
 
@@ -2976,12 +3122,78 @@
               </listitem>
             </itemizedlist>
           </section>
+
+          <section id="WaitingNotifyAtCheckin">
+            <title>WaitingNotifyAtCheckin</title>
+
+            <para>Default: Don't notify</para>
+
+            <para>Asks: ___ librarians of waiting holds for the patron whose
+            items they are checking in.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't notify</para>
+              </listitem>
+
+              <listitem>
+                <para>Notify</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When checking in books you can choose whether or not to
+                have a notice pop up if the patron who returned the book has a
+                hold waiting for pick up. If you choose 'Notify' for
+                WaitingNotifyAtCheckin then everytime a hold is found for the
+                patron who had the book out last a message will appear on your
+                check in screen.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section id="circscoprefs">
           <title>Self Checkout</title>
 
           <para></para>
+
+          <section id="AllowSelfCheckReturns">
+            <title>AllowSelfCheckReturns</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to return items through web-based self
+            checkout system.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference is used to determine if you want patrons
+                to be allowed to return items through your self check
+                machines. By default Koha's self check interface is simply for
+                checking items out.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="AutoSelfCheckAllowed">
             <title>AutoSelfCheckAllowed, AutoSelfCheckID &amp;
@@ -3021,12 +3233,82 @@
             linkend="patronpermissions">permissions</link>.</para>
           </section>
 
+          <section id="SelfCheckHelpMessage">
+            <title>SelfCheckHelpMessage</title>
+
+            <para>Asks: Include the following HTML in the Help page of the
+            web-based self checkout system</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Clicking the 'Help' link in the top right of the self
+                checkout interface opens up a three step process for using the
+                self check interface. Adding HTML to this system preference
+                will print that additional help text above what's already
+                included.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SelfCheckoutByLogin">
+            <title>SelfCheckoutByLogin</title>
+
+            <para>Default: Barcode</para>
+
+            <para>Asks: Have patrons login into the web-based self checkout
+            system with their ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Barcode</para>
+              </listitem>
+
+              <listitem>
+                <para>Username and password</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference lets you decide how your patrons will
+                log in to the self checkout machine. Barcode is the patron's
+                card number and their username and password is set using the
+                opac login and password fields on the patron record.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SelfCheckTimeout">
+            <title>SelfCheckTimeout</title>
+
+            <para>Default: 120</para>
+
+            <para>Asks: Time out the current patron's web-based self checkout
+            system login after ___ seconds.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>After the machine is idle for the time entered in this
+                preference the self check out system will log out the current
+                patron and return to the starting screen.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="ShowPatronImageInWebBasedSelfCheck">
             <title>ShowPatronImageInWebBasedSelfCheck</title>
 
             <para>Default: Don't show</para>
 
-            <para>Asks ___ the patron's picture (if one has been added) when
+            <para>Asks: ___ the patron's picture (if one has been added) when
             they use the web-based self checkout.</para>
 
             <para>Values:</para>
@@ -5355,6 +5637,151 @@
             </itemizedlist>
           </section>
 
+          <section id="COinSinOPACResults">
+            <title>COinSinOPACResults</title>
+
+            <para>Default: Include</para>
+
+            <para>Asks: ___ COinS / OpenURL / Z39.88 in OPAC search
+            results.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't include</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>If you choose not to include COinS on the search
+                    results, it will still be loaded on the individual
+                    bibliographic records.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Include</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Enabling this feature will slow OPAC search response
+                    times.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>COinS stands for ContextObjects in Spans. COinS is a
+                method to embed bibliographic metadata in the HTML code of web
+                pages. This allows bibliographic software to publish
+                machine-readable bibliographic items and client reference
+                management software (such as Zotero) to retrieve bibliographic
+                metadata. The metadata can also be sent to an OpenURL
+                resolver. This allows, for instance, searching for a copy of a
+                book in one's own library.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OPACDisplay856uAsImage">
+            <title>OPACDisplay856uAsImage</title>
+
+            <para>Default: Neither details or results page</para>
+
+            <para>Asks: Display the URI in the 856u field as an image on:
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Both results and details pages</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Not implemented yet</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Detail page only</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para><link
+                      linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
+                      needs to be on for this preference to work.</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+
+                <screenshot>
+                  <screeninfo>Showing the 856u as an image</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACDisplay856uAsImage.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Neither details or results page</para>
+              </listitem>
+
+              <listitem>
+                <para>Results page only</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Not yet implemented</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In addition to this option being set, the corresponding
+                XSLT option must be turned on. Also, the corresponding 856q
+                field must have a valid MIME image extension (e.g., "jpg") or
+                MIME image type (i.e. starting with "image/"), or the generic
+                indicator "img" entered in the field. When all of the
+                requirements are met, an image file will be displayed instead
+                of the standard link text. Clicking on the image will open it
+                in the same way as clicking on the link text. When you click
+                on the image it should open to full size, in the current
+                window or in a new window depending on the value in the system
+                pref <link
+                linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link>.</para>
+
+                <screenshot>
+                  <screeninfo>Sample 856 in MARC Record</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/856imagemarc.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="DisplayOPACiconsXSLT">
             <title>DisplayOPACiconsXSLT</title>
 
@@ -5522,16 +5949,14 @@
           <section id="opaccolorstylesheet">
             <title>opaccolorstylesheet</title>
 
-            <para>Default: colors.css</para>
-
-            <para>Asks: Include the additional CSS stylesheet /css/ ___ on all
-            pages in the OPAC</para>
+            <para>Asks: Include the additional CSS stylesheet ___ to override
+            specified settings from the default stylesheet.</para>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>The preference looks for stylesheets in the template
+                <para>The preference can look for stylesheets in the template
                 directory for your OPAC language, for instance:
                 /koha-tmpl/opac-tmpl/prog/en/css. If you upload a custom file,
                 opac-mystyles.css to this directory, you can specify it by
@@ -5542,6 +5967,12 @@
                 user's browser, meaning upon repeat visits to your site the
                 user's browser will not have to re-download the stylesheet,
                 instead using the copy in the browser's cache.</para>
+              </listitem>
+
+              <listitem>
+                <para>If you would rather, you can upload your CSS to another
+                server and enter the full URL pointing to it's location
+                remember to begin the URL with http://</para>
               </listitem>
             </itemizedlist>
 
@@ -5638,6 +6069,42 @@
                     needs to be set to 'allow'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OpacFavicon">
+            <title>OpacFavicon</title>
+
+            <para>Asks: Use the image at ___ for the OPAC's favicon.
+            <important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <tip>
+              <para>Turn your logo into a favicon with the <ulink
+              url="http://antifavicon.com/">Favicon Generator</ulink>.</para>
+            </tip>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The favicon is the little icon that appears next to the
+                URL in the address bar in most browsers. The default value for
+                this field (if left blank) is the small 'K' in the Koha
+                logo.</para>
+
+                <screenshot>
+                  <screeninfo>Default Koha Favicon</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/favicon.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </section>
@@ -6594,6 +7061,36 @@
             </itemizedlist>
           </section>
 
+          <section id="ShowReviewer">
+            <title>ShowReviewer</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ reviewer's name above comments in OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Hide</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to protect your patron's privacy in
+                the OPAC you can choose to hide their names from any of the
+                comments they leave on bib records in your system.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="suggestionspref">
             <title>suggestion</title>
 
@@ -6629,6 +7126,38 @@
           <title>Policy</title>
 
           <para></para>
+
+          <section id="AllowPurchaseSuggestionBranchChoice">
+            <title>AllowPurchaseSuggestionBranchChoice</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ patrons to select branch when making a purchase
+            suggestion</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If your library system lets patrons make purchase
+                suggestions for a specific branch you can set this preference
+                to 'Allow' to add a branch selection option to the purchase
+                suggestion form.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="OPACFineNoRenewals">
             <title>OPACFineNoRenewals</title>
@@ -7950,6 +8479,67 @@
                 subject indexes.</para>
               </listitem>
             </itemizedlist>
+
+            <important>
+              <para>This preference assumes that you're using XSLT stylesheets
+              as set in the <link
+              linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
+              preference.</para>
+            </important>
+          </section>
+
+          <section id="TraceSubjectSubdivisions">
+            <title>TraceSubjectSubdivisions</title>
+
+            <para>Default: Include</para>
+
+            <para>Asks: ___ subdivisions for searches generated by clicking on
+            subject tracings.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't include</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Searches for subject keywords (example:
+                    opac-search.pl?q=su,complete-subfield:%22Web%20sites%22)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Include</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Searches for complete subject fields (example:
+                    opac-search.pl?q=(su,complete-subfield:%22Web%20sites%22)%20and%20(su,complete-subfield:%22Design.%22))</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When TraceSubjectSubdivisions is set to "Include," if
+                you click on a subject with subdivisions (subfields other than
+                'a') they will be searched along with the subject heading
+                (subfield 'a'). To have only the subject heading (subfield
+                'a') searched, set this preference to "Don't include."</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference assumes that you're using XSLT stylesheets
+              as set in the <link
+              linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
+              preference.</para>
+            </important>
           </section>
         </section>
 
@@ -8032,6 +8622,73 @@
             </itemizedlist>
           </section>
 
+          <section id="displayFacetCount">
+            <title>displayFacetCount</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ facet counts.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference lets you decide if you show how many
+                times a facet is used in your search results in the OPAC and
+                the staff client. The relevance of these numbers highly
+                depends on the value of the <link
+                linkend="maxRecordsForFacets">maxRecordsForFacets</link>
+                preference. Showing these numbers can potentially effect the
+                performance of your searching, so test your system with
+                different values for this preference to see what works
+                best.</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>Number of times each Facet is found in
+                  results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/displayFacetCount.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="FacetLabelTruncationLength">
+            <title>FacetLabelTruncationLength</title>
+
+            <para>Default: 20</para>
+
+            <para>Asks: Truncate facets length to ___ characters, in
+            OPAC/staff interface.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In the OPAC and the staff client your facets are cut off
+                at 20 characters by default. Depending on your layout this may
+                be too many or two few letters, this preference lets you
+                decide what number is best for your library's design.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="maxItemsInSearchResults">
             <title>maxItemsInSearchResults</title>
 
@@ -8047,6 +8704,29 @@
                 <para>This preference will let you set how many results
                 display by default when a search is run on the Staff
                 Client.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="maxRecordsForFacets">
+            <title>maxRecordsForFacets</title>
+
+            <para>Default: 20</para>
+
+            <para>Asks: Build facets based on ___ records from the search
+            results.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>By default Koha only bases facets on the first page of
+                results (usually 20 results). This preference lets you tell
+                Koha to based the facet descriptions and numbers on any number
+                of search results returned. The higher this number the longer
+                it will take for your search results to return, so test with
+                various different values to find the best balance for your
+                library.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -8234,6 +8914,33 @@
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Serials</para>
 
+        <section id="opacSerialDefaultTab">
+          <title>opacSerialDefaultTab</title>
+
+          <para>Default: Subscriptions tab</para>
+
+          <para>Asks: Show ___ as default tab for serials in OPAC. <important>
+              <para>Please note that the Serial Collection tab is currently
+              available only for systems using the UNIMARC standard.</para>
+            </important></para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Holdings tab</para>
+            </listitem>
+
+            <listitem>
+              <para>Serial Collection tab</para>
+            </listitem>
+
+            <listitem>
+              <para>Subscriptions tab</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="OPACSerialIssueDisplayCount">
           <title>OPACSerialIssueDisplayCount</title>
 
@@ -8408,6 +9115,99 @@
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Staff Client</para>
 
+        <section id="Display856uAsImage">
+          <title>Display856uAsImage</title>
+
+          <para>Default: Neither details or results page</para>
+
+          <para>Asks: Display the URI in the 856u field as an image on:
+          ___</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Both results and details pages</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>Not implemented yet</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Detail page only</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para><link
+                    linkend="XSLTDetailsDisplay">XSLTDetailsDisplay</link>
+                    needs to be on for this preference to work.</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+
+              <screenshot>
+                <screeninfo>Showing the 856u as an image</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/Display856uAsImage.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Neither details or results page</para>
+            </listitem>
+
+            <listitem>
+              <para>Results page only</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>Not yet implemented</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>In addition to this option being set, the corresponding
+              XSLT option must be turned on. Also, the corresponding 856q
+              field must have a valid MIME image extension (e.g., "jpg") or
+              MIME image type (i.e. starting with "image/"), or the generic
+              indicator "img" entered in the field. When all of the
+              requirements are met, an image file will be displayed instead of
+              the standard link text. Clicking on the image will open it in
+              the same way as clicking on the link text. When you click on the
+              image it should open to full size, in the current window or in a
+              new window depending on the value in the system pref <link
+              linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link>.</para>
+
+              <screenshot>
+                <screeninfo>Sample 856 Field</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/856imagemarc.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="staffappearprefs">
           <title>Appearance</title>
 
@@ -8443,6 +9243,42 @@
             <important>
               <para>Leave this field blank to disable.</para>
             </important>
+          </section>
+
+          <section id="IntranetFavicon">
+            <title>IntranetFavicon</title>
+
+            <para>Asks: Use the image at ___ for the Staff Client's favicon.
+            <important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <tip>
+              <para>Turn your logo into a favicon with the <ulink
+              url="http://antifavicon.com/">Favicon Generator</ulink>.</para>
+            </tip>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The favicon is the little icon that appears next to the
+                URL in the address bar in most browsers. The default value for
+                this field (if left blank) is the small 'K' in the Koha
+                logo.</para>
+
+                <screenshot>
+                  <screeninfo>Default Koha Favicon</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/favicon.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="IntranetmainUserblock">
@@ -8553,6 +9389,27 @@
                 Sample JQuery scripts used by Koha libraries can be found on
                 the wiki: <ulink
                 url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="StaffAuthorisedValueImages">
+            <title>StaffAuthorisedValueImages</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ images for authorized values (such as lost
+            statuses and locations) in search results.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -9607,6 +10464,17 @@
                 </listitem>
               </itemizedlist>
             </listitem>
+
+            <listitem>
+              <para>YES_NO</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>A generic authorized value field that can be used
+                  anywhere you need a simple yes/no pull down menu.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
           </itemizedlist>
         </section>
 
@@ -9911,6 +10779,33 @@
             <listitem>
               <para>If you want your patron to receive overdue notices, set
               the 'Overdue notice required' to 'Yes'</para>
+            </listitem>
+
+            <listitem>
+              <para>You can decide on a patron category basis if lost items
+              are shown in the staff client by making a choice from the 'Lost
+              items in staff client' pull down</para>
+
+              <screenshot>
+                <screeninfo>Choose a value for 'Hide Lost Items'</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/patroncirc/hidelostitemspatron.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>Note that this is only applicable in the staff
+                    client, so changing this value on patron categories who do
+                    not have access to the staff client won't make any
+                    difference</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -10428,6 +11323,13 @@
               <para>Define the period of time and item can be checked out to a
               patron by entering the number of days in the 'Loan Period'
               box.</para>
+            </listitem>
+
+            <listitem>
+              <para>You can also define a hard due date for a specific patron
+              category and item type. A hard due date ignores your usual
+              circulation rules and makes it so that all items of the type
+              defined are due on, before or after the date you specify.</para>
             </listitem>
 
             <listitem>
@@ -11429,6 +12331,109 @@
 
           <para></para>
         </section>
+
+        <section id="importexportframeworks">
+          <title>Import/Export Frameworks</title>
+
+          <para>Next to each framework is a link to either import or export
+          the framework.</para>
+
+          <section id="exportframeworks">
+            <title>Export Framework</title>
+
+            <para>To export a framework simply click the 'Export' link to the
+            right of framework title.</para>
+
+            <screenshot>
+              <screeninfo>Export link next to framework</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/importexport.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>When you click 'Export' you will be prompted to choose what
+            format to export the file in.</para>
+
+            <screenshot>
+              <screeninfo>Export formats</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/exportoptions.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>A framework exported this way can be imported into any other
+            Koha installation using the import framework option.</para>
+          </section>
+
+          <section id="importframeworks">
+            <title>Import Framework</title>
+
+            <para>An easy way to create a new framework is to import it from
+            another Koha database. To import a framework you first need to
+            create <link linkend="addframework">a new framework</link>. Once
+            you have that framework, click 'Import' to the right of the new
+            framework.</para>
+
+            <screenshot>
+              <screeninfo>Import link next to framework</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/importexport.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>You will be prompted to find a file on your computer to
+            import into the framework.</para>
+
+            <screenshot>
+              <screeninfo>Choose a file to import</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/importfile.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>You will be asked to confirm your actions before the file is
+            imported.</para>
+
+            <screenshot>
+              <screeninfo>Confirm your desire to import</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/importconfirm.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>As your file is uploaded you will see an image that will
+            confirm that the system is working.</para>
+
+            <screenshot>
+              <screeninfo>Import timer</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/cataloging/importtimer.png" />
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+
+            <para>Once your import is complete you will be brought to the
+            framework edit tool where you can make any changes you need to the
+            framework you imported.</para>
+          </section>
+        </section>
       </section>
 
       <section id="kohamarcmapping">
@@ -11808,7 +12813,8 @@
               </listitem>
 
               <listitem>
-                <para>'Match threshold' - ??</para>
+                <para>'Match threshold' - The total number of 'points' a
+                biblio must earn to be considered a 'match'</para>
               </listitem>
 
               <listitem>
@@ -11823,7 +12829,10 @@
               </listitem>
 
               <listitem>
-                <para>'Score' - ??</para>
+                <para>'Score' - The number of 'points' a match on this field
+                is worth. If the sum of each score is greater than the match
+                threshold, the incoming record is a match to the existing
+                record</para>
               </listitem>
 
               <listitem>
@@ -11837,11 +12846,11 @@
               </listitem>
 
               <listitem>
-                <para>'Offset' - ??</para>
+                <para>'Offset' - For use with control fields, 001-009</para>
               </listitem>
 
               <listitem>
-                <para>'Length' - ??</para>
+                <para>'Length' - For use with control fields, 001-009</para>
               </listitem>
 
               <listitem>
@@ -12295,19 +13304,18 @@
           administration menu</para>
         </important>
 
-        <para><emphasis role="bold"><emphasis>Stop words are words that you
-        want the search system to ignore. </emphasis></emphasis></para>
+        <para>Stop words are words that you want the search system to
+        ignore.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Additional Parameters &gt; Stop Words</para>
+            <para>&gt;Get there: More &gt; Administration &gt; Additional
+            Parameters &gt; Stop Words</para>
           </listitem>
         </itemizedlist>
 
-        <para><emphasis role="bold"><emphasis>Koha comes with a standard list
-        of stop words that can be edited by visiting the Stop Word
-        administration area.</emphasis></emphasis></para>
+        <para>Koha comes with a standard list of stop words that can be edited
+        by visiting the Stop Word administration area.</para>
 
         <screenshot>
           <screeninfo>Stop word list</screeninfo>
@@ -12319,9 +13327,8 @@
           </mediaobject>
         </screenshot>
 
-        <para><emphasis role="bold"><emphasis>To add a new stop word to the
-        list, click the 'New Stop Word' button and add the word you'd like
-        ignored</emphasis></emphasis></para>
+        <para>To add a new stop word to the list, click the 'New Stop Word'
+        button and add the word you'd like ignored</para>
 
         <screenshot>
           <screeninfo>New stop word</screeninfo>
@@ -14209,6 +15216,16 @@
 
             <listitem>
               <para>Choose the character encoding</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>If you leave this set to Default Koha will try to
+                  guess the encoding, but it should be noted that this is
+                  almost always wrong for non-UTF8 records with non-ASCII
+                  characters. Specifying a character set is much more reliable
+                  if you're not using UTF-8.</para>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -14320,8 +15337,31 @@
         </listitem>
 
         <listitem>
-          <para>Below the summary there will be a list of the records that
-          will be imported</para>
+          <para>Below the summary is the option to import the batch of bib
+          records using a specific framework</para>
+
+          <screenshot>
+            <screeninfo>Choose Framework to Import Into</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/marcimport/importframework.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <itemizedlist>
+            <listitem>
+              <para>Choosing a framework other than 'Default' isn't necessary,
+              but it's helpful for running reports and having the right bib
+              level item type selected on import.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Below the framework selection there will be a list of the
+          records that will be imported</para>
 
           <screenshot>
             <screeninfo>List of Staged Records</screeninfo>
@@ -17084,8 +18124,8 @@
         <title>Details</title>
 
         <para>All patron information will appear on the Details tab. This
-        includes all the contact information, notes, messaging preferences,
-        etc entered when adding the patron.</para>
+        includes all the contact information, notes, custom patron attributes,
+        messaging preferences, etc entered when adding the patron.</para>
 
         <para>In the case of patrons who are marked as 'Child' or
         'Professional' and their Guarantors additional information will appear
@@ -17123,6 +18163,37 @@
             </screenshot>
           </listitem>
         </itemizedlist>
+
+        <section id="patcircsummary">
+          <title>Circulation Summary</title>
+
+          <para>Below the patron's information on the details screen is a
+          tabbed display of the items they have checked out, overdue, and on
+          hold.</para>
+
+          <screenshot>
+            <screeninfo>Checkout summary</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/checkoutsummary.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>If they have family at the library staff can see what the
+          other family members have checked out.</para>
+
+          <screenshot>
+            <screeninfo>Relative checkouts</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/relativecheckouts.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section id="patronfines">
@@ -17687,7 +18758,14 @@
         </screenshot>
 
         <para>Once you have checked out all of the items for the patron you
-        can print them a receipt by clicking the Print button at the top of
+        can print them a receipt by choosing one of two methods. </para>
+
+        <para>The first is that you can simply hit enter on your keyboard or
+        scan a blank piece of paper with your barcode scanner. The idea being
+        that you're "checking out" a blank barcode which triggers Koha to
+        print the 'Quick Slip.'</para>
+
+        <para>The second is that you can click the Print button at the top of
         the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
 
         <screenshot>
@@ -21667,9 +22745,9 @@
         </listitem>
 
         <listitem>
-          <para>In 'First issue publication' you want to enter the date of the
-          issue you have in your hand, the date from which the prediction
-          pattern will start</para>
+          <para>In 'First issue publication date' you want to enter the date
+          of the issue you have in your hand, the date from which the
+          prediction pattern will start</para>
         </listitem>
 
         <listitem>
@@ -22094,6 +23172,105 @@
         <mediaobject>
           <imageobject>
             <imagedata fileref="images/serials/fullopac.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
+
+    <section id="serialclaims">
+      <title>Claim Late Serials</title>
+
+      <para>Koha can send email messages to your serial vendors if you have
+      late issues. To the left of the main serials page there is a link to
+      'Claims'</para>
+
+      <screenshot>
+        <screeninfo>Link to Claims on Serials Menu</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/serialclaimmenu.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>The links to claims also appears to the left of the subscription
+      detail page</para>
+
+      <screenshot>
+        <screeninfo>Link to Claims on the Serials Menu</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/serialclaimmenu1.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If you don't have a claim notice defined yet you will see a
+      warning message that you need to first define a notice.</para>
+
+      <screenshot>
+        <screeninfo>Missing Claims Notice Warning</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/noserialclaim.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Clicking 'Claims' will open a report that will ask you to choose
+      from your various serial vendors to generate claims for late
+      issues.</para>
+
+      <screenshot>
+        <screeninfo>Serial Claims</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/serialclaims.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>From the list of late issues you can choose which ones you want to
+      send a claim email to by clicking the checkbox to the left of late
+      issue, choosing the notice template to use and clicking the 'Send
+      notification' button.</para>
+    </section>
+
+    <section id="serialexpiration">
+      <title>Check Serial Expiration</title>
+
+      <para>When adding serials you enter a subscription length, using the
+      check expiration tool you can see when your subscriptions are about to
+      expire. To use the tool click the link to 'Check expiration' on the
+      serials menu.</para>
+
+      <screenshot>
+        <screeninfo>Check Serial Expiration</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/serialexpiresearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the form that appears you need to enter at least a date to
+      search by.</para>
+
+      <para>In your results you will see all subscriptions that will expire
+      before the date you entered. From there you can choose to view the
+      subscription further or renew it in one click.</para>
+
+      <screenshot>
+        <screeninfo>Serial Expiration Search Results</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serials/serialexpire.png" />
           </imageobject>
         </mediaobject>
       </screenshot>
@@ -22676,7 +23853,7 @@
               <listitem>
                 <para>If the item you're ordering from an external source
                 looks like it might be a duplicate, Koha will warn you and
-                give you options on how to procede</para>
+                give you options on how to proceed</para>
 
                 <screenshot>
                   <screeninfo>Duplicate order warning</screeninfo>
@@ -22794,7 +23971,14 @@
           <listitem>
             <para>The list of funds is populated by the <link
             linkend="funds">funds</link> you have assigned in the <link
-            linkend="acqadmin">Acquisitions Administration</link> area.</para>
+            linkend="acqadmin">Acquisitions Administration</link> area</para>
+          </listitem>
+
+          <listitem>
+            <para>The currency pull down will have the <link
+            linkend="currexchangeadmin">currencies</link> you set up in the
+            <link linkend="acqadmin">Acquisitions Administration</link>
+            area</para>
           </listitem>
 
           <listitem>
@@ -24161,7 +25345,34 @@
       <section id="patnocheckouts">
         <title>Patrons with no checkouts</title>
 
-        <para></para>
+        <para>This report will list for you the patrons in your system who
+        haven't checked any items out.</para>
+
+        <screenshot>
+          <screeninfo>Patrons with no Checkouts</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/patnocheckout.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you choose to output to the browser your results will print
+        to the screen.</para>
+
+        <screenshot>
+          <screeninfo>Results for Patrons with no Checkouts</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/patnocheckout-results.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You can also choose to export to a file that you can manipulate
+        to your needs.</para>
       </section>
 
       <section id="itemnocheckouts">
@@ -24829,7 +26040,9 @@
         </screenshot>
 
         <para>Other patrons will see the comment with the name of the patron
-        who left the comment.</para>
+        who left the comment (unless you have set the <link
+        linkend="ShowReviewer">ShowReviewer</link> preference to not show
+        patron names).</para>
 
         <screenshot>
           <screeninfo>Comment by other patron</screeninfo>
@@ -24837,6 +26050,21 @@
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/opac/commentby.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you'd like to link to a page of recent comments added to your
+        catalog you simply need to add a link to
+        http://YOURCATALOG/cgi-bin/koha/opac-showreviews.pl to anywhere on
+        your OPAC:</para>
+
+        <screenshot>
+          <screeninfo>Recent Comments List</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/recentcomments.png" />
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -25398,11 +26626,27 @@
         </mediaobject>
       </screenshot>
 
-      <para>From the form on the 'Title' is required by the library. If you
-      would like the 'Reason for suggestion' menu shown in the screenshot
-      above to appear on your suggestions list you need to add an <link
-      linkend="authorizedvalues">authorized value</link> category titled
-      'OPAC_SUG' and include reasons as values in that list.</para>
+      <itemizedlist>
+        <listitem>
+          <para>From the form on the 'Title' is required by the
+          library.</para>
+        </listitem>
+
+        <listitem>
+          <para>If you would like the 'Reason for suggestion' menu shown in
+          the screenshot above to appear on your suggestions list you need to
+          add an <link linkend="authorizedvalues">authorized value</link>
+          category titled 'OPAC_SUG' and include reasons as values in that
+          list.</para>
+        </listitem>
+
+        <listitem>
+          <para>If you would like the patron to be able to choose which branch
+          they are making a suggestion for you need to set the <link
+          linkend="AllowPurchaseSuggestionBranchChoice">AllowPurchaseSuggestionBranchChoice</link>
+          preference to 'Allow'</para>
+        </listitem>
+      </itemizedlist>
 
       <para>Once the form is submitted the data will be saved to the <link
       linkend="managesuggest">Acquisitions</link> module for the librarians to
@@ -26511,7 +27755,8 @@
       <title>Koha Search Indexes</title>
 
       <para>By default, not all fields are indexed in the Zebra search engine,
-      but most are. Below are the fields that are indexed in Zebra.</para>
+      but many are. Below are the MARC21 fields that are indexed in
+      Zebra.</para>
 
       <table cellpadding="4" cellspacing="4" frame="all">
         <title>Indexes</title>
@@ -33121,6 +34366,157 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         with a series of original images that you can alter to meet your
         needs. The originals can be found in the misc/interface_customization/
         directory.</para>
+      </section>
+
+      <section id="opacdisplayfaq">
+        <title>OPAC Display Fields</title>
+
+        <para><emphasis role="bold">Question</emphasis>: What MARC fields
+        print to the different OPAC screens in Koha?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: The XSLT preference
+        must be set as follows for the following fields to show</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><link
+            linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> =
+            using XSLT stylesheets</para>
+          </listitem>
+
+          <listitem>
+            <para><link
+            linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> =
+            using XSLT stylesheets</para>
+          </listitem>
+
+          <listitem>
+            <para><link
+            linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link> =
+            show</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The OPAC Results page shows:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>245</para>
+          </listitem>
+
+          <listitem>
+            <para>100, 110, 111</para>
+          </listitem>
+
+          <listitem>
+            <para>700, 710, 711</para>
+          </listitem>
+
+          <listitem>
+            <para>250</para>
+          </listitem>
+
+          <listitem>
+            <para>260</para>
+          </listitem>
+
+          <listitem>
+            <para>246</para>
+          </listitem>
+
+          <listitem>
+            <para>856</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The OPAC Details page shows:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>245</para>
+          </listitem>
+
+          <listitem>
+            <para>100, 110, 111</para>
+          </listitem>
+
+          <listitem>
+            <para>700, 710, 711</para>
+          </listitem>
+
+          <listitem>
+            <para>440, 490</para>
+          </listitem>
+
+          <listitem>
+            <para>260</para>
+          </listitem>
+
+          <listitem>
+            <para>250</para>
+          </listitem>
+
+          <listitem>
+            <para>300</para>
+          </listitem>
+
+          <listitem>
+            <para>020</para>
+          </listitem>
+
+          <listitem>
+            <para>022</para>
+          </listitem>
+
+          <listitem>
+            <para>246</para>
+          </listitem>
+
+          <listitem>
+            <para>130, 240</para>
+          </listitem>
+
+          <listitem>
+            <para>6xx</para>
+          </listitem>
+
+          <listitem>
+            <para>856</para>
+          </listitem>
+
+          <listitem>
+            <para>505</para>
+          </listitem>
+
+          <listitem>
+            <para>773</para>
+          </listitem>
+
+          <listitem>
+            <para>520</para>
+          </listitem>
+
+          <listitem>
+            <para>866</para>
+          </listitem>
+
+          <listitem>
+            <para>775</para>
+          </listitem>
+
+          <listitem>
+            <para>780</para>
+          </listitem>
+
+          <listitem>
+            <para>785</para>
+          </listitem>
+
+          <listitem>
+            <para>plus all of the 5xx fields in the Notes tab at the
+            bottom</para>
+          </listitem>
+        </itemizedlist>
       </section>
 
       <section id="displaysubtitle">
