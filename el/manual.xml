@@ -5949,7 +5949,7 @@
             <title>opaccolorstylesheet</title>
 
             <para>Asks: Include the additional CSS stylesheet ___ to override
-            specified settings from the default stylesheet. </para>
+            specified settings from the default stylesheet.</para>
 
             <para>Description:</para>
 
@@ -15215,6 +15215,16 @@
 
             <listitem>
               <para>Choose the character encoding</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>If you leave this set to Default Koha will try to
+                  guess the encoding, but it should be noted that this is
+                  almost always wrong for non-UTF8 records with non-ASCII
+                  characters. Specifying a character set is much more reliable
+                  if you're not using UTF-8.</para>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -18747,7 +18757,14 @@
         </screenshot>
 
         <para>Once you have checked out all of the items for the patron you
-        can print them a receipt by clicking the Print button at the top of
+        can print them a receipt by choosing one of two methods. </para>
+
+        <para>The first is that you can simply hit enter on your keyboard or
+        scan a blank piece of paper with your barcode scanner. The idea being
+        that you're "checking out" a blank barcode which triggers Koha to
+        print the 'Quick Slip.'</para>
+
+        <para>The second is that you can click the Print button at the top of
         the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
 
         <screenshot>
@@ -26022,7 +26039,9 @@
         </screenshot>
 
         <para>Other patrons will see the comment with the name of the patron
-        who left the comment.</para>
+        who left the comment (unless you have set the <link
+        linkend="ShowReviewer">ShowReviewer</link> preference to not show
+        patron names).</para>
 
         <screenshot>
           <screeninfo>Comment by other patron</screeninfo>
@@ -26030,6 +26049,21 @@
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/opac/commentby.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you'd like to link to a page of recent comments added to your
+        catalog you simply need to add a link to
+        http://YOURCATALOG/cgi-bin/koha/opac-showreviews.pl to anywhere on
+        your OPAC:</para>
+
+        <screenshot>
+          <screeninfo>Recent Comments List</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/recentcomments.png" />
             </imageobject>
           </mediaobject>
         </screenshot>
