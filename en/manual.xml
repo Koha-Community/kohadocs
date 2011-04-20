@@ -6434,6 +6434,45 @@
             </important>
           </section>
 
+          <section id="OPACMySummaryHTML">
+            <title>OPACMySummaryHTML</title>
+
+            <para>Asks: Include a "Links" column on the "my summary" tab when
+            a user is logged in to the OPAC, with the following HTML (leave
+            blank to disable).</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In this preference you can enter HTML that will appear
+                on the 'Checked Out' tab on the 'My Summary' section when
+                logged in to the OPAC. The placeholders {BIBLIONUMBER},
+                {TITLE}, {ISBN} and {AUTHOR} will be replaced with information
+                from the displayed record. This can be used to enter in
+                'share' links for social networks or generate searches against
+                other library catalogs.</para>
+
+                <screenshot>
+                  <screeninfo>Example of 'Links' column with a value in the
+                  OPACMySummaryHTML preference</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACMySummaryHTML%20.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Sample Data:<programlisting>&lt;p&gt;&lt;a href="http://www.facebook.com/sharer.php?u=http://YOUROPAC.ORG/cgi-bin/koha/opac-detail.pl?biblionumber={BIBLIONUMBER}"&gt;Share on Facebook&lt;/a&gt;
+&lt;br /&gt;TITLE: {TITLE}
+&lt;br /&gt;AUTHOR: {AUTHOR}
+&lt;br /&gt;ISBN: {ISBN}
+&lt;br /&gt;BIBLIONUMBER: {BIBLIONUMBER}&lt;/p&gt;</programlisting></para>
+          </section>
+
           <section id="opacstylesheet">
             <title>opacstylesheet</title>
 
@@ -18744,7 +18783,7 @@
         </screenshot>
 
         <para>Once you have checked out all of the items for the patron you
-        can print them a receipt by choosing one of two methods. </para>
+        can print them a receipt by choosing one of two methods.</para>
 
         <para>The first is that you can simply hit enter on your keyboard or
         scan a blank piece of paper with your barcode scanner. The idea being
