@@ -6374,11 +6374,42 @@
 
             <para>Asks: Include a "More Searches" box on the detail pages of
             items on the OPAC, with the following HTML (leave blank to
-            disable)<note>
-                <para>The placeholders {CONTROLNUMBER}, {TITLE}, {ISBN} and
-                {AUTHOR} will be replaced with information from the displayed
-                record.</para>
-              </note></para>
+            disable)</para>
+
+            <note>
+              <para>The placeholders {BIBLIONUMBER}, {CONTROLNUMBER}, {TITLE},
+              {ISBN} and {AUTHOR} will be replaced with information from the
+              displayed record.</para>
+            </note>
+
+            <tip>
+              <para>You can use this field to add social networking share
+              links by using code similar to this</para>
+
+              <programlisting>&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="detailtagcell"&gt;
+&lt;script
+src="http://connect.facebook.net/en_US/all.js#xfbml=1"&gt;&lt;/script&gt;&lt;fb:like
+href="http://opac.mylibrary.tld/bib/{BIBLIONUMBER}" show_faces="true"
+width="450" font=""&gt;&lt;/fb:like&gt;
+&lt;div&gt;&lt;a href="http://twitter.com/share" class="twitter-share-button"
+data-url="http://opac.mylibrary.tld/bib/{BIBLIONUMBER}" data-text="I'm reading
+this" data-count="horizontal"&gt;Tweet&lt;/a&gt;&lt;script type="text/javascript"
+src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;ul&gt;</programlisting>
+
+              <para>The starting &lt;/ul&gt; is necessary to break out of the
+              'Search for this Title In' pull down menu</para>
+
+              <screenshot>
+                <screeninfo>OPACSearchForTitleIn with Social Networking
+                Links</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/OPACSearchForTitleIn.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </tip>
           </section>
 
           <section id="OPACShowCheckoutName">
