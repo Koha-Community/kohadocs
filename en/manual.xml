@@ -11234,7 +11234,7 @@
                   <itemizedlist>
                     <listitem>
                       <para><emphasis>Get there: </emphasis>More &gt;
-                      Administration &gt; Catalog &gt; <link
+                      Administration &gt; Basic Parameters &gt; <link
                       linkend="authorizedvalues">Authorized
                       Values</link></para>
                     </listitem>
@@ -26633,6 +26633,50 @@
           </mediaobject>
         </screenshot>
 
+        <para>If your patrons would like to see the items barcodes on their
+        list of checked out items you can set up a <link
+        linkend="patronattributetypes">patron attribute</link> with the value
+        of SHOW_BCODE and <link linkend="authorizedvalues">authorized
+        value</link> of YES_NO.</para>
+
+        <screenshot>
+          <screeninfo>Add SHOW_BCODE patron attribute</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEadd.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then on the <link linkend="editpatrons">patron's record set the
+        value</link> for SHOW_BCODE to yes.</para>
+
+        <screenshot>
+          <screeninfo>Setting value for SHOW_BCODE on patron
+          record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEattribute.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>This will add a column to the check out summary in the OPAC that
+        shows the patrons the barcodes of the items they have checked
+        out.</para>
+
+        <screenshot>
+          <screeninfo>Barcode number on checkout list in OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/barcodeoncheckouts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
         <para>Clicking on the 'Overdue' tab will show only the items that are
         overdue.</para>
 
@@ -35094,6 +35138,62 @@ no-repeat scroll center top transparent;
  &lt;/style&gt;
 &lt;script type="text/javascript"&gt;
 //&lt;![CDATA[</programlisting></para>
+      </section>
+
+      <section id="opacbarcodesfaq">
+        <title>Show patrons the barcodes of items they have checked
+        out</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Can patrons see the
+        barcodes for the items they have checked out.</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Not by default, but
+        with a few edits to the patron record you can make a barcode column
+        appear on the patron's check out summary in the OPAC. You can set up a
+        <link linkend="patronattributetypes">patron attribute</link> with the
+        value of SHOW_BCODE and <link linkend="authorizedvalues">authorized
+        value</link> of YES_NO to make this happen.</para>
+
+        <screenshot>
+          <screeninfo>Add SHOW_BCODE patron attribute</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEadd.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then on the <link linkend="editpatrons">patron's record set the
+        value</link> for SHOW_BCODE to yes.</para>
+
+        <screenshot>
+          <screeninfo>Setting value for SHOW_BCODE on patron
+          record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEattribute.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>This will add a column to the check out summary in the OPAC that
+        shows the patrons the barcodes of the items they have checked
+        out.</para>
+
+        <screenshot>
+          <screeninfo>Barcode number on checkout list in OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/barcodeoncheckouts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Clicking on the 'Overdue' tab will show only the items that are
+        overdue.</para>
       </section>
     </section>
 
