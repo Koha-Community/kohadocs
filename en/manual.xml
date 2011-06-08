@@ -7242,6 +7242,37 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </important>
           </section>
 
+          <section id="OpacHiddenItems">
+            <title>OpacHiddenItems</title>
+
+            <para>Asks: Allows to define custom rules for hiding specific
+            items at opac. See docs/opac/OpacHiddenItems.txt for more
+            informations.</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In this field you can enter criteria for items you would
+                like to hide from display in the OPAC. This field takes any
+                combination of item fields for blocking. For example a value
+                of:</para>
+
+                <para><programlisting>itype: [07, 10]
+location: [STAFF, ISO]</programlisting>Will block items with an itype code of
+                07 or 10 as well as items that have a shelving location of
+                STAFF or ISO.</para>
+
+                <para>In items my items.itype 07 is defined in Item Types
+                Administration as Staff Assigned My items.itype 10 in Item
+                Types is Archival Copy The locations STAFF and ISO are in
+                Authoritized Values for category=LOC STAFF means it's assigned
+                to the staff reading room and ISO means it is in the isolation
+                room.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OPACItemHolds">
             <title>OPACItemHolds</title>
 
@@ -33705,7 +33736,7 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
         </listitem>
 
         <listitem>
-          <para>we start in 2011 </para>
+          <para>we start in 2011</para>
         </listitem>
 
         <listitem>
@@ -33713,11 +33744,11 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
         </listitem>
 
         <listitem>
-          <para>starting from issue 215 </para>
+          <para>starting from issue 215</para>
         </listitem>
       </itemizedlist>
 
-      <para> The planning would look like this:</para>
+      <para>The planning would look like this:</para>
 
       <screenshot>
         <screeninfo>Sample for this Hebrew Journal</screeninfo>
