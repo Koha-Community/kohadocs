@@ -130,6 +130,13 @@
         </mediaobject>
       </screenshot>
 
+      <para>If the preference refers to monetary values (like <link
+      linkend="maxoutstanding">maxoutstanding</link>) the currency displayed
+      will be the default you set in your <link
+      linkend="currexchangeadmin">Currency and Exchange Rate</link>
+      administration area. In the examples to follow they will all read USD
+      for U.S. Dollars.</para>
+
       <section id="acqprefs">
         <title>Acquisitions</title>
 
@@ -3278,7 +3285,8 @@
                 <para>This preference lets you decide how your patrons will
                 log in to the self checkout machine. Barcode is the patron's
                 card number and their username and password is set using the
-                opac login and password fields on the patron record.</para>
+                opac/staff username and password fields on the patron
+                record.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6379,11 +6387,42 @@
 
             <para>Asks: Include a "More Searches" box on the detail pages of
             items on the OPAC, with the following HTML (leave blank to
-            disable)<note>
-                <para>The placeholders {CONTROLNUMBER}, {TITLE}, {ISBN} and
-                {AUTHOR} will be replaced with information from the displayed
-                record.</para>
-              </note></para>
+            disable)</para>
+
+            <note>
+              <para>The placeholders {BIBLIONUMBER}, {CONTROLNUMBER}, {TITLE},
+              {ISBN} and {AUTHOR} will be replaced with information from the
+              displayed record.</para>
+            </note>
+
+            <tip>
+              <para>You can use this field to add social networking share
+              links by using code similar to this</para>
+
+              <programlisting>&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="detailtagcell"&gt;
+&lt;script
+src="http://connect.facebook.net/en_US/all.js#xfbml=1"&gt;&lt;/script&gt;&lt;fb:like
+href="http://opac.mylibrary.tld/bib/{BIBLIONUMBER}" show_faces="true"
+width="450" font=""&gt;&lt;/fb:like&gt;
+&lt;div&gt;&lt;a href="http://twitter.com/share" class="twitter-share-button"
+data-url="http://opac.mylibrary.tld/bib/{BIBLIONUMBER}" data-text="I'm reading
+this" data-count="horizontal"&gt;Tweet&lt;/a&gt;&lt;script type="text/javascript"
+src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;ul&gt;</programlisting>
+
+              <para>The starting &lt;/ul&gt; is necessary to break out of the
+              'Search for this Title In' pull down menu</para>
+
+              <screenshot>
+                <screeninfo>OPACSearchForTitleIn with Social Networking
+                Links</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/OPACSearchForTitleIn.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </tip>
           </section>
 
           <section id="OPACShowCheckoutName">
@@ -6445,6 +6484,45 @@
               <para>This should be a complete URL, starting with
               http://</para>
             </important>
+          </section>
+
+          <section id="OPACMySummaryHTML">
+            <title>OPACMySummaryHTML</title>
+
+            <para>Asks: Include a "Links" column on the "my summary" tab when
+            a user is logged in to the OPAC, with the following HTML (leave
+            blank to disable).</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In this preference you can enter HTML that will appear
+                on the 'Checked Out' tab on the 'My Summary' section when
+                logged in to the OPAC. The placeholders {BIBLIONUMBER},
+                {TITLE}, {ISBN} and {AUTHOR} will be replaced with information
+                from the displayed record. This can be used to enter in
+                'share' links for social networks or generate searches against
+                other library catalogs.</para>
+
+                <screenshot>
+                  <screeninfo>Example of 'Links' column with a value in the
+                  OPACMySummaryHTML preference</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACMySummaryHTML.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Sample Data:<programlisting>&lt;p&gt;&lt;a href="http://www.facebook.com/sharer.php?u=http://YOUROPAC.ORG/cgi-bin/koha/opac-detail.pl?biblionumber={BIBLIONUMBER}"&gt;Share on Facebook&lt;/a&gt;
+&lt;br /&gt;TITLE: {TITLE}
+&lt;br /&gt;AUTHOR: {AUTHOR}
+&lt;br /&gt;ISBN: {ISBN}
+&lt;br /&gt;BIBLIONUMBER: {BIBLIONUMBER}&lt;/p&gt;</programlisting></para>
           </section>
 
           <section id="opacstylesheet">
@@ -7175,6 +7253,39 @@
               linkend="opacuserlogin">opacuserlogin</link> needs to be set to
               'allow'</para>
             </important>
+          </section>
+
+          <section id="OpacHiddenItems">
+            <title>OpacHiddenItems</title>
+
+            <para>Asks: Allows to define custom rules for hiding specific
+            items at opac. <tip>
+                <para>See docs/opac/OpacHiddenItems.txt in your Koha install
+                directory for more information</para>
+              </tip></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In this field you can enter criteria for items you would
+                like to hide from display in the OPAC. This field takes any
+                combination of item fields for blocking. For example a value
+                of:</para>
+
+                <para><programlisting>itype: [07, 10]
+location: [STAFF, ISO]</programlisting>Will block items with an itype code of
+                07 or 10 as well as items that have a shelving location of
+                STAFF or ISO.</para>
+
+                <para>In items my items.itype 07 is defined in Item Types
+                Administration as Staff Assigned My items.itype 10 in Item
+                Types is Archival Copy The locations STAFF and ISO are in
+                Authoritized Values for category=LOC STAFF means it's assigned
+                to the staff reading room and ISO means it is in the isolation
+                room.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="OPACItemHolds">
@@ -9706,7 +9817,7 @@
           </section>
 
           <section id="ILS-DIAuthorized_IPs">
-            <title>ILS-DI:Authorized_IPs</title>
+            <title>ILS-DI:AuthorizedIPs</title>
 
             <para>Asks: ___ allowed IPs to use the ILS-DI services</para>
           </section>
@@ -10726,12 +10837,50 @@
                     (numbers and letters)</para>
                   </important>
                 </listitem>
+
+                <listitem>
+                  <important>
+                    <para>This field is required in order to save your patron
+                    category. If left blank you will be presented with an
+                    error.</para>
+
+                    <screenshot>
+                      <screeninfo>Missing fields error</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/patroncirc/patcaterror.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </important>
+                </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
               <para>Enter a plain text version of the category in the
               'Description' field.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This field is required in order to save your patron
+                    category. If left blank you will be presented with an
+                    error.</para>
+
+                    <screenshot>
+                      <screeninfo>Missing fields error</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/patroncirc/patcaterror.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -10744,6 +10893,24 @@
                   <important>
                     <para>You cannot enter both a month limit and a date
                     until. Choose to enter either one or the other.</para>
+                  </important>
+                </listitem>
+
+                <listitem>
+                  <important>
+                    <para>This field is required in order to save your patron
+                    category. If left blank you will be presented with an
+                    error.</para>
+
+                    <screenshot>
+                      <screeninfo>Missing fields error</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/patroncirc/patcaterror.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
                   </important>
                 </listitem>
               </itemizedlist>
@@ -10833,6 +11000,26 @@
                   </imageobject>
                 </mediaobject>
               </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This field is required in order to save your patron
+                    category. If left blank you will be presented with an
+                    error.</para>
+
+                    <screenshot>
+                      <screeninfo>Missing fields error</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/patroncirc/patcaterror.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -11124,7 +11311,7 @@
                   <itemizedlist>
                     <listitem>
                       <para><emphasis>Get there: </emphasis>More &gt;
-                      Administration &gt; Catalog &gt; <link
+                      Administration &gt; Basic Parameters &gt; <link
                       linkend="authorizedvalues">Authorized
                       Values</link></para>
                     </listitem>
@@ -16883,9 +17070,10 @@
             </listitem>
 
             <listitem>
-              <para>The OPAC Login and Password are used by the patron to log
-              into their account in the OPAC. They are also used for staff
-              accounts to provide them access to the staff client.</para>
+              <para>The Staff/OPAC asks for the username and password to be
+              used by the patron (and/or staff member) to log into their
+              account in the OPAC and for staff to log in to the staff
+              client.</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -17035,8 +17223,8 @@
 
         <listitem>
           <para>All of the fields with the exception of first name, card
-          number, opac login and opac password have been duplicated. Fill in
-          the missing pieces and click 'Save'</para>
+          number, username and password have been duplicated. Fill in the
+          missing pieces and click 'Save'</para>
 
           <screenshot>
             <screeninfo>Duplicating Patron Form</screeninfo>
@@ -18757,7 +18945,7 @@
         </screenshot>
 
         <para>Once you have checked out all of the items for the patron you
-        can print them a receipt by choosing one of two methods. </para>
+        can print them a receipt by choosing one of two methods.</para>
 
         <para>The first is that you can simply hit enter on your keyboard or
         scan a blank piece of paper with your barcode scanner. The idea being
@@ -19996,6 +20184,22 @@
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>Items that have been on the hold shelf longer than you normally
+        allow (based on the <link
+        linkend="ReservesMaxPickUpDelay">ReservesMaxPickUpDelay</link>
+        preference value) will appear on the 'Holds Over' tab, they will not
+        automatically be cancelled.</para>
+
+        <screenshot>
+          <screeninfo>Items waiting on the hold shelf too long</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/holdspickupover.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="holdratios">
@@ -21066,6 +21270,47 @@
         <para>If you want to move all items to a new record creating only one
         bibliographic record you can use the <link
         linkend="mergebibrecs">Merge Records tool</link> instead.</para>
+      </section>
+
+      <section id="deleteitems">
+        <title>Deleting Items</title>
+
+        <para>There are many ways to delete item records. If you only need to
+        delete one item you can do this by opening up the detail page for the
+        bib record and clicking the 'Edit' button at the top. From there you
+        can choose to 'Edit items'.</para>
+
+        <screenshot>
+          <screeninfo>'Edit Items' menu option</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/edititemstodelete.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>You will be presented with a list of items and next to each one
+        will be a link labeled 'Delete'. Click that link and if the item is
+        not checked out it will delete that item.</para>
+
+        <screenshot>
+          <screeninfo>Delete link on the left</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/deleteitemlink.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you know that all of the items attached to your record are
+        not currently checked out you can use the 'Delete all items' option
+        under the 'Edit menu' and it will remove all items from the
+        record.</para>
+
+        <para>Finally you can use the <link linkend="batchdeleteitems">batch
+        delete tool</link> to delete a batch of items.</para>
       </section>
 
       <section id="itemcirchistory">
@@ -23597,6 +23842,32 @@
         </mediaobject>
       </screenshot>
 
+      <para>Another option for libraries with long lists of suggestions is to
+      approve or reject suggestions one by one by clicking on the title of the
+      suggestion to open a suggestion editing page.</para>
+
+      <screenshot>
+        <screeninfo>Edit Purchase Suggestion</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/editsuggestion.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>From this form you can make edits to the suggestion (adding more
+      details or updating incorrect information provided by the patron). You
+      can also choose to accept or reject the suggestion on an individual
+      basis.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Choosing to mark a request as 'Asked' will move the request
+          back to the 'Pending' tab.</para>
+        </listitem>
+      </itemizedlist>
+
       <para>Reasons for accepting and rejecting suggestions are defined by the
       <link linkend="suggestauthorized">SUGGEST</link> authorized
       value.</para>
@@ -24927,7 +25198,7 @@
             </mediaobject>
           </screenshot>
 
-          <para>If you feel that your report might be too resource intesive
+          <para>If you feel that your report might be too resource intensive
           you might want to consider using runtime parameters to your query.
           Runtime parameters basically make a filter appear before the report
           is run to save your system resources.</para>
@@ -25761,7 +26032,224 @@
     <section id="opacbibrec">
       <title>Bibliographic Record</title>
 
-      <para></para>
+      <para>When you click on a title from the search results, you're brought
+      to the bibliographic detail of the record. This page is broken down in
+      several different areas.</para>
+
+      <para>At the top of your screen will be the title and the GMD:</para>
+
+      <screenshot>
+        <screeninfo>Title</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibtitle.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Below the title the authors will be listed. These come from your
+      1xx and 7xx fields:</para>
+
+      <screenshot>
+        <screeninfo>Author Display</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibauthor.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If you have your <link
+      linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link> preference
+      set to 'show' you will see a material type that is deterined by values
+      in your fixed fields (learn more in the <link linkend="XSLTiTypes">XSLT
+      Item Types</link> Appendix).</para>
+
+      <screenshot>
+        <screeninfo>XSLT Item Type</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibleader.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Next you'll see the description of the record you're
+      viewing:</para>
+
+      <screenshot>
+        <screeninfo>Basic Details</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibdetails.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Following that information you'll find the subject headings which
+      can be clicked to search for other titles on similar topics</para>
+
+      <screenshot>
+        <screeninfo>Bibliographic Subjects</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibsubjects.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If your record has data in the 856 fields you'll see the links to
+      the right of the 'Online Resources' label</para>
+
+      <screenshot>
+        <screeninfo>Online Resources</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/biblinks.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If the title you're viewing is in a public list then you'll see a
+      list of those to the right of the 'List(s) this item appears in'
+      label.</para>
+
+      <screenshot>
+        <screeninfo>Lists</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/biblists.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If your library allows tags and has them displaying on the detail
+      record, you'll see the tags and a link to add additonal tags next</para>
+
+      <screenshot>
+        <screeninfo>Tags</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibtags.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the tabs below the details you will find your holdings
+      data</para>
+
+      <screenshot>
+        <screeninfo></screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibholdings.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Any notes (5xx fields) that have been cataloged will appear under
+      'Title Notes'</para>
+
+      <screenshot>
+        <screeninfo>Title notes</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibtitlenotes.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If you're allowing comments they will appear in the next
+      tab</para>
+
+      <screenshot>
+        <screeninfo>Comments</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibcomments.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>And finally if you have enabled FRBR and you have other editions
+      of the title in your collection you will see the 'Editions' tab.</para>
+
+      <screenshot>
+        <screeninfo>Editions</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibeditions.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>To the right of the bib details you're find the links to place a
+      hold, print the record, save the record to your lists, or add it to your
+      cart</para>
+
+      <screenshot>
+        <screeninfo>More options</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/biboptions.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Clicking 'More Searches' will show the list of libraries you
+      entered in your <link
+      linkend="OPACSearchForTitleIn">OPACSearchForTitleIn</link>
+      preference</para>
+
+      <screenshot>
+        <screeninfo>More Searches</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibmoresearch.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Under the 'Save Record' label you will find a series of file
+      formats you can save the record as</para>
+
+      <screenshot>
+        <screeninfo>Save Record</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibsave.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>If at any time you want to change the view from the 'Normal' view
+      to see the Marc or the ISBD you can click the tabs across the top of the
+      record</para>
+
+      <screenshot>
+        <screeninfo>Record Views</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/bibdetail/bibviews.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section id="opaclistscart">
@@ -25777,7 +26265,52 @@
       <section id="opaclists">
         <title>Lists</title>
 
-        <para></para>
+        <para>Patrons can manage their own private lists by visiting the 'my
+        lists' section of their account.</para>
+
+        <screenshot>
+          <screeninfo>Lists Management</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/nolists.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <section id="opacaddlists">
+          <title>Creating Lists</title>
+
+          <para>Lists can also be created by choosing the 'New List' option in
+          the 'Add to' menu on the search results</para>
+
+          <screenshot>
+            <screeninfo>Add to New List</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/addtonewlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To create a list the patron simply needs to click the 'New
+          List' link and populate the form that appears</para>
+
+          <screenshot>
+            <screeninfo>Create a new list</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/newlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The only field required is the 'List Name,' but the patron can
+          also choose how they want the list sorted and if the list is public
+          or private.</para>
+        </section>
 
         <section id="opacaddtolists">
           <title>Adding titles to Lists</title>
@@ -25807,6 +26340,50 @@
 
         <section id="opacmanagelists">
           <title>Managing Lists</title>
+
+          <para>Once the list is saved patrons can begin adding items to it.
+          From the 'my lists' tab on the patron record the patron can edit and
+          delete the lists they have created by clicking the appropriate link
+          to the right of the list name.</para>
+
+          <screenshot>
+            <screeninfo>My Lists</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/mylists.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>To edit the list's title or sorting patrons click the 'Edit'
+          link to the right of the list description.</para>
+
+          <screenshot>
+            <screeninfo>Editing List</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/editlist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>When clicking 'Delete' next to a list you will be asked to
+          confirm that you want to delete the list.</para>
+
+          <screenshot>
+            <screeninfo>Delete list confirmation</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/deletelist.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>The list will not be deleted until the 'Confirm' button is
+          clicked to the right of the list you'd like to delete.</para>
 
           <para></para>
         </section>
@@ -26176,8 +26753,66 @@
         they have checked out with the overdue items highlighted in red. If
         you have <link linkend="OpacRenewalAllowed">OpacRenewalAllowed</link>
         set to 'Allow' then your patrons will be able to renew their books
-        right from the OPAC. Clicking on the 'Overdue' tab will show only the
-        items that are overdue.</para>
+        right from the OPAC. If you have HTML entered in the <link
+        linkend="OPACMySummaryHTML">OPACMySummaryHTML</link> preference then
+        you will see that to the right of the 'Fines' column.</para>
+
+        <screenshot>
+          <screeninfo>Checked out tab with OPACMySummaryHTML set</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/opacsummary-wlinks.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If your patrons would like to see the items barcodes on their
+        list of checked out items you can set up a <link
+        linkend="patronattributetypes">patron attribute</link> with the value
+        of SHOW_BCODE and <link linkend="authorizedvalues">authorized
+        value</link> of YES_NO.</para>
+
+        <screenshot>
+          <screeninfo>Add SHOW_BCODE patron attribute</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEadd.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then on the <link linkend="editpatrons">patron's record set the
+        value</link> for SHOW_BCODE to yes.</para>
+
+        <screenshot>
+          <screeninfo>Setting value for SHOW_BCODE on patron
+          record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEattribute.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>This will add a column to the check out summary in the OPAC that
+        shows the patrons the barcodes of the items they have checked
+        out.</para>
+
+        <screenshot>
+          <screeninfo>Barcode number on checkout list in OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/barcodeoncheckouts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Clicking on the 'Overdue' tab will show only the items that are
+        overdue.</para>
 
         <screenshot>
           <screeninfo>Overdue Items</screeninfo>
@@ -31792,6 +32427,19 @@ print theme('pages_catalog');</programlisting>
         </section>
       </section>
 
+      <section id="acqcrons">
+        <title>Acquisitions</title>
+
+        <section id="cleansuggcron">
+          <title>Clean up old suggestions</title>
+
+          <para>Script path: misc/cronjobs/purge_suggestions.pl</para>
+
+          <para>Does: Removes old (defined by you) suggestions from the
+          suggestion management area.</para>
+        </section>
+      </section>
+
       <section id="deprecatedcrons">
         <title>Deprecated scripts</title>
 
@@ -33123,6 +33771,50 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
       supplemental issue in week 51, which we have to define the enumeration
       for, then the next predicted issue will be the following year's first
       week.</para>
+    </section>
+
+    <section id="hebrewserialsample">
+      <title>&#1506;&#1514;-&#1502;&#1493;&#1500;
+      &#1506;&#1497;&#1514;&#1493;&#1503;
+      &#1500;&#1514;&#1493;&#1500;&#1491;&#1493;&#1514; &#1488;&#1512;&#1509;
+      &#1497;&#1513;&#1512;&#1488;&#1500; &#1493;&#1506;&#1501;
+      &#1497;&#1513;&#1512;&#1488;&#1500;</title>
+
+      <para>This journal is published with the following rules:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>6 issues a year (every 2 months)</para>
+        </listitem>
+
+        <listitem>
+          <para>year changes every 6 issues</para>
+        </listitem>
+
+        <listitem>
+          <para>we start in 2011</para>
+        </listitem>
+
+        <listitem>
+          <para>the issue number goes up indefinitly</para>
+        </listitem>
+
+        <listitem>
+          <para>starting from issue 215</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>The planning would look like this:</para>
+
+      <screenshot>
+        <screeninfo>Sample for this Hebrew Journal</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/serialssamples/hebrewnewspaper.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
   </appendix>
 
@@ -34637,6 +35329,62 @@ no-repeat scroll center top transparent;
  &lt;/style&gt;
 &lt;script type="text/javascript"&gt;
 //&lt;![CDATA[</programlisting></para>
+      </section>
+
+      <section id="opacbarcodesfaq">
+        <title>Show patrons the barcodes of items they have checked
+        out</title>
+
+        <para><emphasis role="bold">Question</emphasis>: Can patrons see the
+        barcodes for the items they have checked out.</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: Not by default, but
+        with a few edits to the patron record you can make a barcode column
+        appear on the patron's check out summary in the OPAC. You can set up a
+        <link linkend="patronattributetypes">patron attribute</link> with the
+        value of SHOW_BCODE and <link linkend="authorizedvalues">authorized
+        value</link> of YES_NO to make this happen.</para>
+
+        <screenshot>
+          <screeninfo>Add SHOW_BCODE patron attribute</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEadd.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then on the <link linkend="editpatrons">patron's record set the
+        value</link> for SHOW_BCODE to yes.</para>
+
+        <screenshot>
+          <screeninfo>Setting value for SHOW_BCODE on patron
+          record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/SHOW_BCODEattribute.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>This will add a column to the check out summary in the OPAC that
+        shows the patrons the barcodes of the items they have checked
+        out.</para>
+
+        <screenshot>
+          <screeninfo>Barcode number on checkout list in OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/barcodeoncheckouts.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Clicking on the 'Overdue' tab will show only the items that are
+        overdue.</para>
       </section>
     </section>
 
