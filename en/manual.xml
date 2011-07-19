@@ -35880,6 +35880,38 @@ no-repeat scroll center top transparent;
             </listitem>
           </itemizedlist>
         </section>
+
+        <section id="rescodefaq">
+          <title>Reserves Table</title>
+
+          <para><emphasis role="bold">Question</emphasis>: What are the
+          possible codes for the found field in the reserves and old_reserves
+          tables?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>NULL: means the patron requested the 1st available, and we
+              haven't choosen the item</para>
+            </listitem>
+
+            <listitem>
+              <para>T = Transit: the reserve is linked to an item but is in
+              transit to the pickup branch</para>
+            </listitem>
+
+            <listitem>
+              <para>W =Waiting: the reserve is linked to an item, is at the
+              pickup branch, and is waiting on the hold shelf</para>
+            </listitem>
+
+            <listitem>
+              <para>F = Finished: the reserve has been completed, and is
+              done</para>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section id="runtimefaq">
