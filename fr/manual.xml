@@ -2054,7 +2054,11 @@
             ___</para>
 
             <para>This preference makes it so that a librarian can get a copy
-            of every notice sent out to patrons.</para>
+            of every notice sent out to patrons.<tip>
+                <para>If you'd like more than one person to receive the blind
+                copy you can simply enter in multiple email addresses
+                separated by commas.</para>
+              </tip></para>
           </section>
 
           <section id="PrintNoticesMaxLines">
@@ -6297,8 +6301,9 @@
 
             <para>Default: Important links here.</para>
 
-            <para>Asks: Show the following HTML on the left hand column of all
-            pages on the OPAC (generally navigation links)</para>
+            <para>Asks: Show the following HTML on the left hand column of the
+            main page and patron account on the OPAC (generally navigation
+            links)</para>
 
             <screenshot>
               <screeninfo>Sample navigation links</screeninfo>
@@ -7134,7 +7139,7 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
 
                   <listitem>
                     <para><link linkend="opacuserlogin">opacuserlogin</link>
-                    needs to be set to 'allow'</para>
+                    needs to be set to 'Allow'</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -7150,7 +7155,7 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
               <listitem>
                 <para>This button allows the patrons to submit comments on
                 books they have read via the OPAC. If this preference is set
-                to &ldquo;'Allow" reviews are first sent to the staff client
+                to &ldquo;Allow" reviews are first sent to the staff client
                 for staff approval before the review is displayed in the OPAC.
                 The staff member who reviews and approves comments may find
                 the pending comments on the <link
@@ -7176,6 +7181,14 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
 
               <listitem>
                 <para>Show</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><link linkend="reviewson">reviewson</link> needs to
+                    be set to 'Allow' for this to preference to come in to
+                    play</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
 
@@ -7186,6 +7199,60 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 <para>If you would like to protect your patron's privacy in
                 the OPAC you can choose to hide their names from any of the
                 comments they leave on bib records in your system.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="ShowReviewerPhoto">
+            <title>ShowReviewerPhoto</title>
+
+            <para>Default: Show</para>
+
+            <para>Asks: ___ reviewer's photo beside comments in OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Hide</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><link linkend="reviewson">reviewson</link> needs to
+                    be set to 'Allow' and <link
+                    linkend="ShowReviewer">ShowReviewer</link> needs to be set
+                    to 'Show' for this to preference to come in to play</para>
+
+                    <screenshot>
+                      <screeninfo>ShowReviewerPhoto set to 'Show'</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/ShowReviewerPhoto.png" />
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This system preference allows libraries to show avatars
+                next to patron's comments in the OPAC. These avatars are
+                pulled from the <ulink
+                url="https://www.libravatar.org">Libravatar</ulink> library,
+                an open source powered product that allows Internet users to
+                choose a small icon to display next to their name on various
+                different websites. The library has no control over the images
+                the patron chooses to display.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -7384,7 +7451,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
             </itemizedlist>
 
-            <para>Descriptions:</para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -7393,6 +7460,51 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 checked out history in the OPAC. It allows patrons to renew
                 their materials without having to contact the library or
                 having to return to the library.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OpacRenewalBranch">
+            <title>OpacRenewalBranch</title>
+
+            <para>Default: the branch the item was checked out from</para>
+
+            <para>Asks: Use ___ as branchcode to store in the statistics
+            table</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>NULL</para>
+              </listitem>
+
+              <listitem>
+                <para>'OPACRenew'</para>
+              </listitem>
+
+              <listitem>
+                <para>the item's home branch</para>
+              </listitem>
+
+              <listitem>
+                <para>the patron's home branch</para>
+              </listitem>
+
+              <listitem>
+                <para>the branch the item was checked out from</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This value is used in the statistics table to help with
+                reporting. The statistics table in Koha keeps track of all
+                checkouts and renewals, this preference defines which branch
+                is entered in to the table when a patron renews an item for
+                themselves via the OPAC.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -27836,7 +27948,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <para>The standard Koha set of indexes is a fairly common example of
           MARC21 indexing rules. The indexes that are defined in Koha are
           indexes typically used by other integrated library systems. The
-          defined Z39.50 Bib-1 Attribute mapped to the indexes are:</para>
+          defined Z39.50 Bib-1 Attribute mapped to the indexes include:</para>
 
           <table cellpadding="4" cellspacing="4" frame="all">
             <title>Attributes</title>
@@ -35933,6 +36045,38 @@ no-repeat scroll center top transparent;
                   'Credit%'"</para>
                 </listitem>
               </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="rescodefaq">
+          <title>Reserves Table</title>
+
+          <para><emphasis role="bold">Question</emphasis>: What are the
+          possible codes for the found field in the reserves and old_reserves
+          tables?</para>
+
+          <para><emphasis role="bold">Answer</emphasis>:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>NULL: means the patron requested the 1st available, and we
+              haven't choosen the item</para>
+            </listitem>
+
+            <listitem>
+              <para>T = Transit: the reserve is linked to an item but is in
+              transit to the pickup branch</para>
+            </listitem>
+
+            <listitem>
+              <para>W =Waiting: the reserve is linked to an item, is at the
+              pickup branch, and is waiting on the hold shelf</para>
+            </listitem>
+
+            <listitem>
+              <para>F = Finished: the reserve has been completed, and is
+              done</para>
             </listitem>
           </itemizedlist>
         </section>
