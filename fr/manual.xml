@@ -2975,10 +2975,31 @@
             <itemizedlist>
               <listitem>
                 <para>Don't show</para>
+
+                <screenshot>
+                  <screeninfo>No X in the top right</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/DisplayClearScreenButtonOff.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
 
               <listitem>
                 <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>X in the top right will clear the
+                  screen</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/DisplayClearScreenButton.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </section>
@@ -3151,6 +3172,16 @@
 
               <listitem>
                 <para>Notify</para>
+
+                <screenshot>
+                  <screeninfo>Notification that a hold is waiting</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/WaitingNotifyAtCheckin.png" />
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
 
@@ -19132,6 +19163,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>When you're done checking an item out if you have the <link
+        linkend="DisplayClearScreenButton">DisplayClearScreenButton</link>
+        preference set to 'Show' you can clear the current patron by clicking
+        the X in the top right of the patron's info to remove the current
+        patron from the screen and start over.</para>
+
+        <screenshot>
+          <screeninfo>Clear Screen Button</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/globalprefs/DisplayClearScreenButton.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="checkoutmsg">
@@ -21104,8 +21151,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>or by clicking the Edit button on the Bibliographic
-        Record</para>
+        <para>or by clicking the Edit button on the Bibliographic Record and
+        choosing 'Edit Record'</para>
 
         <screenshot>
           <screeninfo>Edit Record Option on Bibliographic Record</screeninfo>
@@ -21129,8 +21176,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you have made your edits you can click 'Save' at the top of
-        the editor.</para>
+        <para>The alternative is to search via Z39.50 to overlay your record
+        with a fuller record found at another library. You can do this by
+        choosing 'Replace Record via Z39.50' from the Edit menu.</para>
+
+        <screenshot>
+          <screeninfo>Replace via Z39.50</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/replaceviaz39.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Once you choose that you will be brought to a Z39.50 search
+        window to search other libraries for the record in question.</para>
+
+        <para>Once you have made your edits (via either method) you can click
+        'Save' at the top left of the editor.</para>
       </section>
 
       <section id="dupbibrec">
@@ -23686,6 +23750,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <para>First, set your <link linkend="acqprefs">Acquisitions System
       Preferences</link> and <link linkend="acqadmin">Acquisitions
       Administration</link> to match your library's workflow.</para>
+
+      <para>On the main acquisitions page you will see your library's funds
+      listed.</para>
+
+      <screenshot>
+        <screeninfo>Acquisitions Funds Summary</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/acqfunds.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para><tip>
+          <para>If the total line is confusing for the funds you have set up
+          you can hide it by adding <programlisting>#funds_total {display:none;}</programlisting></para>
+
+          <para>to the <link linkend="IntranetUserCSS">IntranetUserCSS</link>
+          preference.</para>
+        </tip> </para>
     </section>
 
     <section id="acqvendors">
