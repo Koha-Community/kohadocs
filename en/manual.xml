@@ -983,7 +983,7 @@
                 <para>An <link linkend="authorizedvalues">authorized
                 value</link> for 942$n field should be set to eliminate
                 errors. One example would be to create an authorized value
-                titled SUPRESS with a value of 0 for don't suppress and 1 for
+                titled SUPPRESS with a value of 0 for don't suppress and 1 for
                 suppress.</para>
               </listitem>
             </itemizedlist>
@@ -3178,7 +3178,7 @@
                 <para>When checking in books you can choose whether or not to
                 have a notice pop up if the patron who returned the book has a
                 hold waiting for pick up. If you choose 'Notify' for
-                WaitingNotifyAtCheckin then everytime a hold is found for the
+                WaitingNotifyAtCheckin then every time a hold is found for the
                 patron who had the book out last a message will appear on your
                 check in screen.</para>
               </listitem>
@@ -5236,16 +5236,16 @@
 
             <itemizedlist>
               <listitem>
-                <para>The dictionary includes a &ldquo;whitelist" and a
-                &ldquo;blacklist" of tags. The whitelist includes all the tags
-                that have been pre-allowed. The blacklist includes tags that
-                are not allowed. This preference identifies the
-                &ldquo;whitelist" dictionary used. Ispell is an open source
-                dictionary which can be used as the &ldquo;whitelist". Since
-                the dictionary allows for accurately spelled obscenities, the
-                libraries policy may dictate that modifications are made to
-                the Ispell dictionary if this preference is use. For more
-                information about Ispell <ulink
+                <para>The dictionary includes a list of accepted and rejected
+                tags. The accepted list includes all the tags that have been
+                pre-allowed. The rejected list includes tags that are not
+                allowed. This preference identifies the "accepted" dictionary
+                used. Ispell is an open source dictionary which can be used as
+                a list of accepted terms. Since the dictionary allows for
+                accurately spelled obscenities, the libraries policy may
+                dictate that modifications are made to the Ispell dictionary
+                if this preference is use. For more information about Ispell
+                <ulink
                 url="http://www.gnu.org/software/ispell/ispell.html">http://www.gnu.org/software/ispell/ispell.html</ulink>.
                 Enter the path on your server to a local ispell executable,
                 used to set $Lingua::Ispell::path.</para>
@@ -6365,7 +6365,7 @@
             <para>Default: Enable</para>
 
             <para>Asks: ___ Koha OPAC as public. Private OPAC requires
-            authentification before accessing the OPAC.</para>
+            authentication before accessing the OPAC.</para>
 
             <para>Values:</para>
 
@@ -6388,7 +6388,7 @@
                 set to 'Don't enable' only members who are logged into the
                 OPAC can search. Most libraries will leave this setting at its
                 default of 'Enable' to allow their OPAC to be searched by
-                anyone and only require login for access to personlized
+                anyone and only require login for access to personalized
                 content.</para>
               </listitem>
             </itemizedlist>
@@ -6645,7 +6645,7 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
               <listitem>
                 <para>OPACUserCSS allows the administrator to enter styles
                 that will overwrite the OPAC's default CSS as defined in
-                &lsquo;opaclayoutstylesheet'or &lsquo;opacstylesheet'. Styles
+                &lsquo;opaclayoutstylesheet' or &lsquo;opacstylesheet'. Styles
                 may be entered for any of the selectors found in the default
                 style sheet. The default stylesheet will likely be found at
                 http://your_koha_address/opac-tmpl/prog/en/css/opac.css.
@@ -7387,7 +7387,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>In items my items.itype 07 is defined in Item Types
                 Administration as Staff Assigned My items.itype 10 in Item
                 Types is Archival Copy The locations STAFF and ISO are in
-                Authoritized Values for category=LOC STAFF means it's assigned
+                Authorized Values for category=LOC STAFF means it's assigned
                 to the staff reading room and ISO means it is in the isolation
                 room.</para>
               </listitem>
@@ -8532,7 +8532,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 example, a search for the word &ldquo;invent" with auto
                 truncation enabled will also retrieve results for inventor,
                 invention, inventory, etc. If you don't want this to happen
-                automatically you can still be perform wildecard searches
+                automatically you can still be perform wildcard searches
                 manually by adding an asterisk (*). Typing &ldquo;invent*"
                 even with auto truncation disabled will retrieve the same
                 inventor, invention, inventory results. Auto truncation
@@ -11560,7 +11560,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>same library, same patron type, alll item types</para>
+            <para>same library, same patron type, all item types</para>
           </listitem>
 
           <listitem>
@@ -20565,7 +20565,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <tip>
                     <para>If the <link
                     linkend="ReturnToShelvingCart">ReturnToShelvingCart</link>
-                    system preference is turned on, any newly-checked-in item
+                    system preference is turned on, any newly checked-in item
                     is also automatically put into the shelving cart, to be
                     covered by the same script run.</para>
                   </tip>
@@ -26318,7 +26318,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <para>If you have your <link
       linkend="DisplayOPACiconsXSLT">DisplayOPACiconsXSLT</link> preference
-      set to 'show' you will see a material type that is deterined by values
+      set to 'show' you will see a material type that is determined by values
       in your fixed fields (learn more in the <link linkend="XSLTiTypes">XSLT
       Item Types</link> Appendix).</para>
 
@@ -26386,7 +26386,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <para>If your library allows tags and has them displaying on the detail
-      record, you'll see the tags and a link to add additonal tags next</para>
+      record, you'll see the tags and a link to add additional tags
+      next</para>
 
       <screenshot>
         <screeninfo>Tags</screeninfo>
@@ -30998,7 +30999,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <listitem>
               <para><link linkend="OpacNav">OpacNav</link> : Enter HTML that
-              will apper to the left on the main OPAC page</para>
+              will aper to the left on the main OPAC page</para>
             </listitem>
 
             <listitem>
@@ -32312,7 +32313,7 @@ print theme('pages_catalog');</programlisting>
             <para><emphasis role="bold">SEE ALSO</emphasis></para>
 
             <para>The misc/cronjobs/advance_notices.pl program allows you to
-            send messages to patrons in advance of thier items becoming due,
+            send messages to patrons in advance of their items becoming due,
             or to alert them of items that have just become due.</para>
 
             <para><emphasis role="bold">INTERNAL METHODS</emphasis></para>
@@ -32562,7 +32563,7 @@ print theme('pages_catalog');</programlisting>
 
           <para>Script path: misc/cronjobs/build_browser_and_cloud.pl</para>
 
-          <para>Does: Generate content for authories browse in OPAC</para>
+          <para>Does: Generate content for authorities browse in OPAC</para>
 
           <para>Required by: <link linkend="OpacBrowser">OpacBrowser</link>
           system preference</para>
@@ -32593,7 +32594,7 @@ print theme('pages_catalog');</programlisting>
 
             <para>cloud-kw.pl [--verbose|--help] --conf=cloud.conf</para>
 
-            <para>Creates multiple HTML files containing kewords cloud with
+            <para>Creates multiple HTML files containing keywords cloud with
             top terms sorted by their logarithmic weight. cloud.conf is a YAML
             configuration file driving cloud generation process.</para>
 
@@ -32646,7 +32647,7 @@ print theme('pages_catalog');</programlisting>
 
             <para>WithCount</para>
 
-            <para>In order to output terms with the number of occurences they
+            <para>In order to output terms with the number of occurrences they
             have been found in Koha Catalogue by Zebra.</para>
 
             <para>CloudLevels</para>
