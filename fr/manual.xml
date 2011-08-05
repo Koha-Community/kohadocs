@@ -51,7 +51,7 @@
     <title>Administration</title>
 
     <section id="globalsysprefs">
-      <title>Global System Preferences</title>
+      <title>Preferences systeme</title>
 
       <para>Global system preferences control the way your Koha system works
       in general. Set these preferences before anything else in Koha.</para>
@@ -4150,7 +4150,7 @@
         </section>
 
         <section id="Babelthequeprefs">
-          <title>Babelth&egrave;que</title>
+          <title>Babelthèque</title>
 
           <para></para>
 
@@ -16997,19 +16997,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
   </chapter>
 
   <chapter id="patrons">
-    <title>Patrons</title>
+    <title>Adhérents</title>
 
-    <para>Before importing and/or adding patrons be sure to set up your <link
-    linkend="patcats">patron categories</link>.</para>
+    <para>Avant de créer ou d'importer des notices d'adhérents, assurez-vous
+    d'avoir déterminé des <link linkend="patcats">catégories
+    adhérent</link>.</para>
 
     <section id="addnewpatron">
-      <title>Add a new patron</title>
+      <title>Inscrire un nouvel adhérent</title>
 
-      <para>Patrons are added by going to the 'Patrons' module.</para>
+      <para>L'inscription s'effectue depuis le module adhérents.</para>
 
       <itemizedlist>
         <listitem>
-          <para>Click 'New'</para>
+          <para>Cliquez sur 'Ajouter'</para>
 
           <screenshot>
             <screeninfo>Choose patron type</screeninfo>
@@ -17023,8 +17024,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>First enter the identifying information regarding your
-          patron</para>
+          <para>Après avoir choisi une catégorie adhérent, rentrez des
+          informations d'identification (nom, prénom..etc)</para>
 
           <screenshot>
             <screeninfo>Add Patron Form</screeninfo>
@@ -17038,21 +17039,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Required fields are defined in the <link
-              linkend="BorrowerMandatoryField">BorrowerMandatoryField</link>
-              system preference</para>
+              <para>Les zones obligatoires sont fixées dans la préférence
+              système <link
+              linkend="BorrowerMandatoryField">BorrowerMandatoryField</link></para>
             </listitem>
 
             <listitem>
-              <para>Salutation is populated by the <link
-              linkend="BorrowersTitles">BorrowersTitles</link> system
-              preference</para>
+              <para>Les mentions de civilité sont fixées dans la préférence
+              système <link
+              linkend="BorrowersTitles">BorrowersTitles</link></para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Next enter the contact information</para>
+          <para>Ensuite entrez l'adresse de l'adhérent</para>
 
           <screenshot>
             <screeninfo>Patron Contact Information</screeninfo>
@@ -17066,8 +17067,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>If this patron is a child, you will be asked to attach the
-          child patron to an adult patron</para>
+          <para>Si l'adhérent est un enfant, vous pouvez associer sa fiche à
+          celle de ses parents ou de son tuteur</para>
 
           <screenshot>
             <screeninfo>Guarantor Linking</screeninfo>
@@ -17081,26 +17082,28 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Click 'Set to Patron' to search your system for an
-              existing patron</para>
+              <para>Cliquez sur 'Adhérent' afin de rechercher la fiche du
+              garant</para>
             </listitem>
 
             <listitem>
-              <para>If the Guarantor is not in the system, you can enter the
-              first and last name in the fields available</para>
+              <para>Si le garant n'est pas inscrit à la Bibliothèque vous
+              pouvez rentrer son nom et prénom dans des zones disponibles de
+              la fiche</para>
             </listitem>
 
             <listitem>
-              <para>The relationships are set using the <link
-              linkend="borrowerRelationship">borrowerRelationship</link>
-              system preference</para>
+              <para>La nature de la relation entre deux adhérents est fixée
+              dans la préférence système <link
+              linkend="borrowerRelationship">borrowerRelationship</link></para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>If this patron is a professional, you will be asked to attach
-          the patron to an organizational patron</para>
+          <para>Si l'adhérent s'inscrit à titre professionnel, vous pouvez
+          l'associer à une association, collectivité (exemple : une
+          école)</para>
 
           <screenshot>
             <screeninfo>Organization Linking</screeninfo>
@@ -17114,14 +17117,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Click 'Set to Patron to search your system for an existing
-              patron</para>
+              <para>Cliquez sur 'Adhérent' afin de vérifier si l'organisme
+              professionnel à une fiche</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Each patron can have an alternate contact</para>
+          <para>Il est posible de rentrer plusieurs adresses dans un même
+          compte</para>
 
           <screenshot>
             <screeninfo>Alternate Contact</screeninfo>
@@ -17135,16 +17139,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>An alternate contact could be a parent or guardian. It can
-              also be used in academic settings to store the patron's home
-              address.</para>
+              <para>La seconde adresse peut être celle du garant ou de
+              l'organisme professionnel.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>The library management section includes values that are used
-          within the library</para>
+          <para>Si des zones sont associées à des listes de codes(valeurs
+          autorisées), Koha propose une liste de ces codes</para>
 
           <screenshot>
             <screeninfo>Library Management</screeninfo>
@@ -17158,39 +17161,38 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>The card number field is automatically calculated if you
-              have the <link linkend="autoMemberNum">autoMemberNum</link>
-              system preference set that way</para>
+              <para>Un numéro de carte peut être crée automatiquement à l'aide
+              de la préférence système <link
+              linkend="autoMemberNum">autoMemberNum</link></para>
 
               <itemizedlist>
                 <listitem>
                   <note>
-                    <para>For a newly installed system this preference will
-                    start at 1 and increment by 1 each time after. To have it
-                    start with the starting number of your barcodes, enter the
-                    first barcode by hand in the patron record and save the
-                    patron. After that the field will increment that number by
-                    1.</para>
+                    <para>La numérotation commencera à 1 et ensuite au fil des
+                    inscriptions il y aura une incrémentation de n+1 lors de
+                    chaque nouvelle inscription. Si vous souhaitez faire
+                    débuter la numérotation avec un numéro de votre choix :
+                    rentrez d'abord ce numéro manuellement en inscrivant un
+                    adhérent puis ensuite activez la préférence système
+                    autoMemberNum dans un second temps.</para>
                   </note>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>If you accidentally chose the wrong patron category at the
-              beginning you can fix that here</para>
+              <para>Indiquez une catégorie adhérent</para>
             </listitem>
 
             <listitem>
-              <para>Sort 1 and 2 are used for statistical purposes within your
-              library</para>
+              <para>Critère 1 et Critère 2 servent à affiner les statistiques
+              adhérents</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Next, the Library Setup section includes additional library
-          settings</para>
+          <para>Ensuite rentrez des éléments de gestion</para>
 
           <screenshot>
             <screeninfo>Library set-up options</screeninfo>
@@ -17204,25 +17206,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>The registration date will automatically be filled in with
-              today's date</para>
+              <para>La date d'inscription sera automatiquement la date du
+              jour</para>
             </listitem>
 
             <listitem>
-              <para>If your patron cards expire (based on your <link
-              linkend="patcats">patron category settings</link>) the Expiry
-              date will automatically be calculated</para>
+              <para>La date d'expiration est fixée automatiquement selon le
+              paramétrage <link linkend="patcats">de la catégorie
+              adhérent</link> retenue</para>
             </listitem>
 
             <listitem>
-              <para>The OPAC Note is a note for the patron - it will appear in
-              the OPAC on the patron's record</para>
+              <para>La note OPAC sera visible dans le compte personnel de
+              l'adhérent</para>
             </listitem>
 
             <listitem>
-              <para>The Circulation Note is meant solely for your library
-              staff and will appear when the circulation staff goes to check
-              an item out to the patron</para>
+              <para>La note de circulation sera visible des professionnels
+              uniquement depuis le compte de l'adherent</para>
 
               <screenshot>
                 <screeninfo>Sample Circulation Note</screeninfo>
@@ -17236,18 +17237,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>The Staff/OPAC asks for the username and password to be
-              used by the patron (and/or staff member) to log into their
-              account in the OPAC and for staff to log in to the staff
-              client.</para>
+              <para>L'identifiant et le mot de passe utilisés pour
+              s'identifier à l'OPAC et/ou dans Koha.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>If you have set <link
-          linkend="patronattributetypes">additional patron attributes</link>
-          up, these will appear next</para>
+          <para>Si vous avez activé <link
+          linkend="patronattributetypes">attributs adhérents</link> en
+          administration , vous verrez ce type de tableau</para>
 
           <screenshot>
             <screeninfo>Additional Patron Attributes</screeninfo>
@@ -17261,10 +17260,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para id="setpatronmessaging">Finally, if you have <link
+          <para id="setpatronmessaging">Enfin si vous avez activé la
+          préférence système <link
           linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
-          set to 'allow,' you can choose the messaging preferences for this
-          patron.</para>
+          vous verrez ce tableau où l'adhérent peut choisir les messages qu'il
+          souhaite recevoir par courriel.</para>
 
           <screenshot>
             <screeninfo>Patron Messaging Settings</screeninfo>
@@ -17278,24 +17278,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>These preferences will override any you set via the <link
-              linkend="addingpatroncat">patron categories</link></para>
+              <para>Les choix retenus dans la fiche adhérent prenderont le
+              dessus sur ceux fixés dans la <link
+              linkend="addingpatroncat">categorie adhérent</link></para>
             </listitem>
 
             <listitem>
-              <para>These preference can be altered by the patron via the
-              OPAC</para>
+              <para>Depuis son compte personnel accessible à l'OPAC,
+              l'adhérent pourra ajuster ses choix quand aux types d'avis qu'il
+              souhaite recevoir par courriel</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Once finished, click 'Save'</para>
+          <para>En bas de la fiche, cliquez sur 'Enregistrer'</para>
         </listitem>
       </itemizedlist>
 
-      <para>If the system suspects this patron is a duplicate of another it
-      will warn you.</para>
+      <para>Lors de l'enregistrement de la fiche koha vérifie si l'adhérent
+      n'a pas déjà été crée; si tel est le cas vous aurez un
+      avertissement.</para>
 
       <screenshot>
         <screeninfo>Patron Duplicate Suspected</screeninfo>
@@ -17309,26 +17312,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="addstaffpatron">
-      <title>Add a Staff Patron</title>
+      <title>Ajouter un bibliothécaire</title>
 
-      <para>All staff members must be entered into Koha as patrons of the
-      'Staff' type. Follow the steps in <link linkend="addnewpatron">Add a
-      Patron</link> to add a staff member. To give the staff member
-      permissions to access the staff client, follow the steps in <link
-      linkend="patronpermissions">Patron Permissions</link></para>
+      <para>La catégorie adhérent associé à la fiche de chaque bibliothécaire
+      doit être liée au type'Bibliothécaire'.Sinon suivre les étapes décrites
+      ci dessus <link linkend="addnewpatron">Inscrire un nouvel
+      adhérent</link> . Ensuite pour mieux comprendre les permissions du
+      bibliothécaire voir le chapitre <link
+      linkend="patronpermissions">Permissions de l'adhérent</link></para>
 
       <important>
-        <para>Remember to assign your staff secure usernames and passwords
-        since these will be used to log into the staff client.</para>
+        <para>se souvenir de l'identifiant et du mot de passe qui seront
+        utilisés pour se connecter à Koha.</para>
       </important>
     </section>
 
     <section id="addstatspatron">
-      <title>Add a Statistical Patron</title>
+      <title>Ajouter un adhérent de type statistique</title>
 
-      <para>To track in house use of items you will need a patron of the
-      Statistical type. First you will need a <link linkend="patcats">patron
-      category</link> set up for your Statistical patron.</para>
+      <para>Vous pouvez créer un compte adhérent de type statistique. Cela
+      suppose que la catégorie retenue dans la fiche adhérent soit liée au
+      type 'Statistique'.</para>
 
       <screenshot>
         <screeninfo>In House Patron Category</screeninfo>
@@ -17340,8 +17344,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Next, you will need to create a new patron of the statistical
-      type</para>
+      <para>Donc dans un premier temps voir le paramétrage des <link
+      linkend="patcats">categories adhérent</link>.</para>
 
       <screenshot>
         <screeninfo>New In House Patron</screeninfo>
@@ -17353,28 +17357,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Next, follow the steps put forth in the '<link
-      linkend="addnewpatron">Add a new Patron</link>' section of this manual.
-      Since this patron is not a real person, simply fill in the required
-      fields, the correct library and nothing else.</para>
+      <para>Ensuite suivre les étapes décrites dans '<link
+      linkend="addnewpatron">Inscrire un nouvel adhérent</link>' . Un adhérent
+      de type statistique enregistre les transactions d'un point de vue
+      comptable et satistique uniquement. il n'enregistre pas les références
+      bibliographiques ayant fait l'objet des transctions.</para>
     </section>
 
     <section id="duplicatepatron">
-      <title>Duplicate a Patron</title>
+      <title>Dupliquer une fiche adhérent</title>
 
-      <para>Sometimes when you're adding a new family to your system you don't
-      want to type the contact information over and over. Koha allows for you
-      to duplicate a patron and change only the parts you want to (or need to)
-      change.</para>
+      <para>Lorsque vous inscrivez les membres d'une famille, vous devez
+      répéter certaines informations(adresses) sous chaque fiche. Koha vous
+      permet de dupliquer une fiche et ensuite d'ajuster certaines
+      informations afin de gagner du temps.</para>
 
       <itemizedlist>
         <listitem>
-          <para>Open the patron you want to use as your base (the patron you
-          want to duplicate information from)</para>
+          <para>Allez jusqu'à la fiche adhérent que vous souhaitez
+          dupliquer</para>
         </listitem>
 
         <listitem>
-          <para>Click the 'Duplicate' button at the top of their record</para>
+          <para>Cliquez sur 'Dupliquer'</para>
 
           <screenshot>
             <screeninfo>The Duplicate Button is the 3rd one in</screeninfo>
@@ -17388,9 +17393,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>All of the fields with the exception of first name, card
-          number, username and password have been duplicated. Fill in the
-          missing pieces and click 'Save'</para>
+          <para>Tous les champs sont copiés à l'exception du prénom, de la
+          date de naissance, de la civilité, du numéro de carte, de
+          l'identifiant OPAC et du mot de passe OPAC. Complétez la fiche et
+          cliquez sur 'Enregistrer'</para>
 
           <screenshot>
             <screeninfo>Duplicating Patron Form</screeninfo>
@@ -17405,16 +17411,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <itemizedlist>
             <listitem>
               <tip>
-                <para>Clicking in a field that is already populated with data
-                will clear that field of all information (making it easier for
-                you to type in something different)</para>
+                <para>En cliquant sur un champ déjà remplit koha efface la
+                donnée afin de gagner du temps au niveau de la mise à
+                jour</para>
               </tip>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>You will be brought to your new patron</para>
+          <para>Ensuite vous serez basculé automatiquement vers le nouveau
+          compte adhérent</para>
 
           <screenshot>
             <screeninfo>Newly created patron</screeninfo>
@@ -17430,15 +17437,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="editpatrons">
-      <title>Editing Patrons</title>
+      <title>Mise à jour d'une fiche adhérent</title>
 
-      <para>Patrons in Koha can be edited using one of many edit
-      buttons.</para>
+      <para>La mise à jour de la fiche adhérent s'effectue à l'aide du bouton
+      'Modifier'.</para>
 
       <itemizedlist>
         <listitem>
-          <para>To edit the entire patron record simply click the 'Edit'
-          button at the top of the patron record.</para>
+          <para>pour accéder à la fiche adhérent cliquez sur le bouton
+          'Modifier' situé en haut du compte adhérent.</para>
 
           <screenshot>
             <screeninfo>Main Patron Edit Menu</screeninfo>
@@ -17452,8 +17459,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>To only change the patron's password, click the 'Change
-          Password' button</para>
+          <para>Si vous souhaitez changer uniquement le mot de passe, cliquez
+          sur le bouton 'Changer Mot de passe'.</para>
 
           <screenshot>
             <screeninfo>Patron Password Change Form</screeninfo>
@@ -17467,22 +17474,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Patron passwords are encrypted and cannot be recovered by
-              the library staff</para>
+              <para>Les mots de passe des adhérents sont cryptés et ne peuvent
+              pas être retrouvés par les bibliothécaires</para>
             </listitem>
 
             <listitem>
-              <para>This form will automatically generate a random password,
-              this password is not the patron's current password, just a new
-              random password</para>
+              <para>Ce formulaire va générer automatiquement un mot de passe
+              aléatoire, ce mot de passe ne sera pas forcement le mot de passe
+              de l'adhérent mais juste un nouveau mot de passe
+              temporaire.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>To edit a specific section of the patron record (for example
-          the Library Use section) click the 'Edit' link below the
-          section</para>
+          <para>Pour modifier des informations générales associées au compte
+          de l'adhérent (par exemple le site de l'adhérent) cliquez sur le
+          lien 'Modifier' sous le chapitre "Usage de la Bibliothèque".</para>
 
           <screenshot>
             <screeninfo>Library Use Section of Patron Record</screeninfo>
@@ -17496,8 +17504,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>A patron image can be added by browsing for the image on your
-          machine from the 'Manage Patron Image' section</para>
+          <para>Une photo de l'adhérent peut être ajoutée dans son compte ;
+          voir le chapitre 'Photo d'un adhérent'</para>
 
           <screenshot>
             <screeninfo>Manage Patron Image Form</screeninfo>
@@ -17511,22 +17519,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>This form will not appear if you have the <link
-              linkend="patronimages">patronimages</link> system preference to
-              allow patron images</para>
+              <para>Ce formulaire apparaîtra si la préférence système <link
+              linkend="patronimages">patronimages</link> est activée</para>
             </listitem>
 
             <listitem>
-              <para>To add patron images in bulk, use the <link
-              linkend="uploadpatronimages">Upload Patron Images</link>
-              Tool</para>
+              <para>Si vous voulez télécharger un lot de photos ; utilisez
+              l'outil <link linkend="uploadpatronimages">Chargement photos
+              d'adhérents</link></para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para id="patronflags">Patrons can also be blocked from checking
-          items out by setting Patron Flags</para>
+          <para id="patronflags">L'adhérent peut être bloqué en activé l'un de
+          ces flags (Carte perdue, Suspendu, Parti sans adresse)</para>
 
           <screenshot>
             <screeninfo>Patron Warning Flags</screeninfo>
@@ -17540,9 +17547,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>If you would like your circulation staff to confirm a
-              patron's address before checking items out to the patron, you
-              can see the 'Gone no Address' flag</para>
+              <para>Si vous voulez un message de confirmation au sujet de
+              l'adresse de l'adhérent avant l'enregistrement d'une transaction
+              activez 'Parti sans adresse'</para>
 
               <screenshot>
                 <screeninfo>Patron's address in doubt</screeninfo>
@@ -17556,14 +17563,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>If you would like to bar a patron from the library you can
-              set the 'Restricted' flag</para>
+              <para>Si vous voulez suspendre un adhérent vous pouvez activer
+              le flag 'Suspendu'</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>This flag can automatically be set with the <link
-                  linkend="noticetriggers">Overdue/Notice Status
-                  Triggers</link></para>
+                  <para>La suspension des adhérents peut être automatique;
+                  voir le paramétrage des règles de circulation et/ou
+                  notifications <link linkend="noticetriggers">Overdue/Notice
+                  Status Triggers</link></para>
 
                   <screenshot>
                     <screeninfo>Patron restricted</screeninfo>
@@ -17579,9 +17587,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>If the patron reports that they have lost their card you
-              can set the 'Lost Card' flag to prevent someone else from using
-              that card to check items out</para>
+              <para>Si un adhérent a perdu sa carte, vous pouvez activer le
+              flag 'Carte perdue'. Si une autre personne essaie d'emprunter
+              avec la carte qu'il a trouvé, il y aura ce message.</para>
 
               <screenshot>
                 <screeninfo>Patron lost card</screeninfo>
@@ -17599,28 +17607,28 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="patronpermissions">
-      <title>Patron Permissions</title>
+      <title>Permissions des adhérents</title>
 
-      <para>Patron Permissions are used to allow staff members access to the
-      staff client.</para>
+      <para>Les permissions correspondent à des fonctionnalités de l'interface
+      professionnelle de Koha et sont donc destinées aux
+      bibliothécaires.</para>
 
       <important>
-        <para>In order for a staff member to log into the staff interface they
-        must have (at the very least) 'catalogue' permissions which allow them
-        to view the staff interface.</para>
+        <para>Chaque bibliothécaire doit avoir au moins la permission
+        'catalogue' d'activée afin de pouvoir consulter le catalogue et
+        accéder à koha.</para>
       </important>
 
       <section id="setpatronperms">
-        <title>Setting Patron Permissions</title>
+        <title>Modifier les permissions</title>
 
-        <para>To set patron permissions, you must first <link
-        linkend="addstaffpatron">have a patron of the 'Staff' type</link>
-        open</para>
+        <para>Pour modifier les permissions, vous devez d'abord ouvrir un
+        compte adhérent de type 'Professionnel'</para>
 
         <itemizedlist>
           <listitem>
-            <para>On the patron record click More and choose Set Permissions
-            to alter patron permissions</para>
+            <para>Depuis le compte adhérent cliquez sur Plus et choisir
+            Définir les permissions pour modifier les permissions</para>
 
             <screenshot>
               <screeninfo>Set Patron Permissions</screeninfo>
@@ -17634,9 +17642,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>You will be presented with a list of preferences, some of
-            which can be expanded by clicking the plus sign to the left of the
-            section title.</para>
+            <para>Koha vous propose une liste de permissions classées par
+            module; cliquez sur le signe plus afin de voir le détail de chaque
+            section.</para>
 
             <screenshot>
               <screeninfo>Patron Permissions</screeninfo>
@@ -17652,7 +17660,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="patronpermsdefined">
-        <title>Patron Permissions Defined</title>
+        <title>Définitions des permissions</title>
 
         <para></para>
 
@@ -17662,7 +17670,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Access to all functions within the staff client</para>
+                <para>Accès à toutes les fonctions. Réservé à l'administrateur
+                koha</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17672,13 +17681,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Ability to check (issue) books out and in and access the
-                'Circulation' page in the staff client</para>
+                <para>Permet d'enregistrer des transactions (prêts, retours)
+                et permet d'accéder à la page 'Circulation'</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="circpermissions">Learn more</link>)</para>
+                <para>A l'aide du symbole plus en peut affiner les droits dans
+                le module de circulation (<link linkend="circpermissions">En
+                savoir plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17688,13 +17698,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Allows staff members to search the catalog via the staff
-                client</para>
+                <para>Permet de faire des recherches dans le catalogue</para>
               </listitem>
 
               <listitem>
-                <para>Must be given to all staff members to allow them to
-                login to the staff client</para>
+                <para>Obligatoire pour se connecter à Koha</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17704,8 +17712,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Provides access to all areas of the Administration
-                menu</para>
+                <para>Permet d'accéder au menu Administration</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17715,8 +17722,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Allows staff members to add or modify patrons (with the
-                exception of setting permissions)</para>
+                <para>Permet d'ajouter et/ou modifier des comptes
+                adhérents</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17726,7 +17733,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Ability to set patron permissions</para>
+                <para>Permet de changer ses droits</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17736,13 +17743,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Ability to place holds on books for patrons via the
-                staff interface</para>
+                <para>Permet d'enregistrer une demande de réservation depuis
+                l'interface professionnelle</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="reservepermissions">Learn more</link>)</para>
+                <para>Section qui peut être affinée en cliquant sur plus
+                (<link linkend="reservepermissions">En savoir
+                plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17752,8 +17760,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Grants staff members the rights to borrow books from the
-                library</para>
+                <para>Droits pour emprunter des ouvrages de la
+                Bibliothèque</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17763,13 +17771,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Ability to catalog items (add and edit bibliographic and
-                holdings data)</para>
+                <para>Permet de créer et/ou modifier les données
+                bibliographiques et exemplaires du catalogue</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="catpermissions">Learn more</link>)</para>
+                <para>Section qui peut être dévellopée et affinée en cliquant
+                sur plus (<link linkend="catpermissions">En savoir
+                plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17779,8 +17788,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Manage patron accounts (including paying fines, adding
-                credits, and creating invoices)</para>
+                <para>Gérer les amendes et frais d'inscription</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17790,13 +17798,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Provides access to the acquisitions and patron purchase
-                suggestion modules</para>
+                <para>Permet d'accéder au commandes et aux suggestions de
+                commandes</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="acqpermissions">Learn more</link>)</para>
+                <para>Section qui peut être dévellopée et affinée en cliquant
+                sur plus (<link linkend="acqpermissions">En savoir
+                plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17806,7 +17815,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>No longer in use</para>
+                <para>Pas opérationnel</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17816,13 +17825,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Access to all items in the Tools section of the staff
-                client</para>
+                <para>Accès aux outils de modification par lot(bib, adhérents,
+                exemplaires..etc)</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="toolspermissions">Learn more</link>)</para>
+                <para>Section qui peut être dévellopée et affinée en cliquant
+                sur plus (<link linkend="toolspermissions">En savoir
+                plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17832,7 +17842,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Provides access to edit the authority record</para>
+                <para>Accès au thésaurus afin de pouvoir modifier/créer des
+                autorités</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17842,12 +17853,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Allows access to the serials module</para>
+                <para>Accès au module de bulletinage</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="serpermissions">Learn more</link>)</para>
+                <para>Section qui peut être dévellopée et affinée en cliquant
+                sur plus (<link linkend="serpermissions">En savoir
+                plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17857,18 +17869,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Allow access to the Reports module (ability to create,
-                edit and run all reports)</para>
+                <para>Accès au modukle Bilan et statistiques (créer, modifier
+                et lancer des rapports)</para>
               </listitem>
 
               <listitem>
-                <para>Reports found on the Circulation page are not controlled
-                by this permission</para>
+                <para>Les rapports qui sont situés à la page 'Circulation' ne
+                sont pas sécurisés sous cette section</para>
               </listitem>
 
               <listitem>
-                <para>This section can be expanded (<link
-                linkend="reportpermissions">Learn more</link>)</para>
+                <para>Section qui peut être dévellopée et affinée en cliquant
+                sur plus (<link linkend="reportpermissions">En savoir
+                plus</link>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -17878,20 +17891,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Provides the ability to modify login / permissions for
-                staff users</para>
+                <para>Demander un login et un mot de passe pour se connecter à
+                Koha</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
         <section id="circpermissions">
-          <title>Granular Circulate Permissions</title>
+          <title>Permissions de la circulation</title>
 
-          <para>If the staff member has 'circulate' permissions they have the
-          ability to perform all of these actions. If you would like to
-          control circulation permissions on a more granular level choose from
-          these options:</para>
+          <para>Si vous cochez la permission 'circulate' le bibliothécaire
+          pourra tout faire en circulation.Par contre si 'curculate' est
+          décoché , il faut détailler à l'intérieur de cette section quels
+          sont ses droits:</para>
 
           <itemizedlist>
             <listitem>
@@ -17899,8 +17912,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>All circulation rights except override
-                  permissions</para>
+                  <para>Tous les droits à l'exception de l'outrepassement des
+                  règles de circulation(quotas par exemple)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17910,7 +17923,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Override blocked renewals</para>
+                  <para>Outrepasse les règles de renouvellement</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17918,12 +17931,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="reservepermissions">
-          <title>Granular Holds Permissions</title>
+          <title>Permissions des réservations</title>
 
-          <para>If the staff member has 'reserveforothers' permissions they
-          have the ability to perform all of these actions. If you would like
-          to control holds permissions on a more granular level choose from
-          these options:</para>
+          <para>Si vous cochez la permission 'reserveforothers' le
+          bibliothécaire pourra tout faire en terme de réservations.Si vous
+          souhaitez contrôler les réservations, vous décochez
+          'reserveforothers' puis vous détaillez à l'intérieur de cette
+          section quels sont les droits de l'adhérent:</para>
 
           <itemizedlist>
             <listitem>
@@ -17931,8 +17945,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Allow staff members to alter the holds priority
-                  (moving patrons up and down the queue)</para>
+                  <para>Modifier la position de l'adhérent dans une file
+                  d'attente</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17942,8 +17956,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>All staff members to place holds for patrons via the
-                  staff interface</para>
+                  <para>Enregistrer une demande de réservation depuis
+                  l'interface koha</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17951,12 +17965,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="catpermissions">
-          <title>Granular Cataloging Permissions</title>
+          <title>Permissions du catalogage</title>
 
-          <para>If the staff member has 'editcatalogue' permissions they have
-          the ability to perform all of these actions. If you would like to
-          control cataloging permissions on a more granular level choose from
-          these options:</para>
+          <para>Si vous cochez la permission 'editcatalogue' le bibliothécaire
+          pourra tout faire en terme de catalogage. Si vous souhaitez
+          contrôler le catalogage, vous décochez 'editcatalogue' puis vous
+          détaillez à l'intérieur de cette section quels sont les droits de
+          l'adhérent:</para>
 
           <itemizedlist>
             <listitem>
@@ -17964,8 +17979,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to access all cataloging functions via the
-                  <link linkend="cataloging">Cataloging</link> page</para>
+                  <para>Accès à toutes les fonction du catalogage, cf.
+                  chapitre <link linkend="cataloging">Catalogage</link>
+                  page</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17975,8 +17991,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to make <link linkend="editingitems">edits to
-                  item records</link>, but not bib records</para>
+                  <para>Possibilité d' <link linkend="editingitems">éditer les
+                  exemplaires</link>, mais pas les notices
+                  bibliographiques</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17986,9 +18003,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to catalog using only the <link
-                  linkend="fastaddcat">Fast Add Framework</link> found on the
-                  <link linkend="circulation">Circulation</link> page</para>
+                  <para>Possibilité d'utiliser la <link
+                  linkend="fastaddcat">grille MARC ajout rapide</link>
+                  accessible au niveau de l'écran <link
+                  linkend="circulation">Circulation</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -17996,12 +18014,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="acqpermissions">
-          <title>Granular Acquisitions Permissions</title>
+          <title>Permissions des acquisitions</title>
 
-          <para>If the staff member has 'acquisition' permissions they have
-          the ability to perform all of these actions. If you would like to
-          control acquisitions permissions on a more granular level choose
-          from these options:</para>
+          <para>Si vous cochez la permission 'acquisition' le bibliothécaire
+          pourra tout faire en terme d'acquisitions. Si vous souhaitez
+          contrôler les acquisitions, vous décochez 'acquisition' puis vous
+          détaillez à l'intérieur de cette section quels sont les droits de
+          l'adhérent:</para>
 
           <itemizedlist>
             <listitem>
@@ -18009,7 +18028,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to add and delete budgets (not modify()</para>
+                  <para>Possibilité d'ajouter et/ou supprimer des budgets (pas
+                  les modifier)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18019,7 +18039,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage budgets</para>
+                  <para>Utiliser les budgets pour faire des commandes</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18029,8 +18049,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to edit existing budgets (not to add or
-                  delete)</para>
+                  <para>Modifier les budgets (pas les ajouter ni les
+                  supprimer)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18040,7 +18060,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage contracts</para>
+                  <para>Utiliser les contracts dans les commandes</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18050,7 +18070,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage orders and basket groups</para>
+                  <para>Gérer les commandes et bordereaux de commandes</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18060,7 +18080,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage orders and baskets</para>
+                  <para>Gérer les commandes et paniers de commandes</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18070,7 +18090,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage orders and baskets</para>
+                  <para>Réceptionner les paniers de commandes</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18080,7 +18100,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage periods</para>
+                  <para>Gérer les périodes (statistiques)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18090,7 +18110,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage budget planning</para>
+                  <para>gérer les planning des budgets (statistiques)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18100,7 +18120,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage vendors</para>
+                  <para>Utiliser les fournisseurs pour faire des
+                  commandes</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18108,12 +18129,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="serpermissions">
-          <title>Granular Serials Permissions</title>
+          <title>Permissions des périodiques</title>
 
-          <para>If the staff member has 'serials' permissions they have the
-          ability to perform all of these actions. If you would like to
-          control serials permissions on a more granular level choose from
-          these options:</para>
+          <para>Si vous cochez la permission 'serials' le bibliothécaire
+          pourra tout faire en terme de bulletinage. Si vous souhaitez
+          contrôler le bulletinage, vous décochez 'serials' puis vous
+          détaillez à l'intérieur de cette section quels sont les droits de
+          l'adhérent:</para>
 
           <itemizedlist>
             <listitem>
@@ -18121,7 +18143,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Check the expiration of a serial</para>
+                  <para>Vérifier les abonnements qui sont expirés</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18131,7 +18153,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Claim missing serials</para>
+                  <para>Réclamations des fascicules de périodiques</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18141,7 +18163,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Create a new subscription</para>
+                  <para>Créer une notice d'abonnement</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18151,7 +18173,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Delete an existing subscription</para>
+                  <para>Supprimer une notice d'abonnement</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18161,8 +18183,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Edit (but not delete or create) an existing
-                  subscription</para>
+                  <para>Modifier (pas supprimer ni ajouter) une notice
+                  d'abonnement</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18172,7 +18194,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Receive serials on existing subscriptions</para>
+                  <para>Bulletiner un abonnement</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18182,7 +18204,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Renew an existing subscription</para>
+                  <para>Renouveler un abonnement</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18192,7 +18214,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage routing lists</para>
+                  <para>Gérer les lsites de routage</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18200,12 +18222,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="toolspermissions">
-          <title>Granular Tools Permissions</title>
+          <title>Permissions des outils</title>
 
-          <para>If the staff member has 'tools' permissions they have the
-          ability to access and use all items under the Tools menu. If you
-          would like to control which tools staff members have access to on a
-          more granular level choose from these options:</para>
+          <para>Si vous cochez la permission 'tools' le bibliothécaire pourra
+          tout faire en terme d'outils. Si vous souhaitez contrôler l'accès à
+          des outils, vous décochez 'tools' puis vous détaillez à l'intérieur
+          de cette section quels sont les droits de l'adhérent::</para>
 
           <itemizedlist>
             <listitem>
@@ -18213,9 +18235,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Upload patron images in batch or one at a time (Access
-                  to the <link linkend="uploadpatronimages">Image Upload
-                  Tool</link>)</para>
+                  <para>Télécharger un lot de photos adhérents (Cf. <link
+                  linkend="uploadpatronimages">Chargement photos
+                  adhérents</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18225,9 +18247,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Delete old borrowers and anonymize circulation/reading
-                  history (Access to the <link linkend="anonpatrons">Anonymize
-                  Patron Tool</link>)</para>
+                  <para>Supprimer les adhérents inactifs depuis plusieurs
+                  années et anonymiser l'historique des prêts (Cf. <link
+                  linkend="anonpatrons">Anonymiser Supprimer
+                  Adhérent</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18237,9 +18260,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Define days when the library is closed (Access to the
-                  <link linkend="calholidays">Calendar/Holidays
-                  Tool</link>)</para>
+                  <para>Mettre à jour le calendrier des Bibliothèques (jours
+                  de fermeture, congés) (Cf. <link
+                  linkend="calholidays">Calendrier</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18249,8 +18272,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Write news for the OPAC and staff interfaces (Access
-                  to the <link linkend="newstool">News Tool</link>)</para>
+                  <para>Créer/Modifier des nouvelles interne et publiques (Cf.
+                  <link linkend="newstool">Nouvelles</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18260,9 +18283,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Set notice/status triggers for overdue items (Access
-                  to the <link linkend="noticetriggers">Overdue Notice
-                  Status/Triggers Tool</link>)</para>
+                  <para>Fixer le nombre et les dates des relances (Cf. <link
+                  linkend="noticetriggers">Déclencheur de
+                  notification</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18272,8 +18295,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Define notices (Access to the <link
-                  linkend="notices">Notices Tool</link>)</para>
+                  <para>Définir le contenu des avis et notifications (Cf.
+                  <link linkend="notices">Messages</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18283,9 +18306,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Export bibliographic and holdings data (Access to the
-                  <link linkend="exportbibs">Export Bibliographic &amp;
-                  Holdings Data Tool</link>)</para>
+                  <para>Exporter les données bibliographiques et les notices
+                  d'exemplaires (Cf. <link linkend="exportbibs">Exportation
+                  Notices Bibliographiques et exemplaires</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18295,8 +18318,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Import patron data (Access to the <link
-                  linkend="patronimport">Import Patrons Tool</link>)</para>
+                  <para>Importer les données adhérent (Cf. <link
+                  linkend="patronimport">Importation des données
+                  adhérent</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18306,9 +18330,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Perform inventory (stocktaking) of your catalog
-                  (Access to the <link linkend="inventory">Inventory
-                  Tool</link>)</para>
+                  <para>Inventaire du catalogue (Cf. <link
+                  linkend="inventory">Inventaire</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18318,9 +18341,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Perform batch deletion of items (Access to the <link
-                  linkend="batchdeleteitems">Delete a queryset of items
-                  Tool</link>)</para>
+                  <para>Supprimer un lot d'exemplaires (Cf. <link
+                  linkend="batchdeleteitems">Suppression d'exemplaires par
+                  lot</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18330,9 +18353,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Perform batch modification of items (Access to the
-                  <link linkend="batchmodifyitems">Modify a queryset of items
-                  Tool</link>)</para>
+                  <para>Modifier un lot d'exemplaires (Cf. <link
+                  linkend="batchmodifyitems">Modification d'exemplaires par
+                  lot</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18342,11 +18365,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Create printable labels and barcodes from catalog and
-                  patron data (Access to the <link
-                  linkend="labelcreator">Label Creator</link> and <link
-                  linkend="quicklabelcreator">Quick Label Creator</link>
-                  Tools)</para>
+                  <para>Créer des étiquette de code à barres exemplaire et
+                  adhérent (Cf. <link linkend="labelcreator">Createur
+                  d'étiquette</link> and <link
+                  linkend="quicklabelcreator">Creation d'étiquettes
+                  rapide</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18356,8 +18379,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Create and edit CSV profiles (Access to the <link
-                  linkend="csvprofiles">CSV Profiles Tool</link>)</para>
+                  <para>Créer et éditer des profiles CSV (Cf. <link
+                  linkend="csvprofiles">Profiles CSV</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18367,10 +18390,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Managed staged MARC records, including completing and
-                  reversing imports (Access to the <link
-                  linkend="managestaged">Manage Staged MARC Records
-                  Tool</link>)</para>
+                  <para>Télécharger des réservoirs de notices bibliographiques
+                  (Cf. <link linkend="managestaged">Préparation des notices
+                  MARC à l'import</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18380,9 +18402,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Moderate patron comments (Access to the <link
-                  linkend="comments">Comments</link> and <link
-                  linkend="tagsmoderation">Tags</link> Tools)</para>
+                  <para>Modérer les commentaires et les tags des adhérents
+                  (Cf. <link linkend="comments">Commentaires</link> et <link
+                  linkend="tagsmoderation">Tags</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18392,8 +18414,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Schedule tasks to run (Access to the <link
-                  linkend="taskscheduler">Task Scheduler Tool</link>)</para>
+                  <para>Rapports statistiques : plannifier des dates et heures
+                  de lancement (Cf. <link
+                  linkend="taskscheduler">Planificateur de
+                  tâches</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18403,9 +18427,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Stage MARC records into the reservoir (Access to the
-                  <link linkend="stagemarc">Stage MARC Records
-                  Tool</link>)</para>
+                  <para>Importer les les réservoirs de notices téléchargés
+                  dans le catalogue koha (Cf. <link linkend="stagemarc">Gérer
+                  les notices préparées</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18415,8 +18439,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Browse the system logs (Access to the <link
-                  linkend="logviewer">Log Viewer Tool</link>)</para>
+                  <para>Accéder aux logs du système (Cf. <link
+                  linkend="logviewer">Visualiseur des logs</link>)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18424,12 +18448,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="reportpermissions">
-          <title>Granular Reports Permissions</title>
+          <title>Permissions Bilans et statistiques</title>
 
-          <para>If the staff member has 'reports' permissions they have the
-          ability to perform all of these actions. If you would like to
-          control reports permissions on a more granular level choose from
-          these options:</para>
+          <para>Si vous cochez la permission 'reports' le bibliothécaire
+          pourra tout faire en terme de rapports. Si vous souhaitez limiter
+          les fonctions dans le module statistiques, vous décochez 'reports'
+          puis vous détaillez à l'intérieur de cette section quels sont les
+          droits de l'adhérent:</para>
 
           <itemizedlist>
             <listitem>
@@ -18437,8 +18462,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to create and edit but not run SQL
-                  reports</para>
+                  <para>Créer et/ou modifier un rapport (pas lancer un
+                  rapport)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18448,8 +18473,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to run but not create or edit SQL
-                  reports</para>
+                  <para>Lancer un rapport (pas créer ou modifier un
+                  rapport)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18459,34 +18484,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="patroninformation">
-      <title>Patron Information</title>
+      <title>Informations adhérent</title>
 
-      <para>When viewing a patron record you have the option to view
-      information from one of many tabs found on the left hand side of the
-      record.</para>
+      <para>Lorsque vous êtes positionné dans un compte adhérent, sur votre
+      gauche, vous avez des onglets qui classent les informations de
+      l'adhérent.</para>
 
       <section id="patcheckout">
-        <title>Check Out</title>
+        <title>Prêts</title>
 
-        <para>For instruction on checking items out, view the <link
-        linkend="checkingout">Checking Out</link> section of this
-        manual.</para>
+        <para>Pour plus d'information voir le chapitre <link
+        linkend="checkingout">Prêts</link> du manuel.</para>
       </section>
 
       <section id="patrondetails">
         <title>Details</title>
 
-        <para>All patron information will appear on the Details tab. This
-        includes all the contact information, notes, custom patron attributes,
-        messaging preferences, etc entered when adding the patron.</para>
+        <para>L'onglet "détail" englobe les contacts de l'adhérent, des notes,
+        les codes et attributs assignés à l'adhérent.</para>
 
-        <para>In the case of patrons who are marked as 'Child' or
-        'Professional' and their Guarantors additional information will appear
-        on their record.</para>
+        <para>On voit aussi également le garant auquel est rattaché
+        l'adhérent.</para>
 
         <itemizedlist>
           <listitem>
-            <para>A child patron will list their Guarantor</para>
+            <para>Un enfant aura un nom de garant qui lui sera associé</para>
 
             <screenshot>
               <screeninfo>Guarantor listed and linked from the child
@@ -18501,8 +18523,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>On the Guarantor's record, all children and/or professionals
-            will be listed</para>
+            <para>Dans la fiche du garant figurera tous les enfants (par
+            exemple) qui sont sous sa tutelle.</para>
 
             <screenshot>
               <screeninfo>Guarantees listed on the Guarantor's
@@ -18518,11 +18540,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </itemizedlist>
 
         <section id="patcircsummary">
-          <title>Circulation Summary</title>
+          <title>Tableau général</title>
 
-          <para>Below the patron's information on the details screen is a
-          tabbed display of the items they have checked out, overdue, and on
-          hold.</para>
+          <para>Sous les informations de l'adhérent, une série de tableaux
+          classés par onglets.Tableaux qui donnent des informations sur les
+          prêts, les réservations, les frais et les suggestions de
+          l'adhérent.</para>
 
           <screenshot>
             <screeninfo>Checkout summary</screeninfo>
@@ -18534,8 +18557,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>If they have family at the library staff can see what the
-          other family members have checked out.</para>
+          <para>Si l'adhérent est un garant il verra les informations des
+          personnes qui sont sous sa tutelle.</para>
 
           <screenshot>
             <screeninfo>Relative checkouts</screeninfo>
@@ -18550,12 +18573,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="patronfines">
-        <title>Fines</title>
+        <title>Amendes</title>
 
-        <para>The patron's complete accounting history will appear on the
-        Fines tab. Contrary to its name, the Fines tab does not just show fine
-        data, it also shows membership fees, rental fees, reserve fees and any
-        other charge you may have for patrons.</para>
+        <para>Onglet qui comprend l'historique des amendes et inscriptions
+        payantes de l'adhérent.</para>
 
         <screenshot>
           <screeninfo>Patron Accounting Summary</screeninfo>
@@ -18568,43 +18589,41 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <section id="chargefines">
-          <title>Charging Fines/Fees</title>
+          <title>Amendes et frais</title>
 
-          <para>Most fees and fines will be charged automatically if the <link
-          linkend="finescronjob">fines cron job</link> is running:</para>
+          <para>La plupart des frais et amendes sont crées automatiquement via
+          <link linkend="finescronjob">fines cron job</link> :</para>
 
           <itemizedlist>
             <listitem>
-              <para>Fines will be charged based on your <link
-              linkend="circfinerules">Circulation &amp; Fines
-              Rules</link></para>
+              <para>Le mode de calcul des amendes est fixé sous Administrtion
+              <link linkend="circfinerules">Règles de
+              circulation</link></para>
             </listitem>
 
             <listitem>
-              <para>Hold fees will be charged based on the rules you set in
-              the <link linkend="patcats">Patron Types &amp; Categories</link>
-              administration area</para>
+              <para>Les frais de réservation sont fixés sous Administration
+              <link linkend="patcats">Categories Adhérent</link></para>
             </listitem>
 
             <listitem>
-              <para>Rental fees will be charged based on the settings in your
-              <link linkend="itemtypeadmin">Item Types</link> administration
-              area</para>
+              <para>Les frais d'emprunt sont fixés sous Administration <link
+              linkend="itemtypeadmin">Types de document</link></para>
             </listitem>
 
             <listitem>
-              <para>Marking an item 'Lost' via the cataloging module will
-              automatically charge the patron the replacement cost for that
-              item</para>
+              <para>Déclarer automatiquement des documents comme étant perdu
+              via un cron, mettra dans le compte adhérent un coût de
+              remplacement</para>
             </listitem>
           </itemizedlist>
         </section>
 
         <section id="payfines">
-          <title>Pay/Reverse Fines</title>
+          <title>Amendes payées/impayées</title>
 
-          <para>Each line item can be paid in full (or written off) using the
-          'Pay Fines' tab.</para>
+          <para>Pour enregistrer le paiement d'une amende, utilisez l'onglet
+          "Payer amendes".</para>
 
           <screenshot>
             <screeninfo>Paying Fines</screeninfo>
@@ -18618,23 +18637,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Choose the payment type (Unpaid, Paid, Writeoff) from the
-              pull down menu</para>
+              <para>Choisir un type de paiement (Impayé, Payé, Perte et
+              profit)</para>
             </listitem>
 
             <listitem>
-              <para>Click 'Make Payment'</para>
+              <para>Cliquez sur 'Paiement' afin d'enregistrer l'amende ou
+              l'inscription</para>
             </listitem>
 
             <listitem>
-              <para>A line item will be added to the account information
-              showing the fee paid in full (or written off)</para>
+              <para>Une ligne sera ajoutée afin de préciser que le paiement a
+              eu lieu</para>
             </listitem>
 
             <listitem>
-              <para>If you accidentally mark and item as paid, you can reverse
-              that line item by clicking 'Reverse' to the right of the
-              line</para>
+              <para>En cas d'erreur vous pouvez annuler un paiement à l'aide
+              du lien 'Annuler paiement'</para>
 
               <screenshot>
                 <screeninfo>Reverse Link</screeninfo>
@@ -18648,8 +18667,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Once clicked a new line item will be added to the
-                  account, showing the payment as reversed</para>
+                  <para>une nouvelle ligne est ajoutée avec un montant
+                  négatif</para>
 
                   <screenshot>
                     <screeninfo>Reversed Payment</screeninfo>
@@ -18667,10 +18686,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="manualinvoice">
-          <title>Creating Manual Invoices</title>
+          <title>Créer une facture manuellement</title>
 
-          <para>For fees that are not automatically charged, librarians can
-          create a manual invoice</para>
+          <para>Pour les frais qui ne sont pas chargés automatiquement, le
+          bibliothécaire peut créer une facture manuellement via l'onglet
+          "Amendes" puis l'onglet "Créer facture manuellement".</para>
 
           <screenshot>
             <screeninfo>Create Manual Invoice</screeninfo>
@@ -18684,41 +18704,41 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>First choose the type of invoice you would like to
-              create</para>
+              <para>D'abord choisir le type de facture que vous souhaitez
+              créer</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>To add additional values to the manual invoice type
-                  pull down menu, add them to the <link
-                  linkend="manualinvvals">MANUAL_INV</link> Authorized
-                  Value</para>
+                  <para>Si vous souhaitez ajouter un type de facture dans la
+                  liste déroulante; ajoutez celui-ci dans la liste de valeur
+                  autorisée <link
+                  linkend="manualinvvals">MANUAL_INV</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>If the fee is associated with an item you can enter its
-              barcode so that the line item shows a link to that item</para>
+              <para>Si les frais sont associés à un exemplaire vous pouvez
+              rentrer celui-ci</para>
             </listitem>
 
             <listitem>
-              <para>The description field is where you will enter the
-              description of the charge</para>
+              <para>A partir du champ description vous pouvez donner un
+              intitulé/Numéro à la facture</para>
             </listitem>
 
             <listitem>
-              <para>In the amount field, do not enter currency symbols, only
-              numbers and decimals</para>
+              <para>Au niveau de la zone "Montant" entrez le coût des frais.
+              Ne pas rentrer de signes monétaires ($, € )</para>
             </listitem>
           </itemizedlist>
         </section>
 
         <section id="manualcredit">
-          <title>Creating Manual Credits</title>
+          <title>Credité manuellement le compte adhérent</title>
 
-          <para>Manual credits can be used to pay off parts of fines, or to
-          forgive a fine amount.</para>
+          <para>Vous pouvez créditer le compte adhérent via les onglets
+          "Amendes"et "Créer crédit manuel"</para>
 
           <screenshot>
             <screeninfo>Create Manual Credit</screeninfo>
@@ -18732,34 +18752,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>First choose the type of credit you'd like to apply</para>
+              <para>Choisir un type de crédit</para>
             </listitem>
 
             <listitem>
-              <para>If this credit is associated with an item you can enter
-              that item's barcode so that the line item links to the right
-              item</para>
+              <para>Si le crédit est associé à un exemplaire vous pouvez
+              rentrer celui-ci</para>
             </listitem>
 
             <listitem>
-              <para>The description field is where you will enter the
-              description of the credit</para>
+              <para>A partir du champ description vous pouvez donner un
+              intitulé/Numéro au crédit</para>
             </listitem>
 
             <listitem>
-              <para>In the amount field, do not enter currency symbols, only
-              numbers and decimals</para>
+              <para>Au niveau de la zone "Montant" entrez le coût du crédit.
+              Ne pas rentrer de signes monétaires ($, € )</para>
             </listitem>
           </itemizedlist>
         </section>
 
         <section id="printinglineitems">
-          <title>Printing Invoices</title>
+          <title>Imprimer des factures</title>
 
-          <para>To the right of each account line there is a print link.
-          Clicking that link will print an invoice for the line item that
-          includes the date and description of the line item along with the
-          total outstanding on the account.</para>
+          <para>A la droite de chaque ligne un lien imprimer. Cliquez sur le
+          lien afin d'iimprimer une facture qui englobera la date, la
+          description et le montant de la ligne.</para>
 
           <screenshot>
             <screeninfo>Sample Invoice</screeninfo>
@@ -18774,15 +18792,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="circhistory">
-        <title>Circulation History</title>
+        <title>Historique des prêts</title>
 
-        <para>The circulation history tab will appear if you have set the
-        <link linkend="intranetreadinghistory">intranetreadinghistory</link>
-        preference to allow it to appear. If you have the <link
-        linkend="OPACPrivacy">OPACPrivacy</link> system preference set to
-        'Allow' and the patron has decided that the library cannot keep this
-        information this tab will only show currently checked out
-        items.</para>
+        <para>L'onglet "Historique des prêts" est activé dans koha si la
+        préférence système <link
+        linkend="intranetreadinghistory">intranetreadinghistory</link> est
+        activée. Depuis l'OPAC , les adhérents peuvent également voir leur
+        historique des prêts si la préférence système <link
+        linkend="OPACPrivacy">OPACPrivacy</link> est activée.</para>
 
         <screenshot>
           <screeninfo>Patron Circulation History</screeninfo>
@@ -18796,12 +18813,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="patmodlog">
-        <title>Modification Log</title>
+        <title>Log des modifications</title>
 
-        <para>If you have set your <link
-        linkend="BorrowersLog">BorrowersLog</link> to track changes to patron
-        records, then this tab will appear. The Modification Log will show all
-        changes made to the patron record.</para>
+        <para>Si vous avez activé <link
+        linkend="BorrowersLog">BorrowersLog</link> , dans le compte adhérent
+        vous aller voir l'onglet "Log des modifications". Onglet qui affiche
+        le journal des modifications du compte adhérent.</para>
 
         <screenshot>
           <screeninfo>Changes to Patron #51</screeninfo>
@@ -18815,26 +18832,26 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para>The Librarian field shows the patron number for the
-            librarian who made the changes</para>
+            <para>La colonne "Bibliothécaire" remonte le numéro Koha de
+            l'adhérent qui a effectué des modifications</para>
           </listitem>
 
           <listitem>
-            <para>The Object field lists the patron that is being modified (in
-            the example above, it was my changing my own record)</para>
+            <para>La colonne "Objet" remonte le numéro kKoha de l'adhérent qui
+            a été modifié</para>
           </listitem>
         </itemizedlist>
       </section>
 
       <section id="patronmessaging">
-        <title>Messaging</title>
+        <title>Messages</title>
 
-        <para>The <link linkend="setpatronmessaging">patron's messaging
-        preferences</link> are set when <link
-        linkend="addnewpatron">adding</link> or <link
-        linkend="editpatrons">editing</link> the patron. This tab will show
-        the messages that have been sent and those that are queued to be
-        sent:</para>
+        <para>Les <link linkend="setpatronmessaging">préférences d'envoi des
+        messages</link> sont fixées dès la <link
+        linkend="addnewpatron">création</link> ou <link
+        linkend="editpatrons">mise à jour</link> du compte adhérent. Cet
+        onglet remonte les messages qui sont dans la table
+        message_queue:</para>
 
         <screenshot>
           <screeninfo>Message Queue</screeninfo>
@@ -18848,14 +18865,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="patnotices">
-        <title>Notices</title>
+        <title>Notifications</title>
 
-        <para>The <link linkend="setpatronmessaging">patron's messaging
-        preferences</link> are set when <link
-        linkend="addnewpatron">adding</link> or <link
-        linkend="editpatrons">editing</link> the patron. This tab will show
-        the messages that have been sent and those that are queued to be sent
-        with their entire body content:</para>
+        <para>Les <link linkend="setpatronmessaging">préférences d'envoi des
+        messages</link> sont fixées dès la <link
+        linkend="addnewpatron">création</link> ou <link
+        linkend="editpatrons">mise à jour</link> du compte adhérent. Cet
+        onglet remonte les messages qui sont dans la table
+        message_queue:</para>
 
         <screenshot>
           <screeninfo>Patron Notices Tab</screeninfo>
@@ -18870,12 +18887,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="patronsearch">
-      <title>Patron Search</title>
+      <title>Recherche adhérent</title>
 
-      <para>Clicking on the link to the Patron module will bring you to a
-      search/browse screen for patrons. From here you can search for a patron
-      by entering any part of their name, username, email address or barcode
-      in the search box at the top.</para>
+      <para>Depuis la page d'accueil,en cliquant sur adhérent on accède à la
+      fonction "Recherche adhérent".Vous pouvez taper son nom une partie de
+      son nom, son adresse emaile, son identifiant OPAC ou son code
+      barre.</para>
 
       <screenshot>
         <screeninfo>Patron Search</screeninfo>
@@ -18887,9 +18904,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>If you want to search for more than just a part of a patron name,
-      username, email address or barcode, you can click the plus sign [+] to
-      the right of the search box.</para>
+      <para>Si vous voulez affiner votre recherche en fonction d'une
+      localisation ou d'une catégorie adhérent , vous pouvez cliquer sur le
+      signe [+] .</para>
 
       <screenshot>
         <screeninfo>Advanced Patron Search</screeninfo>
@@ -18901,8 +18918,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>You can also browse through the patron records by clicking on the
-      linked letters across the top.</para>
+      <para>Vous pouvez également vous aidez du classement alphabétique des
+      fiches adhérent en cliquant sur la lettre de votre choix.</para>
 
       <screenshot>
         <screeninfo>Patron Browse</screeninfo>
@@ -18919,56 +18936,56 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
   <chapter id="circulation">
     <title>Circulation</title>
 
-    <para>Circulation functions can be accessed in several different ways. On
-    the main page of the staff client there are some quick links in the center
-    of the page to check items out, in or transfer them. For a complete
-    listing of Circulation functions you can visit the Circulation page which
-    is linked from the top left of every page or from the center of the main
-    page.</para>
+    <para>Les fonctions de circulation sont accessibles de plusieurs façons.
+    Depuis la page d'accueil, il y a "Prêter à ", "Retour" et "Transferts".
+    Pour voir les autres fonctions du module circulation, il faut aller dans
+    la page "Circulation" en cliquant sur le lien "Circulation" de la page
+    d'accueil.</para>
 
-    <para>Before circulating your collection you will want to set your <link
-    linkend="globalsysprefs">Global System Preferences</link>, <link
-    linkend="basicparams">Basic Parameters</link> and <link
-    linkend="patscirc">Patrons &amp; Circulation Rules</link>.</para>
+    <para>Avant d'utiliser ce module , il est préférable d'ajuster les <link
+    linkend="globalsysprefs">Preferences système</link>, <link
+    linkend="basicparams">Parametres de base</link> et <link
+    linkend="patscirc">Règles de circulation</link>.</para>
 
-    <para>While in Circulation you can jump between the tabs on the quick
-    search box at the top of the screen by using the following hot
-    keys:</para>
+    <para>Au niveau de la barre de recherche rapide, vous pouvez passez d'une
+    option à l'autre grâce(d'un onglet à l'autre) grâce à des raccourcis
+    clavier :</para>
 
     <itemizedlist>
       <listitem>
-        <para>jump to the catalog search with Alt+Q</para>
+        <para>Alt+Q pour l'option recherhce catalogue</para>
       </listitem>
 
       <listitem>
-        <para>jump to the checkout with Alt+U</para>
+        <para>Alt+U pour l'option prêt</para>
 
         <itemizedlist>
           <listitem>
-            <para>this will not work for Mac user</para>
+            <para>avec un poste Mac ça ne fonctionne pas</para>
           </listitem>
         </itemizedlist>
       </listitem>
 
       <listitem>
-        <para>jump to the checkin with Alt+R</para>
+        <para>Alt+R pour l'option retour</para>
       </listitem>
     </itemizedlist>
 
     <para><tip>
-        <para>Mac users use the OPTION button in place of ALT</para>
+        <para>Avec un Mac on doit utiliser le bouton OPTION à la place du
+        bouton ALT</para>
       </tip></para>
 
     <section id="checkingout">
-      <title>Check Out (Issuing)</title>
+      <title>Prêt</title>
 
-      <para>To begin the checkout process you must enter the patron barcode or
-      part of their name. The checkout option appears in three main
-      places:</para>
+      <para>Avant d'enregistrer une transcation, il faut rechercher l'adhérent
+      via son nom ou son numéro de carte par exemple. La fonction qui permet
+      d'enregistrer un prêt apparaît à trois endroits:</para>
 
       <itemizedlist>
         <listitem>
-          <para>Check out option on main staff client</para>
+          <para>Page d'accueil "Prêter à "</para>
 
           <screenshot>
             <screeninfo>Check out box on main Koha Staff Client
@@ -18983,7 +19000,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>Check out option on the patron record</para>
+          <para>Onglet "Prêt" dans le compte adhérent</para>
 
           <screenshot>
             <screeninfo>Check out tab on a patron record</screeninfo>
@@ -18997,7 +19014,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>Check out option on the quick search bar</para>
+          <para>Option "Prêt" dans la barre de recherche rapide</para>
 
           <screenshot>
             <screeninfo>Check out tab on quick search bar</screeninfo>
@@ -19012,10 +19029,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </itemizedlist>
 
       <section id="checkitemout">
-        <title>Checking Items Out</title>
+        <title>Enregistrer une transaction</title>
 
-        <para>To check an item out to a patron, first search for that patron
-        using one of the many options listed above.</para>
+        <para>Après avoir recherché et trouvé la fiche de l'adhérent,
+        s'affiche ce type d'écran</para>
 
         <screenshot>
           <screeninfo>Check Out Screen</screeninfo>
@@ -19027,33 +19044,36 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>At the top of the Check Out screen is a box for you to type or
-        scan the item's barcode into.</para>
+        <para>En haut dans le cadre, il suffit de scanner le code à barres du
+        document pour enregistrer la transaction.</para>
 
         <itemizedlist>
           <listitem>
             <important>
-              <para>Many modern barcode scanners will send a 'return' to the
-              browser, making it so that the 'Check Out' button is
-              automatically clicked</para>
+              <para>A priori pas besoin de cliquer sur le bouton "Prêt", la
+              plupart des douchette englobe la fonction de validation après
+              lecture du numéro de code à barres.</para>
             </important>
           </listitem>
         </itemizedlist>
 
-        <para>Below the box for the barcode there may be options for you to
-        override the default due date for the item.</para>
+        <para>En dessous du cadre pour le code barres, il y a une option qui
+        permet de fixer une date de retour manuellement et qui ,dans ce cas,
+        outrepasserait les règles de circulation et la date de retour fixée
+        automatiquement.</para>
 
         <itemizedlist>
           <listitem>
-            <para>This option will only appear if you have set the <link
-            linkend="SpecifyDueDate">SpecifyDueDate</link> system preference
-            to allow staff to override the due date</para>
+            <para>Cette option apparait si vous avez activé la préférence
+            système <link
+            linkend="SpecifyDueDate">SpecifyDueDate</link></para>
           </listitem>
         </itemizedlist>
 
-        <para>At the bottom of the page there is a summary of the patron's
-        current checked out items along with the due date, items checked out
-        today will appear at the top.</para>
+        <para>En bas , un tableau avec l'onglet "Prêts" affiche les
+        transactions qui ont été enregistrées dans le compte de l'adhérent.
+        Les dernières transactions enregistrées sont classées en début de
+        liste.</para>
 
         <screenshot>
           <screeninfo>Patron's checkout summary</screeninfo>
@@ -19067,16 +19087,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para>This screen will show whether an item is renewable and if
-            not, why not.</para>
+            <para>Depuis cette copie d'écran, on voit que seul le premier
+            document est renouvelable: le second étant réservé et le troisième
+            n'est pas renouvelable.</para>
           </listitem>
 
           <listitem>
-            <para>To override the renewal limits you can set the <link
-            linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
-            system preference to allow overrides and a checkbox will appear
-            below the list of checkouts that reads 'Override Renewal
-            Limit'</para>
+            <para>Pour outrepasser les règles de renouvellement vous pouvez
+            vous aider de la préférence système <link
+            linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link></para>
 
             <screenshot>
               <screeninfo>Override Renewal Limit</screeninfo>
@@ -19090,15 +19109,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Checking that box will add checkboxes in the renew
-                column above where before the item was not renewable.</para>
+                <para>Quand un document est renouvelable, il y a une case à
+                cocher qui est activée dans la colonne
+                "Renouvellement".</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
-        <para>Also at the bottom of the page is the list of items the patron
-        has on hold</para>
+        <para>En bas de la page il y a également un tableau "Réservations" qui
+        regroupe les demandes de réservation de l'adhérent</para>
 
         <screenshot>
           <screeninfo>Holds summary on check out screen</screeninfo>
@@ -19110,16 +19130,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you have checked out all of the items for the patron you
-        can print them a receipt by choosing one of two methods.</para>
+        <para>Une fois les prêts enregistrés, vous pouvez imprimer un
+        ticket.</para>
 
-        <para>The first is that you can simply hit enter on your keyboard or
-        scan a blank piece of paper with your barcode scanner. The idea being
-        that you're "checking out" a blank barcode which triggers Koha to
-        print the 'Quick Slip.'</para>
+        <para>Pour cela vous pouvez vous aider du bouton 'Imprimer' puis de
+        l'option 'Imprimer ticket'.</para>
 
-        <para>The second is that you can click the Print button at the top of
-        the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
+        <para>Vous pouvez également utiliser l'option 'Ticket rapide'.</para>
 
         <screenshot>
           <screeninfo>Print receipt to slip printer</screeninfo>
@@ -19131,13 +19148,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you choose 'Print Slip' it will print all of the items the
-        patron has checked out, including those they checked out at an earlier
-        date. Choosing 'Quick Slip' will print only the items that were
-        checked out today.</para>
+        <para>Si vous choisissez 'Imprimer ticket', il va imprimer l'ensemble
+        des ouvrages signalés comme étant empruntés sous votre compte. Si vous
+        choisissez 'Ticket rapide' vous imprimez uniquement les ouvrages
+        empruntés dans la journée.</para>
 
-        <para>If there are notes on the patron record these will appear to the
-        right of the checkout box</para>
+        <para>Si des notes ont été ajoutées dans le compte de l'adhérent,
+        elles vont apparaître à la droite de l'écran</para>
 
         <screenshot>
           <screeninfo>Patron notes on check out screen</screeninfo>
@@ -19149,10 +19166,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If the patron has a hold waiting at the library that too will
-        appear to the right of the check out box making it easy for the
-        circulation librarian to see that there is another item to give the
-        patron</para>
+        <para>Si l'adhérent a effectué des demandes de réservations et que les
+        documents sont disponibles et en attente de retrait, l'information
+        sera affichée à la droite de l'écran afin d'avertir rapidement le
+        bibliothécaire</para>
 
         <screenshot>
           <screeninfo>Hold waiting message on check out screen</screeninfo>
@@ -19182,16 +19199,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="checkoutmsg">
-        <title>Check Out Messages</title>
+        <title>Messages liés au prêt</title>
 
-        <para>There are times when Koha will prevent the librarian from being
-        able to check out items to a patron. When this happens a warning will
-        appear notifying the librarian of why the patron cannot check items
-        out.</para>
+        <para>Il existe des messages qui sont associés aux transactions. Par
+        exemple des messages informant l'adhérent qu'il ne peut plus emprunter
+        de document.</para>
 
         <itemizedlist>
           <listitem>
-            <para>Patron owes too much in fines</para>
+            <para>Messages disant que l'adhérent a des documents en retard et
+            qu'il a une amende de 22,50; amende qui bloque le prêt</para>
 
             <screenshot>
               <screeninfo>Patron owes too much in fines</screeninfo>
@@ -19205,16 +19222,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>You can set the amount at which patron checkouts are
-                blocked with the <link
-                linkend="noissuescharge">noissuescharge</link> system
-                preference</para>
+                <para>Vous pouvez fixer un seuil d'amende (montant) qui
+                bloquera les prêts à l'aide de la préférence système <link
+                linkend="noissuescharge">noissuescharge</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Patron has been barred from the library</para>
+            <para>Adhérent qui a été suspendu de pret</para>
 
             <screenshot>
               <screeninfo>Patron account barred</screeninfo>
@@ -19228,16 +19244,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>This can be set by the librarian editing a patron record
-                and adding a <link linkend="patronflags">flag</link> or by the
-                <link linkend="noticetriggers">Overdue/Notice Status
-                Triggers</link></para>
+                <para>La suspension peut être fixée manuellement en éditant la
+                fiche adhérent et cochant la mention <link
+                linkend="patronflags">oui</link> ou bien de façon automatique
+                depuis outils <link linkend="noticetriggers">Déclencheur de
+                notifications</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Patron needs to confirm their address</para>
+            <para>Adhérent qui a besoin de confirmer son adresse</para>
 
             <screenshot>
               <screeninfo>Patron's address warning</screeninfo>
@@ -19251,14 +19268,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>This can be set by the librarian editing a patron record
-                and adding a <link linkend="patronflags">flag</link></para>
+                <para>Message qui peut être fixé manuellement en éditant la
+                fiche adhérent et cochant la mention <link
+                linkend="patronflags">oui</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Patrons has lost their library card</para>
+            <para>Adhérent qui a perdu sa carte</para>
 
             <screenshot>
               <screeninfo>Lost patron card warning</screeninfo>
@@ -19272,8 +19290,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>This can be set by the librarian editing a patron record
-                and adding a <link linkend="patronflags">flag</link></para>
+                <para>Message qui peut être fixé manuellement en éditant la
+                fiche adhérent et cochant la mention <link
+                linkend="patronflags">oui</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -19281,16 +19300,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="checkoutwarn">
-        <title>Check Out Warnings</title>
+        <title>Avertissement liés au prêt</title>
 
-        <para>Sometimes checkouts will trigger warning messages that will
-        appear in a yellow box above the check out field. These warnings need
-        to be acknowledged before you will be able to continue checking items
-        out.</para>
+        <para>Lors des enregistrements des transactions, il y a des contrôles
+        et des avertissements. Ces avertissements vous demandent de
+        valider/confirmer pour pouvoir poursuivre les opérations.</para>
 
         <itemizedlist>
           <listitem>
-            <para>Patron has outstanding fines</para>
+            <para>Adhérent qui a des charges sur son compte, demande de
+            confirmation du prêt</para>
 
             <screenshot>
               <screeninfo>Patron has a debt</screeninfo>
@@ -19304,7 +19323,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Item on hold for someone else</para>
+            <para>Le document est réservé par un autre adhérent, demande de
+            confirmation du prêt</para>
 
             <screenshot>
               <screeninfo>Item is on hold for someone else</screeninfo>
@@ -19318,8 +19338,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Item should be on the hold shelf waiting for someone
-            else</para>
+            <para>Le document est en attente de retrait pour un autre
+            adhérent, demande de confirmation du prêt</para>
 
             <screenshot>
               <screeninfo>Item is on hold shelf waiting for someone
@@ -19334,7 +19354,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Item already checked out to this patron</para>
+            <para>Document déjà emprunté par l'adhérent, demande de
+            confirmation d'un renouvellement</para>
 
             <screenshot>
               <screeninfo>Item is currently checked out to this
@@ -19349,7 +19370,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Item checked out to another patron</para>
+            <para>Document emprunté par un autre adhérent</para>
 
             <screenshot>
               <screeninfo>Item checked out to another patron</screeninfo>
@@ -19363,7 +19384,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Item not for loan</para>
+            <para>Docuemnt qui n'a pas le statut '0 Disponible', demande de
+            confirmation du prêt</para>
 
             <screenshot>
               <screeninfo>Item is not normally for loan</screeninfo>
@@ -19377,7 +19399,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Patron has too many things checked out</para>
+            <para>Adhérent qui a atteind le seuil maximal des prêts autorisés,
+            demande de confirmation du prêt</para>
 
             <screenshot>
               <screeninfo>Too many checkouts</screeninfo>
@@ -19391,7 +19414,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Item cannot be renewed</para>
+            <para>Renouvellement du document impossible</para>
 
             <screenshot>
               <screeninfo>No more renewals</screeninfo>
@@ -19405,15 +19428,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>This can be overridden with the <link
-                linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
-                system preference</para>
+                <para>La possibilité d'outrepasser les règles de
+                renouvellement se fixe à partir de la préférence système <link
+                linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Barcode not found</para>
+            <para>Code à barres non trouvé</para>
 
             <screenshot>
               <screeninfo>Barcode not found</screeninfo>
@@ -19430,14 +19453,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="checkingin">
-      <title>Check In (Returning)</title>
+      <title>Retours</title>
 
-      <para>Checking in items can be performed from various different
-      locations</para>
+      <para>La fonctionnalité qui enregistre le retour des documents est
+      située à plusieurs endroits</para>
 
       <itemizedlist>
         <listitem>
-          <para>The check in link on main staff client</para>
+          <para>page d'accueil - Lien 'Retour'</para>
 
           <screenshot>
             <screeninfo>Check out box on main Koha Staff Client
@@ -19452,8 +19475,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>The check in option on the quick search bar on the Circulation
-          page<screenshot>
+          <para>Page 'Circulation' - Onglet 'Retour' au niveau de la barre de
+          recherche rapide<screenshot>
               <screeninfo>Check in tab on quick search bar</screeninfo>
 
               <mediaobject>
@@ -19465,8 +19488,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>The check in link on the patron's checkout summary (and on the
-          checkout summary page)</para>
+          <para>Depuis le compte adhérent et le tableau qui liste les
+          documents empruntés : colonne 'Retour'</para>
 
           <screenshot>
             <screeninfo>Patron checkout summary includes 'Check In'
@@ -19482,11 +19505,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </itemizedlist>
 
       <section id="checkitemin">
-        <title>Checking Items In</title>
+        <title>Enregistrer un retour</title>
 
-        <para>To check an item in scan the barcode for the item into the box
-        provided. A summary of all items checked in will appear below the
-        checkin box</para>
+        <para>Pour enregistrer un retour, il faut lire le code à barres du
+        document dans la boîte prévue à cet effet. La liste des documents
+        retournés apparaîtra en dessous.</para>
 
         <screenshot>
           <screeninfo>Check In Summary</screeninfo>
@@ -19498,34 +19521,35 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you are checking items in that were put in the dropbox while
-        the library was closed you can check the 'Dropbox mode' box before
-        scanning items. This will effectively roll back the returned date to
-        the last date the library was open.</para>
+        <para>Vous pouvez utiliser le mode de retour 'Boîte à livre' afin
+        d'enregistrer le retour des documents qui ont été déposés lors de la
+        fermeture de la Bibliothèque. Dans ce cas, la date réelle de retour
+        sera le dernier jour d'ouverture de la Bibliothèque avant le
+        retour.</para>
 
         <itemizedlist>
           <listitem>
-            <para>This requires that you have your closings added to the <link
-            linkend="calholidays">Holidays &amp; Calendar Tool </link></para>
+            <para>cela suppose d'avoir rentré le calendrier de la Bibliothèque
+            sous outils <link linkend="calholidays">Calendrier </link></para>
           </listitem>
         </itemizedlist>
 
-        <para>You can also choose to forgive all overdue charges for items you
-        are checking in by checking the 'Forgive overdue charges' box before
-        scanning items.</para>
+        <para>Vous pouvez aussi choisir le mode de retour 'Effcacer amendes'
+        afin de lever d'eventuelles amendes qui seraient venues à l'issue du
+        retour des documents.</para>
       </section>
 
       <section id="checkinmsg">
-        <title>Check In Messages</title>
+        <title>Messages liés au retour</title>
 
-        <para>There are several messages that can appear when checking items
-        in:</para>
+        <para>Lors du retour des documents des messages peuvent apparaître
+        :</para>
 
         <itemizedlist>
           <listitem>
-            <para>If you are checking an item in at a library other than the
-            home branch, a message will appear asking you to transfer the book
-            to the home library</para>
+            <para>Si vous retournez un document appartenant à un autre site,
+            un message vous invitera à transférer le document vers son site
+            propriétaire</para>
 
             <screenshot>
               <screeninfo>Check in Transfer Message</screeninfo>
@@ -19539,8 +19563,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>After this item is checked in the status of the item
-                will be changed in the catalog to 'in transit'</para>
+                <para>Ensuite un message indiquera que le document est 'en
+                transit'</para>
 
                 <screenshot>
                   <screeninfo>In Transit Status</screeninfo>
@@ -19554,8 +19578,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>To mark an item as back at the home branch, check the
-                item in at the home branch</para>
+                <para>Ensuite il faudra passer de nouveau le document en
+                retour depuis son site propriétaire afin de signaler à Koha
+                que le document est bien rentré dans son site de
+                rattachement</para>
 
                 <screenshot>
                   <screeninfo>Check In Transferred Item</screeninfo>
@@ -19569,10 +19595,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <itemizedlist>
                   <listitem>
-                    <para>A message will appear tell you that the item is not
-                    checked out, but the status will now say available in the
-                    catalog. This step is necessary to mark items as received
-                    by the home branch.</para>
+                    <para>Un message signalera que le document n'était pas
+                    emprunté, mais le message signalant le transit aura
+                    disparu. Etape qui est donc nécessaire.</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -19580,8 +19605,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>If you're checking an item in that has a hold on it, you
-            will be prompted to confirm the hold</para>
+            <para>Si vous retournez un document ayant fait l'objet d'une
+            réservation, vous aurez ce genre d'avertissement vous invitant à
+            confirmer la réservation</para>
 
             <screenshot>
               <screeninfo>Hold Found Check In Message</screeninfo>
@@ -19595,8 +19621,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Clicking the Confirm hold button will mark the item as
-                waiting for pickup from the library</para>
+                <para>La confirmation de la réservation permet l'envoi de la
+                notification à l'adhérent pour lui signaler que le document
+                est en attente dans le site de retrait</para>
 
                 <screenshot>
                   <screeninfo>Hold waiting at the library</screeninfo>
@@ -19610,23 +19637,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>Clicking the Print Slip and Confirm button will mark the
-                item as waiting for pickup at the library and present the
-                library with a receipt to print and place on the book with the
-                patron's information</para>
+                <para>Il est possible egalement d'imprimer un ticket avec les
+                informations de l'adhérent ayant fait la demande de
+                réservation</para>
               </listitem>
 
               <listitem>
-                <para>Ignoring the hold will leave the item on hold, but leave
-                its status as Available (it will not cancel the hold)</para>
+                <para>Le bouton ignorer permet de ne pas envoyer la
+                notification, le document a le statut 'disponible' mais cela
+                n'annule pas la réservation.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>If you're checking in an item that has a hold on it at
-            another branch you will be prompted to confirm and transfer the
-            item</para>
+            <para>Si vous retournez un document réservé dont le site de
+            retrait est différent du site utilisé, Koha vous demandera de
+            transférer le document jusqu'au site de retrait</para>
 
             <screenshot>
               <screeninfo>Hold found for another branch</screeninfo>
@@ -19640,9 +19667,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Clicking the Confirm hold and Transfer button will mark
-                the item as in transit to the library where the hold was
-                placed</para>
+                <para>Pour cela cliquez sur le bouton 'Confirmer et
+                transférer'</para>
 
                 <screenshot>
                   <screeninfo>In transit hold status</screeninfo>
@@ -19656,15 +19682,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>Clicking the Print Slip, Transfer and Confirm button
-                will mark the item as in transit to the library where the hold
-                was placed and present the library with a receipt to print and
-                place on the book with the patron's information</para>
+                <para>Vous avez aussi un bouton qui permet d'imprimet un
+                ticket, de confirmer la réservation et de signaler le
+                transfert du document.</para>
               </listitem>
 
               <listitem>
-                <para>Ignoring the hold will leave the item on hold, but leave
-                its status as Available (it will not cancel the hold)</para>
+                <para>Le bouton ignorer permet de ne pas envoyer la
+                notification, le document a le statut 'disponible' mais cela
+                n'annule pas la réservation.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -19673,19 +19699,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="circmessages">
-      <title>Circulation Messages</title>
+      <title>Messages de la circulation</title>
 
-      <para>Circulation messages are short messages that librarians can leave
-      for their patrons or their colleagues that will appear at the time of
-      circulation.</para>
+      <para>Vous pouvez créer des messages 'type' qui seront utilisés
+      fréquemment et qui seront adressés soit aux bibliothécaires soit
+      directement à l'adhérent.</para>
 
       <section id="setcircmsg">
-        <title>Setting up Messages</title>
+        <title>Créer des messages type</title>
 
-        <para>Circulation messages are set up as <link
-        linkend="authorizedvalues">Authorized Values</link>. To add or edit
-        Circulation Messages you want to work with the <link
-        linkend="bornotes">BOR_NOTES</link> value.</para>
+        <para>Les messages type sont des <link
+        linkend="authorizedvalues">Valeurs autorisées</link>. Insérez les
+        messages sous la catégorie <link linkend="bornotes">BOR_NOTES</link>
+        .</para>
 
         <screenshot>
           <screeninfo>BOR_NOTES Authorized Values</screeninfo>
@@ -19699,10 +19725,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="addcircmsg">
-        <title>Adding a Message</title>
+        <title>Ajouter un message</title>
 
-        <para>When on the patron's check out tab you will see a link to 'Add a
-        new message' to the right of the check out box.</para>
+        <para>Depuis le compte de l'adhérent et l'onglet 'Prêt', en haut à
+        droite de l'écran vous avez le lien 'Ajouter un message'.</para>
 
         <screenshot>
           <screeninfo>Circulation Message in Staff Client</screeninfo>
@@ -19714,9 +19740,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>When you click 'Add a new message' you will be asked to choose
-        if the message is for the librarians or the patron and the message you
-        would like to leave.</para>
+        <para>Après avoir cliqué sur le lien, il faut préciser à qui est
+        adressé le message ('Ajouter un message pour') puis ensuite une
+        seconde liste déroulante vous propose les messages types qui ont été
+        crées en amont dans les valeurs autorisées.</para>
 
         <screenshot>
           <screeninfo>Leave a Circulation Message</screeninfo>
@@ -19730,10 +19757,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="viewcircmsg">
-        <title>Viewing Messages</title>
+        <title>Voir les messages</title>
 
-        <para>Circulation messages meant for the staff will appear on the
-        patron's checkout screen.</para>
+        <para>Les messages apparaissent depuis le compte adhérent ; onglet
+        'Prêt'.</para>
 
         <screenshot>
           <screeninfo>Circulation Message in Staff Client</screeninfo>
@@ -19745,8 +19772,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Circulation messages meant for the patron will appear when they
-        log into the OPAC.</para>
+        <para>Les messages adressés à l'adhérent s'afficheront à l'OPAC apres
+        authentification.</para>
 
         <screenshot>
           <screeninfo>Circulation Message in OPAC</screeninfo>
@@ -19761,16 +19788,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="holds">
-      <title>Holds</title>
+      <title>Réservations</title>
 
       <para></para>
 
       <section id="holdsinstaff">
-        <title>Placing Holds in Staff Client</title>
+        <title>Demande de réservation depuis Koha</title>
 
-        <para>There are several ways to place holds from the staff client. The
-        most obvious is using the 'Place Hold' button at the top of any
-        bibliographic record.</para>
+        <para>Depuis koha, il existe plusieurs modes opératoire pour
+        enregistrer une demande de réservation. Le mode le plus simple est
+        d'utiliser le bouton 'Réserver' situé en haut de chaque notice
+        bibliographique.</para>
 
         <screenshot>
           <screeninfo>Place Hold Button on Bib Record</screeninfo>
@@ -19782,9 +19810,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>You can also click the smaller 'Place Hold' link found at the
-        top of your catalog search results, or the 'Holds' link found below
-        each result.</para>
+        <para>Vous avez également un bouton placé en haut des résultats d'une
+        recherche catalogue.</para>
 
         <screenshot>
           <screeninfo>Hold options on search results</screeninfo>
@@ -19796,8 +19823,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>You will be asked to search for a patron by barcode or any part
-        of their name to start the hold process.</para>
+        <para>Ensuite , il vous est demandé de rechercher l'adhérent par le
+        biais de son nom ou de son numéro de carte.</para>
 
         <screenshot>
           <screeninfo>Find Patron For Hold</screeninfo>
@@ -19809,9 +19836,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you'd like to search for the patron first and then the bib
-        record for the hold, you can open the patron record and click on the
-        'Search to Hold' button at the top of the patron record.</para>
+        <para>Si vous souhaitez d'abord rechercher l'adhérent avant de choisir
+        l'ouvrage, vous pouvez utiliser le bouton 'Rechercher pour
+        réservation' depuis le compte adhérent.</para>
 
         <screenshot>
           <screeninfo>Search to Hold on Patron Record</screeninfo>
@@ -19823,10 +19850,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>After clicking the button you will be brought to the catalog
-        search page where you can find the book(s) you want to place a hold
-        on. Under each title on the results you'll see an option to 'Hold for
-        Patron Name.'</para>
+        <para>Ensuite vous êtes redirigé en recherche catalogue afin d'accéder
+        à la référence bibliographique de votre choix. Sous chaque titre vous
+        avez le lien 'Réserver pour XXX.'</para>
 
         <screenshot>
           <screeninfo>Hold for Patron links on Search Results</screeninfo>
@@ -19838,9 +19864,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you want to place a hold on multiple items, simply check the
-        boxes to the left of them and click the arrow to the right of the
-        'Place Hold' button.</para>
+        <para>Si vous devez enregistrer plusieurs réservations en même temps;
+        sélectionnez les titres puis en haut des résultats utilisez le bouton
+        'Reserver' avec la flèche descendante.</para>
 
         <screenshot>
           <screeninfo>Hold Multiple Items for Patron</screeninfo>
@@ -19852,10 +19878,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Depending on how many items you choose to place a hold on at
-        once you will be see a different place hold form. If you are placing a
-        hold on one bibliographic record you will see a list of all of the
-        items you can place a hold on.</para>
+        <para>Ensuite, l'écran sera différent selon le nombre de réservations
+        simultanées que vous souhaitez enregistrer. Si vous avez placé une
+        réservation sur un seul titre, vous aurez ce type d'écran.</para>
 
         <screenshot>
           <screeninfo>Place Hold Form</screeninfo>
@@ -19869,52 +19894,52 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para>Enter any notes that might apply to this hold</para>
+            <para>Vous pouvez indiquer une note au sujet de la demande (pas
+            obligatoire)</para>
           </listitem>
 
           <listitem>
-            <para>Choose the library where the patron will pick up the
-            item</para>
+            <para>Vous pouvez choisir le site de retrait</para>
           </listitem>
 
           <listitem>
-            <para>If the patron wants the hold to start on a date other than
-            today, enter that in the 'Hold starts on date' field</para>
+            <para>Il est possible de faire démarrer la demande de réservation
+            à une date de son choix (le lendemain : J+ 1 par exemple)</para>
 
             <itemizedlist>
               <listitem>
-                <para>This option will only appear if the <link
-                linkend="AllowHoldDateInFuture">AllowHoldDateInFuture</link>
-                system preference is set to 'Allow'</para>
+                <para>Pour cela il faut activer la préférence système <link
+                linkend="AllowHoldDateInFuture">AllowHoldDateInFuture</link></para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>If the patron has specified that they don't want the item
-            after a certain date, or if you have limits on hold lengths, you
-            can enter an expiration date for the hold in the 'Hold expires on
-            date'</para>
+            <para>Il est possible de fixer une durée maximale de la demande en
+            indiquant une date d'expiration de la réservation</para>
 
             <itemizedlist>
               <listitem>
-                <para>To have expired holds canceled automatically you will
-                need to have the <link linkend="expiredholdscron">Expired
-                Holds</link> cron job set to run on a regular basis.</para>
+                <para>Pour une annulation automatique des réservations, il
+                faut s'assurer que le cron <link
+                linkend="expiredholdscron">Expired Holds</link> fonctionne
+                quotidiennement.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Next choose if you want to place a hold on the next
-            available item or a specific item by clicking the radio button
-            next to an individual item.</para>
+            <para>Ensuite choisir si l'on souhaite réserver une exemplaire
+            précis ou bien si l'on souhaite réserver n'importe quel exemplaire
+            qui sera disponible en premier.</para>
           </listitem>
         </itemizedlist>
 
-        <para>If you're placing a hold on multiple items you will be presented
-        with the next available option for all titles. If no items are
-        available for hold it will say so on the confirmation screen.</para>
+        <para>Si vous réservez plusieurs titres en même temps, vous aurez un
+        écran qui ressemble à celui indiqué ci-dessous. Si aucun exemplaire
+        n'est disponible pour les réservations au niveau de l'un des titres
+        retenus, koha précise cet état de fait au niveau de la colonne
+        'Information'.</para>
 
         <screenshot>
           <screeninfo>Place multiple items on hold</screeninfo>
@@ -19928,10 +19953,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="manageholds">
-        <title>Managing Holds</title>
+        <title>Gestion des réservations</title>
 
-        <para>Holds can be altered and canceled from the Holds tab found on
-        the left of the bibliographic record.</para>
+        <para>Les réservations peuvent être changées ou supprimées depuis
+        l'onglet 'Réservations' placé à gauche de chaque notice
+        bibliographique.</para>
 
         <screenshot>
           <screeninfo>Bibliographic Record Tabs</screeninfo>
@@ -19943,8 +19969,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From the list of holds you can change the order of the holds,
-        the pickup location and/or cancel the hold.</para>
+        <para>Au niveau d ela file d'attente des réservations, il est possible
+        de changer l'ordre des demandes, le site de retrait et/ou d'annuler la
+        demande de réservation.</para>
 
         <screenshot>
           <screeninfo>Lists of Holds</screeninfo>
@@ -19957,15 +19984,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <note>
-          <para>Depending on how you have your <link
-          linkend="HidePatronName">HidePatronName</link> system preference set
-          the list may show patron names instead of card numbers in the Patron
-          column like in the image above.</para>
+          <para>Le nom de l'adhérent est affiché ou non selon l'activation de
+          la préférence système <link
+          linkend="HidePatronName">HidePatronName</link> .</para>
         </note>
 
-        <para>To rearrange or delete holds, simply make a selection from the
-        'Priority' pull down or click the arrows to the right of the priority
-        pull down.</para>
+        <para>Pour déplacer une demande à l'intérieur de la file d'attente
+        aidez-vous des flèches montantes ou descendantes et fixé le numéro de
+        priorité à partir de la colonne 'Priorité'.</para>
 
         <screenshot>
           <screeninfo>Hold Priority Menu</screeninfo>
@@ -19977,18 +20003,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>To delete or cancel a hold, choose 'del' from the menu or click
-        the red 'X' to the right of the hold line.</para>
+        <para>Pour annuler ou supprimer une demande cliquez sur la croix
+        rouge.</para>
 
-        <para>Clicking the down arrow to the right of the hold will stick the
-        hold at the bottom of the list even if more requests are made.</para>
+        <para>La flèche descendante avec un trait horizontal permet de placer
+        la demande en fin de liste.</para>
 
-        <para>For example, your library has home-bound patrons that are
-        allowed to keep books out for months at a time. It would not be fair
-        to other patrons if a home-bound patron were able to check out a brand
-        new book and keep it for months. For this reason, the home-bound
-        patron's hold request would stay at the bottom of the queue until
-        everyone else who wanted to read that book has already done so.</para>
+        <para>Le changement du classement des adhérents à l'intérieur d'une
+        file d'attente de réservations peut se justifier si de grands écarts
+        en terme de droit de prêt (durée de prêt) sont signalés : mettre à la
+        fin de la liste les adhérents qui ont une durée de prêt plus longue
+        par exemple.</para>
 
         <screenshot>
           <screeninfo>Lowest Priority &amp; Delete Options for
@@ -20001,19 +20026,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you have made your changes, click the 'Update hold(s)'
-        button and your changes will be saved.</para>
+        <para>une fois les mises à jour effectuées, pensez à cliquer sur
+        'Enregistrer'.</para>
       </section>
 
       <section id="receiveholds">
-        <title>Receiving Holds</title>
+        <title>Réception des documents réservés</title>
 
-        <para>When items that are on hold are checked in or out the system
-        will remind the circulation librarian that the item is on hold and
-        offer them options for managing the hold.</para>
+        <para>Lors du retour du document, Koha vous averti qu'un adhérent a
+        fait la demande de l'ouvrage.</para>
 
-        <para>When you check in an item that has a hold on it the system will
-        ask you to either confirm and transfer the item</para>
+        <para>il peut arrivé que l'on vous demande la confirmation du
+        transfert du document vers un autre site du réseau.</para>
 
         <screenshot>
           <screeninfo>Confirm Hold &amp; Transfer</screeninfo>
@@ -20025,7 +20049,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>or just confirm the hold</para>
+        <para>Sinon il faut juste confirmer la réservation si le document ne
+        doit pas quitter le site.</para>
 
         <screenshot>
           <screeninfo>Confirm Hold</screeninfo>
@@ -20037,16 +20062,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Clicking the Confirm button will mark the item as on hold for
-        the patron. If the item needs to be transferred the item will also be
-        marked as in transit to the proper branch. Clicking 'Ignore' will
-        retain the hold, but allow you to check the item out to another
-        patron. Choosing to confirm and print will present you with a
-        printable page that you can slip inside the book with the necessary
-        hold and/or transfer information.</para>
+        <para>La confirmation de la réservation permet d'indiquer en recherche
+        que le document est mis de côté pour retrait. Si le document est
+        transféré dans un autre site, il sera indiqué en recherche que le
+        document est en transit. La confirmation d ela réservation permet
+        également d'envoyer une notification à l'adhérent. Le bouton ignorer
+        n'annule pas la réservation mais évite toutes les actions citées
+        précédemment. Si le document doit être transféré dans un autre site
+        vous pouvez éditer un ticket avec les informations de l'adhérent et du
+        document.</para>
 
-        <para>Once confirmed the hold will show on the patron record and on
-        the checkout screen under the 'Hold' tab.</para>
+        <para>Enfin, une fois confirmée, la réservation sera signalée comme en
+        attente pour retrait dans le compte adhérent (interface
+        proffesionnelle et OPAC).</para>
 
         <screenshot>
           <screeninfo>Hold on Patron Record</screeninfo>
@@ -20058,7 +20086,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The item record will also show that the item is on hold.</para>
+        <para>Signalement egalement au niveau de la notice exemplaire.</para>
 
         <screenshot>
           <screeninfo>Hold on Item Record</screeninfo>
@@ -20070,11 +20098,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>In some cases a patron may come in to pick up a hold for their
-        partner (or someone else in their household). In this case you want to
-        make sure that the hold is cancelled when you check the item out to
-        someone else. When trying to check out an item that is already waiting
-        for someone else you will be presented with a warning message.</para>
+        <para>Si un autre adhérent tente d'emprunter le document qui est en
+        attente pour retrait, il y a un avertissement accompagné d'une demande
+        de confirmation.</para>
 
         <screenshot>
           <screeninfo>Hold waiting for someone else</screeninfo>
@@ -20086,21 +20112,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From here you can check the item out to the patron at the desk
-        and cancel the hold for the partner.</para>
+        <para>On peut même annuler la réservation à partir de cet
+        avertissement.</para>
       </section>
     </section>
 
     <section id="transfers">
-      <title>Transfers</title>
+      <title>Transferts</title>
 
-      <para>If you work in a multi-branch system you can transfer items from
-      one library to another by using the Transfer tool. To transfer an
-      item</para>
+      <para>Si vous travaillez en réseau de Bibliothèques, vous pouvez
+      utilisez l'outil 'Transferts' afin de vous échanger des ouvrages.</para>
 
       <itemizedlist>
         <listitem>
-          <para>Click 'Transfer' on the Circulation page</para>
+          <para>Depuis la page Circulation, lien 'Transferts'</para>
 
           <screenshot>
             <screeninfo>Transfer Tool</screeninfo>
@@ -20114,19 +20139,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Enter the library you would like to transfer the item
-              to</para>
+              <para>Enterez le site de destination</para>
             </listitem>
 
             <listitem>
-              <para>Scan or type the barcode on the item you would like to
-              transfer</para>
+              <para>Scannez les codes à barres des documents à
+              transférer</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Click 'Submit'</para>
+          <para>Cliquez sur 'Valider'</para>
 
           <screenshot>
             <screeninfo>Transfer Summary</screeninfo>
@@ -20140,7 +20164,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>The item will now say that it is in transit</para>
+          <para>Les docuements seront signalés 'en transit'.</para>
 
           <screenshot>
             <screeninfo>Item in Transit</screeninfo>
@@ -20154,14 +20178,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>When the item arrives at the other branch the librarian must
-          check the item in to acknowledge that it is no longer in
-          transit</para>
+          <para>Quand les documents arrivent au site dépositaire, passez-les
+          en retrour afin de ne plus les signaler 'en transit'.</para>
         </listitem>
 
         <listitem>
-          <para>The item will not be permanently moved to the new
-          library</para>
+          <para>Les documents sont signalés temporairement dans le site
+          dépositaire.</para>
 
           <screenshot>
             <screeninfo>Item record</screeninfo>
@@ -20175,8 +20198,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>The item shows the same 'Home Library' but has updated the
-              'Current Location' to note where it resides at this time</para>
+              <para>Quand un transfert à été enregistré, le code site
+              propritaire du document ne change pas alors que le code site
+              dépositaire change temporairement.</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -20184,11 +20208,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="setlibrary">
-      <title>Set Library</title>
+      <title>Gestion des sites</title>
 
-      <para>By default you will enter the staff client as if you are at your
-      home library. This library will appear in the top right of the Staff
-      Client.</para>
+      <para>Par défaut vous vous connectez à l'interface professionnelle de
+      koha avec le code site de votre compte adhérent.</para>
 
       <screenshot>
         <screeninfo>My Library</screeninfo>
@@ -20200,10 +20223,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>This is the library that all circulation transactions will take
-      place at. If you are at another library (or on a bookmobile) you will
-      want to set your library before you start circulating items. To do this
-      you can click 'Set' at the top right or on the Circulation page.</para>
+      <para>Le code site de connexion va correspondre au site des transactions
+      qui seront enregistrées.Vous pouvez changer de code site de connexion
+      avec le lien 'Set' situé en haut à droite de l'écran.</para>
 
       <screenshot>
         <screeninfo>Set Library Form</screeninfo>
@@ -20215,20 +20237,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Once you have saved your changes you new library will appear in
-      the top right.</para>
+      <para>Une fois la modification validée, le nouveau site apparaît en haut
+      à droite.</para>
     </section>
 
     <section id="fastaddcat">
-      <title>Fast Add Cataloging</title>
+      <title>Ajouts rapides</title>
 
-      <para>Sometimes circulation librarians need to quickly add a record to
-      the system for an item they are about to check out. This is called 'Fast
-      Add.' To allow circulation librarians access to the Fast Add Cataloging
-      tool, simply make sure they have the <link
-      linkend="fastaddpermissions">fast_cataloging</link> permissions. To add
-      a title with the fast add framework, click the Fast Cataloging option on
-      the Circulation page</para>
+      <para>Depuis la banque de prêt , il est possible de cataloguer à la
+      volée un ouvrage ne figurant pas dans la base afin de pouvoir
+      enregistrer son prêt. On appelle cela faire un 'ajout rapide'. Avant
+      vérifiez les permissions des bibliothécaires qui sont à la banque de
+      prêt ( <link linkend="fastaddpermissions">fast_cataloging</link> ). Pour
+      accéder à la grille de catalogage 'Ajout rapide', allez à la page
+      'Circulation' puis cliquez sur le lien 'Ajout rapide'.</para>
 
       <screenshot>
         <screeninfo>Circulation Menu</screeninfo>
@@ -20240,8 +20262,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>The cataloging interface will open up with the short cataloging
-      record:</para>
+      <para>Ouverture d'une grille de catalogage MARC abrégée:</para>
 
       <screenshot>
         <screeninfo>Fast Add Framework</screeninfo>
@@ -20253,23 +20274,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>After adding your cataloging data you will be asked to enter item
-      data. Enter the items barcode, collection code, etc and save the item
-      before checking it out.</para>
+      <para>Apres avoir crée la notice bibliographique, vous devez
+      exemplariser cette dernière avec un code à barres, un code site, une
+      localisation....etc.</para>
     </section>
 
     <section id="circreports">
-      <title>Circulation Reports</title>
+      <title>Rapports de circulation</title>
 
       <para></para>
 
       <section id="holdsqueue">
-        <title>Holds Queue</title>
+        <title>Fil des réservations</title>
 
-        <para>This report will show you all of the holds at your library. To
-        generate this report, you must have the <link
-        linkend="buildholdscron">Build Holds Queue cron job</link>
-        running.</para>
+        <para>Rapport qui remonte toutes les réservations de votre
+        Bibliothèque. Pour créer ce rapport assurez-vous que le cron <link
+        linkend="buildholdscron">Build Holds Queue cron job</link> est
+        plannifié.</para>
 
         <screenshot>
           <screeninfo>Sample Holds Queue</screeninfo>
@@ -20283,10 +20304,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="holdspull">
-        <title>Holds to pull</title>
+        <title>Réservations à traiter</title>
 
-        <para>This report will show you all of the items that have holds on
-        them that are available at the library for pulling.</para>
+        <para>Rapport qui remonte tous les ouvrages qui sont en rayon
+        (disponibles) et qu'il faut retirer des rayons afin de les passer en
+        retour pour confirmation de la réservation.</para>
 
         <screenshot>
           <screeninfo>Holds to Pull</screeninfo>
@@ -20298,8 +20320,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>This report will be generated based on a few system
-        preferences:</para>
+        <para>Ce rapport dépend de plusieurs préférences système:</para>
 
         <itemizedlist>
           <listitem>
@@ -20308,10 +20329,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Allows the library to specify a list of library location
-                codes -- if used alone, it will rank the list statically,
-                selecting the top-ranking available location to be added to
-                the picklist.</para>
+                <para>Indiquer le scodes sites concernés</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -20322,23 +20340,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>If 'RandomizeHoldsQueueWeight' and
-                'StaticHoldsQueueWeight' are set, the list of library codes in
-                the 'StaticHoldsQueueWeight' system preference are randomized
-                rather than statically ranked. If RandomizeHoldsQueueWeight
-                alone is set, the list of all available library codes is used
-                to randomize the weight.</para>
+                <para>Classement aléatoire ou dans l'ordre cela dépend des
+                codes rentrés ou non sous 'StaticHoldsQueueWeight'</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
-        <para>If neither 'RandomizeHoldsQueueWeight' or
-        'StaticHoldsQueueWeight' is set, the holds queue is statically ranked
-        according to how they are pulled out of the system database.</para>
+        <para>Si rien n'est indiqué dans ces préférences le classement se fait
+        de façon aléatoire au fure et à mesure des demandes</para>
 
-        <para>You can limit the results you see by using the Refine box on the
-        left side of the page:</para>
+        <para>On peut filtrer les résultats à l'aide des dates situées sur la
+        gauche :</para>
 
         <screenshot>
           <screeninfo>Refine Holds to Pull Report</screeninfo>
@@ -20352,10 +20365,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="holdspickup">
-        <title>Holds awaiting pickup</title>
+        <title>Réservations mises de côté</title>
 
-        <para>This report will show all of the holds that are waiting for
-        patrons to pick them up.</para>
+        <para>Rapport qui remonte les documents qui sont mis de côte en
+        attente de retrait.</para>
 
         <screenshot>
           <screeninfo>Holds Awaiting Pickup</screeninfo>
@@ -20367,11 +20380,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Items that have been on the hold shelf longer than you normally
-        allow (based on the <link
-        linkend="ReservesMaxPickUpDelay">ReservesMaxPickUpDelay</link>
-        preference value) will appear on the 'Holds Over' tab, they will not
-        automatically be cancelled.</para>
+        <para>L'onglet réservations en trop remonte les ouvrages qui n'ont pas
+        été retirés par l'adhérent malgré le délai d'attente. Le délai
+        d'attente maximum étant fixé avec la préférence système <link
+        linkend="ReservesMaxPickUpDelay">ReservesMaxPickUpDelay</link> .Ce
+        rapport est doc mis à jour automatiquement et il correspond aux
+        demandes de réservation qu'il faut annuler avant remise en
+        circulation.</para>
 
         <screenshot>
           <screeninfo>Items waiting on the hold shelf too long</screeninfo>
@@ -20385,14 +20400,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="holdratios">
-        <title>Hold ratios</title>
+        <title>Ratios de réservations</title>
 
-        <para>Hold ratios help with collection development. Using this report
-        you will be able to see how many of your patrons have holds on items
-        and whether you should buy more. By default it will be set to the
-        library needing 3 items per hold that has been placed. The report will
-        tell you how many additional items need to be purchased to meet this
-        quota.</para>
+        <para>Le ratio des réservations est une aide au développement des
+        collections. Le rapport permet de connaitre les documents qui sont
+        beaucoup réservés; cela peut être une indication pour commander des
+        exemplaires supplémentaires.Par défaut le ratio est fixé à 3; donc si
+        un titre possède un exemplaire et que celui-ci à été réservé six fois,
+        le rapport vous propose de commander deux exemplaires
+        supplémentaires.</para>
 
         <screenshot>
           <screeninfo>Hold Ratios</screeninfo>
@@ -20408,8 +20424,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="transferstoreceive">
         <title>Transfers to receive</title>
 
-        <para>This report will list all of the items that Koha thinks are in
-        transit to your library.</para>
+        <para>Rapport qui remonte les exemplaires qui sont transférés dans
+        votre site et que vous êtes sensé réceptionner en les passant au
+        retour.</para>
 
         <screenshot>
           <screeninfo>Transfers to Receive</screeninfo>
@@ -20421,8 +20438,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If your transfers are late in arriving at your library you will
-        see a message stating how late your items are.</para>
+        <para>Si les documents transférés ne sont toujours pas réceptionnés,
+        il seront signalés 'en retard'</para>
 
         <screenshot>
           <screeninfo>Late transfers include warning messages</screeninfo>
@@ -20435,30 +20452,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <important>
-          <para>An item is considered late based on the number of days you
-          have entered in the <link
+          <para>Le délai au-delà duquel les documents sont considérés comme
+          étant en retard est fixé sous la préférence <link
           linkend="TransfersMaxDaysWarning">TransfersMaxDaysWarning</link>
-          system preference.</para>
+          .</para>
         </important>
       </section>
 
       <section id="overduesreport">
-        <title>Overdues</title>
+        <title>Retards</title>
 
         <important>
-          <para>For libraries with a large patron base, this report may take a
-          significant amount of time to run.</para>
+          <para>Le rapport peut mettre du temps à remonter des résultats si la
+          base des adhérents est relativement conséquente.</para>
         </important>
 
         <tip>
-          <para>Large libraries can choose to filter the report before it runs
-          by setting the <link
+          <para>il est conseillé de paramétrer les filtres qui sont sur la
+          gauche via la préférence <link
           linkend="FilterBeforeOverdueReport">FilterBeforeOverdueReport</link>
-          system preference to 'Require'.</para>
+          .</para>
         </tip>
 
-        <para>This report will list all items that are overdue at your
-        library.</para>
+        <para>Ci dessous, s'affiche tous les retards d'un site.</para>
 
         <screenshot>
           <screeninfo>Overdues List</screeninfo>
@@ -20470,25 +20486,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The report can be filtered using the menu options found on the
-        left of the report.</para>
+        <para>On peut filtrer les documents en fonction d'une catégorie de
+        document et/ou catégorie de document.</para>
       </section>
 
       <section id="overduesfines">
-        <title>Overdues with fines</title>
+        <title>Retards avec amendes</title>
 
         <para></para>
       </section>
     </section>
 
     <section id="trackinhouse">
-      <title>Tracking Inhouse Use</title>
+      <title>Suivi des consultations sur place</title>
 
-      <para>Many libraries track the use of items within the library. This is
-      possible within Koha with the use of one or more <link
-      linkend="addstatspatron">Statistical Patrons</link>. When collecting
-      items that have been used within the library, you will want to check
-      them out to your statistical patron:</para>
+      <para>Chaque site peut avvoir un suivi des consultations sur place. Pour
+      cela il faut utilise un compte adhérent associé au type <link
+      linkend="addstatspatron">Statistique</link>. Afin d'enrigistrer la
+      consultation du document, vous scanner le document comme une transaction
+      de prêt:</para>
 
       <screenshot>
         <screeninfo>Check Out Items to Stats Patron</screeninfo>
@@ -20500,8 +20516,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Instead of marking the item as 'checked out' the system will
-      record that the item was used in house:</para>
+      <para>Au lieu de lister le document comme étant 'emprunté', Koha mettra
+      à jour un compteur statistique:</para>
 
       <screenshot>
         <screeninfo>Local Use Recorded</screeninfo>
@@ -20513,8 +20529,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Repeat these steps for all items that have been used within the
-      library to keep accurate statistics for item use.</para>
+      <para>Ensuite répétez l'étape pour chaque document consultés sur
+      place</para>
     </section>
 
     <section id="processinglocations">
@@ -30398,7 +30414,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para><link
               linkend="AllowNotForLoanOverride">AllowNotForLoanOverride</link>
               : Decide if you want the staff to be able to checkout items
-              marked as &lsquo;not for loan'</para>
+              marked as ‘not for loan'</para>
             </listitem>
 
             <listitem>
