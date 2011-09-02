@@ -23556,10 +23556,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="serialsubinstaff">
-      <title>Subscriptions in Staff Client</title>
+      <title>Informations Abonnements depuis l'interface
+      professionnelle</title>
 
-      <para>Subscription information will appear on bibliographic records
-      under the 'Subscriptions' tab</para>
+      <para>Les informations de l'abonnement apparaissent sous le détail
+      bibliographique, à l'intérieur de l'onglet 'Abonnement'.</para>
 
       <screenshot>
         <screeninfo>Subscription Tab on Bibliographic Record</screeninfo>
@@ -23571,18 +23572,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Clicking the 'Subscription Details' link will take you to the
-      Subscription summary page in the staff client.</para>
+      <para>Cliquez sur le lien 'Details de l'abonnement' pour rebondir au
+      niveau de la page 'Informations de l'abonnements'.</para>
     </section>
 
     <section id="serialsubinopac">
-      <title>Subscriptions in OPAC</title>
+      <title>Abonnements à l'OPAC</title>
 
-      <para>When viewing the subscription in the OPAC there will be several
-      options.</para>
+      <para>Plusieurs options pour voir les informations d'abonnements à
+      l'OPAC.</para>
 
-      <para>Like in the staff client, there will be a Subscriptions tab on the
-      bibliographic record.</para>
+      <para>L'onglet 'Abonnement' sous le détail bibliographique.</para>
 
       <screenshot>
         <screeninfo>Subscriptions Tab in OPAC</screeninfo>
@@ -23594,18 +23594,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Under this tab will appear the number of issues you chose when
-      setting up the subscription or in your <link
+      <para>Depuis cet onglet vous verrez le nombre de fascicule qui
+      correspond au paramétrage de la préférence système <link
       linkend="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</link>
-      system preference. Clicking the 'More details' link will provide you
-      with additional information about the serial history. You can set the
-      default view of a serial in the OPAC with the <link
-      linkend="SubscriptionHistory">SubscriptionHistory</link> system
-      preference.</para>
+      . Cliquez sur 'Plus de details' pour accéder à l'état de collection. La
+      présentation de l'état de collection peut se configurer à partir de la
+      préférence système <link
+      linkend="SubscriptionHistory">SubscriptionHistory</link> .</para>
 
-      <para>There are two views, compact and full. The compact serial
-      subscription will show basic information regarding the
-      subscription</para>
+      <para>Il existe deux modes de présentation :synthèse ou liste
+      complète.Ci dessous un exemple de la forme 'compacte'</para>
 
       <screenshot>
         <screeninfo>Compact Serial View</screeninfo>
@@ -23617,8 +23615,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Whereas the full view shows extensive details, broken out by year,
-      regarding the subscription</para>
+      <para>Ci-dessous un exemple de la forme 'complète'</para>
 
       <screenshot>
         <screeninfo>Full Serial View</screeninfo>
@@ -23632,11 +23629,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="serialclaims">
-      <title>Claim Late Serials</title>
+      <title>Réclamation des fascicules</title>
 
-      <para>Koha can send email messages to your serial vendors if you have
-      late issues. To the left of the main serials page there is a link to
-      'Claims'</para>
+      <para>Koha peut envoyer des courriels aux fournisseurs qui on des
+      fascicules en retards. A la gauche de la page 'Périodiques' il y a le
+      lien 'Réclamations'</para>
 
       <screenshot>
         <screeninfo>Link to Claims on Serials Menu</screeninfo>
@@ -23648,8 +23645,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>The links to claims also appears to the left of the subscription
-      detail page</para>
+      <para>Le lien 'réclamations' apparaît également au niveau de l'écran
+      'Informations de l'abonnement'</para>
 
       <screenshot>
         <screeninfo>Link to Claims on the Serials Menu</screeninfo>
@@ -23661,8 +23658,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>If you don't have a claim notice defined yet you will see a
-      warning message that you need to first define a notice.</para>
+      <para>Si vous n'avez pas défini de message pour les réclamations de
+      fascicules, vous aurez ce type d'avertissement.</para>
 
       <screenshot>
         <screeninfo>Missing Claims Notice Warning</screeninfo>
@@ -23674,9 +23671,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Clicking 'Claims' will open a report that will ask you to choose
-      from your various serial vendors to generate claims for late
-      issues.</para>
+      <para>Les réclamations sont classées par fournisseur. Ensuite vous
+      pouvez filtrer la liste des retards par date, par site et par statut par
+      exemple</para>
 
       <screenshot>
         <screeninfo>Serial Claims</screeninfo>
@@ -23688,19 +23685,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>From the list of late issues you can choose which ones you want to
-      send a claim email to by clicking the checkbox to the left of late
-      issue, choosing the notice template to use and clicking the 'Send
-      notification' button.</para>
+      <para>Si vous voulez envoyer par courriel une relance au fournisseur,
+      sélectionnez le type de message à adresser au niveau de 'sélectionner
+      une notification' puis cliquez sur 'Envoyer la notification'. Pensez à
+      sélectionner à la gauche du tableau , les numéros que vous voulez voir
+      apparaître dans la relance.</para>
     </section>
 
     <section id="serialexpiration">
-      <title>Check Serial Expiration</title>
+      <title>Date d'expiration des abonnements</title>
 
-      <para>When adding serials you enter a subscription length, using the
-      check expiration tool you can see when your subscriptions are about to
-      expire. To use the tool click the link to 'Check expiration' on the
-      serials menu.</para>
+      <para>Lorsque vous créez une notice d'abonnement, vous indiquez la durée
+      de celui-ci. Koha contêole cette durée afin de vous informer plus tard
+      qu'il faudra renouveler à la bonne date l'abonnement, A la gauche de la
+      page 'Périodiques', vous avez un lien 'Vérifier dates
+      d'expiration'.</para>
 
       <screenshot>
         <screeninfo>Check Serial Expiration</screeninfo>
@@ -23712,12 +23711,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>In the form that appears you need to enter at least a date to
-      search by.</para>
+      <para>Vous avez un critère de date pour retrouver les
+      abonnements.</para>
 
-      <para>In your results you will see all subscriptions that will expire
-      before the date you entered. From there you can choose to view the
-      subscription further or renew it in one click.</para>
+      <para>Les résultats affichent les titres dans les dates d'expiration
+      sont antérieures à la date saisie lors de la recherche. A la droite de
+      chaque titre vous avez un lien 'Renouveler'.</para>
 
       <screenshot>
         <screeninfo>Serial Expiration Search Results</screeninfo>
