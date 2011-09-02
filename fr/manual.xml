@@ -10088,31 +10088,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="basicparams">
-      <title>Basic Parameters</title>
+      <title>Paramètres de base</title>
 
-      <para><emphasis>Get there:</emphasis> More &gt; Administration</para>
+      <para><emphasis>Situé sous :</emphasis> Accueil &gt;
+      Administration</para>
 
       <important>
-        <para>Configure all 'parameters' in the order they appear.</para>
+        <para>Configurer les 'paramètres' dans l'ordre dans lequel ils sont
+        proposés.</para>
       </important>
 
       <section id="libsgroups">
-        <title>Libraries &amp; Groups</title>
+        <title>Sites et Groupes</title>
 
-        <para>When setting up your Koha system you will want to add
-        information for every library that will be sharing your system. This
-        data is used in several areas of Koha.</para>
+        <para>Un site correspond à un établissement où sont regroupées des
+        collections. Données indispensables dans Koha car utilisées à
+        plusieurs reprises dans différents endroits de l'application.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Basic Parameters &gt; Libraries, branches and groups</para>
+            <para><emphasis>Situé sous:</emphasis> Accueil &gt; Administration
+            &gt; Paramètres de base&gt; Sites et groupes</para>
           </listitem>
         </itemizedlist>
 
-        <para>When visiting this page you are presented with a list of the
-        libraries and groups that have already been added to the
-        system.</para>
+        <para>Exemple d'écran si des sites existent déjà.</para>
 
         <screenshot>
           <screeninfo>Library List</screeninfo>
@@ -10135,35 +10135,36 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <section id="addingalibrary">
-          <title>Adding a Library</title>
+          <title>Ajouter un site</title>
 
-          <para>To add a new library:</para>
+          <para>Pour ajouter un nouveau site:</para>
 
           <itemizedlist>
             <listitem>
-              <para>Click 'New Library'</para>
+              <para>Cliquez sur 'Ajouter site'</para>
             </listitem>
 
             <listitem>
-              <para>Fill in the data requested on the form that follows</para>
+              <para>Indiquez les données obligatoires dans le formulaire
+              suivant :</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>Of the fields listed, only 'Library code' and 'Name'
-                  are required</para>
+                  <para>Les seuls champs obligatoires sont : le code et
+                  l'intitulé du site.</para>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>Be sure to enter a library email address to make
-                    sure that notices are sent to and from the right
-                    address</para>
+                    <para>Un code ne doit pas dépasser 10 caractères. Pensez à
+                    indiquer une adresse email et une adresse postale (pour
+                    les relances et notifications)</para>
                   </important>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>An IP address is required if you have enabled
+                    <para>Une adresse IP est nécessaire si vous avez activé
                     AutoLocation</para>
                   </important>
                 </listitem>
@@ -10183,10 +10184,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="editingalibrary">
-          <title>Editing/Deleting a Library</title>
+          <title>Editer/Supprimer un site</title>
 
-          <para>You will be unable to delete any library that has patrons or
-          items attached to it.</para>
+          <para>Vous ne pourrez pas supprimer un code site si celui-ci est lié
+          à des comptes d'adhérents et ou à des notices d'exemplaires. Vous
+          aurez un avertissement de ce type.</para>
 
           <screenshot>
             <screeninfo>Staff will be presented with a warning when trying to
@@ -10199,20 +10201,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>Each library will have an 'Edit' link to the right of it.
-          Click this link to edit/alter details associated with the library in
-          question.</para>
+          <para>Chaque site à un lien "Modifier" à sa droite.</para>
 
-          <important>
-            <para>You will be unable to edit the 'Library code'</para>
-          </important>
+          <para></para>
         </section>
 
         <section id="addinglibgroup">
-          <title>Adding a group</title>
+          <title>Ajouter un groupe</title>
 
-          <para>To add a Search Domain or Library Property Group click the
-          'New Group' button at the top of the screen</para>
+          <para>Un groupe de sites correspond à un domaine de recherche à
+          l'intérieur d'un réseau. Ce domaine est un filtre de recherche
+          supplémentaire proposé en recherche avancée. Cliquez sur 'Ajouter
+          groupe' en haut de l'écran</para>
 
           <screenshot>
             <screeninfo>Add group form</screeninfo>
@@ -10224,15 +10224,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>Of the fields on the group form, 'Category code' and 'Name'
-          are the only required fields</para>
+          <para>Au niveau du formulaire 'groupe site' seuls les champs code et
+          intitulé sont obligatoires. Code limité à 10 caractères.</para>
 
           <section id="searchdomaingroups">
-            <title>Search Domain Groups</title>
+            <title>Recherche - groupe sites</title>
 
-            <para>Search Domain Groups allow you to search a group of
-            libraries at the same time instead of searching just one library
-            or all libraries.</para>
+            <para>En recherche avancée, le groupe de sites vous permet de
+            rechercher à l'intérieur d'un domaine représentant une partie du
+            réseau.</para>
 
             <screenshot>
               <screeninfo>Search Domain Groups</screeninfo>
@@ -10244,8 +10244,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </mediaobject>
             </screenshot>
 
-            <para>To see Search Domain Groups in action visit the staff client
-            advanced search page in your Koha system:</para>
+            <para>Utilisez le module 'Rechercher' :</para>
 
             <screenshot>
               <screeninfo>Library group search on staff client</screeninfo>
@@ -10259,10 +10258,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </section>
 
           <section id="libpropertygroups">
-            <title>Library Property Groups</title>
+            <title>Groupe sites - Properties</title>
 
-            <para>You can assign specific categories to your libraries by
-            adding groups for them</para>
+            <para>En créant un code groupe, vous pouvez associer ce dernier à
+            la catégorie 'Properties'.</para>
 
             <screenshot>
               <screeninfo>Library Property Groups</screeninfo>
@@ -10274,8 +10273,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </mediaobject>
             </screenshot>
 
-            <para>Properties are then applied to libraries via the add or edit
-            library form</para>
+            <para>Le groupe de type 'Properties' n'est pas utilisé en
+            recherche avancée.</para>
 
             <screenshot>
               <screeninfo>Groups on the Add/Modify library form</screeninfo>
@@ -10291,20 +10290,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="itemtypeadmin">
-        <title>Item Types</title>
+        <title>Types de document</title>
 
-        <para>Koha allows you to organize your collection by item types and
-        collection codes.</para>
+        <para>Vous pouvez découper vos collections avec des types de document.
+        Généralement, ils servent à affiner les règles de circulation.
+        Eventuellement, ils peuvent également servir de filtre de recherche
+        depuis le module 'Rechercher' et l'option 'recherche avancée'.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Basic Parameters &gt; Item Types</para>
+            <para><emphasis>Situé sous:</emphasis> Accueil &gt; Administration
+            &gt; Paramètrers de base &gt; Types de document</para>
           </listitem>
         </itemizedlist>
 
-        <para>Item types typically refer to the material type (book, cd, dvd,
-        etc), but can be used in any way that works for your library.</para>
+        <para>Généralement les types de document sont : CD, DVD, IMPRIMES,
+        REVUES. Si le type de document sert à affiner les règles de prêt, on
+        peut faire des listes plus fines : IMPRIMES 8 JOURS, IMPRIMES 15
+        JOURS, BD ADULTES, BD JEUNSESSE....</para>
 
         <screenshot>
           <screeninfo>Item Types</screeninfo>
@@ -10317,10 +10320,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <section id="additemtype">
-          <title>Adding Item Types</title>
+          <title>Créer un type de document</title>
 
-          <para>To add a new item type, simply click the 'New Item Type'
-          button at the top of the Item Types page.</para>
+          <para>Pour ajouter un type de document, cliquez sur 'Ajouter type de
+          document'.</para>
 
           <screenshot>
             <screeninfo>Sample DVD Item Type</screeninfo>
@@ -10334,44 +10337,45 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>In the 'Item Type' field, enter a short code for your item
-              type</para>
+              <para>Champ 'Type de document' : entrez un code (limité à 10
+              caractères)</para>
             </listitem>
 
             <listitem>
-              <para>The description is the plain text definition of the item
-              type</para>
+              <para>Champ 'Description' : entrez un intitulé</para>
             </listitem>
 
             <listitem>
-              <para>You can choose to have an image associated with your item
-              type</para>
+              <para>Vous pouvez associer le type de document à un
+              pictogramme</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>You can choose from a series of image
-                  collections</para>
+                  <para>Vous pouvez choisir parmi les images standards de
+                  koha</para>
                 </listitem>
 
                 <listitem>
-                  <para>You can link to a remote image</para>
+                  <para>Vous pouvez déclarer un lien pour remonter
+                  l'image</para>
                 </listitem>
 
                 <listitem>
-                  <para>Or you can just have no image associated with the item
-                  type</para>
+                  <para>ou bien ne pas associer le type de document à une
+                  image</para>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>To have your item type images appear in the OPAC you
-                    need to set noItemTypeImages to 'Show'</para>
+                    <para>afin que l'image apparaîsse à l'OPAC vous avez
+                    besoin de paramétrer la préférence système
+                    noItemTypeImages à 'Afficher'</para>
                   </important>
 
                   <itemizedlist>
                     <listitem>
-                      <para><emphasis>Get there: </emphasis>More &gt;
-                      Administration &gt; Global System Preferences &gt; <link
+                      <para><emphasis>Situé sous: </emphasis>Accueil &gt;
+                      Administration &gt; Préférence système &gt; <link
                       linkend="adminprefs">Admin</link></para>
                     </listitem>
                   </itemizedlist>
@@ -10380,57 +10384,57 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>For items that do not circulate, check the 'Not for loan'
-              options</para>
+              <para>Pour un type de document non empruntable, cochez la
+              mention 'Exclu du prêt'</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>Items marked 'Not for loan' will appear in the
-                  catalog, but cannot be checked out to patrons</para>
+                  <para>Les documents auront la mention 'Non empruntable' qui
+                  s'affichera au catalogue et les adhérents ne pourront pas
+                  emprunter ces documents</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>Enter the total number of renewals allowed for the item
-              type in the 'Renewals' box</para>
+              <para>Entrez le nombre de renouvellements autorisés</para>
             </listitem>
 
             <listitem>
-              <para id="rentalcharge">For items that you charge a rental fee
-              for, enter the total fee you charge in the 'Rental charge'
-              field</para>
+              <para id="rentalcharge">Pour les documents dont le prêt est
+              payant, entrez le montant dans le champ 'Charge'</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Do not enter symbols in this field, only numbers and
-                    decimal points (ex. $5.00 should be entered as 5 or
-                    5.00)</para>
+                    <para>Ne pas indiquer de symbole monétaire, seulement des
+                    chiffres et le point pour la décimale (exemples : 5 ou
+                    5.10)</para>
                   </important>
                 </listitem>
 
                 <listitem>
-                  <para>This will charge the patron on checkout</para>
+                  <para>Montant qui sera repris dans le compte adhérent au
+                  niveau de l'onglet 'Amendes'</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>When finished, click 'Save Changes'</para>
+              <para>Cliquez sur 'Enregistrer'</para>
 
               <itemizedlist>
                 <listitem>
                   <tip>
-                    <para>All fields, with the exception of the 'Item Type'
-                    will be editable from the Item Types list</para>
+                    <para>Tous les champs sont éditables sauf le champ 'Type
+                    de document' contenant le code.</para>
                   </tip>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>Your new item type will now appear on the list</para>
+              <para>Votre nouveau code s'affiche dans la liste</para>
 
               <screenshot>
                 <screeninfo>New DVD Item Type</screeninfo>
@@ -10446,27 +10450,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="edititemtype">
-          <title>Editing Item Types</title>
+          <title>Modifier un Type de document</title>
 
-          <para>Each item type has an Edit button beside it. To edit an item
-          simply click the 'Edit' link.</para>
+          <para>Chaque type de document à un lien 'Modifier' à sa
+          droite'.</para>
 
           <important>
-            <para>You will not be able to edit the code you assigned as the
-            'Item Type' but you will be able to edit the description for the
-            item.</para>
+            <para>Vous ne pourrez pas changer le code du type document mais
+            par contre vous pourrez changer son intitulé.</para>
           </important>
         </section>
 
         <section id="deleteitemtype">
-          <title>Deleting Item Types</title>
+          <title>Supprimer un Type de document</title>
 
-          <para>Each item has a Delete button beside it. To delete an item,
-          simply click the 'Delete' link.</para>
+          <para>En face chaque type de document, un lien 'Supprimer'.</para>
 
           <important>
-            <para>You will not be able to delete item types that are being
-            used by items within your system.</para>
+            <para>Vous ne pourrez pas supprimer un type de document qui est
+            associé à des notices d'exemplaires</para>
           </important>
 
           <screenshot>
@@ -10483,24 +10485,34 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="authorizedvalues">
-        <title>Authorized Values</title>
+        <title>Valeurs autorisées</title>
 
-        <para>Authorized values can be used in several areas of Koha. One
-        reason you would add an authorized value category would be to control
-        the values that can be entered into MARC fields by catalogers.</para>
+        <para>Les valeurs autorisées peuvent être utilisées à différents
+        endroits dans Koha. Chaque liste de valeurs est représentée par un
+        code catégorie. Ce code permet de regrouper et classer les
+        valeurs.</para>
+
+        <para>Exemple; les valeurs autorisées sont des listes de valeurs
+        associées aux zones codées MARC (codes de langues, codes de
+        fonctions...etc). Elles permettent de contrôler la saisie dans
+        certaines zones de la notice bibliographique et évitent donc les
+        erreurs.</para>
+
+        <para>Il existe également des listes de valeurs pour les modules :
+        adhérents, circulation et acquisitions.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Basic Parameters &gt; Authorized Values</para>
+            <para><emphasis>Situé sous:</emphasis> Accueil &gt; Administration
+            &gt; Paramètres de base &gt; Valeurs autorisées</para>
           </listitem>
         </itemizedlist>
 
         <section id="existingauthvalues">
-          <title>Existing Values</title>
+          <title>Valeurs pré-définies</title>
 
-          <para>Koha installs with pre-defined values that your library is
-          likely to use, for instance 'Lost'.</para>
+          <para>Koha installe des valeurs pré-définies sous des codes
+          catégorie pré-définis également</para>
 
           <itemizedlist>
             <listitem>
@@ -10508,7 +10520,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Used for acquisitions statistical purposes</para>
+                  <para>Code catégorie où l'on va indiquer des valeurs utiles
+                  pour les statistiques des acquisitions</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10518,7 +10531,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Used for acquisitions statistical purposes</para>
+                  <para>Code catégorie où l'on va indiquer des valeurs utiles
+                  pour les statistiques des acquisitions</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10528,8 +10542,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Values for custom patron notes that appear on the
-                  circulation screen and the OPAC</para>
+                  <para>Code catégorie où l'on va indiquer des messages 'type'
+                  qui seront adressés aux adhérents (exemple : vous avez
+                  oublié votre carte d'identité...etc).</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10539,7 +10554,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Used for patron statistical purposes</para>
+                  <para>Code catégorie où l'on va indiquer des valeurs utiles
+                  pour les statistiques des adhérents</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10549,7 +10565,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Used for patron statistical purposes</para>
+                  <para>Code catégorie où l'on va indiquer des valeurs utiles
+                  pour les statistiques des adhérents</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10559,9 +10576,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Is the shelving cart location, used by <link
+                  <para>Emplacement sur l'étagère, utilisé par <link
                   linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>
-                  and <link
+                  et <link
                   linkend="ReturnToShelvingCart">ReturnToShelvingCart</link></para>
                 </listitem>
               </itemizedlist>
@@ -10572,8 +10589,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Collection codes (appears when cataloging and working
-                  with items)</para>
+                  <para>Codes Collection (liste de valeurs autorisées 'CCODE'
+                  associée à la zone MARC 099$t généralement)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10583,8 +10600,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Descriptions for items marked as damaged (appears when
-                  cataloging and working with items)</para>
+                  <para>Intitulé signalant l'exemplaire comme étant 'abîmé';
+                  Intitulé qui apparaît dans le catalogue et qui peut bloquer
+                  les demandes de réservation futures.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10594,9 +10612,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>General Holdings: Acquisition Status Designator ::
-                  This data element specifies acquisition status for the unit
-                  at the time of the holdings report.a</para>
+                  <para>Zone 9XX : Statut acquisitions</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10606,7 +10622,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>General Holdings: Completeness Designator</para>
+                  <para>Zone 9XX : situation de la collection (complète,
+                  incomplète...)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10616,7 +10633,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Physical Form Designators</para>
+                  <para>zone 9XX : Indication forme physique</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10626,9 +10643,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>General Holdings: Retention Designator :: This data
-                  element specifies the retention policy for the unit at the
-                  time of the holdings report.</para>
+                  <para>Zone 9XX : état de conservation</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10638,7 +10653,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>General Holdings: Type of Unit Designator</para>
+                  <para>Zone 9XX : type d'unité</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10648,8 +10663,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Shelving location (usually appears when adding or
-                  editing an item)</para>
+                  <para>Localisation à l'intérieur d'un site (fait
+                  généralement référence à des espaces ou des pôles : Adultes,
+                  Jeunesse...)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10659,15 +10675,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Descriptions for the items marked as lost (appears
-                  when adding or editing an item)</para>
+                  <para>Raisons de la perte du document</para>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>Values given to lost statuses should be numeric and
-                    not alphabetical in order for statuses to appear
-                    properly</para>
+                    <para>les codes doivent êtres des chiffres
+                    (1,2,3..)</para>
                   </important>
                 </listitem>
               </itemizedlist>
@@ -10678,7 +10692,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Values for manual invoicing types</para>
+                  <para>Types de factures</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10688,7 +10702,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Reasons why a title is not for loan</para>
+                  <para>Raisons de l'impossibilité d'emprunter le
+                  document</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10698,10 +10713,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The location to be used for <link
+                  <para>Localisation utilisée par <link
                   linkend="NewItemsDefaultLocation">NewItemsDefaultLocation</link>
-                  (change description as desired), also the location expected
-                  by <link
+                  et <link
                   linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>.</para>
                 </listitem>
               </itemizedlist>
@@ -10712,7 +10726,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Restricted status of an item</para>
+                  <para>Statuts restreints d'un exemplaire</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10722,8 +10736,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>List of patron suggestion reject or accept reasons
-                  (appears when managing suggestions)</para>
+                  <para>Raisons d'une validation ou d'un rejet pour une
+                  suggestion d'achat (Cf. Gestion des suggestions)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10733,8 +10747,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Description of a withdrawn item (appears when adding
-                  or editing an item)</para>
+                  <para>Retirer l'exempaire des rayons ( intitulé qui apparaît
+                  dans le catalogue)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10744,8 +10758,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>A generic authorized value field that can be used
-                  anywhere you need a simple yes/no pull down menu.</para>
+                  <para>Liste générique qui peut être utilisée n'importe où,
+                  si vous avez besoin d'activer un menu avec les mention 'Oui'
+                  et 'Non'.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -10753,16 +10768,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="newauthvalcat">
-          <title>Add new Authorized Value Category</title>
+          <title>Ajouter une nouvelle catégorie</title>
 
-          <para>In addition to the existing categories that come by default
-          with Koha, librarians can add their own authorized value categories
-          to control data that is entered into the system. To add a new
-          category:</para>
+          <para>En ajoutant une nouvelle catégorie,vous pourrez créer une
+          nouvelle liste de valeurs autorisées:</para>
 
           <itemizedlist>
             <listitem>
-              <para>Click 'New Category'</para>
+              <para>Cliquez sur 'Ajouter Catégorie'</para>
 
               <screenshot>
                 <screeninfo>New Authorized Category form</screeninfo>
@@ -10776,34 +10789,33 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Limit your Category to 11 characters (something short to
-              make it clear what the category is for)</para>
+              <para>Le code catégorie est limité à 10 caractères.</para>
             </listitem>
 
             <listitem>
-              <para>When adding a new category you're asked to create at least
-              one authorized value</para>
+              <para>Lorsque vous créez un code catégorie, vous devez
+              l'associer à une valeur autorisée.</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>Enter a code for your Authorized Value into the
-                  'Authorized value' field</para>
+                  <para>Entrez le code de la valeur autorisée dans la zone
+                  'Valeur autorisée'.</para>
                 </listitem>
 
                 <listitem>
-                  <para>Use the Description field for the actual value that
-                  will be entered</para>
+                  <para>Indiquez une description pour la valeur
+                  autorisée</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>Click 'Save'</para>
+              <para>Cliquez sur 'Enregistrer'</para>
             </listitem>
 
             <listitem>
-              <para>Your new category and value will appear on the list of
-              Authorized Values</para>
+              <para>La nouvelle catégorie s'affichera à la suite des autres
+              catégories</para>
 
               <screenshot>
                 <screeninfo>Custom Authorized Value on list of
@@ -10820,14 +10832,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="newauthval">
-          <title>Add new Authorized Value</title>
+          <title>Ajouter une nouvelle valeur autorisée</title>
 
-          <para>New authorized values can be added to any existing or new
-          category. To add a value:</para>
+          <para>Une valeur autorisée est classée sous une catégorie. Donc
+          avant de créer la valeur autorisée, il faut choisir le code
+          catégorie où sera classée la valeur.Pour ajouter une valeur:</para>
 
           <itemizedlist>
             <listitem>
-              <para>Click 'New authorized value for ...'</para>
+              <para>Cliquez sur 'Ajouter valeur autorisée pour...'</para>
 
               <screenshot>
                 <screeninfo>New Authorized Value form</screeninfo>
@@ -10841,22 +10854,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Enter a code for your Authorized Value into the
-              'Authorized value' field</para>
+              <para>Entrez le code de la valeur autorisée dans la zone 'Valeur
+              autorisée'.</para>
             </listitem>
 
             <listitem>
-              <para>Use the Description field for the actual value that will
-              be entered</para>
+              <para>Indiquez une description pour la valeur autorisée</para>
             </listitem>
 
             <listitem>
-              <para>Click 'Save'</para>
+              <para>Cliquez sur 'Enregistrer'</para>
             </listitem>
 
             <listitem>
-              <para>The new value will appear in the list along with existing
-              values</para>
+              <para>La nouvelle valeur s'affiche dans la liste</para>
 
               <screenshot>
                 <screeninfo>List of authorized values in MARC504
@@ -10875,21 +10886,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="patscirc">
-      <title>Patrons &amp; Circulation</title>
+      <title>Adhérents &amp; Circulation</title>
 
-      <para>Settings for controlling circulation and patron
-      information.</para>
+      <para>Rubrique qui traite des paramères des adhérents et de la
+      circultation.</para>
 
       <section id="patcats">
-        <title>Patron Categories</title>
+        <title>Categories adhérent</title>
 
-        <para>Patron categories allow you to organize your patrons into
-        different roles, age groups, and patron types.</para>
+        <para>Les catégories adhérent correspondent à des types d'abonnements
+        qui peuvent s'organiser autour de tranches d'âges ou/et de rôles et/ou
+        de types adhérents. (exemples : Adultes, Jeunes, Collectivités,
+        Bibliothécaires,....)</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Patron Categories</para>
+            <para><emphasis>Allez sous:</emphasis> Accueil &gt; Administration
+            &gt; Adhérents et Circulation &gt; Categories Adhérent</para>
           </listitem>
         </itemizedlist>
 
@@ -10903,81 +10916,82 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Patrons are assigned to one of six main categories:</para>
+        <para>Chaque catégorie adhérent doit associée à l'un des types
+        suivants:</para>
 
         <itemizedlist>
           <listitem>
-            <para>Adult</para>
+            <para>Adulte</para>
 
             <itemizedlist>
               <listitem>
-                <para>Most common patron type, usually used for a general
-                'Patron' category.</para>
+                <para>type 'générique' qui désigne une personne physique ayant
+                atteint sa majorité.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Child</para>
+            <para>Enfant</para>
 
             <itemizedlist>
               <listitem>
-                <para>Children patrons can have a guardian to be attached to
-                them.</para>
+                <para>type 'générique' qui désigne une personne physique
+                n'ayant pas atteint sa majorité.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Staff</para>
+            <para>Bibliothécaire</para>
 
             <itemizedlist>
               <listitem>
-                <para>Patrons within the staff category will have access to
-                the staff client.</para>
+                <para>Adhérents qui correspondent au personnel de la
+                Bibliothèque.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Organizational</para>
+            <para>Collectivité</para>
 
             <itemizedlist>
               <listitem>
-                <para>Organizational patrons are organizations. Organizations
-                can be used as guarantors for Professional patrons.</para>
+                <para>Ecoles,Bibliothèques,Théâtres....</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Professional</para>
+            <para>Professionnel</para>
 
             <itemizedlist>
               <listitem>
-                <para>Professional patrons can be linked to Organizational
-                patrons</para>
+                <para>Adhérents associés à une collectivité et inscits à titre
+                professionnel.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Statistical</para>
+            <para>Statistiques</para>
 
             <itemizedlist>
               <listitem>
-                <para>This patron type is used strictly for statistical
-                purposes, such as in house use of items.</para>
+                <para>Adhérents qui n'ont pas le droit d'emprunter. Adhérents
+                qui peuvent uniquement consulter les documents sur
+                place.</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
         <section id="addingpatroncat">
-          <title>Adding a patron category</title>
+          <title>Ajouter une catégorie adhérent</title>
 
-          <para>To add a new patron category click 'New Category' at the top
-          of the page</para>
+          <para>Pour ajouter une nouvelle catégorie adhérent, cliquez sur
+          'Ajouter Categorie'.</para>
 
           <screenshot>
             <screeninfo>New patron category form</screeninfo>
@@ -10991,22 +11005,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>The 'Category Code' is an identifier for your new
-              code.</para>
+              <para>La catégorie sera identifiée via un code.</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>The category code is limited to 10 characters
-                    (numbers and letters)</para>
+                    <para>Le code est limité à 10 caractères (numériques,
+                    alphabétiques, alphanumériques)</para>
                   </important>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>This field is required in order to save your patron
-                    category. If left blank you will be presented with an
-                    error.</para>
+                    <para>Des zones sont obligatoires (codes, type,
+                    description...).En cas d'oubli, un message d'erreur de ce
+                    type vous signale les zones obligatoires.</para>
 
                     <screenshot>
                       <screeninfo>Missing fields error</screeninfo>
@@ -11023,15 +11036,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Enter a plain text version of the category in the
-              'Description' field.</para>
+              <para>Indiquez un intitulé à la catégorie dans la zone
+              'Description'.</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>This field is required in order to save your patron
-                    category. If left blank you will be presented with an
-                    error.</para>
+                    <para>En cas d'oubli, un message d'erreur de ce type vous
+                    signale les zones obligatoires.</para>
 
                     <screenshot>
                       <screeninfo>Missing fields error</screeninfo>
@@ -11048,23 +11060,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Enrollment period (in months) should be filled in if you
-              have a limited enrollment period for your patrons (eg. Student
-              cards expire after 9 months or until a specific date)</para>
+              <para>Indiquez la durée de l'abonnement : soit en précisant un
+              nombre de mois soit en précisant une date de fin.</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>You cannot enter both a month limit and a date
-                    until. Choose to enter either one or the other.</para>
+                    <para>Vous devez choisir l'un des deux modes mais pas les
+                    deux à la fois.</para>
                   </important>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>This field is required in order to save your patron
-                    category. If left blank you will be presented with an
-                    error.</para>
+                    <para>Ce champs est obligatoire.En cas d'oubli, vous aurez
+                    un message d'avertissement.</para>
 
                     <screenshot>
                       <screeninfo>Missing fields error</screeninfo>
@@ -11081,40 +11091,38 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Some patron categories can have a minimum age (in years)
-              requirement associated with them, enter this age in the 'Age
-              required'</para>
+              <para>Vous pouvez associer la catégorie à un âge minimum : zone
+              'Age requis'</para>
             </listitem>
 
             <listitem>
-              <para>Patron categories can also have a maximum age (in years)
-              associated with them (such as children), enter this age in the
-              'Upperage limit'</para>
+              <para>Vous pouvez associer la catégorie à un âge maximum (par
+              exemple pour les enfants) : zone 'Limite d'âge
+              supérieure'</para>
             </listitem>
 
             <listitem>
-              <para>If you charge a membership fee for your patrons (such as
-              those who live in another region) you can enter that in the
-              'Enrollment fee' field.</para>
+              <para>Indiquez le coût de l'abonnement dans 'Frais
+              d'inscription'.</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Only enter numbers and decimals in this field</para>
+                    <para>entrez uniquement des chiffres dans cette
+                    zone</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>If you want your patron to receive overdue notices, set
-              the 'Overdue notice required' to 'Yes'</para>
+              <para>Si vous souhaitez envoyer des relances à cette catégorie,
+              indiquez 'Oui' dans 'Message de retard demandé'</para>
             </listitem>
 
             <listitem>
-              <para>You can decide on a patron category basis if lost items
-              are shown in the staff client by making a choice from the 'Lost
-              items in staff client' pull down</para>
+              <para>Est-ce que la catégorie peut voir les documents déclarés
+              perdus?</para>
 
               <screenshot>
                 <screeninfo>Choose a value for 'Hide Lost Items'</screeninfo>
@@ -11129,31 +11137,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Note that this is only applicable in the staff
-                    client, so changing this value on patron categories who do
-                    not have access to the staff client won't make any
-                    difference</para>
+                    <para>Cette restriction s'applique uniquement à
+                    l'interface professionnelle donc pour les adhérents qui
+                    n'ont pas accès à Koha cela n'a pas d'incidence.</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>If you charge patrons for placing holds on items, enter
-              the fee amount in the 'Hold fee' field.</para>
+              <para>Si les réservations sont payantes, indiquez un montant
+              sous 'Coût Réservation'.</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Only enter numbers and decimals in this field</para>
+                    <para>entrez uniquement des chiffres dans cette
+                    zone</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>In the 'Category type' field choose one of the six main
-              parent categories</para>
+              <para>Depuis 'Type categorie' choisir un type d'adhérent</para>
 
               <screenshot>
                 <screeninfo>Six main patron categories</screeninfo>
@@ -11168,9 +11175,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>This field is required in order to save your patron
-                    category. If left blank you will be presented with an
-                    error.</para>
+                    <para>Ce champs est obligatoire.En cas d'oubli, vous aurez
+                    un message d'avertissement.</para>
 
                     <screenshot>
                       <screeninfo>Missing fields error</screeninfo>
@@ -11187,23 +11193,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Finally you can assign advanced messaging preferences by
-              default to a patron category</para>
+              <para>Enfin, vous pouvez activer les types de messages que
+              receveront les adhérents (préférences).</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Requires that you have <link
-                    linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
-                    enabled</para>
+                    <para>Cela suppose l'activation de la préférence système
+                    <link
+                    linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link></para>
                   </important>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>These can be changed for individual patrons, this
-                    setting is just a default to make it easier to set up
-                    messages for an entire category</para>
+                    <para>Ensuite le paramétrage des messages pourra être
+                    ajusté au cas par cas à l'intérieur des fiches des
+                    adhérents lors des inscriptions .</para>
                   </important>
                 </listitem>
               </itemizedlist>
@@ -11213,25 +11219,26 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="citytowns">
-        <title>Cities and Towns</title>
+        <title>Villes et communes</title>
 
-        <para>To standardize patron input you can define cities or towns
-        within your region so that when new patrons are added librarians
-        simply have to select the town from a list instead of having to type
-        the town and zip (or postal) code information.</para>
+        <para>Afin de gagner du temps et d'éviter des erreurs lors de la
+        saisie, vous pouvez rentrer dans Koha une liste de codes postaux et de
+        villes. Liste qui sera ensuite accessible depuis la fiche
+        adhérent.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Cities and Towns</para>
+            <para><emphasis>Allez sous:</emphasis> Accueil &gt; Administration
+            &gt; Adhérents et Circulation &gt; Villes et communes</para>
           </listitem>
         </itemizedlist>
 
         <section id="addingcity">
-          <title>Adding a City</title>
+          <title>Ajouter une ville</title>
 
-          <para>To add a new city, click the 'New City' button at the top of
-          the page and enter the city name, state and zip/postal code.</para>
+          <para>Pour ajouter une ville, cliquez sur le bouton 'Ajouter
+          commune'. Ensuite, indiquez le nom de la ville puis le code
+          postal.</para>
 
           <screenshot>
             <screeninfo>New city entry form</screeninfo>
@@ -11243,8 +11250,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>One you click Submit, your city will be saved and will be
-          listed on the Cities and Towns page</para>
+          <para>Cliquez sur 'Enregistrer'</para>
 
           <screenshot>
             <screeninfo>List of Cities</screeninfo>
@@ -11256,15 +11262,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>Cities can be edited or deleted at any time.</para>
+          <para>En face chaque intitulé de ville les liens 'Modifier' et
+          'Supprimer'.</para>
         </section>
 
         <section id="citiesonpatform">
-          <title>Viewing Cities on Patron Add Form</title>
+          <title>Voir les villes depuis la fiche adhérent</title>
 
-          <para>If you have defined local cities using the New city form, then
-          when adding or editing a patron record you will see those cities in
-          a pull down menu to make city selection easy.</para>
+          <para>La liste des villes est activée dans la fiche adhérent au
+          niveau des zones de l'adresse, à côté de la zone 'Ville'.</para>
 
           <screenshot>
             <screeninfo>Cities pull down on the patron record</screeninfo>
@@ -11276,31 +11282,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>This will allow for easy entry of local cities into the patron
-          record without risking the potential for typos or mistaken
-          zip/postal codes.</para>
+          <para>La liste déroulante permettra un gain de temps et évitera des
+          erreurs.</para>
         </section>
       </section>
 
       <section id="roadtypes">
-        <title>Road Types</title>
+        <title>Types de voies</title>
 
-        <para>To standardize patron input you can define road types within
-        your region so that when new patrons are added librarians simply have
-        to select the road from a list instead of having to type it in.</para>
+        <para>Afin de gagner du temps et d'éviter des erreurs lors de la
+        saisie, vous pouvez rentrer dans Koha une liste de voies(rue,
+        avenue...). Liste qui sera ensuite accessible depuis la fiche
+        adhérent.</para>
 
         <tip>
-          <para>If you want your patrons to have their road types abbreviated
-          all of the time then you can enter the appropriate abbreviations
-          here, if you'd like the road types to always be spelled out you can
-          do that here as well.</para>
+          <para>vous pouvez mettre dans cette liste les abréviations des voies
+          (av. ,bd...etc)</para>
         </tip>
 
         <section id="addroadtype">
-          <title>Adding Road Types</title>
+          <title>Ajouter un Type de voie</title>
 
-          <para>To add a road type, click 'New Road Type' and then enter the
-          road type the way you'd like it displayed.</para>
+          <para>Pour ajouter un type de voie, cliquez sur 'Ajouter Type de
+          voie'.</para>
 
           <screenshot>
             <screeninfo>New Road</screeninfo>
@@ -11312,8 +11316,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>Once you submit the form, your new road type will be listed on
-          the Road Types page</para>
+          <para>Indiquez le type de voie puis enregistrez;</para>
 
           <screenshot>
             <screeninfo>Roads in Koha</screeninfo>
@@ -11327,11 +11330,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="roadtypeonpatform">
-          <title>Viewing Road Types on Patron Add form</title>
+          <title>Voir les types de voie depuis la fiche adhérent</title>
 
-          <para>When adding or editing a patron, if you have road types
-          defined, there will be a pull down to choose the road type
-          from.</para>
+          <para>Liste déroulante au milieu des zones de l'adresse (Type de
+          rue).</para>
 
           <screenshot>
             <screeninfo>Road types on patron record</screeninfo>
@@ -11346,23 +11348,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="patronattributetypes">
-        <title>Patron Attribute Types</title>
+        <title>Attributs des adhérents</title>
 
-        <para>Patron attributes can be used to define custom fields to
-        associate with your patron records. In order to enable the use of
-        custom fields you need to set the <link
-        linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link>
-        system preference.</para>
+        <para>Vous pouvez associer un ou plusieurs code(s) attribut sous
+        chaque fiche adhérent. Mais avant il faut activer la préférence
+        système <link
+        linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link> .
+        Les attributs peuvent réprésentés une liste de codes
+        socio-professionnels, une liste de codes quartiers, une liste de
+        tranches d'âges, une liste de niveau d'études. Un attribut peut être
+        une information issue d'une base LDAP (identifiant).</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Patron attribute types</para>
+            <para><emphasis>Allez sous:</emphasis> Accueil &gt; Administration
+            &gt; Adhérents et Circulation &gt; Attributs adhérent</para>
           </listitem>
         </itemizedlist>
 
-        <para>A common use for this field would be for a student ID number or
-        a Driver's license number.</para>
+        <para>Cliquez sur 'Ajouter attribut adhérent'.</para>
 
         <screenshot>
           <screeninfo>List of Patron Attributes</screeninfo>
@@ -11375,10 +11379,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <section id="addpatattributes">
-          <title>Adding Patron Attributes</title>
+          <title>Ajouter un attribut</title>
 
-          <para>To add a new Patron Attribute Type, click the 'New Patron
-          Attribute Type' button at the top of the page</para>
+          <para>Pour ajouter un attribut adhérent, cliquez sur le bouton
+          'Ajouter Attribut'.</para>
 
           <screenshot>
             <screeninfo>Add Patron Attribute Type form</screeninfo>
@@ -11392,112 +11396,108 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>In the 'Patron attribute type code', enter a short code to
-              identify this field</para>
+              <para>Dans la 1ière zone, indiquez le code identifiant
+              l'attribut</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>This field is limited to 10 characters (numbers and
-                    letters only)</para>
+                    <para>Code limité à 10 caractères</para>
                   </important>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>This setting cannot be changed after an attribute is
-                    defined</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>In the 'Description' field, enter a longer (plain text)
-              explanation of what this field will contain</para>
-            </listitem>
-
-            <listitem>
-              <para>Check the box next to 'Repeatable' to let a patron record
-              have multiple values of this attribute.</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>This setting cannot be changed after an attribute is
-                    defined</para>
+                    <para>Un code ne peut pas être changé après avoir été
+                    enregistré</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>If 'Unique identifier' is checked, the attribute will be a
-              unique identifier which means, if a value is given to a patron
-              record, the same value cannot be given to a different
-              record.</para>
+              <para>Dans la zone 'Description' indiquez un intitulé décrivant
+              l'attribut</para>
+            </listitem>
+
+            <listitem>
+              <para>Est-ce que l'onformation est répétable?</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>This setting cannot be changed after an attribute is
-                    defined</para>
+                    <para>Ce point de paramètrage ne peut pas être changé une
+                    fois le code enregistré.</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>Check 'Allow password' to make it possible to associate a
-              password with this attribute.</para>
-            </listitem>
-
-            <listitem>
-              <para>Check 'Display in OPAC' to display this attribute on a
-              patron's details page in the OPAC.</para>
-            </listitem>
-
-            <listitem>
-              <para>Check 'Searchable' to make this attribute searchable in
-              the staff patron search.</para>
-            </listitem>
-
-            <listitem>
-              <para>Authorized value category; if one is selected, the patron
-              record input page will only allow values to be chosen from the
-              authorized value list.</para>
+              <para>Est-ce que la valeur de l'attribut est 'unique' ? La
+              donnée de l'attribut signalée comme étant 'unique' ne pourra pas
+              être placée dans différents comptes d'adhérents.</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>You will first need to add an authorized value list
-                  for it to appear in this menu</para>
+                  <important>
+                    <para>Ce point de paramètrage ne peut pas être changé une
+                    fois le code enregistré.</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Est-ce que l'on associe l'attribut à un mot de passe
+              ?</para>
+            </listitem>
+
+            <listitem>
+              <para>Est-ce que l'adhérent pourra voir l'attribut à l'OPAC
+              depuis son compte ?</para>
+            </listitem>
+
+            <listitem>
+              <para>Est-ce que depuis la recherche des adhérents, il est
+              possible de filtrer à partir des attributs?</para>
+            </listitem>
+
+            <listitem>
+              <para>Est-ce que l'attribut est associé à une liste de valeurs
+              autorisées?</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Si tel est le cas, pensez à créer d'abord la liste des
+                  valeurs autorisées</para>
 
                   <itemizedlist>
                     <listitem>
-                      <para><emphasis>Get there: </emphasis>More &gt;
-                      Administration &gt; Basic Parameters &gt; <link
-                      linkend="authorizedvalues">Authorized
-                      Values</link></para>
+                      <para><emphasis>Aller sous: </emphasis>Accueil &gt;
+                      Administration &gt; Parametres de base &gt; <link
+                      linkend="authorizedvalues">Valeurs
+                      autorisées</link></para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>an authorized value list is not enforced during
-                    batch patron import.</para>
+                    <para>une liste de valeurs autorisées n'est pas reconnue
+                    lors d'un import d'adhérent.</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>Click Save to save your new attribute</para>
+              <para>Cliquez sur enregistrer</para>
             </listitem>
           </itemizedlist>
 
-          <para>Once added your attribute will appear on the list of
-          attributes and also on the patron record add/edit form</para>
+          <para>L'attribut va apparaître dans le fiche de chaque
+          adhérent.</para>
 
           <screenshot>
             <screeninfo>Patron Attributes list on the Patron add/edit
@@ -11512,30 +11512,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="editpatattributes">
-          <title>Editing/Deleting Patron Attributes</title>
+          <title>Modifier/Supprimer un attribut</title>
 
-          <para>Each patron attribute has an edit and a delete link beside it
-          on the list of attributes.</para>
+          <para>Chaque attribut peut être modifié ou supprimé via les liens
+          placés en face chaque attribut</para>
 
-          <para>Some fields in the attribute will not be editable once
-          created:</para>
+          <para>Par contre des zones ne sont pas éditable</para>
 
           <itemizedlist>
             <listitem>
-              <para>Patron attribute type code</para>
+              <para>Code attribut</para>
             </listitem>
 
             <listitem>
-              <para>Repeatable</para>
+              <para>Répétable</para>
             </listitem>
 
             <listitem>
-              <para>Unique identifier</para>
+              <para>Identifiant unique</para>
             </listitem>
           </itemizedlist>
 
-          <para>You will be unable to delete an attribute if it's in
-          use.</para>
+          <para>Vous ne pourrez pas supprimer un attribut déjà utilisé dans
+          des comptes d'adhérents.</para>
 
           <screenshot>
             <screeninfo>Warning when trying to delete an attribute that is in
@@ -11551,81 +11550,84 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="circfinerules">
-        <title>Circulation and Fine Rules</title>
+        <title>Règles de circulation</title>
 
-        <para>These rules define how your items are circulated, how/when fines
-        are calculated and how holds are handled.</para>
+        <para>Les règles fixent les quotas et les durées des prêts et des
+        réservations. Les règles fixent également le mode de calcul des
+        amendes.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Circulation and fines
-            rules</para>
+            <para><emphasis>Allez sous:</emphasis> Accueil &gt; Administration
+            &gt; Adhérents et Circulation &gt; Règles de circulation</para>
           </listitem>
         </itemizedlist>
 
-        <para>The rules are applied from most specific to less specific, using
-        the first found in this order:</para>
+        <para>Les règles sont appliquées du plus spécifique au moins
+        spécifique, les contrôles s'effectuent dans cet ordre :</para>
 
         <itemizedlist>
           <listitem>
-            <para>same library, same patron type, all item types</para>
+            <para>même site, même catégorie adhérent, même type de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>same library, same patron type, alll item types</para>
+            <para>même site, même catégorie adhérent, tous les types de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>same library, all patron types, same item type</para>
+            <para>même site, toutes les catégories adhérent, même type de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>same library, all patron types, all item types</para>
+            <para>même site, toutes les catégories adhérent,tous les types de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>all libraries, same patron type, same item type</para>
+            <para>tous les sites, même catégorie adhérent, même type de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>all libraries, same patron type, all item types</para>
+            <para>tous les sites,même catégorie adhérent, tous les types de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>all libraries, all patron types, same item type</para>
+            <para>tous les sites, toutes les catégories adhérent, même type de
+            document</para>
           </listitem>
 
           <listitem>
-            <para>all libraries, all patron types, all item types</para>
+            <para>tous les sites, toutes les catégories adhérent, tous les
+            types de document</para>
           </listitem>
         </itemizedlist>
 
         <tip>
-          <para>If you are a single library system choose your branch name
-          before creating rules (sometimes having only rules for the 'all
-          libraries' option can cause issues with holds)</para>
+          <para>D'abord sélectionner le site avant de fixer les règles.</para>
         </tip>
 
         <para><important>
-            <para>At the very least you will need to set an default
-            circulation rule. This rule should be set for all item types, all
-            libraries and all patron categories. That will catch all instances
-            that do not match a specific rule. When checking out if you do not
-            have a rule for all libraries, all item types and all patron types
-            then you may see patrons getting blocked from placing holds. You
-            will also want a rule for your specific library set for all item
-            types and all patron types to avoid this holds issue. Koha needs
-            to know what rule to fall back on.</para>
+            <para>Vous pouvez aussi fixer des règles par defaut qui sont
+            communes à tous les sites, à tous les adhérents et à tous les
+            types de document. Les règles par défaut prennent le relais si
+            aucune règle spécifique n'a été trouvée. L'absence de règles par
+            défaut peut bloquer les demandes de réservations. Si vous voulez
+            fixer des règles pour un site donné, créez des règles de
+            réservation par type de document et par catégorie adhérent.</para>
           </important></para>
 
         <section id="defaultcircrules">
-          <title>Default Circulation Rules</title>
+          <title>Règles de circulation par défaut</title>
 
-          <para>Using the issuing rules matrix you can define rules that
-          depend on patron/item type combos. To set your rules, choose a
-          library from the pull down (or 'all libraries' if you want to apply
-          these rules to all branches):</para>
+          <para>Vous pouvez croiser type de document et catégorie d'adhérent
+          afin de fixer des règles. Si vous voulez associer les règles à un
+          site, choisir le site juste en haut du tableau.</para>
 
           <screenshot>
             <screeninfo>Libraries to apply the rules to</screeninfo>
@@ -11637,8 +11639,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>From the matrix you can choose any combination of patron
-          categories and item types to apply the rules to</para>
+          <para></para>
 
           <screenshot>
             <screeninfo>Setting issuing rules for your libraries</screeninfo>
@@ -11652,94 +11653,90 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>First choose which patron category you'd like the rule to
-              be applied to. If you leave this to 'All' it will apply to all
-              patron categories</para>
+              <para>En premier choisir la catégorie adhérent. Si vous ne
+              choisissez pas de catégorie adhérent, tous les adhérents seront
+              concernés par cette règle.</para>
             </listitem>
 
             <listitem>
-              <para>Choose the 'Item Type' you would like this rule to apply
-              to. If you leave this to 'All' it will apply to all item
-              types</para>
+              <para>Choisir un type de document. Si vous ne choisissez pas de
+              type de document, tous les documents seront concernés par cette
+              règle.</para>
             </listitem>
 
             <listitem>
-              <para>Limit the number of items a patron can have checked out at
-              the same time by entering a number in the 'Current Checkouts
-              Allowed' field</para>
+              <para>Fixez le nombre de prêts autoriés</para>
             </listitem>
 
             <listitem>
-              <para>Define the period of time and item can be checked out to a
-              patron by entering the number of days in the 'Loan Period'
-              box.</para>
+              <para>Fixez la durée de prêt</para>
             </listitem>
 
             <listitem>
-              <para>You can also define a hard due date for a specific patron
-              category and item type. A hard due date ignores your usual
-              circulation rules and makes it so that all items of the type
-              defined are due on, before or after the date you specify.</para>
+              <para>Temporairement, vous pouvez préciser une date de retour
+              fixe pour une catégorie d'adhérent et/ou un type de document.
+              Temporairement,vous pouvez également avancer les dates de retour
+              en fonction d'une date donnée. C'est un moyen d'outrepasser les
+              durées de prêt "standards" sans être obligé de tout modifier
+              dans le tableau.</para>
             </listitem>
 
             <listitem>
-              <para>'Fine Amount' should have the amount you would like to
-              charge for overdue items</para>
+              <para>Si vous appliquez des amendes, quel est le montant
+              journalier de l'amende?</para>
 
               <itemizedlist>
                 <listitem>
                   <important>
-                    <para>Enter only numbers and decimal points (no currency
-                    symbols).</para>
+                    <para>Entrez uniquement des chiffres.</para>
                   </important>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>The 'Fine Grace Period' is the period of time an item can
-              be overdue before you start charging fines.</para>
+              <para>La période de grâce correspond à un nombre de jours qui
+              permet de retarder le calcul et l'application d'une amende en
+              cas de retard.</para>
             </listitem>
 
             <listitem>
-              <para>Enter the 'Fine Charging Interval' in days (ex. charge
-              fines every 1 day, or every 2 days)</para>
+              <para>Entrez un intervalle de jours avant chaque calcul de
+              l'amende (ex. chaque jour, tous les 3 jours...).</para>
             </listitem>
 
             <listitem>
-              <para>If your library 'fines' patrons by suspending their
-              account you can enter the number of days their fine should be
-              suspended in the 'Suspension in Days' field</para>
+              <para>Si vous appliquez les supensions de prêt lors d'un retour
+              de document signalé comme étant 'En retard', indiquez la valeur
+              1 dans la colonne 'Suspension'.</para>
             </listitem>
 
             <listitem>
-              <para>Next decide if the patron can renew this item type and if
-              so, enter how many times they can renew it in the 'Renewals
-              Allowed' box</para>
+              <para>Est-ce que l'adhérent peut renouveler les documents
+              empruntés? Indiquez le nombre de renouvellements
+              autorisés.</para>
             </listitem>
 
             <listitem>
-              <para>If the patron can place holds on this item type, enter the
-              total numbers of items (of this type) that can be put on hold in
-              the 'Holds Allowed' field</para>
+              <para>Est-ce que l'adhérent peut faire des demandes de
+              réservation? Entrez le nombre total de demandes de réservations
+              par type de document.</para>
             </listitem>
 
             <listitem>
-              <para>Finally, if you charge a <link
-              linkend="rentalcharge">rental fee</link> for the item type and
-              want to give a specific patron type a discount on that fee,
-              enter the percentage discount (without the % symbol) in the
-              'Rental Discount' field</para>
+              <para>Si vous faites payer les réservations (cf <link
+              linkend="rentalcharge">rental fee</link> dans Types de document)
+              vous pouvez pour chaque catégorie adhérent appliquer un taux de
+              remise.</para>
             </listitem>
           </itemizedlist>
 
-          <para>When finished, click 'Add' to save your changes. To modify a
-          rule, create a new one with the same patron type and item type. If
-          you would like to delete your rule, simply click the 'Delete' link
-          to the right of the rule.</para>
+          <para>Cliquez sur 'Enregistrer' afin de sauvegarder les mises à
+          jour. Pour modifier une règle, vous devez créer une nouvelle règle
+          puis supprimer l'ancienne règle.</para>
 
-          <para>To save time you can clone rules from one library to another
-          by choosing the clone option above the rules matrix.</para>
+          <para>Vous pouvez dupliquer les règles d'un site vers un autre
+          site..</para>
 
           <screenshot>
             <screeninfo>Circulation &amp; Fine Rules Clone Tool</screeninfo>
@@ -11751,8 +11748,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>After choosing to clone you will be presented with a
-          confirmation message.</para>
+          <para>Vous aurez un message de confirmation.</para>
 
           <screenshot>
             <screeninfo>Circulation &amp; Fine Rules Successfully Cloned
@@ -11767,11 +11763,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="defaultcheckoutpolicy">
-          <title>Default Checkouts and Hold Policy</title>
+          <title>Prêt par défaut et règles de réservation</title>
 
-          <para>You can set a default maximum number of checkouts and hold
-          policy that will be used if none is defined below for a particular
-          item type or category.</para>
+          <para>Vous pouvez fixer un quota maximum de prêt quel que soit
+          l'adhérent et le type de document. Ce quota peut être un quota
+          réseau ou bien un quota associé au site de l'adhérent.</para>
 
           <screenshot>
             <screeninfo>Default Checkouts and Hold Policy</screeninfo>
@@ -11783,50 +11779,49 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>From this menu you can set a default to apply to all item
-          types and patrons in the library.</para>
+          <para>Le quota va s'appliquer à tous les adhérents et à tous les
+          documents.</para>
 
           <itemizedlist>
             <listitem>
-              <para>In 'Total Current Checkouts Allowed' enter the total
-              number of items patrons can have checked out at one time</para>
+              <para>Indiquez le nombre de prêts total autorisé.</para>
             </listitem>
 
             <listitem>
-              <para>Control where patrons can place holds from using the 'Hold
-              Policy' menu</para>
+              <para>Contrôle où l'adhérent peut placer des réservations</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>From Any Library: Patrons from any library may put
-                  this item on hold. (default if none is defined)</para>
+                  <para>Tout site: les adhérents peuvent réserver des
+                  documents de tout le réseau</para>
                 </listitem>
 
                 <listitem>
-                  <para>From Home Library: Only patrons from the item's home
-                  library may put this book on hold.</para>
+                  <para>Site de rattachement: Les adhérents peuvent réserver
+                  uniquement des exemplaires dont le site correspond à celui
+                  de l'adhérent.</para>
                 </listitem>
 
                 <listitem>
-                  <para>No Holds Allowed: No patron may put this book on
-                  hold.</para>
+                  <para>Réservation non autorisée: auncune réservation
+                  possible.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
-              <para>Once your policy is set, you can unset it by clicking the
-              'Unset' link to the right of the rule</para>
+              <para>Une fois la règle fixée, vous pouvez cliquer sur le lien
+              'Retirer' si vous voulez supprimer cette règle en cas d'erreur
+              par exemple</para>
             </listitem>
           </itemizedlist>
         </section>
 
         <section id="checkoutperpatron">
-          <title>Checkouts Per Patron</title>
+          <title>Prêts par catégorie d'adhérent</title>
 
-          <para>For this library, you can specify the maximum number of loans
-          that a patron of a given category can make, regardless of the item
-          type.</para>
+          <para>Pour un site et pour chaque catégorie d'adhérent, vous pouvez
+          donner un nombre maximum de prêts autorisés.</para>
 
           <screenshot>
             <screeninfo>Set default checkouts per patron category</screeninfo>
@@ -11839,18 +11834,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </screenshot>
 
           <tip>
-            <para>If the total amount loanable for a given patron category is
-            left blank, no limit applies, except possibly for a limit you
-            define for a specific item type.</para>
+            <para>S'il n'y a pas de quota 'chapeau' par catégorie adhérent,
+            koha ira contrôler les quota par type de document</para>
           </tip>
         </section>
 
         <section id="holdpolicies">
-          <title>Item Hold Policies</title>
+          <title>Règles de réservation par site et type document</title>
 
-          <para>For this library, you can edit rules for given itemtypes,
-          regardless of the patron's category. Currently, this means hold
-          policies.</para>
+          <para>Depuis un site donné ou pour tout le réseau et pour chaque
+          type de document, vous pouvez fixer le domaine des
+          réservations.</para>
 
           <screenshot>
             <screeninfo>Hold policies per item type</screeninfo>
@@ -11862,59 +11856,60 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>The various policies have the following effects:</para>
+          <para>Pour chaque type de document trois domaines possibles:</para>
 
           <itemizedlist>
             <listitem>
-              <para>From Any Library: Patrons from any library may put this
-              item on hold. (default if none is defined)</para>
+              <para>Tout site: l'adhérent peut réserver n'importe quel
+              document du réseau quel que soit le site du document.</para>
             </listitem>
 
             <listitem>
-              <para>From Home Library: Only patrons from the item's home
-              library may put this book on hold.</para>
+              <para>Site de rattachement: les adhérents peuvent réserver
+              uniquement des exemplaires localisés dans leur site de
+              rattachement</para>
             </listitem>
 
             <listitem>
-              <para>No Holds Allowed: No patron may put this book on
-              hold.</para>
+              <para>Réservation non autorisée: aucune réservation
+              possible.</para>
             </listitem>
           </itemizedlist>
 
           <important>
-            <para>Note that if the system preference <link
+            <para>Si la préférence système <link
             linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
-            set to 'allow', these policies can be overridden by your
-            circulation staff.</para>
+            est activée vous pouvez outrepasser les règles de
+            réservation.</para>
           </important>
 
           <important>
-            <para>These policies are based on the patron's home branch, not
-            the branch that the reserving staff member is from.</para>
+            <para>Ces règles sont interprétées en fonction du site de
+            l'adhérent et non en fonction du site de connexion.</para>
           </important>
         </section>
       </section>
 
       <section id="libtransferlimits">
-        <title>Library Transfer Limits</title>
+        <title>Limites de transfert réseau</title>
 
-        <para>Limit the ability to transfer items between libraries based on
-        the library sending, the library receiving, and the collection code
-        involved.</para>
+        <para>Vous pouvez limiter les autorisations de transferts de documents
+        entre différents sites.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Library Transfer Limits</para>
+            <para><emphasis>Allez sous:</emphasis> Accueil &gt; Administration
+            &gt; Adhérents et Circulation &gt; Limites de transfert
+            réseau</para>
           </listitem>
         </itemizedlist>
 
-        <para>These rules only go into effect if the preference <link
-        linkend="UseBranchTransferLimits">UseBranchTransferLimits</link> is
-        set to 'enforce'.</para>
+        <para>Cela suppose l'activation de la préférence système <link
+        linkend="UseBranchTransferLimits">UseBranchTransferLimits</link>
+        .</para>
 
-        <para>Before you begin you will want to choose which library you are
-        setting these limits for.</para>
+        <para>Vous pouvez établir des règles différentes sous chaque
+        site.</para>
 
         <screenshot>
           <screeninfo>Choose the library you're setting limits
@@ -11927,9 +11922,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Transfer limits are set based on the collections codes you have
-        applied via the <link linkend="authorizedvalues">Authorized
-        Value</link> administration area.</para>
+        <para>On peut affiner les autorisations par type de document ou par
+        code collection (ccode : cf <link linkend="authorizedvalues">Valeurs
+        autorisées</link> ).</para>
 
         <screenshot>
           <screeninfo>Collection Code values assigned in the Authorized Value
@@ -11942,8 +11937,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Collection codes will appear as tabs above the
-        checkboxes:</para>
+        <para>Les codes sont alignés sous la forme d'onglets:</para>
 
         <screenshot>
           <screeninfo>Collection Code tabs</screeninfo>
@@ -11955,9 +11949,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Check the boxes for the libraries that you accept checkins from
-        for the item type you have selected at the top (in the example below -
-        FIC)</para>
+        <para>Sélectionnez votre site puis un onglet correspondant à un type
+        document ou à un code collection , puis ensuite fixez vos
+        règles</para>
 
         <screenshot>
           <screeninfo>Example transfer limits set up</screeninfo>
@@ -11969,9 +11963,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>In the above example, Centerville library will allow patrons to
-        return items from all libraries except Liberty and Franklin to their
-        branch.</para>
+        <para>Exemple ci dessus: depuis le site Centerville les documents de
+        type FIC peuvent être transférés vers d'autres sites sauf les sites FR
+        Franklin et LPL Liberty.</para>
       </section>
 
       <section id="itemcircalerts">
@@ -15033,43 +15027,44 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="calholidays">
-      <title>Calendar &amp; Holidays</title>
+      <title>Calendrier et congés</title>
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Get there:</emphasis> More &gt; Tools &gt;
-          Additional Tools &gt; Calendar</para>
+          <para><emphasis>Outil situé :</emphasis> Accueil &gt; Outils &gt;
+          Outils supplémentaires&gt; Calendrier</para>
         </listitem>
       </itemizedlist>
 
-      <para>Libraries can define library closings and holidays to be used when
-      calculating due dates. You can make use of the Calendar by turning on
-      the proper system preferences:</para>
+      <para>Chaque site peut rentrer ses jours de fermeture hebdomadaire ainsi
+      que ses congés. Ainsi aucun document n'aura une date de retour
+      correspondant à un jour de fermeture. Le paramétrage de la date de
+      retour et des amandes se fait également sous :</para>
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Get there: </emphasis>More &gt; Administration &gt;
-          Global System Preferences &gt; Circulation &gt; <link
+          <para><emphasis> </emphasis>Accueil &gt; Administration &gt;
+          Préférences système &gt; Circulation &gt; <link
           linkend="useDaysMode">useDaysMode</link></para>
 
           <itemizedlist>
             <listitem>
-              <para>Choose the method for calculating due date - either
-              include days the library is closed in the calculation or don't
-              include them.</para>
+              <para>Choisir le mode de calcul de la date de retour - est-ce
+              que les jours de fermeture sont inclus dans le calcul de la
+              durée de prêt?</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
-          Global System Preferences &gt; Circulation &gt; <link
+          <para><emphasis></emphasis>Accueil &gt; Administration &gt;
+          Préférences &gt; Circulation &gt; <link
           linkend="finesCalendar">finescalendar</link></para>
 
           <itemizedlist>
             <listitem>
-              <para>This will check the holiday calendar before charging
-              fines</para>
+              <para>Tenir compte des jours de fermeture avant de calculer les
+              amendes.</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -15086,17 +15081,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <section id="addevents">
-        <title>Adding Events</title>
+        <title>Ajouter un événement</title>
 
-        <para>Before adding events, choose the library you would like to apply
-        the closings to. When adding events you will be asked if you would
-        like to apply the event to one branch or all branches. To add events,
-        simply</para>
+        <para>Vous devez d'abord choisir le site où sera enregistré
+        l'événement. Lors de la création d'un événement, vous avez la
+        possibilité de le dupliquer sous les autres sites du réseau. Pour
+        ajouter un événement :</para>
 
         <itemizedlist>
           <listitem>
-            <para>Click on the date on the calendar that you would like to
-            apply the closing to</para>
+            <para>Cliquez sur la date du calendrier que vous voulez déclarer
+            comme étant fermée.</para>
 
             <screenshot>
               <screeninfo>Calendar Add Form</screeninfo>
@@ -15110,41 +15105,40 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>In the form that appears above the calendar, enter the
-            closing information</para>
+            <para>Au niveau du formulaire indiqué ci-dessus, indiquez les
+            informations suivantes :</para>
 
             <itemizedlist>
               <listitem>
-                <para>Library will be filled in automatically based on the
-                library you chose from the pull down at the top of the
-                page</para>
+                <para>Le champ site est rempli automatiquement avec le code
+                site retenu précédemment</para>
               </listitem>
 
               <listitem>
-                <para>The day information will also be filled in automatically
-                based on the date you clicked on the calendar</para>
+                <para>Le champ date correspond à la date du clandrier que vous
+                avez choisie</para>
               </listitem>
 
               <listitem>
-                <para>In the description enter the reason the library is
-                closed</para>
+                <para>Dans le champ description rentrez un intitulé concernant
+                l'événement</para>
               </listitem>
 
               <listitem>
-                <para>Next you can choose if this event is a one time event or
-                if it is repeatable.</para>
+                <para>Vous pouvez décider si cet événement est répétable ou
+                non</para>
               </listitem>
 
               <listitem>
-                <para>Finally decide if this event should be applied to all
-                libraries or just the one you have originally selected</para>
+                <para>Enfin vous pouvez copier l'événement sous d'autres
+                sites</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>After saving you will see the event listed in the summary to
-            the right the calendar</para>
+            <para>Après enregistrement, vous pouvez voir l'événement sur la
+            droite du calendrier</para>
 
             <screenshot>
               <screeninfo>Calendar Summary</screeninfo>
@@ -15160,15 +15154,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="editevents">
-        <title>Editing Events</title>
+        <title>Modifier un événement</title>
 
-        <para>To edit events</para>
+        <para>Pour modifier un événement</para>
 
         <itemizedlist>
           <listitem>
-            <para>Click on the event on the calendar that you want to change
-            (do this by clicking on the date on the calendar, not the event
-            listed in the summary)</para>
+            <para>Cliquez sur la date du calendrier et non sur l'événement
+            présenté dans le tableau</para>
 
             <screenshot>
               <screeninfo>Edit holiday form</screeninfo>
@@ -15182,14 +15175,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>From this form you can make edits to the holiday or delete
-            the holiday completely. Both actions require that you click 'Save'
-            before the change will be made.</para>
+            <para>Depuis le formulaire, vous pouvez soit modifier, soit
+            supprimer l'événement. Après avoir choisi l'une de ces options ,
+            cliquez sur 'Enregistrer'</para>
           </listitem>
 
           <listitem>
-            <para>Clicking on repeatable events will offer slightly different
-            options</para>
+            <para>Vous aurez des options défférentes si vous avez cliqué sur
+            une date dont le paramétrage avait été déclarée comme étant
+            répétable (exemple le 1er mai).</para>
 
             <screenshot>
               <screeninfo>Edit repeatable event</screeninfo>
@@ -15203,11 +15197,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>In the form above you will note that there is now an
-                option to 'Generate an exception for this repeated holiday,'
-                choosing this option will allow you to make it so that this
-                date is not closed even though the library is usually closed
-                on this date.</para>
+                <para>Si vous cliquez sur l'option 'Créer une exception à ce
+                jour de fermeture' ce jour ne sera pas déclaré comme étant un
+                jour fermé.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -15215,11 +15207,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="calendarhelp">
-        <title>Additional Help</title>
+        <title>Aide</title>
 
-        <para>When adding or editing events you can get additional help by
-        clicking on the question mark next to various different options on the
-        form</para>
+        <para>Lorsque vous créez ou modifiez un événement, vous pouvez vous
+        aider de l'aide symbolisé par le signe[?]</para>
 
         <screenshot>
           <screeninfo>Additional Calendar Help Buttons</screeninfo>
@@ -26493,7 +26484,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Si la notice est associée à des tag</para>
+      <para>Si la notice est associée à des tags</para>
 
       <screenshot>
         <screeninfo>Tags</screeninfo>
@@ -26542,7 +26533,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <para>Si vous avez activé le webservice FRBR pour voir les autres
-      éditions du titre dans une colletion.</para>
+      éditions du titre dans une collection.</para>
 
       <screenshot>
         <screeninfo>Editions</screeninfo>
@@ -26554,9 +26545,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>TA la droite de la notice, des liens pour : réserver le document,
+      <para>A la droite de la notice, des liens pour : réserver le document,
       imprimer la page, inclure la référence dans une liste, inclure la
-      référence dans un ppanier.</para>
+      référence dans un panier.</para>
 
       <screenshot>
         <screeninfo>More options</screeninfo>
@@ -26571,7 +26562,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <para>Cliquez sur 'Plus de recherches' pour lancer une recherche du
       document dans d'autres catalogues. Cela suppose un ajustement de la
       préférence système <link
-      linkend="OPACSearchForTitleIn">OPACSearchForTitleIn</link> </para>
+      linkend="OPACSearchForTitleIn">OPACSearchForTitleIn</link></para>
 
       <screenshot>
         <screeninfo>More Searches</screeninfo>
@@ -26632,7 +26623,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <title>Listes</title>
 
         <para>L'adhérent peut retrouver ses listes en allant dans son compte
-        (après authentification) et ouvrant le contenu de l'onglet "Mes
+        (après authentification) et en ouvrant le contenu de l'onglet "Mes
         listes".</para>
 
         <screenshot>
@@ -26661,8 +26652,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>To create a list the patron simply needs to click the 'New
-          List' link and populate the form that appears</para>
+          <para>Cliquez sur la mention 'Nouvelle liste' avant d'être redirigé
+          vers le fomulaire suivant :</para>
 
           <screenshot>
             <screeninfo>Create a new list</screeninfo>
@@ -26674,18 +26665,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>The only field required is the 'List Name,' but the patron can
-          also choose how they want the list sorted and if the list is public
-          or private.</para>
+          <para>Le seul champ obligatiore est le nom de la liste. L'adhérent
+          peut choisir le mode de tri(titre,date..) et d'affichage de la
+          liste(privée, publique).</para>
         </section>
 
         <section id="opacaddtolists">
-          <title>Adding titles to Lists</title>
+          <title>Ajouter des titres à une liste</title>
 
-          <para>Titles can be added to lists from the search results and/or
-          from the bibliographic record. On the search results options to add
-          items to the list appear below each result and across the top of the
-          results page</para>
+          <para>Il est possible d'ajouter un titre à une liste soit à partir
+          de l'écran des résultats soit depuis le détail bibliographique.
+          Depuis l'écran des résultats, utilisez le menu "Ajouter à".</para>
 
           <screenshot>
             <screeninfo>Add to Lists from Results</screeninfo>
@@ -26697,21 +26687,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>To add a single title to a list, click the 'Save to Lists'
-          option and then choose the list you'd like to add the title to. To
-          add multiple titles to a list check the boxes on the left of the
-          titles you want to add and then choose the list you want to add the
-          titles to from the 'Add too' pull down at the top of the
-          screen.</para>
+          <para>Sous chaque titre, il y a également un lien qui permet
+          d'ajouter un titre de son choix sous une liste. Si vous voulez
+          ajouter plusieurs titres dans une liste, sélectionnez ces derniers
+          avec les cases situées à la gauche des résultats.</para>
         </section>
 
         <section id="opacmanagelists">
-          <title>Managing Lists</title>
+          <title>Gestion des Listes</title>
 
-          <para>Once the list is saved patrons can begin adding items to it.
-          From the 'my lists' tab on the patron record the patron can edit and
-          delete the lists they have created by clicking the appropriate link
-          to the right of the list name.</para>
+          <para>Depuis son compte et l'onglet "Mes listes", l'adhérent peut
+          gérer ses listes en retirant des titres de la liste par exemple. Il
+          peut également modifier l'intitulé ou le mode de tri des
+          listes.</para>
 
           <screenshot>
             <screeninfo>My Lists</screeninfo>
@@ -26723,8 +26711,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>To edit the list's title or sorting patrons click the 'Edit'
-          link to the right of the list description.</para>
+          <para>En cliquant sur le lien 'Modifier' placé en face de l'intitulé
+          de chaque liste, l'adhérent sera redirigé vers le formaulaire
+          suivant :</para>
 
           <screenshot>
             <screeninfo>Editing List</screeninfo>
@@ -26736,8 +26725,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>When clicking 'Delete' next to a list you will be asked to
-          confirm that you want to delete the list.</para>
+          <para>Lorsque vous cliquez sur 'Supprimer', un message de
+          confrmation vous est demandé.</para>
 
           <screenshot>
             <screeninfo>Delete list confirmation</screeninfo>
@@ -26749,25 +26738,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>The list will not be deleted until the 'Confirm' button is
-          clicked to the right of the list you'd like to delete.</para>
+          <para>Le titre se sera pas retiré de la lsite tant que vous n'avez
+          pas confirmé.</para>
 
           <para></para>
         </section>
       </section>
 
       <section id="opaccart">
-        <title>Cart</title>
+        <title>Panier</title>
 
         <para></para>
 
         <section id="opacaddtocart">
-          <title>Adding titles to the Cart</title>
+          <title>Ajouter des titres</title>
 
-          <para>Titles can be added to the cart from the search results and/or
-          from the bibliographic record. On the search results options to add
-          items to the cart appear below each result and across the top of the
-          results page</para>
+          <para>Il est possible d'ajouter un titre à un panier soit à partir
+          de l'écran des résultats soit depuis le détail bibliographique.
+          Depuis l'écran des résultats, utilisez le menu "Ajouter à".</para>
 
           <screenshot>
             <screeninfo>Add to Cart on Search Results</screeninfo>
@@ -26779,11 +26767,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>Clicking the 'Add to Cart' button will add the one title to
-          your cart. To add multiple titles at once, check the box to the left
-          of each result and the choose 'Cart' from the 'Add to' pull down at
-          the top of the screen. Once titles are added to the cart you will be
-          presented with a confirmation</para>
+          <para>Choisir la mention 'panier'. Koha vous indique le nombre de
+          documents qui ont été ajoutés au panier. Si vous voulez ajouter
+          plusieurs titres dans une liste, sélectionnez ces derniers avec les
+          cases situées à la gauche des résultats.</para>
 
           <screenshot>
             <screeninfo>Items added to Cart</screeninfo>
@@ -26797,12 +26784,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
 
         <section id="manageopaccart">
-          <title>Managing the Cart</title>
+          <title>Gestion du panier</title>
 
-          <para>Once you have titles in your cart you can manage the contents
-          by clicking on the 'Cart' button usually found at the top of the
-          screen to the right of the search box. Your cart will open in a new
-          window.</para>
+          <para>En cliquant sur le bouton 'Panier' vous accédez à son contenu
+          et à des fonctionnnalités de gestion.</para>
 
           <screenshot>
             <screeninfo>Contents of your cart</screeninfo>
@@ -26814,19 +26799,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>From this window you are presented with several options.
-          Across the top of the cart are several buttons.</para>
+          <para>Plus de détail permet de remonter plus d'informations au sujet
+          des titres (ISBN, Sujets, éditeur, notes...etc).</para>
 
-          <para>First is the 'More details' button. Clicking this will show
-          you additional information about the titles in your card (ISBNs,
-          Subjects, Publisher Info, Notes and more).</para>
-
-          <para>Next is the option to send the contents of your cart to an
-          email address. This is handy if you want to send the resources you
-          found at the library to your home email account to refer to later or
-          to send to a patron researching a specific topic. Clicking this link
-          will open up a new window that asks for the email address and
-          message to send.</para>
+          <para>L'option suivante permet d'envoyer sa sélection dans une boîte
+          email de son choix. Vous serez redirigé vers une autre fenêtre où il
+          faudra indiquer l'adresse de destination.</para>
 
           <screenshot>
             <screeninfo>Email Cart</screeninfo>
@@ -26838,10 +26816,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>In addition to sending your cart you can download the contents
-          of your cart in several pre-defined formats or using a <link
-          linkend="csvprofiles">CSV Profile</link> that you defined in the
-          Tools module.</para>
+          <para>Autre option; vous pouvez télécharger votre sélection dans un
+          fichier de type CSV afin de sauvegarder les données en local.</para>
 
           <screenshot>
             <screeninfo>Download Cart</screeninfo>
@@ -26853,35 +26829,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>Finally you can print out the contents of your cart by
-          choosing the 'Print' link.</para>
+          <para>Enfin vous pouvez imprimer le contenu du panier.</para>
 
-          <para>In addition to the various different ways to save the contents
-          of your cart, there are ways to add value to the data in your cart.
-          By selecting one or more titles from the cart you can add them to a
-          list (click 'Add to a List'), place hold(s) (click 'Place hold'), or
-          tag them (click 'Tag'). All of these operations follow the same
-          procedure as they do when performing them in the OPAC.</para>
+          <para>Les titres d'un panier peuvent être ajoutés à une liste, faire
+          l'objet d'une demande de réservation, être associés à des tags. Les
+          modes opératoires restent inchangés quelque soit la place du titre
+          vis à vis du panier.</para>
         </section>
       </section>
     </section>
 
     <section id="opacenhancedcontent">
-      <title>Enhanced Content</title>
+      <title>Contenu enrichi</title>
 
       <para></para>
 
       <section id="opactagging">
-        <title>Tagging</title>
+        <title>Baliser</title>
 
-        <para>Depending on your settings for the <link
+        <para>Si vous avez activé les préférences suivantes : <link
         linkend="TagsEnabled">TagsEnabled</link>, <link
-        linkend="TagsInputOnList">TagsInputOnList</link> and <link
-        linkend="TagsInputOnDetail">TagsInputOnDetail</link> preferences you
-        may be able to add tags to bibliographic records from the search
-        results and/or bibliographic records. If you are allowing patrons to
-        add tags from the search results screen you will see an input box
-        below each result and a 'Tag' option at the top of the screen.</para>
+        linkend="TagsInputOnList">TagsInputOnList</link> et <link
+        linkend="TagsInputOnDetail">TagsInputOnDetail</link> vous pouvez
+        'baliser' (=tager) les notices bibliographiques à l'aide de mots
+        significatifs. On peut autoriser l'adhérent à baliser des notices
+        depuis l'écran des résultats d'une recherche.</para>
 
         <screenshot>
           <screeninfo>Tagging Options on Results</screeninfo>
@@ -26893,9 +26865,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>To add a tag to one item, type the tabs (separated by commas) in
-        the 'New tag' box and click 'Add'. You will be presented with a
-        confirmation of your tags being added.</para>
+        <para>Pour associer un tag à une notice, saisissez celui-ci dans la
+        boîte 'Nouveau tag' puis cliquez sur 'Ajouter'.</para>
 
         <screenshot>
           <screeninfo>Tags Added on Results</screeninfo>
@@ -26907,10 +26878,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From the results you can also tag items in bulk by clicking the
-        checkboxes on the left and then clicking the 'Tag' button at the top.
-        After clicking the button it will change into an input box for you to
-        add tags to all of the items you have selected.</para>
+        <para>Depuis l'écran des résultats, vous pouvez aussi utiliser la
+        boîte 'Nouveau tag' placée en haut des résultats.A utiliser après
+        avoir sélectionné la notice concernée.</para>
 
         <screenshot>
           <screeninfo>Add Tags to Multiple Items</screeninfo>
@@ -26924,12 +26894,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="opaccomments">
-        <title>Comments</title>
+        <title>Commentaires</title>
 
-        <para>Patrons can leave comments in the OPAC if you have the <link
-        linkend="reviewson">reviewson</link> preference set to allow this.
-        Each bibliographic record has a comments tab below the bibliographic
-        information.</para>
+        <para>Les adhérents peuvent ajouter des commentaires si la préférence
+        <link linkend="reviewson">reviewson</link> a été activée. L'onglet
+        'Commentaires' s'affichera sous le détail bibliographique.</para>
 
         <screenshot>
           <screeninfo>Comments Tab</screeninfo>
@@ -26941,9 +26910,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If the patron is logged in they will see a link to add a comment
-        to the item. Clicking this link will open a pop up window with a box
-        for their comments.</para>
+        <para>Si l'adhérent n'est pas connecté, il y aura un lien à
+        l'intérieur de l'onglet . En cliquant sur le lien, un pop-up et un
+        cadre de saisie vous seront proposés.</para>
 
         <screenshot>
           <screeninfo>Add a Comment</screeninfo>
@@ -26955,9 +26924,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once the comment has been typed and the 'Submit' button clicked,
-        the patron will see their comment as pending and other patrons will
-        simply see that there are no comments on the item.</para>
+        <para>Une fois le commentaire rentré, cliquez sur 'Valider'.
+        L'adhérent verra son commentaire par contre les autres adhérents ne
+        verront pas ce commentaire tant qu'il n'est pas rendu public par
+        l'équipe des bibliothécaires.</para>
 
         <screenshot>
           <screeninfo>Pending Comment</screeninfo>
@@ -26969,9 +26939,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once the comment is approved the patron will see the number of
-        comments on the 'Comments' tab and the comment highlighted in yellow
-        as their comment.</para>
+        <para>Une fois le commentaire validé, le nombre de commentaires sera
+        indiqué et le commentaire sera surligné.</para>
 
         <screenshot>
           <screeninfo>Your Comments</screeninfo>
@@ -26983,10 +26952,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Other patrons will see the comment with the name of the patron
-        who left the comment (unless you have set the <link
-        linkend="ShowReviewer">ShowReviewer</link> preference to not show
-        patron names).</para>
+        <para>Les autres adhérents verront le nom de la personne qui a posté
+        le commentaire (à moins que le paramétrage de la préférence <link
+        linkend="ShowReviewer">ShowReviewer</link> l'interdise).</para>
 
         <screenshot>
           <screeninfo>Comment by other patron</screeninfo>
@@ -26998,10 +26966,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you'd like to link to a page of recent comments added to your
-        catalog you simply need to add a link to
-        http://YOURCATALOG/cgi-bin/koha/opac-showreviews.pl to anywhere on
-        your OPAC:</para>
+        <para>Si vous voulez ajouter un lien vers un commentaire :
+        http://YOURCATALOG/cgi-bin/koha/opac-showreviews.pl </para>
 
         <screenshot>
           <screeninfo>Recent Comments List</screeninfo>
@@ -27095,17 +27061,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="opacmyaccount">
-      <title>My Account</title>
+      <title>Mon compte</title>
 
-      <para>From the OPAC patrons can log in and access their account if you
-      have set the <link linkend="opacuserlogin">opacuserlogin</link>
-      preference to 'Allow'. Once logged in patrons are brought to their
-      account summary. If you would like to get from any other page your
-      account in the OPAC, click on your name in the top right of the
-      OPAC.</para>
+      <para>Depuis l'OPAC, l'adhérent peut accéder à son compte après
+      authentification.Cela suppose l'activation de la préférence système
+      <link linkend="opacuserlogin">opacuserlogin</link> .Une fois connecté,
+      l'adhérent peut parcourir son compte qui est découpé en plusieurs
+      rubriques. Le nom de l'adhérent apparaîtra en haut à droite de
+      l'écran.</para>
 
       <section id="opacmysummary">
-        <title>My Summary</title>
+        <title>Mon compte</title>
 
         <screenshot>
           <screeninfo>My Summary</screeninfo>
@@ -27117,13 +27083,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From the 'my summary' tab, patrons will see all of the items
-        they have checked out with the overdue items highlighted in red. If
-        you have <link linkend="OpacRenewalAllowed">OpacRenewalAllowed</link>
-        set to 'Allow' then your patrons will be able to renew their books
-        right from the OPAC. If you have HTML entered in the <link
-        linkend="OPACMySummaryHTML">OPACMySummaryHTML</link> preference then
-        you will see that to the right of the 'Fines' column.</para>
+        <para>Depuis la rubrique 'Mon Compte', l'adhérent peut voir les
+        documents qu'il a emprunté. Si un document est en retard, celui-ci
+        sera indiqué en rouge. Si la préférence <link
+        linkend="OpacRenewalAllowed">OpacRenewalAllowed</link> est activée,
+        l'adhérent pourra depuis cet écran renouveler l'emprunt.Vous pouvez
+        ajouter des colonnes au tableau en ajoutant du code HTML sous la
+        préférence <link linkend="OPACMySummaryHTML">OPACMySummaryHTML</link>
+        . Vous pouvez par exemple ajouter une colonne 'Liens' qui regroupent
+        des renvois vers des sites web.</para>
 
         <screenshot>
           <screeninfo>Checked out tab with OPACMySummaryHTML set</screeninfo>
@@ -27135,11 +27103,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If your patrons would like to see the items barcodes on their
-        list of checked out items you can set up a <link
-        linkend="patronattributetypes">patron attribute</link> with the value
-        of SHOW_BCODE and <link linkend="authorizedvalues">authorized
-        value</link> of YES_NO.</para>
+        <para>Si l'adhérent veut voir les codes à barres des documents qu'il a
+        sur son compte; vous pouvez associer un <link
+        linkend="patronattributetypes">attribut adhérent</link> SHOW_BCODE
+        avec <link linkend="authorizedvalues"> la valeur autorisée</link>
+        YES_NO.</para>
 
         <screenshot>
           <screeninfo>Add SHOW_BCODE patron attribute</screeninfo>
@@ -27151,8 +27119,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Then on the <link linkend="editpatrons">patron's record set the
-        value</link> for SHOW_BCODE to yes.</para>
+        <para>Puis dans le compte adhérent choisir 'YES' <link
+        linkend="editpatrons"></link>au niveau de l'attribut
+        SHOW_BCODE.</para>
 
         <screenshot>
           <screeninfo>Setting value for SHOW_BCODE on patron
@@ -27165,9 +27134,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>This will add a column to the check out summary in the OPAC that
-        shows the patrons the barcodes of the items they have checked
-        out.</para>
+        <para>Ensuite la colonne 'code à barres' sera ajoutée dans le tableau
+        des prêts dans la rubrique 'Mon compte'.</para>
 
         <screenshot>
           <screeninfo>Barcode number on checkout list in OPAC</screeninfo>
@@ -27179,8 +27147,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Clicking on the 'Overdue' tab will show only the items that are
-        overdue.</para>
+        <para>L'onglet 'Retards' affiche les retards de l'adhérent.</para>
 
         <screenshot>
           <screeninfo>Overdue Items</screeninfo>
@@ -27192,7 +27159,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The 'Fines' tab will show just a total of what the patron owes.
+        <para>L'onglet 'Amendes' indique si l'adhérent doit payer une somme
+        d'argent en raison d'une inscription et /ou d'un retard...etc.
         Clicking on the total will take them to the 'my fines' tab where they
         will see a complete breakdown of their fines and bills. If you don't
         charge fines at your library you can turn the display of these tabs
