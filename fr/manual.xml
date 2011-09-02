@@ -28,7 +28,6 @@
     </othercredit>
 
     <copyright>
-
       <year>2010, 2011</year>
 
       <holder>Nicole C. Engard/ByWater Solutions/BibLibre/Laurence
@@ -7186,10 +7185,10 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
               <listitem>
                 <para>This button allows the patrons to submit comments on
                 books they have read via the OPAC. If this preference is set
-                to &ldquo;Allow" reviews are first sent to the staff client
-                for staff approval before the review is displayed in the OPAC.
-                The staff member who reviews and approves comments may find
-                the pending comments on the <link
+                to “Allow" reviews are first sent to the staff client for
+                staff approval before the review is displayed in the OPAC. The
+                staff member who reviews and approves comments may find the
+                pending comments on the <link
                 linkend="comments">Comments</link> tool. The staff member can
                 then choose to approve or delete the comments.</para>
               </listitem>
@@ -19969,7 +19968,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Au niveau d ela file d'attente des réservations, il est possible
+        <para>Au niveau de la file d'attente des réservations, il est possible
         de changer l'ordre des demandes, le site de retrait et/ou d'annuler la
         demande de réservation.</para>
 
@@ -20616,31 +20615,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="selfcheckout">
-      <title>Self Checkout</title>
+      <title>Borne automatique de prêts</title>
 
-      <para>Koha comes with a very basic self checkout module. To enable this
-      module you need to set the <link
-      linkend="WebBasedSelfCheck">WebBasedSelfCheck</link> preference to
-      'Enable.' To use this module you have to log in as a <link
-      linkend="addstaffpatron">staff member</link> with <link
-      linkend="patronpermissions">circulation permissions</link>.</para>
+      <para>Pour configurer ce module vous devez activer la préférence système
+      <link linkend="WebBasedSelfCheck">WebBasedSelfCheck</link> . Il faut
+      créer un compte adhérent de type <link
+      linkend="addstaffpatron">professionnel</link> avec les <link
+      linkend="patronpermissions">permissions de circulation</link>.</para>
 
       <tip>
-        <para>Create a <link linkend="addstaffpatron">staff patron</link>
-        specifically for this action so that you don't leave a real staff
-        client logged into a computer all day</para>
+        <para>Le compte adhérent de type <link
+        linkend="addstaffpatron">professionnel</link> est crée spécialement
+        pour la borne automatique de prêt</para>
       </tip>
 
-      <para>There is no link to the Self Checkout module, but a simple
-      addition to the <link linkend="intranetuserjs">intranetuserjs</link>
-      system preference can add one.</para>
+      <para>Il n'y a pas de lien vers la borne automatique, mais vous pouvez
+      en ajouter un depuis la préférence <link
+      linkend="intranetuserjs">intranetuserjs</link> .</para>
 
       <programlisting>$(document).ready(function(){ $("#login
       #submit").parent().after("&lt;p&gt;&lt;a
       href=\"http://YOUR_KOHA_OPAC_URL/cgi-bin/koha/sco/sco-main.pl\"
       target=\"_blank\"&gt;Self-Checkout&lt;/a&gt;&lt;/p&gt;"); }); </programlisting>
 
-      <para>The link will then appear at the bottom of the log in page:</para>
+      <para>Le lien apparaîtra en bas de la fenêtre de connexion :</para>
 
       <screenshot>
         <screeninfo>Self Checkout Link on Staff Login</screeninfo>
@@ -20652,11 +20650,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>You can also access this module by going to :
+      <para>Vous pouvez également accéder au module via ce type d'url :
       http://YOUR_KOHA_OPAC_URL/cgi-bin/koha/sco/sco-main.pl</para>
 
-      <para>When on the self checkout page you will be asked to enter your
-      patron card number:</para>
+      <para>Quand vous serez sur la page de la borne il vous sera demandé le
+      numéro de carte du compte adhérent dédié à la borne:</para>
 
       <screenshot>
         <screeninfo>Self Checkout Patron Card Number</screeninfo>
@@ -20668,8 +20666,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Once your card number is entered you will be asked to scan the
-      items you are checking out</para>
+      <para>Ensuite vous pouvez scanner les documents</para>
 
       <screenshot>
         <screeninfo>Self Checkout</screeninfo>
@@ -20681,7 +20678,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>As you scan items they will appear below the barcode box</para>
+      <para>Les documents scannés s'affichent en bas de l'écran</para>
 
       <screenshot>
         <screeninfo>Self Checkout Summary</screeninfo>
@@ -20693,16 +20690,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>When you are finished scanning items it is important to click the
-      'Click here if done' button to log the patron out and prepare for the
-      next patron.</para>
+      <para>Lorsque vous avez terminé de scanné les exemplaires 'Cliquez sur
+      terminé' afin de vous déconnecté.</para>
 
-      <para>When attempting to check items out there are some instances where
-      error messages will appear and the patron will be directed to the
-      librarian. This will happen even if you are allowing overrides on
-      circulation functions. Only a librarian can override a circulation block
-      and so patrons must go to the librarian for help in these
-      situations.</para>
+      <para>Un adhérent de base (non bibliothécaire) ne pourra pas, par
+      exemple, outrepasser les règles de circulation donc il aura des messages
+      d'avertissement. Seuls les bibliothécaires, depuis la borne automatique
+      de prêt, pourront outrepasser.</para>
 
       <screenshot>
         <screeninfo>Self Checkout Error Message</screeninfo>
@@ -20716,19 +20710,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="offlinecirc">
-      <title>Offline Circulation Utility</title>
+      <title>Prêt de secours</title>
 
       <para></para>
 
       <section id="firefoxofflinecirc">
-        <title>Firefox Plugin</title>
+        <title>Plugin Firefox</title>
 
-        <para>There is a plugin for Firefox that can be used for Offline
-        Circulation: <ulink
+        <para>Il existe un plugin Firefox qui fait office de prêt de secours :
+        <ulink
         url="https://addons.mozilla.org/en-US/firefox/addon/14399">https://addons.mozilla.org/en-US/firefox/addon/14399</ulink></para>
 
-        <para>Once installed there will be an icon for the Offline Circulation
-        Tool in the status bar at the bottom of you Firefox Window.</para>
+        <para>Une fois installé vous avez l'icone de Koha en bas à droite de
+        votre écran de Firefox.</para>
 
         <screenshot>
           <screeninfo>Koha Icon on the Status Bar in Firefox</screeninfo>
@@ -20740,27 +20734,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Additional instructions for using this Plugin can be found on
-        the Koha Wiki: <ulink
+        <para>Vous trouverez plus d'informations au sujet de l'utilisation de
+        cet outil à cette adresse : <ulink
         url="http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin">http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin</ulink></para>
       </section>
 
       <section id="windowsofflinecirc">
-        <title>Offline Circ Tool for Windows</title>
+        <title>Outil prêt de secours pour Windows</title>
 
-        <para>The Offline Circulation Utility can be downloaded at: <ulink
+        <para>L'outil peut être téléchargé à partir de cette adresse : <ulink
         url="http://millruntech.com/koha/koha-tools/koha-offline-circulation">http://millruntech.com/koha/koha-tools/koha-offline-circulation</ulink></para>
       </section>
 
       <section id="uploadofflinecirc">
-        <title>Upload Offline Circ File</title>
+        <title>Téléchargé le fichier du prêt de secours</title>
 
-        <para>The <link linkend="windowsofflinecirc">offline circulation tool
-        for Windows</link> will generate a KOC file that you can upload into
-        Koha once your system comes back up.</para>
+        <para>L'outil <link linkend="windowsofflinecirc">du prêt de secours
+        pour Windows</link> crée un fichier KOC que vous pouvez charger dans
+        Koha une fois le système revenu.</para>
 
-        <para>On the Circulation menu click 'Offline Circulation File (.koc)
-        Uploader'</para>
+        <para>Depuis la page 'Circulation' cliquez sur le lien 'Chargeur de
+        fichier .koc de prêts secourus'</para>
 
         <screenshot>
           <screeninfo>Circulation menu</screeninfo>
@@ -20772,7 +20766,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Browse your computer for the *.koc file</para>
+        <para>Parcourir votre ordinateur à la rercherche des fichiers
+        *.koc</para>
 
         <screenshot>
           <screeninfo>Upload KOC File</screeninfo>
@@ -20784,7 +20779,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once the file is uploaded, click the process the file</para>
+        <para>Une fois le fichier chargé, cliquez sur le bouton
+        'Terminé'</para>
 
         <screenshot>
           <screeninfo>Process offline circulation file</screeninfo>
@@ -20796,8 +20792,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>When this is complete you'll see the summary of actions from
-        when you were offline (including any errors).</para>
+        <para>Un rapport listant les différentes actions est poposé.</para>
 
         <screenshot>
           <screeninfo>Summary of offline actions</screeninfo>
@@ -20813,31 +20808,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
   </chapter>
 
   <chapter id="cataloging">
-    <title>Cataloging</title>
+    <title>Catalogage</title>
 
-    <para>Before you start cataloging in Koha you're going to want to do some
-    basic setup. Refer to the <link linkend="implementation">Implementation
-    Checklist</link> for a full list of these things. Most importantly you're
-    going to want to make sure that your <link
-    linkend="marcbibframeworks">Frameworks</link> are all defined the way you
-    want. Once in the cataloging module you will not be able to add or remove
-    fields and subfields so your frameworks must be ready before you start
-    cataloging.</para>
+    <para>Avant de débuter le catalogage pensez à ajuster quelques paramètres
+    de base. Voir la <link linkend="implementation">liste</link> des points à
+    traiter. Le point le plus important concerne le paramétrage des <link
+    linkend="marcbibframeworks">grilles MARC</link> . Depuis le module de
+    catalogage , il n'est pas possible d'ajouter ou supprimer des zones et
+    sous-zones de son choix donc il est important de bien configurer ses
+    grilles.</para>
 
     <section id="catbibs">
-      <title>Bibliographic Records</title>
+      <title>Notices bibliographiques</title>
 
       <para></para>
 
       <section id="addbibrec">
-        <title>Adding Records</title>
+        <title>Créer une notice</title>
 
-        <para>Records can be added to Koha via original or copy cataloging. If
-        you would like to catalog a record using a blank template</para>
+        <para>Une notice peut être créée à partir d'une notice existante en
+        effectuant une copie. Si vous voulez créer une notice à l'aide d'une
+        grille MARC :</para>
 
         <itemizedlist>
           <listitem>
-            <para>Click 'New Record'</para>
+            <para>Cliquez sur 'Ajouter notice'</para>
 
             <screenshot>
               <screeninfo>New Record Menu</screeninfo>
@@ -20851,19 +20846,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Choose the framework you would like to base your record
-                off of</para>
+                <para>Choisir la grille de votre choix</para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
-        <para>If you want to catalog a record based on an existing record at
-        another library</para>
+        <para>Si vous souhaitez récupérer une notice d'un autre catalogue,
+        vous pouvez vous aider de la recherche Z39.50</para>
 
         <itemizedlist>
           <listitem>
-            <para>Click 'z39.50 Search'</para>
+            <para>Cliquez sur 'Recherche z39.50'</para>
 
             <screenshot>
               <screeninfo>Z39.50 Search</screeninfo>
@@ -20877,27 +20871,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Search for the item you would like to catalog</para>
+                <para>Rechercher la notice que vous voulez cataloguer</para>
 
                 <itemizedlist>
                   <listitem>
                     <tip>
-                      <para>If no results are found, try searching for fewer
-                      fields, not all Z39.50 targets can search all of the
-                      fields above.</para>
+                      <para>Si aucun résultat trouvé, ciblé votre recherche
+                      sur certains champs seulement et non tous.</para>
                     </tip>
                   </listitem>
                 </itemizedlist>
               </listitem>
 
               <listitem>
-                <para>Search targets can be altered by using the <link
-                linkend="z3950admin">Z39.50 Admin</link> area.</para>
+                <para>La configuration des profils Z39.50 peut être changée
+                depuis <link linkend="z3950admin">Administration/serveurs Z39
+                50</link> .</para>
               </listitem>
 
               <listitem>
-                <para>From the results you can view the MARC or Card view for
-                the records or choose to Import them into Koha</para>
+                <para>A partir des résultats, vous pouvez visualiser les
+                notices au format MARC avant de les importer dans Koha</para>
 
                 <screenshot>
                   <screeninfo>Z39.50 Search Results</screeninfo>
@@ -20911,10 +20905,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <itemizedlist>
                   <listitem>
-                    <para>In addition to the Import link to the right of each
-                    title, you can click on the title you're interested in and
-                    a menu will pop up with links to preview the record and
-                    import it</para>
+                    <para>En plus du lien 'Import' qui est à la droite de
+                    chaque titre, en cliquant sur le titre s'active les
+                    boutons 'Import' et 'Visualiser MARC'</para>
 
                     <screenshot>
                       <screeninfo>Import Link Popup on Z39.50 Search
@@ -20929,9 +20922,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   </listitem>
 
                   <listitem>
-                    <para>If you don't find the title you need in your Z39.50
-                    search results you can click the 'Try Another Search'
-                    button at the bottom left of your results</para>
+                    <para>Si vous n'avez pas trouvez la référence à partir de
+                    votre recherche, vous povez cliquer sur 'Autre recherche'
+                    en bas à gauche des résultats</para>
 
                     <screenshot>
                       <screeninfo>Try another search</screeninfo>
@@ -20949,9 +20942,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
 
-        <para>Once you've opened a blank framework or imported a record via
-        Z39.50 you will be presented with the form to continue
-        cataloging</para>
+        <para>La grille MARC de catalogage ressemble à ceci</para>
 
         <screenshot>
           <screeninfo>Add MARC Record</screeninfo>
@@ -20965,20 +20956,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para>To expand a collapsed tag click on the tag number</para>
+            <para>Pour afficher le détail d'une zone, cliquez sur le libellé
+            de la zone</para>
           </listitem>
 
           <listitem>
-            <para>To get help from the Library of Congress on a Marc tag click
-            the question mark (?) to the right of each field number</para>
+            <para>Pour en savoir plus sur la zone cliquez sur le signe (?)
+            placé à côté de chaque zone</para>
 
             <itemizedlist>
               <listitem>
                 <tip>
-                  <para>If you think this is an unwanted feature, you could
-                  add the following JavaScript to your <link
-                  linkend="intranetuserjs">intranetuserjs</link> system
-                  preference: <programlisting>
+                  <para>si vous pensez que l'option d'aide est inutile, vous
+                  pouvez la masquer via la préférence système <link
+                  linkend="intranetuserjs">intranetuserjs</link> en y
+                  ajoutant: <programlisting>
                 $(document).ready(function(){
                  $(".tagnum a").hide();
                 });</programlisting></para>
@@ -20988,12 +20980,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Sometimes fields may not be editable due to the value in
-            your <link
-            linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link>
-            system preference. If you have this preference set to not allow
-            catalogers to type in fields controlled by authorities you may see
-            a lock symbol to the left of the field.</para>
+            <para>Il est possible de verrouiller l'usage des zones autorités
+            via la préférence système <link
+            linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link> .
+            Dans ce cas on ne peut pas créer de nouvelles autorités , on peut
+            juste utiliser les autorités déjà présentes dans le thésaurus de
+            Koha.</para>
 
             <screenshot>
               <screeninfo>Authority fields locked against editing</screeninfo>
@@ -21007,8 +20999,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>If this icon appears you must click the ellipse to the
-                right of the field to search for an existing authority.</para>
+                <para>Pour rechercher une autorité dans le thésaurus de Koha,
+                cliquez sur le lien symbolisé par 3 points de suspension ( ...
+                )</para>
 
                 <screenshot>
                   <screeninfo>Search for authority</screeninfo>
@@ -21022,8 +21015,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>From the results list click 'Choose authority' to bring
-                that into your catalog record</para>
+                <para>Depuis l'écran des résultats cliquez sur 'Choisir' pour
+                insérer l'autorité dans la notice bibliographique</para>
 
                 <screenshot>
                   <screeninfo>Authority search results</screeninfo>
@@ -21039,8 +21032,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>To duplicate a field click on the + (plus sign) to the right
-            of the tag</para>
+            <para>Pour répéter une zone cliquez sur le signe + placé à la
+            droite du libellé de la zone</para>
 
             <screenshot>
               <screeninfo>Duplicate a Field</screeninfo>
@@ -21054,14 +21047,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>To move subfields in to the right order, click the up
-                arrow to the left of the field</para>
+                <para>Pour déplacer et classer les sous zones à l'intérieur
+                d'une zone, vous pouvez vous aider des flèches qui sont à
+                gauche des sous-zones</para>
               </listitem>
 
               <listitem>
-                <para>To duplicate a subfield click on the clone icon (to
-                remove a copied field, click the delete clone icon) to the
-                right of the field</para>
+                <para>Pour copier une sous-zone cliquez sur le bouton 'cloner'
+                placé à droite de la sous zone</para>
 
                 <screenshot>
                   <screeninfo>Clone Subfield</screeninfo>
@@ -21075,16 +21068,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>To remove a subfield (if there is more than one of the
-                same type), click the - (minus sign) to the right of the
-                field</para>
+                <para>Pour supprimer un champ cliquez sur le signe - placé à
+                droite du libellé de la zone</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>To use a plugin click on the ... (ellipse) to the right of
-            the filed</para>
+            <para>Des zones sont associées à un plugin symbolise par le lien
+            ... placé à la droite du champ.</para>
 
             <screenshot>
               <screeninfo>Leader Builder Plugin</screeninfo>
@@ -21098,9 +21090,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Some fixed fields have editors that will change based on
-                the material type you're cataloging (for example the 006 and
-                the 008 fields)</para>
+                <para>C'est le cas des zones fixes (1XX) avec des listes de
+                valeurs pré-définies</para>
 
                 <screenshot>
                   <screeninfo>008 Plugin</screeninfo>
@@ -21116,10 +21107,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Once you've finished, click the 'Save' button at the top and
-            choose whether you want to save and view the bib record you have
-            created or continue on to add/edit items attached to the
-            record</para>
+            <para>Une fois le choix des codes ajusté, cliquez sur
+            'Enregistrer' afin de quitter le pop-up et revenir à la notice
+            bibliographique</para>
 
             <screenshot>
               <screeninfo>Record save options</screeninfo>
@@ -21133,8 +21123,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>If you are about to add a duplicate record to the system
-                you will be warned before saving</para>
+                <para>Lors de l'enregistrement de la notice Koha contrôle si
+                cette dernière n'est pas déjà dans la base (contrôle via
+                l'ISBN)</para>
 
                 <screenshot>
                   <screeninfo>Duplicate Record Warning</screeninfo>
@@ -21152,10 +21143,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="editbibrec">
-        <title>Editing Records</title>
+        <title>Modifier une notice</title>
 
-        <para>To edit a record you can click 'Edit Biblio' from the search
-        results on the cataloging page</para>
+        <para>Après avoir lancé la recherche, cliquez sur 'Modifier' depuis la
+        page de résultats</para>
 
         <screenshot>
           <screeninfo>Edit Biblio Option on Search Results</screeninfo>
@@ -21167,8 +21158,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>or by clicking the Edit button on the Bibliographic Record and
-        choosing 'Edit Record'</para>
+        <para>ou bien depuis le détail bibliographique de la notice cliquez
+        sur le bouton 'Modifier'</para>
 
         <screenshot>
           <screeninfo>Edit Record Option on Bibliographic Record</screeninfo>
@@ -21180,7 +21171,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The record will open in the MARC editor</para>
+        <para>ensuite chargement de la grille MARC</para>
 
         <screenshot>
           <screeninfo>Editing MARC Record</screeninfo>
@@ -21192,9 +21183,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The alternative is to search via Z39.50 to overlay your record
-        with a fuller record found at another library. You can do this by
-        choosing 'Replace Record via Z39.50' from the Edit menu.</para>
+        <para>Vous pouvez écraser une notice du catalogue Koha par une notice
+        issue de la recherche Z 39.50, en utilisant le bouton 'Modifier' puis
+        l'option 'Remplacer via Z 39.50'.</para>
 
         <screenshot>
           <screeninfo>Replace via Z39.50</screeninfo>
@@ -21206,21 +21197,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you choose that you will be brought to a Z39.50 search
-        window to search other libraries for the record in question.</para>
+        <para>Après avoir choisi cette option, vous êtes redirigé vers une
+        recherche Z 39.50</para>
 
-        <para>Once you have made your edits (via either method) you can click
-        'Save' at the top left of the editor.</para>
+        <para>Après la mise à jour de la notice cliquez sur
+        'Enregistrer'.</para>
       </section>
 
       <section id="dupbibrec">
-        <title>Duplicating Records</title>
+        <title>Dupliquer une notice</title>
 
-        <para>Sometimes a copy of the record you need to catalog can't be
-        found via Z39.50. In these cases you can create a duplicate of similar
-        record and edit the necessary pieces to create a new record. To
-        duplicate an existing record click 'Edit as New (Duplicate)' from the
-        Edit menu on the Bibliographic Record</para>
+        <para>Pour le cas des nouvelles éditions d'ouvrages, vous pouvez
+        dupliquer une notice déjà présente dans Koha afin de gagner du temps.
+        Pour cela, depuis le détail bibliographique, cliquez sur 'Modifier'
+        puis 'Dupliquer la notice'.</para>
 
         <screenshot>
           <screeninfo>Edit as New (Duplicate) Bibliographic
@@ -21233,8 +21223,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>This will open a new MARC record with the fields filled in with
-        the values from the original Bibliographic Record.</para>
+        <para>Une nouvelle notice MARC est créée avec les informations de la
+        notice initiale.</para>
 
         <screenshot>
           <screeninfo>New Duplicate Record</screeninfo>
@@ -21248,26 +21238,26 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="mergebibs">
-        <title>Merging Records</title>
+        <title>Fusionner des notices</title>
 
-        <para>If you would like to merge together multiple records you can do
-        that via the <link linkend="lists">Lists</link> tool. <link
-        linkend="mergebibrecs">Learn more here</link>.</para>
+        <para>Pour fusionner des notices utilisez l'outil <link
+        linkend="lists">Listes</link> . <link linkend="mergebibrecs">En savoir
+        plus</link>.</para>
       </section>
     </section>
 
     <section id="catitems">
-      <title>Item Records</title>
+      <title>Notices d'exemplaires</title>
 
       <para></para>
 
       <section id="addingitems">
-        <title>Adding Items</title>
+        <title>Créer une notice d'exemplaire</title>
 
-        <para>After saving a new bibliographic record, you will be redirected
-        to a blank item record so that you can attach an item to the
-        bibliographic record. You can also click 'Add Holdings' from the
-        cataloging search results</para>
+        <para>Après avoir sauvegardé votre nouvelle notice bibliographique,
+        vous êtes redirigé vers un formulaire d'exemplaire vide. Sinon après
+        avoir lancé la recherche, depuis l'écran des résultats vous pouvez
+        utiliser le lien 'Ajout exemplaire'.</para>
 
         <screenshot>
           <screeninfo>Add Holdings Option on Search Results</screeninfo>
@@ -21279,8 +21269,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>or you can add new item at any time by clicking 'New' on the
-        bibliographic record and choosing 'New Item'</para>
+        <para>ou bien depuis le détail bibliographique vous pouvez utiliser le
+        bouton 'Ajouter' puis l'option 'Nouvel exemplaire'</para>
 
         <screenshot>
           <screeninfo>New Item Button</screeninfo>
@@ -21292,7 +21282,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The item edit form will appear:</para>
+        <para>Le formulaire d'une notice exemplaire:</para>
 
         <screenshot>
           <screeninfo>Add item form</screeninfo>
@@ -21304,48 +21294,47 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>At the very least, the following fields should be entered for
-        new items:</para>
+        <para>Les champs obligatoires:</para>
 
         <itemizedlist>
           <listitem>
-            <para>8 - Collection code</para>
+            <para>8 - code</para>
           </listitem>
 
           <listitem>
-            <para>a - Permanent location</para>
+            <para>a - Site propriétaire</para>
           </listitem>
 
           <listitem>
-            <para>b - Shelving location</para>
+            <para>b - Site dépositaire</para>
           </listitem>
 
           <listitem>
-            <para>o - Full call number</para>
+            <para>o - Cote</para>
           </listitem>
 
           <listitem>
-            <para>p - Barcode</para>
+            <para>p - Code à barres</para>
           </listitem>
 
           <listitem>
-            <para>v - Cost, replacement price</para>
+            <para>v - Coût, prix de remplacment</para>
 
             <itemizedlist>
               <listitem>
-                <para>This value will be charged to patrons when you mark and
-                item they have checked out as 'Lost'</para>
+                <para>Quand le document a été déclaré comme étant perdu, un
+                coût de remplacement est fixé</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>y - Koha item type</para>
+            <para>y - Type de prêt</para>
           </listitem>
         </itemizedlist>
 
-        <para>Below the add form there are 3 buttons for adding the
-        item</para>
+        <para>En bas du formulaire, 3 boutons pour enregistrer
+        l'exemplaire</para>
 
         <screenshot>
           <screeninfo>Add Item Buttons</screeninfo>
@@ -21359,23 +21348,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para>Add Item will add just the one item</para>
+            <para>'Ajout exemplaire' ajoute un seul exemplaire</para>
           </listitem>
 
           <listitem>
-            <para>Add &amp; Duplicate will add the item and fill in a new form
-            with the same values for your to alter</para>
+            <para>'Ajout &amp; Dupliquer' enregistre le dernier exemplaire et
+            duplique celui-ci dans un nouvel exemplaire</para>
           </listitem>
 
           <listitem>
-            <para>Add Multiple Copies will ask how many copies and will then
-            add that number of copies adding +1 to the barcode so each barcode
-            is unique</para>
+            <para>'Ajout exemplaires multiple' enregistre le dernier
+            exemplaire et duplique celui-ci en 'n' copies. A vous de choisir
+            le nombre d'exemplaires à créer simultanément</para>
           </listitem>
         </itemizedlist>
 
-        <para>Your added items will appear above the add form once
-        submitted</para>
+        <para>Les nouveaux exemplaires s'affichent dans un tableau regroupant
+        les informations utiles des exemplaires</para>
 
         <screenshot>
           <screeninfo>Items</screeninfo>
@@ -21387,8 +21376,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Your items will also appear below the bibliographic details on
-        the bib record display.</para>
+        <para>Informations qui sont placées sous la notice
+        bibligraphique</para>
 
         <screenshot>
           <screeninfo>List of Items on the Bib Record</screeninfo>
@@ -21400,9 +21389,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you have SpineLabelShowPrintOnBibDetails set to 'Display'
-        then there will also be a link to print a quick spine label next to
-        each item.</para>
+        <para>Si vous avez activé la préférence
+        SpineLabelShowPrintOnBibDetails, s'affichera, au niveau des données
+        d'exemplaires, un lien 'imprimer étiquette'.</para>
 
         <screenshot>
           <screeninfo>List of Items on the Bib Record with a Print Label
@@ -21417,14 +21406,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="editingitems">
-        <title>Editing Items</title>
+        <title>Modifier une notice d'exemplaire</title>
 
-        <para>Items can be edited in several ways.</para>
+        <para>Les exemplaires peuvent être modifiés de plusieurs
+        façons.</para>
 
         <itemizedlist>
           <listitem>
-            <para>Clicking 'Edit' and 'Edit Items' from the bibliographic
-            record</para>
+            <para>Cliquez sur 'Modifier' et 'Modifier les exemplaires' depuis
+            le détail bibliographique</para>
 
             <screenshot>
               <screeninfo>Edit Items Menu Option</screeninfo>
@@ -21438,8 +21428,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>Clicking 'Edit Items' beside the item on the 'Items'
-            tab</para>
+            <para>Cliquez sur 'Modifier exemplaire' à partir de l'onglet
+            'Exemplaires' placé à gauche du détail bibliographique</para>
 
             <screenshot>
               <screeninfo>Items Tab</screeninfo>
@@ -21453,7 +21443,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
 
-        <para>The edit menu is also where items can be deleted from:</para>
+        <para>Depuis le tableau des exemplaires vous avez également un lien
+        'Modifier':</para>
 
         <screenshot>
           <screeninfo>Edit and Delete links for Items</screeninfo>
@@ -21467,10 +21458,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="moveitemrec">
-        <title>Moving Items</title>
+        <title>Déplacer des exemplaires</title>
 
-        <para>Items can be moved from one bibliographic record to another
-        using the Attach Item option</para>
+        <para>Vous pouvez déplacer des exemplaires d'une notice
+        bibliographique à une autre à l'aide de l'option 'Attacher des
+        exemplaires' placée sous le bouton 'Modifier'.</para>
 
         <screenshot>
           <screeninfo>Attach Item Option</screeninfo>
@@ -21482,8 +21474,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Visit the bibliographic record you want to attach the item to
-        and choose 'Attach Item' from the 'Edit' menu.</para>
+        <para>Menu 'Modifier' option 'Attacher des exemplaires'.</para>
 
         <screenshot>
           <screeninfo>Attach Item Form</screeninfo>
@@ -21495,21 +21486,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Simply enter the barcode for the item you want to move and click
-        'Select'</para>
+        <para>Entrez le code à barres d el'exemplaire à déplacer</para>
 
-        <para>If you want to move all items to a new record creating only one
-        bibliographic record you can use the <link
-        linkend="mergebibrecs">Merge Records tool</link> instead.</para>
+        <para>Si vous voulez déplacer la totalité des exemplaires d'une notice
+        puis ne garder qu'une seule notice bibliographique, dans ce cas,
+        utilisez la <link linkend="mergebibrecs">fusion</link></para>
       </section>
 
       <section id="deleteitems">
-        <title>Deleting Items</title>
+        <title>Supprimer des notices d'exemplaires</title>
 
-        <para>There are many ways to delete item records. If you only need to
-        delete one item you can do this by opening up the detail page for the
-        bib record and clicking the 'Edit' button at the top. From there you
-        can choose to 'Edit items'.</para>
+        <para>Il existe plusieurs façons. Si vous n'avez qu'un seul exemplaire
+        à supprimer, dans ce cas, utilisez le bouton 'Modifier' puis l'option
+        'Modifier les exemplaires'.</para>
 
         <screenshot>
           <screeninfo>'Edit Items' menu option</screeninfo>
@@ -21521,9 +21510,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>You will be presented with a list of items and next to each one
-        will be a link labeled 'Delete'. Click that link and if the item is
-        not checked out it will delete that item.</para>
+        <para>Les exemplaires de la notices seront présentés dans un tableau
+        situé en haut de l'écran avec en face de chaque exemplaire, un lien
+        'Supprimer'.</para>
 
         <screenshot>
           <screeninfo>Delete link on the left</screeninfo>
@@ -21535,22 +21524,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If you know that all of the items attached to your record are
-        not currently checked out you can use the 'Delete all items' option
-        under the 'Edit menu' and it will remove all items from the
-        record.</para>
+        <para>Si vous devez supprimer la totalité des exemplaires d'une
+        notice, et si vous savez qu'aucun exemplaire est emprunté, vous pouvez
+        utiliser le bouton 'Modifier' puis l'option 'Supprimer tous les
+        exemplaires'</para>
 
-        <para>Finally you can use the <link linkend="batchdeleteitems">batch
-        delete tool</link> to delete a batch of items.</para>
+        <para>Enfin depuis la page 'Outils' vous pouvez utiliser l'outil <link
+        linkend="batchdeleteitems">Suppression d'exemplaires par lot</link>
+        .</para>
       </section>
 
       <section id="itemcirchistory">
-        <title>Item Specific Circulation History</title>
+        <title>Historique des prêts d'un exemplaire</title>
 
-        <para>Each bibliographic record keeps a circulation history (with or
-        without the patron information depending on your settings), but each
-        item also has its own circulation history page. To see this, click on
-        the 'Items' tab to the left of the record you are viewing.</para>
+        <para>Chaque notice bibliographique à un historique des prêts (avec ou
+        sans information adhérent: cela dépend du paramétrage), et chaque
+        exemplaire a également son historique des prêts. Pour voir cela,
+        cliquez sur l'onglet 'Exemplaires' à gauche du détail
+        bibliographique.</para>
 
         <screenshot>
           <screeninfo>Items tab</screeninfo>
@@ -21562,10 +21553,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Below the 'History' heading is a link to 'View item's checkout
-        history,' clicking that will open up the item's history which will
-        look slightly different from the bibliographic record's history
-        page.</para>
+        <para>Au niveau de la rubrique 'Historique' figure le lien 'Voir
+        historique des prêts,'. Un tableau remonte le nombre de prêts par
+        site.</para>
 
         <screenshot>
           <screeninfo>Item Specific Circulation History</screeninfo>
@@ -21580,17 +21570,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="catauthorities">
-      <title>Authorities</title>
+      <title>Autorités</title>
 
-      <para>Authority records are a way of controlling fields in your MARC
-      records. Using authority records will provide you with control over
-      subject headings, personal names and places.</para>
+      <para>Les autorités sont un moyen de contrôler la cohérence des
+      informations qui sont rentrées dans certains champs MARC. Ces champs
+      concernent les auteurs, les sujets et titres uniformes.</para>
 
       <section id="addauthorities">
-        <title>Adding Authorities</title>
+        <title>Créer une notice autorité</title>
 
-        <para>To add a new authority record, choose the authority type from
-        the 'New Authority' button.</para>
+        <para>Avant de créer une autorité, il faut choisir le type d'autorité
+        à l'aide du bouton 'Ajouter autorité'.</para>
 
         <screenshot>
           <screeninfo>New Authority Record Options</screeninfo>
@@ -21602,8 +21592,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>The form that appears will allow you to enter all of the
-        necessary details regarding your authority record.</para>
+        <para>La grille MARC vous propose toutes les zones de la norme MARC
+        autorité.</para>
 
         <screenshot>
           <screeninfo>New Authority Record</screeninfo>
@@ -21615,15 +21605,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>To expand collapsed values simply click on the title and the
-        subfields will appear.</para>
+        <para>Pour voir le détail d'un zone, cliquez sur le libellé de la
+        zone</para>
       </section>
 
       <section id="searchauthorities">
-        <title>Searching Authorities</title>
+        <title>Recherche des autoritiés</title>
 
-        <para>From the authorities page you can search for existing terms and
-        the bibliographic records they are attached to.</para>
+        <para>Après avoir utilisé le Menu 'Plus' puis l'option 'Autorités vous
+        pouvez rechercher un terme figurant dans la notice autorité puis
+        accéder aux notices liées à l'autorité trouvée.</para>
 
         <screenshot>
           <screeninfo>Authority Search</screeninfo>
@@ -21635,9 +21626,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From the results you will see the authority record, how many
-        bibliographic records it is attached to, and a delete link (if there
-        are not bibliographic records attached).</para>
+        <para>Depuis l'écran des résultats on peut voir l'autorité, le nombre
+        de notices associées à l'autorité et le lien 'Supprimer' qui permet de
+        supprimer l'autorité du thésaurus Koha.</para>
 
         <screenshot>
           <screeninfo>Authority Search Results</screeninfo>
@@ -21649,8 +21640,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Clicking on the authority record summary will open the full
-        record and the option to edit the record.</para>
+        <para>En cliquant sur l'autorité, on accède à la notice autorité
+        complète.</para>
 
         <screenshot>
           <screeninfo>Authority Record</screeninfo>
@@ -21664,11 +21655,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="editauthorities">
-        <title>Editing Authorities</title>
+        <title>Modifier les autorités</title>
 
-        <para>Authorities can be edited by clicking on the authority summary
-        from the search results and then clicking the 'Edit' button above the
-        record.</para>
+        <para>Les autorités peuvent être modifiées après avoir cliqué sur leur
+        tête de vedette depuis les résultats et après avoir cliqué sur
+        'Modifier'.</para>
 
         <screenshot>
           <screeninfo>Edit Authority Record</screeninfo>
@@ -21680,20 +21671,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you've made the necessary edits, simply click 'Save' and
-        all of the records that use this authority record will be
-        updated.</para>
+        <para>Après les mises à jour pensez à cliquer sur 'Enregistrer' afin
+        de sauvegarder votre travail.</para>
 
-        <para>To delete an authority record you first must make sure it's not
-        linked to any bibliographic records. If it is not used by any
-        bibliographic records a 'Delete' link will appear to the right of the
-        record on the search results and as a button that appears after
-        clicking on the summary of the authority record.</para>
+        <para>Pour supprimer une autorité, il faut s'assurer d'abord qu'aucune
+        notice bibliographique est liée à l'autorité.Si tel est le cas, le
+        lien 'Supprimer' apparaît à la droite de chaque autorité au niveau des
+        résultats de recherche (Menu Plus/Autorité).</para>
       </section>
     </section>
 
     <section id="catguides">
-      <title>Cataloging Guides</title>
+      <title>Guides de catalogage</title>
 
       <para></para>
 
@@ -21720,10 +21709,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <pubdate>2010</pubdate>
         </sectioninfo>
 
-        <title>Bibliographic Record Cataloging Cheat Sheet</title>
+        <title>Zones MARC21 des notices bibliographiques</title>
 
         <table cellpadding="4" cellspacing="4" frame="all">
-          <title>Cataloging Guide</title>
+          <title>Guide catalogue</title>
 
           <tgroup align="left" cols="4" colsep="1" rowsep="1">
             <thead>
@@ -21744,12 +21733,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>LEADER</para></entry>
 
-                <entry><para>Describes the record(i.e. surrogate) -- is it a
-                record for a monograph? A serial?</para></entry>
+                <entry><para>indique le type de document(i.e. surrogate) --
+                monographie? périodique, enregistrement sonore</para></entry>
 
-                <entry><para>Click in this field to fill it in. Then set
-                "Bibliographic level" to 'a' for articles or 's' for serials.
-                Otherwise, leave everything as is.</para></entry>
+                <entry><para>Voir le champs niveau bibliographique 'a' pour
+                les articles, 's' pour les périodiques, 'j' enregistrements
+                sonores..... </para></entry>
               </row>
 
               <row>
@@ -21757,11 +21746,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>CONTROL NUMBER</para></entry>
 
-                <entry><para>Accession number.</para></entry>
+                <entry><para>numéro koha.</para></entry>
 
-                <entry><para>Enter the accession number written inside the
-                item here. For articles and items which do not have accession
-                numbers, leave blank.</para></entry>
+                <entry><para>numéro koha</para></entry>
               </row>
 
               <row>
@@ -21769,12 +21756,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>CONTROL NUMBER IDENTIFIER</para></entry>
 
-                <entry><para>Your MARC Organizational Code</para></entry>
+                <entry><para>Code organisation MARC</para></entry>
 
-                <entry><para>Click in this field to fill it in (will auto fill
-                if you have your <link
-                linkend="MARCOrgCode">MARCOrgCode</link> preference
-                set).</para></entry>
+                <entry><para>Cf. préférence système <link
+                linkend="MARCOrgCode">MARCOrgCode</link> .</para></entry>
               </row>
 
               <row>
@@ -21782,9 +21767,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>D &amp; T LATEST TRANSACTION</para></entry>
 
-                <entry><para>Current date and time.</para></entry>
+                <entry><para>Date et heure.</para></entry>
 
-                <entry><para>Click in this field to fill it in.</para></entry>
+                <entry><para>Cliquez sur le champ modifier.</para></entry>
               </row>
 
               <row>
@@ -21795,16 +21780,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <entry><para>Field containing computer-readable
                 representations of a number of things.</para></entry>
 
-                <entry><para>Generally you will only use 's' (single) or 'm'
-                (multiple) options for position 06- use the former when the
-                item was published in a single year, the latter when it was
-                published over the course of several. If there is a single
-                date, only enter a date in the first date field (positions
-                07-10). Enter the three-digit country code in positions 15-17,
-                being sure to add spaces if the country code is fewer than
-                three characters long. If there is an index, note that fact in
-                position 31. Enter the three-letter language code in positions
-                35-37.</para></entry>
+                <entry><para> 's' (seul) ou 'm' (multiple) options pour
+                position 06- use the former when the item was published in a
+                single year, the latter when it was published over the course
+                of several. If there is a single date, only enter a date in
+                the first date field (positions 07-10). Enter the three-digit
+                country code in positions 15-17, being sure to add spaces if
+                the country code is fewer than three characters long. If there
+                is an index, note that fact in position 31. Enter the
+                three-letter language code in positions 35-37.</para></entry>
               </row>
 
               <row>
@@ -23033,15 +23017,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
   </chapter>
 
   <chapter id="serials">
-    <title>Serials</title>
+    <title>Périodiques</title>
 
     <para></para>
 
     <section id="newsubscription">
-      <title>Add a subscription</title>
+      <title>Créer une notice d'abonnement</title>
 
-      <para>Subscriptions can be added by clicking the 'New' button on any
-      bibliographic record</para>
+      <para>Vous pouvez créer un abonnement depuis le détail bibliographique
+      de notice et le bouton 'Ajouter' et l'option 'Ajouter Abonnement'</para>
 
       <screenshot>
         <screeninfo>New Subscription Button</screeninfo>
@@ -23053,8 +23037,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Or by visiting the Serials module and clicking 'New
-      Subscription'</para>
+      <para>Oou bien depuis le module 'Périodiques' et le bouton 'Ajouter
+      abonnement'</para>
 
       <screenshot>
         <screeninfo>New Subscription Button</screeninfo>
@@ -23066,9 +23050,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>If you are entering a new subscription from the Serials module you
-      will be presented with a blank form (if creating new from a
-      bibliographic record the form will include the bib info).</para>
+      <para>Vous êtes redirigé vers un formulaire d'abonnement vide.</para>
 
       <screenshot>
         <screeninfo>Add a new Subscription Form</screeninfo>
@@ -23082,23 +23064,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <itemizedlist>
         <listitem>
-          <para>'Librarian' field will show the logged in librarian's
-          username</para>
+          <para>'Bibliothécaire' permet de connaître la personne qui va créer
+          la notice d'abonnement</para>
         </listitem>
 
         <listitem>
-          <para>'Vendor' can be found by either searching vendors entered via
-          the <link linkend="acqmodule">Acquisitions module</link> or entering
-          the vendor ID number</para>
+          <para>'Fournisseur' recherche du fournisseur , cf. <link
+          linkend="acqmodule">Module Acquisitions</link> ou rentrez
+          directement le numéro koha du fournisseur</para>
 
           <itemizedlist>
             <listitem>
-              <para>Vendor information is not required</para>
+              <para>Le fournisseur n'est pas une information
+              obligatoire</para>
             </listitem>
 
             <listitem>
-              <para>In order to claim missing and late issues you need to
-              enter vendor information</para>
+              <para>Mais si vous souhaitez réclamer auprès du fournisseur les
+              numéros manquants et/ou en retards, il est préférable d'indiquer
+              le fournisseur</para>
 
               <screenshot>
                 <screeninfo>Vendor Missing Warning</screeninfo>
@@ -23114,45 +23098,45 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>'Biblio' is the MARC record you'd like to link this
-          subscription to</para>
+          <para>'Biblio' correspond au numéro de notice bibliographique
+          associé à l'abonnement</para>
 
           <itemizedlist>
             <listitem>
-              <para>This can be done by searching for an existing record by
-              clicking on the 'Search for Biblio' link below the boxes or by
-              entering the bib number for a record in the first box. Only if
-              you search with the field between the parenthesis.</para>
+              <para>Il est possible de retrouver le numéro de la notice en
+              cliquant sur le lien 'Rechercher la notice' , sinon vous pouvez
+              rentrer directement le numéro de notice dans le champ.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Next you can choose whether a new item is created when
-          receiving an issue</para>
+          <para>Ensuite vous précisez si le bulletinage doit entraîner la
+          création d'un exemplaire ou pas</para>
         </listitem>
 
         <listitem>
-          <para>'Location' is for the shelving location</para>
+          <para>'Localisation' correspond à la localisation de
+          l'abonnement</para>
         </listitem>
 
         <listitem>
-          <para>'Call Number' is for your item's call number prefix</para>
+          <para>'Cote' : cote des exemplaires</para>
         </listitem>
 
         <listitem>
-          <para>'Library' is the branch that owns this subscription.</para>
+          <para>'Site' : site de l'abonnement.</para>
 
           <itemizedlist>
             <listitem>
-              <para>If more than one library subscribes to this serial you
-              will need to create a subscription for each library</para>
+              <para>Si plusieurs sites sont abonnés au même titre, chaque site
+              devra créer sa notice d'abonnement</para>
             </listitem>
 
             <listitem>
-              <para>This can be done easily by using the 'Edit as New
-              (Duplicate)' option found on the subscription information page
-              and changing only the 'Library' field</para>
+              <para>Il est possible de dupliquer une notice d'abonnement afin
+              de gagner du temps : bouton 'Modifier' option 'Dupliquer la
+              notice'</para>
 
               <screenshot>
                 <screeninfo>New Duplicate Subscription</screeninfo>
@@ -23168,169 +23152,164 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>The 'Grace Period' is the number of days before an issue is
-          automatically moved from 'expected' status to 'waiting' and how many
-          days before an issue is automatically moved from 'waiting' status to
-          'late'</para>
+          <para>La 'Période de grâce' est le nombre de jours supplémentaires
+          d'attente d'un fascicule ayant le statut 'En attente'. Ce nombre de
+          jours sert aussi à fixer la date où le fascicule passera
+          automatiquement de 'En attante' à 'En retard'.</para>
         </listitem>
 
         <listitem>
-          <para>Use the 'Public Note' for any notes you would like to appear
-          in the OPAC for the patrons</para>
+          <para>'Note publique' : note adressée aux adhérents et visible à
+          l'OPAC</para>
         </listitem>
 
         <listitem>
-          <para>'Nonpublic Note' should be used for notes that are only
-          visible to the librarians via the staff client</para>
+          <para>'Note privée' : note adressée aux bibliothécaires</para>
         </listitem>
 
         <listitem>
-          <para>To set up a routing list for serials, choose 'Routing List'
-          from the 'Patron notification' field.</para>
+          <para>Pour fixer une liste de routage, choisir 'Liste d eroutage'
+          depuis la zone 'Notification adhérent'.</para>
 
           <itemizedlist>
             <listitem>
-              <para>For this option to appear you need to make sure that you
-              have a Routing List notice set up in the <link
-              linkend="notices">Notices Tool</link></para>
+              <para>Pour que cette option soit activée, il faut créer un code
+              RLIST sous Outils <link linkend="notices">Messages</link></para>
             </listitem>
 
             <listitem>
-              <para>Learn more about <link linkend="routinglist">Routing
-              Lists</link> later in this manual</para>
+              <para>Pour en savoir plus Cf. <link linkend="routinglist">Liste
+              de routage</link></para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>The Staff and OPAC Display options allow you to control how
-          many issues appear by default on bibliographic records in the Staff
-          Client and the OPAC</para>
+          <para>Les options d'affichage interne et publique vous permettent de
+          contrôler l'affichage du nombre de fascicules sous le détail
+          bibliographique et à l'OPAC</para>
 
           <itemizedlist>
             <listitem>
-              <para>If no values are entered in these fields, they will use
-              the <link
+              <para>Si vous laisser les champs vides, Koha contrôlera les
+              valeurs sous les préférences système <link
               linkend="OPACSerialIssueDisplayCount">OPACSerialIssueDisplayCount</link>
-              and <link
-              linkend="StaffSerialIssueDisplayCount">StaffSerialIssueDisplayCount</link>
-              system preference values</para>
+              et <link
+              linkend="StaffSerialIssueDisplayCount">StaffSerialIssueDisplayCount</link></para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>In 'First issue publication date' you want to enter the date
-          of the issue you have in your hand, the date from which the
-          prediction pattern will start</para>
+          <para>Dans 'Première date de parution' vous entrez la date du
+          premier numéro à bulletiner que vous avez entre les mains. Cette
+          date marquera le départ du prévisionnel</para>
         </listitem>
 
         <listitem>
-          <para>There are several pre-defined options for the 'Frequency' of
-          publication</para>
+          <para>'Périodicité' : choisir une des périodicités proposées</para>
 
           <itemizedlist>
             <listitem>
-              <para>Without periodicy: some very specific (usually high level
-              science journals) don't have a true periodicity. When you
-              subscribe to the title, you subscribe for 6 issues, which can
-              arrive in 1 year... or 2... There is no regularity or known
-              schedule.</para>
+              <para>Sans périodicité: quand il n'y a pas de périodicité
+              régulière tout au long de l'année.</para>
             </listitem>
 
             <listitem>
-              <para>Unknown select this if none of the other choices are
-              relevant</para>
+              <para>Inconnu : à choisir si aucune des périodicités proposées
+              ne convient</para>
             </listitem>
 
             <listitem>
-              <para>Irregular: The journal is not "regular" but has a
-              periodicity. You know that it comes out on January, then in
-              October and December, it is irregular, but you know when it's
-              going to arrive.</para>
+              <para>Irrégulier: Le périodique a une périodicité; par exemple :
+              janvier, octobre et décembre mais vous ne savez pas exactement à
+              quel jour vous allez recevoir les numéros.</para>
             </listitem>
 
             <listitem>
-              <para>2/day: Twice daily</para>
+              <para>2/day: 2 fois par jour</para>
             </listitem>
 
             <listitem>
-              <para>1/day: Daily</para>
+              <para>1/day: 1 fois par jour</para>
             </listitem>
 
             <listitem>
-              <para>3/week: Three times a week</para>
+              <para>3/week: 3 fois par semaine</para>
             </listitem>
 
             <listitem>
-              <para>1/week: Weekly</para>
+              <para>1/week: hebdomadaire</para>
             </listitem>
 
             <listitem>
-              <para>1/ 2 weeks: Twice monthly (fortnightly)</para>
+              <para>1/ 2 weeks: Bimensuel</para>
             </listitem>
 
             <listitem>
-              <para>1/ 3 weeks: Tri-weekly</para>
+              <para>1/ 3 weeks: 1 fois toutes les 3 semaines</para>
             </listitem>
 
             <listitem>
-              <para>1/month: Monthly</para>
+              <para>1/month: 1 fois par mois</para>
             </listitem>
 
             <listitem>
-              <para>1/ 2 months (6/year): Bi-monthly</para>
+              <para>1/ 2 months (6/year): Bimestriel</para>
             </listitem>
 
             <listitem>
-              <para>1/ 3 months (1/quarter): Quarterly</para>
+              <para>1/ 3 months (1/quarter): Trimestriel</para>
             </listitem>
 
             <listitem>
-              <para>1/quarter (seasonal) : Quarterly related to seasons (ie.
-              Summer, Autumn, Winter, Spring)</para>
+              <para>1/quarter (seasonal) : saisons (ie. Eté, Automne, hiver,
+              Printemps)</para>
             </listitem>
 
             <listitem>
-              <para>2/year: Half yearly</para>
+              <para>2/year: 2 fois par an</para>
             </listitem>
 
             <listitem>
-              <para>1/year: Annual</para>
+              <para>1/year: Annuel</para>
             </listitem>
 
             <listitem>
-              <para>1/ 2 years: Bi-annual</para>
+              <para>1/ 2 years: Biannuel</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Checking the 'Manual history' box will allow you to enter
-          serials outside the prediction pattern.</para>
+          <para>Cocher 'Historique manuel' permet de préciser manuellement
+          l'état de collection de l'abonnement.</para>
         </listitem>
 
         <listitem>
-          <para>'Numbering pattern' will help you determine how the numbers
-          are printed for each issue</para>
+          <para>'Modèle de numérotation' détermine le mode de numérotation des
+          fascicules (1 niveau, 2 niveau..)</para>
 
           <itemizedlist>
             <listitem>
-              <para>Start with the numbering on the issue you have in hand,
-              the numbering that matches the date you entered in the 'First
-              issue publication' field</para>
+              <para>Dans 'commence par' indiquer le numéro que vous avez entre
+              les mains et qui va être le départ du bulletinage. C'est le
+              numéro qui correspond à la date de publication que vous avez
+              rentré sous 'Première date de parution'</para>
             </listitem>
 
             <listitem>
-              <para>If you have chosen any 'Numbering Format' other than
-              'Number' in the 'Rollover at' field, enter the last issue number
-              before the volume number changes</para>
+              <para>Si dans le modèle de numérotation vous avez choisi un mode
+              de numérotation à deux niveaux (Numéro, Volume par exemple) dans
+              'Retour à' rentrez le dernier numéro du second niveau avant que
+              le 1ier niveau (volume) passe à n+1. Exemple : si chaque volume
+              correspond à 4 numéros, indiquez 4 dans 'Retour à'.</para>
 
               <itemizedlist>
                 <listitem>
-                  <para>If you chose the 'Number' Numbering Format you will
-                  see 'issues expected' in which you will enter the total
-                  number of issues you expect to receive.</para>
+                  <para>Si dans le 'Modèle de numérotation' vous avez choisi
+                  'Numéro' (1 seul niveau) , il faudra préciser le nombre de
+                  fascicules attendus durant une année.</para>
 
                   <screenshot>
                     <screeninfo>Number as Numbering Pattern</screeninfo>
@@ -23346,48 +23325,49 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>You can choose to create your own numbering pattern by
-              choosing 'None of the above' and clicking the 'Show/Hide
-              Advanced Pattern' button at the bottom of the form</para>
+              <para>Vous pouvez créer votre propre modèle de numérotation en
+              choisissant la mention 'Aucun de ci-dessus' et cliquer sur le
+              bouton 'Afficher/Masquer le Prévisionnel Avancé situé plus
+              bas.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>'Subscription start date' is the date at which the
-          subscription begins. This is used for setting up renewal
-          alerts</para>
+          <para>'Date de début de l'abonnement' : date de démarrage de
+          l'abonnement qui est utilisée pour savoir quand il faudra renouveler
+          l'abonnement</para>
         </listitem>
 
         <listitem>
-          <para>'Subscription length' is the number of issues or months in the
-          subscription. This is also used for setting up renewal alerts</para>
+          <para>'Durée d'abonnement' : au bout de combien de numéros ou bien
+          au bout de conbien de mois l'abonnement doit-il être
+          renouvelé.</para>
         </listitem>
 
         <listitem>
-          <para>'Subscription end date' should only be entered for
-          subscriptions that have ended (if you're entering in a backlog of
-          serials)</para>
+          <para>'Date de fin d'abonnement' : sert à stopper le bulletinage si
+          l'abonnement s'arrête</para>
         </listitem>
 
         <listitem>
-          <para>The 'Numbering formula' is editable to match the way you'd
-          like your numbering to print on the item record and subscription
-          information pages</para>
+          <para>'Formule de numérotation' : abréviations des niveaux de
+          numérotation. Abréviations qui seront reprises et affichés dans les
+          données exemplaires</para>
         </listitem>
       </itemizedlist>
 
-      <para>Click 'Save Subscription' to save the information you have
-      entered. <link linkend="sampleserialsapp">Find sample serial examples in
-      the appendix</link>.</para>
+      <para>Cliquez sur 'Enregistrer abonnement' afin de sauvegarder les
+      paramètres et informations de l'abonnement. <link
+      linkend="sampleserialsapp">Exemples en annexe</link>.</para>
     </section>
 
     <section id="receiveissues">
-      <title>Receive Issues</title>
+      <title>Réception des fascicules</title>
 
-      <para>Issues can be marked as received from several locations. To find a
-      subscription, use the search box at the top of the Serials page to
-      search for the serial you'd like to receive issues for:</para>
+      <para>Les fascicules peuvent être réceptionnés depuis différents sites.
+      Pour chercher un abonnement , utilisez la barre de recherche située en
+      haut de la page 'Périodiques':</para>
 
       <screenshot>
         <screeninfo>Subscription Search</screeninfo>
@@ -23399,9 +23379,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>From the search results you can click the 'Serial Receive' link or
-      you can click on the subscription title and then click the 'Receive'
-      button.</para>
+      <para>Depuis la tableau des résultats, cliquez sur le lien 'Bulletiner'
+      ou bien cliquez sur le titre de l'abonnement puis sur le bouton
+      'Bulletiner'.</para>
 
       <screenshot>
         <screeninfo>Subscription Buttons</screeninfo>
@@ -23413,9 +23393,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>The final way to receive serials is from the 'Serial Collection'
-      page. To the left of the Subscription summary page there is a menu with
-      a link to 'Serial Collection'</para>
+      <para>L'autre accès au bulletinage est depuis l'écran 'Informations sur
+      l'abonnement'. A gauche, il y a le lien 'Etat de Collection'</para>
 
       <screenshot>
         <screeninfo>Serial Subscription Menu</screeninfo>
@@ -23427,8 +23406,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>From the page that opens up you can click 'Edit Serial' with the
-      issue you want to receive checked.</para>
+      <para>A la page suivante, cliquez sur le bouton 'Bulletiner' siué en bas
+      du tableau.</para>
 
       <screenshot>
         <screeninfo>Edit Issues</screeninfo>
@@ -23440,8 +23419,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>All three of these options will open up the issue receive
-      form:</para>
+      <para>Quel que soit le mode opératoire utilisé, vous arrivé sur ce
+      formulaire de réception:</para>
 
       <screenshot>
         <screeninfo>Receive Serials</screeninfo>
@@ -23455,40 +23434,42 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <itemizedlist>
         <listitem>
-          <para>Choose 'Arrived' from the status pull down to mark a serial as
-          received.</para>
+          <para>Choisissez le statut 'Arrivé'.</para>
         </listitem>
 
         <listitem>
-          <para>If you have decided to have an item record created for each
-          issue an <link linkend="addingitems">item add form</link> will
-          appear</para>
+          <para>Si vous avez décidé de créer un exemplaire pour chaque
+          fascicule; un lien <link linkend="addingitems">Cliquer pour ajouter
+          un exemplaire</link> apparaîtra. Puis le formulaire de la notice
+          exemplaire va s'afficher avec des champs pré-remplis.</para>
         </listitem>
 
         <listitem>
-          <para>If your issue has a supplemental issue with it, fill in the
-          Supplemental Issue information.</para>
+          <para>Si un supplément accompagne le fascicule, vous disposez du
+          champ 'Supplément'.</para>
         </listitem>
 
         <listitem>
-          <para>If you have decided to have an item record created for each
-          issue an <link linkend="addingitems">item add form</link> will
-          appear for your supplement and for the issue itself</para>
+          <para>Si vous avez décidé de créer un exemplaire pour chaque
+          fascicule; un lien <link linkend="addingitems">Cliquer pour ajouter
+          un exemplaire</link> apparaîtra sous le champ 'Supplément'.</para>
         </listitem>
 
         <listitem>
-          <para>Once you have entered your info you can click 'Save'</para>
+          <para>Pensez à cliquer sur 'Enregistrer' pour valider la
+          réception.</para>
         </listitem>
       </itemizedlist>
     </section>
 
     <section id="routinglist">
-      <title>Create a Routing List</title>
+      <title>Créer une liste de routage</title>
 
-      <para>A routing list is a list of people who receive the serial before
-      it goes to the shelf. When setting up your serial subscription you want
-      to be sure to pick 'Routing List' from the 'Patron Notification' pull
-      down.</para>
+      <para>Une liste de routage regroupe des adhérents qui sont sensés
+      recevoir les derniers fascicules avant que ceux-ci soient mis en
+      circulation. Avant tout s'assurer que dans la notice d'abonnement la
+      mention 'routing List' soit activée dans le champ 'Notifications de
+      l'adhérent'.</para>
 
       <screenshot>
         <screeninfo>Patron Notification Option</screeninfo>
@@ -23500,8 +23481,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>When on the subscription page you will see a link to the left that
-      reads 'Create Routing List.'</para>
+      <para>Depuis la page 'Informations de l'abonnement' vous verrez un lien
+      'Créer une liste de circulation.'</para>
 
       <screenshot>
         <screeninfo>Subscription Routing List Link</screeninfo>
@@ -23513,8 +23494,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Clicking that link will bring you to the menu to add a new routing
-      list.</para>
+      <para>Le lien vous redirige vers un formulaire afin de créer une liste
+      de routage.</para>
 
       <screenshot>
         <screeninfo>Routing List Creation</screeninfo>
@@ -23526,10 +23507,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>From here you want to click 'Add recipients' in order to add
-      people to the routing list. In the menu that appears you can filter
-      patrons by part of their name, their library and/or patron
-      category.</para>
+      <para>Cliquez sur 'Ajouter destinataires' afin d'ajouter les personnes
+      dans la liste. Un pop-up de recherche adhérent s'affiche avec des
+      filtres de recherche par site et catégorie adhérent.</para>
 
       <screenshot>
         <screeninfo>Add Members to Routing List</screeninfo>
@@ -23541,9 +23521,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Clicking 'Add' to the right of each name will add them to the
-      routing list. When you have chosen all of the people for the list, click
-      the 'Close' link to be redirected to the routing list.</para>
+      <para>Cliquez sur 'Ajouter' à la droite de chaque nom. Puis ensuite
+      cliquez sur 'Fermer' pour revenir à la liste.</para>
 
       <screenshot>
         <screeninfo>Routing List</screeninfo>
@@ -23555,13 +23534,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>If the list looks the way you expect it to, then click 'Save'.
-      Next you will be brought to a preview of the routing list. To print the
-      list click 'Save and preview routing slip.' This will open a printable
-      version of the list.</para>
+      <para>Une fois la liste complète, cliquez sur 'Enregistrer'. Un tableau
+      regroupant tous les destinataires s'affiche; vous pouvez imprimer ce
+      tableau en cliquant sur 'Ok aperçu du bon de circulation'.</para>
 
       <screenshot>
-        <screeninfo>Preview Routing List</screeninfo>
+        <screeninfo>Preview Routing ListS </screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -23570,10 +23548,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>If <link
-      linkend="RoutingListAddReserves">RoutingListAddReserves</link> is set to
-      on then patrons listed in the routing list will automatically be added
-      to the holds list for the issue.</para>
+      <para><link
+      linkend="RoutingListAddReserves">RoutingListAddReserves</link> est une
+      préférence système qui permet d'enregistrer une demande de réservation
+      dans le compte des destinataires à l'issue de la réception du dernier
+      fascicule.</para>
     </section>
 
     <section id="serialsubinstaff">
@@ -23786,7 +23765,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <para>to the <link linkend="IntranetUserCSS">IntranetUserCSS</link>
           preference.</para>
-        </tip> </para>
+        </tip></para>
     </section>
 
     <section id="acqvendors">
