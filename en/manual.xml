@@ -19127,6 +19127,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               automatically clicked</para>
             </important>
           </listitem>
+
+          <listitem>
+            <para>If the barcode is not found you will be prompted to use fast
+            cataloging to add the item. Learn more about <link
+            linkend="fastaddcat">fast cataloging</link> later in this
+            manual.</para>
+          </listitem>
         </itemizedlist>
 
         <para>Below the box for the barcode there may be options for you to
@@ -19509,10 +19516,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="images/circ/warnings/nobarcode.png" />
+                  <imagedata fileref="images/circ/barcodefastadd.png" />
                 </imageobject>
               </mediaobject>
             </screenshot>
+
+            <itemizedlist>
+              <listitem>
+                <para>Learn more about <link linkend="fastaddcat">fast
+                cataloging</link> later in this manual.</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
         </itemizedlist>
       </section>
@@ -20315,9 +20329,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       the system for an item they are about to check out. This is called 'Fast
       Add.' To allow circulation librarians access to the Fast Add Cataloging
       tool, simply make sure they have the <link
-      linkend="fastaddpermissions">fast_cataloging</link> permissions. To add
-      a title with the fast add framework, click the Fast Cataloging option on
-      the Circulation page</para>
+      linkend="fastaddpermissions">fast_cataloging</link> permissions. There
+      are two ways to add titles via fast add. If you know that you're about
+      to check out an item that isn't in you catalog you can go to the
+      Circulation module and click 'Fast cataloging.'</para>
 
       <screenshot>
         <screeninfo>Circulation Menu</screeninfo>
@@ -20345,6 +20360,61 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <para>After adding your cataloging data you will be asked to enter item
       data. Enter the items barcode, collection code, etc and save the item
       before checking it out.</para>
+
+      <para>The other way to fast catalog is from the checkout screen. When
+      you enter a barcode at checkout that Koha can't find, it will prompt you
+      to use fast cataloging to add the item to Koha and check it out.</para>
+
+      <screenshot>
+        <screeninfo>Barcode not found</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/barcodefastadd.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Clicking 'Fast cataloging' will bring you to the fast cataloging
+      form where you can enter the title information</para>
+
+      <screenshot>
+        <screeninfo>Fast cataloging</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/fastaddbarcode.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>After clicking 'Save' you will be brought to the item record where
+      the barcode will already be filled in with the barcode you're trying to
+      check out.</para>
+
+      <screenshot>
+        <screeninfo>Fast cataloging item record</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/fastadditem.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>After clicking the 'Add item' button the item will automatically
+      be checked out the patron you were trying to check the book out to
+      originally.</para>
+
+      <screenshot>
+        <screeninfo>Checked out item</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/fastaddcheckedout.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section id="circreports">
