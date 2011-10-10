@@ -20925,11 +20925,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     <section id="trackinhouse">
       <title>Tracking Inhouse Use</title>
 
-      <para>Many libraries track the use of items within the library. This is
-      possible within Koha with the use of one or more <link
-      linkend="addstatspatron">Statistical Patrons</link>. When collecting
-      items that have been used within the library, you will want to check
-      them out to your statistical patron:</para>
+      <para>Many libraries track the use of items within the library. This can
+      be done in Koha one of two ways. The first is to create one or more
+      <link linkend="addstatspatron">Statistical Patrons</link>. When
+      collecting items that have been used within the library, you will want
+      to check them out to your statistical patron:</para>
 
       <screenshot>
         <screeninfo>Check Out Items to Stats Patron</screeninfo>
@@ -20956,6 +20956,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <para>Repeat these steps for all items that have been used within the
       library to keep accurate statistics for item use.</para>
+
+      <para>The other way to record local use of items is to set your <link
+      linkend="RecordLocalUseOnReturn">RecordLocalUseOnReturn</link>
+      preference to 'Record.' Then whenever you check an item in that is not
+      checked out and not on hold a local use will be recorded.</para>
+
+      <screenshot>
+        <screeninfo>Local Use Recorded</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/localusecheckin.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section id="processinglocations">
