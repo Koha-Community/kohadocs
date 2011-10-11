@@ -7344,6 +7344,18 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 <para>Don't allow</para>
               </listitem>
             </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If patrons are allowed to notify the library of changes
+                an email will be sent to the library administration email
+                address with the changes. Lines that start with the fieldname
+                in all caps are the lines that the patron made changes
+                to.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="OpacTopissue">
@@ -27901,7 +27913,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>Patrons can edit their details in this form and click 'Submit
         Changes' to have their edits sent to the library for review before
-        their record is updated. If the <link
+        their record is updated. The email with the changes is sent to the
+        library administration email address and lines that the patron changed
+        will start with the field name in all caps.</para>
+
+        <para>If the <link
         linkend="OPACPatronDetails">OPACPatronDetails</link> preference is set
         to 'Don't allow' then patrons will simply see their details in plain
         text.</para>
