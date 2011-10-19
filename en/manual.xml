@@ -19721,32 +19721,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you have checked out all of the items for the patron you
-        can print them a receipt by choosing one of two methods.</para>
-
-        <para>The first is that you can simply hit enter on your keyboard or
-        scan a blank piece of paper with your barcode scanner. The idea being
-        that you're "checking out" a blank barcode which triggers Koha to
-        print the 'Quick Slip.'</para>
-
-        <para>The second is that you can click the Print button at the top of
-        the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
-
-        <screenshot>
-          <screeninfo>Print receipt to slip printer</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/printslip.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>If you choose 'Print Slip' it will print all of the items the
-        patron has checked out, including those they checked out at an earlier
-        date. Choosing 'Quick Slip' will print only the items that were
-        checked out today.</para>
-
         <para>If there are notes on the patron record these will appear to the
         right of the checkout box</para>
 
@@ -19775,21 +19749,55 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>When you're done checking an item out if you have the <link
-        linkend="DisplayClearScreenButton">DisplayClearScreenButton</link>
-        preference set to 'Show' you can clear the current patron by clicking
-        the X in the top right of the patron's info to remove the current
-        patron from the screen and start over.</para>
+        <section id="printcircreceipt">
+          <title>Printing Receipts</title>
 
-        <screenshot>
-          <screeninfo>Clear Screen Button</screeninfo>
+          <para>Once you have checked out all of the items for the patron you
+          can print them a receipt by choosing one of two methods.</para>
 
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/globalprefs/DisplayClearScreenButton.png" />
-            </imageobject>
-          </mediaobject>
-        </screenshot>
+          <para>The first is that you can simply hit enter on your keyboard or
+          scan a blank piece of paper with your barcode scanner. The idea
+          being that you're "checking out" a blank barcode which triggers Koha
+          to print the 'Quick Slip.'</para>
+
+          <para>The second is that you can click the Print button at the top
+          of the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
+
+          <screenshot>
+            <screeninfo>Print receipt to slip printer</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/printslip.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>If you choose 'Print Slip' it will print all of the items the
+          patron has checked out, including those they checked out at an
+          earlier date. Choosing 'Quick Slip' will print only the items that
+          were checked out today.</para>
+        </section>
+
+        <section id="clearpatroninfo">
+          <title>Clear Patron Information</title>
+
+          <para>When you're done checking an item out if you have the <link
+          linkend="DisplayClearScreenButton">DisplayClearScreenButton</link>
+          preference set to 'Show' you can clear the current patron by
+          clicking the X in the top right of the patron's info to remove the
+          current patron from the screen and start over.</para>
+
+          <screenshot>
+            <screeninfo>Clear Screen Button</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/DisplayClearScreenButton.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
 
       <section id="checkoutmsg">
