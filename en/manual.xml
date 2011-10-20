@@ -27756,6 +27756,145 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
     </section>
 
+    <section id="opacplacehold">
+      <title>Placing Holds</title>
+
+      <para>Patrons can place holds on items via the OPAC if they're logged
+      in. If the item can be placed on hold the option to place it on hold
+      will appear in several different places.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>When viewing a list or search results page you'll see the
+          option to place hold on multiple items by checking the boxes to the
+          left of the results and clicking 'Place Hold' at the top</para>
+
+          <screenshot>
+            <screeninfo>Place Hold from Results</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/opacplaceholdresults.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>When viewing a list or search results page you'll see the
+          option to place the item on hold below the basic information about
+          the title</para>
+
+          <screenshot>
+            <screeninfo>Place Hold</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/opacplaceholdsindiv.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>When viewing an individual title you'll see the option to
+          place a hold in the box on the right side of the screen</para>
+
+          <screenshot>
+            <screeninfo>Place Hold</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/opacplaceholdsdetail.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+
+      <para>No matter which of the above links you click to place your hold
+      you'll be brought to the same hold screen.</para>
+
+      <screenshot>
+        <screeninfo>Place Hold Form</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/opac/opacplacehold.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <itemizedlist>
+        <listitem>
+          <para>Check the box to the left of the items you'd like to place on
+          hold</para>
+        </listitem>
+
+        <listitem>
+          <para>The title includes a link back to the detail page for the
+          record</para>
+        </listitem>
+
+        <listitem>
+          <para>The priority shows where in the holds queue this hold will
+          fall</para>
+        </listitem>
+
+        <listitem>
+          <para>If allowed by your <link
+          linkend="OPACAllowHoldDateInFuture">OPACAllowHoldDateInFuture</link>
+          preference, the 'Hold Starts on Date' column will show. This field
+          allows the patron to have their hold start on a future date.</para>
+        </listitem>
+
+        <listitem>
+          <para>By default holds placed in the system remain until canceled,
+          but if the patron fills in a 'Hold Not Needed After' date then the
+          hold has an expiration date.</para>
+
+          <itemizedlist>
+            <listitem>
+              <important>
+                <para>Expired holds are removed by the <link
+                linkend="expiredholdscron">Expired Holds Cron Job</link>, this
+                is not an automatic process and must be set up by your system
+                administrator</para>
+              </important>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>If allowed by your <link
+          linkend="OPACItemHolds">OPACItemHolds</link> preference the patron
+          will be allowed to choose whether to place the hold on the next
+          available copy or a specific copy</para>
+
+          <screenshot>
+            <screeninfo>Specific Copy Hold</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/opacplaceholdspecific.png" />
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>If allowed by your <link
+          linkend="OPACAllowUserToChooseBranch">OPACAllowUserToChooseBranch</link>
+          preference the patron can choose where they'd like to pick up their
+          hold</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>After clicking the Place Hold button the patron will be brought to
+      their account page where they'll see all of the items they have on
+      hold.</para>
+    </section>
+
     <section id="opacenhancedcontent">
       <title>Enhanced Content</title>
 
