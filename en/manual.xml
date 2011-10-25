@@ -19718,38 +19718,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <itemizedlist>
-          <listitem>
-            <para>This screen will show whether an item is renewable and if
-            not, why not.</para>
-          </listitem>
-
-          <listitem>
-            <para>To override the renewal limits you can set the <link
-            linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
-            system preference to allow overrides and a checkbox will appear
-            below the list of checkouts that reads 'Override Renewal
-            Limit'</para>
-
-            <screenshot>
-              <screeninfo>Override Renewal Limit</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/circ/overriderenewal.png" />
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-
-            <itemizedlist>
-              <listitem>
-                <para>Checking that box will add checkboxes in the renew
-                column above where before the item was not renewable.</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-        </itemizedlist>
-
         <para>Also at the bottom of the page is the list of items the patron
         has on hold</para>
 
@@ -20095,6 +20063,65 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
       </section>
+    </section>
+
+    <section id="circrenew">
+      <title>Renewing</title>
+
+      <para>Checked out items can be renewed (checked out for another period
+      of time) based on your <link linkend="circfinerules">circulation
+      rules</link> and <link linkend="RenewalPeriodBase">renewal
+      preferences</link>. If you allow it, patrons can renew their own items
+      via the OPAC, but sometimes you'll need to help them by renewing their
+      items via the staff client. To renew items checked out to a patron,
+      visit their details page or checkout page and review their checkout
+      summary at the bottom.</para>
+
+      <screenshot>
+        <screeninfo>Circulation Summary</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/circsummary.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the Renew column you will see how many times each item has been
+      renewed and a checkbox to renew the item for the patron. Check the boxed
+      of the items you would like to renew and click the 'Renew or Return
+      checked items' button, or to renew all items checked out to the patron
+      simply click the 'Renew all' button.</para>
+
+      <screenshot>
+        <screeninfo>Renew buttons</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/renewbutton.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Sometimes renewals will be blocked based on your circulation
+      rules, to override this block you must have your <link
+      linkend="AllowRenewalLimitOverride">AllowRenewalLimitOverride</link>
+      preference set to 'Allow'. If you allow renewal limit overrides, you
+      will see a checkbox at the bottom left of the circulation summary. Check
+      that box and then choose the items you would like to renew.</para>
+
+      <screenshot>
+        <screeninfo>Override renewal limit</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/overriderenew.png" />
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Checking that box will add checkboxes in the renew column above
+      where before the item was not renewable.</para>
     </section>
 
     <section id="checkingin">
