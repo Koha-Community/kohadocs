@@ -1819,42 +1819,6 @@
             </itemizedlist>
           </section>
 
-          <section id="ceilingDueDate">
-            <title>ceilingDueDate</title>
-
-            <para>Default: no value</para>
-
-            <para>Asks: Make all checkouts due on or before ___</para>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference limits the due date of all items to be
-                before a selected date. This means that any items checked out
-                will be due no later than the selected date. This preference
-                is useful if the library is going to be closed for an extended
-                period of time. This allows for the opportunity for all
-                materials to be returned by a certain date (presumably the
-                closure date).</para>
-              </listitem>
-            </itemizedlist>
-
-            <tip>
-              <para>Enter the date to match the format you set in your
-              localization preferences (iso = YYYY-MM-DD or metric =
-              MM/DD/YYYY)</para>
-            </tip>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global system preferences &gt; I18N/L10N &gt; <link
-                linkend="dateformat">dateformat</link></para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
           <section id="CircControl">
             <title>CircControl</title>
 
@@ -1897,43 +1861,6 @@
                     patron</para>
                   </listitem>
                 </itemizedlist>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="globalDueDate">
-            <title>globalDueDate</title>
-
-            <para>Default: no value</para>
-
-            <para>Asks: Make all checkouts have a due date of ___</para>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference sets a specific date upon which all
-                library materials must be returned, regardless of whether or
-                not this date interferes with the normal check-out duration.
-                This feature is particularly useful for school libraries that
-                close during the summer break and require the return of their
-                materials before the end of the academic year. No default
-                value is set and the parameter is left blank unless a date is
-                entered.</para>
-              </listitem>
-            </itemizedlist>
-
-            <tip>
-              <para>Enter the date to match the format you set in your
-              localization preferences (iso = YYYY-MM-DD or metric =
-              MM/DD/YYYY)</para>
-            </tip>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>Get there:</emphasis> More &gt; Administration
-                &gt; Global system preferences &gt; I18N/L10N &gt; <link
-                linkend="dateformat">dateformat</link></para>
               </listitem>
             </itemizedlist>
           </section>
@@ -31732,6 +31659,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
+              <para><link linkend="AllowFineOverride">AllowFineOverride</link>
+              : Decide if you want staff to be able to override fine
+              limits</para>
+            </listitem>
+
+            <listitem>
               <para><link linkend="RenewalPeriodBase">RenewalPeriodBase</link>
               : Decide what date renewals are based on</para>
             </listitem>
@@ -31763,18 +31696,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para><link linkend="soundon">soundon</link> : Decide if you
               want to have sounds on for circulation actions</para>
-            </listitem>
-
-            <listitem>
-              <para><link linkend="globalDueDate">globalDueDate</link> : If
-              you want all your books due on the same date, enter that
-              here</para>
-            </listitem>
-
-            <listitem>
-              <para><link linkend="ceilingDueDate">ceilingDueDate</link> : If
-              you want all books due no later than a specific date (like the
-              end of a semester) enter a date here</para>
             </listitem>
 
             <listitem>
@@ -32158,6 +32079,47 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
           </itemizedlist>
         </listitem>
+
+        <listitem>
+          <para>Searching System Preferences</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><link
+              linkend="AdvancedSearchTypes">AdvancedSearchTypes</link> :
+              Decide which authorized value field you want patrons to be able
+              to limit their advanced searches by</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="UseAuthoritiesForTracings">UseAuthoritiesForTracings</link>
+              : Decide how you want Koha to handle subject searches in the
+              OPAC</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><link
+                  linkend="TraceCompleteSubfields">TraceCompleteSubfields</link>
+                  : Decide how you want Koha to handle subject searches in the
+                  OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="TraceSubjectSubdivisions">TraceSubjectSubdivisions</link>
+                  : Decide how you want Koha to handle subject searches in the
+                  OPAC</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="displayFacetCount">displayFacetCount</link>
+              : Decide whether to show facet counts on search results</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
       </itemizedlist>
     </section>
 
@@ -32310,12 +32272,36 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <listitem>
               <para><link linkend="OpacNav">OpacNav</link> : Enter HTML that
-              will aper to the left on the main OPAC page</para>
+              will appear to the left on the main OPAC page</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OpacNavBottom">OpacNavBottom</link> : Enter
+              HTML that will appear below OpacNav</para>
             </listitem>
 
             <listitem>
               <para><link linkend="opacheader">opacheader</link> : Enter the
               HTML that will appear above the search box on the OPAC</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OPACNoResultsFound">OPACNoResultsFound</link> : Enter
+              the HTML that will appear when no results are found</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="OPACResultsSidebar">OPACResultsSidebar</link> : Enter
+              the HTML that will appear below the facets on your search
+              results</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="OPACMySummaryHTML">OPACMySummaryHTML</link>
+              : Enter the HTML that will appear in the far right of the
+              circulation summary in the OPAC</para>
             </listitem>
 
             <listitem>
@@ -32435,8 +32421,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               linkend="customrssfeedcron">feed to be populated</link></para>
             </listitem>
           </itemizedlist>
-
-          <para></para>
         </listitem>
       </itemizedlist>
 
@@ -32558,6 +32542,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para>Enabling ThingISBN will help to populate the editions tab
               on the bib record display if you have enabled FRBR.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><link linkend="novelistselect">Novelist</link></para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This is a pay service from Ebsco. Contact Ebsco for the
+              information to enter into these preferences</para>
             </listitem>
           </itemizedlist>
         </listitem>
