@@ -21922,7 +21922,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="cataloganalytics">
         <title>Adding Analytic Records</title>
 
-        <para>If you would like to catlaog analytic records in Koha you first
+        <para>If you would like to catalog analytic records in Koha you first
         need to update the <link
         linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link>
         preference to 'Display.'</para>
@@ -21987,6 +21987,34 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           linkend="editbibrec">editing the record</link> after the link is
           done.</para>
         </tip>
+
+        <para>If you have linked an analytic record incorrectly you can remove
+        that link by editing the item on the analytic record (not the host
+        record). To do this, go to the analytic record and click the 'Edit'
+        button and choose to 'Edit items'. To the left of each item you will
+        see two options.</para>
+
+        <screenshot>
+          <screeninfo>Edit Analytic Item Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/analyticdelink.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Clicking 'Edit in Host' will allow you to edit the item on
+            the host record. </para>
+          </listitem>
+
+          <listitem>
+            <para>Clicking 'Delink' will remove the 773 field and the link
+            between the analytic and the host.</para>
+          </listitem>
+        </itemizedlist>
 
         <para>To view all of the items tied to the host record, do a search
         for the record, click the Analytics tab on the left and the analytics
