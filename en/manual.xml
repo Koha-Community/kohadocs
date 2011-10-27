@@ -1278,10 +1278,33 @@
           </section>
 
           <section id="EasyAnalyticalRecords">
+            <sectioninfo>
+              <author>
+                <firstname id="analyticsauthor">Linda</firstname>
+
+                <surname>Culberson</surname>
+
+                <affiliation>
+                  <orgname>Ms. Dept. of Archives and History</orgname>
+                </affiliation>
+              </author>
+
+              <pubdate id="analyticspubdate">October 2011</pubdate>
+
+              <othercredit id="analyticseditor" role="copyeditor">
+                <firstname>Nicole C.</firstname>
+
+                <surname>Engard</surname>
+
+                <contrib id="analyticscredit">Fixed typos, changed content
+                where necessary and added new screenshots.</contrib>
+              </othercredit>
+            </sectioninfo>
+
             <title>EasyAnalyticalRecords</title>
 
             <para>Asks: ___ easy ways to create analytical record
-            relationships </para>
+            relationships</para>
 
             <para>Default: Don't Display</para>
 
@@ -1311,27 +1334,6 @@
                 host records, and this system preference adds several new menu
                 options to the staff cataloging detail pages to allow that to
                 happen.</para>
-
-                <para>After creating and saving an analytical record, you can
-                click the "Edit" tab, select "Link to Host item," and enter
-                the barcode of the host record containing the part you are
-                describing. The 773 field will automatically be filled out
-                automatically, except for the first indicator which will need
-                to be filled out manually. If you find you have made a
-                mistake, click on the items of the analytic, select "Edit
-                item" on the mistaken item, and simply click "Delink" to
-                remove the link to the host item. </para>
-
-                <para>To view all of the items tied to the host record, do a
-                search for the record, click "Analytics" and the analytics
-                tied to each barcode will be shown under the "Used in" column.
-                </para>
-
-                <para>It is also possible to create analytic records from this
-                screen by clicking on "Create Analytics" The only fields that
-                will be automatically filled out in your new record will be
-                the 773. Once again the first indicator will need to be filed
-                out manually.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -13424,7 +13426,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <pubdate id="classsourcepubdate">August 2010</pubdate>
 
-          <othercredit role="copyeditor">
+          <othercredit id="classsourceeditor" role="copyeditor">
             <firstname>Nicole C.</firstname>
 
             <surname>Engard</surname>
@@ -21915,6 +21917,109 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </itemizedlist>
           </listitem>
         </itemizedlist>
+      </section>
+
+      <section id="cataloganalytics">
+        <title>Adding Analytic Records</title>
+
+        <para>If you would like to catlaog analytic records in Koha you first
+        need to update the <link
+        linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link>
+        preference to 'Display.'</para>
+
+        <para>After cataloging your analytic record (see <link
+        linkend="addbibrec">Adding Records</link> for more on creating
+        records) click 'Edit' from the normal view and choose to 'Link to Host
+        Item'</para>
+
+        <screenshot>
+          <screeninfo>Link to Host Item</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/analyticslink.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>This will prompt you to enter the barcode for the item this
+        record should be linked to.</para>
+
+        <screenshot>
+          <screeninfo>Barcode for Analytic Linking</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/analyticsbarcode.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>After entering the item's barcode and clicking 'Select' you will
+        receive a confirmation message.</para>
+
+        <screenshot>
+          <screeninfo>Analytic Link Success</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/analyticlinksuccess.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The record will now have the 773 field filled in properly to
+        complete the link.</para>
+
+        <screenshot>
+          <screeninfo>773</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/analytics773.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <tip>
+          <para>While the 773 is filled in automatically, the first indicator
+          needs to be entered by hand. This can be done by <link
+          linkend="editbibrec">editing the record</link> after the link is
+          done.</para>
+        </tip>
+
+        <para>To view all of the items tied to the host record, do a search
+        for the record, click the Analytics tab on the left and the analytics
+        tied to each barcode will be shown under the "Used in" column.</para>
+
+        <screenshot>
+          <screeninfo>Analytics Tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/analyticstab.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <tip>
+          <para>It is also possible to create analytic records from this
+          screen by clicking on "Create Analytics" </para>
+        </tip>
+
+        <para>You can also see the analytics attached to this record by
+        clicking the 'Show Analytic' link towards the top of the record in the
+        normal view.</para>
+
+        <screenshot>
+          <screeninfo>Show Analytics on Bib Record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/anayticbib.png" />
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="editbibrec">
