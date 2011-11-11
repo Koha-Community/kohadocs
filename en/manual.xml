@@ -14835,6 +14835,53 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
+          <itemizedlist>
+            <listitem>
+              <para>The name of your layout can be anything you'd like to help
+              you identify it later.</para>
+            </listitem>
+
+            <listitem>
+              <para>If this is a barcode label you'll want to choose the
+              encoding (Code 39 is the most common)</para>
+            </listitem>
+
+            <listitem>
+              <para>The layout type can be any combination of bibliographic
+              information and/or barcode. For example a spine label would just
+              be Biblio whereas a label for your circulation staff to use to
+              checkout the book would probably be Biblio/Barcode.</para>
+            </listitem>
+
+            <listitem>
+              <para>The Bibliographic Data to Print includes any of the data
+              fields that may be mapped to your MARC frameworks. You can
+              choose from the preset list of fields or you can click on 'List
+              Fields' and enter your own data. In 'List Fields', you can
+              specify MARC subfields as a 4-character tag-subfield string:
+              (ie. 254a for the title field), You can also enclose a
+              whitespace-separated list of fields to concatenate on one line
+              in double quotes. (ie. "099a 099b" or "itemcallnumber barcode").
+              Finally you could add in static text strings in single-quote
+              (ie. 'Some static text here.')</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose if the label maker should print out the guilde
+              lines around each label</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose if you'd like Koha to try to split your call
+              numbers (usually used on Spine Labels)</para>
+            </listitem>
+
+            <listitem>
+              <para>Finally choose your text settings such as alignment, font
+              type and size.</para>
+            </listitem>
+          </itemizedlist>
+
           <para>After saving, your layouts will appear on the 'Manage Layouts'
           page.</para>
         </section>
