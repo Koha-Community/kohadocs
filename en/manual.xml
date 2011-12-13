@@ -38076,6 +38076,40 @@ no-repeat scroll center top transparent;
           </itemizedlist>
         </section>
       </section>
+
+      <section id="wildcardsearchfaq">
+        <title>Wildcard Searching</title>
+
+        <para><emphasis role="bold">Question</emphasis>:What is the difference
+        between a keyword search using the &lsquo;*&rsquor; (asterisk) versus
+        a keyword search using the &lsquo;%&rsquor; (percent)? Both work in
+        the catalog, but return different sets. Why?</para>
+
+        <para><emphasis role="bold">Answer</emphasis>: A wildcard is a
+        character (*,?,%,.) that can be used to represent one or more
+        characters in a word. Two of the wildcard characters that can be used
+        in Koha searches are the asterisk (&lsquo;*&rsquor;) and the percent
+        sign (&lsquo;%&rsquor;). However, these two characters act differently
+        when used in searching.</para>
+
+        <para>The &lsquo;*&rsquor; is going to force a more exact search of
+        the first few characters you enter prior to the &lsquo;*&rsquor;. The
+        asterisk will allow for an infinite number of characters in the search
+        as long as the first few characters designated by your search remain
+        the same. For example, searching for authors using the term, Smi*,
+        will return a list that may include Smith, Smithers, Smithfield,
+        Smiley, etc depending on the authors in your database.</para>
+
+        <para>The &lsquo;%&rsquor; will treat the words you enter in the terms
+        of &ldquo;is like&rdquor;. So a search of Smi% will search for words
+        like Smi. This results in a much more varied results list. For
+        example, a search on Smi% will return a list containing Smothers,
+        Smith, Smelley, Smithfield and many others depending on what is your
+        database.</para>
+
+        <para>The bottom line in searching with wildcards: &lsquo;*&rsquor; is
+        more exact while &lsquo;%&rsquor; searches for like terms.</para>
+      </section>
     </section>
 
     <section id="enhancedcontentfaq">
