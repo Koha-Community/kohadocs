@@ -3016,7 +3016,7 @@
                 branch, date range, patron category or other such filter.
                 Requiring that the report be filtered before it's run prevents
                 your staff from running a system heavy report and slowing down
-                other operations in the system. </para>
+                other operations in the system.</para>
 
                 <screenshot>
                   <screeninfo>Overdue Report Filters</screeninfo>
@@ -8463,34 +8463,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </itemizedlist>
         </section>
 
-        <section id="AutoEmailPrimaryAddress">
-          <title>AutoEmailOpacUser &amp; AutoEmailPrimaryAddress</title>
+        <section id="AutoEmailOPACUser">
+          <title>AutoEmailOpacUser</title>
 
-          <para>AutoEmailOpacUser Default: Don't send</para>
-
-          <para>AutoEmailPrimaryAddress Default: alternate</para>
+          <para>Default: Don't send</para>
 
           <para>Asks: ___ an email to newly created patrons with their account
-          details at their ___ email address.</para>
+          details. </para>
 
-          <para>Descriptions:</para>
+          <para>Description:</para>
 
           <itemizedlist>
             <listitem>
               <para>AutoEmailOpacUser allows library users to be notified by
-              email of their account details when a new account is opened. The
-              email will be sent to the address specified in
-              AutoEmailPrimaryAddress. If you choose 'first valid' as the
-              value for AutoEmailPrimaryAddress the system will check the
-              email fields in this order: home, work, then alternate. The
-              email contains the username and password given to or chosen by
-              the patron when signing up for their account and can be
-              customized by editing the <link
+              email of their account details when a new account is opened at
+              the email address specified in the <link
+              linkend="AutoEmailPrimaryAddress">AutoEmailPrimaryAddress</link>
+              preference. The email contains the username and password given
+              to or chosen by the patron when signing up for their account and
+              can be customized by editing the <link
               linkend="ACCTDETAILS">ACCTDETAILS</link> notice.</para>
             </listitem>
           </itemizedlist>
 
-          <para>AutoEmailOpacUser Values:</para>
+          <para>Values:</para>
 
           <itemizedlist>
             <listitem>
@@ -8501,8 +8497,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para>Send</para>
             </listitem>
           </itemizedlist>
+        </section>
 
-          <para>AutoEmailPrimaryAddress Values:</para>
+        <section id="AutoEmailPrimaryAddress">
+          <title>AutoEmailPrimaryAddress</title>
+
+          <para>Default: alternate</para>
+
+          <para>Asks: Use ___ patron email address for sending out emails.
+          </para>
+
+          <para>Values:</para>
 
           <itemizedlist>
             <listitem>
@@ -8519,6 +8524,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <listitem>
               <para>work</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If you choose 'first valid' as the value for
+              AutoEmailPrimaryAddress the system will check the email fields
+              in this order: home, work, then alternate. Otherwise the system
+              will use the email address you specify.</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -17190,7 +17206,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <listitem>
                 <para>Sent to patrons when their account is set up if the
                 <link
-                linkend="AutoEmailPrimaryAddress">AutoEmailOPACUser</link>
+                linkend="AutoEmailOPACUser">AutoEmailOPACUser</link>
                 preference is set to 'Send'</para>
               </listitem>
             </itemizedlist>
@@ -18340,8 +18356,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <itemizedlist>
                   <listitem>
-                    <tip><para>With this selected there is no need to choose any
-                    other permissions</para></tip>
+                    <tip>
+                      <para>With this selected there is no need to choose any
+                      other permissions</para>
+                    </tip>
                   </listitem>
                 </itemizedlist>
               </listitem>
