@@ -10693,12 +10693,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para>Fill in the data requested on the form that follows</para>
 
-              <itemizedlist>
-                <listitem>
-                  <para>Of the fields listed, only 'Library code' and 'Name'
-                  are required</para>
-                </listitem>
+              <screenshot>
+                <screeninfo>New Library Form</screeninfo>
 
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/newlibrary.png" />
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
                 <listitem>
                   <important>
                     <para>Be sure to enter a library email address to make
@@ -10709,21 +10714,40 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <listitem>
                   <important>
-                    <para>An IP address is required if you have enabled
-                    AutoLocation</para>
+                    <para>An IP address is required if you have enabled <link
+                    linkend="AutoLocation">AutoLocation</link></para>
                   </important>
                 </listitem>
+
+                <listitem>
+                  <para>The Library code should not contain any spaces and be
+                  10 or fewer characters. This code will be used as a unique
+                  identifier in the database.</para>
+                </listitem>
+
+                <listitem>
+                  <para>The Name will be displayed on the OPAC wherever the
+                  library name displays to the public and should be a name
+                  that makes sense to your patrons.</para>
+                </listitem>
+
+                <listitem>
+                  <para>The address and contact fields can be used to make
+                  notices custom for each branch</para>
+                </listitem>
+
+                <listitem>
+                  <para>If the URL field is populated then the library name
+                  will be linked in the holdings table on the OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <tip>
+                    <para>Of the fields listed, only 'Library code' and 'Name'
+                    are required</para>
+                  </tip>
+                </listitem>
               </itemizedlist>
-
-              <screenshot>
-                <screeninfo>New Library Form</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/basicparams/newlibrary.png" />
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
             </listitem>
           </itemizedlist>
         </section>
