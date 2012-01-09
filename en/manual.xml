@@ -8587,7 +8587,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <para>Default: surname|cardnumber|barcode</para>
 
           <para>Asks: The following database columns must be filled in on the
-          patron entry screen ___</para>
+          patron entry screen: ___</para>
 
           <para>Description:</para>
 
@@ -8608,7 +8608,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <tip>
             <para>For help with field names, ask your system administrator or
-            view the database structure associated with the borrowers
+            <ulink
+            url="http://schema.koha-community.org/tables/borrowers.html">view
+            the database structure</ulink> associated with the borrowers
             table.</para>
           </tip>
         </section>
@@ -8969,6 +8971,35 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
             for this to work.</para>
           </important>
+        </section>
+
+        <section id="BorrowerUnwantedField">
+          <title>BorrowerUnwantedField</title>
+
+          <para>Asks: The following database columns will not appear on the
+          patron entry screen: ___</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference enables the system administrator to choose
+              which fields your library doesn't need to see on the patron
+              entry form. Enter field names separated by | (bar). </para>
+            </listitem>
+          </itemizedlist>
+
+          <important>
+            <para>Separate columns with |</para>
+          </important>
+
+          <tip>
+            <para>For help with field names, ask your system administrator or
+            <ulink
+            url="http://schema.koha-community.org/tables/borrowers.html">view
+            the database structure</ulink> associated with the borrowers
+            table.</para>
+          </tip>
         </section>
 
         <section id="uppercasesurnames">
