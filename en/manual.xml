@@ -2709,10 +2709,17 @@
               </listitem>
             </itemizedlist>
 
-            <para><tip>
-                <para>This notice can be customized by editing the HOLDPLACED
-                notice.</para>
-              </tip></para>
+            <important>
+              <para>In order for this email to send you must have a <link
+              linkend="notices">notice</link> template with the code of
+              HOLDSPLACED</para>
+            </important>
+
+            <important>
+              <para>This notice will only be sent if the <link
+              linkend="msgqueuecron">process_message_queue.pl cronjob</link>
+              being run periodically to send the messages.</para>
+            </important>
           </section>
 
           <section id="maxreserves">
