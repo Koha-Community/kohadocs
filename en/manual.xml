@@ -3500,10 +3500,30 @@
             <itemizedlist>
               <listitem>
                 <para>Barcode</para>
+
+                <screenshot>
+                  <screeninfo>Self Checkout Patron Card Number</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/selfcheckout.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
 
               <listitem>
                 <para>Username and password</para>
+
+                <screenshot>
+                  <screeninfo>Shelf checkout by login</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/SelfCheckoutByLogin.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
 
@@ -21676,8 +21696,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <para>You can also access this module by going to :
       http://YOUR_KOHA_OPAC_URL/cgi-bin/koha/sco/sco-main.pl</para>
 
-      <para>When on the self checkout page you will be asked to enter your
-      patron card number:</para>
+      <para>When on the self checkout page depending on your value in the
+      <link linkend="SelfCheckoutByLogin">SelfCheckoutByLogin</link>
+      preference you will be asked to enter you cardnumber </para>
 
       <screenshot>
         <screeninfo>Self Checkout Patron Card Number</screeninfo>
@@ -21689,8 +21710,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Once your card number is entered you will be asked to scan the
-      items you are checking out</para>
+      <para>or your username and password:</para>
+
+      <screenshot>
+        <screeninfo>Shelf checkout by login</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/SelfCheckoutByLogin.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Once you're logged in to the self check module you will be asked
+      to scan the items you are checking out</para>
 
       <screenshot>
         <screeninfo>Self Checkout</screeninfo>
