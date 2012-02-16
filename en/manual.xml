@@ -1785,6 +1785,46 @@
             </itemizedlist>
           </section>
 
+          <section id="AllowItemsOnHoldCheckout">
+            <title>AllowItemsOnHoldCheckout</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ checkouts of items items reserved to someone else.
+            If allowed do not generate RESERVE_WAITING and RESERVED warning.
+            This allows self checkouts for those items. </para>
+
+            <para>Values: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This system preference relates only to SIP based self
+              checkout, not Koha's web based self checkout.</para>
+            </important>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para> When this preference is set to 'Allow' patrons will be
+                able to use your external self check machine to check out a
+                book to themselves even if it's on hold for someone else. If
+                you would like Koha to prevent people from checking out books
+                that are on hold for someone else set this preference to
+                "Don't allow."</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="AllowNotForLoanOverride">
             <title>AllowNotForLoanOverride</title>
 
