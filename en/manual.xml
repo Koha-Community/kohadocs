@@ -1792,9 +1792,9 @@
 
             <para>Asks: ___ checkouts of items items reserved to someone else.
             If allowed do not generate RESERVE_WAITING and RESERVED warning.
-            This allows self checkouts for those items. </para>
+            This allows self checkouts for those items.</para>
 
-            <para>Values: </para>
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
@@ -1815,7 +1815,7 @@
 
             <itemizedlist>
               <listitem>
-                <para> When this preference is set to 'Allow' patrons will be
+                <para>When this preference is set to 'Allow' patrons will be
                 able to use your external self check machine to check out a
                 book to themselves even if it's on hold for someone else. If
                 you would like Koha to prevent people from checking out books
@@ -21881,7 +21881,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <para>When on the self checkout page depending on your value in the
       <link linkend="SelfCheckoutByLogin">SelfCheckoutByLogin</link>
-      preference you will be asked to enter you cardnumber </para>
+      preference you will be asked to enter you cardnumber</para>
 
       <screenshot>
         <screeninfo>Self Checkout Patron Card Number</screeninfo>
@@ -32165,6 +32165,58 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <para><link linkend="patronimport">Map your patron data</link> from
           your legacy system to the Koha fields and migrate (remembering to
           use the patron and library codes you defined above)</para>
+        </listitem>
+
+        <listitem>
+          <para>Test your migrated data to be sure that everything is as you
+          expect it to be, some things to test include:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Check some of your titles with diacritics and make sure
+              that they migrated properly.</para>
+            </listitem>
+
+            <listitem>
+              <para>Check titles in a series and make sure that series
+              information migrated properly.</para>
+            </listitem>
+
+            <listitem>
+              <para>Make sure that your patrons have their contact information
+              in the right fields.</para>
+            </listitem>
+
+            <listitem>
+              <para>If your serials data was migrated search for these records
+              in the catalog and confirm that they look right.</para>
+            </listitem>
+
+            <listitem>
+              <para>If your serials data was migrated search for these records
+              in the serials module and confirm that they look right.</para>
+            </listitem>
+
+            <listitem>
+              <para>Check marc records to verify a variety of items are
+              cataloged correctly</para>
+            </listitem>
+
+            <listitem>
+              <para>Check cataloging process to see if all necessary fields
+              are available</para>
+            </listitem>
+
+            <listitem>
+              <para>If fines are migrated, check to see that they are applied
+              correctly</para>
+            </listitem>
+
+            <listitem>
+              <para>If holds are migrated, check to see they are accurate in
+              catalog and patron record</para>
+            </listitem>
+          </itemizedlist>
         </listitem>
       </itemizedlist>
     </section>
