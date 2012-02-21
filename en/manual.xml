@@ -3715,9 +3715,10 @@
         </important>
 
         <tip>
-          <para>You cannot have more than one service for cover images set up.
-          If you set up more than one you will get multiple cover images.
-          Instead choose only one source for cover images.</para>
+          <para>You cannot have more than one service for cover images
+          (including local cover images) set up. If you set up more than one
+          you will get multiple cover images. Instead choose only one source
+          for cover images.</para>
         </tip>
 
         <section id="frbrenhancedprefs">
@@ -4823,6 +4824,122 @@
                 recommendations and cover art. It also can offer advanced
                 features like tagged browsing, patron written reviews, and a
                 virtual library display accessed from the details tab.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+        <section id="localimages">
+          <title>Local Cover Images</title>
+
+          <para/>
+
+          <section id="AllowMultipleCovers">
+            <title>AllowMultipleCovers</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ multiple images to be attached to each
+            bibliographic record.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If this preference is set to 'Allow' then you can upload
+                multiple images that will appear in the images tab on the bib
+                record in the OPAC and the staff client. This preference
+                requires that either one or both <link
+                linkend="LocalCoverImages">LocalCoverImages</link> and <link
+                linkend="OPACLocalCoverImages">OPACLocalCoverImages</link> are
+                set to 'Display.'</para>
+
+                <screenshot>
+                  <screeninfo>Multiple cover images</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AllowMultipleCovers.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LocalCoverImages">
+            <title>LocalCoverImages</title>
+
+            <para>Default: Don't display</para>
+
+            <para>Asks: ___ local cover images on intranet search and details
+            pages.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Display</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't display</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Setting this preference to 'Display' allows you to
+                upload your own cover images to bib records and display them
+                on the detail page in the staff client. At this time the cover
+                will only show under the 'Images' tab on the holdings table on
+                the detail display, not next to the title at the top left or
+                on the search results.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OPACLocalCoverImages">
+            <title>OPACLocalCoverImages</title>
+
+            <para>Default: Don't display</para>
+
+            <para>Asks: ___ local cover images on OPAC search and details
+            pages.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Display</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't display</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Setting this preference to 'Display' allows you to
+                upload your own cover images to bib records and display them
+                on the detail page and search results in the OPAC.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -17898,6 +18015,178 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
     </section>
+
+    <section id="uploadlocalimages">
+      <title>Upload Local Cover Image</title>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Catalog
+          &gt; Upload Local Cover Image</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>This tool will allow you to upload cover images for the materials
+      in your catalog. Images can be uploaded in batches or one by one. To
+      access this tool, staff will need the <link
+      linkend="toolspermissions">upload_local_cover_images
+      permission</link>.</para>
+
+      <para>If uploading a single image:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Visit the tool and click the 'Browse' button to browse to the
+          image on your local machine.</para>
+
+          <screenshot>
+            <screeninfo>Upload single cover image</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/uploadlocalimg/uploadsingle.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Upload file'</para>
+        </listitem>
+
+        <listitem>
+          <para>Choose 'Image file' under the 'File type' section</para>
+        </listitem>
+
+        <listitem>
+          <para>Enter the biblionumber for the record you're attaching this
+          image to. This is not the same as the barcode, this is the system
+          generated number assigned by Koha.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Find the biblionumber by looking at the end of the URL in
+              the address bar when on the detail page</para>
+
+              <screenshot>
+                <screeninfo>Biblionumber in URL</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/uploadlocalimg/bibnumurl.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>or by clicking on the MARC tab on the detail page in the
+              staff client</para>
+
+              <screenshot>
+                <screeninfo>Biblionumber on MARC Record</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/uploadlocalimg/bibnummarc.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>If you would like to replace any other cover images you may
+          have uploaded in the past, check the 'Replace existing covers' box
+          under the 'Options' section</para>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Process images'</para>
+        </listitem>
+
+        <listitem>
+          <para>You will be presented with a summary of the upload and a link
+          to the record you have just added the image to</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>If uploading a batch of images at once you will need to prepare a
+      ZIP file first.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Enter in to the ZIP file all the images you are
+          uploading</para>
+        </listitem>
+
+        <listitem>
+          <para>Also include a text file (*.TXT) named either datalink.txt or
+          idlink.txt listing the biblionumber followed by the image name for
+          each image one per line</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>ex. 4091,image4091.jpg</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Browse your local computer to the ZIP file</para>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Upload file'</para>
+        </listitem>
+
+        <listitem>
+          <para>Choose 'Zip file' under the 'File type' section</para>
+        </listitem>
+
+        <listitem>
+          <para>If you would like to replace any other cover images you may
+          have uploaded in the past, check the 'Replace existing covers' box
+          under the 'Options' section</para>
+        </listitem>
+
+        <listitem>
+          <para>Click 'Process images'</para>
+        </listitem>
+
+        <listitem>
+          <para>You will be presented with a summary of the upload</para>
+
+          <screenshot>
+            <screeninfo>Upload Summary</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/uploadlocalimg/uploadsummary.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+      </itemizedlist>
+
+      <para>You will be able to see your cover images in the staff client on
+      the detail page under the 'Image' tab in the holdings table at the
+      bottom</para>
+
+      <screenshot>
+        <screeninfo>Cover images in the staff client</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/admin/globalprefs/AllowMultipleCovers.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>In the OPAC the cover images will also appear in the images tab,
+      as well as next to the title and on the search results.</para>
+    </section>
   </chapter>
 
   <chapter id="patrons">
@@ -19339,6 +19628,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <listitem>
                   <para>Stage MARC records into the reservoir (Access to the
                   <link linkend="stagemarc">Stage MARC Records
+                  Tool</link>)</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>upload_local_cover_images</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Upload local cover images (Access to the <link
+                  linkend="uploadlocalimages">Upload Local Cover Image
                   Tool</link>)</para>
                 </listitem>
               </itemizedlist>
@@ -22579,6 +22880,26 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>Once you have made your edits (via either method) you can click
         'Save' at the top left of the editor.</para>
+
+        <para>You can also use the edit menu to add your own custom cover
+        image if you have either <link
+        linkend="OPACLocalCoverImages">OPACLocalCoverImages</link> and/or
+        <link linkend="LocalCoverImages">LocalCoverImages</link> set to
+        'Display' by choosing 'Upload Image' from the menu.</para>
+
+        <screenshot>
+          <screeninfo>Upload Image</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/uploadimage.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Choosing to 'Upload Image' will take you to the <link
+        linkend="uploadlocalimages">Upload Local Cover Image
+        Tool</link>.</para>
       </section>
 
       <section id="dupbibrec">
