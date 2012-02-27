@@ -6686,6 +6686,31 @@
             </itemizedlist>
           </section>
 
+          <section id="OpacExportOptions">
+            <title>OpacExportOptions</title>
+
+            <para>Default:
+            bibtex|dc|marcxml|marc8|utf8|marcstd|mods|ris</para>
+
+            <para>Asks: List export options that should be available from OPAC
+            detail page separated by |: ___</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In the OPAC on the right of each bib record there is a
+                menu that allows for saving the record in various formats.
+                This patch will allow you to define which options are in the
+                pull down menu. Available options are: BIBTEX (bibtex), Dublin
+                Core (dc), MARCXML (marcxml), MARC-8 encoded MARC (marc8),
+                Unicode/UTF-8 encoded MARC (utf8), Unicode/UTF-8 encoded MARC
+                without local use -9xx, x9x, xx9- fields and subfields
+                (marcstd), MODS (mods), and RIS (ris).</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OpacFavicon">
             <title>OpacFavicon</title>
 
@@ -14293,7 +14318,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <title>Add a budget</title>
 
           <para>Budgets can either be created from scratch or by duplicating
-          the previous year's budget. </para>
+          the previous year's budget.</para>
 
           <para>To duplicate a budget from a previous year, click on the link
           for the budget name from the list of budgets</para>
@@ -28798,7 +28823,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <para>Under the 'Save Record' label you will find a series of file
-      formats you can save the record as</para>
+      formats you can save the record as. This list can be customized by
+      altering the <link linkend="OpacExportOptions">OpacExportOptions</link>
+      system preference.</para>
 
       <screenshot>
         <screeninfo>Save Record</screeninfo>
