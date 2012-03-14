@@ -2762,6 +2762,64 @@
             </important>
           </section>
 
+          <section id="ExpireReservesMaxPickUpDelay">
+            <title>ExpireReservesMaxPickUpDelay</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ holds to expire automatically if they have not
+            been picked by within the time period specified in <link
+            linkend="ReservesMaxPickUpDelay">ReservesMaxPickUpDelay</link>
+            </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If set to 'allow' this will cancel holds that have been
+                waiting for longer than the number of days specified in the
+                <link
+                linkend="ReservesMaxPickupDelay">ReservesMaxPickupDelay</link>
+                system preference.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="ExpireReservesMaxPickUpDelayCharge">
+            <title>ExpireReservesMaxPickUpDelayCharge</title>
+
+            <para>Default: 0</para>
+
+            <para>Asks: If using <link
+            linkend="ExpireReservesMaxPickUpDelay">ExpireReservesMaxPickUpDelay</link>,
+            charge a borrower who allows his or her waiting hold to expire a
+            fee of ___ USD</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you are expiring holds that have been waiting too
+                long you can use this preference to charge the patron for not
+                picking up their hold. If you don't charge patrons for items
+                that aren't picked up you can leave this set to the default
+                which is 0.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="maxreserves">
             <title>maxreserves</title>
 
