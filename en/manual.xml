@@ -15385,8 +15385,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               (ie. 254a for the title field), You can also enclose a
               whitespace-separated list of fields to concatenate on one line
               in double quotes. (ie. "099a 099b" or "itemcallnumber barcode").
+              The fields available are from the database tables list below.
               Finally you could add in static text strings in single-quote
               (ie. 'Some static text here.')</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>You can use the schema viewer (<ulink
+                  url="http://schema.koha-community.org">http://schema.koha-community.org</ulink>)
+                  with the following tables to find field names to use:</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>Currently all fields in the following tables are
+                      used: items, biblioitems, biblio, branches</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
