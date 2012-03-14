@@ -10105,18 +10105,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <para>Default: itemtype</para>
 
-            <para>Asks: Show checkboxes to search by ___ on the OPAC and staff
-            advanced search pages.</para>
+            <para>Asks: Show tabs in OPAC and staff-side advanced search for
+            limiting searches on the ___ fields (separate values with |).
+            </para>
 
-            <para>Values:</para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>collection code</para>
-              </listitem>
+                <para>On the advanced search page you can choose to allow
+                filters on one or all of the following: Item types
+                (itemtypes), Collection Codes (ccode) and Shelving Location
+                (loc). If you would like to be able to limit searches on item
+                type and shelving location for example you would enter
+                itemtypes|loc in the preference input box. Tabs appear in the
+                order listed.</para>
 
-              <listitem>
-                <para>itemtype</para>
+                <screenshot>
+                  <screeninfo>Searching by Item Type and Shelving
+                  Location</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AdvancedSearchTypes%20.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </section>
@@ -33741,8 +33755,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para><link
               linkend="AdvancedSearchTypes">AdvancedSearchTypes</link> :
-              Decide which authorized value field you want patrons to be able
-              to limit their advanced searches by</para>
+              Decide which authorized value fields you want patrons and staff
+              to be able to limit their advanced searches by</para>
             </listitem>
 
             <listitem>
