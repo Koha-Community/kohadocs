@@ -2792,7 +2792,9 @@
                 waiting for longer than the number of days specified in the
                 <link
                 linkend="ReservesMaxPickupDelay">ReservesMaxPickupDelay</link>
-                system preference.</para>
+                system preference. Holds will only be cancelled if the <link
+                linkend="expiredholdscron">Expire Holds cron job</link> is
+                runnning.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2815,7 +2817,9 @@
                 long you can use this preference to charge the patron for not
                 picking up their hold. If you don't charge patrons for items
                 that aren't picked up you can leave this set to the default
-                which is 0.</para>
+                which is 0. Holds will only be cancelled and charged if the
+                <link linkend="expiredholdscron">Expire Holds cron job</link>
+                is runnning.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -34939,7 +34943,15 @@ print theme('pages_catalog');</programlisting>
           <para>Script path:
           misc/cronjobs/holds/cancel_expired_holds.pl</para>
 
-          <para>Does: Cancels holds that have past their expiration.</para>
+          <para>Does: By default, this cron job will only automatically cancel
+          holds where the user has set an expiration date. If the library is
+          using the <link
+          linkend="ExpireReservesMaxPickUpDelay">ExpireReservesMaxPickUpDelay</link>
+          and <link
+          linkend="ExpireReservesMaxPickUpDelayCharge">ExpireReservesMaxPickUpDelayCharge</link>
+          preferences then this script will also cancel holds that have been
+          sitting on the hold shelf for too long and will (if the library
+          does) charge the patron for not picking up the hold.</para>
 
           <para>Frequency suggestion: daily</para>
         </section>
