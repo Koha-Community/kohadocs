@@ -17725,16 +17725,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <itemizedlist>
               <listitem>
                 <important>
-                  <para>On overdue notices make sure to use
-                  &lt;&lt;items.content&gt;&gt; to print out the data related
-                  to all items that are overdue. The other option is to use
-                  the &lt;item&gt;&lt;/item&gt; tags to span the line so that
-                  it will print out multiple lines</para>
+                  <para>Overdue notices can use &lt;&lt;items.content&gt;&gt;
+                  tags by themselves, or use &lt;item&gt;&lt;/item&gt; to span
+                  all of the tags.</para>
 
                   <itemizedlist>
                     <listitem>
-                      <para>One example for the &lt;item&gt;&lt;/item&gt; tag
-                      option is:</para>
+                      <para> On overdue notices make sure to use
+                      &lt;&lt;items.content&gt;&gt; tags to print out the data
+                      related to all items that are overdue.</para>
+                    </listitem>
+                  </itemizedlist>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>The other option, only for overdue notices, is to
+                      use the &lt;item&gt;&lt;/item&gt; tags to span the line
+                      so that it will print out multiple lines One example for
+                      the &lt;item&gt;&lt;/item&gt; tag option is:</para>
 
                       <para>&lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by
                       &lt;&lt;biblio.author&gt;&gt;,
