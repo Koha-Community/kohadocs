@@ -17731,7 +17731,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                   <itemizedlist>
                     <listitem>
-                      <para> On overdue notices make sure to use
+                      <para>On overdue notices make sure to use
                       &lt;&lt;items.content&gt;&gt; tags to print out the data
                       related to all items that are overdue.</para>
                     </listitem>
@@ -23472,6 +23472,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <listitem>
             <para>y - Koha item type</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>To make sure that these values are filled in you can mark them
+        as mandatory in the <link linkend="marcbibframeworks">framework</link>
+        you're using and then they will appear in red with a 'required' label.
+        The item will not save until the required fields are filled in.</para>
+
+        <screenshot>
+          <screeninfo>Required Item Subfield</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/requireditemfields.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <tip>
+              <para>To make item subfields required in a framework you'll want
+              to edit the 952 field in the <link
+              linkend="marcbibframeworks">framework editor</link>.</para>
+            </tip>
           </listitem>
         </itemizedlist>
 
