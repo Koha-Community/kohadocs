@@ -8224,6 +8224,79 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </itemizedlist>
           </section>
 
+          <section id="OpacAllowPublicListCreation">
+            <title>OpacAllowPublicListCreation</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ opac users to create public lists</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Public lists are visible to anyone who visits your OPAC.
+                With this preference you can control whether or now patrons
+                are allowed to create these public lists. If this is set to
+                "Don't allow" then only staff will be able to create public
+                lists.</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference will only be taken in to account if you
+              have <link linkend="virtualshelves">virtualshelves</link> set to
+              'Allow'</para>
+            </important>
+          </section>
+
+          <section id="OpacAllowSharingPrivateLists">
+            <title>OpacAllowSharingPrivateLists</title>
+
+            <important>
+              <para>This feature is not active yet but will be released
+              soon</para>
+            </important>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ opac users to share private lists with other
+            patrons.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This feature will add the option for patrons to share
+                their lists with other patrons.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OPACFineNoRenewals">
             <title>OPACFineNoRenewals</title>
 
@@ -27504,10 +27577,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>A Public List can be seen by everybody, but managed only
                 by you</para>
               </listitem>
-
-              <listitem>
-                <para>A Open List can be seen and managed by everybody</para>
-              </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
@@ -27558,11 +27627,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <listitem>
                     <para>A Public List can be seen by everybody, but managed
                     only by you</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>A Open List can be seen and managed by
-                    everybody</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -29424,7 +29488,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <para>The only field required is the 'List Name,' but the patron can
           also choose how they want the list sorted and if the list is public
-          or private.</para>
+          or private.<important>
+              <para>If you aren't allowing patrons to create public lists with
+              the <link
+              linkend="OpacAllowPublicListCreation">OpacAllowPublicListCreation</link>
+              preference then patrons will only be able to create private
+              lists.</para>
+            </important></para>
         </section>
 
         <section id="opacaddtolists">
@@ -34115,6 +34185,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <listitem>
                   <para><link linkend="virtualshelves">virtualshelves</link> :
                   Decide if you want patrons to be able to create Lists</para>
+                </listitem>
+
+                <listitem>
+                  <para><link
+                  linkend="OpacAllowPublicListCreation">OpacAllowPublicListCreation</link>
+                  : If patrons can create lists then decide if they are
+                  allowed to create public lists</para>
                 </listitem>
 
                 <listitem>
