@@ -39421,15 +39421,43 @@ no-repeat scroll center top transparent;
         </itemizedlist>
 
         <tip>
+          <para>To generate a date picker calendar to the right of the field
+          when running a report you can use the 'date' keyword like this:
+          &lt;&lt;Enter Date|date&gt;&gt;</para>
+
+          <screenshot>
+            <screeninfo>Date Picker</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/reports/datepicker.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </tip>
+
+        <tip>
           <para>You have to put "%" in a text box to 'leave it blank'.
           Otherwise, it literally looks for "" (empty string) as the value for
           the field.</para>
         </tip>
 
         <para><important>
-            <para>The only supported dropdowns at this time are Branches
+            <para>In addition to using any authorized value code to generate a
+            dropdown, you can use the following values as well: Branches
             (branches), Item Types (itemtypes) and Patron Categories
-            (categorycode).</para>
+            (categorycode). For example a branch pull down would be generated
+            like this &lt;&lt;Branch|branches&gt;&gt;</para>
+
+            <screenshot>
+              <screeninfo>Branch pull down</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/reports/branchpulldown.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </important></para>
       </section>
 
