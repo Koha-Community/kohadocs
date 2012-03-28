@@ -21092,13 +21092,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <para>Once you have checked out all of the items for the patron you
           can print them a receipt by choosing one of two methods.</para>
 
-          <para>The first is that you can simply hit enter on your keyboard or
-          scan a blank piece of paper with your barcode scanner. The idea
-          being that you're "checking out" a blank barcode which triggers Koha
-          to print the 'Quick Slip.'</para>
+          <para>If you have the <link
+          linkend="CircAutoPrintQuickSlip">CircAutoPrintQuickSlip</link>
+          preference set to 'open a print quick slip window' you can simply
+          hit enter on your keyboard or scan a blank piece of paper with your
+          barcode scanner. The idea being that you're "checking out" a blank
+          barcode which triggers Koha to print the 'Quick Slip.'</para>
 
-          <para>The second is that you can click the Print button at the top
-          of the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
+          <para>You can also click the Print button at the top of the screen
+          and choose 'Print Slip' or 'Quick Slip'.</para>
 
           <screenshot>
             <screeninfo>Print receipt to slip printer</screeninfo>
@@ -21114,6 +21116,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           patron has checked out, including those they checked out at an
           earlier date. Choosing 'Quick Slip' will print only the items that
           were checked out today.</para>
+
+          <para>What prints on the slips can be customized by altering the
+          slip templates under the <link linkend="notices">Notices &amp;
+          Slips</link> tool.</para>
         </section>
 
         <section id="clearpatroninfo">
@@ -21134,6 +21140,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </imageobject>
             </mediaobject>
           </screenshot>
+
+          <para>If you have the <link
+          linkend="CircAutoPrintQuickSlip">CircAutoPrintQuickSlip</link>
+          preference set to 'clear the screen' then you simply need to hit
+          enter or scan a blank barcode and the screen will be cleared of the
+          current patron.</para>
         </section>
       </section>
 
