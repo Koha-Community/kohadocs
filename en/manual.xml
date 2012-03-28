@@ -281,9 +281,9 @@
             <para>Asks:___ (space-separated list of fields that should be
             unique for items, must be valid SQL fields of <ulink
             url="http://schema.koha-community.org/tables/items.html">items</ulink>
-            table) </para>
+            table)</para>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -3325,6 +3325,26 @@
                     migrating from Follett systems</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="NoticeCSS">
+            <title>NoticeCSS</title>
+
+            <para>Asks: Include the stylesheet at ___ on Notices.<important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <para>Description: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to style your notices with a
+                consistent set of fonts and colors you can use this preference
+                to point Koha to a stylesheet specifically for your
+                notices.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -17879,7 +17899,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <para>Each notice can be edited, but only a few can be deleted, this is
       to prevent system errors should a message try to send without a
       template. Each notice and slip can be edited on a per library basis, by
-      default you will see the notices for all libraries. </para>
+      default you will see the notices for all libraries.</para>
 
       <para>If you have a style you'd like applied to all slips you can point
       the <link linkend="SlipCSS">SlipCSS</link> preference to a
