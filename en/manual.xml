@@ -272,6 +272,28 @@
                 (6%).</para>
               </tip></para>
           </section>
+
+          <section id="UniqueItemFields">
+            <title>UniqueItemFields</title>
+
+            <para>Default: barcode</para>
+
+            <para>Asks:___ (space-separated list of fields that should be
+            unique for items, must be valid SQL fields of <ulink
+            url="http://schema.koha-community.org/tables/items.html">items</ulink>
+            table) </para>
+
+            <para>Description: </para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If this preference is left blank when adding items in
+                acquisitions there will be no check for uniqueness. This means
+                that a duplicate barcode can be created in acquisitions which
+                will cause errors later when checking items in and out.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section id="acqprefsprinting">
