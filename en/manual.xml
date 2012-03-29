@@ -21432,6 +21432,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="checkoutmsg">
         <title>Check Out Messages</title>
 
+        <para>If you check out an item that has multiple pieces and you have
+        cataloged that information in subfield 3 of the item record (in
+        MARC21) a message will pop up when you check out that item telling you
+        how many pieces should be there.</para>
+
+        <screenshot>
+          <screeninfo>Materials in the checked out item</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/materialspecified.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
         <para>There are times when Koha will prevent the librarian from being
         able to check out items to a patron. When this happens a warning will
         appear notifying the librarian of why the patron cannot check items
@@ -21891,6 +21906,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you are checking in an item that should have multiple
+            parts or pieces a message will appear warning you about the number
+            of pieces you should have in your hand</para>
+
+            <screenshot>
+              <screeninfo>Materials Specified</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/materialspecified.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </listitem>
 
           <listitem>
