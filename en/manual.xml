@@ -18061,7 +18061,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <title>Existing Notices &amp; Slips</title>
 
         <para>Among the default notices are notices for several common actions
-        within Koha, here are some of what those notices do</para>
+        within Koha. All of these notices can be customized by altering their
+        text via the Notices &amp; Slips tool and their style using the <link
+        linkend="NoticeCSS">NoticeCSS</link> preference to define a
+        stylesheet. Here are some of what those notices do</para>
 
         <itemizedlist>
           <listitem>
@@ -18219,6 +18222,74 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   new serial issues, you can click on 'define a notice' which
                   will take you to the 'Notices' tool</para>
                 </tip>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>There are also a set of predefined slips (or receipts) listed on
+        this page. All of these slips can be customized by altering their text
+        via the Notices &amp; Slips tool and their style using the <link
+        linkend="SlipCSS">SlipCSS</link> preference to define a stylesheet.
+        Here is what those slips are used for:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ISSUEQSLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print the quick slip in circulation</para>
+              </listitem>
+
+              <listitem>
+                <para>The quick slip only includes items that were checked out
+                today</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>ISSUESLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print a full slip in circulation</para>
+              </listitem>
+
+              <listitem>
+                <para>The slip or receipt will show items checked out today as
+                well as items that are still checked out</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>RESERVESLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print a holds slip</para>
+              </listitem>
+
+              <listitem>
+                <para>The holds slip is generated when a hold is
+                confirmed</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>TRANSFERSLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print a transfer slip</para>
+              </listitem>
+
+              <listitem>
+                <para>The transfer sliip is printed when you confirm a
+                transfer from one branch to another in your system</para>
               </listitem>
             </itemizedlist>
           </listitem>
