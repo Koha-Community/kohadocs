@@ -11281,7 +11281,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <itemizedlist>
           <listitem>
             <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Basic Parameters &gt; Libraries, branches and groups</para>
+            &gt; Basic Parameters &gt; Libraries and Groups</para>
           </listitem>
         </itemizedlist>
 
@@ -11320,10 +11320,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Fill in the data requested on the form that follows</para>
+              <para>The top of the form asks for some basics about the
+              library</para>
 
               <screenshot>
-                <screeninfo>New Library Form</screeninfo>
+                <screeninfo>Basic Library Info</screeninfo>
 
                 <mediaobject>
                   <imageobject>
@@ -11334,51 +11335,122 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <important>
-                    <para>Be sure to enter a library email address to make
-                    sure that notices are sent to and from the right
-                    address</para>
-                  </important>
-                </listitem>
-
-                <listitem>
-                  <important>
-                    <para>An IP address is required if you have enabled <link
-                    linkend="AutoLocation">AutoLocation</link></para>
-                  </important>
-                </listitem>
-
-                <listitem>
-                  <para>The Library code should not contain any spaces and be
+                  <para>The library code should not contain any spaces and be
                   10 or fewer characters. This code will be used as a unique
                   identifier in the database.</para>
                 </listitem>
 
                 <listitem>
-                  <para>The Name will be displayed on the OPAC wherever the
+                  <para>The name will be displayed on the OPAC wherever the
                   library name displays to the public and should be a name
                   that makes sense to your patrons.</para>
                 </listitem>
 
                 <listitem>
+                  <para>If you have <link
+                  linkend="addinglibgroup">groups</link> set up you can choose
+                  what group this library belongs to after entering in the
+                  code and name</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Next you can enter basic contact info about the
+              branch</para>
+
+              <screenshot>
+                <screeninfo>Library Contact Info</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/librarycontact.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
                   <para>The address and contact fields can be used to make
-                  notices custom for each branch</para>
+                  notices custom for each library</para>
+                </listitem>
+
+                <listitem>
+                  <para>The email address field is not required, but it should
+                  be filled for every library in your system</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <important>
+                        <para>Be sure to enter a library email address to make
+                        sure that notices are sent to and from the right
+                        address</para>
+                      </important>
+                    </listitem>
+                  </itemizedlist>
                 </listitem>
 
                 <listitem>
                   <para>If the URL field is populated then the library name
                   will be linked in the holdings table on the OPAC</para>
+
+                  <screenshot>
+                    <screeninfo>Linked Library Name</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/basicparams/librarylink.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
                 </listitem>
 
                 <listitem>
-                  <tip>
-                    <para>Of the fields listed, only 'Library code' and 'Name'
-                    are required</para>
-                  </tip>
+                  <para>The OPAC Info box is for you to put information about
+                  the library that will appear in the OPAC when the branch
+                  name is moused over in the holdings table</para>
+
+                  <screenshot>
+                    <screeninfo>OPAC Info</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/basicparams/opacinfo.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+
+                <listitem>
+                  <para>IP Address does not have be filled in unless you plan
+                  on limiting access to your staff client to a specific IP
+                  Address</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <important>
+                        <para>An IP address is required if you have enabled
+                        <link
+                        linkend="AutoLocation">AutoLocation</link></para>
+                      </important>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Finally, if you have any notes you can put them here.
+                  These will not show in the OPAC</para>
                 </listitem>
               </itemizedlist>
             </listitem>
           </itemizedlist>
+
+          <tip>
+            <para>Of the fields listed, only 'Library code' and 'Name' are
+            required</para>
+          </tip>
+
+          <para/>
         </section>
 
         <section id="editingalibrary">
