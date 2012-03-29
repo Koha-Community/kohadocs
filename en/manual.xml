@@ -2674,6 +2674,40 @@
             </itemizedlist>
           </section>
 
+          <section id="AutoResumeSuspendedHolds">
+            <title>AutoResumeSuspendedHolds</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ suspended holds to be automatically resumed by a
+            set date.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If this preference is set to 'Allow' then all suspended
+                holds will be able to have a date at which they automatically
+                become unsuspended. If you have this preference set to 'Allow'
+                you will also need the <link
+                linkend="unsuspendholdcron">Unsuspend Holds</link> cron job
+                running.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="canreservefromotherbranches">
             <title>canreservefromotherbranches</title>
 
@@ -21359,6 +21393,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
+        <para>From the holds list you can suspend or resume patrons holds
+        using the options at the bottom of the list.</para>
+
         <para>If there are notes on the patron record these will appear to the
         right of the checkout box</para>
 
@@ -22339,10 +22376,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <note>
+          <para>If you have your <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference set to "Don't allow" then you will not have the option to
+          put an end date on the hold suspension</para>
+        </note>
+
+        <note>
           <para>Depending on how you have your <link
           linkend="HidePatronName">HidePatronName</link> system preference set
-          the list may show patron names instead of card numbers in the Patron
-          column like in the image above.</para>
+          the list may show card numbers instead of names in the Patron column
+          like in the image above.</para>
         </note>
 
         <para>To rearrange or delete holds, simply make a selection from the
@@ -22361,6 +22405,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>To delete or cancel a hold, choose 'del' from the menu or click
         the red 'X' to the right of the hold line.</para>
+
+        <para>If you use the priority pull down to rearrange or delete holds
+        you will need to click the 'Update hold(s)' button to save your
+        changes.</para>
 
         <para>Clicking the down arrow to the right of the hold will stick the
         hold at the bottom of the list even if more requests are made.</para>
@@ -22383,8 +22431,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you have made your changes, click the 'Update hold(s)'
-        button and your changes will be saved.</para>
+        <para>If a patron asks to have their hold suspended you can do so by
+        clicking the Suspend button to far right. If the patron gives you a
+        date for the items to become unsuspended you can enter that in the
+        date box and click the 'Update hold(s)' button to save your
+        changes.</para>
+
+        <screenshot>
+          <screeninfo>Hold suspension column</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/suspendholds.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para/>
       </section>
 
       <section id="receiveholds">
@@ -29390,6 +29453,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para><link linkend="RequestOnOpac">RequestOnOpac</link> =
         Allow</para>
       </listitem>
+
+      <listitem>
+        <para><link
+        linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link> =
+        Allow</para>
+      </listitem>
     </itemizedlist>
 
     <para>If your system preferences are set differently your displays may
@@ -30615,6 +30684,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>Patrons can cancel their own holds if they are not in transit or
+        already waiting for them. They can also suspend all of their holds
+        indefinitely or until a specific date if they choose by filling in the
+        suspend options at the bottom of the page.</para>
       </section>
 
       <section id="opacmyaccount-flags">
@@ -35654,6 +35728,21 @@ print theme('pages_catalog');</programlisting>
           preferences then this script will also cancel holds that have been
           sitting on the hold shelf for too long and will (if the library
           does) charge the patron for not picking up the hold.</para>
+
+          <para>Frequency suggestion: daily</para>
+        </section>
+
+        <section id="unsuspendholdcron">
+          <title>Unsuspend Holds</title>
+
+          <para>Script path:
+          misc/cronjobs/holds/auto_unsuspend_holds.pl</para>
+
+          <para>Does: This script checks to find holds that should no longer
+          be suspended and removes the suspension if the <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference is set to 'allow'. This puts the patron back in to the
+          queue where they were when the hold was suspended.</para>
 
           <para>Frequency suggestion: daily</para>
         </section>
