@@ -7633,26 +7633,72 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
           <section id="OPACXSLTDetailsDisplay">
             <title>OPACXSLTDetailsDisplay</title>
 
-            <para>Default: normally</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show item details pages on the OPAC ___</para>
+            <para>Asks: Display OPAC details using XSLT stylesheet at
+            ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the detail pages in the OPAC</para>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
+              </listitem>
+
+              <listitem>
+                <para>put a path to define a XSLT file</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/opac/prog/{langcode}/xslt/OpacDetail.xsl
+                        </para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykohaopac.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing a bib record. This
+                preference will allow you either use the default look that
+                comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -7660,26 +7706,71 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
           <section id="OPACXSLTResultsDisplay">
             <title>OPACXSLTResultsDisplay</title>
 
-            <para>Default: normally</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show biblio records on OPAC result page ___</para>
+            <para>Asks: Display OPAC results using XSLT stylesheet at
+            ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results pages in the OPAC</para>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
+              </listitem>
+
+              <listitem>
+                <para>put a path to define a XSLT file</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/opac/prog/{langcode}/xslt/OpacDetail.xsl</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykohaopac.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing the search results.
+                This preference will allow you either use the default look
+                that comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -10941,48 +11032,93 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="XSLTDetailsDisplay">
             <title>XSLTDetailsDisplay</title>
 
-            <para>Default: normally</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show item details pages in the staff client ___</para>
+            <para>Asks: Display details in the staff client using XSLT
+            stylesheet at ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
+
+                    <screenshot>
+                      <screeninfo>Detail display without XSLT
+                      stylesheets</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
 
                 <screenshot>
-                  <screeninfo>Detail display without XSLT
+                  <screeninfo>Detail display using XSLT
                   stylesheets</screeninfo>
 
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png"/>
+                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png"/>
                     </imageobject>
                   </mediaobject>
                 </screenshot>
               </listitem>
 
               <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>put a path to define a XSLT file</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the bibliographic records in the Staff Client</para>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
 
-                    <screenshot>
-                      <screeninfo>Detail display using XSLT
-                      stylesheets</screeninfo>
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
 
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png"/>
-                        </imageobject>
-                      </mediaobject>
-                    </screenshot>
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/intranet-tmpl/prog/{langcode}/xslt/intranetDetail.xsl</para>
+                      </listitem>
+                    </itemizedlist>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykohaopac.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing a bib record. This
+                preference will allow you either use the default look that
+                comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -10990,27 +11126,71 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="XSLTResultsDisplay">
             <title>XSLTResultsDisplay</title>
 
-            <para>Default: using XSLT stylesheets</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show biblio records on result page in the staff client
-            ___</para>
+            <para>Asks: Display results in the staff client using XSLT
+            stylesheet at ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the Staff Client</para>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
+              </listitem>
+
+              <listitem>
+                <para>put a path to define a XSLT file</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/intranet-tmpl/prog/{langcode}/xslt/intranetDetail.xsl</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykohaopac.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing the search results.
+                This preference will allow you either use the default look
+                that comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -29377,14 +29557,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     <itemizedlist>
       <listitem>
         <para><link
-        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> = using
-        XSLT stylesheets</para>
+        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> =
+        default</para>
       </listitem>
 
       <listitem>
         <para><link
-        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> = using
-        XSLT stylesheets</para>
+        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> =
+        default</para>
       </listitem>
 
       <listitem>
