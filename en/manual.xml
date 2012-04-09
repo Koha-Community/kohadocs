@@ -13330,9 +13330,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Define the period of time and item can be checked out to a
-              patron by entering the number of days in the 'Loan Period'
-              box.</para>
+              <para>Define the period of time an item can be checked out to a
+              patron by entering the number of units (days or hours) in the
+              'Loan Period' box.</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose which unit of time, Days or Hours, that the loan
+              period and fines will be calculate in</para>
             </listitem>
 
             <listitem>
@@ -13357,19 +13362,37 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>The 'Fine Grace Period' is the period of time an item can
-              be overdue before you start charging fines.</para>
+              <para>Enter the 'Fine Charging Interval' in the unit you set
+              (ex. charge fines every 1 day, or every 2 hours)</para>
             </listitem>
 
             <listitem>
-              <para>Enter the 'Fine Charging Interval' in days (ex. charge
-              fines every 1 day, or every 2 days)</para>
+              <para>The 'Fine Grace Period' is the period of time an item can
+              be overdue before you start charging fines.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This can only be set for the Day unit, not in
+                    Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
               <para>If your library 'fines' patrons by suspending their
               account you can enter the number of days their fine should be
               suspended in the 'Suspension in Days' field</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This can only be set for the Day unit, not in
+                    Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -13475,6 +13498,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
+              <para>Control where the item returns to once it is checked
+              in</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Item returns home</para>
+                </listitem>
+
+                <listitem>
+                  <para>Item returns to issuing branch</para>
+                </listitem>
+
+                <listitem>
+                  <para>Item floats</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>When an item floats it stays where it was checked
+                      in and does not ever return 'home'</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
               <para>Once your policy is set, you can unset it by clicking the
               'Unset' link to the right of the rule</para>
             </listitem>
@@ -13522,7 +13571,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>The various policies have the following effects:</para>
+          <para>The various Hold Policies have the following effects:</para>
 
           <itemizedlist>
             <listitem>
@@ -13552,6 +13601,49 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>These policies are based on the patron's home branch, not
             the branch that the reserving staff member is from.</para>
           </important>
+
+          <para>The various Return Policies have the following effects:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Item returns home: The item will prompt the librarian to
+              transfer the item to its home library</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If the <link
+                    linkend="AutomaticItemReturn">AutomaticItemReturn</link>
+                    preference is set to automatically transfer the items
+                    home, then a prompt will not appear</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Item returns to issuing branch: The item will prompt the
+              librarian to transfer the item back to the library where it was
+              checked out</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If the <link
+                    linkend="AutomaticItemReturn">AutomaticItemReturn</link>
+                    preference is set to automatically transfer the items
+                    home, then a prompt will not appear</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Item floats: The item will not be transferred from the
+              branch it was checked in at, instead it will remain there until
+              transferred manually or checked in at another branch</para>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
 
@@ -21583,8 +21675,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </itemizedlist>
 
         <para>At the bottom of the page there is a summary of the patron's
-        current checked out items along with the due date, items checked out
-        today will appear at the top.</para>
+        current checked out items along with the due date (and time if the
+        item is an hourly loan), items checked out today will appear at the
+        top.</para>
+
+        <tip>
+          <para>If the checked out time is listed as 00:00 then the item is a
+          daily loan item. The due time for daily checkouts will show 23:59
+          which is the last minute of the day.</para>
+        </tip>
 
         <screenshot>
           <screeninfo>Patron's checkout summary</screeninfo>
