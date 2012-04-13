@@ -28998,12 +28998,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               your query. Runtime parameters basically make a filter appear
               before the report is run to save your system resources.</para>
 
-              <para><note>
-                  <para>There is a limit of 10,000 records put on SQL
-                  statements entered in Koha. To get around this you want to
-                  add 'LIMIT 100000' to the end of your SQL statement (or any
-                  other number above 10,000.</para>
-                </note>There is a specific syntax that Koha will understand as
+              <para>There is a specific syntax that Koha will understand as
               'ask for values when running the report'. The syntax is
               &lt;&lt;Question to ask|authorized_value&gt;&gt;.</para>
 
@@ -29095,6 +29090,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </important></para>
             </listitem>
           </itemizedlist>
+
+          <note>
+            <para>There is a limit of 10,000 records put on SQL statements
+            entered in Koha. To get around this you want to add 'LIMIT 100000'
+            to the end of your SQL statement (or any other number above
+            10,000.</para>
+          </note>
 
           <para>Once everything is entered click the 'Save Report' button and
           you'll be presented with options to run it. Once a report is saved
