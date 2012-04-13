@@ -15169,7 +15169,92 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="oaisetsconfig">
         <title>OAI Sets Configuration</title>
 
-        <para>Manage OAI Sets.</para>
+        <para>On this page you can create, modify and delete OAI-PMH
+        sets</para>
+
+        <section id="oaicreate">
+          <title>Create a set</title>
+
+          <para>To creat a set:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click on the link 'Add a new set'</para>
+            </listitem>
+
+            <listitem>
+              <para>Fill the mandatory fields 'setSpec' and 'setName'</para>
+            </listitem>
+
+            <listitem>
+              <para>Then you can add descriptions for this set. To do this
+              click on 'Add description' and fill the newly created text box.
+              You can add as many descriptions as you want.</para>
+            </listitem>
+
+            <listitem>
+              <para>Click on 'Save' button'</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="oaimodify">
+          <title>Modify/Delete a set</title>
+
+          <para>To modify a set, just click on the link 'Modify' on the same
+          line of the set you want to modify. A form similar to set creation
+          form will appear and allow you to modify the setSpec, setName and
+          descriptions.</para>
+
+          <para>To delete a set, just click on the link 'Delete' on the same
+          line of the set you want to delete.</para>
+        </section>
+
+        <section id="oaimapping">
+          <title>Define mappings</title>
+
+          <para>Here you can define how a set will be build (what records will
+          belong to this set) by defining mappings. Mappings are a list of
+          conditions on record content. A record only need to match one
+          condition to belong to the set.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Fill the fields 'Field', 'Subfield' and 'Value'. For
+              example if you want to include in this set all records that have
+              a 999$9 equal to 'XXX'. Fill 'Field' with 999, 'Subfield' with 9
+              and 'Value' with XXX.</para>
+            </listitem>
+
+            <listitem>
+              <para>If you want to add another condition, click on 'OR' button
+              and repeat step 1.</para>
+            </listitem>
+
+            <listitem>
+              <para>Click on 'Save'</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>To delete a condition, just leave at least one of 'Field',
+          'Subfield' or 'Value' empty and click on 'Save'.<note>
+              <para>Actually, a condition is true if value in the
+              corresponding subfield is strictly equal to what is defined if
+              'Value'. A record having 999$9 = 'XXX YYY' will not belong to a
+              set where condition is 999$9 = 'XXX'.</para>
+            </note></para>
+
+          <para>And it is case sensitive : a record having 999$9 = 'xxx' will
+          not belong to a set where condition is 999$9 = 'XXX'.</para>
+        </section>
+
+        <section id="oaibuild">
+          <title>Build sets</title>
+
+          <para>Once you have configured all your sets, you have to build the
+          sets. This is done by calling the script
+          misc/migration_tools/build_oai_sets.pl.</para>
+        </section>
       </section>
     </section>
 
