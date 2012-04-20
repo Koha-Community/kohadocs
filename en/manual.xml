@@ -330,7 +330,7 @@
             <para>Default: no</para>
 
             <para>Asks: Use ___ field for SSL client certificate
-            authentication </para>
+            authentication</para>
 
             <para>Values:</para>
 
@@ -8038,6 +8038,47 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 <para>run the <link linkend="authbrowsercron">Authorities
                 Browser Cron Job</link> to create the browser list</para>
               </important></para>
+          </section>
+
+          <section id="OpacBrowseResults">
+            <title>OpacBrowseResults</title>
+
+            <para>Default: enable</para>
+
+            <para>Asks: ___ browsing and paging search results from the OPAC
+            detail page.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>disable</para>
+              </listitem>
+
+              <listitem>
+                <para>enable</para>
+
+                <screenshot>
+                  <screeninfo>Browsing and Paging Search Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacBrowseResults.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference will control the option to return to
+                your results and/or browse them from the detail page in the
+                OPAC.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="OPACFinesTab">
@@ -30034,6 +30075,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para><link
         linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link> =
         Allow</para>
+      </listitem>
+
+      <listitem>
+        <para><link linkend="OpacBrowseResults">OpacBrowseResults</link> =
+        Enable</para>
       </listitem>
     </itemizedlist>
 
