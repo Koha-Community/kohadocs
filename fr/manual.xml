@@ -202,6 +202,78 @@
             </itemizedlist>
           </section>
 
+         <section id="AcqViewBaskets">
+            <title>AcqViewBaskets</title>
+
+            <para>Default: created by staff member</para>
+
+            <para>Asks: Show baskets ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>created by staff member</para>
+              </listitem>
+
+              <listitem>
+                <para>from staff member's branch</para>
+              </listitem>
+
+              <listitem>
+                <para>in system, regardless of owner</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When in acquisitions this preference allows you to
+                control whose baskets you can see when looking at a vendor.
+                The default value of 'created by staff member' makes it so
+                that you only see the baskets you created. Choosing to see
+                baskets 'from staff member's branch' will show you the baskets
+                created by anyone at the branch you're logged in at. Finally,
+                you can choose to set this preference to show you all baskets
+                regardless of who created it ('in system, regardless of
+                owner). Regardless of which value you choose for this
+                preference, superlibrarians can see all baskets created in the
+                system.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="BasketConfirmations">
+            <title>BasketConfirmations</title>
+
+            <para>Default: always ask for confirmation</para>
+
+            <para>Asks: When closing or reopening a basket, ___.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>always ask for confirmation</para>
+              </listitem>
+
+              <listitem>
+                <para>do not ask for confirmation</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Descriptions:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference adds the option to skip confirmations on
+                closing and reopening a basket. If you skip the confirmation,
+                you do not create a new basket group.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="CurrencyFormat">
             <title>CurrencyFormat</title>
 
@@ -273,6 +345,31 @@
 	  <para>CAS (Central Authentication Service)est un protocole d'identification
 		  unique pour le web. Si vous ne savez pas ce que c'est, laissez
 		  les valeurs par défaut.</para>
+
+          <section id="AllowPKIAuth">
+            <title>AllowPKIAuth</title>
+
+            <para>Default: no</para>
+
+            <para>Asks: Use ___ field for SSL client certificate
+            authentication</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>no</para>
+              </listitem>
+
+              <listitem>
+                <para>the common name</para>
+              </listitem>
+
+              <listitem>
+                <para>the email address</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="casAuthentication">
             <title>casAuthentication</title>
@@ -1143,6 +1240,14 @@
               </listitem>
             </itemizedlist>
 
+            <important>
+              <para>Unless you are going in and manually changing 773$w to
+              match your rigorously-defined bibliographic relationships, you
+              should set this preference to "Don't use" and instead set <link
+              linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link> to
+              "Display"</para>
+            </important>
+
             <para>Description :</para>
 
             <itemizedlist>
@@ -1261,6 +1366,76 @@
 
               <listitem>
                 <para>Universal Decimal Classification</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+         <section id="EasyAnalyticalRecords">
+            <sectioninfo>
+              <author>
+                <firstname id="analyticsauthor">Linda</firstname>
+
+                <surname>Culberson</surname>
+
+                <affiliation>
+                  <orgname>Ms. Dept. of Archives and History</orgname>
+                </affiliation>
+              </author>
+
+              <pubdate id="analyticspubdate">October 2011</pubdate>
+
+              <othercredit id="analyticseditor" role="copyeditor">
+                <firstname>Nicole C.</firstname>
+
+                <surname>Engard</surname>
+
+                <contrib id="analyticscredit">Fixed typos, changed content
+                where necessary and added new screenshots.</contrib>
+              </othercredit>
+            </sectioninfo>
+
+            <title>EasyAnalyticalRecords</title>
+
+            <para>Asks: ___ easy ways to create analytical record
+            relationships</para>
+
+            <para>Default: Don't Display</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Display</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't Display</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>If you decide to use this feature you'll want to make sure
+              that your <link
+              linkend="UseControlNumber">UseControlNumber</link> preference is
+              set to "Don't use" or else the "Show analytics" links in the
+              staff client and the OPAC will be broken.</para>
+            </important>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>An analytic entry in a catalog is one that describes a
+                part of a larger work that is also described in the catalog.
+                In bibliographic cataloging, analytic entries may be made for
+                chapters in books or special issues of articles in
+                periodicals. In archival cataloging, analytic entries may be
+                made for series or items within a collection. This feature in
+                Koha allows for an easy way of linking analytic entries to the
+                host records, and this system preference adds several new menu
+                options to the staff cataloging detail pages to allow that to
+                happen.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2003,12 +2178,12 @@
             </itemizedlist>
 
 	    <para>Exemple : Dans votre bibliothèque la limite définie pour
-	    les amendes est de 5 € (c'est à dire qu'un adhérent ayant accumulé
+	    les amendes est de 5 &#8364 (c'est à dire qu'un adhérent ayant accumulé
 	    5 euros d'amendes n'est plus autorisé à emrunter de documents).
 	    Un adhérent ayant déjà 4 euros d'amendes impayées sur son compte
 	    se présente à la banque de prêt avec 5 documents (4 livres et une
 	    video). La video est un prêt payant, avec un coût d'un euro, ce
-	    qui porterait la somme totale due par l'adhérent à 5 €. Selon
+	    qui porterait la somme totale due par l'adhérent à 5 &#8364. Selon
 	    la valuer de cette préférence, ce prêt sera permit ou non.</para>
           </section>
 
@@ -2549,6 +2724,40 @@
 		des réservations à l'OPAV, réglera cette préférence sur
 		'permettre'. La régler sur 'interdire' forcera un fonctionnement
 		de type 'premier arrivé, premier servi'.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="AutoResumeSuspendedHolds">
+            <title>AutoResumeSuspendedHolds</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ suspended holds to be automatically resumed by a
+            set date.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If this preference is set to 'Allow' then all suspended
+                holds will be able to have a date at which they automatically
+                become unsuspended. If you have this preference set to 'Allow'
+                you will also need the <link
+                linkend="unsuspendholdcron">Unsuspend Holds</link> cron job
+                running.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -3162,6 +3371,26 @@
             </itemizedlist>
           </section>
 
+          <section id="NoticeCSS">
+            <title>NoticeCSS</title>
+
+            <para>Asks: Include the stylesheet at ___ on Notices.<important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to style your notices with a
+                consistent set of fonts and colors you can use this preference
+                to point Koha to a stylesheet specifically for your
+                notices.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="numReturnedItemsToShow">
             <title>numReturnedItemsToShow</title>
 
@@ -3186,6 +3415,40 @@
 
               <listitem>
                 <para>du plus récent au plus ancien</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="RecordLocalUseOnReturn">
+            <title>RecordLocalUseOnReturn</title>
+
+            <para>Default: Don't record</para>
+
+            <para>Asks: ___ local use when an unissued item is checked
+            in.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't record</para>
+              </listitem>
+
+              <listitem>
+                <para>Record</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this preference is set to "Don't record" you can
+                record local use of items by checking items out to the
+                statistical patron. With this preference set to "Record" you
+                can record local use by checking out to the statistical patron
+                and/or by checking in a book that is not currently checked
+                out.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4349,6 +4612,22 @@
           </section>
         </section>
 
+          <section id="Babeltheque_url_js">
+            <title>Babeltheque_url_js</title>
+
+            <para>Asks: ___ Defined the url for the Babeltheque javascript
+            file (eg. http://www.babeltheque.com/bw_XX.js)</para>
+          </section>
+
+          <section id="Babeltheque_url_update">
+            <title>Babeltheque_url_update</title>
+
+            <para>Asks: ___ Defined the url for the Babeltheque update
+            periodically (eq.
+            http://www.babeltheque.com/.../file.csv.bz2).</para>
+          </section>
+        </section>
+
         <section id="btcontentprefs">
           <title>Baker &amp; Taylor</title>
 
@@ -5012,6 +5291,42 @@
               limited to 1000 requests per day. Available at: <ulink
               url="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp">http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp</ulink></para>
             </important>
+          </section>
+        </section>
+
+        <section id="OpenLibraryPrefs">
+          <title>Open Library</title>
+
+          <section id="OpenLibraryCovers">
+            <title>OpenLibraryCovers</title>
+
+            <para>Default: Don't add</para>
+
+            <para>Asks: ___ cover images from Open Library to search results
+            and item detail pages on the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't add</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This setting controls the display of applicable cover
+                art from the free Open Library database, via the Open Library
+                API. Please note that to use this feature, all other cover
+                services should be turned off.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -6677,6 +6992,44 @@
             </itemizedlist>
           </section>
 
+          <section id="OpacKohaUrl">
+            <title>OpacKohaUrl</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this preference is set to 'Show' text will appear
+                in the bottom right of the OPAC footer stating 'Powered by
+                Koha' and linking to the official Koha website.</para>
+
+                <screenshot>
+                  <screeninfo>Powered by Koha</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacKohaUrl.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="opaclayoutstylesheet">
             <title>opaclayoutstylesheet</title>
 
@@ -6812,6 +7165,33 @@
 		<link linkend="editableopac">Régions éditables de l'OPAC</link>.</para>
           </section>
 
+          <section id="OpacNavBottom">
+            <title>OpacNavBottom</title>
+
+            <para>Asks: Show the following HTML on the left hand column of the
+            main page and patron account on the OPAC, after <link
+            linkend="OpacNav">OpacNav</link>, and before patron account links
+            if available:</para>
+
+            <para>Description: When a patron is logged in to their account
+            they see a series of tabs to access their account information.
+            <link linkend="OpacNav">OpacNav</link> appears above this list of
+            tabs and OpacNavBottom will appear below them. When not on the
+            patron account pages the HTML in OpacNavBottom will just appear
+            right below <link linkend="OpacNav">OpacNav</link>.</para>
+
+            <screenshot>
+              <screeninfo>OpacNav and OpacNavBottom on Patron
+              Account</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/OpacNavBottom.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </section>
+
           <section id="OPACNoResultsFound">
             <title>OPACNoResultsFound</title>
 
@@ -6868,6 +7248,23 @@
 		donner l'accès à tout le monde à leur recherche à l'opac et de
 		n'exiger l'authentification que pour l'accès au contenu
 		personnalisé.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OPACResultsSidebar">
+            <title>OPACResultsSidebar</title>
+
+            <para>Asks: Include the following HTML under the facets in OPAC
+            search results</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The HTML entered in this preference will appear on the
+                search results pages below the list of facets on the left side
+                of the screen.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6961,6 +7358,46 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </itemizedlist>
           </section>
 
+          <section id="OpacShowRecentComments">
+            <title>OpacShowRecentComments</title>
+
+            <para>Default: Don't show</para>
+
+            <para>Asks: ___ a link to recent comments in the OPAC
+            masthead.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+              </listitem>
+            </itemizedlist>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you have chosen to allow comments in your OPAC by
+                setting <link linkend="reviewson">reviewson</link> to 'Allow'
+                you can include a link to the recent comments under the search
+                box at the top of your OPAC with this preference.</para>
+
+                <screenshot>
+                  <screeninfo>Recent Comments link on OPAC</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacShowRecentComments%20.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="opacsmallimage">
             <title>opacsmallimage</title>
 
@@ -6987,6 +7424,64 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
               <para>Mettez une url complète, qui commence par
               http://</para>
             </important>
+          </section>
+
+          <section id="OpacStarRatings">
+            <title>OpacStarRatings</title>
+
+            <para>Default: no</para>
+
+            <para>Asks: Show star-ratings on ___ pages.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>no</para>
+              </listitem>
+
+              <listitem>
+                <para>only details</para>
+
+                <screenshot>
+                  <screeninfo>Star Ratings on the Details Page</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacStarRatings-details.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>results and details</para>
+
+                <screenshot>
+                  <screeninfo>OPAC Star Ratings on the Search
+                  Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacStarRatings-results.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Star ratings are a way for your patrons to leave ratings
+                without having to leave a full review. Patrons who are not
+                logged in will only be able to see the stars, once logged in
+                patrons can click on the stars on the details page to leave
+                their own rating. Clicking on the stars on the search results
+                will not submit a rating.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="OPACMySummaryHTML">
@@ -7410,6 +7905,47 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
               </important></para>
           </section>
 
+          <section id="OpacBrowseResults">
+            <title>OpacBrowseResults</title>
+
+            <para>Default: enable</para>
+
+            <para>Asks: ___ browsing and paging search results from the OPAC
+            detail page.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>disable</para>
+              </listitem>
+
+              <listitem>
+                <para>enable</para>
+
+                <screenshot>
+                  <screeninfo>Browsing and Paging Search Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacBrowseResults.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference will control the option to return to
+                your results and/or browse them from the detail page in the
+                OPAC.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OPACFinesTab">
             <title>OPACFinesTab</title>
 
@@ -7751,7 +8287,7 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
 
             <para>Valeur par défaut : Montrer</para>
 
-            <para>Demande : ___ la photo des personnes ayant laissées des
+            <para>Demande : ___ la photo des personnes ayant laissé des
 	    commentaires à l'OPAC.</para>
 
             <para>Valeurs :</para>
@@ -7797,6 +8333,46 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
 		une petite icône à afficher à côté de leur nom sur différents 
 		sites web. La bibliothèque n'a pas de contrôle sur les images 
 		que les adhérents choisissent d'afficher.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SocialNetworks">
+            <title>SocialNetworks</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ social network links in opac detail pages</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+
+                <screenshot>
+                  <screeninfo>Social Networks</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/SocialNetworks.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference will enable a line of social network
+                share buttons below the right hand column on the detail pages
+                of records in the OPAC.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -10028,6 +10604,27 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </itemizedlist>
         </section>
 
+        <section id="SubscriptionDuplicateDroppedInput">
+          <title>SubscriptionDuplicateDroppedInput</title>
+
+          <para>Asks: List of fields which must not be rewritten when a
+          subscription is duplicated (Separated by pipe |) ___</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>When duplicating a subscription sometimes you don't want
+              all of the fields duplicated, using this preference you can list
+              the fields that you don't want to be duplicated. These field
+              names come from the subscription table in the Koha database.
+              Learn what fields are in that table on the <ulink
+              url="http://schema.koha-community.org/tables/subscription.html">Koha
+              DB Schema</ulink> site.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="SubscriptionHistory">
           <title>SubscriptionHistory</title>
 
@@ -10344,6 +10941,27 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
                 Sample JQuery scripts used by Koha libraries can be found on
                 the wiki: <ulink
                 url="http://wiki.koha-community.org/wiki/JQuery_Library">http://wiki.koha-community.org/wiki/JQuery_Library</ulink>.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SlipCSS">
+            <title>SlipCSS</title>
+
+            <para>Asks: Include the stylesheet at ___ on Issue and Reserve
+            Slips.<important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to style your receipts or slips with a
+                consistent set of fonts and colors you can use this preference
+                to point Koha to a stylesheet specifically for your
+                slips.</para>
               </listitem>
             </itemizedlist>
           </section>
