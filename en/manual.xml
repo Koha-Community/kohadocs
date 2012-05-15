@@ -23884,20 +23884,44 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     <section id="offlinecirc">
       <title>Offline Circulation Utility</title>
 
-      <para/>
-
       <section id="firefoxofflinecirc">
+        <sectioninfo>
+          <author>
+            <firstname>Franois</firstname>
+
+            <surname>Charbonnier</surname>
+          </author>
+
+          <affiliation>
+            <orgname>BibLibre</orgname>
+          </affiliation>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Changed content where necessary.</contrib>
+          </othercredit>
+
+          <pubdate>2012</pubdate>
+        </sectioninfo>
+
         <title>Firefox Plugin</title>
 
-        <para>There is a plugin for Firefox that can be used for Offline
-        Circulation: <ulink
-        url="https://addons.mozilla.org/en-US/firefox/addon/14399">https://addons.mozilla.org/en-US/firefox/addon/14399</ulink></para>
+        <para>There is an offline circulation tool that you can add to your
+        Firefox browser as a plugin/addon. To do so, just go to <ulink
+        url="https://addons.mozilla.org/en/firefox/addon/koct/">https://addons.mozilla.org/en/firefox/addon/koct/</ulink>
+        page and click on the "install now" button. You may have to confirm
+        the installation, just click on "install now" and then restart Firefox
+        to complete the installation.</para>
 
-        <para>Once installed there will be an icon for the Offline Circulation
-        Tool in the status bar at the bottom of your Firefox Window.</para>
+        <para>Once you have installed the plugin and restarted Firefox, you
+        will see the Koha logo in the add-on bar at the bottom right of
+        Firefox. </para>
 
         <screenshot>
-          <screeninfo>Koha Icon on the Status Bar in Firefox</screeninfo>
+          <screeninfo>Koha Icon on Add-on Bar</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -23906,9 +23930,372 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Additional instructions for using this Plugin can be found on
-        the Koha Wiki: <ulink
-        url="http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin">http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin</ulink></para>
+        <para>A click on the logo will open the tool in its own window.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circ Tool</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koct.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The plugin consists of four tabs:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The Check Out tab is where you check out items</para>
+          </listitem>
+
+          <listitem>
+            <para>The Check In tab is where you check in items </para>
+          </listitem>
+
+          <listitem>
+            <para>The Log tab keeps track of every transaction done while in
+            offline mode</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The log will keep information until you empty it. Each
+                time you open the plugin and it contains data in the log it
+                will warn you</para>
+
+                <screenshot>
+                  <screeninfo>Koha Offline Circ Warning</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/koctwarn.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <para>If you'd like to clear the log, check the 'I want to
+                delete rows' box before hitting the 'OK' button. Otherwise
+                clicking 'OK' will keep the items in the log and let you
+                continue working with the tool.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>The Param tab is to set up the plugin</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The first thing you want to do then is to set up the plugin. Go
+        to the Param tab to set up the plugin</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline CIrc Params</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctparam.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Answer the 4 questions presented:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Server = the URL of the librarian interface</para>
+          </listitem>
+
+          <listitem>
+            <para>Branch Code = the code for the branch where you are
+            located</para>
+          </listitem>
+
+          <listitem>
+            <para>Username = your staff account login</para>
+          </listitem>
+
+          <listitem>
+            <para>Password = your staff account password</para>
+          </listitem>
+        </itemizedlist>
+
+        <para><important>
+            <para>To save the settings, you will have to close the plugin
+            window and re-open it by clicking again on the Koha logo in the
+            add-on bar.</para>
+          </important><tip>
+            <para>You can create a staff account dedicated to the offline
+            circulation. So that, no matter who is at the circulation desk,
+            they can all use the same login. Along those lines, you can use a
+            group login that you already have in place for circulation as
+            well.</para>
+          </tip>Once you have everything set up you can start checking items
+        in and out.</para>
+
+        <para>Checking out:</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Check Out</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koct.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to the Check Out tab</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the patron barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the item barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Click 'Save'</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Checking in:</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Check In</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctcheckin.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to the Check In tab</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the item barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Click Save</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Each time, you check out or check in an item, a new transaction
+        is recorded in the local plugin database and you will see, at the
+        bottom of the plugin how many transactions has been made during the
+        offline circulation. For example, "10 Row(s) Added" means you did 10
+        transactions. </para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Tool Count</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctcount.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then, if you want an overview of every transaction, go to the
+        Log tab. This tab will show you the transactions in the plugin
+        database</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Log</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctlog.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para><tip>
+            <para>The status will be "Local." as long as you are offline and
+            don't process the transactions into Koha.</para>
+          </tip>When your Internet connection comes back up you will want to
+        get these transactions in to Koha. Before processing these
+        transactions you should be aware of a few issues.</para>
+
+        <para>Because you are not connected to your Koha database when using
+        this plugin holds will need additional processing. If an item you
+        check in while offline has a hold, the hold is kept on the item.
+        Since, you can't confirm holds found during the processing of every
+        check in, the holds stay on the item and will need to be managed
+        later. If you only checked in a few items you can just keep a record
+        of them all. If you checked in a lot of items you can use the Holds
+        Queue once it rebuilds to see what holds made it to the shelf
+        erroneously.</para>
+
+        <para>Similarly, if an patron card was expired, the offline
+        circulation tool won't know about it, so the checkout will be recorded
+        regardless of the patron's account being blocked normally.</para>
+
+        <para>You have two options for adding this data to Koha</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Commit to Koha</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you checked in/out on more than one computer at the
+                same time, what you want is to process every transaction
+                consistently. Let's say for instance that one patron checked a
+                book out on one computer and then checked the same book in on
+                another computer. To be consistent, you need to record the
+                check out first and then the check in. Not the opposite! To do
+                so, you need to group every transaction in one place, sort
+                them all and then, process everything. So, you need to use the
+                "Commit to Koha" option from every plugin/computer you worked
+                with. This way, the log will go to Koha and be accessible from
+                the Offline Circulation page.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Get there:</emphasis> Circulation &gt; Offline
+                Circulation</para>
+
+                <screenshot>
+                  <screeninfo>Offline Circulation</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecirclog.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Once all of the logs from all of the circulation
+                computers are loaded you will be able to check them all or
+                select just those you want to process into Koha. </para>
+              </listitem>
+
+              <listitem>
+                <para>Click on the Process button and Koha will record every
+                sorted transaction one by one. For each transaction, the
+                status will change to:</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed
+                    correctly</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is
+                    incorrect</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not found." if the item barcode is
+                    wrong</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available
+                    item</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Once finished you will have a summary of all of your
+                transactions</para>
+
+                <screenshot>
+                  <screeninfo>Offline Circulation Summary</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecircsuccess.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Apply directly</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you performed all of the circulation actions on one
+                computer then everything is sorted already so you can choose
+                to "Apply directly"</para>
+              </listitem>
+
+              <listitem>
+                <para>The status column will be updated to let you know if the
+                transactions were applied</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed
+                    correctly</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is
+                    incorrect</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not found." if the item barcode is
+                    wrong</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available
+                    item</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Once you're finished you can review all of the items
+                right in the Log tab</para>
+
+                <screenshot>
+                  <screeninfo>Koha Offlince Circulation Apply
+                  Directly</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/koctdirectly.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>Once you are done you can clear the log by clicking Clear. If
+        you don't you will be warned the next time you open the Offline
+        Circulation tool.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offlince Circulation Tool Warning</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctwarn.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="windowsofflinecirc">
