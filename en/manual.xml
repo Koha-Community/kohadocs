@@ -272,6 +272,28 @@
                 (6%).</para>
               </tip></para>
           </section>
+
+          <section id="UniqueItemFields">
+            <title>UniqueItemFields</title>
+
+            <para>Default: barcode</para>
+
+            <para>Asks:___ (space-separated list of fields that should be
+            unique for items, must be valid SQL fields of <ulink
+            url="http://schema.koha-community.org/tables/items.html">items</ulink>
+            table)</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If this preference is left blank when adding items in
+                acquisitions there will be no check for uniqueness. This means
+                that a duplicate barcode can be created in acquisitions which
+                will cause errors later when checking items in and out.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section id="acqprefsprinting">
@@ -301,6 +323,31 @@
           <para>The Central Authentication Service (CAS) is a single sign-on
           protocol for the web. If you don't know what this is, leave these
           preferences set to their defaults.</para>
+
+          <section id="AllowPKIAuth">
+            <title>AllowPKIAuth</title>
+
+            <para>Default: no</para>
+
+            <para>Asks: Use ___ field for SSL client certificate
+            authentication</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>no</para>
+              </listitem>
+
+              <listitem>
+                <para>the common name</para>
+              </listitem>
+
+              <listitem>
+                <para>the email address</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="casAuthentication">
             <title>casAuthentication</title>
@@ -1785,7 +1832,7 @@
             </itemizedlist>
           </section>
 
-          <section>
+          <section id="AllowItemsOnHoldCheckout">
             <title>AllowItemsOnHoldCheckout</title>
 
             <para>Default: Don't allow</para>
@@ -2652,6 +2699,40 @@
             </itemizedlist>
           </section>
 
+          <section id="AutoResumeSuspendedHolds">
+            <title>AutoResumeSuspendedHolds</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ suspended holds to be automatically resumed by a
+            set date.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If this preference is set to 'Allow' then all suspended
+                holds will be able to have a date at which they automatically
+                become unsuspended. If you have this preference set to 'Allow'
+                you will also need the <link
+                linkend="unsuspendholdcron">Unsuspend Holds</link> cron job
+                running.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="canreservefromotherbranches">
             <title>canreservefromotherbranches</title>
 
@@ -3303,6 +3384,26 @@
                     migrating from Follett systems</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="NoticeCSS">
+            <title>NoticeCSS</title>
+
+            <para>Asks: Include the stylesheet at ___ on Notices.<important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to style your notices with a
+                consistent set of fonts and colors you can use this preference
+                to point Koha to a stylesheet specifically for your
+                notices.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -4556,6 +4657,21 @@
                 <para>Don't</para>
               </listitem>
             </itemizedlist>
+          </section>
+
+          <section id="Babeltheque_url_js">
+            <title>Babeltheque_url_js</title>
+
+            <para>Asks: ___ Defined the url for the Babeltheque javascript
+            file (eg. http://www.babeltheque.com/bw_XX.js)</para>
+          </section>
+
+          <section id="Babeltheque_url_update">
+            <title>Babeltheque_url_update</title>
+
+            <para>Asks: ___ Defined the url for the Babeltheque update
+            periodically (eq.
+            http://www.babeltheque.com/.../file.csv.bz2).</para>
           </section>
         </section>
 
@@ -6394,107 +6510,20 @@
             </itemizedlist>
           </section>
 
-          <section id="OPACDisplay856uAsImage">
-            <title>OPACDisplay856uAsImage</title>
-
-            <para>Default: Neither details or results page</para>
-
-            <para>Asks: Display the URI in the 856u field as an image on:
-            ___</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Both results and details pages</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <important>
-                      <para>Not implemented yet</para>
-                    </important>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-
-              <listitem>
-                <para>Detail page only</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <important>
-                      <para><link
-                      linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
-                      needs to be on for this preference to work.</para>
-                    </important>
-                  </listitem>
-                </itemizedlist>
-
-                <screenshot>
-                  <screeninfo>Showing the 856u as an image</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACDisplay856uAsImage.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-
-              <listitem>
-                <para>Neither details or results page</para>
-              </listitem>
-
-              <listitem>
-                <para>Results page only</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <important>
-                      <para>Not yet implemented</para>
-                    </important>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>In addition to this option being set, the corresponding
-                XSLT option must be turned on. Also, the corresponding 856q
-                field must have a valid MIME image extension (e.g., "jpg") or
-                MIME image type (i.e. starting with "image/"), or the generic
-                indicator "img" entered in the field. When all of the
-                requirements are met, an image file will be displayed instead
-                of the standard link text. Clicking on the image will open it
-                in the same way as clicking on the link text. When you click
-                on the image it should open to full size, in the current
-                window or in a new window depending on the value in the system
-                pref <link
-                linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link>.</para>
-
-                <screenshot>
-                  <screeninfo>Sample 856 in MARC Record</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/856imagemarc.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-            </itemizedlist>
-          </section>
-
           <section id="DisplayOPACiconsXSLT">
             <title>DisplayOPACiconsXSLT</title>
 
             <para>Default: Don't show</para>
 
             <para>Asks: On pages displayed with XSLT stylesheets on the OPAC,
-            ___ icons for itemtype and authorized values.</para>
+            ___ icons for itemtype and authorized values.<important>
+                <para><link
+                linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link>
+                and/or <link
+                linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
+                must be set to use an XSLT stylesheet for this to show
+                (default or custom)</para>
+              </important></para>
 
             <para>Values:</para>
 
@@ -6505,6 +6534,16 @@
 
               <listitem>
                 <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>DisplayOPACiconsXSLT</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/DisplayOPACiconsXSLT.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
 
@@ -6738,6 +6777,100 @@
 
             <para>Learn more in the <link linkend="editableopac">OPAC Editable
             Regions</link> section.</para>
+          </section>
+
+          <section id="OPACDisplay856uAsImage">
+            <title>OPACDisplay856uAsImage</title>
+
+            <para>Default: Neither details or results page</para>
+
+            <para>Asks: Display the URI in the 856u field as an image on:
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Both results and details pages</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Not implemented yet</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Detail page only</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para><link
+                      linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
+                      needs to be on for this preference to work.</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+
+                <screenshot>
+                  <screeninfo>Showing the 856u as an image</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACDisplay856uAsImage.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Neither details or results page</para>
+              </listitem>
+
+              <listitem>
+                <para>Results page only</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Not yet implemented</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In addition to this option being set, the corresponding
+                XSLT option must be turned on. Also, the corresponding 856q
+                field must have a valid MIME image extension (e.g., "jpg") or
+                MIME image type (i.e. starting with "image/"), or the generic
+                indicator "img" entered in the field. When all of the
+                requirements are met, an image file will be displayed instead
+                of the standard link text. Clicking on the image will open it
+                in the same way as clicking on the link text. When you click
+                on the image it should open to full size, in the current
+                window or in a new window depending on the value in the system
+                pref <link
+                linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link>.</para>
+
+                <screenshot>
+                  <screeninfo>Sample 856 in MARC Record</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/856imagemarc.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="OPACDisplayRequestPriority">
@@ -7053,6 +7186,45 @@
             Regions</link> section.</para>
           </section>
 
+          <section id="OPACMySummaryHTML">
+            <title>OPACMySummaryHTML</title>
+
+            <para>Asks: Include a "Links" column on the "my summary" tab when
+            a user is logged in to the OPAC, with the following HTML (leave
+            blank to disable).</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In this preference you can enter HTML that will appear
+                on the 'Checked Out' tab on the 'My Summary' section when
+                logged in to the OPAC. The placeholders {BIBLIONUMBER},
+                {TITLE}, {ISBN} and {AUTHOR} will be replaced with information
+                from the displayed record. This can be used to enter in
+                'share' links for social networks or generate searches against
+                other library catalogs.</para>
+
+                <screenshot>
+                  <screeninfo>Example of 'Links' column with a value in the
+                  OPACMySummaryHTML preference</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACMySummaryHTML.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Sample Data:<programlisting>&lt;p&gt;&lt;a href="http://www.facebook.com/sharer.php?u=http://YOUROPAC.ORG/cgi-bin/koha/opac-detail.pl?biblionumber={BIBLIONUMBER}"&gt;Share on Facebook&lt;/a&gt;
+&lt;br /&gt;TITLE: {TITLE}
+&lt;br /&gt;AUTHOR: {AUTHOR}
+&lt;br /&gt;ISBN: {ISBN}
+&lt;br /&gt;BIBLIONUMBER: {BIBLIONUMBER}&lt;/p&gt;</programlisting></para>
+          </section>
+
           <section id="OpacNav">
             <title>OpacNav</title>
 
@@ -7335,43 +7507,62 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </important>
           </section>
 
-          <section id="OPACMySummaryHTML">
-            <title>OPACMySummaryHTML</title>
+          <section id="OpacStarRatings">
+            <title>OpacStarRatings</title>
 
-            <para>Asks: Include a "Links" column on the "my summary" tab when
-            a user is logged in to the OPAC, with the following HTML (leave
-            blank to disable).</para>
+            <para>Default: no</para>
 
-            <para>Description:</para>
+            <para>Asks: Show star-ratings on ___ pages.</para>
+
+            <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>In this preference you can enter HTML that will appear
-                on the 'Checked Out' tab on the 'My Summary' section when
-                logged in to the OPAC. The placeholders {BIBLIONUMBER},
-                {TITLE}, {ISBN} and {AUTHOR} will be replaced with information
-                from the displayed record. This can be used to enter in
-                'share' links for social networks or generate searches against
-                other library catalogs.</para>
+                <para>no</para>
+              </listitem>
+
+              <listitem>
+                <para>only details</para>
 
                 <screenshot>
-                  <screeninfo>Example of 'Links' column with a value in the
-                  OPACMySummaryHTML preference</screeninfo>
+                  <screeninfo>Star Ratings on the Details Page</screeninfo>
 
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACMySummaryHTML.png"/>
+                      <imagedata fileref="images/admin/globalprefs/OpacStarRatings-details.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>results and details</para>
+
+                <screenshot>
+                  <screeninfo>OPAC Star Ratings on the Search
+                  Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacStarRatings-results.png"/>
                     </imageobject>
                   </mediaobject>
                 </screenshot>
               </listitem>
             </itemizedlist>
 
-            <para>Sample Data:<programlisting>&lt;p&gt;&lt;a href="http://www.facebook.com/sharer.php?u=http://YOUROPAC.ORG/cgi-bin/koha/opac-detail.pl?biblionumber={BIBLIONUMBER}"&gt;Share on Facebook&lt;/a&gt;
-&lt;br /&gt;TITLE: {TITLE}
-&lt;br /&gt;AUTHOR: {AUTHOR}
-&lt;br /&gt;ISBN: {ISBN}
-&lt;br /&gt;BIBLIONUMBER: {BIBLIONUMBER}&lt;/p&gt;</programlisting></para>
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Star ratings are a way for your patrons to leave ratings
+                without having to leave a full review. Patrons who are not
+                logged in will only be able to see the stars, once logged in
+                patrons can click on the stars on the details page to leave
+                their own rating. Clicking on the stars on the search results
+                will not submit a rating.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="opacstylesheet">
@@ -7542,26 +7733,76 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
           <section id="OPACXSLTDetailsDisplay">
             <title>OPACXSLTDetailsDisplay</title>
 
-            <para>Default: normally</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show item details pages on the OPAC ___</para>
+            <para>Asks: Display OPAC details using XSLT stylesheet at
+            ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the detail pages in the OPAC</para>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
+              </listitem>
+
+              <listitem>
+                <para>put a path to define a XSLT file</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/opac/prog/{langcode}/xslt/OpacDetail.xsl</para>
+                      </listitem>
+
+                      <listitem>
+                        <para>ex.
+                        http://mykohaopac.org/{langcode}/stylesheet.xsl</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykohaopac.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing a bib record. This
+                preference will allow you either use the default look that
+                comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -7569,26 +7810,76 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
           <section id="OPACXSLTResultsDisplay">
             <title>OPACXSLTResultsDisplay</title>
 
-            <para>Default: normally</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show biblio records on OPAC result page ___</para>
+            <para>Asks: Display OPAC results using XSLT stylesheet at
+            ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results pages in the OPAC</para>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
+              </listitem>
+
+              <listitem>
+                <para>put a path to define a XSLT file</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/opac/prog/{langcode}/xslt/OpacDetail.xsl</para>
+                      </listitem>
+
+                      <listitem>
+                        <para>ex.
+                        http://mykohaopac.org/{langcode}/stylesheet.xsl</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykohaopac.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing the search results.
+                This preference will allow you either use the default look
+                that comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -7747,6 +8038,47 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 <para>run the <link linkend="authbrowsercron">Authorities
                 Browser Cron Job</link> to create the browser list</para>
               </important></para>
+          </section>
+
+          <section id="OpacBrowseResults">
+            <title>OpacBrowseResults</title>
+
+            <para>Default: enable</para>
+
+            <para>Asks: ___ browsing and paging search results from the OPAC
+            detail page.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>disable</para>
+              </listitem>
+
+              <listitem>
+                <para>enable</para>
+
+                <screenshot>
+                  <screeninfo>Browsing and Paging Search Results</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OpacBrowseResults.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference will control the option to return to
+                your results and/or browse them from the detail page in the
+                OPAC.</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="OPACFinesTab">
@@ -8156,6 +8488,46 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </itemizedlist>
           </section>
 
+          <section id="SocialNetworks">
+            <title>SocialNetworks</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ social network links in opac detail pages</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+
+                <screenshot>
+                  <screeninfo>Social Networks</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/SocialNetworks.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference will enable a line of social network
+                share buttons below the right hand column on the detail pages
+                of records in the OPAC.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="suggestionspref">
             <title>suggestion</title>
 
@@ -8220,6 +8592,79 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 suggestions for a specific branch you can set this preference
                 to 'Allow' to add a branch selection option to the purchase
                 suggestion form.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OpacAllowPublicListCreation">
+            <title>OpacAllowPublicListCreation</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ opac users to create public lists</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Public lists are visible to anyone who visits your OPAC.
+                With this preference you can control whether or now patrons
+                are allowed to create these public lists. If this is set to
+                "Don't allow" then only staff will be able to create public
+                lists.</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This preference will only be taken in to account if you
+              have <link linkend="virtualshelves">virtualshelves</link> set to
+              'Allow'</para>
+            </important>
+          </section>
+
+          <section id="OpacAllowSharingPrivateLists">
+            <title>OpacAllowSharingPrivateLists</title>
+
+            <important>
+              <para>This feature is not active yet but will be released
+              soon</para>
+            </important>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ opac users to share private lists with other
+            patrons.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This feature will add the option for patrons to share
+                their lists with other patrons.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -9808,6 +10253,33 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               preference.</para>
             </important>
           </section>
+
+          <section id="UseICU">
+            <title>UseICU</title>
+
+            <para>Default: Using</para>
+
+            <para>Asks: ___ ICU Zebra indexing. <important>
+                <para>This setting will not affect Zebra indexing, it should
+                only be used to tell Koha that you have activated ICU indexing
+                if you have actually done so, since there is no way for Koha
+                to figure this out on its own.</para>
+              </important></para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Not using</para>
+              </listitem>
+
+              <listitem>
+                <para>Using</para>
+              </listitem>
+            </itemizedlist>
+
+            <para/>
+          </section>
         </section>
 
         <section id="searchresultsprefs">
@@ -10275,6 +10747,42 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </itemizedlist>
         </section>
 
+        <section id="RoutingListAddReserves">
+          <title>RoutingListAddReserves</title>
+
+          <para>Default: Place</para>
+
+          <para>Asks: ___ received serials on hold if they are on a routing
+          list.</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Place</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't place</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="RoutingListNote">
+          <title>RoutingListNote</title>
+
+          <para>Asks: Include following note on all routing lists</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Text entered in this box will appear below the routing
+              list information.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="RoutingSerials">
           <title>RoutingSerials</title>
 
@@ -10312,27 +10820,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </itemizedlist>
         </section>
 
-        <section id="RoutingListAddReserves">
-          <title>RoutingListAddReserves</title>
-
-          <para>Default: Place</para>
-
-          <para>Asks: ___ received serials on hold if they are on a routing
-          list.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Place</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't place</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
         <section id="StaffSerialIssueDisplayCount">
           <title>StaffSerialIssueDisplayCount</title>
 
@@ -10354,23 +10841,64 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </itemizedlist>
         </section>
 
+        <section id="SubscriptionDuplicateDroppedInput">
+          <title>SubscriptionDuplicateDroppedInput</title>
+
+          <para>Asks: List of fields which must not be rewritten when a
+          subscription is duplicated (Separated by pipe |) ___</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>When duplicating a subscription sometimes you don't want
+              all of the fields duplicated, using this preference you can list
+              the fields that you don't want to be duplicated. These field
+              names come from the subscription table in the Koha database.
+              Learn what fields are in that table on the <ulink
+              url="http://schema.koha-community.org/tables/subscription.html">Koha
+              DB Schema</ulink> site.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="SubscriptionHistory">
           <title>SubscriptionHistory</title>
 
-          <para>Default: a full list</para>
+          <para>Default: full history</para>
 
-          <para>Asks: When showing the subscription information for a biblio,
-          show ___ of the serial issues.</para>
+          <para>Asks: When showing the subscription information for a
+          bibliographic record, preselect ___ view of serial issues.</para>
 
           <para>Values:</para>
 
           <itemizedlist>
             <listitem>
-              <para>a full list</para>
+              <para>brief history</para>
+
+              <screenshot>
+                <screeninfo>Brief History</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/SubscriptionHistory-brief.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
             </listitem>
 
             <listitem>
-              <para>a summary</para>
+              <para>full history</para>
+
+              <screenshot>
+                <screeninfo>Full History</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/globalprefs/SubscriptionHistory-full.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
             </listitem>
           </itemizedlist>
 
@@ -10380,9 +10908,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para>This preference determines what information appears in the
               OPAC when the user clicks the More Details option. The
-              &lsquo;summary' option displays a one-line summary of the volume
+              &lsquo;brief' option displays a one-line summary of the volume
               and issue numbers of all issues of that serial held by the
-              library. The &lsquo;full list' option displays a more detailed
+              library. The &lsquo;full' option displays a more detailed
               breakdown of issues per year, including information such as the
               issue date and the status of each issue.</para>
             </listitem>
@@ -10674,6 +11202,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </itemizedlist>
           </section>
 
+          <section id="SlipCSS">
+            <title>SlipCSS</title>
+
+            <para>Asks: Include the stylesheet at ___ on Issue and Reserve
+            Slips.<important>
+                <para>This should be a complete URL, starting with
+                http://</para>
+              </important></para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you would like to style your receipts or slips with a
+                consistent set of fonts and colors you can use this preference
+                to point Koha to a stylesheet specifically for your
+                slips.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="StaffAuthorisedValueImages">
             <title>StaffAuthorisedValueImages</title>
 
@@ -10720,48 +11269,98 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="XSLTDetailsDisplay">
             <title>XSLTDetailsDisplay</title>
 
-            <para>Default: normally</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show item details pages in the staff client ___</para>
+            <para>Asks: Display details in the staff client using XSLT
+            stylesheet at ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
+
+                    <screenshot>
+                      <screeninfo>Detail display without XSLT
+                      stylesheets</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
 
                 <screenshot>
-                  <screeninfo>Detail display without XSLT
+                  <screeninfo>Detail display using XSLT
                   stylesheets</screeninfo>
 
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-off.png"/>
+                      <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png"/>
                     </imageobject>
                   </mediaobject>
                 </screenshot>
               </listitem>
 
               <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>put a path to define a XSLT file</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the bibliographic records in the Staff Client</para>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
 
-                    <screenshot>
-                      <screeninfo>Detail display using XSLT
-                      stylesheets</screeninfo>
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
 
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="images/admin/globalprefs/XSLTDetailsDisplay-on.png"/>
-                        </imageobject>
-                      </mediaobject>
-                    </screenshot>
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/intranet-tmpl/prog/{langcode}/xslt/intranetDetail.xsl</para>
+                      </listitem>
+
+                      <listitem>
+                        <para>ex.
+                        http://mykoha.org/{langcode}/stylesheet.xsl</para>
+                      </listitem>
+                    </itemizedlist>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykoha.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing a bib record. This
+                preference will allow you either use the default look that
+                comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -10769,27 +11368,76 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="XSLTResultsDisplay">
             <title>XSLTResultsDisplay</title>
 
-            <para>Default: using XSLT stylesheets</para>
+            <para>Default: default</para>
 
-            <para>Asks: Show biblio records on result page in the staff client
-            ___</para>
+            <para>Asks: Display results in the staff client using XSLT
+            stylesheet at ___</para>
 
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>normally</para>
-              </listitem>
-
-              <listitem>
-                <para>using XSLT stylesheets</para>
+                <para>leave empty to not use the XSLT stylesheet</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>XSLT stylesheets enable more detail to be displayed
-                    on the search results in the Staff Client</para>
+                    <para>In previous versions of Koha this was the setting
+                    that read 'normally'</para>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>enter "default" for the default one</para>
+              </listitem>
+
+              <listitem>
+                <para>put a path to define a XSLT file</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: /path/to/koha/and/your/stylesheet.xsl</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>If in a multi-language system you can enter
+                    {langcode} in the path to tell Koha to look in the right
+                    language folder</para>
+
+                    <itemizedlist>
+                      <listitem>
+                        <para>ex:
+                        /home/koha/src/koha-tmpl/intranet-tmpl/prog/{langcode}/xslt/intranetDetail.xsl</para>
+                      </listitem>
+
+                      <listitem>
+                        <para>ex.
+                        http://mykoha.org/{langcode}/stylesheet.xsl</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>put an URL for an external specific stylesheet</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>ex: http://mykoha.org/stylesheet.xsl</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>XSLT stylesheets allow for the customization of the
+                details shows on the screen when viewing the search results.
+                This preference will allow you either use the default look
+                that comes with Koha or design your own stylesheet.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -11051,6 +11699,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             :</para>
           </section>
 
+          <section id="OAI-PMHAutoUpdateSets">
+            <title>OAI-PMH:AutoUpdateSets</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ automatic update of OAI-PMH sets when a
+            bibliographic record is created or updated.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OAI-PMHConfFile">
             <title>OAI-PMH:ConfFile</title>
 
@@ -11109,7 +11778,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <itemizedlist>
           <listitem>
             <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Basic Parameters &gt; Libraries, branches and groups</para>
+            &gt; Basic Parameters &gt; Libraries and Groups</para>
           </listitem>
         </itemizedlist>
 
@@ -11148,10 +11817,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Fill in the data requested on the form that follows</para>
+              <para>The top of the form asks for some basics about the
+              library</para>
 
               <screenshot>
-                <screeninfo>New Library Form</screeninfo>
+                <screeninfo>Basic Library Info</screeninfo>
 
                 <mediaobject>
                   <imageobject>
@@ -11162,51 +11832,122 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <important>
-                    <para>Be sure to enter a library email address to make
-                    sure that notices are sent to and from the right
-                    address</para>
-                  </important>
-                </listitem>
-
-                <listitem>
-                  <important>
-                    <para>An IP address is required if you have enabled <link
-                    linkend="AutoLocation">AutoLocation</link></para>
-                  </important>
-                </listitem>
-
-                <listitem>
-                  <para>The Library code should not contain any spaces and be
+                  <para>The library code should not contain any spaces and be
                   10 or fewer characters. This code will be used as a unique
                   identifier in the database.</para>
                 </listitem>
 
                 <listitem>
-                  <para>The Name will be displayed on the OPAC wherever the
+                  <para>The name will be displayed on the OPAC wherever the
                   library name displays to the public and should be a name
                   that makes sense to your patrons.</para>
                 </listitem>
 
                 <listitem>
+                  <para>If you have <link
+                  linkend="addinglibgroup">groups</link> set up you can choose
+                  what group this library belongs to after entering in the
+                  code and name</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Next you can enter basic contact info about the
+              branch</para>
+
+              <screenshot>
+                <screeninfo>Library Contact Info</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/basicparams/librarycontact.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
                   <para>The address and contact fields can be used to make
-                  notices custom for each branch</para>
+                  notices custom for each library</para>
+                </listitem>
+
+                <listitem>
+                  <para>The email address field is not required, but it should
+                  be filled for every library in your system</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <important>
+                        <para>Be sure to enter a library email address to make
+                        sure that notices are sent to and from the right
+                        address</para>
+                      </important>
+                    </listitem>
+                  </itemizedlist>
                 </listitem>
 
                 <listitem>
                   <para>If the URL field is populated then the library name
                   will be linked in the holdings table on the OPAC</para>
+
+                  <screenshot>
+                    <screeninfo>Linked Library Name</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/basicparams/librarylink.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
                 </listitem>
 
                 <listitem>
-                  <tip>
-                    <para>Of the fields listed, only 'Library code' and 'Name'
-                    are required</para>
-                  </tip>
+                  <para>The OPAC Info box is for you to put information about
+                  the library that will appear in the OPAC when the branch
+                  name is moused over in the holdings table</para>
+
+                  <screenshot>
+                    <screeninfo>OPAC Info</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/basicparams/opacinfo.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+
+                <listitem>
+                  <para>IP Address does not have be filled in unless you plan
+                  on limiting access to your staff client to a specific IP
+                  Address</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <important>
+                        <para>An IP address is required if you have enabled
+                        <link
+                        linkend="AutoLocation">AutoLocation</link></para>
+                      </important>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Finally, if you have any notes you can put them here.
+                  These will not show in the OPAC</para>
                 </listitem>
               </itemizedlist>
             </listitem>
           </itemizedlist>
+
+          <tip>
+            <para>Of the fields listed, only 'Library code' and 'Name' are
+            required</para>
+          </tip>
+
+          <para/>
         </section>
 
         <section id="editingalibrary">
@@ -12584,6 +13325,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
+              <para>If you'd like to only show this attribute on patrons of
+              one type choose that patron type from the 'Category' pull
+              down</para>
+            </listitem>
+
+            <listitem>
+              <para>If you have a lot of attributes it might be handy to group
+              them so that you can easily find them for editing. If you create
+              an <link linkend="authorizedvalues">Authorized Value</link> for
+              PA_CLASS it will show in the 'Class' pull down and you can then
+              change your attributes page to have sections of
+              attributes</para>
+
+              <screenshot>
+                <screeninfo>Patron Attributes Sorted</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/patroncirc/pa_class.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
               <para>Click Save to save your new attribute</para>
             </listitem>
           </itemizedlist>
@@ -12598,6 +13364,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <mediaobject>
               <imageobject>
                 <imagedata fileref="images/admin/patroncirc/patronattribute.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>If you have set up classes for organizing attributes they will
+          appear that way on the add/edit patron form</para>
+
+          <screenshot>
+            <screeninfo>Grouped Attributes</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/pa_class-patron.png"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -12762,9 +13541,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>Define the period of time and item can be checked out to a
-              patron by entering the number of days in the 'Loan Period'
-              box.</para>
+              <para>Define the period of time an item can be checked out to a
+              patron by entering the number of units (days or hours) in the
+              'Loan Period' box.</para>
+            </listitem>
+
+            <listitem>
+              <para>Choose which unit of time, Days or Hours, that the loan
+              period and fines will be calculate in</para>
             </listitem>
 
             <listitem>
@@ -12789,19 +13573,37 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>The 'Fine Grace Period' is the period of time an item can
-              be overdue before you start charging fines.</para>
+              <para>Enter the 'Fine Charging Interval' in the unit you set
+              (ex. charge fines every 1 day, or every 2 hours)</para>
             </listitem>
 
             <listitem>
-              <para>Enter the 'Fine Charging Interval' in days (ex. charge
-              fines every 1 day, or every 2 days)</para>
+              <para>The 'Fine Grace Period' is the period of time an item can
+              be overdue before you start charging fines.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This can only be set for the Day unit, not in
+                    Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
               <para>If your library 'fines' patrons by suspending their
               account you can enter the number of days their fine should be
               suspended in the 'Suspension in Days' field</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This can only be set for the Day unit, not in
+                    Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -12907,6 +13709,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
+              <para>Control where the item returns to once it is checked
+              in</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Item returns home</para>
+                </listitem>
+
+                <listitem>
+                  <para>Item returns to issuing branch</para>
+                </listitem>
+
+                <listitem>
+                  <para>Item floats</para>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>When an item floats it stays where it was checked
+                      in and does not ever return 'home'</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
               <para>Once your policy is set, you can unset it by clicking the
               'Unset' link to the right of the rule</para>
             </listitem>
@@ -12954,7 +13782,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>The various policies have the following effects:</para>
+          <para>The various Hold Policies have the following effects:</para>
 
           <itemizedlist>
             <listitem>
@@ -12984,6 +13812,49 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>These policies are based on the patron's home branch, not
             the branch that the reserving staff member is from.</para>
           </important>
+
+          <para>The various Return Policies have the following effects:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Item returns home: The item will prompt the librarian to
+              transfer the item to its home library</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If the <link
+                    linkend="AutomaticItemReturn">AutomaticItemReturn</link>
+                    preference is set to automatically transfer the items
+                    home, then a prompt will not appear</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Item returns to issuing branch: The item will prompt the
+              librarian to transfer the item back to the library where it was
+              checked out</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If the <link
+                    linkend="AutomaticItemReturn">AutomaticItemReturn</link>
+                    preference is set to automatically transfer the items
+                    home, then a prompt will not appear</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Item floats: The item will not be transferred from the
+              branch it was checked in at, instead it will remain there until
+              transferred manually or checked in at another branch</para>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
 
@@ -13947,6 +14818,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
 
+        <important>
+          <para>This tool only effects sites that are not using the XSLT
+          Stylesheets.</para>
+        </important>
+
         <para>At this time the only keyword in use is 'subtitle.'</para>
 
         <para>Using this tool you can define what MARC field prints to the
@@ -14319,7 +15195,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/admin/cataloging/newmatchrule.png"/>
+                <imagedata fileref="images/admin/cataloging/samplematchrule.png"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -14385,6 +15261,97 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </screenshot>
             </listitem>
           </itemizedlist>
+        </section>
+      </section>
+
+      <section id="oaisetsconfig">
+        <title>OAI Sets Configuration</title>
+
+        <para>On this page you can create, modify and delete OAI-PMH
+        sets</para>
+
+        <section id="oaicreate">
+          <title>Create a set</title>
+
+          <para>To creat a set:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click on the link 'Add a new set'</para>
+            </listitem>
+
+            <listitem>
+              <para>Fill the mandatory fields 'setSpec' and 'setName'</para>
+            </listitem>
+
+            <listitem>
+              <para>Then you can add descriptions for this set. To do this
+              click on 'Add description' and fill the newly created text box.
+              You can add as many descriptions as you want.</para>
+            </listitem>
+
+            <listitem>
+              <para>Click on 'Save' button'</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="oaimodify">
+          <title>Modify/Delete a set</title>
+
+          <para>To modify a set, just click on the link 'Modify' on the same
+          line of the set you want to modify. A form similar to set creation
+          form will appear and allow you to modify the setSpec, setName and
+          descriptions.</para>
+
+          <para>To delete a set, just click on the link 'Delete' on the same
+          line of the set you want to delete.</para>
+        </section>
+
+        <section id="oaimapping">
+          <title>Define mappings</title>
+
+          <para>Here you can define how a set will be build (what records will
+          belong to this set) by defining mappings. Mappings are a list of
+          conditions on record content. A record only need to match one
+          condition to belong to the set.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Fill the fields 'Field', 'Subfield' and 'Value'. For
+              example if you want to include in this set all records that have
+              a 999$9 equal to 'XXX'. Fill 'Field' with 999, 'Subfield' with 9
+              and 'Value' with XXX.</para>
+            </listitem>
+
+            <listitem>
+              <para>If you want to add another condition, click on 'OR' button
+              and repeat step 1.</para>
+            </listitem>
+
+            <listitem>
+              <para>Click on 'Save'</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>To delete a condition, just leave at least one of 'Field',
+          'Subfield' or 'Value' empty and click on 'Save'.<note>
+              <para>Actually, a condition is true if value in the
+              corresponding subfield is strictly equal to what is defined if
+              'Value'. A record having 999$9 = 'XXX YYY' will not belong to a
+              set where condition is 999$9 = 'XXX'.</para>
+            </note></para>
+
+          <para>And it is case sensitive : a record having 999$9 = 'xxx' will
+          not belong to a set where condition is 999$9 = 'XXX'.</para>
+        </section>
+
+        <section id="oaibuild">
+          <title>Build sets</title>
+
+          <para>Once you have configured all your sets, you have to build the
+          sets. This is done by calling the script
+          misc/migration_tools/build_oai_sets.pl.</para>
         </section>
       </section>
     </section>
@@ -15506,6 +16473,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     <listitem>
                       <para>Currently all fields in the following tables are
                       used: items, biblioitems, biblio, branches</para>
+
+                      <screenshot>
+                        <screeninfo>List fields</screeninfo>
+
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/tools/labelcreator/listlabelfields.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -15579,9 +16556,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </screenshot>
 
           <para>You will be brought to an empty batch with an 'Add item(s)'
-          button at the top of the page. Clicking 'Add item(s)' will open a
-          search window for you to find the items you want to add to the
-          batch.</para>
+          button at the top of the page and a box to scan barcodes in
+          to.</para>
+
+          <screenshot>
+            <screeninfo>Add Items</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/labelcreator/addbatchitems.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>You can either scan barcodes in to the box provided and click
+          the 'Add item(s)' button or you can click the 'Add item(s)' button
+          with the barcodes box empty. Clicking 'Add item(s)' with nothing in
+          the barcodes box will open a search window for you to find the items
+          you want to add to the batch.</para>
 
           <screenshot>
             <screeninfo>Search for items for a Batch</screeninfo>
@@ -16373,6 +17365,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <listitem>
                 <para>Finally decide if this event should be applied to all
                 libraries or just the one you have originally selected</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>If you'd rather enter all the holidays and then copy
+                    them all to another branch all at once you can use the
+                    copy menu below the calendar</para>
+
+                    <screenshot>
+                      <screeninfo>Copy holidays</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/tools/calendar/copyholidays.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -16841,16 +17851,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <listitem>
               <para>Choose the character encoding</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>If you leave this set to Default Koha will try to
-                  guess the encoding, but it should be noted that this is
-                  almost always wrong for non-UTF8 records with non-ASCII
-                  characters. Specifying a character set is much more reliable
-                  if you're not using UTF-8.</para>
-                </listitem>
-              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -17653,21 +18653,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="notices">
-      <title>Notices</title>
+      <title>Notices &amp; Slips</title>
 
       <itemizedlist>
         <listitem>
           <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patrons
-          and Circulation &gt; Notices</para>
+          and Circulation &gt; Notices &amp; Slips</para>
         </listitem>
       </itemizedlist>
 
-      <para>All notices sent by Koha can be customized using the Notices Tool.
-      The system comes with several predefined templates that will appear when
-      you first visit the Notices Tool</para>
+      <para>All notices and circulation receipts (or slips) generated by Koha
+      can be customized using the Notices &amp; Slips Tool. The system comes
+      with several predefined templates that will appear when you first visit
+      this tool.</para>
 
       <screenshot>
-        <screeninfo>Notices Tool</screeninfo>
+        <screeninfo>Notices &amp; Slips Tool</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -17678,12 +18679,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <para>Each notice can be edited, but only a few can be deleted, this is
       to prevent system errors should a message try to send without a
-      template.</para>
+      template. Each notice and slip can be edited on a per library basis, by
+      default you will see the notices for all libraries.</para>
+
+      <para>If you have a style you'd like applied to all slips you can point
+      the <link linkend="SlipCSS">SlipCSS</link> preference to a stylesheet.
+      The same is true for notices, using the <link
+      linkend="NoticeCSS">NoticeCSS</link> preference to define a
+      stylesheet.</para>
 
       <section id="addnotices">
-        <title>Adding Notices</title>
+        <title>Adding Notices &amp; Slips</title>
 
-        <para>To add a new notice</para>
+        <para>To add a new notice or slip</para>
 
         <itemizedlist>
           <listitem>
@@ -17701,6 +18709,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
+            <para>Choose which library this notice or slip is for</para>
+          </listitem>
+
+          <listitem>
             <para>Choose the module this notice is related to</para>
           </listitem>
 
@@ -17710,6 +18722,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <listitem>
             <para>Use the name field to expand on your Code</para>
+          </listitem>
+
+          <listitem>
+            <para>If you plan on writing the notice or slip in HTML check the
+            'HTML Message' box, otherwise the content will be generated as
+            plain text</para>
           </listitem>
 
           <listitem>
@@ -17725,16 +18743,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <itemizedlist>
               <listitem>
                 <important>
-                  <para>On overdue notices make sure to use
-                  &lt;&lt;items.content&gt;&gt; to print out the data related
-                  to all items that are overdue. The other option is to use
-                  the &lt;item&gt;&lt;/item&gt; tags to span the line so that
-                  it will print out multiple lines</para>
+                  <para>Overdue notices can use &lt;&lt;items.content&gt;&gt;
+                  tags by themselves, or use &lt;item&gt;&lt;/item&gt; to span
+                  all of the tags. Learn more about the <link
+                  linkend="noticemarkup">Overdue Notice Markup</link></para>
 
                   <itemizedlist>
                     <listitem>
-                      <para>One example for the &lt;item&gt;&lt;/item&gt; tag
-                      option is:</para>
+                      <para>On overdue notices make sure to use
+                      &lt;&lt;items.content&gt;&gt; tags to print out the data
+                      related to all items that are overdue.</para>
+                    </listitem>
+                  </itemizedlist>
+
+                  <itemizedlist>
+                    <listitem>
+                      <para>The other option, only for overdue notices, is to
+                      use the &lt;item&gt;&lt;/item&gt; tags to span the line
+                      so that it will print out multiple lines One example for
+                      the &lt;item&gt;&lt;/item&gt; tag option is:</para>
 
                       <para>&lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by
                       &lt;&lt;biblio.author&gt;&gt;,
@@ -17762,7 +18789,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </itemizedlist>
 
         <section id="noticemarkup">
-          <title>Notice Markup</title>
+          <title>Overdue Notice Markup</title>
 
           <para>When creating your overdue notices there are two tags in
           addition to the various database fields that you can use in your
@@ -17812,10 +18839,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="existingnotices">
-        <title>Existing Notices</title>
+        <title>Existing Notices &amp; Slips</title>
 
         <para>Among the default notices are notices for several common actions
-        within Koha, here are some of what those notices do</para>
+        within Koha. All of these notices can be customized by altering their
+        text via the Notices &amp; Slips tool and their style using the <link
+        linkend="NoticeCSS">NoticeCSS</link> preference to define a
+        stylesheet. Here are some of what those notices do</para>
 
         <itemizedlist>
           <listitem>
@@ -17973,6 +19003,74 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   new serial issues, you can click on 'define a notice' which
                   will take you to the 'Notices' tool</para>
                 </tip>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>There are also a set of predefined slips (or receipts) listed on
+        this page. All of these slips can be customized by altering their text
+        via the Notices &amp; Slips tool and their style using the <link
+        linkend="SlipCSS">SlipCSS</link> preference to define a stylesheet.
+        Here is what those slips are used for:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>ISSUEQSLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print the quick slip in circulation</para>
+              </listitem>
+
+              <listitem>
+                <para>The quick slip only includes items that were checked out
+                today</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>ISSUESLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print a full slip in circulation</para>
+              </listitem>
+
+              <listitem>
+                <para>The slip or receipt will show items checked out today as
+                well as items that are still checked out</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>RESERVESLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print a holds slip</para>
+              </listitem>
+
+              <listitem>
+                <para>The holds slip is generated when a hold is
+                confirmed</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>TRANSFERSLIP</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Used to print a transfer slip</para>
+              </listitem>
+
+              <listitem>
+                <para>The transfer sliip is printed when you confirm a
+                transfer from one branch to another in your system</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -18275,9 +19373,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <para>You will be presented with a confirmation screen. From here you
-      can uncheck the items you don't want to delete before clicking 'Go.' If
-      the items are checked out you will be presented with an error after
-      clicking 'Go' and the items will not be deleted.</para>
+      can uncheck the items you don't want to delete and decide if Koha should
+      delete the bib record if the last item is being deleted before clicking
+      'Delete selected items.' If the items are checked out you will be
+      presented with an error after clicking 'Delete selected items' and the
+      items will not be deleted.</para>
 
       <screenshot>
         <screeninfo>Items not Deleted</screeninfo>
@@ -20800,7 +21900,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <itemizedlist>
         <listitem>
-          <para>Check out option on main staff client</para>
+          <para>Check out option on the top of the main staff client</para>
 
           <screenshot>
             <screeninfo>Check out box on main Koha Staff Client
@@ -20829,7 +21929,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>Check out option on the quick search bar</para>
+          <para>Check out option on the quick search bar on the circulation
+          page</para>
 
           <screenshot>
             <screeninfo>Check out tab on quick search bar</screeninfo>
@@ -20891,8 +21992,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </itemizedlist>
 
         <para>At the bottom of the page there is a summary of the patron's
-        current checked out items along with the due date, items checked out
-        today will appear at the top.</para>
+        current checked out items along with the due date (and time if the
+        item is an hourly loan), items checked out today will appear at the
+        top.</para>
+
+        <tip>
+          <para>If the checked out time is listed as 00:00 then the item is a
+          daily loan item. The due time for daily checkouts will show 23:59
+          which is the last minute of the day.</para>
+        </tip>
 
         <screenshot>
           <screeninfo>Patron's checkout summary</screeninfo>
@@ -20916,6 +22024,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>From the holds list you can suspend or resume patrons holds
+        using the options at the bottom of the list.</para>
 
         <para>If there are notes on the patron record these will appear to the
         right of the checkout box</para>
@@ -20951,13 +22062,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <para>Once you have checked out all of the items for the patron you
           can print them a receipt by choosing one of two methods.</para>
 
-          <para>The first is that you can simply hit enter on your keyboard or
-          scan a blank piece of paper with your barcode scanner. The idea
-          being that you're "checking out" a blank barcode which triggers Koha
-          to print the 'Quick Slip.'</para>
+          <para>If you have the <link
+          linkend="CircAutoPrintQuickSlip">CircAutoPrintQuickSlip</link>
+          preference set to 'open a print quick slip window' you can simply
+          hit enter on your keyboard or scan a blank piece of paper with your
+          barcode scanner. The idea being that you're "checking out" a blank
+          barcode which triggers Koha to print the 'Quick slip.'</para>
 
-          <para>The second is that you can click the Print button at the top
-          of the screen and choosing 'Print Slip' or 'Quick Slip'.</para>
+          <para>You can also click the Print button at the top of the screen
+          and choose 'Print slip' or 'Print quick slip'.</para>
 
           <screenshot>
             <screeninfo>Print receipt to slip printer</screeninfo>
@@ -20969,10 +22082,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>If you choose 'Print Slip' it will print all of the items the
+          <para>If you choose 'Print slip' it will print all of the items the
           patron has checked out, including those they checked out at an
-          earlier date. Choosing 'Quick Slip' will print only the items that
-          were checked out today.</para>
+          earlier date. Choosing 'Print quick slip' will print only the items
+          that were checked out today.</para>
+
+          <para>What prints on the slips can be customized by altering the
+          slip templates under the <link linkend="notices">Notices &amp;
+          Slips</link> tool.</para>
         </section>
 
         <section id="clearpatroninfo">
@@ -20993,11 +22110,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </imageobject>
             </mediaobject>
           </screenshot>
+
+          <para>If you have the <link
+          linkend="CircAutoPrintQuickSlip">CircAutoPrintQuickSlip</link>
+          preference set to 'clear the screen' then you simply need to hit
+          enter or scan a blank barcode and the screen will be cleared of the
+          current patron.</para>
         </section>
       </section>
 
       <section id="checkoutmsg">
         <title>Check Out Messages</title>
+
+        <para>If you check out an item that has multiple pieces and you have
+        cataloged that information in subfield 3 of the item record (in
+        MARC21) a message will pop up when you check out that item telling you
+        how many pieces should be there.</para>
+
+        <screenshot>
+          <screeninfo>Materials in the checked out item</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/materialspecified.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
 
         <para>There are times when Koha will prevent the librarian from being
         able to check out items to a patron. When this happens a warning will
@@ -21318,7 +22456,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <itemizedlist>
         <listitem>
-          <para>The check in box on main staff client</para>
+          <para>The check in box on the top of the main staff client</para>
 
           <screenshot>
             <screeninfo>Check out box on main Koha Staff Client
@@ -21326,7 +22464,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/circ/checkoutmain.png"/>
+                <imagedata fileref="images/circ/checkinmain.png"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -21356,6 +22494,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <mediaobject>
               <imageobject>
                 <imagedata fileref="images/circ/checkinlink.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </listitem>
+
+        <listitem>
+          <para>The Check in page under the Circulation menu</para>
+
+          <screenshot>
+            <screeninfo>Check in link on Circulation Module</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/checkincirc.png"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -21458,6 +22610,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>If you are checking in an item that should have multiple
+            parts or pieces a message will appear warning you about the number
+            of pieces you should have in your hand</para>
+
+            <screenshot>
+              <screeninfo>Materials Specified</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/materialspecified.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </listitem>
 
           <listitem>
@@ -21854,10 +23022,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <note>
+          <para>If you have your <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference set to "Don't allow" then you will not have the option to
+          put an end date on the hold suspension</para>
+        </note>
+
+        <note>
           <para>Depending on how you have your <link
           linkend="HidePatronName">HidePatronName</link> system preference set
-          the list may show patron names instead of card numbers in the Patron
-          column like in the image above.</para>
+          the list may show card numbers instead of names in the Patron column
+          like in the image above.</para>
         </note>
 
         <para>To rearrange or delete holds, simply make a selection from the
@@ -21876,6 +23051,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>To delete or cancel a hold, choose 'del' from the menu or click
         the red 'X' to the right of the hold line.</para>
+
+        <para>If you use the priority pull down to rearrange or delete holds
+        you will need to click the 'Update hold(s)' button to save your
+        changes.</para>
 
         <para>Clicking the down arrow to the right of the hold will stick the
         hold at the bottom of the list even if more requests are made.</para>
@@ -21898,8 +23077,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Once you have made your changes, click the 'Update hold(s)'
-        button and your changes will be saved.</para>
+        <para>If a patron asks to have their hold suspended you can do so by
+        clicking the Suspend button to far right. If the patron gives you a
+        date for the items to become unsuspended you can enter that in the
+        date box and click the 'Update hold(s)' button to save your
+        changes.</para>
+
+        <screenshot>
+          <screeninfo>Hold suspension column</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/suspendholds.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para/>
       </section>
 
       <section id="receiveholds">
@@ -22690,20 +23884,44 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     <section id="offlinecirc">
       <title>Offline Circulation Utility</title>
 
-      <para/>
-
       <section id="firefoxofflinecirc">
+        <sectioninfo>
+          <author>
+            <firstname>Franois</firstname>
+
+            <surname>Charbonnier</surname>
+          </author>
+
+          <affiliation>
+            <orgname>BibLibre</orgname>
+          </affiliation>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Changed content where necessary.</contrib>
+          </othercredit>
+
+          <pubdate>2012</pubdate>
+        </sectioninfo>
+
         <title>Firefox Plugin</title>
 
-        <para>There is a plugin for Firefox that can be used for Offline
-        Circulation: <ulink
-        url="https://addons.mozilla.org/en-US/firefox/addon/14399">https://addons.mozilla.org/en-US/firefox/addon/14399</ulink></para>
+        <para>There is an offline circulation tool that you can add to your
+        Firefox browser as a plugin/addon. To do so, just go to <ulink
+        url="https://addons.mozilla.org/en/firefox/addon/koct/">https://addons.mozilla.org/en/firefox/addon/koct/</ulink>
+        page and click on the "install now" button. You may have to confirm
+        the installation, just click on "install now" and then restart Firefox
+        to complete the installation.</para>
 
-        <para>Once installed there will be an icon for the Offline Circulation
-        Tool in the status bar at the bottom of your Firefox Window.</para>
+        <para>Once you have installed the plugin and restarted Firefox, you
+        will see the Koha logo in the add-on bar at the bottom right of
+        Firefox. </para>
 
         <screenshot>
-          <screeninfo>Koha Icon on the Status Bar in Firefox</screeninfo>
+          <screeninfo>Koha Icon on Add-on Bar</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -22712,16 +23930,379 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Additional instructions for using this Plugin can be found on
-        the Koha Wiki: <ulink
-        url="http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin">http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin</ulink></para>
+        <para>A click on the logo will open the tool in its own window.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circ Tool</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koct.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The plugin consists of four tabs:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The Check Out tab is where you check out items</para>
+          </listitem>
+
+          <listitem>
+            <para>The Check In tab is where you check in items </para>
+          </listitem>
+
+          <listitem>
+            <para>The Log tab keeps track of every transaction done while in
+            offline mode</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The log will keep information until you empty it. Each
+                time you open the plugin and it contains data in the log it
+                will warn you</para>
+
+                <screenshot>
+                  <screeninfo>Koha Offline Circ Warning</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/koctwarn.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <para>If you'd like to clear the log, check the 'I want to
+                delete rows' box before hitting the 'OK' button. Otherwise
+                clicking 'OK' will keep the items in the log and let you
+                continue working with the tool.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>The Param tab is to set up the plugin</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The first thing you want to do then is to set up the plugin. Go
+        to the Param tab to set up the plugin</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline CIrc Params</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctparam.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Answer the 4 questions presented:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Server = the URL of the librarian interface</para>
+          </listitem>
+
+          <listitem>
+            <para>Branch Code = the code for the branch where you are
+            located</para>
+          </listitem>
+
+          <listitem>
+            <para>Username = your staff account login</para>
+          </listitem>
+
+          <listitem>
+            <para>Password = your staff account password</para>
+          </listitem>
+        </itemizedlist>
+
+        <para><important>
+            <para>To save the settings, you will have to close the plugin
+            window and re-open it by clicking again on the Koha logo in the
+            add-on bar.</para>
+          </important><tip>
+            <para>You can create a staff account dedicated to the offline
+            circulation. So that, no matter who is at the circulation desk,
+            they can all use the same login. Along those lines, you can use a
+            group login that you already have in place for circulation as
+            well.</para>
+          </tip>Once you have everything set up you can start checking items
+        in and out.</para>
+
+        <para>Checking out:</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Check Out</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koct.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to the Check Out tab</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the patron barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the item barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Click 'Save'</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Checking in:</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Check In</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctcheckin.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to the Check In tab</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the item barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Click Save</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Each time, you check out or check in an item, a new transaction
+        is recorded in the local plugin database and you will see, at the
+        bottom of the plugin how many transactions has been made during the
+        offline circulation. For example, "10 Row(s) Added" means you did 10
+        transactions. </para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Tool Count</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctcount.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then, if you want an overview of every transaction, go to the
+        Log tab. This tab will show you the transactions in the plugin
+        database</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Log</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctlog.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para><tip>
+            <para>The status will be "Local." as long as you are offline and
+            don't process the transactions into Koha.</para>
+          </tip>When your Internet connection comes back up you will want to
+        get these transactions in to Koha. Before processing these
+        transactions you should be aware of a few issues.</para>
+
+        <para>Because you are not connected to your Koha database when using
+        this plugin holds will need additional processing. If an item you
+        check in while offline has a hold, the hold is kept on the item.
+        Since, you can't confirm holds found during the processing of every
+        check in, the holds stay on the item and will need to be managed
+        later. If you only checked in a few items you can just keep a record
+        of them all. If you checked in a lot of items you can use the Holds
+        Queue once it rebuilds to see what holds made it to the shelf
+        erroneously.</para>
+
+        <para>Similarly, if an patron card was expired, the offline
+        circulation tool won't know about it, so the checkout will be recorded
+        regardless of the patron's account being blocked normally.</para>
+
+        <para>You have two options for adding this data to Koha</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Commit to Koha</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you checked in/out on more than one computer at the
+                same time, what you want is to process every transaction
+                consistently. Let's say for instance that one patron checked a
+                book out on one computer and then checked the same book in on
+                another computer. To be consistent, you need to record the
+                check out first and then the check in. Not the opposite! To do
+                so, you need to group every transaction in one place, sort
+                them all and then, process everything. So, you need to use the
+                "Commit to Koha" option from every plugin/computer you worked
+                with. This way, the log will go to Koha and be accessible from
+                the Offline Circulation page.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Get there:</emphasis> Circulation &gt; Offline
+                Circulation</para>
+
+                <screenshot>
+                  <screeninfo>Offline Circulation</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecirclog.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Once all of the logs from all of the circulation
+                computers are loaded you will be able to check them all or
+                select just those you want to process into Koha. </para>
+              </listitem>
+
+              <listitem>
+                <para>Click on the Process button and Koha will record every
+                sorted transaction one by one. For each transaction, the
+                status will change to:</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed
+                    correctly</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is
+                    incorrect</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not found." if the item barcode is
+                    wrong</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available
+                    item</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Once finished you will have a summary of all of your
+                transactions</para>
+
+                <screenshot>
+                  <screeninfo>Offline Circulation Summary</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecircsuccess.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Apply directly</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you performed all of the circulation actions on one
+                computer then everything is sorted already so you can choose
+                to "Apply directly"</para>
+              </listitem>
+
+              <listitem>
+                <para>The status column will be updated to let you know if the
+                transactions were applied</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed
+                    correctly</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is
+                    incorrect</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not found." if the item barcode is
+                    wrong</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available
+                    item</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Once you're finished you can review all of the items
+                right in the Log tab</para>
+
+                <screenshot>
+                  <screeninfo>Koha Offlince Circulation Apply
+                  Directly</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/koctdirectly.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>Once you are done you can clear the log by clicking Clear. If
+        you don't you will be warned the next time you open the Offline
+        Circulation tool.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offlince Circulation Tool Warning</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctwarn.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="windowsofflinecirc">
         <title>Offline Circ Tool for Windows</title>
 
         <para>The Offline Circulation Utility can be downloaded at: <ulink
-        url="http://millruntech.com/koha/koha-tools/koha-offline-circulation">http://millruntech.com/koha/koha-tools/koha-offline-circulation</ulink></para>
+        url="http://millruntech.com/koha/koha-offline-circulation">http://millruntech.com/koha/koha-offline-circulation</ulink></para>
       </section>
 
       <section id="uploadofflinecirc">
@@ -23467,6 +25048,31 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
 
+        <para>To make sure that these values are filled in you can mark them
+        as mandatory in the <link linkend="marcbibframeworks">framework</link>
+        you're using and then they will appear in red with a 'required' label.
+        The item will not save until the required fields are filled in.</para>
+
+        <screenshot>
+          <screeninfo>Required Item Subfield</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/requireditemfields.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <tip>
+              <para>To make item subfields required in a framework you'll want
+              to edit the 952 field in the <link
+              linkend="marcbibframeworks">framework editor</link>.</para>
+            </tip>
+          </listitem>
+        </itemizedlist>
+
         <para>Below the add form there are 3 buttons for adding the
         item</para>
 
@@ -23636,6 +25242,40 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
         </section>
+      </section>
+
+      <section id="iteminfo">
+        <title>Item Information</title>
+
+        <para>To the left of every bibliographic record there is a tab to view
+        the items.</para>
+
+        <screenshot>
+          <screeninfo>Items Tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/itemstab-long.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Clicking that tab will give you basic information about the
+        items. If you ordered the item via the acquisitions module then the
+        History section will include information about the order.</para>
+
+        <screenshot>
+          <screeninfo>History with order info</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/itemorderinfo.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If the Order or Accession date is linked, clicking it will bring
+        you to the acquisitions information for that item.</para>
       </section>
 
       <section id="moveitemrec">
@@ -26191,6 +27831,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
+                <para>If your library is charged tax mark your Tax Number as
+                registered</para>
+              </listitem>
+
+              <listitem>
+                <para>Note if you list prices and/or invoice prices include
+                tax</para>
+              </listitem>
+
+              <listitem>
                 <para>If the vendor offers a consistent blank discount, enter
                 that in the 'Discount' field</para>
 
@@ -26203,7 +27853,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>GST rate is for any tax the vendor may charge</para>
+                <para>Enter your tax rate if your library is charged taxes on
+                orders</para>
+              </listitem>
+
+              <listitem>
+                <para>If you know about how long it usually takes orders to
+                arrive from this vendor you can enter a delivery time. This
+                will allow Koha to estimate when orders will arrive at your
+                library on the late orders report.</para>
               </listitem>
 
               <listitem>
@@ -26433,7 +28091,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </mediaobject>
       </screenshot>
 
-      <para>Clicking 'edit' to the righ of the suggested title will open a
+      <para>Clicking 'edit' to the right of the suggested title will open a
       suggestion editing page.</para>
 
       <screenshot>
@@ -26513,8 +28171,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="createacqbasket">
         <title>Create a basket</title>
 
-        <para>To create a basket you have several options from the vendor
-        search results page:</para>
+        <para>To create a basket you must first search for the vendor you're
+        ordering from:</para>
 
         <screenshot>
           <screeninfo>New Basket / Add Basket Options</screeninfo>
@@ -26526,8 +28184,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From here you can choose to create a new basket by clicking 'New
-        basket' under 'Manage orders' or by clicking 'Add basket'</para>
+        <para>Next to the vendor name you will see a 'New Basket'
+        button</para>
 
         <screenshot>
           <screeninfo>Add Basket Form</screeninfo>
@@ -27199,7 +28857,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <para>Upon clicking on the link to 'Late Orders' from the Acquisitions
       page you will be presented with a series of filter options on the left
-      hand side.</para>
+      hand side. These filters will be applied only closed baskets.</para>
 
       <screenshot>
         <screeninfo>Acquisitions Late Order Filters</screeninfo>
@@ -27210,6 +28868,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </imageobject>
         </mediaobject>
       </screenshot>
+
+      <note>
+        <para>The vendor pull down only shows vendors with closed baskets that
+        are late.</para>
+      </note>
 
       <para>Once you filter your orders to show you the things you consider to
       be late you will be presented with a list of these items.</para>
@@ -27225,9 +28888,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <para>To the right of each late title you will be see a checkbox. Check
-      off the ones you want a claim letter sent to and click 'Claim Order.'
-      This will automatically send an email to the vendor at the email address
-      you have on file.</para>
+      off the ones you want a claim letter sent to and click 'Claim Order' at
+      the bottom right of the list. This will automatically send an email to
+      the vendor at the email address you have on file.<note>
+          <para>The Estimated Delivery Date is based on the Delivery time
+          value entered on the vendor record.</para>
+        </note></para>
 
       <para>If you would rather use a different acquisition claim letter
       (other than the default) you can <link linkend="addnotices">create that
@@ -27424,10 +29090,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>A Public List can be seen by everybody, but managed only
                 by you</para>
               </listitem>
-
-              <listitem>
-                <para>A Open List can be seen and managed by everybody</para>
-              </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
@@ -27478,11 +29140,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <listitem>
                     <para>A Public List can be seen by everybody, but managed
                     only by you</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>A Open List can be seen and managed by
-                    everybody</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -27914,7 +29571,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           /installer/data/mysql/kohastructure.sql or online at: <ulink
           url="http://schema.koha-community.org/">http://schema.koha-community.org</ulink>.</para>
 
-          <para>To add your query, simply fill in the form presented</para>
+          <para>To add your query, click the link to 'Create from SQL' on the
+          main reports module or the New button at the top of the Saved
+          Reports page.</para>
+
+          <screenshot>
+            <screeninfo>New SQL Report</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/reports/newsql.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <para>Fill in the form presented</para>
 
           <screenshot>
             <screeninfo>Create Report from SQL</screeninfo>
@@ -27926,76 +29597,141 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>If you feel that your report might be too resource intensive
-          you might want to consider using runtime parameters to your query.
-          Runtime parameters basically make a filter appear before the report
-          is run to save your system resources.</para>
-
-          <para><note>
-              <para>There is a limit of 10,000 records put on SQL statements
-              entered in Koha. To get around this you want to add 'LIMIT
-              100000' to the end of your SQL statement (or any other number
-              above 10,000.</para>
-            </note>There is a specific syntax that Koha will understand as
-          'ask for values when running the report'. The syntax is
-          &lt;&lt;Question to ask|authorized_value&gt;&gt;.</para>
-
           <itemizedlist>
             <listitem>
-              <para>The &lt;&lt; and &gt;&gt; are just delimiters. You must
-              put &lt;&lt; at the beginning and &gt;&gt; at the end of your
-              parameter</para>
+              <para>The name is what will appear on the Saved Reports page to
+              help you identify the report later. It will also be searchable
+              using the filters found the left of the Saved Reports
+              page.</para>
             </listitem>
 
             <listitem>
-              <para>The 'Question to ask' will be displayed on the left of the
-              string to enter.</para>
+              <para>Notes will also appear on the Saved Reports page, this can
+              be used to provide more details about the report or tips on how
+              to enter values when it runs</para>
             </listitem>
 
             <listitem>
-              <para>The authorized_value can be omitted if not applicable. If
-              it contains an authorized value category, or branches or
-              itemtype or categorycode, a list with the Koha authorized values
-              will be displayed instead of a free field Note that you can have
-              more than one parameter in a given SQL Note that entering
-              nothing at run time won't probably work as you expect. It will
-              be considered as "value empty" not as "ignore this parameter".
-              For example entering nothing for : "title=&lt;&lt;Enter
-              title&gt;&gt;" will display results with title='' (no title). If
-              you want to have to have something not mandatory, use "title
-              like &lt;&lt;Enter title&gt;&gt;" and enter a % at run time
-              instead of nothing</para>
+              <para>The type should always be 'Tabular' at this time since the
+              other formats have not been implemented</para>
+            </listitem>
+
+            <listitem>
+              <para>In the SQL box you will type or paste the SQL for the
+              report</para>
+            </listitem>
+
+            <listitem>
+              <para>If you feel that your report might be too resource
+              intensive you might want to consider using runtime parameters to
+              your query. Runtime parameters basically make a filter appear
+              before the report is run to save your system resources.</para>
+
+              <para>There is a specific syntax that Koha will understand as
+              'ask for values when running the report'. The syntax is
+              &lt;&lt;Question to ask|authorized_value&gt;&gt;.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>The &lt;&lt; and &gt;&gt; are just delimiters. You
+                  must put &lt;&lt; at the beginning and &gt;&gt; at the end
+                  of your parameter</para>
+                </listitem>
+
+                <listitem>
+                  <para>The 'Question to ask' will be displayed on the left of
+                  the string to enter.</para>
+                </listitem>
+
+                <listitem>
+                  <para>The authorized_value can be omitted if not applicable.
+                  If it contains an authorized value category, or branches or
+                  itemtype or categorycode, a list with the Koha authorized
+                  values will be displayed instead of a free field Note that
+                  you can have more than one parameter in a given SQL Note
+                  that entering nothing at run time won't probably work as you
+                  expect. It will be considered as "value empty" not as
+                  "ignore this parameter". For example entering nothing for :
+                  "title=&lt;&lt;Enter title&gt;&gt;" will display results
+                  with title='' (no title). If you want to have to have
+                  something not mandatory, use "title like &lt;&lt;Enter
+                  title&gt;&gt;" and enter a % at run time instead of
+                  nothing</para>
+                </listitem>
+              </itemizedlist>
+
+              <para>Examples:</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>SELECT surname,firstname FROM borrowers WHERE
+                  branchcode=&lt;&lt;Enter patrons library|branches&gt;&gt;
+                  AND surname like &lt;&lt;Enter filter for patron surname (%
+                  if none)&gt;&gt;</para>
+                </listitem>
+
+                <listitem>
+                  <para>SELECT * FROM items WHERE homebranch = &lt;&lt;Pick
+                  your branch|branches&gt;&gt; and barcode like
+                  &lt;&lt;Partial barcode value here&gt;&gt;</para>
+                </listitem>
+              </itemizedlist>
+
+              <tip>
+                <para>To generate a date picker calendar to the right of the
+                field when running a report you can use the 'date' keyword
+                like this: &lt;&lt;Enter Date|date&gt;&gt;</para>
+
+                <screenshot>
+                  <screeninfo>Date Picker</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/reports/datepicker.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </tip>
+
+              <tip>
+                <para>You have to put "%" in a text box to 'leave it blank'.
+                Otherwise, it literally looks for "" (empty string) as the
+                value for the field.</para>
+              </tip>
+
+              <para><important>
+                  <para>In addition to using any authorized value code to
+                  generate a dropdown, you can use the following values as
+                  well: Branches (branches), Item Types (itemtypes) and Patron
+                  Categories (categorycode). For example a branch pull down
+                  would be generated like this
+                  &lt;&lt;Branch|branches&gt;&gt;</para>
+
+                  <screenshot>
+                    <screeninfo>Branch pull down</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/reports/branchpulldown.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </important></para>
             </listitem>
           </itemizedlist>
 
-          <para>Examples:</para>
+          <note>
+            <para>There is a limit of 10,000 records put on SQL statements
+            entered in Koha. To get around this you want to add 'LIMIT 100000'
+            to the end of your SQL statement (or any other number above
+            10,000.</para>
+          </note>
 
-          <itemizedlist>
-            <listitem>
-              <para>SELECT surname,firstname FROM borrowers WHERE
-              branchcode=&lt;&lt;Enter patrons library|branches&gt;&gt; AND
-              surname like &lt;&lt;Enter filter for patron surname (% if
-              none)&gt;&gt;</para>
-            </listitem>
-
-            <listitem>
-              <para>SELECT * FROM items WHERE homebranch = &lt;&lt;Pick your
-              branch|branches&gt;&gt; and barcode like &lt;&lt;Partial barcode
-              value here&gt;&gt;</para>
-            </listitem>
-          </itemizedlist>
-
-          <tip>
-            <para>You have to put "%" in a text box to 'leave it blank'.
-            Otherwise, it literally looks for "" (empty string) as the value
-            for the field.</para>
-          </tip>
-
-          <para><important>
-              <para>The only supported dropdowns at this time are Branches
-              (branches), Item Types (itemtypes) and Patron Categories
-              (categorycode).</para>
-            </important></para>
+          <para>Once everything is entered click the 'Save Report' button and
+          you'll be presented with options to run it. Once a report is saved
+          you do not have to recreate it you can simply find it on the Saved
+          Reports page and <link linkend="runcustomreport">run</link> or <link
+          linkend="editcustomreports">edit</link> it.</para>
         </section>
       </section>
 
@@ -28031,6 +29767,59 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
+      </section>
+
+      <section id="runcustomreport">
+        <title>Running Custom Reports</title>
+
+        <para>Once custom reports are saved to Koha, you can run them by going
+        to the Saved Reports page and clicking the Run link to the right of
+        the report.</para>
+
+        <screenshot>
+          <screeninfo>Run Report</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/runreport.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>When you report runs you will either be asked for some
+        values</para>
+
+        <screenshot>
+          <screeninfo>Enter report parameters</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/reportparameters.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>or you will see the results right away</para>
+
+        <screenshot>
+          <screeninfo>Report results</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/reports/reportresults.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From the results you can choose to rerun the report by clicking
+        'Run rpeort' at the top, edit the report by clicking the 'Edit' button
+        or starting over and creating a new report by using the 'New' button.
+        You can also download your results by choosing a file type at the
+        bottom of the results next to the 'Download the report' label and
+        clicking 'Download.'<tip>
+            <para>A Comma Separated Text file is a CSV file and it can be
+            opened by any spreadsheet application.</para>
+          </tip></para>
       </section>
     </section>
 
@@ -28316,7 +30105,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         to your needs.</para>
       </section>
 
-      <section>
+      <section id="holdstats">
         <title>Holds Statistics</title>
 
         <note>
@@ -28331,7 +30120,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         row. You can also choose from the filters on the far right of the
         form.</para>
 
-        <screenshot id="holdstats">
+        <screenshot>
           <screeninfo>Hold Statistics Form</screeninfo>
 
           <mediaobject>
@@ -28683,14 +30472,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     <itemizedlist>
       <listitem>
         <para><link
-        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> = using
-        XSLT stylesheets</para>
+        linkend="OPACXSLTResultsDisplay">OPACXSLTResultsDisplay</link> =
+        default</para>
       </listitem>
 
       <listitem>
         <para><link
-        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> = using
-        XSLT stylesheets</para>
+        linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link> =
+        default</para>
       </listitem>
 
       <listitem>
@@ -28758,6 +30547,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <listitem>
         <para><link linkend="RequestOnOpac">RequestOnOpac</link> =
         Allow</para>
+      </listitem>
+
+      <listitem>
+        <para><link
+        linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link> =
+        Allow</para>
+      </listitem>
+
+      <listitem>
+        <para><link linkend="OpacBrowseResults">OpacBrowseResults</link> =
+        Enable</para>
       </listitem>
     </itemizedlist>
 
@@ -29214,7 +31014,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <para>The only field required is the 'List Name,' but the patron can
           also choose how they want the list sorted and if the list is public
-          or private.</para>
+          or private.<important>
+              <para>If you aren't allowing patrons to create public lists with
+              the <link
+              linkend="OpacAllowPublicListCreation">OpacAllowPublicListCreation</link>
+              preference then patrons will only be able to create private
+              lists.</para>
+            </important></para>
         </section>
 
         <section id="opacaddtolists">
@@ -29978,6 +31784,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
+
+        <para>Patrons can cancel their own holds if they are not in transit or
+        already waiting for them. They can also suspend all of their holds
+        indefinitely or until a specific date if they choose by filling in the
+        suspend options at the bottom of the page.</para>
       </section>
 
       <section id="opacmyaccount-flags">
@@ -33908,6 +35719,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </listitem>
 
                 <listitem>
+                  <para><link
+                  linkend="OpacAllowPublicListCreation">OpacAllowPublicListCreation</link>
+                  : If patrons can create lists then decide if they are
+                  allowed to create public lists</para>
+                </listitem>
+
+                <listitem>
                   <para><link linkend="suggestionspref">suggestion</link> :
                   Decide if you want patrons to be able to submit purchase
                   suggestions</para>
@@ -35010,6 +36828,21 @@ print theme('pages_catalog');</programlisting>
           preferences then this script will also cancel holds that have been
           sitting on the hold shelf for too long and will (if the library
           does) charge the patron for not picking up the hold.</para>
+
+          <para>Frequency suggestion: daily</para>
+        </section>
+
+        <section id="unsuspendholdcron">
+          <title>Unsuspend Holds</title>
+
+          <para>Script path:
+          misc/cronjobs/holds/auto_unsuspend_holds.pl</para>
+
+          <para>Does: This script checks to find holds that should no longer
+          be suspended and removes the suspension if the <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference is set to 'allow'. This puts the patron back in to the
+          queue where they were when the hold was suspended.</para>
 
           <para>Frequency suggestion: daily</para>
         </section>
@@ -37466,7 +39299,7 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
         <listitem>
           <para>Kyles's Koha Tools - <ulink
-          url="http://millruntech.com/koha/koha-tools">http://millruntech.com/koha/koha-tools</ulink></para>
+          url="http://millruntech.com/koha">http://millruntech.com/koha</ulink></para>
         </listitem>
 
         <listitem>
@@ -39360,15 +41193,43 @@ no-repeat scroll center top transparent;
         </itemizedlist>
 
         <tip>
+          <para>To generate a date picker calendar to the right of the field
+          when running a report you can use the 'date' keyword like this:
+          &lt;&lt;Enter Date|date&gt;&gt;</para>
+
+          <screenshot>
+            <screeninfo>Date Picker</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/reports/datepicker.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </tip>
+
+        <tip>
           <para>You have to put "%" in a text box to 'leave it blank'.
           Otherwise, it literally looks for "" (empty string) as the value for
           the field.</para>
         </tip>
 
         <para><important>
-            <para>The only supported dropdowns at this time are Branches
+            <para>In addition to using any authorized value code to generate a
+            dropdown, you can use the following values as well: Branches
             (branches), Item Types (itemtypes) and Patron Categories
-            (categorycode).</para>
+            (categorycode). For example a branch pull down would be generated
+            like this &lt;&lt;Branch|branches&gt;&gt;</para>
+
+            <screenshot>
+              <screeninfo>Branch pull down</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/reports/branchpulldown.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </important></para>
       </section>
 
