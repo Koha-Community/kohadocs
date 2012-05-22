@@ -10621,8 +10621,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 (itemtypes), Collection Codes (ccode) and Shelving Location
                 (loc). If you would like to be able to limit searches on item
                 type and shelving location for example you would enter
-                itemtypes|loc in the preference input box. Tabs appear in the
-                order listed.</para>
+                itemtypes|loc in the preference input box. The order of these
+                fields will determine the order of the tabs in the OPAC and
+                staff client advanced search screens. Values within the search
+                type are OR'ed together, while each different search type is
+                AND'ed together in the query limits. The current stored values
+                are supported without any required modification.Each set of
+                advanced search fields are displayed in tabs in both the OPAC
+                and staff client. The first value in the AdvancedSearchTypes
+                syspref is the selected tab; if no values are present,
+                "itemtypes" is used. For non-itemtype values, the value in
+                AdvancedSearchTypes must match the Authorised Value name, and
+                must be indexed with 'mc-' prefixing that name.</para>
 
                 <screenshot>
                   <screeninfo>Searching by Item Type and Shelving
