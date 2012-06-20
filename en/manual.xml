@@ -764,6 +764,49 @@
         <section id="generalauthorities">
           <title>General</title>
 
+          <section id="AutoCreateAuthorities">
+            <title>AutoCreateAuthorities</title>
+
+            <para>Default: do not generate</para>
+
+            <para>Asks: When editing records, ___ authority records that are
+            missing. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>do not generate</para>
+              </listitem>
+
+              <listitem>
+                <para>generate</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para><link
+              linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link>
+              must be set to "allow" for this to have any effect</para>
+            </important>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this and <link
+                linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link>
+                are both turned on, automatically create authority records for
+                headings that don't have any authority link when cataloging.
+                When BiblioAddsAuthorities is on and AutoCreateAuthorities is
+                turned off, do not automatically generate authority records,
+                but allow the user to enter headings that don't match an
+                existing authority. When BiblioAddsAuthorities is off, this
+                has no effect.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="BiblioAddsAuthorities">
             <title>BiblioAddsAuthorities</title>
 
