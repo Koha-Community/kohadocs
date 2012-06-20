@@ -761,143 +761,355 @@
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Authorities</para>
 
-        <section id="BiblioAddsAuthorities">
-          <title>BiblioAddsAuthorities</title>
+        <section id="generalauthorities">
+          <title>General</title>
 
-          <para>Default: allow</para>
+          <section id="BiblioAddsAuthorities">
+            <title>BiblioAddsAuthorities</title>
 
-          <para>Asks: When editing records, ___ them to automatically create
-          new authority records if needed, rather than having to reference
-          existing authorities.</para>
+            <para>Default: allow</para>
 
-          <para>Values:</para>
+            <para>Asks: When editing records, ___ them to automatically create
+            new authority records if needed, rather than having to reference
+            existing authorities.</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>allow</para>
+            <para>Values:</para>
 
-              <itemizedlist>
-                <listitem>
-                  <para>This setting allows you to type values in the fields
-                  controlled by authorities and then adds a new authority if
-                  one does not exist</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
+            <itemizedlist>
+              <listitem>
+                <para>allow</para>
 
-            <listitem>
-              <para>don't allow</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>This setting allows you to type values in the fields
+                    controlled by authorities and then adds a new authority if
+                    one does not exist</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
 
-              <itemizedlist>
-                <listitem>
-                  <para>This setting will lock the authority controlled
-                  fields, forcing you to search for an authority versus
-                  allowing you to type the information in yourself.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
+              <listitem>
+                <para>don't allow</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>This setting will lock the authority controlled
+                    fields, forcing you to search for an authority versus
+                    allowing you to type the information in yourself.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="dontmerge">
+            <title>dontmerge</title>
+
+            <para>Default: Don't</para>
+
+            <para>Asks: ___ automatically update attached biblios when
+            changing an authority record.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>If this is set to not merge you will need to ask your
+              administrator to enable the merge_authorities.pl cronjob.</para>
+            </important>
+          </section>
+
+          <section id="MARCAuthorityControlField008">
+            <title>MARCAuthorityControlField008</title>
+
+            <para>Default: || aca||aabn | a|a d</para>
+
+            <para>Asks: Use the following text for the contents of MARC
+            authority control field 008 position 06-39 (fixed length data
+            elements).</para>
+
+            <para><important>
+                <para>Do not include the date (position 00-05) in this
+                preference, Koha will calculate automatically and put that in
+                before the values in this preference.</para>
+              </important>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference controls the default value in the 008
+                field on Authority records. It does not effect bibliographic
+                records.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="UseAuthoritiesForTracings">
+            <title>UseAuthoritiesForTracings</title>
+
+            <para>Default: Don't use</para>
+
+            <para>Asks: ___ authority record numbers instead of text strings
+            for searches from subject tracings.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't use</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Search links look for subject/author keywords
+                    (example: opac-search.pl?q=su:Business%20networks)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Use</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Search links look for an authority record (example:
+                    opac-search.pl?q=an:354)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>For libraries that have authority files, they may want
+                to make it so that when a link to an authorized subject or
+                author is clicked on the OPAC or staff client it takes the
+                searcher only to a list of results with that authority record.
+                Most libraries do not have complete authority files and so
+                setting this preference to 'Don't use' will allow searchers to
+                click on links to authors and subject headings and perform a
+                keyword search against those fields, finding all possible
+                relevant results instead.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
-        <section id="dontmerge">
-          <title>dontmerge</title>
+        <section id="linkerauthorities">
+          <title>Linker</title>
 
-          <para>Default: Don't</para>
+          <para>These preference will control how Koha links bibliographic
+          records to authority records. All bibliographic records added to
+          Koha after these preferences are set will link automatically to
+          authority records, for records added before these preferences are
+          set there is a script (misc/link_bibs_to_authorities.pl) that your
+          system administrator can run to link records together.</para>
 
-          <para>Asks: ___ automatically update attached biblios when changing
-          an authority record.</para>
+          <section id="CatalogModuleRelink">
+            <title>CatalogModuleRelink</title>
 
-          <para>Values:</para>
+            <para>Default: Do not</para>
 
-          <itemizedlist>
-            <listitem>
-              <para>Do</para>
-            </listitem>
+            <para>Asks: ___ automatically relink headings that have previously
+            been linked when saving records in the cataloging module.</para>
 
-            <listitem>
-              <para>Don't</para>
-            </listitem>
-          </itemizedlist>
+            <para>Values:</para>
 
-          <important>
-            <para>If this is set to not merge you will need to ask your
-            administrator to enable the merge_authorities.pl cronjob.</para>
-          </important>
-        </section>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
 
-        <section id="MARCAuthorityControlField008">
-          <title>MARCAuthorityControlField008</title>
+              <listitem>
+                <para>Do not</para>
+              </listitem>
+            </itemizedlist>
 
-          <para>Default: || aca||aabn | a|a d</para>
+            <para>Description:</para>
 
-          <para>Asks: Use the following text for the contents of MARC
-          authority control field 008 position 06-39 (fixed length data
-          elements).</para>
+            <itemizedlist>
+              <listitem>
+                <para>Longtime users of Koha don't expect the authority and
+                bib records to link consistently. This preference makes it
+                possible to disable authority relinking in the cataloging
+                module only (i.e. leaving it enabled for future runs of
+                link_bibs_to_authorities.pl). Note that though the default
+                behavior matches the previous behavior of Koha, it does not
+                match the intended behavior. Libraries that want the intended
+                behavior of authority control rather than the way Koha used to
+                handle linking should set CatalogModuleRelink to 'Do'. Once
+                setting this to 'Do' the following preferences can also be
+                set.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
-          <para><important>
-              <para>Do not include the date (position 00-05) in this
-              preference, Koha will calculate automatically and put that in
-              before the values in this preference.</para>
-            </important>Description:</para>
+          <section id="LinkerKeepStale">
+            <title>LinkerKeepStale</title>
 
-          <itemizedlist>
-            <listitem>
-              <para>This preference controls the default value in the 008
-              field on Authority records. It does not effect bibliographic
-              records.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
+            <para>Default: Do not</para>
 
-        <section id="UseAuthoritiesForTracings">
-          <title>UseAuthoritiesForTracings</title>
+            <para>Asks: ___ keep existing links to authority records for
+            headings where the linker is unable to find a match. </para>
 
-          <para>Default: Don't use</para>
+            <para>Values:</para>
 
-          <para>Asks: ___ authority record numbers instead of text strings for
-          searches from subject tracings.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
 
-          <para>Values:</para>
+              <listitem>
+                <para>Do not</para>
+              </listitem>
+            </itemizedlist>
 
-          <itemizedlist>
-            <listitem>
-              <para>Don't use</para>
+            <para>Description: </para>
 
-              <itemizedlist>
-                <listitem>
-                  <para>Search links look for subject/author keywords
-                  (example: opac-search.pl?q=su:Business%20networks)</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
+            <itemizedlist>
+              <listitem>
+                <para>When set to 'Do', the linker will never remove a link to
+                an authority record, though, depending on the value of <link
+                linkend="LinkerRelink">LinkerRelink</link>, it may change the
+                link.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
-            <listitem>
-              <para>Use</para>
+          <section id="LinkerModule">
+            <title>LinkerModule</title>
 
-              <itemizedlist>
-                <listitem>
-                  <para>Search links look for an authority record (example:
-                  opac-search.pl?q=an:354)</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
+            <para>Default: Default</para>
 
-          <para>Description:</para>
+            <para>Asks: Use the ___ linker module for matching headings to
+            authority records. </para>
 
-          <itemizedlist>
-            <listitem>
-              <para>For libraries that have authority files, they may want to
-              make it so that when a link to an authorized subject or author
-              is clicked on the OPAC or staff client it takes the searcher
-              only to a list of results with that authority record. Most
-              libraries do not have complete authority files and so setting
-              this preference to 'Don't use' will allow searchers to click on
-              links to authors and subject headings and perform a keyword
-              search against those fields, finding all possible relevant
-              results instead.</para>
-            </listitem>
-          </itemizedlist>
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Default</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Retains Koha's previous behavior of only creating
+                    links when there is an exact match to one and only one
+                    authority record; if the <link
+                    linkend="LinkerOptions">LinkerOptions</link> preference is
+                    set to 'broader_headings', it will try to link headings to
+                    authority records for broader headings by removing
+                    subfields from the end of the heading </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>First match</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Creates a link to the first authority record that
+                    matches a given heading, even if there is more than one
+                    authority record that matches</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Last match</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Creates a link to the last authority record that
+                    matches a given heading, even if there is more than one
+                    record that matches</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference tells Koha which match to use when
+                searching for authority matches when saving a record.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LinkerOptions">
+            <title>LinkerOptions</title>
+
+            <para>Asks: Set the following options for the authority linker ___
+            </para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This is a pipe seperated (|) list of options. At the
+                moment, the only option available is "broader_headings." With
+                this option set to "broader_headings", the linker will try to
+                match the following heading as follows: </para>
+
+                <para>=600 10$aCamins-Esakov, Jared$xCoin
+                collections$vCatalogs$vEarly works to 1800. </para>
+
+                <para>First: Camins-Esakov, Jared--Coin
+                collections--Catalogs--Early works to 1800 </para>
+
+                <para>Next: Camins-Esakov, Jared--Coin collections--Catalogs
+                </para>
+
+                <para>Next: Camins-Esakov, Jared--Coin collections </para>
+
+                <para>Next: Camins-Esakov, Jared (matches! if a previous
+                attempt had matched, it would not have tried this) </para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LinkerRelink">
+            <title>LinkerRelink</title>
+
+            <para>Default: Do</para>
+
+            <para>Asks: ___ relink headings that have previously been linked
+            to authority records. </para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+
+              <listitem>
+                <para>Do not</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When set to 'Do', the linker will confirm the links for
+                headings that have previously been linked to an authority
+                record when it runs. When set to 'Do not', any heading with an
+                existing link will be ignored.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
       </section>
 
