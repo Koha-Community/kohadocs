@@ -984,14 +984,16 @@
                 <para>Longtime users of Koha don't expect the authority and
                 bib records to link consistently. This preference makes it
                 possible to disable authority relinking in the cataloging
-                module only (i.e. leaving it enabled for future runs of
-                link_bibs_to_authorities.pl). Note that though the default
-                behavior matches the previous behavior of Koha, it does not
-                match the intended behavior. Libraries that want the intended
-                behavior of authority control rather than the way Koha used to
-                handle linking should set CatalogModuleRelink to 'Do'. Once
-                setting this to 'Do' the following preferences can also be
-                set.</para>
+                module only (i.e. relinking is still possible if
+                link_bibs_to_authorities.pl is run). Note that though the
+                default behavior matches the previous behavior of Koha
+                (retaining links to outdated authority records), it does not
+                match the intended behavior (updating biblio/authority link
+                after bibliographic record is edited). Libraries that want the
+                intended behavior of authority control rather than the way
+                Koha used to handle linking should set CatalogModuleRelink to
+                'Do'. Once setting this to 'Do' the following preferences can
+                also be set.</para>
               </listitem>
             </itemizedlist>
           </section>
