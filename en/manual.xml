@@ -10085,6 +10085,26 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </ulink></para>
 
           <important>
+            <para>Only drivers available as Perl modules will work in this
+            preference, so make sure a Perl module is available before
+            choosing an SMS service.</para>
+          </important>
+
+          <para>Once a driver is entered in the preference an option will
+          appear in the staff client and the OPAC on the patron messaging form
+          to choose to receive messages as SMS</para>
+
+          <screenshot>
+            <screeninfo>SMSSendDriver Options</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/SMSSendDriver.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <important>
             <para>You must allow <link
             linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
             for this to work.</para>
@@ -32475,6 +32495,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/opac/mymessages.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If you also allow SMS messages with the <link
+        linkend="SMSSendDriver">SMSSendDriver</link> preference, you will see
+        an additional column to receive these messages as SMS (or text
+        messages) and a field for a cell (or SMS) number.</para>
+
+        <screenshot>
+          <screeninfo>SMSSendDriver in the OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/OPACSMSSendDriver.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
