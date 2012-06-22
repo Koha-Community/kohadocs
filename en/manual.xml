@@ -3371,6 +3371,70 @@
               </listitem>
             </itemizedlist>
           </section>
+
+          <section id="SuspendHoldsIntranet">>
+            <title>SuspendHoldsIntranet</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ holds to be suspended from the intranet.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The holds suspention feature can be turned on and off in
+                the staff client by altering this system preference. If this
+                is set to 'allow' you will want to set the <link
+                linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+                system preference.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SuspendHoldsOpac">
+            <title>SuspendHoldsOpac</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ holds to be suspended from the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The holds suspention feature can be turned on and off in
+                the OPAC by altering this system preference. If this is set to
+                'allow' you will want to set the <link
+                linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+                system preference.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
 
         <section id="circinterfaceprefs">
@@ -22317,7 +22381,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <para>From the holds list you can suspend or resume patrons holds
-        using the options at the bottom of the list.</para>
+        using the options at the bottom of the list if you have the <link
+        linkend="SuspendHoldsIntranet">SuspendHoldsIntranet</link> preference
+        set to 'allow.'</para>
+
+        <note>
+          <para>If you have your <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference set to "Don't allow" then you will not have the option to
+          put an end date on the hold suspension</para>
+        </note>
 
         <para>If there are notes on the patron record these will appear to the
         right of the checkout box</para>
@@ -23318,7 +23391,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
 
         <para>From the list of holds you can change the order of the holds,
-        the pickup location and/or cancel the hold.</para>
+        the pickup location, suspend and/or cancel the hold.</para>
 
         <screenshot>
           <screeninfo>Lists of Holds</screeninfo>
@@ -23386,11 +23459,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>If a patron asks to have their hold suspended you can do so by
-        clicking the Suspend button to far right. If the patron gives you a
-        date for the items to become unsuspended you can enter that in the
-        date box and click the 'Update hold(s)' button to save your
-        changes.</para>
+        <para>If a patron asks to have their hold suspended and you have the
+        <link linkend="SuspendHoldsIntranet">SuspendHoldsIntranet</link>
+        system preference set to 'allow' you can do so by clicking the Suspend
+        button to far right. If the patron gives you a date for the items to
+        become unsuspended you can enter that in the date box and click the
+        'Update hold(s)' button to save your changes.</para>
 
         <screenshot>
           <screeninfo>Hold suspension column</screeninfo>
@@ -30947,6 +31021,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para><link linkend="OpacBrowseResults">OpacBrowseResults</link> =
         Enable</para>
       </listitem>
+
+      <listitem>
+        <para><link linkend="SuspendHoldsOpac">SuspendHoldsOpac</link> =
+        Allow</para>
+      </listitem>
     </itemizedlist>
 
     <para>If your system preferences are set differently your displays may
@@ -32175,8 +32254,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>Patrons can cancel their own holds if they are not in transit or
         already waiting for them. They can also suspend all of their holds
+        (depending on the value of your <link
+        linkend="SuspendHoldsOpac">SuspendHoldsOpac</link> system preference)
         indefinitely or until a specific date if they choose by filling in the
         suspend options at the bottom of the page.</para>
+
+        <note>
+          <para>If you have your <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference set to "Don't allow" then you will not have the option to
+          put an end date on the hold suspension</para>
+        </note>
       </section>
 
       <section id="opacmyaccount-flags">
