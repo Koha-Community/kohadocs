@@ -7194,45 +7194,6 @@
             </itemizedlist>
           </section>
 
-          <section id="OPACDisplayRequestPriority">
-            <title>OPACDisplayRequestPriority</title>
-
-            <para>Default: Don't</para>
-
-            <para>Asks: ___ patrons the priority level of their holds in the
-            OPAC.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-
-                <screenshot>
-                  <screeninfo>Patron record in the OPAC shows where in line
-                  the patron waits for their hold.</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACDisplayRequestPriority.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-
-                <itemizedlist>
-                  <listitem>
-                    <para><link linkend="opacuserlogin">opacuserlogin</link>
-                    needs to be set to 'allow'</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-          </section>
-
           <section id="OpacExportOptions">
             <title>OpacExportOptions</title>
 
@@ -7756,6 +7717,63 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 contact the patron with the book themselves. In larger public
                 and academic libraries setting this to 'Show' would pose
                 serious privacy issues.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="OPACShowHoldQueueDetails">
+            <title>OPACShowHoldQueueDetails</title>
+
+            <para>Default: Don't show any hold details</para>
+
+            <para>Asks: ___ to patrons in the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show any hold details</para>
+              </listitem>
+
+              <listitem>
+                <para>Show holds</para>
+
+                <screenshot>
+                  <screeninfo>The holdings table on the bibliographic record
+                  will show the number of holds</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACShowHoldQueueDetails-showholds.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Show holds and priority level</para>
+              </listitem>
+
+              <listitem>
+                <para>Show priority level</para>
+
+                <screenshot>
+                  <screeninfo>Patron record in the OPAC shows where in line
+                  the patron waits for their hold.</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACShowHoldQueueDetails-priority.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </itemizedlist>
           </section>
