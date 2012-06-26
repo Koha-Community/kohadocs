@@ -1754,7 +1754,7 @@
             <title>DefaultLanguageField008</title>
 
             <para>Asks: Fill in the default language for field 008 Range 35-37
-            ___. </para>
+            ___.</para>
 
             <para>Description:</para>
 
@@ -2422,6 +2422,71 @@
             account. One of the videos has a rental charge of $1, therefore
             making the total fines on the patron's account suddenly $5 (the
             limit).</para>
+          </section>
+
+          <section id="IssueLostItem">
+            <title>IssueLostItem</title>
+
+            <para>Default: diplay a message</para>
+
+            <para>Asks: When issuing an item that has been marked as lost,
+            ___.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>display a message</para>
+
+                <screenshot>
+                  <screeninfo>Lost message when checking out</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/IssueLostItem-msg.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>do nothing</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>This option will just check the item out without
+                    notifying you that the item was marked lost.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>require confirmation</para>
+
+                <screenshot>
+                  <screeninfo>Confirm checkout of lost item</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/IssueLostItem-confirm.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference lets you define how library staff are
+                notified that an item with a lost status is being checked out.
+                This will help staff mark items as 'available' if you choose
+                to 'display a message' or 'require confirmation.' If you
+                choose to 'do nothing,' there will be no notification that the
+                item being checked out is marked as 'lost.'</para>
+              </listitem>
+            </itemizedlist>
           </section>
 
           <section id="maxoutstanding">
@@ -22800,6 +22865,40 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <listitem>
                 <para>Learn more about <link linkend="fastaddcat">fast
                 cataloging</link> later in this manual.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Item being checked out is marked as 'lost'</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Depending on the value in your <link
+                linkend="IssueLostItem">IssueLostItem</link> preference, you
+                may just see a warning</para>
+
+                <screenshot>
+                  <screeninfo>Warning that item is lost</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/lostitemmsg.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <para>or a confirmation box</para>
+
+                <screenshot>
+                  <screeninfo>Confirm checkout of lost item</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/lostitemconfirm.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </listitem>
