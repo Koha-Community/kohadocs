@@ -26767,8 +26767,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <entry><para>Classification scheme that defines filing rules
                 used for sorting call numbers.</para></entry>
 
-                <entry><para>If no classification scheme is entered, the
-                system will use the value entered in the <link
+                <entry><para>A choice of <link
+                linkend="classificationsources">classification sources</link>
+                as they are defined in administration. If no classification
+                scheme is entered, the system will use the value entered in
+                the <link
                 linkend="DefaultClassificationSource">DefaultClassificationSource</link>
                 preference.</para></entry>
               </row>
@@ -26781,9 +26784,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <entry><para>Specific issues of serials or multi-part
                 items.</para></entry>
 
-                <entry><para>Copy/volume data is stored in 952$h and $t for
-                display in Normal views. $3 isn't displayed anywhere except
-                the MARC view.</para></entry>
+                <entry><para>Displayed when items are checked out and in to
+                tell the staff how many pieces the item has. Copy/volume data
+                is stored in 952$h and $t for display in Normal
+                views.</para></entry>
               </row>
 
               <row>
@@ -26823,7 +26827,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>Coded value, matching <link
                 linkend="authorizedvalues">Authorized Value</link> category
-                ('RESTRICT' in default installation)</para></entry>
+                ('RESTRICT' in default installation). This value has no effect
+                on circulation.</para></entry>
               </row>
 
               <row>
@@ -26851,7 +26856,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>Coded value, matching <link
                 linkend="authorizedvalues">Authorized Value</link> category
-                ('NOT_LOAN' in default installation)</para></entry>
+                ('NOT_LOAN' in default installation). Negative number values
+                can still be placed on hold.</para></entry>
               </row>
 
               <row>
@@ -26933,7 +26939,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>Coded value or vendor string</para></entry>
 
-                <entry><para/></entry>
+                <entry><para>Filled in automatically with the Koha assigned
+                vendor id by Aquisitions when an item is
+                received.</para></entry>
               </row>
 
               <row>
@@ -26941,19 +26949,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>Purchase price</para></entry>
 
-                <entry><para>Decimal number, no currency symbol</para></entry>
+                <entry><para>Decimal number, no currency symbol (ex.
+                10.00)</para></entry>
 
-                <entry><para/></entry>
+                <entry><para>Filled in automatically by Acquisitions when an
+                item is received.</para></entry>
               </row>
 
               <row>
                 <entry><para>952$h</para></entry>
 
-                <entry><para>Serial enumeration caption</para></entry>
+                <entry><para>Serial enumeration</para></entry>
 
                 <entry><para/></entry>
 
-                <entry><para/></entry>
+                <entry><para>Filled in automatically by Serials if the issue
+                is received there.</para></entry>
               </row>
 
               <row>
@@ -26963,7 +26974,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para/></entry>
 
-                <entry><para/></entry>
+                <entry><para>Can be filled in automatically based on the <link
+                linkend="itemcallnumber">itemcallnumber</link> system
+                preference.</para></entry>
               </row>
 
               <row>
@@ -26991,9 +27004,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry><para>Replacement price</para></entry>
 
-                <entry><para>Decimal number, no currency symbol</para></entry>
+                <entry><para>Decimal number, no currency symbol (ex.
+                10.00)</para></entry>
 
-                <entry><para/></entry>
+                <entry><para>Filled in automatically by Acquisitions when an
+                item is received.</para></entry>
               </row>
 
               <row>
@@ -27005,7 +27020,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                 <entry>Date formats in the 952 subfields are required to be in
                 the system internal format for data loading and subsequent
-                item editing: YYYY-MM-DD</entry>
+                item editing: YYYY-MM-DD. Filled in automatically by
+                Acquisitions when an item is received.</entry>
               </row>
 
               <row>
