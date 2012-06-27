@@ -35756,6 +35756,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para><link linkend="languagepref">language</link> : Decide
               which languages appear in the staff client</para>
             </listitem>
+
+            <listitem>
+              <para><link
+              linkend="CalendarFirstDayOfWeek">CalendarFirstDayOfWeek</link> :
+              Define your first day of the week</para>
+            </listitem>
           </itemizedlist>
         </listitem>
       </itemizedlist>
@@ -36002,11 +36008,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               Decide how you want Koha to react if you scan in a blank barcode
               on the checkout screen</para>
             </listitem>
+
+            <listitem>
+              <para><link
+              linkend="SuspendHoldsIntranet">SuspendHoldsIntranet</link>
+              and/or <link linkend="SuspendHoldsOpac">SuspendHoldsOpac</link>
+              : Decide if you want patrons and/or staff to be able to suspend
+              holds</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para><link
+                  linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+                  : If you allow holds to be suspended decide if you want them
+                  to automaticalluy resume on the date entered by the staff
+                  and/or patron</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Customize your <link linkend="notices">Notices</link></para>
+          <para>Customize your <link linkend="notices">Notices &amp;
+          Slips</link></para>
         </listitem>
 
         <listitem>
@@ -36031,6 +36056,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para><link linkend="finescronjob">Calculate fines due</link>
               (daily)</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Fines on hourly loans will calculate when you check
+                  the items in</para>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -36059,6 +36091,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para>Decide when the system <link
               linkend="advnoticecron">queues the advanced notice of items
               due</link> (daily)</para>
+            </listitem>
+
+            <listitem>
+              <para>Find holds that need to be <link
+              linkend="unsuspendholdcron">resumed and remove suspension</link>
+              (daily)</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -36336,6 +36374,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               updates to authorities trigger updates to the bibliographic
               records that link to them</para>
             </listitem>
+
+            <listitem>
+              <para><link
+              linkend="AutoCreateAuthorities">AutoCreateAuthorities</link> :
+              Decide when authorities are created</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="LinkerModule">LinkerModule</link> : Decide
+              which match the authority linker should use</para>
+            </listitem>
+
+            <listitem>
+              <para><link linkend="LinkerOptions">LinkerOptions</link> :
+              Decide if you want authority linking to be broader or more
+              specific</para>
+            </listitem>
+
+            <listitem>
+              <para><link
+              linkend="CatalogModuleRelink">CatalogModuleRelink</link> :
+              Decide if you want to enable authority linking while
+              cataloging</para>
+            </listitem>
           </itemizedlist>
         </listitem>
 
@@ -36497,6 +36559,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <para><link linkend="reviewson">reviewson</link> : Decide if
                   you want to allow patrons to comment on bib records via the
                   OPAC</para>
+                </listitem>
+
+                <listitem>
+                  <para><link linkend="OpacStarsRating">OpacStarsRating</link>
+                  : Decide if patrons can leave star ratings</para>
                 </listitem>
 
                 <listitem>
