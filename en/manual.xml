@@ -10327,6 +10327,38 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </important>
         </section>
 
+        <section id="StatisticsFields">
+          <title>StatisticsFields</title>
+
+          <para>Default: location|itype|ccode</para>
+
+          <para>Asks: Show the following fields from the items database table
+          as columns on the statistics tab on the patron record: ___</para>
+
+          <screenshot>
+            <screeninfo>Statistics on Patron Record</screeninfo>
+
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/globalprefs/StatisticsFields.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+
+          <important>
+            <para>Enter the values separated by bars (|)</para>
+          </important>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference lets you set which fields will show on the
+              patron record on the Statistics tab.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="BorrowerUnwantedField">
           <title>BorrowerUnwantedField</title>
 
@@ -22375,6 +22407,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/patrons/patnoticestab-full.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section id="patronstatstab">
+        <title>Statistics</title>
+
+        <para>Depending on what you set for the values of your <link
+        linkend="StatisticsFields">StatisticsFields</link> system preference,
+        you can see statistics for one patron's circulation actions.</para>
+
+        <screenshot>
+          <screeninfo>Patron's Statistics</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/patronstats.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
