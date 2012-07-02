@@ -10600,7 +10600,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <important>
               <para>Requires that <link linkend="NoZebra">NoZebra</link> is
-              set to 'Use'</para>
+              set to 'Use' and <link linkend="UseICU">UseICU</link> set to
+              'Not using'</para>
             </important>
           </section>
 
@@ -10852,7 +10853,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>ICU is a set of code libraries providing Unicode and
                 Globalization support for software applications. What this
                 means is ICU Zebra indexing is only necessary if you use
-                non-roman characters in your cataloging.</para>
+                non-roman characters in your cataloging. If using ICU Zebra
+                indexing you will want to not use <link
+                linkend="QueryFuzzy">QueryFuzzy</link>.</para>
               </listitem>
             </itemizedlist>
 
