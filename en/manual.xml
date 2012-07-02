@@ -10829,14 +10829,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="UseICU">
             <title>UseICU</title>
 
-            <para>Default: Using</para>
+            <para>Default: Not using</para>
 
-            <para>Asks: ___ ICU Zebra indexing. <important>
-                <para>This setting will not affect Zebra indexing, it should
-                only be used to tell Koha that you have activated ICU indexing
-                if you have actually done so, since there is no way for Koha
-                to figure this out on its own.</para>
-              </important></para>
+            <para>Asks: ___ ICU Zebra indexing.</para>
 
             <para>Values:</para>
 
@@ -10850,7 +10845,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
             </itemizedlist>
 
-            <para/>
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ICU is a set of code libraries providing Unicode and
+                Globalization support for software applications. What this
+                means is ICU Zebra indexing is only necessary if you use
+                non-roman characters in your cataloging.</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>This setting will not affect Zebra indexing, it should
+              only be used to tell Koha that you have activated ICU indexing
+              if you have actually done so, since there is no way for Koha to
+              figure this out on its own.</para>
+            </important>
+
+            <important>
+              <para>Talk to your system administrator when changing this
+              preference to make sure that your system is set up properly for
+              this to work.</para>
+            </important>
           </section>
         </section>
 
