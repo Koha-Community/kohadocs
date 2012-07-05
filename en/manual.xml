@@ -3,7 +3,7 @@
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book>
   <bookinfo id="manual">
-    <title>Koha 3.10 Manual (en)</title>
+    <title>Koha 3.8 Manual (en)</title>
 
     <author id="manualauthor">
       <firstname>Nicole C.</firstname>
@@ -1750,26 +1750,6 @@
             </itemizedlist>
           </section>
 
-          <section id="DefaultLanguageField008">
-            <title>DefaultLanguageField008</title>
-
-            <para>Asks: Fill in the default language for field 008 Range 35-37
-            ___.</para>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference will allow you to set the language for
-                your 008 field by default. If this is left empty it will
-                default to English (eng). See the <ulink
-                url="http://www.loc.gov/marc/languages/language_code.html">MARC
-                Code List for Languages</ulink> for additional values for this
-                preference.</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
           <section id="item-level_itypes">
             <title>item-level_itypes</title>
 
@@ -2422,71 +2402,6 @@
             account. One of the videos has a rental charge of $1, therefore
             making the total fines on the patron's account suddenly $5 (the
             limit).</para>
-          </section>
-
-          <section id="IssueLostItem">
-            <title>IssueLostItem</title>
-
-            <para>Default: diplay a message</para>
-
-            <para>Asks: When issuing an item that has been marked as lost,
-            ___.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>display a message</para>
-
-                <screenshot>
-                  <screeninfo>Lost message when checking out</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/IssueLostItem-msg.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-
-              <listitem>
-                <para>do nothing</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>This option will just check the item out without
-                    notifying you that the item was marked lost.</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-
-              <listitem>
-                <para>require confirmation</para>
-
-                <screenshot>
-                  <screeninfo>Confirm checkout of lost item</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/IssueLostItem-confirm.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference lets you define how library staff are
-                notified that an item with a lost status is being checked out.
-                This will help staff mark items as 'available' if you choose
-                to 'display a message' or 'require confirmation.' If you
-                choose to 'do nothing,' there will be no notification that the
-                item being checked out is marked as 'lost.'</para>
-              </listitem>
-            </itemizedlist>
           </section>
 
           <section id="maxoutstanding">
@@ -7279,6 +7194,45 @@
             </itemizedlist>
           </section>
 
+          <section id="OPACDisplayRequestPriority">
+            <title>OPACDisplayRequestPriority</title>
+
+            <para>Default: Don't</para>
+
+            <para>Asks: ___ patrons the priority level of their holds in the
+            OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Don't show</para>
+              </listitem>
+
+              <listitem>
+                <para>Show</para>
+
+                <screenshot>
+                  <screeninfo>Patron record in the OPAC shows where in line
+                  the patron waits for their hold.</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/OPACDisplayRequestPriority.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
+                <itemizedlist>
+                  <listitem>
+                    <para><link linkend="opacuserlogin">opacuserlogin</link>
+                    needs to be set to 'allow'</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="OpacExportOptions">
             <title>OpacExportOptions</title>
 
@@ -7771,55 +7725,6 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </tip>
           </section>
 
-          <section id="OPACShowBarcode">
-            <title>OPACShowBarcode</title>
-
-            <para>Default: Don't show</para>
-
-            <para>Asks: ___ the item's barcode on the holdings tab.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-
-                <screenshot>
-                  <screeninfo>Barcode not shown in the OPAC</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACShowBarcode-noshow.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-
-                <screenshot>
-                  <screeninfo>Barcode shown in the OPAC</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACShowBarcode-show.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference allows you to control whether patrons
-                can see items' barcodes in the OPAC.</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
           <section id="OPACShowCheckoutName">
             <title>OPACShowCheckoutName</title>
 
@@ -7851,63 +7756,6 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                 contact the patron with the book themselves. In larger public
                 and academic libraries setting this to 'Show' would pose
                 serious privacy issues.</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="OPACShowHoldQueueDetails">
-            <title>OPACShowHoldQueueDetails</title>
-
-            <para>Default: Don't show any hold details</para>
-
-            <para>Asks: ___ to patrons in the OPAC.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show any hold details</para>
-              </listitem>
-
-              <listitem>
-                <para>Show holds</para>
-
-                <screenshot>
-                  <screeninfo>The holdings table on the bibliographic record
-                  will show the number of holds</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACShowHoldQueueDetails-showholds.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-
-              <listitem>
-                <para>Show holds and priority level</para>
-              </listitem>
-
-              <listitem>
-                <para>Show priority level</para>
-
-                <screenshot>
-                  <screeninfo>Patron record in the OPAC shows where in line
-                  the patron waits for their hold.</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/admin/globalprefs/OPACShowHoldQueueDetails-priority.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-
-                <itemizedlist>
-                  <listitem>
-                    <para><link linkend="opacuserlogin">opacuserlogin</link>
-                    needs to be set to 'allow'</para>
-                  </listitem>
-                </itemizedlist>
               </listitem>
             </itemizedlist>
           </section>
@@ -7950,53 +7798,6 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
                     </imageobject>
                   </mediaobject>
                 </screenshot>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="OPACShowUnusedAuthorities">
-            <title>OPACShowUnusedAuthorities</title>
-
-            <para>Default: Show</para>
-
-            <para>Asks: ___ unused authorities in the OPAC authority
-            browser.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Do not show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <important>
-                      <para>Requires that the <link
-                      linkend="OpacAuthorities">OpacAuthorities</link>
-                      preference is set to 'Allow'</para>
-                    </important>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>When patrons search your authority file via the OPAC
-                they will see all authorities in your system even if you don't
-                have them linked to any bibliographic records. This preference
-                lets you determine what the default behavior is when searching
-                authorities via the OPAC. If you choose 'Do not show' it will
-                only show patrons authority records that are linked to bib
-                records in the search results. Otherwise the system will show
-                all authority records even if they aren't linked to
-                records.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -10374,38 +10175,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </important>
         </section>
 
-        <section id="StatisticsFields">
-          <title>StatisticsFields</title>
-
-          <para>Default: location|itype|ccode</para>
-
-          <para>Asks: Show the following fields from the items database table
-          as columns on the statistics tab on the patron record: ___</para>
-
-          <screenshot>
-            <screeninfo>Statistics on Patron Record</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/StatisticsFields.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <important>
-            <para>Enter the values separated by bars (|)</para>
-          </important>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference lets you set which fields will show on the
-              patron record on the Statistics tab.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
         <section id="BorrowerUnwantedField">
           <title>BorrowerUnwantedField</title>
 
@@ -10600,8 +10369,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <important>
               <para>Requires that <link linkend="NoZebra">NoZebra</link> is
-              set to 'Use' and <link linkend="UseICU">UseICU</link> set to
-              'Not using'</para>
+              set to 'Use'</para>
             </important>
           </section>
 
@@ -10853,9 +10621,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>ICU is a set of code libraries providing Unicode and
                 Globalization support for software applications. What this
                 means is ICU Zebra indexing is only necessary if you use
-                non-roman characters in your cataloging. If using ICU Zebra
-                indexing you will want to not use <link
-                linkend="QueryFuzzy">QueryFuzzy</link>.</para>
+                non-roman characters in your cataloging.</para>
               </listitem>
             </itemizedlist>
 
@@ -17924,68 +17690,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </itemizedlist>
       </section>
 
-      <section id="batchpatronmod">
-        <title>Batch patron modifiction</title>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patrons
-            and Circulation &gt; Batch patron modification</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>With this tool you can make edits to a batch of patron records.
-        Simply load in a file of cardnumbers (one per line) or scan patron
-        card numbers in to the box provided.</para>
-
-        <screenshot>
-          <screeninfo>Batch patron modification</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/tools/batchpatron/batchmodify.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Once you have the file loaded or the barcodes scanned click
-        'Continue.' You will be presented with a list of the patrons and the
-        changes you can make.</para>
-
-        <screenshot>
-          <screeninfo>Patrons to modify</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/tools/batchpatron/modifyform.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>To the left of each text box there is a checkbox. Clicking that
-        checkbox will clear our the field values. <important>
-            <para>If the field is mandatory you will not be able to clear the
-            value in it.</para>
-          </important></para>
-
-        <para>If you have multiple patron attributes you can change them all
-        by using the plus (+) sign to the right of the text box. This will
-        allow you to add another attribute value.</para>
-
-        <screenshot>
-          <screeninfo>Editing patron attributes</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/tools/batchpatron/attributes.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Once you have made the changes you want, you can click 'Save'
-        and Koha will present you with the changed patron records.</para>
-      </section>
-
       <section id="tagsmoderation">
         <title>Tag Moderation</title>
 
@@ -22478,24 +22182,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
       </section>
-
-      <section id="patronstatstab">
-        <title>Statistics</title>
-
-        <para>Depending on what you set for the values of your <link
-        linkend="StatisticsFields">StatisticsFields</link> system preference,
-        you can see statistics for one patron's circulation actions.</para>
-
-        <screenshot>
-          <screeninfo>Patron's Statistics</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/patrons/patronstats.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </section>
     </section>
 
     <section id="patronsearch">
@@ -23150,40 +22836,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <listitem>
                 <para>Learn more about <link linkend="fastaddcat">fast
                 cataloging</link> later in this manual.</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-
-          <listitem>
-            <para>Item being checked out is marked as 'lost'</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Depending on the value in your <link
-                linkend="IssueLostItem">IssueLostItem</link> preference, you
-                may just see a warning</para>
-
-                <screenshot>
-                  <screeninfo>Warning that item is lost</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/circ/lostitemmsg.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-
-                <para>or a confirmation box</para>
-
-                <screenshot>
-                  <screeninfo>Confirm checkout of lost item</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/circ/lostitemconfirm.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -31514,11 +31166,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <listitem>
         <para><link linkend="SuspendHoldsOpac">SuspendHoldsOpac</link> =
         Allow</para>
-      </listitem>
-
-      <listitem>
-        <para><link linkend="OPACShowBarcode">OPACShowBarcode</link> = Don't
-        show</para>
       </listitem>
     </itemizedlist>
 
