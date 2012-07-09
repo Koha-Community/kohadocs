@@ -2,10 +2,10 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book>
-  <bookinfo>
+  <bookinfo id="manual">
     <title>Manuel Koha 3.8 (fr)</title>
 
-    <author>
+    <author id="manualauthor">
       <firstname>Nicole C.</firstname>
 
       <surname>Engard</surname>
@@ -63,14 +63,26 @@
       <contrib>Traduction française</contrib>
     </othercredit>
 
-    <copyright>
+    <othercredit role="translator">
+      <firstname>François</firstname>
+
+      <surname>Charbonnier</surname>
+
+      <affiliation>
+        <orgname>BibLibre</orgname>
+      </affiliation>
+
+      <contrib>Traduction française</contrib>
+    </othercredit>
+
+    <copyright id="manualcopy">
       <year>2012</year>
 
-      <holder>Nicole C. Engard/ByWater Solutions / BibLibre/Laurence
-      Lefaucheur</holder>
+      <holder>Nicole C. Engard/ByWater Solutions / Laurence
+      Lefaucheur/BibLibre</holder>
     </copyright>
 
-    <legalnotice>
+    <legalnotice id="manuallegal">
       <para>Ce manuel est publié sous licence <ulink
       url="http://www.gnu.org/licenses/gpl.html">GNU General Public License,
       version 3</ulink> ou ultérieure</para>
@@ -79,7 +91,7 @@
       Appendix</link></para>
     </legalnotice>
 
-    <pubdate>2011</pubdate>
+    <pubdate id="manualpubdate">2012</pubdate>
   </bookinfo>
 
   <chapter id="administration">
@@ -202,26 +214,26 @@
             </itemizedlist>
           </section>
 
-         <section id="AcqViewBaskets">
+          <section id="AcqViewBaskets">
             <title>AcqViewBaskets</title>
 
-            <para>Default: created by staff member</para>
+            <para>Valeur par défaut: créés par le bibliothécaire</para>
 
-            <para>Asks: Show baskets ___</para>
+            <para>Demande: Afficher les paniers ___</para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>created by staff member</para>
+                <para>créés par le bibliothécaire</para>
               </listitem>
 
               <listitem>
-                <para>from staff member's branch</para>
+                <para>de la bibliothèque</para>
               </listitem>
 
               <listitem>
-                <para>in system, regardless of owner</para>
+                <para>du système, peu importe le propriétaire</para>
               </listitem>
             </itemizedlist>
 
@@ -229,17 +241,7 @@
 
             <itemizedlist>
               <listitem>
-                <para>When in acquisitions this preference allows you to
-                control whose baskets you can see when looking at a vendor.
-                The default value of 'created by staff member' makes it so
-                that you only see the baskets you created. Choosing to see
-                baskets 'from staff member's branch' will show you the baskets
-                created by anyone at the branch you're logged in at. Finally,
-                you can choose to set this preference to show you all baskets
-                regardless of who created it ('in system, regardless of
-                owner). Regardless of which value you choose for this
-                preference, superlibrarians can see all baskets created in the
-                system.</para>
+                <para>Quand vous êtes dans les acquisitions cette préférence vous permet de contrôler quels sont les paniers que vous pouvez voir pour un fournisseur. La valeur par défaut est 'créés par le bibliothécaire', ce qui fait que vous ne voyez que les paniers que vous avez créés. Choisir de voir les paniers 'de la bibliothèque' vous permet de voir les paniers créés par n'importe qui dans la bibliothèque à laquelle vous êtes connecté. Enfin, vous pouvez choisir de positionner cette préférence pour afficher tous les paniers, indépendamment de qui les a créés ('du système, peu importe le propriétaire'). Quelle que soit la valeur choisie pour cette préférence, les superlibrarians peuvent voir tous les paniers créés dans le système.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -315,6 +317,25 @@
 			<para>Entrez cette valeur comme un nombre (.06) et non comme un
 			pourcentage (6%).</para>
               </tip></para>
+          </section>
+        </section>
+
+          <section id="UniqueItemFields">
+            <title>UniqueItemFields</title>
+
+            <para>Valeur par défaut: barcode</para>
+
+            <para>Demande:___ (liste de champs uniques pour les exemplaires, séparés par des espaces ; doivent être des champs valides de la table SQL <ulink
+            url="http://schema.koha-community.org/tables/items.html">items</ulink>
+            )</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Si cette préférence est laissée vide, à l'ajout d'exemplaires dans les acquisitions il n'y aura pas de vérification d'unicité. Ceci signifie qu'un doublon de code barre peut être créé dans les acquisitions, ce qui provoquera des erreurs ultérieurement lors des prêts et retours d'exemplaires.</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
 
@@ -791,7 +812,53 @@
         <para><emphasis>Situé sous :</emphasis> Accueil &gt; Administration &gt;
         Préférences système &gt; Autorités</para>
 
-        <section id="BiblioAddsAuthorities">
+        <section id="generalauthorities">
+          <title>General</title>
+
+          <section id="AutoCreateAuthorities">
+            <title>AutoCreateAuthorities</title>
+
+            <para>Default: do not generate</para>
+
+            <para>Asks: When editing records, ___ authority records that are
+            missing.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>do not generate</para>
+              </listitem>
+
+              <listitem>
+                <para>generate</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para><link
+              linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link>
+              must be set to "allow" for this to have any effect</para>
+            </important>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When this and <link
+                linkend="BiblioAddsAuthorities">BiblioAddsAuthorities</link>
+                are both turned on, automatically create authority records for
+                headings that don't have any authority link when cataloging.
+                When BiblioAddsAuthorities is on and AutoCreateAuthorities is
+                turned off, do not automatically generate authority records,
+                but allow the user to enter headings that don't match an
+                existing authority. When BiblioAddsAuthorities is off, this
+                has no effect.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="BiblioAddsAuthorities">
           <title>BiblioAddsAuthorities</title>
 
           <para>Valeur par défaut : créer</para>
@@ -830,7 +897,7 @@
           </itemizedlist>
         </section>
 
-        <section id="dontmerge">
+          <section id="dontmerge">
           <title>dontmerge</title>
 
           <para>Valeur par défaut : Ne pas mettre à jour automatiquement</para>
@@ -857,7 +924,7 @@
           </important>
         </section>
 
-        <section id="MARCAuthorityControlField008">
+          <section id="MARCAuthorityControlField008">
           <title>MARCAuthorityControlField008</title>
 
           <para>Valeur par défaut : || aca||aabn | a|a d</para>
@@ -881,7 +948,7 @@
           </itemizedlist>
         </section>
 
-        <section id="UseAuthoritiesForTracings">
+          <section id="UseAuthoritiesForTracings">
           <title>UseAuthoritiesForTracings</title>
 
           <para>Valeur par défaut : Ne pas utiliser</para>
@@ -931,6 +998,214 @@
 	      à la place.</para>
             </listitem>
           </itemizedlist>
+        </section>
+      </section>
+
+        <section id="linkerauthorities">
+          <title>Linker</title>
+
+          <para>Cette préférence contrôle comment Koha lie les notices bibliographiques aux notices autorités. Toutes les notices bibliographiques ajoutées à Koha une fois cette préférence paramétrée seront liées automatiquement aux notices autorités ; pour les notices ajoutées avant que la préférence soit paramétrée, un script (misc/link_bibs_to_authorities.pl) peut être exécuté par votre administrateur système pour activer les liens.</para>
+
+          <section id="CatalogModuleRelink">
+            <title>CatalogModuleRelink</title>
+
+            <para>Valeur par défaut: Ne pas recréer</para>
+
+            <para>Demande: ___automatiquement le lien des vedettes liées préalablement à l'enregistrement des notices dans le module catalogage.</para>
+
+            <para>Valeurs:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Recréer</para>
+              </listitem>
+
+              <listitem>
+                <para>Ne pas recréer</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Longtime users of Koha don't expect the authority and
+                bib records to link consistently. This preference makes it
+                possible to disable authority relinking in the cataloging
+                module only (i.e. relinking is still possible if
+                link_bibs_to_authorities.pl is run). Note that though the
+                default behavior matches the previous behavior of Koha
+                (retaining links to outdated authority records), it does not
+                match the intended behavior (updating biblio/authority link
+                after bibliographic record is edited). Libraries that want the
+                intended behavior of authority control rather than the way
+                Koha used to handle linking should set CatalogModuleRelink to
+                'Do'. Once setting this to 'Do' the following preferences can
+                also be set.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LinkerKeepStale">
+            <title>LinkerKeepStale</title>
+
+            <para>Default: Do not</para>
+
+            <para>Asks: ___ keep existing links to authority records for
+            headings where the linker is unable to find a match.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+
+              <listitem>
+                <para>Do not</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When set to 'Do', the linker will never remove a link to
+                an authority record, though, depending on the value of <link
+                linkend="LinkerRelink">LinkerRelink</link>, it may change the
+                link.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LinkerModule">
+            <title>LinkerModule</title>
+
+            <para>Default: Default</para>
+
+            <para>Asks: Use the ___ linker module for matching headings to
+            authority records.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Default</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Retains Koha's previous behavior of only creating
+                    links when there is an exact match to one and only one
+                    authority record; if the <link
+                    linkend="LinkerOptions">LinkerOptions</link> preference is
+                    set to 'broader_headings', it will try to link headings to
+                    authority records for broader headings by removing
+                    subfields from the end of the heading</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>First match</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Creates a link to the first authority record that
+                    matches a given heading, even if there is more than one
+                    authority record that matches</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Last match</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Creates a link to the last authority record that
+                    matches a given heading, even if there is more than one
+                    record that matches</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference tells Koha which match to use when
+                searching for authority matches when saving a record.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LinkerOptions">
+            <title>LinkerOptions</title>
+
+            <para>Asks: Set the following options for the authority linker
+            ___</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This is a pipe separated (|) list of options. At the
+                moment, the only option available is "broader_headings." With
+                this option set to "broader_headings", the linker will try to
+                match the following heading as follows:</para>
+
+                <para>=600 10$aCamins-Esakov, Jared$xCoin
+                collections$vCatalogs$vEarly works to 1800.</para>
+
+                <para>First: Camins-Esakov, Jared--Coin
+                collections--Catalogs--Early works to 1800</para>
+
+                <para>Next: Camins-Esakov, Jared--Coin
+                collections--Catalogs</para>
+
+                <para>Next: Camins-Esakov, Jared--Coin collections</para>
+
+                <para>Next: Camins-Esakov, Jared (matches! if a previous
+                attempt had matched, it would not have tried this)</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="LinkerRelink">
+            <title>LinkerRelink</title>
+
+            <para>Default: Do</para>
+
+            <para>Asks: ___ relink headings that have previously been linked
+            to authority records.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+
+              <listitem>
+                <para>Do not</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When set to 'Do', the linker will confirm the links for
+                headings that have previously been linked to an authority
+                record when it runs, correcting any incorrect links it may
+                find. When set to 'Do not', any heading with an existing link
+                will be ignored, even if the existing link is invalid or
+                incorrect.</para>
+              </listitem>
+            </itemizedlist>
+
+         </section>
         </section>
       </section>
 
@@ -1371,7 +1646,7 @@
           </section>
         </section>
 
-         <section id="EasyAnalyticalRecords">
+          <section id="EasyAnalyticalRecords">
             <sectioninfo>
               <author>
                 <firstname id="analyticsauthor">Linda</firstname>
@@ -2178,12 +2453,12 @@
             </itemizedlist>
 
 	    <para>Exemple : Dans votre bibliothèque la limite définie pour
-	    les amendes est de 5 &#8364 (c'est à dire qu'un adhérent ayant accumulé
+	    les amendes est de 5 &#8364; (c'est à dire qu'un adhérent ayant accumulé
 	    5 euros d'amendes n'est plus autorisé à emrunter de documents).
 	    Un adhérent ayant déjà 4 euros d'amendes impayées sur son compte
 	    se présente à la banque de prêt avec 5 documents (4 livres et une
 	    video). La video est un prêt payant, avec un coût d'un euro, ce
-	    qui porterait la somme totale due par l'adhérent à 5 &#8364. Selon
+	    qui porterait la somme totale due par l'adhérent à 5 &#8364;. Selon
 	    la valuer de cette préférence, ce prêt sera permit ou non.</para>
           </section>
 
@@ -3125,6 +3400,71 @@
 
               <listitem>
                 <para>dans cet ordre</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+
+          <section id="SuspendHoldsIntranet">
+            <title>SuspendHoldsIntranet</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ holds to be suspended from the intranet.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The holds suspention feature can be turned on and off in
+                the staff client by altering this system preference. If this
+                is set to 'allow' you will want to set the <link
+                linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+                system preference.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="SuspendHoldsOpac">
+            <title>SuspendHoldsOpac</title>
+
+            <para>Default: Allow</para>
+
+            <para>Asks: ___ holds to be suspended from the OPAC.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The holds suspention feature can be turned on and off in
+                the OPAC by altering this system preference. If this is set to
+                'allow' you will want to set the <link
+                linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+                system preference.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -5965,7 +6305,6 @@
             </itemizedlist>
           </section>
         </section>
-      </section>
 
       <section id="l18nprefs">
         <title>International</title>
@@ -8446,7 +8785,7 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </itemizedlist>
           </section>
 
-         <section id="OpacAllowPublicListCreation">
+          <section id="OpacAllowPublicListCreation">
             <title>OpacAllowPublicListCreation</title>
 
             <para>Default: Allow</para>
@@ -9143,6 +9482,36 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
                   </imageobject>
                 </mediaobject>
               </screenshot>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="AutoEmailOPACUser">
+          <title>AutoEmailOpacUser</title>
+
+          <para>Valeur par défaut: Ne pas envoyer</para>
+
+          <para>Demande: ___ un courriel aux nouveaux inscrits avec le détail de leur compte.</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>AutoEmailOpacUser permet aux adhérents de la bibliothèque d'être notifiés par courriel des détails de leur compte lorsqu'un nouveau compte est créé, à l'adresse mail spécifiée dans la préférence <link
+              linkend="AutoEmailPrimaryAddress">AutoEmailPrimaryAddress</link>. Le courriel comporte le nom d'utilisateur et le mot de passe donnés au ou choisis par l'adhérent lorsqu'il s'est inscrit, et peut être personnalisé en modifiant le message <link
+              linkend="ACCTDETAILS">ACCTDETAILS</link>.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Valeurs:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Ne pas envoyer</para>
+            </listitem>
+
+            <listitem>
+              <para>Envoyer</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -10056,6 +10425,44 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
               as set in the <link
               linkend="OPACXSLTDetailsDisplay">OPACXSLTDetailsDisplay</link>
               preference.</para>
+            </important>
+          </section>
+        </section>
+
+          <section id="UseICU">
+            <title>UseICU</title>
+
+            <para>Valeur par défaut: Ne pas utiliser</para>
+
+            <para>Demande: ___ L'indexation Zebra ICU.</para>
+
+            <para>Valeurs:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Ne pas utiliser</para>
+              </listitem>
+
+              <listitem>
+                <para>Utiliser</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>ICU est un paramétrage de bibliothèques de code fournissant le support pour Unicode et la globalisation pour les applications logicielles.. Ceci signifie que l'indexation Zebra ICU est nécessaire uniquement si vous utilisez des caractères non-roman dans votre catalogage. Si vous utilisez l'indexation Zebra ICU vous n'utiliserez pas <link
+                linkend="QueryFuzzy">QueryFuzzy</link>.</para>
+              </listitem>
+            </itemizedlist>
+
+            <important>
+              <para>Ce paramétrage n'affecte pas l'indexation Zbera, il doit seulement être utilisé pour dire à Koha que vous avez activé l'indexation ICU si vous l'avez vraiment fait, parce qu'il n'y a aucun moyen pour que Koha le sache sinon.</para>
+            </important>
+
+            <important>
+              <para>Voir avec votre administrateur système si vous changez cette préférence afin de vous assurer que votre système soit bien paramétré correctement pour que ça fonctionne.</para>
             </important>
           </section>
         </section>
@@ -14608,7 +15015,92 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
       <section id="oaisetsconfig">
         <title>OAI Sets Configuration</title>
 
-        <para>Manage OAI Sets.</para>
+        <para>On this page you can create, modify and delete OAI-PMH
+        sets</para>
+
+        <section id="oaicreate">
+          <title>Create a set</title>
+
+          <para>To creat a set:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click on the link 'Add a new set'</para>
+            </listitem>
+
+            <listitem>
+              <para>Fill the mandatory fields 'setSpec' and 'setName'</para>
+            </listitem>
+
+            <listitem>
+              <para>Then you can add descriptions for this set. To do this
+              click on 'Add description' and fill the newly created text box.
+              You can add as many descriptions as you want.</para>
+            </listitem>
+
+            <listitem>
+              <para>Click on 'Save' button'</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="oaimodify">
+          <title>Modify/Delete a set</title>
+
+          <para>To modify a set, just click on the link 'Modify' on the same
+          line of the set you want to modify. A form similar to set creation
+          form will appear and allow you to modify the setSpec, setName and
+          descriptions.</para>
+
+          <para>To delete a set, just click on the link 'Delete' on the same
+          line of the set you want to delete.</para>
+        </section>
+
+        <section id="oaimapping">
+          <title>Define mappings</title>
+
+          <para>Here you can define how a set will be build (what records will
+          belong to this set) by defining mappings. Mappings are a list of
+          conditions on record content. A record only need to match one
+          condition to belong to the set.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Fill the fields 'Field', 'Subfield' and 'Value'. For
+              example if you want to include in this set all records that have
+              a 999$9 equal to 'XXX'. Fill 'Field' with 999, 'Subfield' with 9
+              and 'Value' with XXX.</para>
+            </listitem>
+
+            <listitem>
+              <para>If you want to add another condition, click on 'OR' button
+              and repeat step 1.</para>
+            </listitem>
+
+            <listitem>
+              <para>Click on 'Save'</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>To delete a condition, just leave at least one of 'Field',
+          'Subfield' or 'Value' empty and click on 'Save'.<note>
+              <para>Actually, a condition is true if value in the
+              corresponding subfield is strictly equal to what is defined if
+              'Value'. A record having 999$9 = 'XXX YYY' will not belong to a
+              set where condition is 999$9 = 'XXX'.</para>
+            </note></para>
+
+          <para>And it is case sensitive : a record having 999$9 = 'xxx' will
+          not belong to a set where condition is 999$9 = 'XXX'.</para>
+        </section>
+
+        <section id="oaibuild">
+          <title>Build sets</title>
+
+          <para>Once you have configured all your sets, you have to build the
+          sets. This is done by calling the script
+          misc/migration_tools/build_oai_sets.pl.</para>
+        </section>
       </section>
     </section>
 
@@ -15188,7 +15680,6 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
         </section>
       </section>
     </section>
-   </section>
   </chapter>
 
   <chapter id="tools">
@@ -20587,56 +21078,50 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
 
           <itemizedlist>
             <listitem>
-              <para>Enter any part of their name, username, email address or
-              barcode</para>
+              <para>Entrer une partie du nom, du login, de l'adresse courriel ou du code-barres de la carte du lecteur.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Email:</para>
+          <para>Courriel:</para>
 
           <itemizedlist>
             <listitem>
-              <para>Enter any part of their email address.</para>
+              <para>Entrer une partie de l'adresse courriel.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Borrower number:</para>
+          <para>Numéro d'adhérent:</para>
 
           <itemizedlist>
             <listitem>
-              <para>Enter the Koha borrower number</para>
+              <para>Entrer l'identifiant Koha du lecteur.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para>Phone number:</para>
+          <para>Numéro de téléphone:</para>
 
           <itemizedlist>
             <listitem>
-              <para>Enter the phone number exactly as it is in the system or
-              by using spaces between each batch of numbers.</para>
+              <para>Entrer le numéro de téléphone tel qu'il a été saisi dans le système ou en utilisant des espaces entre chaque groupe de numéros.</para>
             </listitem>
 
             <listitem>
-              <para>Example: To find (212) 555-1212 you can search for it
-              exactly as it was entered or by searching for 212 555
-              1212</para>
+              <para>Exemple: Pour trouver (212) 555-1212, vous pouvez rechercher ce numéro en utilisant exactement cette forme ou en saisissant 212 555 1212</para>
             </listitem>
           </itemizedlist>
         </listitem>
       </itemizedlist>
 
-      <para>If you want to filter your results to a specific branch or
-      category, you can click the plus sign [+] to the right of the search
-      box.</para>
+      <para>Si vous souhaitez filtrer vos résultats de recherche sur une bibliothèque ou une catégorie d'adhérent spécifique, vous pouvez cliquer le bouton plus [+] à la droite du champ de recherche.</para>
 
       <screenshot>
-        <screeninfo>Advanced Patron Search</screeninfo>
+        <screeninfo>Recherche adhérent avancée</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -22261,14 +22746,12 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
     </section>
 
     <section id="processinglocations">
-      <title>In Processing / Book Cart Locations</title>
+      <title>Localisation "En traitement" / "En rangement"</title>
 
-      <para>Koha allows for handling temporary locations like the processing
-      center and/or book carts throughout the library. For this feature to
-      work you must first make sure you have <link
-      linkend="authorizedvalues">authorized values</link> set in the <link
-      linkend="shelvelocvals">LOC</link> category for PROC (Processing Center)
-      and CART (Book Cart).</para>
+      <para>Koha permet d'utiliser des localisations temporaires pour indiquer d'une document est en cours de traitement ou de rangement dans la bibliothèque. Pour que cette fonctionnalité fonctionne, vous devez avoir paramétré dans le liste de <link
+      linkend="authorizedvalues">valeurs autorisées</link> localisation <link
+      linkend="shelvelocvals">LOC</link> le code PROC (En traitement ou Processing Center en anglais)
+      et CART (En rangement ou Book Cart en anglais).</para>
 
       <screenshot>
         <screeninfo>CART &amp; PROC values in LOC</screeninfo>
@@ -22280,59 +22763,42 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
         </mediaobject>
       </screenshot>
 
-      <para>Next you need to set the <link
-      linkend="NewItemsDefaultLocation">NewItemsDefaultLocation</link> system
-      preference to PROC. This will set the new items to the Processing Center
-      as their default location.</para>
+      <para>Ensuite vous devez paramétrer la préférence système <link
+      linkend="NewItemsDefaultLocation">NewItemsDefaultLocation</link> en indiquant comme localisation par défaut d'un nouvel exemplaire "PROC". Ce paramétrage permettra de renseigner par defaut la localisation "En traitement" pour chaque nouvel exemplaire.</para>
 
-      <para>Create items with their desired final shelving location.</para>
+      <para>Exemplariser avec la localisation finale.</para>
 
       <itemizedlist>
         <listitem>
-          <para>These newly cataloged items will be temporarily set to the
-          PROC location and will display with whatever description PROC has.
-          The original location code entered at item creation is stored in the
-          new items column 'permanent_location', for future use. Items will
-          stay in the PROC location until they are checked in. To have those
-          items then move to the shelving cart:</para>
+          <para>Ces nouveaux exemplaires créés auront temporairement la localisation PROC (En traitement) et seront affiché avec la description choisie pour cette valeur autorisée. Le code de la localisation originale est stockée dans le champ 'permanent_location' de la table items pour sa future utilisation. Les exemplaires garderont la localisation PROC tant qu'ils n'auront pas été passé en retour. Pour que ces exemplaires prennent la localisation "En rangement" :</para>
 
           <orderedlist>
             <listitem>
-              <para>Turn on the <link
+              <para>Activez la préférence système <link
               linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>
-              system preference</para>
+              </para>
             </listitem>
 
             <listitem>
-              <para>Check in those newly-created items and they will be moved
-              to the location code of CART and display with whatever
-              description CART has.</para>
+              <para>Une fois le retour effectué, ces nouveaux exemplaires prendront la localisation CART. Ces exemplaires s'afficheront avec la localisation "En rangement" ou n'importe quelle description indiquée pour cette valeur autorisée.</para>
             </listitem>
 
             <listitem>
-              <para>A <link linkend="proccartcron">cron job</link> runs at
-              specified intervals to age items from CART to the permanent
-              shelving location. (For example, an hourly cron entry of
-              cart_to_shelf.pl --hours 3 where --hours is the amount of time
-              an item should spend on the cart before aging to its permanent
-              location.)</para>
+              <para>Une <link linkend="proccartcron">tâche régulière</link> sera lancé à des intervals spécifiques pour remplacer la localisation CART par sa localisation permanente. (Par exemple, une tâche régulière peut être lancée toutes les 3 heures ainsi : cart_to_shelf.pl --hours 3 où le paramètre --hours correspond à la durée de rangement d'un document en rayon.)
+             </para>
 
               <itemizedlist>
                 <listitem>
                   <tip>
-                    <para>If the <link
+                    <para>Si la préférence système <link
                     linkend="ReturnToShelvingCart">ReturnToShelvingCart</link>
-                    system preference is turned on, any newly-checked-in item
-                    is also automatically put into the shelving cart, to be
-                    covered by the same script run.</para>
+                    est activée, la localisation de tous les exemplaires retournés passera automatiquement à CART (En rangement), pour ensuite retrouvé sa localisation permanent quand la tâche régulière aura été lancée.</para>
                   </tip>
                 </listitem>
 
                 <listitem>
                   <important>
-                    <para>Checkins with confirmed holds will not go into the
-                    shelving cart. If items on the shelving cart are checked
-                    out, the cart location will be cleared.</para>
+                    <para>Lors des retours, les documents réservés ne prendront pas la localication CART (En rangement). Si un exemplaire avec la localisation CART est emprunté, celui ci perd sa localisation CART et retrouve sa localisation permanente.</para>
                   </important>
                 </listitem>
               </itemizedlist>
@@ -22443,28 +22909,426 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
       <para></para>
 
       <section id="firefoxofflinecirc">
+        <sectioninfo>
+          <author>
+            <firstname>François</firstname>
+
+            <surname>Charbonnier</surname>
+          </author>
+
+          <affiliation>
+            <orgname>BibLibre</orgname>
+          </affiliation>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Changed content where necessary.</contrib>
+          </othercredit>
+
+          <pubdate>2012</pubdate>
+        </sectioninfo>
         <title>Plugin Firefox</title>
 
-        <para>Il existe un plugin Firefox qui fait office de prêt de secours :
-        <ulink
-        url="https://addons.mozilla.org/en-US/firefox/addon/14399">https://addons.mozilla.org/en-US/firefox/addon/14399</ulink></para>
+        <para>There is an offline circulation tool that you can add to your
+        Firefox browser as a plugin/addon. To do so, just go to <ulink
+        url="https://addons.mozilla.org/en/firefox/addon/koct/">https://addons.mozilla.org/en/firefox/addon/koct/</ulink>
+        page and click on the "install now" button. You may have to confirm
+        the installation, just click on "install now" and then restart Firefox
+        to complete the installation.</para>
 
-        <para>Une fois installé vous avez l'icone de Koha en bas à droite de
-        votre écran de Firefox.</para>
+        <para>Once you have installed the plugin and restarted Firefox, you
+        will see the Koha logo in the add-on bar at the bottom right of
+        Firefox.</para>
 
         <screenshot>
-          <screeninfo>Koha Icon on the Status Bar in Firefox</screeninfo>
+          <screeninfo>Koha Icon on Add-on Bar</screeninfo>
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="images/circ/koctstatusbar.png" />
+              <imagedata fileref="images/circ/koctstatusbar.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
 
-        <para>Vous trouverez plus d'informations au sujet de l'utilisation de
-        cet outil à cette adresse : <ulink
-        url="http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin">http://wiki.koha-community.org/wiki/Offline_circulation_firefox_plugin</ulink></para>
+        <para>A click on the logo will open the tool in its own window.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circ Tool</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koct.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>The plugin consists of four tabs:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The Check Out tab is where you check out items</para>
+          </listitem>
+
+          <listitem>
+            <para>The Check In tab is where you check in items</para>
+          </listitem>
+
+          <listitem>
+            <para>The Log tab keeps track of every transaction done while in
+            offline mode</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>The log will keep information until you empty it. Each
+                time you open the plugin and it contains data in the log it
+                will warn you</para>
+
+                <screenshot>
+                  <screeninfo>Koha Offline Circ Warning</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/koctwarn.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+                <para>If you'd like to clear the log, check the 'I want to
+                delete rows' box before hitting the 'OK' button. Otherwise
+                clicking 'OK' will keep the items in the log and let you
+                continue working with the tool.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>The Param tab is to set up the plugin</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The first thing you want to do then is to set up the plugin. Go
+        to the Param tab to set up the plugin</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline CIrc Params</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctparam.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Answer the 4 questions presented:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Server = the URL of the librarian interface</para>
+          </listitem>
+
+          <listitem>
+            <para>Branch Code = the code for the branch where you are
+            located</para>
+          </listitem>
+
+          <listitem>
+            <para>Username = your staff account login</para>
+          </listitem>
+
+          <listitem>
+            <para>Password = your staff account password</para>
+          </listitem>
+        </itemizedlist>
+
+        <para><important>
+            <para>To save the settings, you will have to close the plugin
+            window and re-open it by clicking again on the Koha logo in the
+            add-on bar.</para>
+          </important><tip>
+            <para>You can create a staff account dedicated to the offline
+            circulation. So that, no matter who is at the circulation desk,
+            they can all use the same login. Along those lines, you can use a
+            group login that you already have in place for circulation as
+            well.</para>
+          </tip>Once you have everything set up you can start checking items
+        in and out.</para>
+
+        <para>Checking out:</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Check Out</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koct.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to the Check Out tab</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the patron barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the item barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Click 'Save'</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Checking in:</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Check In</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctcheckin.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <itemizedlist>
+          <listitem>
+            <para>Go to the Check In tab</para>
+          </listitem>
+
+          <listitem>
+            <para>Scan the item barcode</para>
+          </listitem>
+
+          <listitem>
+            <para>Click Save</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Each time, you check out or check in an item, a new transaction
+        is recorded in the local plugin database and you will see, at the
+        bottom of the plugin how many transactions has been made during the
+        offline circulation. For example, "10 Row(s) Added" means you did 10
+        transactions.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Tool Count</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctcount.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>Then, if you want an overview of every transaction, go to the
+        Log tab. This tab will show you the transactions in the plugin
+        database</para>
+
+        <screenshot>
+          <screeninfo>Koha Offline Circulation Log</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctlog.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para><tip>
+            <para>The status will be "Local." as long as you are offline and
+            don't process the transactions into Koha.</para>
+          </tip>When your Internet connection comes back up you will want to
+        get these transactions in to Koha. Before processing these
+        transactions you should be aware of a few issues.</para>
+
+        <para>Because you are not connected to your Koha database when using
+        this plugin holds will need additional processing. If an item you
+        check in while offline has a hold, the hold is kept on the item.
+        Since, you can't confirm holds found during the processing of every
+        check in, the holds stay on the item and will need to be managed
+        later. If you only checked in a few items you can just keep a record
+        of them all. If you checked in a lot of items you can use the Holds
+        Queue once it rebuilds to see what holds made it to the shelf
+        erroneously.</para>
+
+        <para>Similarly, if an patron card was expired, the offline
+        circulation tool won't know about it, so the checkout will be recorded
+        regardless of the patron's account being blocked normally.</para>
+
+        <para>You have two options for adding this data to Koha</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Commit to Koha</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you checked in/out on more than one computer at the
+                same time, what you want is to process every transaction
+                consistently. Let's say for instance that one patron checked a
+                book out on one computer and then checked the same book in on
+                another computer. To be consistent, you need to record the
+                check out first and then the check in. Not the opposite! To do
+                so, you need to group every transaction in one place, sort
+                them all and then, process everything. So, you need to use the
+                "Commit to Koha" option from every plugin/computer you worked
+                with. This way, the log will go to Koha and be accessible from
+                the Offline Circulation page.</para>
+
+                <screenshot>
+                  <screeninfo>Circulation Menu</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecirclink.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Get there:</emphasis> Circulation &gt; Offline
+                Circulation (Firefox add-on)</para>
+
+                <screenshot>
+                  <screeninfo>Offline Circulation</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecirclog.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Once all of the logs from all of the circulation
+                computers are loaded you will be able to check them all or
+                select just those you want to process into Koha.</para>
+              </listitem>
+
+              <listitem>
+                <para>Click on the Process button and Koha will record every
+                sorted transaction one by one. For each transaction, the
+                status will change to:</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed
+                    correctly</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is
+                    incorrect</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not found." if the item barcode is
+                    wrong</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available
+                    item</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Once finished you will have a summary of all of your
+                transactions</para>
+
+                <screenshot>
+                  <screeninfo>Offline Circulation Summary</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/offlinecircsuccess.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Apply directly</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you performed all of the circulation actions on one
+                computer then everything is sorted already so you can choose
+                to "Apply directly"</para>
+              </listitem>
+
+              <listitem>
+                <para>The status column will be updated to let you know if the
+                transactions were applied</para>
+
+
+                <itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed
+                    correctly</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is
+                    incorrect</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not found." if the item barcode is
+                    wrong</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available
+                    item</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Once you're finished you can review all of the items
+                right in the Log tab</para>
+
+                <screenshot>
+                  <screeninfo>Koha Offlince Circulation Apply
+                  Directly</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/circ/koctdirectly.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <para>Once you are done you can clear the log by clicking Clear. If
+        you don't you will be warned the next time you open the Offline
+        Circulation tool.</para>
+
+        <screenshot>
+          <screeninfo>Koha Offlince Circulation Tool Warning</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/koctwarn.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="windowsofflinecirc">
@@ -29621,7 +30485,7 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
         pour les index Biblio, Index exemplaire, champs fixes et autres
         indexes spécifiques Z39.50 Bib-1 profile est constitué de différents
         types  d'attributs: Use, Relation, Position, Structure,
-        Truncature, et exhaustivité. L'attribut bib-1 'Use' est utilisé sur le tableau les autres
+        Truncature, et exhaustivité. L'attribut bib-1 'Use' est utilisé sur le tableau, les autres
         attributs sont utilisés par la recherche. Il y a plus de 150 attributs mais
         vous n'êtes pas obligé de tous les utiliser. Les attributs que vous choisissez d'utiliser
         sont ceux qui deviennent des règles d'indexation pour votre base de données.
@@ -29665,56 +30529,31 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
         also possible to set other attributes, such as the structure
         attribute.</emphasis></para>
 
-        <para>In the MARC tags indexed column, there are some conventions used
-        that have specific meanings. They are:</para>
+        <para>Dans la colonne 'Etiquette MARC indexée', des conventions d'écriture sont utilisées et ont un sens précis. Ces conventions sont :</para>
 
         <itemizedlist>
           <listitem>
-            <para>A three digit tag (100) means that all subfields in the tag
-            can be used in a search query. So, if you enter a search for
-            'Jackson' as an author, you will retrieve records where Jackson
-            could be the last name or the first name.</para>
+            <para>Une étiquette de 3 chiffres (100) signifie que tous les sous-champs de l'étiquette peuvent être utilisé dans une requête de recherche. Ainsi, si vous recherchez 'Jackson' comme auteur, vous retrouverez les notices où Jackson est le nom ou le prénom de l'auteur.</para>
           </listitem>
 
           <listitem>
-            <para>A three digit tag that has a '$' followed by a letter
-            (600$a) means that a search query will only search the 'a'
-            subfield.</para>
+            <para>Une étiquette de 3 chiffres qui possède un '$' suivi par une lettre (600$a) signifie que la requête de recherche ne portera que sur le sous-champ 'a' de cette étiquette.</para>
           </listitem>
 
           <listitem>
-            <para>A three digit tag that is followed by a ':' and a letter
-            (240:w) means that a search query can be further qualified. The
-            letter following the ':' identifies how to conduct the search. The
-            most common values you'll see are 'w' (word), 'p' (phrase), 's'
-            (sort), and 'n' (numeric).</para>
+            <para>Une étiquette de 3 chiffres suivie par un ':' et une lettre (240:w) signifie que le type de recherche est indiquée en plus dans la requête de recherche elle même. La lettre qui suit les ':' identifie comment la recheche doit être réalisée. Les valeurs les plus communes sont :'w' (word), 'p' (phrase), 's' (sort), and 'n' (numeric).</para>
           </listitem>
         </itemizedlist>
 
-        <para>The contents of the MARC tags, subfields, and/or fixed field
-        elements that are listed in this chart are all indexed. You'll see
-        that every attribute line is not mapped to a specific qualifier
-        (index)-LC card number, line 9 is one example. However, every indexed
-        word (a string of characters preceded and succeeded by a space) can be
-        searched using a keyword (kw) search. So, although an LC card number
-        specific index doesn't exist, you can still search by the LCCN since
-        tag 010 is assigned to the LC-card-number attribute. To verify this,
-        enter 72180055 in the persistent search box. You should retrieve The
-        gods themselves, by Isaac Asimov.</para>
+        <para>Le contenu des étiquettes, sous-champs MARC, et/ou des éléments fixes des champs qui sont listés dans cette charte sont tous indexés. Vous verez que chaque ligne correspondant à un attribut n'est pas toujours mappé à un qualificatif spécifique (index). LC card number, ligne 9 est un exemple. Cependant, tous les mots indexés (une chaine de caractères précédée ou suivie d'un espace) peuvent être cherchés en utilisant le mot clé 'kw'. Ainsi, bien que l'index 'LC card number' n'existe pas, vous pouvez toujours rechercher par le LCNN puisque l'étiquette 010 est assignée à l'attribut LC-card-number. Pour le vérifier, vous pouvez entrer 72180055 dans le champ de recherche simple. Vous devriez retrouver 'The gods themselves' par Isaac Asimov.</para>
 
-        <para>Examples of fixed field elements indexing can be seen on the
-        chart between Attribute 8822 and Attribute 8703. These attributes are
-        most commonly used for limiting. The fixed field attributes currently
-        represent the BK codes. Other format codes, if needed, could be
-        defined.</para>
+        <para>Exemples d'éléments de champs fixes indéxés qui peuvent être vus dans la charte entre l'Attributs 8822 et l'Attribut 8703. Ces attributs sont utilisées habituellement comme limitation. Les attibuts pour les champs fixes représente aujourd'hui les codes BK. D'autres codes, si nécessaires, peuvent être définis.</para>
       </section>
 
       <section id="searchguide-basics">
-        <title>Basic Searching</title>
+        <title>Recherche simple</title>
 
-        <para>The search box that library staff and library patrons will see
-        most often is the persistent search box at the top of the page. Koha
-        interprets the searches as keyword searches.</para>
+        <para>Le champ de recherche que les bibliothécaires et les usager verront le plus souvent est le champ persistant de recherche simple en haut de la page. Koha interprète les recherches à partir de ce champ comme une recherche par mot-clés.</para>
 
         <screenshot>
           <screeninfo>Koha search box</screeninfo>
@@ -29726,22 +30565,11 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </mediaobject>
         </screenshot>
 
-        <para>To start a search, you enter a word or multiple words in the
-        search box. When a single word is entered, a keyword search is
-        performed. You can check this out by typing one word into the form and
-        note the number of results located. Then, repeat the search with a
-        minor change. In front of the search word, type 'kw=' followed by the
-        same search term. The results will be identical.</para>
+        <para>Pour faire une recherche, entrez un ou plusieurs mots dans le champ de recherche simple. Quand un seul mot est entré, une recherche par mot-clés est lancée. Vous pouvez le constater en lanceant une recherche sur un seul terme et noter le nombre de résultats trouvés. Ensuite, répétez la recherche mais cette fois avec un nouvel élément. Devant le terme de recherche, ajoutez 'kw=' suivi par le terme de recherche. Vous verrez que le nombre de résultat est identique.</para>
 
-        <para>When you have more than one word in the search box, Koha will
-        still do a keyword search, but a bit differently. Each word will be
-        searched on its own, then the Boolean connector 'and' will narrow your
-        search to those items with all words contained in matching
-        records.</para>
+        <para>Quand vous avez plus d'une terme de recherche, Koha effectue toujours une recherche par mot-clés, mais celle ci est légèrement différente. Chaque terme est recherché indépendamment les uns des autres, et ensuite, l'opérateur booléen 'and' limite la recherche aux notices qui contiennent tous les termes recherchés.</para>
 
-        <para>Suppose you want to find material about how libraries are using
-        mashups. You'll select the major words and enter them into the
-        persistent search box.</para>
+        <para>Supposons que vous souhaitez trouver de la documentation sur la façon dont les bibliothèques utilisent des 'mashups'. Vous allez selectionner les termes importants et les saisir dans le champ de recherche simple.</para>
 
         <screenshot>
           <screeninfo>Keyword Search</screeninfo>
@@ -29753,7 +30581,7 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </mediaobject>
         </screenshot>
 
-        <para>The response to this search is:</para>
+        <para>La réponse à cette recherche est:</para>
 
         <screenshot>
           <screeninfo>Results</screeninfo>
@@ -29765,9 +30593,7 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </mediaobject>
         </screenshot>
 
-        <para>The order of the words does not affect the retrieval results, so
-        you could also enter the search as "mashups library". The response to
-        this search is results</para>
+        <para>L'ordre des termes de recherche n'affecte pas le tri des résultats, donc vous pouvez saisir la recherche suivante "mashups library". La réponse à cette recherche est :</para>
 
         <screenshot>
           <screeninfo>Results</screeninfo>
@@ -29779,8 +30605,7 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </mediaobject>
         </screenshot>
 
-        <para>Too many words in the search box will find very few matches, as
-        the following example illustrates:</para>
+        <para>Trop de termes dans le champ de recherche amène peu de résultats, comme l'illustre l'exemple suivant :</para>
 
         <screenshot>
           <screeninfo>No results found</screeninfo>
@@ -29794,11 +30619,9 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
       </section>
 
       <section id="searchguide-advanced">
-        <title>Advanced Searching</title>
+        <title>Recherche avancée</title>
 
-        <para>When you can't find the most appropriate material with a general
-        search, you can move to the Advanced Search page by clicking on the
-        Search option on the persistent toolbar.</para>
+        <para>Quand vous ne trouvez pas de résultats qui vous conviennent avec la recherche simple, vous pouvez utiliser le formulaire de recherche avancée en cliquant sur le lien 'recherche avancée' sous le champ de recherche simple.</para>
 
         <screenshot>
           <screeninfo>Koha Menu</screeninfo>
@@ -29810,22 +30633,14 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </mediaobject>
         </screenshot>
 
-        <para>The Advanced Search page offers many ways to limit the results
-        of your search. You can search using the Boolean operators AND, OR,
-        and NOT; limit by item type; limit by year and language; limit by
-        subtypes audience, content, format, or additional content types; by
-        location and by availability.</para>
+        <para>Le formulaire de recherche avancée offre plusieurs limitations de recherche. Vous pouvez utiliser les opérateurs booléen ET, OU, SAUF; limiter par type de document, limiter par année et langue, limiter par les données codées : audience, contenu, format ou type de contenu; limiter par localisation et disponibilité.</para>
 
-        <para>The first limiting section on the Advanced Search page provides
-        a quick and simple way to use the Boolean operators in your search.
-        Note that this display depends on a system preference setting. This
-        option can be found on the Administration &gt; System Preferences &gt;
-        Searching page. The option called <link
-        linkend="expandedSearchOption">expandedSearchOption</link> must be set
-        to 'show' to see the following display.</para>
+        <para>La première section de limitation dans le formulaire de recherche avancée permet une utilisation rapide et simple des opérateurs booléen dans la recherche. Notez que cette affichage dépend d'un paramétrage dans vos préférences système.T Cette option peut être trouvée dans Administration &gt; Préférences système &gt;
+        Formulaire de recherche. L'option appelée <link
+        linkend="expandedSearchOption">expandedSearchOption</link> doit être configuré à 'montrer' pour voir l'affichage suivant.</para>
 
         <screenshot>
-          <screeninfo>Advanced Search Options</screeninfo>
+          <screeninfo>Options de la recherche avancée</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -29834,16 +30649,9 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
           </mediaobject>
         </screenshot>
 
-        <para>In this section you can choose among the many indexes by
-        clicking on the arrow in the first box. The blank box that follows is
-        where you enter your first search term or terms. On the second line,
-        you can choose the Boolean operator you want to use in your search.
-        The options are 'and', 'or', and 'not'. Then, you would again choose
-        the index to search, followed by the second term or terms. If you have
-        more concepts you want to include in your search, you can click the
-        [+] to add another line for your search.</para>
+        <para>Dans cette section, vous pouvez choisir parmis plusieurs index en cliquant sur les flèches dans le premier menu déroulant. Le champ qui suit ce menu correspond au champ dans lequel vous allez entrer votre recherche. Sur la ligne suivante, vous pouvez choisir l'opérateur Booléen que vous souhaitez utiliser dans votre recherche. Les options sont 'et', 'ou', 'sauf'. Ensuite, vous pouvez de nouveau choisir un index et saisir un ou plusieurs termes de recherche. Si vous avez plusieurs concepts à saisir dans votre recherche, vous pouvez cliquer sur les [+] pour ajouter une nouvelle ligne de recherche.</para>
 
-        <para>A sample search is shown next, followed by its results:</para>
+        <para>Ci dessous, un exemple de recherche, suivi par ses résultats:</para>
 
         <screenshot>
           <screeninfo>Advanced Search</screeninfo>
@@ -33881,6 +34689,21 @@ print theme('pages_catalog');</programlisting>
           preferences then this script will also cancel holds that have been
           sitting on the hold shelf for too long and will (if the library
           does) charge the patron for not picking up the hold.</para>
+
+          <para>Frequency suggestion: daily</para>
+        </section>
+
+        <section id="unsuspendholdcron">
+          <title>Unsuspend Holds</title>
+
+          <para>Script path:
+          misc/cronjobs/holds/auto_unsuspend_holds.pl</para>
+
+          <para>Does: This script checks to find holds that should no longer
+          be suspended and removes the suspension if the <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference is set to 'allow'. This puts the patron back in to the
+          queue where they were when the hold was suspended.</para>
 
           <para>Frequency suggestion: daily</para>
         </section>
