@@ -474,7 +474,7 @@
               </listitem>
             </itemizedlist>
 
-            <para>Description: </para>
+            <para>Description:</para>
 
             <itemizedlist>
               <listitem>
@@ -18046,6 +18046,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para>This tool will allow you to delete a batch of item records from
         Koha.</para>
 
+        <para>From the tool you can choose to upload a file of barcodes or
+        item ids, or you can scan items one by one into the box below the
+        upload tool. </para>
+
         <screenshot>
           <screeninfo>Batch Deletion Tool</screeninfo>
 
@@ -18056,10 +18060,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From the tool you can choose to upload a file of barcodes or
-        item ids, or you can scan items one by one into the box below the
-        upload tool. Once you have your file uploaded or the barcodes listed
-        you can click 'Continue.'</para>
+        <para>Once you have your file uploaded or the barcodes scanned you can
+        click 'Continue.'</para>
+
+        <para>You will be presented with a confirmation screen. From here you
+        can uncheck the items you don't want to delete and decide if Koha
+        should delete the bib record if the last item is being deleted before
+        clicking 'Delete selected items.'</para>
 
         <screenshot>
           <screeninfo>Confirm Deletion</screeninfo>
@@ -18071,12 +18078,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>You will be presented with a confirmation screen. From here you
-        can uncheck the items you don't want to delete and decide if Koha
-        should delete the bib record if the last item is being deleted before
-        clicking 'Delete selected items.' If the items are checked out you
-        will be presented with an error after clicking 'Delete selected items'
-        and the items will not be deleted.</para>
+        <para>If your file (or list of scanned barcodes) has more than 1000
+        barcodes, Koha will be unable to present you with a list of the items.
+        You will still be able to delete them, but not able to choose which
+        items specifically to delete or delete the biblio records.</para>
+
+        <screenshot>
+          <screeninfo>More than 1000 records in the file</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/tools/batchdelete/toomanytodelete.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>If the items are checked out you will be presented with an error
+        after clicking 'Delete selected items' and the items will not be
+        deleted.</para>
 
         <screenshot>
           <screeninfo>Items not Deleted</screeninfo>
