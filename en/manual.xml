@@ -18363,7 +18363,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>From the tool you can choose to upload a file of barcodes or
         item ids, or you can scan items one by one into the box below the
-        upload tool. </para>
+        upload tool.</para>
 
         <screenshot>
           <screeninfo>Batch Deletion Tool</screeninfo>
@@ -30661,16 +30661,34 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>The name is what will appear on the Saved Reports page to
-              help you identify the report later. It will also be searchable
-              using the filters found the left of the Saved Reports
+              <para>The 'Name' is what will appear on the Saved Reports page
+              to help you identify the report later. It will also be
+              searchable using the filters found the left of the Saved Reports
               page.</para>
             </listitem>
 
             <listitem>
-              <para>Notes will also appear on the Saved Reports page, this can
-              be used to provide more details about the report or tips on how
-              to enter values when it runs</para>
+              <para>'Report is public' should be left to the default of 'No'
+              in most cases. A report can be made public if you intend to
+              allow access to it through the JSON webservice interface. This
+              is a system that can be used by developers to make custom
+              presentations of the data from the report, for example
+              displaying it using a graphing API. To learn more speak to your
+              local developer.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>A public report is accessible via a URL that looks
+                  like this:
+                  http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>'Notes' will also appear on the Saved Reports page, this
+              can be used to provide more details about the report or tips on
+              how to enter values when it runs</para>
             </listitem>
 
             <listitem>
@@ -30679,7 +30697,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>In the SQL box you will type or paste the SQL for the
+              <para>In the 'SQL' box you will type or paste the SQL for the
               report</para>
             </listitem>
 
