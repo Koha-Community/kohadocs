@@ -30493,8 +30493,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           process to generate a report.</para>
 
           <para>Step 1: Choose the module you want to report on. This will
-          determine what tables and fields are available for you to
-          query.</para>
+          determine what tables and fields are available for you to query.
+          </para>
+
+          <para>'Report is public' should be left to the default of 'No' in
+          most cases. A report can be made public if you intend to allow
+          access to it through the JSON webservice interface. This is a system
+          that can be used by developers to make custom presentations of the
+          data from the report, for example displaying it using a graphing
+          API. To learn more speak to your local developer.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>A public report is accessible via a URL that looks like
+              this: http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID</para>
+            </listitem>
+          </itemizedlist>
 
           <screenshot>
             <screeninfo>Chose Module for Report</screeninfo>
