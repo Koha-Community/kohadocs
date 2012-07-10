@@ -18048,7 +18048,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>From the tool you can choose to upload a file of barcodes or
         item ids, or you can scan items one by one into the box below the
-        upload tool. </para>
+        upload tool.</para>
 
         <screenshot>
           <screeninfo>Batch Deletion Tool</screeninfo>
@@ -29510,9 +29510,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </screenshot>
 
       <para>From this form you can alter the cost information. You can also
-      choose to only receive 1 of multiple items if only 1 arrived. Once you
-      have made any changes necessary, click 'Save' to mark the item as
-      received.</para>
+      choose to mark only part of the order as received if the vendor didn't
+      send your entire order be entering in the 'Quantity received'. The
+      values you enter in the 'Replacement cost' and 'Actual cost' will
+      automatically populate the item record by filling in subfield v (Cost,
+      replacement price) and subfield g (Cost, normal purchase price) on the
+      item record after saving. </para>
+
+      <screenshot>
+        <screeninfo>Item record after receipt</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/acquisitions/receiveditem.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Once you have made any changes necessary, click 'Save' to mark the
+      item as received.</para>
 
       <screenshot>
         <screeninfo>Already Received Items</screeninfo>
