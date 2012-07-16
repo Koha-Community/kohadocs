@@ -42618,6 +42618,38 @@ no-repeat scroll center top transparent;
     </section>
   </appendix>
 
+  <appendix id="siteintegration">
+    <title>Koha and Your Website</title>
+
+    <para>This appendix will include tips for integrating Koha in to your
+    library website.</para>
+
+    <section id="embedsearch">
+      <title>Koha search on your site</title>
+
+      <para>Often you'll want to add a Koha search box to your library
+      website. To do so, just copy and paste the following code in to your
+      library website and update the YOURCATALOG bit with your
+      catalog&rsquor;s URL and you&rsquor;re set to go.</para>
+
+      <para><programlisting>
+&lt;form name="searchform" method="get" action="http://YOURCATLOG/cgi-bin/koha/opac-search.pl" id="searchform"&gt;
+&lt;input id="transl1" name="q" type="text"&gt;&lt;p&gt;
+&lt;select name="idx" id="masthead_search"&gt;
+&lt;option value="kw"&gt;Keyword&lt;/option&gt;
+&lt;option value="ti"&gt;Title&lt;/option&gt;
+&lt;option value="au"&gt;Author&lt;/option&gt;
+&lt;option value="su"&gt;Subject&lt;/option&gt;
+&lt;option value="nb"&gt;ISBN&lt;/option&gt;
+&lt;option value="se"&gt;Series&lt;/option&gt;
+&lt;option value="callnum"&gt;Call Number&lt;/option&gt;
+&lt;/select&gt;
+&lt;input value="Search" id="searchsubmit" type="submit"&gt;
+&lt;/p&gt;&lt;/form&gt;
+      </programlisting></para>
+    </section>
+  </appendix>
+
   <appendix id="gpl">
     <title><acronym>GNU</acronym> General Public License version 3</title>
 
