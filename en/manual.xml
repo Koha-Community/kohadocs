@@ -43018,6 +43018,84 @@ no-repeat scroll center top transparent;
       webmaster take them, eventually clean them a little bit before
       integrating them into navigation widgets or pages.</para>
     </section>
+
+    <section id="newtitlesoption">
+      <title>Newest Titles Pulldown</title>
+
+      <para>Often we want to add a way for our patrons to do searches for the
+      newest items. In this example I'll show you how to create a pull down
+      menu of the newest items by item type. These tips will work (with a
+      couple changes) for collection codes or shelving locations as
+      well.</para>
+
+      <para>First, it's important to note that every link in Koha is a
+      permanent link. This means if I do a search for everything of a specific
+      item type sorted by the acquisitions date and bookmark that URL,
+      whenever I click it I'll see the newest items of that type on the first
+      few pages of the results.</para>
+
+      <para>I took this knowledge and wrote a form takes this functionality in
+      to consideration. It basically just does a search of your Koha catalog
+      for a specific item type and sorts the results by acquisitions
+      date.</para>
+
+      <para>The first thing I did was write a MySQL statement to generate a
+      list of item types for me - why copy and paste when you can use the
+      power of MySQL?</para>
+
+      <para><programlisting>select concat('&lt;option value=\"mc-itype:', itemtype, '\"&gt;',description,'&lt;/option&gt;') from itemtypes</programlisting></para>
+
+      <para>The above looks at the itemtypes table and slaps the necessary
+      HTML around each item type for me. I then exported that to CSV and
+      opened it in my text editor and added the other parts of the
+      form.</para>
+
+      <para><programlisting>&lt;p&gt;&lt;strong&gt;New Items&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;form name="searchform" method="get" action="/cgi-bin/koha/opac-search.pl"&gt;
+&lt;input name="idx" value="kw" type="hidden"&gt;
+&lt;input name="sort_by" value="acqdate_dsc" type="hidden"&gt;
+&lt;input name="do" value="OK" type="hidden"&gt;
+&lt;select name="limit" onchange="this.form.submit()"&gt;
+&lt;option&gt;-- Please choose --&lt;/option&gt;
+&lt;option value="mc-itype:BOOK"&gt;Book&lt;/option&gt;
+&lt;option value="mc-itype:BOOKCD"&gt;Book on CD&lt;/option&gt;
+&lt;option value="mc-itype:DVD"&gt;DVD&lt;/option&gt;
+&lt;option value="mc-itype:LRG_PRINT"&gt;Large print book&lt;/option&gt;
+&lt;option value="mc-itype:MAGAZINE"&gt;Magazine&lt;/option&gt;
+&lt;option value="mc-itype:NEWSPAPER"&gt;Newspaper&lt;/option&gt;
+&lt;option value="mc-itype:VIDEO"&gt;Videocassette&lt;/option&gt;
+&lt;/select&gt;
+&lt;/form&gt;
+&lt;/p&gt;</programlisting></para>
+
+      <para>Now, what does all of that mean? The important bits are
+      these:</para>
+
+      <para>First the starting of the form.</para>
+
+      <para><programlisting>&lt;p&gt;&lt;form name="searchform" method="get" action="/cgi-bin/koha/opac-search.pl"&gt;</programlisting></para>
+
+      <para>This tells the browser to take any value selected and put it at
+      the end of this http://YOURSITE/cgi-bin/koha/opac-search.pl. If you want
+      to embed this form on your library website (and not on your OPAC) you
+      can put the full OPAC URL in there.</para>
+
+      <para>Next, there is a hidden value that is telling the search to sort
+      by acquisitions date descending (newest items at the top):</para>
+
+      <para><programlisting>&lt;input name="sort_by" value="acqdate_dsc" type="hidden"&gt;</programlisting></para>
+
+      <para>And finally you have an option for each item type you want people
+      to search.<programlisting>&lt;option value="mc-itype:BOOK"&gt;Book&lt;/option&gt;</programlisting></para>
+
+      <para>These options each include the string "mc-itype:" which tells Koha
+      to do an item type search.</para>
+
+      <para>Once you have all of that in place you can copy and paste the form
+      to somewhere on your OPAC. The <ulink
+      url="http://catalog.farmingtonlibraries.org">Farmington Public Libraries
+      OPAC</ulink> has a few examples of this on the left.</para>
+    </section>
   </appendix>
 
   <appendix id="siteintegration">
