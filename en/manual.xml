@@ -10287,8 +10287,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <para>Default: 9999</para>
 
-          <para>Asks: The late fine for a specific checkout will only go up to
-          ___ USD.</para>
+          <para>Asks: The late fine for all checkouts will only go up to ___
+          USD.</para>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>This preference controls the default cap on fines accrued
+              by the patron. Leaving this preference blank means that there is
+              no cap on the amount of fines a patron can accrue. If you'd
+              like, single item caps can be specified in the <link
+              linkend="circfinerules">circulation rules matrix</link>.</para>
+            </listitem>
+          </itemizedlist>
         </section>
 
         <section id="memberofinstitution">
@@ -14281,6 +14293,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <important>
                     <para>This can only be set for the Day unit, not in
                     Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>The 'Overdue Fines Cap' is the maximum fine for this
+              patron and item combination</para>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If this field is left blank then Koha will not put a
+                    limit on the fines this item will accrue. A maximum fine
+                    amount can be set using the <link
+                    linkend="MaxFine">MaxFine</link> system preference.</para>
                   </important>
                 </listitem>
               </itemizedlist>
