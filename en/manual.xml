@@ -10251,6 +10251,37 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </important>
         </section>
 
+        <section id="TalkingTechItivaPhoneNotification">
+          <title>TalkingTechItivaPhoneNotification</title>
+
+          <para>Default: Disable</para>
+
+          <para>Asks: ___ patron phone notifications using Talking Tech i-tiva
+          (overdues, predues and holds notices currently supported).</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Disable</para>
+            </listitem>
+
+            <listitem>
+              <para>Enable</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>To learn more about setting up this third party product
+              view the <link linkend="talkingtechappendix">Talking Tech
+              Appendix</link>.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="uppercasesurnames">
           <title>uppercasesurnames</title>
 
@@ -38096,6 +38127,123 @@ print theme('pages_catalog');</programlisting>
 
           <para>Frequency suggestion: nightly</para>
         </section>
+
+        <section id="talkingtechcrons">
+          <title>Talking Tech</title>
+
+          <para>To learn more about setting up this third party product view
+          the <link linkend="talkingtechappendix">Talking Tech
+          Appendix</link>.</para>
+
+          <section id="talkingtechsendcron">
+            <title>Sending Notices File</title>
+
+            <para>Script path:
+            misc/cronjobs/thirdparty/TalkingTech_itiva_outbound.pl</para>
+
+            <para>Does: Script to generate Spec C outbound notifications file
+            for Talking Tech i-tiva phone notification system.</para>
+
+            <para>Frequency suggestion: nightly</para>
+
+            <section id="talkingsendcronperl">
+              <title>Perl Documentation</title>
+
+              <para><emphasis role="bold">USAGE</emphasis></para>
+
+              <para>TalkingTech_itiva_outbound.pl</para>
+
+              <para>TalkingTech_itiva_outbound.pl --type=OVERDUE -w 0 -w 2 -w
+              6 --output=/tmp/talkingtech/outbound.csv</para>
+
+              <para>TalkingTech_itiva_outbound.pl --type=RESERVE
+              --type=PREOVERDUE --lang=FR</para>
+
+              <para>Script to generate Spec C outbound notifications file for
+              Talking Tech i-tiva phone notification system.</para>
+
+              <para>--help -h</para>
+
+              <para>Prints this help</para>
+
+              <para>-v Provide verbose log information.</para>
+
+              <para>--output -o</para>
+
+              <para>Destination for outbound notifications file (CSV format).
+              If no value is specified, output is dumped to screen.</para>
+
+              <para>--lang</para>
+
+              <para>Sets the language for all outbound messages. Currently
+              supported values are EN, FR and ES. If no value is specified, EN
+              will be used by default.</para>
+
+              <para>--type</para>
+
+              <para>REQUIRED. Sets which messaging types are to be used. Can
+              be given multiple times, to specify multiple types in a single
+              output file. Currently supported values are RESERVE, PREOVERDUE
+              and OVERDUE. If no value is given, this script will not produce
+              any outbound notifications.</para>
+
+              <para>--waiting-hold-day -w</para>
+
+              <para>OPTIONAL for --type=RESERVE. Sets the days after a hold
+              has been set to waiting on which to call. Use switch as many
+              times as desired. For example, passing "-w 0 -w 2 -w 6" will
+              cause calls to be placed on the day the hold was set to waiting,
+              2 days after the waiting date, and 6 days after. See example
+              above. If this switch is not used with --type=RESERVE, calls
+              will be placed every day until the waiting reserve is picked up
+              or canceled.</para>
+
+              <para>--library-code --code -c</para>
+
+              <para>OPTIONAL The code of the source library of the message.
+              The library code is used to group notices together for
+              consortium purposes and apply library specific settings, such as
+              prompts, to those notices. This field can be blank if all
+              messages are from a single library.</para>
+            </section>
+          </section>
+
+          <section id="talkingtechreceivecron">
+            <title>Receiving Notices File</title>
+
+            <para>Script path:
+            misc/cronjobs/thirdparty/TalkingTech_itiva_inbound.pl</para>
+
+            <para>Does: Script to process received Results files for Talking
+            Tech i-tiva phone notification system.</para>
+
+            <para>Frequency suggestion: nightly</para>
+
+            <section id="talkingreceivecronperl">
+              <title>Perl Documentation</title>
+
+              <para><emphasis role="bold">USAGE</emphasis></para>
+
+              <para>TalkingTech_itiva_inbound.pl</para>
+
+              <para>TalkingTech_itiva_inbound.pl -v
+              --input=/tmp/talkingtech/results.csv</para>
+
+              <para>Script to process received Results files for Talking Tech
+              i-tiva phone notification system.</para>
+
+              <para>--help -h</para>
+
+              <para>Prints this help</para>
+
+              <para>-v Provide verbose log information.</para>
+
+              <para>--input -i</para>
+
+              <para>REQUIRED. Path to incoming results file.</para>
+            </section>
+          </section>
+        </section>
       </section>
 
       <section id="proccartcron">
@@ -41000,6 +41148,87 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         <para>And within few minutes, we have imported around 10,000 records
         in Koha</para>
       </section>
+    </section>
+  </appendix>
+
+  <appendix id="talkingtechappendix">
+    <title>Talking Tech</title>
+
+    <para>Talking Tech I-tiva is a third party, proprietary, product that
+    libraries can subscribe to. Learn more here: <ulink
+    url="http://www.talkingtech.com/solutions/library">http://www.talkingtech.com/solutions/library</ulink>.</para>
+
+    <section id="talkingtechinstall">
+      <title>Installation and Setup Instructions</title>
+
+      <para>Be sure you've run
+      installer/data/mysql/atomicupdate/Bug-4246-Talking-Tech-itiva-phone-notifications.pl
+      to install the required data pack (new syspref, notice placeholders and
+      messaging transport preferences)</para>
+
+      <para>To use, <link
+      linkend="TalkingTechItivaPhoneNotification">TalkingTechItivaPhoneNotification</link>
+      syspref must be turned on.</para>
+
+      <para>If you wish to process PREOVERDUE or RESERVES messages, you'll
+      need the <link
+      linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+      system preference turned on, and patrons to have filled in a preference
+      for receiving these notices by phone.</para>
+
+      <para>For OVERDUE messages, overdue notice triggers must be configured
+      under Koha -&gt; Tools -&gt; <link linkend="noticetriggers">Overdue
+      Notice Triggers</link>. Either branch-specific triggers or the default
+      level triggers may be used (script will select whichever is
+      appropriate).</para>
+    </section>
+
+    <section id="talkingtechsend">
+      <title>Sending Notices File</title>
+
+      <orderedlist>
+        <listitem>
+          <para>Add the TalkingTech_itiva_outbound.pl script to your
+          crontab</para>
+        </listitem>
+
+        <listitem>
+          <para>Add an FTP/SFTP or other transport method to send the output
+          file to the I-tiva server</para>
+        </listitem>
+
+        <listitem>
+          <para>If you wish, archive the sent notices file in another
+          directory after sending</para>
+        </listitem>
+      </orderedlist>
+
+      <para>Run TalkingTech_itiva_outbound.pl --help for more
+      information</para>
+    </section>
+
+    <section id="talkingtechreceive">
+      <title>Receiving Results File</title>
+
+      <orderedlist>
+        <listitem>
+          <para>Add an FTP/SFTP or other transport method to send the Results
+          file to a known directory on your Koha server</para>
+        </listitem>
+
+        <listitem>
+          <para>Add the TalkingTech_itiva_inbound.pl script to your crontab,
+          aimed at that directory</para>
+        </listitem>
+
+        <listitem>
+          <para>If you wish, archive the results file in another directory
+          after processing</para>
+        </listitem>
+      </orderedlist>
+
+      <para>Run TalkingTech_itiva_inbound.pl --help for more
+      information</para>
     </section>
   </appendix>
 
