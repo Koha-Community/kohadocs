@@ -11342,103 +11342,104 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Staff Client</para>
 
-        <section id="Display856uAsImage">
-          <title>Display856uAsImage</title>
-
-          <para>Default: Neither details or results page</para>
-
-          <para>Asks: Display the URI in the 856u field as an image on:
-          ___</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Both results and details pages</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>Not implemented yet</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Detail page only</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para><link
-                    linkend="XSLTDetailsDisplay">XSLTDetailsDisplay</link>
-                    needs to be on for this preference to work.</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-
-              <screenshot>
-                <screeninfo>Showing the 856u as an image</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/globalprefs/Display856uAsImage.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </listitem>
-
-            <listitem>
-              <para>Neither details or results page</para>
-            </listitem>
-
-            <listitem>
-              <para>Results page only</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>Not yet implemented</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>In addition to this option being set, the corresponding
-              XSLT option must be turned on. Also, the corresponding 856q
-              field must have a valid MIME image extension (e.g., "jpg") or
-              MIME image type (i.e. starting with "image/"), or the generic
-              indicator "img" entered in the field. When all of the
-              requirements are met, an image file will be displayed instead of
-              the standard link text. Clicking on the image will open it in
-              the same way as clicking on the link text. When you click on the
-              image it should open to full size, in the current window or in a
-              new window depending on the value in the system pref <link
-              linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link>.</para>
-
-              <screenshot>
-                <screeninfo>Sample 856 Field</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/globalprefs/856imagemarc.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </listitem>
-          </itemizedlist>
-        </section>
-
         <section id="staffappearprefs">
           <title>Appearance</title>
 
           <para/>
+
+          <section id="Display856uAsImage">
+            <title>Display856uAsImage</title>
+
+            <para>Default: Neither details or results page</para>
+
+            <para>Asks: Display the URI in the 856u field as an image on:
+            ___</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Both results and details pages</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Not implemented yet</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Detail page only</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para><link
+                      linkend="XSLTDetailsDisplay">XSLTDetailsDisplay</link>
+                      needs to be on for this preference to work.</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+
+                <screenshot>
+                  <screeninfo>Showing the 856u as an image</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Display856uAsImage.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Neither details or results page</para>
+              </listitem>
+
+              <listitem>
+                <para>Results page only</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Not yet implemented</para>
+                    </important>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>In addition to this option being set, the corresponding
+                XSLT option must be turned on. Also, the corresponding 856q
+                field must have a valid MIME image extension (e.g., "jpg") or
+                MIME image type (i.e. starting with "image/"), or the generic
+                indicator "img" entered in the field. When all of the
+                requirements are met, an image file will be displayed instead
+                of the standard link text. Clicking on the image will open it
+                in the same way as clicking on the link text. When you click
+                on the image it should open to full size, in the current
+                window or in a new window depending on the value in the system
+                pref <link
+                linkend="OPACURLOpenInNewWindow">OPACURLOpenInNewWindow</link>.</para>
+
+                <screenshot>
+                  <screeninfo>Sample 856 Field</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/856imagemarc.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="intranet_includes">
             <title>intranet_includes</title>
