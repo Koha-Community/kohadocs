@@ -21233,6 +21233,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>Provides access to all areas of the Administration
                 menu</para>
               </listitem>
+
+              <listitem>
+                <para>This secton can be expanded (<link
+                linkend="parameterpermissions">Learn more</link>)</para>
+              </listitem>
             </itemizedlist>
           </listitem>
 
@@ -21448,6 +21453,38 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <listitem>
                   <para>Requires that the staff member also has
                   circulate_remaining_permissions</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="parameterpermissions">
+          <title>Granular Parameters Permissions</title>
+
+          <para>If the staff member has 'parameters' permissions they have the
+          ability to perform all of these actions. If you would like to
+          control parameter permissions on a more granular level choose from
+          these options:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>manage_circ_rules</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>The ability to edit circulation and fine rules in the
+                  administration area</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>parameters_remaining_permissions</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Access to all other areas under Administration</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -43120,8 +43157,8 @@ no-repeat scroll center top transparent;
 
       <para>Often you'll want to add a Koha search box to your library
       website. To do so, just copy and paste the following code in to your
-      library website and update the YOURCATALOG bit with your
-      catalog&rsquor;s URL and you&rsquor;re set to go.</para>
+      library website and update the YOURCATALOG bit with your catalog’s URL
+      and you’re set to go.</para>
 
       <para><programlisting>
 &lt;form name="searchform" method="get" action="http://YOURCATLOG/cgi-bin/koha/opac-search.pl" id="searchform"&gt;
