@@ -4009,6 +4009,46 @@
             </itemizedlist>
           </section>
 
+          <section id="UpdateTotalIssuesOnCirc">
+            <title>UpdateTotalIssuesOnCirc</title>
+
+            <para>Default: Do not</para>
+
+            <para>Asks: ___ update a bibliographic record's total issues count
+            whenever an item is issued</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Do<important>
+                    <para>This increases server load significantly; if
+                    performance is a concern, use the <link
+                    linkend="updateissuescron">cron job</link> to update the
+                    total issues count instead.</para>
+                  </important></para>
+              </listitem>
+
+              <listitem>
+                <para>Do not</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Koha can track the number of times and item is checked
+                out and store that on the item record in the database. This
+                information is not stored by default. Setting this preference
+                to 'Do' will tell Koha to track that info everytime the item
+                is checked out in real time. Otherwise you could use the <link
+                linkend="updateissuescron">cron job</link> to have Koha update
+                that field nightly.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="UseTablesortForCirc">
             <title>UseTablesortForCirc</title>
 
@@ -38292,6 +38332,17 @@ print theme('pages_catalog');</programlisting>
             <para>longoverdue.pl cron script to set lost statuses on overdue
             materials. Execute without options for help.</para>
           </section>
+        </section>
+
+        <section id="updateissuescron">
+          <title>Track total checkouts</title>
+
+          <para>Script path: misc/cronjobs/update_totalissues.pl</para>
+
+          <para>Does: updates the biblioitems.totalissues field in the
+          database with the latest tally of checkouts.</para>
+
+          <para>Frequency suggestion: nightly</para>
         </section>
       </section>
 
