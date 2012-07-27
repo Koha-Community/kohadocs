@@ -10540,6 +10540,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               Appendix</link>.</para>
             </listitem>
           </itemizedlist>
+
+          <important>
+            <para>Requires that you have <link
+            linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
+            set to Allow to use.</para>
+          </important>
         </section>
 
         <section id="uppercasesurnames">
@@ -41665,8 +41671,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
 
       <orderedlist>
         <listitem>
-          <para>Add the TalkingTech_itiva_outbound.pl script to your
-          crontab</para>
+          <para>Add the <link
+          linkend="talkingtechsendcron">TalkingTech_itiva_outbound.pl</link>
+          script to your crontab</para>
         </listitem>
 
         <listitem>
@@ -41694,8 +41701,9 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
         </listitem>
 
         <listitem>
-          <para>Add the TalkingTech_itiva_inbound.pl script to your crontab,
-          aimed at that directory</para>
+          <para>Add the <link
+          linkend="talkingtechreceivecron">TalkingTech_itiva_inbound.pl</link>
+          script to your crontab, aimed at that directory</para>
         </listitem>
 
         <listitem>
