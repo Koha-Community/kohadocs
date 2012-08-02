@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book>
@@ -249,19 +249,19 @@
           <section id="BasketConfirmations">
             <title>BasketConfirmations</title>
 
-            <para>Default: always ask for confirmation</para>
+            <para>Valeur par défaut: toujours demander confirmation</para>
 
-            <para>Asks: When closing or reopening a basket, ___.</para>
+            <para>Demande: Pour fermer ou réouvrir un panier, ___.</para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>always ask for confirmation</para>
+                <para>toujours demander confirmation</para>
               </listitem>
 
               <listitem>
-                <para>do not ask for confirmation</para>
+                <para>ne pas demander confirmation</para>
               </listitem>
             </itemizedlist>
 
@@ -269,9 +269,7 @@
 
             <itemizedlist>
               <listitem>
-                <para>This preference adds the option to skip confirmations on
-                closing and reopening a basket. If you skip the confirmation,
-                you do not create a new basket group.</para>
+                <para>Cette préférence ajoute la possibilité de ne pas avoir d'étape de confirmation à la fermeture et à la réouverture d'un panier. Si vous désactivez l'étape de confirmation, vous ne créez pas un nouveau bordereau.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -370,24 +368,23 @@
           <section id="AllowPKIAuth">
             <title>AllowPKIAuth</title>
 
-            <para>Default: no</para>
+            <para>Valeur par défaut: aucun</para>
 
-            <para>Asks: Use ___ field for SSL client certificate
-            authentication</para>
+            <para>Demande: Utiliser ___ champ pour le certificat d'authentification client SSL</para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>no</para>
+                <para>aucun</para>
               </listitem>
 
               <listitem>
-                <para>the common name</para>
+                <para>le nom de famille</para>
               </listitem>
 
               <listitem>
-                <para>the email address</para>
+                <para>l'adresse email</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -1516,11 +1513,8 @@
             </itemizedlist>
 
             <important>
-              <para>Unless you are going in and manually changing 773$w to
-              match your rigorously-defined bibliographic relationships, you
-              should set this preference to "Don't use" and instead set <link
-              linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link> to
-              "Display"</para>
+              <para>A moins que vous ne poursuiviez et changiez manuellement le 773$w pour correspondre aux relations bibliographiques rigoureuses, vous devriez positionner cette préférence sur "Ne pas utiliser" et paramétrer à la place <link linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link> sur
+              "Afficher"</para>
             </important>
 
             <para>Description :</para>
@@ -1672,45 +1666,35 @@
 
             <title>EasyAnalyticalRecords</title>
 
-            <para>Asks: ___ easy ways to create analytical record
-            relationships</para>
+            <para>Demande: ___ les façons simples de créer des relations entre notices (notice analytique)
+            </para>
 
-            <para>Default: Don't Display</para>
+            <para>Valeur par défaut: Ne pas afficher</para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Display</para>
+                <para>Afficher</para>
               </listitem>
 
               <listitem>
-                <para>Don't Display</para>
+                <para>Ne pas afficher</para>
               </listitem>
             </itemizedlist>
 
             <important>
-              <para>If you decide to use this feature you'll want to make sure
-              that your <link
-              linkend="UseControlNumber">UseControlNumber</link> preference is
-              set to "Don't use" or else the "Show analytics" links in the
-              staff client and the OPAC will be broken.</para>
+              <para>Si vous décidez d'utiliser cette fonctionnalité assurez vous que votre préférence <link
+              linkend="UseControlNumber">UseControlNumber</link> est positionnée sur "Ne pas utiliser", sinon le lien "Afficher les notices analytiques" dans l'interface professionnelle et à l'OPAC sera brisé.
+              </para>
             </important>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>An analytic entry in a catalog is one that describes a
-                part of a larger work that is also described in the catalog.
-                In bibliographic cataloging, analytic entries may be made for
-                chapters in books or special issues of articles in
-                periodicals. In archival cataloging, analytic entries may be
-                made for series or items within a collection. This feature in
-                Koha allows for an easy way of linking analytic entries to the
-                host records, and this system preference adds several new menu
-                options to the staff cataloging detail pages to allow that to
-                happen.</para>
+                <para>Une notice analytique dans le catalogue est une notice qui décrit une partie d'un travail plus large également décrit dans le catalogue. Dans le catalogage bibliographique, les notices analytiques peuvent être faites pour les chapitres de livres ou des articles de numéros de périodiques. Dans le catalogage d'archive, les notices analytiques peuvent être faites pour des séries de documents à l'intérieur d'une collection. Cette fonctionnalité dans Koha fournit un moyen facile de lier des notices analytiques au document hôte, et cette préférence système ajoute plusieurs options sur les pages de détail de catalogage de l'interface professionnelle permettant d'utiliser la fonctionnalité.
+                 </para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2156,39 +2140,32 @@
           <section>
             <title>AllowItemsOnHoldCheckout</title>
 
-            <para>Default: Don't allow</para>
+            <para>Valeur par défaut: Ne pas permettre</para>
 
-            <para>Asks: ___ checkouts of items items reserved to someone else.
-            If allowed do not generate RESERVE_WAITING and RESERVED warning.
-            This allows self checkouts for those items.</para>
+            <para>Demande: ___ le prêt d'exemplaires réservés pour quelqu'un d'autre. Si c'est autorisé ne pas générer les alertes Réservation mise de côté RESERVE_WAITING et Réservé RESERVED. Ceci autorise le prêt libre service de ces exemplaires.
+            </para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Allow</para>
+                <para>Permettre</para>
               </listitem>
 
               <listitem>
-                <para>Don't allow</para>
+                <para>Ne pas permettre</para>
               </listitem>
             </itemizedlist>
 
             <important>
-              <para>This system preference relates only to SIP based self
-              checkout, not Koha's web based self checkout.</para>
+              <para>Cette préférence système fait référence uniquement au prêt libre service par automate SIP, pas au prêt libre service de Koha. </para>
             </important>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>When this preference is set to 'Allow' patrons will be
-                able to use your external self check machine to check out a
-                book to themselves even if it's on hold for someone else. If
-                you would like Koha to prevent people from checking out books
-                that are on hold for someone else set this preference to
-                "Don't allow."</para>
+                <para>Quand cette préférence est positionnée sur 'Permettre' les adhérents pourront utiliser l'automate de prêt pour emprunter un document même s'il est réservé pour quelqu'un d'autre. Si vous voulez empêcher les personnes d'emprunter des livres qui sont réservés pour quelqu'un d'autre, positionnez cette préférence sur "Ne pas permettre".</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -3005,20 +2982,19 @@
           <section id="AutoResumeSuspendedHolds">
             <title>AutoResumeSuspendedHolds</title>
 
-            <para>Default: Allow</para>
+            <para>Valeur par défaut: Permettre</para>
 
-            <para>Asks: ___ suspended holds to be automatically resumed by a
-            set date.</para>
+            <para>Demande: ___ de réactiver automatiquement les réservations suspendues en saisissant une date.</para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Allow</para>
+                <para>Permettre</para>
               </listitem>
 
               <listitem>
-                <para>Don't allow</para>
+                <para>Ne pas permettre</para>
               </listitem>
             </itemizedlist>
 
@@ -3026,12 +3002,8 @@
 
             <itemizedlist>
               <listitem>
-                <para>If this preference is set to 'Allow' then all suspended
-                holds will be able to have a date at which they automatically
-                become unsuspended. If you have this preference set to 'Allow'
-                you will also need the <link
-                linkend="unsuspendholdcron">Unsuspend Holds</link> cron job
-                running.</para>
+                <para>Si cette préférence est positionnée sur 'Permettre' alors toutes les réservations suspendues pourront recevoir une date à laquelle la suspension sera levée automatiquement. Si vous positionnez cette préférence sur 'Permettre' vous aurez aussi besoin d'exécuter le cron job <link
+                linkend="unsuspendholdcron">Lever les suspensions de réservation</link> .</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -3143,21 +3115,20 @@
           <section id="ExpireReservesMaxPickUpDelay">
             <title>ExpireReservesMaxPickUpDelay</title>
 
-            <para>Default: Don't allow</para>
+            <para>Valeur par défaut: Ne pas permettre</para>
 
-            <para>Asks: ___ holds to expire automatically if they have not
-            been picked by within the time period specified in <link
+            <para>Demande: ___ que les réservations expirent automatiquement si elles n'ont pas été mises de côté durant l'intervalle de temps spécifié dans <link
             linkend="ReservesMaxPickUpDelay">ReservesMaxPickUpDelay</link></para>
 
-            <para>Values:</para>
+            <para>Valeurs:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Allow</para>
+                <para>Permettre</para>
               </listitem>
 
               <listitem>
-                <para>Don't allow</para>
+                <para>Ne pas permettre</para>
               </listitem>
             </itemizedlist>
 
@@ -3165,13 +3136,9 @@
 
             <itemizedlist>
               <listitem>
-                <para>If set to 'allow' this will cancel holds that have been
-                waiting for longer than the number of days specified in the
-                <link
+                <para>Si c'est positionné sur 'Permettre',ceci annulera les réservations qui attendent depuis plus longtemps que le nombre de jours spécifié dans la préférence système <link
                 linkend="ReservesMaxPickUpDelay">ReservesMaxPickUpDelay</link>
-                system preference. Holds will only be cancelled if the <link
-                linkend="expiredholdscron">Expire Holds cron job</link> is
-                runnning.</para>
+                . Les réservations seront annulées uniquement si le cron job <link linkend="expiredholdscron">Cron job d'expiration des réservations</link> est mis en place.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -3179,24 +3146,19 @@
           <section id="ExpireReservesMaxPickUpDelayCharge">
             <title>ExpireReservesMaxPickUpDelayCharge</title>
 
-            <para>Default: 0</para>
+            <para>Valeur par défaut: 0</para>
 
-            <para>Asks: If using <link
+            <para>Demande: Si <link
             linkend="ExpireReservesMaxPickUpDelay">ExpireReservesMaxPickUpDelay</link>,
-            charge a borrower who allows his or her waiting hold to expire a
-            fee of ___ USD</para>
+            est utilisé, imputer au lecteur qui a laissé son délai de réservation expirer une amende de ___ </para>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>If you are expiring holds that have been waiting too
-                long you can use this preference to charge the patron for not
-                picking up their hold. If you don't charge patrons for items
-                that aren't picked up you can leave this set to the default
-                which is 0. Holds will only be cancelled and charged if the
-                <link linkend="expiredholdscron">Expire Holds cron job</link>
-                is runnning.</para>
+                <para>Si vous voyez des réservations expirées depuis longtemps vous pouvez utiliser cette préférence pour mettre une amende aux adhérents pour ne pas avoir retiré leurs réservations. Si vous ne mettez pas d'amende aux adhérents pour les documents non retirés vous pouvez laisser la valeur par défaut qui est 0. Les réservations seront annulées et l'amende imputée uniquement si le script
+                <link linkend="expiredholdscron">Expiration des réservatios</link>
+                est mis en place.</para>
               </listitem>
             </itemizedlist>
           </section>
