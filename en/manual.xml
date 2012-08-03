@@ -3458,37 +3458,6 @@
             <para>Asks: Satisfy holds from the libraries ___ (as branchcodes,
             separated by commas; if empty, uses all libraries) ___</para>
 
-            <para>Descriptions:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>RandomizeHoldsQueueWeight randomizes the libraries to
-                which hold requests are sent. All available libraries may be
-                randomized or only those libraries listed in the
-                StaticHoldsQueueWeight preference. RandomizeHoldsQueueWeight
-                can work with StaticHoldsQueueWeight to determine which
-                libraries (branch or consortium library) will be targets for
-                items on holds list. This hold list is produced when patron's
-                requests for items are generated on a libraries to which holds
-                are sent. RandomizeHoldsQueueWeight will or will not randomize
-                the list of libraries that in the StaticHoldsQueueWeight list.
-                If the RandomizeHoldsQueueWeight is set as “in random order"
-                the hold requests will be sent randomly to the libraries on
-                the StaticHoldsQueueWeight list. If RandomizeHoldsQueueWeight
-                is set as "in that order", hold requests will be sent to the
-                libraries according to their order as designated in
-                StaticHoldsQueueWeight or according to their static ranking in
-                the database. The StaticHoldsQueueWeight works in conjunction
-                with the RandomHoldsQueueWeight preference. The
-                StaticHoldsQueueWeight preference allows for certain libraries
-                or branches to have a higher weight for holds fulfillment,
-                allowing these libraries to receive holds before other branch
-                libraries. Previously set library codes are entered into the
-                preference box, separated by commas, and these libraries would
-                receive holds before libraries not listed.</para>
-              </listitem>
-            </itemizedlist>
-
             <para>RandomizeHoldsQueueWeight Values:</para>
 
             <itemizedlist>
@@ -3498,6 +3467,48 @@
 
               <listitem>
                 <para>in that order</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Descriptions:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If you do not want all of your libraries to participate
+                in the on-shelf holds fulfillment process, you should list the
+                the libraries that *do* participate in the process here by
+                inputting all the participating library's branchcodes,
+                separated by commas ( e.g. "MPL,CPL,SPL,BML" etc. ).</para>
+
+                <para>By default, the holds queue will be generated such that
+                the system will first attempt to hold fulfillment using items
+                already at the pickup library if possible. If there are no
+                items available at the pickup library to fill a hold,
+                build_holds_queue.pl will then use the list of libraries
+                defined in StaticHoldsQueueWeight. If
+                RandomizeHoldsQueueWeight is disabled ( which it is by default
+                ), the script will assign fulfillment requests in the order
+                the branches are placed in the StaticHoldsQueueWeight system
+                preference.</para>
+
+                <para>For example, if your system has three libraries, of
+                varying sizes ( small, medium and large ) and you want the
+                burden of holds fulfillment to be on larger libraries before
+                smaller libraries, you would want StaticHoldsQueueWeight to
+                look something like "LRG,MED,SML".</para>
+
+                <para>If you want the burden of holds fulfillment to be spread
+                out equally throughout your library system, simply enable
+                RandomizeHoldsQueueWeight. When this system preference is
+                enabled, the order in which libraries will be requested to
+                fulfill an on-shelf hold will be randomized each time the list
+                is regenerated.</para>
+
+                <para>Leaving StaticHoldsQueueWeight empty is contraindicated
+                at this time. Doing so will cause the build_holds_queue script
+                to ignore RandomizeHoldsQueueWeight, causing the script to
+                request hold fulfillment not randomly, but by alphabetical
+                order.</para>
               </listitem>
             </itemizedlist>
           </section>
