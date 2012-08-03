@@ -37619,6 +37619,56 @@ print theme('pages_catalog');</programlisting>
 
           <para>Frequency suggestion: every 1-4 hours</para>
 
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>A script that should be run periodically if your library
+              system allows borrowers to place on-shelf holds. This script
+              decides which library should be responsible for fulfilling a
+              given hold request. </para>
+
+              <para>It's behavior is controlled by the system preferences
+              <link linkend="holdqueueweight">StaticHoldsQueueWeight</link>
+              and <link
+              linkend="holdqueueweight">RandomizeHoldsQueueWeight</link>.</para>
+
+              <para>If you do not want all of your libraries to participate in
+              the on-shelf holds fulfillment process, you should list the the
+              libraries that *do* participate in the process here by inputting
+              all the participating library's branchcodes, separated by commas
+              ( e.g. "MPL,CPL,SPL,BML" etc. ).</para>
+
+              <para>By default, the holds queue will be generated such that
+              the system will first attempt to hold fulfillment using items
+              already at the pickup library if possible. If there are no items
+              available at the pickup library to fill a hold,
+              build_holds_queue.pl will then use the list of libraries defined
+              in StaticHoldsQueueWeight. If RandomizeHoldsQueueWeight is
+              disabled ( which it is by default ), the script will assign
+              fulfillment requests in the order the branches are placed in the
+              StaticHoldsQueueWeight system preference.</para>
+
+              <para>For example, if your system has three libraries, of
+              varying sizes ( small, medium and large ) and you want the
+              burden of holds fulfillment to be on larger libraries before
+              smaller libraries, you would want StaticHoldsQueueWeight to look
+              something like "LRG,MED,SML".</para>
+
+              <para>If you want the burden of holds fulfillment to be spread
+              out equally throughout your library system, simply enable
+              RandomizeHoldsQueueWeight. When this system preference is
+              enabled, the order in which libraries will be requested to
+              fulfill an on-shelf hold will be randomized each time the list
+              is regenerated.</para>
+
+              <para>Leaving StaticHoldsQueueWeight empty is contraindicated at
+              this time. Doing so will cause the build_holds_queue script to
+              ignore RandomizeHoldsQueueWeight, causing the script to request
+              hold fulfillment not randomly, but by alphabetical order.</para>
+            </listitem>
+          </itemizedlist>
+
           <section id="buildholdscronperl">
             <title>Perl Documentation</title>
 
