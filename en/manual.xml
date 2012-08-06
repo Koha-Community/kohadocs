@@ -24626,7 +24626,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <title>Holds to pull</title>
 
         <para>This report will show you all of the items that have holds on
-        them that are available at the library for pulling.</para>
+        them that are available at the library for pulling. If the items are
+        available at multiple branches then all branches with that item
+        available will see the hold to pull until one library triggers the
+        hold.</para>
 
         <screenshot>
           <screeninfo>Holds to Pull</screeninfo>
@@ -24637,45 +24640,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
-
-        <para>This report will be generated based on a few system
-        preferences:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><link
-            linkend="holdqueueweight">StaticHoldsQueueWeight</link></para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Allows the library to specify a list of library location
-                codes -- if used alone, it will rank the list statically,
-                selecting the top-ranking available location to be added to
-                the picklist.</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-
-          <listitem>
-            <para><link
-            linkend="holdqueueweight">RandomizeHoldsQueueWeight</link></para>
-
-            <itemizedlist>
-              <listitem>
-                <para>If 'RandomizeHoldsQueueWeight' and
-                'StaticHoldsQueueWeight' are set, the list of library codes in
-                the 'StaticHoldsQueueWeight' system preference are randomized
-                rather than statically ranked. If RandomizeHoldsQueueWeight
-                alone is set, the list of all available library codes is used
-                to randomize the weight.</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-        </itemizedlist>
-
-        <para>If neither 'RandomizeHoldsQueueWeight' or
-        'StaticHoldsQueueWeight' is set, the holds queue is statically ranked
-        according to how they are pulled out of the system database.</para>
 
         <para>You can limit the results you see by using the Refine box on the
         left side of the page:</para>
