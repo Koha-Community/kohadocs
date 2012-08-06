@@ -22281,11 +22281,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para>If you have set your <link
         linkend="BorrowersLog">BorrowersLog</link> to track changes to patron
-        records, then this tab will appear. The Modification Log will show all
-        changes made to the patron record.</para>
+        records, then this tab will appear. The Modification Log will show
+        when changes were made to the patron record. If you also have turned
+        on the <link linkend="IssueLog">IssueLog</link> and <link
+        linkend="ReturnLog">ReturnLog</link> you will see checkins and outs on
+        this screen as well.</para>
 
         <screenshot>
-          <screeninfo>Changes to Patron #51</screeninfo>
+          <screeninfo>Changes to Patron</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -22301,8 +22304,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
 
           <listitem>
-            <para>The Object field lists the patron that is being modified (in
-            the example above, it was my changing my own record)</para>
+            <para>The module lists 'MEMBERS' for the patron module</para>
+          </listitem>
+
+          <listitem>
+            <para>The action will tell you what action was being logged</para>
+          </listitem>
+
+          <listitem>
+            <para>The Object field lists the borrowernumber that is being
+            modified (in the example above, it was my changing my own
+            record)</para>
           </listitem>
         </itemizedlist>
       </section>
