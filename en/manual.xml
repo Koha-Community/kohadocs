@@ -10245,6 +10245,37 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </important>
         </section>
 
+        <section id="EnableBorrowerFiles">
+          <title>EnableBorrowerFiles</title>
+
+          <para>Default: Don't</para>
+
+          <para>Asks: ___ enable the ability to upload and attach arbitrary
+          files to a borrower record.</para>
+
+          <para>Values:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Do</para>
+            </listitem>
+
+            <listitem>
+              <para>Don't</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Description:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>When enabled this will add a 'Files' tab to the left of
+              the patron detail page where you can view and upload files to
+              the patron record.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
         <section id="EnhancedMessagingPreferences">
           <title>EnhancedMessagingPreferences</title>
 
@@ -22862,6 +22893,51 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/patrons/patronstats.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
+
+      <section id="patronfiles">
+        <title>Files</title>
+
+        <para>If you set the <link
+        linkend="EnableBorrowerFiles">EnableBorrowerFiles</link> preference to
+        'Do' the Files tab will be visible on the patron information
+        page.</para>
+
+        <screenshot>
+          <screeninfo>Patron Files Tab</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/patronfilestab.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>From here you can upload files to attach to the patron
+        record.</para>
+
+        <screenshot>
+          <screeninfo>Upload patron files</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/nopatronfiles.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <para>All files that are uploaded will appear above a form where
+        additional files can be uploaded from.</para>
+
+        <screenshot>
+          <screeninfo>List of files on the patorn record</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/patronfileslist.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
