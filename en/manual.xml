@@ -19358,7 +19358,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         and/or OPAC you will need to set your <link
         linkend="LocalCoverImages">LocalCoverImages</link> and/or <link
         linkend="OPACLocalCoverImages">OPACLocalCoverImages</link> preferences
-        to 'Display.' Images can be uploaded in batches or one by one.</para>
+        to 'Display.' Images can be uploaded in batches or one by one.<tip>
+            <para>Koha does not have a maximum file size limit for this tool,
+            but Apache may limit the maximum size of uploads (talk to your sys
+            admin).</para>
+          </tip></para>
 
         <para>If uploading a single image:</para>
 
@@ -19507,6 +19511,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </screenshot>
           </listitem>
         </itemizedlist>
+
+        <tip>
+          <para>Large cover images will be resized down to 800x600. Smaller
+          images will not be made larger.</para>
+        </tip>
 
         <para>You will be able to see your cover images in the staff client on
         the detail page under the 'Image' tab in the holdings table at the
