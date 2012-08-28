@@ -18694,130 +18694,224 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="exportbibs">
-        <title>Export Bibliographic and Holdings Data (MARC Export)</title>
+        <title>Export Data (MARC &amp; Authorities)</title>
 
         <itemizedlist>
           <listitem>
             <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Catalog
-            &gt; Export Bibliographic and Holdings Data</para>
+            &gt; Export Data</para>
           </listitem>
         </itemizedlist>
 
         <para>Koha comes with a tool that will allow you to export your
-        bibliographic and/or holdings data in bulk. This can be used to send
-        your records to fellow libraries, organizations or services; or simply
-        for backup purposes.</para>
+        bibliographic, holdings and/or authority data in bulk. This can be
+        used to send your records to fellow libraries, organizations or
+        services; or simply for backup purposes.</para>
 
-        <itemizedlist>
-          <listitem>
-            <para>Fill in the form in order to limit your export to a specific
-            range (all fields are optional)</para>
+        <section id="exportmarc">
+          <title>Export Bibliographic Records</title>
 
-            <screenshot>
-              <screeninfo>Select Records to Export</screeninfo>
+          <para>At the top of the screen you need to pick what data you're
+          exporting. If you're exporting bibliographic records with or without
+          the holdings information you want to click the 'Export bibliographic
+          records' tab.</para>
 
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/tools/exportmarc/marcexport-pt1.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
+          <itemizedlist>
+            <listitem>
+              <para>Fill in the form in order to limit your export to a
+              specific range (all fields are optional)</para>
 
-            <itemizedlist>
-              <listitem>
-                <para>Choose to limit your export by any one or more of the
-                following options</para>
+              <screenshot>
+                <screeninfo>Select Records to Export</screeninfo>
 
-                <itemizedlist>
-                  <listitem>
-                    <para>Limit to a bib number range</para>
-                  </listitem>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/exportmarc/marcexport-pt1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
 
-                  <listitem>
-                    <para>Limit to a specific item type</para>
-                  </listitem>
+              <itemizedlist>
+                <listitem>
+                  <para>Choose to limit your export by any one or more of the
+                  following options</para>
 
-                  <listitem>
-                    <para>Limit to a specific library</para>
-                  </listitem>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Limit to a bib number range</para>
+                    </listitem>
 
-                  <listitem>
-                    <para>Limit to a call number range</para>
-                  </listitem>
+                    <listitem>
+                      <para>Limit to a specific item type</para>
+                    </listitem>
 
-                  <listitem>
-                    <para>Limit to an acquisition date range</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
+                    <listitem>
+                      <para>Limit to a specific library</para>
+                    </listitem>
 
-              <listitem>
-                <para>Next choose what to skip when exporting</para>
+                    <listitem>
+                      <para>Limit to a call number range</para>
+                    </listitem>
 
-                <screenshot>
-                  <screeninfo>Export options</screeninfo>
+                    <listitem>
+                      <para>Limit to an acquisition date range</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
 
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/tools/exportmarc/marcexport-pt2.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
+                <listitem>
+                  <para>Next choose what to skip when exporting</para>
 
-                <itemizedlist>
-                  <listitem>
-                    <para>By default items will be exported, if you would like
-                    to only export bibliographic data, check the 'Don't export
-                    items' box</para>
-                  </listitem>
+                  <screenshot>
+                    <screeninfo>Export options</screeninfo>
 
-                  <listitem>
-                    <para>To limit your export only to items from the library
-                    you're logged in as (if you leave the 'Library' field set
-                    to 'All') or to the library you selected above check the
-                    'Remove non-local items' box</para>
-                  </listitem>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/tools/exportmarc/marcexport-pt2.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
 
-                  <listitem>
-                    <para>You can also choose what fields you don't want to
-                    export. This can be handy if you're sharing your data, you
-                    can remove all local fields before sending your data to
-                    another library</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
+                  <itemizedlist>
+                    <listitem>
+                      <para>By default items will be exported, if you would
+                      like to only export bibliographic data, check the 'Don't
+                      export items' box</para>
+                    </listitem>
 
-              <listitem>
-                <para>Finally choose the file type and file name</para>
+                    <listitem>
+                      <para>To limit your export only to items from the
+                      library you're logged in as (if you leave the 'Library'
+                      field set to 'All') or to the library you selected above
+                      check the 'Remove non-local items' box</para>
+                    </listitem>
 
-                <screenshot>
-                  <screeninfo>File export format</screeninfo>
+                    <listitem>
+                      <para>You can also choose what fields you don't want to
+                      export. This can be handy if you're sharing your data,
+                      you can remove all local fields before sending your data
+                      to another library</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
 
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/tools/exportmarc/marcexport-pt3.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
+                <listitem>
+                  <para>Finally choose the file type and file name</para>
 
-                <itemizedlist>
-                  <listitem>
-                    <para>Choose to export your data in marc or marcxml
-                    format</para>
-                  </listitem>
+                  <screenshot>
+                    <screeninfo>File export format</screeninfo>
 
-                  <listitem>
-                    <para>Choose the name you want your file to save as</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/tools/exportmarc/marcexport-pt3.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
 
-              <listitem>
-                <para>Click 'Export'</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-        </itemizedlist>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Choose to export your data in marc or marcxml
+                      format</para>
+                    </listitem>
+
+                    <listitem>
+                      <para>Choose the name you want your file to save
+                      as</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+
+                <listitem>
+                  <para>Click 'Export bibliographic records'</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+
+        </section>
+
+        <section id="exportauthority">
+          <title>Export Authority Records</title>
+
+          <para>At the top of the screen you need to pick what data you're
+          exporting. If you're exporting authority records you want to click
+          the 'Export authority records' tab.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Fill in the form in order to limit your export to a
+              specific range or type of authority record (all fields are
+              optional)</para>
+
+              <screenshot>
+                <screeninfo>Export authorities</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/exportmarc/authexport-pt1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Next choose fields that you would like to exclude from the
+              export separated by a space (no commas)</para>
+
+              <screenshot>
+                <screeninfo>Authority export options</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/exportmarc/authexport-pt2.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>If you'd like to exclude all subfields of the 200 for
+                  example just enter 200</para>
+                </listitem>
+
+                <listitem>
+                  <para>If you'd like to exclude a specific subfield enter it
+                  beside the field value 100a will exclude just the subfield
+                  'a' of the 100</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Finally choose the file type and file name</para>
+
+              <screenshot>
+                <screeninfo>Export format</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/exportmarc/authexport-pt3.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Choose to export your data in marc or marcxml
+                  format</para>
+                </listitem>
+
+                <listitem>
+                  <para>Choose the name you want your file to save as</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Click 'Export authority records'</para>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section id="inventory">
