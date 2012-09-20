@@ -8967,6 +8967,37 @@ src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/
             </itemizedlist>
           </section>
 
+          <section id="QuoteOfTheDay">
+            <title>QuoteOfTheDay</title>
+
+            <para>Default: Disable</para>
+
+            <para>Asks: ___ Quote of the Day display on OPAC home page</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This feature will allow you to enter a series of quotes
+                that will then show on the OPAC homepage in random order. To
+                add/edit quotes, visit the <link linkend="QOTDEditor">Quote of
+                the Day Editor</link> under Tools.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
           <section id="RequestOnOpac">
             <title>RequestOnOpac</title>
 
@@ -20752,6 +20783,292 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           at.deny exists but is blank, then every user can use it. Talk to
           your system admin about adding the user to the right place to make
           the task scheduler work.</para>
+        </section>
+      </section>
+
+      <section id="QOTDEditor">
+        <title>Quote of the Day (QOTD) Editor</title>
+
+        <para>This tool will allow you to add and edit quotes to show on the
+        OPAC if you're using the Quote of the Day (QOTD) feature.</para>
+
+        <para>To turn this feature on set the <link
+        linkend="QuoteOfTheDay">QuoteOfTheDay</link> preference to 'Enable and
+        add at least one quote via the Quote of the Day Editor. Once these
+        steps are complete you will see your quotes above the <link
+        linkend="OpacMainUserBlock">OpacMainUserBlock</link> in the
+        OPAC:</para>
+
+        <screenshot>
+          <screeninfo>Quote in the OPAC</screeninfo>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/tools/qotd/quoteinopac.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+
+        <section id="addquote">
+          <title>Add a Quote</title>
+
+          <para>To add a quote:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Click the 'Add quote' button in the toolbar and an empty
+              quote entry will be added to the end of the current quote
+              list.</para>
+
+              <screenshot>
+                <screeninfo>Add quote button</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/quotebuttons.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>Both the 'Source' and the 'Text' fields must be
+                    filled in in order to save the new quote.</para>
+
+                    <screenshot>
+                      <screeninfo>Add quote</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/tools/qotd/addquote.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>When finished filling in both fields, press the
+              &lt;Enter&gt; key on your keyboard to save the new quote.</para>
+            </listitem>
+
+            <listitem>
+              <para>The list will update and the new quote should now be
+              visible in the list.</para>
+            </listitem>
+          </itemizedlist>
+
+          <tip>
+            <para>You may cancel the addition of a new quote any time prior to
+            saving it simply by pressing the &lt;Esc&gt; key on your
+            keyboard.</para>
+          </tip>
+        </section>
+
+        <section id="editquote">
+          <title>Edit/Delete a Quote</title>
+
+          <para>Once the current quote pool has been loaded into the editing
+          table, you may edit the quote source and text.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Edit either the 'Source' or 'Text' fields by clicking on
+              the desired field.</para>
+
+              <screenshot>
+                <screeninfo>Edit quote</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/editquote.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>When you are finished editing a field, press the
+              &lt;Enter&gt; key on your keyboard to save the changes.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>The list will be updated, the edits saved, and visible.</para>
+
+          <para>If you'd like you can also delete quote(s).</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Select the quote(s) you desire to delete by clicking on
+              the corresponding quote id.</para>
+            </listitem>
+
+            <listitem>
+              <para>Once quote selection is finished, simply click the 'Delete
+              quote(s)' button.</para>
+            </listitem>
+
+            <listitem>
+              <para>You will be prompted to confirm the deletion.</para>
+            </listitem>
+
+            <listitem>
+              <para>After confirming the deletion, the list will update and
+              the quote(s) will no longer appear.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="importquote">
+          <title>Import Quotes</title>
+
+          <para>If you'd like you can import a batch of quotes as a CSV file.
+          Your file must contain two columns in the form: "source","text" with
+          no header row.</para>
+
+          <note>
+            <para>You will be prompted to confirm upload of files larger than
+            512KB.</para>
+          </note>
+
+          <itemizedlist>
+            <listitem>
+              <para>To start the import process click the 'Import quotes'
+              button at the top of the screen</para>
+
+              <screenshot>
+                <screeninfo>Import quotes button</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/quotebuttons.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>Once on the import quotes screen you can browse your
+              computer for the file you would like to import</para>
+
+              <screenshot>
+                <screeninfo>Import quotes</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/importquotes.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>After selecting the CSV file, click the 'Open' button and
+              the file will be uploaded into a temporary editing table.</para>
+
+              <screenshot>
+                <screeninfo>Imported quotes</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/importedsummary.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>From the listing you can edit either the 'Source' or
+              'Text' fields by clicking on the desired field. When you are
+              finished editing a field, press the &lt;Enter&gt; key on your
+              keyboard to save the changes.</para>
+
+              <screenshot>
+                <screeninfo>Edit imported quote</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/editimported.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+
+            <listitem>
+              <para>You can also delete quotes from this listing before
+              completing the import.</para>
+
+              <itemizedlist>
+                <listitem>
+                  <para>Select the quote(s) you desire to delete by clicking
+                  on the corresponding quote id.</para>
+
+                  <screenshot>
+                    <screeninfo>Selected for deletion</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/tools/qotd/selectfordelete.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+
+                <listitem>
+                  <para>Once quote selection is finished, simply click the
+                  'Delete quote(s)' key.</para>
+
+                  <screenshot>
+                    <screeninfo>Delete quote(s)</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/tools/qotd/importquotebuttons.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+
+                <listitem>
+                  <para>You will be prompted to confirm the deletion.</para>
+
+                  <screenshot>
+                    <screeninfo>Confirm deletion</screeninfo>
+
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/tools/qotd/confirmdelete.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+
+                <listitem>
+                  <para>After confirming the deletion, the list will update
+                  and the quote(s) will no longer appear.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+
+            <listitem>
+              <para>Once you are satisfied with the quotes, click the 'Save
+              quotes' button in the toolbar at the top and the quotes will be
+              saved.</para>
+
+              <screenshot>
+                <screeninfo>Save quotes button</screeninfo>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/qotd/importquotebuttons.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
     </section>
