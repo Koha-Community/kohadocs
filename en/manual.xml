@@ -4589,233 +4589,6 @@
 
           <para/>
 
-          <section id="AmazonEnabled">
-            <title>AmazonEnabled</title>
-
-            <para>Default: Don't use</para>
-
-            <para>Asks: ___ data from Amazon on the staff interface (including
-            reviews and "Search Inside" links on item detail pages).</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't use</para>
-              </listitem>
-
-              <listitem>
-                <para>Use</para>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>This requires that you have signed up for and entered an
-              access key.</para>
-            </important>
-
-            <itemizedlist>
-              <listitem>
-                <para>Sign up at: <ulink
-                url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
-              </listitem>
-
-              <listitem>
-                <para>Enter your key in the <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> system
-                preference</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference does not display any content but instead
-                enables other Amazon-related preferences (<link
-                linkend="AmazonCoverImages">AmazonCoverImages</link>, <link
-                linkend="AmazonSimilarItems">AmazonSimilarItems</link>, <link
-                linkend="AmazonReviews">AmazonReviews</link>). Before turning
-                this feature to "Use", the library must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Furthermore, if
-                Amazon content is enabled, other jacket services should be
-                disabled to avoid interference. This preference applies only
-                to the Staff Client. In order to display Amazon content on the
-                OPAC, please set the <link
-                linkend="OPACAmazonEnabled">OPACAmazonEnabled</link>
-                preference.</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="OPACAmazonEnabled">
-            <title>OPACAmazonEnabled</title>
-
-            <para>Default: Don't use</para>
-
-            <para>Asks: ___ data from Amazon on the OPAC (including reviews
-            and "Search Inside" links on item detail pages).</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't use</para>
-              </listitem>
-
-              <listitem>
-                <para>Use</para>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>This requires that you have signed up for and entered an
-              access key.</para>
-            </important>
-
-            <itemizedlist>
-              <listitem>
-                <para>Sign up at: <ulink
-                url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
-              </listitem>
-
-              <listitem>
-                <para>Set your enter your key in the <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> system
-                preference</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference does not display any content but instead
-                enables other Amazon-related preferences (<link
-                linkend="AmazonCoverImages">AmazonCoverImages</link>, <link
-                linkend="AmazonSimilarItems">AmazonSimilarItems</link>, <link
-                linkend="AmazonReviews">AmazonReviews</link>). Before turning
-                this feature to "Use", the library must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Furthermore, if
-                Amazon content is enabled, other jacket services should be
-                disabled to avoid interference. This preference applies only
-                to the OPAC. In order to display Amazon content on the Staff
-                Client, please set the <link
-                linkend="AmazonEnabled">AmazonEnabled</link>
-                preference.</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="AmazonLocale">
-            <title>AmazonLocale</title>
-
-            <para>Default: American</para>
-
-            <para>Asks: Use Amazon data from its ___ website.</para>
-
-            <para>Value:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>American</para>
-              </listitem>
-
-              <listitem>
-                <para>British</para>
-              </listitem>
-
-              <listitem>
-                <para>Canadian</para>
-              </listitem>
-
-              <listitem>
-                <para>French</para>
-              </listitem>
-
-              <listitem>
-                <para>German</para>
-              </listitem>
-
-              <listitem>
-                <para>Japanese</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="AWSAccessKeyID">
-            <title>AWSAccessKeyID</title>
-
-            <para>Asks: Access Amazon content using the access key ___</para>
-
-            <para>Sign up at: <ulink
-            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>If the library has signed up for an Amazon Web Services
-                (AWS) account, it will be assigned an Access Key ID. In order
-                to enable Amazon content, cover images, reviews, and similar
-                item suggestions, the library's Access Key ID must be entered
-                here.</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Once signed up your keys can be accessed by logging into
-            your account and going to the 'Security Credentials' page. Your
-            Access Key will be listed next to the date it was created.</para>
-
-            <screenshot>
-              <screeninfo>Amazon Access Keys</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/admin/globalprefs/amazonkeys.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-          </section>
-
-          <section id="AWSPrivateKey">
-            <title>AWSPrivateKey</title>
-
-            <para>Asks: Access Amazon content (other than book jackets) using
-            the private key ___</para>
-
-            <para>Sign up at: <ulink
-            url="http://aws.amazon.com/">http://aws.amazon.com/</ulink></para>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>If the library has signed up for an Amazon Web Services
-                (AWS) account, it will be assigned a Secret Access Key. In
-                order to enable Amazon reviews and similar item suggestions,
-                the library's Secret Access Key must be entered here.</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Once signed up your keys can be accessed by logging into
-            your account and going to the 'Security Credentials' page. Next to
-            your Access key is a link that says 'Show,' clicking this will
-            open up your secret access key or your AWSPrivateKey.</para>
-
-            <screenshot>
-              <screeninfo>Amazon Private Key</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/admin/globalprefs/amazonkeys.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-          </section>
-
           <section id="AmazonAssocTag">
             <title>AmazonAssocTag</title>
 
@@ -4878,130 +4651,51 @@
                 prevent Amazon cover images from being displayed in the Staff
                 Client. Cover images are retrieved by Amazon, which pulls the
                 content based on the first ISBN number in the item's MARC
-                record. Amazon offers this service free of charge, but
-                interested libraries must first establish an Amazon Web
-                Services (AWS) account (<ulink
-                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
-                the value for this preference is set to "Show", the cover
-                images will appear in the Staff Client, and if it is set to
-                "Don't show", the images will not appear. If activating this
-                feature, the library must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
-                you're using Amazon cover images, all other cover image
-                services must be disabled. If they are not disabled, they will
-                prevent AmazonCoverImages from functioning properly.</para>
+                record. Amazon offers this service free of charge. If the
+                value for this preference is set to "Show", the cover images
+                will appear in the Staff Client, and if it is set to "Don't
+                show", the images will not appear. Finally, if you're using
+                Amazon cover images, all other cover image services must be
+                disabled. If they are not disabled, they will prevent
+                AmazonCoverImages from functioning properly.</para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>Requires that <link
-              linkend="AmazonEnabled">AmazonEnabled</link> is set to
-              'Use'</para>
-            </important>
           </section>
 
-          <section id="AmazonReviews">
-            <title>AmazonReviews</title>
+          <section id="AmazonLocale">
+            <title>AmazonLocale</title>
 
-            <para>Default: Don't show</para>
+            <para>Default: American</para>
 
-            <para>Asks: ___ reviews from Amazon on item detail pages on the
-            staff interface.</para>
+            <para>Asks: Use Amazon data from its ___ website.</para>
 
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
+            <para>Value:</para>
 
             <itemizedlist>
               <listitem>
-                <para>This preference makes it possible to either allow or
-                prevent Amazon reviews from being displayed in the Staff
-                Client. Amazon offers this service free of charge, but
-                interested libraries must first establish an Amazon Web
-                Services (AWS) account (<ulink
-                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
-                the value is set to "Show", the reviews will appear in the
-                Staff Client, and if it is set to "Don't show", the reviews
-                will not appear. Before setting this to "Show", the library
-                must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
-                AmazonReviews is enabled, all other review services should be
-                disabled to avoid interference.</para>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>Since a change in terms of service by Amazon, this feature
-              no longer works.</para>
-            </important>
-          </section>
-
-          <section id="AmazonSimilarItems">
-            <title>AmazonSimilarItems</title>
-
-            <para>Default: Don't show</para>
-
-            <para>Asks: ___ similar items, as determined by Amazon, on item
-            detail pages on the staff interface.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
+                <para>American</para>
               </listitem>
 
               <listitem>
-                <para>Show</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>This will use Amazon data to determine if you have
-                    similar items in your collection - it will not show items
-                    that you do not already have cataloged at your
-                    library.</para>
-                  </listitem>
-                </itemizedlist>
+                <para>British</para>
               </listitem>
-            </itemizedlist>
 
-            <para>Description:</para>
-
-            <itemizedlist>
               <listitem>
-                <para>This preference makes it possible to either allow or
-                prevent Amazon's suggestions for Similar Items from being
-                displayed in the Staff Client. Amazon offers this service free
-                of charge, but interested libraries must first establish an
-                Amazon Web Services (AWS) account (<ulink
-                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
-                the value is set to "Show", the Similar Items suggestions will
-                appear in the Staff Client, and if it is set to "Don't show",
-                the suggestions will not appear. Before enabling this
-                preference, the library must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
-                AmazonSimilarItems is enabled, all other similar item services
-                should be disabled to avoid interference.</para>
+                <para>Canadian</para>
+              </listitem>
+
+              <listitem>
+                <para>French</para>
+              </listitem>
+
+              <listitem>
+                <para>German</para>
+              </listitem>
+
+              <listitem>
+                <para>Japanese</para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>Since a change in terms of service by Amazon, this feature
-              no longer works.</para>
-            </important>
           </section>
 
           <section id="OPACAmazonCoverImages">
@@ -5032,129 +4726,15 @@
                 prevent Amazon cover images from being displayed in the OPAC.
                 Cover images are retrieved by Amazon, which pulls the content
                 based on the first ISBN number in the item's MARC record.
-                Amazon offers this service free of charge, but interested
-                libraries must first establish an Amazon Web Services (AWS)
-                account (<ulink
-                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
-                the value for this preference is set to "Show", the cover
-                images will appear in the OPAC, and if it is set to "Don't
-                show", the images will not appear. If activating this feature,
-                the library must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
-                you're using Amazon cover images, all other cover image
-                services must be disabled. If they are not disabled, they will
-                prevent AmazonCoverImages from functioning properly.</para>
+                Amazon offers this service free of charge. If the value for
+                this preference is set to "Show", the cover images will appear
+                in the OPAC, and if it is set to "Don't show", the images will
+                not appear. Finally, if you're using Amazon cover images, all
+                other cover image services must be disabled. If they are not
+                disabled, they will prevent AmazonCoverImages from functioning
+                properly.</para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>Requires that <link
-              linkend="OPACAmazonEnabled">OPACAmazonEnabled</link> is set to
-              'Use'</para>
-            </important>
-          </section>
-
-          <section id="OPACAmazonSimilarItems">
-            <title>OPACAmazonSimilarItems</title>
-
-            <para>Default: Don't show</para>
-
-            <para>Asks: ___ similar items, as determined by Amazon, on item
-            detail pages on the OPAC.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>This will use Amazon data to determine if you have
-                    similar items in your collection - it will not show items
-                    that you do not already have cataloged at your
-                    library.</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference makes it possible to either allow or
-                prevent Amazon's suggestions for Similar Items from being
-                displayed in the OPAC. Amazon offers this service free of
-                charge, but interested libraries must first establish an
-                Amazon Web Services (AWS) account (<ulink
-                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
-                the value is set to "Show", the Similar Items suggestions will
-                appear in the OPAC, and if it is set to "Don't show", the
-                suggestions will not appear. Before enabling this preference,
-                the library must first set <link
-                linkend="AWSAccessKeyID">AWSAccessKeyID</link> and <link
-                linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally, if
-                AmazonSimilarItems is enabled, all other similar item services
-                should be disabled to avoid interference.</para>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>Since a change in terms of service by Amazon, this feature
-              no longer works.</para>
-            </important>
-          </section>
-
-          <section id="OPACAmazonReviews">
-            <title>OPACAmazonReviews</title>
-
-            <para>Default: Don't show</para>
-
-            <para>Asks: ___ reviews from Amazon on item detail pages on the
-            OPAC.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't show</para>
-              </listitem>
-
-              <listitem>
-                <para>Show</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference makes it possible to either allow or
-                prevent Amazon reviews from being displayed in the OPAC.
-                Amazon offers this service free of charge, but interested
-                libraries must first establish an Amazon Web Services (AWS)
-                account (<ulink
-                url="http://aws.amazon.com">http://aws.amazon.com</ulink>). If
-                the value is set to "Show", the reviews will appear in the
-                OPAC, and if it is set to "Don't show", the reviews will not
-                appear. Before setting this to "Show", the library must first
-                set <link linkend="AWSAccessKeyID">AWSAccessKeyID</link> and
-                <link linkend="AWSPrivateKey">AWSPrivateKey</link>. Finally,
-                if AmazonReviews is enabled, all other review services should
-                be disabled to avoid interference.</para>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>Since a change in terms of service by Amazon, this feature
-              no longer works.</para>
-            </important>
           </section>
         </section>
 
@@ -32573,11 +32153,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </listitem>
 
       <listitem>
-        <para><link linkend="OPACAmazonEnabled">OPACAmazonEnabled</link> =
-        Use</para>
-      </listitem>
-
-      <listitem>
         <para><link
         linkend="OPACAmazonCoverImages">OPACAmazonCoverImages</link> =
         Show</para>
@@ -38161,11 +37736,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Using the Amazon preferences you can choose to show
-              different types of content from Amazon. Before choosing which
-              types of content you would like to display you will need to
-              enable Amazon content for the staff client and/or the
-              OPAC.</para>
+              <para>Using the Amazon preferences you can choose to show cover
+              images from Amazon.</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -43771,48 +43343,6 @@ no-repeat scroll center top transparent;
         <title>Amazon</title>
 
         <para/>
-
-        <section id="amzprivatekey">
-          <title>Amazon Private Key</title>
-
-          <para><emphasis role="bold">Question</emphasis>: Why do I need the
-          <link linkend="AWSPrivateKey">AWSPrivateKey</link> as well as the
-          <link linkend="AWSAccessKeyID">AWSAccessKeyID</link> to use Amazon
-          Content?</para>
-
-          <para><emphasis role="bold">Answer</emphasis>: After 2009-08-15,
-          Amazon Web Services will expect that all requests to the Product
-          Advertising API, which is what Koha uses for retrieving reviews and
-          other enhanced content from Amazon, include signatures. This patch
-          and subsequent patches implement this functionality.</para>
-
-          <para>What this means in practice (assuming the user has elected to
-          use any enhanced content from Amazon) is that</para>
-
-          <orderedlist>
-            <listitem>
-              <para>The user must get a Amazon Secret Access Key. This can be
-              done by logging in to the user's AWS account at (e.g.)
-              http://aws.amazon.com/, going to the 'Access Identifiers' page,
-              and from there retrieving and/or creating a new Secret Access
-              Key.</para>
-            </listitem>
-
-            <listitem>
-              <para>The contents of the Secret Access Key should then be
-              entered into the new AWSPrivateKey system preference.</para>
-            </listitem>
-          </orderedlist>
-
-          <para>Once that is done, grabbing reviews and table of contents from
-          Amazon should work as normal. If the user doesn't do this before
-          2009-08-15, reviews and TOCs will no longer be supplied from Amazon,
-          although there should be no crashes - the content will simply not
-          show up.</para>
-
-          <para>Note that the requirement to sign requests does *NOT* appear
-          to apply to simply displaying book covers from Amazon.</para>
-        </section>
 
         <section id="amazonfaq">
           <title>All Amazon Content</title>
