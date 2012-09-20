@@ -19207,8 +19207,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
 
-        <para>Importing records into Koha includes two steps. The first is to
-        stage records for import.</para>
+        <para>This tool can be used to import both bibliographic and authority
+        records that are saved in MARC format. Importing records into Koha
+        includes two steps. The first is to stage records for import.</para>
 
         <itemizedlist>
           <listitem>
@@ -19247,18 +19248,63 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
+                <para>Tell Koha which type of file this is, bibliographic or
+                authority</para>
+
+                <screenshot>
+                  <screeninfo>Record type</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/marcimport/recordtype.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
                 <para>Choose the character encoding</para>
+
+                <screenshot>
+                  <screeninfo>Chracter encoding</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/marcimport/encoding.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
 
               <listitem>
                 <para>Choose whether or not you want to look for matching
                 records</para>
 
+                <screenshot>
+                  <screeninfo>Look for matches</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/marcimport/matches.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+
                 <itemizedlist>
                   <listitem>
                     <para>You can set up <link
                     linkend="recordmatchingrules">record matching rules</link>
                     through the administration area</para>
+
+                    <screenshot>
+                      <screeninfo>Matching rules</screeninfo>
+
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/tools/marcimport/matchrule.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -19275,7 +19321,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <listitem>
                 <para>Next you can choose whether or not to import the item
-                data found in the MARC records</para>
+                data found in the MARC records (if the file you're loading is
+                a bibliographic file)</para>
+
+                <screenshot>
+                  <screeninfo>Import items</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/marcimport/checkitems.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
             </itemizedlist>
           </listitem>
