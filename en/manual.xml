@@ -1399,31 +1399,35 @@
           </section>
 
           <section id="OpacSuppression">
-            <title>OpacSuppression</title>
-
-            <para>Default: Don't hide</para>
+            <title>OpacSuppression and OpacSuppressionByIPRange</title>
 
             <para>Asks: ___ items marked as suppressed from OPAC search
-            results.</para>
+            results. Restrict the suppression to IP adresses outside of the IP
+            range ___ </para>
 
-            <para>Values:</para>
+            <para>OpacSuppression Default: Don't hide</para>
+
+            <para>OpacSuppression Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>Don't hide -- will show items in OPAC search results if
-                they are marked suppressed</para>
-              </listitem>
-
-              <listitem>
-                <para>Hide -- will not show items in OPAC search results if
-                they're marked as suppressed</para>
+                <para>Don't hide</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>Each bib record with items you want to hide from the
-                    OPAC simply need to have the 942n field set to 1. The
-                    index then hides it from display in OPAC but will still
-                    display it in the Staff Client</para>
+                    <para>Will show items in OPAC search results if they are
+                    marked suppressed</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Hide</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Will not show items in OPAC search results if
+                    they're marked as suppressed</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1433,11 +1437,21 @@
 
             <itemizedlist>
               <listitem>
-                <para>An <link linkend="authorizedvalues">authorized
-                value</link> for 942$n field should be set to eliminate
-                errors. One example would be to create an authorized value
-                titled SUPPRESS with a value of 0 for don't suppress and 1 for
-                suppress.</para>
+                <para>These preferences control hiding of bib records from
+                display in the OPAC. Each bib record you want to hide from the
+                OPAC simply needs to have the 942$n field set to 1. The
+                indexer then hides it from display in OPAC but will still
+                display it in the Staff Client. If you want to further control
+                suppression you can set an IP address range to still show
+                suppressed items to. Define a range like 192.168.. If you
+                don't want to limit suppression in this way, leave the IP
+                field blank.<tip>
+                    <para>An <link linkend="authorizedvalues">authorized
+                    value</link> for 942$n field should be set to eliminate
+                    errors. One example would be to create an authorized value
+                    titled SUPPRESS with a value of 0 for don't suppress and 1
+                    for suppress.</para>
+                  </tip></para>
               </listitem>
             </itemizedlist>
 
