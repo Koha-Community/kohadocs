@@ -1403,7 +1403,7 @@
 
             <para>Asks: ___ items marked as suppressed from OPAC search
             results. Restrict the suppression to IP adresses outside of the IP
-            range ___ </para>
+            range ___</para>
 
             <para>OpacSuppression Default: Don't hide</para>
 
@@ -2111,6 +2111,98 @@
           <title>Checkout Policy</title>
 
           <para/>
+
+          <section id="AgeRestrictionMarker">
+            <title>AgeRestrictionMarker</title>
+
+            <para>Asks: Restrict patrons with the following target audience
+            values from checking out inappropriate materials: ___</para>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>This preference defines certain keywords that will
+                trigger Koha to restrict checkout based on age. These
+                restrictions can be overridden by the <link
+                linkend="AgeRestrictionOverride">AgeRestrictionOverride</link>
+                preference. Enter in this field a series of keywords separated
+                by bar (|) with no spaces. For example PG|R|E|EC|Age| will
+                look for PG followed by an age number, R folllowed by an age
+                number, Age followed by an age number, and so on. These values
+                can appear in any MARC field, but Library of Congress
+                recommends the 521$a (Target Audience Note). Whatever field
+                you decide to use you must map the word agerestriction in the
+                biblioitems table to that field in the <link
+                linkend="kohamarcmapping">Koha to MARC Mapping</link>. When
+                cataloging you can enter values like PG 13 or E 10 in the
+                521$a and Koha will then notify circulation librarians that
+                the material may not be recommended for the patron based on
+                their age.<important>
+                    <para>You must map the word agerestriction in the
+                    biblioitems table to the MARC field where this informatino
+                    will appear via the <link linkend="kohamarcmapping">Koha
+                    to MARC Mapping</link> administration area.</para>
+                  </important></para>
+              </listitem>
+            </itemizedlist>
+          </section>
+
+          <section id="AgeRestrictionOverride">
+            <title>AgeRestrictionOverride</title>
+
+            <para>Default: Don't allow</para>
+
+            <para>Asks: ___ staff to check out an item with age
+            restriction.</para>
+
+            <para>Values:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+
+                <screenshot>
+                  <screeninfo>Allow age restriction override</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AgeRestrictionOverride.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+
+              <listitem>
+                <para>Don't allow</para>
+
+                <screenshot>
+                  <screeninfo>Don't allow age restriction
+                  override</screeninfo>
+
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AgeRestrictionMarker.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist>
+
+            <para>Description:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>When the <link
+                linkend="AgeRestrictionMarker">AgeRestrictionMarker</link>
+                preference is set, Koha will try to warn circulation
+                librarians before checking out an item that might have an age
+                restriction listed in the MARC record. This preference asks if
+                you would like the staff to be able to still check out these
+                items to patrons under the age limit.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
 
           <section id="AllFinesNeedOverride">
             <title>AllFinesNeedOverride</title>
