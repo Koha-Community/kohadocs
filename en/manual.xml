@@ -1793,7 +1793,18 @@
               <listitem>
                 <para>This setting is for libraries wishing to generate
                 barcodes from within Koha (as opposed to scanning in
-                pre-printed barcodes or manually assigning them).</para>
+                pre-printed barcodes or manually assigning them). The default
+                behavior makes it so that when you click in the barcode field
+                (952$p in MARC21) it will populate with the automatic barcode
+                you have chosen. If you would rather it only enter an
+                automatic barcode when you click on the plugin (the ... to the
+                right of the field) you can change the plugin used for that
+                field in the framework. Set the plugin for 952$p (if using
+                MARC21 or equivalent field mapped to items.barcode in your
+                local MARC format) for your frameworks to barcode_manual.pl
+                instead of barcode.pl. Learn more about editing frameworks
+                under the <link linkend="marcbibframeworks">MARC Bibliographic
+                Frameworks</link> section of this manual.</para>
               </listitem>
             </itemizedlist>
           </section>
