@@ -44245,6 +44245,105 @@ no-repeat scroll center top transparent;
       url="http://catalog.farmingtonlibraries.org">Farmington Public Libraries
       OPAC</ulink> has a few examples of this on the left.</para>
     </section>
+
+    <section id="colorsearch">
+      <title>Cataloging and Searching by Color</title>
+
+      <para>One of the icon sets installed in Koha includes a series of
+      colors. This set can be used to catalog and search by color if you'd
+      like. This guide will walk you use changing collection code to color in
+      Koha so that you can do this.</para>
+
+      <para>The following SQL could be used to add these colors to the CCODE
+      authorized value category in a batch. If you wanted to use these colors
+      for another authorized value you'd have to edit this to use that
+      category:</para>
+
+      <programlisting>    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','000000','Black','','colors/000000.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','66cc66','Bright Green','','colors/66cc66.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','99cc33','Olive','','colors/99cc33.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','3333cc','Dark Blue','','colors/3333cc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','006600' ,'Dark Green','','colors/006600.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','6600cc','Plum','','colors/6600cc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','6666cc','Purple','','colors/6666cc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','9999cc','Light Purple','','colors/9999cc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','660000' ,'Burgundy','','colors/660000.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','663333' ,'Brown','','colors/663333.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','990000' ,'Red','','colors/990000.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','996633' ,'Tan','','colors/996633.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','999999' ,'Gray','','colors/999999.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','cc66cc','Pink','','colors/cc66cc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','cc99cc','Bubble Gum','','colors/cc99cc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','cc3333' ,'Orange','','colors/cc3333.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','cc6666' ,'Peach','','colors/cc6666.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','cc9999' ,'Rose','','colors/cc9999.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','cccc00' ,'Gold','','colors/cccc00.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','ffff33' ,'Yellow','','colors/ffff33.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','ffffcc','Cream','','colors/ffffcc.png');
+    insert into authorised_values (category, authorised_value, lib,
+     lib_opac, imageurl) values ('CCODE','ffffff','White','','colors/ffffff.png');</programlisting>
+
+      <para>If you would like to choose the colors manually you can do that
+      via the <link linkend="authorizedvalues">Authorized Values</link>
+      administration area.</para>
+
+      <screenshot>
+        <screeninfo>Colors for CCODE</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/appendix-extending/colorccode.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>Next you'll want to <link linkend="marcbibframeworks">update the
+      frameworks</link> so that the 952$8 (if you're using collection code)
+      label to says Color.</para>
+
+      <para>Once you have that in place you can start to catalog items by
+      color.</para>
+
+      <para>Finally you'll want to add the following JQuery to your
+      preferences so that it will relabel 'Collection' to 'Color'</para>
+
+      <para><link linkend="intranetuserjs">intranetuserjs</link></para>
+
+      <programlisting>$(document).ready(function(){
+    $("#advsearch-tab-ccode a:contains('Collection')").text("Color");
+    $("#holdings th:contains('Collection')").text("Color");
+    });</programlisting>
+
+      <para><link linkend="opacuserjs">opacuserjs</link></para>
+
+      <programlisting>$(document).ready(function(){
+    $("#advsearch-tab-ccode a:contains('Collection')").text("Color");
+    $('#item_ccode').text("Color");
+    });</programlisting>
+
+      <para/>
+    </section>
   </appendix>
 
   <appendix id="siteintegration">
