@@ -23365,7 +23365,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Enter any part of their email address.</para>
+              <para>Enter any part of their email address using % as a
+              wildcard</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -23396,6 +23397,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
           </itemizedlist>
         </listitem>
+
+        <listitem>
+          <para>Street address:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Enter any part of the patron's address (includes all
+              address fields) using % as a wildcard</para>
+            </listitem>
+
+            <listitem>
+              <para>Example: To find Portland, ME you can search for %Port%
+              and it will find the string "Port" anywhere in the address
+              fields</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
       </itemizedlist>
 
       <para>If you want to filter your results to a specific branch or
@@ -23408,6 +23426,19 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <mediaobject>
           <imageobject>
             <imagedata fileref="images/patrons/patronfilter.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+
+      <para>You can also choose how your results will be sorted by using the
+      'Order by' pull down menu at the end of the form.</para>
+
+      <screenshot>
+        <screeninfo>Patron search sort</screeninfo>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/patrons/patronsearchsort.png"/>
           </imageobject>
         </mediaobject>
       </screenshot>
