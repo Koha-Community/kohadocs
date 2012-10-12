@@ -2036,6 +2036,43 @@
             location of ___ (should be a location code, or blank to
             disable).</para>
           </section>
+          <section id="PrefillItem">
+            <title>PrefillItem</title>
+            <para>Default: the new item is not prefilled with last created item values.</para>
+            <para>Asks: When a new item is added ___</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>the new item is not prefilled with last created item values.</para>
+                </listitem>
+                <listitem>
+                  <para>the new item is prefilled with last created item values.</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference controls the behavior used when adding new items.  Using the
+                    options here you can choose to have your next new item prefill with the values
+                    used in the last item was added to save time typing values or to have the item
+                    form appear completely blank. Using <link linkend="SubfieldsToUseWhenPrefill"
+                      >SubfieldsToUseWhenPrefill</link> you can control specifically which fields
+                    are prefilled.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="SubfieldsToUseWhenPrefill">
+            <title>SubfieldsToUseWhenPrefill</title>
+            <para>Asks: Define a list of subfields to use when prefilling items ___<important>
+                <para>Separate values with a space.</para>
+              </important></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>When the <link linkend="PrefillItem">PrefillItem</link> preference is set to
+                    prefill item values with those from the last added item, this preference can
+                    control which fields are prefilled (and which are not). Enter a space separated
+                    list of fields that you would like to prefill when adding a new item.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
 
           <section id="z3950NormalizeAuthor">
             <title>z3950NormalizeAuthor &amp; z3950AuthorAuthFields</title>
