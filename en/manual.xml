@@ -19864,18 +19864,28 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The 'Profile name' will appear on the export pull down
-                  list when choosing 'Download' from your cart or list</para>
+                  <para>The 'Profile name' will appear on the export pull down list when choosing
+                    'Download' from your cart or list<screenshot>
+                      <screeninfo>Download List</screeninfo>
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/tools/csvprofiles/downloadcsv.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot></para>
                 </listitem>
 
                 <listitem>
-                  <para>The 'Profile description' is for your own
-                  benefit</para>
+                  <para>The 'Profile description' is for your own benefit, but will also appear in
+                    the OPAC when patrons download content, so make sure it's clear to your patrons
+                    as well</para>
                 </listitem>
 
                 <listitem>
-                  <para>The 'CSV separator' is the character used to separate
-                  values and value groups</para>
+                  <para>The 'CSV separator' is the character used to separate values and value groups<tip>
+                      <para>The most common option here is comma because most spreadsheet
+                        applications know how to open files split by commas.</para>
+                    </tip></para>
                 </listitem>
 
                 <listitem>
@@ -19884,7 +19894,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                   <itemizedlist>
                     <listitem>
-                      <para>Example: You may have multiple 650 fields</para>
+                      <para>Example: You may have multiple 650 fields and this is the character that
+                        will appear in between each one in the column<screenshot>
+                          <screeninfo>Field separators in between multiple subjects</screeninfo>
+                          <mediaobject>
+                            <imageobject>
+                              <imagedata fileref="images/tools/csvprofiles/csvfieldsep.png"/>
+                            </imageobject>
+                          </mediaobject>
+                        </screenshot></para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -19919,15 +19937,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
                     <listitem>
                       <tip>
-                        <para>You can also use your own headers (instead of
-                        the ones from Koha) by prefixing the field number with
-                        an header, followed by the equal sign. Example :
-                        Personal name=200|Entry element=210$a|300|009</para>
+                        <para>You can also use your own headers (instead of the ones from Koha) by
+                          prefixing the field number with an header, followed by the equal sign.
+                          Example : Personal name=100|title=245$a|300</para>
                       </tip>
                     </listitem>
                   </itemizedlist>
                 </listitem>
               </itemizedlist>
+              <para>When you have entered in all of the information for you profile, simply click
+                'Submit' and you will be presented with a confirmation that your profile has been saved.<screenshot>
+                  <screeninfo>Confirmation of new CSV profile</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/csvprofiles/csvadded.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
             </listitem>
           </itemizedlist>
         </section>
@@ -19950,8 +19976,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>Choose the profile you would like to edit and alter the
-              necessary fields.</para>
+              <para>Choose the profile you would like to edit and alter the necessary fields.</para>
+            </listitem>
+            <listitem>
+              <para>After submitting your changes you will be presented with a confirmation message
+                at the top of the screen<screenshot>
+                  <screeninfo>Confirmation of CSV modification</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/csvprofiles/csvmodified.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
             </listitem>
 
             <listitem>
@@ -19974,11 +20010,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <section id="usecsvprofiles">
           <title>Using CSV Profiles</title>
 
-          <para>Your CSV Profiles will appear on the export list or cart menu
-          under the 'Download' button</para>
+          <para>Your CSV Profiles will appear on the export list or cart menu under the 'Download'
+            button in both the staff client and the OPAC</para>
 
           <screenshot>
-            <screeninfo>CSV Profiles on Download Menu</screeninfo>
+            <screeninfo>CSV Profiles on Download Menu in the Staff Client</screeninfo>
 
             <mediaobject>
               <imageobject>
