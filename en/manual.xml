@@ -13972,6 +13972,656 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </itemizedlist>
         </section>
       </section>
+      <section id="circfinerules">
+        <title>Circulation and Fine Rules</title>
+        <para>These rules define how your items are circulated, how/when fines are calculated and
+          how holds are handled.</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration &gt; Patrons &amp;
+              Circulation &gt; Circulation and fines rules</para>
+          </listitem>
+        </itemizedlist>
+        <para>The rules are applied from most specific to less specific, using the first found in
+          this order:</para>
+        <itemizedlist>
+          <listitem>
+            <para>same library, same patron type, same item type</para>
+          </listitem>
+          <listitem>
+            <para>same library, same patron type, all item type</para>
+          </listitem>
+          <listitem>
+            <para>same library, all patron types, same item type</para>
+          </listitem>
+          <listitem>
+            <para>same library, all patron types, all item types</para>
+          </listitem>
+          <listitem>
+            <para>all libraries, same patron type, same item type</para>
+          </listitem>
+          <listitem>
+            <para>all libraries, same patron type, all item types</para>
+          </listitem>
+          <listitem>
+            <para>all libraries, all patron types, same item type</para>
+          </listitem>
+          <listitem>
+            <para>all libraries, all patron types, all item types</para>
+          </listitem>
+        </itemizedlist>
+        <tip>
+          <para>If you are a single library system choose your branch name before creating rules
+            (sometimes having only rules for the 'all libraries' option can cause issues with
+            holds)</para>
+        </tip>
+        <para>
+          <important>
+            <para>At the very least you will need to set a default circulation rule. This rule
+              should be set for all item types, all libraries and all patron categories. That will
+              catch all instances that do not match a specific rule. When checking out if you do not
+              have a rule for all libraries, all item types and all patron types then you may see
+              patrons getting blocked from placing holds. You will also want a rule for your
+              specific library set for all item types and all patron types to avoid this holds
+              issue. Koha needs to know what rule to fall back on.</para>
+          </important>
+        </para>
+        <section id="defaultcircrules">
+          <title>Default Circulation Rules</title>
+          <para>Using the issuing rules matrix you can define rules that depend on patron/item type
+            combos. To set your rules, choose a library from the pull down (or 'all libraries' if
+            you want to apply these rules to all branches):</para>
+          <screenshot>
+            <screeninfo>Libraries to apply the rules to</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/selectissuinglibrary.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>From the matrix you can choose any combination of patron categories and item types
+            to apply the rules to</para>
+          <screenshot>
+            <screeninfo>Setting issuing rules for your libraries</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/addcircrule.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <itemizedlist>
+            <listitem>
+              <para>First choose which patron category you'd like the rule to be applied to. If you
+                leave this to 'All' it will apply to all patron categories</para>
+            </listitem>
+            <listitem>
+              <para>Choose the 'Item Type' you would like this rule to apply to. If you leave this
+                to 'All' it will apply to all item types</para>
+            </listitem>
+            <listitem>
+              <para>Limit the number of items a patron can have checked out at the same time by
+                entering a number in the 'Current Checkouts Allowed' field</para>
+            </listitem>
+            <listitem>
+              <para>Define the period of time an item can be checked out to a patron by entering the
+                number of units (days or hours) in the 'Loan Period' box.</para>
+            </listitem>
+            <listitem>
+              <para>Choose which unit of time, Days or Hours, that the loan period and fines will be
+                calculate in</para>
+            </listitem>
+            <listitem>
+              <para>You can also define a hard due date for a specific patron category and item
+                type. A hard due date ignores your usual circulation rules and makes it so that all
+                items of the type defined are due on, before or after the date you specify.</para>
+            </listitem>
+            <listitem>
+              <para>'Fine Amount' should have the amount you would like to charge for overdue
+                items</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>Enter only numbers and decimal points (no currency symbols).</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Enter the 'Fine Charging Interval' in the unit you set (ex. charge fines every 1
+                day, or every 2 hours)</para>
+            </listitem>
+            <listitem>
+              <para>The 'Fine Grace Period' is the period of time an item can be overdue before you
+                start charging fines.</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This can only be set for the Day unit, not in Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The 'Overdue Fines Cap' is the maximum fine for this patron and item
+                combination</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If this field is left blank then Koha will not put a limit on the fines
+                      this item will accrue. A maximum fine amount can be set using the <link
+                        linkend="MaxFine">MaxFine</link> system preference.</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>If your library 'fines' patrons by suspending their account you can enter the
+                number of days their fine should be suspended in the 'Suspension in Days'
+                field</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This can only be set for the Day unit, not in Hours</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Next decide if the patron can renew this item type and if so, enter how many
+                times they can renew it in the 'Renewals Allowed' box</para>
+            </listitem>
+            <listitem>
+              <para>If the patron can place holds on this item type, enter the total numbers of
+                items (of this type) that can be put on hold in the 'Holds Allowed' field</para>
+            </listitem>
+            <listitem>
+              <para>Finally, if you charge a <link linkend="rentalcharge">rental fee</link> for the
+                item type and want to give a specific patron type a discount on that fee, enter the
+                percentage discount (without the % symbol) in the 'Rental Discount' field</para>
+            </listitem>
+          </itemizedlist>
+          <para>When finished, click 'Add' to save your changes. To modify a rule, create a new one
+            with the same patron type and item type. If you would like to delete your rule, simply
+            click the 'Delete' link to the right of the rule.</para>
+          <para>To save time you can clone rules from one library to another by choosing the clone
+            option above the rules matrix.</para>
+          <screenshot>
+            <screeninfo>Circulation &amp; Fine Rules Clone Tool</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/clonerules.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>After choosing to clone you will be presented with a confirmation message.</para>
+          <screenshot>
+            <screeninfo>Circulation &amp; Fine Rules Successfully Cloned Message</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/rulescloned.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+        <section id="defaultcheckoutpolicy">
+          <title>Default Checkouts and Hold Policy</title>
+          <para>You can set a default maximum number of checkouts and hold policy that will be used
+            if none is defined below for a particular item type or category.</para>
+          <screenshot>
+            <screeninfo>Default Checkouts and Hold Policy</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/defaultcheckholds.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>From this menu you can set a default to apply to all item types and patrons in the
+            library.</para>
+          <itemizedlist>
+            <listitem>
+              <para>In 'Total Current Checkouts Allowed' enter the total number of items patrons can
+                have checked out at one time</para>
+            </listitem>
+            <listitem>
+              <para>Control where patrons can place holds from using the 'Hold Policy' menu</para>
+              <itemizedlist>
+                <listitem>
+                  <para>From Any Library: Patrons from any library may put this item on hold.
+                    (default if none is defined)</para>
+                </listitem>
+                <listitem>
+                  <para>From Home Library: Only patrons from the item's home library may put this
+                    book on hold.</para>
+                </listitem>
+                <listitem>
+                  <para>No Holds Allowed: No patron may put this book on hold.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Control where the item returns to once it is checked in</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Item returns home</para>
+                </listitem>
+                <listitem>
+                  <para>Item returns to issuing branch</para>
+                </listitem>
+                <listitem>
+                  <para>Item floats</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>When an item floats it stays where it was checked in and does not ever
+                        return 'home'</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Once your policy is set, you can unset it by clicking the 'Unset' link to the
+                right of the rule</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section id="checkoutperpatron">
+          <title>Checkouts Per Patron</title>
+          <para>For this library, you can specify the maximum number of loans that a patron of a
+            given category can make, regardless of the item type.</para>
+          <screenshot>
+            <screeninfo>Set default checkouts per patron category</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/checkoutsperpatron.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <tip>
+            <para>If the total amount loanable for a given patron category is left blank, no limit
+              applies, except possibly for a limit you define for a specific item type.</para>
+          </tip>
+        </section>
+        <section id="holdpolicies">
+          <title>Item Hold Policies</title>
+          <para>For this library, you can edit rules for given itemtypes, regardless of the patron's
+            category. Currently, this means hold policies.</para>
+          <screenshot>
+            <screeninfo>Hold policies per item type</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/holdsperitem.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>The various Hold Policies have the following effects:</para>
+          <itemizedlist>
+            <listitem>
+              <para>From Any Library: Patrons from any library may put this item on hold. (default
+                if none is defined)</para>
+            </listitem>
+            <listitem>
+              <para>From Home Library: Only patrons from the item's home library may put this book
+                on hold.</para>
+            </listitem>
+            <listitem>
+              <para>No Holds Allowed: No patron may put this book on hold.</para>
+            </listitem>
+          </itemizedlist>
+          <important>
+            <para>Note that if the system preference <link linkend="AllowHoldPolicyOverride"
+                >AllowHoldPolicyOverride</link> set to 'allow', these policies can be overridden by
+              your circulation staff.</para>
+          </important>
+          <important>
+            <para>These policies are based on the patron's home branch, not the branch that the
+              reserving staff member is from.</para>
+          </important>
+          <para>The various Return Policies have the following effects:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Item returns home: The item will prompt the librarian to transfer the item to
+                its home library</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If the <link linkend="AutomaticItemReturn">AutomaticItemReturn</link>
+                      preference is set to automatically transfer the items home, then a prompt will
+                      not appear</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Item returns to issuing branch: The item will prompt the librarian to transfer
+                the item back to the library where it was checked out</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>If the <link linkend="AutomaticItemReturn">AutomaticItemReturn</link>
+                      preference is set to automatically transfer the items home, then a prompt will
+                      not appear</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Item floats: The item will not be transferred from the branch it was checked in
+                at, instead it will remain there until transferred manually or checked in at another
+                branch</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+      <section id="patronattributetypes">
+        <title>Patron Attribute Types</title>
+        <para>Patron attributes can be used to define custom fields to associate with your patron
+          records. In order to enable the use of custom fields you need to set the <link
+            linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link> system
+          preference.</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration &gt; Patrons &amp;
+              Circulation &gt; Patron attribute types</para>
+          </listitem>
+        </itemizedlist>
+        <para>A common use for this field would be for a student ID number or a Driver's license
+          number.</para>
+        <screenshot>
+          <screeninfo>List of Patron Attributes</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/attributes.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <section id="addpatattributes">
+          <title>Adding Patron Attributes</title>
+          <para>To add a new Patron Attribute Type, click the 'New Patron Attribute Type' button at
+            the top of the page</para>
+          <screenshot>
+            <screeninfo>Add Patron Attribute Type form</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/addattribute.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <itemizedlist>
+            <listitem>
+              <para>In the 'Patron attribute type code', enter a short code to identify this
+                field</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This field is limited to 10 characters (numbers and letters only)</para>
+                  </important>
+                </listitem>
+                <listitem>
+                  <important>
+                    <para>This setting cannot be changed after an attribute is defined</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>In the 'Description' field, enter a longer (plain text) explanation of what this
+                field will contain</para>
+            </listitem>
+            <listitem>
+              <para>Check the box next to 'Repeatable' to let a patron record have multiple values
+                of this attribute.</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This setting cannot be changed after an attribute is defined</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>If 'Unique identifier' is checked, the attribute will be a unique identifier
+                which means, if a value is given to a patron record, the same value cannot be given
+                to a different record.</para>
+              <itemizedlist>
+                <listitem>
+                  <important>
+                    <para>This setting cannot be changed after an attribute is defined</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Check 'Allow password' to make it possible to associate a password with this
+                attribute.</para>
+            </listitem>
+            <listitem>
+              <para>Check 'Display in OPAC' to display this attribute on a patron's details page in
+                the OPAC.</para>
+            </listitem>
+            <listitem>
+              <para>Check 'Searchable' to make this attribute searchable in the staff patron
+                search.</para>
+            </listitem>
+            <listitem>
+              <para>Check 'Display in check-out' to make this attribute visible in the patron's
+                short detail display on the left of the checkout screen and other patron
+                pages</para>
+              <screenshot>
+                <screeninfo>Show attribute in patron detail on the left</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/patroncirc/showattribute.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+            <listitem>
+              <para>Authorized value category; if one is selected, the patron record input page will
+                only allow values to be chosen from the authorized value list.</para>
+              <itemizedlist>
+                <listitem>
+                  <para>You will first need to add an authorized value list for it to appear in this
+                    menu</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para><emphasis>Get there: </emphasis>More &gt; Administration &gt; Basic
+                        Parameters &gt; <link linkend="authorizedvalues">Authorized
+                        Values</link></para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <important>
+                    <para>an authorized value list is not enforced during batch patron
+                      import.</para>
+                  </important>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>If you'd like to only show this attribute on patrons of one type choose that
+                patron type from the 'Category' pull down</para>
+            </listitem>
+            <listitem>
+              <para>If you have a lot of attributes it might be handy to group them so that you can
+                easily find them for editing. If you create an <link linkend="authorizedvalues"
+                  >Authorized Value</link> for PA_CLASS it will show in the 'Class' pull down and
+                you can then change your attributes page to have sections of attributes</para>
+              <screenshot>
+                <screeninfo>Patron Attributes Sorted</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/patroncirc/pa_class.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </listitem>
+            <listitem>
+              <para>Click Save to save your new attribute</para>
+            </listitem>
+          </itemizedlist>
+          <para>Once added your attribute will appear on the list of attributes and also on the
+            patron record add/edit form</para>
+          <screenshot>
+            <screeninfo>Patron Attributes list on the Patron add/edit form</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/patronattribute.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>If you have set up classes for organizing attributes they will appear that way on
+            the add/edit patron form</para>
+          <screenshot>
+            <screeninfo>Grouped Attributes</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/pa_class-patron.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+        <section id="editpatattributes">
+          <title>Editing/Deleting Patron Attributes</title>
+          <para>Each patron attribute has an edit and a delete link beside it on the list of
+            attributes.</para>
+          <para>Some fields in the attribute will not be editable once created:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Patron attribute type code</para>
+            </listitem>
+            <listitem>
+              <para>Repeatable</para>
+            </listitem>
+            <listitem>
+              <para>Unique identifier</para>
+            </listitem>
+          </itemizedlist>
+          <para>You will be unable to delete an attribute if it's in use.</para>
+          <screenshot>
+            <screeninfo>Warning when trying to delete an attribute that is in use</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/deletepatronattr.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+      </section>
+      <section id="libtransferlimits">
+        <title>Library Transfer Limits</title>
+        <para>Limit the ability to transfer items between libraries based on the library sending,
+          the library receiving, and the collection code involved.</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration &gt; Patrons &amp;
+              Circulation &gt; Library Transfer Limits</para>
+          </listitem>
+        </itemizedlist>
+        <para>These rules only go into effect if the preference <link
+            linkend="UseBranchTransferLimits">UseBranchTransferLimits</link> is set to
+          'enforce'.</para>
+        <para>Before you begin you will want to choose which library you are setting these limits
+          for.</para>
+        <screenshot>
+          <screeninfo>Choose the library you're setting limits for</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/librarytransferselect.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Transfer limits are set based on the collections codes you have applied via the <link
+            linkend="authorizedvalues">Authorized Value</link> administration area.</para>
+        <screenshot>
+          <screeninfo>Collection Code values assigned in the Authorized Value area</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/collectcodes.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Collection codes will appear as tabs above the checkboxes:</para>
+        <screenshot>
+          <screeninfo>Collection Code tabs</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/limittocollcode.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Check the boxes for the libraries that you accept checkins from for the item type you
+          have selected at the top (in the example below - FIC)</para>
+        <screenshot>
+          <screeninfo>Example transfer limits set up</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/admin/patroncirc/transferlimits.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>In the above example, Centerville library will allow patrons to return items from all
+          libraries except Liberty and Franklin to their branch.</para>
+      </section>
+      <section id="transportcostmatrix">
+        <title>Transport cost matrix</title>
+        <para>The Transport cost matric lets a library system define relative costs to transport
+          books to one another. </para>
+      </section>
+      <section id="itemcircalerts">
+        <title>Item Circulation Alerts</title>
+        <para>Libraries can decide if they want to have patrons automatically notified of
+          circulation events (check ins and check outs).</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration &gt; Patrons &amp;
+              Circulation &gt; Item Circulation Alerts</para>
+          </listitem>
+        </itemizedlist>
+        <para>These preferences are set based on patron types and item types.</para>
+        <important>
+          <para>These preference can be overridden by changes in the individual patron's messaging
+            preferences.</para>
+        </important>
+        <para>To set up circulation alerts:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Choose your library from the pull down at the top of the screen</para>
+            <screenshot>
+              <screeninfo>Libraries to set Circulation Alerts</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/patroncirc/librariesforalert.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <itemizedlist>
+              <listitem>
+                <para>To set preferences for all libraries, keep the menu set to 'Default'</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>By default all item types and all patrons are notified of check ins and check
+              outs. To change this, click on the item/patron type combo that you would like to stop
+              notices for.</para>
+            <screenshot>
+              <screeninfo>Circulation Alert Matrix</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/patroncirc/alertmatrix.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <itemizedlist>
+              <listitem>
+                <para>In the above example, Juveniles and Kids will not receive check out
+                  notices.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
 
       <section id="citytowns">
         <title>Cities and Towns</title>
@@ -14105,869 +14755,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
         </section>
-      </section>
-
-      <section id="patronattributetypes">
-        <title>Patron Attribute Types</title>
-
-        <para>Patron attributes can be used to define custom fields to
-        associate with your patron records. In order to enable the use of
-        custom fields you need to set the <link
-        linkend="ExtendedPatronAttributes">ExtendedPatronAttributes</link>
-        system preference.</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Patron attribute types</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>A common use for this field would be for a student ID number or
-        a Driver's license number.</para>
-
-        <screenshot>
-          <screeninfo>List of Patron Attributes</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/patroncirc/attributes.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <section id="addpatattributes">
-          <title>Adding Patron Attributes</title>
-
-          <para>To add a new Patron Attribute Type, click the 'New Patron
-          Attribute Type' button at the top of the page</para>
-
-          <screenshot>
-            <screeninfo>Add Patron Attribute Type form</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/addattribute.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <itemizedlist>
-            <listitem>
-              <para>In the 'Patron attribute type code', enter a short code to
-              identify this field</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>This field is limited to 10 characters (numbers and
-                    letters only)</para>
-                  </important>
-                </listitem>
-
-                <listitem>
-                  <important>
-                    <para>This setting cannot be changed after an attribute is
-                    defined</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>In the 'Description' field, enter a longer (plain text)
-              explanation of what this field will contain</para>
-            </listitem>
-
-            <listitem>
-              <para>Check the box next to 'Repeatable' to let a patron record
-              have multiple values of this attribute.</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>This setting cannot be changed after an attribute is
-                    defined</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>If 'Unique identifier' is checked, the attribute will be a
-              unique identifier which means, if a value is given to a patron
-              record, the same value cannot be given to a different
-              record.</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>This setting cannot be changed after an attribute is
-                    defined</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Check 'Allow password' to make it possible to associate a
-              password with this attribute.</para>
-            </listitem>
-
-            <listitem>
-              <para>Check 'Display in OPAC' to display this attribute on a
-              patron's details page in the OPAC.</para>
-            </listitem>
-
-            <listitem>
-              <para>Check 'Searchable' to make this attribute searchable in
-              the staff patron search.</para>
-            </listitem>
-
-            <listitem>
-              <para>Check 'Display in check-out' to make this attribute
-              visible in the patron's short detail display on the left of the
-              checkout screen and other patron pages</para>
-
-              <screenshot>
-                <screeninfo>Show attribute in patron detail on the
-                left</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/patroncirc/showattribute.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </listitem>
-
-            <listitem>
-              <para>Authorized value category; if one is selected, the patron
-              record input page will only allow values to be chosen from the
-              authorized value list.</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>You will first need to add an authorized value list
-                  for it to appear in this menu</para>
-
-                  <itemizedlist>
-                    <listitem>
-                      <para><emphasis>Get there: </emphasis>More &gt;
-                      Administration &gt; Basic Parameters &gt; <link
-                      linkend="authorizedvalues">Authorized
-                      Values</link></para>
-                    </listitem>
-                  </itemizedlist>
-                </listitem>
-
-                <listitem>
-                  <important>
-                    <para>an authorized value list is not enforced during
-                    batch patron import.</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>If you'd like to only show this attribute on patrons of
-              one type choose that patron type from the 'Category' pull
-              down</para>
-            </listitem>
-
-            <listitem>
-              <para>If you have a lot of attributes it might be handy to group
-              them so that you can easily find them for editing. If you create
-              an <link linkend="authorizedvalues">Authorized Value</link> for
-              PA_CLASS it will show in the 'Class' pull down and you can then
-              change your attributes page to have sections of
-              attributes</para>
-
-              <screenshot>
-                <screeninfo>Patron Attributes Sorted</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/patroncirc/pa_class.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </listitem>
-
-            <listitem>
-              <para>Click Save to save your new attribute</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Once added your attribute will appear on the list of
-          attributes and also on the patron record add/edit form</para>
-
-          <screenshot>
-            <screeninfo>Patron Attributes list on the Patron add/edit
-            form</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/patronattribute.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>If you have set up classes for organizing attributes they will
-          appear that way on the add/edit patron form</para>
-
-          <screenshot>
-            <screeninfo>Grouped Attributes</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/pa_class-patron.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
-
-        <section id="editpatattributes">
-          <title>Editing/Deleting Patron Attributes</title>
-
-          <para>Each patron attribute has an edit and a delete link beside it
-          on the list of attributes.</para>
-
-          <para>Some fields in the attribute will not be editable once
-          created:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Patron attribute type code</para>
-            </listitem>
-
-            <listitem>
-              <para>Repeatable</para>
-            </listitem>
-
-            <listitem>
-              <para>Unique identifier</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>You will be unable to delete an attribute if it's in
-          use.</para>
-
-          <screenshot>
-            <screeninfo>Warning when trying to delete an attribute that is in
-            use</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/deletepatronattr.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
-      </section>
-
-      <section id="circfinerules">
-        <title>Circulation and Fine Rules</title>
-
-        <para>These rules define how your items are circulated, how/when fines
-        are calculated and how holds are handled.</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Circulation and fines
-            rules</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>The rules are applied from most specific to less specific, using
-        the first found in this order:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para>same library, same patron type, same item type</para>
-          </listitem>
-
-          <listitem>
-            <para>same library, same patron type, all item type</para>
-          </listitem>
-
-          <listitem>
-            <para>same library, all patron types, same item type</para>
-          </listitem>
-
-          <listitem>
-            <para>same library, all patron types, all item types</para>
-          </listitem>
-
-          <listitem>
-            <para>all libraries, same patron type, same item type</para>
-          </listitem>
-
-          <listitem>
-            <para>all libraries, same patron type, all item types</para>
-          </listitem>
-
-          <listitem>
-            <para>all libraries, all patron types, same item type</para>
-          </listitem>
-
-          <listitem>
-            <para>all libraries, all patron types, all item types</para>
-          </listitem>
-        </itemizedlist>
-
-        <tip>
-          <para>If you are a single library system choose your branch name
-          before creating rules (sometimes having only rules for the 'all
-          libraries' option can cause issues with holds)</para>
-        </tip>
-
-        <para><important>
-            <para>At the very least you will need to set a default circulation
-            rule. This rule should be set for all item types, all libraries
-            and all patron categories. That will catch all instances that do
-            not match a specific rule. When checking out if you do not have a
-            rule for all libraries, all item types and all patron types then
-            you may see patrons getting blocked from placing holds. You will
-            also want a rule for your specific library set for all item types
-            and all patron types to avoid this holds issue. Koha needs to know
-            what rule to fall back on.</para>
-          </important></para>
-
-        <section id="defaultcircrules">
-          <title>Default Circulation Rules</title>
-
-          <para>Using the issuing rules matrix you can define rules that
-          depend on patron/item type combos. To set your rules, choose a
-          library from the pull down (or 'all libraries' if you want to apply
-          these rules to all branches):</para>
-
-          <screenshot>
-            <screeninfo>Libraries to apply the rules to</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/selectissuinglibrary.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>From the matrix you can choose any combination of patron
-          categories and item types to apply the rules to</para>
-
-          <screenshot>
-            <screeninfo>Setting issuing rules for your libraries</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/addcircrule.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <itemizedlist>
-            <listitem>
-              <para>First choose which patron category you'd like the rule to
-              be applied to. If you leave this to 'All' it will apply to all
-              patron categories</para>
-            </listitem>
-
-            <listitem>
-              <para>Choose the 'Item Type' you would like this rule to apply
-              to. If you leave this to 'All' it will apply to all item
-              types</para>
-            </listitem>
-
-            <listitem>
-              <para>Limit the number of items a patron can have checked out at
-              the same time by entering a number in the 'Current Checkouts
-              Allowed' field</para>
-            </listitem>
-
-            <listitem>
-              <para>Define the period of time an item can be checked out to a
-              patron by entering the number of units (days or hours) in the
-              'Loan Period' box.</para>
-            </listitem>
-
-            <listitem>
-              <para>Choose which unit of time, Days or Hours, that the loan
-              period and fines will be calculate in</para>
-            </listitem>
-
-            <listitem>
-              <para>You can also define a hard due date for a specific patron
-              category and item type. A hard due date ignores your usual
-              circulation rules and makes it so that all items of the type
-              defined are due on, before or after the date you specify.</para>
-            </listitem>
-
-            <listitem>
-              <para>'Fine Amount' should have the amount you would like to
-              charge for overdue items</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>Enter only numbers and decimal points (no currency
-                    symbols).</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Enter the 'Fine Charging Interval' in the unit you set
-              (ex. charge fines every 1 day, or every 2 hours)</para>
-            </listitem>
-
-            <listitem>
-              <para>The 'Fine Grace Period' is the period of time an item can
-              be overdue before you start charging fines.</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>This can only be set for the Day unit, not in
-                    Hours</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>The 'Overdue Fines Cap' is the maximum fine for this
-              patron and item combination</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>If this field is left blank then Koha will not put a
-                    limit on the fines this item will accrue. A maximum fine
-                    amount can be set using the <link
-                    linkend="MaxFine">MaxFine</link> system preference.</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>If your library 'fines' patrons by suspending their
-              account you can enter the number of days their fine should be
-              suspended in the 'Suspension in Days' field</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>This can only be set for the Day unit, not in
-                    Hours</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Next decide if the patron can renew this item type and if
-              so, enter how many times they can renew it in the 'Renewals
-              Allowed' box</para>
-            </listitem>
-
-            <listitem>
-              <para>If the patron can place holds on this item type, enter the
-              total numbers of items (of this type) that can be put on hold in
-              the 'Holds Allowed' field</para>
-            </listitem>
-
-            <listitem>
-              <para>Finally, if you charge a <link
-              linkend="rentalcharge">rental fee</link> for the item type and
-              want to give a specific patron type a discount on that fee,
-              enter the percentage discount (without the % symbol) in the
-              'Rental Discount' field</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>When finished, click 'Add' to save your changes. To modify a
-          rule, create a new one with the same patron type and item type. If
-          you would like to delete your rule, simply click the 'Delete' link
-          to the right of the rule.</para>
-
-          <para>To save time you can clone rules from one library to another
-          by choosing the clone option above the rules matrix.</para>
-
-          <screenshot>
-            <screeninfo>Circulation &amp; Fine Rules Clone Tool</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/clonerules.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>After choosing to clone you will be presented with a
-          confirmation message.</para>
-
-          <screenshot>
-            <screeninfo>Circulation &amp; Fine Rules Successfully Cloned
-            Message</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/rulescloned.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
-
-        <section id="defaultcheckoutpolicy">
-          <title>Default Checkouts and Hold Policy</title>
-
-          <para>You can set a default maximum number of checkouts and hold
-          policy that will be used if none is defined below for a particular
-          item type or category.</para>
-
-          <screenshot>
-            <screeninfo>Default Checkouts and Hold Policy</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/defaultcheckholds.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>From this menu you can set a default to apply to all item
-          types and patrons in the library.</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>In 'Total Current Checkouts Allowed' enter the total
-              number of items patrons can have checked out at one time</para>
-            </listitem>
-
-            <listitem>
-              <para>Control where patrons can place holds from using the 'Hold
-              Policy' menu</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>From Any Library: Patrons from any library may put
-                  this item on hold. (default if none is defined)</para>
-                </listitem>
-
-                <listitem>
-                  <para>From Home Library: Only patrons from the item's home
-                  library may put this book on hold.</para>
-                </listitem>
-
-                <listitem>
-                  <para>No Holds Allowed: No patron may put this book on
-                  hold.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Control where the item returns to once it is checked
-              in</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>Item returns home</para>
-                </listitem>
-
-                <listitem>
-                  <para>Item returns to issuing branch</para>
-                </listitem>
-
-                <listitem>
-                  <para>Item floats</para>
-
-                  <itemizedlist>
-                    <listitem>
-                      <para>When an item floats it stays where it was checked
-                      in and does not ever return 'home'</para>
-                    </listitem>
-                  </itemizedlist>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Once your policy is set, you can unset it by clicking the
-              'Unset' link to the right of the rule</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="checkoutperpatron">
-          <title>Checkouts Per Patron</title>
-
-          <para>For this library, you can specify the maximum number of loans
-          that a patron of a given category can make, regardless of the item
-          type.</para>
-
-          <screenshot>
-            <screeninfo>Set default checkouts per patron category</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/checkoutsperpatron.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <tip>
-            <para>If the total amount loanable for a given patron category is
-            left blank, no limit applies, except possibly for a limit you
-            define for a specific item type.</para>
-          </tip>
-        </section>
-
-        <section id="holdpolicies">
-          <title>Item Hold Policies</title>
-
-          <para>For this library, you can edit rules for given itemtypes,
-          regardless of the patron's category. Currently, this means hold
-          policies.</para>
-
-          <screenshot>
-            <screeninfo>Hold policies per item type</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/holdsperitem.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>The various Hold Policies have the following effects:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>From Any Library: Patrons from any library may put this
-              item on hold. (default if none is defined)</para>
-            </listitem>
-
-            <listitem>
-              <para>From Home Library: Only patrons from the item's home
-              library may put this book on hold.</para>
-            </listitem>
-
-            <listitem>
-              <para>No Holds Allowed: No patron may put this book on
-              hold.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Note that if the system preference <link
-            linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
-            set to 'allow', these policies can be overridden by your
-            circulation staff.</para>
-          </important>
-
-          <important>
-            <para>These policies are based on the patron's home branch, not
-            the branch that the reserving staff member is from.</para>
-          </important>
-
-          <para>The various Return Policies have the following effects:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Item returns home: The item will prompt the librarian to
-              transfer the item to its home library</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>If the <link
-                    linkend="AutomaticItemReturn">AutomaticItemReturn</link>
-                    preference is set to automatically transfer the items
-                    home, then a prompt will not appear</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Item returns to issuing branch: The item will prompt the
-              librarian to transfer the item back to the library where it was
-              checked out</para>
-
-              <itemizedlist>
-                <listitem>
-                  <important>
-                    <para>If the <link
-                    linkend="AutomaticItemReturn">AutomaticItemReturn</link>
-                    preference is set to automatically transfer the items
-                    home, then a prompt will not appear</para>
-                  </important>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Item floats: The item will not be transferred from the
-              branch it was checked in at, instead it will remain there until
-              transferred manually or checked in at another branch</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-      </section>
-
-      <section id="libtransferlimits">
-        <title>Library Transfer Limits</title>
-
-        <para>Limit the ability to transfer items between libraries based on
-        the library sending, the library receiving, and the collection code
-        involved.</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Library Transfer Limits</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>These rules only go into effect if the preference <link
-        linkend="UseBranchTransferLimits">UseBranchTransferLimits</link> is
-        set to 'enforce'.</para>
-
-        <para>Before you begin you will want to choose which library you are
-        setting these limits for.</para>
-
-        <screenshot>
-          <screeninfo>Choose the library you're setting limits
-          for</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/patroncirc/librarytransferselect.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Transfer limits are set based on the collections codes you have
-        applied via the <link linkend="authorizedvalues">Authorized
-        Value</link> administration area.</para>
-
-        <screenshot>
-          <screeninfo>Collection Code values assigned in the Authorized Value
-          area</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/patroncirc/collectcodes.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Collection codes will appear as tabs above the
-        checkboxes:</para>
-
-        <screenshot>
-          <screeninfo>Collection Code tabs</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/patroncirc/limittocollcode.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Check the boxes for the libraries that you accept checkins from
-        for the item type you have selected at the top (in the example below -
-        FIC)</para>
-
-        <screenshot>
-          <screeninfo>Example transfer limits set up</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/patroncirc/transferlimits.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>In the above example, Centerville library will allow patrons to
-        return items from all libraries except Liberty and Franklin to their
-        branch.</para>
-      </section>
-
-      <section id="itemcircalerts">
-        <title>Item Circulation Alerts</title>
-
-        <para>Libraries can decide if they want to have patrons automatically
-        notified of circulation events (check ins and check outs).</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Patrons &amp; Circulation &gt; Item Circulation Alerts</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>These preferences are set based on patron types and item
-        types.</para>
-
-        <important>
-          <para>These preference can be overridden by changes in the
-          individual patron's messaging preferences.</para>
-        </important>
-
-        <para>To set up circulation alerts:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para>Choose your library from the pull down at the top of the
-            screen</para>
-
-            <screenshot>
-              <screeninfo>Libraries to set Circulation Alerts</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/admin/patroncirc/librariesforalert.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-
-            <itemizedlist>
-              <listitem>
-                <para>To set preferences for all libraries, keep the menu set
-                to 'Default'</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-
-          <listitem>
-            <para>By default all item types and all patrons are notified of
-            check ins and check outs. To change this, click on the item/patron
-            type combo that you would like to stop notices for.</para>
-
-            <screenshot>
-              <screeninfo>Circulation Alert Matrix</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/admin/patroncirc/alertmatrix.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-
-            <itemizedlist>
-              <listitem>
-                <para>In the above example, Juveniles and Kids will not
-                receive check out notices.</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-        </itemizedlist>
       </section>
     </section>
 
