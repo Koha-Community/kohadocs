@@ -3127,6 +3127,35 @@
             linkend="calholidays">Calendar &amp; Holidays</link>' section of
             this manual.</para>
           </section>
+          <section id="UseTransportCostMatrix">
+            <title>UseTransportCostMatrix</title>
+            <para>Default: Don't use</para>
+            <para>Asks: ___  Transport Cost Matrix for calculating optimal holds filling between
+              branches.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't use</para>
+                </listitem>
+                <listitem>
+                  <para>Use</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>If the system is configured to use the <link linkend="transportcostmatrix"
+                      >Transport cost matrix</link> for filling holds, then when attempting to fill
+                    a hold, the system will search for the lowest cost branch, and attempt to fill
+                    the hold with an item from that branch first. Branches of equal cost will be
+                    selected from randomly. The branch or branches of the next highest cost shall be
+                    selected from only if all the branches in the previous group are unable to fill
+                    the hold.</para>
+                  <para>The system will use the item's current holding branch when determining
+                    whether the item can fulfill a hold using the Transport Cost Matrix. This
+                    behaviour will be overruled if the <link linkend="AutomaticItemReturn"
+                      >AutomaticItemReturn</link> system preference is enabled.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
         </section>
 
         <section id="circfinespolicy">
@@ -14565,8 +14594,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
       <section id="transportcostmatrix">
         <title>Transport cost matrix</title>
-        <para>The Transport cost matric lets a library system define relative costs to transport
-          books to one another. </para>
+        <para>The Transport cost matrix lets a library system define relative costs to transport
+          books to one another.  In order for the system to use this matrix you must first set the
+            <link linkend="UseTransportCostMatrix">UseTransportCostMatrix</link> preference to
+          'Use'.</para>
       </section>
       <section id="itemcircalerts">
         <title>Item Circulation Alerts</title>
