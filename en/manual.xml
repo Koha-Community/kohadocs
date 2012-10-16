@@ -14598,6 +14598,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           books to one another.  In order for the system to use this matrix you must first set the
             <link linkend="UseTransportCostMatrix">UseTransportCostMatrix</link> preference to
           'Use'.</para>
+        <para>Costs are decimal values between some arbitrary maximum value (e.g. 1 or 100) and 0
+          which is the minimum (no) cost. For example, you could just use the distance between each
+          library in miles as your 'cost', if that would accurately reflect the cost of transferring
+          them. Perhaps post offices would be a better measure. Libraries sharing a post office
+          would have a cost of 1, adjacent post offices would have a cost of 2, etc.</para>
+        <para>To enter transport costs simply click in the cell you would like to alter, uncheck the
+          'Disable' box and enter your 'cost'<screenshot>
+            <screeninfo>Transport cost matrix</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/patroncirc/transportcostmatrix.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
       </section>
       <section id="itemcircalerts">
         <title>Item Circulation Alerts</title>
