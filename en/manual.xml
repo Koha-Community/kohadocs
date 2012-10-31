@@ -10792,34 +10792,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <para/>
 
-          <section id="NoZebra">
-            <title>NoZebra</title>
-
-            <para>Default: Use</para>
-
-            <para>Asks: ___ the Zebra search engine. Searches are very slow on
-            even modest sized collections when Zebra is off.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't use</para>
-              </listitem>
-
-              <listitem>
-                <para>Use</para>
-              </listitem>
-            </itemizedlist>
-          </section>
-
-          <section id="NoZebraIndexes">
-            <title>NoZebraIndexes</title>
-
-            <para>Default: See the <link linkend="nozebradefault">Systems
-            Preferences Appendix</link></para>
-          </section>
-
           <section id="OpacGroupResults">
             <title>OpacGroupResults</title>
 
@@ -10922,55 +10894,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </itemizedlist>
 
             <important>
-              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
-              set to 'Use' and <link linkend="UseICU">UseICU</link> set to
-              'Not using'</para>
-            </important>
-          </section>
-
-          <section id="QueryRemoveStopwords">
-            <title>QueryRemoveStopwords</title>
-
-            <para>Default: Don't remove</para>
-
-            <para>Asks: ___ stop words specified in Koha from searches.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Don't remove</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <important>
-                      <para>If <link linkend="NoZebra">NoZebra</link> is set
-                      to 'Use' leave this preference set to 'Don't
-                      remove'</para>
-                    </important>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-
-              <listitem>
-                <para>Remove</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>Requires that you have updated your Koha <link
-                    linkend="stopwordsadmin">Stop Words</link> list</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <important>
-              <para>Requires that NoZebra is set to 'Don't use'</para>
-            </important>
-
-            <important>
-              <para>Zebra, on its own, handles a few of the most common stop
-              words</para>
+              <para>Requires that <link linkend="UseICU">UseICU</link> set to 'Not using'</para>
             </important>
           </section>
 
@@ -11010,11 +10934,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 would be returned).</para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
-              set to 'Use'</para>
-            </important>
           </section>
 
           <section id="QueryWeightFields">
@@ -11035,11 +10954,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>Enable</para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>Requires that <link linkend="NoZebra">NoZebra</link> is
-              set to 'Use'</para>
-            </important>
           </section>
 
           <section id="TraceCompleteSubfields">
@@ -16630,56 +16544,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           Additional Parameters</para>
         </listitem>
       </itemizedlist>
-
-      <section id="stopwordsadmin">
-        <title>Stop Words</title>
-
-        <important>
-          <para>If NoZebra is set to 'Use' this option will not appear on the
-          administration menu</para>
-        </important>
-
-        <para>Stop words are words that you want the search system to
-        ignore.</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="italic">Get there:</emphasis> More &gt; Administration &gt;
-              Additional Parameters &gt; Stop Words</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>Koha comes with a standard list of stop words that can be edited
-        by visiting the Stop Word administration area.</para>
-
-        <screenshot>
-          <screeninfo>Stop word list</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/stopwords.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>To add a new stop word to the list, click the 'New Stop Word'
-        button and add the word you'd like ignored</para>
-
-        <screenshot>
-          <screeninfo>New stop word</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/newstop.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <important>
-          <para>If you change something in this table, ask your administrator
-          to run misc/batchRebuildBiblioTables.pl script.</para>
-        </important>
-      </section>
 
       <section id="z3950admin">
         <title>Z39.50 Servers</title>
@@ -41025,46 +40889,6 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
         {995y}&lt;/td&gt;&lt;td&gt;{995e}  &lt;/td&gt;&lt;td&gt;
         {995o}&lt;/td&gt;&lt;td&gt;{995f}&lt;/td&gt;&lt;/tr&gt;|&lt;/table&gt;</para>
       </section>
-    </section>
-
-    <section id="nozebradefault">
-      <title>NoZebraIndexes Default</title>
-
-      <para>'title' =&gt;
-      '130a,210a,222a,240a,243a,245a,245b,246a,246b,247a,247b,250a,250b,440a,830a',</para>
-
-      <para>'author' =&gt;
-      '100a,100b,100c,100d,110a,111a,111b,111c,111d,245c,700a,710a,711a,800a,810a,811a',</para>
-
-      <para>'isbn' =&gt; '020a',</para>
-
-      <para>'issn' =&gt; '022a',</para>
-
-      <para>'lccn' =&gt; '010a',</para>
-
-      <para>'biblionumber' =&gt; '999c',</para>
-
-      <para>'itemtype' =&gt; '942c',</para>
-
-      <para>'publisher' =&gt; '260b',</para>
-
-      <para>'date' =&gt; '260c',</para>
-
-      <para>'note' =&gt; '500a,
-      501a,504a,505a,508a,511a,518a,520a,521a,522a,524a,526a,530a,533a,538a,541a,546a,555a,556a,562a,563a,583a,585a,582a',</para>
-
-      <para>'subject' =&gt;
-      '600*,610*,611*,630*,650*,651*,653*,654*,655*,662*,690*',</para>
-
-      <para>'dewey' =&gt; '082',</para>
-
-      <para>'bc' =&gt; '952p',</para>
-
-      <para>'callnum' =&gt; '952o',</para>
-
-      <para>'an' =&gt; '6009,6109,6119',</para>
-
-      <para>'homebranch' =&gt; '952a,952c'</para>
     </section>
   </appendix>
 
