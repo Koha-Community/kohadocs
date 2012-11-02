@@ -17994,11 +17994,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         (this means that you keep records of how many times items were checked
         out - but not the patrons who checked the items out) or bulk delete
         patrons (remove them from the system completely).<important>
-            <para>Patrons with outstanding fines or items checked out are not
-            saved. They are not completely removed from the system (moved to
-            the delete_borrowers table), but this tool does not provide as
-            many checks as one may desire.</para>
+            <para>Patrons with outstanding fines or items checked out are not saved. They are not
+              completely removed from the system (they are only moved to the delete_borrowers
+              table), but this tool does not provide as many checks as one may desire.</para>
           </important></para>
+        <important>
+          <para>The anonymization will fail quietly if <link linkend="AnonymousPatron"
+              >AnonymousPatron</link> preference does not contain a valid value.</para>
+        </important>
 
         <screenshot>
           <screeninfo>Patron Anonymize/Bulk Delete Tool</screeninfo>
