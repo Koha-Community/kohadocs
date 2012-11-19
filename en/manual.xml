@@ -42744,6 +42744,133 @@ $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </p
       information</para>
     </section>
   </appendix>
+  <appendix id="oclcappendix">
+    <title>OCLC Connexion Gateway</title>
+    <para>Koha can be set to work with the OCLC Connextion Gateway.  This allows libraries to use
+      OCLC Connexion as their cataloging tool and simply send those records to Koha with a single
+      click.  The following instructions will help you set up the OCLC Connexion Gateway, if you
+      have a system administrator you will want to consult with them on this process.</para>
+    <section id="oclckohasetup">
+            <sectioninfo>
+          <author>
+            <firstname>D. Ruth</firstname>
+
+            <surname>Bavousett</surname>
+          </author>
+
+          <affiliation>
+            <orgname>ByWater Solutions.com</orgname>
+          </affiliation>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Changed content where necessary.</contrib>
+          </othercredit>
+
+          <pubdate>2012</pubdate>
+        </sectioninfo>
+      <title>Setting up OCLC service on Koha</title>
+      <para>First, you'll need to create a file somewhere on your system with configuration
+        information.  You could put this anywhere that is visible to the account that will be
+        running the service. </para>
+      <para>The file contains 11 lines. The first 6 will be about your Koha
+        system:<programlisting>host:  The IP address of your Koha server 
+port:  The port you want to use for the Connexion service. This port must be different from your SIP port, or any other service 
+koha:  The full URL of your staff client 
+log:  The location (full file specification) of your log for the service 
+user:  The default Koha username to use for importing 
+password:  The password that goes with that username</programlisting></para>
+      <para>The remaining lines describe how to do the staging:
+        <programlisting>match: The name of the matching rule from your system to use 
+overlay_action: "replace", "create_new", or "ignore"-- what to do if there is a match 
+nomatch_action: "create_new" or "ignore"-- what to do if there is no match 
+item_action: "always_add","add_only_for_matches","add_only_for_new", or "ignore" -- what to do with embedded 952 item data 
+import_mode: "direct" or "stage"</programlisting></para>
+      <para> A sample file would look like
+        this:<programlisting>host: 1.2.3.4
+port: 8000
+log: /home/koha/koha-dev/var/log/connexion.log
+koha: http://kohastaff.myuniversity.edu
+user: koha_generic_staff
+password: password
+match: 001
+overlay_action: replace
+nomatch_action: create_new
+item_action: ignore
+import_mode: direct</programlisting></para>
+      <para>When choosing an 'import_mode' if you use "direct" then the staged record will be
+        immediately imported into Koha, and should be searchable after your indexes catch up.  If
+        you choose "stage", then the record will be placed in a staged batch for you to later go the
+          <link linkend="managestaged">Managed Staged MARC Records</link> tool to finish the import. </para>
+      <para>If you import multiple records, they'll be in the same batch, until that batch is
+        imported, then a new batch will be created. </para>
+      <para>In "direct" mode, each record will be in its' own batch. </para>
+      <para>To start the service, run the script:
+        <programlisting>/location/of/connexion/import/daemon/connexion_import_daemon.pl -d -c /location/of/config/file.cnf</programlisting></para>
+      <para/>
+    </section>
+    <section id="oclcdesktopsetup">
+                <sectioninfo>
+          <author>
+            <firstname>D. Ruth</firstname>
+
+            <surname>Bavousett</surname>
+          </author>
+
+          <affiliation>
+            <orgname>ByWater Solutions.com</orgname>
+          </affiliation>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Changed content where necessary.</contrib>
+          </othercredit>
+
+          <pubdate>2012</pubdate>
+        </sectioninfo>
+      <title>Setting up your OCLC desktop client</title>
+      <para> To set up the OCLC Connexion desktop client to connect to Koha, go to Tools/Options,
+        then choose the Export tab. <itemizedlist>
+          <listitem>
+            <para>Click the "Create..." button to set up a new destination, then choose "OCLC
+              Gateway Export" and click OK.</para>
+          </listitem>
+          <listitem>
+            <para>Enter the host name or IP address (host: from your config file) and the port
+              (port: <link linkend="oclckohasetup">from above</link>). </para>
+          </listitem>
+          <listitem>
+            <para>Make sure that the "Notify Host Before Disconnect" box is checked, and that
+              "Permanent Connection" and "Print Results to Default Printer" are not.</para>
+          </listitem>
+          <listitem>
+            <para>Set the three numeric parameters:  Timeout: 100  Retries:  3   Delay:  0 </para>
+          </listitem>
+          <listitem>
+            <para>In the "Local System Authorization" box, click the "Send Local System Login Id and
+              Password" box, then enter the Koha login and password you want to use.</para>
+          </listitem>
+          <listitem>
+            <para>Click "OK" to save this connection.</para>
+          </listitem>
+          <listitem>
+            <para>Click on "Record Characteristics" and make sure that the bibliographic records are
+              using MARC21, UTF-8 Unicode, and click OK to save.   </para>
+          </listitem>
+        </itemizedlist></para>
+      <para>You should be ready to go!  To export a record from OCLC Connexion Client to Koha, just
+        press F5 while the record is on-screen.  The export dialog will pop up, and you'll see
+        Connexion attempting to talk to Koha.  You should get a message that the record was added or
+        overlaid, including its biblio number, and a URL that you can copy into your web browser to
+        jump straight to the record. </para>
+    </section>
+  </appendix>
 
   <appendix id="faqs">
     <title>FAQs</title>
