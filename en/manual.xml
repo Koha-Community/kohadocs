@@ -42717,6 +42717,30 @@ no-repeat scroll center top transparent;
         <para>The bottom line in searching with wildcards: &lsquo;*&rsquor; is
         more exact while &lsquo;%&rsquor; searches for like terms.</para>
       </section>
+      <section id="titlesearchingfaq">
+        <title>Title Searching</title>
+        <para><emphasis role="bold">Question</emphasis>: Why does my Zebra title search for 'Help'
+          not turn up 'The help' in the first pages of results?</para>
+        <para><emphasis role="bold">Answer</emphasis>: When doing a title search, you actually want
+          to search for the title (i.e., 'the help' rather than just 'help'), and it will bubble
+          right up to the top. If you're just searching for 'help' then the relevance ranking is
+          going to affect the results you see. </para>
+        <para>When it comes to relevance in Zebra, here's what's happening. First, the search is
+          done. If you search for the title "help", then any title that has "help" in it comes back.
+          Then from those records, separately, it does relevance on the *whole* record. The more
+          your word appears, the more relevant, and some MARC tags are worth more points than
+          others. So a self-help book with 505 notes where "help" appears a *lot* will be at the
+          top, regardless of keyword or title.</para>
+        <para>But when you add a *second word*, that helps it figure things out, as it's weighing
+          the relevance of both words and the phrase. Because of the way relevance works, if you
+          search "the help", then "the help" or "the help I need" are more relevant than "the way to
+          help", because they appear together in order. Likewise, "help the girl" would be lower
+          relevance, because it's out of order, and "help for the homeless" would be lower still, as
+          they're out of order, and apart.</para>
+        <para>The moral of the story is that single word searches, particularly on common words,
+          will always struggle a bit; it can't evaluate relevance well, because you've not given it
+          enough input.</para>
+      </section>
     </section>
 
     <section id="enhancedcontentfaq">
