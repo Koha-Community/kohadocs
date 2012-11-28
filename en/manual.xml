@@ -39450,10 +39450,15 @@ print theme('pages_catalog');</programlisting>
 
           <para>Script path: misc/cronjobs/process_message_queue.pl</para>
 
-          <para>Does: processes the message queue to send emails and SMS
-          messages to users. sends outgoing emails to patrons.</para>
+          <para>Does: processes the message queue to send the check out, check in and hold filled
+            emails and SMS message to users and sends outgoing emails to patrons. requires <link
+              linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link> to be
+            on</para>
 
-          <para>Frequency suggestion: 1-4 hours</para>
+          <para>Frequency suggestion: 1-4 hours<important>
+              <para>Item due and Advanced due notices are controlled by the <link
+                  linkend="advnoticecron">advance_notices cron</link>.</para>
+            </important></para>
         </section>
 
         <section id="advnoticecron">
