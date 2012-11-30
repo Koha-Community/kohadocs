@@ -13995,19 +13995,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <important>
-                    <para>Requires that you have <link
-                    linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
-                    enabled</para>
-                  </important>
+                  <para>
+                    <important>
+                      <para>Requires that you have <link linkend="EnhancedMessagingPreferences"
+                          >EnhancedMessagingPreferences</link> enabled</para>
+                    </important>
+                  </para>
                 </listitem>
 
                 <listitem>
-                  <important>
-                    <para>These can be changed for individual patrons, this
-                    setting is just a default to make it easier to set up
-                    messages for an entire category</para>
-                  </important>
+                  <para>These defaults will be applied to new patrons that are added to the system.
+                    They will not edit the preferences of the existing patrons.  Also, these can be
+                    changed for individual patrons, this setting is just a default to make it easier
+                    to set up messages for an entire category.<itemizedlist>
+                      <listitem>
+                        <tip>
+                          <para>After setting the default for the patron category you can force
+                            those changes to all existing patrons by running the <emphasis
+                              role="italic">borrowers-force-messaging-defaults</emphasis> script
+                            found in the <emphasis role="italic">misc/maintenance</emphasis> folder.
+                            Ask your system administrator for assistance with this script.</para>
+                        </tip>
+                      </listitem>
+                    </itemizedlist></para>
                 </listitem>
               </itemizedlist>
             </listitem>
