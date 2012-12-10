@@ -33449,15 +33449,43 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>The only field required is the 'List Name,' but the patron can
-          also choose how they want the list sorted and if the list is public
-          or private.<important>
-              <para>If you aren't allowing patrons to create public lists with
-              the <link
-              linkend="OpacAllowPublicListCreation">OpacAllowPublicListCreation</link>
-              preference then patrons will only be able to create private
-              lists.</para>
+          <para>The only field required is the 'List Name,' but the patron can also choose how they
+            want the list sorted and if the list is public or private.<itemizedlist>
+              <listitem>
+                <para>A Private List is managed by you and can be seen only by you (depending on
+                  your permissions settings below)</para>
+              </listitem>
+              <listitem>
+                <para>A Public List can be seen by everybody, but managed only by you (depending on
+                  your permissions settings below)</para>
+              </listitem>
+            </itemizedlist><important>
+              <para>If you aren't allowing patrons to create public lists with the <link
+                  linkend="OpacAllowPublicListCreation">OpacAllowPublicListCreation</link>
+                preference then patrons will only be able to create private lists.</para>
             </important></para>
+          <itemizedlist>
+            <listitem>
+              <para>Finally decide what your permissions will be on the list. You can all or disallow:<itemizedlist>
+                  <listitem>
+                    <para>anyone else to add entries</para>
+                  </listitem>
+                  <listitem>
+                    <para>anyone to remove his own contributed entries<itemizedlist>
+                        <listitem>
+                          <tip>
+                            <para>The owner of a list is always allowed to add entries, but needs
+                              permission to remove.</para>
+                          </tip>
+                        </listitem>
+                      </itemizedlist></para>
+                  </listitem>
+                  <listitem>
+                    <para>anyone to remove other contributed entries     </para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+          </itemizedlist>
         </section>
 
         <section id="opacaddtolists">
