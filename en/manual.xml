@@ -34527,10 +34527,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="opacmydetails">
         <title>My Details</title>
 
-        <para>If you have your <link
-        linkend="OPACPatronDetails">OPACPatronDetails</link> preference set to
-        'Allow', your patrons will see a form filled in with their contacting
-        information by clicking on the 'my personal details' tab.</para>
+        <para>If you have your <link linkend="OPACPatronDetails">OPACPatronDetails</link> preference
+          set to 'Allow', your patrons will see a form filled in with their contacting information
+          by clicking on the 'my personal details' tab. You can control what fields patrons see and
+          can modify via the OPAC by setting the <link
+            linkend="PatronSelfRegistrationBorrowerMandatoryField"
+            >PatronSelfRegistrationBorrowerMandatoryField</link>
+          <link linkend="PatronSelfRegistrationBorrowerUnwantedField"
+            >PatronSelfRegistrationBorrowerUnwantedField</link> preferences.</para>
 
         <screenshot>
           <screeninfo>Patron's personal details</screeninfo>
@@ -34542,11 +34546,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Patrons can edit their details in this form and click 'Submit
-        Changes' to have their edits sent to the library for review before
-        their record is updated. The email with the changes is sent to the
-        library administration email address and lines that the patron changed
-        will start with the field name in all caps.</para>
+        <para>Patrons can edit their details in this form and click 'Submit Changes' to have their
+          edits sent to the library for review before their record is updated. Staff will see all
+          patrons requesting modification to their record listed below the modules on the main
+          dashboard along with anything else awaiting library attention.<screenshot>
+            <screeninfo>Patron requests waiting review</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/patronrequestwaiting.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
 
         <para>If the <link
         linkend="OPACPatronDetails">OPACPatronDetails</link> preference is set
