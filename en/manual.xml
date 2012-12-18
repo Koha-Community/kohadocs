@@ -9986,8 +9986,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="PatronSelfRegistrationExpireTemporaryAccountsDelay">
             <title>PatronSelfRegistrationExpireTemporaryAccountsDelay</title>
             <para>Default: 0</para>
-            <para>Asks: Delete patrons registered via the OPAC, but not yet verified after ___ days.
-            </para>
+            <para>Asks: Delete patrons registered via the OPAC, but not yet verified after ___
+              days.</para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This prefence links to the <link linkend="deleteexpiredregistrationcron"
+                      >delete_expired_opac_registrations.pl cron job</link>.  If that cron is set to
+                    run nightly it will clean up any registrations that have not been reviewed by a
+                    staff member in the number of days entered on this preference.</para>
+                </listitem>
+              </itemizedlist></para>
           </section>
           <section id="PatronSelfRegistrationVerifyByEmail">
             <title>PatronSelfRegistrationVerifyByEmail</title>
@@ -39713,6 +39721,29 @@ print theme('pages_catalog');</programlisting>
           database with the latest tally of checkouts.</para>
 
           <para>Frequency suggestion: nightly</para>
+        </section>
+      </section>
+      <section id="patroncrons">
+        <title>Patrons</title>
+        <para/>
+        <section id="deleteexpiredregistrationcron">
+          <title>Unverified Registrations</title>
+          <para>Script path: misc/cronjobs/delete_expired_opac_registrations.pl</para>
+          <para>Does: Deletes patron registrations that were submitted via the OPAC but not reviewed
+            by the library within the number of days entered in the <link
+              linkend="PatronSelfRegistrationExpireTemporaryAccountsDelay"
+              >PatronSelfRegistrationExpireTemporaryAccountsDelay</link> preference.</para>
+          <para>Frequency suggestion: nightly</para>
+        </section>
+        <section id="deleteunverifiedcron">
+          <title>Unconfirmed Registrations</title>
+          <para>Script path: misc/cronjobs/delete_unverified_opac_registrations.pl </para>
+          <para>Does: Deletes patron self registrations that were submitted via the OPAC but not
+            confirmed via email within 24 hours. This is only necessary if you are requiring patrons
+            to confirm their registrations via email with the <link
+              linkend="PatronSelfRegistrationVerifyByEmail"
+              >PatronSelfRegistrationVerifyByEmail</link> preference.</para>
+          <para>Frequency suggestion: hourly</para>
         </section>
       </section>
 
