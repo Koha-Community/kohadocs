@@ -34298,6 +34298,52 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </important></para>
       </section>
     </section>
+    <section id="selfregistration">
+      <title>OPAC Self Registration</title>
+      <para>If you allow it, patrons can register for their own accounts via the OPAC.  If you have
+        the <link linkend="PatronSelfRegistration">PatronSelfRegistration</link> preference set to
+        'Allow' then patrons will see a link to register below the log in box on the right of the
+        main OPAC page.<screenshot>
+          <screeninfo>Registration link in OPAC</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/PatronSelfRegistration.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>When the patron clicks the 'Register here' link they will be brough to a registration
+        page.  The options on the registration page can be conrolled by editing the <link
+          linkend="PatronSelfRegistrationBorrowerMandatoryField"
+          >PatronSelfRegistrationBorrowerMandatoryField</link>
+        <link linkend="PatronSelfRegistrationBorrowerUnwantedField"
+          >PatronSelfRegistrationBorrowerUnwantedField</link> preferences.<screenshot>
+          <screeninfo>Registration form</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/patronregistration.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>Once the patron has confirmed submitted their registration they will either be sent an
+        email to confirm their account (if you have the <link
+          linkend="PatronSelfRegistrationVerifyByEmail">PatronSelfRegistrationVerifyByEmail</link>
+        preference to require this) or presented with their new username and password.<screenshot>
+          <screeninfo>New account confirmation</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/patronregistrationcomplete.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>Patrons registered in this way will not have a cardnumber until assigned one by the
+        library, but will have access to all OPAC functionality immediately. For this reason it is
+        recommended that you set up a provisional <link linkend="patcats">patron category</link>
+        with no <link linkend="circfinerules">circulation rights</link>.  That way patrons will have
+        to come in to the library to verify their identity before given a cardnumber and circulation
+        rights at the library. Once the patron confirms their identiy the library staff can change
+        the category to one with permissions and add a cardnumber/barcode to check items out and
+        place holds.</para>
+    </section>
 
     <section id="opacmyaccount">
       <title>My Account</title>
