@@ -9846,6 +9846,152 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </important>
           </section>
         </section>
+        <section id="opacselfregistrationprefs">
+          <title>Self Registration</title>
+          <section id="PatronSelfRegistration">
+            <title>PatronSelfRegistration</title>
+            <para>Default: Don't allow</para>
+            <para>Asks: ___ library patrons to register an account via the OPAC.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Allow</para>
+                </listitem>
+                <listitem>
+                  <para>Don't allow</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Setting this preference to 'Allow' will provide a link on the OPAC to register
+                  for a new account.  Using the other <link linkend="opacselfregistrationprefs">Self
+                    Registration</link> system preferences you can control how this preference will function.<screenshot>
+                    <screeninfo>Register link in the OPAC</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/globalprefs/PatronSelfRegistration.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Patrons registering via the OPAC will not need to be approved by a librarian.
+                For this reason it is recommended that you set up a provisional <link
+                  linkend="patcats">patron category</link> with no <link linkend="circfinerules"
+                  >circulation rights</link>.  That way patrons will have to come in to the library
+                to verify their identity before given circulation rights at the library. Once the
+                patron confirms their identiy the library staff can change the category to one with
+                permissions to check items out and place holds.</para>
+            </important>
+          </section>
+          <section id="PatronSelfRegistrationBorrowerMandatoryField">
+            <title>PatronSelfRegistrationBorrowerMandatoryField</title>
+            <para>Default: surname|firstname</para>
+            <para>Asks: The following database columns must be filled in on the patron entry screen:
+              ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows you to define what fields patrons must fill in on their
+                  self regisration form.  If any of the required fields are blank Koha will not let
+                  the patron register.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Separate columns with |</para>
+            </important>
+            <tip>
+              <para>For help with field names, ask your system administrator or <ulink
+                  url="http://schema.koha-community.org/tables/borrowers.html">view the database
+                  structure</ulink> associated with the borrowers table.</para>
+            </tip>
+            <tip>
+              <para>If you're going to require that patrons verify their accounts via email with the
+                  <link linkend="PatronSelfRegistrationVerifyByEmail"
+                  >PatronSelfRegistrationVerifyByEmail</link> preference you will want to make the
+                email field required.</para>
+            </tip>
+          </section>
+          <section id="PatronSelfRegistrationBorrowerUnwantedField">
+            <title>PatronSelfRegistrationBorrowerUnwantedField</title>
+            <para>Asks: The following database columns will not appear on the patron entry screen:
+              ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Using this preference you can hide fields from the patron registraion and
+                  update form in the OPAC.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Separate columns with |</para>
+            </important>
+            <tip>
+              <para>For help with field names, ask your system administrator or <ulink
+                  url="http://schema.koha-community.org/tables/borrowers.html">view the database
+                  structure</ulink> associated with the borrowers table.</para>
+            </tip>
+          </section>
+          <section id="PatronSelfRegistrationDefaultCategory">
+            <title>PatronSelfRegistrationDefaultCategory</title>
+            <para>Asks: Use the patron category code ___ as the default patron category for patrons
+              registered via the OPAC. </para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Enter in the patron category code for the category that all new patrons
+                  registered via the OPAC will be put in to.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Patrons registering via the OPAC will not need to be approved by a librarian.
+                For this reason it is recommended that you set up a provisional <link
+                  linkend="patcats">patron category</link> with no <link linkend="circfinerules"
+                  >circulation rights</link>.  That way patrons will have to come in to the library
+                to verify their identity before given circulation rights at the library. Once the
+                patron confirms their identiy the library staff can change the category to one with
+                permissions to check items out and place holds.</para>
+            </important>
+            <important>
+              <para>If you leave this blank or enter in an invalid code your patrons will still be
+                able to register but will not be given a username. There will be no errors on the
+                page to explain this, so be sure to enter a valid patron category code.</para>
+            </important>
+          </section>
+          <section id="PatronSelfRegistrationExpireTemporaryAccountsDelay">
+            <title>PatronSelfRegistrationExpireTemporaryAccountsDelay</title>
+            <para>Default: 0</para>
+            <para>Asks: Delete patrons registered via the OPAC, but not yet verified after ___ days.
+            </para>
+          </section>
+          <section id="PatronSelfRegistrationVerifyByEmail">
+            <title>PatronSelfRegistrationVerifyByEmail</title>
+            <para>Default: Don't require</para>
+            <para>Asks: ___  that a self-registering patron verify his or herself via email.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't require</para>
+                </listitem>
+                <listitem>
+                  <para>Require</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>If you require patrons to verify their accounts via email they will not be
+                    able to log in to the OPAC until they acknowledge the email sent by Koha. If you
+                    don't require this then patrons will be able to log in as soon as they fill in
+                    the registration form.</para>
+                </listitem>
+              </itemizedlist><tip>
+                <para>If you're going to require that patrons verify their accounts via email you
+                  will want to make the email field required in the <link
+                    linkend="PatronSelfRegistrationBorrowerMandatoryField"
+                    >PatronSelfRegistrationBorrowerMandatoryField</link> preference.</para>
+              </tip></para>
+          </section>
+        </section>
 
         <section id="shelfbrowseprefs">
           <title>Shelf Browser</title>
