@@ -36211,20 +36211,17 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
     <section id="kohacmssetup">
       <title>Setup</title>
 
-      <para>These are instructions for taking a default install of Koha 3.0
-      and allowing it to function as a little content management system. This
-      will allow a library to publish an arbitrary number of pages based on a
-      template. This example uses the template for the main opac page, but you
-      could just as well use any template you wish with a bit more editing.
-      This may be appropriate if you have a small library, want to allow
-      librarians to easily add pages, and do not want to support a complete
-      CMS.</para>
+      <para>These are instructions for taking a default install of Koha 3.4 or later and allowing it
+        to function as a little content management system. This will allow a library to publish an
+        arbitrary number of pages based on a template. This example uses the template for the main
+        opac page, but you could just as well use any template you wish with a bit more editing.
+        This may be appropriate if you have a small library, want to allow librarians to easily add
+        pages, and do not want to support a complete CMS. </para>
 
       <itemizedlist>
         <listitem>
           <para>Copy /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to
-          /usr/share/koha/opac/cgi-bin/opac/pages.pl (in the same
-          directory)</para>
+            /usr/share/koha/opac/cgi-bin/opac/pages.pl (in the same directory) </para>
         </listitem>
 
         <listitem>
@@ -36232,67 +36229,55 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
         </listitem>
 
         <listitem>
-          <para>At approximately line 32 add:</para>
+          <para>At approximately line 36 change this code: </para>
 
-          <programlisting>my $cgi = new CGI;</programlisting>
+          <programlisting>template_name  => "opac-main.tt",</programlisting>
         </listitem>
 
         <listitem>
-          <para>At approximately line 36 change this code:</para>
-
-          <programlisting>template_name =&gt;
-          "opac-main.tmpl",</programlisting>
-
           <para>To this code:</para>
 
-          <programlisting>template_name =&gt; "pages.tmpl",</programlisting>
+          <programlisting>template_name  => "pages.tt", </programlisting>
         </listitem>
 
         <listitem>
-          <para>At approximately line 54 change this code:</para>
-
-          <programlisting>$template-&gt;param( 
-          koha_news =&gt; $all_koha_news, 
-          koha_news_count =&gt; $koha_news_count
-          ); </programlisting>
-
-          <para>To this:</para>
-
-          <programlisting>my $page = "page_" . $cgi-&gt;param("p");
-          $template-&gt;param( 
-          koha_news =&gt; $all_koha_news, 
-          koha_news_count =&gt; $koha_news_count,
-          local_page =&gt; "" .
-          C4::Context-&gt;preference($page) 
-          ); </programlisting>
+          <para>At approximately line 54 after this code: </para>
+          <programlisting>$template->param( 
+           koha_news       => $all_koha_news, 
+           koha_news_count => $koha_news_count
+           ); </programlisting>
+        </listitem>
+        <listitem>
+          <para>Add these lines: </para>
+          <programlisting>        my $page = "page_" . $cgi->param('p');            # go for "p" value in URL and do the concatenation
+        my $preference = C4::Context->preference($page);  # Go for preference  
+        $template->{VARS}->{'page_test'} = $preference    # pass variable to template pages.tt</programlisting>
         </listitem>
 
         <listitem>
-          <para>Copy
-          /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tmpl
-          to
-          /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tmpl</para>
+          <para>Note pages.pl file must have Webserver user execution permissions, you can use
+              <ulink url="http://en.wikipedia.org/wiki/Chmod">chmod</ulink> command if you are
+            actually logged in as such user:
+            <programlisting>        $chmod 711 pages.pl</programlisting></para>
         </listitem>
 
+        <listitem>
+          <para>Copy /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tt to
+            /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt </para>
+        </listitem>
+        <listitem>
+          <para>Edit /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt </para>
+        </listitem>
         <listitem>
           <para>At approximately line 38, change this:</para>
-
-          <programlisting>&lt;!-- TMPL_IF NAME="OpacMainUserBlock"
-          --&gt;&lt;div id="opacmainuserblock" class="container"&gt;&lt;!--
-          TMPL_VAR NAME="OpacMainUserBlock" --&gt;&lt;/div&gt;&lt;!-- /TMPL_IF
-          --&gt; </programlisting>
-
+          <programlisting> [% IF ( OpacMainUserBlock ) %]&lt;div id="opacmainuserblock" class="container">[% OpacMainUserBlock %]&lt;/div>[% END %]</programlisting>
           <para>To this:</para>
-
-          <programlisting>&lt;!-- TMPL_IF NAME="local_page" --&gt;&lt;div
-          id="opacmainuserblock" class="container"&gt;&lt;!-- TMPL_VAR
-          NAME="local_page" --&gt;&lt;/div&gt;&lt;!-- /TMPL_IF
-          --&gt;</programlisting>
+          <programlisting> [% IF ( page_test ) %]&lt;div id="opacmainuserblock" class="container">[% page_test %]&lt;/div>[% END %]</programlisting>
         </listitem>
 
         <listitem>
-          <para>In system preferences in the staff client, click the button
-          for "New Preference" under "Local Use"</para>
+          <para>In the browser go to Home › Administration › System Preferences > Local Use and add
+            a New Preference called "page_test" </para>
         </listitem>
 
         <listitem>
@@ -36323,20 +36308,22 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
         </listitem>
 
         <listitem>
-          <para>In a browser go to
-          http://youraddress/cgi-bin/koha/pages.pl?p=test The page should come
-          up with the words "Lorem ipsum" in the main content area of the
-          page. (replace "youraddress" with localhost, 127.0.0.1, or your
-          domain name depending on how you have Apache set up.)</para>
+          <para>In a browser go to http://youraddress/cgi-bin/koha/pages.pl?p=test The page should
+            come up with the words "Lorem ipsum" in the main content area of the page. (replace
+            "youraddress" with localhost, 127.0.0.1, or your domain name depending on how you have
+            Apache set up.) </para>
         </listitem>
 
         <listitem>
-          <para>To add more pages simply create a system preference where the
-          title begins with "page_" followed by any arbitrary letters. You can
-          add any markup you want as the value of the field. Reference the new
-          page by changing the value of the "p" parameter in the URL.</para>
+          <para>To add more pages simply create a system preference where the title begins with
+            "page_" followed by any arbitrary letters. You can add any markup you want as the value
+            of the field. Reference the new page by changing the value of the "p" parameter in the
+            URL. </para>
         </listitem>
       </itemizedlist>
+      <para>To learn more visit the Koha wiki page on this topic: <ulink
+          url="http://wiki.koha-community.org/wiki/Koha_as_a_CMS"
+          >http://wiki.koha-community.org/wiki/Koha_as_a_CMS</ulink></para>
 
       <section id="kohacmstrouble">
         <title>Troubleshooting</title>
