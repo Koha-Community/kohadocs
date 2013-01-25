@@ -18306,15 +18306,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             and Circulation &gt; Patrons (anonymize, bulk-delete)</para>
           </listitem>
         </itemizedlist>
-
-        <para>This tool allows you to bulk anonymize circulation histories
-        (this means that you keep records of how many times items were checked
-        out - but not the patrons who checked the items out) or bulk delete
-        patrons (remove them from the system completely).<important>
+        <para>This tool allows you to bulk anonymize circulation histories (this means that you keep
+          records of how many times items were checked out - but not the patrons who checked the
+          items out) or bulk delete patrons (remove them from the system completely).<important>
             <para>Patrons with outstanding fines or items checked out are not saved. They are not
               completely removed from the system (they are only moved to the delete_borrowers
               table), but this tool does not provide as many checks as one may desire.</para>
           </important></para>
+        <important>
+          <para>Before using this tool it is recommended that you backup your database. Changes made
+            here are permanent.</para>
+        </important>
         <important>
           <para>The anonymization will fail quietly if <link linkend="AnonymousPatron"
               >AnonymousPatron</link> preference does not contain a valid value.</para>
@@ -18334,12 +18336,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para>Check the task you would like to perform (Delete or
-            Anonymize)</para>
+            <para>Check the 'Verify' box on the task you would like to complete (Delete or
+              Anonymize)</para>
           </listitem>
 
           <listitem>
             <para>Enter a date before which you want to alter the data</para>
+          </listitem>
+          <listitem>
+            <para>If deleteing patrons you can also choose to find patrons with a specific
+              expiration date or category</para>
           </listitem>
 
           <listitem>
