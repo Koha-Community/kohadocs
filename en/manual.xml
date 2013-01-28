@@ -3310,6 +3310,30 @@
               (misc/cronjobs/fines.pl)</para>
             </important>
           </section>
+          <section id="RefundLostItemFeeOnReturn">
+            <title>RefundLostItemFeeOnReturn</title>
+            <para>Default: Refund</para>
+            <para>Asks: ___  lost item fees charged to a borrower when the lost item is
+              returned.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't refund</para>
+                </listitem>
+                <listitem>
+                  <para>Refund</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>When an item is marked lost in Koha the system charges the patron the
+                    replacement fee for the item.  This preference lets you control how Koha handles
+                    returns of these items.  By default when an item that was previously marked lost
+                    is checked in Koha refunds the patron the replacement fee. Change this
+                    preference to "Don't refund" if you would like Koha to not refund the
+                    replacement fee.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
         </section>
 
         <section id="circholdspolicy">
