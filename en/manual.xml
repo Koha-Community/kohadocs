@@ -3886,6 +3886,13 @@
                 order.</para>
               </listitem>
             </itemizedlist>
+            <important>
+              <para>The <link linkend="transportcostmatrix">Transport Cost Matrix</link> takes
+                precedence in controlling where holds are filled from, if the matrix is not used
+                then Koha checks the StaticHoldsQueueWeight.  To use the Transport Cost Matrix
+                simply set your <link linkend="UseTransportCostMatrix">UseTransportCostMatrix</link>
+                preference to 'Use'</para>
+            </important>
           </section>
 
           <section id="SuspendHoldsIntranet">
@@ -14585,9 +14592,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="transportcostmatrix">
         <title>Transport cost matrix</title>
         <para>The Transport cost matrix lets a library system define relative costs to transport
-          books to one another.  In order for the system to use this matrix you must first set the
+          books to one another. In order for the system to use this matrix you must first set the
             <link linkend="UseTransportCostMatrix">UseTransportCostMatrix</link> preference to
-          'Use'.</para>
+          'Use'.  <important>
+            <para>The Transport cost matrix takes precedence in controlling where holds are filled
+              from, if the matrix is not used then Koha checks the <link linkend="holdqueueweight"
+                >StaticHoldsQueueWeight</link>.</para>
+          </important></para>
         <para>Costs are decimal values between some arbitrary maximum value (e.g. 1 or 100) and 0
           which is the minimum (no) cost. For example, you could just use the distance between each
           library in miles as your 'cost', if that would accurately reflect the cost of transferring
