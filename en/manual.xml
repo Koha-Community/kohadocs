@@ -22574,8 +22574,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>All circulation rights except the ability to override
-                  renewals</para>
+                  <para>Remaining circulation permissions</para>
+                </listitem>
+                <listitem>
+                  <para>All circulation rights except the ability to override renewals</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22611,8 +22613,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to edit circulation and fine rules in the
-                  administration area</para>
+                  <para>Manage circulation rules</para>
+                </listitem>
+                <listitem>
+                  <para>The ability to access the <link linkend="circfinerules">Circulation and
+                      fines rules</link> in the administration area</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22622,7 +22627,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Access to all other areas under Administration</para>
+                  <para>Remaining system parameters permissions</para>
+                </listitem>
+                <listitem>
+                  <para>The ability to access all areas in Administration (other than the
+                    Circulation and fine rules)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22643,8 +22652,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Allow staff members to alter the holds priority
-                  (moving patrons up and down the queue)</para>
+                  <para>Modify holds priority</para>
+                </listitem>
+                <listitem>
+                  <para>Allow staff members to alter the holds priority (moving patrons up and down
+                    the queue)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22654,8 +22666,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Allows staff members to place holds for patrons via
-                  the staff interface</para>
+                  <para>Place holds for patrons</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22676,8 +22687,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to access all cataloging functions via the
-                  <link linkend="cataloging">Cataloging</link> page</para>
+                  <para>Edit catalog (Modify bibliographic/holdings data)</para>
+                </listitem>
+                <listitem>
+                  <para>Ability to access all cataloging functions via the <link
+                      linkend="cataloging">Cataloging</link> page</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22687,8 +22701,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to make <link linkend="editingitems">edits to
-                  item records</link>, but not bib records</para>
+                  <para>Edit items</para>
+                </listitem>
+                <listitem>
+                  <para>Ability to make <link linkend="editingitems">edits to item/holdings
+                      records</link>, but not bibliographic records</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22698,9 +22715,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to catalog using only the <link
-                  linkend="fastaddcat">Fast Add Framework</link> found on the
-                  <link linkend="circulation">Circulation</link> page</para>
+                  <para>Fast cataloging</para>
+                </listitem>
+                <listitem>
+                  <para>The ability to catalog using only the <link linkend="fastaddcat">Fast Add
+                      Framework</link> found on the <link linkend="circulation">Circulation</link>
+                    page</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22721,14 +22741,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Ability to add and delete budgets (not modify)</para>
+                  <para>Add and delete budgets (but can't modify them)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
               <para>budget_manage</para>
-
               <itemizedlist>
                 <listitem>
                   <para>Manage budgets</para>
@@ -22737,12 +22756,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
+              <para>budget_manage_all <itemizedlist>
+                  <listitem>
+                    <para>Manage all budgets</para>
+                  </listitem>
+                </itemizedlist></para>
               <para>budget_modify</para>
-
               <itemizedlist>
                 <listitem>
-                  <para>Ability to edit existing budgets (not to add or
-                  delete)</para>
+                  <para>Modify budget (can't create lines, but can modify existing ones)</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22833,7 +22855,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Check the expiration of a serial</para>
+                  <para>Check the <link linkend="serialexpiration">expiration of a
+                    serial</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22843,7 +22866,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Claim missing serials</para>
+                  <para>Claim missing serials via the <link linkend="serialclaims">Claims
+                      section</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22853,7 +22877,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Create a new subscription</para>
+                  <para>Create <link linkend="newsubscription">a new subscription</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22873,8 +22897,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Edit (but not delete or create) an existing
-                  subscription</para>
+                  <para>Edit an existing subscription</para>
+                </listitem>
+                <listitem>
+                  <para>This permission does not include the ability to delete or create a
+                    subscription</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22883,6 +22910,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para>receive_serials</para>
 
               <itemizedlist>
+                <listitem>
+                  <para>Serials receiving</para>
+                </listitem>
                 <listitem>
                   <para>Receive serials on existing subscriptions</para>
                 </listitem>
@@ -22894,7 +22924,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Renew an existing subscription</para>
+                  <para>Renew a subscription</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22904,7 +22934,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Manage routing lists</para>
+                  <para>Routing</para>
+                </listitem>
+                <listitem>
+                  <para>Manage <link linkend="routinglist">routing lists</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22925,9 +22958,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Upload patron images in batch or one at a time (Access
-                  to the <link linkend="uploadpatronimages">Image Upload
-                  Tool</link>)</para>
+                  <para>Upload patron images in batch or one at a time </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="uploadpatronimages">Image Upload
+                    Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22937,9 +22972,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Delete old borrowers and anonymize circulation/reading
-                  history (Access to the <link linkend="anonpatrons">Anonymize
-                  Patron Tool</link>)</para>
+                  <para>Delete old borrowers and anonymize circulation/reading history (deletes
+                    borrower reading history)</para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="anonpatrons">Anonymize Patron
+                    Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22949,9 +22987,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Define days when the library is closed (Access to the
-                  <link linkend="calholidays">Calendar/Holidays
-                  Tool</link>)</para>
+                  <para>Define days when the library is closed </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="calholidays">Calendar/Holidays
+                    Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22961,8 +23001,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Write news for the OPAC and staff interfaces (Access
-                  to the <link linkend="newstool">News Tool</link>)</para>
+                  <para>Write news for the OPAC and staff interfaces </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="newstool">News Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22972,9 +23014,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Set notice/status triggers for overdue items (Access
-                  to the <link linkend="noticetriggers">Overdue Notice
-                  Status/Triggers Tool</link>)</para>
+                  <para>Set notice/status triggers for overdue items </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="noticetriggers">Overdue Notice Status/Triggers
+                      Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22984,8 +23028,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Define notices (Access to the <link
-                  linkend="notices">Notices Tool</link>)</para>
+                  <para>Define notices </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="notices">Notices Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -22995,9 +23041,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Export bibliographic and holdings data (Access to the
-                  <link linkend="exportbibs">Export Bibliographic &amp;
-                  Holdings Data Tool</link>)</para>
+                  <para>Export bibliographic, authorities and holdings data </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="exportbibs">Export Data Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23007,8 +23054,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Import patron data (Access to the <link
-                  linkend="patronimport">Import Patrons Tool</link>)</para>
+                  <para>Import patron data </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="patronimport">Import Patrons Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23018,9 +23067,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Perform inventory (stocktaking) of your catalog
-                  (Access to the <link linkend="inventory">Inventory
-                  Tool</link>)</para>
+                  <para>Perform inventory (stocktaking) of your catalog </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="inventory">Inventory Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23030,9 +23080,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Perform batch deletion of items (Access to the <link
-                  linkend="batchdeleteitems">Delete a queryset of items
-                  Tool</link>)</para>
+                  <para>Perform batch deletion of items </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="batchdeleteitems">Batch Item Deletion
+                      Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23042,9 +23094,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Perform batch modification of items (Access to the
-                  <link linkend="batchmodifyitems">Modify a queryset of items
-                  Tool</link>)</para>
+                  <para>Perform batch modification of items </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="batchmodifyitems">Batch Item Modification
+                      Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23054,11 +23108,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Create printable labels and barcodes from catalog and
-                  patron data (Access to the <link
-                  linkend="labelcreator">Label Creator</link> and <link
-                  linkend="quicklabelcreator">Quick Label Creator</link>
-                  Tools)</para>
+                  <para>Create printable labels and barcodes from catalog and patron data </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="labelcreator">Label Creator</link> and <link
+                      linkend="quicklabelcreator">Quick Label Creator</link> Tools</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23068,8 +23122,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Create and edit CSV profiles (Access to the <link
-                  linkend="csvprofiles">CSV Profiles Tool</link>)</para>
+                  <para>Manage CSV export profiles</para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="csvprofiles">CSV Profiles Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23079,10 +23135,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Managed staged MARC records, including completing and
-                  reversing imports (Access to the <link
-                  linkend="managestaged">Manage Staged MARC Records
-                  Tool</link>)</para>
+                  <para>Managed staged MARC records, including completing and reversing imports
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="managestaged">Manage Staged MARC Records
+                      Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23092,20 +23150,34 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Moderate patron comments (Access to the <link
-                  linkend="comments">Comments</link> and <link
-                  linkend="tagsmoderation">Tags</link> Tools)</para>
+                  <para>Moderate patron comments </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="comments">Comments Tool</link>
+                  </para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
+              <para>moderate_tags<itemizedlist>
+                  <listitem>
+                    <para>Moderate patron tags</para>
+                  </listitem>
+                  <listitem>
+                    <para>Acces to the <link linkend="tagsmoderation">Tags Tool</link></para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
               <para>schedule_tasks</para>
-
               <itemizedlist>
                 <listitem>
-                  <para>Schedule tasks to run (Access to the <link
-                  linkend="taskscheduler">Task Scheduler Tool</link>)</para>
+                  <para>Schedule tasks to run </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="taskscheduler">Task Scheduler
+                    Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23115,9 +23187,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Stage MARC records into the reservoir (Access to the
-                  <link linkend="stagemarc">Stage MARC Records
-                  Tool</link>)</para>
+                  <para>Stage MARC records into the reservoir </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="stagemarc">Stage MARC Records
+                    Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23127,9 +23201,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Upload local cover images (Access to the <link
-                  linkend="uploadlocalimages">Upload Local Cover Image
-                  Tool</link>)</para>
+                  <para>Upload local cover images </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="uploadlocalimages">Upload Local Cover Image
+                      Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23139,8 +23215,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>Browse the system logs (Access to the <link
-                  linkend="logviewer">Log Viewer Tool</link>)</para>
+                  <para>Browse the system logs </para>
+                </listitem>
+                <listitem>
+                  <para>Access to the <link linkend="logviewer">Log Viewer Tool</link></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23161,8 +23239,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to create and edit but not run SQL
-                  reports</para>
+                  <para>Create SQL Reports</para>
+                </listitem>
+                <listitem>
+                  <para>The ability to create and edit but not run SQL reports</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -23172,8 +23252,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <itemizedlist>
                 <listitem>
-                  <para>The ability to run but not create or edit SQL reports (this includes
-                    Circulation reports such as Overdues)</para>
+                  <para>Execure SQL Reports</para>
+                </listitem>
+                <listitem>
+                  <para>The ability to run but not create or edit SQL reports </para>
+                </listitem>
+                <listitem>
+                  <para>
+                    <tip>
+                      <para>This include Circulation reports such as Overdues</para>
+                    </tip>
+                  </para>
                 </listitem>
               </itemizedlist>
             </listitem>
