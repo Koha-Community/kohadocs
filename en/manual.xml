@@ -40396,6 +40396,13 @@ print theme('pages_catalog');</programlisting>
               >PatronSelfRegistrationVerifyByEmail</link> preference.</para>
           <para>Frequency suggestion: hourly</para>
         </section>
+        <section id="anonymizecron">
+          <title>Anonymize Patron Data</title>
+          <para>Script path: misc/cronjobs/batch_anonymise.pl</para>
+          <para>Does: Used to anonymize patron data.  This will remove borrowernumbers from
+            circulation history so that the stats are kept, but the patron information is removed
+            for privacy reasons.</para>
+        </section>
       </section>
 
       <section id="noticescron">
