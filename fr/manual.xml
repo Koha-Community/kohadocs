@@ -2178,12 +2178,12 @@
             </itemizedlist>
 
 	    <para>Exemple : Dans votre bibliothèque la limite définie pour
-	    les amendes est de 5 &#8364 (c'est à dire qu'un adhérent ayant accumulé
+	    les amendes est de 5 &#8364; (c'est à dire qu'un adhérent ayant accumulé
 	    5 euros d'amendes n'est plus autorisé à emrunter de documents).
 	    Un adhérent ayant déjà 4 euros d'amendes impayées sur son compte
 	    se présente à la banque de prêt avec 5 documents (4 livres et une
 	    video). La video est un prêt payant, avec un coût d'un euro, ce
-	    qui porterait la somme totale due par l'adhérent à 5 &#8364. Selon
+	    qui porterait la somme totale due par l'adhérent à 5 &#8364;. Selon
 	    la valuer de cette préférence, ce prêt sera permit ou non.</para>
           </section>
 
@@ -5965,7 +5965,6 @@
             </itemizedlist>
           </section>
         </section>
-      </section>
 
       <section id="l18nprefs">
         <title>International</title>
@@ -15188,7 +15187,6 @@ location: [STAFF, ISO]</programlisting>Bloquera les exemplaires avec un itype
         </section>
       </section>
     </section>
-   </section>
   </chapter>
 
   <chapter id="tools">
@@ -33885,6 +33883,21 @@ print theme('pages_catalog');</programlisting>
           <para>Frequency suggestion: daily</para>
         </section>
 
+        <section id="unsuspendholdcron">
+          <title>Unsuspend Holds</title>
+
+          <para>Script path:
+          misc/cronjobs/holds/auto_unsuspend_holds.pl</para>
+
+          <para>Does: This script checks to find holds that should no longer
+          be suspended and removes the suspension if the <link
+          linkend="AutoResumeSuspendedHolds">AutoResumeSuspendedHolds</link>
+          preference is set to 'allow'. This puts the patron back in to the
+          queue where they were when the hold was suspended.</para>
+
+          <para>Frequency suggestion: daily</para>
+        </section>
+
         <section id="finescronjob">
           <title>Fines</title>
 
@@ -39427,3 +39440,4 @@ under certain conditions; type &lsquo;<literal>show c</literal>' for details.
     url="http://www.gnu.org/philosophy/why-not-lgpl.html">http://www.gnu.org/philosophy/why-not-lgpl.html</ulink>.</para>
   </appendix>
 </book>
+
