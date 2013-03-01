@@ -39800,6 +39800,23 @@ print theme('pages_catalog');</programlisting>
               execute them on the database. </para>
             <para>-b changes patrons for one specific branch. Use the value in the
               branches.branchcode table.</para>
+            <para> -f *required* defines the juvenile category to update. Expects the code from
+              categories.categorycode. </para>
+            <para>-t *required* defines the category juvenile patrons will be converted to. Expects
+              the code from categories.categorycode. </para>
+            <para><emphasis role="bold">DESCRIPTION</emphasis>
+            </para>
+            <para>This script is designed to update patrons from juvenile to adult patron types,
+              remove the guarantor, and update their category codes appropriately when they reach
+              the upper age limit defined in the Patron Categories. </para>
+            <para><emphasis role="bold">USAGE EXAMPLES</emphasis>
+            </para>
+            <para>"juv2adult.pl" - Suggests that you read this help. :) </para>
+            <para>"juv2adult.pl" -b=&lt;branchcode> -f=&lt;categorycode> -t=&lt;categorycode> -
+              Processes a single branch, and updates the patron categories from fromcat to tocat. </para>
+            <para>"juv2adult.pl" -f=&lt;categorycode> -t=&lt;categorycode> -v -n - Processes all
+              branches, shows all messages, and reports the patrons who would be affected. Takes no
+              action on the database.</para>
           </section>
         </section>
       </section>
