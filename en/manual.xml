@@ -40424,6 +40424,41 @@ print theme('pages_catalog');</programlisting>
             circulation history so that the stats are kept, but the patron information is removed
             for privacy reasons.</para>
         </section>
+        <section id="j2acron">
+          <title>Update Child to Adult Patron Type</title>
+          <para>Script path: misc/cronjobs/j2a.pl</para>
+          <para>Does: Convert juvenile/child patrons from juvenile patron category and category code
+            to corresponding adult patron category and category code when they reach the upper age
+            limit defined in the Patron Categories. </para>
+          <para>Frequency suggestion: nightly</para>
+          <section>
+            <title>Perl Documentation</title>
+            <para><emphasis role="bold">NAME</emphasis>
+            </para>
+            <para>juv2adult.pl - convert juvenile/child patrons from juvenile patron category and
+              category code to corresponding adult patron category and category code when they reach
+              the upper age limit defined in the Patron Categories. </para>
+            <para><emphasis role="bold">SYNOPSIS</emphasis>
+            </para>
+            <para>juv2adult.pl [ -b=&lt;branchcode> -f=&lt;categorycode> -t=&lt;categorycode> ] </para>
+            <para>Options: </para>
+            <para>--help brief help message </para>
+            <para>--man full documentation </para>
+            <para>-v verbose mode </para>
+            <para>-n take no action, display only </para>
+            <para>-b &lt;branchname> only deal with patrons from this library/branch </para>
+            <para>-f &lt;categorycode> change patron category from this category </para>
+            <para>-t &lt;categorycode> change patron category to this category </para>
+            <para>=head1 OPTIONS </para>
+            <para>--help Print a brief help message and exits. </para>
+            <para>--man Prints the manual page and exits. </para>
+            <para>-v Verbose. Without this flag set, only fatal errors are reported. </para>
+            <para>-n No Action. With this flag set, script will report changes but not actually
+              execute them on the database. </para>
+            <para>-b changes patrons for one specific branch. Use the value in the
+              branches.branchcode table.</para>
+          </section>
+        </section>
       </section>
 
       <section id="noticescron">
@@ -41233,8 +41268,6 @@ print theme('pages_catalog');</programlisting>
         <para>Script path:misc/cronjobs/reservefix.pl</para>
 
         <para>Script path:misc/cronjobs/zebraqueue_start.pl</para>
-
-        <para>Script path:misc/cronjobs/j2a.pl</para>
       </section>
     </section>
   </chapter>
