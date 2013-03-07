@@ -3555,14 +3555,16 @@
 
             <itemizedlist>
               <listitem>
-                <para>If this preference is set to 'Allow' then all suspended
-                holds will be able to have a date at which they automatically
-                become unsuspended. If you have this preference set to 'Allow'
-                you will also need the <link
-                linkend="unsuspendholdcron">Unsuspend Holds</link> cron job
-                running.</para>
+                <para>If this preference is set to 'Allow' then all suspended holds will be able to
+                  have a date at after which they automatically become unsuspended. If you have this
+                  preference set to 'Allow' you will also need the <link linkend="unsuspendholdcron"
+                    >Unsuspend Holds</link> cron job running.</para>
               </listitem>
             </itemizedlist>
+            <important>
+              <para>The holds will become unsuspended the date after that entered by the
+                patron.</para>
+            </important>
           </section>
 
           <section id="canreservefromotherbranches">
