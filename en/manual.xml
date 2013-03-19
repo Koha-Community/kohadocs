@@ -31012,6 +31012,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       suggestion will show the name of the librarian who managed the
       suggestion and the reason they gave for accepting or rejecting it (found
       under 'Status').</para>
+      <para>An 'Accepted' suggestion is one that you have marked as 'Accepted' using the form below
+        the suggestions.  A 'Pending' suggestion is one that is awaiting action from the library.  A
+        'Checked' suggestion is one that has been marked as 'Checked' using the form before the
+        suggestions.  An 'Ordered' suggestion is on that has been ordered using the '<link
+          linkend="orderfromsuggestion">From a purchase suggestion</link>' link in your basket. A
+        'Rejected' suggestion is one that you have marked at 'Rejected' using the form below the
+        list of suggestions.</para>
 
       <para>For libraries with lots of suggestions, there are filters on the
       left hand side of the Manage Suggestions page to assist in limiting the
@@ -31274,51 +31281,41 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </itemizedlist>
           </listitem>
 
-          <listitem>
-            <para>If you allow patrons to make purchase suggestions (learn
-            more in the <link linkend="managesuggest">Managing
-            Suggestions</link> section of this manual), then you can place
-            orders from those suggestions.</para>
-
+          <listitem id="orderfromsuggestion">
+            <para>If you allow patrons to make purchase suggestions (learn more in the <link
+                linkend="managesuggest">Managing Suggestions</link> section of this manual), then
+              you can place orders from those suggestions. In order to keep track of suggestions
+              that have been ordered and received you must place the order using this link.  </para>
             <screenshot>
               <screeninfo>Approved Suggestions to Order From</screeninfo>
-
               <mediaobject>
                 <imageobject>
                   <imagedata fileref="images/acquisitions/orderfromsuggest.png"/>
                 </imageobject>
               </mediaobject>
             </screenshot>
-
             <itemizedlist>
               <listitem>
-                <para>From the results, click 'Order' next to the item you
-                want to order and you will be presented with the order form
-                including a link to the suggestion</para>
-
+                <para>From the results, click 'Order' next to the item you want to order and you
+                  will be presented with the order form including a link to the suggestion</para>
                 <screenshot>
                   <screeninfo>Order from a Suggestion</screeninfo>
-
                   <mediaobject>
                     <imageobject>
                       <imagedata fileref="images/acquisitions/orderfromsuggestform.png"/>
                     </imageobject>
                   </mediaobject>
                 </screenshot>
-
                 <itemizedlist>
                   <listitem>
-                    <para>From this form you can make changes to the Catalog
-                    Details if necessary.</para>
+                    <para>From this form you can make changes to the Catalog Details if
+                      necessary.</para>
                   </listitem>
-
                   <listitem>
-                    <para>When the item appears in your basket it will include
-                    a link to the suggestion.</para>
-
+                    <para>When the item appears in your basket it will include a link to the
+                      suggestion.</para>
                     <screenshot>
                       <screeninfo>Suggestion Link in basket</screeninfo>
-
                       <mediaobject>
                         <imageobject>
                           <imagedata fileref="images/acquisitions/ordersuggestlink.png"/>
@@ -31327,6 +31324,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </screenshot>
                   </listitem>
                 </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>Orders added to the basket in this way will notify the patron via email that
+                  their suggestion has been ordered and will update the patron's '<link
+                    linkend="opacmysuggestions">My purchase suggestions</link>' page in the
+                  OPAC.</para>
               </listitem>
             </itemizedlist>
           </listitem>
