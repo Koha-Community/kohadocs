@@ -10247,6 +10247,35 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               reading history kept.</para>
             </important>
           </section>
+          <section id="TrackClicks">
+            <title>TrackClicks</title>
+            <para>Default: Don't track</para>
+            <para>Asks: ___  links that patrons click on.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't track</para>
+                </listitem>
+                <listitem>
+                  <para>Track</para>
+                </listitem>
+                <listitem>
+                  <para>Track anonymously</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>By setting this preference to one of the track options you will allow Koha
+                    to track every link clicked in Koha.  This data will be stored in a database
+                    table so that you can run reports against that data.  If you choose to 'Track'
+                    clicks then Koha will record both the link clicked and the logged in user who
+                    clicked the link. If you choose to 'Track anonymously' then the borrowernumber
+                    will not be recorded, but the rest of the data will.<tip>
+                      <para>Remember to update your local privacy policies and link to them from the
+                        OPAC to notify your users that you are tracking their information.</para>
+                    </tip></para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
         </section>
         <section id="opacselfregistrationprefs">
           <title>Self Registration</title>
