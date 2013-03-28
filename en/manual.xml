@@ -17897,50 +17897,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="noticemarkup">
             <title>Overdue Notice Markup</title>
 
-            <para>When creating your overdue notices there are two tags in
-            addition to the various database fields that you can use in your
-            notices.<important>
-                <para>These new tags only work on the overdue notices, not
-                other circulation related notices at this time.</para>
-              </important></para>
+            <para>When creating your overdue notices there are two tags in addition to the various
+              database fields that you can use in your notices.<important>
+                <para>These new tags only work on the overdue notices, not other circulation related
+                  notices at this time.</para>
+              </important>These tags are &lt;item&gt; and &lt;/item&gt; which should enclose all
+              fields from the biblio, biblioitems, and items tables.</para>
 
-            <itemizedlist>
-              <listitem>
-                <para>&lt;item&gt;&lt;/item&gt; which should enclose all
-                fields from the biblio, biblioitems, and items tables.</para>
-              </listitem>
-
-              <listitem>
-                <para>&lt;fine&gt;&lt;/fine&gt; which should be enclosed by
-                the item tag and should enclose a currency identifier per ISO
-                4217. If this tag is present with a proper identifier, the
-                fine for that item will be displayed in the proper currency
-                format.</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>Note: ISO 4217 changes from time to time therefore
-                    all currencies may not be supported. If you find one that
-                    is not supported, please file a bug with the
-                    Locale::Currency::Format author Tan D Nguyen &lt;tnguyen
-                    at cpan doe org&gt;.</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <para>An example of using these two tags in a notice template
-            might be like:</para>
+            <para>An example of using these tags in a notice template might be like:</para>
 
             <programlisting>   The following item(s) is/are currently overdue:
 
-   &lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by &lt;&lt;biblio.author&gt;&gt;, &lt;&lt;items.itemcallnumber&gt;&gt;, Barcode: &lt;&lt;items.barcode&gt;&gt; Fine: &lt;fine&gt;GBP&lt;/fine&gt;&lt;/item&gt;</programlisting>
+   &lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by &lt;&lt;biblio.author&gt;&gt;, &lt;&lt;items.itemcallnumber&gt;&gt;, Barcode: &lt;&lt;items.barcode&gt;&gt; Fine: &lt;&lt;items.fine>>&lt;/item&gt;</programlisting>
 
-            <para>Which, assuming two items were overdue, would result in a
-            notice like:<programlisting>   The following item(s) is/are currently overdue:
+            <para>Which, assuming two items were overdue, would result in a notice
+              like:<programlisting>   The following item(s) is/are currently overdue:
 
-   "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: £3.50
-   "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: £3.50</programlisting></para>
+   "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: 3.50
+   "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: 3.50</programlisting></para>
           </section>
         </section>
 
