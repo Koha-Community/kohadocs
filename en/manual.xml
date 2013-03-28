@@ -7471,6 +7471,47 @@
               </listitem>
             </itemizedlist>
           </section>
+          <section id="HighlightOwnItemsOnOPAC">
+            <title>HighlightOwnItemsOnOPAC &amp; HighlightOwnItemsOnOPACWhich</title>
+            <para>HighlightOwnItemsOnOPAC Default: Don't emphasize</para>
+            <para>HighlightOwnItemsOnOPACWhich Default: patron's home library </para>
+            <para>Asks: ___  results from the ___ by moving the results to the front and increasing
+              the size or highlighting the rows for those results. </para>
+            <para>HighlightOwnItemsOnOPAC Values:<itemizedlist>
+                <listitem>
+                  <para>Don't emphasize</para>
+                </listitem>
+                <listitem>
+                  <para>Emphasize</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>HighlightOwnItemsOnOPACWhich Values:<itemizedlist>
+                <listitem>
+                  <para>OPAC's branch based via the URL<itemizedlist>
+                      <listitem>
+                        <para>The items emphasized will be those of the same library as the patron's
+                          library. If no one is logged into the OPAC, no items will be
+                          highlighted.</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+                <listitem>
+                  <para>patron's home library<itemizedlist>
+                      <listitem>
+                        <para>The library is chosen based on the Apache environment variable
+                          BRANCHCODE. For example, this could be added to the OPAC section of
+                          koha-httpd.conf: SetEnv BRANCHCODE "CPL"</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+              </itemizedlist></para>
+            <important>
+              <para>This preference will only effect sites that are not using an XSLT stylesheet.
+                XSLT stylesheets are defined in the <link linkend="OPACXSLTResultsDisplay"
+                  >OPACXSLTResultsDisplay</link> and <link linkend="OPACXSLTDetailsDisplay"
+                  >OPACXSLTDetailsDisplay</link> preferences.</para>
+            </important>
+          </section>
 
           <section id="LibraryName">
             <title>LibraryName</title>
