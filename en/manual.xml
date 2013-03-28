@@ -32743,8 +32743,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>If you choose to save the report you will be asked to name
-          your report and enter any notes regarding it.</para>
+          <para>If you choose to save the report you will be asked to name your report, sort it in
+            to groups and subgroups and enter any notes regarding it.</para>
 
           <screenshot>
             <screeninfo>Save custom report</screeninfo>
@@ -32769,12 +32769,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
 
-          <para>From here you can make edits, run the report, or schedule a
-          time to have the report run. To find the report you created you can
-          sort by any of the columns by clicking the on the column header
-          (creation date is the best bet for finding the report you just
-          added). You can also filter your results using the filter menu on
-          the left.</para>
+          <para>From here you can make edits, run the report, or schedule a time to have the report
+            run. To find the report you created you can sort by any of the columns by clicking the
+            on the column header (creation date is the best bet for finding the report you just
+            added). You can also filter your results using the filter menu on the left or use the
+            tabs to find reports based on your custom groups.</para>
         </section>
 
         <section id="reportfromsql">
@@ -32788,9 +32787,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           /installer/data/mysql/kohastructure.sql or online at: <ulink
           url="http://schema.koha-community.org/">http://schema.koha-community.org</ulink>.</para>
 
-          <para>To add your query, click the link to 'Create from SQL' on the
-          main reports module or the New button at the top of the Saved
-          Reports page.</para>
+          <para>To add your query, click the link to 'Create from SQL' on the main reports module or
+            the 'New report' button at the top of the 'Saved reports' page.</para>
 
           <screenshot>
             <screeninfo>New SQL Report</screeninfo>
@@ -32823,38 +32821,54 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>You can use the 'Report group' to organize your reports so
-              that you can easily filter reports by groups. Report groups are
-              set in the <link linkend="reportgroup">REPORT_GROUP</link>
-              authorized value category.</para>
-
-              <screenshot>
-                <screeninfo>Report group</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/reports/reportgroup.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
+              <para>You can use the 'Report group' to organize your reports so that you can easily
+                filter reports by groups. Report groups are set in the <link linkend="reportgroup"
+                  >REPORT_GROUP</link> authorized value category or can be added on the fly when
+                creating the report by choosing the 'or create' radio button.<screenshot>
+                  <screeninfo>Report group</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/reports/reportgroup.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot><itemizedlist>
+                  <listitem>
+                    <para>
+                      <tip>
+                        <para>If you're adding a report group on the fly, remember that you code
+                          should be fewer than 10 characters and should not include special
+                          characters or spaces.</para>
+                      </tip>
+                    </para>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
 
             <listitem>
-              <para>You can use 'Report subgroup' to further organize your
-              reports so that you can easily filter reports by groups and
-              subgroups. Report subgroups are set in the <link
-              linkend="reportsubgroup">REPORT_SUBGROUP</link> authorized value
-              category.</para>
-
+              <para>You can use 'Report subgroup' to further organize your reports so that you can
+                easily filter reports by groups and subgroups. Report subgroups are set in the <link
+                  linkend="reportsubgroup">REPORT_SUBGROUP</link> authorized value category or can
+                be added on the fly when creating the report by choosing the 'or create' radio
+                button.</para>
               <screenshot>
                 <screeninfo>Report subgroup</screeninfo>
-
                 <mediaobject>
                   <imageobject>
                     <imagedata fileref="images/reports/reportsubgroup.png"/>
                   </imageobject>
                 </mediaobject>
               </screenshot>
+              <itemizedlist>
+                <listitem>
+                  <para>
+                    <tip>
+                      <para>If you're adding a report subgroup on the fly, remember that you code
+                        should be fewer than 10 characters and should not include special characters
+                        or spaces.</para>
+                    </tip>
+                  </para>
+                </listitem>
+              </itemizedlist>
             </listitem>
 
             <listitem>
@@ -33003,6 +33017,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           Reports page and <link linkend="runcustomreport">run</link> or <link
           linkend="editcustomreports">edit</link> it.</para>
         </section>
+        <section id="duplicatereport">
+          <title>Duplicate Report</title>
+          <para>Reports can also be added by duplicating an existing report.  Visit the 'Saved
+            reports' page to see all of the reports listed on your system already.</para>
+          <screenshot>
+            <screeninfo>Saved Reports</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/reports/savedreports.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>To the right of every report there is a 'Duplicate' link in the 'Saved SQL' column.
+            Click that 'Duplicate' link to use an existing report as the basis for your new report.
+            That will populate the new report form with the exisitng SQL for easy editing and
+            resaving.</para>
+        </section>
       </section>
 
       <section id="editcustomreports">
@@ -33021,12 +33052,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>To find the report you'd like to edit you can sort by any of the
-        columns by clicking the on the column header. You can also filter your
-        results using the filter menu on the left.</para>
+        <para>To find the report you'd like to edit you can sort by any of the columns by clicking
+          the on the column header. You can also filter your results using the filter menu on the
+          left or use the tabs to find reports based on your custom groups.</para>
 
-        <para>From this list you can edit any custom report by clicking 'Edit
-        SQL'</para>
+        <para>From this list you can edit any custom report by clicking 'Edit' in the 'Saved SQL'
+          column.</para>
 
         <screenshot>
           <screeninfo>Edit SQL Form</screeninfo>
@@ -33042,9 +33073,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="runcustomreport">
         <title>Running Custom Reports</title>
 
-        <para>Once custom reports are saved to Koha, you can run them by going
-        to the Saved Reports page and clicking the Run link to the right of
-        the report.</para>
+        <para>Once custom reports are saved to Koha, you can run them by going to the Saved Reports
+          page and clicking the 'Run' link to the right of the report.</para>
 
         <screenshot>
           <screeninfo>Run Report</screeninfo>
