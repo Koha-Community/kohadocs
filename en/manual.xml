@@ -6223,6 +6223,27 @@
             </itemizedlist>
           </section>
         </section>
+        <section id="pluginprefs">
+          <title>Plugins</title>
+          <section id="UseKohaPlugins">
+            <title>UseKohaPlugins</title>
+            <para>Default: Don't enable</para>
+            <para>Asks: ___  the ability to use Koha Plugins.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't enable</para>
+                </listitem>
+                <listitem>
+                  <para>Enable</para>
+                </listitem>
+              </itemizedlist></para>
+            <note>
+              <para>The plugin system must also be enabled in the Koha configuration file to be
+                fully enabled. Learn more in the <link linkend="pluginsystem">Plugins
+                chapter</link>.</para>
+            </note>
+          </section>
+        </section>
 
         <section id="Syndeticsprefs">
           <title>Syndetics</title>
@@ -38291,6 +38312,37 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </tbody>
         </tgroup>
       </table>
+    </section>
+  </chapter>
+  <chapter id="pluginsystem">
+    <title>Plugin System</title>
+    <para>Koha's Plugin System allows for you to add additional tools and reports to Koha that are
+      specific to your library.  Plugins are installed by uploading KPZ ( Koha Plugin Zip )
+      packages. A KPZ file is just a zip file containing the perl files, template files, and any
+      other files neccessary to make the plugin work.</para>
+    <para>The plugin system needs to be turned on by a system administrator and should only managed
+      by those who understand Perl and the way data connects within Koha. </para>
+    <section id="pluginsetup">
+      <title>Set up</title>
+      <para>To set up the Koha plugin system you must first make some changes to your install.<itemizedlist>
+          <listitem>
+            <para>Create the directory /var/lib/koha/plugins</para>
+          </listitem>
+          <listitem>
+            <para>Add the lines &lt;pluginsdir>/var/lib/koha/plugins&lt;/pluginsdir>
+              &lt;enable_plugins>1&lt;/enable_plugins>" to your koha-conf.xml file</para>
+          </listitem>
+          <listitem>
+            <para>Add the line Alias /plugin/ "/var/lib/koha/plugins/" to your koha-httpd.conf
+              file</para>
+          </listitem>
+          <listitem>
+            <para>Restart your webserver</para>
+          </listitem>
+        </itemizedlist>Once set up is complete you will need to alter your <link
+          linkend="UseKohaPlugins">UseKohaPlugins</link> system preference to be able to see a
+        Plugins option under the More menu on your toolbar.  On the Tools page you will see the
+        Tools Plugins and on the Reports page you will see the Reports Plugins.</para>
     </section>
   </chapter>
 
