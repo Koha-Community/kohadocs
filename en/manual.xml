@@ -22265,7 +22265,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/patrons/duplicatepatron.png"/>
+                <imagedata fileref="images/patrons/patronedit.png"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -22501,9 +22501,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>Children patrons do not become adults automatically in Koha.
-          To upgrade a child patron to and adult patron category click on the
-          'More' menu and choose 'Update Child to Adult Patron'</para>
+          <para>Children patrons do not become adults automatically in Koha unless you have <link
+              linkend="j2acron">Juvenile to Adult cron job</link> running. To upgrade a child patron
+            to and adult patron category manually go to the 'More' menu and choose 'Update Child to
+            Adult Patron'</para>
 
           <screenshot>
             <screeninfo>Update Child to Adult Patron</screeninfo>
@@ -38379,8 +38380,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       specific to your library.  Plugins are installed by uploading KPZ ( Koha Plugin Zip )
       packages. A KPZ file is just a zip file containing the perl files, template files, and any
       other files neccessary to make the plugin work.</para>
-    <para>The plugin system needs to be turned on by a system administrator and should only managed
-      by those who understand Perl and the way data connects within Koha. </para>
+    <para>The plugin system needs to be turned on by a system administrator. </para>
     <section id="pluginsetup">
       <title>Set up</title>
       <para>To set up the Koha plugin system you must first make some changes to your install.<itemizedlist>
