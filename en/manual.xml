@@ -14766,16 +14766,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>same library, all patron types, all item types</para>
           </listitem>
           <listitem>
-            <para>all libraries, same patron type, same item type</para>
+            <para>default (all libraries), same patron type, same item type</para>
           </listitem>
           <listitem>
-            <para>all libraries, same patron type, all item types</para>
+            <para>default (all libraries), same patron type, all item types</para>
           </listitem>
           <listitem>
-            <para>all libraries, all patron types, same item type</para>
+            <para>default (all libraries), all patron types, same item type</para>
           </listitem>
           <listitem>
-            <para>all libraries, all patron types, all item types</para>
+            <para>default (all libraries), all patron types, all item types</para>
           </listitem>
         </itemizedlist>
         <tip>
@@ -14938,7 +14938,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <section id="defaultcheckoutpolicy">
           <title>Default Checkouts and Hold Policy</title>
           <para>You can set a default maximum number of checkouts and hold policy that will be used
-            if none is defined below for a particular item type or category.</para>
+            if none is defined below for a particular item type or category.  This is the fall back
+            rule for defaults.</para>
           <screenshot>
             <screeninfo>Default Checkouts and Hold Policy</screeninfo>
             <mediaobject>
@@ -14948,7 +14949,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
           <para>From this menu you can set a default to apply to all item types and patrons in the
-            library.</para>
+            library if no other option is set in the forms below.</para>
           <itemizedlist>
             <listitem>
               <para>In 'Total Current Checkouts Allowed' enter the total number of items patrons can
@@ -14999,7 +15000,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <section id="checkoutperpatron">
           <title>Checkouts Per Patron</title>
           <para>For this library, you can specify the maximum number of loans that a patron of a
-            given category can make, regardless of the item type.</para>
+            given category can make, regardless of the item type.  </para>
           <screenshot>
             <screeninfo>Set default checkouts per patron category</screeninfo>
             <mediaobject>
@@ -15012,11 +15013,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>If the total amount loanable for a given patron category is left blank, no limit
               applies, except possibly for a limit you define for a specific item type.</para>
           </tip>
+          <para>For example, if you have a rule in the matrix that says Board patrons are allowed 10
+            books and 5 DVDs but you want to make it so that Board patrons only have a total of 12
+            things checked out at once.  If you enter 12 here and the patron has 10 books out
+            already they will only be allowed 2 DVDs to equal the 12 total they're allowed.</para>
         </section>
         <section id="holdpolicies">
           <title>Item Hold Policies</title>
-          <para>For this library, you can edit rules for given itemtypes, regardless of the patron's
-            category. Currently, this means hold policies.</para>
+          <para>For this library, you can edit hold and return policies for a given item type,
+            regardless of the patron's category.</para>
           <screenshot>
             <screeninfo>Hold policies per item type</screeninfo>
             <mediaobject>
@@ -15082,6 +15087,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 branch</para>
             </listitem>
           </itemizedlist>
+          <para>For example you might allow holds at your libraries but not what New items or DVDs to
+            be placed on hold by other branches so you can set the 'Hold policy' to 'From home
+            library' so that those items can only be placed on hold if the items' owning library and
+            the patron's home library are the same.  You can also block holds completely on specific
+            item types from this form.  This is also how you can set up floating item types and
+            types that remain with their home library.</para>
         </section>
       </section>
       <section id="patronattributetypes">
