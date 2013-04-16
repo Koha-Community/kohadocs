@@ -12675,6 +12675,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </itemizedlist>
           </section>
         </section>
+        <section id="reportingservice">
+          <title>Reporting</title>
+          <section id="SvcMaxReportRows">
+            <title>SvcMaxReportRows</title>
+            <para>Default: 10</para>
+            <para>Asks: Only return ___ rows of a report requested via the reports web
+              service.</para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This value will be used to limit the number of results returned by <link
+                      linkend="publicreport">public reports</link>.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+        </section>
       </section>
     </section>
 
@@ -32138,20 +32153,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </screenshot>
             </listitem>
 
-            <listitem>
-              <para>'Report is public' should be left to the default of 'No'
-              in most cases. A report can be made public if you intend to
-              allow access to it through the JSON webservice interface. This
-              is a system that can be used by developers to make custom
-              presentations of the data from the report, for example
-              displaying it using a graphing API. To learn more speak to your
-              local developer.</para>
-
+            <listitem id="publicreport">
+              <para>'Report is public' should be left to the default of 'No' in most cases. A report
+                can be made public if you intend to allow access to it through the JSON webservice
+                interface. This is a system that can be used by developers to make custom
+                presentations of the data from the report, for example displaying it using a
+                graphing API. To learn more speak to your local developer.</para>
               <itemizedlist>
                 <listitem>
-                  <para>A public report is accessible via a URL that looks
-                  like this:
-                  http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID</para>
+                  <para>A public report is accessible via a URL that looks like this:
+                    http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID</para>
                 </listitem>
               </itemizedlist>
             </listitem>
