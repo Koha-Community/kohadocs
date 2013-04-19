@@ -2653,20 +2653,6 @@
 
             <para>Asks: Use the checkout and fines rules of ___</para>
 
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference establishes what may be done with a
-                loaned item once the item has been returned. It deals with
-                situations in which one library branch has borrowed materials
-                from a different branch. Essentially it decides whether a
-                library may check the borrowed item back out to its patron or
-                if it must immediately send the item back to the owning
-                location.</para>
-              </listitem>
-            </itemizedlist>
-
             <para>Values:</para>
 
             <itemizedlist>
@@ -2680,22 +2666,24 @@
             </itemizedlist>
 
             <important>
-              <para>It is not recommend that this setting be changed after
-              initial setup of Koha</para>
+              <para>It is not recommend that this setting be changed after initial setup of Koha
+                because it will change the behavior of items already checked out.</para>
             </important>
-
-            <important>
-              <para>This preference does nothing unless the
-              IndependantBranches preference is set to 'Prevent'.</para>
-            </important>
-
+            <para>Description:</para>
             <itemizedlist>
               <listitem>
-                <para><emphasis>Get there: </emphasis>More &gt; Administration
-                &gt; Global System Preferences &gt; Admin &gt; <link
-                linkend="IndependantBranches">IndependantBranches</link></para>
+                <para>If <link linkend="IndependantBranches">IndependantBranches</link> is set to
+                  'Prevent' and <link linkend="CircControl">CircControl</link> is set to 'the
+                  library the item is from' this preference decides whether the library holding the
+                  item (holding library on the item record) may check the item out to its own patron
+                  or if it must immediately send the item back to the owning location (home library
+                  on the item record).</para>
               </listitem>
             </itemizedlist>
+            <important>
+              <para>This preference does nothing unless the <link linkend="IndependantBranches"
+                  >IndependantBranches</link> preference is set to 'Prevent'.</para>
+            </important>
           </section>
 
           <section id="InProcessingToShelvingCart">
