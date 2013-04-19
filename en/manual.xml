@@ -1478,7 +1478,7 @@
             </itemizedlist>
           </section>
           <section id="NotesBlacklist">
-            <title>NotesBlacklist</title>
+            <title/>
             <para>Asks: Don't show these ___ note fields in title notes separator (OPAC record
               details) and in the description separator (Staff client record details). </para>
             <para>Description:<itemizedlist>
@@ -12286,6 +12286,50 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <para>show</para>
               </listitem>
             </itemizedlist>
+          </section>
+          <section id="IntranetNumbersPreferPhrase">
+            <title>IntranetNumbersPreferPhrase</title>
+            <para>Default: don't use</para>
+            <para>Asks: By default, ___ the operator "phr" in the callnumber and standard number
+              staff client searches </para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>don't use</para>
+                </listitem>
+                <listitem>
+                  <para>use</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>When searching by call number and standard number (biblionumber) in Koha
+                    Staff Client you can choose to force the search to be a phrase search by setting
+                    this preference to 'use.' This will allow for more accurate results over doing a
+                    general keyword field search.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="OPACNumbersPreferPhrase">
+            <title>OPACNumbersPreferPhrase</title>
+            <para>Default: don't use</para>
+            <para>Asks: By default, ___ the operator "phr" in the callnumber and standard number
+              OPAC searches </para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>don't use</para>
+                </listitem>
+                <listitem>
+                  <para>use</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>When searching by call number and standard number (biblionumber) in the Koha
+                    OPAC you can choose to force the search to be a phrase search by setting this
+                    preference to 'use.' This will allow for more accurate results over doing a
+                    general keyword field search.</para>
+                </listitem>
+              </itemizedlist></para>
           </section>
         </section>
       </section>
