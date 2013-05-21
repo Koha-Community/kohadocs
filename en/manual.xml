@@ -27509,132 +27509,173 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         created for the title, it is not physically separated from the host
         item.  Learn more about Analytics in Chapter 13 of AACR2.</para>
 
-        <para>If you would like to catalog analytic records in Koha you first
-        need to update the <link linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link>
-        preference to 'Display.'</para>
-
-        <para>After cataloging your analytic record (see <link linkend="addbibrec">Adding Records</link> for more on creating
-        records) click 'Edit' from the normal view and choose to 'Link to Host
-        Item'</para>
-
-        <screenshot>
-          <screeninfo>Link to Host Item</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/analyticslink.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>This will prompt you to enter the barcode for the item this
-        record should be linked to.</para>
-
-        <screenshot>
-          <screeninfo>Barcode for Analytic Linking</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/analyticsbarcode.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>After entering the item's barcode and clicking 'Select' you will
-        receive a confirmation message.</para>
-
-        <screenshot>
-          <screeninfo>Analytic Link Success</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/analyticlinksuccess.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>The record will now have the 773 field filled in properly to
-        complete the link.</para>
-
-        <screenshot>
-          <screeninfo>773</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/analytics773.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>If you have linked an analytic record incorrectly you can remove
-        that link by editing the item on the analytic record (not the host
-        record). To do this, go to the analytic record and click the 'Edit'
-        button and choose to 'Edit items'. To the left of each item you will
-        see two options.</para>
-
-        <screenshot>
-          <screeninfo>Edit Analytic Item Record</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/analyticdelink.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <itemizedlist>
-          <listitem>
-            <para>Clicking 'Edit in Host' will allow you to edit the item on
-            the host record.</para>
-          </listitem>
-
-          <listitem>
-            <para>Clicking 'Delink' will remove the 773 field and the link
-            between the analytic and the host.</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>To view all of the items tied to the host record, do a search
-        for the record, click the Analytics tab on the left and the analytics
-        tied to each barcode will be shown under the "Used in" column.</para>
-
-        <screenshot>
-          <screeninfo>Analytics Tab</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/analyticstab.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <tip>
-          <para>It is also possible to create analytic records from this
-          screen by clicking on "Create Analytics"</para>
-        </tip>
-
-        <para>You can also see the analytics attached to this record by
-        clicking the 'Show Analytic' link towards the top of the record in the
-        normal view.</para>
-
-        <screenshot>
-          <screeninfo>Show Analytics on Bib Record</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/cataloging/anayticbib.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>When looking at the anaytic record you will also see a link to the host item under the
-          'Host records' column in the holdings table when viewing the 'Analtyics' tab.<screenshot>
-            <screeninfo>Host Record</screeninfo>
+        <para>If you would like to catalog analytic records there are two options. One is to use the
+            <link linkend="catalogeasyanalytics">Easy Analytics</link> funtion; the other is the
+            <link linkend="catalogenhanceanalytics">Analytics Enhanced Workflow</link>.</para>
+        <section id="catalogeasyanalytics">
+          <title>Easy Analytics</title>
+          <para>The Easy Analytics feature makes linking analytic records together easier.  The
+            first thing you need to do is set the <link linkend="EasyAnalyticalRecords"
+              >EasyAnalyticalRecords</link> preference to 'Display' and the <link
+              linkend="UseControlNumber">UseControlNumber</link> preference to 'Don't use.' </para>
+          <para>After cataloging your analytic record (see <link linkend="addbibrec">Adding
+              Records</link> for more on creating records) click 'Edit' from the normal view and
+            choose to 'Link to Host Item'</para>
+          <screenshot>
+            <screeninfo>Link to Host Item</screeninfo>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="images/cataloging/hostrecords.png"/>
+                <imagedata fileref="images/cataloging/analyticslink.png"/>
               </imageobject>
             </mediaobject>
-          </screenshot></para>
+          </screenshot>
+          <para>This will prompt you to enter the barcode for the item this record should be linked
+            to.</para>
+          <screenshot>
+            <screeninfo>Barcode for Analytic Linking</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analyticsbarcode.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>After entering the item's barcode and clicking 'Select' you will receive a
+            confirmation message.</para>
+          <screenshot>
+            <screeninfo>Analytic Link Success</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analyticlinksuccess.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>The record will now have the 773 field filled in properly to complete the
+            link.</para>
+          <screenshot>
+            <screeninfo>773</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analytics773.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>To view all of the items tied to the host record, do a search for the record, click
+            the Analytics tab on the left and the analytics tied to each barcode will be shown under
+            the "Used in" column.</para>
+          <screenshot>
+            <screeninfo>Analytics Tab</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analyticstab.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <tip>
+            <para>It is also possible to create analytic records from this screen by clicking on
+              "Create Analytics"</para>
+          </tip>
+          <para>You can also see the analytics attached to this record by clicking the 'Show
+            Analytic' link towards the top of the record in the normal view.</para>
+          <screenshot>
+            <screeninfo>Show Analytics on Bib Record</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/anayticbib.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>When looking at the anaytic record you will also see a link to the host item under
+            the 'Host records' column in the holdings table when viewing the 'Analtyics' tab.<screenshot>
+              <screeninfo>Host Record</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/hostrecords.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+        </section>
+        <section id="catalogenhanceanalytics">
+          <title>Analytics Enhanced Workflow </title>
+          <para>To use the Enhanced Workflow method of adding analyticsm the first thing you need to
+            do is set the <link linkend="EasyAnalyticalRecords">EasyAnalyticalRecords</link>
+            preference to 'Don't display' and the <link linkend="UseControlNumber"
+              >UseControlNumber</link> preference to 'Use.' </para>
+          <para>After cataloging your original record (see <link linkend="addbibrec">Adding
+              Records</link> for more on creating records) click 'New' from the normal view and
+            choose to 'New child record.'<screenshot>
+              <screeninfo>New child record</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/analyticschildlink.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>This will open a new blank record for cataloging. The blank record will only have
+            the 773 field filled in properly to complete the link once the record is saved.</para>
+          <screenshot>
+            <screeninfo>773</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analytics773child.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>To view all of the items tied to the host record, do a search for the record, click
+            the Analytics tab on the left and the analytics tied to each barcode will be shown under
+            the "Used in" column.</para>
+          <screenshot>
+            <screeninfo>Analytics Tab</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analyticstab.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>You can also see the analytics attached to this record by clicking the 'Show
+            Analytic' link towards the top of the record in the normal view.</para>
+          <screenshot>
+            <screeninfo>Show Analytics on Bib Record</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/anayticbib.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>When looking at the anaytic record you will also see a link to the host item under
+            the 'Host records' column in the holdings table when viewing the 'Analtyics' tab.<screenshot>
+              <screeninfo>Host Record</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/cataloging/hostrecords.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+        </section>
+        <section id="analyticediting">
+          <title>Editing Analytics</title>
+          <para>If you have linked an analytic record incorrectly you can remove that link by
+            editing the item on the analytic record (not the host record). To do this, go to the
+            analytic record and click the 'Edit' button and choose to 'Edit items'. To the left of
+            each item you will see two options.</para>
+          <screenshot>
+            <screeninfo>Edit Analytic Item Record</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/analyticdelink.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <itemizedlist>
+            <listitem>
+              <para>Clicking 'Edit in Host' will allow you to edit the item on the host
+                record.</para>
+            </listitem>
+            <listitem>
+              <para>Clicking 'Delink' will remove the 773 field and the link between the analytic
+                and the host.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
 
       <section id="editbibrec">
