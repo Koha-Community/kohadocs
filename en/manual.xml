@@ -42957,8 +42957,10 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
   <appendix id="resetkohadb">
     <title>Resetting the Koha Database</title>
 
-    <para>These notes on how to reset the database for Koha 3 were derived
-    from the following email thread: <ulink url="http://lists.koha-community.org/pipermail/koha-devel/2009-January/008939.html">http://lists.koha-community.org/pipermail/koha-devel/2009-January/008939.html</ulink></para>
+    <para>These notes on how to reset the database for Koha were derived from the following email
+      thread: <ulink
+        url="http://lists.koha-community.org/pipermail/koha-devel/2009-January/008939.html"
+        >http://lists.koha-community.org/pipermail/koha-devel/2009-January/008939.html</ulink></para>
 
     <para>Resetting the database may be useful if you install Koha with the
     sample data, and then wish to use real data without reinstalling the
@@ -43003,6 +43005,11 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
       <para>Run the following commands to reset the authorities and biblios
       Zebra indices. <programlisting>$ zebraidx -c /etc/koha/zebradb/zebra-authorities-dom.cfg -g iso2709 -d authorities init 
 $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init </programlisting></para>
+      <para>If you are running a package install then you'll want to run the following commands to
+        reset the authorities and biblios Zebra indices
+        instead:<programlisting>$ sudo zebraidx -c /etc/koha/sites/YOURLIBRARY/zebra-authorities-dom.cfg  -g iso2709 -d authorities init 
+$ sudo zebraidx -c /etc/koha/sites/YOURLIBRARY/zebra-biblios.cfg  -g iso2709 -d biblios init </programlisting></para>
+      <para>Replacing YOURLIBRARY with your Koha installation name.</para>
     </section>
   </appendix>
 
