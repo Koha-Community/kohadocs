@@ -26981,6 +26981,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <title>Offline Circ Tool for Windows</title>
 
         <para>The Offline Circulation Utility can be downloaded at: <ulink url="http://kylehall.info/index.php/projects/koha/koha-offline-circulation/">http://kylehall.info/index.php/projects/koha/koha-offline-circulation/</ulink></para>
+        <para>To generate a borrowers.db file for loading in to the Windows tool you will need to
+          run the <link linkend="offlinecirccron">file generator via a cron job</link>.</para>
       </section>
 
       <section id="uploadofflinecirc">
@@ -40489,6 +40491,13 @@ print theme('pages_catalog');</programlisting>
             </para>
             <para>Jared Camins-Esakov &lt;jcamins AT cpbibliography DOT com></para>
           </section>
+        </section>
+        <section id="offlinecirccron">
+          <title>Generate Patron File for Offline Circulation</title>
+          <para>Script path: misc/cronjobs/create_koc_db.pl</para>
+          <para>Does: Generates the borrowers.db file for use with the <link
+              linkend="windowsofflinecirc">Koha Offline Circulation</link> tool</para>
+          <para>Frequency suggestion: weekly</para>
         </section>
       </section>
       <section id="patroncrons">
