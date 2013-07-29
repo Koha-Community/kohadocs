@@ -29782,6 +29782,153 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
     </section>
   </chapter>
+  <chapter id="coursereserves">
+    <title>Course Reserves</title>
+    <para>The course reserves module in Koha allows you to temporarily move items to 'reserve' and
+      assign different circulation rules to these items while they are being used for a specific
+      course.</para>
+    <section id="coursesetup">
+      <title>Course Reserves Setup</title>
+      <para>Before using Course Reserves you will need to do some set up.  </para>
+      <para>First you will need to enable course reserves by setting the UseCourseReserves
+        preference to 'Use'.</para>
+      <para>Next you will need to have all of your course instructors <link linkend="addnewpatron"
+          >added as patrons</link>.</para>
+      <para>Next you will want to add a couple of new <link linkend="newauthval">authorized
+          values</link> for Departments and Terms. </para>
+      <para>You may also want to create new <link linkend="additemtype">item types</link>, <link
+          linkend="ccode">collection codes</link> and/or <link linkend="shelvelocvals">shelving
+          locations</link> to make it clear that the items are on reserve to your patrons. You will
+        also want to be sure to confirm that your <link linkend="circfinerules">circulation and fine
+          rules</link> are right for your new item types (whether they be hourly or daily
+        loans).</para>
+    </section>
+    <section id="addingcourses">
+      <title>Adding Courses</title>
+      <para>Once you have completed your set up for Course Reserves you can start creating courses
+        and adding titles to the reserve list.<screenshot>
+          <screeninfo>Course Reserves Admin</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/coursesblank.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>From the main course reserves page you can add a new course by clicking the 'New course'
+        button at the top left.  <screenshot>
+          <screeninfo>Add a new course</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/newcourse.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>Your new course will need a Department, Number and Name at the bare minimum.  You can
+        also add in additional details like course section number and term.  To link a instructor to
+        this course simply start typing their name and Koha will search your patron database to find
+        you the right person.<screenshot>
+          <screeninfo>Instrcutor search</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/instructorsearch.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>Once the instructor you want appears just click their name and they will be added. You
+        can repeat this for all instructors on this course. Each instructor will appear above the
+        search box and can be removed by clicking the 'Remove' link to the right of their name.<screenshot>
+          <screeninfo>Instructors</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/instructorremove.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>If you would like your course to show publicly you'll want to be sure to check the
+        'Enabled?' box before saving your new course.</para>
+      <para>Once your course is saved it will show on the main course reserves page and be
+        searchable by any field in the course.<screenshot>
+          <screeninfo>Courses</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/courses.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+    </section>
+    <section id="addreserves">
+      <title>Adding Reserve Materials </title>
+      <para>Before adding reserve materials you will need at least one course to add them to.  To
+        add materials visit the Course Reserves module.</para>
+      <screenshot>
+        <screeninfo>Courses</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/coursereserves/courses.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Click on the title of the course you would like to add materials to.<screenshot>
+          <screeninfo>Course administration</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/courseadmin.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>At the top of the course description click the 'Add reserves' button to add titles to
+        this reserve list. You will be asked to enter the barcode for the reserve item.</para>
+      <screenshot>
+        <screeninfo>Add item to reserve</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/coursereserves/addbarcode.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>After you are done scanning the barcodes to add to the course you can see them on the
+        course page</para>
+      <screenshot>
+        <screeninfo>Course with reserves</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/coursereserves/coursewithreserves.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
+    <section id="opaccoursereserves">
+      <title>Course Reserves in the OPAC</title>
+      <para>Once you have enabled Course Reserves and added courses you will see a link to Course
+        Reserves below your search box in the OPAC. <screenshot>
+          <screeninfo>Course Reserves Link</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/courselinkopac.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>Clicking that link will show you your list of enabled courses (if you have only one
+        course you will just see the contents of that one course).<screenshot>
+          <screeninfo>Course list in the OPAC</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/coursesopac.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+      <para>You can search course reserves by any field (course number, course name, instructor
+        name, department) that is visbile in the list of courses. Clicking a course name will show
+        you the details and reserve items.<screenshot>
+          <screeninfo>Course listing</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/coursereserves/courseopac.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+    </section>
+  </chapter>
 
   <chapter id="serials">
     <title>Serials</title>
