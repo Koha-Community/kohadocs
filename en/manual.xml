@@ -15897,20 +15897,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <listitem>
               <para>To edit the subfields click 'Edit Subfields'</para>
+            </listitem>
 
+            <listitem>
+              <para>For each subfield you can set the following Basic constraint values</para>
               <screenshot>
                 <screeninfo>Editing the 504 Subfield</screeninfo>
-
                 <mediaobject>
                   <imageobject>
                     <imagedata fileref="images/admin/cataloging/editsubfield.png"/>
                   </imageobject>
                 </mediaobject>
               </screenshot>
-            </listitem>
-
-            <listitem>
-              <para>For each subfield you can set the following values</para>
 
               <itemizedlist>
                 <listitem>
@@ -15975,23 +15973,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>For each subfield you can set the following Advanced constraint values<screenshot>
+                  <screeninfo>Advanced constraints</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/cataloging/advancedoptsubfield.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
+              <itemizedlist>
                 <listitem>
                   <para>Default value</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>defines what you want to appear in the field by
-                      default, this will be editable, but it saves time if you
-                      use the same note over and over or the same value in a
-                      field often.</para>
+                      <para>defines what you want to appear in the field by default, this will be
+                        editable, but it saves time if you use the same note over and over or the
+                        same value in a field often.</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
                   <para>Visibility</para>
-
                   <itemizedlist>
                     <listitem>
                       <para>allows you to select from where this subfield is visible/hidden, simply
@@ -16007,92 +16012,83 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
                   <para>Is a URL</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>if checked, it means that the subfield is a URL
-                      and can be clicked</para>
+                      <para>if checked, it means that the subfield is a URL and can be
+                        clicked</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
                   <para>Link</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>If you enter a field/subfield here (200b), a link
-                      appears after the subfield in the MARC Detail view. This
-                      view is present only in the staff client, not the OPAC.
-                      If the librarian clicks on the link, a search is done on
-                      the database for the field/subfield with the same value.
-                      This can be used for 2 main topics :</para>
-
+                      <para>If you enter a field/subfield here (200b), a link appears after the
+                        subfield in the MARC Detail view. This view is present only in the staff
+                        client, not the OPAC. If the librarian clicks on the link, a search is done
+                        on the database for the field/subfield with the same value. This can be used
+                        for 2 main topics :</para>
                       <itemizedlist>
                         <listitem>
-                          <para>on a field like author (200f in UNIMARC), put
-                          200f here, you will be able to see all bib records
-                          with the same author.</para>
+                          <para>on a field like author (200f in UNIMARC), put 200f here, you will be
+                            able to see all bib records with the same author.</para>
                         </listitem>
-
                         <listitem>
-                          <para>on a field that is a link (4xx) to reach
-                          another bib record. For example, put 011a in 464$x,
-                          will find the serials that are with this
-                          ISSN.</para>
+                          <para>on a field that is a link (4xx) to reach another bib record. For
+                            example, put 011a in 464$x, will find the serials that are with this
+                            ISSN.</para>
                         </listitem>
                       </itemizedlist>
                     </listitem>
-
                     <listitem>
                       <warning>
                         <para>This value should not change after data has been added to your
-                          catalog.  If you need to change this value you must ask your system
+                          catalog. If you need to change this value you must ask your system
                           administrator to run misc/batchRebuildBiblioTables.pl. </para>
                       </warning>
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
                   <para>Koha link</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>Koha is multi-MARC compliant. So, it does not know
-                      what the 245$a means, neither what 200$f (those 2 fields
-                      being both the title in MARC21 and UNIMARC). So, in this
-                      list you can "map" a MARC subfield to its meaning. Koha
-                      constantly maintains consistency between a subfield and
-                      its meaning. When the user want to search on "title",
-                      this link is used to find what is searched (245 if
-                      you're MARC21, 200 if you're UNIMARC).</para>
+                      <para>Koha is multi-MARC compliant. So, it does not know what the 245$a means,
+                        neither what 200$f (those 2 fields being both the title in MARC21 and
+                        UNIMARC). So, in this list you can "map" a MARC subfield to its meaning.
+                        Koha constantly maintains consistency between a subfield and its meaning.
+                        When the user want to search on "title", this link is used to find what is
+                        searched (245 if you're MARC21, 200 if you're UNIMARC).</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>For each subfield you can set the following Other option values<screenshot>
+                  <screeninfo/>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/cataloging/otheroptssubfield.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
+              <itemizedlist>
                 <listitem>
                   <para>Authorized value</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>means the value cannot by typed by the librarian,
-                      but must be chosen from a pull down generated by the
-                      <link linkend="authorizedvalues">authorized value</link>
-                      list</para>
+                      <para>means the value cannot by typed by the librarian, but must be chosen
+                        from a pull down generated by the <link linkend="authorizedvalues"
+                          >authorized value</link> list</para>
                     </listitem>
-
                     <listitem>
-                      <para>In the example above, the 504a field will show the
-                      MARC504 Authorized Values when cataloging</para>
-
+                      <para>In the example above, the 504a field will show the MARC504 Authorized
+                        Values when cataloging</para>
                       <screenshot>
-                        <screeninfo>Example of an Authorized
-                        Subfield</screeninfo>
-
+                        <screeninfo>Example of an Authorized Subfield</screeninfo>
                         <mediaobject>
                           <imageobject>
                             <imagedata fileref="images/admin/cataloging/504auth.png"/>
@@ -16102,35 +16098,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
                   <para>Thesaurus</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>means that the value is not free text, but must be
-                      searched in the authority/thesaurus of the selected
-                      category</para>
+                      <para>means that the value is not free text, but must be searched in the
+                        authority/thesaurus of the selected category</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
                   <para>Plugin</para>
-
                   <itemizedlist>
                     <listitem>
-                      <para>means the value is calculated or managed by a
-                      plugin. Plugins can do almost anything.</para>
+                      <para>means the value is calculated or managed by a plugin. Plugins can do
+                        almost anything.</para>
                     </listitem>
-
                     <listitem>
-                      <para>For example, in UNIMARC there are plugins for
-                      every 1xx fields that are coded fields. The plugin is a
-                      huge help for cataloger ! There are also two plugins
-                      (unimarc_plugin_210c and unimarc_plugin_225a that can
-                      "magically" find the editor from an ISBN, and the
-                      collection list for the editor)</para>
+                      <para>For example, in UNIMARC there are plugins for every 1xx fields that are
+                        coded fields. The plugin is a huge help for cataloger ! There are also two
+                        plugins (unimarc_plugin_210c and unimarc_plugin_225a that can "magically"
+                        find the editor from an ISBN, and the collection list for the editor)</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
