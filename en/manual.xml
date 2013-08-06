@@ -12690,17 +12690,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="intranetcolorstylesheet">
             <title>intranetcolorstylesheet</title>
 
-            <para>Asks: Include the stylesheet /intranet-tmpl/prog/en/css/ ___
-            on all pages in the staff interface.</para>
+            <para>Asks: Include the additional CSS stylesheet ___ to override specified settings
+              from the default stylesheet</para>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>This preference is used to set the background color and
-                style of the Staff Client. The value is a .css file. The
-                system administrator should determine which file is
-                appropriate.</para>
+                <para>This preference is used to set the background color and style of the Staff
+                  Client. The value is a .css file. The system administrator should determine which
+                  file is appropriate. Enter just a filename, a full local path or a complete URL
+                  starting with http:// (if the file lives on a remote server). Please note that if
+                  you just enter a filename, the file should be in the css subdirectory for each
+                  active theme and language within the Koha templates directory. A full local path
+                  is expected to start from your HTTP document root. </para>
               </listitem>
             </itemizedlist>
 
@@ -12801,26 +12804,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="intranetstylesheet">
             <title>intranetstylesheet</title>
 
-            <para>Asks: Include the stylesheet at ___ on all pages in the
-            staff interface, instead of the default.</para>
+            <para>Asks: Use the CSS stylesheet ___ on all pages in the staff interface, instead of
+              the default css (used when leaving this field blank). </para>
 
             <para>Description:</para>
 
             <itemizedlist>
               <listitem>
-                <para>The Intranetstylesheet preference is a layout and design
-                feature for the intranet or staff client. To change the
-                stylesheet from the original, place in this preference the
-                file path to the style sheet - include the entire url starting
-                with http://. This preference allows a library to customize
-                the appearance of the Staff Client.</para>
+                <para>The Intranetstylesheet preference is a layout and design feature for the
+                  intranet or staff client. This preference allows a library to customize the
+                  appearance of the Staff Client. Enter just a filename, a full local path or a
+                  complete URL starting with http:// (if the file lives on a remote server). Please
+                  note that if you just enter a filename, the file should be in the css subdirectory
+                  for each active theme and language within the Koha templates directory. A full
+                  local path is expected to start from your HTTP document root. </para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>This should be a complete URL, starting with
-              http://</para>
-            </important>
           </section>
 
           <section id="IntranetUserCSS">
