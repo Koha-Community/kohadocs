@@ -650,54 +650,41 @@
             </itemizedlist>
           </section>
 
-          <section id="IndependantBranches">
+          <section id="IndependentBranches">
             <title>IndependentBranches</title>
-
             <para>Default: Don't prevent</para>
-
-            <para>Asks: ___ staff (but not superlibrarians) from modifying
-            objects (holds, items, patrons, etc.) belonging to other
-            libraries.</para>
-
+            <para>Asks: ___ staff (but not superlibrarians) from modifying objects (holds, items,
+              patrons, etc.) belonging to other libraries.</para>
             <para>Values:</para>
-
             <itemizedlist>
               <listitem>
                 <para>Don't prevent</para>
               </listitem>
-
               <listitem>
                 <para>Prevent</para>
               </listitem>
             </itemizedlist>
-
             <para>Description:</para>
-
             <itemizedlist>
               <listitem>
-                <para>This preference should only be used by library systems
-                which are sharing a single Koha installation among multiple
-                branches but are considered independent organizations, meaning
-                they do not share material or patrons with other branches and
-                do not plan to change that in the future. If set to 'Prevent'
-                it increases the security between library branches by:
-                prohibiting staff users from logging into another branch from
-                within the staff client, filtering out patrons from patron
-                searches who are not a part of the login branch conducting the
-                search, limiting the location choices to the login branch when
-                adding or modifying an item record, preventing users from
-                other branch locations from placing holds or checking out
-                materials from library branches other than their own, and
-                preventing staff from editing item records which belong to
-                other library branches. All of these security safeguards can
-                be overridden only by the superlibrarian, the highest level of
-                privileges.</para>
+                <para>This preference should only be used by library systems which are sharing a
+                  single Koha installation among multiple branches but are considered independent
+                  organizations, meaning they do not share material or patrons with other branches
+                  and do not plan to change that in the future. If set to 'Prevent' it increases the
+                  security between library branches by: prohibiting staff users from logging into
+                  another branch from within the staff client, filtering out patrons from patron
+                  searches who are not a part of the login branch conducting the search, limiting
+                  the location choices to the login branch when adding or modifying an item record,
+                  preventing users from other branch locations from placing holds or checking out
+                  materials from library branches other than their own, and preventing staff from
+                  editing item records which belong to other library branches. All of these security
+                  safeguards can be overridden only by the superlibrarian, the highest level of
+                  privileges.</para>
               </listitem>
             </itemizedlist>
-
             <important>
-              <para>It is important that this value be set before going live
-              and that it NOT be changed</para>
+              <para>It is important that this value be set before going live and that it NOT be
+                changed</para>
             </important>
           </section>
 
@@ -2728,7 +2715,7 @@
             <para>Description:</para>
             <itemizedlist>
               <listitem>
-                <para>If <link linkend="IndependantBranches">IndependentBranches</link> is set to
+                <para>If <link linkend="IndependentBranches">IndependentBranches</link> is set to
                   'Prevent' and <link linkend="CircControl">CircControl</link> is set to 'the
                   library the item is from' this preference decides whether the library holding the
                   item (holding library on the item record) may check the item out to its own patron
@@ -2737,7 +2724,7 @@
               </listitem>
             </itemizedlist>
             <important>
-              <para>This preference does nothing unless the <link linkend="IndependantBranches"
+              <para>This preference does nothing unless the <link linkend="IndependentBranches"
                   >IndependentBranches</link> preference is set to 'Prevent'.</para>
             </important>
           </section>
@@ -3693,8 +3680,8 @@
               </listitem>
 
               <listitem>
-                <para>Don't allow (with <link linkend="IndependantBranches">independent
-                branches</link>)</para>
+                <para>Don't allow (with <link linkend="IndependentBranches">independent
+                    branches</link>)</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -38606,7 +38593,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para><link linkend="IndependantBranches">IndependentBranches</link> : Prevent
+              <para><link linkend="IndependentBranches">IndependentBranches</link> : Prevent
                 librarians from editing content that belongs to other branches</para>
             </listitem>
           </itemizedlist>
