@@ -2289,6 +2289,35 @@
                 </listitem>
               </itemizedlist></para>
           </section>
+          <section id="CalculateFinesOnReturn">
+            <title>CalculateFinesOnReturn</title>
+            <para>Default: Do</para>
+            <para>Asks: ___ calculate and update overdue charges when an item is returned.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Do</para>
+                </listitem>
+                <listitem>
+                  <para>Don't</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>If this preference is set to "Do" and the <link linkend="finescronjob">fines
+                      cron job</link> is off then Koha will calculate fines only when items are
+                    returned. If you have the fines cron job on and this preference set to "Do" then
+                    this preference will calculate fines based on the cron (usually run nightly) and
+                    then again when you check the item in.  This option is best for those who are
+                    doing hourly loans.  If this preference is set to "Don't" then fines will only
+                    be accrued if the fines cron job is running.</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>
+              <important>
+                <para>If you are doing hourly loans then you should have this set to 'Do'.</para>
+              </important>
+            </para>
+          </section>
         </section>
 
         <section id="circcheckoutpolicy">
