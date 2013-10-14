@@ -17262,9 +17262,11 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="z3950admin">
         <title>Z39.50 Servers</title>
 
-        <para>Koha has a powerful copy cataloging tool. Using Koha you can
-        connect to any Z39.50 target that is publicly available or that you
-        have the log in information to.</para>
+<para>Z39.50 is a client–server protocol for searching and retrieving information from
+          remote computer databases, in short it's a tool used for copy cataloging. Using Koha you
+          can connect to any Z39.50 target that is publicly available or that you have the log in
+          information to and copy both bibliographic and/or authority records from that
+          source.</para>
 
         <itemizedlist>
           <listitem>
@@ -17293,28 +17295,60 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>From the main Z39.50 page, click 'New Z39.50
-              Server'</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>Userid and Password are only required for servers that
-                  are password protected</para>
-                </listitem>
-              </itemizedlist>
-
+              <para>From the main Z39.50 page, click 'New Z39.50 Server'</para>
               <screenshot>
                 <screeninfo>New Z39.50 Server Form</screeninfo>
-
                 <mediaobject>
                   <imageobject>
                     <imagedata fileref="images/admin/additional/newz39.png"/>
                   </imageobject>
                 </mediaobject>
               </screenshot>
+
+              <itemizedlist>
+                <listitem>
+                  <para>'Z39.50 server' should be populated with a name that will help you identify
+                    the source (such as the library name).</para>
+                </listitem>
+                <listitem>
+                  <para>'Hostname' will be the address to the Z39.50 target.</para>
+                </listitem>
+                <listitem>
+                  <para>'Port' tells Koha what port to listen on to get results from this
+                    target.</para>
+                </listitem>
+                <listitem>
+                  <para>'Userid' and 'Password' are only required for servers that are password
+                    protected.</para>
+                </listitem>
+                <listitem>
+                  <para>Check the 'Checked' box if you want this target to always be selected by
+                    default.</para>
+                </listitem>
+                <listitem>
+                  <para>'Rank' lets you enter where in the list you'd like this target to appear.<itemizedlist>
+                      <listitem>
+                        <para>If this is left blank the targets will be in alphabetical
+                          order.</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+                <listitem>
+                  <para>'Syntax' is the MARC flavor you use.</para>
+                </listitem>
+                <listitem>
+                  <para>'Encoding' tells the system how to read special characters.</para>
+                </listitem>
+                <listitem>
+                  <para>'Timeout' is helpful for targets that take a long while. You can set the
+                    timeout so that it doesn't keep trying the target if results aren't found in a
+                    reasonable amount of time.</para>
+                </listitem>
+              </itemizedlist>
             </listitem>
           </itemizedlist>
         </section>
+
 
         <section id="suggestztarget">
           <title>Suggested Z39.50 Targets</title>
