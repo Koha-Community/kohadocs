@@ -28697,9 +28697,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>From the results you will see the authority record, how many
-        bibliographic records it is attached to, and a delete link (if there
-        are no bibliographic records attached).</para>
+        <para>From the results you will see the authority record, how many bibliographic records it
+          is attached to, an <link linkend="editauthorities">edit</link> link, a <link
+            linkend="authoritymerge">merge</link> link and a <link linkend="editauthorities"
+            >delete</link> link (if there are no bibliographic records attached).</para>
 
         <screenshot>
           <screeninfo>Authority Search Results</screeninfo>
@@ -28743,9 +28744,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <section id="editauthorities">
         <title>Editing Authorities</title>
 
-        <para>Authorities can be edited by clicking on the authority summary
-        from the search results and then clicking the 'Edit' button above the
-        record.</para>
+        <para>Authorities can be edited by clicking on the authority summary from the search results
+          and then clicking the 'Edit' button above the record. Or by clicking on the 'Edit' link to
+          the left of the authority on the search results.</para>
 
         <screenshot>
           <screeninfo>Edit Authority Record</screeninfo>
@@ -28767,6 +28768,52 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         bibliographic records a 'Delete' link will appear to the right of the
         record on the search results and as a button that appears after
         clicking on the summary of the authority record.</para>
+      </section>
+      <section id="authoritymerge">
+        <title>Merging Authorities</title>
+        <para>If you have duplicate authority records you can merge them together by clicking the
+          'Merge' link next to two results on an authority search.  After clicking 'Merge' on the
+          first result you will see that authority listed at the top of the results.<screenshot>
+            <screeninfo>Merging authorities results</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/authmergesearch.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>You will be asked which of the two records you would like to keep as your primary
+          record and which will be deleted after the merge.</para>
+        <screenshot>
+          <screeninfo>Merging authorities</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/authmergechoice.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>You will be presented with the MARC for both of the records (each accessible by tabs
+          labeled with the authority numbers for those records). By default the entire first record
+          will be selected, uncheck the fields you don't want in the final (destination) record and
+          then move on to the second tab to choose which fields should be in the final (destination)
+          record.</para>
+        <screenshot>
+          <screeninfo>Authorities to merge</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/authmerging.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Once you have completed your selections click the 'Merge' button. The primary record
+          will now contain the data you chose for it and the second record will be deleted.</para>
+        <screenshot>
+          <screeninfo>Merged authority</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/cataloging/authmerged.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
     </section>
 
