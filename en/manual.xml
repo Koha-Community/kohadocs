@@ -21305,17 +21305,34 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <itemizedlist>
             <listitem>
               <para>Click 'CSV Profiles' from the Tools menu</para>
-
+            </listitem>
+            <listitem>
+              <para>The 'Profile type' determines what type of fields you plan to use (MARC or SQL)
+                to define your profile<itemizedlist>
+                  <listitem>
+                    <para>If tyou choose MARC then you will need to enter MARC fields</para>
+                  </listitem>
+                </itemizedlist></para>
               <screenshot>
-                <screeninfo>Add CSV Profile</screeninfo>
-
+                <screeninfo>MARC CSV Profile</screeninfo>
                 <mediaobject>
                   <imageobject>
                     <imagedata fileref="images/tools/csvprofiles/addcsv.png"/>
                   </imageobject>
                 </mediaobject>
               </screenshot>
-
+              <itemizedlist>
+                <listitem>
+                  <para>If tyou choose SQL then you will need to enter SQL database fields<screenshot>
+                      <screeninfo>SQL CSV Profile</screeninfo>
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/tools/csvprofiles/addcsv-sql.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot></para>
+                </listitem>
+              </itemizedlist>
               <itemizedlist>
                 <listitem>
                   <para>The 'Profile name' will appear on the export pull down list when choosing
@@ -21328,24 +21345,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                       </mediaobject>
                     </screenshot></para>
                 </listitem>
-
                 <listitem>
                   <para>The 'Profile description' is for your own benefit, but will also appear in
                     the OPAC when patrons download content, so make sure it's clear to your patrons
                     as well</para>
                 </listitem>
-
                 <listitem>
                   <para>The 'CSV separator' is the character used to separate values and value groups<tip>
                       <para>The most common option here is comma because most spreadsheet
                         applications know how to open files split by commas.</para>
                     </tip></para>
                 </listitem>
-
                 <listitem>
-                  <para>The 'Field separator' is the character used to
-                  separate duplicate fields</para>
-
+                  <para>The 'Field separator' is the character used to separate duplicate
+                    fields</para>
                   <itemizedlist>
                     <listitem>
                       <para>Example: You may have multiple 650 fields and this is the character that
@@ -21360,34 +21373,28 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
-                  <para>The 'Subfield separator' is the character used to
-                  separate duplicate subfields</para>
-
+                  <para>The 'Subfield separator' is the character used to separate duplicate
+                    subfields</para>
                   <itemizedlist>
                     <listitem>
-                      <para>Example: You may have multiple $a subfields in a
-                      field</para>
+                      <para>Example: You may have multiple $a subfields in a field</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
-
                 <listitem>
-                  <para>The 'Encoding' field lets you define the encoding used
-                  when saving the file</para>
+                  <para>The 'Encoding' field lets you define the encoding used when saving the
+                    file</para>
                 </listitem>
-
                 <listitem>
-                  <para>Finally format your CSV file using the 'Profile MARC fields' fields</para>
-
+                  <para>Finally format your CSV file using the 'Profile MARC' or 'Profile SQL'
+                    field</para>
                   <itemizedlist>
                     <listitem>
-                      <para>Define which fields or subfields you want to
-                      export, separated by pipes. Example :
-                      200|210$a|301</para>
+                      <para>Define which fields or subfields you want to export, separated by pipes.
+                        Example : 200|210$a|301 for MARC and biblio.title|biblio.author for
+                        SQL</para>
                     </listitem>
-
                     <listitem>
                       <tip>
                         <para>You can also use your own headers (instead of the ones from Koha) by
