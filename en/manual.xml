@@ -26919,7 +26919,151 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     </section>
 
     <section id="offlinecirc">
-      <title>Offline Circulation Utility</title>
+      <title>Offline Circulation Utilities</title>
+      <para>Koha allows for you to continue circulation actions while offline by using any one of
+        three utilities.</para>
+      <section id="kohaofflinecirc">
+        <title>Offline Circulation in Koha</title>
+        <para>If the <link linkend="AllowOfflineCirculation">AllowOfflineCirculation</link>
+          preference is set to 'Enable' the library staff can continue to perform circulation
+          actions within Koha when the system is offline. </para>
+        <section id="kohaofflinesetup">
+          <title id="offlinesetup">Setup</title>
+          <para>Before the first time the system goes offline go to Circulation and choose 'Built-in
+            offline circulation interface'<screenshot>
+              <screeninfo>Built-in offline circulation interface</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/offlinecirc.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>And synchronize your data on every circulation computer by clicking the
+            'Synchronize' link on the right of the screen.<screenshot>
+              <screeninfo>Synchronize data</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/syncoffline.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>This will allow you download a local copy of your patrons and circulation data.
+            Click the 'Download records' link at the top of the page to synchronize your data.<screenshot>
+              <screeninfo>Download records for offline use</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/downloadoffline.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>Once your data is downloaded you will see the dates your data was last synced to the
+            right of each data set.<screenshot>
+              <screeninfo>Synced offline data</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/syncedoffline.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>This should be done regularly in preparation for any unexpected connection
+            losses.</para>
+        </section>
+        <section id="kohaofflinecirculating">
+          <title id="offlinecirculating">Circulating</title>
+          <para>When your system goes offline visit the Offline Circulation page in Koha and click
+            'Check out' or 'Check in' to perform offline actions.</para>
+          <para>Checking out is done by searching for the patron by barcode or name at the top of
+            the 'Check out' screen. After selecting a patron you will be presented with the synced
+            patron info, including fines and check outs.<screenshot>
+              <screeninfo>Check out offline</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/offlinecheckout.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>Scan the barcode of the item you would like to check out and enter a due date. If
+            you don't enter a due date Koha will prompt you for one.<screenshot>
+              <screeninfo>Offline due date</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/offlineduedate.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>Once the item is checked out it will appear below the patron's info.<screenshot>
+              <screeninfo>Offline checkouts</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/offlinecheckouts.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para/>
+        </section>
+        <section id="kohaofflineupload">
+          <title>Koha Offline Uploading</title>
+          <para>Once the system is back online visit the Synchronize page on the Offline Circulation
+            module and click 'Upload transactions'<screenshot>
+              <screeninfo>Upload transactions</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/offlineupload.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>After the files are uploaded you can click 'View pending offline circulation
+            actions' on the right.<screenshot>
+              <screeninfo>View pending offline circulation actions</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/viewkohaoffline.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+          <para>After clicking 'View pending offline circulation actions' you will be brought to a
+            summary of all of the actions you loaded in to Koha in your *.koc file.</para>
+          <screenshot>
+            <screeninfo>Offline Circulation</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/offlinecirclog.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <itemizedlist>
+            <listitem>
+              <para>Once all of the logs from all of the circulation computers are loaded you will
+                be able to check them all or select just those you want to process into Koha.</para>
+            </listitem>
+            <listitem>
+              <para>Click on the Process button and Koha will record every stored transaction one by
+                one. For each transaction, the status will change to:<itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed correctly</para>
+                  </listitem>
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is incorrect</para>
+                  </listitem>
+                  <listitem>
+                    <para>"Item not found." if the item barcode is wrong</para>
+                  </listitem>
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available item</para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+          </itemizedlist>
+          <para>Once finished you will have a summary of all of your transactions</para>
+          <screenshot>
+            <screeninfo>Offline Circulation Summary</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/offlinecircsuccess.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+      </section>
 
       <section id="firefoxofflinecirc">
         <sectioninfo>
@@ -27349,105 +27493,91 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para>The Offline Circulation Utility can be downloaded at: <ulink url="http://kylehall.info/index.php/projects/koha/koha-offline-circulation/">http://kylehall.info/index.php/projects/koha/koha-offline-circulation/</ulink></para>
         <para>To generate a borrowers.db file for loading in to the Windows tool you will need to
           run the <link linkend="offlinecirccron">file generator via a cron job</link>.</para>
-      </section>
-
-      <section id="uploadofflinecirc">
-        <title>Upload Offline Circ File</title>
-
-        <para>The <link linkend="windowsofflinecirc">offline circulation tool
-        for Windows</link> will generate a KOC file that you can upload into
-        Koha once your system comes back up.</para>
-
-        <para>On the Circulation menu click 'Upload offline circulation file (.koc)'</para>
-
-        <screenshot>
-          <screeninfo>Circulation menu</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/offlinecirclink.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Browse your computer for the *.koc file</para>
-
-        <screenshot>
-          <screeninfo>Upload KOC File</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/uploadofflinecirc.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>Once the file is uploaded, click the process the file</para>
-
-        <screenshot>
-          <screeninfo>Process offline circulation file</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/processoffline.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-
-        <para>When this is complete you'll be able to upload another file or tend to pending offline
-          circulation actions.</para>
-
-        <screenshot>
-          <screeninfo>Summary of offline actions</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/offlinesummary.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>After clicking 'View pending offline circulation actions' you will be brought to a
-          summary of all of the actions you loaded in to Koha in your *.koc file.</para>
-        <screenshot>
-          <screeninfo>Offline Circulation</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/offlinecirclog.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <itemizedlist>
-          <listitem>
-            <para>Once all of the logs from all of the circulation computers are loaded you will be
-              able to check them all or select just those you want to process into Koha.</para>
-          </listitem>
-          <listitem>
-            <para>Click on the Process button and Koha will record every stored transaction one by
-              one. For each transaction, the status will change to:<itemizedlist>
-                <listitem>
-                  <para>"Success." if the transaction was processed correctly</para>
-                </listitem>
-                <listitem>
-                  <para>"Borrower not found." if the borrower card number is incorrect</para>
-                </listitem>
-                <listitem>
-                  <para>"Item not found." if the item barcode is wrong</para>
-                </listitem>
-                <listitem>
-                  <para>"Item not issued." if you checked in an available item</para>
-                </listitem>
-              </itemizedlist></para>
-          </listitem>
-        </itemizedlist>
-        <para>Once finished you will have a summary of all of your transactions</para>
-        <screenshot>
-          <screeninfo>Offline Circulation Summary</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/circ/offlinecircsuccess.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
+        <section id="uploadofflinecirc">
+          <title>Upload Offline Circ File</title>
+          <para>The <link linkend="windowsofflinecirc">offline circulation tool for Windows</link>
+            will generate a KOC file that you can upload into Koha once your system comes back
+            up.</para>
+          <para>On the Circulation menu click 'Upload offline circulation file (.koc)'</para>
+          <screenshot>
+            <screeninfo>Circulation menu</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/offlinecirclink.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>Browse your computer for the *.koc file</para>
+          <screenshot>
+            <screeninfo>Upload KOC File</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/uploadofflinecirc.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>Once the file is uploaded, click the process the file</para>
+          <screenshot>
+            <screeninfo>Process offline circulation file</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/processoffline.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>When this is complete you'll be able to upload another file or tend to pending
+            offline circulation actions.</para>
+          <screenshot>
+            <screeninfo>Summary of offline actions</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/offlinesummary.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <para>After clicking 'View pending offline circulation actions' you will be brought to a
+            summary of all of the actions you loaded in to Koha in your *.koc file.</para>
+          <screenshot>
+            <screeninfo>Offline Circulation</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/offlinecirclog.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+          <itemizedlist>
+            <listitem>
+              <para>Once all of the logs from all of the circulation computers are loaded you will
+                be able to check them all or select just those you want to process into Koha.</para>
+            </listitem>
+            <listitem>
+              <para>Click on the Process button and Koha will record every stored transaction one by
+                one. For each transaction, the status will change to:<itemizedlist>
+                  <listitem>
+                    <para>"Success." if the transaction was processed correctly</para>
+                  </listitem>
+                  <listitem>
+                    <para>"Borrower not found." if the borrower card number is incorrect</para>
+                  </listitem>
+                  <listitem>
+                    <para>"Item not found." if the item barcode is wrong</para>
+                  </listitem>
+                  <listitem>
+                    <para>"Item not issued." if you checked in an available item</para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+          </itemizedlist>
+          <para>Once finished you will have a summary of all of your transactions</para>
+          <screenshot>
+            <screeninfo>Offline Circulation Summary</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/offlinecircsuccess.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
       </section>
     </section>
   </chapter>
