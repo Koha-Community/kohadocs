@@ -39258,19 +39258,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <title>SOPAC2 Introduction</title>
 
-      <para><note>
-          <para>The following documentation was translated using Google
-          Translate from French to English and may have some language
-          errors.</para>
-        </note></para>
     </section>
 
     <section id="sopacintro">
       <title>Introduction</title>
 
-      <para>This is an installation guide and the connector SOPAC2 Koha. It
-      has been tested on Debian Lenny and Ubuntu Jaunty, with 6.12 and Koha
-      Drupal 3.0.x It does not cover the installation of Koha and Drupal, but
+      <para>This is an installation guide for SOPAC2 and its Koha connector. It
+      has been tested on Debian Lenny and Ubuntu Jaunty with Drupal 6.12 and Koha
+      3.0.x. It does not cover the installation of Koha and Drupal, only
       SOPAC, its dependencies and the connector.</para>
     </section>
 
@@ -39331,7 +39326,7 @@ $dsn = 'mysql://scas_user:scas_pass@localhost/scas';</programlisting>
       <section id="sopacinstallinsurge">
         <title>Installation of Insurge</title>
 
-        <para>If you customize the name of the database, consider editing the
+        <para>If you customize the name of the database, remember to edit the
         sql file:</para>
 
         <programlisting># nano /usr/local/lib/insurge/sql/scas_insurge.sql</programlisting>
@@ -39384,7 +39379,7 @@ group_key = ""</programlisting>
         <programlisting>[locum_config]
 dsn_file = "/usr/local/etc/locum_insurge_dsn.php"</programlisting>
 
-        <para>And the coordinates of your Koha installation:</para>
+        <para>And the information for your Koha installation:</para>
 
         <programlisting>[ils_config]
 ils = "koha";
@@ -39392,14 +39387,14 @@ ils_version = "30x"
 ils_server = "localhost"
 ils_harvest_port = "80"</programlisting>
 
-        <para>The rest depends on your configuration of Koha.</para>
+        <para>The rest depends on your Koha configuration.</para>
       </section>
     </section>
 
     <section id="sopackoha">
       <title>Installation of Koha Connector</title>
 
-      <para>Enter the connector Koha from SVN:</para>
+      <para>Download the Koha connector using SVN:</para>
 
       <programlisting># cd /usr/local/lib/locum/connectors/
 # svn co http://dobby.darienlibrary.org/svn/connectors/koha/ locum_koha_30x</programlisting>
@@ -39473,7 +39468,7 @@ $ rm -R sphinx-0.9.8*</programlisting>
       </section>
 
       <section id="demonsphinx">
-        <title>The demon Sphinx</title>
+        <title>The Sphinx daemon</title>
 
         <para>Download:</para>
 
@@ -39481,7 +39476,7 @@ $ rm -R sphinx-0.9.8*</programlisting>
 # wget http://www.thesocialopac.net/sites/thesocialopac.net/files/sphinx
 # chmod +x /etc/init.d/sphinx</programlisting>
 
-        <para>Add Sphinx in the service at boot:</para>
+        <para>Add Sphinx to the default boot services:</para>
 
         <programlisting># update-rc.d sphinx defaults</programlisting>
       </section>
@@ -39497,9 +39492,9 @@ $ rm -R sphinx-0.9.8*</programlisting>
 mv tmpfile /usr/local/sphinx/etc/sphinx.conf
 # sed 's/locum_db_pass/scas_pass/g' /usr/local/sphinx/etc/sphinx.conf &gt; tmpfile; mv tmpfile /usr/local/sphinx/etc/sphinx.conf</programlisting>
 
-        <para>And if you personalize the name of the BDD:</para>
+        <para>And if you personalize the name of the database:</para>
 
-        <programlisting># sed 's/scas/Ma_BDD/g' /usr/local/sphinx/etc/sphinx.conf &gt; tmpfile; mv tmpfile /usr/local/sphinx/etc/sphinx.conf</programlisting>
+        <programlisting># sed 's/scas/MY_DB/g' /usr/local/sphinx/etc/sphinx.conf &gt; tmpfile; mv tmpfile /usr/local/sphinx/etc/sphinx.conf</programlisting>
       </section>
 
       <section id="sphinxindexing">
@@ -39517,12 +39512,11 @@ $ /usr/local/lib/insurge/tools/update-index.php</programlisting>
 
         <programlisting>$ /usr/local/sphinx/bin/indexer --all</programlisting>
 
-        <para>Finally, we must start the demon:</para>
+        <para>Finally, we must start the daemon:</para>
 
         <programlisting># /etc/init.d/sphinx start</programlisting>
 
-        <para>When the demon is already en route, you can update the index
-        with:</para>
+        <para>When the daemon is running, you can update the index with:</para>
 
         <programlisting>$ /usr/local/sphinx/bin/indexer --all --rotate</programlisting>
       </section>
@@ -39547,8 +39541,8 @@ $ svn co http://dobby.darienlibrary.org/svn/sopac/trunk/ sopac</programlisting>
       <section id="sopacinstallation">
         <title>Installation</title>
 
-        <para>Going in the administration of Drupal to activate the module.
-        Enable also the dependencies:</para>
+        <para>In Drupal's administration settings, activate the module.
+        Also, enable the dependencies:</para>
 
         <itemizedlist>
           <listitem>
@@ -39605,11 +39599,11 @@ print theme('pages_catalog');</programlisting>
 
         <para>Go to the root of Drupal, a search form will appear.</para>
 
-        <para>Thinking to empty the cache of Drupal when something does not
+        <para>Remember to empty Drupal's cache when something does not
         work.</para>
 
-        <para>Drupal offers a few blocks, not configured by default. Must
-        specify on which page they should appear.</para>
+        <para>Drupal offers a few blocks, which are not configured by default. 
+        You must specify on which page they should appear.</para>
       </section>
     </section>
   </chapter>
