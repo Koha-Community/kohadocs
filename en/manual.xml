@@ -16858,6 +16858,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
 
       <section id="recordmatchingrules">
+              <sectioninfo>
+          <author>
+            <firstname>Joy</firstname>
+
+            <surname>Nelson</surname>
+          </author>
+
+          <affiliation>
+            <orgname>ByWater Solutions</orgname>
+          </affiliation>
+
+          <othercredit role="copyeditor">
+            <firstname>Nicole C.</firstname>
+
+            <surname>Engard</surname>
+
+            <contrib>Changed/edited content where necessary.</contrib>
+          </othercredit>
+
+          <pubdate>2013</pubdate>
+        </sectioninfo>
         <title>Record Matching Rules</title>
 
         <para>Record matching rules are used when importing MARC records into
@@ -16871,91 +16892,106 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </itemizedlist>
 
         <para>The rules that you set up here will be referenced with you <link linkend="stagemarc">Stage MARC Records for Import</link>.</para>
+        <para>It is important to understand the difference between Match Points and Match Checks
+          before adding new matching rules to Koha.</para>
 
-        <para>To create a new matching rule :</para>
+       <para>Match Points are the criteria that you enter that must be met in order for an incoming
+          record to match an existing MARC record in your catalog. You can have multiple match
+          points on an import rule each with its own score. An incoming record will be compared
+          against your existing records (‘one record at a time’) and given a score for each match
+          point. When the total score of the matchpoints matches or exceeds the threshold given for
+          the matching rule, Koha assumes a good match and imports/overlays according your
+          specifications in the import process. An area to watch out for here is the sum of the
+          match points. Doublecheck that the matches you want will add up to a successful
+          match.</para>
 
-        <itemizedlist>
-          <listitem>
-            <para>Click 'New Record Matching Rule'</para>
+<para>Example: </para>
+        <para>Threshold of 1000 </para>
+        <para>Match Point on 020$a 1000 </para>
+        <para>Match Point on 022$a 1000 </para>
+        <para>Match Point on 245$a 500 </para>
+        <para>Match Point on 100$a 100</para>
 
-            <screenshot>
-              <screeninfo>Add record matching rule</screeninfo>
+<para>In the example above, a match on either the 020$a or the 022$a will result in a successful match.  A match on 245$a title and 100$a author (and not on 020$a or 022$a) will only add up to 600 and not be a match.  And a match on 020$a and 245$a will result in 1500 and while this is a successful match, the extra 500 point for the 245$a title match are superfluous.  The incoming record successfully matched on the 020$a without the need for the 245$a match.  However, if you assigned a score of 500 to the 100$a Match Point, a match on 245$a title and 100$a author will be considered a successful match (total of 1000) even if the 020$a is not a match.</para>
 
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/admin/cataloging/newmatchrule.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
+<para>Match Checks are not commonly used in import rules. However, they can serve a couple of
+          purposes in matching records. First, match checks can be used as the matching criteria
+          instead of the match points if your indexes are stale and out of date. The match checks go
+          right for the data instead of relying on the data in the indexes. (If you fear your
+          indexes are out of date, a rebuild of your indexes would be a great idea and solve that
+          situation!) The other use for a Match Check is as a “double check” or “veto” of your
+          matching rule. For example, if you have a matching rule as below:</para>
+<para>Threshold of 1000 </para>
+        <para>Match Point on 020$a 1000 </para>
+        <para>Match Check on 245$a</para>
 
-            <itemizedlist>
-              <listitem>
-                <para>Choose a unique name and enter it in the 'Matching rule
-                code' field</para>
-              </listitem>
+<para>Koha will first look at the 020$a tag/subfield to see if the incoming record matches an existing record.  If it does, it will then move on to the Match Check and look directly at the 245$a value in the incoming data and compare it to the 245$a in the existing ‘matched’ record in your catalog.  If the 245$a matches, Koha continues on as if a match was successful.  If the 245$a does not match, then Koha concludes that the two records are not a match after all.  The Match Checks can be a really useful tool in confirming true matches.</para>
 
-              <listitem>
-                <para>'Description' can be anything you want to make it clear
-                to you what rule you're picking</para>
-              </listitem>
-
-              <listitem>
-                <para>'Match threshold' - The total number of 'points' a
-                biblio must earn to be considered a 'match'</para>
-              </listitem>
-
-              <listitem>
-                <para>Match points are set up to determine what fields to
-                match on</para>
-              </listitem>
-
-              <listitem>
-                <para>'Search index' can be found by looking at the
-                ccl.properties file on your system which tells the zebra
-                indexing what data to search for in the MARC data".</para>
-              </listitem>
-
-              <listitem>
-                <para>'Score' - The number of 'points' a match on this field
-                is worth. If the sum of each score is greater than the match
-                threshold, the incoming record is a match to the existing
-                record</para>
-              </listitem>
-
-              <listitem>
-                <para>Enter the MARC tag you want to match on in the 'Tag'
-                field</para>
-              </listitem>
-
-              <listitem>
-                <para>Enter the MARC tag subfield you want to match on in the
-                'Subfields' field</para>
-              </listitem>
-
-              <listitem>
-                <para>'Offset' - For use with control fields, 001-009</para>
-              </listitem>
-
-              <listitem>
-                <para>'Length' - For use with control fields, 001-009</para>
-              </listitem>
-
-              <listitem>
-                <para>Koha only has one 'Normalization rule' that removes
-                extra characters such as commas and semicolons. The value you
-                enter in this field is irrelevant to the normalization
-                process.</para>
-              </listitem>
-
-              <listitem>
-                <para>'Required match checks' - ??</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-        </itemizedlist>
-
-        <para/>
-
+<para>Match Points and Match Checks are powerful tools in the import process.   Harness the power of these two matching criteria and make your data behave for you!</para>
+        <section id="addrecordmatchrule">
+          <title>Adding Matching Rules</title>
+          <para>To create a new matching rule :</para>
+          <itemizedlist>
+            <listitem>
+              <para>Click 'New Record Matching Rule'</para>
+              <screenshot>
+                <screeninfo>Add record matching rule</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/cataloging/newmatchrule.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+              <itemizedlist>
+                <listitem>
+                  <para>Choose a unique name and enter it in the 'Matching rule code' field</para>
+                </listitem>
+                <listitem>
+                  <para>'Description' can be anything you want to make it clear to you what rule
+                    you're picking</para>
+                </listitem>
+                <listitem>
+                  <para>'Match threshold' - The total number of 'points' a biblio must earn to be
+                    considered a 'match'</para>
+                </listitem>
+                <listitem>
+                  <para>Match points are set up to determine what fields to match on</para>
+                </listitem>
+                <listitem>
+                  <para>'Search index' can be found by looking at the ccl.properties file on your
+                    system which tells the zebra indexing what data to search for in the MARC
+                    data".</para>
+                </listitem>
+                <listitem>
+                  <para>'Score' - The number of 'points' a match on this field is worth. If the sum
+                    of each score is greater than the match threshold, the incoming record is a
+                    match to the existing record</para>
+                </listitem>
+                <listitem>
+                  <para>Enter the MARC tag you want to match on in the 'Tag' field</para>
+                </listitem>
+                <listitem>
+                  <para>Enter the MARC tag subfield you want to match on in the 'Subfields'
+                    field</para>
+                </listitem>
+                <listitem>
+                  <para>'Offset' - For use with control fields, 001-009</para>
+                </listitem>
+                <listitem>
+                  <para>'Length' - For use with control fields, 001-009</para>
+                </listitem>
+                <listitem>
+                  <para>Koha only has one 'Normalization rule' that removes extra characters such as
+                    commas and semicolons. The value you enter in this field is irrelevant to the
+                    normalization process.</para>
+                </listitem>
+                <listitem>
+                  <para>'Required match checks' - ??</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
         <section id="samplerecordmatch">
           <title>Sample Record Matching Rule: Control Number</title>
 
