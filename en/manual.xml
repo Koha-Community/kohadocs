@@ -7729,18 +7729,18 @@
                 <listitem>
                   <para>OPAC's branch based via the URL<itemizedlist>
                       <listitem>
-                        <para>The items emphasized will be those of the same library as the patron's
-                          library. If no one is logged into the OPAC, no items will be
-                          highlighted.</para>
+                        <para>The library is chosen based on the Apache environment variable
+                          BRANCHCODE. For example, this could be added to the OPAC section of
+                          koha-httpd.conf: SetEnv BRANCHCODE "CPL"</para>
                       </listitem>
                     </itemizedlist></para>
                 </listitem>
                 <listitem>
                   <para>patron's home library<itemizedlist>
                       <listitem>
-                        <para>The library is chosen based on the Apache environment variable
-                          BRANCHCODE. For example, this could be added to the OPAC section of
-                          koha-httpd.conf: SetEnv BRANCHCODE "CPL"</para>
+                        <para>The items emphasized will be those of the same library as the patron's
+                          library. If no one is logged into the OPAC, no items will be
+                          highlighted.</para>
                       </listitem>
                     </itemizedlist></para>
                 </listitem>
