@@ -36052,12 +36052,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot></para>
       <para>Patrons registered in this way will not have a cardnumber until assigned one by the
         library, but will have access to all OPAC functionality immediately. For this reason it is
-        recommended that you set up a provisional <link linkend="patcats">patron category</link>
-        with no <link linkend="circfinerules">circulation rights</link>.  That way patrons will have
-        to come in to the library to verify their identity before given a cardnumber and circulation
-        rights at the library. Once the patron confirms their identiy the library staff can change
-        the category to one with permissions and add a cardnumber/barcode to check items out and
-        place holds.</para>
+        recommended that you:<itemizedlist>
+          <listitem>
+            <para>set up a provisional <link linkend="addingpatroncat">patron category</link> for
+              self registered patrons (such as 'Self Registered)</para>
+          </listitem>
+          <listitem>
+            <para>give this patron category minimal circulation privileges in the <link
+                linkend="circfinerules">Circulation and Fine Rules</link> (such as allowing a couple
+              holds, but no check outs)</para>
+          </listitem>
+        </itemizedlist>That way patrons will have to come in to the library to verify their identity
+        before given a cardnumber and the ability to check items out at the library. Once the patron
+        confirms their identity the library staff can change the category to one that is more
+        appropriate (be it an adult, resident, non resident, student, etc) and add a
+        cardnumber/barcode.</para>
     </section>
 
     <section id="opacmyaccount">
