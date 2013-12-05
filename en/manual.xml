@@ -30801,7 +30801,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       bibliographic record the form will include the bib info).</para>
 
       <screenshot>
-        <screeninfo>Add a new Subscription Form</screeninfo>
+        <screeninfo>Add a new subscription (1/2)</screeninfo>
 
         <mediaobject>
           <imageobject>
@@ -30945,7 +30945,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
           </itemizedlist>
         </listitem>
-
+        </itemizedlist>
+      <para>Once that data is filled in you can click 'Next' to enter the prediction pattern information.<screenshot>
+          <screeninfo>Add a new subscription (2/2)</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/serials/addsub2.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot></para>
+<itemizedlist>
         <listitem>
           <para>In 'First issue publication date' you want to enter the date
           of the issue you have in your hand, the date from which the
@@ -31031,10 +31040,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
           </itemizedlist>
         </listitem>
-
         <listitem>
-          <para>Checking the 'Manual history' box will allow you to enter
-          serials outside the prediction pattern.</para>
+          <para>'Subscription length' is the number of issues or months in the subscription. This is
+            also used for setting up renewal alerts</para>
+        </listitem>
+        <listitem>
+          <para>'Subscription start date' is the date at which the subscription begins. This is used
+            for setting up renewal alerts</para>
+        </listitem>
+        <listitem>
+          <para>'Subscription end date' should only be entered for subscriptions that have ended (if
+            you're entering in a backlog of serials)</para>
         </listitem>
 
         <listitem>
@@ -31049,58 +31065,52 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>If you have chosen any 'Numbering Format' other than
-              'Number' in the 'Rollover at' field, enter the last issue number
-              before the volume number changes</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>If you chose the 'Number' Numbering Format you will
-                  see 'issues expected' in which you will enter the total
-                  number of issues you expect to receive.</para>
-
-                  <screenshot>
-                    <screeninfo>Number as Numbering Pattern</screeninfo>
-
-                    <mediaobject>
-                      <imageobject>
-                        <imagedata fileref="images/serials/numberonly.png"/>
-                      </imageobject>
-                    </mediaobject>
-                  </screenshot>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>You can choose to create your own numbering pattern by
-              choosing 'None of the above' and clicking the 'Show/Hide
-              Advanced Pattern' button at the bottom of the form</para>
+              <para>You can choose to create your own numbering pattern by choosing 'None of the
+                above' and clicking the 'Show/Hide Advanced Pattern' button at the bottom of the form<screenshot>
+                  <screeninfo>Advanced prediction pattern</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/serials/advancedpattern.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
             </listitem>
           </itemizedlist>
         </listitem>
-
         <listitem>
-          <para>'Subscription start date' is the date at which the
-          subscription begins. This is used for setting up renewal
-          alerts</para>
+          <para>The 'Locale' is to help the system with encoding.</para>
         </listitem>
 
         <listitem>
-          <para>'Subscription length' is the number of issues or months in the
-          subscription. This is also used for setting up renewal alerts</para>
-        </listitem>
-
-        <listitem>
-          <para>'Subscription end date' should only be entered for
-          subscriptions that have ended (if you're entering in a backlog of
-          serials)</para>
-        </listitem>
-
-        <listitem>
-          <para>The 'Numbering formula' is editable to match the way you'd
-          like your numbering to print on the item record and subscription
-          information pages</para>
+          <para>Once a 'Numbering pattern' is chosen the number formula will appear.<screenshot>
+              <screeninfo>Numbering Forumla</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/serials/numberonly.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot><itemizedlist>
+              <listitem>
+                <para>The 'Begins with' number is the number of the issue you're holding in your
+                  hand.</para>
+              </listitem>
+              <listitem>
+                <para>The 'Inner counter' is usually only needed in the final field (the 'Number' in
+                  the image above) to tell the system when the number should go back to 1</para>
+              </listitem>
+              <listitem>
+                <para>After filling in this data click the 'Test prediction pattern' button to see
+                  what issues the system will generate, if there are irregularities you can choose
+                  which issues don't exist from the list presented.<screenshot>
+                    <screeninfo>Prediction pattern</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/serials/predictionpattern.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+              </listitem>
+            </itemizedlist></para>
         </listitem>
       </itemizedlist>
 
