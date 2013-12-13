@@ -25860,14 +25860,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
     <section id="circrenew">
       <title>Renewing</title>
 
-      <para>Checked out items can be renewed (checked out for another period
-      of time) based on your <link linkend="circfinerules">circulation
-      rules</link> and <link linkend="RenewalPeriodBase">renewal
-      preferences</link>. If you allow it, patrons can renew their own items
-      via the OPAC, but sometimes you'll need to help them by renewing their
-      items via the staff client. To renew items checked out to a patron,
-      visit their details page or checkout page and review their checkout
-      summary at the bottom.</para>
+      <para>Checked out items can be renewed (checked out for another period of time) based on your
+          <link linkend="circfinerules">circulation rules</link> and <link
+          linkend="RenewalPeriodBase">renewal preferences</link>. </para>
+      <para>If <link linkend="OpacRenewalAllowed">you allow it</link>, patrons can renew their own
+        items via the OPAC, but sometimes you'll need to help them by renewing their items via the
+        staff client. </para>
+      <para>To renew items checked out to a patron, you can do one of two things. </para>
+      <para>The first is to visit their details page or checkout page and review their checkout
+        summary at the bottom.</para>
 
       <screenshot>
         <screeninfo>Circulation Summary</screeninfo>
@@ -25913,6 +25914,51 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <para>Checking that box will add checkboxes in the renew column above
       where before the item was not renewable.</para>
+      <para>The second option is to visit the 'Renew' page found under the Circulation menu.</para>
+      <screenshot>
+        <screeninfo>Renew</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/renewcirc.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>And scan the barcodes of the items you would like to renew.</para>
+      <screenshot>
+        <screeninfo>Barcode to renew</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/renewbarcode.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>If the item is renewed you will receive a confirmation message.</para>
+      <screenshot>
+        <screeninfo>Item renewed</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/renewed.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>If the barcode is not found you will be presented with an error.</para>
+      <screenshot>
+        <screeninfo>No barcode found</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/renewnomatch.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>If the item is not actually checked out you will also receive an error.</para>
+      <screenshot>
+        <screeninfo>Item not checked out</screeninfo>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/circ/renewnotchecked.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
 
     <section id="checkingin">
