@@ -10856,9 +10856,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               days.</para>
             <para>Description:<itemizedlist>
                 <listitem>
-                  <para>This prefence links to the <link linkend="deleteexpiredregistrationcron">delete_expired_opac_registrations.pl cron job</link>.  If that cron is set to
-                    run nightly it will clean up any registrations that have not been reviewed by a
-                    staff member in the number of days entered on this preference.</para>
+                  <para>This prefence links to the <link linkend="deleteexpiredregistrationcron"
+                      >delete_expired_opac_registrations.pl cron job</link>. If that cron is set to
+                    run nightly it will clean up any registrations that have not been verified via
+                    email in the number of days entered on this preference. This is dependent on
+                      <link linkend="PatronSelfRegistrationVerifyByEmail"
+                      >PatronSelfRegistrationVerifyByEmail</link> preference.</para>
                 </listitem>
               </itemizedlist></para>
           </section>
@@ -10879,7 +10882,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <para>If you require patrons to verify their accounts via email they will not be
                     able to log in to the OPAC until they acknowledge the email sent by Koha. If you
                     don't require this then patrons will be able to log in as soon as they fill in
-                    the registration form.</para>
+                    the registration form. You can set the <link
+                      linkend="PatronSelfRegistrationExpireTemporaryAccountsDelay"
+                      >PatronSelfRegistrationExpireTemporaryAccountsDelay</link> preference to
+                    delete the un-verified self registrations after a certain number of days.</para>
                 </listitem>
               </itemizedlist><tip>
                 <para>If you're going to require that patrons verify their accounts via email then
