@@ -1566,8 +1566,8 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>Will show items in OPAC search results if they are
-                    marked suppressed</para>
+                    <para>Will show records in OPAC search results if they are marked
+                      suppressed</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1577,8 +1577,8 @@
 
                 <itemizedlist>
                   <listitem>
-                    <para>Will not show items in OPAC search results if
-                    they're marked as suppressed</para>
+                    <para>Will not show records in OPAC search results if they're marked as
+                      suppressed</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1588,21 +1588,22 @@
 
             <itemizedlist>
               <listitem>
-                <para>These preferences control hiding of bib records from
-                display in the OPAC. Each bib record you want to hide from the
-                OPAC simply needs to have the 942$n field set to 1. The
-                indexer then hides it from display in OPAC but will still
-                display it in the Staff Client. If you want to further control
-                suppression you can set an IP address range to still show
-                suppressed items to. Define a range like 192.168.. If you
-                don't want to limit suppression in this way, leave the IP
-                field blank.<tip>
-                    <para>An <link linkend="authorizedvalues">authorized
-                    value</link> for 942$n field should be set to eliminate
-                    errors. One example would be to create an authorized value
-                    titled SUPPRESS with a value of 0 for don't suppress and 1
-                    for suppress.</para>
-                  </tip></para>
+                <para>These preferences control hiding of bibliographic records from display in the
+                  OPAC. Each bibliogrphic record you want to hide from the OPAC simply needs to have
+                  the value "1" in the field mapped with Suppress index (942$n field in MARC21, no
+                  official field in UNIMARC). The indexer then hides it from display in OPAC but
+                  will still display it in the Staff Client. If you want to further control
+                  suppression you can set an IP address range to still show suppressed items to.
+                  Define a range like 192.168.. If you don't want to limit suppression in this way,
+                  leave the IP field blank.</para>
+                <para>
+                  <tip>
+                    <para>An <link linkend="authorizedvalues">authorized value</link> for the MARC21
+                      942$n field (or the equivalent UNIMARC field) should be set to eliminate
+                      errors. One example would be to create an authorized value titled SUPPRESS
+                      with a value of 0 for don't suppress and 1 for suppress.</para>
+                  </tip>
+                </para>
               </listitem>
             </itemizedlist>
 
@@ -1613,9 +1614,9 @@
             </important>
 
             <important>
-              <para>You must have the Suppress index set up in Zebra and at
-              least one suppressed item, or your searches will be
-              broken.</para>
+              <para>You must have the Suppress index set up in Zebra and at least one record with
+                the value "1" in the field mapped with this index, or your searches will be
+                completely broken in OPAC (you won't get any results at all).</para>
             </important>
           </section>
           <section id="SeparateHoldings">
