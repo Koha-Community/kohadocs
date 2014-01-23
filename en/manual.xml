@@ -2073,29 +2073,45 @@
             <para>Asks: Interpret and store MARC records in the ___
             format.</para>
 
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference defines global MARC style (MARC21 or
-                UNIMARC) used for encoding. MARC21 is the standard style for
-                the US, Canada and Britain. UNIMARC is a variation of MARC21
-                that is used in France, Italy, Russia, and many other
-                countries.</para>
-              </listitem>
-            </itemizedlist>
-
             <para>Values:</para>
 
             <itemizedlist>
               <listitem>
-                <para>MARC21</para>
+                <para>MARC21<itemizedlist>
+                    <listitem>
+                      <para>The standard style for the US, Canada, Australia, New Zealand, United
+                        Kingdom, Germany and other countries</para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
 
               <listitem>
-                <para>UNIMARC</para>
+                <para>UNIMARC<itemizedlist>
+                    <listitem>
+                      <para>The standard style used in France, Italy, Portugal, Russia, and other
+                        countries</para>
+                    </listitem>
+                  </itemizedlist></para>
+              </listitem>
+              <listitem>
+                <para>NORMARC<itemizedlist>
+                    <listitem>
+                      <para>The standard style for Norway</para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
             </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference defines global MARC style (MARC21, UNIMARC or NORMARC) used
+                  for encoding.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Changing the value of this preference will not convert your records from one
+                MARC style to an other.</para>
+            </important>
           </section>
 
           <section id="MARCOrgCode">
