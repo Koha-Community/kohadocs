@@ -23707,9 +23707,52 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   <para>Remaining circulation permissions</para>
                 </listitem>
                 <listitem>
-                  <para>All circulation rights except the ability to override renewals</para>
+                  <para>All circulation rights except those covered by permissions listed
+                    below</para>
                 </listitem>
               </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>force_checkout<itemizedlist>
+                  <listitem>
+                    <para>Force checkout if a limitation exists</para>
+                  </listitem>
+                  <listitem>
+                    <para>With this permission a librarian will be allowed to override a check out
+                      restriction in the following cases: <itemizedlist>
+                        <listitem>
+                          <para>age restriction</para>
+                        </listitem>
+                        <listitem>
+                          <para>the item is issued to another patron</para>
+                        </listitem>
+                        <listitem>
+                          <para>the item is not for loan</para>
+                        </listitem>
+                        <listitem>
+                          <para>the patron has overdue items</para>
+                        </listitem>
+                        <listitem>
+                          <para>the item is lost </para>
+                        </listitem>
+                        <listitem>
+                          <para>the item is a high demand item</para>
+                        </listitem>
+                        <listitem>
+                          <para>the item is on hold</para>
+                        </listitem>
+                      </itemizedlist></para>
+                  </listitem>
+                </itemizedlist></para>
+              <para>manage_restrictions<itemizedlist>
+                  <listitem>
+                    <para>Manage restrictions for accounts</para>
+                  </listitem>
+                  <listitem>
+                    <para>Grants permission to the staff member to lift a restriction that might be
+                      on the patron's record</para>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
             <listitem>
               <para>overdues_report<itemizedlist>
