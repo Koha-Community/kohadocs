@@ -27686,7 +27686,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <title>Offline Circulation in Koha</title>
         <para>If the <link linkend="AllowOfflineCirculation">AllowOfflineCirculation</link>
           preference is set to 'Enable' the library staff can continue to perform circulation
-          actions within Koha when the system is offline. </para>
+          actions within Koha when the system is offline.  You will want to visit
+          http://your-koha-staff-client-url/cgi-bin/koha/circ/offline.pl at least once while online
+          and bookmark that page. That is the page you will go to when you are offline.</para>
         <section id="kohaofflinesetup">
           <title id="offlinesetup">Setup</title>
           <para>Before the first time the system goes offline go to Circulation and choose 'Built-in
@@ -27732,7 +27734,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
         <section id="kohaofflinecirculating">
           <title id="offlinecirculating">Circulating</title>
-          <para>When your system goes offline visit the Offline Circulation page in Koha and click
+          <para>When your system goes offline visit the Offline Circulation page
+            (http://your-koha-staff-client-url/cgi-bin/koha/circ/offline.pl) in Koha and click
             'Check out' or 'Check in' to perform offline actions.</para>
           <para>Checking out is done by searching for the patron by barcode or name at the top of
             the 'Check out' screen. After selecting a patron you will be presented with the synced
