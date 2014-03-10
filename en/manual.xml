@@ -3922,11 +3922,24 @@
             <para>Default: 0</para>
             <para>Asks: Confirm future hold requests (starting no later than ___ days from now) at
               checkin time.  </para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>When confirming a hold at checkin time, the number of days in this
+                    preference is taken into account when deciding which holds to show alerts for.
+                    This preference does not interfere with renewing, checking out or transferring a
+                    book.</para>
+                </listitem>
+              </itemizedlist></para>
             <note>
               <para>This number of days will be used too in calculating the default end date for the
                 Holds to pull-report. But it does not interfere with issuing, renewing or
                 transferring books.</para>
             </note>
+            <important>
+              <para>This preference is only looked at if you're allowing hold dates in the future
+                with <link linkend="AllowHoldDateInFuture">AllowHoldDateInFuture</link> or <link
+                  linkend="OPACAllowHoldDateInFuture">OPACAllowHoldDateInFuture</link></para>
+            </important>
           </section>
           <section id="decreaseLoanHighHolds">
             <title>decreaseLoanHighHolds, decreaseLoanHighHoldsDuration and
