@@ -45775,23 +45775,20 @@ $ sudo zebraidx -c /etc/koha/sites/YOURLIBRARY/zebra-biblios.cfg  -g iso2709 -
       have a system administrator you will want to consult with them on this process.</para>
     <section id="oclckohasetup">
             <sectioninfo>
-          <author>
-            <firstname>D. Ruth</firstname>
+              <authorgroup>
+                <author>
+                  <firstname>D. Ruth</firstname>
+                  <surname>Bavousett</surname>
+                  <affiliation>
+                    <orgname>ByWater Solutions</orgname>
+                  </affiliation>
+                </author>
 
-            <surname>Bavousett</surname>
-          </author>
-
-          <affiliation>
-            <orgname>ByWater Solutions.com</orgname>
-          </affiliation>
-
-          <othercredit role="copyeditor">
-            <firstname>Nicole C.</firstname>
-
-            <surname>Engard</surname>
-
-            <contrib>Changed content where necessary.</contrib>
-          </othercredit>
+                <editor>
+                  <firstname>Nicole C.</firstname>
+                  <surname>Engard</surname>
+                </editor>
+              </authorgroup>
 
           <pubdate>2012</pubdate>
         </sectioninfo>
@@ -45833,58 +45830,118 @@ import_mode: direct</programlisting></para>
       <para>In "direct" mode, each record will be in its' own batch. </para>
       <para>To start the service, run the script:
         <programlisting>/location/of/connexion/import/daemon/connexion_import_daemon.pl -d -c /location/of/config/file.cnf</programlisting></para>
-      <para/>
     </section>
     <section id="oclcdesktopsetup">
-                <sectioninfo>
+      <sectioninfo>
+        <authorgroup>
           <author>
             <firstname>D. Ruth</firstname>
-
             <surname>Bavousett</surname>
+            <affiliation>
+              <orgname>ByWater Solutions</orgname>
+            </affiliation>
           </author>
-
-          <affiliation>
-            <orgname>ByWater Solutions.com</orgname>
-          </affiliation>
-
-          <othercredit role="copyeditor">
+          
+          <author>
+            <firstname>Heather</firstname>
+            <surname>Hernandez</surname>
+            <affiliation>
+              <orgname>San Francisco Maritime National Historical Park</orgname>
+            </affiliation>
+          </author>
+          
+          <editor>
             <firstname>Nicole C.</firstname>
-
             <surname>Engard</surname>
-
-            <contrib>Changed content where necessary.</contrib>
-          </othercredit>
-
-          <pubdate>2012</pubdate>
-        </sectioninfo>
+          </editor>
+        </authorgroup>
+        
+        <pubdate>2012/2014</pubdate>
+      </sectioninfo>
       <title>Setting up your OCLC desktop client</title>
-      <para> To set up the OCLC Connexion desktop client to connect to Koha, go to Tools/Options,
-        then choose the Export tab. <itemizedlist>
+      <note>
+        <para>Screenshots are OCLC Connexion Client v.2.50, Koha v.3.12</para>
+      </note>
+      <para>To set up the OCLC Connexion desktop client to connect to Koha, go to Tools > Options,
+        then choose the Export tab. <screenshot>
+          <screeninfo>Connexion Export Tab</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/appendix-oclc/oclcexporttab.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot><itemizedlist>
           <listitem>
             <para>Click the "Create..." button to set up a new destination, then choose "OCLC
               Gateway Export" and click OK.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Enter the following information:</para>
+              
+              <itemizedlist>
+              <listitem>
+                    <para>"Host Name:" Your catalog’s appropriate IP address (from your <link
+                        linkend="oclckohasetup">config file above</link>) </para>
+                  </listitem>
+                  <listitem>
+                    <para>"Port:" Your catalog's appropriate port number (from your <link
+                        linkend="oclckohasetup">config file above</link>) </para>
+                  </listitem>
+                  <listitem>
+                    <para>"Login ID:" The cataloger's Koha login </para>
+                  </listitem>
+                  <listitem>
+                    <para>"Password:" The cataloger's Koha password </para>
+                  </listitem>
+                  <listitem>
+                    <para>"Notify Host Before Disconnect" = checked, </para>
+                  </listitem>
+                  <listitem>
+                    <para>"Timeout" = 100, "Retries" = 3, "Delay" = 0 (zero), </para>
+                  </listitem>
+                  <listitem>
+                    <para>"Send Local System Logon ID  Password" = checked. </para>
+                  </listitem>
+              </itemizedlist>
+              </listitem>
+            </itemizedlist>
+            <screenshot>
+              <screeninfo>OCLC Gateway Export Settings</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/appendix-oclc/oclcgatewaysetup.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
           </listitem>
           <listitem>
-            <para>Enter the host name or IP address (host: from your config file) and the port
-              (port: <link linkend="oclckohasetup">from above</link>). </para>
-          </listitem>
-          <listitem>
-            <para>Make sure that the "Notify Host Before Disconnect" box is checked, and that
-              "Permanent Connection" and "Print Results to Default Printer" are not.</para>
-          </listitem>
-          <listitem>
-            <para>Set the three numeric parameters:  Timeout: 100  Retries:  3   Delay:  0 </para>
-          </listitem>
-          <listitem>
-            <para>In the "Local System Authorization" box, click the "Send Local System Login Id and
-              Password" box, then enter the Koha login and password you want to use.</para>
-          </listitem>
-          <listitem>
-            <para>Click "OK" to save this connection.</para>
+            <para>Select "OK" when finished, and you should see your new "Gateway Export" option
+              listed (The catalog's IP address and port are blacked out in the following
+              screenshot)</para>
+            <para>
+              <screenshot>
+                <screeninfo>Gateway Export Added</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/appendix-oclc/oclcgatewayexport.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </para>
           </listitem>
           <listitem>
             <para>Click on "Record Characteristics" and make sure that the bibliographic records are
-              using MARC21, UTF-8 Unicode, and click OK to save.   </para>
+              using MARC21, UTF-8 Unicode, and click OK to save. </para>
+            <para>
+              <screenshot>
+                <screeninfo>Record Characteristics</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/appendix-oclc/oclcrecordchar.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </para>
           </listitem>
         </itemizedlist></para>
       <para>You should be ready to go!  To export a record from OCLC Connexion Client to Koha, just
@@ -45892,6 +45949,89 @@ import_mode: direct</programlisting></para>
         Connexion attempting to talk to Koha.  You should get a message that the record was added or
         overlaid, including its biblio number, and a URL that you can copy into your web browser to
         jump straight to the record. </para>
+    </section>
+    <section id="oclcgateway">
+      <sectioninfo>
+        <authorgroup>
+          <author>
+            <firstname>Heather</firstname>
+            <surname>Hernandez</surname>
+            <affiliation>
+              <orgname>San Francisco Maritime National Historical Park</orgname>
+            </affiliation>
+          </author>
+          <editor>
+            <firstname>Nicole C.</firstname>
+            <surname>Engard</surname>
+          </editor>
+        </authorgroup>
+        <pubdate>2014</pubdate>
+      </sectioninfo>
+      <title>Using the OCLC Connexion Gateway</title>
+      <para>Records can be exported from Connexion either in a batch or one by one.  </para>
+      <section id="oclconeexport">
+        <title>Exporting records one by one</title>
+        <para>To export bibliographic records one by one, be sure your "Batch" options are correct:
+          from the "Tools" menu, select "Options", and select the "Batch" tab. In the "Perform local
+          actions in batch" area, "Bibliographic Record Export" should be unchecked<screenshot>
+            <screeninfo>Connexion batch options</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-oclc/oclcoptions.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>When ready to export, from the "Action" menu, select "Export" or use the F5 key. You
+          will see a screen similar to the following if the import is successful and if the record
+          is new to the Catalog; you may copy &amp; paste the resulting URL into your Koha catalog
+          to see the new record.<screenshot>
+            <screeninfo>Connexion Export</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-oclc/oclcstatus.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>If the record was overlaid, you will see a message to that effect in the "OCLC Gateway
+          Export Status" window<screenshot>
+            <screeninfo>Overlay confirmation</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-oclc/oclcoverlay.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+      </section>
+      <section id="oclcbatchexport">
+        <title>Exporting records in a batch</title>
+        <para>To export bibliographic records in a batch, be sure your "Batch" options are correct:
+          from the "Tools" menu, select "Options", and select the "Batch" tab. In the "Perform local
+          actions in batch" area, "Bibliographic Record Export" should be checked<screenshot>
+            <screeninfo>OCLC Batch Export Options</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-oclc/oclcexportbatch.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>When a record is ready to export, from the "Action" menu, select "Export" or use the
+          F5 key, and it’s export status will be "ready." </para>
+        <para>When ready to export the batch, from the "Batch" menu, select "Process batch" and
+          check the appropriate "Path" and "Export" boxes<screenshot>
+            <screeninfo>Batch import process</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/appendix-oclc/oclcprocessbatch.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>The export will begin, and the bib records will be exported &amp; imported into Koha
+          one by one; you will see "OCLC Gateway Export Status" windows, as above, showing you the
+          results of each export. That window will stay there until you select "Close," and then the
+          next record’s export/import will begin. The process will continue until all records in the
+          batch are completed. Then you may or may not see the Connexion Client export report
+          (depending on your Client options for that). </para>
+      </section>
     </section>
   </appendix>
 
