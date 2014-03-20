@@ -21414,15 +21414,28 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </listitem>
         </itemizedlist>
 
-        <para>This tool will allow you to upload cover images for the
-        materials in your catalog. To access this tool, staff will need the
-        <link linkend="toolspermissions">upload_local_cover_images
-        permission</link>. In order for images to show in the staff client
-        and/or OPAC you will need to set your <link linkend="LocalCoverImages">LocalCoverImages</link> and/or <link linkend="OPACLocalCoverImages">OPACLocalCoverImages</link> preferences
-        to 'Display.' Images can be uploaded in batches or one by one.<tip>
-            <para>Koha does not have a maximum file size limit for this tool,
-            but Apache may limit the maximum size of uploads (talk to your sys
-            admin).</para>
+        <para>This tool will allow you to upload cover images for the materials in your catalog. To
+          access this tool, staff will need the <link linkend="toolspermissions"
+            >upload_local_cover_images permission</link>. In order for images to show in the staff
+          client and/or OPAC you will need to set your <link linkend="LocalCoverImages"
+            >LocalCoverImages</link> and/or <link linkend="OPACLocalCoverImages"
+            >OPACLocalCoverImages</link> preferences to 'Display.' Images can be uploaded in batches
+          or one by one.<tip>
+            <para>Koha does not have a maximum file size limit for this tool, but Apache may limit
+              the maximum size of uploads (talk to your sys admin).</para>
+          </tip><tip>
+            <para>When you want to upload multiple images onto a bib record, they will display left
+              to right (then top to bottom, depending on screen real estate) in order of uploading,
+              and the one on the left (the first one uploaded) will be the one used as a thumbnail
+              cover in search results and on the detail page. There is no way to reorder cover
+              images uploaded in this way, so be sure to upload them in the order you'd like them to appear.<screenshot>
+                <screeninfo>Multiple cover images on one record</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/uploadlocalimg/multiplecovers.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
           </tip></para>
 
         <para>If uploading a single image:</para>
