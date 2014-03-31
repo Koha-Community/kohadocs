@@ -20021,7 +20021,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </listitem>
 
                     <listitem>
-                      <para>Limit to a specific item type</para>
+                      <para>Limit to a specific item type<itemizedlist>
+                          <listitem>
+                            <important>
+                              <para>This limit will use the type you have defined in the <link
+                                  linkend="item-level_itypes">item-level_itypes</link> preference.
+                                If you have the item-level_itypes preference set to 'specific item'
+                                and you have no items attached to a bib record it will not be
+                                exported.  To get all bib records of a specific type you will need
+                                your item-level_itypes preference set to 'biblio record'.</para>
+                            </important>
+                          </listitem>
+                        </itemizedlist></para>
                     </listitem>
 
                     <listitem>
