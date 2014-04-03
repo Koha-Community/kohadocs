@@ -15335,8 +15335,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
             <listitem>
               <para>If you would like this attribute to only be used by specific branches you can
-                choose those branches from the 'Branches limitation' list.  Choose 'All branches' to
-                show it for all libraries.</para>
+                choose those branches from the 'Branches limitation' list. Choose 'All branches' to
+                show it for all libraries.<itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>Note that items with locations already set on them will not be altered.
+                        The branch limitation only limits the choosing of an authorized value based
+                        on the home branch of the current staff login. All authorized values for
+                        item records (LOC, LOST, CCODE, etc) will show in the OPAC for all
+                        patrons.</para>
+                    </important>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
             <listitem>
               <para>If you'd like to only show this attribute on patrons of one type choose that
