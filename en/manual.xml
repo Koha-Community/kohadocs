@@ -14662,6 +14662,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem id="suggestauthorized">
+              <para>ROADTYPE<itemizedlist>
+                  <listitem>
+                    <para>Road types to be used in patron addresses</para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
               <para>SUGGEST</para>
               <itemizedlist>
                 <listitem>
@@ -16013,69 +16020,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <para>This will allow for easy entry of local cities into the patron
           record without risking the potential for typos or mistaken
           zip/postal codes.</para>
-        </section>
-      </section>
-
-      <section id="roadtypes">
-        <title>Road Types</title>
-
-        <para>To standardize patron input you can define road types within
-        your region so that when new patrons are added librarians simply have
-        to select the road from a list instead of having to type it in.</para>
-
-        <tip>
-          <para>If you want your patrons to have their road types abbreviated
-          all of the time then you can enter the appropriate abbreviations
-          here, if you'd like the road types to always be spelled out you can
-          do that here as well.</para>
-        </tip>
-
-        <section id="addroadtype">
-          <title>Adding Road Types</title>
-
-          <para>To add a road type, click 'New Road Type' and then enter the
-          road type the way you'd like it displayed.</para>
-
-          <screenshot>
-            <screeninfo>New Road</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/newroad.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <para>Once you submit the form, your new road type will be listed on
-          the Road Types page</para>
-
-          <screenshot>
-            <screeninfo>Roads in Koha</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/roads.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
-
-        <section id="roadtypeonpatform">
-          <title>Viewing Road Types on Patron Add form</title>
-
-          <para>When adding or editing a patron, if you have road types
-          defined, there will be a pull down to choose the road type
-          from.</para>
-
-          <screenshot>
-            <screeninfo>Road types on patron record</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/patroncirc/patronroad.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
         </section>
       </section>
     </section>
@@ -40121,8 +40065,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </listitem>
 
         <listitem>
-          <para>Optionally define <link linkend="citytowns">City/State/Postal Code</link> combos and
-              <link linkend="roadtypes">Road Types</link> for patron entry</para>
+          <para>Optionally define <link linkend="citytowns">City/State/Postal Code</link> combos </para>
         </listitem>
 
         <listitem>
