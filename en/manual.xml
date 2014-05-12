@@ -33789,92 +33789,74 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </itemizedlist>
           </listitem>
 
-          <listitem>
-            <para>The final option for ordering is to order from a staged
-            record (<link linkend="stagemarc">learn more about staging
-            records</link>).</para>
-
+          <listitem id="orderfromstagedfile">
+            <para>The final option for ordering is to order from a staged record (<link
+                linkend="stagemarc">learn more about staging records</link>).</para>
             <screenshot>
               <screeninfo>Staged Files to Order From</screeninfo>
-
               <mediaobject>
                 <imageobject>
                   <imagedata fileref="images/acquisitions/stagedfiles.png"/>
                 </imageobject>
               </mediaobject>
             </screenshot>
-
             <itemizedlist>
               <listitem>
-                <para>From the list of files you are presented with, choose
-                the 'Add orders' link.</para>
-
-                <screenshot>
-                  <screeninfo>Records in the staged file</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/acquisitions/stagedrecords.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>From the list of records, click 'Add order' next to
-                    the item that you want to add to your order.</para>
-
-                    <screenshot>
-                      <screeninfo>New order from Staged Record</screeninfo>
-
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="images/acquisitions/stagedorder.png"/>
-                        </imageobject>
-                      </mediaobject>
-                    </screenshot>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para>From the order form, you will not be able to
-                        edit the catalog details.</para>
-                      </listitem>
-                    </itemizedlist>
-                  </listitem>
-
-                  <listitem>
-                    <para>The other option is to import all records from the
-                    staged file by scrolling below the list of records in the
-                    staged file and filling in the item information.</para>
-
-                    <screenshot>
-                      <screeninfo>Import All</screeninfo>
-
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="images/acquisitions/importallstaged.png"/>
-                        </imageobject>
-                      </mediaobject>
-                    </screenshot>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para>If you choose this option the Koha will look in
-                        the 020$c and grab the pricing information from that
-                        field and put that on each order line.</para>
-                      </listitem>
-                    </itemizedlist>
-                  </listitem>
-                </itemizedlist>
+                <para>From the list of files you are presented with, choose the 'Add orders' link to
+                  add the records in the staged file to your order. <screenshot>
+                    <screeninfo>Staged records</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/acquisitions/importallstaged.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+              </listitem>
+              <listitem>
+                <para>Next to each title is a checkbox, check the items you would like to order, or
+                  choose 'Check all' at the top. Depending on your settings in the <link
+                    linkend="MarcFieldsToOrder">MarcFieldsToOrder</link> preference Koha will
+                  populate the next screen with with the relevant Quantity, Price, Fund, Statistic
+                  1, and Statistic 2 found within the staged file.<screenshot>
+                    <screeninfo>Add orders from staged file</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/acquisitions/selecttoimport.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+              </listitem>
+              <listitem>
+                <para>In the 'Item Information' tab you can enter information that will be added to
+                  every ordered item such as item type, collection code and not for loan status.<screenshot>
+                    <screeninfo>Item information</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/acquisitions/itemfromstaged.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+              </listitem>
+              <listitem>
+                <para>If no information is imported from the MARC record regarding fund information
+                  the 'Default accounting details' tab can be used to apply values related to the accounting.<screenshot>
+                    <screeninfo>Accounting details</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/acquisitions/stagedaccounting.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
               </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
 
-        <para>After bringing in the bib information, if your <link linkend="AcqCreateItem">AcqCreateItem</link> system preference is set
-        to add an item when ordering you will enter the item info next. You
-        need to fill out at least one item record and then click the 'Add'
-        button at the bottom left of the item form.</para>
+        <para>After bringing in the bib information (for all import methods except for the staged
+          file), if your <link linkend="AcqCreateItem">AcqCreateItem</link> system preference is set
+          to add an item when ordering you will enter the item info next. You need to fill out at
+          least one item record and then click the 'Add' button at the bottom left of the item
+          form.</para>
 
         <screenshot>
           <screeninfo>Item order</screeninfo>
