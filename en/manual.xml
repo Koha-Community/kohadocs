@@ -18793,6 +18793,124 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </listitem>
               </itemizedlist>
             </listitem>
+            <listitem>
+              <para>CHECKIN<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Check in' notice for all items that are
+                      checked in</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if two criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive this notice</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>CHECKOUT<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Check out' notice for all items that are
+                      checked out</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if two criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive this notice</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>DUE<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Item due' for an item is due</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if two criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive this notice</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>DUEDGST<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Item due' for all items that are due</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if two criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive this notice as a digest</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
 
             <listitem>
               <para id="HOLDnotice">HOLD (Hold Available for Pickup)</para>
@@ -18851,24 +18969,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para id="HOLD_PRINT">HOLD_PRINT (Printed notice when hold
-              available for pickup)</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>This notice is used for hold confirmation notices that
-                  are sent out in print format. This will not effect what the
-                  email notice looks like.</para>
-                </listitem>
-
-                <listitem>
-                  <para>When this notice references the branches table it is
-                  referring to the pickup branch information.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
               <para id="ODUE">ODUE (Overdue Notice)</para>
 
               <itemizedlist>
@@ -18887,6 +18987,99 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   Triggers</link></para>
                 </listitem>
               </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>PREDUE<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Advanced notice' for an item is due</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if two criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive this notice</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>PREDUEDGST<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Advanced notice' for all items that are
+                      due</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if two criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive this notice as a digest</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>RENEWAL<itemizedlist>
+                  <listitem>
+                    <para>This notice is sent as the 'Check out' notice for all items that are
+                      renewed</para>
+                  </listitem>
+                  <listitem>
+                    <para>This notice is used if three criteria are met:</para>
+                    <orderedlist>
+                      <listitem>
+                        <para>The <link linkend="EnhancedMessagingPreferences"
+                            >EnhancedMessagingPreferences</link> is set to 'Allow'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The <link linkend="RenewalSendNotice">RenewalSendNotice</link>
+                          preference is set to 'Send'</para>
+                      </listitem>
+                      <listitem>
+                        <para>The patron has requested to receive the checkout notice</para>
+                        <itemizedlist>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>OPAC &gt; Login &gt; my
+                              messaging</para>
+                          </listitem>
+                          <listitem>
+                            <para><emphasis>Get there: </emphasis>Staff Client &gt; Patron Record
+                              &gt; <link linkend="patnotices">Notices</link></para>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </orderedlist>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
 
             <listitem>
@@ -18920,6 +19113,30 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                   </tip>
                 </listitem>
               </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>SHARE_ACCEPT<itemizedlist>
+                  <listitem>
+                    <para>Used to notify a patron when another patron has accepted their shared
+                      list.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Requires that you set <link linkend="OpacAllowSharingPrivateLists"
+                        >OpacAllowSharingPrivateLists</link> to 'Allow'</para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>SHARE_INVITE <itemizedlist>
+                  <listitem>
+                    <para>Used to notify a patron that another patron would like to share a list
+                      with them.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Requires that you set <link linkend="OpacAllowSharingPrivateLists"
+                        >OpacAllowSharingPrivateLists</link> to 'Allow'</para>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
           </itemizedlist>
 
@@ -18974,18 +19191,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </listitem>
               </itemizedlist>
             </listitem>
-
             <listitem>
               <para>TRANSFERSLIP</para>
-
               <itemizedlist>
                 <listitem>
                   <para>Used to print a transfer slip</para>
                 </listitem>
-
                 <listitem>
-                  <para>The transfer slip is printed when you confirm a
-                  transfer from one branch to another in your system</para>
+                  <para>The transfer slip is printed when you confirm a transfer from one branch to
+                    another in your system</para>
                 </listitem>
               </itemizedlist>
             </listitem>
