@@ -15485,13 +15485,27 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 able to use this category.</para>
             </listitem>
             <listitem>
+              <para>You can decide if this patron category is blocked from performing actions in the
+                OPAC if their card is expired using the next option.  By default it will follow the
+                rule set in the <link linkend="BlockExpiredPatronOpacActions"
+                  >BlockExpiredPatronOpacActions</link> preference<screenshot>
+                  <screeninfo/>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/patroncirc/blockexpired.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
+            </listitem>
+            <listitem>
               <para>Finally you can assign advanced messaging preferences by default to a patron
                 category</para>
               <itemizedlist>
                 <listitem>
                   <para>
                     <important>
-                      <para>Requires that you have <link linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link> enabled</para>
+                      <para>Requires that you have <link linkend="EnhancedMessagingPreferences"
+                          >EnhancedMessagingPreferences</link> enabled</para>
                     </important>
                   </para>
                 </listitem>
@@ -15503,7 +15517,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                       <listitem>
                         <tip>
                           <para>After setting the default for the patron category you can force
-                            those changes to all existing patrons by running the <emphasis role="italic">borrowers-force-messaging-defaults</emphasis> script
+                            those changes to all existing patrons by running the <emphasis
+                              role="italic">borrowers-force-messaging-defaults</emphasis> script
                             found in the <emphasis role="italic">misc/maintenance</emphasis> folder.
                             Ask your system administrator for assistance with this script.</para>
                         </tip>
