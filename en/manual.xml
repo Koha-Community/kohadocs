@@ -1751,6 +1751,35 @@
             </itemizedlist>
           </section>
         </section>
+        <section id="catimportprefs">
+          <title>Importing</title>
+          <section id="AggressiveMatchOnISBN">
+            <title>AggressiveMatchOnISBN</title>
+            <para>Default: don't</para>
+            <para>Asks: When matching on ISBN with the record import tool, ___ attempt to match
+              aggressively by trying all variations of the ISBNs in the imported record as a phrase
+              in the ISBN fields of already cataloged records. </para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>do</para>
+                </listitem>
+                <listitem>
+                  <para>don't</para>
+                </listitem>
+              </itemizedlist>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference allows you to choose to alter the ISBN matching rule used
+                    when staging records for import to be more aggressive. This means that all text
+                    will be stripped from the ISBN field so that a pure number match is possible. If
+                    this preference is set to "Don't" then Koha will find a match only if the ISBN
+                    fields are identical.</para>
+                </listitem>
+              </itemizedlist><important>
+                <para>Note that this preference has no effect if <link linkend="UseQueryParser"
+                    >UseQueryParser</link> is on. </para>
+              </important></para>
+          </section>
+        </section>
 
         <section id="catinterfaceprefs">
           <title>Interface</title>
