@@ -18614,62 +18614,122 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
 
             <listitem>
-              <para>If you plan on writing the notice or slip in HTML check
-              the 'HTML Message' box, otherwise the content will be generated
-              as plain text</para>
+              <para>Next you can customize the notice for every possible delivery method<itemizedlist>
+                  <listitem>
+                    <para>Every notice should have an Email template set for it<screenshot>
+                        <screeninfo>New Email notice</screeninfo>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/tools/notices/newemail.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot></para>
+                  </listitem>
+                  <listitem>
+                    <para>Next, you can set up a Feed template<screenshot>
+                        <screeninfo>New Feed notice</screeninfo>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/tools/notices/newfeed.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot></para>
+                  </listitem>
+                  <listitem>
+                    <para>If you're using the <link linkend="TalkingTechItivaPhoneNotification"
+                        >TalkingTechItivaPhoneNotification</link> service you can set up a Phone notification<screenshot>
+                        <screeninfo>New Phone notice</screeninfo>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/tools/notices/newphone.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot></para>
+                  </listitem>
+                  <listitem>
+                    <para>If you plan on printing this notice you can set the Print template next<screenshot>
+                        <screeninfo>New Print notice</screeninfo>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/tools/notices/newprint.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot></para>
+                  </listitem>
+                  <listitem>
+                    <para>If you have enabled SMS notices with the <link linkend="SMSSendDriver"
+                        >SMSSendDriver</link> preference you can set the text for your SMS notices next<screenshot>
+                        <screeninfo>New SMS notice</screeninfo>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/tools/notices/newsms.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot></para>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
-
             <listitem>
-              <para>Message Subject is what will appear in the subject line of
-              the email</para>
-            </listitem>
-
-            <listitem>
-              <para>In the message body feel free to type whatever message you
-              feel is best, use the fields on the left hand side to enter
-              individualized data from the from database.</para>
-
-              <itemizedlist>
+              <para>Each notice offers you the same options<itemizedlist>
                 <listitem>
-                  <important>
-                    <para>Overdue notices can use &lt;&lt;items.content&gt;&gt; tags by themselves,
-                      or use &lt;item&gt;&lt;/item&gt; to span all of the tags. Learn more about the
-                        <link linkend="noticemarkup">Overdue Notice Markup</link></para>
-                    <itemizedlist>
-                      <listitem>
-                        <para>On overdue notices make sure to use &lt;&lt;items.content&gt;&gt; tags
-                          to print out the data related to all items that are overdue.</para>
-                      </listitem>
-                    </itemizedlist>
-                    <itemizedlist>
-                      <listitem>
-                        <para>The other option, only for overdue notices, is to use the
-                          &lt;item&gt;&lt;/item&gt; tags to span the line so that it will print out
-                          multiple lines One example for the &lt;item&gt;&lt;/item&gt; tag option
-                          is:</para>
-                        <para>&lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by
-                          &lt;&lt;biblio.author&gt;&gt;, &lt;&lt;items.itemcallnumber&gt;&gt;,
-                          Barcode: &lt;&lt;items.barcode&gt;&gt; , Checkout date:
-                          &lt;&lt;issues.issuedate&gt;&gt;, Due date:
-                          &lt;&lt;issues.date_due&gt;&gt; Fine: &lt;&lt;items.fine>> Due date:
-                          &lt;&lt;issues.date_due&gt;&gt; &lt;/item&gt;</para>
-                      </listitem>
-                    </itemizedlist>
-                  </important>
+                  <para>If you plan on writing the notice or slip in HTML check
+                    the 'HTML Message' box, otherwise the content will be generated
+                    as plain text</para>
                 </listitem>
+                
                 <listitem>
-                  <important>
-                    <para>Only the overdue notices take advantage of the &lt;item&gt;&lt;/item&gt;
-                      tags, all other notices referencing items need to use
-                      &lt;&lt;items.content&gt;&gt;</para>
-                  </important>
+                  <para>Message Subject is what will appear in the subject line of
+                    the email</para>
                 </listitem>
+                
                 <listitem>
-                  <tip>
-                    <para>To add today's date you can use the &lt;&lt;today&gt;&gt; syntax</para>
-                  </tip>
+                  <para>In the message body feel free to type whatever message you
+                    feel is best, use the fields on the left hand side to enter
+                    individualized data from the from database.</para>
+                  
+                  <itemizedlist>
+                    <listitem>
+                      <important>
+                        <para>Overdue notices can use &lt;&lt;items.content&gt;&gt; tags by themselves,
+                          or use &lt;item&gt;&lt;/item&gt; to span all of the tags. Learn more about the
+                          <link linkend="noticemarkup">Overdue Notice Markup</link></para>
+                        <itemizedlist>
+                          <listitem>
+                            <para>On overdue notices make sure to use &lt;&lt;items.content&gt;&gt; tags
+                              to print out the data related to all items that are overdue.</para>
+                          </listitem>
+                        </itemizedlist>
+                        <itemizedlist>
+                          <listitem>
+                            <para>The other option, only for overdue notices, is to use the
+                              &lt;item&gt;&lt;/item&gt; tags to span the line so that it will print out
+                              multiple lines One example for the &lt;item&gt;&lt;/item&gt; tag option
+                              is:</para>
+                            <para>&lt;item&gt;"&lt;&lt;biblio.title&gt;&gt;" by
+                              &lt;&lt;biblio.author&gt;&gt;, &lt;&lt;items.itemcallnumber&gt;&gt;,
+                              Barcode: &lt;&lt;items.barcode&gt;&gt; , Checkout date:
+                              &lt;&lt;issues.issuedate&gt;&gt;, Due date:
+                              &lt;&lt;issues.date_due&gt;&gt; Fine: &lt;&lt;items.fine>> Due date:
+                              &lt;&lt;issues.date_due&gt;&gt; &lt;/item&gt;</para>
+                          </listitem>
+                        </itemizedlist>
+                      </important>
+                    </listitem>
+                    <listitem>
+                      <important>
+                        <para>Only the overdue notices take advantage of the &lt;item&gt;&lt;/item&gt;
+                          tags, all other notices referencing items need to use
+                          &lt;&lt;items.content&gt;&gt;</para>
+                      </important>
+                    </listitem>
+                    <listitem>
+                      <tip>
+                        <para>To add today's date you can use the &lt;&lt;today&gt;&gt; syntax</para>
+                      </tip>
+                    </listitem>
+                  </itemizedlist>
                 </listitem>
-              </itemizedlist>
+                </itemizedlist></para>
             </listitem>
           </itemizedlist>
 
