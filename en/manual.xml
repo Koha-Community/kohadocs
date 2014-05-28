@@ -35586,6 +35586,10 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para><link linkend="OpacSeparateHoldings">OpacSeparateHoldingsBranch</link> = home
           library</para>
       </listitem>
+      <listitem>
+        <para><link linkend="DisplayLibraryFacets">DisplayLibraryFacets</link> = holding
+          library</para>
+      </listitem>
     </itemizedlist>
 
     <para>If your system preferences are set differently your displays may
@@ -35713,21 +35717,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
-
-        <para>If you only have one library/branch in Koha you will not see the
-        'Libraries' filter, instead you will see a filter on Shelving
-        Location. The same will happen if you have <link linkend="singleBranchMode">singleBranchMode</link> set to "Don't
-        allow"</para>
-
-        <screenshot>
-          <screeninfo>Location facet</screeninfo>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/opac/locationfacet.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
+        <para>Depending on your setting for the <link linkend="DisplayLibraryFacets"
+            >DisplayLibraryFacets</link> system preference you will see filters for your home,
+          holding or both libraries.<screenshot>
+            <screeninfo>Library Facet</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/locationfacet.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
       </section>
 
       <section id="searchrss">
