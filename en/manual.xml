@@ -28303,6 +28303,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           actions within Koha when the system is offline.  You will want to visit
           http://your-koha-staff-client-url/cgi-bin/koha/circ/offline.pl at least once while online
           and bookmark that page. That is the page you will go to when you are offline.</para>
+        <important>
+          <para>The offline interface uses HTML LocalStorage, which depending on the browser and
+            user setting, is limited to 2.5MB or 5MB per domain. This means that larger systems will
+            not be able to syncronize their data and are recommended to use either the <link
+              linkend="firefoxofflinecirc">Firefox</link> or <link linkend="windowsofflinecirc"
+              >Windows</link> application for offline circulation.</para>
+        </important>
         <section id="kohaofflinesetup">
           <title id="offlinesetup">Setup</title>
           <para>Before the first time the system goes offline go to Circulation and choose 'Built-in
@@ -28325,6 +28332,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </imageobject>
               </mediaobject>
             </screenshot>
+          <important>
+            <para>The offline interface uses HTML LocalStorage, which depending on the browser and
+              user setting, is limited to 2.5MB or 5MB per domain. This means that larger systems
+              will not be able to syncronize their data and are recommended to use either the <link
+                linkend="firefoxofflinecirc">Firefox</link> or <link linkend="windowsofflinecirc"
+                >Windows</link> application for offline circulation.</para>
+          </important>
           <para>This will allow you download a local copy of your patrons and circulation data.
             Click the 'Download records' link at the top of the page to synchronize your data.</para>
           <screenshot>
