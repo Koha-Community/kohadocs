@@ -1566,12 +1566,16 @@ budget_code: 922$a</programlisting></para>
           </section>
 
           <section id="OpacSuppression">
-            <title>OpacSuppression and OpacSuppressionByIPRange</title>
+            <title>OpacSuppression, OpacSuppressionByIPRange, OpacSuppressionRedirect, and
+              OpacSuppressionMessage</title>
             <para>OpacSuppression Default: Don't hide</para>
 
-            <para>Asks: ___ items marked as suppressed from OPAC search
-            results. Restrict the suppression to IP adresses outside of the IP
-            range ___</para>
+            <para>Asks:  ___ items marked as suppressed from OPAC search results. Note that you must
+              have the Suppress index set up in Zebra and at least one suppressed item, or your
+              searches will be broken. Restrict the suppression to IP adresses outside of the IP
+              range ___ (Leave blank if not used. Define a range like 192.168..) Redirect the opac
+              detail page for suppressed records to ___ Display the following message on the
+              redirect page for suppressed biblios ___.</para>
 
             <para>OpacSuppression Values:</para>
 
@@ -1598,6 +1602,14 @@ budget_code: 922$a</programlisting></para>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+            <para>OpacSuppressionRedirect Values:<itemizedlist>
+                <listitem>
+                  <para>an explanatory page ('This record is blocked').</para>
+                </listitem>
+                <listitem>
+                  <para>the 404 error page ('Not found').</para>
+                </listitem>
+              </itemizedlist></para>
 
             <para>Description:</para>
 
@@ -1610,7 +1622,11 @@ budget_code: 922$a</programlisting></para>
                   will still display it in the Staff Client. If you want to further control
                   suppression you can set an IP address range to still show suppressed items to.
                   Define a range like 192.168.. If you don't want to limit suppression in this way,
-                  leave the IP field blank.</para>
+                  leave the IP field blank. You can also decide what the patrons will see in the
+                  OPAC when a title is suppressed by setting the OpacSuppressionRedirect and
+                  OpacSuppressionMessage preferences.  You can either show the patron a 404 page if
+                  they try to see a suppressed record or you can create a custom page by entering
+                  the HTML in the OpacSuppressionMessage part of this preference.</para>
                 <para>
                   <tip>
                     <para>An <link linkend="authorizedvalues">authorized value</link> for the MARC21
