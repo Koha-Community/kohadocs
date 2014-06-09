@@ -3923,6 +3923,12 @@ budget_code: 922$a</programlisting></para>
                 enforce a first come, first served standard.</para>
               </listitem>
             </itemizedlist>
+            <important>
+              <para>An item's hold status doesn not affect whether or not the item is 'available'
+                until the item is in 'waiting' status. Items with on-shelf holds will show as
+                available until a librarian has pulled them from the shelf and checked the item in
+                make it show 'waiting'.</para>
+            </important>
           </section>
 
           <section id="AutoResumeSuspendedHolds">
@@ -36388,10 +36394,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>Below each title you will see the availability for the items
-        attached to the record. Note that even if you filtered on one library
-        location all locations that hold the item will appear on the search
-        results.</para>
+        <para>Below each title you will see the availability for the items attached to the record. <note>
+            <para>Even if you filtered on one library location all locations that hold the item will
+              appear on the search results.</para>
+          </note><important>
+            <para>An item's hold status doesn not affect whether or not the item is 'available'
+              until the item is in 'waiting' status. Items with on-shelf holds will show as
+              available until a librarian has pulled them from the shelf and checked the item in
+              make it show 'waiting'.</para>
+          </important></para>
 
         <screenshot>
           <screeninfo>Holdings Information</screeninfo>
