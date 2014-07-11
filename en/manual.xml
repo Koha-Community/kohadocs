@@ -17079,8 +17079,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     you're picking</para>
                 </listitem>
                 <listitem>
-                  <para>'Match threshold' - The total number of 'points' a biblio must earn to be
+                  <para>'Match threshold' is the total number of 'points' a biblio must earn to be
                     considered a 'match'</para>
+                </listitem>
+                <listitem>
+                  <para>'Record type' is the type of import this rule will be used for - either
+                    authority or bibliographic</para>
                 </listitem>
                 <listitem>
                   <para>Match points are set up to determine what fields to match on</para>
@@ -17121,7 +17125,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </itemizedlist>
         </section>
         <section id="samplerecordmatch">
-          <title>Sample Record Matching Rule: Control Number</title>
+          <title>Sample Bibliographic Record Matching Rule: Control Number</title>
 
           <screenshot>
             <screeninfo>LOC Matching Rule</screeninfo>
@@ -17136,6 +17140,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <itemizedlist>
             <listitem>
               <para>Match threshold: 100</para>
+            </listitem>
+            <listitem>
+              <para>Record type: Bibliographic<itemizedlist>
+                  <listitem>
+                    <tip>
+                      <para>If you'd like a rule to match on the 001 in authority records you will
+                        need the repeat all of these values and change just the record type to
+                        'Authority record'</para>
+                    </tip>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
 
             <listitem>
