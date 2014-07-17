@@ -43848,12 +43848,16 @@ print theme('pages_catalog');</programlisting>
         </section>
 
         <section id="mergeauthcron">
-          <title>Merge Authorities</title>
+          <title>Update Authorities</title>
 
           <para>Script path: misc/migration_tools/merge_authority.pl</para>
 
-          <para>Does: Updates biblio data with changes to authorities
-          records</para>
+          <para>Does: Updates biblio data with changes to authorities records<note>
+              <para>The name of this script is misleading.  This script does not merge authorities
+                together it instead merges authority data with linked bib records. Edits to
+                authority records will be applied to bibliographic records that use that authority
+                when this script is run.</para>
+            </note></para>
 
           <para>Required by: <link linkend="dontmerge">dontmerge</link> system
           preference</para>
