@@ -44445,6 +44445,171 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
       </itemizedlist>
     </section>
   </appendix>
+  <appendix id="noticesappendix">
+    <title>Notice &amp; Slips Guides</title>
+    <section id="noticesfieldguide">
+      <sectioninfo>
+        <authorgroup>
+          <author>
+            <firstname>Barton</firstname>
+            <surname>Chittenden</surname>
+            <affiliation>
+              <orgname>ByWater Solutions</orgname>
+            </affiliation>
+          </author>
+          <editor>
+            <firstname>Nicole C.</firstname>
+            <surname>Engard</surname>
+          </editor>
+        </authorgroup>
+        <pubdate>2014</pubdate>
+      </sectioninfo>
+      <title>Field Guide for Notices &amp; Slips</title>
+      <para>This guide will break down the notices and slips information in 3 ways.  First it will
+        tell you what file generates the notice, then how you will present the item info in that
+        notice and finally if the notice can be branch specific or not.</para>
+      <para>
+        <informaltable
+          style="border-collapse:collapse;border:1px solid black;font-family:'Times New Roman';letter-spacing:normal;text-indent:0px;text-transform:none;word-spacing:0px">
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1" align="left">Letter Code</th>
+              <th rowspan="1" colspan="1" align="left">Used In</th>
+              <th rowspan="1" colspan="1" align="left">Detail tag</th>
+              <th rowspan="1" colspan="1" align="left">Can be branch specific</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">DUE</td>
+              <td rowspan="1" colspan="1" align="left">advance_notices.pl</td>
+              <td rowspan="1" colspan="1" align="left">&lt;&lt;items.content&gt;&gt;</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">DUEDGST</td>
+              <td rowspan="1" colspan="1" align="left">advance_notices.pl</td>
+              <td rowspan="1" colspan="1" align="left">&lt;&lt;items.content&gt;&gt;</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">PREDUE</td>
+              <td rowspan="1" colspan="1" align="left">advance_notices.pl</td>
+              <td rowspan="1" colspan="1" align="left">&lt;&lt;items.content&gt;&gt;</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">PREDUEDGST</td>
+              <td rowspan="1" colspan="1" align="left">advance_notices.pl</td>
+              <td rowspan="1" colspan="1" align="left">&lt;&lt;items.content&gt;&gt;</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">ODUE*</td>
+              <td rowspan="1" colspan="1" align="left">overdue_notices.pl</td>
+              <td rowspan="1" colspan="1" align="left">&lt;&lt;items.content&gt;&gt; or &lt;item&gt;
+                &lt;/item&gt;</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">CHECKOUT</td>
+              <td rowspan="1" colspan="1" align="left">C4/Circulation.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">RENEWAL</td>
+              <td rowspan="1" colspan="1" align="left">C4/Circulation.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">TRANSFERSLIP</td>
+              <td rowspan="1" colspan="1" align="left">C4/Circulation.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">ISSUESLIP</td>
+              <td rowspan="1" colspan="1" align="left">C4/Members.pm</td>
+              <td rowspan="1" colspan="1" align="left">
+                <para>&lt;checkedout&gt; &lt;/checkedout&gt; </para>
+                <para> &lt;overdue&gt; &lt;/overdue&gt; </para>
+                <para> &lt;news&gt; &lt;/news&gt; </para>
+              </td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">ISSUEQSLIP</td>
+              <td rowspan="1" colspan="1" align="left">C4/Members.pm</td>
+              <td rowspan="1" colspan="1" align="left">&lt;checkedout&gt; &lt;/checkedout&gt;</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">HOLDPLACED</td>
+              <td rowspan="1" colspan="1" align="left">C4/Reserves.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">RESERVESLIP</td>
+              <td rowspan="1" colspan="1" align="left">C4/Reserves.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">ASKED</td>
+              <td rowspan="1" colspan="1" align="left">C4/Suggestions.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">CHECKED</td>
+              <td rowspan="1" colspan="1" align="left">C4/Suggestions.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">ACCEPTED</td>
+              <td rowspan="1" colspan="1" align="left">C4/Suggestions.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">REJECTED</td>
+              <td rowspan="1" colspan="1" align="left">C4/Suggestions.pm</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">Yes</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">PREDUE_PHONE</td>
+              <td rowspan="1" colspan="1" align="left">TalkingTech_itiva_outbound</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">OVERDUE_PHONE</td>
+              <td rowspan="1" colspan="1" align="left">TalkingTech_itiva_outbound</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">HOLD_PHONE</td>
+              <td rowspan="1" colspan="1" align="left">TalkingTech_itiva_outbound</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+            <tr>
+              <td rowspan="1" colspan="1" align="left">OPAC_REG_VERIFY</td>
+              <td rowspan="1" colspan="1" align="left">opac/opac-memberentry.pl</td>
+              <td rowspan="1" colspan="1" align="left">N/A</td>
+              <td rowspan="1" colspan="1" align="left">No</td>
+            </tr>
+          </tbody>
+        </informaltable>
+      </para>
+    </section>
+  </appendix>
 
   <appendix id="samplenotice">
     <title>Example Notice</title>
