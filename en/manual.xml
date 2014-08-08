@@ -44958,7 +44958,7 @@ Items :
         </listitem>
 
         <listitem>
-          <para>At approximately line 36 change this code: </para>
+          <para>At approximately line 33 change this code: </para>
 
           <programlisting>template_name  => "opac-main.tt",</programlisting>
         </listitem>
@@ -44970,10 +44970,12 @@ Items :
         </listitem>
 
         <listitem>
-          <para>At approximately line 54 after this code: </para>
+          <para>At approximately line 62 after this code: </para>
           <programlisting>$template->param( 
            koha_news       => $all_koha_news, 
-           koha_news_count => $koha_news_count
+           koha_news_count => $koha_news_count,
+           display_daily_quote => C4::Context->preference('QuoteOfTheDay'),
+           daily_quote         => $quote,
            );</programlisting>
         </listitem>
         <listitem>
@@ -44987,23 +44989,67 @@ Items :
           <para>Note pages.pl file must have Webserver user execution permissions, you can use
               <ulink url="http://en.wikipedia.org/wiki/Chmod">chmod</ulink> command if you are
             actually logged in as such user:
-            <programlisting>        $chmod 711 pages.pl</programlisting></para>
+            <programlisting>        $chmod 755 pages.pl</programlisting></para>
         </listitem>
 
-        <listitem>
-          <para>Copy /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tt to
-            /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt </para>
-        </listitem>
-        <listitem>
-          <para>Edit /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt </para>
-        </listitem>
-        <listitem>
-          <para>At approximately line 38, change this:</para>
-          <programlisting> [% IF ( OpacMainUserBlock ) %]&lt;div id="opacmainuserblock" class="container">[% OpacMainUserBlock %]&lt;/div>[% END %]</programlisting>
-          <para>To this:</para>
-          <programlisting> [% IF ( page_test ) %]&lt;div id="opacmainuserblock" class="container">[% page_test %]&lt;/div>[% END %]</programlisting>
-        </listitem>
-
+      <section id="kohacmstmpl">
+	<title>Editing the pages template</title>
+	<para>The file to create / edit for the pages template will depend on your opacthemes system preference setting i.e. bootstrap or prog (deprecated) or ccsr (deprecated)</para>
+	<section id="kohacmstmplboot">
+	  <title>Editing 'bootstrap' theme template (current)</title>
+	  <itemizedlist>
+	    <listitem>
+	      <para>Copy /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main.tt to /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt</para>
+	    </listitem>
+	    <listitem>
+	      <para>Edit /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt</para>
+	    </listitem>
+	    <listitem>
+	      <para>At approximately line 61, change this:
+		<programlisting>        [% IF ( OpacMainUserBlock ) %]<div id="opacmainuserblock">[% OpacMainUserBlock %]</div>[% END %]</programlisting></para>
+	    </listitem>	    
+	    <listitem>
+	      <para>To this:
+	      <programlisting>        [% IF ( page_test ) %]<div id="opacmainuserblock">[% page_test %]</div>[% END %]</programlisting></para>
+	    </listitem>
+	  </itemizedlist>
+	  <para>Remark: You may wish to disable your News block of these CMS style pages e.g. when you do not want it displayed on the CMS style pages or where the News block is long enough that it actually makes the 'page_test' include scroll outside the default viewport dimensions. In that case, remove the following code from your pages.tt template.
+	    <programlisting>
+	              [% IF ( koha_news_count ) %]
+                      <div id="news">
+                      <table class="table table-bordered">
+                      [% FOREACH koha_new IN koha_news %]
+                        <thead><tr><th>[% koha_new.title %]</th></tr></thead>
+                        <tbody><tr><td><p>[% koha_new.new %]</p>
+                        <p class="newsfooter"><i>(published on [% koha_new.newdate %])</i></p></td></tr></tbody>
+                      [% END %]
+                      </table>
+                      </div>
+                     [% END %]
+	    </programlisting>
+	  </para>
+	</section>
+	<section id="kohacmstmplprog">
+	  <title>Editing 'prog' theme template (deprecated)</title>
+	  <itemizedlist>
+	    <listitem>
+	      <para>Copy /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tt to /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt</para>
+	    </listitem>
+	    <listitem>
+	      <para>Edit /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt</para>
+	    </listitem>
+	    <listitem>
+	      <para>At approximately line 40, change this:
+		<programlisting>        <div id="opacmainuserblock" class="container">[% OpacMainUserBlock %]</div></programlisting></para>
+	    </listitem>
+	    <listitem>
+	      <para>To this:
+		<programlisting>        <div id="opacmainuserblock" class="container">[% page_test %]</div></programlisting></para>
+	    </listitem>
+	  </itemizedlist>	  
+	</section>
+      </section>
+      
         <listitem>
 	  <para>In the browser go to Home &gt; Administration &gt; System Preferences &gt; Local Use and add
             a New Preference called "page_test" </para>
