@@ -1065,18 +1065,19 @@ budget_code: 922$a</programlisting></para>
 
             <itemizedlist>
               <listitem>
-                <para>This preference tells Koha how to handle changes to your
-                Authority records. If you edit an authority record and this
-                preference is set to 'Do' Koha will update all of the bib
-                records linked to the authority with the new authority
-                record's data. If this is set to "Don't" then Koha won't edit
-                bib records when changes are made to authorities.</para>
+                <para>This preference tells Koha how to handle changes to your Authority records. If
+                  you edit an authority record and this preference is set to 'Do' Koha will
+                  immediately update all of the bib records linked to the authority with the new
+                  authority record's data. If this is set to "Don't" then Koha won't edit bib
+                  records when changes are made to authorities, rather, this is done later by the
+                    <link linkend="mergeauthcron">merge_authority.pl cronjob</link>.</para>
               </listitem>
             </itemizedlist>
 
             <important>
-              <para>If this is set to merge you will need to ask your administrator to enable the
-                  <link linkend="mergeauthcron">merge_authority.pl cronjob</link>.</para>
+              <para>If this is set to "Don't automatically update" you will need to ask your
+                administrator to enable the <link linkend="mergeauthcron">merge_authority.pl
+                  cronjob</link>.</para>
             </important>
           </section>
 
