@@ -43220,6 +43220,45 @@ print theme('pages_catalog');</programlisting>
 
           <para>Does: Truncates the sessions table, cleans out old zebraqueue entries, action logs
             and staged MARC files.</para>
+          <section>
+            <title>Perl Documentation</title>
+            <para><emphasis role="bold">USAGE</emphasis></para>
+            <para>kohaclone/misc/cronjobs/cleanup_database.pl [-h|--help] [--sessions] [--sessdays
+              DAYS] [-v|--verbose] [--zebraqueue DAYS] [-m|--mail] [--merged] [--import DAYS]
+              [--logs DAYS] [--searchhistory DAYS]</para>
+            <para><emphasis role="bold">PARAMETERS</emphasis></para>
+            <para>-h --help </para>
+            <para>prints this help message, and exits, ignoring all other options</para>
+            <para>--sessions </para>
+            <para>purge the sessions table. If you use this while users are logged into Koha, they
+              will have to reconnect.</para>
+            <para>--sessdays DAYS </para>
+            <para>purge only sessions older than DAYS days</para>
+            <para>-v --verbose </para>
+            <para>will cause the script to give you a bit more information about the run.</para>
+            <para>--zebraqueue DAYS </para>
+            <para>purge completed zebraqueue entries older than DAYS days. Defaults to 30 days if no
+              days specified.</para>
+            <para>-m --mail DAYS </para>
+            <para>purge items from the mail queue that are older than DAYS days. Defaults to 30 days
+              if no days specified.</para>
+            <para>--merged </para>
+            <para>purged completed entries from need_merge_authorities.</para>
+            <para>--import DAYS </para>
+            <para>purge records from import tables older than DAYS days. Defaults to 60 days if no
+              days specified</para>
+            <para>--z3950 </para>
+            <para>purge records from import tables that are the result of Z39.50 searches</para>
+            <para>--logs DAYS </para>
+            <para>purge entries from action_logs older than DAYS days. Defaults to 180 days if no
+              days specified</para>
+            <para>--searchhistory DAYS </para>
+            <para>purge entries from search_history older than DAYS days. Defaults to 30 days if no
+              days specified</para>
+            <para>--list-invites DAYS </para>
+            <para>purge (unaccepted) list share invites older than DAYS days. Defaults to 14 days if
+              no days specified.</para>
+          </section>
         </section>
       </section>
 
