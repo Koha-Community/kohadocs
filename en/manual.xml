@@ -3279,6 +3279,29 @@ budget_code: 922$a</programlisting></para>
                   all notices to the BCC address.</para>
               </tip></para>
           </section>
+          <section id="OverdueNoticeCalendar">
+            <title>OverdueNoticeCalendar</title>
+            <para>Default: Ignore calendar</para>
+            <para>Asks: ___  when working out the period for overdue notices</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Ignore calendar<itemizedlist>
+                      <listitem>
+                        <para>Notices do not take holidays into account, so they will be sent even
+                          if holidays have meant the item is not actually overdue yet</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+                <listitem>
+                  <para>Use calendar<itemizedlist>
+                      <listitem>
+                        <para>Notices take holidays into account, so they will not be sent if
+                          holidays mean the item is not actually overdue yet</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
 
           <section id="PrintNoticesMaxLines">
             <title>PrintNoticesMaxLines</title>
