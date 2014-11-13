@@ -43494,6 +43494,31 @@ print theme('pages_catalog');</programlisting>
               linkend="windowsofflinecirc">Koha Offline Circulation</link> tool</para>
           <para>Frequency suggestion: weekly</para>
         </section>
+        <section id="autorenewcron">
+          <title>Automatic renewal</title>
+          <para>Script path: misc/cronjobs/automatic_renewals.pl</para>
+          <para>Does: Will automatically renew items if you're allowing automatic renewal with your
+              <link linkend="circfinerules">circulation and fine rules</link>.</para>
+          <para>Frequency suggestion: nightly</para>
+          <section id="autorenewcronperl">
+            <title>Perl Documentation</title>
+            <para><emphasis role="bold">NAME</emphasis>
+            </para>
+            <para>automatic_renewals.pl - cron script to renew loans </para>
+            <para><emphasis role="bold">SYNOPSIS</emphasis>
+            </para>
+            <para>./automatic_renewals.pl </para>
+            <para>or, in crontab: 0 3 * * * automatic_renewals.pl </para>
+            <para><emphasis role="bold">DESCRIPTION</emphasis>
+            </para>
+            <para>This script searches for issues scheduled for automatic renewal
+              (issues.auto_renew). If there are still renews left (Renewals allowed) and the renewal
+              isn't premature (No Renewal before) the issue is renewed. </para>
+            <para><emphasis role="bold">OPTIONS</emphasis>
+            </para>
+            <para>No options.</para>
+          </section>
+        </section>
       </section>
       <section id="patroncrons">
         <title>Patrons</title>
