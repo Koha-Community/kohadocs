@@ -15920,7 +15920,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para>You can enable automatic renewals for certain items/patrons if you'd like. This
                 will renew automatically following your circulation rules unless there is a hold on
-                the item</para>
+                the item<itemizedlist>
+                  <listitem>
+                    <important>
+                      <para>You will need to enable the <link linkend="autorenewcron">automatic
+                          renewal cron job</link> for this to work.</para>
+                    </important>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
             <listitem>
               <para>If the patron can place holds on this item type, enter the total numbers of
