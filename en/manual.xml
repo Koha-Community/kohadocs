@@ -46170,7 +46170,8 @@ Items :
       <para>To learn more visit the Koha wiki page on this topic: <ulink url="http://wiki.koha-community.org/wiki/Koha_as_a_CMS">http://wiki.koha-community.org/wiki/Koha_as_a_CMS</ulink></para>
       <section id="kohacmstmpl">
         <title>Editing the pages template</title>
-        <para>The file to create / edit for the pages template will depend on your opacthemes system preference setting i.e. bootstrap or prog (deprecated) or ccsr (deprecated)</para>
+        <para>The file to create / edit for the pages template will depend on your <link
+            linkend="opacthemes">opacthemes</link> system preference setting </para>
         <section id="kohacmstmplboot">
           <title>Editing 'bootstrap' theme template (current)</title>
           <itemizedlist>
@@ -46204,25 +46205,6 @@ Items :
                      [% END %]
 	    </programlisting>
           </para>
-        </section>
-        <section id="kohacmstmplprog">
-          <title>Editing 'prog' theme template (deprecated)</title>
-          <itemizedlist>
-            <listitem>
-              <para>Copy /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/opac-main.tt to /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt</para>
-            </listitem>
-            <listitem>
-              <para>Edit /usr/share/koha/opac/htdocs/opac-tmpl/prog/en/modules/pages.tt</para>
-            </listitem>
-            <listitem>
-              <para>At approximately line 40, change this:
-                <programlisting>        &lt;div id="opacmainuserblock" class="container">[% OpacMainUserBlock %]&lt;/div></programlisting></para>
-            </listitem>
-            <listitem>
-              <para>To this:
-                <programlisting>        &lt;div id="opacmainuserblock" class="container">[% page_test %]&lt;/div></programlisting></para>
-            </listitem>
-          </itemizedlist>	  
         </section>
       </section>
       <section id="kohacmstrouble">
