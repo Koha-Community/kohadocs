@@ -2461,6 +2461,54 @@ budget_code: 922$a</programlisting></para>
                 </listitem>
               </itemizedlist></para>
           </section>
+          <section id="SubfieldsToAllowForRestrictedBatchmod">
+            <title>SubfieldsToAllowForRestrictedBatchmod</title>
+            <para>Asks: Define a list of subfields for which editing is authorized when
+              items_batchmod_restricted permission is enabled, separated by spaces. ___</para>
+            <para>Examples:<itemizedlist>
+                <listitem>
+                  <para>UNIMARC: "995$f 995$h 995$j" </para>
+                </listitem>
+                <listitem>
+                  <para>MARC21: "952$a 952$b 952$c" </para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference lets you define what fields can be edited via the <link
+                      linkend="batchmodifyitems">batch item modification tool</link> if the
+                    items_batchmod_restricted permission is enabled.</para>
+                  <para>
+                    <note>
+                      <para>The FA framework is excluded from the permission. If the pref is empty,
+                        no fields are restricted. </para>
+                    </note>
+                  </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="SubfieldsToAllowForRestrictedEditing">
+            <title>SubfieldsToAllowForRestrictedEditing</title>
+            <para>Asks: Define a list of subfields for which editing is authorized when
+              edit_items_restricted permission is enabled, separated by spaces. ___</para>
+            <para>Examples:<itemizedlist>
+                <listitem>
+                  <para>UNIMARC: "995$f 995$h 995$j"</para>
+                </listitem>
+                <listitem>
+                  <para>MARC21: "952$a 952$b 952$c"</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference lets you define what fields can be edited via cataloging if
+                    the edit_items_restricted permission is enabled<note>
+                      <para>The FA framework is excluded from the permission. If the pref is empty,
+                        no fields are restricted. </para>
+                    </note></para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
           <section id="SubfieldsToUseWhenPrefill">
             <title>SubfieldsToUseWhenPrefill</title>
             <para>Asks: Define a list of subfields to use when prefilling items ___<important>
