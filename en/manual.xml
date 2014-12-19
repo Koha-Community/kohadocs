@@ -4533,6 +4533,29 @@ budget_code: 922$a</programlisting></para>
               </listitem>
             </itemizedlist>
           </section>
+          <section id="TransferWhenCancelAllWaitingHolds">
+            <title>TransferWhenCancelAllWaitingHolds</title>
+            <para>Default: Don't transfer</para>
+            <para>Asks: ___  items when cancelling all waiting holds. </para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't transfer</para>
+                </listitem>
+                <listitem>
+                  <para>Transfer</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>When TransferWhenCancelAllWaitingHolds is set to "Don't transfer", no branch
+                    transfer records are created. Koha will not allow the holds to be transferred,
+                    because that would orphan the items at the library where the holds were awaiting
+                    pickup, without any further instruction to staff as to what items are at the
+                    library or where they need to go. When that system preference set to "Transfer",
+                    branch transfers are created, so the holds may be cancelled.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
         </section>
 
         <section id="circinterfaceprefs">
