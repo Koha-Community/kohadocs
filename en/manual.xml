@@ -1180,55 +1180,6 @@ budget_code: 922$a</programlisting></para>
             link automatically to authority records, for records added before these preferences are
             set there is a script (misc/link_bibs_to_authorities.pl) that your system administrator
             can run to link records together.</para>
-          <para>
-            <table frame="void" id="authorityindexes">
-              <caption>Authority Indexes</caption>
-              <thead>
-                <tr>
-                  <th>Index name</th>
-                  <th>Matches Marc Tag</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>LC-cardnumber</td>
-                  <td>010$a</td>
-                </tr>
-                <tr>
-                  <td>Personal-name</td>
-                  <td>100$a</td>
-                </tr>
-                <tr>
-                  <td>Corporate-name-heading</td>
-                  <td>110$a</td>
-                </tr>
-                <tr>
-                  <td>Meeting-name</td>
-                  <td>111$a</td>
-                </tr>
-                <tr>
-                  <td>Title-uniform</td>
-                  <td>130$a</td>
-                </tr>
-                <tr>
-                  <td>Chronological-term</td>
-                  <td>148$a</td>
-                </tr>
-                <tr>
-                  <td>Subject-topical</td>
-                  <td>150$a</td>
-                </tr>
-                <tr>
-                  <td>Name-geographic</td>
-                  <td>151$a</td>
-                </tr>
-                <tr>
-                  <td>Term-genre-form</td>
-                  <td>155$a</td>
-                </tr>
-              </tbody>
-            </table>
-          </para>
 
           <section id="CatalogModuleRelink">
             <title>CatalogModuleRelink</title>
@@ -17523,7 +17474,55 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
 <para>Koha will first look at the 020$a tag/subfield to see if the incoming record matches an existing record.  If it does, it will then move on to the Match Check and look directly at the 245$a value in the incoming data and compare it to the 245$a in the existing ‘matched’ record in your catalog.  If the 245$a matches, Koha continues on as if a match was successful.  If the 245$a does not match, then Koha concludes that the two records are not a match after all.  The Match Checks can be a really useful tool in confirming true matches.</para>
 
-<para>Match Points and Match Checks are powerful tools in the import process.   Harness the power of these two matching criteria and make your data behave for you!</para>
+<para>When looking to create matching rules for your authority records the following indexes will be
+          of use:</para>
+        <table frame="void" id="authorityindexes">
+          <caption>Authority Indexes</caption>
+          <thead>
+            <tr>
+              <th>Index name</th>
+              <th>Matches Marc Tag</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LC-cardnumber</td>
+              <td>010$a</td>
+            </tr>
+            <tr>
+              <td>Personal-name</td>
+              <td>100$a</td>
+            </tr>
+            <tr>
+              <td>Corporate-name-heading</td>
+              <td>110$a</td>
+            </tr>
+            <tr>
+              <td>Meeting-name</td>
+              <td>111$a</td>
+            </tr>
+            <tr>
+              <td>Title-uniform</td>
+              <td>130$a</td>
+            </tr>
+            <tr>
+              <td>Chronological-term</td>
+              <td>148$a</td>
+            </tr>
+            <tr>
+              <td>Subject-topical</td>
+              <td>150$a</td>
+            </tr>
+            <tr>
+              <td>Name-geographic</td>
+              <td>151$a</td>
+            </tr>
+            <tr>
+              <td>Term-genre-form</td>
+              <td>155$a</td>
+            </tr>
+          </tbody>
+        </table>
         <section id="addrecordmatchrule">
           <title>Adding Matching Rules</title>
           <para>To create a new matching rule :</para>
