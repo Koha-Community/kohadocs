@@ -43313,6 +43313,25 @@ print theme('pages_catalog');</programlisting>
 
             <para>longoverdue.pl cron script to set lost statuses on overdue
             materials. Execute without options for help.</para>
+            <para><emphasis role="bold">DESCRIPTION</emphasis></para>
+            <para> --lost | -l </para>
+            <para>This option takes the form of n=lv, where n is num days overdue, and lv is the
+              lost value. See warning below.</para>
+            <para> --charge | -c </para>
+            <para>This specifies what lost value triggers Koha to charge the account for the lost
+              item. Replacement costs are not charged if this is not specified. </para>
+            <para>--verbose | v </para>
+            <para>verbose. </para>
+            <para>--confirm </para>
+            <para>confirm. without this option, the script will report the number of affected items
+              and return without modifying any records. </para>
+            <para>--quiet </para>
+            <para>suppress summary output. </para>
+            <para>--maxdays </para>
+            <para>Specifies the end of the range of overdue days to deal with (defaults to 366).
+              This value is universal to all lost num days overdue passed. </para>
+            <para>--mark-returned </para>
+            <para>When an item is marked lost, remove it from the borrowers issued items.</para>
           </section>
         </section>
 
