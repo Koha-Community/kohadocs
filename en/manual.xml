@@ -3218,6 +3218,36 @@ budget_code: 922$a</programlisting></para>
               </listitem>
             </itemizedlist>
           </section>
+          <section id="DefaultLongOverdueChargeValue">
+            <title>DefaultLongOverdueChargeValue</title>
+            <para>Asks: Charge a lost item to the borrower's account when the LOST value of the item
+              changes to ___</para>
+            <para>Description: <itemizedlist>
+                <listitem>
+                  <para>Leave this field empty if you don't want to charge the user for lost items.
+                    If you want the user to be charged enter the <link linkend="lost">LOST
+                      authorized value</link> you are using in the <link
+                      linkend="DefaultLongOverdueLostValue">DefaultLongOverdueLostValue</link>
+                    preference. This preference is used when the <link linkend="longoverduecron"
+                      >longoverdue cron job</link> is called without the --charge parameter.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="DefaultLongOverdueLostValue">
+            <title>DefaultLongOverdueLostValue &amp; DefaultLongOverdueDays </title>
+            <para>Asks: By default, set the LOST value of an item to ___ when the item has been
+              overdue for more than ___ days. </para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>These preferences are used when the <link linkend="longoverduecron"
+                      >longoverdue cron job</link> is called without the --lost parameter. It allows
+                    users to set the values of the <link linkend="longoverduecron">longoverdue
+                      cron</link> without having to edit the crontab.  Setting the values to 1 and
+                    30 for example will mark the item with the <link linkend="lost">LOST authorized
+                      value</link> of 1 after the item is 30 days overdue. </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
           <section id="HoldsInNoissuesCharge">
             <title>HoldsInNoissuesCharge</title>
             <para>Default: Don't include</para>
