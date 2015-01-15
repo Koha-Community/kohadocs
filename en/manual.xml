@@ -10958,14 +10958,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <para>Default: 0</para>
 
-            <para>Asks: Use borrowernumber ___ as the Anonymous Patron (for
-            anonymous suggestions and reading history) <tip>
-                <para>Before setting this preference <link linkend="addnewpatron">create a patron</link> to be used for
-                all anonymous suggestions and/or reading history items. This
-                patron can be any type and should be named something to make
-                it clear to you that they're anonymous (ex. Anonymous
-                Patron).</para>
-              </tip></para>
+            <para>Asks: Use borrowernumber ___ as the Anonymous Patron (for anonymous suggestions
+              and reading history) </para>
+            <tip>
+              <para>Before setting this preference <link linkend="addnewpatron">create a
+                  patron</link> to be used for all anonymous suggestions and/or reading history
+                items. This patron can be any type and should be named something to make it clear to
+                you that they're anonymous (ex. Anonymous Patron).</para>
+            </tip>
+            <important>
+              <para>Remember to use the borrowernumber note the patron's cardnumber for this value.
+                The borrowernumber can be found on the patron record under 'Library Use' on the right.<screenshot>
+                  <screeninfo>Borrowernumber</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AnonymousPatron.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot></para>
+            </important>
           </section>
 
           <section id="EnableOpacSearchHistory">
