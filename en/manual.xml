@@ -11715,769 +11715,606 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Patrons</para>
 
-        <section id="AddPatronLists">
-          <title>AddPatronLists</title>
-
-          <para>Default: specific categories</para>
-
-          <para>Asks: List ___ under the new patron menu.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>general patron types</para>
-
-              <screenshot>
-                <screeninfo>Add patron options with AddPatronLists set to
-                general patron types</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/globalprefs/AddPatronLists-category.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </listitem>
-
-            <listitem>
-              <para>specific categories</para>
-
-              <screenshot>
-                <screeninfo>Add patron options with AddPatronLists set to
-                specific categories</screeninfo>
-
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/admin/globalprefs/AddPatronLists-specific.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="AutoEmailOPACUser">
-          <title>AutoEmailOpacUser</title>
-
-          <para>Default: Don't send</para>
-
-          <para>Asks: ___ an email to newly created patrons with their account
-          details.</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>AutoEmailOpacUser allows library users to be notified by
-              email of their account details when a new account is opened at
-              the email address specified in the <link linkend="AutoEmailPrimaryAddress">AutoEmailPrimaryAddress</link>
-              preference. The email contains the username and password given
-              to or chosen by the patron when signing up for their account and
-              can be customized by editing the <link linkend="ACCTDETAILS">ACCTDETAILS</link> notice.</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't send</para>
-            </listitem>
-
-            <listitem>
-              <para>Send</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="AutoEmailPrimaryAddress">
-          <title>AutoEmailPrimaryAddress</title>
-
-          <para>Default: alternate</para>
-
-          <para>Asks: Use ___ patron email address for sending out
-          emails.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>alternate</para>
-            </listitem>
-
-            <listitem>
-              <para>first valid</para>
-            </listitem>
-
-            <listitem>
-              <para>home</para>
-            </listitem>
-
-            <listitem>
-              <para>work</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>If you choose 'first valid' as the value for
-              AutoEmailPrimaryAddress the system will check the email fields
-              in this order: home, work, then alternate. Otherwise the system
-              will use the email address you specify.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="autoMemberNum">
-          <title>autoMemberNum</title>
-
-          <para>Default: Do</para>
-
-          <para>Asks: ___ default the card number field on the patron addition
-          screen to the next available card number</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Do</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>If the largest currently used card number is
-                  26345000012941, then this field will default to
-                  26345000012942 for the next patron</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Don't</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference determines if the patron's barcode is
-              automatically calculated. This prevents the person setting up
-              the library card account from having to assign a number to the
-              new card. If set to 'Do' the system will calculate a new patron
-              barcode by adding 1 to the maximum barcode already present in
-              the database.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="BorrowerMandatoryField">
-          <title>BorrowerMandatoryField</title>
-
-          <para>Default: surname|cardnumber|barcode</para>
-
-          <para>Asks: The following database columns must be filled in on the
-          patron entry screen: ___</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference enables the system administrator to choose
-              which fields your library would like required for patron
-              accounts. Enter field names separated by | (bar). This ensures
-              that basic information is included in each patron record. If a
-              patron leaves one of the required fields blank an error message
-              will issue and the account will not be created.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Separate columns with |</para>
-          </important>
-
-          <tip>
-            <para>For help with field names, ask your system administrator or
-            <ulink url="http://schema.koha-community.org/tables/borrowers.html">view
-            the database structure</ulink> associated with the borrowers
-            table.</para>
-          </tip>
-        </section>
-
-        <section id="borrowerRelationship">
-          <title>borrowerRelationship</title>
-
-          <para>Default: father|mother</para>
-
-          <para>Asks: Guarantors can be the following of those they guarantee
-          ___</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference enables the system administrator to define
-              valid relationships between a guarantor (usually a parent) &amp;
-              a guarantee (usually a child). Defining values for this field
-              does not make the guarantor field required when adding a
-              guarantee type patron. This preference creates a drop down list
-              identifying the relationship of the guarantor to the guarantee.
-              To disable the ability to add children types in Koha you can
-              leave this field blank.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Input multiple choices separated by |</para>
-          </important>
-        </section>
-
-        <section id="BorrowerRenewalPeriodBase">
-          <title>BorrowerRenewalPeriodBase</title>
-
-          <para>Default: current date</para>
-
-          <para>Asks: When renewing borrowers, base the new expiry date on
-          ___</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>current date.</para>
-            </listitem>
-
-            <listitem>
-              <para>current membership expiry date.</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference controls what the patron's new expiration
-              date will be when you renew their card. Using the 'current date'
-              will add the subscription period to today's date when
-              calculating the new expiration date. Using 'current membership
-              expiry date' will add the subscription period to the old
-              expiration date for the patron when renewing their
-              account.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="BorrowersTitles">
-          <title>BorrowersTitles</title>
-
-          <para>Default: Mr|Mrs|Miss|Ms</para>
-
-          <para>Asks: Borrowers can have the following titles ___</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference allows the staff to choose the titles that
-              can be assigned to patrons. The choices present as a drop down
-              list when creating a patron record.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Input multiple choices separated by |</para>
-          </important>
-        </section>
-
-        <section id="BorrowerUnwantedField">
-          <title>BorrowerUnwantedField</title>
-
-          <para>Asks: The following database columns will not appear on the
-          patron entry screen: ___</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference enables the system administrator to choose
-              which fields your library doesn't need to see on the patron
-              entry form. Enter field names separated by | (bar).</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Separate columns with |</para>
-          </important>
-
-          <tip>
-            <para>For help with field names, ask your system administrator or
-            <ulink url="http://schema.koha-community.org/tables/borrowers.html">view
-            the database structure</ulink> associated with the borrowers
-            table.</para>
-          </tip>
-        </section>
-        <section id="CardnumberLength">
-          <title>CardnumberLength</title>
-          <para>Asks: Card numbers for patrons must be ___ characters long. </para>
-          <para>Description:<itemizedlist>
+        <section id="generalpatronpref">
+          <title>General</title>
+          <section id="AddPatronLists">
+            <title>AddPatronLists</title>
+            <para>Default: specific categories</para>
+            <para>Asks: List ___ under the new patron menu.</para>
+            <para>Values:</para>
+            <itemizedlist>
               <listitem>
-                <para>The length can be a single number to specify an exact length, a range
-                  separated by a comma (i.e., 'Min,Max'), or a maximum with no minimum (i.e.,
-                  ',Max'). If 'cardnumber' is included in the <link linkend="BorrowerMandatoryField"
-                    >BorrowerMandatoryField</link> list, the minimum length, if not specified here,
-                  defaults to one. </para>
+                <para>general patron types</para>
+                <screenshot>
+                  <screeninfo>Add patron options with AddPatronLists set to general patron
+                    types</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AddPatronLists-category.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
-            </itemizedlist></para>
-        </section>
-
-        <section id="checkdigit">
-          <title>checkdigit</title>
-
-          <para>Default: Don't</para>
-
-          <para>Asks: ___ check and construct borrower card numbers in the
-          Katipo style.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Do</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>This overrides <link linkend="autoMemberNum">autoMemberNum</link> if on.</para>
-          </important>
-        </section>
-
-        <section id="EnableBorrowerFiles">
-          <title>EnableBorrowerFiles</title>
-
-          <para>Default: Don't</para>
-
-          <para>Asks: ___ enable the ability to upload and attach arbitrary
-          files to a borrower record.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Do</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>When enabled this will add a 'Files' tab to the left of
-              the patron detail page where you can view and upload files to
-              the patron record.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="EnhancedMessagingPreferences">
-          <title>EnhancedMessagingPreferences</title>
-
-          <para>Default: Allow</para>
-
-          <para>Asks: ___ patrons to choose which notices they receive and
-          when they receive them.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>This only applies to certain kinds of notices, overdue
-            notices will be sent based on the library's rules, not the
-            patron's choice.</para>
-          </important>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>These messages are in addition to the overdue notices that
-              the library sends. The difference between these notices and
-              overdues is that the patron can opt-in and out of these. Setting
-              this preference to 'Allow' will allow patrons to choose to
-              receive any one of the following messages:</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>Item Checkout : A notice that lists all the of the items the patron has just
-                    checked out and/or renewed, this is an electronic form of the checkout
-                    receipt</para>
-                </listitem>
-
-                <listitem>
-                  <para>Item Due : A notice on the day and item is due back at
-                  the library</para>
-                </listitem>
-
-                <listitem>
-                  <para>Hold Filled : A notice when you have confirmed the
-                  hold is waiting for the patron</para>
-                </listitem>
-
-                <listitem>
-                  <para>Item Checkin : A notice that lists all the of the
-                  items the patron has just checked in</para>
-                </listitem>
-
-                <listitem>
-                  <para>Advanced Notice : A notice in advance of the patron's
-                  items being due (The patron can choose the number of days in
-                  advance)</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="ExtendedPatronAttributes">
-          <title>ExtendedPatronAttributes</title>
-
-          <para>Default: Enable</para>
-
-          <para>Asks: ___ searching, editing and display of custom attributes
-          on patrons.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't enable</para>
-            </listitem>
-
-            <listitem>
-              <para>Enable</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para>Define attributes in Koha administration</para>
-                </listitem>
-
-                <listitem>
-                  <para>Get there: More &gt; Administration &gt; <link linkend="patronattributetypes">Patron Attribute
-                  Types</link></para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Patron attributes are library-defined custom fields that
-              can be applied to patron records.</para>
-            </listitem>
-          </itemizedlist>
-
-          <tip>
-            <para>Use custom attributes for fields that the default patron
-            record does not support such as driver's license number or student
-            ID number.</para>
-          </tip>
-        </section>
-
-        <section id="intranetreadinghistory">
-          <title>intranetreadinghistory</title>
-
-          <para>Default: Allow</para>
-
-          <para>Asks: ___ staff to access a patron's checkout
-          history<important>
-              <para>If you have the <link linkend="OPACPrivacy">OPACPrivacy</link> preference set to
-              'Allow' and the patron has decided to not have their history
-              kept staff will only see currently checked out items.</para>
-            </important></para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>This data is stored in the system regardless of your
-            choice.</para>
-          </important>
-        </section>
-
-        <section id="MaxFine">
-          <title>MaxFine</title>
-
-          <para>Default: 9999</para>
-
-          <para>Asks: The late fine for all checkouts will only go up to ___
-          USD.</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference controls the default cap on fines accrued
-              by the patron. Leaving this preference blank means that there is
-              no cap on the amount of fines a patron can accrue. If you'd
-              like, single item caps can be specified in the <link linkend="circfinerules">circulation rules matrix</link>.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="minPasswordLength">
-          <title>minPasswordLength</title>
-
-          <para>Default: 3</para>
-
-          <para>Asks: Login passwords for staff and patrons must be at least
-          ___ characters long.</para>
-
-          <important>
-            <para>This applies to both the staff login and the patron OPAC
-            login.</para>
-          </important>
-        </section>
-
-        <section id="NotifyBorrowerDeparture">
-          <title>NotifyBorrowerDeparture</title>
-
-          <para>Default: 30</para>
-
-          <para>Asks: Show a notice that a patron is about to expire ___ days
-          beforehand.</para>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>When the patron attempts to check out materials, a warning
-              will appear in the check out window of the Staff Client telling
-              the librarian that the patrons account is about to
-              expire.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>This notice will appear on the patron's record in the staff
-            client.</para>
-          </important>
-        </section>
-
-        <section id="patronimages">
-          <title>patronimages</title>
-
-          <para>Default: Allow</para>
-
-          <para>Asks: ___ images to be uploaded and shown for patrons on the
-          staff client.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Allow</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't allow</para>
-            </listitem>
-          </itemizedlist>
-          <para>Description:<itemizedlist>
               <listitem>
-                <para>If this preference is set to 'Allow' the staff will be able to upload images
-                  of patrons either <link linkend="addpatronimages">one by one</link> or <link
-                    linkend="uploadpatronimages">in bulk</link>.  Patrons images will show on the
-                  detail page to the left of the patron information. They can also show in the OPAC
-                  if you set the <link linkend="OPACpatronimage">OPACpatronimage</link> preference
-                  or in the self check out module if you set the <link
-                    linkend="ShowPatronImageInWebBasedSelfCheck"
-                    >ShowPatronImageInWebBasedSelfCheck</link> preference.</para>
+                <para>specific categories</para>
+                <screenshot>
+                  <screeninfo>Add patron options with AddPatronLists set to specific
+                    categories</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/AddPatronLists-specific.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
               </listitem>
-            </itemizedlist></para>
-        </section>
-
-        <section id="PatronsPerPage">
-          <title>PatronsPerPage</title>
-
-          <para>Default: 20</para>
-
-          <para>Asks: By default, show ___ results per page in the staff
-          client.</para>
-          <para>Description:<itemizedlist>
+            </itemizedlist>
+          </section>
+          <section id="AutoEmailOPACUser">
+            <title>AutoEmailOpacUser</title>
+            <para>Default: Don't send</para>
+            <para>Asks: ___ an email to newly created patrons with their account details.</para>
+            <para>Description:</para>
+            <itemizedlist>
               <listitem>
-                <para>This preference will let you define how many patrons to show on patron search
-                  results pages.</para>
+                <para>AutoEmailOpacUser allows library users to be notified by email of their
+                  account details when a new account is opened at the email address specified in the
+                    <link linkend="AutoEmailPrimaryAddress">AutoEmailPrimaryAddress</link>
+                  preference. The email contains the username and password given to or chosen by the
+                  patron when signing up for their account and can be customized by editing the
+                    <link linkend="ACCTDETAILS">ACCTDETAILS</link> notice.</para>
               </listitem>
-            </itemizedlist></para>
+            </itemizedlist>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't send</para>
+              </listitem>
+              <listitem>
+                <para>Send</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="AutoEmailPrimaryAddress">
+            <title>AutoEmailPrimaryAddress</title>
+            <para>Default: alternate</para>
+            <para>Asks: Use ___ patron email address for sending out emails.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>alternate</para>
+              </listitem>
+              <listitem>
+                <para>first valid</para>
+              </listitem>
+              <listitem>
+                <para>home</para>
+              </listitem>
+              <listitem>
+                <para>work</para>
+              </listitem>
+            </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>If you choose 'first valid' as the value for AutoEmailPrimaryAddress the
+                  system will check the email fields in this order: home, work, then alternate.
+                  Otherwise the system will use the email address you specify.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="autoMemberNum">
+            <title>autoMemberNum</title>
+            <para>Default: Do</para>
+            <para>Asks: ___ default the card number field on the patron addition screen to the next
+              available card number</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>If the largest currently used card number is 26345000012941, then this
+                      field will default to 26345000012942 for the next patron</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference determines if the patron's barcode is automatically
+                  calculated. This prevents the person setting up the library card account from
+                  having to assign a number to the new card. If set to 'Do' the system will
+                  calculate a new patron barcode by adding 1 to the maximum barcode already present
+                  in the database.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="BorrowerMandatoryField">
+            <title>BorrowerMandatoryField</title>
+            <para>Default: surname|cardnumber|barcode</para>
+            <para>Asks: The following database columns must be filled in on the patron entry screen:
+              ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference enables the system administrator to choose which fields your
+                  library would like required for patron accounts. Enter field names separated by |
+                  (bar). This ensures that basic information is included in each patron record. If a
+                  patron leaves one of the required fields blank an error message will issue and the
+                  account will not be created.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Separate columns with |</para>
+            </important>
+            <tip>
+              <para>For help with field names, ask your system administrator or <ulink
+                  url="http://schema.koha-community.org/tables/borrowers.html">view the database
+                  structure</ulink> associated with the borrowers table.</para>
+            </tip>
+          </section>
+          <section id="borrowerRelationship">
+            <title>borrowerRelationship</title>
+            <para>Default: father|mother</para>
+            <para>Asks: Guarantors can be the following of those they guarantee ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference enables the system administrator to define valid relationships
+                  between a guarantor (usually a parent) &amp; a guarantee (usually a child).
+                  Defining values for this field does not make the guarantor field required when
+                  adding a guarantee type patron. This preference creates a drop down list
+                  identifying the relationship of the guarantor to the guarantee. To disable the
+                  ability to add children types in Koha you can leave this field blank.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Input multiple choices separated by |</para>
+            </important>
+          </section>
+          <section id="BorrowerRenewalPeriodBase">
+            <title>BorrowerRenewalPeriodBase</title>
+            <para>Default: current date</para>
+            <para>Asks: When renewing borrowers, base the new expiry date on ___</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>current date.</para>
+              </listitem>
+              <listitem>
+                <para>current membership expiry date.</para>
+              </listitem>
+            </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference controls what the patron's new expiration date will be when
+                  you renew their card. Using the 'current date' will add the subscription period to
+                  today's date when calculating the new expiration date. Using 'current membership
+                  expiry date' will add the subscription period to the old expiration date for the
+                  patron when renewing their account.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="BorrowersTitles">
+            <title>BorrowersTitles</title>
+            <para>Default: Mr|Mrs|Miss|Ms</para>
+            <para>Asks: Borrowers can have the following titles ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows the staff to choose the titles that can be assigned to
+                  patrons. The choices present as a drop down list when creating a patron
+                  record.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Input multiple choices separated by |</para>
+            </important>
+          </section>
+          <section id="BorrowerUnwantedField">
+            <title>BorrowerUnwantedField</title>
+            <para>Asks: The following database columns will not appear on the patron entry screen:
+              ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference enables the system administrator to choose which fields your
+                  library doesn't need to see on the patron entry form. Enter field names separated
+                  by | (bar).</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Separate columns with |</para>
+            </important>
+            <tip>
+              <para>For help with field names, ask your system administrator or <ulink
+                  url="http://schema.koha-community.org/tables/borrowers.html">view the database
+                  structure</ulink> associated with the borrowers table.</para>
+            </tip>
+          </section>
+          <section id="CardnumberLength">
+            <title>CardnumberLength</title>
+            <para>Asks: Card numbers for patrons must be ___ characters long. </para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>The length can be a single number to specify an exact length, a range
+                    separated by a comma (i.e., 'Min,Max'), or a maximum with no minimum (i.e.,
+                    ',Max'). If 'cardnumber' is included in the <link
+                      linkend="BorrowerMandatoryField">BorrowerMandatoryField</link> list, the
+                    minimum length, if not specified here, defaults to one. </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="checkdigit">
+            <title>checkdigit</title>
+            <para>Default: Don't</para>
+            <para>Asks: ___ check and construct borrower card numbers in the Katipo style.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>This overrides <link linkend="autoMemberNum">autoMemberNum</link> if on.</para>
+            </important>
+          </section>
+          <section id="EnableBorrowerFiles">
+            <title>EnableBorrowerFiles</title>
+            <para>Default: Don't</para>
+            <para>Asks: ___ enable the ability to upload and attach arbitrary files to a borrower
+              record.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>When enabled this will add a 'Files' tab to the left of the patron detail page
+                  where you can view and upload files to the patron record.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="EnhancedMessagingPreferences">
+            <title>EnhancedMessagingPreferences</title>
+            <para>Default: Allow</para>
+            <para>Asks: ___ patrons to choose which notices they receive and when they receive
+              them.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>This only applies to certain kinds of notices, overdue notices will be sent
+                based on the library's rules, not the patron's choice.</para>
+            </important>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>These messages are in addition to the overdue notices that the library sends.
+                  The difference between these notices and overdues is that the patron can opt-in
+                  and out of these. Setting this preference to 'Allow' will allow patrons to choose
+                  to receive any one of the following messages:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Item Checkout : A notice that lists all the of the items the patron has
+                      just checked out and/or renewed, this is an electronic form of the checkout
+                      receipt</para>
+                  </listitem>
+                  <listitem>
+                    <para>Item Due : A notice on the day and item is due back at the library</para>
+                  </listitem>
+                  <listitem>
+                    <para>Hold Filled : A notice when you have confirmed the hold is waiting for the
+                      patron</para>
+                  </listitem>
+                  <listitem>
+                    <para>Item Checkin : A notice that lists all the of the items the patron has
+                      just checked in</para>
+                  </listitem>
+                  <listitem>
+                    <para>Advanced Notice : A notice in advance of the patron's items being due (The
+                      patron can choose the number of days in advance)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="ExtendedPatronAttributes">
+            <title>ExtendedPatronAttributes</title>
+            <para>Default: Enable</para>
+            <para>Asks: ___ searching, editing and display of custom attributes on patrons.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't enable</para>
+              </listitem>
+              <listitem>
+                <para>Enable</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Define attributes in Koha administration</para>
+                  </listitem>
+                  <listitem>
+                    <para>Get there: More &gt; Administration &gt; <link
+                        linkend="patronattributetypes">Patron Attribute Types</link></para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Patron attributes are library-defined custom fields that can be applied to
+                  patron records.</para>
+              </listitem>
+            </itemizedlist>
+            <tip>
+              <para>Use custom attributes for fields that the default patron record does not support
+                such as driver's license number or student ID number.</para>
+            </tip>
+          </section>
+          <section id="intranetreadinghistory">
+            <title>intranetreadinghistory</title>
+            <para>Default: Allow</para>
+            <para>Asks: ___ staff to access a patron's checkout history<important>
+                <para>If you have the <link linkend="OPACPrivacy">OPACPrivacy</link> preference set
+                  to 'Allow' and the patron has decided to not have their history kept staff will
+                  only see currently checked out items.</para>
+              </important></para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>This data is stored in the system regardless of your choice.</para>
+            </important>
+          </section>
+          <section id="MaxFine">
+            <title>MaxFine</title>
+            <para>Default: 9999</para>
+            <para>Asks: The late fine for all checkouts will only go up to ___ USD.</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference controls the default cap on fines accrued by the patron.
+                  Leaving this preference blank means that there is no cap on the amount of fines a
+                  patron can accrue. If you'd like, single item caps can be specified in the <link
+                    linkend="circfinerules">circulation rules matrix</link>.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="minPasswordLength">
+            <title>minPasswordLength</title>
+            <para>Default: 3</para>
+            <para>Asks: Login passwords for staff and patrons must be at least ___ characters
+              long.</para>
+            <important>
+              <para>This applies to both the staff login and the patron OPAC login.</para>
+            </important>
+          </section>
+          <section id="NotifyBorrowerDeparture">
+            <title>NotifyBorrowerDeparture</title>
+            <para>Default: 30</para>
+            <para>Asks: Show a notice that a patron is about to expire ___ days beforehand.</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>When the patron attempts to check out materials, a warning will appear in the
+                  check out window of the Staff Client telling the librarian that the patrons
+                  account is about to expire.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>This notice will appear on the patron's record in the staff client.</para>
+            </important>
+          </section>
+          <section id="patronimages">
+            <title>patronimages</title>
+            <para>Default: Allow</para>
+            <para>Asks: ___ images to be uploaded and shown for patrons on the staff client.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Allow</para>
+              </listitem>
+              <listitem>
+                <para>Don't allow</para>
+              </listitem>
+            </itemizedlist>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>If this preference is set to 'Allow' the staff will be able to upload images
+                    of patrons either <link linkend="addpatronimages">one by one</link> or <link
+                      linkend="uploadpatronimages">in bulk</link>. Patrons images will show on the
+                    detail page to the left of the patron information. They can also show in the
+                    OPAC if you set the <link linkend="OPACpatronimage">OPACpatronimage</link>
+                    preference or in the self check out module if you set the <link
+                      linkend="ShowPatronImageInWebBasedSelfCheck"
+                      >ShowPatronImageInWebBasedSelfCheck</link> preference.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="PatronsPerPage">
+            <title>PatronsPerPage</title>
+            <para>Default: 20</para>
+            <para>Asks: By default, show ___ results per page in the staff client.</para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference will let you define how many patrons to show on patron
+                    search results pages.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="SMSSendDriver">
+            <title>SMSSendDriver</title>
+            <para>Asks: Use the SMS::Send:: ___ driver to send SMS messages.</para>
+            <para>Some examples of values are:</para>
+            <itemizedlist>
+              <listitem>
+                <para>SMS::Send::Us::Ipipi</para>
+              </listitem>
+              <listitem>
+                <para>SMS::Send::US::TMobile</para>
+              </listitem>
+              <listitem>
+                <para>SMS::Send::US::Verizon</para>
+              </listitem>
+            </itemizedlist>
+            <para>Additional values can be found here: <ulink
+                url="http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all"
+                >http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all </ulink></para>
+            <important>
+              <para>Only drivers available as Perl modules will work in this preference, so make
+                sure a Perl module is available before choosing an SMS service.</para>
+            </important>
+            <para>Once a driver is entered in the preference an option will appear in the staff
+              client and the OPAC on the patron messaging form to choose to receive messages as
+              SMS</para>
+            <screenshot>
+              <screeninfo>SMSSendDriver Options</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/SMSSendDriver.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <important>
+              <para>You must allow <link linkend="EnhancedMessagingPreferences"
+                  >EnhancedMessagingPreferences</link> for this to work.</para>
+            </important>
+          </section>
+          <section id="StatisticsFields">
+            <title>StatisticsFields</title>
+            <para>Default: location|itype|ccode</para>
+            <para>Asks: Show the following fields from the items database table as columns on the
+              statistics tab on the patron record: ___</para>
+            <screenshot>
+              <screeninfo>Statistics on Patron Record</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/StatisticsFields.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <important>
+              <para>Enter the values separated by bars (|)</para>
+            </important>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference lets you set which fields will show on the patron record on
+                  the Statistics tab.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="TalkingTechItivaPhoneNotification">
+            <title>TalkingTechItivaPhoneNotification</title>
+            <para>Default: Disable</para>
+            <para>Asks: ___ patron phone notifications using Talking Tech i-tiva (overdues, predues
+              and holds notices currently supported).</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>To learn more about setting up this third party product view the <link
+                    linkend="talkingtechappendix">Talking Tech Appendix</link>.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Requires that you have <link linkend="EnhancedMessagingPreferences"
+                  >EnhancedMessagingPreferences</link> set to Allow to use.</para>
+            </important>
+          </section>
+          <section id="uppercasesurnames">
+            <title>uppercasesurnames</title>
+            <para>Default: Don't</para>
+            <para>Asks: ___ store and display surnames (last names) in upper case.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
-
-        <section id="SMSSendDriver">
-          <title>SMSSendDriver</title>
-
-          <para>Asks: Use the SMS::Send:: ___ driver to send SMS
-          messages.</para>
-
-          <para>Some examples of values are:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>SMS::Send::Us::Ipipi</para>
-            </listitem>
-
-            <listitem>
-              <para>SMS::Send::US::TMobile</para>
-            </listitem>
-
-            <listitem>
-              <para>SMS::Send::US::Verizon</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Additional values can be found here: <ulink url="http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all">http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all
-          </ulink></para>
-
-          <important>
-            <para>Only drivers available as Perl modules will work in this
-            preference, so make sure a Perl module is available before
-            choosing an SMS service.</para>
-          </important>
-
-          <para>Once a driver is entered in the preference an option will
-          appear in the staff client and the OPAC on the patron messaging form
-          to choose to receive messages as SMS</para>
-
-          <screenshot>
-            <screeninfo>SMSSendDriver Options</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/SMSSendDriver.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <important>
-            <para>You must allow <link linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
-            for this to work.</para>
-          </important>
-        </section>
-
-        <section id="StatisticsFields">
-          <title>StatisticsFields</title>
-
-          <para>Default: location|itype|ccode</para>
-
-          <para>Asks: Show the following fields from the items database table
-          as columns on the statistics tab on the patron record: ___</para>
-
-          <screenshot>
-            <screeninfo>Statistics on Patron Record</screeninfo>
-
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/admin/globalprefs/StatisticsFields.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-
-          <important>
-            <para>Enter the values separated by bars (|)</para>
-          </important>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>This preference lets you set which fields will show on the
-              patron record on the Statistics tab.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="TalkingTechItivaPhoneNotification">
-          <title>TalkingTechItivaPhoneNotification</title>
-
-          <para>Default: Disable</para>
-
-          <para>Asks: ___ patron phone notifications using Talking Tech i-tiva
-          (overdues, predues and holds notices currently supported).</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Disable</para>
-            </listitem>
-
-            <listitem>
-              <para>Enable</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>Description:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>To learn more about setting up this third party product
-              view the <link linkend="talkingtechappendix">Talking Tech
-              Appendix</link>.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Requires that you have <link linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link>
-            set to Allow to use.</para>
-          </important>
-        </section>
-
-        <section id="uppercasesurnames">
-          <title>uppercasesurnames</title>
-
-          <para>Default: Don't</para>
-
-          <para>Asks: ___ store and display surnames (last names) in upper
-          case.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Do</para>
-            </listitem>
-
-            <listitem>
-              <para>Don't</para>
-            </listitem>
-          </itemizedlist>
+        <section id="norwegianpref">
+          <title>Norwegian patron database</title>
+          <section id="NorwegianPatronDBEnable">
+            <title>NorwegianPatronDBEnable &amp; NorwegianPatronDBEndpoint</title>
+            <para>NorwegianPatronDBEnable Default: Disable</para>
+            <para>Asks: ___ the ability to communicate with the Norwegian national patron database
+              via the ___ endpoint. </para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Disable</para>
+                </listitem>
+                <listitem>
+                  <para>Enable</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="NorwegianPatronDBSearchNLAfterLocalHit">
+            <title>NorwegianPatronDBSearchNLAfterLocalHit</title>
+            <para>Default: Don't</para>
+            <para>Asks: ___ search the Norwegian national patron database after a local search
+              result was found.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Do</para>
+              </listitem>
+              <listitem>
+                <para>Don't</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="NorwegianPatronDBUsername">
+            <title>NorwegianPatronDBUsername &amp; NorwegianPatronDBPassword</title>
+            <para>Asks: Communicate with the Norwegian national patron database using the username
+              ___ and the password ___. </para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>You can get these from "Base Bibliotek", which is maintained by the
+                    Norwegian National Library. </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
         </section>
       </section>
 
