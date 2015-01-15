@@ -43834,7 +43834,12 @@ print theme('pages_catalog');</programlisting>
           different lost statuses, and optionally charge for them using the
           replacement price listed on the item record.</para>
 
-          <para>Frequency suggestion: nightly</para>
+          <para>Frequency suggestion: nightly<note>
+              <para>Staff can control some of the parameters for the longoverdue cron job with the
+                  <link linkend="DefaultLongOverdueLostValue">DefaultLongOverdueLostValue</link> and
+                  <link linkend="DefaultLongOverdueChargeValue">DefaultLongOverdueChargeValue</link>
+                preferences.</para>
+            </note></para>
 
           <section id="longoverduecronperl">
             <title>Perl Documentation</title>
