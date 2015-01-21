@@ -3275,32 +3275,45 @@ budget_code: 922$a</programlisting></para>
 
             <itemizedlist>
               <listitem>
-                <para>the library the item is from</para>
+                <para>the library the item is from<itemizedlist>
+                    <listitem>
+                      <para>This is equivalent to 'home library'</para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
 
               <listitem>
-                <para>the library the item was checked out from</para>
+                <para>the library the item was checked out from<itemizedlist>
+                    <listitem>
+                      <para>This is equivalent to 'holding library'</para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
             </itemizedlist>
-
-            <important>
-              <para>It is not recommend that this setting be changed after initial setup of Koha
-                because it will change the behavior of items already checked out.</para>
-            </important>
             <para>Description:</para>
             <itemizedlist>
               <listitem>
-                <para>If <link linkend="IndependentBranches">IndependentBranches</link> is set to
-                  'Prevent' and <link linkend="CircControl">CircControl</link> is set to 'the
-                  library the item is from' this preference decides whether the library holding the
-                  item (holding library on the item record) may check the item out to its own patron
-                  or if it must immediately send the item back to the owning location (home library
-                  on the item record).</para>
+                <para>This preference does several things.  <itemizedlist>
+                    <listitem>
+                      <para>If <link linkend="CircControl">CircControl</link> is set to 'the library
+                        the item is from' then the <link linkend="circfinerules">circulation and
+                          fines policies</link> will be determined by the item's library where
+                        HomeOrHoldingBranch chooses if item's home library is used or holding
+                        library is used.</para>
+                    </listitem>
+                    <listitem>
+                      <para>If <link linkend="IndependentBranches">IndependentBranches</link> is set
+                        to 'Prevent' then the value of this preference is used in figuring out if
+                        the item can be checked out.  If the item's home library does not match the
+                        logged in library, the item cannot be checked out unless you are a <link
+                          linkend="patronpermsdefined">superlibrarian</link>.</para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
             </itemizedlist>
             <important>
-              <para>This preference does nothing unless the <link linkend="IndependentBranches"
-                  >IndependentBranches</link> preference is set to 'Prevent'.</para>
+              <para>It is not recommend that this setting be changed after initial setup of Koha
+                because it will change the behavior of items already checked out.</para>
             </important>
           </section>
           <section id="HomeOrHoldingBranchReturn">
