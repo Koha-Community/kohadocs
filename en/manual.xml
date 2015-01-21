@@ -15867,6 +15867,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 selected based on the item's library where HomeOrHoldingBranch chooses if item's
                 home library is used or holding library is used.</para>
             </listitem>
+            <listitem>
+              <para>If <link linkend="IndependentBranches">IndependentBranches</link> is set to
+                'Prevent' then the value of HomeOrHoldingBranch is used in figuring out if the item
+                can be checked out. If the item's home library does not match the logged in library,
+                the item cannot be checked out unless you are a <link linkend="patronpermsdefined"
+                  >superlibrarian</link>.</para>
+            </listitem>
           </itemizedlist></para>
         <tip>
           <para>If you are a single library system choose your branch name before creating rules
