@@ -2967,7 +2967,9 @@ budget_code: 922$a</programlisting></para>
                 <itemizedlist>
                   <listitem>
                     <para>The <link linkend="circfinerules">circulation and fines policies</link>
-                      will be determined by the library that owns the item</para>
+                      will be determined by the item's library where <link
+                        linkend="HomeOrHoldingBranch">HomeOrHoldingBranch</link> chooses if item's
+                      home library is used or holding library is used.</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -15691,6 +15693,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>default (all libraries), all patron types, all item types</para>
           </listitem>
         </itemizedlist>
+        <para>The <link linkend="CircControl">CircControl</link> and <link
+            linkend="HomeOrHoldingBranch">HomeOrHoldingBranch</link> also come in to play when
+          figuring out which circulation rule to follow.<itemizedlist>
+            <listitem>
+              <para>If CircControl is set to "the library you are logged in at" circ rules will be
+                selected based on the library you are logged in at </para>
+            </listitem>
+            <listitem>
+              <para>If CircControl is set to "the library the patron is from" circ rules will be
+                selected based on the patron's library </para>
+            </listitem>
+            <listitem>
+              <para>If CircControl is set to "the library the item is from" circ rules will be
+                selected based on the item's library where HomeOrHoldingBranch chooses if item's
+                home library is used or holding library is used.</para>
+            </listitem>
+          </itemizedlist></para>
         <tip>
           <para>If you are a single library system choose your branch name before creating rules
             (sometimes having only rules for the 'all libraries' option can cause issues with
