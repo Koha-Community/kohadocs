@@ -5897,27 +5897,7 @@ budget_code: 922$a</programlisting></para>
         </section>
       </section>
 
-      <section id="creatorprefs">
-        <title>Creators</title>
-
-        <para>These preferences have to do with creating content.</para>
-
-        <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
-        Global System Preferences &gt; Creators</para>
-
-        <section id="creatorpatcardprefs">
-          <title>Patron Cards</title>
-
-          <para>These preferences are in reference to the <link linkend="patroncardcreator">Patron Card Creator</link> tool.</para>
-
-          <section id="ImageLimit">
-            <title>ImageLimit</title>
-
-            <para>Asks: Limit the number of creator images stored in the
-            database to ___ images.</para>
-          </section>
-        </section>
-      </section>
+      
 
       <section id="enhancedcontent">
         <title>Enhanced Content</title>
@@ -10037,33 +10017,6 @@ budget_code: 922$a</programlisting></para>
                 patrons.</para>
               </listitem>
             </itemizedlist>
-          </section>
-          <section id="OPACAcquisitionDetails">
-            <title>OPACAcquisitionDetails</title>
-            <para>Default: Don't display</para>
-            <para>Asks: ___  the acquisition details on OPAC detail pages.</para>
-            <para>Values:<itemizedlist>
-                <listitem>
-                  <para>Display<screenshot>
-                      <screeninfo>Acquisitions details in the OPAC</screeninfo>
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="images/admin/globalprefs/OPACAcquisitionDetails.png"/>
-                        </imageobject>
-                      </mediaobject>
-                    </screenshot></para>
-                </listitem>
-                <listitem>
-                  <para>Don't display</para>
-                </listitem>
-              </itemizedlist></para>
-            <para>Description:<itemizedlist>
-                <listitem>
-                  <para>This preference shows the patrons how many items are on order in the
-                    Holdings tab if you have the <link linkend="AcqCreateItem">AcqCreateItem</link>
-                    set to 'cataloging the record'</para>
-                </listitem>
-              </itemizedlist></para>
           </section>
 
           <section id="OpacAuthorities">
@@ -14235,19 +14188,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </section>
       <section id="toolsprefs">
         <title>Tools</title>
-        <section id="MaxItemsForBatch">
-          <title>MaxItemsForBatch</title>
-          <para>Default: 1000</para>
-          <para>Asks: Process up to ___ items in a single modification or deletion batch. </para>
-          <para>Description:<itemizedlist>
-              <listitem>
-                <para>In the <link linkend="batchdeleteitems">batch item delete tool</link> this
-                  will prevent the display of more than the items you entered in this preference,
-                  but you will be able to delete more than the number you enter here.  In the <link
-                    linkend="batchmodifyitems">batch item modification tool</link> this preference
-                  will prevent the editing of more than the number entered here.</para>
-              </listitem>
-            </itemizedlist></para>
+        <section id="batchitemodprefs">
+          <title>Batch Item Modification</title>
+          <section id="MaxItemsForBatch">
+            <title>MaxItemsForBatch</title>
+            <para>Default: 1000</para>
+            <para>Asks: Process up to ___ items in a single modification or deletion batch. </para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>In the <link linkend="batchdeleteitems">batch item delete tool</link> this
+                    will prevent the display of more than the items you entered in this preference,
+                    but you will be able to delete more than the number you enter here. In the <link
+                      linkend="batchmodifyitems">batch item modification tool</link> this preference
+                    will prevent the editing of more than the number entered here.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+        </section> 
+        <section id="patcardprefs">
+          <title>Patron Cards</title>
+          <para>These preferences are in reference to the <link linkend="patroncardcreator">Patron
+              Card Creator</link> tool.</para>
+          <section id="ImageLimit">
+            <title>ImageLimit</title>
+            <para>Asks: Limit the number of creator images stored in the database to ___
+              images.</para>
+          </section>
         </section>
       </section>
 
@@ -18559,7 +18525,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           or delete</para>
 
         <screenshot>
-          <screeninfo>List of Z39.50/SRU Servers in Koha</screeninfo>
+          <screeninfo>List of Z39.50 Servers in Koha</screeninfo>
 
           <mediaobject>
             <imageobject>
@@ -18579,7 +18545,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>From the main Z39.50/SRU page, click 'New Z39.50 Server'</para>
+              <para>From the main Z39.50 page, click 'New Z39.50
+              Server'</para>
               <screenshot>
                 <screeninfo>New Z39.50 Server Form</screeninfo>
                 <mediaobject>
@@ -18832,7 +18799,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                           names to the SRU search field mappings. To do this, edit the server and
                           click the Modify button next to this field.
                             <table cellpadding="4" cellspacing="4" frame="all">
-                              <title>SRU Search Field Mapping</title>
+                              <title>SRU Mapping</title>
                               
                               <tgroup align="left" cols="2" colsep="1" rowsep="1">
                               <tbody>
@@ -18959,66 +18926,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </imageobject>
             </mediaobject>
           </screenshot>
-      </section>
-      <section id="admincolumns">
-        <title>Column settings</title>
-        <para>This administration area will help you hide or display columns on fixed tables
-          throughout the staff client.  Right now there is only one table, the <link
-            linkend="currexchangeadmin">currencies</link> table, you can control with this, but more
-          will come.</para>
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> Administration &gt; Additional Parameters > Column
-              settings</para>
-          </listitem>
-        </itemizedlist>
-        <screenshot>
-          <screeninfo>Column settings</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/columns.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>Clicking on the module you'd like to edit tables for will show you the options
-          available to you.  Right now only 'Administration' has any options.</para>
-        <para>This area lets you control the columsn that show in the Currency admin area.  If
-          nothing is hidden you will see no check marks.</para>
-        <screenshot>
-          <screeninfo>Column settings</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/setcurrencynohide.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>And will see all of the columns when viewing the table.</para>
-        <screenshot>
-          <screeninfo>Columns on currency table</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/currenciesnohide.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>If columns are hidden they will be checked off</para>
-        <screenshot>
-          <screeninfo>Column settings</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/setcurrencyhide.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>And hidden when you view the table.</para>
-        <screenshot>
-          <screeninfo>Columns on currency table</screeninfo>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/admin/additional/currencieshide.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
       </section>
     </section>
   </chapter>
