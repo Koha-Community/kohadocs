@@ -18511,23 +18511,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       </itemizedlist>
 
       <section id="z3950admin">
-        <title>Z39.50 Servers</title>
+        <title>Z39.50/SRU servers</title>
 
         <para>Z39.50 is a client–server protocol for searching and retrieving information from
-          remote computer databases, in short it's a tool used for copy cataloging. Using Koha you
-          can connect to any Z39.50 target that is publicly available or that you have the log in
-          information to and copy both bibliographic and/or authority records from that
-          source.</para>
+          remote computer databases, in short it's a tool used for copy cataloging. </para>
+        <para>SRU- Search/Retrieve via URL -  is a standard XML-based protocol for search queries,
+          utilizing  CQL - Contextual Query Language - a standard syntax for representing queries. </para>
+        <para>Using Koha you can connect to any Z39.50 or SRU target that is publicly available or
+          that you have the log in information to and copy both bibliographic and/or authority
+          records from that source.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Administration
-            &gt; Additional Parameters &gt; Z39.50 Servers</para>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration &gt; Additional
+              Parameters &gt; Z39.50/SRU Servers</para>
           </listitem>
         </itemizedlist>
 
-        <para>Koha comes with a default list of Z39.50 targets set up that you
-        can add to, edit or delete</para>
+        <para>Koha comes with a default list of Z39.50/SRU targets set up that you can add to, edit
+          or delete</para>
 
         <screenshot>
           <screeninfo>List of Z39.50 Servers in Koha</screeninfo>
@@ -18539,7 +18541,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
 
-        <para>To find additional targets you use IndexData's IRSpy: <ulink
+        <para>To find additional Z39.50 targets you use IndexData's IRSpy: <ulink
             url="http://irspy.indexdata.com/">http://irspy.indexdata.com</ulink> or the Library of
           Congress's List of Targets <ulink url="http://www.loc.gov/z3950/"
             >http://www.loc.gov/z3950/</ulink>
@@ -18550,8 +18552,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para>From the main Z39.50 page, click 'New Z39.50
-              Server'</para>
+              <para>From the main Z39.50/SRU page, click 'New Z39.50 Server'</para>
               <screenshot>
                 <screeninfo>New Z39.50 Server Form</screeninfo>
                 <mediaobject>
@@ -18578,7 +18579,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     protected.</para>
                 </listitem>
                 <listitem>
-                  <para>Check the 'Checked' box if you want this target to always be selected by
+                  <para>Check the 'Preselected' box if you want this target to always be selected by
                     default.</para>
                 </listitem>
                 <listitem>
@@ -18603,6 +18604,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 <listitem>
                   <para>'Record type' lets you define if this is a bibliographic or an authority
                     target.</para>
+                </listitem>
+                <listitem>
+                  <para>'XSLT file(s)' lets enter one or more (comma-separated) XSLT file names that
+                    you want to apply on the search results.<itemizedlist>
+                      <listitem>
+                        <para>When retrieving records from external targets you may wish to automate
+                          some changes to those records. XSLT's allow you to do this. Koha ships
+                          with some sample XSLT files in the /koha-tmpl/intranet-tmpl/prog/en/xslt/
+                          directory ready for use: <itemizedlist>
+                            <listitem>
+                              <para>Del952.xsl: Remove items (MARC21/NORMARC)</para>
+                            </listitem>
+                            <listitem>
+                              <para>Del995.xsl: Remove items (UNIMARC)</para>
+                            </listitem>
+                            <listitem>
+                              <para>Del9LinksExcept952.xsl: Remove $9 links. Skip item fields
+                                (MARC21/NORMARC)</para>
+                            </listitem>
+                            <listitem>
+                              <para>Del9LinksExcept995.xsl: Remove $9 links. Skip item fields
+                                (UNIMARC)</para>
+                            </listitem>
+                          </itemizedlist></para>
+                      </listitem>
+                    </itemizedlist></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -18709,6 +18736,140 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </listitem>
             <listitem>
               <para>LIBRARY OF CONGRESS SUBJECT AUTHORITIES lx2.loc.gov:210 SAF</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section id="addsru">
+          <title>Add a SRU Target</title>
+          <itemizedlist>
+            <listitem>
+              <para>From the main Z39.50/SRU page, click 'New SRU Server'</para>
+              <screenshot>
+                <screeninfo>New SRU Server Form</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/admin/additional/newsru.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+              <itemizedlist>
+                <listitem>
+                  <para>'Server name' should be populated with a name that will help you identify
+                    the source (such as the library name).</para>
+                </listitem>
+                <listitem>
+                  <para>'Hostname' will be the address to the Z39.50 target.</para>
+                </listitem>
+                <listitem>
+                  <para>'Port' tells Koha what port to listen on to get results from this
+                    target.</para>
+                </listitem>
+                <listitem>
+                  <para>'Userid' and 'Password' are only required for servers that are password
+                    protected.</para>
+                </listitem>
+                <listitem>
+                  <para>Check the 'Preselected' box if you want this target to always be selected by
+                    default.</para>
+                </listitem>
+                <listitem>
+                  <para>'Rank' lets you enter where in the list you'd like this target to appear.<itemizedlist>
+                      <listitem>
+                        <para>If this is left blank the targets will be in alphabetical
+                          order.</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+                <listitem>
+                  <para>'Syntax' is the MARC flavor you use.</para>
+                </listitem>
+                <listitem>
+                  <para>'Encoding' tells the system how to read special characters.</para>
+                </listitem>
+                <listitem>
+                  <para>'Timeout' is helpful for targets that take a long while. You can set the
+                    timeout so that it doesn't keep trying the target if results aren't found in a
+                    reasonable amount of time.</para>
+                </listitem>
+                <listitem>
+                  <para>'Additional SRU options' is where you can enter additional options of the
+                    external server here, like sru_version=1.1 or schema=marc21, etc. Note that
+                    these options are server dependent.</para>
+                </listitem>
+                <listitem>
+                  <para>'SRU Search field mapping' lets you add or update the mapping from the
+                    available fields on the Koha search form to the specific server dependent index
+                    names. <itemizedlist>
+                      <listitem>
+                        <para>To further refine your searches, you could add the following index
+                          names to the SRU search field mappings. To do this, edit the server and
+                          click the Modify button next to this field.
+                            <table cellpadding="4" cellspacing="4" frame="all">
+                              <title>SRU Search Field Mapping</title>
+                              
+                              <tgroup align="left" cols="2" colsep="1" rowsep="1">
+                              <tbody>
+                                <row>
+                                  <entry>Title</entry>
+                                  <entry>dc.title</entry>
+                                </row>
+                                <row>
+                                  <entry>ISBN</entry>
+                                  <entry>bath.isbn</entry>
+                                </row>
+                                <row>
+                                  <entry>Any</entry>
+                                  <entry>cql.anywhere</entry>
+                                </row>
+                                <row>
+                                  <entry>Author</entry>
+                                  <entry>dc.author</entry>
+                                </row>
+                                <row>
+                                  <entry>ISSN</entry>
+                                  <entry>bath.issn</entry>
+                                </row>
+                                <row>
+                                  <entry>Subject</entry>
+                                  <entry>dc.subject</entry>
+                                </row>
+                                <row>
+                                  <entry>Standard ID</entry>
+                                  <entry>bath.standardIdentifier</entry>
+                                </row>
+                              </tbody>
+                              </tgroup>
+                          </table></para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+                <listitem>
+                  <para>'XSLT file(s)' lets enter one or more (comma-separated) XSLT file names that
+                    you want to apply on the search results.<itemizedlist>
+                      <listitem>
+                        <para>When retrieving records from external targets you may wish to automate
+                          some changes to those records. XSLT's allow you to do this. Koha ships
+                          with some sample XSLT files in the /koha-tmpl/intranet-tmpl/prog/en/xslt/
+                          directory ready for use: <itemizedlist>
+                            <listitem>
+                              <para>Del952.xsl: Remove items (MARC21/NORMARC)</para>
+                            </listitem>
+                            <listitem>
+                              <para>Del995.xsl: Remove items (UNIMARC)</para>
+                            </listitem>
+                            <listitem>
+                              <para>Del9LinksExcept952.xsl: Remove $9 links. Skip item fields
+                                (MARC21/NORMARC)</para>
+                            </listitem>
+                            <listitem>
+                              <para>Del9LinksExcept995.xsl: Remove $9 links. Skip item fields
+                                (UNIMARC)</para>
+                            </listitem>
+                          </itemizedlist></para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+              </itemizedlist>
             </listitem>
           </itemizedlist>
         </section>
