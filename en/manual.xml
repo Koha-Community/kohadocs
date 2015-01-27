@@ -36464,19 +36464,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </listitem>
 
                 <listitem>
-                  <para>The authorized_value can be omitted if not applicable.
-                  If it contains an authorized value category, or branches or
-                  itemtype or categorycode, a list with the Koha authorized
-                  values will be displayed instead of a free field Note that
-                  you can have more than one parameter in a given SQL Note
-                  that entering nothing at run time won't probably work as you
-                  expect. It will be considered as "value empty" not as
-                  "ignore this parameter". For example entering nothing for :
-                  "title=&lt;&lt;Enter title&gt;&gt;" will display results
-                  with title='' (no title). If you want to have to have
-                  something not mandatory, use "title like &lt;&lt;Enter
-                  title&gt;&gt;" and enter a % at run time instead of
-                  nothing</para>
+                  <para>The authorized_value can be omitted if not applicable. If it contains an
+                    authorized value category, or branches or itemtype or categorycode or
+                    biblio_framework, a list with the Koha authorized values will be displayed
+                    instead of a free field Note that you can have more than one parameter in a
+                    given SQL Note that entering nothing at run time won't probably work as you
+                    expect. It will be considered as "value empty" not as "ignore this parameter".
+                    For example entering nothing for : "title=&lt;&lt;Enter title&gt;&gt;" will
+                    display results with title='' (no title). If you want to have to have something
+                    not mandatory, use "title like &lt;&lt;Enter title&gt;&gt;" and enter a % at run
+                    time instead of nothing</para>
                 </listitem>
               </itemizedlist>
 
@@ -36491,9 +36488,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 </listitem>
 
                 <listitem>
-                  <para>SELECT * FROM items WHERE homebranch = &lt;&lt;Pick
-                  your branch|branches&gt;&gt; and barcode like
-                  &lt;&lt;Partial barcode value here&gt;&gt;</para>
+                  <para>SELECT * FROM items WHERE homebranch = &lt;&lt;Pick your
+                    branch|branches&gt;&gt; and barcode like &lt;&lt;Partial barcode value
+                    here&gt;&gt;</para>
+                </listitem>
+                <listitem>
+                  <para>SELECT title , author FROM biblio WHERE frameworkcode=&lt;&lt;Enter the
+                    frameworkcode|biblio_framework>> </para>
                 </listitem>
               </itemizedlist>
 
