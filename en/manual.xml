@@ -29266,59 +29266,34 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       preference to PROC. This will set the new items to the Processing Center
       as their default location.</para>
 
-      <para>Create items with their desired final shelving location.</para>
+      <para>When creating items you enter in their desired final shelving location and Koha will
+        temporarily change that to PROC.  If <link linkend="InProcessingToShelvingCart"
+          >InProcessingToShelvingCart</link> is set to "Don't move" then when an item with a
+        location of PROC is checked in it will either automatically update the item to use the
+        permanent location. If <link linkend="InProcessingToShelvingCart"
+          >InProcessingToShelvingCart</link> is set to "Move" then when an item is checked in the
+        location is changed from PROC to CART.</para>
 
-      <itemizedlist>
-        <listitem>
-          <para>These newly cataloged items will be temporarily set to the
-          PROC location and will display with whatever description PROC has.
-          The original location code entered at item creation is stored in the
-          new items column 'permanent_location', for future use. Items will
-          stay in the PROC location until they are checked in. To have those
-          items then move to the shelving cart:</para>
-
-          <orderedlist>
-            <listitem>
-              <para>Turn on the <link linkend="InProcessingToShelvingCart">InProcessingToShelvingCart</link>
-              system preference</para>
-            </listitem>
-
-            <listitem>
-              <para>Check in those newly-created items and they will be moved
-              to the location code of CART and display with whatever
-              description CART has.</para>
-            </listitem>
-
-            <listitem>
-              <para>A <link linkend="proccartcron">cron job</link> runs at
-              specified intervals to age items from CART to the permanent
-              shelving location. (For example, an hourly cron entry of
-              cart_to_shelf.pl --hours 3 where --hours is the amount of time
-              an item should spend on the cart before aging to its permanent
-              location.)</para>
-
+              <para>A <link linkend="proccartcron">cron job</link> is then set to run at specified
+        intervals to age items from CART to the permanent shelving location. (For example, an hourly
+        cron entry of cart_to_shelf.pl --hours 3 where --hours is the amount of time an item should
+        spend on the cart before aging to its permanent location.)</para>
               <itemizedlist>
                 <listitem>
                   <tip>
                     <para>If the <link linkend="ReturnToShelvingCart">ReturnToShelvingCart</link>
-                    system preference is turned on, any newly checked-in item
-                    is also automatically put into the shelving cart, to be
-                    covered by the same script run.</para>
+              system preference is set to "Move", any newly checked-in item is also automatically
+              put into the shelving cart, to be covered by the same script run.</para>
                   </tip>
                 </listitem>
-
                 <listitem>
                   <important>
-                    <para>Checkins with confirmed holds will not go into the
-                    shelving cart. If items on the shelving cart are checked
-                    out, the cart location will be cleared.</para>
+                    <para>Checkins with confirmed holds will not go into the shelving cart. If items
+                      on the shelving cart are checked out, the cart location will be
+                      cleared.</para>
                   </important>
                 </listitem>
               </itemizedlist>
-            </listitem>
-          </orderedlist>
-        </listitem>
-      </itemizedlist>
     </section>
 
     <section id="selfcheckout">
