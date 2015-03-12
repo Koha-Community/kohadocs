@@ -45332,6 +45332,67 @@ print theme('pages_catalog');</programlisting>
               if no days specified. </para>
           </section>
         </section>
+        <section id="usagecron">
+          <title>Share Usage Stats</title>
+          <para>Script path: misc/cronjobs/share_usage_with_koha_community.pl</para>
+          <para>Does: If you're sharing information via the <link linkend="UsageStats"
+              >UsageStats</link> feature this will send your info to the <ulink
+              url="http://hea.koha-community.org/">Hea website</ulink>.</para>
+          <para>Frequency: monthly</para>
+          <section id="usagecronperl">
+            <title>Perl Documentation</title>
+            <para><emphasis role="bold">NAME</emphasis>
+            </para>
+            <para>share_usage_with_koha_community.pl - Share your library's usage with the Koha
+              community</para>
+            <para><emphasis role="bold">SYNOPSIS</emphasis>
+            </para>
+            <para>share_usage_with_koha_community.pl [-h|--help] [-v|--verbose] </para>
+            <para>If the <link linkend="UsageStats">UsageStats</link> system preference is set, you
+              can launch this script to share your usage data anonymously with the Koha community. </para>
+            <para>Collecting Koha usage statistics will help developers to know how Koha is used
+              across the world. </para>
+            <para>This script will send the usage data for the bibliographic and authority records,
+              checkouts, holds, orders, and subscriptions. </para>
+            <para>Only the total number is retrieved. In no case will private data be shared! </para>
+            <para>In order to know which parts of Koha modules are used, this script will collect
+              some system preference values. </para>
+            <para>If you want to tell us who you are, you can fill the <link
+                linkend="UsageStatsLibraryName">UsageStatsLibraryName</link> system preference with
+              your library name, <link linkend="UsageStatsLibraryUrl">UsageStatsLibraryUrl</link>,
+                <link linkend="UsageStatsLibraryType">UsageStatsLibraryType</link> and/or <link
+                linkend="UsageStatsCountry">UsageStatsCountry</link>. </para>
+            <para>All these data will be analyzed on the <ulink url="http://hea.koha-community.org"
+                >http://hea.koha-community.org</ulink> Koha community website. </para>
+            <para>IMPORTANT : please do NOT run the cron on the 1st, but on another day. The idea is
+              to avoid all Koha libraries sending their data at the same time ! So choose any day
+              between 1 and 28 !</para>
+            <para><emphasis role="bold">OPTIONS</emphasis>
+            </para>
+            <para>-h|--help </para>
+            <para>Print a brief help message </para>
+            <para>-v|--verbose </para>
+            <para>Verbose mode. </para>
+            <para>-f|--force </para>
+            <para>Force the update.</para>
+            <para><emphasis role="bold">AUTHOR</emphasis>
+            </para>
+            <para>Alex Arnaud &lt;alex.arnaud@biblibre.com> </para>
+            <para>Jonathan Druart &lt;jonathan.druart@biblibre.com></para>
+            <para><emphasis role="bold">COPYRIGHT</emphasis>
+            </para>
+            <para>Copyright 2014 BibLibre</para>
+            <para><emphasis role="bold">LICENSE</emphasis>
+            </para>
+            <para>This file is part of Koha. </para>
+            <para>Koha is free software; you can redistribute it and/or modify it under the terms of
+              the GNU General Public License as published by the Free Software Foundation; either
+              version 3 of the License, or (at your option) any later version. </para>
+            <para>You should have received a copy of the GNU General Public License along with Koha;
+              if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+              Boston, MA 02110-1301 USA.</para>
+          </section>
+        </section>
       </section>
 
       <section id="acqcrons">
