@@ -42023,22 +42023,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
       <title>Set up</title>
       <para>To set up the Koha plugin system you must first make some changes to your install.<itemizedlist>
           <listitem>
-            <para>Create the directory /var/lib/koha/plugins</para>
-          </listitem>
-          <listitem>
-            <para>Add the lines &lt;pluginsdir>/var/lib/koha/plugins&lt;/pluginsdir>
-              &lt;enable_plugins>1&lt;/enable_plugins>" to your koha-conf.xml file</para>
-          </listitem>
-          <listitem>
-            <para>Add the line Alias /plugin/ "/var/lib/koha/plugins/" to your koha-httpd.conf
-              file</para>
+            <para>Change &lt;enable_plugins&gt;0&lt;/enable_plugins&gt; to
+              &lt;enable_plugins&gt;1&lt;/enable_plugins&gt; in your koha-conf.xml file</para>
           </listitem>
           <listitem>
             <para>Restart your webserver</para>
           </listitem>
-        </itemizedlist>Once set up is complete you will need to alter your <link linkend="UseKohaPlugins">UseKohaPlugins</link> system preference to be able to see a
-        Plugins option under the More menu on your toolbar.  On the Tools page you will see the
-        Tools Plugins and on the Reports page you will see the Reports Plugins.</para>
+        </itemizedlist>Once set up is complete you will need to alter your <link
+          linkend="UseKohaPlugins">UseKohaPlugins</link> system preference. On the Tools page you
+        will see the Tools Plugins and on the Reports page you will see the Reports Plugins.</para>
     </section>
   </chapter>
   <chapter id="staffsearchhistory">
