@@ -39705,13 +39705,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         specifically be addressed in this document. For a complete list of the
         standard Bib-1 attributes, go to <ulink url="http://www.loc.gov/z3950/agency/defns/bib1.html">http://www.loc.gov/z3950/agency/defns/bib1.html</ulink>.</para>
 
-        <para>The second file
-        (etc/zebradb/marc_defs/[marc21|unimarc]/biblios/record.abs) contains
-        the abstract syntax which maps the MARC21 tags to the set of Use
-        Attributes you choose to use. The rules established in this file
-        provides a passable Bath level 0 and 1 service, which includes author,
-        title, subject, keyword and exact services such as standard
-        identifiers (LCCN, ISBN, ISSN, etc.)</para>
+        <para>The second file is etc/zebradb/marc_defs/[marc21|unimarc]/biblios/record.abs if you
+          use grs1 indexing [the default until 3.16] or
+          etc/zebradb/marc_defs/[marc21|unimarc]/biblios/biblio-koha-indexdefs.xml if you use dom
+          indexing [the default from 3.18]. Either files contains the abstract syntax which maps the
+          MARC21 tags to the set of Use Attributes you choose to use. To be more precise the xml
+          file to be activate needs to be transform into biblio-zebra-indexdefs.xsl, read the head
+          of biblio-zebra-indexdefs.xsl to know more about this topic. The rules established in this
+          file provides a passable Bath level 0 and 1 service, which includes author, title,
+          subject, keyword and exact services such as standard identifiers (LCCN, ISBN, ISSN,
+          etc.)</para>
 
         <para>The third file (etc/zebradb/ccl.properties) is the Common
         Command Language (CCL) field mappings. This file combines the bib-1
