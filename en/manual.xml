@@ -4391,53 +4391,6 @@ budget_code: 922$a</programlisting></para>
               </listitem>
             </itemizedlist>
           </section>
-
-          <section id="AllowOnShelfHolds">
-            <title>AllowOnShelfHolds</title>
-
-            <para>Default: Allow</para>
-
-            <para>Asks: ___ hold requests to be placed on items that are not
-            checked out.</para>
-
-            <para>Values:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>Allow</para>
-              </listitem>
-
-              <listitem>
-                <para>Don't Allow</para>
-              </listitem>
-            </itemizedlist>
-
-            <para>Description:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>This preference is a binary setting which controls the
-                ability of patrons to place holds on items that are not
-                currently checked out. Setting it to "Don't allow" allows
-                borrowers to place holds on items that are checked out but not
-                on items that are on the shelf (or assumed available in the
-                library), setting it to "Allow" allows borrowers to place
-                holds on any item that is available for loan whether it is
-                checked out or not. This setting might be set to "Allow" if
-                the library system is a multi branch system and patrons used
-                the hold system to request items from other libraries, or if
-                the library wanted to allow users to place holds on items from
-                home through the OPAC. Setting it to "Don't allow" would
-                enforce a first come, first served standard.</para>
-              </listitem>
-            </itemizedlist>
-            <important>
-              <para>An item's hold status doesn't not affect whether or not the item is 'available'
-                until the item is in 'waiting' status. Items with on-shelf holds will show as
-                available until a librarian has pulled them from the shelf and checked the item in
-                make it show 'waiting'.</para>
-            </important>
-          </section>
           <section id="AllowRenewalIfOtherItemsAvailable">
             <title>AllowRenewalIfOtherItemsAvailable</title>
             <para>Default: Don't allow</para>
@@ -42588,20 +42541,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para><link linkend="ReturnBeforeExpiry">ReturnBeforeExpiry</link> : Decide
               if patrons need to return items before their accounts
               expire</para>
-            </listitem>
-
-            <listitem>
-              <para><link linkend="AllowOnShelfHolds">AllowOnShelfHolds</link>
-              : Decide if patrons can place holds on items that are marked as
-              being available</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para><link linkend="AllowHoldPolicyOverride">AllowHoldPolicyOverride</link>
-                  : Decide if you want the staff to be able to override the
-                  setting for the above at checkout</para>
-                </listitem>
-              </itemizedlist>
             </listitem>
 
             <listitem>
