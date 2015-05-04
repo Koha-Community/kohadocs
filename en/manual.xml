@@ -20287,91 +20287,219 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patrons
-            and Circulation &gt; Patron Card Creator</para>
+            <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patron Card Creator</para>
           </listitem>
         </itemizedlist>
 
-        <para>The Patron Card Creator allow you to use layouts and templates
-        which you design to print a nearly unlimited variety of patron cards
-        including barcodes. Here are some of the features of the Patron Card
-        Creator module:</para>
+        <para>The Patron Card Creator allow you to use layouts and templates which you design to
+          print your custom patron cards on your printer. Here are some of the features of the
+          Patron Card Creator module:</para>
 
         <itemizedlist>
           <listitem>
-            <para>Customize patron card layouts</para>
+            <para>Customize patron card layouts with text retrieved from the Koha patron data</para>
           </listitem>
 
           <listitem>
-            <para>Design custom card templates for printed patron cards</para>
+            <para>Design custom card templates for printed patron cards (to match the label
+              sheets)</para>
           </listitem>
 
           <listitem>
-            <para>Build and manage batches of patron cards</para>
+            <para>Build and manage batches of patron cards to print</para>
           </listitem>
 
           <listitem>
-            <para>Export single or multiple batches</para>
+            <para>Export (as PDF) single or multiple batches to print</para>
           </listitem>
 
           <listitem>
-            <para>Export single or multiple patron cards from within a
-            batch</para>
-          </listitem>
-
-          <listitem>
-            <para>Export card data as a PDF readable by any standard PDF
-            reader, making patron cards printable directly on a printer</para>
+            <para>Export (as PDF) single or multiple patron cards from within a batch</para>
           </listitem>
         </itemizedlist>
 
-        <para>At the top of each screen within the Patron Card Creator, you
-        will see a toolbar allowing quick access to relevant functions. The
-        menu to the left of each screen also allows easy access to the
-        different sections of the Patron Card Creator. The bread crumb trail
-        near the top of each screen will give specific indication as to where
-        you are within the Patron Card Creator module and allow quick
-        navigation to previously traversed sections. And finally, you can find
-        more detailed information on each section of the Patron Card Creator
-        by clicking the online help link at the upper left-hand corner of
-        every page.</para>
+        <para><screenshot>
+            <screeninfo>Patron Card Creator</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/patroncards/patroncardhome.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>At the top of each screen within the Patron Card Creator, you will see a
+          toolbar allowing quick access to relevant functions. The menu to the left of each screen
+          also allows easy access to the different sections of the Patron Card Creator. The bread
+          crumb trail at the top left of each screen will give specific indication as to where you
+          are within the Patron Card Creator module and allow quick navigation to previously
+          traversed sections. Finally, you can find more detailed information on each section of the
+          Patron Card Creator by clicking the 'Help' link at the upper right-hand corner of every
+          page.</para>
+        <section id="cardlayouts">
+          <title>Layouts</title>
+          <itemizedlist>
+            <listitem>
+              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patron Card Creator &gt;
+                Manage layouts</para>
+            </listitem>
+          </itemizedlist>
+          <para>A layout defines the text and images that will be printed on to the card and where
+            it will appear. <note>
+              <para>Up to three lines of text, the patron's number in barcode representation and up
+                to two images can be printed on to the card.</para>
+            </note></para>
+          <section id="addcardlayout">
+            <title>Add a Layout</title>
+            <para>If you have no layouts defined, you will add a new layout by clicking the 'New
+              layout' button at the top of your screen.<screenshot>
+                <screeninfo>New layout button</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/newbuttons.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>You may also choose to press 'Manage layout' on the left side. Here you are
+              offered a list of available layouts you can select for editing. But at the top of the
+              page there is still the 'New layout' button.</para>
+            <screenshot>
+              <screeninfo>Add New Layout</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/patroncards/addlayout.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <itemizedlist>
+              <listitem>
+                <para>The name you assign to the layout is for your benefit, name it something that
+                  will be easy to identify at a later date</para>
+              </listitem>
+              <listitem>
+                <para>The Units pull down is used to define what measurement scale you're going to
+                  be using for your layout.</para>
+                <screenshot>
+                  <screeninfo>Units of Measurement</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/tools/patroncards/units.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+                <itemizedlist>
+                  <listitem>
+                    <note>
+                      <para>A Postscript Point is 1/72" an Adoba Agate is 1/64", an Inch is 25.4 SI
+                        Millimeters </para>
+                    </note>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>Next note if this layout is for the front or the back of the patron
+                  card</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>
+                      <note>
+                        <para>You will need a layout for both the front and back of your card if you
+                          have 2-sided library cards, this option doesn't allow you to print two
+                          sided cards, just lets you track which side of the card you're
+                          designing.</para>
+                      </note>
+                    </para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>You have the option of adding up to 3 lines of text to your card. Your text
+                  can be static text of your choosing and/or fields from the patron record. If you
+                  want to print fields from the patron record you want to put the field names in
+                  brackets like so - &lt;firstname&gt;<itemizedlist>
+                    <listitem>
+                      <note>
+                        <para>A full list of field names can be found in the database schema at
+                            <ulink url="http://schema.koha-community.org"
+                            >http://schema.koha-community.org</ulink></para>
+                      </note>
+                    </listitem>
+                  </itemizedlist></para>
+              </listitem>
+              <listitem>
+                <para>For each line of text, you can choose your font, font size and the location of
+                  the text on the card using the lower X and Y coordinates</para>
+              </listitem>
+              <listitem>
+                <para>In order to show the barcode and the patron card number you will need to check
+                  the 'Print Card Number as Barcode' option. This will turn the patron card number
+                  into a barcode. If you want the number to print in human readable format you will
+                  need to check the 'Print Card Number as Text Under Barcode' option.</para>
+              </listitem>
+              <listitem>
+                <para>Finally you can choose up to two images to print on the card.</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>One can be the <link linkend="uploadpatronimages">patron image</link>
+                      which you can resize to meet your needs.</para>
+                  </listitem>
+                  <listitem>
+                    <para>The other image can be something like a library logo or symbol that you
+                      uploaded using the '<link linkend="managecardimages">Manage Images</link>'
+                      module of the Patron Card Creator Tool.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+            <para><important>
+                <para>It is the designers responsibility to define textlines, barcode and images
+                  such that overlap is avoided.</para>
+              </important>After saving, your layouts will appear on the 'Manage layouts'
+              page.</para>
+            <screenshot>
+              <screeninfo>Manage Layouts</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/patroncards/managelayouts.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+          </section>
+        </section>
 
         <section id="patrontemplate">
           <title>Templates</title>
 
           <itemizedlist>
             <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt;
-              Patron Card Creator &gt; Templates</para>
+              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patron Card Creator &gt;
+                Manage templates</para>
             </listitem>
           </itemizedlist>
 
-          <para>A template is the label/card stock you are using. This might
-          be Avery 5160 for address labels, Gaylord 47-284 for spine labels or
-          Avery 28371 for your patron cards, just to give a couple of
-          examples. These labels will include all of the information you will
-          need for setting up a Koha, this information may be on the
-          packaging, and if not it can usually be found on the vendor's
-          website.</para>
+          <para>A template describes the arrangement of labels on the label sheet/card stock you are
+            using. This might be Avery 5160 for address labels, Gaylord 47-284 for spine labels or
+            Avery 28371 for your patron cards, just to give a couple of examples. All of the
+            information you will need for setting up a template may be on the packaging, and if not
+            it can usually be found on the vendor's website or can be measured from a sample
+            sheet.</para>
 
           <section id="addcardtemplate">
             <title>Add a Template</title>
 
-            <para>To add a new template, you want to click on the 'Templates'
-            button at the top of your page and choose 'New Template'</para>
-
+            <para>To add a new template click on the 'New template' button at the top of your page
+              which brings you to the Edit template form immediately. You may also choose to press
+              'Manage templates' on the left side. Here you are offered a list of available
+              templates you can select for editing. But in the top of the page there is still the
+              'New template' button.</para>
             <screenshot>
-              <screeninfo>New Template Button</screeninfo>
-
+              <screeninfo>New template button</screeninfo>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="images/tools/patroncards/newtemplate.png"/>
+                  <imagedata fileref="images/tools/patroncards/newbuttons.png"/>
                 </imageobject>
               </mediaobject>
             </screenshot>
 
-            <para>Using the form that appears you can define the template for
-            your sheet of labels or cards.</para>
+            <para>Using the form that appears after pressing either 'Edit' or 'New template'you can
+              define the template for your sheet of labels or cards. </para>
 
             <screenshot>
               <screeninfo>Add Patron Card Template</screeninfo>
@@ -20385,14 +20513,12 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>Template ID will be automatically generated after saving
-                your template, this is simply a system generated unique
-                id</para>
+                <para>Template ID is simply a system generated unique id</para>
               </listitem>
 
               <listitem>
-                <para>Template Code should be something you can use to
-                identify your template on a list of templates</para>
+                <para>Template Code should be the name of this template to identify it on a list of
+                  templates</para>
               </listitem>
 
               <listitem>
@@ -20401,51 +20527,70 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </listitem>
 
               <listitem>
-                <para>The Units pull down is used to define what measurement
-                scale you're going to be using for the template. This should
-                probably match the unit of measurement used on the template
-                description provided by the product vendor.</para>
-
+                <para>The Units pull down is used to define what measurement scale you're going to
+                  be using for the template. </para>
                 <screenshot>
                   <screeninfo>Measurement Units</screeninfo>
-
                   <mediaobject>
                     <imageobject>
                       <imagedata fileref="images/tools/patroncards/units.png"/>
                     </imageobject>
                   </mediaobject>
                 </screenshot>
+                <itemizedlist>
+                  <listitem>
+                    <note>
+                      <para>A Postscript Point is 1/72" an Adoba Agate is 1/64", an Inch is 25.4 SI
+                        Millimeters </para>
+                    </note>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
-                <para>The measurements can be found on the vendor product
-                packaging or website.</para>
+                <para>The measurements (page height, page width, card width, card height) may be on
+                  the packaging, and if not it can usually be found on the vendor's website or can
+                  be measured from a sample sheet.</para>
               </listitem>
 
               <listitem>
-                <para>A profile is a set of "adjustments" applied to a given
-                template just prior to printing which compensates for
-                anomalies unique and peculiar to a given printer (to which the
-                profile is assigned).</para>
+                <para>A profile is a set of "adjustments" applied to a given template just prior to
+                  printing which compensates for anomalies unique and peculiar to a given printer
+                  (to which the profile is assigned). </para>
 
                 <itemizedlist>
                   <listitem>
-                    <para>Before picking a profile try printing some sample
-                    cards so that you can easily define a profile that is
-                    right for your printer/template combination.</para>
+                    <para>Before defining a profile try printing some sample cards so that you can
+                      take measurements to define a profile to perform the right adjustments for
+                      your printer/template combination.</para>
                   </listitem>
 
                   <listitem>
-                    <para>After finding any anomalies in the printed document,
-                    <link linkend="addcardprofile">create a profile</link> and
-                    assign it to the template.</para>
+                    <para>After finding and documenting any anomalies in the printed document, then
+                      you can <link linkend="addcardprofile">create a profile</link> and assign it
+                      to the template.</para>
+                  </listitem>
+                  <listitem>
+                    <para>
+                      <important>
+                        <para>Do not specify a profile unless needed, i.e. do not click to define a
+                          printer profile. It is not possible to remove a profile from a template
+                          but you can switch to another profile. </para>
+                      </important>
+                    </para>
+                  </listitem>
+                  <listitem>
+                    <note>
+                      <para>If you are using different printers you may be required to define
+                        several templates that are identical only different profiles are
+                        specified.</para>
+                    </note>
                   </listitem>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
 
-            <para>After saving, your templates will appear on the 'Manage
-            Templates' page.</para>
+            <para>After saving, your templates will appear on the 'Manage templates' page.</para>
 
             <screenshot>
               <screeninfo>Manage Templates</screeninfo>
@@ -20464,19 +20609,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <itemizedlist>
             <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt;
-              Patron Card Creator &gt; Profiles</para>
+              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patron Card Creator &gt;
+                Manage profiles</para>
             </listitem>
           </itemizedlist>
 
-          <para>A profile is a set of "adjustments" applied to a given <link linkend="patrontemplate">template</link> just prior to printing
-          which compensates for anomalies unique and peculiar to a given
-          printer (to which the profile is assigned). This means if you set a
-          template up and then print a sample set of data and find that the
-          items are not all aligned the same on each card, you need to set up
-          a profile for each printer to make up for the differences in
-          printing styles, such as the shifting of text to the left, right,
-          top or bottom.</para>
+          <para>A profile is a set of "adjustments" applied to a given <link
+              linkend="patrontemplate">template</link> just prior to printing which compensates for
+            anomalies unique and peculiar to a given printer. This means if you set a template up
+            and then print a sample set of data and find that the items are not all aligned the same
+            on each card, you need to set up a profile for each printer (or even different tray
+            selections on the same printer) to make up for the differences in printing styles, such
+            as the shifting of text to the left, right, top or bottom.</para>
 
           <para>If your cards are printing just the way you want, you will not
           need a profile.</para>
@@ -20492,13 +20636,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="images/tools/patroncards/newprofile.png"/>
+                  <imagedata fileref="images/tools/patroncards/newbuttons.png"/>
                 </imageobject>
               </mediaobject>
             </screenshot>
-
-            <para>Using the form that appears you can create a profile to fix
-            any problems with your template.</para>
+            <para>To add a new profile, you want to click on the 'New profile' button at the top of
+              your page. Using the form that appears you can define the values to correct the card
+              misalignments on your label sheet. You may also choose 'Manage profiles' on the left
+              side and select one of the currently available profiles for editing.</para>
 
             <screenshot>
               <screeninfo>Add Printer Profile</screeninfo>
@@ -20512,11 +20657,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>The Printer Name and Paper Bin do not have to match your
-                printer exactly, they are for your reference so you can
-                remember what printer you have set the profile for. So if you
-                want to use the Printer model number in printer name or you
-                can call it 'the printer on my desk'</para>
+                <para>The Printer Name and Paper Bin do not have to match your printer exactly, they
+                  are for your reference so you can remember what printer you have set the profile
+                  for. <itemizedlist>
+                    <listitem>
+                      <para>
+                        <note>
+                          <para>For example: if you want to use the Printer model number in printer
+                            name you can, or you can call it 'the printer on my desk'</para>
+                        </note>
+                      </para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
 
               <listitem>
@@ -20537,29 +20689,32 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     </imageobject>
                   </mediaobject>
                 </screenshot>
+                <itemizedlist>
+                  <listitem>
+                    <note>
+                      <para>A Postscript Point is 1/72" an Adoba Agate is 1/64", an Inch is 25.4 SI
+                        Millimeters </para>
+                    </note>
+                  </listitem>
+                </itemizedlist>
               </listitem>
 
               <listitem>
-                <para>Offset describes what happens when the entire image is
-                off center either vertically or horizontally and creep
-                describes a condition where the distance between the labels
-                changes across the page or up and down the page</para>
-
-                <itemizedlist>
+                <para>Offset should be used when the entire image is off center either vertically or
+                  horizontally. Creep describes a condition where the distance between the labels changes
+                  across the page or up and down the page<itemizedlist>
+                    <listitem>
+                      <para>For offset and creep values, negative numbers move the printed
+                        information up and to the left on the printed sheet and positive numbers
+                        move down and to the right</para>
+                    </listitem>
                   <listitem>
-                    <para>For these values, negative numbers move the error up
-                    and to the left and positive numbers move the error down
-                    and to the right</para>
+                    <para>Example: the text is printed 0 .25" from the left edge of the first label,
+                      0 .28" from the left edge of the second label and 0 .31" from the left edge of
+                      the third label. This means the horizontal creep should be set to (minus)
+                      -0.03 " to make up for this difference.</para>
                   </listitem>
-
-                  <listitem>
-                    <para>Example: the text is .25" from the left edge of the
-                    first label, .28" from the left edge of the second label
-                    and .31" from the left edge of the third label. This means
-                    the horizontal creep should be set to .03" to make up for
-                    this difference.</para>
-                  </listitem>
-                </itemizedlist>
+                </itemizedlist></para>
               </listitem>
             </itemizedlist>
 
@@ -20582,146 +20737,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </section>
         </section>
 
-        <section id="cardlayouts">
-          <title>Layouts</title>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt;
-              Patron Card Creator &gt; Layouts</para>
-            </listitem>
-          </itemizedlist>
-
-          <para>A layout defines the text and images that will be printed on
-          to the card and where it will appear.</para>
-
-          <section id="addcardlayout">
-            <title>Add a Layout</title>
-
-            <para>To add a new layout, you want to click on the 'Layouts'
-            button at the top of your page and choose 'New Layout'</para>
-
-            <screenshot>
-              <screeninfo>New Layout Button</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/tools/patroncards/newlayout.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-
-            <para>Using the form that appears you can create a profile to fix
-            any problems with your template.</para>
-
-            <screenshot>
-              <screeninfo>Add New Layout</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/tools/patroncards/addlayout.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-
-            <itemizedlist>
-              <listitem>
-                <para>The name you assign to the layout is for your benefit,
-                name it something that will be easy to identify at a later
-                date</para>
-              </listitem>
-
-              <listitem>
-                <para>The Units pull down is used to define what measurement
-                scale you're going to be using for your layout.</para>
-
-                <screenshot>
-                  <screeninfo>Units of Measurement</screeninfo>
-
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="images/tools/patroncards/units.png"/>
-                    </imageobject>
-                  </mediaobject>
-                </screenshot>
-              </listitem>
-
-              <listitem>
-                <para>Next note if this layout is for the front or the back of
-                the patron card</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>You will need a layout for both the front and back
-                    of your card if you have 2-sided library cards</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-
-              <listitem>
-                <para>You have the option of adding up to 3 lines of text to
-                your card. Your text can be static text of your choosing
-                and/or fields from the patron record. If you want to print
-                fields from the patron record you want to put the field names
-                in brackets like so - &lt;firstname&gt;</para>
-              </listitem>
-
-              <listitem>
-                <para>For each line of text, you can choose your font, font
-                size and the location of the text on the card using the lower
-                X and Y coordinates</para>
-              </listitem>
-
-              <listitem>
-                <para>In order to show the barcode and the patron card number
-                you will need to check the 'Print Card Number as Barcode'
-                option. This will turn the patron card number into a barcode.
-                If you want the number to print in human readable format you
-                will need to check the 'Print Card Number as Text Under
-                Barcode' option.</para>
-              </listitem>
-
-              <listitem>
-                <para>Finally you can choose up to two images to print on the
-                card.</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>One can be the <link linkend="uploadpatronimages">patron image</link> which you
-                    can resize to meet your needs.</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>The other image can be something like a library logo
-                    or symbol that you uploaded using the '<link linkend="managecardimages">Manage Images</link>' module of
-                    the Patron Card Creator Tool.</para>
-                  </listitem>
-                </itemizedlist>
-              </listitem>
-            </itemizedlist>
-
-            <para>After saving, your layouts will appear on the 'Manage
-            Layouts' page.</para>
-
-            <screenshot>
-              <screeninfo>Manage Layouts</screeninfo>
-
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/tools/patroncards/managelayouts.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-          </section>
-        </section>
-
         <section id="patroncardbatches">
           <title>Batches</title>
 
           <itemizedlist>
             <listitem>
-              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt;
-              Patron Card Creator &gt; Batches</para>
+              <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Patron Card Creator &gt;
+                Manage batches</para>
             </listitem>
           </itemizedlist>
 
@@ -20731,20 +20753,102 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="addcardbatch">
             <title>Add a Batch</title>
 
-            <para>To add a new batch, you want to click on the 'Batches'
-            button at the top of your page and choose 'New Batch'</para>
+            <para>To add a new batch, you want to click on the 'New batches' button at the top of
+              your page. Choosing the menu item 'Manage batches' on the left a list of already
+              defined batches is displayed. In this display you can either select a batch for
+              editing or add a new batch.</para>
 
             <screenshot>
               <screeninfo>New Batch Button</screeninfo>
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="images/tools/patroncards/newbatch.png"/>
+                  <imagedata fileref="images/tools/patroncards/newbuttons.png"/>
                 </imageobject>
               </mediaobject>
             </screenshot>
+            <para> For a new batch a message pops up and directs you to select patrons to be
+              processed in this batch.<screenshot>
+                <screeninfo>No items in batch</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/noitemsbatch.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
 
-            <para/>
+            <para>After choosing the 'Add item(s)' button the Patron Search window pops up.<screenshot>
+                <screeninfo>Patron search</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/patronsearch.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>From here you can search for patrons to add to your batch by any part of their
+              name, their category and/or library. Entering * in the search box will display all the
+              patrons. <screenshot>
+                <screeninfo>Patron search results</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/addpatrons.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>From the results you can add patrons to the batch by clicking the 'Add' button.
+              After adding patrons from the results you can start over and perform another search or
+              click 'Close' at the bottom of the screen to indicate that you are done. You will then
+              be presented with your batch.<screenshot>
+                <screeninfo>Patron batch</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/batchsummary.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>If you are satisfied with your batch you can proceed to export. If you want to
+              correct or even delete that batch the buttons to do so can be found at the top of your
+              screen. You can always come back here through the 'Manage batches' menu item. </para>
+            <para>If you would like to export all patron cards you can click 'Export batch'
+              otherwise you can choose specific patrons to print cards for by checking the box to
+              the right of their names and then choose 'Export item(s)' at the top. </para>
+            <para>The export menu will ask you to choose a template, a layout and starting position
+              (where on the sheet should printing begin).<note>
+                <para>For the starting position if the first 6 labels have already been used on your
+                  sheet you can start printing on label in position 7 on the sheet. The labels are
+                  numbered left to right from top to bottom.</para>
+              </note><screenshot>
+                <screeninfo>Export batch</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/export.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>Once you click 'Export' you will be presented with a PDF of your labels for printing<screenshot>
+                <screeninfo>PDF Export</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/pdf.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>When you open the PDF you will see the cards for printing</para>
+            <screenshot>
+              <screeninfo>Final cards</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/patroncards/cards.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <para>The above image shows a layout that is made up of two textlines. The first one is
+              just plain text, the second one is composed of the &lt;firstname> &lt;surname> fields.
+              A patron image is printed (if available) and the barcode of patrons number is
+              displayed in code 39. All this is printed on a template with three columns and 8 rows
+              using position 1-3 here. When printing this PDF please take care that your printer
+              doesn't rescale the PDF (e.g do not fit to paper size) otherwise the printer will not
+              be able to print to the right place per your templates.</para>
           </section>
         </section>
 
