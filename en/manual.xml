@@ -6491,6 +6491,87 @@ budget_code: 922$a</programlisting></para>
             </important>
           </section>
         </section>
+        <section id="coceimages">
+          <title>Coce Cover images cache</title>
+          <para>Coce is a remote image URL cache. With this option, cover images are not fetched
+            directly from Amazon, Google, and so on. Their URLs are requested via a web service to
+            Coce which manages a cache of URLs. </para>
+          <section id="Coce">
+            <title>Coce</title>
+            <para>Default: Don't enable</para>
+            <para>Asks: ___  a Coce image cache service.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't enable</para>
+                </listitem>
+                <listitem>
+                  <para>Enable</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description: <itemizedlist>
+                <listitem>
+                  <para>Coce has many benefits when it comes to choosing and displaying cover images
+                    in Koha:<itemizedlist>
+                      <listitem>
+                        <para>If a book cover is not available from a provider, but is available
+                          from another one, Koha will be able to display a book cover, which isn't
+                          the case now </para>
+                      </listitem>
+                      <listitem>
+                        <para>Since URLs are cached, it isn't necessary for each book cover to
+                          request, again and again, the provider, and several of them if necessary.
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>Amazon book covers are retrieved with Amazon Product Advertising API,
+                          which means that more covers are retrieved (ISBN13).</para>
+                      </listitem>
+                    </itemizedlist><important>
+                      <para>Coce does not come bundled with Koha. Your Koha install with not already
+                        have a Coce server set up. Before enabling this functionality you will want
+                        to be sure to have a Coce server set up.  Instructions on installing and
+                        setting up Coce can be found on the official github page at <ulink
+                          url="https://github.com/fredericd/coce"
+                          >https://github.com/fredericd/coce</ulink>.</para>
+                    </important></para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="CoceHost">
+            <title>CoceHost</title>
+            <para>Asks: Coce server URL ___</para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This will be the full URL (starting with http://) to your Coce server.
+                  </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="CoceProviders">
+            <title>CoceProviders</title>
+            <para>Asks: Use the following providers to fetch the covers ___</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>[Select all]</para>
+                </listitem>
+                <listitem>
+                  <para>Amazon Web Services</para>
+                </listitem>
+                <listitem>
+                  <para>Google Books</para>
+                </listitem>
+                <listitem>
+                  <para>Open Library</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>The providers chosen here will be used to gather cover images for display in
+                    your Koha catalog.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+        </section>
 
         <section id="googleprefs">
           <title>Google</title>
