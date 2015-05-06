@@ -13271,6 +13271,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>Asks: By default, show ___ results per page in the
             OPAC.</para>
           </section>
+          <section id="SearchWithISBNVariations">
+            <title>SearchWithISBNVariations</title>
+            <para>Default: don't search</para>
+            <para>Asks: When searching on the ISBN index, ___ on all variations of the ISBN.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>don't search</para>
+                </listitem>
+                <listitem>
+                  <para>search</para>
+                </listitem>
+              </itemizedlist> Descriptions:<itemizedlist>
+                <listitem>
+                  <para>With this preference set to search you'll be able to search for ISBNs even
+                    if there are dashes or spaces in the field.  So if you search for 9781843345855
+                    but the ISBN was cataloged as 978-1843345855 you'll still be able to find it if
+                    this preference is set to 'search'.</para>
+                </listitem>
+              </itemizedlist><important>
+                <para>This preference has no effect if <link linkend="UseQueryParser"
+                    >UseQueryParser</link> is on</para>
+              </important></para>
+          </section>
         </section>
 
         <section id="searchformprefs">
