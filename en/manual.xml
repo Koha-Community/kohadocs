@@ -47593,6 +47593,50 @@ import_mode: direct</programlisting></para>
           batch are completed. Then you may or may not see the Connexion Client export report
           (depending on your Client options for that). </para>
       </section>
+      <section>
+        <title>Items in OCLC</title>
+        <para>If you'd like to create your item records in OCLC you can do so by addding a 952 for
+          each item to the bib record you're cataloging.  The <link linkend="itemcatguide"
+            >Item/Holdings Cataloging Guide</link> will break down what subfields you can use in the
+          952, but at the minimum you want to have subfield 2, a, b, and y on your items.</para>
+        <example>
+            <title>Item record example</title>
+          <para>952 \\$2CLASSIFICATION$aHOMEBRANCHCODE$bHOLDINGBRANCHCODE$yITEMTYPECODE</para>
+          </example>
+        <para>
+          <itemizedlist>
+            <listitem>
+              <para>The subfield 2 holds the classification code. This can be ddc for Dewey or lcc
+                for Library of Congress or z for Custom. Other classification sources can be found
+                in the <link linkend="classificationsources">Classification Sources</link> area in
+                administration</para>
+            </listitem>
+            <listitem>
+              <para>Subfield a is your home library and needs to be the code for your home library,
+                not the library name. You can find these codes in the <link linkend="libsgroups"
+                  >Libraries &amp; Groups</link> administration area.</para>
+            </listitem>
+            <listitem>
+              <para>Subfield b is your holding library and needs to be the code for your holding
+                library, not the library name. You can find these codes in the <link
+                  linkend="libsgroups">Libraries &amp; Groups</link> administration area.</para>
+            </listitem>
+            <listitem>
+              <para>Subfield y is your item type code.  It needs to be the code, not the item type
+                name. You can find these codes in the <link linkend="itemtypeadmin">Item
+                  Types</link> administration area.</para>
+            </listitem>
+          </itemizedlist>
+        </para>
+        <example>
+          <title>Item record example</title>
+          <para>952 \\$2ddc$aMAIN$bMAIN$yBOOK</para>
+        </example>
+        <para>In addition to these required fields you can enter any other subfield you'd like.
+          Most libraries will enter a call number in subfield o and a barcode in subfield p as well.
+          Review the <link linkend="itemcatguide">Item/Holdings Cataloging Guide</link> for a full
+          list of subfields and values.</para>
+      </section>
     </section>
   </appendix>
 
