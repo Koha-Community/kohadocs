@@ -31286,9 +31286,69 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
       <section id="mergebibs">
         <title>Merging Records</title>
+        <para>To merge bibliographic records together you will want to go to the Cataloging module
+          and perform a search. </para>
+        <para>If you see duplicates on that search results screen you can check the boxes next to
+          the duplicates and click the 'Merge selected' button at the top of the results. If you
+          choose more than or fewer than 2, you will be presented with an error:</para>
+              <screenshot>
+                <screeninfo>Merge Items Error</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/lists/merge2rec.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+              <para>Once you have selected the records you want to merge, click the 'Merge selected'
+                button at the top of the list. You will be asked which of the two records you would
+                like to keep as your primary record and which will be deleted after the merge. If
+                the records were created using different frameworks, Koha will also ask you what
+                Framework you would like the newly merged record to use.</para>
+              <screenshot>
+                <screeninfo>Choose Primary Record for Merge</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/lists/mergeprimary.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+              <para>You will be presented with the MARC for both of the records (each accessible by
+                tabs labeled with the bib numbers for those records). By default the entire first
+                record will be selected, uncheck the fields you don't want in the final
+                (destination) record and then move on to the second tab to choose which fields
+                should be in the final (destination) record.</para>
+              <screenshot>
+                <screeninfo>Merging Records</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/lists/mergerecs.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+              <para>Should you try to add a field that is not repeatable two times (like choosing
+                the 245 field from both record #1 and #2) you will be presented with an error</para>
+              <screenshot>
+                <screeninfo>Non-repeatable Error</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/lists/nondupfield.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+              <para>Once you have completed your selections click the 'merge' button. The primary
+                record will now CONTAIN the data you chose for it as well as all of the
+                items/holdings from both bib records, and the second record will be deleted.<important>
+                  <para>It is important to rebuild your zebra index immediately after merging
+                    records. If a search is performed for a record which has been deleted Koha will
+                    present the patrons with an error in the OPAC.</para>
+                </important></para>
 
-        <para>If you would like to merge together multiple records you can do
-        that via the <link linkend="lists">Lists</link> tool. <link linkend="mergebibrecs">Learn more here</link>.</para>
+        <para>
+          <note>
+            <para>If you would like you can also use the <link linkend="lists">Lists</link> tool for
+              merging records together. <link linkend="mergebibrecs">Learn more here</link>.</para>
+          </note>
+        </para>
       </section>
       <section id="deleterecord">
         <title>Deleting Records</title>
