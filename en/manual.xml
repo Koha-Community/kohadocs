@@ -27502,6 +27502,59 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para>Learn more about <link linkend="purchasesuggest">Purchase suggestions</link> in the
             <link linkend="acqmodule">Acquisitions</link> chapter of this manual.</para>
       </section>
+      <section id="patrondischarge">
+        <title>Patron discharges</title>
+        <para>A discharge is a certificate that says the patron has no current checkouts, no holds
+          and owe no money. To enable this option on the patron record you need to set the <link
+            linkend="useDischarge">useDischarge</link> system preference to 'Allow'.</para>
+                <note>
+                  <para>In France a "quitus" ("discharge") is needed if you want to register for an
+                    account in a library or a university). </para>
+                </note>
+                <note>
+                  <para>Academic libraries often require that you have a clear record at the library
+                    before you can graduate.</para>
+                </note>
+        <para>To generate a discharge for a patron click the 'Discharge' tab on the left of the
+          patron record<screenshot>
+            <screeninfo>Discharge</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/patrons/discharge.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>If the patron can have a discharge generated then it will have a button that says
+          'Generate discharge'</para>
+        <screenshot>
+          <screeninfo>Generate discharge</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/generatedischarge.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>If not then you'll see an error explaining why you can't discharge the patron.</para>
+        <screenshot>
+          <screeninfo>Cannot discharge</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/cantdischarge.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Once the letter is generated you will have a PDF to download</para>
+        <screenshot>
+          <screeninfo>Discharge letter</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/patrons/dischargeletter.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+              
+
+      </section>
     </section>
 
     <section id="patronsearch">
