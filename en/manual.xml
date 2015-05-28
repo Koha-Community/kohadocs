@@ -14484,6 +14484,48 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Web Services</para>
+        <section id="idref">
+          <title>IdRef</title>
+          <para>Default: Disable</para>
+          <para>Asks: ___ the IdRef webservice from the opac detail page.  IdRef allows to request
+            authorities from the Sudoc database. </para>
+          <para>Values:<itemizedlist>
+              <listitem>
+                <para>Disable</para>
+              </listitem>
+              <listitem>
+                <para>Enable</para>
+              </listitem>
+            </itemizedlist></para>
+          <para>Description:<itemizedlist>
+              <listitem>
+                <para>IdRef is a French service for Sudoc autorities. Using the <ulink
+                    url="http://www.sudoc.abes.fr/">Sudoc database</ulink>, it allows to request /
+                  modify / add authorities. If a record comes from the Sudoc (so 009 is filled with
+                  an integer), at the OPAC you will see "Author: Idref" if a 7..$3 (unimarc author)
+                  if filled with a ppn. On clicking on the Idref link, a popup will display. The
+                  Idref webservice is requested and all records (by roles) for this author will be
+                  displayed (see screenshot). </para>
+                <para>There is 1 line / record and 2 links at the end. 1 will request Koha
+                  (cgi-bin/koha/opac-search.pl?q=ident:003381862), the other one will redirect to
+                  the sudoc page (http://www.sudoc.fr/003381862).</para>
+              </listitem>
+              <listitem>
+                <para>
+                  <important>
+                    <para>Please note that this feature is available only for libraries using
+                      UNIMARC. </para>
+                  </important>
+                </para>
+              </listitem>
+              <listitem>
+                <note>
+                  <para>The French Sudoc database should not be confused with the US Superintendent
+                    of Documents (SuDocs) Classification Scheme.</para>
+                </note>
+              </listitem>
+            </itemizedlist></para>
+        </section>
 
         <section id="ilsdiprefs">
           <title>ILS-DI</title>
