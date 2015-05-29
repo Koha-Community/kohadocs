@@ -14509,9 +14509,23 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                     url="http://www.sudoc.abes.fr/">Sudoc database</ulink>, it allows to request /
                   modify / add authorities. If a record comes from the Sudoc (so 009 is filled with
                   an integer), at the OPAC you will see "Author: Idref" if a 7..$3 (unimarc author)
-                  if filled with a ppn. On clicking on the Idref link, a popup will display. The
-                  Idref webservice is requested and all records (by roles) for this author will be
-                  displayed (see screenshot). </para>
+                  if filled with a ppn. On clicking on the Idref link, a popup will display. <screenshot>
+                    <screeninfo>IdRef link</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/globalprefs/idref1.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+                <para>The Idref webservice is requested and all records (by roles) for this author
+                  will be displayed<screenshot>
+                    <screeninfo>Sudoc</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/globalprefs/idref2.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
                 <para>There is 1 line / record and 2 links at the end. 1 will request Koha
                   (cgi-bin/koha/opac-search.pl?q=ident:003381862), the other one will redirect to
                   the sudoc page (http://www.sudoc.fr/003381862).</para>
