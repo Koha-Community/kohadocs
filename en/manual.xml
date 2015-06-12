@@ -19502,19 +19502,16 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           can use as a template for your patron records. If you would like to
           create the file yourself, make sure that your file has the following
           fields in this order as the header row:</para>
-
-          <para>borrowernumber, cardnumber, surname, firstname, title, othernames, initials,
-            streetnumber, streettype, address, address2, city, zipcode, country, email, phone,
-            mobile, fax, emailpro, phonepro, B_streetnumber, B_streettype, B_address, B_address2,
-            B_city, B_zipcode, B_country, B_email, B_phone, dateofbirth, branchcode, categorycode,
-            dateenrolled, dateexpiry, gonenoaddress, lost, debarred, contactname, contactfirstname,
-            contacttitle, guarantorid, borrowernotes, relationship, ethnicity, ethnotes, sex,
-            password, flags, userid, opacnote, contactnote, sort1, sort2, altcontactfirstname,
-            altcontactsurname, altcontactaddress1, altcontactaddress2, altcontactaddress3,
-            altcontactzipcode, altcontactcountry, altcontactphone, smsalertnumber, patron_attributes<important>
-              <para>The borrowernumber column should not be left blank. If you do not have data for
-                that column you should delete that column before importing your patrons.</para>
-            </important></para>
+          <para>cardnumber, surname, firstname, title, othernames, initials, streetnumber,
+            streettype, address, address2, city, state, zipcode, country, email, phone, mobile, fax,
+            emailpro, phonepro, B_streetnumber, B_streettype, B_address, B_address2, B_city,
+            B_state, B_zipcode, B_country, B_email, B_phone, dateofbirth, branchcode, categorycode,
+            dateenrolled, dateexpiry, gonenoaddress, lost, debarred, debarredcomment, contactname,
+            contactfirstname, contacttitle, guarantorid, borrowernotes, relationship, ethnicity,
+            ethnotes, sex, password, flags, userid, opacnote, contactnote, sort1, sort2,
+            altcontactfirstname, altcontactsurname, altcontactaddress1, altcontactaddress2,
+            altcontactaddress3, altcontactstate, altcontactzipcode, altcontactcountry,
+            altcontactphone, smsalertnumber, privacy, patron_attributes  </para>
 
           <important>
             <para>The 'password' should be stored in plaintext, and will be converted to a Bcrypt
@@ -19542,34 +19539,28 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>The attribute type code and a colon should precede each
-                value.</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>For example: <emphasis role="bold">INSTID:12345,LANG:fr</emphasis> or <emphasis role="bold">STARTDATE:January 1
-                    2010,TRACK:Day</emphasis></para>
-                  </listitem>
-
-                  <listitem>
-                    <para>If an input record has more than one attribute, the
-                    fields should either be entered as an unquoted string
-                    (previous examples), or with each field wrapped in
-                    separate double quotes and delimited by a comma:</para>
-
-                    <itemizedlist>
-                      <listitem>
-                        <para><emphasis role="bold">"STARTDATE:January 1,
-                        2010","TRACK:Day"</emphasis></para>
-                      </listitem>
-
-                      <listitem>
-                        <para>This syntax would be required if the data might
-                        have a comma in it, like a date string.</para>
-                      </listitem>
-                    </itemizedlist>
-                  </listitem>
-                </itemizedlist>
+                <para>The attribute type code and a colon should precede each value.<itemizedlist>
+                    <listitem>
+                      <para>For example: "INSTID:12345,BASEBALL:Cubs" </para>
+                    </listitem>
+                    <listitem>
+                      <para>This field must be wrapped in quotes if multiple values are defined.
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>Since values can contain spaces, additional doubled-quotes may be
+                        required: <itemizedlist>
+                          <listitem>
+                            <para>"INSTID:12345,BASEBALL:Cubs,""BASEBALL:White Sox""" </para>
+                          </listitem>
+                        </itemizedlist></para>
+                    </listitem>
+                    <listitem>
+                      <para>When replacing a patron record, any attributes specified in the input
+                        file replace all of the attribute values of any type that were previously
+                        assigned to the patron record. </para>
+                    </listitem>
+                  </itemizedlist></para>
               </listitem>
             </itemizedlist>
           </note>
