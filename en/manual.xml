@@ -21418,6 +21418,113 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             that the image be 200x300 pixels, but smaller images will work as well.</para>
         </important>
       </section>
+      <section id="rotatingcollections">
+        <sectioninfo>
+          <authorgroup>
+            <author>
+              <firstname>Cindy</firstname>
+              <surname>Murdock Ames</surname>
+              <affiliation>
+                <orgname>Meadville Public Library | CCFLS</orgname>
+              </affiliation>
+            </author>
+            <editor>
+              <firstname>Nicole C.</firstname>
+              <surname>Engard</surname>
+            </editor>
+          </authorgroup>
+          <pubdate>2014</pubdate>
+        </sectioninfo>
+        <title>Rotating Collections</title>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Catalog &gt; Rotating
+              Collections</para>
+          </listitem>
+        </itemizedlist>
+        <para>Rotating Collections is a tool for managing collections of materials that frequently
+          get shifted from library to library. It adds the ability to store not only an item's home
+          library and current location but also information about where it is supposed to be
+          transferred to next to ensure that all items in the collection are sent to the correct
+          library. When an item in a rotating collection is checked in, library staff is notified
+          that the item is part of a rotating collection and which branch it should be sent to if it
+          is not at the correct one.</para>
+        <important>
+          <para>The <link linkend="AutomaticItemReturn">AutomaticItemReturn</link> system preference
+            must be set to "Don't automatically transfer items to their home library when they are
+            returned" for Rotating Collections to function properly.</para>
+        </important>
+        <itemizedlist>
+          <listitem>
+            <para>To create a new rotating collection, click the "New Collection" button, fill in
+              the Title and Description, and click Submit. Once submitted you'll see "Collection
+              Name added successfully"; click "Return to rotating collections home" to return to the
+              main Rotating Collections management page (or click Rotating Collections in the
+              sidebar).</para>
+          </listitem>
+          <listitem>
+            <para>To add items to a collection, click "Add or remove items" next to the collection's
+              name in the list of collections. Under "Add or remove items" scan or type in the
+              barcode of the item you wish to add to the collection, and hit Enter or click Submit
+              if necessary.</para>
+          </listitem>
+          <listitem>
+            <para>To remove an item from a collection, either click Remove next to the item's
+              barcode in the list of items within the collection or check the "Remove item from
+              collection" box next to the Barcode text box under "Add or remove items, and scan or
+              type in the barcode, clicking Submit or hitting Enter if necessary. Note: The "Remove
+              item from collection" checkbox will remain checked as long as you are on the "Add or
+              remove items" page, unless you uncheck it, to facilitate quickly removing a number of
+              items at a time by scanning their barcodes. </para>
+          </listitem>
+        </itemizedlist>
+        <section id="transferrotatingcollection">
+          <title>Transfer a Rotating Collection</title>
+          <para>Transferring a collection will:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Change the current location of the items in that collection to the library it is
+                to be transferred to</para>
+            </listitem>
+            <listitem>
+              <para>Initiate a transfer from its original current location/holding library to the
+                current location/holding library it is to be rotated to. When a library receives a
+                collection they will need to check in the items to complete the transfer.</para>
+            </listitem>
+          </itemizedlist>
+          <para>You can transfer a collection in one of two ways:</para>
+          <itemizedlist>
+            <listitem>
+              <para>From the main Rotating Collections page, click on Transfer next to the title of
+                the collection you wish to transfer; choose the library you wish to transfer the
+                collection to and click "Transfer collection".</para>
+            </listitem>
+            <listitem>
+              <para>Or, from the "add or remove items" page for a collection, you can click the
+                Transfer button, choose the library you wish to transfer the collection to and click
+                "Transfer Collection".</para>
+            </listitem>
+          </itemizedlist>
+          <important>
+            <para>In order to complete the transfer process, the library receiving the rotating
+              collection should check in all items from the collection as they receive them. This
+              will clear the transfer so that the items are no longer shown as being "in
+              transit".</para>
+          </important>
+          <para>If an item in a rotating collection is checked in at a library other than the one it
+            is supposed to be transferred to, a notification will appear notifying library staff
+            that the item is part of a rotating collection, also letting them know where the item
+            needs to be sent.</para>
+          <screenshot>
+            <screeninfo>Rotating Collection Item Notification</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/rotatingcollections/rotatingcollectionnotice.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </section>
+      </section>
     </section>
 
     
@@ -22564,107 +22671,6 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </imageobject>
           </mediaobject>
         </screenshot>
-      </section><section id="rotatingcollections">
-        <sectioninfo>
-          <authorgroup>
-            <author>
-              <firstname>Cindy</firstname>
-              <surname>Murdock Ames</surname>
-              <affiliation>
-                <orgname>Meadville Public Library | CCFLS</orgname>
-              </affiliation>
-            </author>
-            <editor>
-              <firstname>Nicole C.</firstname>
-              <surname>Engard</surname>
-            </editor>
-          </authorgroup>
-          <pubdate>2014</pubdate>
-        </sectioninfo>
-        <title>Rotating Collections</title>
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Catalog &gt; Rotating Collections</para>
-          </listitem>
-        </itemizedlist>
-        
-        <para>Rotating Collections is a tool for managing collections of materials that frequently get shifted from library to library.  
-          It adds the ability to store not only an item's home library and current location but also information about where it is supposed 
-          to be transferred to next to ensure that all items in the collection are sent to the correct library.  When an item in a rotating 
-          collection is checked in, library staff is notified that the item is part of a rotating collection and which branch it should be 
-          sent to if it is not at the correct one.</para>
-        
-        <important>
-          <para>The <link linkend="AutomaticItemReturn">AutomaticItemReturn</link> system preference must
-            be set to "Don't automatically transfer items to their home library when they are
-            returned" for Rotating Collections to function properly.</para>
-        </important>
-        
-        <itemizedlist>
-          <listitem>
-            <para>To create a new rotating collection, click the "New Collection" button, fill in the Title and Description, and click Submit.  
-              Once submitted you'll see "Collection Name added successfully"; click "Return to rotating collections home" to return to the main 
-              Rotating Collections management page (or click Rotating Collections in the sidebar).</para>
-          </listitem>
-          
-          <listitem>
-            <para>To add items to a collection, click "Add or remove items" next to the collection's name in the list of collections.  
-              Under "Add or remove items" scan or type in the barcode of the item you wish to add to the collection, and hit Enter or click 
-              Submit if necessary.</para>
-          </listitem>
-          
-          <listitem>
-            <para>To remove an item from a collection, either click Remove next to the item's barcode in the list of items within the collection 
-              or check the "Remove item from collection" box next to the Barcode text box under "Add or remove items, and scan or type in the barcode, 
-              clicking Submit or hitting Enter if necessary.  Note:  The "Remove item from collection" checkbox will remain checked as long as you are on 
-              the "Add or remove items" page, unless you uncheck it, to facilitate quickly removing a number of items at a time by scanning their barcodes. </para>
-          </listitem>
-        </itemizedlist>
-        
-        <section id="transferrotatingcollection">
-          <title>Transfer a Rotating Collection</title>
-          
-          <para>Transferring a collection will:</para>
-          <itemizedlist>
-            <listitem>
-              <para>Change the current location of the items in that collection to the library it is to be transferred to</para>
-            </listitem>
-            <listitem>
-              <para>Initiate a transfer from its original current location/holding library to the current location/holding library it is to be rotated to.  
-                When a library receives a collection they will need to check in the items to complete the transfer.</para>
-            </listitem>
-          </itemizedlist>
-          
-          <para>You can transfer a collection in one of two ways:</para>
-          
-          <itemizedlist>
-            <listitem>
-              <para>From the main Rotating Collections page, click on Transfer next to the title of the collection you wish to transfer; choose 
-                the library you wish to transfer the collection to and click "Transfer collection".</para>
-            </listitem>
-            <listitem>
-              <para>Or, from the "add or remove items" page for a collection, you can click the Transfer button, choose the library you wish to 
-                transfer the collection to and click "Transfer Collection".</para>
-            </listitem>
-          </itemizedlist>
-          
-          <important>
-            <para>In order to complete the transfer process, the library receiving the rotating collection should check in all items from the collection 
-              as they receive them.  This will clear the transfer so that the items are no longer shown as being "in transit".</para>
-          </important>
-          
-          <para>If an item in a rotating collection is checked in at a library other than the one it is supposed to be transferred to, a notification 
-            will appear notifying library staff that the item is part of a rotating collection, also letting them know where the item needs to be sent.</para>
-          
-          <screenshot>
-            <screeninfo>Rotating Collection Item Notification</screeninfo>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="images/tools/rotatingcollections/rotatingcollectionnotice.png"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot>
-        </section>
       </section>
       <section id="marcmodtemplates">
         <title>MARC modification templates</title>
