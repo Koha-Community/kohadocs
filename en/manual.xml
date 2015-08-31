@@ -10090,13 +10090,13 @@ budget_code: 922$a</programlisting></para>
           </section>
 
           <section id="opacuserjs">
-            <title>opacuserjs</title>
+            <title>OPACUserJS</title>
 
             <para>Asks: Include the following JavaScript on all pages in the
             OPAC</para>
 
             <screenshot>
-              <screeninfo>OPAC login box before opacuserjs edit</screeninfo>
+              <screeninfo>OPAC login box before OPACUserJS edit</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -10106,8 +10106,7 @@ budget_code: 922$a</programlisting></para>
             </screenshot>
 
             <screenshot>
-              <screeninfo>JavaScript in opacuserjs to change the OPAC login
-              box</screeninfo>
+              <screeninfo>JavaScript in OPACUserJS to change the OPAC login box</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -10117,8 +10116,7 @@ budget_code: 922$a</programlisting></para>
             </screenshot>
 
             <screenshot>
-              <screeninfo>New OPAC login box after editing
-              opacuserjs</screeninfo>
+              <screeninfo>New OPAC login box after editing OPACUserJS</screeninfo>
 
               <mediaobject>
                 <imageobject>
@@ -46515,7 +46513,7 @@ http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
       which cover the widget will start on, among other options.</para>
     <para>At the time the plugins options are saved or updated, the plugin will then generate some
       minified JavaScript code that is automatically stored in the Koha system preference
-      OpacUserJS. Here is an example of the
+      OPACUserJS. Here is an example of the
       output:<programlisting>/* JS for Koha CoverFlow Plugin 
  This JS was added automatically by installing the CoverFlow plugin
  Please do not modify */$(document).ready(function(){$.getScript("/plugin/Koha/Plugin/Com/ByWaterSolutions/CoverFlow/jquery-flipster/src/js/jquery.flipster.min.js",function(data,textStatus,jqxhr){$("head").append("&lt;link id='flipster-css' href='/plugin/Koha/Plugin/Com/ByWaterSolutions/CoverFlow/jquery-flipster/src/css/jquery.flipster.min.css' type='text/css' rel='stylesheet' /&gt;");$('#coverflow').load("/coverflow.pl?id=42",function(){var opt={'items':'.item','minfactor':15,'distribution':1.5,'scalethreshold':0,'staticbelowthreshold':false,'titleclass':'itemTitle','selectedclass':'selectedItem','scrollactive':true,'step':{'limit':4,'width':10,'scale':true}};$('#coverflow').flipster({style:'coverflow',});});});});
@@ -51189,7 +51187,7 @@ import_mode: direct</programlisting></para>
     $("#holdings th:contains('Collection')").text("Color");
     });</programlisting>
 
-      <para><link linkend="opacuserjs">opacuserjs</link></para>
+      <para><link linkend="opacuserjs">OPACUserJS</link></para>
 
       <programlisting>$(document).ready(function(){
     $("#advsearch-tab-ccode a:contains('Collection')").text("Color");
