@@ -47949,9 +47949,9 @@ Items :
         </listitem>
         <listitem>
           <para>Add these lines: </para>
-          <programlisting>        my $page = "page_" . $cgi->param('p');            # go for "p" value in URL and do the concatenation
+          <programlisting>        my $page = "page_" . $input->param('p');          # go for "p" value in URL and do the concatenation
         my $preference = C4::Context->preference($page);  # Go for preference  
-        $template->{VARS}->{'page_test'} = $preference    # pass variable to template pages.tt</programlisting>
+        $template->{VARS}->{'page_test'} = $preference;   # pass variable to template pages.tt</programlisting>
         </listitem>
 
         <listitem>
