@@ -46129,6 +46129,34 @@ print theme('pages_catalog');</programlisting>
           <para>Does: Removes old (defined by you) suggestions from the
           suggestion management area.</para>
         </section>
+        <section id="emailsuggestfund">
+          <title>Email suggestions to process</title>
+          <para>Script path: misc/cronjobs/notice_unprocessed_suggestions.pl</para>
+          <para>Does: Generates a notice to the fund owner that there are suggestions in need of
+            processing</para>
+          <section id="emailsuggestfundperl">
+            <title>Perl Documentation</title>
+            <para><emphasis role="bold">NAME</emphasis>
+            </para>
+            <para>notice_unprocessed_suggestions.pl - Generate notification for unprocessed
+              suggestions. </para>
+            <para>The budget owner will be notified. </para>
+            <para>The letter template 'TO_PROCESS' will be used. </para>
+            <para><emphasis role="bold">SYNOPSIS</emphasis>
+            </para>
+            <para>notice_unprocessed_suggestions.pl [-h|--help] [-v|--verbose] [-c|--confirm]
+              [--days=NUMBER_OF_DAYS] </para>
+            <para><emphasis role="bold">OPTIONS</emphasis>
+            </para>
+            <para>-h|--help Print a brief help message </para>
+            <para>-c|--confirm This flag must be provided in order for the script to actually
+              generate notices. If it is not supplied, the script will only report on the patron it
+              would have noticed. </para>
+            <para>--days This parameter is mandatory. It must contain an integer representing the
+              number of days elapsed since the last modification of suggestions to process. </para>
+            <para>-v|--verbose Verbose mode.</para>
+          </section>
+        </section>
       </section>
 
       <section id="deprecatedcrons">
