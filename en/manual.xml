@@ -14756,6 +14756,22 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>For more information, see the <link linkend="oaiconfsample">sample conf file</link> in the
             appendix.</para>
           </section>
+          <section id="OAI-PMH:DeletedRecord">
+            <title>OAI-PMH:DeletedRecord</title>
+            <para>Default: will never be emptied or truncated (persistent)</para>
+            <para>Asks: Koha's deletedbiblio table ___</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>will never have any data in it (no)</para>
+                </listitem>
+                <listitem>
+                  <para>will never be emptied or truncated (persistent)</para>
+                </listitem>
+                <listitem>
+                  <para>might be emptied or truncated at some point (transient)</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
 
           <section id="OAI-PMHMaxCount">
             <title>OAI-PMH:MaxCount</title>
