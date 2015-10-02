@@ -31553,6 +31553,44 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
       </section>
+      <section id="uploadbibfile">
+        <title>Attaching files to Records</title>
+        <para>If you would like to upload files to Koha you can do so with a few settings.<itemizedlist>
+            <listitem>
+              <para>You will need to ask your system administrator to set the 'upload_path' config
+                variable to point to where the files will be stored<itemizedlist>
+                  <listitem>
+                    <para>You can see if your upload path is set correctly by visiting About Koha >
+                      System Information. If there is an error you will see it there.<screenshot>
+                        <screeninfo>Upload Path Warning</screeninfo>
+                        <mediaobject>
+                          <imageobject>
+                            <imagedata fileref="images/cataloging/uploadwarning.png"/>
+                          </imageobject>
+                        </mediaobject>
+                      </screenshot></para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>You will want to be sure that your <link linkend="OPACBaseURL"
+                  >OPACBaseURL</link> system preference is set appropriately </para>
+            </listitem>
+            <listitem>
+              <para>You will want to add the upload.pl plugin to the 856$u subfield in one (or
+                multiple) of your <link linkend="editsubfields">frameworks</link></para>
+            </listitem>
+          </itemizedlist></para>
+        <para>Once you are all set up you can continue with cataloging as regular. You will see a
+          plugin icon next to the 856$u that will open up the upload window<screenshot>
+            <screeninfo>Upload file to record</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/cataloging/uploadfilebib.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+      </section>
 
       <section id="mergebibs">
         <title>Merging Records</title>
