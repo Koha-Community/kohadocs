@@ -2026,6 +2026,56 @@ budget_code: 922$a</programlisting></para>
             </itemizedlist>
           </section>
         </section>
+        <section id="catexportprefs">
+          <title>Exporting</title>
+          <section id="BibtexExportAdditionalFields">
+            <title>BibtexExportAdditionalFields</title>
+            <para>Asks: Include following fields when exporting BibTeX</para>
+            <para>Description: <itemizedlist>
+                <listitem>
+                  <para>Use one line per tag in the format BT_TAG: TAG$SUBFIELD ( e.g. lccn: 010$a )
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>To specificy multiple marc tags/subfields as targets for a repeating BibTex
+                    tag, use the following format: BT_TAG: [TAG2$SUBFIELD1, TAG2$SUBFIELD2] ( e.g.
+                    notes: [501$a, 505$g] )</para>
+                </listitem>
+                <listitem>
+                  <para>All values of repeating tags and subfields will be printed with the given
+                    BibTeX tag. </para>
+                </listitem>
+                <listitem>
+                  <para>Use '@' ( with quotes ) as the BT_TAG to replace the bibtex record type with
+                    a field value of your choosing.  </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="RisExportAdditionalFields">
+            <title>RisExportAdditionalFields</title>
+            <para>Asks: Include following fields when exporting RIS</para>
+            <para>Description: <itemizedlist>
+                <listitem>
+                  <para>Use one line per tag in the format RIS_TAG: TAG$SUBFIELD ( e.g. LC: 010$a )
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>To specificy multiple marc tags/subfields as targets for a repeating RIS
+                    tag, use the following format: RIS_TAG: [TAG2$SUBFIELD1, TAG2$SUBFIELD2] ( e.g.
+                    NT: [501$a, 505$g] ) </para>
+                </listitem>
+                <listitem>
+                  <para>All values of repeating tags and subfields will be printed with the given
+                    RIS tag.  </para>
+                </listitem>
+                <listitem>
+                  <para>Use of TY ( record type ) as a key will <emphasis role="italic"
+                      >replace</emphasis> the default TY with the field value of your choosing.
+                  </para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+        </section>
         <section id="catimportprefs">
           <title>Importing</title>
           <section id="AggressiveMatchOnISBN">
