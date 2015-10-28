@@ -12506,9 +12506,14 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>Description:<itemizedlist>
                 <listitem>
                   <para>If you would like to notify patrons that their accounts are about to expire
-                    then you can enter a number of days before expiration in this preference.</para>
+                    then you can enter a number of days before expiration in this preference.  The
+                    notice text can be customized in the <link linkend="notices">Notices &amp;
+                      Slips</link> tool.</para>
                 </listitem>
-              </itemizedlist></para>
+              </itemizedlist><important>
+                <para>You will need to enable the <link linkend="patronexpirycron">membership expiry
+                    cron job</link> for this notice to send.</para>
+              </important></para>
           </section>
           <section id="minPasswordLength">
             <title>minPasswordLength</title>
