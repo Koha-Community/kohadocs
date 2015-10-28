@@ -23150,7 +23150,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </screenshot>
         <itemizedlist>
           <listitem>
-            <para>Choose 'Copy'</para>
+            <para>Choose 'Copy and replace'</para>
           </listitem>
           <listitem>
             <para>Decide if you want to copy the first occurance or all occurances of the
@@ -23202,7 +23202,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot><itemizedlist>
             <listitem>
-              <para>Choose 'Copy'</para>
+              <para>Choose 'Copy and replace'</para>
             </listitem>
             <listitem>
               <para>Decide if you want to copy the first occurance or all occurances of the
@@ -23225,6 +23225,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para>Click 'Add action'</para>
             </listitem>
           </itemizedlist></para>
+        <para>When choosing between 'Copy' and 'Copy and replace' keep the following example in
+          mind:</para>
+        <programlisting>245 _aThe art of computer programming _cDonald E. Knuth. 
+300 _aA_exists _bB_exists </programlisting>
+        <para>If we apply action (a) Copy the whole field 245 to 300, we get: </para>
+        <programlisting>245 _aThe art of computer programming _cDonald E. Knuth. 
+300 _aA_exists _bB_exists 
+300 _aThe art of computer programming _cDonald E. Knuth. </programlisting>
+        <para>If we apply action (b) Copy the subfield 245$a to 300$a, we get: </para>
+        <programlisting>245 _aThe art of computer programming _cDonald E. Knuth. 
+300 _aThe art of computer programming _bB_exists</programlisting>
         <para>Once your actions are saved you can view them at the top of the screen. Actions can be
           moved around using the arrows to the left of them. </para>
         <screenshot>
