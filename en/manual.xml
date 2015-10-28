@@ -45939,6 +45939,15 @@ print theme('pages_catalog');</programlisting>
             </section>
           </section>
         </section>
+        <section id="patronexpirycron">
+          <title>Notify Patrons of Expiration</title>
+          <para>Script path: misc/cronjobs/membership_expiry.pl </para>
+          <para>Does: Sends messages to warn patrons of their card expiration to the <link
+              linkend="msgqueuecron">messaage queue</link> cron.</para>
+          <para>Requires: <link linkend="MembershipExpiryDaysNotice"
+              >MembershipExpiryDaysNotice</link></para>
+          <para>Frequency: nightly</para>
+        </section>
       </section>
 
       <section id="proccartcron">
