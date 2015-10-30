@@ -28155,6 +28155,17 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             </mediaobject>
           </screenshot>
         </listitem>
+        <listitem>
+          <para>If you have enabled <link linkend="batchcheckoutprefs">batch checkouts</link> then
+            click the batch check out option on the patron record<screenshot>
+              <screeninfo>Batch checkout</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/circ/batchcheckout.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot></para>
+        </listitem>
 
         <listitem>
           <para>Check out option on the quick search bar on the circulation
@@ -28405,6 +28416,41 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           enter or scan a blank barcode and the screen will be cleared of the
           current patron.</para>
         </section>
+      </section>
+      <section id="batchcheckout">
+        <title>Batch Checkouts</title>
+        <para>If you would like to perform a batch check out you can do so by turning on the <link
+            linkend="BatchCheckouts">BatchCheckouts</link> system preference and assigning the
+          proper patron categories via the <link linkend="BatchCheckoutsValidCategories"
+            >BatchCheckoutsValidCategories</link> preference.  This will allow you to use an RFID
+          pad that reads multiple barcodes or perform a batch check out for training internal use.<screenshot>
+            <screeninfo>Batch checkouts</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/circ/batchcheckoutscan.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>From this screen you can scan several barcodes or load a file of barcodes.  If those
+          items cannot be checked out they will provide a warning on the following screen</para>
+        <screenshot>
+          <screeninfo>Batch checkout warnings</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/batchcheckoutwarn.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>If you are using a statistical patron type then you'll see that local use was recorded
+          for each item you scanned.</para>
+        <screenshot>
+          <screeninfo>Batch local use</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/circ/batchlocaluse.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
       </section>
 
       <section id="checkoutmsg">
