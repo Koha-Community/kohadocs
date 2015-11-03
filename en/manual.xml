@@ -19048,6 +19048,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                         <para>To add today's date you can use the &lt;&lt;today&gt;&gt; syntax</para>
                       </note>
                     </listitem>
+                      <listitem>
+                        <note>
+                          <para>If you don't want to print the patron's full name on your slips or
+                            notice you can enter data in the Other name or Initials field for each
+                            patron and use that value instead.</para>
+                        </note>
+                      </listitem>
                   </itemizedlist>
                 </listitem>
                 </itemizedlist></para>
@@ -23610,6 +23617,20 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para>Salutation is populated by the <link linkend="BorrowersTitles">BorrowersTitles</link> system
               preference</para>
+            </listitem>
+            <listitem>
+              <note>
+                <para>If you'd like to prevent full names from printing on <link linkend="notices"
+                    >slips</link> and you're not using the Initials or Other name fields for
+                  anything else, you can use them for shortened versions of the name to then be
+                  printed on the slip.  </para>
+                <para>For example:
+                  <programlisting>Firstname: Nicole C.
+Surname: Engard
+Initials: NCE</programlisting></para>
+                <para>Then on the slip you can have it print the &lt;&lt;borrowers.initials>>
+                  instead of the full name.</para>
+              </note>
             </listitem>
           </itemizedlist>
         </listitem>
