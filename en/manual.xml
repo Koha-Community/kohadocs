@@ -19781,6 +19781,38 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </mediaobject>
         </screenshot>
       </section>
+      <section id="audioadmin">
+        <title>Audio alerts</title>
+        <para>If you have your AudioAlerts preference set to 'Enable' you will be able to control
+          the various alert sounds that Koha uses from this area.</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Administration > Additional Parameters >
+              Audio alerts</para>
+          </listitem>
+        </itemizedlist>
+        <para>Each dialog box in Koha has a CSS class assigned to it that can be used as a selector
+          for a sound.<screenshot>
+            <screeninfo>Audio alerts</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/additional/alerts.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>You can edit the defaults by clicking the 'Edit' button to the right of each alert<screenshot>
+            <screeninfo>Edit alert</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/additional/editalert.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>You can assign alerts to other CSS classes in Koha by entering that information in the
+          selector box.  For example if you enter
+          <programlisting id="comment_text_146">body:contains('Check in message')</programlisting></para>
+        <para>Then when you visit the checkin page you will hear an alert.</para>
+      </section>
     </section>
   </chapter>
 
