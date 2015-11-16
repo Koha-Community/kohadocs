@@ -31937,21 +31937,12 @@ Initials: E</programlisting></para>
         <para>To merge bibliographic records together you will want to go to the Cataloging module
           and perform a search. </para>
         <para>If you see duplicates on that search results screen you can check the boxes next to
-          the duplicates and click the 'Merge selected' button at the top of the results. If you
-          choose more than or fewer than 2, you will be presented with an error:</para>
-              <screenshot>
-                <screeninfo>Merge Items Error</screeninfo>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="images/lists/merge2rec.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
+          the duplicates and click the 'Merge selected' button at the top of the results. </para>
               <para>Once you have selected the records you want to merge, click the 'Merge selected'
-                button at the top of the list. You will be asked which of the two records you would
-                like to keep as your primary record and which will be deleted after the merge. If
-                the records were created using different frameworks, Koha will also ask you what
-                Framework you would like the newly merged record to use.</para>
+          button at the top of the list. You will be asked which of the records you would like to
+          keep as your primary record and which will be deleted after the merge. If the records were
+          created using different frameworks, Koha will also ask you what Framework you would like
+          the newly merged record to use.</para>
               <screenshot>
                 <screeninfo>Choose Primary Record for Merge</screeninfo>
                 <mediaobject>
@@ -31960,11 +31951,11 @@ Initials: E</programlisting></para>
                   </imageobject>
                 </mediaobject>
               </screenshot>
-              <para>You will be presented with the MARC for both of the records (each accessible by
-                tabs labeled with the bib numbers for those records). By default the entire first
-                record will be selected, uncheck the fields you don't want in the final
-                (destination) record and then move on to the second tab to choose which fields
-                should be in the final (destination) record.</para>
+              <para>You will be presented with the MARC for all of the records (each accessible by
+          tabs labeled with the bib numbers for those records). By default the entire first record
+          will be selected, uncheck the fields you don't want in the final (destination) record and
+          then move on to the second tab to choose which fields should be in the final (destination)
+          record.</para>
               <screenshot>
                 <screeninfo>Merging Records</screeninfo>
                 <mediaobject>
@@ -31983,6 +31974,36 @@ Initials: E</programlisting></para>
                   </imageobject>
                 </mediaobject>
               </screenshot>
+        <para>Below the records you are merging is an option to enter fields to report on. This will
+          allow you to control what fields you see on the merge confirmation page:</para>
+        <screenshot>
+          <screeninfo>Merge report fields</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/lists/mergereportvalues.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>If you enter nothing you will be presented with a confirmation of biblionumbers
+          only</para>
+        <screenshot>
+          <screeninfo>Merge report</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/lists/mergeblankreport.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>If you enter fields you will see those on the confirmation page (you can set defaults
+          with the MergeReportFields preference)</para>
+        <screenshot>
+          <screeninfo>Merge report</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/lists/mergereport.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
               <para>Once you have completed your selections click the 'merge' button. The primary
                 record will now CONTAIN the data you chose for it as well as all of the
                 items/holdings from both bib records, and the second record will be deleted.<important>
