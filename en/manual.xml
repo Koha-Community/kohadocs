@@ -16626,6 +16626,18 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
                 entering a number in the 'Current checkouts allowed' field</para>
             </listitem>
             <listitem>
+              <para>If you're allowing <link linkend="OnSiteCheckouts">OnSiteCheckouts</link> then
+                you may also want to set a limit on the number of items patron's can have onsite.<itemizedlist>
+                  <listitem>
+                    <note>
+                      <para>This setting also depends on the <link
+                          linkend="ConsiderOnSiteCheckoutsAsNormalCheckouts"
+                          >ConsiderOnSiteCheckoutsAsNormalCheckouts</link> preference</para>
+                    </note>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
               <para>Define the period of time an item can be checked out to a patron by entering the
                 number of units (days or hours) in the 'Loan period' box.</para>
             </listitem>
@@ -16652,6 +16664,29 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <listitem>
               <para>Enter the 'Fine charging interval' in the unit you set (ex. charge fines every 1
                 day, or every 2 hours)</para>
+            </listitem>
+            <listitem>
+              <para>'When to charge' is most handy in libraries that have a fine charging interval
+                of more than 1 day.  <itemizedlist>
+                  <listitem>
+                    <para>End of interval<itemizedlist>
+                        <listitem>
+                          <para>Given a grace period of 2 days and a fine interval of 7 days, the
+                            first fine will appear 7 days after the due date, it will always take
+                            one fine interval (7 days), before the first fine is charged</para>
+                        </listitem>
+                      </itemizedlist></para>
+                  </listitem>
+                  <listitem>
+                    <para>Start of interval<itemizedlist>
+                        <listitem>
+                          <para>Given a grace period of 2 days and a fine interval of 7 days, the
+                            first fine will appear 2 days after the due date and the second fine 7
+                            days after the due date.</para>
+                        </listitem>
+                      </itemizedlist></para>
+                  </listitem>
+                </itemizedlist></para>
             </listitem>
             <listitem>
               <para>The 'Fine grace period' is the period of time an item can be overdue before you
@@ -16808,8 +16843,13 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             library if no other option is set in the forms below.</para>
           <itemizedlist>
             <listitem>
-              <para>In 'Total Current Checkouts Allowed' enter the total number of items patrons can
+              <para>In 'Total current checkouts allowed' enter the total number of items patrons can
                 have checked out at one time</para>
+            </listitem>
+            <listitem>
+              <para>In 'Total current on-site checkouts allowed' enter the total number of items
+                patrons can have checked out on site at a time (<link linkend="OnSiteCheckouts"
+                  >OnSiteCheckouts</link> needs to be set to 'Enable')</para>
             </listitem>
             <listitem>
               <para>Control where patrons can place holds from using the 'Hold Policy' menu</para>
