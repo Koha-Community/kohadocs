@@ -8346,205 +8346,187 @@ budget_code: 922$a</programlisting></para>
 
         <para><emphasis>Get there:</emphasis> More &gt; Administration &gt;
         Global System Preferences &gt; Logs</para>
-
-        <section id="AuthoritiesLog">
-          <title>AuthoritiesLog</title>
-
-          <para>Default: Don't log</para>
-
-          <para>Asks: ___ changes to authority records.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
+        <section id="debuggingprefs">
+          <title>Debugging</title>
+          <section id="DumpTemplateVarsIntranet">
+            <title>DumpTemplateVarsIntranet</title>
+            <para>Default: Don't</para>
+            <para>Asks: ___  dump all Template Toolkit variable to a comment in the html source for
+              the staff intranet. </para>
+            <para>Value: <itemizedlist>
+                <listitem>
+                  <para>Don't </para>
+                </listitem>
+                <listitem>
+                  <para>Do</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="DumpTemplateVarsOpac">
+            <title>DumpTemplateVarsOpac</title>
+            <para>Default: Don't</para>
+            <para>Asks: ___  dump all Template Toolkit variable to a comment in the html source for
+              the OPAC. </para>
+            <para>Value: <itemizedlist>
+                <listitem>
+                  <para>Don't </para>
+                </listitem>
+                <listitem>
+                  <para>Do</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
         </section>
-
-        <section id="BorrowersLog">
-          <title>BorrowersLog</title>
-
-          <para>Default: Log</para>
-
-          <para>Asks: ___ changes to patron records.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="CataloguingLog">
-          <title>CataloguingLog</title>
-
-          <para>Default: Don't log</para>
-
-          <para>Asks: ___ any changes to bibliographic or item records.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Since this occurs whenever a book is cataloged, edited, or
-            checked in or out it can be very resource intensive - slowing down
-            your system.</para>
-          </important>
-        </section>
-        <section id="CronjobLog">
-          <title>CronjobLog</title>
-          <para>Default: Don't log</para>
-          <para>Asks: ___  information from cron jobs. </para>
-          <para>Values:</para>
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="FinesLog">
-          <title>FinesLog</title>
-
-          <para>Default: Log</para>
-
-          <para>Asks: ___ when overdue fines are charged or automatically
-          forgiven.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="IssueLog">
-          <title>IssueLog</title>
-
-          <para>Default: Log</para>
-
-          <para>Asks: ___ when items are checked out.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="LetterLog">
-          <title>LetterLog</title>
-
-          <para>Default: Log</para>
-
-          <para>Asks: ___ when an automatic claim notice is sent.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-
-          <note>
-            <para>This log tracks all notices that go to patrons including the
-            overdue notices.</para>
-          </note>
-        </section>
-        <section id="ReportsLog">
-          <title>ReportsLog</title>
-          <para>Default: Don't log</para>
-          <para>Asks: ___ when reports are added, deleted or changed.</para>
-          <para>Values:</para>
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="ReturnLog">
-          <title>ReturnLog</title>
-
-          <para>Default: Log</para>
-
-          <para>Asks: ___ when items are returned.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-
-        <section id="SubscriptionLog">
-          <title>SubscriptionLog</title>
-
-          <para>Default: Log</para>
-
-          <para>Asks: ___ when serials are added, deleted or changed.</para>
-
-          <para>Values:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Don't log</para>
-            </listitem>
-
-            <listitem>
-              <para>Log</para>
-            </listitem>
-          </itemizedlist>
+        <section id="loggingprefs">
+          <title>Logging</title>
+          <section id="AuthoritiesLog">
+            <title>AuthoritiesLog</title>
+            <para>Default: Don't log</para>
+            <para>Asks: ___ changes to authority records.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="BorrowersLog">
+            <title>BorrowersLog</title>
+            <para>Default: Log</para>
+            <para>Asks: ___ changes to patron records.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="CataloguingLog">
+            <title>CataloguingLog</title>
+            <para>Default: Don't log</para>
+            <para>Asks: ___ any changes to bibliographic or item records.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Since this occurs whenever a book is cataloged, edited, or checked in or out it
+                can be very resource intensive - slowing down your system.</para>
+            </important>
+          </section>
+          <section id="CronjobLog">
+            <title>CronjobLog</title>
+            <para>Default: Don't log</para>
+            <para>Asks: ___ information from cron jobs. </para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="FinesLog">
+            <title>FinesLog</title>
+            <para>Default: Log</para>
+            <para>Asks: ___ when overdue fines are charged or automatically forgiven.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="IssueLog">
+            <title>IssueLog</title>
+            <para>Default: Log</para>
+            <para>Asks: ___ when items are checked out.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="LetterLog">
+            <title>LetterLog</title>
+            <para>Default: Log</para>
+            <para>Asks: ___ when an automatic claim notice is sent.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+            <note>
+              <para>This log tracks all notices that go to patrons including the overdue
+                notices.</para>
+            </note>
+          </section>
+          <section id="ReportsLog">
+            <title>ReportsLog</title>
+            <para>Default: Don't log</para>
+            <para>Asks: ___ when reports are added, deleted or changed.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="ReturnLog">
+            <title>ReturnLog</title>
+            <para>Default: Log</para>
+            <para>Asks: ___ when items are returned.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="SubscriptionLog">
+            <title>SubscriptionLog</title>
+            <para>Default: Log</para>
+            <para>Asks: ___ when serials are added, deleted or changed.</para>
+            <para>Values:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Don't log</para>
+              </listitem>
+              <listitem>
+                <para>Log</para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </section>
       </section>
 
