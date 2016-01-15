@@ -14614,22 +14614,21 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
             <itemizedlist>
               <listitem>
-                <para>For the Open Archives Initiative-Protocol for Metadata
-                Harvesting (OAI-PMH) there are two groups of 'participants':
-                Data Providers and Service Providers. Data Providers (open
-                archives, repositories) provide free access to metadata, and
-                may, but do not necessarily, offer free access to full texts
-                or other resources. OAI-PMH provides an easy to implement, low
-                barrier solution for Data Providers. Service Providers use the
-                OAI interfaces of the Data Providers to harvest and store
-                metadata. Note that this means that there are no live search
-                requests to the Data Providers; rather, services are based on
-                the harvested data via OAI-PMH. Koha at present can only act
-                as a Data Provider. It can not harvest from other
-                repositories. The biggest stumbling block to having Koha
-                harvest from other repositories is that MARC is the only
-                metadata format that Koha indexes natively. Visit <ulink url="http://www.oaforum.org/tutorial/english/page3.htm">http://www.oaforum.org/tutorial/english/page3.htm</ulink>
-                for diagrams of how OAI-PMH works.</para>
+                <para>Once enabled you can visit http://YOURKOHACATALOG/cgi-bin/koha/oai.pl to see
+                  your file. For the Open Archives Initiative-Protocol for Metadata Harvesting
+                  (OAI-PMH) there are two groups of 'participants': Data Providers and Service
+                  Providers. Data Providers (open archives, repositories) provide free access to
+                  metadata, and may, but do not necessarily, offer free access to full texts or
+                  other resources. OAI-PMH provides an easy to implement, low barrier solution for
+                  Data Providers. Service Providers use the OAI interfaces of the Data Providers to
+                  harvest and store metadata. Note that this means that there are no live search
+                  requests to the Data Providers; rather, services are based on the harvested data
+                  via OAI-PMH. Koha at present can only act as a Data Provider. It can not harvest
+                  from other repositories. The biggest stumbling block to having Koha harvest from
+                  other repositories is that MARC is the only metadata format that Koha indexes
+                  natively. Visit <ulink url="http://www.oaforum.org/tutorial/english/page3.htm"
+                    >http://www.oaforum.org/tutorial/english/page3.htm</ulink> for diagrams of how
+                  OAI-PMH works.</para>
               </listitem>
             </itemizedlist>
 
@@ -46171,8 +46170,25 @@ print theme('pages_catalog');</programlisting>
 
     <section id="OAI-PMHservice">
       <title>OAI-PMH</title>
-
-      <para/>
+      <para>For the Open Archives Initiative-Protocol for Metadata Harvesting (OAI-PMH) there are
+        two groups of 'participants': Data Providers and Service Providers. Data Providers (open
+        archives, repositories) provide free access to metadata, and may, but do not necessarily,
+        offer free access to full texts or other resources. OAI-PMH provides an easy to implement,
+        low barrier solution for Data Providers. Service Providers use the OAI interfaces of the
+        Data Providers to harvest and store metadata. Note that this means that there are no live
+        search requests to the Data Providers; rather, services are based on the harvested data via
+        OAI-PMH. </para>
+      <para>Koha at present can only act as a Data Provider. It can not harvest from other
+        repositories. The biggest stumbling block to having Koha harvest from other repositories is
+        that MARC is the only metadata format that Koha indexes natively. Visit <ulink
+          url="http://www.oaforum.org/tutorial/english/page3.htm"
+          >http://www.oaforum.org/tutorial/english/page3.htm</ulink> for diagrams of how OAI-PMH
+        works.</para>
+      <para>Learn more about OAI-PMH at: <ulink url="http://www.openarchives.org/pmh/"
+          >http://www.openarchives.org/pmh/</ulink></para>
+      <para>To enable OAI-PMH in Koha edit the <link linkend="OAI-PMH">OAI-PMH</link> preference.
+        Once enabled you can visit http://YOURKOHACATALOG/cgi-bin/koha/oai.pl to see your
+        file.</para>
 
       <section id="oaiconfsample">
         <title>Sample OAI Conf File</title>
