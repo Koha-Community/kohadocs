@@ -11779,9 +11779,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </itemizedlist></para>
             <para>Description:<itemizedlist>
                 <listitem>
-                  <para>By default staff can see checkout to family members via the staff client.
+                  <para>By default staff can see checkouts to family members via the staff client.
                     This preference will allow guarantees (children) to grant permission to
-                    guarantors (guardians) to view their reading history via the public catalog.
+                    guarantors (guardians) to view their current checkouts via the public catalog.
                     This preference requires that you allow patrons to se their own privacy with the
                       <link linkend="OPACPrivacy">OPACPrivacy</link> preference.</para>
                 </listitem>
@@ -40589,6 +40589,16 @@ Initials: E</programlisting></para>
             </imageobject>
           </mediaobject>
         </screenshot>
+        <para>If their guarantee has allowed it via <link linkend="opacmyprivacy">their
+            privacy</link>, when the guarantor logs in they will see a tab labeled "Relatives'
+          checkouts" on their summary tab.<screenshot>
+            <screeninfo>Relatives' checkouts</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/relativecheckouts.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
 
         <para>Clicking on the 'Overdue' tab will show only the items that are
         overdue.</para>
@@ -40943,7 +40953,7 @@ Initials: E</programlisting></para>
               the <link linkend="AnonymousPatron">AnonymousPatron</link> preference set.</para>
           </important></para>
         <para>If you're allowing guarantees to grand permission to their guarantors to view their
-          reading history with the <link linkend="AllowPatronToSetCheckoutsVisibilityForGuarantor"
+          current checkouts with the <link linkend="AllowPatronToSetCheckoutsVisibilityForGuarantor"
             >AllowPatronToSetCheckoutsVisibilityForGuarantor</link> preference they will see that
           option on this screen.<screenshot>
             <screeninfo>AllowPatronToSetCheckoutsVisibilityForGuarantor</screeninfo>
@@ -40951,6 +40961,15 @@ Initials: E</programlisting></para>
               <imageobject>
                 <imagedata fileref="images/opac/AllowPatronToSetCheckoutsVisibilityForGuarantor.png"
                 />
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>When the guarantor logs in they will see a tab labeled "Relatives' checkouts" on their
+          summary tab.<screenshot>
+            <screeninfo>Relatives' checkouts</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/relativecheckouts.png"/>
               </imageobject>
             </mediaobject>
           </screenshot></para>
