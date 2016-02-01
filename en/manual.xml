@@ -11013,6 +11013,34 @@ budget_code: 922$a</programlisting></para>
                 </listitem>
               </itemizedlist></para>
           </section>
+          <section id="OpacResetPassword">
+            <title>OpacResetPassword</title>
+            <para>Default: not allowed</para>
+            <para>Asks: Library users are ___ to recover their password via e-mail in the
+              OPAC.</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>allowed<screenshot>
+                      <screeninfo>Forgot your password link</screeninfo>
+                      <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="images/admin/globalprefs/OpacResetPassword.png"/>
+                        </imageobject>
+                      </mediaobject>
+                    </screenshot></para>
+                </listitem>
+                <listitem>
+                  <para>not allowed</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference controls whether you present users of the public catalog
+                    with a 'Forgot your password' link or not.  Learn more in the <link
+                      linkend="resetpwopac">OPAC section</link> of this manual.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
 
           <section id="OpacTopissue">
             <title>OpacTopissue</title>
@@ -40662,6 +40690,37 @@ Initials: E</programlisting></para>
       account summary. If you would like to get to your account in the OPAC,
       you can click on your name in the top right of any page in the
       OPAC.</para>
+      <section id="resetpwopac">
+        <title>Resetting your password</title>
+        <para>If you have the OpacResetPassword set to allow patrons to reset their password they
+          can click 'Forgot your password?' link found under the log in box to reset their
+          passwords.</para>
+        <screenshot>
+          <screeninfo>'Forgot your password?' link</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/forgotpwlink.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Once clicked they will be presented with a form asking for their username and their
+          email address (patrons must have an email address on file to reset their password).<screenshot>
+            <screeninfo>Recover password</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/resetpw.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>The system will then email the patron instructions for resetting their password.<screenshot>
+            <screeninfo>Reset password confirmation</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/opac/resetconfirm.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+      </section>
 
       <section id="opacmysummary">
         <title>My Summary</title>
