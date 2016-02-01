@@ -11979,10 +11979,15 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>Description:<itemizedlist>
                 <listitem>
                   <para>The default privacy setting for each patron category can be set in the <link
-                      linkend="patcats">Patrons Categories</link> area.  If you set this preference
+                      linkend="patcats">Patrons Categories</link> area. If you set this preference
                     to 'allow' then patrons can change that for themselves via the OPAC.</para>
                 </listitem>
-              </itemizedlist></para>
+              </itemizedlist><important>
+                <para>If patron has chosen to have their reading history anonymized and you have
+                    <link linkend="StoreLastBorrower">StoreLastBorrower</link> set to "Don't store"
+                  then as soon as the item is checked in the last borrower will be
+                  anonymized.</para>
+              </important></para>
           </section>
 
           <section id="opacreadinghistory">
