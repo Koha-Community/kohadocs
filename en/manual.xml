@@ -11390,6 +11390,80 @@ budget_code: 922$a</programlisting></para>
             </itemizedlist>
           </section>
         </section>
+        <section id="opacpayments">
+          <title>Payments</title>
+          <para>These preferences will allow you control the tools you use to accept online payments
+            from your patrons via the OPAC.</para>
+          <section id="EnablePayPalOpacPayments">
+            <title>EnablePayPalOpacPayments &amp; PayPalSandboxMode</title>
+            <para>EnablePayPalOpacPayments Default: Don't all</para>
+            <para>PayPalSandboxMode Default: Sandbox</para>
+            <para>Asks: ___ patrons to make payments from the OPAC via PayPal in ___ mode. </para>
+            <para>EnablePayPalOpacPayments values:<itemizedlist>
+                <listitem>
+                  <para>Allow</para>
+                </listitem>
+                <listitem>
+                  <para>Don't allow</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>PayPalSandboxMode values:<itemizedlist>
+                <listitem>
+                  <para>Production<itemizedlist>
+                      <listitem>
+                        <para>Visit <ulink url="https://developer.paypal.com/"
+                            >https://developer.paypal.com/</ulink> to get information for accepting
+                          payments in production</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+                <listitem>
+                  <para>Sandbox<itemizedlist>
+                      <listitem>
+                        <para>Visit <ulink url="https://developer.paypal.com/developer/accounts/"
+                            >https://developer.paypal.com/developer/accounts/</ulink> to get
+                          information for your sandbox account</para>
+                      </listitem>
+                    </itemizedlist></para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>This preference will allow you to accept credit card payments via the OPAC
+                    for fines via PayPal.  You will need to set up your PayPal account and it is
+                    recommended that you run tests before using this in production. </para>
+                </listitem>
+              </itemizedlist></para>
+            <important>
+              <para>PayPayl's terms of service state that you cannot charge your patrons for the
+                processing fees and so this plugin will not add additional fees to the
+                charges.</para>
+            </important>
+          </section>
+          <section id="PayPalChargeDescription">
+            <title>PayPalChargeDescription</title>
+            <para>Default: Koha fee payment</para>
+            <para>Asks: The patron should see the charge description as ___</para>
+            <para>Description<itemizedlist>
+                <listitem>
+                  <para>This preference controls what the patron will see on their PayPal
+                    account/Bank account for this charge.</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="PayPalPwd">
+            <title>PayPalPwd</title>
+            <para>Asks: The password for the PayPal account to receive payments is ___</para>
+          </section>
+          <section id="PayPalSignature">
+            <title>PayPalSignature</title>
+            <para>Asks: The signature for the PayPal account to receive payments is ___</para>
+          </section>
+          <section id="PayPalUser">
+            <title>PayPalUser</title>
+            <para>Asks: The email address to receive PayPal payments is ___</para>
+          </section>
+        </section>
 
         <section id="opacpolicyprefs">
           <title>Policy</title>
