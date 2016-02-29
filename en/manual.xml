@@ -12138,6 +12138,24 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         </section>
         <section id="opacselfregistrationprefs">
           <title>Self Registration</title>
+          <section id="PatronSelfModificationBorrowerUnwantedField">
+            <title>PatronSelfModificationBorrowerUnwantedField</title>
+            <para>Default: password</para>
+            <para>Asks: The following <ulink
+                url="http://schema.koha-community.org/tables/borrowers.html">database
+                columns</ulink> will not appear on the patron self-modification screen: ___</para>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>This preference allows you to define what fields patrons can edit if you're
+                  allowing them to update their personal information via the public catalog with the
+                    <link linkend="OPACPatronDetails">OPACPatronDetails</link> preference.</para>
+              </listitem>
+            </itemizedlist>
+            <important>
+              <para>Separate columns with |</para>
+            </important>
+          </section>
           <section id="PatronSelfRegistration">
             <title>PatronSelfRegistration</title>
             <para>Default: Don't allow</para>
@@ -12213,6 +12231,7 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           </section>
           <section id="PatronSelfRegistrationBorrowerUnwantedField">
             <title>PatronSelfRegistrationBorrowerUnwantedField</title>
+            <para>Default: password</para>
             <para>Asks: The following database columns will not appear on the patron entry screen:
               ___</para>
             <para>Description:</para>
