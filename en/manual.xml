@@ -12919,7 +12919,9 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <title> SMSSendDriver, SMSSendUsername, and SMSSendPassword </title>
             <para>Asks: Use the SMS::Send:: ___ driver to send SMS messages. Define a username/login
               ___ and a password ___.</para>
-            <para>Some examples of values for the driver are:</para>
+            <para>There are two options for using SMS in Koha.  You can use the Email protocol for
+              free by entering 'Email' as the SMSSendDriver or you can pay for a SMS driver.  Some
+              examples of values for the driver are:</para>
             <itemizedlist>
               <listitem>
                 <para>SMS::Send::Us::Ipipi</para>
@@ -20156,6 +20158,52 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           to a specific page </para>
         <para>Any ID selector (where html contains id="name_of_id" ) and can also be a trigger as:
           #name_of_selector </para>
+      </section>
+      <section id="smsadmin">
+        <title>SMS cellular providers</title>
+        <important><para>This option will only appear if the <link linkend="SMSSendDriver">SMSSendDriver</link>
+          preference is set to 'Email'</para></important>
+        <para>From here you can enter as many cellular providers as you need to send SMS notices to
+          your patrons using the email protocol.<screenshot>
+            <screeninfo>SMS Providers</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/additional/smsproviders.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>Some examples in the US are:<itemizedlist>
+            <listitem>
+              <para>Sprint messaging.sprintpcs.com </para>
+            </listitem>
+            <listitem>
+              <para>Verizon vtext.com </para>
+            </listitem>
+            <listitem>
+              <para>T-Mobile tmomail.net </para>
+            </listitem>
+            <listitem>
+              <para>AT&amp;T txt.att.net</para>
+            </listitem>
+          </itemizedlist></para>
+        <para>To add new providers enter the details in the form and click 'Add new' to save.<screenshot>
+            <screeninfo>Add SMS Provider</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/additional/smsadd.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>These options will appear in the OPAC for patrons to choose from on the <link
+            linkend="opacmymsgs">messaging tab</link> if you have <link
+            linkend="EnhancedMessagingPreferences">EnhancedMessagingPreferences</link> enabled.<screenshot>
+            <screeninfo>Options for providers in the OPAC</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/admin/additional/smsopacoptions.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
       </section>
     </section>
   </chapter>
@@ -41284,9 +41332,10 @@ Initials: E</programlisting></para>
           </mediaobject>
         </screenshot>
 
-        <para>If you also allow SMS messages with the <link linkend="SMSSendDriver">SMSSendDriver</link> preference, you will see
-        an additional column to receive these messages as SMS (or text
-        messages) and a field for a cell (or SMS) number.</para>
+        <para>If you use an outside driver for sending text messages set with the <link
+            linkend="SMSSendDriver">SMSSendDriver</link> preference, you will see an additional
+          column to receive these messages as SMS (or text messages) and a field for a cell (or SMS)
+          number.</para>
 
         <screenshot>
           <screeninfo>SMSSendDriver in the OPAC</screeninfo>
@@ -41294,6 +41343,19 @@ Initials: E</programlisting></para>
           <mediaobject>
             <imageobject>
               <imagedata fileref="images/opac/OPACSMSSendDriver.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>If you are using the Email protocol for sending text messages set with the <link
+            linkend="SMSSendDriver">SMSSendDriver</link> preference, you will see an additional
+          column to receive these messages as SMS (or text messages), a field for a cell (or SMS)
+          number, and a pull down listing <link linkend="smsadmin">cellular providers entered in
+            administration</link>.</para>
+        <screenshot>
+          <screeninfo>SMSSendDriver in the OPAC</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/opac/smsopac.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
