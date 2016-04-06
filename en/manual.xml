@@ -12432,39 +12432,50 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <title> SMSSendDriver, SMSSendUsername, and SMSSendPassword </title>
             <para>Asks: Use the SMS::Send:: ___ driver to send SMS messages. Define a username/login
               ___ and a password ___.</para>
-            <para>Some examples of values for the driver are:</para>
-            <itemizedlist>
-              <listitem>
-                <para>SMS::Send::Us::Ipipi</para>
-              </listitem>
-              <listitem>
-                <para>SMS::Send::US::TMobile</para>
-              </listitem>
-              <listitem>
-                <para>SMS::Send::US::Verizon</para>
-              </listitem>
-              <listitem>
-                <para>SMS::Send::IN::Unicel</para>
-              </listitem>
-            </itemizedlist>
-            <para>Additional values can be found here: <ulink
-                url="http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all"
-                >http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all </ulink></para>
-            <important>
-              <para>Only drivers available as Perl modules will work in this preference, so make
-                sure a Perl module is available before choosing an SMS service.</para>
-            </important>
-            <para>Once a driver is entered in the preference an option will appear in the staff
-              client and the OPAC on the patron messaging form to choose to receive messages as
-              SMS</para>
-            <screenshot>
-              <screeninfo>SMSSendDriver Options</screeninfo>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="images/admin/globalprefs/SMSSendDriver.png"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
+            <para>
+              <important>
+                <para> Please refer to your national laws concerning the sending of bulk SMS
+                  messages before enabling this feature.</para>
+              </important>
+            </para>
+            <para>Description:<itemizedlist>
+                <listitem>
+                  <para>Some examples of values for the driver are:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>SMS::Send::Us::Ipipi</para>
+                    </listitem>
+                    <listitem>
+                      <para>SMS::Send::US::TMobile</para>
+                    </listitem>
+                    <listitem>
+                      <para>SMS::Send::US::Verizon</para>
+                    </listitem>
+                    <listitem>
+                      <para>SMS::Send::IN::Unicel</para>
+                    </listitem>
+                  </itemizedlist>
+                  <para>Additional values can be found here: <ulink
+                      url="http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all"
+                      >http://search.cpan.org/search?query=sms%3A%3Asend&amp;mode=all
+                    </ulink></para>
+                  <important>
+                    <para>Only drivers available as Perl modules will work in this preference, so
+                      make sure a Perl module is available before choosing an SMS service.</para>
+                  </important>
+                  <para>Once a driver is entered in the preference an option will appear in the
+                    staff client and the OPAC on the patron messaging form to choose to receive
+                    messages as SMS</para>
+                  <screenshot>
+                    <screeninfo>SMSSendDriver Options</screeninfo>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="images/admin/globalprefs/SMSSendDriver.png"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot>
+                </listitem>
+              </itemizedlist></para>
             <important>
               <para>You must allow <link linkend="EnhancedMessagingPreferences"
                   >EnhancedMessagingPreferences</link> for this to work.</para>
