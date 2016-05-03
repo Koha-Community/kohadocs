@@ -22854,6 +22854,65 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
         <para>Once you're sure everything is the way you want you can click the 'Modify selected
           records' button and your records will be modified.</para>
       </section>
+      <section id="autoitemagemod">
+        <title>Automatic item modifications by age</title>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Get there:</emphasis> More &gt; Tools &gt; Catalog &gt; Automatic item
+              modifications by age</para>
+          </listitem>
+        </itemizedlist>
+        <para>This tool allows librarians to update item specific fields when an item reaches a
+          certain age.</para>
+        <para>
+          <note>
+            <para>Staff need the items_batchmod permission to access this tool</para>
+          </note>
+        </para>
+        <para>
+          <note>
+            <para>The settings in this tool will be acted upon by the corresponding cron job</para>
+          </note>
+        </para>
+        <para>To create a new rule click the 'Edit' button at the top of the page<screenshot>
+            <screeninfo>Automatic item modifications by age</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/tools/autoitemmodage/newrule.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
+        <para>In the form that appears you can set :<itemizedlist>
+            <listitem>
+              <para>the age in days at which the item will update (Age)</para>
+            </listitem>
+            <listitem>
+              <para>what criteria is needed to trigger the update (Conditions)</para>
+            </listitem>
+            <listitem>
+              <para>what changes are made when the script runs (Substitutions)</para>
+            </listitem>
+          </itemizedlist>
+        </para>
+        <screenshot>
+          <screeninfo>New rule</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/tools/autoitemmodage/ruleform.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Once you're done you can click the 'Add this rule' link and then add additional rules
+          or you can click the 'Submit these rules' button to save your changes.</para>
+        <screenshot>
+          <screeninfo>List of rules</screeninfo>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/tools/autoitemmodage/savedrule.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </section>
 
       <section id="exportbibs">
         <title>Export Data (MARC &amp; Authorities)</title>
