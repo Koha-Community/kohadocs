@@ -4718,20 +4718,47 @@ budget_code: 922$a</programlisting></para>
             </important>
           </section>
           <section id="decreaseLoanHighHolds">
-            <title>decreaseLoanHighHolds, decreaseLoanHighHoldsDuration and
-              decreaseLoanHighHoldsValue</title>
-            <para>Asks: ___ the reduction of loan period to ___ days for items with more than ___
-              holds. </para>
+            <title>decreaseLoanHighHolds, decreaseLoanHighHoldsDuration, decreaseLoanHighHoldsValue,
+              decreaseLoanHighHoldsControl, and decreaseLoanHighHoldsIgnoreStatuses </title>
+            <para>Asks: ___ the reduction of loan period ___ to days for items with more than ___
+              holds ___ . Ignore items with the following statuses when counting items ___</para>
             <para>decreaseLoanHighHolds default: Don't enable</para>
+            <para>decreaseLoanHighHoldsControl default: on the record</para>
             <para>decreaseLoanHighHolds values:<itemizedlist>
                 <para>Don't enable</para>
                 <listitem>
                   <para>Enable</para>
                 </listitem>
-              </itemizedlist>Description:<itemizedlist>
+              </itemizedlist></para>
+            <para>decreaseLoanHighHoldsControl values:<itemizedlist>
+                <listitem>
+                  <para>over the number of holdable items on the records</para>
+                </listitem>
+                <listitem>
+                  <para>on the record</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>decreaseLoanHighHoldsIgnoreStatuses values:<itemizedlist>
+                <listitem>
+                  <para>[Select All]</para>
+                </listitem>
+                <listitem>
+                  <para>Damages</para>
+                </listitem>
+                <listitem>
+                  <para>Lost</para>
+                </listitem>
+                <listitem>
+                  <para>Not for loan</para>
+                </listitem>
+                <listitem>
+                  <para>Withdrawn</para>
+                </listitem>
+              </itemizedlist></para>
+            <para>Description:<itemizedlist>
                 <listitem>
                   <para>These preferences let you change the loan length for items that have many
-                    holds on them.  This will not effect items that are already checked out, but
+                    holds on them. This will not effect items that are already checked out, but
                     items that are checked out after the decreaseLoanHighHoldsValue is met will only
                     be checked out for the number of days entered in the
                     decreaseLoanHighHoldsDuration preference.</para>
@@ -4739,7 +4766,8 @@ budget_code: 922$a</programlisting></para>
                     <screeninfo>Warning on checkout</screeninfo>
                     <mediaobject>
                       <imageobject>
-                        <imagedata fileref="images/admin/globalprefs/decreaseLoanHighHoldsDuration.png"/>
+                        <imagedata
+                          fileref="images/admin/globalprefs/decreaseLoanHighHoldsDuration.png"/>
                       </imageobject>
                     </mediaobject>
                   </screenshot>
