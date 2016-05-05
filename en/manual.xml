@@ -558,6 +558,140 @@ budget_code: 922$a</programlisting></para>
             ___</para>
           </section>
         </section>
+        <section id="googleopenid">
+          <title>Google OpenID Connect</title>
+          <para>Visit the <ulink url="https://console.developers.google.com/">Google Developers
+              Console</ulink> to obtain OAuth 2.0 credentials such as a client ID and client secret
+            that are known to both Google and your application.<screenshot>
+              <screeninfo>Developers Console</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/admin/globalprefs/Google/1project.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot><itemizedlist>
+              <listitem>
+                <para>Create a project, and give it some details to help you identify it
+                  later</para>
+                <screenshot>
+                  <screeninfo>New Project</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/2newproject.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+              <listitem>
+                <para>Next search for the Google Identity and Access Management API</para>
+                <screenshot>
+                  <screeninfo>API Search</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/3identity.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+              <listitem>
+                <para>Enable the Google Identity and Access Management API</para>
+                <screenshot>
+                  <screeninfo>Enable Google Identity</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/4enable.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+              <listitem>
+                <para>Go to 'Credentials' and set the OAuth cosent screen values</para>
+                <screenshot>
+                  <screeninfo>OAuth Consent Screen</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/5consent.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+              <listitem>
+                <para>Next choose to 'Create credentials' from the 'Credentials' page</para>
+                <screenshot>
+                  <screeninfo>Create credentials</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/6credtype.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+              <listitem>
+                <para>Choose 'Web application' from the 'Application type' menu and fill in the form
+                  presented</para>
+                <screenshot>
+                  <screeninfo>Create Client ID</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/7creds.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+                <itemizedlist>
+                  <listitem>
+                    <para>Set 'Authorized JavaScript origins' to your OPACBaseURL </para>
+                  </listitem>
+                  <listitem>
+                    <para>Change the 'Authorized Redirect URIs' to
+                      http://YOUROPAC/cgi-bin/koha/svc/auth/googleopenidconnect</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>You will be presented with your values for your client ID and your client
+                  secret after saving </para>
+                <screenshot>
+                  <screeninfo>OAuth Client ID and Secret</screeninfo>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="images/admin/globalprefs/Google/8oauth.png"/>
+                    </imageobject>
+                  </mediaobject>
+                </screenshot>
+              </listitem>
+            </itemizedlist></para>
+          <section id="GoogleOAuth2ClientID">
+            <title>GoogleOAuth2ClientID</title>
+            <para>Asks: Google OAuth2 Client ID ___</para>
+          </section>
+          <section id="GoogleOAuth2ClientSecret">
+            <title>GoogleOAuth2ClientSecret</title>
+            <para>Asks: Google OAuth2 Client Secret ___</para>
+          </section>
+          <section id="GoogleOpenIDConnect">
+            <title>GoogleOpenIDConnect</title>
+            <para>Default: Don't use</para>
+            <para>Asks ___  Google OpenID Connect login. <important>
+                <para>You will need to select OAuth2 when creating an app in the google cloud
+                  console, and set the web origin to your_opac_url and the redirect url to
+                  your_opac_url/cgi-bin/koha/svc/auth/googleopenidconnect . </para>
+              </important></para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't use</para>
+                </listitem>
+                <listitem>
+                  <para>Use</para>
+                </listitem>
+              </itemizedlist></para>
+          </section>
+          <section id="GoogleOpenIDConnectDomain">
+            <title>GoogleOpenIDConnectDomain</title>
+            <para>Asks: Google OpenID Connect Restrict to domain (or subdomain of this domain) ___. <note>
+                <para>Leave blank for all google domains </para>
+              </note></para>
+          </section>
+        </section>
 
         <section id="adminprefsinterface">
           <title>Interface options</title>
