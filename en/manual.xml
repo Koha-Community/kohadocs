@@ -12968,8 +12968,8 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
           <section id="EnhancedMessagingPreferences">
             <title>EnhancedMessagingPreferences</title>
             <para>Default: Allow</para>
-            <para>Asks: ___ patrons to choose which notices they receive and when they receive
-              them.</para>
+            <para>Asks: ___ staff to manage which notices patrons will receive and when they will
+              receive them. </para>
             <para>Values:</para>
             <itemizedlist>
               <listitem>
@@ -12983,6 +12983,59 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               <para>This only applies to certain kinds of notices, overdue notices will be sent
                 based on the library's rules, not the patron's choice.</para>
             </important>
+            <note>
+              <para>To manage if patrons have also access to these settings, use <link
+                  linkend="EnhancedMessagingPreferencesOPAC"
+                >EnhancedMessagingPreferencesOPAC</link>. </para>
+            </note>
+            <para>Description:</para>
+            <itemizedlist>
+              <listitem>
+                <para>These messages are in addition to the overdue notices that the library sends.
+                  The difference between these notices and overdues is that the patron can opt-in
+                  and out of these. Setting this preference to 'Allow' will allow staff to choose
+                  for patrons to receive any one of the following messages:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Item Checkout : A notice that lists all the of the items the patron has
+                      just checked out and/or renewed, this is an electronic form of the checkout
+                      receipt</para>
+                  </listitem>
+                  <listitem>
+                    <para>Item Due : A notice on the day and item is due back at the library</para>
+                  </listitem>
+                  <listitem>
+                    <para>Hold Filled : A notice when you have confirmed the hold is waiting for the
+                      patron</para>
+                  </listitem>
+                  <listitem>
+                    <para>Item Checkin : A notice that lists all the of the items the patron has
+                      just checked in</para>
+                  </listitem>
+                  <listitem>
+                    <para>Advanced Notice : A notice in advance of the patron's items being due
+                      (Staff can choose the number of days in advance)</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section id="EnhancedMessagingPreferencesOPAC">
+            <title>EnhancedMessagingPreferencesOPAC</title>
+            <para>Default: Show</para>
+            <para>Asks: ___ patron messaging setting on the OPAC</para>
+            <para>Values:<itemizedlist>
+                <listitem>
+                  <para>Don't show</para>
+                </listitem>
+                <listitem>
+                  <para>Show</para>
+                </listitem>
+              </itemizedlist><important>
+                <para><link linkend="EnhancedMessagingPreferences"
+                    >EnhancedMessagingPreferences</link> must be enabled for messaging options to
+                  show in the OPAC</para>
+              </important></para>
             <para>Description:</para>
             <itemizedlist>
               <listitem>
