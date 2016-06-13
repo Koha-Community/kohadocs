@@ -5245,15 +5245,24 @@ budget_code: 922$a</programlisting></para>
           </section>
 
           <section id="holdqueueweight">
-            <title><link linkend="holdqueueweight">StaticHoldsQueueWeight &amp;
-            RandomizeHoldsQueueWeight</link></title>
+            <title><link linkend="holdqueueweight">StaticHoldsQueueWeight, HoldsQueueSkipClosed
+                &amp; RandomizeHoldsQueueWeight</link></title>
 
             <para>StaticHoldsQueueWeight Default: 0</para>
+            <para>HoldsQueueSkipClosed Default: open or closed</para>
 
             <para>RandomizeHoldsQueueWeight Default: in that order</para>
 
-            <para>Asks: Satisfy holds from the libraries ___ (as branchcodes,
-            separated by commas; if empty, uses all libraries) ___</para>
+            <para>Asks: Satisfy holds using items from the libraries ___ (as branchcodes, separated
+              by commas; if empty, uses all libraries) when they are ___ ___.</para>
+            <para>HoldsQueueSkipClosed Values:<itemizedlist>
+                <listitem>
+                  <para>open or closed</para>
+                </listitem>
+                <listitem>
+                  <para>open</para>
+                </listitem>
+              </itemizedlist></para>
 
             <para>RandomizeHoldsQueueWeight Values:</para>
 
