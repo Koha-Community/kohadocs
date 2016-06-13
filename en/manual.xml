@@ -17445,6 +17445,26 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
               </itemizedlist>
             </listitem>
             <listitem>
+              <para>Control if there is a limit to filling a hold based on the item's library<itemizedlist>
+                  <listitem>
+                    <para>any library</para>
+                  </listitem>
+                  <listitem>
+                    <para>item's home library</para>
+                  </listitem>
+                  <listitem>
+                    <para>item's holding library</para>
+                  </listitem>
+                  <listitem>
+                    <note>
+                      <para>The patron's home library should not affect whether a patron can place
+                        the hold, instead the hold will only be fillable when an item matching the
+                        pickup location becomes available.</para>
+                    </note>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
               <para>Control where the item returns to once it is checked in</para>
               <itemizedlist>
                 <listitem>
@@ -17525,6 +17545,25 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
             <para>These policies are based on the patron's home branch, not the branch that the
               reserving staff member is from.</para>
           </important>
+          <para>Control if there is a limit to filling a hold based on the item's library<itemizedlist>
+                    <listitem>
+                      <para>any library</para>
+                    </listitem>
+                    <listitem>
+                      <para>item's home library</para>
+                    </listitem>
+                    <listitem>
+                      <para>item's holding library</para>
+                    </listitem>
+                    <listitem>
+                      <note>
+                        <para>The patron's home library should not affect whether a patron can place
+                          the hold, instead the hold will only be fillable when an item matching the
+                          pickup location becomes available.</para>
+                      </note>
+                    </listitem>
+                  </itemizedlist></para>
+              
           <para>The various Return Policies have the following effects:</para>
           <itemizedlist>
             <listitem>
