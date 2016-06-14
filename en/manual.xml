@@ -37203,11 +37203,21 @@ Initials: E</programlisting></para>
     <section id="placingacqorder">
       <title><link linkend="placingacqorder">Placing Orders</link></title>
 
-      <para>To place an order you must first search for the vendor or
-      bookseller you want to send the order to.</para>
+      <para>To place an order you must first search for the vendor or bookseller you want to send
+        the order to. <important>
+          <para>If you are planning on using EDIFACT to submit your order you will need to first set
+            up your library's <link linkend="ediaccounts">EDI Accounts</link> and <link
+              linkend="libraryeans">EANs</link>.</para>
+        </important></para>
 
       <section id="createacqbasket">
         <title><link linkend="createacqbasket">Create a basket</link></title>
+        <para>
+          <note>
+            <para>If you're using EDI for ordering you will want to download your order record from
+              your vendor before starting the process in Koha.</para>
+          </note>
+        </para>
 
         <para>To create a basket you must first search for the vendor you're
         ordering from:</para>
@@ -37521,7 +37531,11 @@ Initials: E</programlisting></para>
           </listitem>
 
           <listitem id="orderfromstagedfile">
-            <para>The next option for ordering is to order from a staged record (<link linkend="stagemarc">learn more about staging records</link>).</para>
+            <para>The next option for ordering is to order from a staged record (<link
+                linkend="stagemarc">learn more about staging records</link>). <note>
+                <para>This is the option you will choose if you have an order file from your
+                  vendor.</para>
+              </note></para>
             <screenshot>
               <screeninfo>Staged Files to Order From</screeninfo>
               <mediaobject>
@@ -37817,7 +37831,15 @@ Initials: E</programlisting></para>
             </imageobject>
           </mediaobject>
         </screenshot>
-
+        <para>If you're using EDI for your order you can click the 'Create EDIFACT order' button
+          when you're done to send the file to the vendor and close the basket.<screenshot>
+            <screeninfo>EDIFACT Order</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/edifactorder.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot></para>
         <para>Once you're sure your basket is complete, you can click 'Close this basket' button to
           indicate that this basket is complete and has been sent to the vendor. </para>
         <important>
