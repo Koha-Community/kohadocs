@@ -38431,7 +38431,9 @@ Initials: E</programlisting></para>
     <section id="ediprocess">
       <title><link linkend="ediprocess">EDI Process</link></title>
       <para>Previous sections explain all ordering options, this section pulls out the parts related
-        to EDI or EDIFACT ordering to help those who are only using EDI for ordering.</para>
+        to EDI or EDIFACT ordering to help those who are only using EDI for ordering.  <important>
+          <para>Koha uses the EDIFACT standard not the X12 standard for electronic ordering.</para>
+        </important></para>
       <section id="ediquestions">
         <title><link linkend="ediquestions">EDI Questions for Vendors</link></title>
         <para>You will want to gather the following information from your vendors before beginning
@@ -38597,7 +38599,12 @@ Initials: E</programlisting></para>
         <para>Before you begin ordering using EDI you will want to take the following steps:<orderedlist>
             <listitem>
               <para>Ask your vendor/bookseller/jobber for <link linkend="ediquestions">connection
-                  information</link></para>
+                  information</link><orderedlist>
+                  <listitem>
+                    <para>It might also be beneficial to ask for a few sample EDIFACT files from the
+                      vendor</para>
+                  </listitem>
+                </orderedlist></para>
             </listitem>
             <listitem>
               <para>Communicate with your support provider or the community about whether you will
