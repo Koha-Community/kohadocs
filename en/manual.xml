@@ -38644,6 +38644,39 @@ Initials: E</programlisting></para>
             </listitem>
           </itemizedlist></para>
       </section>
+      <section id="ediordering">
+        <title><link linkend="ediordering">EDI Ordering</link></title>
+        <para>The first step in ordering using EDI happens on the book vendor's website.  Each
+          seller will use different language, but you will need to place your order on their site
+          and then download the MARC order file. Some language that you might see included "basket",
+          "order", "cart", and/or "MARC order." Once you have this MARC file downloaded to your
+          computer you will want to log in to Koha and continue the process there.</para>
+        <para>Visit the <link linkend="stagemarc">Stage MARC Records for Import</link> tool and
+          upload your file. Once presented with the confirmation screen proceed to
+          Acquisitions.</para>
+        <para>In Acquisitions <link linkend="createacqbasket">create a basket</link> for the vendor
+          you ordered from. From the basket, choose to <link linkend="orderfromstagedfile">order
+            from a staged file</link> and click 'Order' next to the file you downloaded from your
+          vendor and staged in Koha.</para>
+        <para>From the confirmation screen you will see all of the data in the MARC file related to
+          your order.  If you are not seeing fields such as fund and quanity filled in then be sure
+          to confirm that your <link linkend="MarcFieldsToOrder">MarcFieldsToOrder</link> preference
+          is set right.</para>
+        <para>Once you have added all of the items to the basket you can click the 'Create EDIFACT
+          order' button.</para>
+        <para>
+          <screenshot>
+            <screeninfo>EDIFACT Order</screeninfo>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="images/acquisitions/edifactorder.png"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+        <para>This will generate a pending file in the <link linkend="edifactmsg">EDIFACT
+            Messages</link> in Koha.</para>
+      </section>
     </section>
     <section id="edifactmsg">
       <title><link linkend="edifactmsg">EDIFACT Messages</link></title>
