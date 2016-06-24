@@ -38679,7 +38679,15 @@ Initials: E</programlisting></para>
           </screenshot>
         </para>
         <para>This will generate a pending file in the <link linkend="edifactmsg">EDIFACT
-            Messages</link> in Koha.</para>
+            Messages</link> in Koha. The pending files will be processed by the <link
+            linkend="edicron">EDI Cron Job</link> and sent to your vendor. </para>
+      </section>
+      <section id="ediinvoice">
+        <title><link linkend="ediinvoice">EDI Invoicing</link></title>
+        <para>When the book vendor is done processing your files they will send an invoice via EDI
+          as well.  The <link linkend="edicron">EDI Cron Job</link> will grab invoices and mark
+          items found in the invoice as received and update your funds without any need for manual
+          intervention.</para>
       </section>
     </section>
     <section id="edifactmsg">
