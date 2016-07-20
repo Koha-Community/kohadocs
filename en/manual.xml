@@ -1469,7 +1469,7 @@ budget_code: 922$a</programlisting></para>
                   immediately update all of the bib records linked to the authority with the new
                   authority record's data. If this is set to "Don't" then Koha won't edit bib
                   records when changes are made to authorities, rather, this is done later by the
-                    <link linkend="mergeauthcron">merge_authority.pl cronjob</link>. </para>
+                    <link linkend="mergeauthcron">merge_authority.pl cronjob</link>.</para>
               </listitem>
             </itemizedlist>
 
@@ -22212,6 +22212,107 @@ location: [STAFF, ISO]</programlisting>Will block items with an itype code of
 
           <para>A batch is a collection of patrons for whom you want to
           generate cards.</para>
+
+          <section id="addcardbatch">
+            <title><link linkend="addcardbatch">Add a Batch</link></title>
+
+            <para>To add a new batch, you want to click on the 'New batches' button at the top of
+              your page. Choosing the menu item 'Manage batches' on the left a list of already
+              defined batches is displayed. In this display you can either select a batch for
+              editing or add a new batch.</para>
+
+            <screenshot>
+              <screeninfo>New Batch Button</screeninfo>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/patroncards/newbatch.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <para> For a new batch a message pops up and directs you to select patrons to be
+              processed in this batch.<screenshot>
+                <screeninfo>No items in batch</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/noitemsbatch.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+
+            <para>After choosing the 'Add item(s)' button the Patron Search window pops up.<screenshot>
+                <screeninfo>Patron search</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/patronsearch.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>From here you can search for patrons to add to your batch by any part of their
+              name, their category and/or library. Entering * in the search box will display all the
+              patrons. <screenshot>
+                <screeninfo>Patron search results</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/addpatrons.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>From the results you can add patrons to the batch by clicking the 'Add' button.
+              After adding patrons from the results you can start over and perform another search or
+              click 'Close' at the bottom of the screen to indicate that you are done. You will then
+              be presented with your batch.<screenshot>
+                <screeninfo>Patron batch</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/batchsummary.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>If you are satisfied with your batch you can proceed to export. If you want to
+              correct or even delete that batch the buttons to do so can be found at the top of your
+              screen. You can always come back here through the 'Manage &gt; Card batches' button. </para>
+            <para>If you would like to export all patron cards you can click 'Export card batch'
+              otherwise you can choose specific patrons to print cards for by checking the box to
+              the right of their names and then choose 'Export selected card(s)' at the top. </para>
+            <para>The export menu will ask you to choose a template, a layout and starting position
+              (where on the sheet should printing begin).<note>
+                <para>For the starting position if the first 6 labels have already been used on your
+                  sheet you can start printing on label in position 7 on the sheet. The labels are
+                  numbered left to right from top to bottom.</para>
+              </note><screenshot>
+                <screeninfo>Export batch</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/export.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>Once you click 'Export' you will be presented with a PDF of your labels for printing<screenshot>
+                <screeninfo>PDF Export</screeninfo>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="images/tools/patroncards/pdf.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot></para>
+            <para>When you open the PDF you will see the cards for printing</para>
+            <screenshot>
+              <screeninfo>Final cards</screeninfo>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="images/tools/patroncards/cards.png"/>
+                </imageobject>
+              </mediaobject>
+            </screenshot>
+            <para>The above image shows a layout that is made up of two textlines. The first one is
+              just plain text, the second one is composed of the &lt;firstname&gt; &lt;surname&gt; fields.
+              A patron image is printed (if available) and the barcode of patrons number is
+              displayed in code 39. All this is printed on a template with three columns and 8 rows
+              using position 1-3 here. When printing this PDF please take care that your printer
+              doesn't rescale the PDF (e.g do not fit to paper size) otherwise the printer will not
+              be able to print to the right place per your templates.</para>
+          </section>
         </section>
 
         <section id="managecardimages">
