@@ -11,4 +11,8 @@ Koha 16.11 Manual (en)
    administration
    tools
    patrons
+   circulation
+   cataloging
+   course_reserves
+   serials
    manual
