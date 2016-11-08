@@ -9,4 +9,6 @@ Koha 16.11 Manual (en)
 
    intro
    administration
+   tools
+   patrons
    manual
