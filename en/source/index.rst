@@ -6,6 +6,7 @@ Koha 16.11 Manual (en)
 
 .. include:: images.rst
 .. toctree::
+   :maxdepth: 2
 
    01_intro
    02_administration
