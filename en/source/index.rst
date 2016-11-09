@@ -15,4 +15,5 @@ Koha 16.11 Manual (en)
    06_cataloging
    07_course_reserves
    08_serials
+   09_acquisitions
    manual
