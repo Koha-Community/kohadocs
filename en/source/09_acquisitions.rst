@@ -1,3 +1,4 @@
+.. include:: images.rst
 
 Acquisitions
 ============

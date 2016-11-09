@@ -16,4 +16,8 @@ Koha 16.11 Manual (en)
    07_course_reserves
    08_serials
    09_acquisitions
+   10_lists
+   11_reports
+   12_opac
+   13_searching
    manual
