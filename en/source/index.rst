@@ -7,12 +7,12 @@ Koha 16.11 Manual (en)
 .. include:: images.rst
 .. toctree::
 
-   intro
-   administration
-   tools
-   patrons
-   circulation
-   cataloging
-   course_reserves
-   serials
+   01_intro
+   02_administration
+   03_tools
+   04_patrons
+   05_circulation
+   06_cataloging
+   07_course_reserves
+   08_serials
    manual
