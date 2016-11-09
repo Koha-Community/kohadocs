@@ -35,7 +35,12 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.coverage',
+    'sphinxcontrib.spelling',
 ]
+
+# Spelling options
+spelling_lang='en_US'
+spelling_word_list_filename='koha_spelling_wordlist.txt'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
