@@ -2,6 +2,7 @@ before_script:
     - apt-get update && apt-get install -y python3-sphinx python3-sphinxcontrib.spelling
 
 build_job:
+    stage: build
     script:
         - cd en
         - make clean
