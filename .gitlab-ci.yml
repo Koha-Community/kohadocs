@@ -8,11 +8,6 @@ build_job:
         - make clean
         - make html
     artifacts:
+        name: "$CI_BUILD_REF_NAME"
         paths:
         - en/build/html
-
-deploy to production:
-  stage: deploy
-  script: git push production HEAD:master
-  environment:
-    name: production
