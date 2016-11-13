@@ -9,3 +9,9 @@ build_job:
     artifacts:
         paths:
         - en/build/html
+
+deploy to production:
+  stage: deploy
+  script: git push production HEAD:master
+  environment:
+    name: production
