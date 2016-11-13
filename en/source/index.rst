@@ -21,4 +21,9 @@ Koha 16.11 Manual (en)
    11_reports
    12_opac
    13_searching
-   manual
+   14_plugins
+   15_implementation_checklist
+   16_sopac
+   17_cron_jobs
+   18_miscellaneous
+   19_license
