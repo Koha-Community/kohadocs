@@ -29,6 +29,7 @@ Other useful commands
 
 To find everything that you can do, you can just do
 > cd en/
+
 > make
 
 And it will list all the available options. Some useful ones are
