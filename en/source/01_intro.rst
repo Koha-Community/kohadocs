@@ -59,10 +59,3 @@ participate in making the best manual possible.
 The manual is stored in git at:
 http://git.koha-community.org/gitweb/?p=kohadocs.git;a=summary
 
-To edit the manual we recommend `oXygen <http://www.oxygenxml.com>`__ or
-other XML/DocBook editor. We ask that every chapter and section have an
-ID tag associated with it to enable permanent linking and searching.
-
-Patches to the manual should be emailed to the `DOCS mailing
-list <https://lists.koha-community.org/cgi-bin/mailman/listinfo/koha-docs>`__
-and will be reviewed by the Documentation Manager before inclusion.
