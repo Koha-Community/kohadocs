@@ -4,16 +4,16 @@ Cataloging
 ==========
 
 Before you start cataloging in Koha you're going to want to do some
-basic setup. Refer to the `Implementation Checklist <#implementation>`__
+basic setup. Refer to the :ref:`Implementation Checklist`
 for a full list of these things. Most importantly you're going to want
-to make sure that your `Frameworks <#marcbibframeworks>`__ are all
+to make sure that your :ref:`MARC Bibliographic Frameworks` are all
 defined the way you want. Once in the cataloging module you will not be
 able to add or remove fields and subfields so your frameworks must be
 ready before you start cataloging.
 
 You can also use OCLC Connexion to send records directly in to Koha. For
-more information on that please review the `OCLC Connexion Setup
-appendix <#oclcappendix>`__.
+more information on that please review the :ref:`OCLC Connexion Gateway` 
+setup Appendix.
 
 -  *Get there:* More > Cataloging
 
@@ -23,8 +23,8 @@ appendix <#oclcappendix>`__.
 In Koha the bibliographic record contains the main information related
 to the material. This includes things like the title, author, ISBN, etc.
 This information is stored in Koha in Marc (different flavors of Marc
-are supported in Koha). Once this information is saved, `items or
-holdings <#catitems>`__ can be attached.
+are supported in Koha). Once this information is saved, :ref:`Item Records`
+can be attached.
 
 `Adding Records <#addbibrec>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

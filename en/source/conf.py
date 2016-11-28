@@ -36,6 +36,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.coverage',
     'sphinxcontrib.spelling',
+    'sphinx.ext.autosectionlabel',
 ]
 
 # Spelling options
