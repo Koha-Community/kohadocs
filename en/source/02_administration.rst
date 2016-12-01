@@ -13591,7 +13591,8 @@ To create a new matching rule :
 
    -  'Search index' can be found by looking at the ccl.properties file
       on your system which tells the zebra indexing what data to search
-      for in the MARC data".
+      for in the MARC data".  Or you can review the index for standard 
+      index names used.  :ref:`Koha Search Indexes`
 
    -  'Score' - The number of 'points' a match on this field is worth.
       If the sum of each score is greater than the match threshold, the
