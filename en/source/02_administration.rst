@@ -42,8 +42,8 @@ Sort option at the top right of each section of preferences
 
 If the preference refers to monetary values (like
 `maxoutstanding <#maxoutstanding>`__) the currency displayed will be the
-default you set in your `Currency and Exchange
-Rate <#currexchangeadmin>`__ administration area. In the examples to
+default you set in your :ref:`Currencies and Exchange Rates` 
+administration area. In the examples to
 follow they will all read USD for U.S. Dollars.
 
     **Important**
@@ -124,12 +124,12 @@ were created when placing an order (e.g. o=5\|a="bar foo""). \_\_\_
 Description:
 
 -  This preference is used in conjunction with the
-   `AcqItemSetSubfieldsWhenReceived <#AcqItemSetSubfieldsWhenReceived>`__
+   :ref:`AcqItemSetSubfieldsWhenReceived`
    preference. If you have the system set to enter default values when
    you receive you will want to have those values revert back if reeipt
    is cancelled. This preference allows you to do that.
 
-`AcqItemSetSubfieldsWhenReceived <#AcqItemSetSubfieldsWhenReceived>`__
+`AcqItemSetSubfieldsWhenReceived`
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Upon receiving items, update their subfields if they were created
@@ -220,8 +220,8 @@ Values:
 
 Description:
 
--  When filing a claim in the `serials <#serialclaims>`__ or
-   `acquisitions <#acqclaims>`__ module this preference will allow for
+-  When filing a claim in the :ref:`Claim Late Serials` or
+   Acquisitions module this preference will allow for
    the sending of a copy of the email to the librarian.
 
 `CurrencyFormat <#CurrencyFormat>`__
@@ -263,7 +263,7 @@ record in a staged file.
 Description:
 
 -  This preference includes MARC fields to check for order information
-   to use when `ordering from a staged file <#orderfromstagedfile>`__ in
+   to use when you are trying to :ref:`Order from a staged file` in
    acquisitions. You can use the following fields: price, quantity,
    budget\_code, discount, sort1, sort2.
 
@@ -492,8 +492,8 @@ Values:
 Description:
 
 -  This preference controls the default value in the branch pull down
-   found at the top of the `circulation and fine
-   rules <#circfinerules>`__.
+   found at the top of the :ref:`Circulation and Fine
+   Rules`.
 
 `DefaultToLoggedInLibraryNoticesSlips <#DefaultToLoggedInLibraryNoticesSlips>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -512,7 +512,7 @@ Values:
 Description:
 
 -  This preference controls the default value in the branch pull down
-   found at the top of the `notices and slips <#notices>`__ tool.
+   found at the top of the :ref:`Notices & Slips` tool.
 
 `DefaultToLoggedInLibraryOverdueTriggers <#DefaultToLoggedInLibraryOverdueTriggers>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -531,8 +531,7 @@ Values:
 Description:
 
 -  This preference controls the default value in the branch pull down
-   found at the top of the `overdue notices and
-   triggers <#noticetriggers>`__.
+   found at the top of the :ref:`Overdue Notice/Status Triggers`.
 
 `delimiter <#delimiter>`__
 ''''''''''''''''''''''''''
@@ -597,7 +596,7 @@ Values:
 Description:
 
 -  This preference allows the system administrator to determine if users
-   will be able to set and see an `item type icon <#itemtypeadmin>`__
+   will be able to set and see an :ref:`item type icon`
    the catalog on both the OPAC and the Staff Client. The images will
    display in both the OPAC and the Staff Client/Intranet. If images of
    item types are disabled, text labels for item types will still appear

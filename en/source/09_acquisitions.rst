@@ -478,6 +478,9 @@ adding items to the order.
        This is the option you will choose if you have an order file from
        your vendor.
 
+Order from a staged file
+~~~~~~~~~~~~~~~~~~~~~~~~
+
    Staged Files to Order From
    |image822|
 
