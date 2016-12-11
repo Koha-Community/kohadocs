@@ -13591,7 +13591,8 @@ To create a new matching rule :
 
    -  'Search index' can be found by looking at the ccl.properties file
       on your system which tells the zebra indexing what data to search
-      for in the MARC data".
+      for in the MARC data".  Or you can review the index for standard 
+      index names used.  :ref:`Koha Search Indexes`
 
    -  'Score' - The number of 'points' a match on this field is worth.
       If the sum of each score is greater than the match threshold, the
@@ -13984,9 +13985,14 @@ The three first fields are required, the rest are optional
 -  Notes are simply for any descriptive notes you might want to add so
    that librarians know when to use this fund
 
--  Planning categories are used for statistical purposes. To learn more
-   about planning categories, check out the `Planning Category
-   FAQ <#planningcatfaq>`__.
+-  Planning categories are used for statistical purposes. If you will be
+   using the Asort1 and/or Asort2 authorised values lists to track your orders 
+   you need to select them when setting up the fund.  Select the Asort1/Asort2
+   option from the dropdown lists for the Statiscal 1 done on: and 
+   Statistical 2 done on: fields.  
+   
+-  To learn more about planning categories, check out the `Planning Category
+   FAQ <#planningcatfaq>`__.  
 
 When complete, click 'Submit' and you will be brought to a list of all
 of the funds for the budget.
