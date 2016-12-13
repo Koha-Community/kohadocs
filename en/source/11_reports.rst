@@ -138,7 +138,8 @@ Create Report from SQL
    can easily filter reports by groups. Report groups are set in the
    `REPORT\_GROUP <#reportgroup>`__ authorized value category or can be
    added on the fly when creating the report by choosing the 'or create'
-   radio button.Report group
+   radio button.Report groups set up in the authorised value category
+   need to have unique authorised values and descriptions.
 
    -  **Note**
 
@@ -150,7 +151,10 @@ Create Report from SQL
    that you can easily filter reports by groups and subgroups. Report
    subgroups are set in the `REPORT\_SUBGROUP <#reportsubgroup>`__
    authorized value category or can be added on the fly when creating
-   the report by choosing the 'or create' radio button.
+   the report by choosing the 'or create' radio button.  Report Subgroups
+   are set up with unique values in Authorised Value, and Description. 
+   The Description (OPAC) field needs to contain the authorised value for 
+   the Report Group that the Subgroup falls under.
 
    Report subgroup
    |image892|
