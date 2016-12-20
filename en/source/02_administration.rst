@@ -852,7 +852,7 @@ Description:
     This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information. If this
     field is empty data will be sent anonymously if you choose 'Share'
-    for the `UsageStats <#UsageStats>`__ preference.
+    for the `UsageStats <#usagestats>`__ preference.
 
 `UsageStatsLibraryType <#UsageStatsLibraryType>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -889,12 +889,11 @@ Description:
 -  This data is stored to help track usage of Koha around the world. If
    you choose to share your information, it will be published on the
    `Hea Koha community website <http://hea.koha-community.org>`__. This
-   information is sent using the `Usage Sharing Cron
-   Job <#usagecron>`__.
+   information is sent using the :ref:`Share Usage Stats` cronjob.
 
     **Important**
 
-    This preference depends on the `UsageStats <#UsageStats>`__
+    This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
 `UsageStatsLibraryUrl <#UsageStatsLibraryUrl>`__
@@ -908,12 +907,11 @@ Description:
 -  This data is stored to help track usage of Koha around the world. If
    you choose to share your information, it will be published on the
    `Hea Koha community website <http://hea.koha-community.org>`__. This
-   information is sent using the `Usage Sharing Cron
-   Job <#usagecron>`__.
+   information is sent using the :ref:`Share Usage Stats` cronjob.
 
     **Important**
 
-    This preference depends on the `UsageStats <#UsageStats>`__
+    This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
 `Authorities <#authprefs>`__
@@ -963,12 +961,12 @@ Values:
 
     **Important**
 
-    `BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ must be set to
+    `BiblioAddsAuthorities <#biblioaddsauthorities>`__ must be set to
     "allow" for this to have any effect
 
 Description:
 
--  When this and `BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ are
+-  When this and `BiblioAddsAuthorities <#biblioaddsauthorities>`__ are
    both turned on, automatically create authority records for headings
    that don't have any authority link when cataloging. When
    BiblioAddsAuthorities is on and AutoCreateAuthorities is turned off,
