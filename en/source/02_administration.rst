@@ -611,7 +611,7 @@ emails
 Description:
 
 -  By default replies to notice emails will go to the `library email
-   address <#libsgroups>`__, if you would like to specify a default
+   address <#libraries-groups>`__, if you would like to specify a default
    email address for all replies to notices you can do that here.
 
 `ReturnpathDefault <#ReturnpathDefault>`__
@@ -624,7 +624,7 @@ Description:
 
 -  The return path is the email address that bounces will be delivered
    to. By default bounced notices will go to the `library email
-   address <#libsgroups>`__, if you would like to specify a default
+   address <#libraries-groups>`__, if you would like to specify a default
    email address for bounces to go to then fill in this preference.
 
 `virtualshelves <#virtualshelves>`__
@@ -662,8 +662,7 @@ specified by their library (if any).
 
 -  Set IP address range in the library administration area
 
-   -  *Get there:* More > Administration > Basic Parameters > `Libraries
-      & Groups <#libsgroups>`__
+   -  *Get there:* More > Administration > Basic Parameters > :ref:`Libraries & Groups`
 
 Values:
 
@@ -827,7 +826,7 @@ preference will help us keep more accurate statistics on where Koha is
 being used. If you choose to share your information, it will be
 published on the `Hea Koha community
 website <http://hea.koha-community.org>`__. You will need to enable the
-`matching cron job <#usagecron>`__ to send this information at regular
+:ref:`Share Usage Stats` cronjob to send this information at regular
 intervals to the community.
 
 `UsageStats <#UsageStats>`__
@@ -848,8 +847,7 @@ Description:
 -  This data is stored to help track usage of Koha around the world. If
    you choose to share your information, it will be published on the
    `Hea Koha community website <http://hea.koha-community.org>`__. This
-   information is sent using the `Usage Sharing Cron
-   Job <#usagecron>`__.
+   information is sent using the :ref:`Share Usage Stats` cronjob.
 
 `UsageStatsCountry <#UsageStatsCountry>`__
 ''''''''''''''''''''''''''''''''''''''''''
@@ -861,12 +859,11 @@ Description:
 -  This data is stored to help track usage of Koha around the world. If
    you choose to share your information, it will be published on the
    `Hea Koha community website <http://hea.koha-community.org>`__. This
-   information is sent using the `Usage Sharing Cron
-   Job <#usagecron>`__.
+   information is sent using the :ref:`Share Usage Stats` cronjob.
 
     **Important**
 
-    This preference depends on the `UsageStats <#UsageStats>`__
+    This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
 `UsageStatsLibraryName <#UsageStatsLibraryName>`__
@@ -880,12 +877,11 @@ Description:
 -  This data is stored to help track usage of Koha around the world. If
    you choose to share your information, it will be published on the
    `Hea Koha community website <http://hea.koha-community.org>`__. This
-   information is sent using the `Usage Sharing Cron
-   Job <#usagecron>`__.
+   information is sent using the :ref:`Share Usage Stats` cron job.
 
     **Important**
 
-    This preference depends on the `UsageStats <#UsageStats>`__
+    This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information. If this
     field is empty data will be sent anonymously if you choose 'Share'
     for the `UsageStats <#UsageStats>`__ preference.
