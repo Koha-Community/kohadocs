@@ -786,38 +786,6 @@ Description:
    time before a session times out must be the same for both the Staff
    Client and the OPAC.
 
-`Mozilla Persona <#mozillapersona>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-`Persona <#persona>`__
-''''''''''''''''''''''
-
-Default: Don't allow
-
-Asks: \_\_\_ Mozilla persona for login.
-
-Values:
-
--  Allow
-
-   Persona login on OPAC
-   |image13|
-
--  Don't allow
-
-Description:
-
--  Mozilla Persona is an OpenID-like service that lets you log in to
-   multiple websites with your Mozilla credentials. If you allow Persona
-   log in for Koha then your patrons can log in to the OPAC using their
-   Mozilla Persona. Learn more about Persona on the `official Mozilla
-   site <http://www.mozilla.org/en-US/persona/>`__.
-
-       **Important**
-
-       For Persona log in to work you will need you
-       `OPACBaseURL <#OPACBaseURL>`__ preference to be set correctly.
-
 `Share anonymous usage statistics <#heaprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
