@@ -1639,7 +1639,7 @@ information you want to click the 'Export bibliographic records' tab.
       -  Limit to an acquisition date range
 
    -  If you'd like you can load a file of biblionumbers for the records
-      you would like to export
+      you would like to export.  File type needs to be .csv or .txt
 
       File of Records to Export
       |image309|
