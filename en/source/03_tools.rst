@@ -1685,7 +1685,7 @@ authority records' tab.
    Export authorities
    |image312|
 
--  Or you can choose a file of authids to exportAuthorities file
+-  Or you can choose a file of authids to exportAuthorities file.  File type needs to be .csv or .txt
 
 -  Next choose fields that you would like to exclude from the export
    separated by a space (no commas)
