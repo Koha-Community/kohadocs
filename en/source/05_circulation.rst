@@ -743,7 +743,7 @@ Place Hold Form
    certain date, or if you have limits on hold lengths, you can enter an
    expiration date for the hold in the 'Hold expires on date'
 
-   -  To have expired holds canceled automatically you will need to have
+   -  To have expired holds cancelled automatically you will need to have
       the `Expired Holds <#expiredholdscron>`__ cron job set to run on a
       regular basis.
 
@@ -769,7 +769,7 @@ Forget Search to Hold Option
 `Managing Holds <#manageholds>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Holds can be altered and canceled from the Holds tab found on the left
+Holds can be altered and cancelled from the Holds tab found on the left
 of the bibliographic record.
 
 Bibliographic Record Tabs
