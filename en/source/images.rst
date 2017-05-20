@@ -1150,7 +1150,6 @@
 .. |image1149| image:: images/appendix-services/sipcommand27.png
 .. |image1150| image:: images/appendix-services/sipcommand28.png
 .. |image1151| image:: images/appendix-services/sipcommand29.png
-
 .. |image1152| image:: images/installer/installer_login.png
 .. |image1153| image:: images/installer/create_library_screen_1.png
 .. |image1154| image:: images/installer/create_library_screen_1_example.png

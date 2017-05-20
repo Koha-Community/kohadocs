@@ -2362,8 +2362,8 @@ SIP2 communications consist of requests and responses.
 
 The self checkout machines are ‘dumb’ and so they send requests to the Koha server which runs logic which determines a particular outcome which is sent as a response message back to the client self checkout machine, and this is then conveyed to the user.
 
-.. warning:: Security notice regarding using SIP2 service
-	     			 To ensure that your SIP2 traffic is secure as it passes over the internet you need to make sure that you are using a VPN or   stunnel.
+.. warning:: Security notice regarding using SIP2 service:
+	     To ensure that your SIP2 traffic is secure as it passes over the internet you need to make sure that you are using a VPN or   stunnel.
 
 Setting up SIP2
 ----------------------
@@ -2405,7 +2405,7 @@ The account(s) you define in the SIPconfig.xml file are simply account(s) permit
 
 				The reason we want SIP2 users to only have circulate permissions rather than superlibrarian permissions is to reduce the access SIP2 users have to confidential patron data in case the system was compromised.
 
-	  			If the ACS or the SC were compromised then having all SIP2 users only having circulation permissions means that an intruder  		  would only be able to access patron data via the terminal rather than the web interface as well (which would be available with 	   superlibrarian permissions). So it is simply a matter of protecting your users.
+	  			If the ACS or the SC were compromised then having all SIP2 users only having circulation permissions means that an intruder would only be able to access patron data via the terminal rather than the web interface as well (which would be available with superlibrarian permissions). So it is simply a matter of protecting your users.
 
 |image1119|
 
