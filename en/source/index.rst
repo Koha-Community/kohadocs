@@ -8,7 +8,9 @@ Koha 16.11 Manual (en)
 .. toctree::
    :maxdepth: 2
 
-   01_intro
+
+   00_intro
+   01_installation
    02_administration
    03_tools
    04_patrons
@@ -27,3 +29,5 @@ Koha 16.11 Manual (en)
    17_cron_jobs
    18_miscellaneous
    19_license
+
+  
