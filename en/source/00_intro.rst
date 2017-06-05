@@ -26,25 +26,23 @@ Chrome.
 ------------------------------------
 
 This manual is always changing and suggestions for edits can be sent to
-the Documentation Manager via the `DOCS mailing
-list <https://lists.koha-community.org/cgi-bin/mailman/listinfo/koha-docs>`__.
+the Koha Documentation Team as a merge request via gitlab or via the 
+`koha-docs mailing list 
+<https://lists.koha-community.org/cgi-bin/mailman/listinfo/koha-docs>`__.
 The manual is organized by Koha module. At the start of most sections
 (and throughout) you will find 'Get there' tips. These lines tell you
 how to get to the section in Koha.
 
-For example: *Get there:* More > Administration > Global System
-Preferences
+For example: *Get there:* More > Administration > Global system
+preferences
 
-Get there: More > Administration > Global System Preferences
+Get there: More > Administration > Global system preferences
 
 The instruction tells you where to find the necessary menu option at the
 top of the Koha staff client.
 
 Links will be found throughout the manual to other sections in the
 manual and images will depict what should be seen on the screen.
-
-The manual can be searched using the custom Google search on the `Koha
-Documentation <http://koha-community.org/documentation/>`__ page.
 
 `Contributing to the Manual <#contributing>`__
 ----------------------------------------------
