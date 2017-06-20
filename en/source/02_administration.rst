@@ -7853,7 +7853,7 @@ Description:
 
     **Important**
 
-    This preference only applies to French systems at this time.
+    This preference only applies to installations using UNIMARC at this time.
 
 Default: Don't allow
 
