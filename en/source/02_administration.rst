@@ -2910,7 +2910,7 @@ Values:
 
 -  block renewing for only this item
 
-`OverdueNoticeBcc <#OverdueNoticeBcc>`__
+`NoticeBcc <#NoticeBcc>`__
 ''''''''''''''''''''''''''''''''''''''''
 
 Asks: Send all notices as a BCC to this email address \_\_\_
@@ -2922,11 +2922,6 @@ notice sent out to patrons.
 
     If you'd like more than one person to receive the blind copy you can
     simply enter in multiple email addresses separated by commas.
-
-    **Note**
-
-    The name of this preference is misleading, it does not only send
-    overdues, but all notices to the BCC address.
 
 `OverdueNoticeCalendar <#OverdueNoticeCalendar>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''
