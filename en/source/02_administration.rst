@@ -2103,6 +2103,126 @@ Values:
 *Get there:* More > Administration > Global System Preferences >
 Circulation
 
+
+
+
+`Article Requests <#articlerequestsprefs>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`ArticleRequests <#ArticleRequests>`__
+''''''''''''''''''''''''''''''''''''''
+
+Default: Don't enable
+
+Asks: \_\_\_ patrons to place article requests.
+
+Values:
+
+-  Enable
+
+-  Don't enable
+
+Description:
+
+-  This preference controls whether or not article requests are allowed to be placed by patrons in the OPAC.
+
+`ArticleRequestsMandatoryFields <#ArticleRequestsMandatoryFields>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: None selected
+
+Asks: For records that are record level or item level requestable, make the following fields mandatory \_\_\_
+
+Values:
+
+-  [Select all]
+
+-  Author
+
+-  Chapters
+
+-  Date
+
+-  Issue
+
+-  Pages
+
+-  Title
+
+-  Volume
+
+Description:
+
+-  This preference controls what fields must be filled in before an article request can be placed
+   for either a record level or item level request. Choosing [Select all] indicates that all fields
+   listed (Author, Chapters, Date, Issue, Pages, Title, Volume) must be completed before the article
+   request can be placed.
+
+`ArticleRequestsMandatoryFieldsItemsOnly <#ArticleRequestsMandatoryFieldsItemsOnly>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: None selected
+
+Asks: For records that are only item level requestable, make the following fields mandatory \_\_\_
+
+Values:
+
+-  [Select all]
+
+-  Author
+
+-  Chapters
+
+-  Date
+
+-  Issue
+
+-  Pages
+
+-  Title
+
+-  Volume
+
+Description:
+
+-  This preference controls what fields must be filled in before an article request can be placed
+   for an item level request only. Choosing [Select all] indicates that all fields
+   listed (Author, Chapters, Date, Issue, Pages, Title, Volume) must be completed before the article
+   request can be placed.
+
+`ArticleRequestsMandatoryFieldsRecordOnly <#ArticleRequestsMandatoryFieldsRecordOnly>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: None selected
+
+Asks: For records that are only record level requestable, make the following fields mandatory \_\_\_
+
+Values:
+
+-  [Select all]
+
+-  Author
+
+-  Chapters
+
+-  Date
+
+-  Issue
+
+-  Pages
+
+-  Title
+
+-  Volume
+
+Description:
+
+-  This preference controls what fields must be filled in before an article request can be placed
+   for a record level request only. Choosing [Select all] indicates that all fields
+   listed (Author, Chapters, Date, Issue, Pages, Title, Volume) must be completed before the article
+   request can be placed.
+
+
 `Batch Checkout <#batchcheckoutprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
