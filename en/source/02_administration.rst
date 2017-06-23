@@ -6494,6 +6494,19 @@ Values:
     This log tracks all notices that go to patrons including the overdue
     notices.
 
+`RenewalLog <#RenewalLog>`__
+''''''''''''''''''''''''''''
+
+Default:  Don't log
+
+Asks: \_\_\_ when items are renewed.
+
+Values:
+
+- Don't log
+
+- Log
+
 `ReportsLog <#ReportsLog>`__
 ''''''''''''''''''''''''''''
 
