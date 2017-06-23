@@ -4142,6 +4142,27 @@ Description:
    go. When that system preference set to "Transfer", branch transfers
    are created, so the holds may be cancelled.
 
+`Housebound module <#circhouseboundmoduleprefs>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`HouseboundModule <#HouseboundModule>`__
+''''''''''''''''''''''''''''''''''''''''
+
+Default: Disable
+
+Asks: \_\_\_ housebound module
+
+Values:
+
+-  Disable
+
+-  Enable
+
+Description:
+
+-  This preference enables or disables the Housebound module which
+   handles management of circulation to Housebound readers.
+
 `Interface <#circinterfaceprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -6576,6 +6597,19 @@ Values:
 Default: Log
 
 Asks: \_\_\_ when overdue fines are charged or automatically forgiven.
+
+Values:
+
+-  Don't log
+
+-  Log
+
+`HoldsLog <#HoldsLog>`__
+''''''''''''''''''''''''
+
+Default: Don't log
+
+Asks: \_\_\_ any actions on holds (create, cancel, suspend, resume, etc.).
 
 Values:
 
@@ -9512,6 +9546,33 @@ Values:
     **Important**
 
     This overrides `autoMemberNum <#autoMemberNum>`__ if on.
+    
+`CheckPrevCheckout <#CheckPrevCheckout>`__
+''''''''''''''''''''''''''''''''''''''''''
+
+Default: Do not
+
+Asks: \_\_\_ check borrower checkout history to see if the current item has been checked out before.
+
+Values:
+
+-  Do
+
+-  Do not
+
+-  Unless overridden, do
+
+-  Unless overridden, do not
+
+`DefaultPatronSearchFields <#DefaultPatronSearchFields>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: surname,firstname,othernames,cardnumber,userid
+
+Asks: \_\_\_ Comma separated list defining the default fields to be used during a patron search
+
+    **Important** possible values can be found in the borrowers table of Koha's schema
+    located at http://schema.koha-community.org/
 
 `EnableBorrowerFiles <#EnableBorrowerFiles>`__
 ''''''''''''''''''''''''''''''''''''''''''''''
@@ -11177,6 +11238,19 @@ Values:
 
 -  Show
 
+`IntranetCatalogSearchPulldown <#IntranetCatalogSearchPulldown>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't show
+
+Asks: \_\_\_ a search field pulldown for 'Search the catalog' boxes.
+
+Values:
+
+-  Don't show
+
+-  Show
+
 `StaffDetailItemSelection <#StaffDetailItemSelection>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -11265,26 +11339,36 @@ Values:
 
 *Get there:* More > Administration > Global System Preferences > Tools
 
-`Batch Item Modification <#batchitemodprefs>`__
+`Batch Item <#batchitemprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preferences are in reference to the `Batch Item
 Modification <#batchmodifyitems>`__ tool.
 
-`MaxItemsForBatch <#MaxItemsForBatch>`__
+`MaxItemsForBatchDel <#MaxItemsForBatchDel>`__
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 1000
 
-Asks: Process up to \_\_\_ items in a single modification or deletion
-batch.
+Asks: Display up to \_\_\_ items in a single deletion batch.
 
 Description:
 
 -  In the `batch item delete tool <#batchdeleteitems>`__ this will
    prevent the display of more than the items you entered in this
    preference, but you will be able to delete more than the number you
-   enter here. In the `batch item modification
+   enter here.
+
+`MaxItemsForBatchMod <#MaxItemsForBatchMod>`__
+''''''''''''''''''''''''''''''''''''''''
+
+Default: 1000
+
+Asks: Process up to \_\_\_ items in a single modification batch.
+
+Description:
+
+-  In the `batch item modification
    tool <#batchmodifyitems>`__ this preference will prevent the editing
    of more than the number entered here.
 
