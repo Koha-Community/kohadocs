@@ -3243,6 +3243,19 @@ Values:
 
 -  the library the items is held by
 
+`SwitchOnSiteCheckouts <#SwitchOnSiteCheckouts>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't switch
+
+Asks: \_\_\_ on-site checkouts to normal checkouts when checked out.
+
+Values:
+
+-  Don't switch
+
+-  Switch
+
 `TransfersMaxDaysWarning <#TransfersMaxDaysWarning>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -3453,28 +3466,21 @@ Values:
     Requires that you have the fines cron job running
     (misc/cronjobs/fines.pl)
 
-`RefundLostItemFeeOnReturn <#RefundLostItemFeeOnReturn>`__
+`RefundLostOnReturnControl <#RefundLostOnReturnControl>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: Refund
+Default: check-in library.
 
-Asks: \_\_\_ lost item fees charged to a borrower when the lost item is
-returned.
+Asks: If a lost item is returned, apply the refunding rules defined
+in the \_\_\_
 
 Values:
 
--  Don't refund
+-  check-in library.
 
--  Refund
+-  item holding branch.
 
-Description:
-
--  When an item is marked lost in Koha the system charges the patron the
-   replacement fee for the item. This preference lets you control how
-   Koha handles returns of these items. By default when an item that was
-   previously marked lost is checked in Koha refunds the patron the
-   replacement fee. Change this preference to "Don't refund" if you
-   would like Koha to not refund the replacement fee.
+-  item home branch.
 
 `WhenLostChargeReplacementFee <#WhenLostChargeReplacementFee>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -5643,6 +5649,36 @@ Description:
 
 -  Novelist Select from Ebsco is a subscription service that can provide
    additional content in the OPAC.
+   
+`NovelistSelectStaffEnabled <#NovelistSelectStaffEnabled>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't add
+
+Asks: \_\_\_ Novelist Select content to the Staff client (requires that
+you have entered in a user profile and password, which can be seen in
+image links).
+
+Values:
+
+-  Don't add
+
+-  Add
+
+`NovelistSelectStaffView <#NovelistSelectStaffView>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: in a tab
+
+Asks: Display Novelist Select staff content \_\_\_.
+
+Values:
+
+-  above the holdings table
+
+-  below the holdings table
+
+-  in a tab
 
 `NovelistSelectView <#NovelistSelectView>`__
 ''''''''''''''''''''''''''''''''''''''''''''
@@ -7249,6 +7285,21 @@ OpacHighlightedWords Values:
 
 -  Highlight
 
+`OPACHoldingsDefaultSortField <#OPACHoldingsDefaultSortField>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: First column of the table
+
+Asks: \_\_\_ is the default sort field for the holdings table
+
+Values:
+
+-  First column of the table
+
+-  Holding library
+
+-  Home library
+
 `OpacKohaUrl <#OpacKohaUrl>`__
 ''''''''''''''''''''''''''''''
 
@@ -7561,6 +7612,20 @@ Description:
    will leave this setting at its default of 'Enable' to allow their
    OPAC to be searched by anyone and only require login for access to
    personalized content.
+
+`OPACResultsLibrary <#OPACResultsLibrary>`__
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: home library
+
+Asks: For search results in the OPAC, show the item's \_\_\_. Please
+note that this feature is currently available for MARC21 and UNIMARC.
+
+Values:
+
+-  current location
+
+-  home library
 
 `OPACResultsSidebar <#OPACResultsSidebar>`__
 ''''''''''''''''''''''''''''''''''''''''''''
@@ -7914,6 +7979,45 @@ Description:
    the screen when viewing a bib record. This preference will allow you
    either use the default look that comes with Koha or design your own
    stylesheet.
+   
+`OPACXSLTListsDisplay <#OPACXSLTListsDisplay>`__
+''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: default
+
+Asks: Display lists in the OPAC using XSLT stylesheet at \_\_\_
+
+Values:
+
+-  leave empty to not use the XSLT stylesheet
+
+   -  In previous versions of Koha this was the setting that read
+      'normally'
+
+-  enter "default" for the default one
+
+-  put a path to define a XSLT file
+
+   -  ex: /path/to/koha/and/your/stylesheet.xsl
+
+   -  If in a multi-language system you can enter {langcode} in the path
+      to tell Koha to look in the right language folder
+
+      -  ex:
+         /home/koha/src/koha-tmpl/opac-tmpl/bootstrap/{langcode}/xslt/MARC21slim2OPACResults.xsl
+
+      -  ex. http://mykohaopac.org/{langcode}/stylesheet.xsl
+
+-  put an URL for an external specific stylesheet
+
+   -  ex: http://mykohaopac.org/stylesheet.xsl
+
+Description:
+
+-  XSLT stylesheets allow for the customization of the details shows on
+   the screen when viewing lists. This preference will
+   allow you either use the default look that comes with Koha or design
+   your own stylesheet.
 
 `OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -8638,6 +8742,14 @@ Description:
    overwritten by the setting on `individual patron
    categories <#patcats>`__.
 
+`MaxOpenSuggestions <#MaxOpenSuggestions>`__
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Limit patrons to \_\_\_ open suggestions. Leave empty for no limit.
+**Note: this setting does not affect anonymous suggestions.
+
 `OpacAllowPublicListCreation <#OpacAllowPublicListCreation>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -9195,6 +9307,20 @@ Description:
     will still be able to register but will not be given a username.
     There will be no errors on the page to explain this, so be sure to
     enter a valid patron category code.
+    
+`PatronSelfRegistrationEmailMustBeUnique <#PatronSelfRegistrationEmailMustBeUnique>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Do not consider
+
+Asks: \_\_\_ patron's email (borrowers.email) as unique on self registering.
+An email won't be accepted if it already exists in the database.
+
+Values:
+
+-  Do not consider
+
+-  Consider
 
 `PatronSelfRegistrationExpireTemporaryAccountsDelay <#PatronSelfRegistrationExpireTemporaryAccountsDelay>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -9213,6 +9339,27 @@ Description:
    This is dependent on
    `PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
    preference.
+
+`PatronSelfRegistrationLibraryList <#PatronSelfRegistrationLibraryList>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Enable the self registration for the following libraries: \_\_\_
+(separate branchcode with |). If empty, all libraries will be listed.
+
+`PatronSelfRegistrationPrefillForm <#PatronSelfRegistrationPrefillForm>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Display and prefill
+
+Asks: \_\_\_ password and login form after a patron has self registered.
+
+Values:
+
+-  Do not display and prefill
+
+-  Display and prefill
 
 `PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -9850,6 +9997,16 @@ Description:
    `ShowPatronImageInWebBasedSelfCheck <#ShowPatronImageInWebBasedSelfCheck>`__
    preference.
 
+`PatronQuickAddFields <#PatronQuickAddFields>`__
+''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: \_\_\_ (separate columns with |) add these fields to the patron
+quick add form when entering a new patron. Displays only mandatory fields
+and fields specified here. If applicable, the guarantor form will be shown
+as well, individual fields in that form will be ignored.
+
 `PatronsPerPage <#PatronsPerPage>`__
 ''''''''''''''''''''''''''''''''''''
 
@@ -9953,6 +10110,20 @@ Description:
     Requires that you have
     `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ set
     to Allow to use.
+    
+`TrackLastPatronActivity <#TrackLastPatronActivity>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't
+
+Asks: \_\_\_ track last patron activity. Everytime a patron will connect,
+the borrowers.lastseen will be updated with the current time.
+
+Values:
+
+-  Don't
+
+-  Do
 
 `uppercasesurnames <#uppercasesurnames>`__
 ''''''''''''''''''''''''''''''''''''''''''
@@ -10697,6 +10868,22 @@ Description:
 
 *Get there:* More > Administration > Global System Preferences > Serials
 
+`makePreviousSerialAvailable <#makePreviousSerialAvailable>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Do not make
+
+Asks: \_\_\_ previous serial automatically available when receiving a
+new serial issue. The previous issue can also be set to another item
+type when receiving a new one. Please note that the `item-level\_itypes <#item-level_itypes>`__
+syspref must be set to specific item.
+
+Values:
+
+-  Do not make
+
+-  Make
+
 `opacSerialDefaultTab <#opacSerialDefaultTab>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -11176,8 +11363,48 @@ Values:
 
 Description:
 
--  XSLT stylesheets allow for the customization of the details shows on
+-  XSLT stylesheets allow for the customization of the details shown on
    the screen when viewing a bib record. This preference will allow you
+   either use the default look that comes with Koha or design your own
+   stylesheet.
+   
+`XSLTListsDisplay <#XSLTListsDisplay>`__
+''''''''''''''''''''''''''''''''''''''''
+
+Default: default
+
+Asks: Display lists in the staff client using XSLT stylesheet at
+\_\_\_
+
+Values:
+
+-  leave empty to not use the XSLT stylesheet
+
+   -  In previous versions of Koha this was the setting that read
+      'normally'
+
+-  enter "default" for the default one
+
+-  put a path to define a XSLT file
+
+   -  ex: /path/to/koha/and/your/stylesheet.xsl
+
+   -  If in a multi-language system you can enter {langcode} in the path
+      to tell Koha to look in the right language folder
+
+      -  ex:
+         /home/koha/src/koha-tmpl/intranet-tmpl/prog/{langcode}/xslt/intranetDetail.xsl
+
+      -  ex. http://mykoha.org/{langcode}/stylesheet.xsl
+
+-  put an URL for an external specific stylesheet
+
+   -  ex: http://mykoha.org/stylesheet.xsl
+
+Description:
+
+-  XSLT stylesheets allow for the customization of the details shown on
+   the screen when viewing a list. This preference will allow you
    either use the default look that comes with Koha or design your own
    stylesheet.
 
@@ -11216,7 +11443,7 @@ Values:
 
 Description:
 
--  XSLT stylesheets allow for the customization of the details shows on
+-  XSLT stylesheets allow for the customization of the details shown on
    the screen when viewing the search results. This preference will
    allow you either use the default look that comes with Koha or design
    your own stylesheet.
