@@ -275,6 +275,12 @@ Description:
        quantity: 969$h
        budget_code: 922$a
 
+`MarcItemFieldsToOrder <#MarcItemFieldsToOrder>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: Set the mapping values for new item records created from a MARC record
+in a staged file.
+
 `UniqueItemFields <#UniqueItemFields>`__
 ''''''''''''''''''''''''''''''''''''''''
 
@@ -834,6 +840,29 @@ Description:
     This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
+`UsageStatsGeolocation <#UsageStatsGeolocation>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Geolocation of the main library: \_\_\_ Note that this value has no effect
+if the `UsageStats <#UsageStats>`__ systemp preference is set to "Don't share"
+
+`UsageStatsLibrariesInfo <#UsageStatsLibrariesInfo>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Do not Share
+
+Asks: \_\_\_ libraries information (name, url, country) Note that this value
+has no effect if the `UsageStats <#UsageStats>`__ system preference is set to
+"Don't share"
+
+Values:
+
+-  Do not Share
+
+-  Share
+
 `UsageStatsLibraryName <#UsageStatsLibraryName>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -946,6 +975,31 @@ Description:
    to broader and/or narrower see also references this preference will
    turn on a display of those authorities at the top of the record.
 
+`AuthorityMergeLimit <#AuthorityMergeLimit>`__
+''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: 50
+
+Asks: When modifying an authority record, do not update attached biblio
+records if the number exceeds \_\_\_ records. (Above this limit, the merge_authority
+cron job will merge them.)
+
+`AuthorityMergeMode <#AuthorityMergeMode>`__
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: loose
+
+Asks: When updating biblio records from an attached authority record ("merging"),
+handle subfields of relevant biblio record fields in \_\_\_ mode. In strict mode
+subfields that are not found in the authority record, are deleted. Loose mode
+will keep them. Loose mode is the historical behavior and still the default.
+
+Values:
+
+-  loose
+
+-  strict
+
 `AutoCreateAuthorities <#AutoCreateAuthorities>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -995,36 +1049,6 @@ Values:
    -  This setting will lock the authority controlled fields, forcing
       you to search for an authority versus allowing you to type the
       information in yourself.
-
-`dontmerge <#dontmerge>`__
-''''''''''''''''''''''''''
-
-Default: Don't
-
-Asks: \_\_\_ automatically update attached biblios when changing an
-authority record.
-
-Values:
-
--  Do
-
--  Don't
-
-Description:
-
--  This preference tells Koha how to handle changes to your Authority
-   records. If you edit an authority record and this preference is set
-   to 'Do' Koha will immediately update all of the bib records linked to
-   the authority with the new authority record's data. If this is set to
-   "Don't" then Koha won't edit bib records when changes are made to
-   authorities, rather, this is done later by the `merge\_authority.pl
-   cronjob <#mergeauthcron>`__.
-
-    **Important**
-
-    If this is set to "Don't automatically update" you will need to ask
-    your administrator to enable the `merge\_authority.pl
-    cronjob <#mergeauthcron>`__.
 
 `MARCAuthorityControlField008 <#MARCAuthorityControlField008>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2321,6 +2345,19 @@ Description:
 
     If you are doing hourly loans then you should have this set to 'Do'.
 
+`CumulativeRestrictionPeriods <#CumulativeRestrictionPeriods>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't cumulate
+
+Asks: \_\_\_ the restriction periods.
+
+Values:
+
+-  Don't cumulate
+
+-  Cumulate
+
 `RentalFeesCheckoutConfirmation <#RentalFeesCheckoutConfirmation>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -3018,6 +3055,20 @@ Description:
    might have and check out items for use within the library. The
    `OnSiteCheckouts <#OnSiteCheckouts>`__ preference must first be set
    to 'Enable' for this preference to be considered.
+
+`OPACFineNoRenewalsBlockAutoRenew <#OPACFineNoRenewalsBlockAutoRenew>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Allow
+
+Asks: If a patron owes more than the value of `OPACFineNoRenewals <#OPACFineNoRenewals>`__,
+\_\_\_ his/her auto renewals.
+
+Values:
+
+-  Allow
+
+-  Block
 
 `OverduesBlockCirc <#OverduesBlockCirc>`__
 ''''''''''''''''''''''''''''''''''''''''''
@@ -3814,6 +3865,19 @@ Description:
     This notice will only be sent if the `process\_message\_queue.pl
     cronjob <#msgqueuecron>`__ being run periodically to send the
     messages.
+    
+`ExcludeHolidaysFromMaxPickUpDelay <#ExcludeHolidaysFromMaxPickUpDelay>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't allow
+
+Asks: \_\_\_ Closed days to be taken into account in reserves max pickup delay.
+
+Values:
+
+-  Don't allow
+
+-  Allow
 
 `ExpireReservesMaxPickUpDelay <#ExpireReservesMaxPickUpDelay>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3944,6 +4008,27 @@ Description:
    transfer titles from one branch to another to fill a hold, it will
    only prevent patrons from saying they plan on picking a book up at a
    branch other than their home branch.
+
+`OPACHoldsIfAvailableAtPickup <#OPACHoldsIfAvailableAtPickup>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Allow
+
+Asks: \_\_\_ to pickup holds at libraries where the item is available.
+
+Values:
+
+-  Don't allow
+
+-  Allow
+
+`OPACHoldsIfAvailableAtPickupExceptions <#OPACHoldsIfAvailableAtPickupExceptions>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Patron categories not affected by `OPACHoldsIfAvailableAtPickup <#OPACHoldsIfAvailableAtPickup>`__
+\_\_\_ (list of patron categories separated with a pipe '|')
 
 `ReservesControlBranch <#ReservesControlBranch>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -4185,6 +4270,19 @@ Values:
 
 -  Don't allow
 
+`AllowCheckoutNotes <#AllowCheckoutNotes>`__
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't allow
+
+Asks: \_\_\_ patrons to submit notes about checked out items.
+
+Values:
+
+-  Don't allow
+
+-  Allow
+
 `AllowOfflineCirculation <#AllowOfflineCirculation>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -4279,6 +4377,19 @@ Description:
    preference is set to clear the screen then "checking out" an empty
    barcode will clear the screen of the patron you were last working
    with.
+   
+`CircSidebar <#CircSidebar>`__
+''''''''''''''''''''''''''''''
+
+Default: Deactivate
+
+Asks: \_\_\_ the navigation sidebar on all Circulation pages.
+
+Values:
+
+-  Deactivate
+
+-  Activate
 
 `FilterBeforeOverdueReport <#FilterBeforeOverdueReport>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -4352,6 +4463,19 @@ Values:
 
    X in the top right will clear the screen
    |image37|
+   
+`ExportCircHistory <#ExportCircHistory>`__
+''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't show
+
+Asks: \_\_\_ the export patron checkout history options.
+
+Values:
+
+-  Don't show
+
+-  Show
 
 `ExportRemoveFields <#ExportRemoveFields>`__
 ''''''''''''''''''''''''''''''''''''''''''''
@@ -5828,6 +5952,21 @@ learn more please contact your OverDrive representative.
 Overdrive results
 |image57|
 
+`OverDriveCirculation <#OverDriveCirculation>`__
+''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't enable
+
+Asks: \_\_\_ users to access their OverDrive circulation history, and circulate
+items. If you enable access, you must register auth return url of
+http(s)://my.opac.hostname/cgi-bin/koha/external/overdrive/auth.pl with OverDrive.
+
+Values:
+
+-  Don't enable
+
+-  Enable
+
 `OverDriveClientKey and OverDriveClientSecret <#OverDriveClientKey>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -6484,6 +6623,21 @@ Values:
 -  12 hour format (eg 02:18PM)
 
 -  24 hour format (eg 14:18)
+
+`TranslateNotices <#TranslateNotices>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't allow
+
+Asks: \_\_\_ notices to be translated. If set, notices will be translatable from
+the "Notices and Slips" interface. The language used to send a notice to a patron
+will be the one defined for the patron.
+
+Values:
+
+-  Don't allow
+
+-  Allow
 
 `Labs <#labsprefs>`__
 ~~~~~~~~~~~~~~~~~~~~~
@@ -8276,6 +8430,19 @@ Description:
 -  This setting allows users of the OPAC results XSLT stylesheet to
    choose to display collection code or location in addition to call
    number.
+
+`OpacNewsLibrarySelect <#OpacNewsLibrarySelect>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't display
+
+Asks: \_\_\_ a branch selection list for news items in the OPAC.
+
+Values:
+
+-  Don't display
+
+-  Display
 
 `OpacPasswordChange <#OpacPasswordChange>`__
 ''''''''''''''''''''''''''''''''''''''''''''
@@ -10170,6 +10337,13 @@ Description:
 `Norwegian patron database <#norwegianpref>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+`FailedLoginAttempts <#FailedLoginAttempts>`__
+''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Block a patron's account if it reaches \_\_\_ failed login attempts.
+
 `NorwegianPatronDBEnable & NorwegianPatronDBEndpoint <#NorwegianPatronDBEnable>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -10841,6 +11015,19 @@ Description:
    Koha Staff Client you can choose to force the search to be a phrase
    search by setting this preference to 'use.' This will allow for more
    accurate results over doing a general keyword field search.
+
+`LoadSearchHistoryToTheFirstLoggedUser <#LoadSearchHistoryToTheFirstLoggedUser`__
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Load
+
+Asks: Load the unlogged history to the next user. \_\_\_ history to the next client.
+
+Values:
+
+-  Don't load
+
+-  Load
 
 `OPACNumbersPreferPhrase <#OPACNumbersPreferPhrase>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -11643,6 +11830,29 @@ Creator <#patroncardcreator>`__ tool.
 
 Asks: Limit the number of creator images stored in the database to
 \_\_\_ images.
+
+`Reports <#reportsprefstools>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+These preferences are in reference to the Reports module.
+
+`NumSavedReports <#NumSavedReports>`__
+''''''''''''''''''''''''''''''''''''''
+
+Default: 20
+
+Asks: By default, show \_\_\_ reports on the Saved Reports page.
+
+`Upload <#uploadprefstools>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`UploadPurgeTemporaryFilesDays <#UploadPurgeTemporaryFilesDays>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Automatically delete temporary uploads older than \_\_\_ days in
+cleanup_database cron job.
 
 `Web Services <#webserviceprefs>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
