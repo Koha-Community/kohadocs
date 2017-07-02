@@ -322,21 +322,6 @@ The Central Authentication Service (CAS) is a single sign-on protocol
 for the web. If you don't know what this is, leave these preferences set
 to their defaults.
 
-`AllowPKIAuth <#AllowPKIAuth>`__
-''''''''''''''''''''''''''''''''
-
-Default: no
-
-Asks: Use \_\_\_ field for SSL client certificate authentication
-
-Values:
-
--  no
-
--  the common name
-
--  the email address
-
 `casAuthentication <#casAuthentication>`__
 ''''''''''''''''''''''''''''''''''''''''''
 
@@ -724,6 +709,21 @@ Description:
     It is important that this value be set before going live and that it
     NOT be changed
 
+`IndependentBranchesPatronModifications <#IndependentBranchesPatronModifications>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: No
+
+Asks: Prevent staff (but not superlibrarians) from viewing and
+approving/denying patron modification requests for patrons
+belonging to other libraries. \_\_\_
+
+Values:
+
+-  No
+
+-  Yes
+
 `SessionRestrictionByIP <#SessionRestrictionByIP>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -791,6 +791,40 @@ Description:
    value of this preference is in seconds. At this time, the amount of
    time before a session times out must be the same for both the Staff
    Client and the OPAC.
+
+`SSL client certificate authentication <#sslclientcertificateauthenticationprefs>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`AllowPKIAuth <#AllowPKIAuth>`__
+''''''''''''''''''''''''''''''''
+
+Default: no
+
+Asks: Use \_\_\_ field for SSL client certificate authentication
+
+Values:
+
+-  no
+
+-  the common name
+
+-  the email address
+
+`Search Engine <#searchengineprefs>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`SearchEngine <#SearchEngine>`__
+''''''''''''''''''''''''''''''''
+
+Default: Zebra
+
+Asks: Use following search engine: \_\_\_
+
+Values:
+
+-  Elasticsearch
+
+-  Zebra
 
 `Share anonymous usage statistics <#heaprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1293,7 +1327,7 @@ Description:
 -  This preference controls whether a tab will show on the detail page
    in the staff client that includes detailed acquisitions information
    for the title. This tab will include links to order information
-   stored in the acquisitions module.AcquisitionDetails
+   stored in the acquisitions module.
 
 `AuthoritySeparator <#authoritysep>`__
 ''''''''''''''''''''''''''''''''''''''
@@ -1682,6 +1716,16 @@ Description:
     Note that this preference has no effect if
     `UseQueryParser <#UseQueryParser>`__ is on.
 
+`AggressiveMatchOnISSN <#AggressiveMatchOnISSN>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: don't
+
+Asks: When matching on ISSN with the record import tool, \_\_\_ attempt
+to match aggressively by trying all variations of the ISSNs in the imported
+record as a phrase in the ISSN fields of already cataloged records. Note that
+this preference has no effect if `UseQueryParser <#UseQueryParser>`__ is on.
+
 `Interface <#catinterfaceprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1729,6 +1773,11 @@ Values:
 -  SuDoc Classification (U.S. GPO)
 
 -  Universal Decimal Classification
+
+    **Note**
+    
+    Adding another classification under Administration > Classification Sources
+    will make it show up in this list as well.
 
 `EasyAnalyticalRecords <#EasyAnalyticalRecords>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2049,6 +2098,14 @@ Description:
    separated list of fields that you would like to prefill when adding a
    new item.
 
+`UNIMARCField100Language <#UNIMARCField100Language>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: fre
+
+Asks: Use the language (ISO 690-2) \_\_\_ as default language in the
+UNIMARC field 100 when creating a new record or in the field plugin.
+
 `z3950NormalizeAuthor & z3950AuthorAuthFields <#z3950NormalizeAuthor>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -2272,32 +2329,6 @@ patron categories separated with a pipe '\|')
 `Checkin Policy <#checkinpolicyprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowMultipleIssuesOnABiblio <#AllowMultipleIssuesOnABiblio>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Allow
-
-Asks: \_\_\_ patrons to check out multiple items from the same record.
-
-Values:
-
--  Allow
-
--  Don't allow
-
-Description:
-
--  If this preference is set to 'Allow' then patrons will be able to
-   check out multiple copies of the same title at the same time. If it's
-   set to "Don't allow" then patrons will only be allowed to check out
-   one item attached to a record at a time. Regardless of the option
-   chosen in this preference records with subscriptions attached will
-   allow multiple check outs.
-
-       **Important**
-
-       This will only effect records without a subscription attached.
-
 `BlockReturnOfWithdrawnItems <#BlockReturnOfWithdrawnItems>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -2357,26 +2388,6 @@ Values:
 -  Don't cumulate
 
 -  Cumulate
-
-`RentalFeesCheckoutConfirmation <#RentalFeesCheckoutConfirmation>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: do not ask
-
-Asks: When checking out an item with rental fees, \_\_\_ for
-confirmation.
-
-Values:
-
--  askRentalFeesCheckoutConfirmation
-
--  do not ask
-
-Description:
-
--  If you are charging rental fees for items this preference will make
-   it so that you can show (or not show) a confirmation before checking
-   out an item that will incur a rental charge.
 
 `UpdateNotForLoanStatusOnCheckin <#UpdateNotForLoanStatusOnCheckin>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2542,6 +2553,32 @@ Description:
    even if it's on hold for someone else. If you would like Koha to
    prevent people from checking out books that are on hold for someone
    else set this preference to "Don't allow".
+
+`AllowMultipleIssuesOnABiblio <#AllowMultipleIssuesOnABiblio>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Allow
+
+Asks: \_\_\_ patrons to check out multiple items from the same record.
+
+Values:
+
+-  Allow
+
+-  Don't allow
+
+Description:
+
+-  If this preference is set to 'Allow' then patrons will be able to
+   check out multiple copies of the same title at the same time. If it's
+   set to "Don't allow" then patrons will only be allowed to check out
+   one item attached to a record at a time. Regardless of the option
+   chosen in this preference records with subscriptions attached will
+   allow multiple check outs.
+
+       **Important**
+
+       This will only effect records without a subscription attached.
 
 `AllowNotForLoanOverride <#AllowNotForLoanOverride>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -2864,34 +2901,6 @@ Description:
           cart. If items on the shelving cart are checked out, the cart
           location will be cleared.
 
-`IssuingInProcess <#IssuingInProcess>`__
-''''''''''''''''''''''''''''''''''''''''
-
-Default: Don't prevent
-
-Asks: \_\_\_ patrons from checking out an item whose rental charge would
-take them over the limit.
-
-Values:
-
--  Don't prevent
-
--  Prevent
-
-Description:
-
--  This preference determines if a patron can check items out if there
-   is an overdue fine on the account and any of the materials the patron
-   wishes to check out will potentially tip the account balance over the
-   maximum fines policy the library has in place.
-
-Example: Your library has a $5 limit set for 'fines' (ie, after
-incurring $5 in fines, a patron can no longer check out items). A patron
-comes to the desk with 5 items to check out (4 books and a video) The
-patron has $4 in charges already on their account. One of the videos has
-a rental charge of $1, therefore making the total fines on the patron's
-account suddenly $5 (the limit).
-
 `IssueLostItem <#IssueLostItem>`__
 ''''''''''''''''''''''''''''''''''
 
@@ -2923,6 +2932,34 @@ Description:
    mark items as 'available' if you choose to 'display a message' or
    'require confirmation.' If you choose to 'do nothing,' there will be
    no notification that the item being checked out is marked as 'lost.'
+
+`IssuingInProcess <#IssuingInProcess>`__
+''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't prevent
+
+Asks: \_\_\_ patrons from checking out an item whose rental charge would
+take them over the limit.
+
+Values:
+
+-  Don't prevent
+
+-  Prevent
+
+Description:
+
+-  This preference determines if a patron can check items out if there
+   is an overdue fine on the account and any of the materials the patron
+   wishes to check out will potentially tip the account balance over the
+   maximum fines policy the library has in place.
+
+Example: Your library has a $5 limit set for 'fines' (ie, after
+incurring $5 in fines, a patron can no longer check out items). A patron
+comes to the desk with 5 items to check out (4 books and a video) The
+patron has $4 in charges already on their account. One of the videos has
+a rental charge of $1, therefore making the total fines on the patron's
+account suddenly $5 (the limit).
 
 `ManInvInNoissuesCharge <#ManInvInNoissuesCharge>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3011,6 +3048,19 @@ Description:
    option in the `Circulation and fine rules <#circfinerules>`__
    administration area.
 
+`NoticeBcc <#NoticeBcc>`__
+''''''''''''''''''''''''''''''''''''''''
+
+Asks: Send all notices as a BCC to this email address \_\_\_
+
+This preference makes it so that a librarian can get a copy of every
+notice sent out to patrons.
+
+    **Note**
+
+    If you'd like more than one person to receive the blind copy you can
+    simply enter in multiple email addresses separated by commas.
+
 `OnSiteCheckouts <#OnSiteCheckouts>`__
 ''''''''''''''''''''''''''''''''''''''
 
@@ -3070,6 +3120,25 @@ Values:
 
 -  Block
 
+`OverdueNoticeCalendar <#OverdueNoticeCalendar>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Ignore calendar
+
+Asks: \_\_\_ when working out the period for overdue notices
+
+Values:
+
+-  Ignore calendar
+
+   -  Notices do not take holidays into account, so they will be sent
+      even if holidays have meant the item is not actually overdue yet
+
+-  Use calendar
+
+   -  Notices take holidays into account, so they will not be sent if
+      holidays mean the item is not actually overdue yet
+
 `OverduesBlockCirc <#OverduesBlockCirc>`__
 ''''''''''''''''''''''''''''''''''''''''''
 
@@ -3107,38 +3176,6 @@ Values:
 -  block renewing for all the patron's items
 
 -  block renewing for only this item
-
-`NoticeBcc <#NoticeBcc>`__
-''''''''''''''''''''''''''''''''''''''''
-
-Asks: Send all notices as a BCC to this email address \_\_\_
-
-This preference makes it so that a librarian can get a copy of every
-notice sent out to patrons.
-
-    **Note**
-
-    If you'd like more than one person to receive the blind copy you can
-    simply enter in multiple email addresses separated by commas.
-
-`OverdueNoticeCalendar <#OverdueNoticeCalendar>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Ignore calendar
-
-Asks: \_\_\_ when working out the period for overdue notices
-
-Values:
-
--  Ignore calendar
-
-   -  Notices do not take holidays into account, so they will be sent
-      even if holidays have meant the item is not actually overdue yet
-
--  Use calendar
-
-   -  Notices take holidays into account, so they will not be sent if
-      holidays mean the item is not actually overdue yet
 
 `PrintNoticesMaxLines <#PrintNoticesMaxLines>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3202,6 +3239,26 @@ Description:
        This preference requires that you have
        `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
        set to 'Allow'
+
+`RentalFeesCheckoutConfirmation <#RentalFeesCheckoutConfirmation>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: do not ask
+
+Asks: When checking out an item with rental fees, \_\_\_ for
+confirmation.
+
+Values:
+
+-  askRentalFeesCheckoutConfirmation
+
+-  do not ask
+
+Description:
+
+-  If you are charging rental fees for items this preference will make
+   it so that you can show (or not show) a confirmation before checking
+   out an item that will incur a rental charge.
 
 `RentalsInNoissuesCharge <#RentalsInNoissuesCharge>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -3517,6 +3574,21 @@ Values:
     Requires that you have the fines cron job running
     (misc/cronjobs/fines.pl)
 
+`HoldFeeMode <#HoldFeeMode>`__
+''''''''''''''''''''''''''''''
+
+Default: only if all items are checked out and the record has at least one hold already.
+
+Asks: Charge a hold fee \_\_\_
+
+Values:
+
+-  any time a hold is collected.
+
+-  any time a hold is placed.
+
+-  only if all items are checked out and the record has at least one hold already.
+
 `RefundLostOnReturnControl <#RefundLostOnReturnControl>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -3603,6 +3675,33 @@ Values:
 
 -  Don't allow
 
+`AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Allow
+
+Asks: \_\_\_ staff to override hold policies when placing holds.
+
+Values:
+
+-  Allow
+
+-  Don't allow
+
+Description:
+
+-  This preference is a binary setting which controls whether or not the
+   library staff can override the circulation and fines rules as they
+   pertain to the placement of holds. Setting this value to "Don't
+   allow" will prevent anyone from overriding, setting it to "Allow"
+   will allow it. This setting is important because it determines how
+   strict the libraries rules for placing holds are. If this is set to
+   "Allow", exceptions can be made for patrons who are otherwise
+   normally in good standing with the library, but there is opportunity
+   for the staff to abuse this function. If it is set to "Don't allow",
+   no abuse of the system is possible, but it makes the system entirely
+   inflexible in respect to holds.
+
 `AllowHoldsOnDamagedItems <#AllowHoldsOnDamagedItems>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -3651,33 +3750,6 @@ Description:
 -  By setting to "Don't allow," you can prevent patrons from placing
    holds on items they already have out, thus preventing them from
    blocking anyone else from getting an item.
-
-`AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Allow
-
-Asks: \_\_\_ staff to override hold policies when placing holds.
-
-Values:
-
--  Allow
-
--  Don't allow
-
-Description:
-
--  This preference is a binary setting which controls whether or not the
-   library staff can override the circulation and fines rules as they
-   pertain to the placement of holds. Setting this value to "Don't
-   allow" will prevent anyone from overriding, setting it to "Allow"
-   will allow it. This setting is important because it determines how
-   strict the libraries rules for placing holds are. If this is set to
-   "Allow", exceptions can be made for patrons who are otherwise
-   normally in good standing with the library, but there is opportunity
-   for the staff to abuse this function. If it is set to "Don't allow",
-   no abuse of the system is possible, but it makes the system entirely
-   inflexible in respect to holds.
 
 `AllowRenewalIfOtherItemsAvailable <#AllowRenewalIfOtherItemsAvailable>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -4305,25 +4377,6 @@ Description:
    application <#windowsofflinecirc>`__, any of these three options can
    be used for offline circulation without effecting the other.
 
-`AudioAlerts <#AudioAlerts>`__
-''''''''''''''''''''''''''''''
-
-Default: Don't enable
-
-Asks: \_\_\_ audio alerts for events defined in the audio alerts section
-of administration.
-
-Values:
-
--  Don't enable
-
--  Enable
-
-    **Important**
-
-    This feature is not supported by all browsers. Requires an HTML5
-    compliant browser.
-
 `CircAutocompl <#CircAutocompl>`__
 ''''''''''''''''''''''''''''''''''
 
@@ -4391,6 +4444,54 @@ Values:
 
 -  Activate
 
+`DisplayClearScreenButton <#DisplayClearScreenButton>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Show
+
+Asks: \_\_\_ a button to clear the current patron from the screen on the
+circulation screen.
+
+Values:
+
+-  Don't show
+
+   No X in the top right
+   |image36|
+
+-  Show
+
+   X in the top right will clear the screen
+   |image37|
+
+`ExportCircHistory <#ExportCircHistory>`__
+''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't show
+
+Asks: \_\_\_ the export patron checkout history options.
+
+Values:
+
+-  Don't show
+
+-  Show
+
+`ExportRemoveFields <#ExportRemoveFields>`__
+''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: The following fields should be excluded from the patron checkout
+history CSV or iso2709 export \_\_\_
+
+Description:
+
+-  This space separated list of fields (e.g. 100a 245b) will
+   automatically be excluded when exporting the patron's current
+   checkout history.
+
+   ExportRemoveFields
+   |image38|
+
 `FilterBeforeOverdueReport <#FilterBeforeOverdueReport>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -4443,70 +4544,6 @@ Description:
 
    Fine notification at checkin
    |image35|
-
-`DisplayClearScreenButton <#DisplayClearScreenButton>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Show
-
-Asks: \_\_\_ a button to clear the current patron from the screen on the
-circulation screen.
-
-Values:
-
--  Don't show
-
-   No X in the top right
-   |image36|
-
--  Show
-
-   X in the top right will clear the screen
-   |image37|
-   
-`ExportCircHistory <#ExportCircHistory>`__
-''''''''''''''''''''''''''''''''''''''''''
-
-Default: Don't show
-
-Asks: \_\_\_ the export patron checkout history options.
-
-Values:
-
--  Don't show
-
--  Show
-
-`ExportRemoveFields <#ExportRemoveFields>`__
-''''''''''''''''''''''''''''''''''''''''''''
-
-Asks: The following fields should be excluded from the patron checkout
-history CSV or iso2709 export \_\_\_
-
-Description:
-
--  This space separated list of fields (e.g. 100a 245b) will
-   automatically be excluded when exporting the patron's current
-   checkout history.
-
-   ExportRemoveFields
-   |image38|
-
-`ExportWithCsvProfile <#ExportWithCsvProfile>`__
-''''''''''''''''''''''''''''''''''''''''''''''''
-
-Asks: Use the \_\_\_ CSV profile when exporting patron checkout history
-
-Description:
-
--  Use this preference to define which `CSV profile <#csvprofiles>`__
-   should be used when exporting patron's current checkout data. Enter
-   the CSV Profile name as the value for this preference. If this
-   preference is left blank you will not be able to export the patron's
-   current checkout summary.
-
-   ExportWithCsvProfile
-   |image39|
 
 `HoldsToPullStartDate <#HoldsToPullStartDate>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''
@@ -5220,36 +5257,6 @@ Asks: \_\_\_ Defined the url for the Babeltheque update periodically
     This is a pay service, you must contact Baker & Taylor to subscribe
     to this service before setting these options.
 
-`BakerTaylorEnabled <#BakerTaylorEnabled>`__
-''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Don't add
-
-Asks: \_\_\_ Baker and Taylor links and cover images to the OPAC and
-staff client. This requires that you have entered in a username and
-password (which can be seen in image links).
-
-Values:
-
--  Add
-
--  Don't add
-
-Description:
-
--  This preference makes it possible to display Baker & Taylor content
-   (book reviews, descriptions, cover images, etc.) in both the Staff
-   Client and the OPAC. Libraries that wish to display Baker & Taylor
-   content must first register and pay for this service with Baker &
-   Taylor (http://www.btol.com). If Baker & Taylor content is enabled be
-   sure to turn off other cover and review services to prevent
-   interference.
-
-    **Important**
-
-    To use this you will need to also set the `BakerTaylorUsername &
-    BakerTaylorPassword <#btuserpass>`__ system preferences
-
 `BakerTaylorBookstoreURL <#BakerTaylorBookstoreURL>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -5287,6 +5294,36 @@ koha.mylibrarybookstore.com/MLB/actions/searchHandler.do?nextPage=bookDetails&pa
 
     Be sure to get this information from Baker & Taylor when
     subscribing.
+
+`BakerTaylorEnabled <#BakerTaylorEnabled>`__
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't add
+
+Asks: \_\_\_ Baker and Taylor links and cover images to the OPAC and
+staff client. This requires that you have entered in a username and
+password (which can be seen in image links).
+
+Values:
+
+-  Add
+
+-  Don't add
+
+Description:
+
+-  This preference makes it possible to display Baker & Taylor content
+   (book reviews, descriptions, cover images, etc.) in both the Staff
+   Client and the OPAC. Libraries that wish to display Baker & Taylor
+   content must first register and pay for this service with Baker &
+   Taylor (http://www.btol.com). If Baker & Taylor content is enabled be
+   sure to turn off other cover and review services to prevent
+   interference.
+
+    **Important**
+
+    To use this you will need to also set the `BakerTaylorUsername &
+    BakerTaylorPassword <#btuserpass>`__ system preferences
 
 `BakerTaylorUsername & BakerTaylorPassword <#btuserpass>`__
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -5350,7 +5387,7 @@ Description:
 
        **Important**
 
-       Coce does not come bundled with Koha. Your Koha install with not
+       Coce does not come bundled with Koha. Your Koha install will not
        already have a Coce server set up. Before enabling this
        functionality you will want to be sure to have a Coce server set
        up. Instructions on installing and setting up Coce can be found
@@ -5455,7 +5492,7 @@ Description:
 -  Enter in file extensions separated with bar (\|)
 
 `HTML5MediaYouTube <#HTML5MediaYouTube>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't embed
 
@@ -5840,6 +5877,29 @@ Values:
 `OCLC <#oclcprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^
 
+`OCLCAffiliateID <#OCLCAffiliateID>`__
+''''''''''''''''''''''''''''''''''''''
+
+Asks: Use the OCLC affiliate ID \_\_\_ to access the xISBN service.
+
+Description:
+
+-  This setting is only applicable if the library has an OCLC Affiliate
+   ID. This allows WorldCat searching in the OPAC via the XISBN
+   programming interface. Simply enter the library's OCLC Affiliate ID
+   in the box provided. Please note that using this data is only
+   necessary if `FRBRizeEditions <#FRBRizeEditions>`__ and/or
+   `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ and `XISBN <#XISBN>`__
+   settings are enabled. For more information on this service please
+   visit the OCLC website:
+   http://www.worldcat.org/affiliate/default.jsp.
+
+    **Important**
+
+    Unless you have signed up for an ID with OCLC, you are limited to
+    1000 requests per day. Available at:
+    http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
+
 `XISBN <#XISBN>`__
 ''''''''''''''''''
 
@@ -5864,29 +5924,6 @@ Values:
 
     Requires `FRBRizeEditions <#FRBRizeEditions>`__ and/or
     `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ set to 'show'
-
-`OCLCAffiliateID <#OCLCAffiliateID>`__
-''''''''''''''''''''''''''''''''''''''
-
-Asks: Use the OCLC affiliate ID \_\_\_ to access the xISBN service.
-
-Description:
-
--  This setting is only applicable if the library has an OCLC Affiliate
-   ID. This allows WorldCat searching in the OPAC via the XISBN
-   programming interface. Simply enter the library's OCLC Affiliate ID
-   in the box provided. Please note that using this data is only
-   necessary if `FRBRizeEditions <#FRBRizeEditions>`__ and/or
-   `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ and `XISBN <#XISBN>`__
-   settings are enabled. For more information on this service please
-   visit the OCLC website:
-   http://www.worldcat.org/affiliate/default.jsp.
-
-    **Important**
-
-    Unless you have signed up for an ID with OCLC, you are limited to
-    1000 requests per day. Available at:
-    http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
 
 `XISBNDailyLimit <#XISBNDailyLimit>`__
 ''''''''''''''''''''''''''''''''''''''
@@ -6025,28 +6062,61 @@ Values:
 Syndetics is a pay service. You must first contact Syndetics directly
 for pricing and subscription information.
 
-`SyndeticsEnabled <#SyndeticsEnabled>`__
-''''''''''''''''''''''''''''''''''''''''
+`SyndeticsAuthorNotes <#SyndeticsAuthorNotes>`__
+''''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: Don't use
+Default: Don't show
 
-Asks: \_\_\_ content from Syndetics.
+Asks: \_\_\_ notes about the author of a title from Syndetics on item
+detail pages on the OPAC.
 
 Values:
 
--  Don't use
+-  Don't show
 
--  Use
+-  Show
 
 Description:
 
--  When this option is enabled any of the Syndetics options can be used.
+-  When this option is set to "Show", Syndetics provides notes and short
+   author biographies for more that 300,000 authors, in both fiction and
+   nonfiction. With this option enabled the library can display
+   Syndetics Author Notes on the OPAC. According to the Syndetics
+   Solutions website (http://www.bowker.com/syndetics/), Author Notes
+   include lists of contributors for many multi-author texts and
+   compilations. The `SyndeticsClientCode <#SyndeticsClientCode>`__ must
+   be entered and the `SyndeticsEnabled <#SyndeticsEnabled>`__ option
+   must be activated before this service can be used.
 
-    **Important**
+`SyndeticsAwards <#SyndeticsAwards>`__
+''''''''''''''''''''''''''''''''''''''
 
-    Requires that you enter your
-    `SyndeticsClientCode <#SyndeticsClientCode>`__ before this content
-    will appear.
+Default: Don't show
+
+Asks: \_\_\_ information from Syndetics about the awards a title has won
+on item detail pages on the OPAC.
+
+Values:
+
+-  Don't show
+
+-  Show
+
+Description:
+
+-  When this option is set to "Show", Syndetics provides its clients
+   with a list of awards that any title has won. With this service
+   enabled the library can display those awards for each book on its
+   website. For each book or item that comes up during a user search,
+   the list of awards for that title will be displayed. When a user
+   clicks on a given award, information about that award is presented
+   along with a list of the other titles that have won that award. If
+   the user clicks on any title in the list, they will see holdings
+   information about that title in their region. This option is a paid
+   subscription service. The
+   `SyndeticsClientCode <#SyndeticsClientCode>`__ must be entered and
+   the `SyndeticsEnabled <#SyndeticsEnabled>`__ option must be activated
+   before this service can be used.
 
 `SyndeticsClientCode <#SyndeticsClientCode>`__
 ''''''''''''''''''''''''''''''''''''''''''''''
@@ -6107,62 +6177,6 @@ SyndeticsCoverImageSize Values:
 
 -  large
 
-`SyndeticsAuthorNotes <#SyndeticsAuthorNotes>`__
-''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Don't show
-
-Asks: \_\_\_ notes about the author of a title from Syndetics on item
-detail pages on the OPAC.
-
-Values:
-
--  Don't show
-
--  Show
-
-Description:
-
--  When this option is set to "Show", Syndetics provides notes and short
-   author biographies for more that 300,000 authors, in both fiction and
-   nonfiction. With this option enabled the library can display
-   Syndetics Author Notes on the OPAC. According to the Syndetics
-   Solutions website (http://www.bowker.com/syndetics/), Author Notes
-   include lists of contributors for many multi-author texts and
-   compilations. The `SyndeticsClientCode <#SyndeticsClientCode>`__ must
-   be entered and the `SyndeticsEnabled <#SyndeticsEnabled>`__ option
-   must be activated before this service can be used.
-
-`SyndeticsAwards <#SyndeticsAwards>`__
-''''''''''''''''''''''''''''''''''''''
-
-Default: Don't show
-
-Asks: \_\_\_ information from Syndetics about the awards a title has won
-on item detail pages on the OPAC.
-
-Values:
-
--  Don't show
-
--  Show
-
-Description:
-
--  When this option is set to "Show", Syndetics provides its clients
-   with a list of awards that any title has won. With this service
-   enabled the library can display those awards for each book on its
-   website. For each book or item that comes up during a user search,
-   the list of awards for that title will be displayed. When a user
-   clicks on a given award, information about that award is presented
-   along with a list of the other titles that have won that award. If
-   the user clicks on any title in the list, they will see holdings
-   information about that title in their region. This option is a paid
-   subscription service. The
-   `SyndeticsClientCode <#SyndeticsClientCode>`__ must be entered and
-   the `SyndeticsEnabled <#SyndeticsEnabled>`__ option must be activated
-   before this service can be used.
-
 `SyndeticsEditions <#SyndeticsEditions>`__
 ''''''''''''''''''''''''''''''''''''''''''
 
@@ -6190,6 +6204,29 @@ Values:
 
     Requires `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ set to
     'show'
+
+`SyndeticsEnabled <#SyndeticsEnabled>`__
+''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't use
+
+Asks: \_\_\_ content from Syndetics.
+
+Values:
+
+-  Don't use
+
+-  Use
+
+Description:
+
+-  When this option is enabled any of the Syndetics options can be used.
+
+    **Important**
+
+    Requires that you enter your
+    `SyndeticsClientCode <#SyndeticsClientCode>`__ before this content
+    will appear.
 
 `SyndeticsExcerpt <#SyndeticsExcerpt>`__
 ''''''''''''''''''''''''''''''''''''''''
@@ -6340,6 +6377,58 @@ Description:
    features. TagsEnable must be set to 'Allow' to allow for other
    tagging features.
 
+`TagsExternalDictionary <#TagsExternalDictionary>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: Allow tags in the dictionary of the ispell executable \_\_\_ on
+the server to be approved without moderation.
+
+Description:
+
+-  The dictionary includes a list of accepted and rejected tags. The
+   accepted list includes all the tags that have been pre-allowed. The
+   rejected list includes tags that are not allowed. This preference
+   identifies the "accepted" dictionary used. Ispell is an open source
+   dictionary which can be used as a list of accepted terms. Since the
+   dictionary allows for accurately spelled obscenities, the libraries
+   policy may dictate that modifications are made to the Ispell
+   dictionary if this preference is use. For more information about
+   Ispell http://www.gnu.org/software/ispell/ispell.html. Enter the path
+   on your server to a local ispell executable, used to set
+   $Lingua::Ispell::path.
+
+`TagsInputOnDetail <#TagsInputOnDetail>`__
+''''''''''''''''''''''''''''''''''''''''''
+
+Default: Allow
+
+Asks: \_\_\_ patrons to input tags on item detail pages on the OPAC.
+
+Values:
+
+-  Allow
+
+   Add Tags on Detail
+   |image59|
+
+-  Don't allow
+
+`TagsInputOnList <#TagsInputOnList>`__
+''''''''''''''''''''''''''''''''''''''
+
+Default: Allow
+
+Asks: \_\_\_ patrons to input tags on search results on the OPAC.
+
+Values:
+
+-  Allow
+
+   Tags on Search Results
+   |image58|
+
+-  Don't allow
+
 `TagsModeration <#TagsModeration>`__
 ''''''''''''''''''''''''''''''''''''
 
@@ -6369,33 +6458,6 @@ before becoming visible.
 
 -  *Get there:* More > Tools > `Tags <#tagsmoderation>`__
 
-`TagsShowOnList <#TagsShowOnList>`__
-''''''''''''''''''''''''''''''''''''
-
-Default: 6
-
-Asks: Show \_\_\_ tags on search results on the OPAC.
-
-    **Note**
-
-    Set the value to 0 (zero) to turn this feature off.
-
-`TagsInputOnList <#TagsInputOnList>`__
-''''''''''''''''''''''''''''''''''''''
-
-Default: Allow
-
-Asks: \_\_\_ patrons to input tags on search results on the OPAC.
-
-Values:
-
--  Allow
-
-   Tags on Search Results
-   |image58|
-
--  Don't allow
-
 `TagsShowOnDetail <#TagsShowOnDetail>`__
 ''''''''''''''''''''''''''''''''''''''''
 
@@ -6407,41 +6469,16 @@ Asks: Show \_\_\_ tags on item detail pages on the OPAC.
 
     Set the value to 0 (zero) to turn this feature off.
 
-`TagsInputOnDetail <#TagsInputOnDetail>`__
-''''''''''''''''''''''''''''''''''''''''''
+`TagsShowOnList <#TagsShowOnList>`__
+''''''''''''''''''''''''''''''''''''
 
-Default: Allow
+Default: 6
 
-Asks: \_\_\_ patrons to input tags on item detail pages on the OPAC.
+Asks: Show \_\_\_ tags on search results on the OPAC.
 
-Values:
+    **Note**
 
--  Allow
-
-   Add Tags on Detail
-   |image59|
-
--  Don't allow
-
-`TagsExternalDictionary <#TagsExternalDictionary>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Asks: Allow tags in the dictionary of the ispell executable \_\_\_ on
-the server to be approved without moderation.
-
-Description:
-
--  The dictionary includes a list of accepted and rejected tags. The
-   accepted list includes all the tags that have been pre-allowed. The
-   rejected list includes tags that are not allowed. This preference
-   identifies the "accepted" dictionary used. Ispell is an open source
-   dictionary which can be used as a list of accepted terms. Since the
-   dictionary allows for accurately spelled obscenities, the libraries
-   policy may dictate that modifications are made to the Ispell
-   dictionary if this preference is use. For more information about
-   Ispell http://www.gnu.org/software/ispell/ispell.html. Enter the path
-   on your server to a local ispell executable, used to set
-   $Lingua::Ispell::path.
+    Set the value to 0 (zero) to turn this feature off.
 
 `I18N/L10N <#l18nprefs>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -6453,7 +6490,7 @@ settings.
 I18N/L10N
 
 `AddressFormat <#AddressFormat>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''''''''
 
 Default: US style ([Street number], [Address] - [City], [Zip/Postal
 Code], [Country])
@@ -6463,6 +6500,9 @@ Asks: Format postal addresses using \_\_\_
 Values:
 
 -  German style ([Address] [Street number] - [Zip/Postal Code] [City] -
+   [Country])
+
+-  French style ([Street number] [Address] - [ZIP/Postal Code] [City] -
    [Country])
 
 -  US style ([Street number], [Address] - [City], [Zip/Postal Code],
@@ -6475,7 +6515,7 @@ Description:
    their record.
 
 `alphabet <#alphabet>`__
-^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''
 
 Default: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
@@ -6491,7 +6531,7 @@ Description:
    |image60|
 
 `CalendarFirstDayOfWeek <#CalendarFirstDayOfWeek>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Sunday
 
@@ -6522,7 +6562,7 @@ Description:
    Javascript on these pages.
 
 `dateformat <#dateformat>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''
 
 Default: mm/dd/yyyy
 
@@ -6552,7 +6592,7 @@ Description:
    http://www.iso.org/iso/iso_catalogue.htm.
 
 `language <#languagepref>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''
 
 Default: English
 
@@ -6566,7 +6606,7 @@ To install additional languages please refer to
 http://wiki.koha-community.org/wiki/Installation_of_additional_languages_for_OPAC_and_INTRANET_staff_client
 
 `opaclanguages <#opaclanguages>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''''''''
 
 Default: English
 
@@ -6585,7 +6625,7 @@ Values:
     show up as an option in this preference.
 
 `opaclanguagesdisplay <#opaclanguagesdisplay>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
 
@@ -6612,7 +6652,7 @@ Description:
    catalog.
 
 `TimeFormat <#TimeFormat>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''
 
 Default: 24 hour format
 
@@ -6625,7 +6665,7 @@ Values:
 -  24 hour format (eg 14:18)
 
 `TranslateNotices <#TranslateNotices>`__
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
 
@@ -6679,6 +6719,74 @@ Use
     Sometimes preferences which are either new or outdated will appear
     in this tab, if you didn't add any preferences to this tab then it's
     best to ignore preferences listed here.
+
+`ArticleRequestsMandatoryFieldsItemsOnly <#ArticleRequestsMandatoryFieldsItemsOnly>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: Comma delimited list of required fields for bibs where artciel requests
+rule = "item_only"
+
+`INTRAdidyoumean <#INTRAdidyoumean>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: Did you mean? configuration for the Intranet. Do not change, as this is
+controlled by /cgi-bin/koha/admin/didyoumean.pl.
+
+`OPACdidyoumean <#OPACdidyoumean>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: Did you mean? configuration for the OPAC. Do not change, as this is
+controlled by /cgi-bin/koha/admin/didyoumean.pl.
+
+`printcirculationships <#printcirculationships>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: ON
+
+Asks: If ON, enable printing circulation receipts
+
+Values:
+
+-  ON
+
+-  OFF
+
+`UsageStatsID <#UsageStatsID>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: This preference is part of Koha but it should not be deleted or
+updated manually.
+
+`UsageStatsLastUpdateTime <#UsageStatsLastUpdateTime>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: This preference is part of Koha but it should not be deleted or
+updated manually.
+
+`UsageStatsPublicID <#UsageStatsPublicID>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: Public ID for Hea website
+
+`Version <#Version>`__
+^^^^^^^^^^^^^^^^^^^^^^
+
+Default: automatically generated
+
+Asks: The Koha database version. WARNING: Do not change this value
+manually. It is maintained by the webinstaller
 
 `Logs <#logs>`__
 ~~~~~~~~~~~~~~~~
@@ -7060,6 +7168,19 @@ Values:
     See the `XSLT Icon Guide <#XSLTiTypes>`__ for more information on
     these icons.
 
+`GoogleIndicTransliteration <#GoogleIndicTransliteration>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't show
+
+Asks: \_\_\_ GoogleIndicTransliteration on the OPAC.
+
+Values:
+
+-  Don't show
+
+-  Show
+
 `hidelostitems <#hidelostitems>`__
 ''''''''''''''''''''''''''''''''''
 
@@ -7121,19 +7242,6 @@ HighlightOwnItemsOnOPACWhich Values:
     `OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__ and
     `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ preferences.
 
-`GoogleIndicTransliteration <#GoogleIndicTransliteration>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Don't show
-
-Asks: \_\_\_ GoogleIndicTransliteration on the OPAC.
-
-Values:
-
--  Don't show
-
--  Show
-
 `LibraryName <#LibraryName>`__
 ''''''''''''''''''''''''''''''
 
@@ -7171,6 +7279,38 @@ Description:
 
    Any HTML in this box will replace the above text below the log in
    box.No login instructions
+
+`OpacAdditionalStylesheet <#OpacAdditionalStylesheet>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: Include the additional CSS stylesheet \_\_\_ to override specified
+settings from the default stylesheet.
+
+Description:
+
+-  The preference can look for stylesheets in the template directory for
+   your OPAC language, for instance: /koha-tmpl/opac-tmpl/prog/en/css.
+   If you upload a custom file, opac-mystyles.css to this directory, you
+   can specify it by entering opac-mystyles.css in your
+   opaccolorstylesheet system preference. This adds your custom
+   stylesheet as a linked stylesheet alongside the OPAC's default CSS
+   files. This method is preferable because linked stylesheets are
+   cached by the user's browser, meaning upon repeat visits to your site
+   the user's browser will not have to re-download the stylesheet,
+   instead using the copy in the browser's cache.
+
+-  If you would rather, you can upload your CSS to another server and
+   enter the full URL pointing to it's location remember to begin the
+   URL with http://
+
+    **Note**
+
+    Leave this field blank to disable it
+
+    **Note**
+
+    This file will add a linked CSS, not replace the existing default
+    CSS.
 
 `OpacAddMastheadLibraryPulldown <#OpacAddMastheadLibraryPulldown>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -7224,38 +7364,6 @@ Description:
 With OPACBaseURL set, links to the OPAC will appear on each individual
 bib record in the staff client
 |image67|
-
-`OpacAdditionalStylesheet <#OpacAdditionalStylesheet>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Asks: Include the additional CSS stylesheet \_\_\_ to override specified
-settings from the default stylesheet.
-
-Description:
-
--  The preference can look for stylesheets in the template directory for
-   your OPAC language, for instance: /koha-tmpl/opac-tmpl/prog/en/css.
-   If you upload a custom file, opac-mystyles.css to this directory, you
-   can specify it by entering opac-mystyles.css in your
-   opaccolorstylesheet system preference. This adds your custom
-   stylesheet as a linked stylesheet alongside the OPAC's default CSS
-   files. This method is preferable because linked stylesheets are
-   cached by the user's browser, meaning upon repeat visits to your site
-   the user's browser will not have to re-download the stylesheet,
-   instead using the copy in the browser's cache.
-
--  If you would rather, you can upload your CSS to another server and
-   enter the full URL pointing to it's location remember to begin the
-   URL with http://
-
-    **Note**
-
-    Leave this field blank to disable it
-
-    **Note**
-
-    This file will add a linked CSS, not replace the existing default
-    CSS.
 
 `opaccredits <#opaccredits>`__
 ''''''''''''''''''''''''''''''
@@ -8504,7 +8612,7 @@ Description:
        `PatronSelfRegistrationBorrowerUnwantedField <#PatronSelfRegistrationBorrowerUnwantedField>`__
        preferences.
 
-`OPACpatronimage <#OPACpatronimage>`__
+`OPACpatronimages <#OPACpatronimages>`__
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -9061,6 +9169,41 @@ Description:
    The statistics table in Koha keeps track of all checkouts and
    renewals, this preference defines which branch is entered in to the
    table when a patron renews an item for themselves via the OPAC.
+
+`OPACSuggestionMandatoryFields <#OPACSuggestionMandatoryFields>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: blank
+
+Asks: Fields that should be mandatory for patron purchase suggestions:
+\_\_\_ Note: if none of the above options are selected, 'Title' field
+would be mandatory anyway, by default.
+
+Values:
+
+-  [Select all]
+
+-  Author
+
+-  Collection title
+
+-  Copyright or publication date
+
+-  ISBN, ISSN or other standard number
+
+-  Item type
+
+-  Library or branch
+
+-  Note
+
+-  Patron reason
+
+-  Publication place
+
+-  Publisher name
+
+-  Title
 
 `OPACViewOthersSuggestions <#OPACViewOthersSuggestions>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -9659,6 +9802,20 @@ Description:
 `General <#generalpatronpref>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+`AllowStaffToSetCheckoutsVisibilityForGuarantor <#AllowStaffToSetCheckoutsVisibilityForGuarantor>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't allow
+
+Asks: \_\_\_ staff to set the ability for a patron's checkouts to be
+viewed by linked patrons in the OPAC.
+
+Values:
+
+-  Don't allow
+
+-  Allow
+
 `AutoEmailOpacUser <#AutoEmailOPACUser>`__
 ''''''''''''''''''''''''''''''''''''''''''
 
@@ -10159,7 +10316,7 @@ Description:
    images of patrons either `one by one <#addpatronimages>`__ or `in
    bulk <#uploadpatronimages>`__. Patrons images will show on the detail
    page to the left of the patron information. They can also show in the
-   OPAC if you set the `OPACpatronimage <#OPACpatronimage>`__ preference
+   OPAC if you set the `OPACpatronimages <#OPACpatronimages>`__ preference
    or in the self check out module if you set the
    `ShowPatronImageInWebBasedSelfCheck <#ShowPatronImageInWebBasedSelfCheck>`__
    preference.
@@ -10933,6 +11090,13 @@ Descriptions:
     This preference has no effect if
     `UseQueryParser <#UseQueryParser>`__ is on
 
+`UNIMARCAuthorsFacetsSeparator <#UNIMARCAuthorsFacetsSeparator>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: , (comma)
+
+Asks: Use the following text as separator for UNIMARC authors facets \_\_\_
+
 `Search Form <#searchformprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -11016,8 +11180,8 @@ Description:
    search by setting this preference to 'use.' This will allow for more
    accurate results over doing a general keyword field search.
 
-`LoadSearchHistoryToTheFirstLoggedUser <#LoadSearchHistoryToTheFirstLoggedUser`__
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+`LoadSearchHistoryToTheFirstLoggedUser <#LoadSearchHistoryToTheFirstLoggedUser>`__
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Load
 
@@ -11473,20 +11637,6 @@ Description:
    set of fonts and colors you can use this preference to point Koha to
    a stylesheet specifically for your slips.
 
-`StaffAuthorisedValueImages <#StaffAuthorisedValueImages>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Default: Show
-
-Asks: \_\_\_ images for authorized values (such as lost statuses and
-locations) in search results.
-
-Values:
-
--  Don't show
-
--  Show
-
 `staffClientBaseURL <#staffClientBaseURL>`__
 ''''''''''''''''''''''''''''''''''''''''''''
 
@@ -11637,6 +11787,25 @@ Description:
 
 `Options <#staffoptsprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`AudioAlerts <#AudioAlerts>`__
+''''''''''''''''''''''''''''''
+
+Default: Don't enable
+
+Asks: \_\_\_ audio alerts for events defined in the audio alerts section
+of administration.
+
+Values:
+
+-  Don't enable
+
+-  Enable
+
+    **Important**
+
+    This feature is not supported by all browsers. Requires an HTML5
+    compliant browser.
 
 `HidePatronName <#HidePatronName>`__
 ''''''''''''''''''''''''''''''''''''
@@ -11860,8 +12029,32 @@ cleanup_database cron job.
 *Get there:* More > Administration > Global System Preferences > Web
 Services
 
+`ILS-DI <#ilsdiprefs>`__
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+`ILS-DI <#ILS-DI>`__
+''''''''''''''''''''
+
+Default: Disable
+
+Asks: \_\_\_ ILS-DI services for OPAC users
+
+Values:
+
+-  Disable
+
+-  Enable
+
+`ILS-DI:AuthorizedIPs <#ILS-DIAuthorized_IPs>`__
+''''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: \_\_\_ allowed IPs to use the ILS-DI services
+
+`IdRef <#idrefprefs>`__
+^^^^^^^^^^^^^^^^^^^^^^^
+
 `IdRef <#idref>`__
-^^^^^^^^^^^^^^^^^^
+''''''''''''''''''
 
 Default: Disable
 
@@ -11899,27 +12092,6 @@ Description:
 
        The French Sudoc database should not be confused with the US
        Superintendent of Documents (SuDocs) Classification Scheme.
-
-`ILS-DI <#ilsdiprefs>`__
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-`ILS-DI <#ILS-DI>`__
-''''''''''''''''''''
-
-Default: Disable
-
-Asks: \_\_\_ ILS-DI services for OPAC users
-
-Values:
-
--  Disable
-
--  Enable
-
-`ILS-DI:AuthorizedIPs <#ILS-DIAuthorized_IPs>`__
-''''''''''''''''''''''''''''''''''''''''''''''''
-
-Asks: \_\_\_ allowed IPs to use the ILS-DI services
 
 `OAI-PMH <#oaiprefs>`__
 ^^^^^^^^^^^^^^^^^^^^^^^
