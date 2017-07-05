@@ -4742,7 +4742,8 @@ Values:
 Description:
 
 -  This preference lets you decide if staff can specify an arbitrary
-   return date when checking in items.
+   return date when checking in items. If an arbitrary return date is
+   specified then fines are recalculated accordingly.
 
 `todaysIssuesDefaultSortOrder <#todaysIssuesDefaultSortOrder>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -6490,7 +6491,7 @@ settings.
 I18N/L10N
 
 `AddressFormat <#AddressFormat>`__
-''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: US style ([Street number], [Address] - [City], [Zip/Postal
 Code], [Country])
@@ -6515,7 +6516,7 @@ Description:
    their record.
 
 `alphabet <#alphabet>`__
-''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
@@ -6531,7 +6532,7 @@ Description:
    |image60|
 
 `CalendarFirstDayOfWeek <#CalendarFirstDayOfWeek>`__
-''''''''''''''''''''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Sunday
 
@@ -6562,7 +6563,7 @@ Description:
    Javascript on these pages.
 
 `dateformat <#dateformat>`__
-''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: mm/dd/yyyy
 
@@ -6592,7 +6593,7 @@ Description:
    http://www.iso.org/iso/iso_catalogue.htm.
 
 `language <#languagepref>`__
-''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: English
 
@@ -6606,7 +6607,7 @@ To install additional languages please refer to
 http://wiki.koha-community.org/wiki/Installation_of_additional_languages_for_OPAC_and_INTRANET_staff_client
 
 `opaclanguages <#opaclanguages>`__
-''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: English
 
@@ -6625,7 +6626,7 @@ Values:
     show up as an option in this preference.
 
 `opaclanguagesdisplay <#opaclanguagesdisplay>`__
-''''''''''''''''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't allow
 
@@ -6652,7 +6653,7 @@ Description:
    catalog.
 
 `TimeFormat <#TimeFormat>`__
-''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: 24 hour format
 
@@ -6665,7 +6666,7 @@ Values:
 -  24 hour format (eg 14:18)
 
 `TranslateNotices <#TranslateNotices>`__
-''''''''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't allow
 
