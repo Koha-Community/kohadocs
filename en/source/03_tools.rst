@@ -1527,7 +1527,7 @@ When you visit the tool it will ask you:
 -  Finally choose the MARC Modification Template you'd like to use to
    edit these records.
 
-Once you've entered your critera click 'Continue'Records to edit
+Once you've entered your criteria click 'Continue'Records to edit
 
 You will be presented with a list of records that will be edited. Next
 to each one is a checkbox so you can uncheck any items you would rather
@@ -2083,7 +2083,7 @@ make alterations to MARC records automatically while staging MARC
 records for import.
 
 This tool is useful for altering MARC records from various
-venders/sources work with your MARC framework. The system essentially
+vendors/sources work with your MARC framework. The system essentially
 allows one to create a basic script using actions to Copy, Move, Add,
 Update and Delete fields.
 
@@ -2109,7 +2109,7 @@ action
 -  Click 'Add action'
 
 Each action can also have an optional condition to check the value or
-existance of another field. For example you might want to add the call
+existence of another field. For example you might want to add the call
 number to the item record if it's not already there.
 
 Add conditional action
@@ -2117,7 +2117,7 @@ Add conditional action
 
 -  Choose 'Copy'
 
--  Decide if you want to copy the first occurance or all occurances of
+-  Decide if you want to copy the first occurrence or all occurrence of
    the field
 
 -  Enter the field 090 (or other biblio call number field) and subfield
@@ -2144,7 +2144,7 @@ Add regex action
 
 -  Choose 'Copy and replace'
 
--  Decide if you want to copy the first occurance or all occurances of
+-  Decide if you want to copy the first occurrence or all occurrences of
    the field
 
 -  Enter the field 020 and subfield c to copy
@@ -2180,7 +2180,7 @@ in front of links in your MARC record.Add proxy URL
 
 -  Choose 'Copy and replace'
 
--  Decide if you want to copy the first occurance or all occurances of
+-  Decide if you want to copy the first occurrence or all occurrences of
    the field
 
 -  Enter the field 856 and subfield u to copy
