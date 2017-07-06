@@ -49,7 +49,7 @@ number and term. To link an instructor to this course simply start
 typing their name and Koha will search your patron database to find you
 the right person.
 
-Instrcutor search
+Instructor search
 |image728|
 
 Once the instructor you want appears just click their name and they will
