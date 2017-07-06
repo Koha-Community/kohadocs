@@ -267,7 +267,7 @@ Add a new subscription (2/2)
    German locale option to display days, etc. in German.
 
 -  Once a 'Numbering pattern' is chosen the number formula will
-   appear.Numbering Forumla
+   appear.Numbering Formula
 
    -  The 'Begins with' number is the number of the issue you're holding
       in your hand.
@@ -470,7 +470,7 @@ subscription <#newsubscription>`__ itself.
 Subscribe link in the OPAC
 |image767|
 
-You can see thos who subscribe to new issue alerts by going to the
+You can see those who subscribe to new issue alerts by going to the
 subscription page in the staff client and looking on the right of the
 'Information' tab.Serial notification subscribers
 
@@ -578,7 +578,7 @@ Advanced Serials Search
 |image779|
 
 From your results you can filter by using the search boxes at the bottom
-of each column and adjust the number of resutls using the toolbar at the
+of each column and adjust the number of results using the toolbar at the
 top of the results set.
 
 Serial Search Results
