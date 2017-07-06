@@ -178,7 +178,7 @@ Add MARC Record
    -  Choosing 'Save and edit items' will bring you to the add/edit item
       form after saving the bib record so that you can attach holdings
 
-   -  Choosing 'Save and continute editing' will allow you to save your
+   -  Choosing 'Save and continue editing' will allow you to save your
       work so far and keep you in the editor to continue working
 
 -  If you are about to add a duplicate record to the system you will be
@@ -408,9 +408,9 @@ You can also see the analytics attached to this record by clicking the
 Show Analytics on Bib Record
 |image651|
 
-When looking at the anaytic record you will also see a link to the host
+When looking at the analytic record you will also see a link to the host
 item under the 'Host records' column in the holdings table when viewing
-the 'Analtyics' tab.
+the 'Analytics' tab.
 
 Host Record
 |image652|
@@ -451,9 +451,9 @@ You can also see the analytics attached to this record by clicking the
 Show Analytics on Bib Record
 |image656|
 
-When looking at the anaytic record you will also see a link to the host
+When looking at the analytic record you will also see a link to the host
 item under the 'Host records' column in the holdings table when viewing
-the 'Analtyics' tab.
+the 'Analytics' tab.
 
 Host Record
 |image657|
@@ -873,7 +873,7 @@ library, item type, collection code, call number and replacement price.
 You can also see and edit the status information. If an item is marked
 lost or withdrawn you will also see the date that status was applied.
 
-In the History section you will see infomration about the check out
+In the History section you will see information about the check out
 history of the item and if you ordered the item via the acquisitions
 module then this section will include information about the order.
 
