@@ -279,7 +279,7 @@ already.
 Saved Reports
 |image895|
 
-To the right of every report there is an 'Actions' pull down. Clickin
+To the right of every report there is an 'Actions' pull down. Clicking
 that and choose 'Duplicate' to use an existing report as the basis for
 your new report. That will populate the new report form with the
 existing SQL for easy editing and resaving.
