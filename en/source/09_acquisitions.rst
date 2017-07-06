@@ -582,7 +582,7 @@ Accounting Details
    Planning Value fields.
 
 Once you have filled in all of the fields click 'Save' to add the item
-to your basket. If your price goes over the amount availalbe in the fund
+to your basket. If your price goes over the amount available in the fund
 you will be presented with a confirmation.
 
 Fund warning
@@ -1167,7 +1167,7 @@ downloaded from your vendor and staged in Koha.
 
 From the confirmation screen you will see all of the data in the MARC
 file related to your order. If you are not seeing fields such as fund
-and quanity filled in then be sure to confirm that your
+and quantity filled in then be sure to confirm that your
 `MarcFieldsToOrder <#MarcFieldsToOrder>`__ preference is set right.
 
 Once you have added all of the items to the basket you can click the
