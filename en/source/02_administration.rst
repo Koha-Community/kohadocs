@@ -1496,7 +1496,7 @@ OpacSuppressionRedirect Values:
 Description:
 
 -  These preferences control hiding of bibliographic records from
-   display in the OPAC. Each bibliogrphic record you want to hide from
+   display in the OPAC. Each bibliographic record you want to hide from
    the OPAC simply needs to have the value "1" in the field mapped with
    Suppress index (942$n field in MARC21, no official field in UNIMARC).
    The indexer then hides it from display in OPAC but will still display
@@ -1654,7 +1654,7 @@ Description:
 -  Use one line per tag in the format BT\_TAG: TAG$SUBFIELD ( e.g. lccn:
    010$a )
 
--  To specificy multiple marc tags/subfields as targets for a repeating
+-  To specify multiple marc tags/subfields as targets for a repeating
    BibTex tag, use the following format: BT\_TAG: [TAG2$SUBFIELD1,
    TAG2$SUBFIELD2] ( e.g. notes: [501$a, 505$g] )
 
@@ -5761,7 +5761,7 @@ Description:
 `Novelist Select <#novelistselect>`__
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Novelist Select is not a free service. Contact your Ebsco representitive
+Novelist Select is not a free service. Contact your Ebsco representative
 to get your log in information to embed this content in the OPAC.
 
     **Important**
@@ -9519,7 +9519,7 @@ Description:
     provisional `patron category <#patcats>`__ with no `circulation
     rights <#circfinerules>`__. That way patrons will have to come in to
     the library to verify their identity before given circulation rights
-    at the library. Once the patron confirms their identiy the library
+    at the library. Once the patron confirms their identity the library
     staff can change the category to one with permissions to check items
     out and place holds.
 
@@ -9545,7 +9545,7 @@ entry screen: \_\_\_
 Description:
 
 -  This preference allows you to define what fields patrons must fill in
-   on their self regisration form. If any of the required fields are
+   on their self registration form. If any of the required fields are
    blank Koha will not let the patron register.
 
     **Important**
@@ -9576,7 +9576,7 @@ screen: \_\_\_
 
 Description:
 
--  Using this preference you can hide fields from the patron registraion
+-  Using this preference you can hide fields from the patron registration
    and update form in the OPAC.
 
     **Important**
@@ -9643,7 +9643,7 @@ Asks: Delete patrons registered via the OPAC, but not yet verified after
 
 Description:
 
--  This prefence links to the `delete\_expired\_opac\_registrations.pl
+-  This preference links to the `delete\_expired\_opac\_registrations.pl
    cron job <#deleteexpiredregistrationcron>`__. If that cron is set to
    run nightly it will clean up any registrations that have not been
    verified via email in the number of days entered on this preference.
@@ -10355,7 +10355,7 @@ username/login \_\_\_ and a password \_\_\_.
     Please refer to your national laws concerning the sending of bulk
     SMS messages before enabling this feature.
 
-Descritpion:
+Description:
 
 -  There are two options for using SMS in Koha. You can use the Email
    protocol for free by entering 'Email' as the SMSSendDriver or you can
