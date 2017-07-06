@@ -80,7 +80,7 @@ installed and whether you need to upgrade certain modules.
 Perl Modules
 |image1066|
 
-Items listed in bold are required by Koha, items highlighed in red are
+Items listed in bold are required by Koha, items highlighted in red are
 missing completely and items highlighted in yellow simply need to be
 upgraded.
 
