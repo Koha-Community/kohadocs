@@ -1524,13 +1524,6 @@ Description:
     to 1, it will hide the entire bib record - not just an individual
     item.
 
-    **Important**
-
-    You must have the Suppress index set up in Zebra and at least one
-    record with the value "1" in the field mapped with this index, or
-    your searches will be completely broken in OPAC (you won't get any
-    results at all).
-
     **Note**
 
     Suppressed records will show a note in the staff client indicating
