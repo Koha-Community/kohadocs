@@ -1125,6 +1125,32 @@ Late transfers include warning messages
     entered in the
     `TransfersMaxDaysWarning <#TransfersMaxDaysWarning>`__ system
     preference.
+    
+`Article Requests <#articlerequests>`__
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the article request has been placed, staff will see new requests at the 
+bottom of the home page on the staff client. (In the same location as tags, 
+comments and modifications).
+
+From there staff will be able to select requests to process.
+
+The first step would be for a staff member to process the request, that moves 
+the request to the processing tab and alerts other staff members that the 
+request is in process. On the actions column, click on the dropdown menu and 
+select process request. This will move the request to the processing tab.
+
+Next staff will go to the shelf and make a copy of the requested article.
+
+Once that is complete, staff can print the Article request slip (this can be 
+customized in notices and slips) and staple or paper clip it to the article. 
+In the actions column, you can select the dropdown and select print slip.
+
+Finally, staff will select the complete article request from the actions 
+dropdown menu which will send a notice to the patron who made the request 
+letting them know the request is ready for pickup.
+
+This removes the article request from the processing tab.
 
 `Overdues <#overduesreport>`__
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
