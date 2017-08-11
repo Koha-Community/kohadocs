@@ -36,7 +36,7 @@ New List Form
    -  A Public List can be seen by everybody, but managed only by you
       (depending on your permissions settings below)
 
--  Finally decide what your permissions will be on the list. You can all
+-  Finally decide what your permissions will be on the list. You can allow
    or disallow:
 
    -  anyone else to add entries
