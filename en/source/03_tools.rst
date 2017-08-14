@@ -9,16 +9,20 @@ management systems.
 
 -  *Get there:* More > Tools
 
-`Patrons and Circulation <#patrontools>`__
+.. _patrons-and-circulation-label:
+
+Patrons and Circulation
 ------------------------------------------
 
-`Patron lists <#patronlists>`__
+.. _patron-lists-label:
+
+Patron lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Patron lists
 
 Patron lists are a way to store a group of patrons for easy modification
-via the `batch patron modification tool <#batchpatronmod>`__ or
+via the :ref:`batch patron modification tool <batch-patron-modification-label>` or
 reporting.
 
 Patron lists
@@ -55,7 +59,9 @@ Once you have all of the patrons you would like to add you can click the
 List of patrons
 |image250|
 
-`Comments <#comments>`__
+.. _comments-label:
+
+Comments
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Comments
@@ -89,7 +95,9 @@ by choosing the 'Approved comments' tab
 Approved comments
 |image254|
 
-`Patron Import <#patronimport>`__
+.. _patron-import-label:
+
+Patron Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Import Patrons
@@ -98,7 +106,9 @@ The patron import tool can be used at any time to add patrons in bulk.
 It is commonly used in universities and schools when a new batch of
 students registers.
 
-`Creating Patron File <#createpatronfile>`__
+.. _creating-patron-file-label:
+
+Creating Patron File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your Koha installation comes with a blank CSV file that you can use as a
@@ -130,19 +140,19 @@ privacy, patron\_attributes
 
     **Important**
 
-    Date formats should match your `system preference <#dateformat>`__,
+    Date formats should match your :ref:`system preference <dateformat-label>`,
     and must be zero-padded, e.g. '01/02/2008'.
 
     **Important**
 
     The fields 'branchcode', 'categorycode' and all fields you have
-    defined in the `BorrowerMandatoryField <#BorrowerMandatoryField>`__
+    defined in the :ref:`BorrowerMandatoryField`
     preference are required and must match valid entries in your
     database.
 
     **Note**
 
-    If loading `patron attributes <#patronattributetypes>`__, the
+    If loading :ref:`patron attributes <patron-attribute-types-label>`, the
     'patron\_attributes' field should contain a comma-separated list of
     attribute types and values.
 
@@ -162,7 +172,9 @@ privacy, patron\_attributes
           the input file replace all of the attribute values of any type
           that were previously assigned to the patron record.
 
-`Importing Patrons <#importpatrons>`__
+.. _importing-patrons-label:
+
+Importing Patrons
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have created your file, you can use the Patron Import Tool to
@@ -199,7 +211,9 @@ bring the data into Koha.
       whether to add your values to existing values or erase existing
       values and enter only your new values.
 
-`Notices & Slips <#notices>`__
+.. _notices-&-slips-label:
+
+Notices & Slips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Notices & Slips
@@ -217,15 +231,17 @@ Each notice and slip can be edited on a per library basis, by default
 you will see the notices for all libraries.
 
 If you have a style you'd like applied to all slips you can point the
-`SlipCSS <#SlipCSS>`__ preference to a stylesheet. The same is true for
-notices, using the `NoticeCSS <#NoticeCSS>`__ preference to define a
+:ref:`SlipCSS` preference to a stylesheet. The same is true for
+notices, using the :ref:`NoticeCSS` preference to define a
 stylesheet.
 
-You will also want to review the `Notices & Slips Field
-Guide <#noticesfieldguide>`__ for more information on formatting these
+You will also want to review the :ref:`Notices & Slips Field
+Guide <field-guide-for-notices-&-slips-label>` for more information on formatting these
 notices.
 
-`Adding Notices & Slips <#addnotices>`__
+.. _adding-notices-&-slips-label:
+
+Adding Notices & Slips
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new notice or slip
@@ -240,8 +256,8 @@ To add a new notice or slip
    -  **Important**
 
           Not all notices can be branch specific for more information
-          review the `Notices & Slips Field
-          Guide <#noticesfieldguide>`__ in this manual.
+          review the :ref:`Notices & Slips Field
+          Guide <field-guide-for-notices-&-slips-label>` in this manual.
 
 -  Choose the module this notice is related to
 
@@ -259,7 +275,7 @@ To add a new notice or slip
 
           With overdue notices, be sure to put your branch name in the
           description as well so that it will be visible when setting up
-          your `triggers <#noticetriggers>`__.
+          your :ref:`triggers <overdue-notice/status-triggers-label>`.
 
 -  Next you can customize the notice for every possible delivery method
 
@@ -267,14 +283,14 @@ To add a new notice or slip
       notice
 
    -  If you're using the
-      `TalkingTechItivaPhoneNotification <#TalkingTechItivaPhoneNotification>`__
+      :ref:`TalkingTechItivaPhoneNotification`
       service you can set up a Phone notificationNew Phone notice
 
    -  If you plan on printing this notice you can set the Print template
       nextNew Print notice
 
    -  If you have enabled SMS notices with the
-      `SMSSendDriver <#SMSSendDriver>`__ preference you can set the text
+      :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference you can set the text
       for your SMS notices nextNew SMS notice
 
 -  Each notice offers you the same options
@@ -292,16 +308,16 @@ To add a new notice or slip
 
       -  **Note**
 
-             Review the `Notices & Slip Field
-             Guide <#noticesfieldguide>`__ for info on what fields can
+             Review the :ref:`Notices & Slip Field
+             Guide <field-guide-for-notices-&-slips-label>` for info on what fields can
              be used here.
 
       -  **Important**
 
              Overdue notices can use <<items.content>> tags by
              themselves, or use <item></item> to span all of the tags.
-             Learn more about the `Overdue Notice
-             Markup <#noticemarkup>`__
+             Learn more about the :ref:`Overdue Notice
+             Markup <overdue-notice-markup-label>`
 
              -  On overdue notices make sure to use <<items.content>>
                 tags to print out the data related to all items that are
@@ -334,12 +350,14 @@ To add a new notice or slip
              slips or notice you can enter data in the Other name or
              Initials field for each patron and use that value instead.
 
-`Overdue Notice Markup <#noticemarkup>`__
+.. _overdue-notice-markup-label:
+
+Overdue Notice Markup
 '''''''''''''''''''''''''''''''''''''''''
 
 When creating your overdue notices there are two tags in addition to the
 various database fields that you can use in your notices. You will also
-want to review the `Notices & Slips Field Guide <#noticesfieldguide>`__
+want to review the :ref:`Notices & Slips Field Guide <field-guide-for-notices-&-slips-label>`
 for information on formatting item information in these notices.
 
     **Important**
@@ -367,21 +385,23 @@ Which, assuming two items were overdue, would result in a notice like:
        "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: 3.50
        "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: 3.50
 
-`Existing Notices & Slips <#existingnotices>`__
+.. _existing-notices-&-slips-label:
+
+Existing Notices & Slips
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Among the default notices are notices for several common actions within
 Koha. All of these notices can be customized by altering their text via
 the Notices & Slips tool and their style using the
-`NoticeCSS <#NoticeCSS>`__ preference to define a stylesheet. You will
-also want to review the `Notices & Slips Field
-Guide <#noticesfieldguide>`__ for information on formatting item
+:ref:`NoticeCSS` preference to define a stylesheet. You will
+also want to review the :ref:`Notices & Slips Field
+Guide <field-guide-for-notices-&-slips-label>` for information on formatting item
 information in these notices. Here are some of what those notices do:
 
 -  ACCTDETAILS
 
    -  Sent to patrons when their account is set up if the
-      `AutoEmailOPACUser <#AutoEmailOPACUser>`__ preference is set to
+      :ref:`AutoEmailOPACUser <autoemailopacuser-label>` preference is set to
       'Send'
 
 -  ACQCLAIM (Acquisition Claim)
@@ -398,7 +418,7 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice
@@ -406,7 +426,7 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  CHECKOUT
 
@@ -416,7 +436,7 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice
@@ -424,7 +444,7 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  DUE
 
@@ -433,7 +453,7 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice
@@ -441,7 +461,7 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  DUEDGST
 
@@ -450,7 +470,7 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice as a digest
@@ -458,14 +478,14 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  HOLD (Hold Available for Pickup)
 
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice
@@ -473,7 +493,7 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
    -  When this notice references the branches table it is referring to
       the pickup branch information.
@@ -482,7 +502,7 @@ information in these notices. Here are some of what those notices do:
    placed)
 
    -  This notice requires the
-      `emailLibrarianWhenHoldIsPlaced <#emailLibrarianWhenHoldIsPlaced>`__
+      :ref:`emailLibrarianWhenHoldIsPlaced`
       system preference to be set to 'Enable'
 
    -  When this notice references the branches table it is referring to
@@ -494,8 +514,8 @@ information in these notices. Here are some of what those notices do:
       are expiring soon.
 
    -  Requires that you have the
-      `MembershipExpiryDaysNotice <#MembershipExpiryDaysNotice>`__ set
-      and the `related cron job <#patronexpirycron>`__ set.
+      :ref:`MembershipExpiryDaysNotice` set
+      and the :ref:`related cron job <notify-patrons-of-expiration-label>` set.
 
 -  ODUE (Overdue Notice)
 
@@ -503,8 +523,8 @@ information in these notices. Here are some of what those notices do:
 
    -  See a `Sample Overdue Notice <#samplenotice>`__
 
-   -  Requires that you set `Overdue Notice/Status
-      Triggers <#noticetriggers>`__
+   -  Requires that you set :ref:`Overdue Notice/Status
+      Triggers <overdue-notice/status-triggers-label>`
 
 -  PREDUE
 
@@ -513,7 +533,7 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice
@@ -521,7 +541,7 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  PREDUEDGST
 
@@ -531,7 +551,7 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if two criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
       2. The patron has requested to receive this notice as a digest
@@ -539,7 +559,7 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  RENEWAL
 
@@ -549,10 +569,10 @@ information in these notices. Here are some of what those notices do:
    -  This notice is used if three criteria are met:
 
       1. The
-         `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+         :ref:`EnhancedMessagingPreferences`
          is set to 'Allow'
 
-      2. The `RenewalSendNotice <#RenewalSendNotice>`__ preference is
+      2. The :ref:`RenewalSendNotice` preference is
          set to 'Send'
 
       3. The patron has requested to receive the checkout notice
@@ -560,15 +580,15 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ OPAC > Login > my messaging
 
          -  *Get there:*\ Staff Client > Patron Record >
-            `Notices <#patnotices>`__
+            :ref:`Notices`
 
 -  RLIST (Routing List)
 
    -  Used in the serials module to notify patrons/staff of new issues
       of a serial
 
-      -  *Get there:* More > Serials > `New
-         Subscription <#newsubscription>`__
+      -  *Get there:* More > Serials > :ref:`New
+         Subscription <add-a-subscription-label>`
 
    -  You have the option to select the 'Routing List' notice when
       creating a new subscription (Choose from the 'Patron notification'
@@ -586,7 +606,7 @@ information in these notices. Here are some of what those notices do:
       shared list.
 
    -  Requires that you set
-      `OpacAllowSharingPrivateLists <#OpacAllowSharingPrivateLists>`__
+      :ref:`OpacAllowSharingPrivateLists`
       to 'Allow'
 
 -  SHARE\_INVITE
@@ -595,7 +615,7 @@ information in these notices. Here are some of what those notices do:
       list with them.
 
    -  Requires that you set
-      `OpacAllowSharingPrivateLists <#OpacAllowSharingPrivateLists>`__
+      :ref:`OpacAllowSharingPrivateLists`
       to 'Allow'
 
 -  TO\_PROCESS
@@ -604,12 +624,12 @@ information in these notices. Here are some of what those notices do:
       moved to the fund they manage
 
    -  Requires the
-      `notice\_unprocessed\_suggestions <#emailsuggestfund>`__ cron job
+      :ref:`notice\_unprocessed\_suggestions <email-suggestions-to-process-label>` cron job
 
 There are also a set of predefined slips (or receipts) listed on this
 page. All of these slips can be customized by altering their text via
 the Notices & Slips tool and their style using the
-`SlipCSS <#SlipCSS>`__ preference to define a stylesheet. Here is what
+:ref:`SlipCSS` preference to define a stylesheet. Here is what
 those slips are used for:
 
 -  ISSUEQSLIP
@@ -638,28 +658,30 @@ those slips are used for:
    -  The transfer slip is printed when you confirm a transfer from one
       branch to another in your system
 
-`Overdue Notice/Status Triggers <#noticetriggers>`__
+.. _overdue-notice/status-triggers-label:
+
+Overdue Notice/Status Triggers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Overdue
    Notice/Status Triggers
 
 In order to send the overdue notices that you defined using the
-`Notices <#notices>`__ tool, you need to first set the triggers to have
+:ref:`Notices <notices-&-slips-label>` tool, you need to first set the triggers to have
 these messages.
 
     **Important**
 
     In order to have overdue notices sent to your patrons, you need to
-    `set that patron category <#addingpatroncat>`__ to require overdue
+    :ref:`set that patron category <adding-a-patron-category-label>` to require overdue
     notices.
 
     **Important**
 
     Depending on the value of your
-    `OverdueNoticeCalendar <#OverdueNoticeCalendar>`__ preference the
+    :ref:`OverdueNoticeCalendar` preference the
     delay may or may not include days the library is closed based on the
-    `holiday calendar <#calholidays>`__.
+    :ref:`holiday calendar <calendar-label>`.
 
 The Overdue Notice/Status Triggers tool gives the librarian the power to
 send up to three notices to each patron type notifying them of overdue
@@ -686,13 +708,13 @@ Overdue Notice/Status Triggers Tool
 
    -  If you choose to restrict a patron in this way you can also have
       Koha automatically remove that restriction with the
-      `AutoRemoveOverduesRestrictions <#AutoRemoveOverduesRestrictions>`__
+      :ref:`AutoRemoveOverduesRestrictions`
       preference.
 
 -  Next you can choose the delivery method for the overdue notice. You
-   can choose from Email, Phone (if you are using the `iTiva Talking
-   Tech service <#TalkingTechItivaPhoneNotification>`__), Print and SMS
-   (if you have set your `SMSSendDriver <#SMSSendDriver>`__).
+   can choose from Email, Phone (if you are using the :ref:`iTiva Talking
+   Tech service <talkingtechitivaphonenotification-label>`), Print and SMS
+   (if you have set your :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>`).
 
    -  **Note**
 
@@ -701,7 +723,9 @@ Overdue Notice/Status Triggers Tool
 
 -  See a `Sample Overdue Notice <#samplenotice>`__
 
-`Patron Card Creator <#patroncardcreator>`__
+.. _patron-card-creator-label:
+
+Patron Card Creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patron Card Creator
@@ -722,7 +746,9 @@ of the features of the Patron Card Creator module:
 
 -  Export (as PDF) single or multiple patron cards from within a batch
 
-`Layouts <#cardlayouts>`__
+.. _layouts-label:
+
+Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Layouts
@@ -735,7 +761,9 @@ and where it will appear.
     Up to three lines of text, the patron's number in barcode
     representation and up to two images can be printed on to the card.
 
-`Add a Layout <#addcardlayout>`__
+.. _add-a-layout-label:
+
+Add a Layout
 '''''''''''''''''''''''''''''''''
 
 If you have no layouts defined, you will add a new layout by clicking
@@ -793,12 +821,12 @@ Add New Layout
 
 -  Finally you can choose up to two images to print on the card.
 
-   -  One can be the `patron image <#uploadpatronimages>`__ which you
+   -  One can be the :ref:`patron image <upload-patron-images-label>` which you
       can resize to meet your needs.
 
    -  The other image can be something like a library logo or symbol
-      that you uploaded using the '`Manage
-      Images <#managecardimages>`__' module of the Patron Card Creator
+      that you uploaded using the ':ref:`Manage
+      Images <manage-images-label>`' module of the Patron Card Creator
       Tool.
 
     **Important**
@@ -811,7 +839,9 @@ After saving, your layouts will appear on the 'Manage layouts' page.
 Manage Layouts
 |image263|
 
-`Templates <#patrontemplate>`__
+.. _templates-label:
+
+Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Card
@@ -825,7 +855,9 @@ for setting up a template may be on the packaging, and if not it can
 usually be found on the vendor's website or can be measured from a
 sample sheet.
 
-`Add a Template <#addcardtemplate>`__
+.. _add-a-template-label:
+
+Add a Template
 '''''''''''''''''''''''''''''''''''''
 
 To add a new template click on the 'New template' button at the top of
@@ -875,7 +907,7 @@ Add Patron Card Template
       adjustments for your printer/template combination.
 
    -  After finding and documenting any anomalies in the printed
-      document, then you can `create a profile <#addcardprofile>`__ and
+      document, then you can :ref:`create a profile <add-a-profile-label>` and
       assign it to the template.
 
    -  **Important**
@@ -895,13 +927,15 @@ After saving, your templates will appear on the 'Manage templates' page.
 Manage Templates
 |image267|
 
-`Profiles <#patronprofile>`__
+.. _profiles-label:
+
+Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Profiles
 
 A profile is a set of "adjustments" applied to a given
-`template <#patrontemplate>`__ just prior to printing which compensates
+:ref:`template <templates-label>` just prior to printing which compensates
 for anomalies unique and peculiar to a given printer. This means if you
 set a template up and then print a sample set of data and find that the
 items are not all aligned the same on each card, you need to set up a
@@ -912,7 +946,9 @@ shifting of text to the left, right, top or bottom.
 If your cards are printing just the way you want, you will not need a
 profile.
 
-`Add a Profile <#addcardprofile>`__
+.. _add-a-profile-label:
+
+Add a Profile
 '''''''''''''''''''''''''''''''''''
 
 To add a new profile, you want to click on the 'Profiles' button at the
@@ -941,7 +977,7 @@ Add Printer Profile
           desk'
 
 -  Template will be filled in once you have chosen which template to
-   apply the profile to on the `template edit form <#addcardtemplate>`__
+   apply the profile to on the :ref:`template edit form <add-a-template-label>`
 
 -  The Units pull down is used to define what measurement scale you're
    going to be using for your profile.
@@ -978,7 +1014,9 @@ Manage Profiles
 Once you have saved your new profile, you can return to the list of
 templates and choose to edit the template that this profile is for.
 
-`Batches <#patroncardbatches>`__
+.. _batches-label:
+
+Batches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Card
@@ -986,7 +1024,9 @@ templates and choose to edit the template that this profile is for.
 
 A batch is a collection of patrons for whom you want to generate cards.
 
-`Add a Batch <#addcardbatch>`__
+.. _add-a-batch-label:
+
+Add a Batch
 '''''''''''''''''''''''''''''''
 
 To add a new batch, you want to click on the 'New batches' button at the
@@ -1051,15 +1091,17 @@ here. When printing this PDF please take care that your printer doesn't
 rescale the PDF (e.g do not fit to paper size) otherwise the printer
 will not be able to print to the right place per your templates.
 
-`Manage Images <#managecardimages>`__
+.. _manage-images-label:
+
+Manage Images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Images
 
 Images uploaded using this tool will appear on the menu when creating
-`patron card layouts <#cardlayouts>`__. You are limited in how many
+:ref:`patron card layouts <layouts-label>`. You are limited in how many
 images you can upload (not counting patron images) by the
-`ImageLimit <#ImageLimit>`__ system preference.
+:ref:`ImageLimit` system preference.
 
     **Important**
 
@@ -1091,7 +1133,9 @@ Images
 To delete one or multiple of these images, click the checkbox to the
 right of each image you want to delete and click the 'Delete' button.
 
-`Patrons (anonymize, bulk-delete) <#anonpatrons>`__
+.. _patrons-(anonymize,-bulk-delete)-label:
+
+Patrons (anonymize, bulk-delete)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Patrons
@@ -1117,7 +1161,7 @@ them from the system completely).
     **Important**
 
     The anonymization will fail quietly if
-    `AnonymousPatron <#AnonymousPatron>`__ preference does not contain a
+    :ref:`AnonymousPatron` preference does not contain a
     valid value.
 
 Patron Anonymize/Bulk Delete Tool
@@ -1136,9 +1180,9 @@ To either delete or anonymize patrons
 
    -  have accounts that will expire before a specific date
 
-   -  are in a specific `patron category <#patcats>`__
+   -  are in a specific :ref:`patron category <patron-categories-label>`
 
-   -  are in a `patron list <#patronlists>`__
+   -  are in a :ref:`patron list <patron-lists-label>`
 
 -  Click 'Next'
 
@@ -1153,15 +1197,17 @@ To either delete or anonymize patrons
    Completed Process
    |image279|
 
-`Batch patron modification <#batchpatronmod>`__
+.. _batch-patron-modification-label:
+
+Batch patron modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Batch patron
    modification
 
 With this tool you can make edits to a batch of patron records. Simply
-load in a file of cardnumbers (one per line), choose from a `list of
-patrons <#patronlists>`__ or scan patron card numbers in to the box
+load in a file of cardnumbers (one per line), choose from a :ref:`list of
+patrons <patron-lists-label>` or scan patron card numbers in to the box
 provided.
 
 Batch patron modification
@@ -1192,12 +1238,14 @@ Editing patron attributes
 Once you have made the changes you want, you can click 'Save' and Koha
 will present you with the changed patron records.
 
-`Tag Moderation <#tagsmoderation>`__
+.. _tag-moderation-label:
+
+Tag Moderation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Tags
 
-Depending on your `tagging system preferences <#taggingprefs>`__,
+Depending on your :ref:`tagging system preferences <tagging-label>`,
 librarians may need to approve tags before they are published on the
 OPAC. This is done via the Tag Moderation Tool. If there are tags
 awaiting moderation they will be listed on the main staff dashboard
@@ -1243,7 +1291,7 @@ Approved Tags
 |image286|
 
 To check terms against the approved and rejected lists (and possibly
-against `the dictionary <#TagsExternalDictionary>`__ you have assigned
+against :ref:`the dictionary <tagsexternaldictionary-label>` you have assigned
 for tag moderation) simply enter the term into the search box on the
 bottom right of the screen to see the status of the term
 
@@ -1255,15 +1303,17 @@ Finally you can find tags by using the filters on the left.
 Tag filters
 |image288|
 
-`Upload Patron Images <#uploadpatronimages>`__
+.. _upload-patron-images-label:
+
+Upload Patron Images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Patrons and Circulation > Upload Patron
    Images
 
-Patron images can be uploaded in bulk if you are `allowing patron
-images <#patronimages>`__ to be attached to patron records. These images
-can also be used when creating `patron cards <#patroncardcreator>`__.
+Patron images can be uploaded in bulk if you are :ref:`allowing patron
+images <patronimages-label>` to be attached to patron records. These images
+can also be used when creating :ref:`patron cards <patron-card-creator-label>`.
 
 -  Create a txt file and title it "DATALINK.TXT" or "IDLINK.TXT"
 
@@ -1298,7 +1348,9 @@ can also be used when creating `patron cards <#patroncardcreator>`__.
     is recommended that the image be 200x300 pixels, but smaller images
     will work as well.
 
-`Rotating Collections <#rotatingcollections>`__
+.. _rotating-collections-label:
+
+Rotating Collections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Rotating Collections
@@ -1314,7 +1366,7 @@ it should be sent to if it is not at the correct one.
 
     **Important**
 
-    The `AutomaticItemReturn <#AutomaticItemReturn>`__ system preference
+    The :ref:`AutomaticItemReturn` system preference
     must be set to "Don't automatically transfer items to their home
     library when they are returned" for Rotating Collections to function
     properly.
@@ -1341,7 +1393,9 @@ it should be sent to if it is not at the correct one.
    quickly removing a number of items at a time by scanning their
    barcodes.
 
-`Transfer a Rotating Collection <#transferrotatingcollection>`__
+.. _transfer-a-rotating-collection-label:
+
+Transfer a Rotating Collection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Transferring a collection will:
@@ -1380,10 +1434,14 @@ collection, also letting them know where the item needs to be sent.
 Rotating Collection Item Notification
 |image292|
 
-`Catalog <#catalogtools>`__
+.. _catalog-label:
+
+Catalog
 ---------------------------
 
-`Batch item modification <#batchmodifyitems>`__
+.. _batch-item-modification-label:
+
+Batch item modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Batch item modification
@@ -1396,8 +1454,8 @@ Batch Modification Tool
 From the tool you can choose to upload a file of barcodes or item ids,
 or you can scan items one by one into the box below the upload tool. You
 can also decide the items edited should be populated with the default
-values you have defined in your `default
-framework <#marcbibframeworks>`__.
+values you have defined in your :ref:`default
+framework <marc-bibliographic-frameworks-label>`.
 
 Once you have your file uploaded or the barcodes listed you can click
 'Continue.'
@@ -1437,7 +1495,9 @@ Item results summary
 Edit items in a batch
 |image297|
 
-`Batch item deletion <#batchdeleteitems>`__
+.. _batch-item-deletion-label:
+
+Batch item deletion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Batch item deletion
@@ -1483,7 +1543,9 @@ a confirmation of your deletion.
 Batch Deletion Confirmation
 |image302|
 
-`Batch record deletion <#batchrecorddelete>`__
+.. _batch-record-deletion-label:
+
+Batch record deletion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tool will take a batch of record numbers for either bibliographic
@@ -1501,14 +1563,16 @@ If a record you want to delete can't be deleted it will be highlighted.
 Check the records you want to delete and click the 'Delete selected
 records' button to finish the process.
 
-`Batch Record Modification <#batchrecordmod>`__
+.. _batch-record-modification-label:
+
+Batch Record Modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Batch record modification
 
 This tool will allow you to edit batches of bibliographic and/or
-authority records using `MARC Modification
-Templates <#marcmodtemplates>`__. Before visiting this tool you will
+authority records using :ref:`MARC Modification
+Templates <marc-modification-templates-label>`. Before visiting this tool you will
 want to set up at least one MARC modification template.
 
 Batch record modification
@@ -1539,7 +1603,9 @@ you finalize the edit.Modified MARC Preview
 Once you're sure everything is the way you want you can click the
 'Modify selected records' button and your records will be modified.
 
-`Automatic item modifications by age <#autoitemagemod>`__
+.. _automatic-item-modifications-by-age-label:
+
+Automatic item modifications by age
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Automatic item modifications by
@@ -1554,8 +1620,8 @@ reaches a certain age.
 
     **Important**
 
-    The settings in this tool will be acted upon by the `corresponding
-    cron job <#autoitemupdatecron>`__
+    The settings in this tool will be acted upon by the :ref:`corresponding
+    cron job <automatic-item-update-label>`
 
 If you haven't created any rules you will see the option to 'Add rules'
 on the Tool page. Click this button to create rules.Automatic item
@@ -1592,7 +1658,9 @@ save your changes.
 List of rules
 |image307|
 
-`Export Data (MARC & Authorities) <#exportbibs>`__
+.. _export-data-(marc-&-authorities)-label:
+
+Export Data (MARC & Authorities)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Export Data
@@ -1602,7 +1670,9 @@ holdings and/or authority data in bulk. This can be used to send your
 records to fellow libraries, organizations or services; or simply for
 backup purposes.
 
-`Export Bibliographic Records <#exportmarc>`__
+.. _export-bibliographic-records-label:
+
+Export Bibliographic Records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At the top of the screen you need to pick what data you're exporting. If
@@ -1625,7 +1695,7 @@ information you want to click the 'Export bibliographic records' tab.
          -  **Important**
 
                 This limit will use the type you have defined in the
-                `item-level\_itypes <#item-level_itypes>`__ preference.
+                :ref:`item-level\_itypes <item-level\_itypes-label>` preference.
                 If you have the item-level\_itypes preference set to
                 'specific item' and you have no items attached to a bib
                 record it will not be exported. To get all bib records
@@ -1672,7 +1742,9 @@ information you want to click the 'Export bibliographic records' tab.
 
    -  Click 'Export bibliographic records'
 
-`Export Authority Records <#exportauthority>`__
+.. _export-authority-records-label:
+
+Export Authority Records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At the top of the screen you need to pick what data you're exporting. If
@@ -1710,7 +1782,9 @@ authority records' tab.
 
 -  Click 'Export authority records'
 
-`Inventory/Stocktaking <#inventory>`__
+.. _inventory/stocktaking-label:
+
+Inventory/Stocktaking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Inventory/Stocktaking
@@ -1753,7 +1827,9 @@ Barcode Import for Inventory Tool
 Choose the text file and the date you want to mark all items as seen and
 then scroll to the very bottom and click 'Submit.'
 
-`Label Creator <#labelcreator>`__
+.. _label-creator-label:
+
+Label Creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Label Creator
@@ -1782,7 +1858,9 @@ Here are some of the features of the Label Creator module:
 
    -  XML - Included as an alternate export format
 
-`Templates <#labeltemplates>`__
+.. _templates-label:
+
+Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Label Creator > Manage > Label templates
@@ -1794,7 +1872,9 @@ labels will include all of the information you will need for setting up
 a Koha, this information may be on the packaging, and if not it can
 usually be found on the vendor's website.
 
-`Add a Template <#addlabeltemplate>`__
+.. _add-a-template-label:
+
+Add a Template
 ''''''''''''''''''''''''''''''''''''''
 
 To add a new template, you want to click on the 'New' button at the top
@@ -1842,8 +1922,8 @@ Label Template Form
       you can easily define a profile that is right for your
       printer/template combination.
 
-   -  After finding any anomalies in the printed document, `create a
-      profile <#addlabelprofile>`__ and assign it to the template.
+   -  After finding any anomalies in the printed document, :ref:`create a
+      profile <add-a-profile-label>` and assign it to the template.
 
 After saving, your templates will appear on the 'Manage' area under
 'Label templates'.
@@ -1851,13 +1931,15 @@ After saving, your templates will appear on the 'Manage' area under
 List of label templates
 |image321|
 
-`Profiles <#labelprofiles>`__
+.. _profiles-label:
+
+Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Label Creator > Manage > Printer Profiles
 
 A profile is a set of "adjustments" applied to a given
-`template <#addlabeltemplate>`__ just prior to printing which
+:ref:`template <add-a-template-label>` just prior to printing which
 compensates for anomalies unique and peculiar to a given printer (to
 which the profile is assigned). This means if you set a template up and
 then print a sample set of data and find that the items are not all
@@ -1868,7 +1950,9 @@ shifting of text to the left, right, top or bottom.
 If your labels are printing just the way you want, you will not need a
 profile.
 
-`Add a Profile <#addlabelprofile>`__
+.. _add-a-profile-label:
+
+Add a Profile
 ''''''''''''''''''''''''''''''''''''
 
 To add a new profile, you want to click on the 'New' button at the top
@@ -1889,8 +1973,8 @@ Create a Printer Profile
    number in printer name or you can call it 'the printer on my desk'
 
 -  Template will be filled in once you have chosen which template to
-   apply the profile to on the `template edit
-   form <#addlabeltemplate>`__
+   apply the profile to on the :ref:`template edit
+   form <add-a-template-label>`
 
 -  The Units pull down is used to define what measurement scale you're
    going to be using for your profile.
@@ -1920,14 +2004,18 @@ List of Profiles
 Once you have saved your new profile, you can return to the list of
 templates and choose to edit the template that this profile is for.
 
-`Layouts <#labellayouts>`__
+.. _layouts-label:
+
+Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Label Creator > Manage > Layouts
 
 A layout is used to define the fields you want to appear on your labels.
 
-`Add a Layout <#addlabellayout>`__
+.. _add-a-layout-label:
+
+Add a Layout
 ''''''''''''''''''''''''''''''''''
 
 To add a new layout, you want to click on the 'New' button at the top of
@@ -1984,7 +2072,9 @@ Add New Layout
 
 After saving, your layouts will appear on the 'Manage Layouts' page.
 
-`Batches <#labelbatches>`__
+.. _batches-label:
+
+Batches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  *Get there:* More > Tools > Label Creator > Manage > Label batches
@@ -1993,12 +2083,14 @@ Batches are made up of the barcodes you would like to print. Once in
 this tool you can search for the item records you would like to print
 out labels for.
 
-`Add a Batch <#addlabelbatch>`__
+.. _add-a-batch-label:
+
+Add a Batch
 ''''''''''''''''''''''''''''''''
 
 Batches can be created in one of two ways. The first is to click the
-'Create Label Batch' link on the '`Staged MARC
-Management <#managestaged>`__' page:
+'Create Label Batch' link on the ':ref:`Staged MARC
+Management <staged-marc-record-management-label>`' page:
 
 Create Label Batch Link on Staged Records List
 |image329|
@@ -2053,7 +2145,9 @@ Batch save options
 After saving your file, simply print to the blank labels you have in
 your library.
 
-`Quick Spine Label Creator <#quicklabelcreator>`__
+.. _quick-spine-label-creator-label:
+
+Quick Spine Label Creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Quick Spine Label Creator
@@ -2064,7 +2158,7 @@ your library.
     prints a spine label in the first spot on the label sheet.
 
     -  Define the fields you want to print on the spine label in the
-       `SpineLabelFormat <#SpineLabelFormat>`__ system preference
+       :ref:`SpineLabelFormat` system preference
 
     -  Format your label printing by editing spinelabel.css found in
        koha-tmpl/intranet-tmpl/prog/en/css/
@@ -2075,7 +2169,9 @@ print the spine label for.
 Quick Spine Label Creator
 |image337|
 
-`MARC modification templates <#marcmodtemplates>`__
+.. _marc-modification-templates-label:
+
+MARC modification templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The MARC Modification Templates system gives Koha users the power to
@@ -2234,12 +2330,14 @@ Duplicate template
 |image342|
 
 Once your template is saved you will be able to pick it when using the
-`Stage MARC Records for Import <#stagemarc>`__ tool.
+:ref:`Stage MARC Records for Import` tool.
 
 Choose template
 |image343|
 
-`Stage MARC Records for Import <#stagemarc>`__
+.. _stage-marc-records-for-import-label:
+
+Stage MARC Records for Import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Stage MARC records for import
@@ -2260,7 +2358,7 @@ steps. The first is to stage records for import.
    |image345|
 
    -  Enter 'Comments about this file' to identify your upload when
-      going to the '`Manage Staged MARC Records <#managestaged>`__' tool
+      going to the ':ref:`Manage Staged MARC Records <staged-marc-record-management-label>`' tool
 
    -  Tell Koha which type of file this is, bibliographic or authority
 
@@ -2272,8 +2370,8 @@ steps. The first is to stage records for import.
       Chracter encoding
       |image347|
 
-   -  Choose if you would like to use a `MARC Modification
-      Template <#marcmodtemplates>`__ to alter the data you're about to
+   -  Choose if you would like to use a :ref:`MARC Modification
+      Template <marc-modification-templates-label>` to alter the data you're about to
       import
 
       Choose modification template
@@ -2284,7 +2382,7 @@ steps. The first is to stage records for import.
       Look for matches
       |image349|
 
-      -  You can set up `record matching rules <#recordmatchingrules>`__
+      -  You can set up :ref:`record matching rules <record-matching-rules-label>`
          through the administration area
 
          Matching rules
@@ -2293,7 +2391,7 @@ steps. The first is to stage records for import.
          -  When using the ISBN matching rule Koha will find only exact
             matches. If you find that the ISBN match is not working to
             your satisfaction you can change the
-            `AggressiveMatchOnISBN <#AggressiveMatchOnISBN>`__
+            :ref:`AggressiveMatchOnISBN`
             preference to 'Do' and then run your import again.
 
    -  Next choose what to do with matching records if they are found
@@ -2322,15 +2420,17 @@ steps. The first is to stage records for import.
    MARC Import Confirmation
    |image352|
 
--  To complete the process continue to the `Manage Staged MARC Records
-   Tool <#managestaged>`__
+-  To complete the process continue to the :ref:`Manage Staged MARC Records
+   Tool <staged-marc-record-management-label>`
 
-`Staged MARC Record Management <#managestaged>`__
+.. _staged-marc-record-management-label:
+
+Staged MARC Record Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Staged MARC Record Management
 
-Once you have `staged <#stagemarc>`__ your records for import you can
+Once you have :ref:`staged <stage-marc-records-for-import-label>` your records for import you can
 complete the import using this tool.
 
 List of Staged MARC Records
@@ -2414,17 +2514,19 @@ To clean items out of the 'reservoir':
    -  Accept the deletion and the records will be removed from the
       reservoir and the status will be changed to 'cleaned'
 
-`Upload Local Cover Image <#uploadlocalimages>`__
+.. _upload-local-cover-image-label:
+
+Upload Local Cover Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Upload Local Cover Image
 
 This tool will allow you to upload cover images for the materials in
 your catalog. To access this tool, staff will need the
-`upload\_local\_cover\_images permission <#toolspermissions>`__. In
+:ref:`upload\_local\_cover\_images permission <granular-tools-permissions-label>`. In
 order for images to show in the staff client and/or OPAC you will need
-to set your `LocalCoverImages <#LocalCoverImages>`__ and/or
-`OPACLocalCoverImages <#OPACLocalCoverImages>`__ preferences to
+to set your :ref:`LocalCoverImages` and/or
+:ref:`OPACLocalCoverImages` preferences to
 'Display.' Images can be uploaded in batches or one by one.
 
     **Note**
@@ -2527,13 +2629,17 @@ In the OPAC the cover images will also appear in the images tab, as well
 as next to the title and on the search results.
 
 If you would like to remove a cover image you can click 'Delete image'
-below the image if you have the `upload\_local\_cover\_images
-permission <#toolspermissions>`__.
+below the image if you have the :ref:`upload\_local\_cover\_images
+permission <granular-tools-permissions-label>`.
 
-`Additional Tools <#additionaltools>`__
+.. _additional-tools-label:
+
+Additional Tools
 ---------------------------------------
 
-`Calendar <#calholidays>`__
+.. _calendar-label:
+
+Calendar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > Calendar
@@ -2543,20 +2649,22 @@ calculating due dates. You can make use of the Calendar by turning on
 the proper system preferences:
 
 -  *Get there:*\ More > Administration > Global System Preferences >
-   Circulation > `useDaysMode <#useDaysMode>`__
+   Circulation > :ref:`useDaysMode`
 
    -  Choose the method for calculating due date - either include days
       the library is closed in the calculation or don't include them.
 
 -  *Get there:* More > Administration > Global System Preferences >
-   Circulation > `finescalendar <#finesCalendar>`__
+   Circulation > :ref:`finescalendar <finescalendar-label>`
 
    -  This will check the holiday calendar before charging fines
 
 Calendar & Holidays Tools
 |image369|
 
-`Adding Events <#addevents>`__
+.. _adding-events-label:
+
+Adding Events
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before adding events, choose the library you would like to apply the
@@ -2616,7 +2724,9 @@ apply the event to one branch or all branches. To add events, simply
    Calendar Summary
    |image372|
 
-`Editing Events <#editevents>`__
+.. _editing-events-label:
+
+Editing Events
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To edit events
@@ -2647,7 +2757,9 @@ To edit events
       -  All actions require that you click 'Save' before the change
          will be made.
 
-`Additional Help <#calendarhelp>`__
+.. _additional-help-label:
+
+Additional Help
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When adding or editing events you can get additional help by clicking on
@@ -2656,7 +2768,9 @@ the question mark next to various different options on the form
 Additional Calendar Help Buttons
 |image375|
 
-`CSV Profiles <#csvprofiles>`__
+.. _csv-profiles-label:
+
+CSV Profiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > CSV Profiles
@@ -2664,7 +2778,9 @@ Additional Calendar Help Buttons
 CSV Profiles are created to define how you would like your cart or list
 to export.
 
-`Add CSV Profiles <#addcsvprofile>`__
+.. _add-csv-profiles-label:
+
+Add CSV Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a CSV Profile
@@ -2740,7 +2856,9 @@ To add a CSV Profile
    Confirmation of new CSV profile
    |image380|
 
-`Modify CSV Profiles <#editcsvprofile>`__
+.. _modify-csv-profiles-label:
+
+Modify CSV Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have created at least one CSV Profile an 'Edit profile' tab
@@ -2764,7 +2882,9 @@ Modify CSV Profiles
    Delete an existing CSV Profile
    |image383|
 
-`Using CSV Profiles <#usecsvprofiles>`__
+.. _using-csv-profiles-label:
+
+Using CSV Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your CSV Profiles will appear on the export list or cart menu under the
@@ -2773,13 +2893,15 @@ Your CSV Profiles will appear on the export list or cart menu under the
 CSV Profiles on Download Menu in the Staff Client
 |image384|
 
-`Log Viewer <#logviewer>`__
+.. _log-viewer-label:
+
+Log Viewer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > Log Viewer
 
-Actions within the Koha system are tracked in log files. Your `system
-preferences <#logs>`__ can be changed to prevent the logging of
+Actions within the Koha system are tracked in log files. Your :ref:`system
+preferences <logs-label>` can be changed to prevent the logging of
 different actions. These logs can be viewed using the Log Viewer Tool.
 
 Log Viewer
@@ -2792,7 +2914,9 @@ A query for all logs related to the Circulation module produces a result
 like this
 |image386|
 
-`News <#newstool>`__
+.. _news-label:
+
+News
 ~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > News
@@ -2840,7 +2964,7 @@ receipt:
 -  After filling in all of the fields, click 'Submit'
 
 -  News in the OPAC will appear above the
-   `OpacMainUserBlock <#OpacMainUserBlock>`__
+   :ref:`OpacMainUserBlock`
 
    News in the OPAC
    |image389|
@@ -2860,11 +2984,13 @@ receipt:
    |image391|
 
 -  Depending on your choice for the
-   `NewsAuthorDisplay <#NewsAuthorDisplay>`__ preference you will also
+   :ref:`NewsAuthorDisplay` preference you will also
    see the person who created the news item (this uses the logged in
    person)
 
-`Task Scheduler <#taskscheduler>`__
+.. _task-scheduler-label:
+
+Task Scheduler
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > Task Scheduler
@@ -2902,7 +3028,9 @@ clicking the 'Schedule' link
 Saved Reports List
 |image394|
 
-`Troubleshooting <#taskscedtroubleshoot>`__
+.. _troubleshooting-label:
+
+Troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Task scheduler will not work if the user the web server runs as doesn't
@@ -2912,7 +3040,9 @@ If you don't have that file, check etc/at.deny. If at.deny exists but is
 blank, then every user can use it. Talk to your system admin about
 adding the user to the right place to make the task scheduler work.
 
-`Quote of the Day (QOTD) Editor <#QOTDEditor>`__
+.. _quote-of-the-day-(qotd)-editor-label:
+
+Quote of the Day (QOTD) Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > Edit quotes for QOTD
@@ -2921,15 +3051,17 @@ adding the user to the right place to make the task scheduler work.
 This tool will allow you to add and edit quotes to show on the OPAC if
 you're using the Quote of the Day (QOTD) feature.
 
-To turn this feature on set the `QuoteOfTheDay <#QuoteOfTheDay>`__
+To turn this feature on set the :ref:`QuoteOfTheDay`
 preference to 'Enable and add at least one quote via the Quote of the
 Day Editor. Once these steps are complete you will see your quotes above
-the `OpacMainUserBlock <#OpacMainUserBlock>`__ in the OPAC:
+the :ref:`OpacMainUserBlock` in the OPAC:
 
 Quote in the OPAC
 |image395|
 
-`Add a Quote <#addquote>`__
+.. _add-a-quote-label:
+
+Add a Quote
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a quote:
@@ -2959,7 +3091,9 @@ To add a quote:
     You may cancel the addition of a new quote any time prior to saving
     it simply by pressing the <Esc> key on your keyboard.
 
-`Edit/Delete a Quote <#editquote>`__
+.. _edit/delete-a-quote-label:
+
+Edit/Delete a Quote
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the current quote pool has been loaded into the editing table, you
@@ -2989,7 +3123,9 @@ If you'd like you can also delete quote(s).
 -  After confirming the deletion, the list will update and the quote(s)
    will no longer appear.
 
-`Import Quotes <#importquote>`__
+.. _import-quotes-label:
+
+Import Quotes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you'd like you can import a batch of quotes as a CSV file. Your file
@@ -3054,21 +3190,25 @@ row.
    Save quotes button
    |image406|
 
-`Upload <#uploadtool>`__
+.. _upload-label:
+
+Upload
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Additional Tools > Upload
 
 This tool will allow you to upload files to your Koha system for
-selection from the `Cataloging form <#uploadbibfile>`__.
+selection from the :ref:`Cataloging form <attaching-files-to-records-label>`.
 
-`Upload Files <#uploadfiles>`__
+.. _upload-files-label:
+
+Upload Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you first visit the Upload tool you might see a warning about
 missing a category.Upload to temprorary
 
-Categories are defined in the `authorized value <#authorizedvalues>`__
+Categories are defined in the :ref:`authorized value <authorized-values-label>`
 in the UPLOAD category. If you do not have upload categories then your
 files will be temporary and will be deleted the next time the server is
 rebooted. Once you have a value in the UPLOAD authorized value category
@@ -3079,7 +3219,9 @@ Browse your computer a file, choose a category and decide if the public
 will be able to download this file via the OPAC. Once your file is
 uploaded you will be presented with a confirmation.Upload confirmation
 
-`Search Files <#searchuploads>`__
+.. _search-files-label:
+
+Search Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All uploaded files are searchable from below the upload form. Using the

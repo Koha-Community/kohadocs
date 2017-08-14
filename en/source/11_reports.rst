@@ -9,18 +9,24 @@ database.
 
 -  *Get there:* More > Reports
 
-`Custom Reports <#customreports>`__
+.. _custom-reports-label:
+
+Custom Reports
 -----------------------------------
 
 Koha's data is stored in a MySQL database which means that librarians
 can generate nearly any report they would like by either using the
-`Guided Reports Wizard <#quidedreportwizard>`__ or writing their own
-`SQL query <#reportfromsql>`__.
+:ref:`Guided Reports Wizard <guided-report-wizard-label>` or writing their own
+:ref:`SQL query <report-from-sql-label>`.
 
-`Add Custom Report <#customreport>`__
+.. _add-custom-report-label:
+
+Add Custom Report
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Guided Report Wizard <#quidedreportwizard>`__
+.. _guided-report-wizard-label:
+
+Guided Report Wizard
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The guided report wizard will walk you through a six step process to
@@ -108,7 +114,9 @@ best bet for finding the report you just added). You can also filter
 your results using the filter menu on the left or use the tabs to find
 reports based on your custom groups.
 
-`Report from SQL <#reportfromsql>`__
+.. _report-from-sql-label:
+
+Report from SQL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In addition to the report wizard, you have the option to write your own
@@ -267,9 +275,11 @@ Create Report from SQL
 Once everything is entered click the 'Save Report' button and you'll be
 presented with options to run it. Once a report is saved you do not have
 to recreate it you can simply find it on the Saved Reports page and
-`run <#runcustomreport>`__ or `edit <#editcustomreports>`__ it.
+:ref:`run <running-custom-reports-label>` or :ref:`edit <edit-custom-reports-label>` it.
 
-`Duplicate Report <#duplicatereport>`__
+.. _duplicate-report-label:
+
+Duplicate Report
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Reports can also be added by duplicating an existing report. Visit the
@@ -284,7 +294,9 @@ that and choose 'Duplicate' to use an existing report as the basis for
 your new report. That will populate the new report form with the
 existing SQL for easy editing and resaving.
 
-`Edit Custom Reports <#editcustomreports>`__
+.. _edit-custom-reports-label:
+
+Edit Custom Reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Every report can be edited from the reports lists. To see the list of
@@ -309,7 +321,9 @@ The form to edit the report will appear.
 Edit SQL Form
 |image898|
 
-`Running Custom Reports <#runcustomreport>`__
+.. _running-custom-reports-label:
+
+Running Custom Reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once custom reports are saved to Koha, you can run them by going to the
@@ -341,23 +355,27 @@ the results next to the 'Download the report' label and clicking
     A Comma Separated Text file is a CSV file and it can be opened by
     any spreadsheet application.
 
-`Statistics Reports <#statsreports>`__
+.. _statistics-reports-label:
+
+Statistics Reports
 --------------------------------------
 
 Statistic reports will show you counts and sums. These reports are all
 about numbers and statistics, for reports that return more detailed
-data, use the `Guided Report Wizard <#quidedreportwizard>`__. These
+data, use the :ref:`Guided Report Wizard`. These
 reports are limited in what data they can look at, so it's often
-recommended to use `custom reports <#customreports>`__ for official end
+recommended to use :ref:`custom reports <custom-reports-label>` for official end
 of the year statistics.
 
-`Acquisitions Statistics <#acqstats>`__
+.. _acquisitions-statistics-label:
+
+Acquisitions Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
 
     These reports are limited in what data they can look at, so it's
-    often recommended to use `custom reports <#customreports>`__ for
+    often recommended to use :ref:`custom reports <custom-reports-label>` for
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
@@ -387,13 +405,15 @@ amounts spent.
 Acquisitions statistics with totals
 |image905|
 
-`Patron Statistics <#patstats>`__
+.. _patron-statistics-label:
+
+Patron Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
 
     These reports are limited in what data they can look at, so it's
-    often recommended to use `custom reports <#customreports>`__ for
+    often recommended to use :ref:`custom reports <custom-reports-label>` for
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
@@ -412,13 +432,15 @@ Based on your selections, you may see some query information above your
 results table. You can also choose to export to a file that you can
 manipulate to your needs.
 
-`Catalog Statistics <#catstats>`__
+.. _catalog-statistics-label:
+
+Catalog Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
 
     These reports are limited in what data they can look at, so it's
-    often recommended to use `custom reports <#customreports>`__ for
+    often recommended to use :ref:`custom reports <custom-reports-label>` for
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
@@ -436,13 +458,15 @@ Catalog Statistic Results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Circulation Statistics <#circstats>`__
+.. _circulation-statistics-label:
+
+Circulation Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
 
     These reports are limited in what data they can look at, so it's
-    often recommended to use `custom reports <#customreports>`__ for
+    often recommended to use :ref:`custom reports <custom-reports-label>` for
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
@@ -484,7 +508,9 @@ needs.
     -  For a single day, an example would be: 11/15/2009 to 11/16/2009
        to find what circulated on the 15th
 
-`Tracking in house use <#inhouseuse>`__
+.. _tracking-in-house-use-label:
+
+Tracking in house use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the Circulation statistics reporting wizard you can run reports on
@@ -494,13 +520,15 @@ pull down:
 In House Use Stats
 |image912|
 
-`Serials Statistics <#serialstats>`__
+.. _serials-statistics-label:
+
+Serials Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
 
     These reports are limited in what data they can look at, so it's
-    often recommended to use `custom reports <#customreports>`__ for
+    often recommended to use :ref:`custom reports <custom-reports-label>` for
     official end of the year statistics.
 
 Using the form provided, choose how you would like to list the serials
@@ -518,13 +546,15 @@ Serials Results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Holds Statistics <#holdstats>`__
+.. _holds-statistics-label:
+
+Holds Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
 
     These reports are limited in what data they can look at, so it's
-    often recommended to use `custom reports <#customreports>`__ for
+    often recommended to use :ref:`custom reports <custom-reports-label>` for
     official end of the year statistics.
 
 Using the form provided you can see statistics for holds placed, filled,
@@ -544,7 +574,9 @@ Hold Stats Results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Patrons with the most checkouts <#mostcheckouts>`__
+.. _patrons-with-the-most-checkouts-label:
+
+Patrons with the most checkouts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will simply list the patrons who have the most checkouts.
@@ -561,7 +593,9 @@ Top checkouts results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Most Circulated Items <#mostcirculated>`__
+.. _most-circulated-items-label:
+
+Most Circulated Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will simply list the items that have the been checked out
@@ -579,7 +613,9 @@ Top Circulation Items Results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Patrons with no checkouts <#patnocheckouts>`__
+.. _patrons-with-no-checkouts-label:
+
+Patrons with no checkouts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list for you the patrons in your system who haven't
@@ -597,7 +633,9 @@ Results for Patrons with no Checkouts
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Items with no checkouts <#itemnocheckouts>`__
+.. _items-with-no-checkouts-label:
+
+Items with no checkouts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list items in your collection that have never been
@@ -615,7 +653,9 @@ Items with no checkouts results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Catalog by Item Type <#catbyitem>`__
+.. _catalog-by-item-type-label:
+
+Catalog by Item Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list the total number of items of each item type per
@@ -633,7 +673,9 @@ Total of Items by Type and Branch
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Lost Items <#lostreport>`__
+.. _lost-items-label:
+
+Lost Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will allow you to generate a list of items that have been
@@ -642,7 +684,9 @@ marked as Lost within the system
 Lost Items Report
 |image927|
 
-`Average Loan Time <#avloantime>`__
+.. _average-loan-time-label:
+
+Average Loan Time
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list the average time items are out on loan based on
@@ -660,7 +704,9 @@ Average Checkout Period Results
 You can also choose to export to a file that you can manipulate to your
 needs.
 
-`Report Dictionary <#reportdic>`__
+.. _report-dictionary-label:
+
+Report Dictionary
 ----------------------------------
 
 The report dictionary is a way to pre-define common filters you'd like

@@ -8,17 +8,19 @@ orders placed with vendors and manage purchase budgets.
 
 -  *Get there:* More > Acquisitions
 
-`Setup <#acqsetup>`__
+.. _setup-label:
+
+Setup
 ---------------------
 
 Before using the Acquisitions Module you will want to make sure that you
 have completed all of the set up.
 
-First, set your `Acquisitions System Preferences <#acqprefs>`__ and
-`Acquisitions Administration <#acqadmin>`__ to match your library's
-workflow. Before setting your `EDI Accounts <#ediaccounts>`__ and
-`Library EANs <#libraryeans>`__ you will need to have `entered your
-vendors <#addacqvendor>`__.
+First, set your :ref:`Acquisitions System Preferences <acquisitions-label>` and
+:ref:`Acquisitions Administration <acquisitions-label>` to match your library's
+workflow. Before setting your :ref:`EDI Accounts` and
+:ref:`Library EANs` you will need to have :ref:`entered your
+vendors <add-a-vendor-label>`.
 
 On the main acquisitions page you will see your library's funds listed.
 
@@ -34,7 +36,7 @@ Acquisitions Funds Summary
 
         #funds_total {display:none;}
 
-    to the `IntranetUserCSS <#IntranetUserCSS>`__ preference.
+    to the :ref:`IntranetUserCSS` preference.
 
 To see all active funds you can click the checkbox next to 'Show active
 and inactive' above the funds table.
@@ -45,16 +47,20 @@ amount and it will run a search for you.
 Breakdown of orders against the FIC Fund
 |image782|
 
-Learn more in the `Budget/Fund Tracking <#fundtracking>`__ section of
+Learn more in the :ref:`Budget/Fund Tracking` section of
 this manual.
 
-`Vendors <#acqvendors>`__
+.. _vendors-label:
+
+Vendors
 -------------------------
 
 Before any orders can be places you must first enter at least one
 vendor.
 
-`Add a Vendor <#addacqvendor>`__
+.. _add-a-vendor-label:
+
+Add a Vendor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add a vendor click the 'New Vendor' button on the Acquisitions page
@@ -91,8 +97,8 @@ The vendor add form is broken into three pieces
 
    -  For List Prices and Invoice Prices choose the currency
 
-      -  Currencies are assigned in the `Currencies & Exchange
-         Rates <#currexchangeadmin>`__ admin area
+      -  Currencies are assigned in the :ref:`Currencies & Exchange
+         Rates <currencies-and-exchange-rates-label>` admin area
 
    -  If your library is charged tax mark your Tax Number as registered
 
@@ -112,7 +118,9 @@ The vendor add form is broken into three pieces
 
    -  Notes are for internal use
 
-`View/Edit a Vendor <#editacqvendor>`__
+.. _view/edit-a-vendor-label:
+
+View/Edit a Vendor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To view a vendor's information page you must search for the vendor from
@@ -137,7 +145,9 @@ will see a 'Receive shipment' button.
 Receive shipment button
 |image789|
 
-`Vendor Contracts <#vendorcontracts>`__
+.. _vendor-contracts-label:
+
+Vendor Contracts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can define contracts (with a start and end date) and attach them to
@@ -145,7 +155,9 @@ a vendor. This is used so that at the end of the year you can see how
 much you spent on a specific contract with a vendor. In some places,
 contracts are set up with a minimum and maximum yearly amount.
 
-`Add a Contract <#addvendorcontract>`__
+.. _add-a-contract-label:
+
+Add a Contract
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At the top of a Vendor Information Page, you will see a 'New Contract'
@@ -175,13 +187,15 @@ It will also be an option when creating a basket
 Contract Pull Down on New Basket Form
 |image793|
 
-`Managing Suggestions <#managesuggest>`__
+.. _managing-suggestions-label:
+
+Managing Suggestions
 -----------------------------------------
 
 Purchase suggestions can be generated in one of two ways. You can create
-suggestions via the staff client either for the library or `on the
-patron's behalf <#patronsuggestions>`__ from their record. Depending on
-your settings in the `suggestion <#suggestionspref>`__ system
+suggestions via the staff client either for the library or :ref:`on the
+patron's behalf <purchase-suggestions-label>` from their record. Depending on
+your settings in the :ref:`suggestion` system
 preference, patrons may also be able to make purchase suggestions via
 the OPAC. When a suggestion is waiting for library review, it will
 appear on the Acquisitions home page under the vendor search.
@@ -280,21 +294,23 @@ Enter reason for 'Others...'
 
 You can also assign this suggestion to a fund. Edit suggestion fund
 
-This edit can trigger a notice (defined in the `Notices &
-Slips <#notices>`__ tool with the `TO\_PROCESS <#toprocessnotice>`__
+This edit can trigger a notice (defined in the :ref:`Notices &
+Slips <notices-&-slips-label>` tool with the `TO\_PROCESS <#toprocessnotice>`__
 notice) to the fund owner that there is a suggestion ready for them to
-manage if you have turned on the `cron job to generate these
-notices <#emailsuggestfund>`__.
+manage if you have turned on the :ref:`cron job to generate these
+notices <email-suggestions-to-process-label>`.
 
 Once you have clicked 'Submit' the suggestion will be moved to the
 matching tab. The status will also be updated on the patron's account in
-the OPAC and an `email notice <#notices>`__ will be sent to the patron
+the OPAC and an :ref:`email notice <notices-&-slips-label>` will be sent to the patron
 using the template that matches the status you have chosen.
 
 Purchase suggestions in the OPAC
 |image804|
 
-`Placing Orders <#placingacqorder>`__
+.. _placing-orders-label:
+
+Placing Orders
 -------------------------------------
 
 To place an order you must first search for the vendor or bookseller you
@@ -303,10 +319,12 @@ want to send the order to.
     **Important**
 
     If you are planning on using EDIFACT to submit your order you will
-    need to first set up your library's `EDI Accounts <#ediaccounts>`__
-    and `EANs <#libraryeans>`__.
+    need to first set up your library's :ref:`EDI Accounts`
+    and :ref:`EANs <library-eans-label>`.
 
-`Create a basket <#createacqbasket>`__
+.. _create-a-basket-label:
+
+Create a basket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -348,7 +366,7 @@ Add Basket Form
 -  If you're ordering standing items (items which arrive regularly) then
    you will want to check the 'Orders are standing' box for this basket
 
-If you have `added contracts <#addvendorcontract>`__ to the vendor
+If you have :ref:`added contracts <add-a-contract-label>` to the vendor
 you're ordering from, you will also have an option to choose which
 contract you're ordering these items under.
 
@@ -379,7 +397,7 @@ adding items to the order.
          listed under 'Catalog details.'
 
 -  If you allow patrons to make purchase suggestions (learn more in the
-   `Managing Suggestions <#managesuggest>`__ section of this manual),
+   :ref:`Managing Suggestions` section of this manual),
    then you can place orders from those suggestions. In order to keep
    track of suggestions that have been ordered and received you must
    place the order using this link.
@@ -405,7 +423,7 @@ adding items to the order.
 
    -  Orders added to the basket in this way will notify the patron via
       email that their suggestion has been ordered and will update the
-      patron's '`My purchase suggestions <#opacmysuggestions>`__' page
+      patron's ':ref:`My purchase suggestions <my-purchase-suggestions-label>`' page
       in the OPAC.
 
 -  If you're using the `Serials <#serials>`__ module you can link your
@@ -470,8 +488,8 @@ adding items to the order.
       New order from Z39.50 Search
       |image821|
 
--  The next option for ordering is to order from a staged record (`learn
-   more about staging records <#stagemarc>`__).
+-  The next option for ordering is to order from a staged record (:ref:`learn
+   more about staging records <stage-marc-records-for-import-label>`).
 
        **Note**
 
@@ -490,7 +508,7 @@ Order from a staged file
 
    -  Next to each title is a checkbox, check the items you would like
       to order, or choose 'Check all' at the top. Depending on your
-      settings in the `MarcFieldsToOrder <#MarcFieldsToOrder>`__
+      settings in the :ref:`MarcFieldsToOrder`
       preference Koha will populate the next screen with with the
       relevant Quantity, Price, Fund, Statistic 1, and Statistic 2 found
       within the staged file.Add orders from staged file
@@ -514,7 +532,7 @@ Order from a staged file
 
 With any of the above ordering options you're presented with an option
 to notify patrons of the new item when it's received. The contents of
-that notification can be edited in the `Notices & Slips <#notices>`__
+that notification can be edited in the :ref:`Notices & Slips`
 tool and will have the code of ACQ\_NOTIF\_ON\_RECEIV. In the 'Patrons'
 section you will see an option to 'Add user'. Click that button to add
 patrons who will be notified of the new issue.
@@ -528,7 +546,7 @@ Patron notification search
    patrons under the 'Patrons' sectionPatrons
 
 After bringing in the bib information (for all import methods except for
-the staged file), if your `AcqCreateItem <#AcqCreateItem>`__ system
+the staged file), if your :ref:`AcqCreateItem` system
 preference is set to add an item when ordering you will enter the item
 info next. You need to fill out at least one item record and then click
 the 'Add' button at the bottom left of the item form.
@@ -557,12 +575,12 @@ Accounting Details
           You cannot edit the quantity manually, you must click 'Add'
           below the item form to add as many items as you're ordering.
 
--  The list of funds is populated by the `funds <#funds>`__ you have
+-  The list of funds is populated by the :ref:`funds <funds-label>` you have
    assigned in the Acquisitions Administration area.
 
 -  The currency pull down will have the
-   `currencies <#currexchangeadmin>`__ you set up in the `Acquisitions
-   Administration <#acqadmin>`__ area.
+   :ref:`currencies <currencies-and-exchange-rates-label>` you set up in the :ref:`Acquisitions
+   Administration <acquisitions-label>` area.
 
 -  The vendor price is the price before any taxes or discounts are
    applied.
@@ -577,8 +595,8 @@ Accounting Details
    you enter this, hit tab and Koha will populate the rest of the cost
    fields below.
 
--  If you added Planning Values when `creating the
-   Fund <#addbudgetfund>`__, those values will appear in the two
+-  If you added Planning Values when :ref:`creating the
+   Fund <add-a-fund-label>`, those values will appear in the two
    Planning Value fields.
 
 Once you have filled in all of the fields click 'Save' to add the item
@@ -636,11 +654,11 @@ sent to the vendor.
 
     **Important**
 
-    You must close the basket to be able to `receive
-    items <#receiveacqorder>`__ when they arrive. Only items in closed
+    You must close the basket to be able to :ref:`receive
+    items <receiving-orders-label>` when they arrive. Only items in closed
     baskets will show as ready to receive.
 
-If you have your `BasketConfirmations <#BasketConfirmations>`__
+If you have your :ref:`BasketConfirmations`
 preference set to show a confirmation, you will be asked if you are sure
 about closing the basket.
 
@@ -678,10 +696,12 @@ Uncertain Prices
 
 Once your order is entered you can search for it through acquisitions or
 view the information on the biblio detail page in the staff client (if
-the `AcquisitionDetails <#AcquisitionDetails>`__ preference is set to
+the :ref:`AcquisitionDetails` preference is set to
 'Display).Acquisitions details
 
-`Create a basket group <#acqbasketgroup>`__
+.. _create-a-basket-group-label:
+
+Create a basket group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A basket group is simply a group of baskets. In some libraries, you have
@@ -690,7 +710,9 @@ of time, someone then groups them together to send to the vendor in
 bulk. That said, it is possible to have one basket in a basket group if
 that's the workflow used in your library.
 
-`Printing baskets <#printacqbasket>`__
+.. _printing-baskets-label:
+
+Printing baskets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you are finished adding items to your basket, click 'Close this
@@ -724,13 +746,15 @@ the items in your order.
 Order found on PDF
 |image838|
 
-`Receiving Orders <#receiveacqorder>`__
+.. _receiving-orders-label:
+
+Receiving Orders
 ---------------------------------------
 
     **Important**
 
-    You must close the basket to be able to `receive
-    items <#receiveacqorder>`__ when they arrive. Only items in closed
+    You must close the basket to be able to :ref:`receive
+    items <receiving-orders-label>` when they arrive. Only items in closed
     baskets will show as ready to receive.
 
 Orders can be received from the vendor information page
@@ -827,7 +851,9 @@ the basket.
 One item marked (rcvd) in basket
 |image850|
 
-`Invoices <#acqinvoices>`__
+.. _invoices-label:
+
+Invoices
 ---------------------------
 
 When orders are received invoices are generated. Invoices can be
@@ -849,7 +875,7 @@ Invoice details
 |image853|
 
 If you're allowing the uploading of acquisitions files with the
-`AcqEnableFiles <#AcqEnableFiles>`__ preference you will see the option
+:ref:`AcqEnableFiles` preference you will see the option
 to manage invoice files next to the link to 'Go to receipt
 page'AcqEnableFiles
 
@@ -878,7 +904,9 @@ will be highlighted in yellow. Enter any different billing information
 in the fields provided and click 'Merge'. The two invoices will become
 one.
 
-`Claims & Late Orders <#acqclaims>`__
+.. _claims-&-late-orders-label:
+
+Claims & Late Orders
 -------------------------------------
 
 If you have entered in an email address for the vendors in your system
@@ -915,13 +943,15 @@ vendor at the email address you have on file.
     entered on the vendor record.
 
 If you would rather use a different acquisition claim letter (other than
-the default) you can `create that in the notices module <#addnotices>`__
+the default) you can :ref:`create that in the notices module <adding-notices-&-slips-label>`
 and choose it from the menu above the list of late items.
 
 Choose a Claim Letter
 |image859|
 
-`Acquisition Searches <#acqsearch>`__
+.. _acquisition-searches-label:
+
+Acquisition Searches
 -------------------------------------
 
 At the top of the various Acquisition pages there is a quick search box
@@ -960,7 +990,9 @@ all of the order search options available.
 Full Order Search
 |image865|
 
-`Budget/Fund Tracking <#fundtracking>`__
+.. _budget/fund-tracking-label:
+
+Budget/Fund Tracking
 ----------------------------------------
 
 On the main acquisitions page there will be a table showing you all of
@@ -976,7 +1008,9 @@ summary of the titles ordered/received on that budget.
 Titles Spent
 |image867|
 
-`EDI Process <#ediprocess>`__
+.. _edi-process-label:
+
+EDI Process
 -----------------------------
 
 Previous sections explain all ordering options, this section pulls out
@@ -988,14 +1022,16 @@ using EDI for ordering.
     Koha uses the EDIFACT standard not the X12 standard for electronic
     ordering.
 
-`EDI Questions for Vendors <#ediquestions>`__
+.. _edi-questions-for-vendors-label:
+
+EDI Questions for Vendors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will want to gather the following information from your vendors
 before beginning the set up process in Koha.
 
 **EDI Accounts:** *This is the basic connection information for your
-vendor. This will be used to fill in the `EDI Accounts <#ediaccounts>`__
+vendor. This will be used to fill in the :ref:`EDI Accounts`
 section.*
 
 -  **Vendor:** The name of the vendor
@@ -1072,8 +1108,8 @@ section.*
 -  **Account description(s):** (the summary of what this number is for)
 
 **EANs:** *Each library using EDIfact needs to specify a buyer
-identifier know as a SAN or EAN. This will fill in the `Library
-EANs <#libraryeans>`__ setting.*
+identifier know as a SAN or EAN. This will fill in the :ref:`Library
+EANs <library-eans-label>` setting.*
 
 -  **Library**
 
@@ -1090,7 +1126,7 @@ EANs <#libraryeans>`__ setting.*
       (92) Assigned by buyer
 
 **MARC Order Fields or Grid Ordering:** *These values will fill in the
-`MarcFieldsToOrder <#MarcFieldsToOrder>`__ preference.*
+:ref:`MarcFieldsToOrder` preference.*
 
 -  **price:** MARC21 field that contains the item price
 
@@ -1107,22 +1143,24 @@ EANs <#libraryeans>`__ setting.*
 
 -  **sort2:** MARC21 field that will populate custom field sort2
 
-`EDI Setup <#edisetup>`__
+.. _edi-setup-label:
+
+EDI Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before you begin ordering using EDI you will want to take the following
 steps:
 
--  Ask your vendor/bookseller/jobber for `connection
-   information <#ediquestions>`__
+-  Ask your vendor/bookseller/jobber for :ref:`connection
+   information <edi-questions-for-vendors-label>`
 
    -  It might also be beneficial to ask for a few sample EDIFACT files
       from the vendor
 
--  Share with your vendor/bookseller/jobber your `library
-   codes <#libsgroups>`__, `item type codes <#itemtypeadmin>`__, `fund
-   codes <#funds>`__, and any other codes or `authorized
-   values <#authorizedvalues>`__ they might need for creating your MARC
+-  Share with your vendor/bookseller/jobber your :ref:`library
+   codes <libraries-&-groups-label>`, :ref:`item type codes <item-types-label>`, :ref:`fund
+   codes <funds-label>`, and any other codes or :ref:`authorized
+   values <authorized-values-label>` they might need for creating your MARC
    order records
 
 -  Communicate with your support provider or the community about whether
@@ -1132,21 +1170,23 @@ steps:
       vendors here:
       https://github.com/bywatersolutions/koha-plugin-edifact-enhanced
 
--  `Enter the vendor/bookseller/jobber <#addacqvendor>`__ in
+-  :ref:`Enter the vendor/bookseller/jobber <add-a-vendor-label>` in
    Acquisitions
 
--  Review your `Acquisitions system preferences <#acqprefs>`__
+-  Review your :ref:`Acquisitions system preferences <acquisitions-label>`
 
-   -  Be sure to fill in the `MarcFieldsToOrder <#MarcFieldsToOrder>`__
+   -  Be sure to fill in the :ref:`MarcFieldsToOrder`
       preference with values for order files
 
--  Enter your `EDI Accounts <#ediaccounts>`__
+-  Enter your :ref:`EDI Accounts`
 
--  Enter your `Library EANs <#libraryeans>`__
+-  Enter your :ref:`Library EANs`
 
--  Turn on the `EDI Cron <#edicron>`__ so that it can process files
+-  Turn on the :ref:`EDI Cron <edi-message-processing-label>` so that it can process files
 
-`EDI Ordering <#ediordering>`__
+.. _edi-ordering-label:
+
+EDI Ordering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first step in ordering using EDI happens on the book vendor's
@@ -1156,38 +1196,42 @@ Some language that you might see included "basket", "order", "cart",
 and/or "MARC order." Once you have this MARC file downloaded to your
 computer you will want to log in to Koha and continue the process there.
 
-Visit the `Stage MARC Records for Import <#stagemarc>`__ tool and upload
+Visit the :ref:`Stage MARC Records for Import` tool and upload
 your file. Once presented with the confirmation screen proceed to
 Acquisitions.
 
-In Acquisitions `create a basket <#createacqbasket>`__ for the vendor
+In Acquisitions :ref:`create a basket <create-a-basket-label>` for the vendor
 you ordered from. From the basket, choose to `order from a staged
 file <#orderfromstagedfile>`__ and click 'Order' next to the file you
 downloaded from your vendor and staged in Koha.
 
 From the confirmation screen you will see all of the data in the MARC
 file related to your order. If you are not seeing fields such as fund
-and quanity filled in then be sure to confirm that your
-`MarcFieldsToOrder <#MarcFieldsToOrder>`__ preference is set right.
+and quantity filled in then be sure to confirm that your
+:ref:`MarcFieldsToOrder` preference is set right.
 
 Once you have added all of the items to the basket you can click the
 'Create EDIFACT order' button.
 
 EDIFACT Order
 
-This will generate a pending file in the `EDIFACT
-Messages <#edifactmsg>`__ in Koha. The pending files will be processed
-by the `EDI Cron Job <#edicron>`__ and sent to your vendor.
+This will generate a pending file in the :ref:`EDIFACT
+Messages <edifact-messages-label>` in Koha. The pending files will be processed
+by the :ref:`EDI Cron Job <edi-message-processing-label>` and sent to your vendor.
 
-`EDI Invoicing <#ediinvoice>`__
+.. _edi-invoicing-label:
+
+EDI Invoicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When the book vendor is done processing your files they will send an
-invoice via EDI as well. The `EDI Cron Job <#edicron>`__ will grab
+invoice via EDI as well. The :ref:`EDI Cron Job <edi-message-processing-label>` will grab
 invoices and mark items found in the invoice as received and update your
 funds without any need for manual intervention.
 
-`EDIFACT Messages <#edifactmsg>`__
+.. _edifact-messages-label:
+
+EDIFACT Messages
 ----------------------------------
 
 A log of all messages sent and received via EDIFACT can be found under

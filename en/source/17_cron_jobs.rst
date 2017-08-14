@@ -12,17 +12,23 @@ sending out email notifications. Koha has many cron jobs in place that
 you can enable (search engine indexing, overdue notice generation, data
 cleanup and more), this chapter will explain those for you.
 
-`Cron Jobs <#cronjobs>`__
+.. _cron-jobs-label:
+
+Cron Jobs
 -------------------------
 
 The locations below assume a dev install which puts the crons in misc/,
 if you have a standard install you may want to look in bin/ for these
 files if you cannot find them in misc/
 
-`Search <#searchcron>`__
+.. _search-label:
+
+Search
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Rebuild Index <#rebuildsearchcron>`__
+.. _rebuild-index-label:
+
+Rebuild Index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/migration\_tools/rebuild\_zebra.pl
@@ -34,17 +40,21 @@ Required by: Zebra
 Frequency suggestion: every x minutes, (between 5-15 minutes) depending
 on performance needs
 
-`Circulation <#circcron>`__
+.. _circulation-label:
+
+Circulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Holds Queue <#buildholdscron>`__
+.. _holds-queue-label:
+
+Holds Queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/holds/build\_holds\_queue.pl
 
 Does: Updates holds queue report
 
-Required by: `Holds Queue Report <#holdsqueue>`__
+Required by: :ref:`Holds Queue Report <holds-queue-label>`
 
 Frequency suggestion: every 1-4 hours
 
@@ -55,8 +65,8 @@ Description:
    library should be responsible for fulfilling a given hold request.
 
    It's behavior is controlled by the system preferences
-   `StaticHoldsQueueWeight <#holdqueueweight>`__ and
-   `RandomizeHoldsQueueWeight <#holdqueueweight>`__.
+   :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
+   :ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
 
    If you do not want all of your libraries to participate in the
    on-shelf holds fulfillment process, you should list the the libraries
@@ -90,7 +100,9 @@ Description:
    RandomizeHoldsQueueWeight, causing the script to request hold
    fulfillment not randomly, but by alphabetical order.
 
-`Perl Documentation <#buildholdscronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 ''''''''''''''''''''''''''''''''''''''''''''
 
 **GetBibsWithPendingHoldRequests**
@@ -163,46 +175,54 @@ MapItemsToHoldRequests($hold\_requests, $available\_items);
 Query system preferences to get ordered list of branches to use to fill
 hold requests.
 
-`Expired Holds <#expiredholdscron>`__
+.. _expired-holds-label:
+
+Expired Holds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/holds/cancel\_expired\_holds.pl
 
 Does: By default, this cron job will only automatically cancel holds
 where the user has set an expiration date. If the library is using the
-`ExpireReservesMaxPickUpDelay <#ExpireReservesMaxPickUpDelay>`__ and
-`ExpireReservesMaxPickUpDelayCharge <#ExpireReservesMaxPickUpDelayCharge>`__
+:ref:`ExpireReservesMaxPickUpDelay` and
+:ref:`ExpireReservesMaxPickUpDelayCharge`
 preferences then this script will also cancel holds that have been
 sitting on the hold shelf for too long and will (if the library does)
 charge the patron for not picking up the hold.
 
 Frequency suggestion: daily
 
-`Unsuspend Holds <#unsuspendholdcron>`__
+.. _unsuspend-holds-label:
+
+Unsuspend Holds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/holds/auto\_unsuspend\_holds.pl
 
 Does: This script checks to find holds that should no longer be
 suspended and removes the suspension if the
-`AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ preference is
+:ref:`AutoResumeSuspendedHolds` preference is
 set to 'allow'. This puts the patron back in to the queue where they
 were when the hold was suspended.
 
 Frequency suggestion: daily
 
-`Fines <#finescronjob>`__
+.. _fines-label:
+
+Fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/fines.pl
 
 Does: Calculates and posts fines to patron accounts.
 
-Required by: `finesMode <#finesMode>`__ system preference
+Required by: :ref:`finesMode` system preference
 
 Frequency suggestion: nightly
 
-`Long Overdues <#longoverduecron>`__
+.. _long-overdues-label:
+
+Long Overdues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/longoverdue.pl
@@ -217,11 +237,13 @@ Frequency suggestion: nightly
 
     Staff can control some of the parameters for the longoverdue cron
     job with the
-    `DefaultLongOverdueLostValue <#DefaultLongOverdueLostValue>`__ and
-    `DefaultLongOverdueChargeValue <#DefaultLongOverdueChargeValue>`__
+    :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` and
+    :ref:`DefaultLongOverdueChargeValue`
     preferences.
 
-`Perl Documentation <#longoverduecronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -264,7 +286,9 @@ Specifies the end of the range of overdue days to deal with (defaults to
 
 When an item is marked lost, remove it from the borrowers issued items.
 
-`Track total checkouts <#updateissuescron>`__
+.. _track-total-checkouts-label:
+
+Track total checkouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/update\_totalissues.pl
@@ -274,7 +298,9 @@ latest tally of checkouts.
 
 Frequency suggestion: nightly
 
-`Perl Documentation <#updateissuesperldoc>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -359,27 +385,33 @@ director of the Arcadia Public Library.
 
 Jared Camins-Esakov <jcamins AT cpbibliography DOT com>
 
-`Generate Patron File for Offline Circulation <#offlinecirccron>`__
+.. _generate-patron-file-for-offline-circulation-label:
+
+Generate Patron File for Offline Circulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/create\_koc\_db.pl
 
-Does: Generates the borrowers.db file for use with the `Koha Offline
-Circulation <#windowsofflinecirc>`__ tool
+Does: Generates the borrowers.db file for use with the :ref:`Koha Offline
+Circulation <offline-circ-tool-for-windows-label>` tool
 
 Frequency suggestion: weekly
 
-`Automatic renewal <#autorenewcron>`__
+.. _automatic-renewal-label:
+
+Automatic renewal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/automatic\_renewals.pl
 
 Does: Will automatically renew items if you're allowing automatic
-renewal with your `circulation and fine rules <#circfinerules>`__.
+renewal with your :ref:`circulation and fine rules <circulation-and-fine-rules-label>`.
 
 Frequency suggestion: nightly
 
-`Perl Documentation <#autorenewcronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -403,22 +435,28 @@ renewed.
 
 No options.
 
-`Patrons <#patroncrons>`__
+.. _patrons-label:
+
+Patrons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Unverified Registrations <#deleteexpiredregistrationcron>`__
+.. _unverified-registrations-label:
+
+Unverified Registrations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_expired\_opac\_registrations.pl
 
 Does: Deletes patron registrations that were submitted via the OPAC but
 not reviewed by the library within the number of days entered in the
-`PatronSelfRegistrationExpireTemporaryAccountsDelay <#PatronSelfRegistrationExpireTemporaryAccountsDelay>`__
+:ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay`
 preference.
 
 Frequency suggestion: nightly
 
-`Unconfirmed Registrations <#deleteunverifiedcron>`__
+.. _unconfirmed-registrations-label:
+
+Unconfirmed Registrations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_unverified\_opac\_registrations.pl
@@ -427,12 +465,14 @@ Does: Deletes patron self registrations that were submitted via the OPAC
 but not confirmed via email within 24 hours. This is only necessary if
 you are requiring patrons to confirm their registrations via email with
 the
-`PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
+:ref:`PatronSelfRegistrationVerifyByEmail`
 preference.
 
 Frequency suggestion: hourly
 
-`Anonymize Patron Data <#anonymizecron>`__
+.. _anonymize-patron-data-label:
+
+Anonymize Patron Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/batch\_anonymise.pl
@@ -441,7 +481,9 @@ Does: Used to anonymize patron data. This will remove borrowernumbers
 from circulation history so that the stats are kept, but the patron
 information is removed for privacy reasons.
 
-`Update Child to Adult Patron Type <#j2acron>`__
+.. _update-child-to-adult-patron-type-label:
+
+Update Child to Adult Patron Type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/j2a.pl
@@ -452,7 +494,9 @@ when they reach the upper age limit defined in the Patron Categories.
 
 Frequency suggestion: nightly
 
-`Perl Documentation <#j2aperldoc>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 ''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -521,10 +565,14 @@ fromcat to tocat.
 branches, shows all messages, and reports the patrons who would be
 affected. Takes no action on the database.
 
-`Notices <#noticescron>`__
+.. _notices-label:
+
+Notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Message Queue <#msgqueuecron>`__
+.. _message-queue-label:
+
+Message Queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/process\_message\_queue.pl
@@ -532,7 +580,7 @@ Script path: misc/cronjobs/process\_message\_queue.pl
 Does: processes the message queue to send the check out, check in and
 hold filled emails and SMS message to users and sends outgoing emails to
 patrons. requires
-`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ to be
+:ref:`EnhancedMessagingPreferences` to be
 on
 
 Frequency suggestion: 1-4 hours
@@ -540,9 +588,11 @@ Frequency suggestion: 1-4 hours
     **Important**
 
     Item due and Advanced due notices are controlled by the
-    `advance\_notices cron <#advnoticecron>`__.
+    :ref:`advance\_notices cron <advanced-notice-label>`.
 
-`Advanced Notice <#advnoticecron>`__
+.. _advanced-notice-label:
+
+Advanced Notice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/advance\_notices.pl
@@ -550,7 +600,7 @@ Script path: misc/cronjobs/advance\_notices.pl
 Does: prepares "pre-due" notices and "item due" notices for patrons who
 request them prepares notices for patrons for items just due or coming
 due soon. requires
-`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ to be
+:ref:`EnhancedMessagingPreferences` to be
 on
 
 Frequency suggestion: nightly
@@ -558,9 +608,11 @@ Frequency suggestion: nightly
     **Note**
 
     This script does not actually send the notices. It queues them in
-    the `message queue <#msgqueuecron>`__ for later
+    the :ref:`message queue <message-queue-label>` for later
 
-`Perl Documentation <#advnoticecronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -585,7 +637,9 @@ can be configured by the patrons in their "My Alerts" tab in the OPAC.
 
 parse\_letter
 
-`Overdue Notice <#overduenoticecron>`__
+.. _overdue-notice-label:
+
+Overdue Notice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/overdue\_notices.pl
@@ -598,10 +652,12 @@ Frequency suggestion: nightly
     **Note**
 
     This script does not actually send the notices. It queues them in
-    the `message queue <#msgqueuecron>`__ for later or generates the
+    the :ref:`message queue <message-queue-label>` for later or generates the
     HTML for later printing
 
-`Perl Documentation <#overduenoticecronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -826,7 +882,9 @@ optional parameters:
 
 outputformat
 
-`Print Hold Notices <#printholdcron>`__
+.. _print-hold-notices-label:
+
+Print Hold Notices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/gather\_print\_notices.pl
@@ -837,13 +895,17 @@ print notice
 
 Frequency suggestion: nightly
 
-`Talking Tech <#talkingtechcrons>`__
+.. _talking-tech-label:
+
+Talking Tech
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To learn more about setting up this third party product view the
 `Talking Tech Appendix <#talkingtechappendix>`__.
 
-`Sending Notices File <#talkingtechsendcron>`__
+.. _sending-notices-file-label:
+
+Sending Notices File
 '''''''''''''''''''''''''''''''''''''''''''''''
 
 Script path: misc/cronjobs/thirdparty/TalkingTech\_itiva\_outbound.pl
@@ -852,11 +914,11 @@ Does: Script to generate Spec C outbound notifications file for Talking
 Tech i-tiva phone notification system.
 
 Required by:
-`TalkingTechItivaPhoneNotification <#TalkingTechItivaPhoneNotification>`__
+:ref:`TalkingTechItivaPhoneNotification`
 
 Frequency suggestion: nightly
 
-`Perl Documentation <#talkingsendcronperl>`__
+:ref:`Perl Documentation`
 
 
 **USAGE**
@@ -912,7 +974,9 @@ is used to group notices together for consortium purposes and apply
 library specific settings, such as prompts, to those notices. This field
 can be blank if all messages are from a single library.
 
-`Receiving Notices File <#talkingtechreceivecron>`__
+.. _receiving-notices-file-label:
+
+Receiving Notices File
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Script path: misc/cronjobs/thirdparty/TalkingTech\_itiva\_inbound.pl
@@ -921,11 +985,11 @@ Does: Script to process received Results files for Talking Tech i-tiva
 phone notification system.
 
 Required by:
-`TalkingTechItivaPhoneNotification <#TalkingTechItivaPhoneNotification>`__
+:ref:`TalkingTechItivaPhoneNotification`
 
 Frequency suggestion: nightly
 
-`Perl Documentation <#talkingreceivecronperl>`__
+:ref:`Perl Documentation`
 
 
 **USAGE**
@@ -947,19 +1011,23 @@ Prints this help
 
 REQUIRED. Path to incoming results file.
 
-`Notify Patrons of Expiration <#patronexpirycron>`__
+.. _notify-patrons-of-expiration-label:
+
+Notify Patrons of Expiration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/membership\_expiry.pl
 
 Does: Sends messages to warn patrons of their card expiration to the
-`messaage queue <#msgqueuecron>`__ cron.
+:ref:`messaage queue <message-queue-label>` cron.
 
-Requires: `MembershipExpiryDaysNotice <#MembershipExpiryDaysNotice>`__
+Requires: :ref:`MembershipExpiryDaysNotice`
 
 Frequency: nightly
 
-`In Processing/Book Cart <#proccartcron>`__
+.. _in-processing/book-cart-label:
+
+In Processing/Book Cart
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Script path: misc/cronjobs/cart\_to\_shelf.pl
@@ -967,13 +1035,15 @@ Script path: misc/cronjobs/cart\_to\_shelf.pl
 Does: Updates all items with a location of CART to the item's permanent
 location.
 
-Required by: `NewItemsDefaultLocation <#NewItemsDefaultLocation>`__,
-`InProcessingToShelvingCart <#InProcessingToShelvingCart>`__, &
-`ReturnToShelvingCart <#ReturnToShelvingCart>`__ system preferences
+Required by: :ref:`NewItemsDefaultLocation`,
+:ref:`InProcessingToShelvingCart`, &
+:ref:`ReturnToShelvingCart` system preferences
 
 Frequency suggestion: hourly
 
-`Perl Documentation <#proccartcronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **NAME**
@@ -982,10 +1052,14 @@ cart\_to\_shelf.pl cron script to set items with location of CART to
 original shelving location after X hours. Execute without options for
 help.
 
-`Catalog <#catalogcron>`__
+.. _catalog-label:
+
+Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Check URLs <#checkurlcron>`__
+.. _check-urls-label:
+
+Check URLs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/check-url.pl
@@ -998,7 +1072,9 @@ Frequency suggestion: monthly
 
 Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements
 
-`Perl Documentation <#checkurlcronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 ''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -1096,7 +1172,9 @@ Server host used to link to biblio record editing page.
 
 Print this help page.
 
-`Update Authorities <#mergeauthcron>`__
+.. _update-authorities-label:
+
+Update Authorities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/migration\_tools/merge\_authority.pl
@@ -1115,7 +1193,9 @@ Required by: `dontmerge <#dontmerge>`__ system preference
 
 Frequency suggestion: nightly
 
-`Serials Update <#serialscron>`__
+.. _serials-update-label:
+
+Serials Update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/serialsUpdate.pl
@@ -1126,19 +1206,23 @@ expected.
 
 Frequency suggestion: nightly
 
-`Automatic item update <#autoitemupdatecron>`__
+.. _automatic-item-update-label:
+
+Automatic item update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/automatic\_item\_modification\_by\_age.pl
 
 Does: updates items based on the list of rules set forth in the
-`Automatic item modifications by age <#autoitemagemod>`__ tool
+:ref:`Automatic item modifications by age` tool
 
-Required by: `Automatic item modifications by age <#autoitemagemod>`__
+Required by: :ref:`Automatic item modifications by age`
 
 Frequency suggestions: nightly
 
-`Perl Documentation <#autoitemupdatecrondoc>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -1185,33 +1269,41 @@ more details.
 You should have received a copy of the GNU General Public License along
 with Koha; if not, see <http://www.gnu.org/licenses>.
 
-`OPAC <#opaccrons>`__
+.. _opac-label:
+
+OPAC
 ~~~~~~~~~~~~~~~~~~~~~
 
-`RSS Feeds <#customrssfeedcron>`__
+.. _rss-feeds-label:
+
+RSS Feeds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/rss/rss.pl
 
 Does: Produces an RSS XML document for any SQL query (not used for
-search results RSS feed). `Learn more <#customrss>`__.
+search results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`.
 
 Frequency suggestion: hourly
 
-`Authorities Browser <#authbrowsercron>`__
+.. _authorities-browser-label:
+
+Authorities Browser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/build\_browser\_and\_cloud.pl
 
 Does: Generate content for authorities browse in OPAC
 
-Required by: `OpacBrowser <#OpacBrowser>`__ system preference
+Required by: :ref:`OpacBrowser` system preference
 
     **Important**
 
     This preference and cron job should only be used on French systems.
 
-`Subject/Author Clouds <#keywordclouds>`__
+.. _subject/author-clouds-label:
+
+Subject/Author Clouds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/cloud-kw.pl
@@ -1223,7 +1315,9 @@ operates.
 Frequency: This is the type of script you can run once a month or so,
 the content generated isn't going to change very much over time.
 
-`Perl Documentation <#keywordcloudsperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -1307,10 +1401,14 @@ Order
 Now terms are outputted in the lexical order. They could be sorted by
 their weight.
 
-`System Administration <#systemcron>`__
+.. _system-administration-label:
+
+System Administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Clean up Database <#cleandbcron>`__
+.. _clean-up-database-label:
+
+Clean up Database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/cleanup\_database.pl
@@ -1389,18 +1487,22 @@ purge (unaccepted) list share invites older than DAYS days. Defaults to
 purge patrons restrictions expired since more than DAYS days. Defaults
 to 30 days if no days specified.
 
-`Share Usage Stats <#usagecron>`__
+.. _share-usage-stats-label:
+
+Share Usage Stats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/share\_usage\_with\_koha\_community.pl
 
-Does: If you're sharing information via the `UsageStats <#UsageStats>`__
+Does: If you're sharing information via the :ref:`UsageStats`
 feature this will send your info to the `Hea
 website <http://hea.koha-community.org/>`__.
 
 Frequency: monthly
 
-`Perl Documentation <#usagecronperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 '''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -1412,7 +1514,7 @@ the Koha community
 
 share\_usage\_with\_koha\_community.pl [-h\|--help] [-v\|--verbose]
 
-If the `UsageStats <#UsageStats>`__ system preference is set, you can
+If the :ref:`UsageStats` system preference is set, you can
 launch this script to share your usage data anonymously with the Koha
 community.
 
@@ -1429,11 +1531,11 @@ In order to know which parts of Koha modules are used, this script will
 collect some system preference values.
 
 If you want to tell us who you are, you can fill the
-`UsageStatsLibraryName <#UsageStatsLibraryName>`__ system preference
+:ref:`UsageStatsLibraryName` system preference
 with your library name,
-`UsageStatsLibraryUrl <#UsageStatsLibraryUrl>`__,
-`UsageStatsLibraryType <#UsageStatsLibraryType>`__ and/or
-`UsageStatsCountry <#UsageStatsCountry>`__.
+:ref:`UsageStatsLibraryUrl`,
+:ref:`UsageStatsLibraryType` and/or
+:ref:`UsageStatsCountry`.
 
 All these data will be analyzed on the http://hea.koha-community.org
 Koha community website.
@@ -1479,10 +1581,14 @@ You should have received a copy of the GNU General Public License along
 with Koha; if not, write to the Free Software Foundation, Inc., 51
 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-`Acquisitions <#acqcrons>`__
+.. _acquisitions-label:
+
+Acquisitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Clean up old suggestions <#cleansuggcron>`__
+.. _clean-up-old-suggestions-label:
+
+Clean up old suggestions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/purge\_suggestions.pl
@@ -1490,7 +1596,9 @@ Script path: misc/cronjobs/purge\_suggestions.pl
 Does: Removes old (defined by you) suggestions from the suggestion
 management area.
 
-`Email suggestions to process <#emailsuggestfund>`__
+.. _email-suggestions-to-process-label:
+
+Email suggestions to process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/notice\_unprocessed\_suggestions.pl
@@ -1498,7 +1606,9 @@ Script path: misc/cronjobs/notice\_unprocessed\_suggestions.pl
 Does: Generates a notice to the fund owner that there are suggestions in
 need of processing
 
-`Perl Documentation <#emailsuggestfundperl>`__
+.. _perl-documentation-label:
+
+Perl Documentation
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 **NAME**
@@ -1529,7 +1639,9 @@ suggestions to process.
 
 -v\|--verbose Verbose mode.
 
-`EDI Message Processing <#edicron>`__
+.. _edi-message-processing-label:
+
+EDI Message Processing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/edi\_cron.pl
@@ -1538,7 +1650,9 @@ Does: Sends and received EDI messages
 
 Frequency: Every 15 minutes
 
-`Deprecated scripts <#deprecatedcrons>`__
+.. _deprecated-scripts-label:
+
+Deprecated scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These should not be run without modification:

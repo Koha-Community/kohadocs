@@ -17,7 +17,9 @@ setup Appendix.
 
 -  *Get there:* More > Cataloging
 
-`Bibliographic Records <#catbibs>`__
+.. _bibliographic-records-label:
+
+Bibliographic Records
 ------------------------------------
 
 In Koha the bibliographic record contains the main information related
@@ -26,7 +28,9 @@ This information is stored in Koha in Marc (different flavors of Marc
 are supported in Koha). Once this information is saved, :ref:`Item Records`
 can be attached.
 
-`Adding Records <#addbibrec>`__
+.. _adding-records-label:
+
+Adding Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Records can be added to Koha via original or copy cataloging. You can
@@ -47,7 +51,7 @@ If you would like to catalog a record using a blank template in the
 advanced editor
 
 -  Enable the
-   `EnableAdvancedCatalogingEditor <#EnableAdvancedCatalogingEditor>`__
+   :ref:`EnableAdvancedCatalogingEditor`
    preference
 
 -  Click the 'Advanced editor' buttonAdvanced editor button
@@ -67,8 +71,8 @@ library in the editor you last used (basic or advanced)
              If no results are found, try searching for fewer fields,
              not all Z39.50 targets can search all of the fields above.
 
-   -  Search targets can be altered by using the `Z39.50
-      Admin <#z3950admin>`__ area.
+   -  Search targets can be altered by using the :ref:`Z39.50
+      Admin <z39.50/sru-servers-label>` area.
 
    -  From the results you can view the MARC or Card view for the
       records or choose to Import them into Koha
@@ -90,7 +94,9 @@ library in the editor you last used (basic or advanced)
          Try another search
          |image631|
 
-`Basic Editor Cataloging <#basicatalog>`__
+.. _basic-editor-cataloging-label:
+
+Basic Editor Cataloging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the basic editor once you've opened a blank framework or imported a
@@ -101,7 +107,7 @@ Add MARC Record
 |image632|
 
 -  If you would rather not see the MARC tag numbers you can change the
-   value in your `hide\_marc <#hide_marc>`__ system preference or each
+   value in your :ref:`hide\_marc <hide\_marc-label>` system preference or each
    user can check the box next to 'Show tags' found under 'Settings'.
 
 -  To expand a collapsed tag click on the tag description
@@ -114,7 +120,7 @@ Add MARC Record
       documentation links' note found under 'Settings'
 
 -  Sometimes fields may not be editable due to the value in your
-   `BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ system preference.
+   :ref:`BiblioAddsAuthorities` system preference.
    If you have this preference set to not allow catalogers to type in
    fields controlled by authorities you may see a lock symbol to the
    left of the field.
@@ -187,11 +193,13 @@ Add MARC Record
    Duplicate Record Warning
    |image641|
 
-`Advanced Editor Cataloging <#advancededitor>`__
+.. _advanced-editor-cataloging-label:
+
+Advanced Editor Cataloging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to use the Advanced cataloging editor you need to enable the
-`EnableAdvancedCatalogingEditor <#EnableAdvancedCatalogingEditor>`__
+:ref:`EnableAdvancedCatalogingEditor`
 preference.
 
     **Important**
@@ -242,7 +250,9 @@ commands
 Advanced Z39.50 results
 |image645|
 
-`Advanced Cataloging Keyboard Shortcuts <#advancedkeyshortcuts>`__
+.. _advanced-cataloging-keyboard-shortcuts-label:
+
+Advanced Cataloging Keyboard Shortcuts
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The following keyboard shortcuts can be used in the advanced cataloging
@@ -270,7 +280,9 @@ module to save time and clicking.
 | Shift-Tab      | Move to previous position      |
 +----------------+--------------------------------+
 
-`Macros in Advanced Cataloging <#macroscataloging>`__
+.. _macros-in-advanced-cataloging-label:
+
+Macros in Advanced Cataloging
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 To record a new macro:
@@ -340,7 +352,9 @@ The basic syntax of the macro language:
 
    -  Deletes the first ‡b subfield on the first 245 to ‡b
 
-`Adding Analytic Records <#cataloganalytics>`__
+.. _adding-analytic-records-label:
+
+Adding Analytic Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Libraries sometimes make journal articles and articles within monographs
@@ -353,20 +367,22 @@ title, it is not physically separated from the host item.  Learn more
 about Analytics in Chapter 13 of AACR2.
 
 If you would like to catalog analytic records there are two options. One
-is to use the `Easy Analytics <#catalogeasyanalytics>`__ funtion; the
-other is the `Analytics Enhanced Workflow <#catalogenhanceanalytics>`__.
+is to use the :ref:`Easy Analytics` funtion; the
+other is the :ref:`Analytics Enhanced Workflow`.
 
-`Easy Analytics <#catalogeasyanalytics>`__
+.. _easy-analytics-label:
+
+Easy Analytics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Easy Analytics feature makes linking analytic records together
 easier. The first thing you need to do is set the
-`EasyAnalyticalRecords <#EasyAnalyticalRecords>`__ preference to
-'Display' and the `UseControlNumber <#UseControlNumber>`__ preference to
+:ref:`EasyAnalyticalRecords` preference to
+'Display' and the :ref:`UseControlNumber` preference to
 'Don't use.'
 
-After cataloging your analytic record (see `Adding
-Records <#addbibrec>`__ for more on creating records) click 'Edit' from
+After cataloging your analytic record (see :ref:`Adding
+Records <adding-records-label>` for more on creating records) click 'Edit' from
 the normal view and choose to 'Link to Host Item'
 
 Link to Host Item
@@ -415,17 +431,19 @@ the 'Analtyics' tab.
 Host Record
 |image652|
 
-`Analytics Enhanced Workflow <#catalogenhanceanalytics>`__
+.. _analytics-enhanced-workflow-label:
+
+Analytics Enhanced Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To use the Enhanced Workflow method of adding analytics, the first thing
 you need to do is set the
-`EasyAnalyticalRecords <#EasyAnalyticalRecords>`__ preference to 'Don't
-display' and the `UseControlNumber <#UseControlNumber>`__ preference to
+:ref:`EasyAnalyticalRecords` preference to 'Don't
+display' and the :ref:`UseControlNumber` preference to
 'Use.'
 
-After cataloging your original record (see `Adding
-Records <#addbibrec>`__ for more on creating records) click 'New' from
+After cataloging your original record (see :ref:`Adding
+Records <adding-records-label>` for more on creating records) click 'New' from
 the normal view and choose to 'New child record.'
 
 New child record
@@ -458,7 +476,9 @@ the 'Analtyics' tab.
 Host Record
 |image657|
 
-`Editing Analytics <#analyticediting>`__
+.. _editing-analytics-label:
+
+Editing Analytics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have linked an analytic record incorrectly you can remove that
@@ -476,7 +496,9 @@ Edit Analytic Item Record
 -  Clicking 'Delink' will remove the 773 field and the link between the
    analytic and the host.
 
-`Editing Records <#editbibrec>`__
+.. _editing-records-label:
+
+Editing Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To edit a record you can click 'Edit Biblio' from the search results on
@@ -510,17 +532,19 @@ Once you have made your edits (via either method) you can click 'Save'
 at the top left of the editor.
 
 You can also use the edit menu to add your own custom cover image if you
-have either `OPACLocalCoverImages <#OPACLocalCoverImages>`__ and/or
-`LocalCoverImages <#LocalCoverImages>`__ set to 'Display' by choosing
+have either :ref:`OPACLocalCoverImages` and/or
+:ref:`LocalCoverImages` set to 'Display' by choosing
 'Upload Image' from the menu.
 
 Upload Image
 |image663|
 
-Choosing to 'Upload Image' will take you to the `Upload Local Cover
-Image Tool <#uploadlocalimages>`__.
+Choosing to 'Upload Image' will take you to the :ref:`Upload Local Cover
+Image Tool <upload-local-cover-image-label>`.
 
-`Duplicating Records <#dupbibrec>`__
+.. _duplicating-records-label:
+
+Duplicating Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes a copy of the record you need to catalog can't be found via
@@ -538,7 +562,9 @@ values from the original Bibliographic Record.
 New Duplicate Record
 |image665|
 
-`Attaching files to Records <#uploadbibfile>`__
+.. _attaching-files-to-records-label:
+
+Attaching files to Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to upload files to Koha you can do so with a few
@@ -552,11 +578,11 @@ settings.
       Koha > System Information. If there is an error you will see it
       there.Upload Path Warning
 
--  You will want to be sure that your `OPACBaseURL <#OPACBaseURL>`__
+-  You will want to be sure that your :ref:`OPACBaseURL`
    system preference is set appropriately
 
 -  You will want to add the upload.pl plugin to the 856$u subfield in
-   one (or multiple) of your `frameworks <#editsubfields>`__
+   one (or multiple) of your :ref:`frameworks <edit-framework-subfields-label>`
 
 Once you are all set up you can continue with cataloging as regular. You
 will see a plugin icon next to the 856$u that will open up the upload
@@ -569,7 +595,9 @@ the search results you can choose which file to attach.Uploaded files
 Once the file is chosen it will appear as a link in the MARC record and
 on the detail display.
 
-`Merging Records <#mergebibs>`__
+.. _merging-records-label:
+
+Merging Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To merge bibliographic records together you will want to go to the
@@ -620,7 +648,7 @@ Merge report
 |image670|
 
 If you enter fields you will see those on the confirmation page (you can
-set defaults with the `MergeReportFields <#MergeReportFields>`__
+set defaults with the :ref:`MergeReportFields`
 preference)
 
 Merge report
@@ -640,10 +668,12 @@ be deleted.
 
     **Note**
 
-    If you would like you can also use the `Lists <#lists>`__ tool for
-    merging records together. `Learn more here <#mergebibrecs>`__.
+    If you would like you can also use the :ref:`Lists` tool for
+    merging records together. :ref:`Learn more here <merging-bibliographic-records-via-lists-label>`.
 
-`Deleting Records <#deleterecord>`__
+.. _deleting-records-label:
+
+Deleting Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To delete a bibliographic record simply choose the 'Edit' button and
@@ -659,14 +689,18 @@ attached you will see that the delete option is grayed out.
 Record with items still attached
 |image673|
 
-`Item Records <#catitems>`__
+.. _item-records-label:
+
+Item Records
 ----------------------------
 
 In Koha each bibliographic record can have one or more items attached.
 These items are sometimes referred to as holdings. Each item includes
 information to the physical copy the library has.
 
-`Adding Items <#addingitems>`__
+.. _adding-items-label:
+
+Adding Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After saving a new bibliographic record, you will be redirected to a
@@ -716,7 +750,7 @@ fields should be entered for new items:
 -  y - Koha item type
 
 To make sure that these values are filled in you can mark them as
-mandatory in the `framework <#marcbibframeworks>`__ you're using and
+mandatory in the :ref:`framework <marc-bibliographic-frameworks-label>` you're using and
 then they will appear in red with a 'required' label. The item will not
 save until the required fields are filled in.
 
@@ -726,8 +760,8 @@ Required Item Subfield
 -  **Note**
 
        To make item subfields required in a framework you'll want to
-       edit the 952 field in the `framework
-       editor <#marcbibframeworks>`__.
+       edit the 952 field in the :ref:`framework
+       editor <marc-bibliographic-frameworks-label>`.
 
 Below the add form there are 3 buttons for adding the item
 
@@ -754,7 +788,7 @@ List of Items on the Bib Record
 |image680|
 
 If you have
-`SpineLabelShowPrintOnBibDetails <#SpineLabelShowPrintOnBibDetails>`__
+:ref:`SpineLabelShowPrintOnBibDetails`
 set to 'Display' then there will also be a link to print a quick spine
 label next to each item.
 
@@ -768,7 +802,9 @@ type in any column to filter the results in the table.
 Filter holdings
 |image682|
 
-`Editing Items <#editingitems>`__
+.. _editing-items-label:
+
+Editing Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Items can be edited in several ways.
@@ -800,12 +836,12 @@ Items can be edited in several ways.
    Edit items in a batch
    |image687|
 
-   This will open up the `batch item modification
-   tool <#batchmodifyitems>`__ where you can edit all of the items on
+   This will open up the :ref:`batch item modification
+   tool <batch-item-modification-label>` where you can edit all of the items on
    this record as a batch.
 
 -  You can also enable
-   `StaffDetailItemSelection <#StaffDetailItemSelection>`__ to have
+   :ref:`StaffDetailItemSelection` to have
    checkboxes appear to the left of each item on the detail display. You
    can then check off the items you would like to edit and click 'Modify
    selected items' at the top of the list.
@@ -819,10 +855,12 @@ Items can be edited in several ways.
 -  There is also a link to Edit items from the search results in the
    staff clientEdit item on the search results
 
--  Finally you can use the `Batch Item
-   Modification <#batchmodifyitems>`__ tool
+-  Finally you can use the :ref:`Batch Item
+   Modification <batch-item-modification-label>` tool
 
-`Quick Item Status Updates <#itemquickedit>`__
+.. _quick-item-status-updates-label:
+
+Quick Item Status Updates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Often circulation staff need to change the status of an item to Lost or
@@ -846,7 +884,9 @@ the pull down and clicking the 'Set Status' button.
 Edit Damaged Status
 |image691|
 
-`Duplicating Items <#duplicateitem>`__
+.. _duplicating-items-label:
+
+Duplicating Items
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can easily duplicate each item by clicking the 'Action' button the
@@ -858,7 +898,9 @@ Edit individual items
 From here you can choose to 'Duplicate' the item and this will populate
 the form with the values from the item you chose.
 
-`Item Information <#iteminfo>`__
+.. _item-information-label:
+
+Item Information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To the left of every bibliographic record there is a tab to view the
@@ -883,7 +925,9 @@ History with order info
 If the Order or Accession date is linked, clicking it will bring you to
 the acquisitions information for that item.
 
-`Moving Items <#moveitemrec>`__
+.. _moving-items-label:
+
+Moving Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Items can be moved from one bibliographic record to another using the
@@ -902,10 +946,12 @@ Simply enter the barcode for the item you want to move and click
 'Select'
 
 If you want to move all items to a new record creating only one
-bibliographic record you can use the `Merge Records
-tool <#mergebibrecs>`__ instead.
+bibliographic record you can use the :ref:`Merge Records
+tool <merging-bibliographic-records-via-lists-label>` instead.
 
-`Deleting Items <#deleteitems>`__
+.. _deleting-items-label:
+
+Deleting Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are many ways to delete item records. If you only need to delete
@@ -928,7 +974,7 @@ currently checked out you can use the 'Delete all items' option under
 the 'Edit menu' and it will remove all items from the record.
 
 You can also enable
-`StaffDetailItemSelection <#StaffDetailItemSelection>`__ to have
+:ref:`StaffDetailItemSelection` to have
 checkboxes appear to the left of each item on the detail display. You
 can then check off the items you would like to delete and click 'Delete
 selected items' at the top of the list.
@@ -936,10 +982,12 @@ selected items' at the top of the list.
 Deleting selected items
 |image699|
 
-Finally you can use the `batch delete tool <#batchdeleteitems>`__ to
+Finally you can use the :ref:`batch delete tool <batch-item-deletion-label>` to
 delete a batch of items.
 
-`Item Specific Circulation History <#itemcirchistory>`__
+.. _item-specific-circulation-history-label:
+
+Item Specific Circulation History
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each bibliographic record keeps a circulation history (with or without
@@ -957,14 +1005,18 @@ different from the bibliographic record's history page.
 Item Specific Circulation History
 |image701|
 
-`Authorities <#catauthorities>`__
+.. _authorities-label:
+
+Authorities
 ---------------------------------
 
 Authority records are a way of controlling fields in your MARC records.
 Using authority records will provide you with control over subject
 headings, personal names and places.
 
-`Adding Authorities <#addauthorities>`__
+.. _adding-authorities-label:
+
+Adding Authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add a new authority record you can either choose the authority type
@@ -1018,7 +1070,9 @@ saving it to your system
 Imported Authority
 |image708|
 
-`Searching Authorities <#searchauthorities>`__
+.. _searching-authorities-label:
+
+Searching Authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From the authorities page you can search for existing terms and the
@@ -1029,8 +1083,8 @@ Authority Search
 
 From the results you will see the authority record, how many
 bibliographic records it is attached to, an 'Actions' menu that includes
-the ability to `edit <#editauthorities>`__, `merge <#authoritymerge>`__
-and `delete <#editauthorities>`__ (if there are no bibliographic records
+the ability to :ref:`edit <editing-authorities-label>`, :ref:`merge <merging-authorities-label>`
+and :ref:`delete <editing-authorities-label>` (if there are no bibliographic records
 attached).
 
 Authority Search Results
@@ -1049,7 +1103,9 @@ that heading instead.
 See Also in Authorities
 |image712|
 
-`Editing Authorities <#editauthorities>`__
+.. _editing-authorities-label:
+
+Editing Authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Authorities can be edited by clicking on the authority summary from the
@@ -1065,7 +1121,7 @@ Once you've made the necessary edits, simply click 'Save' and
 all of the bib records linked to the authority with the new authority
 record's data. If dontmerge is set to "Don't" then Koha won't edit bib
 records when changes are made to authorities, rather, this is done later
-by the `merge\_authority.pl cronjob <#mergeauthcron>`__.
+by the :ref:`merge\_authority.pl cronjob <update-authorities-label>`.
 
 To delete an authority record you first must make sure it's not linked
 to any bibliographic records. If it is not used by any bibliographic
@@ -1073,7 +1129,9 @@ records a 'Delete' link will appear to the right of the record on the
 search results and as a button that appears after clicking on the
 summary of the authority record.
 
-`Merging Authorities <#authoritymerge>`__
+.. _merging-authorities-label:
+
+Merging Authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have duplicate authority records you can merge them together by
@@ -1115,10 +1173,14 @@ record will be deleted.
 Merged authority
 |image718|
 
-`Cataloging Guides <#catguides>`__
+.. _cataloging-guides-label:
+
+Cataloging Guides
 ----------------------------------
 
-`Bibliographic Record Cataloging Cheat Sheet <#bibcatcheatsheet>`__
+.. _bibliographic-record-cataloging-cheat-sheet-label:
+
+Bibliographic Record Cataloging Cheat Sheet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1128,7 +1190,7 @@ Merged authority
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 001   | CONTROL NUMBER                      | Accession number.                                                                                                                                    | Enter the accession number written inside the item here. For articles and items which do not have accession numbers, leave blank.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 003   | CONTROL NUMBER IDENTIFIER           | Your MARC Organizational Code                                                                                                                        | Click in this field to fill it in (will auto fill if you have your `MARCOrgCode <#MARCOrgCode>`__ preference set).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 003   | CONTROL NUMBER IDENTIFIER           | Your MARC Organizational Code                                                                                                                        | Click in this field to fill it in (will auto fill if you have your :ref:`MARCOrgCode` preference set).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 005   | D & T LATEST TRANSACTION            | Current date and time.                                                                                                                               | Click in this field to fill it in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1223,7 +1285,9 @@ Merged authority
 
 Table: Cataloging Guide
 
-`Item/Holdings Record Cataloging Guide <#itemcatguide>`__
+.. _item/holdings-record-cataloging-guide-label:
+
+Item/Holdings Record Cataloging Guide
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This table represents the default embedded holdings data in Koha. This
@@ -1232,15 +1296,15 @@ information can be used for migration or importing data purposes
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MARC21 Tag/subfield   | Data Element                                        | Description                                                                      | Notes                                                                                                                                                                                                                                                                    |
 +=======================+=====================================================+==================================================================================+==========================================================================================================================================================================================================================================================================+
-| 952$0                 | Withdrawn status                                    | Default values:                                                                  | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('WITHDRAWN' in default installation)                                                                                                                                                            |
+| 952$0                 | Withdrawn status                                    | Default values:                                                                  | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('WITHDRAWN' in default installation)                                                                                                                                                            |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  0 = Not withdrawn                                                             |                                                                                                                                                                                                                                                                          |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  1 = Withdrawn                                                                 |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$1                 | Lost status                                         | Default values:                                                                  | It's possible to configure OPAC so that lost items don't display with the `hidelostitems <#hidelostitems>`__ system preference.                                                                                                                                          |
+| 952$1                 | Lost status                                         | Default values:                                                                  | It's possible to configure OPAC so that lost items don't display with the :ref:`hidelostitems` system preference.                                                                                                                                          |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
-|                       |                                                     | -  0 = Available                                                                 | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('LOST' in default installation)                                                                                                                                                                 |
+|                       |                                                     | -  0 = Available                                                                 | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('LOST' in default installation)                                                                                                                                                                 |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  1 = Lost                                                                      |                                                                                                                                                                                                                                                                          |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
@@ -1252,23 +1316,23 @@ information can be used for migration or importing data purposes
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  5 = Missing in Hold Queue                                                     |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$2                 | Classification                                      | Classification scheme that defines filing rules used for sorting call numbers.   | A choice of `classification sources <#classificationsources>`__ as they are defined in administration. If no classification scheme is entered, the system will use the value entered in the `DefaultClassificationSource <#DefaultClassificationSource>`__ preference.   |
+| 952$2                 | Classification                                      | Classification scheme that defines filing rules used for sorting call numbers.   | A choice of :ref:`classification sources <classification-sources-label>` as they are defined in administration. If no classification scheme is entered, the system will use the value entered in the :ref:`DefaultClassificationSource` preference.   |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$3                 | Materials specified                                 | Specific issues of serials or multi-part items.                                  | Displayed when items are checked out and in to tell the staff how many pieces the item has. Copy/volume data is stored in 952$h and $t for display in Normal views.                                                                                                      |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$4                 | Damaged status                                      | Default values:                                                                  | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('DAMAGE' in default installation)                                                                                                                                                               |
+| 952$4                 | Damaged status                                      | Default values:                                                                  | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('DAMAGE' in default installation)                                                                                                                                                               |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  0 = Not damaged                                                               |                                                                                                                                                                                                                                                                          |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  1 = Damaged                                                                   |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$5                 | Use restrictions                                    | Default values:                                                                  | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('RESTRICT' in default installation). This value has no effect on circulation.                                                                                                                   |
+| 952$5                 | Use restrictions                                    | Default values:                                                                  | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('RESTRICT' in default installation). This value has no effect on circulation.                                                                                                                   |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  0 = No use restrictions                                                       |                                                                                                                                                                                                                                                                          |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  1 = Restricted Access                                                         |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$7                 | Not for loan                                        | Default values:                                                                  | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('NOT\_LOAN' in default installation). Negative number values can still be placed on hold.                                                                                                       |
+| 952$7                 | Not for loan                                        | Default values:                                                                  | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('NOT\_LOAN' in default installation). Negative number values can still be placed on hold.                                                                                                       |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  -1 = Ordered                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
@@ -1278,15 +1342,15 @@ information can be used for migration or importing data purposes
 |                       |                                                     |                                                                                  |                                                                                                                                                                                                                                                                          |
 |                       |                                                     | -  2 = Staff Collection                                                          |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$8                 | Collection code                                     | Coded value                                                                      | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('CCODE' in default installation)                                                                                                                                                                |
+| 952$8                 | Collection code                                     | Coded value                                                                      | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('CCODE' in default installation)                                                                                                                                                                |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$9                 | Item number                                         | System-generated item number.                                                    | Does not display in the item record.                                                                                                                                                                                                                                     |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$a                 | Owning Library \*\*                                 | Branch code                                                                      | **Required**. Code must be defined in `Libraries, Branches and Groups <#libsgroups>`__                                                                                                                                                                                   |
+| 952$a                 | Owning Library \*\*                                 | Branch code                                                                      | **Required**. Code must be defined in :ref:`Libraries, Branches and Groups <libraries-&-groups-label>`                                                                                                                                                                                   |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$b                 | Holding library \*\* (usually the same as 952$a )   | Branch code                                                                      | **Required**. Code must be defined in `Libraries, Branches and Groups <#libsgroups>`__                                                                                                                                                                                   |
+| 952$b                 | Holding library \*\* (usually the same as 952$a )   | Branch code                                                                      | **Required**. Code must be defined in :ref:`Libraries, Branches and Groups <libraries-&-groups-label>`                                                                                                                                                                                   |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$c                 | Shelving location code                              |                                                                                  | Coded value, matching `Authorized Value <#authorizedvalues>`__ category ('LOC' in default installation)                                                                                                                                                                  |
+| 952$c                 | Shelving location code                              |                                                                                  | Coded value, matching :ref:`Authorized Value <authorized-values-label>` category ('LOC' in default installation)                                                                                                                                                                  |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$d                 | Date acquired                                       | YYYY-MM-DD                                                                       | Date formats in the 952 subfields are required to be in the system internal format for data loading and subsequent item editing: YYYY-MM-DD                                                                                                                              |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1296,7 +1360,7 @@ information can be used for migration or importing data purposes
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$h                 | Serial enumeration                                  |                                                                                  | Filled in automatically by Serials if the issue is received there.                                                                                                                                                                                                       |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$o                 | Koha full call number                               |                                                                                  | Can be filled in automatically based on the `itemcallnumber <#itemcallnumber>`__ system preference.                                                                                                                                                                      |
+| 952$o                 | Koha full call number                               |                                                                                  | Can be filled in automatically based on the :ref:`itemcallnumber` system preference.                                                                                                                                                                      |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$p                 | Barcode \*                                          | Max 20 characters                                                                |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1310,7 +1374,7 @@ information can be used for migration or importing data purposes
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$x                 | Nonpublic note                                      |                                                                                  | This is a note field for notes that will not appear in the OPAC. Right now this note does not appear anywhere but in the item edit screen in the staff client.                                                                                                           |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 952$y                 | Koha item type \*\*                                 | Coded value, required field for circulation                                      | **Required**. Coded value, must be defined in `Item types <#itemtypeadmin>`__                                                                                                                                                                                            |
+| 952$y                 | Koha item type \*\*                                 | Coded value, required field for circulation                                      | **Required**. Coded value, must be defined in :ref:`Item types <item-types-label>`                                                                                                                                                                                            |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$z                 | Public note                                         |                                                                                  |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1321,7 +1385,9 @@ Table: Koha Embedded Holdings Data
 
 \*\* - required by Koha
 
-`Handling On Order Items and Holds <#onorderitemholds>`__
+.. _handling-on-order-items-and-holds-label:
+
+Handling On Order Items and Holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you tend to import your MARC records when you have ordered the book
@@ -1423,7 +1489,7 @@ in MARCEdit.
 -  Choose where to save your file
 
 Now you want to go into your Koha system and follow the instructions for
-`importing MARC records <#stagemarc>`__.
+:ref:`importing MARC records <stage-marc-records-for-import-label>`.
 
 Once the item has come in, you will need to go to the item record and
 individually change the item to have the correct barcode, and manually

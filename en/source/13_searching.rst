@@ -3,7 +3,9 @@
 Searching
 =========
 
-`Advanced Search Prefixes <#searchprefixes>`__
+.. _advanced-search-prefixes-label:
+
+Advanced Search Prefixes
 ----------------------------------------------
 
 The following prefixes can be added to search terms in the keyword
@@ -37,7 +39,9 @@ search box to limit items returned
 
    -  levels lex:510
 
-`Guide to Searching <#searchguide>`__
+.. _guide-to-searching-label:
+
+Guide to Searching
 -------------------------------------
 
 This brief guide will explain a chart that shows a sample of how a
@@ -46,7 +50,9 @@ searching guide. The indexing fields described in this document relate
 to the bibliographic data and does not address authority database
 indexing.
 
-`Indexing and Searching Description <#searchguide-indexing>`__
+.. _indexing-and-searching-description-label:
+
+Indexing and Searching Description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Koha's databases are indexed by the Zebra open-source software. The
@@ -78,7 +84,9 @@ indexing.
     The indexing described in this document is the set used by
     SouthEastern University. Your local indexing may vary.
 
-`Indexing Configuration <#searchguide-indexconfig>`__
+.. _indexing-configuration-label:
+
+Indexing Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are three configuration files that Koha uses while indexing.
@@ -119,7 +127,7 @@ cfn, ti, se, ut, nb, ns, sn, lcn, callnum, su, su-to, su-geo, su-ut,
 yr,pubdate, acqdate, ln, pl, ab, nt, rtype, mc-rtype, mus, au, su-na,
 kw, pb, ctype, and an.
 
-The `Koha Indexing Chart <#kohasearchindexes>`__ summarizes the contents
+The :ref:`Koha Indexing Chart <koha-search-indexes-label>` summarizes the contents
 of all three of these files in a more readable format. The first two
 columns labeled Z39.50 attribute and Z39.50 name matches the Z39.50
 bib-1 attributes file. The third column labeled MARC tags indexed is
@@ -170,7 +178,9 @@ between Attribute 8822 and Attribute 8703. These attributes are most
 commonly used for limiting. The fixed field attributes currently
 represent the BK codes. Other format codes, if needed, could be defined.
 
-`Basic Searching <#searchguide-basics>`__
+.. _basic-searching-label:
+
+Basic Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The search box that library staff and library patrons will see most
@@ -217,7 +227,9 @@ following example illustrates:
 No results found
 |image1041|
 
-`Advanced Searching <#searchguide-advanced>`__
+.. _advanced-searching-label:
+
+Advanced Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you can't find the most appropriate material with a general search,
@@ -237,7 +249,7 @@ The first limiting section on the Advanced Search page provides a quick
 and simple way to use the Boolean operators in your search. Note that
 this display depends on a system preference setting. This option can be
 found on the Administration > System Preferences > Searching page. The
-option called `expandedSearchOption <#expandedSearchOption>`__ must be
+option called :ref:`expandedSearchOption` must be
 set to 'show' to see the following display.
 
 Advanced Search Options
@@ -268,7 +280,7 @@ results because the search will look for occurrences of all of your
 search terms. The 'not' operator excludes records with the term that
 follows the operator.
 
-Note: If you leave this `expandedSearchOption <#expandedSearchOption>`__
+Note: If you leave this :ref:`expandedSearchOption`
 set to 'don't show', this is the display you will see:
 
 Fewer Search Options
@@ -292,10 +304,12 @@ The default sort is by relevance, although you can choose to sort by
 author, by title, by call number, by dates, or by popularity (which uses
 the information on total issues found in the items table). If you would
 prefer a different default sort, you can set
-`defaultSortField <#defaultSortField>`__ to one of the other choices in
+:ref:`defaultSortField <defaultsortfield-&-defaultsortorder-label>` to one of the other choices in
 Administration > System Preferences > Searching.
 
-`Item Searching <#searchguide-itemsearch>`__
+.. _item-searching-label:
+
+Item Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are looking for specific items you can use the item search engine
@@ -314,7 +328,9 @@ items that can be output to the screen or to a CSV file. If your results
 are printed to the screen you will have the option to narrow your search
 further using filters at the top.Item search results
 
-`Common Command Language Searching <#searchguide-ccl>`__
+.. _common-command-language-searching-label:
+
+Common Command Language Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Koha uses the Common Command Language (CCL) (ISO 8777) as its internal
@@ -329,7 +345,9 @@ explain the use of the Koha command based structure. The indexes,
 operators, and limiters used are identical to those used in the
 graphical interface.
 
-`Indexes <#searchguide-indexes>`__
+.. _indexes-label:
+
+Indexes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The CCL standard itself doesn't specify a particular set of qualifiers
@@ -403,10 +421,12 @@ Bib-1 Attribute mapped to the indexes include:
 
 Table: Attributes
 
-Refer to the `Koha Indexing Chart <#kohasearchindexes>`__ for the MARC21
+Refer to the :ref:`Koha Indexing Chart <koha-search-indexes-label>` for the MARC21
 tags mapped to each Bib-1 Attribute and index combination.
 
-`Audience Examples <#search-audexamp>`__
+.. _audience-examples-label:
+
+Audience Examples
 ''''''''''''''''''''''''''''''''''''''''
 
 -  aud:a Preschool
@@ -425,7 +445,9 @@ tags mapped to each Bib-1 Attribute and index combination.
 
 -  aud:j Juvenile
 
-`Contents Examples <#search-contentsexamp>`__
+.. _contents-examples-label:
+
+Contents Examples
 '''''''''''''''''''''''''''''''''''''''''''''
 
 -  fic:1 Fiction
@@ -438,7 +460,9 @@ tags mapped to each Bib-1 Attribute and index combination.
 
 -  mus:I Non musical record
 
-`Search Syntax <#searchguide-syntax>`__
+.. _search-syntax-label:
+
+Search Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the persistent search box, single words generally retrieve large
@@ -623,7 +647,9 @@ document. They are: Audience and Content. The only difference in the
 syntax of the CCL is the actual limiter. They are reproduced here just
 in case you would like to use these limiters.
 
-`Koha Search Indexes <#kohasearchindexes>`__
+.. _koha-search-indexes-label:
+
+Koha Search Indexes
 --------------------------------------------
 
 By default, not all fields are indexed in the Zebra search engine, but
