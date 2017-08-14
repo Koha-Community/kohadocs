@@ -1,5 +1,5 @@
 ======================
-Koha 17.05 Manual (en)
+Koha 17.11 Manual (en)
 ======================
 
 :Author: Nicole C. Engard & The Koha Community
