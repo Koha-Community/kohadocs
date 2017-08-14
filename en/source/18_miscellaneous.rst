@@ -3,7 +3,9 @@
 Web Services
 ============
 
-`OAI-PMH <#OAI-PMHservice>`__
+.. _oai-pmh-label:
+
+OAI-PMH
 -----------------------------
 
 For the Open Archives Initiative-Protocol for Metadata Harvesting
@@ -26,11 +28,13 @@ OAI-PMH works.
 
 Learn more about OAI-PMH at: http://www.openarchives.org/pmh/
 
-To enable OAI-PMH in Koha edit the `OAI-PMH <#OAI-PMH>`__ preference.
+To enable OAI-PMH in Koha edit the :ref:`OAI-PMH` preference.
 Once enabled you can visit http://YOURKOHACATALOG/cgi-bin/koha/oai.pl to
 see your file.
 
-`Sample OAI Conf File <#oaiconfsample>`__
+.. _sample-oai-conf-file-label:
+
+Sample OAI Conf File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -54,7 +58,9 @@ see your file.
                xsl_file:
     /usr/local/koha/koha-tmpl/intranet-tmpl/xslt/UNIMARCslim2OAIDC.xsl
 
-`REST services <#Rest-services>`__
+.. _rest-services-label:
+
+REST services
 ----------------------------------
 
 Koha can now be requested by REST http requests. BibLibre wrotes an
@@ -95,7 +101,9 @@ Services provided in 1.4 version are:
 Using the SRU server
 ====================
 
-`Using the SRU server <#usingsru>`__
+.. _using-the-sru-server-label:
+
+Using the SRU server
 ------------------------------------
 
 Koha implements the Search/Retrieve via URL (SRU) protocol. More
@@ -103,7 +111,9 @@ information about the protocol itself can be found at
 http://www.loc.gov/standards/sru/. The version implemented is version
 1.1.
 
-`Explain <#sru_explain>`__
+.. _explain-label:
+
+Explain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to have information about the implementation of SRU on a
@@ -172,7 +182,9 @@ information about the default settings of the SRU server.
             </index>
 
 
-`Search <#sru_search>`__
+.. _search-label:
+
+Search
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 This url :
@@ -195,7 +207,9 @@ http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation.html
 gives more details about the search operations and in particular the
 list of optional parameters for searching.
 
-`More details about Search <#sru_search_more_details>`__
+.. _more-details-about-search-label:
+
+More details about Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The "operation" key can take two values: scan or searchRetrieve.
@@ -243,7 +257,9 @@ I can do this query :
 http://myserver.com:9999/biblios?version=1.1&operation=searchRetrieve&query=Title=coral
 first
 
-`Retrieve <#sru_retrieve>`__
+.. _retrieve-label:
+
+Retrieve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 My search for
@@ -409,12 +425,16 @@ mobile platforms as well, and are even touch responsive!Coverflow Widget
 System Preference Defaults
 ==========================
 
-`ISBD Defaults <#isbddefaults>`__
+.. _isbd-defaults-label:
+
+ISBD Defaults
 ---------------------------------
 
-Default values for the `ISBD <#isbdpref>`__ preference.
+Default values for the :ref:`ISBD` preference.
 
-`MARC Default <#isbddefault>`__
+.. _marc-default-label:
+
+MARC Default
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #100\|\|{ 100a }{ 100b }{ 100c }{ 100d }{ 110a }{ 110b }{ 110c }{ 110d
@@ -687,7 +707,9 @@ Default values for the `ISBD <#isbdpref>`__ preference.
 
 #088\|<br/><br/><label>Report. No.: </label>\|{ 088a }\|
 
-`UNIMARC Default <#unimarcdefault>`__
+.. _unimarc-default-label:
+
+UNIMARC Default
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #200\|<h2>Title : \|{200a}{. 200c}{ : 200e}{200d}{. 200h}{. 200i}\|</h2>
@@ -803,12 +825,16 @@ type</th><th>Barcode</th>\|
 {995y}</td><td>{995e}  </td><td>
 {995o}</td><td>{995f}</td></tr>\|</table>
 
-`OPACISBD Defaults <#opacisbddefaults>`__
+.. _opacisbd-defaults-label:
+
+OPACISBD Defaults
 -----------------------------------------
 
-Default values for the `OPACISBD <#OPACISBD>`__ preference.
+Default values for the :ref:`OPACISBD` preference.
 
-`MARC <#opacisbdmarcdefault>`__
+.. _marc-label:
+
+MARC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #100\|\|{ 100a }{ 100b }{ 100c }{ 100d }{ 110a }{ 110b }{ 110c }{ 110d
@@ -1075,10 +1101,14 @@ Configuring Receipt Printers
 The following instructions are for specific receipt printers, but can
 probably be used to help with setup of other brands as well.
 
-`For Epson TM-T88III (3) & TM-T88IV (4) Printers <#epsonprinters>`__
+.. _for-epson-tm-t88iii-(3)-&-tm-t88iv-(4)-printers-label:
+
+For Epson TM-T88III (3) & TM-T88IV (4) Printers
 --------------------------------------------------------------------
 
-`In the Print Driver <#epsonprintdriver>`__
+.. _in-the-print-driver-label:
+
+In the Print Driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For these instructions, we are using version 5,0,3,0 of the Epson
@@ -1103,7 +1133,9 @@ Properties:
 
 -  OK your way out of there.
 
-`In Firefox <#epsonfirefox>`__
+.. _in-firefox-label:
+
+In Firefox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Under File > Page Setup:
@@ -1161,7 +1193,9 @@ dialog:
     Setting the print.always\_print\_silent setting in about:config
     DISABLES the ability to choose a printer in Firefox.
 
-`For Epson TM-T88II (2) Printers <#epson2>`__
+.. _for-epson-tm-t88ii-(2)-printers-label:
+
+For Epson TM-T88II (2) Printers
 ---------------------------------------------
 
 Register at the `EpsonExpert Technical Resource Center
@@ -1169,7 +1203,9 @@ website <https://www.epsonexpert.com/login>`__ to gain access to the
 drivers; go to Technical Resources, then choose the printer model from
 the Printers drop-down list.
 
-`In Firefox <#epson2firefox>`__
+.. _in-firefox-label:
+
+In Firefox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Under File > Page Setup:
@@ -1217,10 +1253,14 @@ dialog:
     Setting the print.always\_print\_silent setting in about:config
     DISABLES the ability to choose a printer in Firefox.
 
-`For Star SP542 Printers <#starprinter>`__
+.. _for-star-sp542-printers-label:
+
+For Star SP542 Printers
 ------------------------------------------
 
-`Installing the Printer <#installstarprinter>`__
+.. _installing-the-printer-label:
+
+Installing the Printer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 While the following comments are based on the Star SP542 receipt
@@ -1252,7 +1292,9 @@ software or the operating system.
 **Windows 7** users should refer to this page:
 http://www.starmicronics.com/supports/win7.aspx.
 
-`Configuring Firefox to Print to Receipt Printer <#firefoxreceipt>`__
+.. _configuring-firefox-to-print-to-receipt-printer-label:
+
+Configuring Firefox to Print to Receipt Printer
 ---------------------------------------------------------------------
 
 -  Open File > Page Setup
@@ -1291,7 +1333,9 @@ http://www.starmicronics.com/supports/win7.aspx.
 Notice & Slips Guides
 =====================
 
-`Field Guide for Notices & Slips <#noticesfieldguide>`__
+.. _field-guide-for-notices-&-slips-label:
+
+Field Guide for Notices & Slips
 --------------------------------------------------------
 
 This guide will break down the notices and slips information in 3 ways.
@@ -1374,7 +1418,9 @@ Sincerely, Library Staff
 Sample Serials
 ==============
 
-`Reader's Digest (0034-0375) <#readersdigestsample>`__
+.. _reader's-digest-(0034-0375)-label:
+
+Reader's Digest (0034-0375)
 ------------------------------------------------------
 
 -  Published 12 times a year (monthly)
@@ -1385,7 +1431,9 @@ Sample Serials
    Sample Reader's Digest Subscription
    |image1069|
 
-`People Weekly (1076-0091) <#peoplesample>`__
+.. _people-weekly-(1076-0091)-label:
+
+People Weekly (1076-0091)
 ---------------------------------------------
 
 -  Published weekly
@@ -1412,7 +1460,9 @@ So we receive 50 issues the first 50 weeks, then one supplemental issue
 in week 51, which we have to define the enumeration for, then the next
 predicted issue will be the following year's first week.
 
-`Et-Mol <#hebrewserialsample>`__
+.. _et-mol-label:
+
+Et-Mol
 --------------------------------
 
 This journal is published with the following rules:
@@ -1432,7 +1482,9 @@ The planning would look like this:
 Sample for this Hebrew Journal
 |image1070|
 
-`Backpacker (0277-867X) <#backpackerserial>`__
+.. _backpacker-(0277-867x)-label:
+
+Backpacker (0277-867X)
 ----------------------------------------------
 
 Published 9 times a year irregularly. The issues continues while the
@@ -1467,7 +1519,9 @@ v. 42, no. 3, iss. 311
 
 v. 42, no. 4, iss. 312
 
-`Keats-Shelley Journal (0453-4387) <#keatsserial>`__
+.. _keats-shelley-journal-(0453-4387)-label:
+
+Keats-Shelley Journal (0453-4387)
 ----------------------------------------------------
 
 This journal is published once per year in July.  The numbering follows
@@ -1484,7 +1538,9 @@ Setup should look like this (if you're starting in July 2014):
 Serial planning
 |image1072|
 
-`Computers in Libraries (1041-7915) <#cilserial>`__
+.. _computers-in-libraries-(1041-7915)-label:
+
+Computers in Libraries (1041-7915)
 ---------------------------------------------------
 
 Computers in Libraries is published ten times per year (monthly with
@@ -1502,7 +1558,9 @@ Received details
 Sample List & Cart Emails
 =========================
 
-`Example Email from List <#examplelistemail>`__
+.. _example-email-from-list-label:
+
+Example Email from List
 -----------------------------------------------
 
 Below is an example of an email from a list in Koha.
@@ -1548,7 +1606,9 @@ Below is an example of an email from a list in Koha.
         East Branch  (813/.54)
         South Branch FIC (FIC Bro) TVSN5000451333
 
-`Example Email from Cart <#examplecartemail>`__
+.. _example-email-from-cart-label:
+
+Example Email from Cart
 -----------------------------------------------
 
 Below is a sample of what an email from the Cart in Koha will look like:
@@ -1601,7 +1661,9 @@ Below is a sample of what an email from the Cart in Koha will look like:
 Using Koha as a Content Management System (CMS)
 ===============================================
 
-`Setup <#kohacmssetup>`__
+.. _setup-label:
+
+Setup
 -------------------------
 
 These are instructions for taking a default install of Koha and allowing
@@ -1686,13 +1748,17 @@ easily add pages, and do not want to support a complete CMS.
 To learn more visit the Koha wiki page on this topic:
 http://wiki.koha-community.org/wiki/Koha_as_a_CMS
 
-`Editing the pages template <#kohacmstmpl>`__
+.. _editing-the-pages-template-label:
+
+Editing the pages template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The file to create / edit for the pages template will depend on your
-`opacthemes <#opacthemes>`__ system preference setting
+:ref:`opacthemes` system preference setting
 
-`Editing 'bootstrap' theme template (current) <#kohacmstmplboot>`__
+.. _editing-'bootstrap'-theme-template-(current)-label:
+
+Editing 'bootstrap' theme template (current)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Copy
@@ -1736,14 +1802,18 @@ remove the following code from your pages.tt template.
                          [% END %]
 
 
-`Troubleshooting <#kohacmstrouble>`__
+.. _troubleshooting-label:
+
+Troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have problems check file permissions on pages.pl and pages.tmpl.
 They should have the same user and group as other Koha files like
 opac-main.pl.
 
-`Bonus Points <#kohacmsbonus>`__
+.. _bonus-points-label:
+
+Bonus Points
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instead of using the address
@@ -1757,13 +1827,17 @@ http://youraddress/pages.pl?p=test Just open up
 
 Then restart Apache.
 
-`Usage <#kohacmsusage>`__
+.. _usage-label:
+
+Usage
 -------------------------
 
 After setting up Koha as a CMS you can create new pages following these
 instructions:
 
-`Adding Pages <#kohacmspages>`__
+.. _adding-pages-label:
+
+Adding Pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add a new page you need to add a system preference under Local Use.
@@ -1790,14 +1864,18 @@ To add a new page you need to add a system preference under Local Use.
    Settings for the new preference
    |image1077|
 
-`Viewing your page <#kohacmsview>`__
+.. _viewing-your-page-label:
+
+Viewing your page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can view your new page at
 http://YOUR-OPAC/cgi-bin/koha/pages.pl?p=PAGENAME where PAGENAME is the
 part you entered after 'page\_' in the Variable field.
 
-`Example <#kohacmsexpage>`__
+.. _example-label:
+
+Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This process can be used to create recommended reading lists within
@@ -1822,7 +1900,9 @@ the HTML to include a link to your newest page:
 Edit original preference to add new page
 |image1080|
 
-`Live Examples <#examplecms>`__
+.. _live-examples-label:
+
+Live Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  The Crawford Library at Dallas Christian College is using this method
@@ -1839,7 +1919,9 @@ and http://lists.katipo.co.nz/public/koha/2014-June/039701.html
 Resetting the database may be useful if you install Koha with the sample
 data, and then wish to use real data without reinstalling the software.
 
-`Delete sample data from Tables <#deletetables>`__
+.. _delete-sample-data-from-tables-label:
+
+Delete sample data from Tables
 --------------------------------------------------
 
 Use your preferred MySQL client to
@@ -1862,7 +1944,9 @@ You may need to disable foreign key checks to delete data from same
 tables. For instructions follow this thread:
 https://lists.katipo.co.nz/pipermail/koha/2013-July/036853.html.
 
-`Reset the Zebra Index <#resetzebra>`__
+.. _reset-the-zebra-index-label:
+
+Reset the Zebra Index
 ---------------------------------------
 
 Run the following commands to reset the authorities and biblios Zebra
@@ -1887,7 +1971,9 @@ Replacing YOURLIBRARY with your Koha installation name.
 Important Links
 ===============
 
-`Koha Related <#koharelatedlinks>`__
+.. _koha-related-label:
+
+Koha Related
 ------------------------------------
 
 -  Report Koha Bugs - http://bugs.koha-community.org
@@ -1906,7 +1992,9 @@ Important Links
 
 -  Koha Shared Links - http://groups.diigo.com/group/everything-koha
 
-`Circulation Related <#circrelatedlinks>`__
+.. _circulation-related-label:
+
+Circulation Related
 -------------------------------------------
 
 -  Koha Desktop Offline Circulation:
@@ -1915,7 +2003,9 @@ Important Links
 -  Koha Firefox Offline Circulation:
    https://addons.mozilla.org/en-US/firefox/addon/koct/
 
-`Cataloging Related <#catalogrelatedlinks>`__
+.. _cataloging-related-label:
+
+Cataloging Related
 ---------------------------------------------
 
 -  Koha MARC Tutorials - http://www.pakban.net/brooke/
@@ -1941,7 +2031,9 @@ Important Links
 -  Z39.50 Bib-1 Attribute -
    http://www.loc.gov/z3950/agency/defns/bib1.html
 
-`Enhanced Content Related <#enhancedcontentlinks>`__
+.. _enhanced-content-related-label:
+
+Enhanced Content Related
 ----------------------------------------------------
 
 -  Amazon Associates -
@@ -1956,7 +2048,9 @@ Important Links
 
 -  LibraryThing for Libraries - http://www.librarything.com/forlibraries
 
-`Design Related <#opaclinks>`__
+.. _design-related-label:
+
+Design Related
 -------------------------------
 
 -  JQuery Library - http://wiki.koha-community.org/wiki/JQuery_Library
@@ -1966,7 +2060,9 @@ Important Links
 
 -  Owen Leonard's Koha Blog - http://www.myacpl.org/koha
 
-`Reports Related <#reportlinks>`__
+.. _reports-related-label:
+
+Reports Related
 ----------------------------------
 
 -  SQL Reports Library -
@@ -1977,7 +2073,9 @@ Important Links
 -  Sample reports from NEKLS -
    http://www.nexpresslibrary.org/training/reports-training/
 
-`Installation Guides <#installlinks>`__
+.. _installation-guides-label:
+
+Installation Guides
 ---------------------------------------
 
 -  Installing Koha 3 on Ubuntu -
@@ -1989,7 +2087,9 @@ Important Links
 -  Koha 3.2 on Debian Squeeze -
    http://wiki.koha-community.org/wiki/Koha_3.2_on_Debian_Squeeze
 
-`Misc <#misclinks>`__
+.. _misc-label:
+
+Misc
 ---------------------
 
 -  Zotero - http://zotero.org
@@ -2000,19 +2100,19 @@ Koha XSLT Item Types
 ====================
 
 When you have any of the XSLT system preferences
-(`OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__,
-`OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__,
-`XSLTDetailsDisplay <#XSLTDetailsDisplay>`__, and/or
-`XSLTResultsDisplay <#XSLTResultsDisplay>`__) along with the
-`DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__ and
-`DisplayIconsXSLT <#DisplayIconsXSLT>`__ preferences turned on you will
+(:ref:`OPACXSLTDetailsDisplay`,
+:ref:`OPACXSLTResultsDisplay`,
+:ref:`XSLTDetailsDisplay`, and/or
+:ref:`XSLTResultsDisplay`) along with the
+:ref:`DisplayOPACiconsXSLT` and
+:ref:`DisplayIconsXSLT` preferences turned on you will
 see item type icons on the related screen.
 
     **Important**
 
     These images are coming from values found in your leader, if your
     leader is not cataloged properly it might be best to turn off the
-    `DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__ preference (which
+    :ref:`DisplayOPACiconsXSLT` preference (which
     can be done while leaving the other XSLT preferences turned on).
 
 Book image
@@ -2107,10 +2207,12 @@ http://marcedit.reeset.net/
     **Important**
 
     Many of the actions described in this chapter can be done in Koha
-    using `Marc Modification Templates <#marcmodtemplates>`__, but this
+    using :ref:`Marc Modification Templates <marc-modification-templates-label>`, but this
     section is here for those who are used to MarcEdit.
 
-`Adding a prefix to call numbers <#marceditprefix>`__
+.. _adding-a-prefix-to-call-numbers-label:
+
+Adding a prefix to call numbers
 -----------------------------------------------------
 
 When bringing data into Koha, you may want to first clean it up. One
@@ -2139,7 +2241,9 @@ common action among Koha users is to add a prefix to the call number.
       text string, add ^b[string to replace] to the Field Data textbox
       and the data to be appended in the Replace With textbox.
 
-`Importing Excel data into Koha <#marceditexcel>`__
+.. _importing-excel-data-into-koha-label:
+
+Importing Excel data into Koha
 ---------------------------------------------------
 
 Suppose you have records of your library in excel data sheet format and
@@ -2151,7 +2255,9 @@ import it into Koha.
 
 Follow the given steps to import your excel records into Koha
 
-`Converting from Excel format into .mrk format <#convertexcel>`__
+.. _converting-from-excel-format-into-.mrk-format-label:
+
+Converting from Excel format into .mrk format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, we will convert excel format into .mrk format. For this we will
@@ -2212,7 +2318,9 @@ Delimited Text Translator
 Click Close and we have created a .mrk file from .xls file in this step.
 You can view the file by double clicking on it.
 
-`Convert .mrk file to .mrc <#convertmrk>`__
+.. _convert-.mrk-file-to-.mrc-label:
+
+Convert .mrk file to .mrc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We will convert .mrk file that we have created in the above step into
@@ -2240,11 +2348,13 @@ MarcMaker
 
 Click Close and now we have raw Marc records with us (.mrc file).
 
-`Import .mrc into Koha <#importmrc>`__
+.. _import-.mrc-into-koha-label:
+
+Import .mrc into Koha
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 More information on importing records into Koha can be found in the
-'`Stage MARC Records for Import <#stagemarc>`__' section of this manual.
+':ref:`Stage MARC Records for Import`' section of this manual.
 
 Finally we will import above created .mrc file into Koha.
 
@@ -2301,7 +2411,9 @@ Talking Tech I-tiva is a third party, proprietary, product that
 libraries can subscribe to. Learn more here:
 http://www.talkingtech.com/solutions/library.
 
-`Installation and Setup Instructions <#talkingtechinstall>`__
+.. _installation-and-setup-instructions-label:
+
+Installation and Setup Instructions
 -------------------------------------------------------------
 
 Be sure you've run
@@ -2310,23 +2422,25 @@ to install the required data pack (new syspref, notice placeholders and
 messaging transport preferences)
 
 To use,
-`TalkingTechItivaPhoneNotification <#TalkingTechItivaPhoneNotification>`__
+:ref:`TalkingTechItivaPhoneNotification`
 syspref must be turned on.
 
 If you wish to process PREOVERDUE or RESERVES messages, you'll need the
-`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ system
+:ref:`EnhancedMessagingPreferences` system
 preference turned on, and patrons to have filled in a preference for
 receiving these notices by phone.
 
 For OVERDUE messages, overdue notice triggers must be configured under
-Koha -> Tools -> `Overdue Notice Triggers <#noticetriggers>`__. Either
+Koha -> Tools -> :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-label>`. Either
 branch-specific triggers or the default level triggers may be used
 (script will select whichever is appropriate).
 
-`Sending Notices File <#talkingtechsend>`__
+.. _sending-notices-file-label:
+
+Sending Notices File
 -------------------------------------------
 
-1. Add the `TalkingTech\_itiva\_outbound.pl <#talkingtechsendcron>`__
+1. Add the :ref:`TalkingTech\_itiva\_outbound.pl <sending-notices-file-label>`
    script to your crontab
 
 2. Add an FTP/SFTP or other transport method to send the output file to
@@ -2337,13 +2451,15 @@ branch-specific triggers or the default level triggers may be used
 
 Run TalkingTech\_itiva\_outbound.pl --help for more information
 
-`Receiving Results File <#talkingtechreceive>`__
+.. _receiving-results-file-label:
+
+Receiving Results File
 ------------------------------------------------
 
 1. Add an FTP/SFTP or other transport method to send the Results file to
    a known directory on your Koha server
 
-2. Add the `TalkingTech\_itiva\_inbound.pl <#talkingtechreceivecron>`__
+2. Add the :ref:`TalkingTech\_itiva\_inbound.pl <receiving-notices-file-label>`
    script to your crontab, aimed at that directory
 
 3. If you wish, archive the results file in another directory after
@@ -3001,7 +3117,9 @@ those records to Koha with a single click. The following instructions
 will help you set up the OCLC Connexion Gateway, if you have a system
 administrator you will want to consult with them on this process.
 
-`Setting up OCLC service on Koha <#oclckohasetup>`__
+.. _setting-up-oclc-service-on-koha-label:
+
+Setting up OCLC service on Koha
 ----------------------------------------------------
 
 First, you'll need to create a file somewhere on your system with
@@ -3048,8 +3166,8 @@ A sample file would look like this:
 When choosing an 'import\_mode' if you use "direct" then the staged
 record will be immediately imported into Koha, and should be searchable
 after your indexes catch up.  If you choose "stage", then the record
-will be placed in a staged batch for you to later go the `Manage Staged
-MARC Records <#managestaged>`__ tool to finish the import.
+will be placed in a staged batch for you to later go the :ref:`Manage Staged
+MARC Records <staged-marc-record-management-label>` tool to finish the import.
 
 If you import multiple records, they'll be in the same batch, until that
 batch is imported, then a new batch will be created.
@@ -3062,7 +3180,9 @@ To start the service, run the script:
 
     /location/of/connexion/import/daemon/connexion_import_daemon.pl -d -c /location/of/config/file.cnf
 
-`Setting up your OCLC desktop client <#oclcdesktopsetup>`__
+.. _setting-up-your-oclc-desktop-client-label:
+
+Setting up your OCLC desktop client
 -----------------------------------------------------------
 
     **Note**
@@ -3078,10 +3198,10 @@ Tools > Options, then choose the Export tab. Connexion Export Tab
    -  Enter the following information:
 
       -  "Host Name:" Your catalog’s appropriate IP address (from your
-         `config file above <#oclckohasetup>`__)
+         :ref:`config file above <setting-up-oclc-service-on-koha-label>`)
 
       -  "Port:" Your catalog's appropriate port number (from your
-         `config file above <#oclckohasetup>`__)
+         :ref:`config file above <setting-up-oclc-service-on-koha-label>`)
 
       -  "Login ID:" The cataloger's Koha login
 
@@ -3115,12 +3235,16 @@ dialog will pop up, and you'll see Connexion attempting to talk to Koha.
 including its biblio number, and a URL that you can copy into your web
 browser to jump straight to the record.
 
-`Using the OCLC Connexion Gateway <#oclcgateway>`__
+.. _using-the-oclc-connexion-gateway-label:
+
+Using the OCLC Connexion Gateway
 ---------------------------------------------------
 
 Records can be exported from Connexion either in a batch or one by one.
 
-`Exporting records one by one <#oclconeexport>`__
+.. _exporting-records-one-by-one-label:
+
+Exporting records one by one
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To export bibliographic records one by one, be sure your "Batch" options
@@ -3137,7 +3261,9 @@ Export
 If the record was overlaid, you will see a message to that effect in the
 "OCLC Gateway Export Status" windowOverlay confirmation
 
-`Exporting records in a batch <#oclcbatchexport>`__
+.. _exporting-records-in-a-batch-label:
+
+Exporting records in a batch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To export bibliographic records in a batch, be sure your "Batch" options
@@ -3160,12 +3286,14 @@ will begin. The process will continue until all records in the batch are
 completed. Then you may or may not see the Connexion Client export
 report (depending on your Client options for that).
 
-`Items in OCLC <#oclcitems>`__
+.. _items-in-oclc-label:
+
+Items in OCLC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you'd like to create your item records in OCLC you can do so by
 addding a 952 for each item to the bib record you're cataloging. The
-`Item/Holdings Cataloging Guide <#itemcatguide>`__ will break down what
+:ref:`Item/Holdings Cataloging Guide <item/holdings-record-cataloging-guide-label>` will break down what
 subfields you can use in the 952, but at the minimum you want to have
 subfield 2, a, b, and y on your items.
 
@@ -3174,35 +3302,39 @@ subfield 2, a, b, and y on your items.
 
 -  The subfield 2 holds the classification code. This can be ddc for
    Dewey or lcc for Library of Congress or z for Custom. Other
-   classification sources can be found in the `Classification
-   Sources <#classificationsources>`__ area in administration
+   classification sources can be found in the :ref:`Classification
+   Sources <classification-sources-label>` area in administration
 
 -  Subfield a is your home library and needs to be the code for your
    home library, not the library name. You can find these codes in the
-   `Libraries & Groups <#libsgroups>`__ administration area.
+   :ref:`Libraries & Groups` administration area.
 
 -  Subfield b is your holding library and needs to be the code for your
    holding library, not the library name. You can find these codes in
-   the `Libraries & Groups <#libsgroups>`__ administration area.
+   the :ref:`Libraries & Groups` administration area.
 
 -  Subfield y is your item type code. It needs to be the code, not the
-   item type name. You can find these codes in the `Item
-   Types <#itemtypeadmin>`__ administration area.
+   item type name. You can find these codes in the :ref:`Item
+   Types <item-types-label>` administration area.
 
 952 \\\\$2ddc$aMAIN$bMAIN$yBOOK
 
 In addition to these required fields you can enter any other subfield
 you'd like. Most libraries will enter a call number in subfield o and a
-barcode in subfield p as well. Review the `Item/Holdings Cataloging
-Guide <#itemcatguide>`__ for a full list of subfields and values.
+barcode in subfield p as well. Review the :ref:`Item/Holdings Cataloging
+Guide <item/holdings-record-cataloging-guide-label>` for a full list of subfields and values.
 
 FAQs
 ====
 
-`Display <#displayfaq>`__
+.. _display-label:
+
+Display
 -------------------------
 
-`Custom Item Type/Authorized Value Icons <#customicons>`__
+.. _custom-item-type/authorized-value-icons-label:
+
+Custom Item Type/Authorized Value Icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:** Can I have my own set of item type images (or authorized
@@ -3220,7 +3352,9 @@ the folders.
        Remember to put the icons in both places (on the OPAC and the
        intranet).
 
-`Customizing Koha Images <#customkohaimages>`__
+.. _customizing-koha-images-label:
+
+Customizing Koha Images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Can I customize the images in the OPAC?
@@ -3229,7 +3363,9 @@ the folders.
 you can alter to meet your needs. The originals can be found in the
 misc/interface\_customization/ directory.
 
-`OPAC Display Fields <#opacdisplayfaq>`__
+.. _opac-display-fields-label:
+
+OPAC Display Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What MARC fields print to the different OPAC screens in
@@ -3238,13 +3374,13 @@ Koha?
 **Answer**: The XSLT preference must be set as follows for the following
 fields to show
 
--  `OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__ = using XSLT
+-  :ref:`OPACXSLTResultsDisplay` = using XSLT
    stylesheets
 
--  `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ = using XSLT
+-  :ref:`OPACXSLTDetailsDisplay` = using XSLT
    stylesheets
 
--  `DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__ = show
+-  :ref:`DisplayOPACiconsXSLT` = show
 
 The OPAC Results page shows:
 
@@ -3306,20 +3442,24 @@ The OPAC Details page shows:
 
 -  plus all of the 5xx fields in the Notes tab at the bottom
 
-`Subtitle Display on Bib Records <#displaysubtitle>`__
+.. _subtitle-display-on-bib-records-label:
+
+Subtitle Display on Bib Records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: How do I get the subtitle to display on the detail pages
 for my bib records?
 
-**Answer**: Subtitle display now depends on there being a `keyword
-mapping <#keywordmapping>`__ for the MARC field in question. Adding a
+**Answer**: Subtitle display now depends on there being a :ref:`keyword
+mapping <keywords-to-marc-mapping-label>` for the MARC field in question. Adding a
 mapping for "subtitle" -> "245b" for an item's framework results in
 display of the subtitle in OPAC and staff client search and detail pages
 (although not in all instances where subtitles might be displayed, e.g.
 the Cart).
 
-`Show patrons the barcodes of items they have checked out <#opacbarcodesfaq>`__
+.. _show-patrons-the-barcodes-of-items-they-have-checked-out-label:
+
+Show patrons the barcodes of items they have checked out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Can patrons see the barcodes for the items they have
@@ -3327,14 +3467,14 @@ checked out.
 
 **Answer**: Not by default, but with a few edits to the patron record
 you can make a barcode column appear on the patron's check out summary
-in the OPAC. You can set up a `patron
-attribute <#patronattributetypes>`__ with the value of SHOW\_BCODE and
-`authorized value <#authorizedvalues>`__ of YES\_NO to make this happen.
+in the OPAC. You can set up a :ref:`patron
+attribute <patron-attribute-types-label>` with the value of SHOW\_BCODE and
+:ref:`authorized value <authorized-values-label>` of YES\_NO to make this happen.
 
 Add SHOW\_BCODE patron attribute
 |image1112|
 
-Then on the `patron's record set the value <#editpatrons>`__ for
+Then on the :ref:`patron's record set the value <editing-patrons-label>` for
 SHOW\_BCODE to yes.
 
 Setting value for SHOW\_BCODE on patron record
@@ -3348,10 +3488,14 @@ Barcode number on checkout list in OPAC
 
 Clicking on the 'Overdue' tab will show only the items that are overdue.
 
-`Circulation/Notices <#circfaq>`__
+.. _circulation/notices-label:
+
+Circulation/Notices
 ----------------------------------
 
-`Book drop Date <#dropboxfaq>`__
+.. _book-drop-date-label:
+
+Book drop Date
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: How is the book drop date is determined? Is it the last
@@ -3366,22 +3510,26 @@ no real way to know what day the books were dropped into the box during
 the 4 closed days. The only way to change the effective checkin date in
 book drop mode is to modify the calendar.
 
-`Holds to Pull and Holds Queue <#holdsreportsfaq>`__
+.. _holds-to-pull-and-holds-queue-label:
+
+Holds to Pull and Holds Queue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Question**: What is the difference between the `Holds
-Queue <#holdsqueue>`__ and `Holds to Pull <#holdspull>`__?
+**Question**: What is the difference between the :ref:`Holds
+Queue <holds-queue-label>` and :ref:`Holds to Pull <holds-to-pull-label>`?
 
 **Answer**: The holds to pull report gives a simple list of what holds
 need to be filled with available items. It should only be used in Koha
 installations where there is only one library.
 
 The holds queue tries to do the same thing, but in a 'smarter' way. This
-allows it to split up the list by library, consult the `transport cost
-matrix <#transportcostmatrix>`__ and refresh regularly to provide
+allows it to split up the list by library, consult the :ref:`transport cost
+matrix <transport-cost-matrix-label>` and refresh regularly to provide
 different pull lists to each library.
 
-`Duplicate Overdue Notices <#dupoverduefaq>`__
+.. _duplicate-overdue-notices-label:
+
+Duplicate Overdue Notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why are patrons getting two overdue notices?
@@ -3391,13 +3539,15 @@ notifications to them. So, if you have a default rule & a branch rule,
 the notification will be generated twice. A quick fix is to discard
 "default rule" for instance.
 
-`Printing Overdue Notices <#printoverduefaq>`__
+.. _printing-overdue-notices-label:
+
+Printing Overdue Notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Can I print overdue notices for patrons without email
 addresses on file?
 
-**Answer**: Yes. The `overdue notice cron job <#overduenoticecron>`__
+**Answer**: Yes. The :ref:`overdue notice cron job <overdue-notice-label>`
 has a setting to generate the overdue notices as HTML for printing. An
 example of this usage would be:
 
@@ -3417,7 +3567,7 @@ file, the text is spaced down or over to where it will print properly on
 the form. The script has code that wraps around the notice file to tell
 the HTML to obey the formatting, and to do a page break between notices.
 That's so that when staff print it out, they get one per page. We had to
-add an extra syspref (`PrintNoticesMaxLines <#PrintNoticesMaxLines>`__)
+add an extra syspref (:ref:`PrintNoticesMaxLines`)
 to specify page length because our client allows a \_lot\_ of checkouts
 which meant some notices were running onto multiple pages. That syspref
 says to truncate the print notice at that page length and put in a
@@ -3431,7 +3581,9 @@ HTML file in the notice directory, as above.
 
 The cron entry is gather\_print\_notices.pl /tmp/noticedir
 
-`Unable to Renew Items <#renewfaq>`__
+.. _unable-to-renew-items-label:
+
+Unable to Renew Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: We're trying to renew some items for our patron. One of
@@ -3440,15 +3592,17 @@ refuse to renew even though they should be eligible. When I try to use
 the override renewal limit, it just returns a little message that says
 "renewal failed". Any idea what's going on here?
 
-**Answer**: At the very least you will need to set an absolute `default
-circulation rule <#circfinerules>`__. This rule should be set for the
+**Answer**: At the very least you will need to set an absolute :ref:`default
+circulation rule <circulation-and-fine-rules-label>`. This rule should be set for the
 default itemtype, default branchcode and default patron category. That
 will catch anyone who doesn't match a specific rule. Patrons who do not
 match a specific rule will get blocked from placing holds or renewing
 items, since there was no baseline number of holds or renewals to
 utilize.
 
-`Unable to Place Holds <#holdsfaq>`__
+.. _unable-to-place-holds-label:
+
+Unable to Place Holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why can't I place holds when I have all of the preferences
@@ -3462,7 +3616,9 @@ rule. When checking out if you do not have a rule for the default
 branch, default item and default patron category then you may see
 patrons getting blocked from placing holds.
 
-`Keyboard Shortcuts <#keyboardshort>`__
+.. _keyboard-shortcuts-label:
+
+Keyboard Shortcuts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Do I have to use my mouse to access the checkout, checkin
@@ -3484,7 +3640,9 @@ available):
 
     Mac users use the OPTION button in place of ALT
 
-`SMS Notices/Messages <#smsnoticefaq>`__
+.. _sms-notices/messages-label:
+
+SMS Notices/Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: I want Koha to send notices via SMS, what do I need to do?
@@ -3519,21 +3677,25 @@ sent / received per users per day. India specific drivers include:
 
 -  Unicel Technologies Pvt Ltd (`unicel.in <http://unicel.in>`__)
 
-`Cataloging <#catfaq>`__
+.. _cataloging-label:
+
+Cataloging
 ------------------------
 
-`Authority Fields <#authorityfaq>`__
+.. _authority-fields-label:
+
+Authority Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:**\ Why can't I edit 1xx, 6xx, or 7xx fields in my catalog
 record?
 
 **Answer:** These fields are authority controlled and you probably have
-the `BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ set to "Don't
+the :ref:`BiblioAddsAuthorities` set to "Don't
 allow". When it is set to "Don't allow" these fields will be locked and
 require you to search for an existing authority record to populate the
 field with. To allow typing in these authority fields set
-`BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ to 'Allow'.
+:ref:`BiblioAddsAuthorities` to 'Allow'.
 
     **Note**
 
@@ -3542,7 +3704,9 @@ field with. To allow typing in these authority fields set
 Fields affected by this preference show a lock in the field
 |image1115|
 
-`Koha to MARC Mapping <#kohamarcfaq>`__
+.. _koha-to-marc-mapping-label:
+
+Koha to MARC Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What's the relationship between 'Koha to MARC Mapping' and
@@ -3555,7 +3719,9 @@ modules, the mapping will change in the other as well. (In other words,
 the two modules 'overwrite' each other in order to prevent conflicts
 from existing in Koha).
 
-`Number of Items Per Bib Record <#itemsperbibfaq>`__
+.. _number-of-items-per-bib-record-label:
+
+Number of Items Per Bib Record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Is there a limit on the number of items I can attach to a
@@ -3567,22 +3733,28 @@ MARC record will exceed the maximum file size limit for the ISO 2709
 standard, which breaks indexing for that record. I've found this occurs
 somewhere between 600 and 1000 items on a 'normal' bibliographic record.
 
-`Analytics <#analyticsfaq>`__
+.. _analytics-label:
+
+Analytics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: I am using the
-`EasyAnalyticalRecords <#EasyAnalyticalRecords>`__ feature, but my links
+:ref:`EasyAnalyticalRecords` feature, but my links
 in the OPAC and Staff Client to 'Show Analytics' are not working.
 
 **Answer**: If you plan on using
-`EasyAnalyticalRecords <#EasyAnalyticalRecords>`__ you will want to make
-sure to set your `UseControlNumber <#UseControlNumber>`__ preference to
+:ref:`EasyAnalyticalRecords` you will want to make
+sure to set your :ref:`UseControlNumber` preference to
 "Don't use," this will prevent broken links.
 
-`Acquisitions <#acqfaq>`__
+.. _acquisitions-label:
+
+Acquisitions
 --------------------------
 
-`Planning Categories <#planningcatfaq>`__
+.. _planning-categories-label:
+
+Planning Categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What is a planning category?
@@ -3619,10 +3791,14 @@ a value from this list in a drop down. Then, after the material has been
 acquired, at the end of the year, you'll be able to compare the goals
 set, with what's been achieved.
 
-`Serials <#serialsfaq>`__
+.. _serials-label:
+
+Serials
 -------------------------
 
-`Advanced Patterns <#advancedpatternfaq>`__
+.. _advanced-patterns-label:
+
+Advanced Patterns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What is the 'inner counter' on the advanced serials
@@ -3662,13 +3838,19 @@ Inner counter says to Koha to take into account the first issues of the
 year, even if they are not received with Koha. If you begin with first
 issue of the year write nothing or 0.
 
-`Reports <#reportsfaq>`__
+.. _reports-label:
+
+Reports
 -------------------------
 
-`Define Codes Stored in DB <#accounttypefaq>`__
+.. _define-codes-stored-in-db-label:
+
+Define Codes Stored in DB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Fines Table <#finescodefaq>`__
+.. _fines-table-label:
+
+Fines Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question:** What do the codes in the accounttype field in the
@@ -3698,7 +3880,9 @@ accountlines table stand for?
 
 -  W = Writeoff
 
-`Statistics Table <#statscodefaq>`__
+.. _statistics-table-label:
+
+Statistics Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question:**\ What are the possible codes for the type field in the
@@ -3726,7 +3910,9 @@ statistics table?
    -  The XXX stores different types of fee credits, so a query to catch
       them all would include a clause like "type LIKE 'Credit%'"
 
-`Reserves Table <#rescodefaq>`__
+.. _reserves-table-label:
+
+Reserves Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the found field in the
@@ -3745,7 +3931,9 @@ reserves and old\_reserves tables?
 
 -  F = Finished: the reserve has been completed, and is done
 
-`Reports Dictionary Table <#reportdicfaq>`__
+.. _reports-dictionary-table-label:
+
+Reports Dictionary Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the area field in the
@@ -3763,7 +3951,9 @@ reports\_dictionary table?
 
 -  5 = Accounts
 
-`Messages Table <#msgtablefaq>`__
+.. _messages-table-label:
+
+Messages Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the message\_type field in
@@ -3775,7 +3965,9 @@ the messages table?
 
 -  B = For Patrons/Borrowers
 
-`Serial Table <#serialtablefaq>`__
+.. _serial-table-label:
+
+Serial Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the status field in the
@@ -3807,7 +3999,9 @@ serial table?
 
 -  44 = Missing (lost)
 
-`Borrowers Table <#borrowerprivacyvalues>`__
+.. _borrowers-table-label:
+
+Borrowers Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the privacy field in the
@@ -3821,7 +4015,9 @@ borrowers table?
 
 -  2 = Never
 
-`Messaging Preferences <#messpreffaq>`__
+.. _messaging-preferences-label:
+
+Messaging Preferences
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes in the message\_attribute\_id
@@ -3839,7 +4035,9 @@ field in the borrower\_message\_preferences table?
 
 -  5 = item check in
 
-`Runtime Parameters <#runtimefaq>`__
+.. _runtime-parameters-label:
+
+Runtime Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Is there a way to filter my custom SQL reports before they
@@ -3909,7 +4107,9 @@ Examples:
     Branch pull down
     |image1117|
 
-`Results Limited <#reportlimitfaq>`__
+.. _results-limited-label:
+
+Results Limited
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: When I download my report it's limited to 10,000 results,
@@ -3919,13 +4119,19 @@ how do I get all of the results to download?
 entered in Koha. To get around this you want to add 'LIMIT 100000' to
 the end of your SQL statement (or any other number above 10,000.
 
-`Searching <#searchfaq>`__
+.. _searching-label:
+
+Searching
 --------------------------
 
-`Advanced Search <#advancedsearchfaq>`__
+.. _advanced-search-label:
+
+Advanced Search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Scan Indexes <#scanindexfaq>`__
+.. _scan-indexes-label:
+
+Scan Indexes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What does 'scan indexes' on the advanced search page mean?
@@ -3937,7 +4143,9 @@ is search is not made directly in the catalog, but first in the indexes
 It works only for one index at once, and only with no limit in Location
 (All libraries needed)
 
-`Searching for Terms that Start With a Character <#searchstartswith>`__
+.. _searching-for-terms-that-start-with-a-character-label:
+
+Searching for Terms that Start With a Character
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: How do I search for all titles that start with the letter
@@ -3948,7 +4156,9 @@ character or series of characters by using the CCL 'first-in-subfield'
 
 -  example: ti,first-in-subfield=C
 
-`Wildcard Searching <#wildcardsearchfaq>`__
+.. _wildcard-searching-label:
+
+Wildcard Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**:What is the difference between a keyword search using the
@@ -3978,7 +4188,9 @@ depending on what is your database.
 The bottom line in searching with wildcards: '\*' is more exact while
 '%' searches for like terms.
 
-`Title Searching <#titlesearchingfaq>`__
+.. _title-searching-label:
+
+Title Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why does my Zebra title search for 'Help' not turn up 'The
@@ -4009,10 +4221,14 @@ The moral of the story is that single word searches, particularly on
 common words, will always struggle a bit; it can't evaluate relevance
 well, because you've not given it enough input.
 
-`Enhanced Content <#enhancedcontentfaq>`__
+.. _enhanced-content-label:
+
+Enhanced Content
 ------------------------------------------
 
-`FRBRizing Content <#frbrfaq>`__
+.. _frbrizing-content-label:
+
+FRBRizing Content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:**\ At our public library we are running a Koha installation
@@ -4026,10 +4242,14 @@ that ISBN. So both XISBN and your internal ISBN (in biblio table) have
 to be normalized. You could therefore use the script
 misc/batchupdateISBNs.pl (it removes all the - in your local ISBNs)
 
-`Amazon <#amzfaq>`__
+.. _amazon-label:
+
+Amazon
 ~~~~~~~~~~~~~~~~~~~~
 
-`All Amazon Content <#amazonfaq>`__
+.. _all-amazon-content-label:
+
+All Amazon Content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: I have all of the Amazon preferences turned on and have
@@ -4044,10 +4264,14 @@ change in made Amazon content should appear immediately.
 On Debian the the command is *date -s "2010-06-30 17:21"* (with the
 proper date and time for your timezone).
 
-`System Administration <#systemfaq>`__
+.. _system-administration-label:
+
+System Administration
 --------------------------------------
 
-`Errors in Zebra Cron <#zebracronfaq>`__
+.. _errors-in-zebra-cron-label:
+
+Errors in Zebra Cron
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: I am noticing some errors in the
@@ -4081,7 +4305,9 @@ easiest thing to do, if anybody has any idea how to make it work. If it
 worked and were the default, I think it would help folks to avoid a
 great deal of the problems that come up with zebra.
 
-`Making Z39.50 Target Public <#publicztarget>`__
+.. _making-z39.50-target-public-label:
+
+Making Z39.50 Target Public
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Could someone tell me the exact steps I need to take to
@@ -4098,7 +4324,9 @@ to be:
 
 Then restart zebasrv and connect on the port specified (9999).
 
-`Shelving Location Authorized Values <#authvalfaq>`__
+.. _shelving-location-authorized-values-label:
+
+Shelving Location Authorized Values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: When editing an item, the new shelving location I created
@@ -4111,7 +4339,9 @@ the authorized value in a field was assigned where the code was 0, the
 value displays as null in the item editor (or MARC editor) instead of
 the value the library meant it to be.
 
-`Why do I need Authorized Values? <#whyauthvals>`__
+.. _why-do-i-need-authorized-values?-label:
+
+Why do I need Authorized Values?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why would I want to define authorized values for MARC
@@ -4131,14 +4361,16 @@ authorized values for that category.
     types and branch codes, and you can link these authorized values to
     MARC subfields when you set up your MARC tag structure.
 
-`How do I clean up the sessions table? <#sessionstblfaq>`__
+.. _how-do-i-clean-up-the-sessions-table?-label:
+
+How do I clean up the sessions table?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Is there a periodic job that can be run to cull old
 sessions from the table? We don't want to backup all the useless session
 data every night.
 
-**Answer**: You can run `cleanup database cron job <#cleandbcron>`__.
+**Answer**: You can run :ref:`cleanup database cron job <clean-up-database-label>`.
 
 Or just before doing a backup command (mysqldump), you can truncate
 session table:  
@@ -4147,10 +4379,14 @@ session table:  
 
     mysql -u<kohauser -p<password <koha-db-name -e 'TRUNCATE TABLE sessions'
 
-`Hardware <#hardwarefaq>`__
+.. _hardware-label:
+
+Hardware
 ---------------------------
 
-`Barcode Scanners <#barcodefaq>`__
+.. _barcode-scanners-label:
+
+Barcode Scanners
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What barcode scanners have been known to work with Koha?
@@ -4177,10 +4413,14 @@ some have triggers under the handle, some have buttons on top, some are
 held like a pen. Think about the staff working with the hardware before
 choosing, as a button in the wrong place can be very awkward to use.
 
-`Printers <#printersfaq>`__
+.. _printers-label:
+
+Printers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Printers used by Koha libraries <#kohaprinters>`__
+.. _printers-used-by-koha-libraries-label:
+
+Printers used by Koha libraries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  POS-X receipt printer
@@ -4207,7 +4447,9 @@ choosing, as a button in the wrong place can be very awkward to use.
 
 -  1x1 labels using a Dymolabelwriter printer
 
-`Braille Support <#braillefaq>`__
+.. _braille-support-label:
+
+Braille Support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: Are there any braille embosser or printer which has
@@ -4216,7 +4458,9 @@ inbuilt braille converter and it is accessible with UNIX environment?
 **Answer**: You may want to look into BRLTTY
 (http://www.emptech.info/product_details.php?ID=1232).
 
-`Additional Support <#hardwaresupport>`__
+.. _additional-support-label:
+
+Additional Support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/
@@ -4224,7 +4468,9 @@ inbuilt braille converter and it is accessible with UNIX environment?
 Extending Koha
 ==============
 
-`Amazon lookup script for Koha libraries <#amzlookup>`__
+.. _amazon-lookup-script-for-koha-libraries-label:
+
+Amazon lookup script for Koha libraries
 --------------------------------------------------------
 
 We order most of our materials from Amazon, so I've been looking for a
@@ -4254,13 +4500,15 @@ for related titles, custom messages based on the status of items (on
 order, on hold, etc.), ... just search the UserScripts site for Amazon +
 library. For a later date!
 
-`Keyword Clouds <#extendkeywordclouds>`__
+.. _keyword-clouds-label:
+
+Keyword Clouds
 -----------------------------------------
 
 In addition to the traditional tag cloud available in Koha, there is a
 way to generate clouds for popular subjects within Koha.
 
-The `Author/Subject Cloud cron job <#keywordclouds>`__ is used to help
+The :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` is used to help
 with this process. This cron job sends its output to files.
 
 -  /home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html
@@ -4271,14 +4519,16 @@ This means that you can produce clouds for authors, collective author,
 all kind of subjects, classifications, etc. And since it works on zebra
 indexes, it is quick, even on large DBs. Tags clouds are sent to files.
 It's up to library webmaster to deal with those files in order to
-include them in `OPACMainUserBlock <#OpacMainUserBlock>`__, or include
+include them in :ref:`OPACMainUserBlock <opacmainuserblock-label>`, or include
 them into their library CMS.
 
 Some libraries even send the file into a Samba shared folder where
 webmaster take them, eventually clean them a little bit before
 integrating them into navigation widgets or pages.
 
-`Newest Titles Pulldown <#newtitlesoption>`__
+.. _newest-titles-pulldown-label:
+
+Newest Titles Pulldown
 ---------------------------------------------
 
 Often we want to add a way for our patrons to do searches for the newest
@@ -4363,7 +4613,9 @@ somewhere on your OPAC. The `Farmington Public Libraries
 OPAC <http://catalog.farmingtonlibraries.org>`__ has a few examples of
 this on the left.
 
-`Cataloging and Searching by Color <#colorsearch>`__
+.. _cataloging-and-searching-by-color-label:
+
+Cataloging and Searching by Color
 ----------------------------------------------------
 
 One of the icon sets installed in Koha includes a series of colors. This
@@ -4424,12 +4676,12 @@ category:
          lib_opac, imageurl) values ('CCODE','ffffff','White','','colors/ffffff.png');
 
 If you would like to choose the colors manually you can do that via the
-`Authorized Values <#authorizedvalues>`__ administration area.
+:ref:`Authorized Values` administration area.
 
 Colors for CCODE
 |image1118|
 
-Next you'll want to `update the frameworks <#marcbibframeworks>`__ so
+Next you'll want to :ref:`update the frameworks <marc-bibliographic-frameworks-label>` so
 that the 952$8 (if you're using collection code) label to says Color.
 
 Once you have that in place you can start to catalog items by color.
@@ -4437,7 +4689,7 @@ Once you have that in place you can start to catalog items by color.
 Finally you'll want to add the following JQuery to your preferences so
 that it will relabel 'Collection' to 'Color'
 
-`IntranetUserJS <#intranetuserjs>`__
+:ref:`IntranetUserJS`
 
 ::
 
@@ -4446,7 +4698,7 @@ that it will relabel 'Collection' to 'Color'
         $("#holdings th:contains('Collection')").text("Color");
         });
 
-`OPACUserJS <#opacuserjs>`__
+:ref:`OPACUserJS`
 
 ::
 
@@ -4461,7 +4713,9 @@ Koha and Your Website
 This appendix will include tips for integrating Koha in to your library
 website.
 
-`Koha search on your site <#embedsearch>`__
+.. _koha-search-on-your-site-label:
+
+Koha search on your site
 -------------------------------------------
 
 Often you'll want to add a Koha search box to your library website. To

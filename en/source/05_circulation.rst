@@ -10,10 +10,10 @@ listing of Circulation functions you can visit the Circulation page
 which is linked from the top left of every page or from the center of
 the main page.
 
-Before circulating your collection you will want to set your `Global
-System Preferences <#globalsysprefs>`__, `Basic
-Parameters <#basicparams>`__ and `Patrons & Circulation
-Rules <#patscirc>`__.
+Before circulating your collection you will want to set your :ref:`Global
+System Preferences <global-system-preferences-label>`, :ref:`Basic
+Parameters <basic-parameters-label>` and :ref:`Patrons & Circulation
+Rules <patrons-&-circulation-label>`.
 
 While in Circulation you can jump between the tabs on the quick search
 box at the top of the screen by using the following hot keys:
@@ -30,7 +30,9 @@ box at the top of the screen by using the following hot keys:
 
     Mac users use the OPTION button in place of ALT
 
-`Check Out (Issuing) <#checkingout>`__
+.. _check-out-(issuing)-label:
+
+Check Out (Issuing)
 --------------------------------------
 
 To begin the checkout process you must enter the patron barcode or part
@@ -46,7 +48,7 @@ of their name. The checkout option appears in three main places:
    Check out tab on a patron record
    |image483|
 
--  If you have enabled `batch checkouts <#batchcheckoutprefs>`__ then
+-  If you have enabled :ref:`batch checkouts <batch-checkout-label>` then
    click the batch check out option on the patron recordBatch checkout
 
 -  Check out option on the quick search bar on the circulation page
@@ -54,7 +56,9 @@ of their name. The checkout option appears in three main places:
    Check out tab on quick search bar
    |image484|
 
-`Checking Items Out <#checkitemout>`__
+.. _checking-items-out-label:
+
+Checking Items Out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To check an item out to a patron, first search for that patron using one
@@ -79,11 +83,11 @@ item's barcode into.
        making it so that the 'Check Out' button is automatically clicked
 
 -  If the barcode is not found you will be prompted to use fast
-   cataloging to add the item. Learn more about `fast
-   cataloging <#fastaddcat>`__ later in this manual.
+   cataloging to add the item. Learn more about :ref:`fast
+   cataloging <fast-add-cataloging-label>` later in this manual.
 
 -  If you have
-   `itemBarcodeFallbackSearch <#itemBarcodeFallbackSearch>`__ set to
+   :ref:`itemBarcodeFallbackSearch` set to
    'Enable' then you can enter a keyword search in this box instead of
    just a barcode (this will make it possible to check out using title
    and/or call number).
@@ -95,19 +99,19 @@ Below the box for the barcode there may be options for you to override
 the default due date for the item.
 
 -  This option will only appear if you have set the
-   `SpecifyDueDate <#SpecifyDueDate>`__ system preference to allow staff
+   :ref:`SpecifyDueDate` system preference to allow staff
    to override the due date
 
 Below the box for the barcode you will see a checkbox for 'Automatic
 renewal'. This will allow this item to automatically renew if the
-`appropriate cron job <#autorenewcron>`__ is running and there are no
+:ref:`appropriate cron job <automatic-renewal-label>` is running and there are no
 holds on the item.
 
 Next is an option to no decrease the loan length based on holds. This
-overrides the `decreaseLoanHighHolds <#decreaseLoanHighHolds>`__
+overrides the :ref:`decreaseLoanHighHolds <decreaseloanhighholds,-decreaseloanhighholdsduration,-decreaseloanhighholdsvalue,-decreaseloanhighholdscontrol,-and-decreaseloanhighholdsignorestatuses-label>`
 preference.
 
-If you're allowing the `checkout of items on site <#OnSiteCheckouts>`__
+If you're allowing the :ref:`checkout of items on site <onsitecheckouts-label>`
 to patrons (these are usually items that are not for loan that you would
 like to check for in library use) then you will see the 'On-site
 checkout' checkbox after clicking the 'Checkout settings' link to expand
@@ -146,13 +150,13 @@ Holds summary on check out screen
 
 From the holds list you can suspend or resume patrons holds using the
 options at the bottom of the list if you have the
-`SuspendHoldsIntranet <#SuspendHoldsIntranet>`__ preference set to
+:ref:`SuspendHoldsIntranet` preference set to
 'allow.'
 
     **Note**
 
     If you have your
-    `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ preference
+    :ref:`AutoResumeSuspendedHolds` preference
     set to "Don't allow" then you will not have the option to put an end
     date on the hold suspension
 
@@ -175,13 +179,15 @@ staff client as well.
 Circulation information on holdings tab
 |image493|
 
-`Printing Receipts <#printcircreceipt>`__
+.. _printing-receipts-label:
+
+Printing Receipts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have checked out all of the items for the patron you can print
 them a receipt by choosing one of two methods.
 
-If you have the `CircAutoPrintQuickSlip <#CircAutoPrintQuickSlip>`__
+If you have the :ref:`CircAutoPrintQuickSlip`
 preference set to 'open a print quick slip window' you can simply hit
 enter on your keyboard or scan a blank piece of paper with your barcode
 scanner. The idea being that you're "checking out" a blank barcode which
@@ -203,13 +209,15 @@ circulation information and 'Print overdues' will print out a slip that
 lists all items that are overdue.
 
 What prints on the slips can be customized by altering the slip
-templates under the `Notices & Slips <#notices>`__ tool.
+templates under the :ref:`Notices & Slips` tool.
 
-`Clear Patron Information <#clearpatroninfo>`__
+.. _clear-patron-information-label:
+
+Clear Patron Information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you're done checking an item out if you have the
-`DisplayClearScreenButton <#DisplayClearScreenButton>`__ preference set
+:ref:`DisplayClearScreenButton` preference set
 to 'Show' you can clear the current patron by clicking the X in the top
 right of the patron's info to remove the current patron from the screen
 and start over.
@@ -217,18 +225,20 @@ and start over.
 Clear Screen Button
 |image495|
 
-If you have the `CircAutoPrintQuickSlip <#CircAutoPrintQuickSlip>`__
+If you have the :ref:`CircAutoPrintQuickSlip`
 preference set to 'clear the screen' then you simply need to hit enter
 or scan a blank barcode and the screen will be cleared of the current
 patron.
 
-`Batch Checkouts <#batchcheckout>`__
+.. _batch-checkouts-label:
+
+Batch Checkouts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to perform a batch check out you can do so by turning
-on the `BatchCheckouts <#BatchCheckouts>`__ system preference and
+on the :ref:`BatchCheckouts` system preference and
 assigning the proper patron categories via the
-`BatchCheckoutsValidCategories <#BatchCheckoutsValidCategories>`__
+:ref:`BatchCheckoutsValidCategories`
 preference. This will allow you to use an RFID pad that reads multiple
 barcodes or perform a batch check out for training internal use.Batch
 checkouts
@@ -246,7 +256,9 @@ use was recorded for each item you scanned.
 Batch local use
 |image497|
 
-`Check Out Messages <#checkoutmsg>`__
+.. _check-out-messages-label:
+
+Check Out Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you check out an item that has multiple pieces and you have cataloged
@@ -267,7 +279,7 @@ notifying the librarian of why the patron cannot check items out.
    |image499|
 
    -  You can set the amount at which patron checkouts are blocked with
-      the `noissuescharge <#noissuescharge>`__ system preference
+      the :ref:`noissuescharge` system preference
 
 -  Patron has a restriction on their account
 
@@ -275,8 +287,8 @@ notifying the librarian of why the patron cannot check items out.
    |image500|
 
    -  This can be set by the librarian editing a patron record and
-      adding a `restriction <#patronflags>`__ or by the `Overdue/Notice
-      Status Triggers <#noticetriggers>`__
+      adding a `restriction <#patronflags>`__ or by the :ref:`Overdue/Notice
+      Status Triggers <overdue-notice/status-triggers-label>`
 
    -  If the staff member has the right permission they can override the
       restriction temporarily
@@ -300,7 +312,9 @@ notifying the librarian of why the patron cannot check items out.
    -  This can be set by the librarian editing a patron record and
       adding a `flag <#patronflags>`__
 
-`Check Out Warnings <#checkoutwarn>`__
+.. _check-out-warnings-label:
+
+Check Out Warnings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes checkouts will trigger warning messages that will appear in a
@@ -341,13 +355,13 @@ acknowledged before you will be able to continue checking items out.
    |image509|
 
 -  Patron has too many things checked out and
-   `AllowTooManyOverride <#AllowTooManyOverride>`__ is set to 'Allow'
+   :ref:`AllowTooManyOverride` is set to 'Allow'
 
    Too many checkouts
    |image510|
 
 -  Patron has too many things checked out and
-   `AllowTooManyOverride <#AllowTooManyOverride>`__ is set to "Don't
+   :ref:`AllowTooManyOverride` is set to "Don't
    allow"
 
    Too many checkouts
@@ -359,7 +373,7 @@ acknowledged before you will be able to continue checking items out.
    |image512|
 
    -  This can be overridden with the
-      `AllowRenewalLimitOverride <#AllowRenewalLimitOverride>`__ system
+      :ref:`AllowRenewalLimitOverride` system
       preference
 
 -  Barcode not found
@@ -367,12 +381,12 @@ acknowledged before you will be able to continue checking items out.
    Barcode not found
    |image513|
 
-   -  Learn more about `fast cataloging <#fastaddcat>`__ later in this
+   -  Learn more about :ref:`fast cataloging <fast-add-cataloging-label>` later in this
       manual.
 
 -  Item being checked out is marked as 'lost'
 
-   -  Depending on the value in your `IssueLostItem <#IssueLostItem>`__
+   -  Depending on the value in your :ref:`IssueLostItem`
       preference, you may just see a warning
 
       Warning that item is lost
@@ -389,20 +403,22 @@ acknowledged before you will be able to continue checking items out.
    |image516|
 
 -  Item being checked out meets the
-   `decreaseLoanHighHolds <#decreaseLoanHighHolds>`__ system preference
+   :ref:`decreaseLoanHighHolds <decreaseloanhighholds,-decreaseloanhighholdsduration,-decreaseloanhighholdsvalue,-decreaseloanhighholdscontrol,-and-decreaseloanhighholdsignorestatuses-label>` system preference
    criteria
 
    Too many holds
    |image517|
 
-`Renewing <#circrenew>`__
+.. _renewing-label:
+
+Renewing
 -------------------------
 
 Checked out items can be renewed (checked out for another period of
-time) based on your `circulation rules <#circfinerules>`__ and `renewal
-preferences <#RenewalPeriodBase>`__.
+time) based on your :ref:`circulation rules <circulation-and-fine-rules-label>` and :ref:`renewal
+preferences <renewalperiodbase-label>`.
 
-If `you allow it <#OpacRenewalAllowed>`__, patrons can renew their own
+If :ref:`you allow it <opacrenewalallowed-label>`, patrons can renew their own
 items via the OPAC, but sometimes you'll need to help them by renewing
 their items via the staff client.
 
@@ -425,7 +441,7 @@ Renew buttons
 
 Sometimes renewals will be blocked based on your circulation rules, to
 override this block you must have your
-`AllowRenewalLimitOverride <#AllowRenewalLimitOverride>`__ preference
+:ref:`AllowRenewalLimitOverride` preference
 set to 'Allow'. If you allow renewal limit overrides, you will see a
 checkbox at the bottom left of the circulation summary. Check that box
 and then choose the items you would like to renew.
@@ -462,7 +478,9 @@ If the item is not actually checked out you will also receive an error.
 Item not checked out
 |image525|
 
-`Check In (Returning) <#checkingin>`__
+.. _check-in-(returning)-label:
+
+Check In (Returning)
 --------------------------------------
 
 Checking in items can be performed from various different locations
@@ -488,7 +506,9 @@ Checking in items can be performed from various different locations
    Check in link on Circulation Module
    |image529|
 
-`Checking Items In <#checkitemin>`__
+.. _checking-items-in-label:
+
+Checking Items In
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To check an item in scan the barcode for the item into the box provided.
@@ -502,18 +522,20 @@ library was closed you can check the 'Book drop mode' box before
 scanning items. This will effectively roll back the returned date to the
 last date the library was open.
 
--  This requires that you have your closings added to the `Holidays &
-   Calendar Tool <#calholidays>`__
+-  This requires that you have your closings added to the :ref:`Holidays &
+   Calendar Tool <calendar-label>`
 
 You can also choose to forgive all overdue charges for items you are
 checking in by checking the 'Forgive overdue charges' box before
 scanning items.
 
-If you have the `SpecifyReturnDate <#SpecifyReturnDate>`__ preference
+If you have the :ref:`SpecifyReturnDate` preference
 set to 'Allow' you will be able to arbitrarily set the return date from
 below the check in box.Specify check in date
 
-`Check In Messages <#checkinmsg>`__
+.. _check-in-messages-label:
+
+Check In Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several messages that can appear when checking items in:
@@ -589,25 +611,29 @@ There are several messages that can appear when checking items in:
       status as Available (it will not cancel the hold)
 
 -  If you have the system showing you fines at the time of checkin
-   (`FineNotifyAtCheckin <#FineNotifyAtCheckin>`__) you will see a
+   (:ref:`FineNotifyAtCheckin`) you will see a
    message telling you about the fine and providing you a link to the
    payment page for that patron
 
    FineNotifyAtCheckin
    |image539|
 
-`Circulation Messages <#circmessages>`__
+.. _circulation-messages-label:
+
+Circulation Messages
 ----------------------------------------
 
 Circulation messages are short messages that librarians can leave for
 their patrons or their colleagues that will appear at the time of
 circulation.
 
-`Setting up Messages <#setcircmsg>`__
+.. _setting-up-messages-label:
+
+Setting up Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Circulation messages are set up as `Authorized
-Values <#authorizedvalues>`__. To add or edit Circulation Messages you
+Circulation messages are set up as :ref:`Authorized
+Values <authorized-values-label>`. To add or edit Circulation Messages you
 want to work with the `BOR\_NOTES <#bornotes>`__ value.
 
 BOR\_NOTES Authorized Values
@@ -622,7 +648,9 @@ appear on the patron's record.
     message field can hold more than that. Enter 80 characters in the
     'Description' field and then type the rest on the patron record.
 
-`Adding a Message <#addcircmsg>`__
+.. _adding-a-message-label:
+
+Adding a Message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When on the patron's check out tab you will see a link to 'Add a new
@@ -643,7 +671,9 @@ Leave a Circulation Message
 
     A message for the patron will also show to the library staff.
 
-`Viewing Messages <#viewcircmsg>`__
+.. _viewing-messages-label:
+
+Viewing Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Circulation messages meant for the staff and/or the patron will appear
@@ -661,16 +691,20 @@ into the OPAC.
 Circulation Message in OPAC
 |image544|
 
-`Holds <#holds>`__
+.. _holds-label:
+
+Holds
 ------------------
 
 Koha allows patrons to put things on hold. A 'Hold' is a way to reserve
-an item. Depending on your `circulation and fine
-rules <#circfinerules>`__ and `hold preference <#circholdspolicy>`__
+an item. Depending on your :ref:`circulation and fine
+rules <circulation-and-fine-rules-label>` and :ref:`hold preference <holds-policy-label>`
 settings patrons will be able to place items on hold for pickup at the
 library at a later date/time.
 
-`Placing Holds in Staff Client <#holdsinstaff>`__
+.. _placing-holds-in-staff-client-label:
+
+Placing Holds in Staff Client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several ways to place holds from the staff client. The most
@@ -727,7 +761,7 @@ Place Hold Form
 -  Choose the library where the patron will pick up the item
 
 -  If you have the
-   `AllowHoldItemTypeSelection <#AllowHoldItemTypeSelection>`__
+   :ref:`AllowHoldItemTypeSelection`
    preference set to 'Allow' and the record had more than one item type
    attached you will see an option to choose to limit the hold to a
    specific item typeAllowHoldItemTypeSelection
@@ -736,7 +770,7 @@ Place Hold Form
    enter that in the 'Hold starts on date' field
 
    -  This option will only appear if the
-      `AllowHoldDateInFuture <#AllowHoldDateInFuture>`__ system
+      :ref:`AllowHoldDateInFuture` system
       preference is set to 'Allow'
 
 -  If the patron has specified that they don't want the item after a
@@ -744,7 +778,7 @@ Place Hold Form
    expiration date for the hold in the 'Hold expires on date'
 
    -  To have expired holds cancelled automatically you will need to have
-      the `Expired Holds <#expiredholdscron>`__ cron job set to run on a
+      the :ref:`Expired Holds` cron job set to run on a
       regular basis.
 
 -  Next choose if you want to place a hold on the next available item or
@@ -766,7 +800,9 @@ button on the search results and choosing the 'Forget' option.
 Forget Search to Hold Option
 |image553|
 
-`Managing Holds <#manageholds>`__
+.. _managing-holds-label:
+
+Managing Holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Holds can be altered and cancelled from the Holds tab found on the left
@@ -784,13 +820,13 @@ Lists of Holds
     **Note**
 
     If you have your
-    `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ preference
+    :ref:`AutoResumeSuspendedHolds` preference
     set to "Don't allow" then you will not have the option to put an end
     date on the hold suspension
 
     **Note**
 
-    Depending on how you have your `HidePatronName <#HidePatronName>`__
+    Depending on how you have your :ref:`HidePatronName`
     system preference set the list may show card numbers instead of
     names in the Patron column like in the image above.
 
@@ -818,7 +854,7 @@ Lowest Priority & Delete Options for Holds
 |image557|
 
 If a patron asks to have their hold suspended and you have the
-`SuspendHoldsIntranet <#SuspendHoldsIntranet>`__ system preference set
+:ref:`SuspendHoldsIntranet` system preference set
 to 'allow' you can do so by clicking the Suspend button to far right. If
 the patron gives you a date for the items to become unsuspended you can
 enter that in the date box and click the 'Update hold(s)' button to save
@@ -835,11 +871,13 @@ bottom of the list.
 Cancel Holds
 |image559|
 
-`Receiving Holds <#receiveholds>`__
+.. _receiving-holds-label:
+
+Receiving Holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When items that are on hold are `checked in <#checkingin>`__ or
-`out <#checkingout>`__ the system will remind the circulation librarian
+When items that are on hold are :ref:`checked in <check-in-(returning)-label>` or
+:ref:`out <check-out-(issuing)-label>` the system will remind the circulation librarian
 that the item is on hold and offer them options for managing the hold.
 
 When you check in an item that has a hold on it the system will ask you
@@ -887,7 +925,9 @@ Hold waiting for someone else
 From here you can check the item out to the patron at the desk and
 cancel the hold for the patron.
 
-`Transfers <#transfers>`__
+.. _transfers-label:
+
+Transfers
 --------------------------
 
 If you work in a multi-branch system you can transfer items from one
@@ -927,7 +967,9 @@ To transfer an item
    -  The item shows the same 'Home Library' but has updated the
       'Current Location' to note where it resides at this time
 
-`Set Library <#setlibrary>`__
+.. _set-library-label:
+
+Set Library
 -----------------------------
 
 By default you will enter the staff client as if you are at your home
@@ -947,7 +989,9 @@ Set Library Form
 Once you have saved your changes you new library will appear in the top
 right.
 
-`Fast Add Cataloging <#fastaddcat>`__
+.. _fast-add-cataloging-label:
+
+Fast Add Cataloging
 -------------------------------------
 
 Sometimes circulation librarians need to quickly add a record to the
@@ -998,7 +1042,9 @@ originally.
 Checked out item
 |image576|
 
-`Circulation Reports <#circreports>`__
+.. _circulation-reports-label:
+
+Circulation Reports
 --------------------------------------
 
 Most reports can be found via the Reports module, but some of the more
@@ -1007,7 +1053,9 @@ module.
 
 -  *Get there*: Circulation > Circulation reports
 
-`Holds Queue <#holdsqueue>`__
+.. _holds-queue-label:
+
+Holds Queue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will show you all of the holds at your library.
@@ -1015,15 +1063,15 @@ This report will show you all of the holds at your library.
 Sample Holds Queue
 |image577|
 
-To generate this report, you must have the `Build Holds Queue cron
-job <#buildholdscron>`__ running. This cron job is a script that should
+To generate this report, you must have the :ref:`Build Holds Queue cron
+job <holds-queue-label>` running. This cron job is a script that should
 be run periodically if your library system allows borrowers to place
 on-shelf holds. This script decides which library should be responsible
 for fulfilling a given hold request.
 
 It's behavior is controlled by the system preferences
-`StaticHoldsQueueWeight <#holdqueueweight>`__ and
-`RandomizeHoldsQueueWeight <#holdqueueweight>`__.
+:ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
+:ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
 
 If you do not want all of your libraries to participate in the on-shelf
 holds fulfillment process, you should list the libraries that \*do\*
@@ -1056,7 +1104,9 @@ Doing so will cause the build\_holds\_queue script to ignore
 RandomizeHoldsQueueWeight, causing the script to request hold
 fulfillment not randomly, but by alphabetical order.
 
-`Holds to pull <#holdspull>`__
+.. _holds-to-pull-label:
+
+Holds to pull
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will show you all of the items that have holds on them that
@@ -1073,7 +1123,9 @@ side of the page:
 Refine Holds to Pull Report
 |image579|
 
-`Holds awaiting pickup <#holdspickup>`__
+.. _holds-awaiting-pickup-label:
+
+Holds awaiting pickup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will show all of the holds that are waiting for patrons to
@@ -1083,16 +1135,18 @@ Holds Awaiting Pickup
 |image580|
 
 Items that have been on the hold shelf longer than you normally allow
-(based on the `ReservesMaxPickUpDelay <#ReservesMaxPickUpDelay>`__
+(based on the :ref:`ReservesMaxPickUpDelay`
 preference value) will appear on the 'Holds Over' tab, they will not
-automatically be cancelled unless you have set the `cron
-job <#expiredholdscron>`__ to do that for you, but you can cancel all
+automatically be cancelled unless you have set the :ref:`cron
+job <expired-holds-label>` to do that for you, but you can cancel all
 holds using the button at the top of the list.
 
 Items waiting on the hold shelf too long
 |image581|
 
-`Hold ratios <#holdratios>`__
+.. _hold-ratios-label:
+
+Hold ratios
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hold ratios help with collection development. Using this report you will
@@ -1104,7 +1158,9 @@ additional items need to be purchased to meet this quota.
 Hold Ratios
 |image582|
 
-`Transfers to receive <#transferstoreceive>`__
+.. _transfers-to-receive-label:
+
+Transfers to receive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list all of the items that Koha thinks are in transit
@@ -1123,10 +1179,12 @@ Late transfers include warning messages
 
     An item is considered late based on the number of days you have
     entered in the
-    `TransfersMaxDaysWarning <#TransfersMaxDaysWarning>`__ system
+    :ref:`TransfersMaxDaysWarning` system
     preference.
     
-`Article Requests <#articlerequests>`__
+.. _article-requests-label:
+
+Article Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First enable your system preference for ArticleRequests. 
@@ -1178,7 +1236,9 @@ letting them know the request is ready for pickup.
 
 This removes the article request from the processing tab.
 
-`Overdues <#overduesreport>`__
+.. _overdues-label:
+
+Overdues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Important**
@@ -1190,7 +1250,7 @@ This removes the article request from the processing tab.
 
     Large libraries can choose to filter the report before it runs by
     setting the
-    `FilterBeforeOverdueReport <#FilterBeforeOverdueReport>`__ system
+    :ref:`FilterBeforeOverdueReport` system
     preference to 'Require'.
 
 This report will list all items that are overdue at your library.
@@ -1207,7 +1267,9 @@ the report.
     switches this from a report of overdues to a report of checkouts. It
     will show all titles checked out regardless of due date.
 
-`Overdues with fines <#overduesfines>`__
+.. _overdues-with-fines-label:
+
+Overdues with fines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will show you any overdues at your library that have accrued
@@ -1218,26 +1280,30 @@ Overdues with fines
 
 If you would like to limit the report you can use the pull down menu at
 the top to limit to a specific shelving location at your branch. To see
-overdues with fines at other branches you will have to `change your
-branch <#setlibrary>`__ or log in at that branch.
+overdues with fines at other branches you will have to :ref:`change your
+branch <set-library-label>` or log in at that branch.
 
     **Important**
 
-    If you do not charge fines and/or don't have the `fines cron
-    job <#finescronjob>`__ running you will see no data on this report.
+    If you do not charge fines and/or don't have the :ref:`fines cron
+    job <fines-label>` running you will see no data on this report.
 
-`Pending on-site checkouts <#pendingonsite>`__
+.. _pending-on-site-checkouts-label:
+
+Pending on-site checkouts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are using the on site checkouts functionality
-(`OnSiteCheckouts <#OnSiteCheckouts>`__) then you'll have a report to
+(:ref:`OnSiteCheckouts`) then you'll have a report to
 view all items that are currently checked out on site.Pending onsite
 checkouts
 
 This will list the due date (overdues in red), who has the item, item
 information and what library the item is at.
 
-`Tracking In house Use <#trackinhouse>`__
+.. _tracking-in-house-use-label:
+
+Tracking In house Use
 -----------------------------------------
 
 Many libraries track the use of items within the library.
@@ -1248,11 +1314,11 @@ Many libraries track the use of items within the library.
     use of items in the library by patrons without them having to check
     them out. On site use is the use of items on site that must first be
     checked out. To learn more about on site usage please review the
-    `OnSiteCheckouts <#OnSiteCheckouts>`__ preference.
+    :ref:`OnSiteCheckouts` preference.
 
 Tracking the use of items in the library without checking them out can
 be done in Koha one of two ways. The first is to create one or more
-`Statistical Patrons <#addstatspatron>`__. When collecting items that
+:ref:`Statistical Patrons <add-a-statistical-patron-label>`. When collecting items that
 have been used within the library, you will want to check them out to
 your statistical patron:
 
@@ -1269,7 +1335,7 @@ Repeat these steps for all items that have been used within the library
 to keep accurate statistics for item use.
 
 The other way to record local use of items is to set your
-`RecordLocalUseOnReturn <#RecordLocalUseOnReturn>`__ preference to
+:ref:`RecordLocalUseOnReturn` preference to
 'Record.' Then whenever you check an item in that is not checked out and
 not on hold a local use will be recorded.
 
@@ -1278,16 +1344,18 @@ Local Use Recorded
 
     **Note**
 
-    If you have `RecordLocalUseOnReturn <#RecordLocalUseOnReturn>`__ set
+    If you have :ref:`RecordLocalUseOnReturn` set
     to 'Record' you can still use your statistical patrons to record
     local use as well.
 
-`In Processing / Book Cart Locations <#processinglocations>`__
+.. _in-processing-/-book-cart-locations-label:
+
+In Processing / Book Cart Locations
 --------------------------------------------------------------
 
 Koha allows for handling temporary locations like the processing center
 and/or book carts throughout the library. For this feature to work you
-must first make sure you have `authorized values <#authorizedvalues>`__
+must first make sure you have :ref:`authorized values <authorized-values-label>`
 set in the `LOC <#shelvelocvals>`__ category for PROC (Processing
 Center) and CART (Book Cart).
 
@@ -1295,20 +1363,20 @@ CART & PROC values in LOC
 |image590|
 
 Next you need to set the
-`NewItemsDefaultLocation <#NewItemsDefaultLocation>`__ system preference
+:ref:`NewItemsDefaultLocation` system preference
 to PROC. This will set the new items to the Processing Center as their
 default location.
 
 When creating items you enter in their desired final shelving location
 and Koha will temporarily change that to PROC. If
-`InProcessingToShelvingCart <#InProcessingToShelvingCart>`__ is set to
+:ref:`InProcessingToShelvingCart` is set to
 "Don't move" then when an item with a location of PROC is checked in it
 will either automatically update the item to use the permanent location.
-If `InProcessingToShelvingCart <#InProcessingToShelvingCart>`__ is set
+If :ref:`InProcessingToShelvingCart` is set
 to "Move" then when an item is checked in the location is changed from
 PROC to CART.
 
-A `cron job <#proccartcron>`__ is then set to run at specified intervals
+A :ref:`cron job <in-processing/book-cart-label>` is then set to run at specified intervals
 to age items from CART to the permanent shelving location. (For example,
 an hourly cron entry of cart\_to\_shelf.pl --hours 3 where --hours is
 the amount of time an item should spend on the cart before aging to its
@@ -1316,7 +1384,7 @@ permanent location.)
 
 -  **Note**
 
-       If the `ReturnToShelvingCart <#ReturnToShelvingCart>`__ system
+       If the :ref:`ReturnToShelvingCart` system
        preference is set to "Move", any newly checked-in item is also
        automatically put into the shelving cart, to be covered by the
        same script run.
@@ -1327,23 +1395,25 @@ permanent location.)
        If items on the shelving cart are checked out, the cart location
        will be cleared.
 
-`Self Checkout <#selfcheckout>`__
+.. _self-checkout-label:
+
+Self Checkout
 ---------------------------------
 
 Koha comes with a very basic self checkout module. To enable this module
-you need to set the `WebBasedSelfCheck <#WebBasedSelfCheck>`__
+you need to set the :ref:`WebBasedSelfCheck`
 preference to 'Enable.' To use this module you have to log in as a
-`staff member <#addstaffpatron>`__ with `circulation
-permissions <#patronpermissions>`__.
+:ref:`staff member <add-a-staff-patron-label>` with :ref:`circulation
+permissions <patron-permissions-label>`.
 
     **Note**
 
-    Create a `staff patron <#addstaffpatron>`__ specifically for this
+    Create a :ref:`staff patron <add-a-staff-patron-label>` specifically for this
     action so that you don't leave a real staff client logged into a
     computer all day
 
 There is no link to the Self Checkout module, but a simple addition to
-the `IntranetUserJS <#intranetuserjs>`__ system preference can add one.
+the :ref:`IntranetUserJS` system preference can add one.
 
 ::
 
@@ -1367,7 +1437,7 @@ You can also access this module by going to :
 http://YOUR\_KOHA\_OPAC\_URL/cgi-bin/koha/sco/sco-main.pl
 
 When on the self checkout page depending on your value in the
-`SelfCheckoutByLogin <#SelfCheckoutByLogin>`__ preference you will be
+:ref:`SelfCheckoutByLogin` preference you will be
 asked to enter you cardnumber
 
 Self Checkout Patron Card Number
@@ -1405,16 +1475,20 @@ patrons must go to the librarian for help in these situations.
 Self Checkout Error Message
 |image597|
 
-`Offline Circulation Utilities <#offlinecirc>`__
+.. _offline-circulation-utilities-label:
+
+Offline Circulation Utilities
 ------------------------------------------------
 
 Koha allows for you to continue circulation actions while offline by
 using any one of three utilities.
 
-`Offline Circulation in Koha <#kohaofflinecirc>`__
+.. _offline-circulation-in-koha-label:
+
+Offline Circulation in Koha
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the `AllowOfflineCirculation <#AllowOfflineCirculation>`__ preference
+If the :ref:`AllowOfflineCirculation` preference
 is set to 'Enable' the library staff can continue to perform circulation
 actions within Koha when the system is offline. You will want to visit
 http://your-koha-staff-client-url/cgi-bin/koha/circ/offline.pl at least
@@ -1427,11 +1501,13 @@ to when you are offline.
     browser and user setting, is limited to 2.5MB or 5MB per domain.
     This means that larger systems will not be able to synchronize their
     data and are recommended to use either the
-    `Firefox <#firefoxofflinecirc>`__ or
-    `Windows <#windowsofflinecirc>`__ application for offline
+    :ref:`Firefox <firefox-plugin-label>` or
+    :ref:`Windows <offline-circ-tool-for-windows-label>` application for offline
     circulation.
 
-`Setup <#kohaofflinesetup>`__
+.. _setup-label:
+
+Setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before the first time the system goes offline go to Circulation and
@@ -1452,8 +1528,8 @@ Synchronize data
     browser and user setting, is limited to 2.5MB or 5MB per domain.
     This means that larger systems will not be able to synchronize their
     data and are recommended to use either the
-    `Firefox <#firefoxofflinecirc>`__ or
-    `Windows <#windowsofflinecirc>`__ application for offline
+    :ref:`Firefox <firefox-plugin-label>` or
+    :ref:`Windows <offline-circ-tool-for-windows-label>` application for offline
     circulation.
 
 This will allow you download a local copy of your patrons and
@@ -1467,7 +1543,9 @@ Once your data is downloaded you will see the dates your data was last
 synced to the right of each data set.Synced offline dataThis should be
 done regularly in preparation for any unexpected connection losses.
 
-`Circulating <#kohaofflinecirculating>`__
+.. _circulating-label:
+
+Circulating
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When your system goes offline visit the Offline Circulation page
@@ -1492,7 +1570,9 @@ Once the item is checked out it will appear below the patron's info.
 Offline checkouts
 |image603|
 
-`Koha Offline Uploading <#kohaofflineupload>`__
+.. _koha-offline-uploading-label:
+
+Koha Offline Uploading
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the system is back online visit the Synchronize page on the Offline
@@ -1535,7 +1615,9 @@ Once finished you will have a summary of all of your transactions
 Offline Circulation Summary
 |image607|
 
-`Firefox Plugin <#firefoxofflinecirc>`__
+.. _firefox-plugin-label:
+
+Firefox Plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is an offline circulation tool that you can add to your Firefox
@@ -1742,20 +1824,24 @@ you will be warned the next time you open the Offline Circulation tool.
 Koha Offline Circulation Tool Warning
 |image620|
 
-`Offline Circ Tool for Windows <#windowsofflinecirc>`__
+.. _offline-circ-tool-for-windows-label:
+
+Offline Circ Tool for Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Offline Circulation Utility can be downloaded at:
 https://github.com/bywatersolutions/koha-offline-circulation/releases
 
 To generate a borrowers.db file for loading in to the Windows tool you
-will need to run the `file generator via a cron
-job <#offlinecirccron>`__.
+will need to run the :ref:`file generator via a cron
+job <generate-patron-file-for-offline-circulation-label>`.
 
-`Upload Offline Circ File <#uploadofflinecirc>`__
+.. _upload-offline-circ-file-label:
+
+Upload Offline Circ File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The `offline circulation tool for Windows <#windowsofflinecirc>`__ will
+The :ref:`offline circulation tool for Windows <offline-circ-tool-for-windows-label>` will
 generate a KOC file that you can upload into Koha once your system comes
 back up.
 

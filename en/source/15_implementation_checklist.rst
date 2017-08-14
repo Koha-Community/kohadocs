@@ -7,7 +7,9 @@ Implementation Checklist
 The following guide will walk you through the areas of Koha you need to
 look at in order to prepare to start using the system.
 
-`Data Migration <#imp-migration>`__
+.. _data-migration-label:
+
+Data Migration
 -----------------------------------
 
 Before you can start using Koha you'll need to have some data. This can
@@ -16,21 +18,21 @@ data in electronic format of some sort and just need to reformat it a
 bit for importing into Koha.
 
 -  Create a list of libraries and enter their info and codes into
-   `Libraries & Groups <#libsgroups>`__
+   :ref:`Libraries & Groups`
 
--  Define your list of `Item Types <#itemtypeadmin>`__
+-  Define your list of :ref:`Item Types`
 
 -  Define your patron categories and enter the categories and their
-   codes into `Patron Categories <#patcats>`__
+   codes into :ref:`Patron Categories`
 
 -  Enter any additional patron information fields you use in your
-   library in the `Patron Attributes <#patronattributetypes>`__
+   library in the :ref:`Patron Attributes <patron-attribute-types-label>`
 
    -  Requires that you first set the
-      `ExtendedPatronAttributes <#ExtendedPatronAttributes>`__ system
+      :ref:`ExtendedPatronAttributes` system
       preference if you have custom fields
 
--  Define all of your `Authorized Values <#authorizedvalues>`__
+-  Define all of your :ref:`Authorized Values`
 
    -  `Collection codes <#ccode>`__
 
@@ -41,14 +43,14 @@ bit for importing into Koha.
 
    -  Plus any others that are needed in your library
 
--  Optionally define `City/State/Postal Code <#citytowns>`__ combos
+-  Optionally define :ref:`City/State/Postal Code <cities-and-towns-label>` combos
 
--  `Map your bibliographic data <#kohamarcmapping>`__ from your legacy
+-  :ref:`Map your bibliographic data <koha-to-marc-mapping-label>` from your legacy
    system to Koha fields and migrate (remembering to use the collection,
    shelving, item type and library codes you entered in the above
    setting areas)
 
--  `Map your patron data <#patronimport>`__ from your legacy system to
+-  :ref:`Map your patron data <patron-import-label>` from your legacy system to
    the Koha fields and migrate (remembering to use the patron and
    library codes you defined above)
 
@@ -82,52 +84,56 @@ bit for importing into Koha.
    -  If holds are migrated, check to see they are accurate in catalog
       and patron record
 
-`Admin Configuration <#impadmin>`__
+.. _admin-configuration-label:
+
+Admin Configuration
 -----------------------------------
 
 Most of these preferences won't need to be changed to use your Koha
 system, but there are a few that you might want to customize.
 
 -  If your library uses CAS Authentication, you'll want to set the
-   various `CAS system preferences <#casauthentication>`__
+   various :ref:`CAS system preferences <cas-authentication-label>`
 
 -  Administration System Preferences
 
-   -  `KohaAdminEmailAddress <#KohaAdminEmailAddress>`__ : This is the
+   -  :ref:`KohaAdminEmailAddress` : This is the
       email address that will be used by the system in 'from' lines and
       to send errors to if there is no email set for the branch
 
-   -  `noItemTypeImages <#noItemTypeImages>`__ : Decide if you want to
+   -  :ref:`noItemTypeImages` : Decide if you want to
       show item type icons in the staff client and opac
 
-   -  `delimiter <#delimiter>`__ : This value will be put in between
+   -  :ref:`delimiter` : This value will be put in between
       fields when exporting data from Koha
 
-   -  `virtualshelves <#virtualshelves>`__ : Decide if you want the
+   -  :ref:`virtualshelves` : Decide if you want the
       staff and/or patrons to use lists in Koha
 
-   -  `AutoLocation <#AutoLocation>`__ : Require staff to log in to the
+   -  :ref:`AutoLocation` : Require staff to log in to the
       staff client from a specific IP range
 
-   -  `IndependentBranches <#IndependentBranches>`__ : Prevent
+   -  :ref:`IndependentBranches` : Prevent
       librarians from editing content that belongs to other branches
 
--  Go through the `Log System Preferences <#logs>`__ and decide which
+-  Go through the :ref:`Log System Preferences <logs-label>` and decide which
    actions you want to keep track of in the logs
 
 -  Decide if you'd like to share your library's information with the
-   Koha community by setting the `Sharing system
-   preferences <#heaprefs>`__.
+   Koha community by setting the :ref:`Sharing system
+   preferences <share-anonymous-usage-statistics-label>`.
 
 -  Decide what `cron jobs <#cronjobsch>`__ you need to run and when.
 
    -  If you're using the long overdue cron job be sure to set your
-      `DefaultLongOverdueChargeValue <#DefaultLongOverdueChargeValue>`__,
-      `DefaultLongOverdueLostValue <#DefaultLongOverdueLostValue>`__ &
-      `DefaultLongOverdueDays <#DefaultLongOverdueLostValue>`__
+      :ref:`DefaultLongOverdueChargeValue`,
+      :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` &
+      :ref:`DefaultLongOverdueDays <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>`
       preferences.
 
-`Localization Configuration <#implocal>`__
+.. _localization-configuration-label:
+
+Localization Configuration
 ------------------------------------------
 
 Koha is used worldwide and so you need to make sure you set your
@@ -136,399 +142,411 @@ for your location/language.
 
 -  Localization/Internationalization System Preferences
 
-   -  `dateformat <#dateformat>`__ : Decide how dates are displayed
+   -  :ref:`dateformat` : Decide how dates are displayed
       throughout Koha
 
-   -  `opaclanguagesdisplay <#opaclanguagesdisplay>`__ : Decide if
+   -  :ref:`opaclanguagesdisplay` : Decide if
       patrons can choose what language the OPAC appears in
 
-      -  `opaclanguages <#opaclanguages>`__ : Decide which languages the
+      -  :ref:`opaclanguages` : Decide which languages the
          patrons can choose from
 
-   -  `language <#languagepref>`__ : Decide which languages appear in
+   -  :ref:`language` : Decide which languages appear in
       the staff client
 
-   -  `CalendarFirstDayOfWeek <#CalendarFirstDayOfWeek>`__ : Define your
+   -  :ref:`CalendarFirstDayOfWeek` : Define your
       first day of the week
 
-`Circulation Configuration <#impcirc>`__
+.. _circulation-configuration-label:
+
+Circulation Configuration
 ----------------------------------------
 
 Before you start circulating your collection you'll need to set up your
 rules and preferences for circulation.
 
--  Define your `Circulation/Fine rules <#circfinerules>`__
+-  Define your :ref:`Circulation/Fine rules <circulation-and-fine-rules-label>`
 
--  Enter the `days your library is closed <#calholidays>`__ for fines
+-  Enter the :ref:`days your library is closed <calendar-label>` for fines
    and due date calculations
 
 -  Circulation System Preferences
 
-   -  `CircControl <#CircControl>`__ : Define whether circ rules are
+   -  :ref:`CircControl` : Define whether circ rules are
       based on item's location, patron's location or transaction
       location
 
-   -  `useDaysMode <#useDaysMode>`__ : Define how due dates are
+   -  :ref:`useDaysMode` : Define how due dates are
       calculated
 
-   -  `finesCalendar <#finesCalendar>`__ : Define how fines are
+   -  :ref:`finesCalendar` : Define how fines are
       calculated (for every late date or only for days the library is
       open)
 
-   -  `SpecifyDueDate <#SpecifyDueDate>`__ : Decide if staff are allowed
+   -  :ref:`SpecifyDueDate` : Decide if staff are allowed
       to override due dates on checkout
 
-   -  `SpecifyReturnDate <#SpecifyReturnDate>`__ : Decide if you want to
+   -  :ref:`SpecifyReturnDate` : Decide if you want to
       let the staff specify an arbitrary return date on checkin
 
-   -  `itemBarcodeFallbackSearch <#itemBarcodeFallbackSearch>`__ :
+   -  :ref:`itemBarcodeFallbackSearch` :
       Decide if you want staff to be able to checkout using a keyword
       search (title, call number, etc)
 
-   -  `AutomaticItemReturn <#AutomaticItemReturn>`__ : Decide if items
+   -  :ref:`AutomaticItemReturn` : Decide if items
       are sent back to the owning branch when checked in
 
-   -  `todaysIssuesDefaultSortOrder <#todaysIssuesDefaultSortOrder>`__ :
+   -  :ref:`todaysIssuesDefaultSortOrder` :
       Decide how items checked out today display on the patron record
 
-   -  `previousIssuesDefaultSortOrder <#previousIssuesDefaultSortOrder>`__
+   -  :ref:`previousIssuesDefaultSortOrder`
       : Decide how items checked out prior to today display on the
       patron record
 
-   -  `noissuescharge <#noissuescharge>`__ : Define the maximum amount a
+   -  :ref:`noissuescharge` : Define the maximum amount a
       patron can owe before checkouts are blocked
 
-   -  `ReturnBeforeExpiry <#ReturnBeforeExpiry>`__ : Decide if patrons
+   -  :ref:`ReturnBeforeExpiry` : Decide if patrons
       need to return items before their accounts expire
 
-   -  `AllowHoldsOnDamagedItems <#AllowHoldsOnDamagedItems>`__ : Decide
+   -  :ref:`AllowHoldsOnDamagedItems` : Decide
       if patrons can place holds on items that are marked as damaged
 
-      -  `AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__ : Decide
+      -  :ref:`AllowHoldPolicyOverride` : Decide
          if you want the staff to be able to override the setting for
          the above at checkout
 
-   -  `maxreserves <#maxreserves>`__ : Decide how many items a patron
+   -  :ref:`maxreserves` : Decide how many items a patron
       can have on hold at once
 
-      -  `AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__ : Decide
+      -  :ref:`AllowHoldPolicyOverride` : Decide
          if you want the staff to be able to override the setting for
          the above at checkout
 
-   -  `maxoutstanding <#maxoutstanding>`__ : Define the maximum amount a
+   -  :ref:`maxoutstanding` : Define the maximum amount a
       patron can owe before holds are blocked
 
-      -  `AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__ : Decide
+      -  :ref:`AllowHoldPolicyOverride` : Decide
          if you want the staff to be able to override the setting for
          the above at checkout
 
-   -  `ReservesMaxPickUpDelay <#ReservesMaxPickUpDelay>`__ : Define the
+   -  :ref:`ReservesMaxPickUpDelay` : Define the
       number of days before a hold expires
 
-   -  `WebBasedSelfCheck <#WebBasedSelfCheck>`__ : Decide if you want to
+   -  :ref:`WebBasedSelfCheck` : Decide if you want to
       use the built in web-based self-checkout system
 
-      -  `AutoSelfCheckAllowed <#AutoSelfCheckAllowed>`__ : Decide if
+      -  :ref:`AutoSelfCheckAllowed <autoselfcheckallowed,-autoselfcheckid-&-autoselfcheckpass-label>` : Decide if
          the self-checkout system requires login
 
-      -  `ShowPatronImageInWebBasedSelfCheck <#ShowPatronImageInWebBasedSelfCheck>`__
+      -  :ref:`ShowPatronImageInWebBasedSelfCheck`
          : Decide if you want patron images to show on the self checkout
          screen
 
-   -  `AllowNotForLoanOverride <#AllowNotForLoanOverride>`__ : Decide if
+   -  :ref:`AllowNotForLoanOverride` : Decide if
       you want the staff to be able to checkout items marked as 'not for
       loan'
 
-   -  `AllowRenewalLimitOverride <#AllowRenewalLimitOverride>`__ :
+   -  :ref:`AllowRenewalLimitOverride` :
       Decide if you want staff to override the limit put on renewals
 
-   -  `AllowFineOverride <#AllowFineOverride>`__ : Decide if you want
+   -  :ref:`AllowFineOverride` : Decide if you want
       staff to be able to override fine limits
 
-   -  `AllowTooManyOverride <#AllowTooManyOverride>`__ : Descide if you
+   -  :ref:`AllowTooManyOverride` : Descide if you
       want staff to be able to check out more than the limit to a patron
 
-   -  `RenewalPeriodBase <#RenewalPeriodBase>`__ : Decide what date
+   -  :ref:`RenewalPeriodBase` : Decide what date
       renewals are based on
 
-   -  `finesMode <#finesMode>`__ : Switch to 'Calculate and Charge'
+   -  :ref:`finesMode` : Switch to 'Calculate and Charge'
       before go live if you charge fines
 
    -  `OverdueNoticeBcc <#OverdueNoticeBcc>`__ : If you want to receive
       a copy of every overdue notice sent out, enter your email address
       here
 
-   -  `emailLibrarianWhenHoldIsPlaced <#emailLibrarianWhenHoldIsPlaced>`__
+   -  :ref:`emailLibrarianWhenHoldIsPlaced`
       : Decide if you want an email every time a hold is placed
 
-   -  `ReservesControlBranch <#ReservesControlBranch>`__ : Decide which
+   -  :ref:`ReservesControlBranch` : Decide which
       branch's hold rules are considered first
 
-   -  `soundon <#AudioAlerts>`__ : Decide if you want to have sounds on
+   -  :ref:`soundon <audioalerts-label>` : Decide if you want to have sounds on
       for circulation actions
 
-   -  `FilterBeforeOverdueReport <#FilterBeforeOverdueReport>`__ : If
+   -  :ref:`FilterBeforeOverdueReport` : If
       you have a large amount of overdues, you might want to turn this
       preference on so as to allow you to filter before results appear
 
-   -  `DisplayClearScreenButton <#DisplayClearScreenButton>`__ : If you
+   -  :ref:`DisplayClearScreenButton` : If you
       have a lot of staff members sharing one circ computer you might
       want to enable this so that staff can clear the screen in between
       checkouts to protect patron's privacy
 
-   -  `CircAutoPrintQuickSlip <#CircAutoPrintQuickSlip>`__ : Decide how
+   -  :ref:`CircAutoPrintQuickSlip` : Decide how
       you want Koha to react if you scan in a blank barcode on the
       checkout screen
 
-   -  `SuspendHoldsIntranet <#SuspendHoldsIntranet>`__ and/or
-      `SuspendHoldsOpac <#SuspendHoldsOpac>`__ : Decide if you want
+   -  :ref:`SuspendHoldsIntranet` and/or
+      :ref:`SuspendHoldsOpac` : Decide if you want
       patrons and/or staff to be able to suspend holds
 
-      -  `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ : If
+      -  :ref:`AutoResumeSuspendedHolds` : If
          you allow holds to be suspended decide if you want them to
          automatically resume on the date entered by the staff and/or
          patron
 
-   -  `OnSiteCheckouts <#OnSiteCheckouts>`__ : Decide if you want to
+   -  :ref:`OnSiteCheckouts` : Decide if you want to
       allow items to be checked out for use within the library
 
-   -  `RecordLocalUseOnReturn <#RecordLocalUseOnReturn>`__ : Set this to
+   -  :ref:`RecordLocalUseOnReturn` : Set this to
       record local use of items when you check them in
 
--  Customize your `Notices & Slips <#notices>`__
+-  Customize your :ref:`Notices & Slips`
 
--  Define your `Overdue Notice Triggers <#noticetriggers>`__
+-  Define your :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-label>`
 
--  Set up your `cron jobs <#cronjobs>`__
+-  Set up your :ref:`cron jobs <cron-jobs-label>`
 
-   -  Populate `your holds queue <#buildholdscron>`__ (every 1-4 hours)
+   -  Populate :ref:`your holds queue <holds-queue-label>` (every 1-4 hours)
 
-   -  Decide `when holds expire <#expiredholdscron>`__ (daily)
+   -  Decide :ref:`when holds expire <expired-holds-label>` (daily)
 
-   -  `Calculate fines due <#finescronjob>`__ (daily)
+   -  :ref:`Calculate fines due <fines-label>` (daily)
 
       -  Fines on hourly loans will calculate when you check the items
          in
 
-   -  `Mark long overdue items as lost <#longoverduecron>`__ (daily)
+   -  :ref:`Mark long overdue items as lost <long-overdues-label>` (daily)
 
-   -  Decide when the system `sends out messages <#msgqueuecron>`__ (1-4
+   -  Decide when the system :ref:`sends out messages <message-queue-label>` (1-4
       hours)
 
-   -  Decide when the system `queues overdue
-      notices <#overduenoticecron>`__ (daily)
+   -  Decide when the system :ref:`queues overdue
+      notices <overdue-notice-label>` (daily)
 
-   -  Set up `hold notices that didn't send for
-      printing <#printholdcron>`__ (daily after overdues and message
+   -  Set up :ref:`hold notices that didn't send for
+      printing <print-hold-notices-label>` (daily after overdues and message
       queue)
 
-   -  Decide when the system `queues the advanced notice of items
-      due <#advnoticecron>`__ (daily)
+   -  Decide when the system :ref:`queues the advanced notice of items
+      due <advanced-notice-label>` (daily)
 
-   -  Find holds that need to be `resumed and remove
-      suspension <#unsuspendholdcron>`__ (daily)
+   -  Find holds that need to be :ref:`resumed and remove
+      suspension <unsuspend-holds-label>` (daily)
 
-   -  If you're allowing automatic renewal of items `set them to
-      renew <#autorenewcron>`__ (nightly)
+   -  If you're allowing automatic renewal of items :ref:`set them to
+      renew <automatic-renewal-label>` (nightly)
 
-`Patron Configuration <#imppratrons>`__
+.. _patron-configuration-label:
+
+Patron Configuration
 ---------------------------------------
 
 You have already imported patron data from your old system, but there
 are plenty of options available to you regarding patrons and their
 accounts.
 
--  Enter your `staff members as patrons <#addstaffpatron>`__
+-  Enter your :ref:`staff members as patrons <add-a-staff-patron-label>`
 
-   -  Define `staff members access permissions <#patronpermissions>`__
+   -  Define :ref:`staff members access permissions <patron-permissions-label>`
 
 -  Patron System Preferences
 
-   -  `autoMemberNum <#autoMemberNum>`__ : Decide if the patrons
+   -  :ref:`autoMemberNum` : Decide if the patrons
       barcodes are auto-generated or if you enter them yourself
 
-   -  `MaxFine <#MaxFine>`__ : Determine the maximum amount that people
+   -  :ref:`MaxFine` : Determine the maximum amount that people
       can owe in fines
 
-   -  `NotifyBorrowerDeparture <#NotifyBorrowerDeparture>`__ : Decide
+   -  :ref:`NotifyBorrowerDeparture` : Decide
       when to warn staff that the patron account is about to expire
 
-   -  `intranetreadinghistory <#intranetreadinghistory>`__ : Decide if
+   -  :ref:`intranetreadinghistory` : Decide if
       the staff can see the patron's reading/checkout history
 
-   -  `BorrowerMandatoryField <#BorrowerMandatoryField>`__ : List fields
+   -  :ref:`BorrowerMandatoryField` : List fields
       that you want to appear as mandatory on the patron add/edit form
 
-   -  `BorrowersTitles <#BorrowersTitles>`__ : Add or change the titles
+   -  :ref:`BorrowersTitles` : Add or change the titles
       for your patrons
 
-   -  `borrowerRelationship <#borrowerRelationship>`__ : Add or change
+   -  :ref:`borrowerRelationship` : Add or change
       borrower relationships (child to adult and professional to
       organization)
 
-   -  `AutoEmailPrimaryAddress <#AutoEmailPrimaryAddress>`__ : Determine
+   -  :ref:`AutoEmailPrimaryAddress` : Determine
       if the patrons get an email confirming the creation of their
       account
 
-   -  `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ :
+   -  :ref:`EnhancedMessagingPreferences` :
       Decide if staff can choose from a series of notices (other than
       overdues) for patrons
 
-   -  `EnhancedMessagingPreferencesOPAC <#EnhancedMessagingPreferencesOPAC>`__:
+   -  :ref:`EnhancedMessagingPreferencesOPAC`:
       Decide if patrons can choose from a series of notices (other than
       ovedues) for themselves
 
-   -  `patronimages <#patronimages>`__ : Decide if you want to save
+   -  :ref:`patronimages` : Decide if you want to save
       patron images in your system
 
-   -  `ExtendedPatronAttributes <#ExtendedPatronAttributes>`__ : Decide
+   -  :ref:`ExtendedPatronAttributes` : Decide
       if you want to enable custom patron fields
 
-   -  `minPasswordLength <#minPasswordLength>`__ : Enter the minimum
+   -  :ref:`minPasswordLength` : Enter the minimum
       number of characters you want passwords to have
 
-   -  `BorrowerUnwantedField <#BorrowerUnwantedField>`__ : Decide what
+   -  :ref:`BorrowerUnwantedField` : Decide what
       fields your library doesn't need to see on the patron entry form
 
--  Set up your `cron jobs <#cronjobs>`__
+-  Set up your :ref:`cron jobs <cron-jobs-label>`
 
-   -  Decide if you would like `children to automatically be come
-      adults <#j2acron>`__
+   -  Decide if you would like :ref:`children to automatically be come
+      adults <update-child-to-adult-patron-type-label>`
 
-`Cataloging Configuration <#impcatalog>`__
+.. _cataloging-configuration-label:
+
+Cataloging Configuration
 ------------------------------------------
 
 Before you start cataloging in Koha you'll want to set up your
 preferences and other rules.
 
--  Define your cataloging templates aka `MARC Bibliographic
-   Frameworks <#marcbibframeworks>`__
+-  Define your cataloging templates aka :ref:`MARC Bibliographic
+   Frameworks <marc-bibliographic-frameworks-label>`
 
-   -  Run the `MARC Bibliographic Framework
-      Test <#marcbibframeworkstest>`__ to be sure your changes are valid
+   -  Run the :ref:`MARC Bibliographic Framework
+      Test <marc-bibliographic-framework-test-label>` to be sure your changes are valid
 
--  Define any `authorized values <#authorizedvalues>`__ you might want
+-  Define any :ref:`authorized values <authorized-values-label>` you might want
    to use in cataloging
 
--  Set up `custom classification sources <#classificationsources>`__ (if
+-  Set up :ref:`custom classification sources <classification-sources-label>` (if
    you use something other than the defaults)
 
--  Set up `MARC matching rules <#recordmatchingrules>`__ for importing
+-  Set up :ref:`MARC matching rules <record-matching-rules-label>` for importing
    records from mrc files or Z39.50
 
--  Set up `Koha to Keyword mapping <#keywordmapping>`__ for deciding how
+-  Set up :ref:`Koha to Keyword mapping <keywords-to-marc-mapping-label>` for deciding how
    to display marc fields to the screen (still in beta - only one field)
 
--  Set up the `Z39.50 targets <#z3950admin>`__ you want to search for
+-  Set up the :ref:`Z39.50 targets <z39.50/sru-servers-label>` you want to search for
    cataloging (and acquisitions)
 
 -  Cataloging System Preferences
 
-   -  `URLLinkText <#URLLinkText>`__ : Enter text to display when 856
+   -  :ref:`URLLinkText` : Enter text to display when 856
       fields do not have pre-defined labels
 
-   -  `hide\_marc <#hide_marc>`__ : If you are unfamiliar with MARC you
+   -  :ref:`hide\_marc <hide\_marc-label>` : If you are unfamiliar with MARC you
       can have the MARC fields number hidden
 
-   -  `LabelMARCView <#LabelMARCView>`__ : Choose how you want duplicate
+   -  :ref:`LabelMARCView` : Choose how you want duplicate
       fields to appear on the editor
 
-   -  `DefaultClassificationSource <#DefaultClassificationSource>`__ :
+   -  :ref:`DefaultClassificationSource` :
       Choose which classification source is the default in your library
 
-   -  `advancedMARCeditor <#advancedMARCeditor>`__ : Decide if you need
+   -  :ref:`advancedMARCeditor` : Decide if you need
       labels to appear on your MARC editor
 
-   -  `marcflavour <#marcflavour>`__ : Choose your MARC format
+   -  :ref:`marcflavour` : Choose your MARC format
 
-   -  `itemcallnumber <#itemcallnumber>`__ : Enter which field and
+   -  :ref:`itemcallnumber` : Enter which field and
       subfields to look into for the call number
 
-   -  `MARCOrgCode <#MARCOrgCode>`__ : Enter your MARC Organizational
+   -  :ref:`MARCOrgCode` : Enter your MARC Organizational
       Code (not the same as your OCLC number)
 
-   -  `autoBarcode <#autoBarcode>`__ : Decide if Koha generates item
+   -  :ref:`autoBarcode` : Decide if Koha generates item
       barcodes for you
 
-   -  `OpacSuppression <#OpacSuppression>`__ : Decide if you want to
+   -  :ref:`OpacSuppression <opacsuppression,-opacsuppressionbyiprange,-opacsuppressionredirect,-and-opacsuppressionmessage-label>` : Decide if you want to
       hide items marked as suppressed from the OPAC search results
 
--  Set up your `cron jobs <#cronjobs>`__
+-  Set up your :ref:`cron jobs <cron-jobs-label>`
 
-   -  Decide when the system `checks URLs in catalog
-      records <#checkurlcron>`__ to see if they are still valid
+   -  Decide when the system :ref:`checks URLs in catalog
+      records <check-urls-label>` to see if they are still valid
 
-`Authorities Configuration <#impauthorities>`__
+.. _authorities-configuration-label:
+
+Authorities Configuration
 -----------------------------------------------
 
 Koha has the ability to keep track of your authority records and how
 they're linked to your bibliographic records. Before using authorities
 you should configure several preferences.
 
--  Set `Authority Frameworks <#authoritiesadmin>`__ aka templates
+-  Set :ref:`Authority Frameworks <authority-types-label>` aka templates
 
 -  Authority System Preferences
 
-   -  `BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ : Decide if
+   -  :ref:`BiblioAddsAuthorities` : Decide if
       Koha creates authorities when cataloging
 
    -  `dontmerge <#dontmerge>`__ : Decide if updates to authorities
       trigger updates to the bibliographic records that link to them
 
-   -  `AutoCreateAuthorities <#AutoCreateAuthorities>`__ : Decide when
+   -  :ref:`AutoCreateAuthorities` : Decide when
       authorities are created
 
-   -  `LinkerModule <#LinkerModule>`__ : Decide which match the
+   -  :ref:`LinkerModule` : Decide which match the
       authority linker should use
 
-   -  `LinkerOptions <#LinkerOptions>`__ : Decide if you want authority
+   -  :ref:`LinkerOptions` : Decide if you want authority
       linking to be broader or more specific
 
-   -  `CatalogModuleRelink <#CatalogModuleRelink>`__ : Decide if you
+   -  :ref:`CatalogModuleRelink` : Decide if you
       want to enable authority linking while cataloging
 
--  Set up your `cron jobs <#cronjobs>`__
+-  Set up your :ref:`cron jobs <cron-jobs-label>`
 
-   -  Choose when the system looks for authorities updates to `merge
-      changes into bibliographic records <#mergeauthcron>`__
+   -  Choose when the system looks for authorities updates to :ref:`merge
+      changes into bibliographic records <update-authorities-label>`
 
-`Searching Configuration <#impsearching>`__
+.. _searching-configuration-label:
+
+Searching Configuration
 -------------------------------------------
 
 There are several system preferences related to searching, it is not
 always recommended to make too many changes to these preferences since
 they are set to get you the most relevant results. If you would like to
-change the default way that Koha handles searching, view the `Searching
-system preferences <#searchingprefs>`__ tab.
+change the default way that Koha handles searching, view the :ref:`Searching
+system preferences <searching-label>` tab.
 
--  Set up your `cron jobs <#cronjobs>`__
+-  Set up your :ref:`cron jobs <cron-jobs-label>`
 
-   -  Decide how often your `system rebuilds the search
-      index <#rebuildsearchcron>`__ (4-10 min)
+   -  Decide how often your :ref:`system rebuilds the search
+      index <rebuild-index-label>` (4-10 min)
 
 -  Searching System Preferences
 
-   -  `AdvancedSearchTypes <#AdvancedSearchTypes>`__ : Decide which
+   -  :ref:`AdvancedSearchTypes` : Decide which
       authorized value fields you want patrons and staff to be able to
       limit their advanced searches by
 
-   -  `AdvancedSearchLanguages <#AdvancedSearchLanguages>`__ : Decide
+   -  :ref:`AdvancedSearchLanguages` : Decide
       which languages you want people to be able to limit to via the
       search engine
 
-   -  `UseAuthoritiesForTracings <#UseAuthoritiesForTracings>`__ :
+   -  :ref:`UseAuthoritiesForTracings` :
       Decide how you want Koha to handle subject searches in the OPAC
 
-      -  `TraceCompleteSubfields <#TraceCompleteSubfields>`__ : Decide
+      -  :ref:`TraceCompleteSubfields` : Decide
          how you want Koha to handle subject searches in the OPAC
 
-      -  `TraceSubjectSubdivisions <#TraceSubjectSubdivisions>`__ :
+      -  :ref:`TraceSubjectSubdivisions` :
          Decide how you want Koha to handle subject searches in the OPAC
 
-   -  `displayFacetCount <#displayFacetCount>`__ : Decide whether to
+   -  :ref:`displayFacetCount` : Decide whether to
       show facet counts on search results
 
-`OPAC Configuration <#impopac>`__
+.. _opac-configuration-label:
+
+OPAC Configuration
 ---------------------------------
 
 There are a lot of ways you can customize your OPAC in Koha.
@@ -548,135 +566,137 @@ There are a lot of ways you can customize your OPAC in Koha.
 
 -  OPAC System preferences
 
-   -  `OPACBaseURL <#OPACBaseURL>`__ : Enter your library's url
+   -  :ref:`OPACBaseURL` : Enter your library's url
 
-   -  `opacuserlogin <#opacuserlogin>`__ : Decide if you want to allow
+   -  :ref:`opacuserlogin` : Decide if you want to allow
       patrons to login to the OPAC to access customized functionality
       (searching will be allowed without logging in)
 
-      -  `RequestOnOpac <#RequestOnOpac>`__ : Decide if patrons can
+      -  :ref:`RequestOnOpac` : Decide if patrons can
          place holds via the OPAC
 
-      -  `OpacPasswordChange <#OpacPasswordChange>`__ : Decide if
+      -  :ref:`OpacPasswordChange` : Decide if
          patrons can change their password (don't allow this if you're
          using LDAP)
 
-      -  `OpacRenewalAllowed <#OpacRenewalAllowed>`__ : Decide if
+      -  :ref:`OpacRenewalAllowed` : Decide if
          patrons can renew their checked out items via the OPAC
 
-      -  `opacreadinghistory <#opacreadinghistory>`__ : Decide if
+      -  :ref:`opacreadinghistory` : Decide if
          patrons can view their reading/checkout history via the OPAC
 
-      -  `reviewson <#reviewson>`__ : Decide if you want to allow
+      -  :ref:`reviewson` : Decide if you want to allow
          patrons to comment on bib records via the OPAC
 
-      -  `OpacStarRatings <#OpacStarRatings>`__ : Decide if patrons can
+      -  :ref:`OpacStarRatings` : Decide if patrons can
          leave star ratings
 
-      -  `virtualshelves <#virtualshelves>`__ : Decide if you want
+      -  :ref:`virtualshelves` : Decide if you want
          patrons to be able to create Lists
 
-      -  `OpacAllowPublicListCreation <#OpacAllowPublicListCreation>`__
+      -  :ref:`OpacAllowPublicListCreation`
          : If patrons can create lists then decide if they are allowed
          to create public lists
 
-      -  `suggestion <#suggestionspref>`__ : Decide if you want patrons
+      -  :ref:`suggestion` : Decide if you want patrons
          to be able to submit purchase suggestions
 
-      -  `OPACViewOthersSuggestions <#OPACViewOthersSuggestions>`__ :
+      -  :ref:`OPACViewOthersSuggestions` :
          Decide if you want patrons to be able to see purchase
          suggestions made by other patrons
 
-   -  `opacbookbag <#opacbookbag>`__ : Decide if patrons can save items
+   -  :ref:`opacbookbag` : Decide if patrons can save items
       into their cart
 
-   -  `AnonSuggestions <#AnonSuggestions>`__ : Decide if you want non
+   -  :ref:`AnonSuggestions` : Decide if you want non
       logged in users to be able to make purchase suggestions
 
-   -  `LibraryName <#LibraryName>`__ : Enter your library name for
+   -  :ref:`LibraryName` : Enter your library name for
       display in the <title> tag and on the top of the OPAC
 
-   -  `opaccredits <#opaccredits>`__ : Enter HTML to appear at the
+   -  :ref:`opaccredits` : Enter HTML to appear at the
       bottom of every page in the OPAC
 
-   -  `OpacMainUserBlock <#OpacMainUserBlock>`__ : Enter HTML that will
+   -  :ref:`OpacMainUserBlock` : Enter HTML that will
       appear in the center of the main OPAC page
 
-   -  `OpacNav <#OpacNav>`__ : Enter HTML that will appear to the left
+   -  :ref:`OpacNav` : Enter HTML that will appear to the left
       on the main OPAC page
 
-   -  `OpacNavBottom <#OpacNavBottom>`__ : Enter HTML that will appear
+   -  :ref:`OpacNavBottom` : Enter HTML that will appear
       below OpacNav
 
-   -  `OpacNavRight <#OpacNavRight>`__ : Enter HTML that will appear
+   -  :ref:`OpacNavRight` : Enter HTML that will appear
       below the login box on the right
 
-   -  `opacheader <#opacheader>`__ : Enter the HTML that will appear
+   -  :ref:`opacheader` : Enter the HTML that will appear
       above the search box on the OPAC
 
-   -  `OPACNoResultsFound <#OPACNoResultsFound>`__ : Enter the HTML that
+   -  :ref:`OPACNoResultsFound` : Enter the HTML that
       will appear when no results are found
 
-   -  `OPACResultsSidebar <#OPACResultsSidebar>`__ : Enter the HTML that
+   -  :ref:`OPACResultsSidebar` : Enter the HTML that
       will appear below the facets on your search results
 
-   -  `OPACMySummaryHTML <#OPACMySummaryHTML>`__ : Enter the HTML that
+   -  :ref:`OPACMySummaryHTML` : Enter the HTML that
       will appear in the far right of the circulation summary in the
       OPAC
 
    -  Customize your stylesheets:
 
-      -  `OPACUserCSS <#OPACUserCSS>`__ : Enter any additional fields
+      -  :ref:`OPACUserCSS` : Enter any additional fields
          you want to define styles for
 
-      -  `opaclayoutstylesheet <#opaclayoutstylesheet>`__ : Point to a
+      -  :ref:`opaclayoutstylesheet` : Point to a
          CSS file on your Koha server
 
-   -  `OpacHighlightedWords <#OpacHighlightedWords>`__ : Decide if you
+   -  :ref:`OpacHighlightedWords <opachighlightedwords-&-nothighlightedwords-label>` : Decide if you
       want search terms to be highlighted on the search results
 
-   -  `hidelostitems <#hidelostitems>`__ : Decide if you want to show
+   -  :ref:`hidelostitems` : Decide if you want to show
       patrons items you have marked as lost
 
-   -  `BiblioDefaultView <#BiblioDefaultView>`__ : Decide what view is
+   -  :ref:`BiblioDefaultView` : Decide what view is
       the default for bib records on the OPAC
 
-   -  `OPACShelfBrowser <#OPACShelfBrowser>`__ : Decide if you want to
+   -  :ref:`OPACShelfBrowser` : Decide if you want to
       enable the shelf browse functionality
 
-   -  `OPACURLOpenInNewWindow <#OPACURLOpenInNewWindow>`__ : Decide if
+   -  :ref:`OPACURLOpenInNewWindow` : Decide if
       URLs clicked in the OPAC are opened in a new window
 
-   -  `SearchMyLibraryFirst <#SearchMyLibraryFirst>`__ : If you have a
+   -  :ref:`SearchMyLibraryFirst` : If you have a
       multi-branch system decide if you want patrons to search their
       library first
 
-   -  `OpacAuthorities <#OpacAuthorities>`__ : Decide if you want
+   -  :ref:`OpacAuthorities` : Decide if you want
       patrons to be able to search your authority file
 
-   -  `OpacBrowser <#OpacBrowser>`__ : Decide if you want patrons to
+   -  :ref:`OpacBrowser` : Decide if you want patrons to
       browse your authority file (French libraries only)
 
-   -  `OPACSearchForTitleIn <#OPACSearchForTitleIn>`__ : Choose which
+   -  :ref:`OPACSearchForTitleIn` : Choose which
       libraries you want patrons to be able to re-run their search in
 
-   -  `OpacAddMastheadLibraryPulldown <#OpacAddMastheadLibraryPulldown>`__
+   -  :ref:`OpacAddMastheadLibraryPulldown`
       : If you're a multi-branch system you can add a pull down to the
       search bar for patrons to search which library to search
 
-   -  `EnableOpacSearchHistory <#EnableOpacSearchHistory>`__ : Decide if
+   -  :ref:`EnableOpacSearchHistory` : Decide if
       you want the system to keep a search history
 
--  Set up your `cron jobs <#cronjobs>`__
+-  Set up your :ref:`cron jobs <cron-jobs-label>`
 
-   -  If you have the `OpacBrowser <#OpacBrowser>`__ preference set
-      decide `when you want the contents to
-      rebuild <#authbrowsercron>`__ (French libraries only)
+   -  If you have the :ref:`OpacBrowser` preference set
+      decide :ref:`when you want the contents to
+      rebuild <authorities-browser-label>` (French libraries only)
 
-   -  If you have `custom RSS feeds <#customrss>`__, decide when you
-      want the `feed to be populated <#customrssfeedcron>`__
+   -  If you have :ref:`custom RSS feeds <custom-rss-feeds-label>`, decide when you
+      want the :ref:`feed to be populated <rss-feeds-label>`
 
-`Editable OPAC Regions <#editableopac>`__
+.. _editable-opac-regions-label:
+
+Editable OPAC Regions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the OPAC system preferences you can customize various regions, the
@@ -686,51 +706,53 @@ regions in the Bootstrap theme.
 OPAC Editable Regions
 |image1068|
 
-`Enhanced Content Configuration <#impenhanced>`__
+.. _enhanced-content-configuration-label:
+
+Enhanced Content Configuration
 -------------------------------------------------
 
 Koha allows you to pull in content from outside sources to enhance your
 bib records. All of this content can be toggled on and off using the
 enhanced content system preferences.
 
--  `FRBR/Editions <#frbrenhancedprefs>`__
+-  :ref:`FRBR/Editions <all-label>`
 
    -  If you would like to have your OPAC and/or staff client show an
       'Editions' tab on the bib record, you want to enable one or the
       other FRBR preferences and then either one or both of the ISBN
       services (XISBN and ThingISBN).
 
--  `Amazon <#amazonprefs>`__ : This service is free and just requires
+-  :ref:`Amazon` : This service is free and just requires
    that you visit http://aws.amazon.com to sign up
 
    -  Using the Amazon preferences you can choose to show cover images
       from Amazon.
 
--  `Babelthèque <#Babelthequeprefs>`__
+-  :ref:`Babelthèque`
 
    -  This is a pay service. Contact Babelthèque to learn how to enable
       this content in the OPAC.
 
--  `Baker and Taylor <#btcontentprefs>`__
+-  :ref:`Baker and Taylor <baker-&-taylor-label>`
 
    -  This is a pay service from Baker & Taylor. Contact Baker & Taylor
       for the information to enter into these preferences.
 
--  `HTML5 Media <#html5>`__
+-  :ref:`HTML5 Media`
 
    -  This allows libraries to embed streaming media in their catalog
 
--  `Google <#googleprefs>`__
+-  :ref:`Google`
 
    -  This service is free and does not require registration, simply
       enable GoogleJackets and you're set to go.
 
--  `I Deam Books <#IDreamLibraries>`__
+-  :ref:`I Deam Books <idreamlibraries-label>`
 
    -  This is a free service that compiles reviews for popular titles
       from many different sources.
 
--  `LibraryThing <#librarythingprefs>`__
+-  :ref:`LibraryThing`
 
    -  With the exception of ThingISBN, you will need to contact
       LibraryThing for the information to enter into these preferences
@@ -738,99 +760,105 @@ enhanced content system preferences.
    -  Enabling ThingISBN will help to populate the editions tab on the
       bib record display if you have enabled FRBR.
 
--  `Novelist <#novelistselect>`__
+-  :ref:`Novelist <novelist-select-label>`
 
    -  This is a pay service from Ebsco. Contact Ebsco for the
       information to enter into these preferences
 
--  `OCLC <#oclcprefs>`__
+-  :ref:`OCLC`
 
    -  XISBN is used to populate the editions tab on the bib record
       display if you have enabled FRBR. This service is free for up to
       999 queries a day.
 
--  `Open Library <#OpenLibraryPrefs>`__
+-  :ref:`Open Library`
 
    -  Open Library project is an open system that you can pull cover
       images (and in the future additional content) from
 
--  `Overdrive <#overdriveprefs>`__
+-  :ref:`Overdrive`
 
    -  This is a pay service that libraries can subscribe to for ebook
       content. If the library subscribes to Overdrive they can integrate
       that content in to Koha for free.
 
--  `Syndetics <#Syndeticsprefs>`__
+-  :ref:`Syndetics`
 
    -  This is a pay service from Syndetics to add content for your bib
       records. Contact Syndetics for the information to enter into these
       preferences.
 
--  `Tagging <#taggingprefs>`__
+-  :ref:`Tagging`
 
    -  Choose whether or not you want to allow patrons to add tags to
       records in Koha.
 
-`Acquisitions Configuration <#impacq>`__
+.. _acquisitions-configuration-label:
+
+Acquisitions Configuration
 ----------------------------------------
 
 When using acquisitions in Koha you first need to define some defaults.
 
--  Set up your `funds & budgets <#budgetplanning>`__
+-  Set up your :ref:`funds & budgets <budgets-label>`
 
--  Choose your `default currency <#currexchangeadmin>`__ and enter
+-  Choose your :ref:`default currency <currencies-and-exchange-rates-label>` and enter
    others if you order from multiple countries
 
--  Enter in your `vendor information <#acqvendors>`__
+-  Enter in your :ref:`vendor information <vendors-label>`
 
--  Create an `Framework with the code ACQ <#marcbibframeworks>`__ (if
+-  Create an :ref:`Framework with the code ACQ <marc-bibliographic-frameworks-label>` (if
    you're going to enter item records at the time of ordering or
    receiving)
 
 -  Acquisitions System preferences
 
-   -  `AcqCreateItem <#AcqCreateItem>`__ : Decide if an item record is
+   -  :ref:`AcqCreateItem` : Decide if an item record is
       created during acquisition
 
-   -  `CurrencyFormat <#CurrencyFormat>`__ : Decide how you want
+   -  :ref:`CurrencyFormat` : Decide how you want
       monetary amounts to display
 
-   -  `gist <#gist>`__ : Enter your sales tax (if you are billed for
+   -  :ref:`gist` : Enter your sales tax (if you are billed for
       tax)
 
-   -  `OrderPdfFormat <#OrderPdfFormat>`__ : Decide what format you want
+   -  :ref:`OrderPdfFormat` : Decide what format you want
       your print orders to use
 
-`Serials Configuration <#impserials>`__
+.. _serials-configuration-label:
+
+Serials Configuration
 ---------------------------------------
 
 When you use serials there are a few options you can set before hand.
 
 -  Serials System Preferences
 
-   -  `RenewSerialAddsSuggestion <#RenewSerialAddsSuggestion>`__ :
+   -  :ref:`RenewSerialAddsSuggestion` :
       Decide if you want renewing serials to add a suggestion for easy
       purchasing
 
-   -  `RoutingSerials <#RoutingSerials>`__ : Decide if you want to route
+   -  :ref:`RoutingSerials` : Decide if you want to route
       serials around your library
 
-   -  `RoutingListAddReserves <#RoutingListAddReserves>`__ : Decide if
+   -  :ref:`RoutingListAddReserves` : Decide if
       holds are placed on serials when there is a routing list in place
 
 -  Cataloging System Preferences
 
-   -  `StaffSerialIssueDisplayCount <#StaffSerialIssueDisplayCount>`__ :
+   -  :ref:`StaffSerialIssueDisplayCount` :
       Decide how many of the most recent issues to display in the staff
       client
 
-   -  `OPACSerialIssueDisplayCount <#OPACSerialIssueDisplayCount>`__ :
+   -  :ref:`OPACSerialIssueDisplayCount` :
       Decide how many of the most recent issues to display in the OPAC
 
-   -  `SubscriptionHistory <#SubscriptionHistory>`__ : Decide how you
+   -  :ref:`SubscriptionHistory` : Decide how you
       want the subscription information to display in the OPAC
 
-`Planning for Go-Live <#impgolive>`__
+.. _planning-for-go-live-label:
+
+Planning for Go-Live
 -------------------------------------
 
 Once you have all of your settings ready, you need to prepare for making
@@ -853,7 +881,9 @@ your system live:
 SOPAC2 Installation
 ===================
 
-`Introduction <#sopacintro>`__
+.. _introduction-label:
+
+Introduction
 ------------------------------
 
 This is an installation guide for SOPAC2 and its Koha connector. It has
@@ -861,7 +891,9 @@ been tested on Debian Lenny and Ubuntu Jaunty with Drupal 6.12 and Koha
 3.0.x. It does not cover the installation of Koha and Drupal, only
 SOPAC, its dependencies and the connector.
 
-`Installation of Locum and Insurge <#sopacinstall>`__
+.. _installation-of-locum-and-insurge-label:
+
+Installation of Locum and Insurge
 -----------------------------------------------------
 
 Locum and Insurge are the two libraries used primarily by SOPAC. They
@@ -870,7 +902,9 @@ aspect (tags, reviews, ratings), while Locum manages the connection to
 the ILS via the connector. Both libraries use a different database from
 that of Drupal.
 
-`Dependencies <#sopacdepend>`__
+.. _dependencies-label:
+
+Dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are no packages for Debian MDB2 yet, you can install it via pear:
@@ -881,7 +915,9 @@ There are no packages for Debian MDB2 yet, you can install it via pear:
     # pear install MDB2
     # pear install MDB2#mysql
 
-`Download <#sopacdownload>`__
+.. _download-label:
+
+Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download the Locum and Insurge libraries from SVN:
@@ -892,7 +928,9 @@ Download the Locum and Insurge libraries from SVN:
     # svn co http://dobby.darienlibrary.org/svn/locum/trunk/ locum
     # svn co http://dobby.darienlibrary.org/svn/insurge/trunk/ insurge
 
-`Creation of the Database <#sopaccreatedb>`__
+.. _creation-of-the-database-label:
+
+Creation of the Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -903,7 +941,9 @@ Download the Locum and Insurge libraries from SVN:
     mysql> flush privileges;
     mysql> exit
 
-`Sync DSN <#sopacdsn>`__
+.. _sync-dsn-label:
+
+Sync DSN
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 This file will provide the connection information to a DB libraries:
@@ -919,7 +959,9 @@ It should contain:
     <?php
     $dsn = 'mysql://scas_user:scas_pass@localhost/scas';
 
-`Installation of Insurge <#sopacinstallinsurge>`__
+.. _installation-of-insurge-label:
+
+Installation of Insurge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you customize the name of the database, remember to edit the sql
@@ -964,7 +1006,9 @@ Here is a sample of insurge.ini
     group_id = ""
     group_key = ""
 
-`Installation of Locum <#sopacinstallocum>`__
+.. _installation-of-locum-label:
+
+Installation of Locum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The same procedure applies to Locum
@@ -998,7 +1042,9 @@ And the information for your Koha installation:
 
 The rest depends on your Koha configuration.
 
-`Installation of Koha Connector <#sopackoha>`__
+.. _installation-of-koha-connector-label:
+
+Installation of Koha Connector
 -----------------------------------------------
 
 Download the Koha connector using SVN:
@@ -1008,7 +1054,9 @@ Download the Koha connector using SVN:
     # cd /usr/local/lib/locum/connectors/
     # svn co http://dobby.darienlibrary.org/svn/connectors/koha/ locum_koha_30x
 
-`Harvest Records <#sopacharvest>`__
+.. _harvest-records-label:
+
+Harvest Records
 -----------------------------------
 
 Now that the connector is in place, we will be able to launch
@@ -1036,12 +1084,16 @@ Then start the harvest:
     # chmod +x /usr/local/lib/locum/tools/harvest.php
     $ /usr/local/lib/locum/tools/harvest.php
 
-`Installation of Sphinx <#sopacphinx>`__
+.. _installation-of-sphinx-label:
+
+Installation of Sphinx
 ----------------------------------------
 
 Sphinx is the indexer for the database used by Locum and Insurge.
 
-`Dependencies <#sphinxdepend>`__
+.. _dependencies-label:
+
+Dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is no Debian package for Sphinx so you'll have to compile the
@@ -1051,7 +1103,9 @@ source directly:
 
     # apt-get install g++ make libmysql++-dev
 
-`Download and Compile <#sphinxdownload>`__
+.. _download-and-compile-label:
+
+Download and Compile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -1067,7 +1121,9 @@ source directly:
     # cp api/sphinxapi.php /usr/local/sphinx/lib/
     $ rm -R sphinx-0.9.8*
 
-`Creation of User and Group <#sphinxuser>`__
+.. _creation-of-user-and-group-label:
+
+Creation of User and Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creating a Sphinx user and change the owner:
@@ -1080,7 +1136,9 @@ Creating a Sphinx user and change the owner:
     # mkdir /usr/local/sphinx/var/run
     # chown -R sphinx.sphinx /usr/local/sphinx/var
 
-`The Sphinx daemon <#demonsphinx>`__
+.. _the-sphinx-daemon-label:
+
+The Sphinx daemon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download:
@@ -1097,7 +1155,9 @@ Add Sphinx to the default boot services:
 
     # update-rc.d sphinx defaults
 
-`Configuration <#sphinxconfig>`__
+.. _configuration-label:
+
+Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copy the configuration file supplied with the source of Sphinx before
@@ -1116,7 +1176,9 @@ And if you personalize the name of the database:
 
     # sed 's/scas/MY_DB/g' /usr/local/sphinx/etc/sphinx.conf > tmpfile; mv tmpfile /usr/local/sphinx/etc/sphinx.conf
 
-`Indexing documents <#sphinxindexing>`__
+.. _indexing-documents-label:
+
+Indexing documents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indexing is necessary if you want to use the search features of SOPAC.
@@ -1146,12 +1208,16 @@ When the daemon is running, you can update the index with:
 
     $ /usr/local/sphinx/bin/indexer --all --rotate
 
-`Installation of SOPAC2 <#installsopac>`__
+.. _installation-of-sopac2-label:
+
+Installation of SOPAC2
 ------------------------------------------
 
 Now to the SOPAC software itself:
 
-`Download <#downloadsopac>`__
+.. _download-label:
+
+Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download from SVN:
@@ -1163,7 +1229,9 @@ Download from SVN:
     $ cd modules/
     $ svn co http://dobby.darienlibrary.org/svn/sopac/trunk/ sopac
 
-`Installation <#sopacinstallation>`__
+.. _installation-label:
+
+Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In Drupal's administration settings, activate the module. Also, enable
@@ -1177,7 +1245,9 @@ the dependencies:
 
 The Drupal menu should now list these entries.
 
-`Configuration <#configsopac>`__
+.. _configuration-label:
+
+Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Then go into the settings of SOPAC.

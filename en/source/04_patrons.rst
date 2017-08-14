@@ -3,10 +3,12 @@
 Patrons
 =======
 
-Before importing and/or adding patrons be sure to set up your `patron
-categories <#patcats>`__.
+Before importing and/or adding patrons be sure to set up your :ref:`patron
+categories <patron-categories-label>`.
 
-`Add a new patron <#addnewpatron>`__
+.. _add-a-new-patron-label:
+
+Add a new patron
 ------------------------------------
 
 Patrons are added by going to the 'Patrons' module.
@@ -21,7 +23,7 @@ Once there you can add a new patron.
    |image407|
 
 -  The fields that appear on the patron add form can be controlled by
-   editing the `BorrowerUnwantedField <#BorrowerUnwantedField>`__ system
+   editing the :ref:`BorrowerUnwantedField` system
    preference.
 
 -  First enter the identifying information regarding your patron
@@ -30,16 +32,16 @@ Once there you can add a new patron.
    |image408|
 
    -  Required fields are defined in the
-      `BorrowerMandatoryField <#BorrowerMandatoryField>`__ system
+      :ref:`BorrowerMandatoryField` system
       preference
 
    -  Salutation is populated by the
-      `BorrowersTitles <#BorrowersTitles>`__ system preference
+      :ref:`BorrowersTitles` system preference
 
    -  **Note**
 
           If you'd like to prevent full names from printing on
-          `slips <#notices>`__ and you're not using the Initials or
+          :ref:`slips <notices-&-slips-label>` and you're not using the Initials or
           Other name fields for anything else, you can use them for
           shortened versions of the name to then be printed on the slip.
 
@@ -89,7 +91,7 @@ Once there you can add a new patron.
       last name in the fields available
 
    -  The relationships are set using the
-      `borrowerRelationship <#borrowerRelationship>`__ system preference
+      :ref:`borrowerRelationship` system preference
 
 -  If this patron is a professional, you will be asked to attach the
    patron to an organizational patron
@@ -114,7 +116,7 @@ Once there you can add a new patron.
    |image413|
 
    -  The card number field is automatically calculated if you have the
-      `autoMemberNum <#autoMemberNum>`__ system preference set that way
+      :ref:`autoMemberNum` system preference set that way
 
       -  **Note**
 
@@ -137,8 +139,8 @@ Once there you can add a new patron.
    -  The registration date will automatically be filled in with today's
       date
 
-   -  If your patron cards expire (based on your `patron category
-      settings <#patcats>`__) the Expiry date will automatically be
+   -  If your patron cards expire (based on your :ref:`patron category
+      settings <patron-categories-label>`) the Expiry date will automatically be
       calculated
 
    -  The OPAC Note is a note for the patron - it will appear in the
@@ -156,17 +158,17 @@ Once there you can add a new patron.
       OPAC and for staff to log in to the staff client.
 
       -  Staff will only be able to use this log in info to log in to
-         the staff client if they have the `necessary
-         permissions <#patronpermissions>`__.
+         the staff client if they have the :ref:`necessary
+         permissions <patron-permissions-label>`.
 
--  If you have set `additional patron
-   attributes <#patronattributetypes>`__ up, these will appear next
+-  If you have set :ref:`additional patron
+   attributes <patron-attribute-types-label>` up, these will appear next
 
    Additional Patron Attributes
    |image416|
 
 -  Finally, if you have
-   `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ set
+   :ref:`EnhancedMessagingPreferences` set
    to 'allow,' you can choose the messaging preferences for this patron.
 
    Patron Messaging Settings
@@ -198,8 +200,8 @@ Once there you can add a new patron.
 
    -  **Important**
 
-          These preferences will override any you set via the `patron
-          categories <#addingpatroncat>`__
+          These preferences will override any you set via the :ref:`patron
+          categories <adding-a-patron-category-label>`
 
    -  **Important**
 
@@ -229,27 +231,31 @@ have selected:
 Patron age warning
 |image419|
 
-`Add a Staff Patron <#addstaffpatron>`__
+.. _add-a-staff-patron-label:
+
+Add a Staff Patron
 ----------------------------------------
 
 All staff members must be entered into Koha as patrons of the 'Staff'
-type. Follow the steps in `Add a Patron <#addnewpatron>`__ to add a
+type. Follow the steps in :ref:`Add a Patron <add-a-new-patron-label>` to add a
 staff member. To give the staff member permissions to access the staff
-client, follow the steps in `Patron Permissions <#patronpermissions>`__
+client, follow the steps in :ref:`Patron Permissions`
 
     **Important**
 
     Remember to assign your staff secure usernames and passwords since
     these will be used to log into the staff client.
 
-`Add a Statistical Patron <#addstatspatron>`__
+.. _add-a-statistical-patron-label:
+
+Add a Statistical Patron
 ----------------------------------------------
 
 One way to track use of in house items is to "check out" the materials
 to a statistical patron. The "check out" process doesn’t check the book
 out, but instead tracks an in house use of the item. To use this method
-for tracking in house use you first will need a `patron
-category <#patcats>`__ set up for your Statistical patron.
+for tracking in house use you first will need a :ref:`patron
+category <patron-categories-label>` set up for your Statistical patron.
 
 In House Patron Category
 |image420|
@@ -259,15 +265,17 @@ Next, you will need to create a new patron of the statistical type
 New In House Patron
 |image421|
 
-Next, follow the steps put forth in the '`Add a new
-Patron <#addnewpatron>`__' section of this manual. Since this patron is
+Next, follow the steps put forth in the ':ref:`Add a new
+Patron <add-a-new-patron-label>`' section of this manual. Since this patron is
 not a real person, simply fill in the required fields, the correct
 library and nothing else.
 
 To learn about other methods of tracking in house use visit the
-`Tracking inhouse use <#trackinhouse>`__ section of this manual.
+:ref:`Tracking inhouse use <tracking-in-house-use-label>` section of this manual.
 
-`Duplicate a Patron <#duplicatepatron>`__
+.. _duplicate-a-patron-label:
+
+Duplicate a Patron
 -----------------------------------------
 
 Sometimes when you're adding a new family to your system you don't want
@@ -301,12 +309,14 @@ change.
    Newly created patron
    |image424|
 
-`Add Patron Images <#addpatronimages>`__
+.. _add-patron-images-label:
+
+Add Patron Images
 ----------------------------------------
 
 If you would like you can add patron images to help identify patrons. To
 enable this feature you must first set the
-`patronimages <#patronimages>`__ preference to 'Allow'.
+:ref:`patronimages` preference to 'Allow'.
 
 If the preference is set to 'Allow' you will see a placeholder image
 under the patron's name and box to upload a patron image below the basic
@@ -327,7 +337,9 @@ Patron image
     is recommended that the image be 200x300 pixels, but smaller images
     will work as well.
 
-`Editing Patrons <#editpatrons>`__
+.. _editing-patrons-label:
+
+Editing Patrons
 ----------------------------------
 
 Patrons in Koha can be edited using one of many edit buttons.
@@ -367,11 +379,11 @@ Patrons in Koha can be edited using one of many edit buttons.
    |image430|
 
    -  This form will not appear if you have the
-      `patronimages <#patronimages>`__ system preference to not allow
+      :ref:`patronimages` system preference to not allow
       patron images
 
-   -  To add patron images in bulk, use the `Upload Patron
-      Images <#uploadpatronimages>`__ Tool
+   -  To add patron images in bulk, use the :ref:`Upload Patron
+      Images <upload-patron-images-label>` Tool
 
 -  Patrons can also be blocked from checking items out by setting Patron
    Flags
@@ -401,8 +413,8 @@ Patrons in Koha can be edited using one of many edit buttons.
 
       -  **Note**
 
-             This flag can automatically be set with the `Overdue/Notice
-             Status Triggers <#noticetriggers>`__
+             This flag can automatically be set with the :ref:`Overdue/Notice
+             Status Triggers <overdue-notice/status-triggers-label>`
 
    -  If you enter in a date and/or note related to the restriction you
       will see that in the restricted message as well
@@ -411,7 +423,7 @@ Patrons in Koha can be edited using one of many edit buttons.
       |image435|
 
 -  Children patrons do not become adults automatically in Koha unless
-   you have `Juvenile to Adult cron job <#j2acron>`__ running. To
+   you have :ref:`Juvenile to Adult cron job <update-child-to-adult-patron-type-label>` running. To
    upgrade a child patron to and adult patron category manually go to
    the 'More' menu and choose 'Update Child to Adult Patron'
 
@@ -424,11 +436,13 @@ Patrons in Koha can be edited using one of many edit buttons.
       Choose Adult Category to Update To
       |image437|
 
-`Managing Patron Self Edits <#mangepatronedits>`__
+.. _managing-patron-self-edits-label:
+
+Managing Patron Self Edits
 --------------------------------------------------
 
 If you are allowing patrons to edit their accounts via the OPAC with the
-`OPACPatronDetails <#OPACPatronDetails>`__ preference then you will need
+:ref:`OPACPatronDetails` preference then you will need
 to approve all changes via the staff client before they're applied. If
 there are patron edits awaiting action they will appear on the staff
 client dashboard below the modules list (along with other items awaiting
@@ -457,7 +471,9 @@ If you would like to see the entire patron record you can click the
 'Patron details' links to the right of the buttons. This will open in a
 new tab.
 
-`Patron Permissions <#patronpermissions>`__
+.. _patron-permissions-label:
+
+Patron Permissions
 -------------------------------------------
 
 Patron Permissions are used to allow staff members access to the staff
@@ -469,11 +485,13 @@ client.
     must have (at the very least) 'catalogue' permissions which allow
     them to view the staff interface.
 
-`Setting Patron Permissions <#setpatronperms>`__
+.. _setting-patron-permissions-label:
+
+Setting Patron Permissions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To set patron permissions, you must first `have a patron of the 'Staff'
-type <#addstaffpatron>`__ open
+To set patron permissions, you must first :ref:`have a patron of the 'Staff'
+type <add-a-staff-patron-label>` open
 
 -  On the patron record click More and choose Set Permissions to alter
    patron permissions
@@ -488,7 +506,9 @@ type <#addstaffpatron>`__ open
    Patron Permissions
    |image441|
 
-`Patron Permissions Defined <#patronpermsdefined>`__
+.. _patron-permissions-defined-label:
+
+Patron Permissions Defined
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  superlibrarian
@@ -504,7 +524,7 @@ type <#addstaffpatron>`__ open
 
    -  Check out and check in items
 
-   -  This section can be expanded (`Learn more <#circpermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-circulate-permissions-label>`)
 
 -  catalogue
 
@@ -520,8 +540,8 @@ type <#addstaffpatron>`__ open
 
    -  Manage Koha system systems (Administration panel)
 
-   -  This section can be expanded (`Learn
-      more <#parameterpermissions>`__)
+   -  This section can be expanded (:ref:`Learn
+      more <granular-parameters-permissions-label>`)
 
 -  borrowers
 
@@ -535,27 +555,27 @@ type <#addstaffpatron>`__ open
 
    -  Place and modify holds for patrons
 
-   -  This section can be expanded (`Learn
-      more <#reservepermissions>`__)
+   -  This section can be expanded (:ref:`Learn
+      more <granular-holds-permissions-label>`)
 
 -  editcatalogue
 
    -  Edit Catalog (Modify bibliographic/holdings data)
 
-   -  This section can be expanded (`Learn more <#catpermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-cataloging-permissions-label>`)
 
 -  updatecharges
 
    -  Manage patrons fines and fees
 
-   -  This section can be expanded (`Learn
-      more <#updatechargespermissions>`__)
+   -  This section can be expanded (:ref:`Learn
+      more <granular-fines-and-charges-permissions-label>`)
 
 -  acquisition
 
    -  Acquisition and/or suggestion management
 
-   -  This section can be expanded (`Learn more <#acqpermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-acquisitions-permissions-label>`)
 
 -  management
 
@@ -569,7 +589,7 @@ type <#addstaffpatron>`__ open
 
    -  Use all tools
 
-   -  This section can be expanded (`Learn more <#toolspermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-tools-permissions-label>`)
 
 -  editauthorities
 
@@ -579,7 +599,7 @@ type <#addstaffpatron>`__ open
 
    -  Manage serial subscriptions
 
-   -  This section can be expanded (`Learn more <#serpermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-serials-permissions-label>`)
 
 -  reports
 
@@ -588,7 +608,7 @@ type <#addstaffpatron>`__ open
    -  Reports found on the Circulation page are not controlled by this
       permission
 
-   -  This section can be expanded (`Learn more <#reportpermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-reports-permissions-label>`)
 
 -  staffaccess
 
@@ -602,7 +622,7 @@ type <#addstaffpatron>`__ open
 
    -  Koha plugins
 
-   -  This section can be expanded (`Learn more <#pluginpermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-plugins-permissions-label>`)
 
 -  lists
 
@@ -615,9 +635,11 @@ type <#addstaffpatron>`__ open
           a staff member permission to delete public lists that they
           have not created.
 
-   -  This section can be expanded (`Learn more <#listspermissions>`__)
+   -  This section can be expanded (:ref:`Learn more <granular-lists-permissions-label>`)
 
-`Granular Circulate Permissions <#circpermissions>`__
+.. _granular-circulate-permissions-label:
+
+Granular Circulate Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'circulate' permissions they have the ability to
@@ -672,7 +694,9 @@ permissions on a more granular level choose from these options:
    -  Requires that the staff member also has
       circulate\_remaining\_permissions
 
-`Granular Parameters Permissions <#parameterpermissions>`__
+.. _granular-parameters-permissions-label:
+
+Granular Parameters Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'parameters' permissions they have the ability
@@ -683,8 +707,8 @@ permissions on a more granular level choose from these options:
 
    -  Manage circulation rules
 
-   -  The ability to access the `Circulation and fines
-      rules <#circfinerules>`__ in the administration area
+   -  The ability to access the :ref:`Circulation and fines
+      rules <circulation-and-fine-rules-label>` in the administration area
 
 -  parameters\_remaining\_permissions
 
@@ -693,7 +717,9 @@ permissions on a more granular level choose from these options:
    -  The ability to access all areas in Administration (other than the
       Circulation and fine rules)
 
-`Granular Holds Permissions <#reservepermissions>`__
+.. _granular-holds-permissions-label:
+
+Granular Holds Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'reserveforothers' permissions they have the
@@ -711,7 +737,9 @@ holds permissions on a more granular level choose from these options:
 
    -  Place holds for patrons
 
-`Granular Cataloging Permissions <#catpermissions>`__
+.. _granular-cataloging-permissions-label:
+
+Granular Cataloging Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'editcatalogue' permissions they have the
@@ -737,13 +765,13 @@ options:
 
    -  Edit items
 
-   -  Ability to make `edits to item/holdings
-      records <#editingitems>`__, but not bibliographic records
+   -  Ability to make :ref:`edits to item/holdings
+      records <editing-items-label>`, but not bibliographic records
 
 -  edit\_items\_restricted
 
    -  Limit item modification to subfields defined in the
-      `SubfieldsToAllowForRestrictedEditing <#SubfieldsToAllowForRestrictedEditing>`__
+      :ref:`SubfieldsToAllowForRestrictedEditing`
       preference
 
    -  **Note**
@@ -754,11 +782,13 @@ options:
 
    -  Fast cataloging
 
-   -  The ability to catalog using only the `Fast Add
-      Framework <#fastaddcat>`__ found on the
+   -  The ability to catalog using only the :ref:`Fast Add
+      Framework <fast-add-cataloging-label>` found on the
       `Circulation <#circulation>`__ page
 
-`Granular Fines and Charges Permissions <#updatechargespermissions>`__
+.. _granular-fines-and-charges-permissions-label:
+
+Granular Fines and Charges Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a staff member has 'updatecharges' permission they have the ability
@@ -774,7 +804,9 @@ charges permissions on a more granular level choose from these options:
 
    -  Write off fines and fees
 
-`Granular Acquisitions Permissions <#acqpermissions>`__
+.. _granular-acquisitions-permissions-label:
+
+Granular Acquisitions Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'acquisition' permissions they have the ability
@@ -830,7 +862,9 @@ options:
 
    -  Manage vendors
 
-`Granular Serials Permissions <#serpermissions>`__
+.. _granular-serials-permissions-label:
+
+Granular Serials Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'serials' permissions they have the ability to
@@ -839,15 +873,15 @@ permissions on a more granular level choose from these options:
 
 -  check\_expiration
 
-   -  Check the `expiration of a serial <#serialexpiration>`__
+   -  Check the :ref:`expiration of a serial <check-serial-expiration-label>`
 
 -  claim\_serials
 
-   -  Claim missing serials via the `Claims section <#serialclaims>`__
+   -  Claim missing serials via the :ref:`Claims section <claim-late-serials-label>`
 
 -  create\_subscription
 
-   -  Create `a new subscription <#newsubscription>`__
+   -  Create :ref:`a new subscription <add-a-subscription-label>`
 
 -  delete\_subscription
 
@@ -874,14 +908,16 @@ permissions on a more granular level choose from these options:
 
    -  Routing
 
-   -  Manage `routing lists <#routinglist>`__
+   -  Manage :ref:`routing lists <create-a-routing-list-label>`
 
 -  superserials
 
    -  Manage subscriptions from any branch (only applies when
-      `IndependantBranches <#IndependentBranches>`__ is used)
+      :ref:`IndependantBranches <independentbranches-label>` is used)
 
-`Granular Tools Permissions <#toolspermissions>`__
+.. _granular-tools-permissions-label:
+
+Granular Tools Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'tools' permissions they have the ability to
@@ -893,75 +929,75 @@ level choose from these options:
 
    -  Upload patron images in batch or one at a time
 
-   -  Access to the `Image Upload Tool <#uploadpatronimages>`__
+   -  Access to the :ref:`Image Upload Tool <upload-patron-images-label>`
 
 -  delete\_anonymize\_patrons
 
    -  Delete old borrowers and anonymize circulation/reading history
       (deletes borrower reading history)
 
-   -  Access to the `Anonymize Patron Tool <#anonpatrons>`__
+   -  Access to the :ref:`Anonymize Patron Tool <patrons-(anonymize,-bulk-delete)-label>`
 
 -  edit\_calendar
 
    -  Define days when the library is closed
 
-   -  Access to the `Calendar/Holidays Tool <#calholidays>`__
+   -  Access to the :ref:`Calendar/Holidays Tool <calendar-label>`
 
 -  edit\_news
 
    -  Write news for the OPAC and staff interfaces
 
-   -  Access to the `News Tool <#newstool>`__
+   -  Access to the :ref:`News Tool <news-label>`
 
 -  edit\_notice\_status\_triggers
 
    -  Set notice/status triggers for overdue items
 
-   -  Access to the `Overdue Notice Status/Triggers
-      Tool <#noticetriggers>`__
+   -  Access to the :ref:`Overdue Notice Status/Triggers
+      Tool <overdue-notice/status-triggers-label>`
 
 -  edit\_notices
 
    -  Define notices
 
-   -  Access to the `Notices Tool <#notices>`__
+   -  Access to the :ref:`Notices Tool <notices-&-slips-label>`
 
 -  export\_catalog
 
    -  Export bibliographic, authorities and holdings data
 
-   -  Access to the `Export Data Tool <#exportbibs>`__
+   -  Access to the :ref:`Export Data Tool <export-data-(marc-&-authorities)-label>`
 
 -  import\_patrons
 
    -  Import patron data
 
-   -  Access to the `Import Patrons Tool <#patronimport>`__
+   -  Access to the :ref:`Import Patrons Tool <patron-import-label>`
 
 -  inventory
 
    -  Perform inventory (stocktaking) of your catalog
 
-   -  Access to the `Inventory Tool <#inventory>`__
+   -  Access to the :ref:`Inventory Tool <inventory/stocktaking-label>`
 
 -  items\_batchdel
 
    -  Perform batch deletion of items
 
-   -  Access to the `Batch Item Deletion Tool <#batchdeleteitems>`__
+   -  Access to the :ref:`Batch Item Deletion Tool <batch-item-deletion-label>`
 
 -  items\_batchmod
 
    -  Perform batch modification of items
 
-   -  Access to the `Batch Item Modification Tool <#batchmodifyitems>`__
+   -  Access to the :ref:`Batch Item Modification Tool <batch-item-modification-label>`
 
 -  items\_batchmod\_restricted
 
-   -  Limit `batch item modification <#batchmodifyitems>`__ to subfields
+   -  Limit :ref:`batch item modification <batch-item-modification-label>` to subfields
       defined in the
-      `SubfieldsToAllowForRestrictedBatchmod <#SubfieldsToAllowForRestrictedBatchmod>`__
+      :ref:`SubfieldsToAllowForRestrictedBatchmod`
       preference
 
    -  **Note**
@@ -972,77 +1008,77 @@ level choose from these options:
 
    -  Create printable labels and barcodes from catalog and patron data
 
-   -  Access to the `Label Creator <#labelcreator>`__ and `Quick Label
-      Creator <#quicklabelcreator>`__ Tools
+   -  Access to the :ref:`Label Creator` and :ref:`Quick Label
+      Creator <quick-spine-label-creator-label>` Tools
 
 -  manage\_csv\_profiles
 
    -  Manage CSV export profiles
 
-   -  Access to the `CSV Profiles Tool <#csvprofiles>`__
+   -  Access to the :ref:`CSV Profiles Tool <csv-profiles-label>`
 
 -  manage\_staged\_marc
 
    -  Manage staged MARC records, including completing and reversing
       imports
 
-   -  Access to the `Manage Staged MARC Records Tool <#managestaged>`__
+   -  Access to the :ref:`Manage Staged MARC Records Tool <staged-marc-record-management-label>`
 
 -  moderate\_comments
 
    -  Moderate patron comments
 
-   -  Access to the `Comments Tool <#comments>`__
+   -  Access to the :ref:`Comments Tool <comments-label>`
 
 -  moderate\_tags
 
    -  Moderate patron tags
 
-   -  Access to the `Tags Tool <#tagsmoderation>`__
+   -  Access to the :ref:`Tags Tool <tag-moderation-label>`
 
 -  records\_batchdel
 
    -  Perform batch deletion of records (bibliographic or authority)
 
-   -  Access to the `Batch Record Deletion Tool <#batchrecorddelete>`__
+   -  Access to the :ref:`Batch Record Deletion Tool <batch-record-deletion-label>`
 
 -  rotating\_collections
 
    -  Manage rotating collections
 
-   -  Access to the `Rotating Collections Tool <#rotatingcollections>`__
+   -  Access to the :ref:`Rotating Collections Tool <rotating-collections-label>`
 
 -  schedule\_tasks
 
    -  Schedule tasks to run
 
-   -  Access to the `Task Scheduler Tool <#taskscheduler>`__
+   -  Access to the :ref:`Task Scheduler Tool <task-scheduler-label>`
 
 -  stage\_marc\_import
 
    -  Stage MARC records into the reservoir
 
-   -  Access to the `Stage MARC Records Tool <#stagemarc>`__
+   -  Access to the :ref:`Stage MARC Records Tool <stage-marc-records-for-import-label>`
 
 -  upload\_general\_files
 
    -  Upload any file
 
-   -  Access to upload files via the `Upload Tool <#uploadtool>`__
+   -  Access to upload files via the :ref:`Upload Tool <upload-label>`
 
 -  upload\_local\_cover\_images
 
    -  Upload local cover images
 
-   -  Access to the `Upload Local Cover Image
-      Tool <#uploadlocalimages>`__ as well as permission to add and
+   -  Access to the :ref:`Upload Local Cover Image
+      Tool <upload-local-cover-image-label>` as well as permission to add and
       delete local cover images from the bib detail page
 
 -  upload\_manage
 
    -  Manage uploaded files
 
-   -  Access to uploaded files via the `Upload Tool <#uploadtool>`__
+   -  Access to uploaded files via the :ref:`Upload Tool <upload-label>`
 
           **Note**
 
@@ -1053,9 +1089,11 @@ level choose from these options:
 
    -  Browse the system logs
 
-   -  Access to the `Log Viewer Tool <#logviewer>`__
+   -  Access to the :ref:`Log Viewer Tool <log-viewer-label>`
 
-`Granular Reports Permissions <#reportpermissions>`__
+.. _granular-reports-permissions-label:
+
+Granular Reports Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'reports' permissions they have the ability to
@@ -1074,7 +1112,9 @@ permissions on a more granular level choose from these options:
 
    -  The ability to run but not create or edit SQL reports
 
-`Granular Plugins Permissions <#pluginpermissions>`__
+.. _granular-plugins-permissions-label:
+
+Granular Plugins Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'plugins' permissions they have the ability to
@@ -1106,7 +1146,9 @@ permissions on a more granular level choose from these options:
 
    -  The ability to use tool plugins
 
-`Granular Lists Permissions <#listspermissions>`__
+.. _granular-lists-permissions-label:
+
+Granular Lists Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All staff members have permission to access lists. This section only
@@ -1117,7 +1159,9 @@ to delete public lists that they have no created themselves.
 
    -  Delete public lists
 
-`Patron Information <#patroninformation>`__
+.. _patron-information-label:
+
+Patron Information
 -------------------------------------------
 
 When viewing a patron record you have the option to view information
@@ -1126,17 +1170,21 @@ from one of many tabs found on the left hand side of the record.
 -  *Get there:* Patrons > Browse or search for patron > Click patron
    name
 
-`Check Out <#patcheckout>`__
+.. _check-out-label:
+
+Check Out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For instruction on checking items out, view the `Checking
-Out <#checkingout>`__ section of this manual.
+For instruction on checking items out, view the :ref:`Checking
+Out <check-out-(issuing)-label>` section of this manual.
 
 Staff members can access their own check out screen by clicking their
 username in the top right of the staff client and choosing 'My
 checkouts'My checkouts
 
-`Details <#patrondetails>`__
+.. _details-label:
+
+Details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Staff members can access their own account details by clicking their
@@ -1163,7 +1211,9 @@ their Guarantors additional information will appear on their record.
    Guarantees listed on the Guarantor's profile
    |image444|
 
-`Circulation Summary <#patcircsummary>`__
+.. _circulation-summary-label:
+
+Circulation Summary
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Below the patron's information on the details screen is a tabbed display
@@ -1196,7 +1246,9 @@ the patron record from here.
 Add restriction
 |image449|
 
-`Fines <#patronfines>`__
+.. _fines-label:
+
+Fines
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The patron's complete accounting history will appear on the Fines tab.
@@ -1220,7 +1272,7 @@ The table will show you the following columns:
 -  Note: any notes about this charge/payment
 
    -  If you're allowing patrons to pay fines via the OPAC with PayPal
-      (`EnablePayPalOpacPayments <#EnablePayPalOpacPayments>`__) you
+      (:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-&-paypalsandboxmode-label>`) you
       will see a Note that says 'PayPal' for items paid this wayPayPal
       Fines
 
@@ -1236,25 +1288,29 @@ At the top of the table you can click the 'Filter paid transaction' to
 hide all completed transaction and above that you can use the search box
 to find a specific charge or payment.
 
-`Charging Fines/Fees <#chargefines>`__
+.. _charging-fines/fees-label:
+
+Charging Fines/Fees
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Most fees and fines will be charged automatically if the `fines cron
-job <#finescronjob>`__ is running:
+Most fees and fines will be charged automatically if the :ref:`fines cron
+job <fines-label>` is running:
 
--  Fines will be charged based on your `Circulation & Fines
-   Rules <#circfinerules>`__
+-  Fines will be charged based on your :ref:`Circulation & Fines
+   Rules <circulation-and-fine-rules-label>`
 
--  Hold fees will be charged based on the rules you set in the `Patron
-   Types & Categories <#patcats>`__ administration area
+-  Hold fees will be charged based on the rules you set in the :ref:`Patron
+   Types & Categories <patron-categories-label>` administration area
 
--  Rental fees will be charged based on the settings in your `Item
-   Types <#itemtypeadmin>`__ administration area
+-  Rental fees will be charged based on the settings in your :ref:`Item
+   Types <item-types-label>` administration area
 
 -  Marking an item 'Lost' via the cataloging module will automatically
    charge the patron the replacement cost for that item
 
-`Pay/Reverse Fines <#payfines>`__
+.. _pay/reverse-fines-label:
+
+Pay/Reverse Fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each line item can be paid in full (or written off) using the 'Pay
@@ -1358,7 +1414,9 @@ Paying Fines
       Reversed Payment
       |image458|
 
-`Creating Manual Invoices <#manualinvoice>`__
+.. _creating-manual-invoices-label:
+
+Creating Manual Invoices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For fees that are not automatically charged, librarians can create a
@@ -1388,7 +1446,9 @@ Create Manual Invoice
 -  In the amount field, do not enter currency symbols, only numbers and
    decimals
 
-`Creating Manual Credits <#manualcredit>`__
+.. _creating-manual-credits-label:
+
+Creating Manual Credits
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Manual credits can be used to pay off parts of fines, or to forgive a
@@ -1408,7 +1468,9 @@ Create Manual Credit
 -  In the amount field, do not enter currency symbols, only numbers and
    decimals
 
-`Printing Invoices <#printinglineitems>`__
+.. _printing-invoices-label:
+
+Printing Invoices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To the right of each account line there is a print link. Clicking that
@@ -1419,7 +1481,9 @@ account.
 Sample Invoice
 |image461|
 
-`Routing Lists <#patronroutingtab>`__
+.. _routing-lists-label:
+
+Routing Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A list of all of the serial routing lists the patron belongs to will be
@@ -1434,12 +1498,14 @@ that this patron is on.
 Patron's routing lists
 |image463|
 
-`Circulation History <#circhistory>`__
+.. _circulation-history-label:
+
+Circulation History
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The circulation history tab will appear if you have set the
-`intranetreadinghistory <#intranetreadinghistory>`__ preference to allow
-it to appear. If you have the `OPACPrivacy <#OPACPrivacy>`__ system
+:ref:`intranetreadinghistory` preference to allow
+it to appear. If you have the :ref:`OPACPrivacy` system
 preference set to 'Allow' and the patron has decided that the library
 cannot keep this information this tab will only show currently checked
 out items.
@@ -1456,13 +1522,15 @@ Export today's checkins
 
 This will generate a text file with one barcode per line.
 
-`Modification Log <#patmodlog>`__
+.. _modification-log-label:
+
+Modification Log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have set your `BorrowersLog <#BorrowersLog>`__ to track changes
+If you have set your :ref:`BorrowersLog` to track changes
 to patron records, then this tab will appear. The Modification Log will
 show when changes were made to the patron record. If you also have
-turned on the `IssueLog <#IssueLog>`__ and `ReturnLog <#ReturnLog>`__
+turned on the :ref:`IssueLog` and :ref:`ReturnLog`
 you will see checkins and outs on this screen as well.
 
 Changes to Patron
@@ -1478,11 +1546,13 @@ Changes to Patron
 -  The Object field lists the borrowernumber that is being modified (in
    the example above, it was my changing my own record)
 
-`Notices <#patnotices>`__
+.. _notices-label:
+
+Notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `patron's messaging preferences <#setpatronmessaging>`__ are set
-when `adding <#addnewpatron>`__ or `editing <#editpatrons>`__ the
+when :ref:`adding <add-a-new-patron-label>` or :ref:`editing <editing-patrons-label>` the
 patron. This tab will show the messages that have been sent and those
 that are queued to be sent:
 
@@ -1502,20 +1572,24 @@ found under the status.
 Resend notice
 |image469|
 
-`Statistics <#patronstatstab>`__
+.. _statistics-label:
+
+Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Depending on what you set for the values of your
-`StatisticsFields <#StatisticsFields>`__ system preference, you can see
+:ref:`StatisticsFields` system preference, you can see
 statistics for one patron's circulation actions.
 
 Patron's Statistics
 |image470|
 
-`Files <#patronfiles>`__
+.. _files-label:
+
+Files
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you set the `EnableBorrowerFiles <#EnableBorrowerFiles>`__ preference
+If you set the :ref:`EnableBorrowerFiles` preference
 to 'Do' the Files tab will be visible on the patron information page.
 
 Patron Files Tab
@@ -1532,7 +1606,9 @@ files can be uploaded from.
 List of files on the patron record
 |image473|
 
-`Purchase Suggestions <#patronsuggestions>`__
+.. _purchase-suggestions-label:
+
+Purchase Suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the patron has made any purchase suggestions you will see a purchase
@@ -1542,15 +1618,17 @@ From here you can see all suggestions made by the patron and their
 status, you can also create a purchase suggestion on the patron's behalf
 by clicking the 'New purchase suggestion' button at the top.
 
-Learn more about `Purchase suggestions <#purchasesuggest>`__ in the
+Learn more about :ref:`Purchase suggestions <purchase-suggestions-label>` in the
 `Acquisitions <#acqmodule>`__ chapter of this manual.
 
-`Patron discharges <#patrondischarge>`__
+.. _patron-discharges-label:
+
+Patron discharges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A discharge is a certificate that says the patron has no current
 checkouts, no holds and owe no money. To enable this option on the
-patron record you need to set the `useDischarge <#useDischarge>`__
+patron record you need to set the :ref:`useDischarge`
 system preference to 'Allow'.
 
     **Note**
@@ -1563,7 +1641,7 @@ system preference to 'Allow'.
     Academic libraries often require that you have a clear record at the
     library before you can graduate.
 
-Patrons can `request discharges via the OPAC <#opacdischarge>`__. Any
+Patrons can :ref:`request discharges via the OPAC <ask-for-a-discharge-label>`. Any
 pending discharges will be listed below the menu buttons on the main
 staff client pagePending discharges
 
@@ -1592,7 +1670,7 @@ Discharge letter
 
     **Note**
 
-    You can style the PDF using the `NoticeCSS <#NoticeCSS>`__
+    You can style the PDF using the :ref:`NoticeCSS`
     preference.
 
 The patron will have a restriction added to their accountDischarge
@@ -1601,7 +1679,9 @@ restriction
 And a history of discharges will be added to the 'Discharge'
 tabDischarge history
 
-`Patron Search <#patronsearch>`__
+.. _patron-search-label:
+
+Patron Search
 ---------------------------------
 
 Clicking on the link to the Patron module will bring you to a
@@ -1657,7 +1737,7 @@ Patron Search Fields
 -  Date of birth
 
    -  Birth dates should be entered using the format set forth in the
-      `dateformat <#dateformat>`__ preference.
+      :ref:`dateformat` preference.
 
 -  Sort field 1
 

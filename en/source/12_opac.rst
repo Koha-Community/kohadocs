@@ -6,56 +6,58 @@ OPAC
 This chapter assumes that you have the following preferences set as
 follows:
 
--  `opacthemes <#opacthemes>`__ = bootstrap
+-  :ref:`opacthemes` = bootstrap
 
--  `OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__ = default
+-  :ref:`OPACXSLTResultsDisplay` = default
 
--  `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ = default
+-  :ref:`OPACXSLTDetailsDisplay` = default
 
--  `DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__ = show
+-  :ref:`DisplayOPACiconsXSLT` = show
 
--  `TagsEnabled <#TagsEnabled>`__ = Allow
+-  :ref:`TagsEnabled` = Allow
 
--  `TagsInputOnDetail <#TagsInputOnDetail>`__ =Allow
+-  :ref:`TagsInputOnDetail` =Allow
 
--  `TagsInputOnList <#TagsInputOnList>`__ = Allow
+-  :ref:`TagsInputOnList` = Allow
 
--  `reviewson <#reviewson>`__ = Allow
+-  :ref:`reviewson` = Allow
 
--  `ShowReviewer <#ShowReviewer>`__ = Allow
+-  :ref:`ShowReviewer` = Allow
 
--  `ShowReviewerPhoto <#ShowReviewerPhoto>`__ =Allow
+-  :ref:`ShowReviewerPhoto` =Allow
 
--  `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ = Show
+-  :ref:`OPACFRBRizeEditions` = Show
 
--  `OPACAmazonCoverImages <#OPACAmazonCoverImages>`__ = Show
+-  :ref:`OPACAmazonCoverImages` = Show
 
--  `XISBN <#XISBN>`__ = Use
+-  :ref:`XISBN` = Use
 
--  `OPACSearchForTitleIn <#OPACSearchForTitleIn>`__ = Default set of
+-  :ref:`OPACSearchForTitleIn` = Default set of
    links
 
--  `OPACShowCheckoutName <#OPACShowCheckoutName>`__ = Don't show
+-  :ref:`OPACShowCheckoutName` = Don't show
 
--  `RequestOnOpac <#RequestOnOpac>`__ = Allow
+-  :ref:`RequestOnOpac` = Allow
 
--  `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ = Allow
+-  :ref:`AutoResumeSuspendedHolds` = Allow
 
--  `OpacBrowseResults <#OpacBrowseResults>`__ = Enable
+-  :ref:`OpacBrowseResults` = Enable
 
--  `SuspendHoldsOpac <#SuspendHoldsOpac>`__ = Allow
+-  :ref:`SuspendHoldsOpac` = Allow
 
--  `OPACShowBarcode <#OPACShowBarcode>`__ = Don't show
+-  :ref:`OPACShowBarcode` = Don't show
 
--  `OpacSeparateHoldings <#OpacSeparateHoldings>`__ = Don't separate
+-  :ref:`OpacSeparateHoldings <opacseparateholdings-&-opacseparateholdingsbranch-label>` = Don't separate
 
--  `OpacSeparateHoldingsBranch <#OpacSeparateHoldings>`__ = home library
+-  :ref:`OpacSeparateHoldingsBranch <opacseparateholdings-&-opacseparateholdingsbranch-label>` = home library
 
--  `DisplayLibraryFacets <#DisplayLibraryFacets>`__ = holding library
+-  :ref:`DisplayLibraryFacets` = holding library
 
 If your system preferences are set differently your displays may differ.
 
-`Search Results <#opacsearchresults>`__
+.. _search-results-label:
+
+Search Results
 ---------------------------------------
 
 To search the OPAC you can either choose to enter your search words in
@@ -68,7 +70,9 @@ OPAC Search Box
 For more on searching check the '`Searching <#searching>`__' chapter in
 this manual.
 
-`Results Overview <#opacresultsoverview>`__
+.. _results-overview-label:
+
+Results Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After performing a search the number of results found for your search
@@ -78,7 +82,7 @@ Total Results
 |image938|
 
 By default your search results will be sorted based on your
-`OPACdefaultSortField and OPACdefaultSortOrder <#opacdefaultsort>`__
+:ref:`OPACdefaultSortField and OPACdefaultSortOrder`
 system preference values. To change this you can choose another sorting
 method from the pull down on the right.
 
@@ -90,7 +94,7 @@ leader will appear. It is important to note that this has nothing to do
 with the item types or collection codes you have applied to your
 records, this data is all pulled from your fixed fields. This can be
 turned on or off with the
-`DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__ system preference.
+:ref:`DisplayOPACiconsXSLT` system preference.
 
 Leader Visualization
 |image940|
@@ -113,13 +117,13 @@ the record.
 Holdings Information
 |image941|
 
-If you have turned on `Enhanced Content <#enhancedcontent>`__
+If you have turned on :ref:`Enhanced Content`
 preferences you may have book jackets on your search results.
 
 Book Jacket on Results
 |image942|
 
-If you have set your `Did you mean? <#didyoumean>`__ options you will
+If you have set your :ref:`Did you mean? <did-you-mean?-label>` options you will
 see a yellow bar across the top of your results will other related
 searches.
 
@@ -130,7 +134,9 @@ If you performed an advanced search you see an option to go back and
 edit your advanced search blow the list of results pages.Return to the
 last advanced search
 
-`Filters <#opacfilter>`__
+.. _filters-label:
+
+Filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To filter your results click on the links below the 'Refine Your Search'
@@ -140,14 +146,16 @@ Refine Your Results
 |image944|
 
 Depending on your setting for the
-`DisplayLibraryFacets <#DisplayLibraryFacets>`__ system preference you
+:ref:`DisplayLibraryFacets` system preference you
 will see filters for your home, holding or both libraries.Library Facet
 
 After clicking a facet you can remove that filter from your results by
 clicking the small 'x' that appears to the right of the facet.Remove
 library facet
 
-`Search RSS Feeds <#searchrss>`__
+.. _search-rss-feeds-label:
+
+Search RSS Feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will be able to subscribe to your search results as an RSS feed by
@@ -161,7 +169,9 @@ RSS Feed Icon
 Subscribing to search results as RSS feeds will allow you to see when a
 new item is added to the catalog in your area of interest.
 
-`Bibliographic Record <#opacbibrec>`__
+.. _bibliographic-record-label:
+
+Bibliographic Record
 --------------------------------------
 
 When you click on a title from the search results, you're brought to the
@@ -187,7 +197,7 @@ will take you directly to the authority record.
 Authority link
 |image948|
 
-If you have your `DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__
+If you have your :ref:`DisplayOPACiconsXSLT`
 preference set to 'show' you will see a material type that is determined
 by values in your fixed fields (learn more in the `XSLT Item
 Types <#XSLTiTypes>`__ Appendix).
@@ -267,14 +277,14 @@ More options
 |image961|
 
 Clicking 'More Searches' will show the list of libraries you entered in
-your `OPACSearchForTitleIn <#OPACSearchForTitleIn>`__ preference
+your :ref:`OPACSearchForTitleIn` preference
 
 More Searches
 |image962|
 
 Under the 'Save Record' label you will find a series of file formats you
 can save the record as. This list can be customized by altering the
-`OpacExportOptions <#OpacExportOptions>`__ system preference.
+:ref:`OpacExportOptions` system preference.
 
 Save Record
 |image963|
@@ -285,7 +295,9 @@ the Marc or the ISBD you can click the tabs across the top of the record
 Record Views
 |image964|
 
-`Lists & Cart <#opaclistscart>`__
+.. _lists-&-cart-label:
+
+Lists & Cart
 ---------------------------------
 
 A cart is a temporary holding place for records you're interested in
@@ -295,7 +307,9 @@ more permanent location for saving items. To learn more about lists,
 check the `Lists in the Staff Client <#stafflists>`__ chapter of this
 manual.
 
-`Lists <#opaclists>`__
+.. _lists-label:
+
+Lists
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Patrons can manage their own private lists by visiting the 'my lists'
@@ -304,7 +318,9 @@ section of their account.
 Lists Management
 |image965|
 
-`Creating Lists <#opacaddlists>`__
+.. _creating-lists-label:
+
+Creating Lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Lists can also be created by choosing the 'New List' option in the 'Add
@@ -332,7 +348,7 @@ private.
     **Important**
 
     If you aren't allowing patrons to create public lists with the
-    `OpacAllowPublicListCreation <#OpacAllowPublicListCreation>`__
+    :ref:`OpacAllowPublicListCreation`
     preference then patrons will only be able to create private lists.
 
     Create a new private list
@@ -352,7 +368,9 @@ private.
 
    -  anyone to remove other contributed entries    
 
-`Adding titles to Lists <#opacaddtolists>`__
+.. _adding-titles-to-lists-label:
+
+Adding titles to Lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Titles can be added to lists from the search results and/or from the
@@ -368,7 +386,9 @@ titles to a list check the boxes on the left of the titles you want to
 add and then choose the list you want to add the titles to from the 'Add
 too' pull down at the top of the screen.
 
-`Viewing Lists Contents <#listscontent>`__
+.. _viewing-lists-contents-label:
+
+Viewing Lists Contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To view the contents of a list, click on the list name under the Lists
@@ -397,15 +417,17 @@ hold, download the list contents, email the list or print the list out.
    choose the format you'd like to download the list in
 
 -  To email the list contents to someone, click the 'Send List' link and
-   enter in your email details in the form that pops up (`view a sample
-   Lists email <#examplelistemail>`__)
+   enter in your email details in the form that pops up (:ref:`view a sample
+   Lists email <example-email-from-list-label>`)
 
    Email List Contents
    |image972|
 
 -  To print the contents of your list out click the 'Print List' link
 
-`Managing Lists <#opacmanagelists>`__
+.. _managing-lists-label:
+
+Managing Lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the list is saved patrons can begin adding items to it. From the
@@ -432,7 +454,7 @@ The list will not be deleted until the 'Confirm' button is clicked to
 the right of the list you'd like to delete.
 
 If the library is allowing you to share private lists with the
-`OpacAllowSharingPrivateLists <#OpacAllowSharingPrivateLists>`__
+:ref:`OpacAllowSharingPrivateLists`
 preference then you will see the 'Share' link on your list of lists and
 the 'Share list' link at the top of each individual list. Clicking this
 will ask you to enter the email address of a patron.Share list
@@ -445,10 +467,14 @@ Share list confirmation
 
 and will send a message to that patron.
 
-`Cart <#opaccart>`__
+.. _cart-label:
+
+Cart
 ~~~~~~~~~~~~~~~~~~~~
 
-`Adding titles to the Cart <#opacaddtocart>`__
+.. _adding-titles-to-the-cart-label:
+
+Adding titles to the Cart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Titles can be added to the cart from the search results and/or from the
@@ -470,7 +496,9 @@ Items added to Cart
 From the results you will see which items are in your cart and will be
 able to remove those items by clicking '(remove)'.Item in your cart
 
-`Managing the Cart <#manageopaccart>`__
+.. _managing-the-cart-label:
+
+Managing the Cart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have titles in your cart you can manage the contents by
@@ -491,8 +519,8 @@ Next is the option to send the contents of your cart to an email
 address. This is handy if you want to send the resources you found at
 the library to your home email account to refer to later or to send to a
 patron researching a specific topic. Clicking this link will open up a
-new window that asks for the email address and message to send. `View a
-sample Cart email <#examplecartemail>`__.
+new window that asks for the email address and message to send. :ref:`View a
+sample Cart email <example-email-from-cart-label>`.
 
 Email Cart
 |image980|
@@ -503,8 +531,8 @@ Email Cart
     your cart email function from being used for spamming.
 
 In addition to sending your cart you can download the contents of your
-cart in several pre-defined formats or using a `CSV
-Profile <#csvprofiles>`__ that you defined in the Tools module.
+cart in several pre-defined formats or using a :ref:`CSV
+Profile <csv-profiles-label>` that you defined in the Tools module.
 
 Download Cart
 |image981|
@@ -519,11 +547,13 @@ to a List'), place hold(s) (click 'Place hold'), or tag them (click
 'Tag'). All of these operations follow the same procedure as they do
 when performing them in the OPAC.
 
-`Placing Holds <#opacplacehold>`__
+.. _placing-holds-label:
+
+Placing Holds
 ----------------------------------
 
 Patrons can place holds on items via the OPAC if they're logged in and
-you have the `RequestOnOpac <#RequestOnOpac>`__ preference set to
+you have the :ref:`RequestOnOpac` preference set to
 'Allow'. If the item can be placed on hold the option to place it on
 hold will appear in several different places.
 
@@ -559,7 +589,7 @@ Place Hold Form
 -  The priority shows where in the holds queue this hold will fall
 
 -  If allowed by your
-   `OPACAllowUserToChooseBranch <#OPACAllowUserToChooseBranch>`__
+   :ref:`OPACAllowUserToChooseBranch`
    preference the patron can choose where they'd like to pick up their
    hold
 
@@ -569,13 +599,13 @@ Place Hold Form
    Place Hold Form with More Options
 
    -  If you have the
-      `AllowHoldItemTypeSelection <#AllowHoldItemTypeSelection>`__
+      :ref:`AllowHoldItemTypeSelection`
       preference set to 'Allow' and the record had more than one item
       type attached you will see an option to choose to limit the hold
       to a specific item typeAllowHoldItemTypeSelection
 
 -  If allowed by your
-   `OPACAllowHoldDateInFuture <#OPACAllowHoldDateInFuture>`__
+   :ref:`OPACAllowHoldDateInFuture`
    preference, the 'Hold Starts on Date' column will show. This field
    allows the patron to have their hold start on a future date.
 
@@ -585,11 +615,11 @@ Place Hold Form
 
    -  **Important**
 
-          Expired holds are removed by the `Expired Holds Cron
-          Job <#expiredholdscron>`__, this is not an automatic process
+          Expired holds are removed by the :ref:`Expired Holds Cron
+          Job <expired-holds-label>`, this is not an automatic process
           and must be set up by your system administrator
 
--  If allowed by the `OpacHoldNotes <#OpacHoldNotes>`__ preference then
+-  If allowed by the :ref:`OpacHoldNotes` preference then
    patrons can leave notes about their holds for the library by clicking
    the 'Edit notes' button
 
@@ -597,7 +627,7 @@ Place Hold Form
    |image986|
 
 -  Depending on the rules you set regarding item specific holds in your
-   `circulation and fines rules <#circfinerules>`__ the patron will be
+   :ref:`circulation and fines rules <circulation-and-fine-rules-label>` the patron will be
    allowed to choose whether to place the hold on the next available
    copy and/or a specific copy
 
@@ -607,15 +637,19 @@ Place Hold Form
 After clicking the Place Hold button the patron will be brought to their
 account page where they'll see all of the items they have on hold.
 
-`Enhanced Content <#opacenhancedcontent>`__
+.. _enhanced-content-label:
+
+Enhanced Content
 -------------------------------------------
 
-`Tagging <#opactagging>`__
+.. _tagging-label:
+
+Tagging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Depending on your settings for the `TagsEnabled <#TagsEnabled>`__,
-`TagsInputOnList <#TagsInputOnList>`__ and
-`TagsInputOnDetail <#TagsInputOnDetail>`__ preferences you may be able
+Depending on your settings for the :ref:`TagsEnabled`,
+:ref:`TagsInputOnList` and
+:ref:`TagsInputOnDetail` preferences you may be able
 to add tags to bibliographic records from the search results and/or
 bibliographic records. If you are allowing patrons to add tags from the
 search results screen you will see an input box below each result and a
@@ -639,11 +673,13 @@ add tags to all of the items you have selected.
 Add Tags to Multiple Items
 |image990|
 
-`Comments <#opaccomments>`__
+.. _comments-label:
+
+Comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Patrons can leave comments in the OPAC if you have the
-`reviewson <#reviewson>`__ preference set to allow this. Each
+:ref:`reviewson` preference set to allow this. Each
 bibliographic record has a comments tab below the bibliographic
 information.
 
@@ -667,7 +703,7 @@ Pending Comment
 Once the comment is approved the patron will see the number of comments
 on the 'Comments' tab and their comment labeled amongst the other
 comments. If you have set your
-`ShowReviewerPhoto <#ShowReviewerPhoto>`__ preference to 'Show' then
+:ref:`ShowReviewerPhoto` preference to 'Show' then
 you'll see the patron's photo pulled from the
 `Libravatar <https://www.libravatar.org>`__ library.
 
@@ -675,13 +711,13 @@ Your Comments
 |image994|
 
 Other patrons will see the comment with the name of the patron who left
-the comment (unless you have set the `ShowReviewer <#ShowReviewer>`__
+the comment (unless you have set the :ref:`ShowReviewer`
 preference to not show patron names).
 
 Comment by other patron
 |image995|
 
-If you have your `OpacShowRecentComments <#OpacShowRecentComments>`__
+If you have your :ref:`OpacShowRecentComments`
 set to show then you'll see the approved comments on that page.
 
 Recent Comments List
@@ -690,7 +726,9 @@ Recent Comments List
 From this page patrons can subscribe to the recent comments using RSS if
 they would like.
 
-`Zotero <#zotero>`__
+.. _zotero-label:
+
+Zotero
 ~~~~~~~~~~~~~~~~~~~~
 
 Zotero is a Firefox add on that allows for the saving and generating of
@@ -712,7 +750,9 @@ opening your Zotero library.
 Title in the Zotero Library
 |image998|
 
-`Custom RSS Feeds <#customrss>`__
+.. _custom-rss-feeds-label:
+
+Custom RSS Feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using misc/cronjobs/rss/rss.pl you can generate an RSS feed for any SQL
@@ -743,12 +783,14 @@ the template to produce the output file.
 
     To use custom RSS feeds you need to turn on the rss.pl cron job.
 
-`OPAC Self Registration <#selfregistration>`__
+.. _opac-self-registration-label:
+
+OPAC Self Registration
 ----------------------------------------------
 
 If you allow it, patrons can register for their own accounts via the
 OPAC. If you have the
-`PatronSelfRegistration <#PatronSelfRegistration>`__ preference set to
+:ref:`PatronSelfRegistration` preference set to
 'Allow' then patrons will see a link to register below the log in box on
 the right of the main OPAC page.
 
@@ -758,9 +800,9 @@ Registration link in OPAC
 When the patron clicks the 'Register here' link they will be brough to a
 registration page. The options on the registration page can be conrolled
 by editing the
-`PatronSelfRegistrationBorrowerMandatoryField <#PatronSelfRegistrationBorrowerMandatoryField>`__
+:ref:`PatronSelfRegistrationBorrowerMandatoryField`
 and the
-`PatronSelfRegistrationBorrowerUnwantedField <#PatronSelfRegistrationBorrowerUnwantedField>`__
+:ref:`PatronSelfRegistrationBorrowerUnwantedField`
 preferences.
 
 Registration form
@@ -768,7 +810,7 @@ Registration form
 
 Once the patron has confirmed submitted their registration they will
 either be sent an email to confirm their account (if you have the
-`PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
+:ref:`PatronSelfRegistrationVerifyByEmail`
 preference to require this) or presented with their new username and
 password.
 
@@ -779,14 +821,14 @@ Patrons registered in this way will not have a cardnumber until assigned
 one by the library, but will have access to all OPAC functionality
 immediately. For this reason it is recommended that you:
 
--  set up a provisional `patron category <#addingpatroncat>`__ for self
+-  set up a provisional :ref:`patron category <adding-a-patron-category-label>` for self
    registered patrons (such as 'Self Registered) instead of using an
    existing patron category and set that value in the
-   `PatronSelfRegistrationDefaultCategory <#PatronSelfRegistrationDefaultCategory>`__
+   :ref:`PatronSelfRegistrationDefaultCategory`
    preference
 
 -  give this patron category minimal circulation privileges in the
-   `Circulation and Fine Rules <#circfinerules>`__ (such as allowing a
+   :ref:`Circulation and Fine Rules` (such as allowing a
    couple holds, but no check outs)
 
 That way patrons will either have to come in to the library to verify
@@ -797,19 +839,23 @@ Once this is done the library can change the category to one that is
 more appropriate (be it an adult, resident, non resident, student, etc)
 and add a cardnumber/barcode.
 
-`My Account <#opacmyaccount>`__
+.. _my-account-label:
+
+My Account
 -------------------------------
 
 From the OPAC patrons can log in and access their account if you have
-set the `opacuserlogin <#opacuserlogin>`__ preference to 'Allow'. Once
+set the :ref:`opacuserlogin` preference to 'Allow'. Once
 logged in patrons are brought to their account summary. If you would
 like to get to your account in the OPAC, you can click on your name in
 the top right of any page in the OPAC.
 
-`Resetting your password <#resetpwopac>`__
+.. _resetting-your-password-label:
+
+Resetting your password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have the `OpacResetPassword <#OpacResetPassword>`__ set to allow
+If you have the :ref:`OpacResetPassword` set to allow
 patrons to reset their password they can click 'Forgot your password?'
 link found under the log in box to reset their passwords.
 
@@ -823,7 +869,9 @@ file to reset their password).Recover password
 The system will then email the patron instructions for resetting their
 password.Reset password confirmation
 
-`My Summary <#opacmysummary>`__
+.. _my-summary-label:
+
+My Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 My Summary
@@ -831,23 +879,23 @@ My Summary
 
 From the 'my summary' tab, patrons will see all of the items they have
 checked out with the overdue items highlighted in red. If you have
-`OpacRenewalAllowed <#OpacRenewalAllowed>`__ set to 'Allow' then your
+:ref:`OpacRenewalAllowed` set to 'Allow' then your
 patrons will be able to renew their books right from the OPAC. If you
-have HTML entered in the `OPACMySummaryHTML <#OPACMySummaryHTML>`__
+have HTML entered in the :ref:`OPACMySummaryHTML`
 preference then you will see that to the right of the 'Fines' column.
 
 Checked out tab with OPACMySummaryHTML set
 |image1004|
 
 If your patrons would like to see the items barcodes on their list of
-checked out items you can set up a `patron
-attribute <#patronattributetypes>`__ with the value of SHOW\_BCODE and
-`authorized value <#authorizedvalues>`__ of YES\_NO.
+checked out items you can set up a :ref:`patron
+attribute <patron-attribute-types-label>` with the value of SHOW\_BCODE and
+:ref:`authorized value <authorized-values-label>` of YES\_NO.
 
 Add SHOW\_BCODE patron attribute
 |image1005|
 
-Then on the `patron's record set the value <#editpatrons>`__ for
+Then on the :ref:`patron's record set the value <editing-patrons-label>` for
 SHOW\_BCODE to yes.
 
 Setting value for SHOW\_BCODE on patron record
@@ -859,8 +907,8 @@ the patrons the barcodes of the items they have checked out.
 Barcode number on checkout list in OPAC
 |image1007|
 
-If their guarantee has allowed it via `their
-privacy <#opacmyprivacy>`__, when the guarantor logs in they will see a
+If their guarantee has allowed it via :ref:`their
+privacy <my-privacy-label>`, when the guarantor logs in they will see a
 tab labeled "Relatives' checkouts" on their summary tab.Relatives'
 checkouts
 
@@ -873,7 +921,7 @@ The 'Fines' tab will show just a total of what the patron owes. Clicking
 on the total will take them to the 'my fines' tab where they will see a
 complete breakdown of their fines and bills. If you don't charge fines
 at your library you can turn the display of these tabs off by setting
-the `OPACFinesTab <#OPACFinesTab>`__ preference to 'Don't Allow.'
+the :ref:`OPACFinesTab` preference to 'Don't Allow.'
 
 Patron Fines
 |image1009|
@@ -885,7 +933,7 @@ Patron holds status
 |image1010|
 
 Patrons can cancel or suspend (depending on the value of your
-`SuspendHoldsOpac <#SuspendHoldsOpac>`__ system preference) their own
+:ref:`SuspendHoldsOpac` system preference) their own
 holds if they are not in transit or already waiting for them. When they
 click 'Suspend' they will be presented with the option to choose a date
 for their hold to resume.Suspend until
@@ -897,11 +945,13 @@ bottom of the page.
     **Note**
 
     If you have your
-    `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ preference
+    :ref:`AutoResumeSuspendedHolds` preference
     set to "Don't allow" then you will not have the option to put an end
     date on the hold suspension
 
-`Patron Flags <#opacmyaccount-flags>`__
+.. _patron-flags-label:
+
+Patron Flags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have `flagged your patron's account <#patronflags>`__ they may
@@ -920,7 +970,7 @@ see one of the following error messages at the top of their account.
    -  **Note**
 
           this error message will not include a link to the update form
-          if you have `OPACPatronDetails <#OPACPatronDetails>`__ set to
+          if you have :ref:`OPACPatronDetails` set to
           'Don't allow'
 
 -  Patron marked restricted
@@ -928,7 +978,9 @@ see one of the following error messages at the top of their account.
    Patron restricted
    |image1013|
 
-`My Fines <#opacmyfines>`__
+.. _my-fines-label:
+
+My Fines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library charges fines the next tab on the left is 'my fines.'
@@ -939,7 +991,7 @@ Library Fines & Charges
 |image1014|
 
 If you are allowing patrons to pay their fines using PayPal with the
-`EnablePayPalOpacPayments <#EnablePayPalOpacPayments>`__ preference
+:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-&-paypalsandboxmode-label>` preference
 there will be checkboxes to the left of each fine with an outstanding
 amount.Fines with checkboxes
 
@@ -955,16 +1007,18 @@ Confirmation
 And you will see that the fine was paid using PayPal on the staff
 side.Staff side fines
 
-`My Details <#opacmydetails>`__
+.. _my-details-label:
+
+My Details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have your `OPACPatronDetails <#OPACPatronDetails>`__ preference
+If you have your :ref:`OPACPatronDetails` preference
 set to 'Allow', your patrons will see a form filled in with their
 contacting information by clicking on the 'my personal details' tab. You
 can control what fields patrons see and can modify via the OPAC by
 setting the
-`PatronSelfRegistrationBorrowerMandatoryField <#PatronSelfRegistrationBorrowerMandatoryField>`__
-`PatronSelfRegistrationBorrowerUnwantedField <#PatronSelfRegistrationBorrowerUnwantedField>`__
+:ref:`PatronSelfRegistrationBorrowerMandatoryField`
+:ref:`PatronSelfRegistrationBorrowerUnwantedField`
 preferences.
 
 Patron's personal details
@@ -979,17 +1033,19 @@ anything else awaiting library attention.
 Patron requests waiting review
 |image1017|
 
-If the `OPACPatronDetails <#OPACPatronDetails>`__ preference is set to
+If the :ref:`OPACPatronDetails` preference is set to
 'Don't allow' then patrons will simply see their details and a message
 stating that they should contact the library for changes.
 
 Patron's personal details with no edits
 |image1018|
 
-`My Tags <#opacmytags>`__
+.. _my-tags-label:
+
+My Tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your library has `TagsEnabled <#TagsEnabled>`__ set to 'Allowed' then
+If your library has :ref:`TagsEnabled` set to 'Allowed' then
 the next tab on the left will be 'my tags.' This tab will show patrons
 all of the tags in the system as a cloud and then all of the tags they
 have applied in a list format. From here patrons have the ability to
@@ -998,10 +1054,12 @@ remove tags that they have added if they want.
 Patron's tags
 |image1019|
 
-`Change My Password <#opacmypassword>`__
+.. _change-my-password-label:
+
+Change My Password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Next, if you have `OpacPasswordChange <#OpacPasswordChange>`__ set to
+Next, if you have :ref:`OpacPasswordChange` set to
 'Allow' the next tab will be 'change my password,' where patrons can
 change their password for logging into the OPAC. Patrons will be
 presented with a standard form asking them to enter their old password
@@ -1010,10 +1068,12 @@ and then their new password twice.
 Change my password
 |image1020|
 
-`My Search History <#opacmysearchistory>`__
+.. _my-search-history-label:
+
+My Search History
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have your `EnableOpacSearchHistory <#EnableOpacSearchHistory>`__
+If you have your :ref:`EnableOpacSearchHistory`
 preference set to 'Allow' then your patrons can access their search
 history via the 'my search history' tab.
 
@@ -1030,29 +1090,33 @@ at the top right of the OPAC.
 Search history link at the top right of the OPAC
 |image1022|
 
-`My Reading History <#opacmyhistory>`__
+.. _my-reading-history-label:
+
+My Reading History
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Depending on your library's setting for
-`opacreadinghistory <#opacreadinghistory>`__ your patrons may see the
+:ref:`opacreadinghistory` your patrons may see the
 'my reading history' tab next. This will show the patron their entire
 reading history unless they have asked the library to not keep that
 information via the 'my privacy' tab which will appear if you have the
-`OPACPrivacy <#OPACPrivacy>`__ preference set to 'Allow.'
+:ref:`OPACPrivacy` preference set to 'Allow.'
 
 Patron reading history
 |image1023|
 
 If you have HTML entered in the
-`OPACMySummaryHTML <#OPACMySummaryHTML>`__ preference then you will see
+:ref:`OPACMySummaryHTML` preference then you will see
 that to the right of the 'Date' column.
 
-`My Privacy <#opacmyprivacy>`__
+.. _my-privacy-label:
+
+My Privacy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The 'my privacy' tab will appear if you have both the
-`opacreadinghistory <#opacreadinghistory>`__ and the
-`OPACPrivacy <#OPACPrivacy>`__ preferences set to 'Allow.' This tab will
+:ref:`opacreadinghistory` and the
+:ref:`OPACPrivacy` preferences set to 'Allow.' This tab will
 allow the patrons to decide how the library keeps their circulation
 history data.
 
@@ -1071,9 +1135,9 @@ The patron can choose from three options:
 -  Never: Delete my reading history immediately. This will delete all
    record of the item that was checked-out upon check-in.
 
-Depending on the patron's suggestions the contents of the '`my reading
-history <#opacmyhistory>`__' tab and the '`Circulation
-History <#circhistory>`__' tab in the staff client may change.
+Depending on the patron's suggestions the contents of the ':ref:`my reading
+history <my-reading-history-label>`' tab and the ':ref:`Circulation
+History <circulation-history-label>`' tab in the staff client may change.
 
 Regardless of the patron's choice they can delete their reading history
 in bulk at any time by clicking the 'Immediate deletion' button.
@@ -1087,39 +1151,43 @@ out, but will clear the patron's past reading history.
     **Important**
 
     In order for the patron to be able to delete their reading history
-    you must have the `AnonymousPatron <#AnonymousPatron>`__ preference
+    you must have the :ref:`AnonymousPatron` preference
     set.
 
 If you're allowing guarantees to grand permission to their guarantors to
 view their current checkouts with the
-`AllowPatronToSetCheckoutsVisibilityForGuarantor <#AllowPatronToSetCheckoutsVisibilityForGuarantor>`__
+:ref:`AllowPatronToSetCheckoutsVisibilityForGuarantor`
 preference they will see that option on this
 screen.AllowPatronToSetCheckoutsVisibilityForGuarantor
 
 When the guarantor logs in they will see a tab labeled "Relatives'
 checkouts" on their summary tab.Relatives' checkouts
 
-`My Purchase Suggestions <#opacmysuggestions>`__
+.. _my-purchase-suggestions-label:
+
+My Purchase Suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library allows patrons to make purchase suggestions the next tab
 will show all suggestions that the patron made to the library and their
 statuses. To disable this tab and the suggestion functionality set the
-`suggestion <#suggestionspref>`__ preference to 'Don't allow.'
+:ref:`suggestion` preference to 'Don't allow.'
 
 Patron purchase suggestions
 |image1026|
 
-If you have `OPACViewOthersSuggestions <#OPACViewOthersSuggestions>`__
+If you have :ref:`OPACViewOthersSuggestions`
 set to 'Show' then patrons will be able to search suggestions from the
 top of this list.
 
-`My Messaging <#opacmymsgs>`__
+.. _my-messaging-label:
+
+My Messaging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library has the
-`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ and the
-`EnhancedMessagingPreferencesOPAC <#EnhancedMessagingPreferencesOPAC>`__
+:ref:`EnhancedMessagingPreferences` and the
+:ref:`EnhancedMessagingPreferencesOPAC`
 preferences set to 'Allow' then your patrons will be able to choose
 which messages they receive from the library (with the exception of
 overdue notices which the library controls).
@@ -1128,7 +1196,7 @@ Patron messaging preferences
 |image1027|
 
 If you use an outside driver for sending text messages set with the
-`SMSSendDriver <#SMSSendDriver>`__ preference, you will see an
+:ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference, you will see an
 additional column to receive these messages as SMS (or text messages)
 and a field for a cell (or SMS) number.
 
@@ -1136,16 +1204,16 @@ SMSSendDriver in the OPAC
 |image1028|
 
 If you are using the Email protocol for sending text messages set with
-the `SMSSendDriver <#SMSSendDriver>`__ preference, you will see an
+the :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference, you will see an
 additional column to receive these messages as SMS (or text messages), a
-field for a cell (or SMS) number, and a pull down listing `cellular
-providers entered in administration <#smsadmin>`__.
+field for a cell (or SMS) number, and a pull down listing :ref:`cellular
+providers entered in administration <sms-cellular-providers-label>`.
 
 SMSSendDriver in the OPAC
 |image1029|
 
-If you are using the `Itiva Talking
-Tech <#TalkingTechItivaPhoneNotification>`__ service you will see an
+If you are using the :ref:`Itiva Talking
+Tech <talkingtechitivaphonenotification-label>` service you will see an
 additional column to receive these messages via Phone.Phone messaging
 preferences in the OPAC
 
@@ -1177,10 +1245,12 @@ in one email) in to one email instead of multiple emails for each alert.
     'Digest only?' if you would like to receive a digest of the
     messages.
 
-`My Lists <#opacmylists>`__
+.. _my-lists-label:
+
+My Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, if your library has the `virtualshelves <#virtualshelves>`__
+Finally, if your library has the :ref:`virtualshelves`
 set to 'Allow' then the last tab will by 'my lists.' From here your
 patrons can review public lists and create or edit their own private
 lists.
@@ -1188,10 +1258,12 @@ lists.
 Patron lists
 |image1030|
 
-`Ask for a Discharge <#opacdischarge>`__
+.. _ask-for-a-discharge-label:
+
+Ask for a Discharge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have enabled the `useDischarge <#useDischarge>`__ preference then
+If you have enabled the :ref:`useDischarge` preference then
 patrons will be able to request a discharge via the OPAC.Discharge tab
 
 From here patrons can request a discharge
@@ -1204,16 +1276,18 @@ And will receive confirmation of their request.
 Discharge confirmation
 |image1032|
 
-`Purchase Suggestions <#purchasesuggest>`__
+.. _purchase-suggestions-label:
+
+Purchase Suggestions
 -------------------------------------------
 
-If your library has the `suggestion <#suggestionspref>`__ preference set
+If your library has the :ref:`suggestion` preference set
 to 'Allow' then patrons will have the option to make purchase
 suggestions in several areas in the OPAC.
 
 If you are allowing everyone to see the purchase suggestions made by
 others with the
-`OPACViewOthersSuggestions <#OPACViewOthersSuggestions>`__ preference,
+:ref:`OPACViewOthersSuggestions` preference,
 then there will be a link at the top of your OPAC under the search box.
 
 Purchase Suggestions Link on Search Box
@@ -1224,8 +1298,8 @@ There will be a link when the patron finds nothing for their search.
 Purchase Suggestion Link from Search Results
 |image1034|
 
-And there will be a link on the patron's `My Purchase
-Suggestions <#opacmysuggestions>`__ tab.
+And there will be a link on the patron's :ref:`My Purchase
+Suggestions <my-purchase-suggestions-label>` tab.
 
 Purchase Suggestion from My Purchase Suggestions Tab
 |image1035|
@@ -1238,17 +1312,17 @@ New Purchase Suggestion
 -  From the form on the 'Title' is required by the library.
 
 -  The Item type list can be edited by editing the SUGGEST\_FORMAT
-   `authorized value <#authorizedvalues>`__.
+   :ref:`authorized value <authorized-values-label>`.
 
 -  If you would like the 'Reason for suggestion' menu shown in the
    screenshot above to appear on your suggestions list you need to add
-   an `authorized value <#authorizedvalues>`__ category titled
+   an :ref:`authorized value <authorized-values-label>` category titled
    'OPAC\_SUG' and include reasons as values in that list.
 
 -  If you would like the patron to be able to choose which branch they
    are making a suggestion for you need to set the
-   `AllowPurchaseSuggestionBranchChoice <#AllowPurchaseSuggestionBranchChoice>`__
+   :ref:`AllowPurchaseSuggestionBranchChoice`
    preference to 'Allow'
 
 Once the form is submitted the data will be saved to the
-`Acquisitions <#managesuggest>`__ module for the librarians to manage.
+:ref:`Acquisitions <managing-suggestions-label>` module for the librarians to manage.

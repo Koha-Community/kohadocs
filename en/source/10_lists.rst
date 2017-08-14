@@ -8,10 +8,14 @@ for a specific purpose. The Cart is a session specific storage space.
 
 -  *Get there:* More > Lists
 
-`Lists <#lists>`__
+.. _lists-label:
+
+Lists
 ------------------
 
-`Create a List <#createlist>`__
+.. _create-a-list-label:
+
+Create a List
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A list can be created by visiting the Lists page and clicking 'New List'
@@ -72,7 +76,9 @@ New list from catalog search
 Once the list is saved it will accessible from the Lists page and from
 the 'Add to' menu at the top of the search results.
 
-`Add to a List <#addtolist>`__
+.. _add-to-a-list-label:
+
+Add to a List
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add titles to an existing list click on the list name from the page
@@ -95,7 +101,9 @@ results page and choosing the list from the 'Add to' menu
 Add to List
 |image874|
 
-`Viewing Lists <#viewlist>`__
+.. _viewing-lists-label:
+
+Viewing Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To see the contents of a list, visit the Lists page on the staff client
@@ -115,18 +123,20 @@ From this list of items you can perform several actions
 -  'Edit' will allow you to edit the description and permissions for
    this list
 
--  'Send list' will send the list to the email address you enter (`view
-   sample List email <#examplelistemail>`__)
+-  'Send list' will send the list to the email address you enter (:ref:`view
+   sample List email <example-email-from-list-label>`)
 
 -  'Download list' will allow you to download the cart using one of 3
-   default formats or your `CSV Profiles <#csvprofiles>`__
+   default formats or your :ref:`CSV Profiles`
 
 -  'Print list' will present you with a printable version of the list
 
 Using the filters at the top of each column you can find specific items
 in your list.
 
-`Merging Bibliographic Records Via Lists <#mergebibrecs>`__
+.. _merging-bibliographic-records-via-lists-label:
+
+Merging Bibliographic Records Via Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One way to merge together duplicate bibliographic records is to add them
@@ -136,9 +146,11 @@ List of Duplicate Records
 |image877|
 
 Once you have selected the records to merge together the process is the
-same as if you had chosen to `merge via cataloging <#mergebibs>`__.
+same as if you had chosen to :ref:`merge via cataloging <merging-records-label>`.
 
-`Cart <#cart>`__
+.. _cart-label:
+
+Cart
 ----------------
 
 The cart is a temporary holding place for items in the OPAC and/or staff
@@ -148,7 +160,7 @@ operations (holds, printing, emailing) or for getting a list of items to
 be printed or emailed to yourself or a patron.
 
 If you would like to enable the cart in the staff client, you need to
-set the `intranetbookbag <#intranetbookbag>`__ system preference to
+set the :ref:`intranetbookbag` system preference to
 'Show.' To add things to the cart, search the catalog and select the
 items you would like added to your cart and choose 'Cart' from the 'Add
 to' menu
@@ -171,11 +183,11 @@ From this list of items you can perform several actions
 
 -  'More details' will show more information about the items in the cart
 
--  'Send' will send the list to the email address you enter (`view
-   sample Cart email <#examplecartemail>`__)
+-  'Send' will send the list to the email address you enter (:ref:`view
+   sample Cart email <example-email-from-cart-label>`)
 
 -  'Download' will allow you to download the cart using one of 3 default
-   formats or your `CSV Profiles <#csvprofiles>`__
+   formats or your :ref:`CSV Profiles`
 
 -  'Print' will present you with a printable version of the cart
 
