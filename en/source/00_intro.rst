@@ -1,7 +1,9 @@
 Introduction
 ============
 
-`Koha Basics <#introbasics>`__
+.. _koha-basics-label:
+
+Koha Basics
 ------------------------------
 
 Koha is the first free and open source software library automation
@@ -11,7 +13,9 @@ and sizes, volunteers, and support companies from around the world.
 Learn more about Koha by visiting the official Koha website:
 http://koha-community.org
 
-`Koha Recommendations <#introrecommend>`__
+.. _koha-recommendations-label:
+
+Koha Recommendations
 ------------------------------------------
 
 Full system recommendations can be found on the official Koha wiki along
@@ -22,7 +26,9 @@ you use the Firefox browser. Koha's staff client is not supported in
 Internet Explorer and has not yet been fully optimized for Google
 Chrome.
 
-`Using this Manual <#usingmanual>`__
+.. _using-this-manual-label:
+
+Using this Manual
 ------------------------------------
 
 This manual is always changing and suggestions for edits can be sent to
@@ -44,7 +50,9 @@ top of the Koha staff client.
 Links will be found throughout the manual to other sections in the
 manual and images will depict what should be seen on the screen.
 
-`Contributing to the Manual <#contributing>`__
+.. _contributing-to-the-manual-label:
+
+Contributing to the Manual
 ----------------------------------------------
 
 This manual is an ever-changing document and edits to the manual are

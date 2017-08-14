@@ -11,7 +11,9 @@ necessary to make the plugin work.
 
 The plugin system needs to be turned on by a system administrator.
 
-`Set up <#pluginsetup>`__
+.. _set-up-label:
+
+Set up
 -------------------------
 
 To set up the Koha plugin system you must first make some changes to
@@ -23,14 +25,14 @@ your install.
 -  Restart your webserver
 
 Once set up is complete you will need to alter your
-`UseKohaPlugins <#UseKohaPlugins>`__ system preference. On the Tools
+:ref:`UseKohaPlugins` system preference. On the Tools
 page you will see the Tools Plugins and on the Reports page you will see
 the Reports Plugins.
 
 Search History
 ==============
 
-If you have your `EnableSearchHistory <#EnableSearchHistory>`__
+If you have your :ref:`EnableSearchHistory`
 preference set to keep your search history then you can access this
 information by clicking on your username in the top right of the staff
 client and choosing 'Search history'.
@@ -56,7 +58,9 @@ as general information about Koha.
 
 -  *Get there:* More > About Koha
 
-`Server Information <#aboutserver>`__
+.. _server-information-label:
+
+Server Information
 -------------------------------------
 
 Under the 'Server Information' tab you will find information about the
@@ -69,7 +73,9 @@ information from this screen.
 Server Information on Koha
 |image1065|
 
-`Perl Modules <#aboutserverperl>`__
+.. _perl-modules-label:
+
+Perl Modules
 -----------------------------------
 
 In order to take advantage of all of the functionalities of Koha, you
@@ -84,7 +90,9 @@ Items listed in bold are required by Koha, items highlighted in red are
 missing completely and items highlighted in yellow simply need to be
 upgraded.
 
-`System Information <#aboutsystem>`__
+.. _system-information-label:
+
+System Information
 -------------------------------------
 
 This tab will provide you with warnings if you are using system

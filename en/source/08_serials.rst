@@ -8,12 +8,14 @@ your screen and choosing Serials or by clicking Serials on the main Koha
 staff client page. The Serials module in Koha is used for keeping track
 of journals, newspapers and other items that come on a regular schedule.
 As with all modules, make sure you go through the related
-`Implementation Checklist <#impserials>`__ before using the Serials
+:ref:`Implementation Checklist <serials-configuration-label>` before using the Serials
 module.
 
 -  *Get there:* More > Serials
 
-`Manage Serial Frequencies <#serialfreq>`__
+.. _manage-serial-frequencies-label:
+
+Manage Serial Frequencies
 -------------------------------------------
 
 Koha keeps a record of publication frequencies for easy management and
@@ -32,7 +34,9 @@ and create new ones.
 New frequency
 |image739|
 
-`Manage Serial Numbering Patterns <#serialpatterns>`__
+.. _manage-serial-numbering-patterns-label:
+
+Manage Serial Numbering Patterns
 ------------------------------------------------------
 
 Everytime you create a new numbering pattern in serials you can save it
@@ -61,7 +65,9 @@ pattern' at the top of the list of patterns.
 New number pattern
 |image741|
 
-`Custom Subscription Fields <#serialfields>`__
+.. _custom-subscription-fields-label:
+
+Custom Subscription Fields
 ----------------------------------------------
 
 This module will allow you to add custom fields to your serial
@@ -89,7 +95,9 @@ and when you view the subscriptionShow field
 and when you search subscriptions (if you chose to make it
 'searchable')Searchable field
 
-`Add a subscription <#newsubscription>`__
+.. _add-a-subscription-label:
+
+Add a subscription
 -----------------------------------------
 
 Subscriptions can be added by clicking the 'New' button on any
@@ -167,7 +175,7 @@ Add a new subscription (1/2)
    patrons who subscribe to updates on this serial via the OPAC.
 
    -  For this option to appear you need to make sure that you have a
-      Routing List notice set up in the `Notices Tool <#notices>`__
+      Routing List notice set up in the :ref:`Notices Tool <notices-&-slips-label>`
 
 -  'Location' is for the shelving location
 
@@ -181,8 +189,8 @@ Add a new subscription (1/2)
    and the OPAC
 
    -  If no values are entered in these fields, they will use the
-      `OPACSerialIssueDisplayCount <#OPACSerialIssueDisplayCount>`__ and
-      `StaffSerialIssueDisplayCount <#StaffSerialIssueDisplayCount>`__
+      :ref:`OPACSerialIssueDisplayCount` and
+      :ref:`StaffSerialIssueDisplayCount`
       system preference values
 
 Once that data is filled in you can click 'Next' to enter the prediction
@@ -197,7 +205,7 @@ Add a new subscription (2/2)
 
 -  There are several pre-defined options for the 'Frequency' of
    publication all of which are visible alongside your own custom
-   frequencies by visiting '`Manage frequencies <#serialfreq>`__'
+   frequencies by visiting ':ref:`Manage frequencies <manage-serial-frequencies-label>`'
 
    -  Without periodicy: some very specific (usually high level science
       journals) don't have a true periodicity. When you subscribe to the
@@ -248,8 +256,8 @@ Add a new subscription (2/2)
 
 -  'Numbering pattern' will help you determine how the numbers are
    printed for each issue. Patterns entered here are saved and editable
-   at any time by visiting '`Manage numbering
-   patterns <#serialpatterns>`__'
+   at any time by visiting ':ref:`Manage numbering
+   patterns <manage-serial-numbering-patterns-label>`'
 
    -  Start with the numbering on the issue you have in hand, the
       numbering that matches the date you entered in the 'First issue
@@ -287,14 +295,16 @@ Add a new subscription (2/2)
       Prediction pattern
       |image749|
 
--  If you have added a `custom subscription field <#serialfields>`__, it
+-  If you have added a :ref:`custom subscription field <custom-subscription-fields-label>`, it
    will be editable above the buttons at the bottom of the screenShow
    field
 
 Click 'Save Subscription' to save the information you have entered.
 `Find sample serial examples in the appendix <#sampleserialsapp>`__.
 
-`Receive Issues <#receiveissues>`__
+.. _receive-issues-label:
+
+Receive Issues
 -----------------------------------
 
 Issues can be marked as received from several locations. To find a
@@ -332,7 +342,7 @@ Receive Serials
    received.
 
 -  If you have decided to have an item record created for each issue an
-   `item add form <#addingitems>`__ will appear after choosing 'Arrived'
+   :ref:`item add form <adding-items-label>` will appear after choosing 'Arrived'
 
    Serial item record
    |image755|
@@ -350,7 +360,7 @@ Receive Serials
          displayed: "v.69 no.3 (Mar. 2015) suppl."
 
 -  If you have decided to have an item record created for each issue an
-   `item add form <#addingitems>`__ will appear for your supplement and
+   :ref:`item add form <adding-items-label>` will appear for your supplement and
    for the issue itself
 
 -  Once you have entered your info you can click 'Save'
@@ -367,12 +377,14 @@ previously expected issue as 'Late' automatically. You can then check
 the 'Edit' box to the right of each issue and edit the status on
 multiple issues at once.
 
-`Create a Routing List <#routinglist>`__
+.. _create-a-routing-list-label:
+
+Create a Routing List
 ----------------------------------------
 
 A routing list is a list of people who receive the serial before it goes
 to the shelf. To enable routing lists you want to set your
-`RoutingSerials <#RoutingSerials>`__ preference to 'Add'.
+:ref:`RoutingSerials` preference to 'Add'.
 
 When on the subscription page you will see a link to the left that reads
 'Create Routing List' or 'Edit Routing List'
@@ -407,14 +419,16 @@ version of the list.
 Preview Routing List
 |image761|
 
-If `RoutingListAddReserves <#RoutingListAddReserves>`__ is set to on
+If :ref:`RoutingListAddReserves` is set to on
 then patrons listed in the routing list will automatically be added to
 the holds list for the issue.
 
 To see a list of all of the routing lists a specific patron is on visit
-the `Routing Lists tab <#patronroutingtab>`__ on their patron record.
+the :ref:`Routing Lists tab <routing-lists-label>` on their patron record.
 
-`Subscriptions in Staff Client <#serialsubinstaff>`__
+.. _subscriptions-in-staff-client-label:
+
+Subscriptions in Staff Client
 -----------------------------------------------------
 
 Subscription information will appear on bibliographic records under the
@@ -436,7 +450,9 @@ before your subscription details.
 Acquisitions information for subscription
 |image764|
 
-`Subscriptions in OPAC <#serialsubinopac>`__
+.. _subscriptions-in-opac-label:
+
+Subscriptions in OPAC
 --------------------------------------------
 
 When viewing the subscription in the OPAC there will be several options.
@@ -449,11 +465,11 @@ Subscriptions Tab in OPAC
 
 Under this tab will appear the number of issues you chose when setting
 up the subscription or in your
-`OPACSerialIssueDisplayCount <#OPACSerialIssueDisplayCount>`__ system
+:ref:`OPACSerialIssueDisplayCount` system
 preference. Clicking the 'More details' link will provide you with
 additional information about the serial history. You can set the default
 view of a serial in the OPAC with the
-`SubscriptionHistory <#SubscriptionHistory>`__ system preference.
+:ref:`SubscriptionHistory` system preference.
 
 There are two views, compact and full. The compact serial subscription
 will show basic information regarding the subscription
@@ -464,8 +480,8 @@ Compact Serial View
 From this compact display patrons can subscribe to be notified of new
 issues as they are released by clicking the 'Subscribe to email
 notifications of new issues' button. For this link to appear you will
-want to have chosen to notify patrons `on the
-subscription <#newsubscription>`__ itself.
+want to have chosen to notify patrons :ref:`on the
+subscription <add-a-subscription-label>` itself.
 
 Subscribe link in the OPAC
 |image767|
@@ -480,7 +496,9 @@ regarding the subscription
 Full Serial View
 |image768|
 
-`Claim Late Serials <#serialclaims>`__
+.. _claim-late-serials-label:
+
+Claim Late Serials
 --------------------------------------
 
 Koha can send email messages to your serial vendors if you have late
@@ -512,7 +530,9 @@ a claim email to by clicking the checkbox to the left of late issue,
 choosing the notice template to use and clicking the 'Send notification'
 button.
 
-`Check Serial Expiration <#serialexpiration>`__
+.. _check-serial-expiration-label:
+
+Check Serial Expiration
 -----------------------------------------------
 
 When adding serials you enter a subscription length, using the check
@@ -532,7 +552,9 @@ further or renew it in one click.
 Serial Expiration Search Results
 |image774|
 
-`Renewing Serials <#serialrenew>`__
+.. _renewing-serials-label:
+
+Renewing Serials
 -----------------------------------
 
 If your serial subscription has expired you won't be able to receive
@@ -562,7 +584,9 @@ Subscription renewal form
 
 -  Finally enter any notes you might have about this renewal.
 
-`Searching Serials <#serialsearch>`__
+.. _searching-serials-label:
+
+Searching Serials
 -------------------------------------
 
 Once in the Serials module there is basic search box at the top that you

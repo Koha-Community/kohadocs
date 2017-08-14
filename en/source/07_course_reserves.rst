@@ -7,28 +7,32 @@ The course reserves module in Koha allows you to temporarily move items
 to 'reserve' and assign different circulation rules to these items while
 they are being used for a specific course.
 
-`Course Reserves Setup <#coursesetup>`__
+.. _course-reserves-setup-label:
+
+Course Reserves Setup
 ----------------------------------------
 
 Before using Course Reserves you will need to do some set up.
 
 First you will need to enable course reserves by setting the
-`UseCourseReserves <#UseCourseReserves>`__ preference to 'Use'.
+:ref:`UseCourseReserves` preference to 'Use'.
 
-Next you will need to have all of your course instructors `added as
-patrons <#addnewpatron>`__.
+Next you will need to have all of your course instructors :ref:`added as
+patrons <add-a-new-patron-label>`.
 
-Next you will want to add a couple of new `authorized
-values <#newauthval>`__ for Departments and Terms.
+Next you will want to add a couple of new :ref:`authorized
+values <add-new-authorized-value-label>` for Departments and Terms.
 
-You may also want to create new `item types <#additemtype>`__,
+You may also want to create new :ref:`item types <adding-item-types-label>`,
 `collection codes <#ccode>`__ and/or `shelving
 locations <#shelvelocvals>`__ to make it clear that the items are on
 reserve to your patrons. You will also want to be sure to confirm that
-your `circulation and fine rules <#circfinerules>`__ are right for your
+your :ref:`circulation and fine rules <circulation-and-fine-rules-label>` are right for your
 new item types (whether they be hourly or daily loans).
 
-`Adding Courses <#addingcourses>`__
+.. _adding-courses-label:
+
+Adding Courses
 -----------------------------------
 
 Once you have completed your set up for Course Reserves you can start
@@ -69,7 +73,9 @@ and be searchable by any field in the course.
 Courses
 |image730|
 
-`Adding Reserve Materials <#addreserves>`__
+.. _adding-reserve-materials-label:
+
+Adding Reserve Materials
 -------------------------------------------
 
 Before adding reserve materials you will need at least one course to add
@@ -96,7 +102,9 @@ see them on the course page
 Course with reserves
 |image734|
 
-`Course Reserves in the OPAC <#opaccoursereserves>`__
+.. _course-reserves-in-the-opac-label:
+
+Course Reserves in the OPAC
 -----------------------------------------------------
 
 Once you have enabled Course Reserves and added courses you will see a

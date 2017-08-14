@@ -3,7 +3,9 @@
 Administration
 ==============
 
-`Global System Preferences <#globalsysprefs>`__
+.. _global-system-preferences-label:
+
+Global System Preferences
 -----------------------------------------------
 
 Global system preferences control the way your Koha system works in
@@ -41,7 +43,7 @@ Sort option at the top right of each section of preferences
 |image4|
 
 If the preference refers to monetary values (like
-`maxoutstanding <#maxoutstanding>`__) the currency displayed will be the
+:ref:`maxoutstanding`) the currency displayed will be the
 default you set in your :ref:`Currencies and Exchange Rates` 
 administration area. In the examples to
 follow they will all read USD for U.S. Dollars.
@@ -60,16 +62,22 @@ follow they will all read USD for U.S. Dollars.
     highlighted terms. Consult with your system administrator for more
     information.
 
-`Acquisitions <#acqprefs>`__
+.. _acquisitions-label:
+
+Acquisitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences >
 Acquisitions
 
-`Policy <#acqprefspolicy>`__
+.. _policy-label:
+
+Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AcqCreateItem <#AcqCreateItem>`__
+.. _acqcreateitem-label:
+
+AcqCreateItem
 ''''''''''''''''''''''''''''''''''
 
 Default: placing an order
@@ -96,7 +104,9 @@ Description:
    acquisitions at all, you will need to go to the cataloging module to
    add the items.
 
-`AcqEnableFiles <#AcqEnableFiles>`__
+.. _acqenablefiles-label:
+
+AcqEnableFiles
 ''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -115,7 +125,9 @@ Description:
 -  This preference controls whether or not you allow the uploading of
    invoice files via the acquisitions module.
 
-`AcqItemSetSubfieldsWhenReceiptIsCancelled <#AcqItemSetSubfieldsWhenReceiptIsCancelled>`__
+.. _acqitemsetsubfieldswhenreceiptiscancelled-label:
+
+AcqItemSetSubfieldsWhenReceiptIsCancelled
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Upon cancelling a receipt, update the item's subfields if they
@@ -144,7 +156,9 @@ Description:
    7=0 in this preference. That will set the Not for Loan status
    (subfield 7) to 0 which is available.
 
-`AcqViewBaskets <#AcqViewBaskets>`__
+.. _acqviewbaskets-label:
+
+AcqViewBaskets
 ''''''''''''''''''''''''''''''''''''
 
 Default: created by staff member
@@ -171,7 +185,9 @@ Description:
    of owner). Regardless of which value you choose for this preference,
    superlibrarians can see all baskets created in the system.
 
-`AcqWarnOnDuplicateInvoice <#AcqWarnOnDuplicateInvoice>`__
+.. _acqwarnonduplicateinvoice-label:
+
+AcqWarnOnDuplicateInvoice
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not warn
@@ -185,7 +201,9 @@ Values:
 
 -  Warn
 
-`BasketConfirmations <#BasketConfirmations>`__
+.. _basketconfirmations-label:
+
+BasketConfirmations
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: always ask for confirmation
@@ -204,7 +222,9 @@ Descriptions:
    reopening a basket. If you skip the confirmation, you do not create a
    new basket group.
 
-`ClaimsBccCopy <#ClaimsBccCopy>`__
+.. _claimsbcccopy-label:
+
+ClaimsBccCopy
 ''''''''''''''''''''''''''''''''''
 
 Default: Don't send
@@ -224,7 +244,9 @@ Description:
    Acquisitions module this preference will allow for
    the sending of a copy of the email to the librarian.
 
-`CurrencyFormat <#CurrencyFormat>`__
+.. _currencyformat-label:
+
+CurrencyFormat
 ''''''''''''''''''''''''''''''''''''
 
 Default: 360,000.00 (US)
@@ -237,7 +259,9 @@ Values:
 
 -  360 000,00 (FR)
 
-`gist <#gist>`__
+.. _gist-label:
+
+gist
 ''''''''''''''''
 
 Default: 0
@@ -254,7 +278,9 @@ Description:
 
     Enter this value as a number (.06) versus a percent (6%).
 
-`MarcFieldsToOrder <#MarcFieldsToOrder>`__
+.. _marcfieldstoorder-label:
+
+MarcFieldsToOrder
 ''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Set the mapping values for a new order line created from a MARC
@@ -275,13 +301,17 @@ Description:
        quantity: 969$h
        budget_code: 922$a
 
-`MarcItemFieldsToOrder <#MarcItemFieldsToOrder>`__
+.. _marcitemfieldstoorder-label:
+
+MarcItemFieldsToOrder
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Set the mapping values for new item records created from a MARC record
 in a staged file.
 
-`UniqueItemFields <#UniqueItemFields>`__
+.. _uniqueitemfields-label:
+
+UniqueItemFields
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: barcode
@@ -297,17 +327,23 @@ Description:
    barcode can be created in acquisitions which will cause errors later
    when checking items in and out.
 
-`Printing <#acqprefsprinting>`__
+.. _printing-label:
+
+Printing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`OrderPdfFormat <#OrderPdfFormat>`__
+.. _orderpdfformat-label:
+
+OrderPdfFormat
 ''''''''''''''''''''''''''''''''''''
 
 Default: pdfformat::layout2pages
 
 Asks: Use \_\_\_ when printing basket groups.
 
-`Administration <#adminprefs>`__
+.. _administration-label:
+
+Administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These preferences are general settings for your system.
@@ -315,33 +351,43 @@ These preferences are general settings for your system.
 *Get there:* More > Administration > Global System Preferences >
 Administration
 
-`CAS Authentication <#casauthentication>`__
+.. _cas-authentication-label:
+
+CAS Authentication
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Central Authentication Service (CAS) is a single sign-on protocol
 for the web. If you don't know what this is, leave these preferences set
 to their defaults.
 
-`casAuthentication <#casAuthentication>`__
+.. _casauthentication-label:
+
+casAuthentication
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
 
 Asks: \_\_\_ CAS for login authentication.
 
-`casLogout <#casLogout>`__
+.. _caslogout-label:
+
+casLogout
 ''''''''''''''''''''''''''
 
 Default: Don't logout
 
 Asks: \_\_\_ of CAS when logging out of Koha.
 
-`casServerUrl <#casServerUrl>`__
+.. _casserverurl-label:
+
+casServerUrl
 ''''''''''''''''''''''''''''''''
 
 Asks: The CAS Authentication Server can be found at \_\_\_
 
-`Google OpenID Connect <#googleopenid>`__
+.. _google-openid-connect-label:
+
+Google OpenID Connect
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Visit the `Google Developers
@@ -392,17 +438,23 @@ Google and your application.Developers Console
    OAuth Client ID and Secret
    |image11|
 
-`GoogleOAuth2ClientID <#GoogleOAuth2ClientID>`__
+.. _googleoauth2clientid-label:
+
+GoogleOAuth2ClientID
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Google OAuth2 Client ID \_\_\_
 
-`GoogleOAuth2ClientSecret <#GoogleOAuth2ClientSecret>`__
+.. _googleoauth2clientsecret-label:
+
+GoogleOAuth2ClientSecret
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Google OAuth2 Client Secret \_\_\_
 
-`GoogleOpenIDConnect <#GoogleOpenIDConnect>`__
+.. _googleopenidconnect-label:
+
+GoogleOpenIDConnect
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -425,7 +477,9 @@ Values:
 
 -  Use
 
-`GoogleOpenIDConnectDomain <#GoogleOpenIDConnectDomain>`__
+.. _googleopenidconnectdomain-label:
+
+GoogleOpenIDConnectDomain
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Google OpenID Connect Restrict to domain (or subdomain of this
@@ -435,12 +489,16 @@ domain) \_\_\_.
 
     Leave blank for all google domains
 
-`Interface options <#adminprefsinterface>`__
+.. _interface-options-label:
+
+Interface options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preference are related to your Koha interface
 
-`DebugLevel <#DebugLevel>`__
+.. _debuglevel-label:
+
+DebugLevel
 ''''''''''''''''''''''''''''
 
 Default: lots of
@@ -467,7 +525,9 @@ Description:
    in working out the bugs (errors or problems) quickly. Having detailed
    error messages makes quick fixes more likely in problem areas.
 
-`DefaultToLoggedInLibraryCircRules <#DefaultToLoggedInLibraryCircRules>`__
+.. _defaulttologgedinlibrarycircrules-label:
+
+DefaultToLoggedInLibraryCircRules
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: all libraries
@@ -486,7 +546,9 @@ Description:
    found at the top of the :ref:`Circulation and Fine
    Rules`.
 
-`DefaultToLoggedInLibraryNoticesSlips <#DefaultToLoggedInLibraryNoticesSlips>`__
+.. _defaulttologgedinlibrarynoticesslips-label:
+
+DefaultToLoggedInLibraryNoticesSlips
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: all libraries
@@ -505,7 +567,9 @@ Description:
 -  This preference controls the default value in the branch pull down
    found at the top of the :ref:`Notices & Slips` tool.
 
-`DefaultToLoggedInLibraryOverdueTriggers <#DefaultToLoggedInLibraryOverdueTriggers>`__
+.. _defaulttologgedinlibraryoverduetriggers-label:
+
+DefaultToLoggedInLibraryOverdueTriggers
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: all libraries
@@ -524,7 +588,9 @@ Description:
 -  This preference controls the default value in the branch pull down
    found at the top of the :ref:`Overdue Notice/Status Triggers`.
 
-`delimiter <#delimiter>`__
+.. _delimiter-label:
+
+delimiter
 ''''''''''''''''''''''''''
 
 Default: semicolons
@@ -552,7 +618,9 @@ Description:
    separate data. In many cases you will be able to change this option
    when exporting if you'd like.
 
-`KohaAdminEmailAddress <#KohaAdminEmailAddress>`__
+.. _kohaadminemailaddress-label:
+
+KohaAdminEmailAddress
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 This is the default 'From' address for emails unless there is one for
@@ -571,7 +639,9 @@ Description:
    this purpose so that if one librarian is out the others can address
    these requests. This email address can be changed when needed.
 
-`noItemTypeImages <#noItemTypeImages>`__
+.. _noitemtypeimages-label:
+
+noItemTypeImages
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -593,7 +663,9 @@ Description:
    item types are disabled, text labels for item types will still appear
    in the OPAC and Staff Client.
 
-`ReplytoDefault <#ReplytoDefault>`__
+.. _replytodefault-label:
+
+ReplytoDefault
 ''''''''''''''''''''''''''''''''''''
 
 Asks: Use \_\_\_ as the email address that will be set as the replyto in
@@ -605,7 +677,9 @@ Description:
    address <#libraries-groups>`__, if you would like to specify a default
    email address for all replies to notices you can do that here.
 
-`ReturnpathDefault <#ReturnpathDefault>`__
+.. _returnpathdefault-label:
+
+ReturnpathDefault
 ''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use \_\_\_ as the email address set as the return path, if you
@@ -618,7 +692,9 @@ Description:
    address <#libraries-groups>`__, if you would like to specify a default
    email address for bounces to go to then fill in this preference.
 
-`virtualshelves <#virtualshelves>`__
+.. _virtualshelves-label:
+
+virtualshelves
 ''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -638,12 +714,16 @@ Description:
    allow" then no one will be able to save items to public or private
    lists.
 
-`Login options <#adminprefslogin>`__
+.. _login-options-label:
+
+Login options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preferences are related to logging into your Koha system
 
-`AutoLocation <#AutoLocation>`__
+.. _autolocation-label:
+
+AutoLocation
 ''''''''''''''''''''''''''''''''
 
 Default: Don't require
@@ -672,7 +752,9 @@ Description:
    authorized. When set to 'Don't require', anyone with a staff client
    login will have access no matter which IP address they are using.
 
-`IndependentBranches <#IndependentBranches>`__
+.. _independentbranches-label:
+
+IndependentBranches
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't prevent
@@ -709,7 +791,9 @@ Description:
     It is important that this value be set before going live and that it
     NOT be changed
 
-`IndependentBranchesPatronModifications <#IndependentBranchesPatronModifications>`__
+.. _independentbranchespatronmodifications-label:
+
+IndependentBranchesPatronModifications
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: No
@@ -724,7 +808,9 @@ Values:
 
 -  Yes
 
-`SessionRestrictionByIP <#SessionRestrictionByIP>`__
+.. _sessionrestrictionbyip-label:
+
+SessionRestrictionByIP
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Enable
@@ -753,7 +839,9 @@ Description:
     recommended otherwise because it is removing important security
     features from your staff client.
 
-`SessionStorage <#SessionStorage>`__
+.. _sessionstorage-label:
+
+SessionStorage
 ''''''''''''''''''''''''''''''''''''
 
 Default: in the MySQL database
@@ -777,7 +865,9 @@ Description:
 -  This preference allows administrators to choose what format session
    data is stored in during web sessions.
 
-`timeout <#timeout>`__
+.. _timeout-label:
+
+timeout
 ''''''''''''''''''''''
 
 Default: 12000000
@@ -792,10 +882,14 @@ Description:
    time before a session times out must be the same for both the Staff
    Client and the OPAC.
 
-`SSL client certificate authentication <#sslclientcertificateauthenticationprefs>`__
+.. _ssl-client-certificate-authentication-label:
+
+SSL client certificate authentication
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowPKIAuth <#AllowPKIAuth>`__
+.. _allowpkiauth-label:
+
+AllowPKIAuth
 ''''''''''''''''''''''''''''''''
 
 Default: no
@@ -810,10 +904,14 @@ Values:
 
 -  the email address
 
-`Search Engine <#searchengineprefs>`__
+.. _search-engine-label:
+
+Search Engine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`SearchEngine <#SearchEngine>`__
+.. _searchengine-label:
+
+SearchEngine
 ''''''''''''''''''''''''''''''''
 
 Default: Zebra
@@ -826,7 +924,9 @@ Values:
 
 -  Zebra
 
-`Share anonymous usage statistics <#heaprefs>`__
+.. _share-anonymous-usage-statistics-label:
+
+Share anonymous usage statistics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As an open source project Koha is used all over the world. These
@@ -837,7 +937,9 @@ website <http://hea.koha-community.org>`__. You will need to enable the
 :ref:`Share Usage Stats` cronjob to send this information at regular
 intervals to the community.
 
-`UsageStats <#UsageStats>`__
+.. _usagestats-label:
+
+UsageStats
 ''''''''''''''''''''''''''''
 
 Default: Don't share
@@ -857,7 +959,9 @@ Description:
    `Hea Koha community website <http://hea.koha-community.org>`__. This
    information is sent using the :ref:`Share Usage Stats` cronjob.
 
-`UsageStatsCountry <#UsageStatsCountry>`__
+.. _usagestatscountry-label:
+
+UsageStatsCountry
 ''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The country where your library is located: \_\_\_
@@ -874,21 +978,25 @@ Description:
     This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
-`UsageStatsGeolocation <#UsageStatsGeolocation>`__
+.. _usagestatsgeolocation-label:
+
+UsageStatsGeolocation
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
 
 Asks: Geolocation of the main library: \_\_\_ Note that this value has no effect
-if the `UsageStats <#UsageStats>`__ systemp preference is set to "Don't share"
+if the :ref:`UsageStats` systemp preference is set to "Don't share"
 
-`UsageStatsLibrariesInfo <#UsageStatsLibrariesInfo>`__
+.. _usagestatslibrariesinfo-label:
+
+UsageStatsLibrariesInfo
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not Share
 
 Asks: \_\_\_ libraries information (name, url, country) Note that this value
-has no effect if the `UsageStats <#UsageStats>`__ system preference is set to
+has no effect if the :ref:`UsageStats` system preference is set to
 "Don't share"
 
 Values:
@@ -897,7 +1005,9 @@ Values:
 
 -  Share
 
-`UsageStatsLibraryName <#UsageStatsLibraryName>`__
+.. _usagestatslibraryname-label:
+
+UsageStatsLibraryName
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The library name \_\_\_ will be shown on the `Hea Koha community
@@ -917,7 +1027,9 @@ Description:
     field is empty data will be sent anonymously if you choose 'Share'
     for the `UsageStats <#usagestats>`__ preference.
 
-`UsageStatsLibraryType <#UsageStatsLibraryType>`__
+.. _usagestatslibrarytype-label:
+
+UsageStatsLibraryType
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: public
@@ -959,7 +1071,9 @@ Description:
     This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
-`UsageStatsLibraryUrl <#UsageStatsLibraryUrl>`__
+.. _usagestatslibraryurl-label:
+
+UsageStatsLibraryUrl
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The library URL \_\_\_ will be shown on the `Hea Koha community
@@ -977,16 +1091,22 @@ Description:
     This preference depends on the `UsageStats <#usagestats>`__
     preference. Set that to 'Share' to share your information.
 
-`Authorities <#authprefs>`__
+.. _authorities-label:
+
+Authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences >
 Authorities
 
-`General <#generalauthorities>`__
+.. _general-label:
+
+General
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AuthDisplayHierarchy <#AuthDisplayHierarchy>`__
+.. _authdisplayhierarchy-label:
+
+AuthDisplayHierarchy
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -1009,7 +1129,9 @@ Description:
    to broader and/or narrower see also references this preference will
    turn on a display of those authorities at the top of the record.
 
-`AuthorityMergeLimit <#AuthorityMergeLimit>`__
+.. _authoritymergelimit-label:
+
+AuthorityMergeLimit
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 50
@@ -1018,7 +1140,9 @@ Asks: When modifying an authority record, do not update attached biblio
 records if the number exceeds \_\_\_ records. (Above this limit, the merge_authority
 cron job will merge them.)
 
-`AuthorityMergeMode <#AuthorityMergeMode>`__
+.. _authoritymergemode-label:
+
+AuthorityMergeMode
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: loose
@@ -1034,7 +1158,9 @@ Values:
 
 -  strict
 
-`AutoCreateAuthorities <#AutoCreateAuthorities>`__
+.. _autocreateauthorities-label:
+
+AutoCreateAuthorities
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: do not generate
@@ -1062,7 +1188,9 @@ Description:
    to enter headings that don't match an existing authority. When
    BiblioAddsAuthorities is off, this has no effect.
 
-`BiblioAddsAuthorities <#BiblioAddsAuthorities>`__
+.. _biblioaddsauthorities-label:
+
+BiblioAddsAuthorities
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: allow
@@ -1084,7 +1212,9 @@ Values:
       you to search for an authority versus allowing you to type the
       information in yourself.
 
-`MARCAuthorityControlField008 <#MARCAuthorityControlField008>`__
+.. _marcauthoritycontrolfield008-label:
+
+MARCAuthorityControlField008
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: \|\| aca\|\|aabn \| a\|a d
@@ -1103,7 +1233,9 @@ Description:
 -  This preference controls the default value in the 008 field on
    Authority records. It does not effect bibliographic records.
 
-`UNIMARCAuthorityField100 <#UNIMARCAuthorityField100>`__
+.. _unimarcauthorityfield100-label:
+
+UNIMARCAuthorityField100
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: afrey50 ba0
@@ -1123,7 +1255,9 @@ Description:
    Authority records cataloged in UNIMARC. It does not effect
    bibliographic records.
 
-`UseAuthoritiesForTracings <#UseAuthoritiesForTracings>`__
+.. _useauthoritiesfortracings-label:
+
+UseAuthoritiesForTracings
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -1154,7 +1288,9 @@ Description:
    perform a keyword search against those fields, finding all possible
    relevant results instead.
 
-`Linker <#linkerauthorities>`__
+.. _linker-label:
+
+Linker
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preferences will control how Koha links bibliographic records to
@@ -1164,7 +1300,9 @@ records added before these preferences are set there is a script
 (misc/link\_bibs\_to\_authorities.pl) that your system administrator can
 run to link records together.
 
-`CatalogModuleRelink <#CatalogModuleRelink>`__
+.. _catalogmodulerelink-label:
+
+CatalogModuleRelink
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not
@@ -1192,7 +1330,9 @@ Description:
    linking should set CatalogModuleRelink to 'Do'. Once setting this to
    'Do' the following preferences can also be set.
 
-`LinkerKeepStale <#LinkerKeepStale>`__
+.. _linkerkeepstale-label:
+
+LinkerKeepStale
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Do not
@@ -1210,9 +1350,11 @@ Description:
 
 -  When set to 'Do', the linker will never remove a link to an authority
    record, though, depending on the value of
-   `LinkerRelink <#LinkerRelink>`__, it may change the link.
+   :ref:`LinkerRelink`, it may change the link.
 
-`LinkerModule <#LinkerModule>`__
+.. _linkermodule-label:
+
+LinkerModule
 ''''''''''''''''''''''''''''''''
 
 Default: Default
@@ -1226,7 +1368,7 @@ Values:
 
    -  Retains Koha's previous behavior of only creating links when there
       is an exact match to one and only one authority record; if the
-      `LinkerOptions <#LinkerOptions>`__ preference is set to
+      :ref:`LinkerOptions` preference is set to
       'broader\_headings', it will try to link headings to authority
       records for broader headings by removing subfields from the end of
       the heading
@@ -1247,7 +1389,9 @@ Description:
 -  This preference tells Koha which match to use when searching for
    authority matches when saving a record.
 
-`LinkerOptions <#LinkerOptions>`__
+.. _linkeroptions-label:
+
+LinkerOptions
 ''''''''''''''''''''''''''''''''''
 
 Asks: Set the following options for the authority linker \_\_\_
@@ -1278,7 +1422,9 @@ Description:
    Next: Camins-Esakov, Jared (matches! if a previous attempt had
    matched, it would not have tried this)
 
-`LinkerRelink <#LinkerRelink>`__
+.. _linkerrelink-label:
+
+LinkerRelink
 ''''''''''''''''''''''''''''''''
 
 Default: Do
@@ -1300,16 +1446,22 @@ Description:
    heading with an existing link will be ignored, even if the existing
    link is invalid or incorrect.
 
-`Cataloging <#catprefs>`__
+.. _cataloging-label:
+
+Cataloging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences >
 Cataloging
 
-`Display <#catdisplayprefs>`__
+.. _display-label:
+
+Display
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AcquisitionDetails <#AcquisitionDetails>`__
+.. _acquisitiondetails-label:
+
+AcquisitionDetails
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Display
@@ -1329,7 +1481,9 @@ Description:
    for the title. This tab will include links to order information
    stored in the acquisitions module.
 
-`AuthoritySeparator <#authoritysep>`__
+.. _authorityseparator-label:
+
+AuthoritySeparator
 ''''''''''''''''''''''''''''''''''''''
 
 Default: --
@@ -1337,7 +1491,9 @@ Default: --
 Asks: Separate multiple displayed authors, series or subjects with
 \_\_\_.
 
-`hide\_marc <#hide_marc>`__
+.. _hide\_marc-label:
+
+hide\_marc
 '''''''''''''''''''''''''''
 
 Default: Display
@@ -1357,7 +1513,9 @@ Values:
    MARC editor without tags showing
    |image16|
 
-`IntranetBiblioDefaultView <#IntranetBiblioDefaultView>`__
+.. _intranetbibliodefaultview-label:
+
+IntranetBiblioDefaultView
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: ISBD form
@@ -1369,7 +1527,7 @@ Values:
 -  ISBD form -- displays records in the staff client in the old card
    catalog format
 
-   -  See `ISBD <#isbdpref>`__ preference for more information
+   -  See :ref:`ISBD` preference for more information
 
 -  Labelled MARC form -- displays records in the staff client in MARC
    with text labels to explain the different fields
@@ -1384,16 +1542,18 @@ Description:
 -  This setting determines the bibliographic record display when
    searching the catalog on the staff client. This setting does not
    affect the display in the OPAC which is changed using the
-   `BiblioDefaultView <#BiblioDefaultView>`__ preference under the OPAC
+   :ref:`BiblioDefaultView` preference under the OPAC
    preference tab. This setting changes the look of the record when
    first displayed. The MARC and ISBD views can still be seen by
    clicking in the sidebar.
 
-`ISBD <#isbdpref>`__
+.. _isbd-label:
+
+ISBD
 ''''''''''''''''''''
 
-Default: `MARC21 Default Appendix <#isbddefault>`__ or `UNIMARC Default
-Appendix <#unimarcdefault>`__
+Default: :ref:`MARC21 Default Appendix <marc-default-label>` or :ref:`UNIMARC Default
+Appendix <unimarc-default-label>`
 
 Asks: Use the following as the ISBD template:
 
@@ -1408,7 +1568,9 @@ Description:
    international exchange of bibliographic records for a variety of
    materials.
 
-`LabelMARCView <#LabelMARCView>`__
+.. _labelmarcview-label:
+
+LabelMARCView
 ''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -1429,7 +1591,9 @@ Values:
    MARC View in the Staff Client with LabelMARCView set to Don't
    |image18|
 
-`MergeReportFields <#MergeReportFields>`__
+.. _mergereportfields-label:
+
+MergeReportFields
 ''''''''''''''''''''''''''''''''''''''''''
 
 Asks: \_\_\_ fields to display for deleted records after merge
@@ -1448,7 +1612,9 @@ Example: '001,245ab,600' displays:
 
 -  all subfields of fields 600
 
-`NotesBlacklist <#NotesBlacklist>`__
+.. _notesblacklist-label:
+
+NotesBlacklist
 ''''''''''''''''''''''''''''''''''''
 
 Asks: Don't show these \_\_\_ note fields in title notes separator (OPAC
@@ -1462,7 +1628,9 @@ Description:
    values as a comma separated list. For example to hide the local note
    and the bibliography note in MARC21 enter 504, 590.
 
-`OpacSuppression, OpacSuppressionByIPRange, OpacSuppressionRedirect, and OpacSuppressionMessage <#OpacSuppression>`__
+.. _opacsuppression,-opacsuppressionbyiprange,-opacsuppressionredirect,-and-opacsuppressionmessage-label:
+
+OpacSuppression, OpacSuppressionByIPRange, OpacSuppressionRedirect, and OpacSuppressionMessage
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 OpacSuppression Default: Don't hide
@@ -1512,7 +1680,7 @@ Description:
 
        **Note**
 
-       An `authorized value <#authorizedvalues>`__ for the MARC21 942$n
+       An :ref:`authorized value <authorized-values-label>` for the MARC21 942$n
        field (or the equivalent UNIMARC field) should be set to
        eliminate errors. One example would be to create an authorized
        value titled SUPPRESS with a value of 0 for don't suppress and 1
@@ -1530,10 +1698,12 @@ Description:
     that they are suppressed from view in the OPAC.Suppressed in Staff
 
     This note can be styled by using the
-    `IntranetUserCSS <#IntranetUserCSS>`__ preference to stand out more
+    :ref:`IntranetUserCSS` preference to stand out more
     if you'd like.Style suppression note
 
-`SeparateHoldings & SeparateHoldingsBranch <#SeparateHoldings>`__
+.. _separateholdings-&-separateholdingsbranch-label:
+
+SeparateHoldings & SeparateHoldingsBranch
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 SeparateHoldings default: Don't separate
@@ -1566,7 +1736,9 @@ Description:
    Separate holdings tabs
    |image19|
 
-`URLLinkText <#URLLinkText>`__
+.. _urllinktext-label:
+
+URLLinkText
 ''''''''''''''''''''''''''''''
 
 Default: Online Resource
@@ -1579,7 +1751,9 @@ Description:
    will say 'Click here to access online.' If you would like the field
    to say something else enter that in this field.
 
-`UseControlNumber <#UseControlNumber>`__
+.. _usecontrolnumber-label:
+
+UseControlNumber
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -1606,7 +1780,7 @@ Values:
     Unless you are going in and manually changing 773$w to match your
     rigorously-defined bibliographic relationships, you should set this
     preference to "Don't use" and instead set
-    `EasyAnalyticalRecords <#EasyAnalyticalRecords>`__ to "Display"
+    :ref:`EasyAnalyticalRecords` to "Display"
 
 Description:
 
@@ -1634,10 +1808,14 @@ Description:
    "Journal of Interesting Things" and "Transactions of the Interesting
    Stuff Society" respectively.
 
-`Exporting <#catexportprefs>`__
+.. _exporting-label:
+
+Exporting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`BibtexExportAdditionalFields <#BibtexExportAdditionalFields>`__
+.. _bibtexexportadditionalfields-label:
+
+BibtexExportAdditionalFields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include following fields when exporting BibTeX
@@ -1657,7 +1835,9 @@ Description:
 -  Use '@' ( with quotes ) as the BT\_TAG to replace the bibtex record
    type with a field value of your choosing.
 
-`RisExportAdditionalFields <#RisExportAdditionalFields>`__
+.. _risexportadditionalfields-label:
+
+RisExportAdditionalFields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include following fields when exporting RIS
@@ -1677,10 +1857,14 @@ Description:
 -  Use of TY ( record type ) as a key will *replace* the default TY with
    the field value of your choosing.
 
-`Importing <#catimportprefs>`__
+.. _importing-label:
+
+Importing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AggressiveMatchOnISBN <#AggressiveMatchOnISBN>`__
+.. _aggressivematchonisbn-label:
+
+AggressiveMatchOnISBN
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't
@@ -1707,9 +1891,11 @@ Description:
     **Important**
 
     Note that this preference has no effect if
-    `UseQueryParser <#UseQueryParser>`__ is on.
+    :ref:`UseQueryParser` is on.
 
-`AggressiveMatchOnISSN <#AggressiveMatchOnISSN>`__
+.. _aggressivematchonissn-label:
+
+AggressiveMatchOnISSN
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't
@@ -1717,12 +1903,16 @@ Default: don't
 Asks: When matching on ISSN with the record import tool, \_\_\_ attempt
 to match aggressively by trying all variations of the ISSNs in the imported
 record as a phrase in the ISSN fields of already cataloged records. Note that
-this preference has no effect if `UseQueryParser <#UseQueryParser>`__ is on.
+this preference has no effect if :ref:`UseQueryParser` is on.
 
-`Interface <#catinterfaceprefs>`__
+.. _interface-label:
+
+Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`advancedMARCeditor <#advancedMARCeditor>`__
+.. _advancedmarceditor-label:
+
+advancedMARCeditor
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -1746,7 +1936,9 @@ Values:
    MARC editor without text labels
    |image21|
 
-`DefaultClassificationSource <#DefaultClassificationSource>`__
+.. _defaultclassificationsource-label:
+
+DefaultClassificationSource
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Dewey Decimal System
@@ -1772,7 +1964,9 @@ Values:
     Adding another classification under Administration > Classification Sources
     will make it show up in this list as well.
 
-`EasyAnalyticalRecords <#EasyAnalyticalRecords>`__
+.. _easyanalyticalrecords-label:
+
+EasyAnalyticalRecords
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't Display
@@ -1788,7 +1982,7 @@ Values:
     **Important**
 
     If you decide to use this feature you'll want to make sure that your
-    `UseControlNumber <#UseControlNumber>`__ preference is set to "Don't
+    :ref:`UseControlNumber` preference is set to "Don't
     use" or else the "Show analytics" links in the staff client and the
     OPAC will be broken.
 
@@ -1804,10 +1998,14 @@ Description:
    new menu options to the staff cataloging detail pages to allow that
    to happen.
 
-`Record Structure <#catrecordprefs>`__
+.. _record-structure-label:
+
+Record Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AlternateHoldingsField & AlternateHoldingsSeparator <#AlternateHoldingsField>`__
+.. _alternateholdingsfield-&-alternateholdingsseparator-label:
+
+AlternateHoldingsField & AlternateHoldingsSeparator
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Display MARC subfield \_\_\_ as holdings information for records
@@ -1833,7 +2031,9 @@ Description:
    Alternate Holdings Display
    |image22|
 
-`autoBarcode <#autoBarcode>`__
+.. _autobarcode-label:
+
+autoBarcode
 ''''''''''''''''''''''''''''''
 
 Default: generated in the form <branchcode>yymm0001
@@ -1864,10 +2064,12 @@ Description:
    field in the framework. Set the plugin for 952$p (if using MARC21 or
    equivalent field mapped to items.barcode in your local MARC format)
    for your frameworks to barcode\_manual.pl instead of barcode.pl.
-   Learn more about editing frameworks under the `MARC Bibliographic
-   Frameworks <#marcbibframeworks>`__ section of this manual.
+   Learn more about editing frameworks under the :ref:`MARC Bibliographic
+   Frameworks <marc-bibliographic-frameworks-label>` section of this manual.
 
-`DefaultLanguageField008 <#DefaultLanguageField008>`__
+.. _defaultlanguagefield008-label:
+
+DefaultLanguageField008
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Empty defaults to eng
@@ -1888,7 +2090,9 @@ Description:
     This preference won't have any effect if your records are in
     UNIMARC.
 
-`item-level\_itypes <#item-level_itypes>`__
+.. _item-level\_itypes-label:
+
+item-level\_itypes
 '''''''''''''''''''''''''''''''''''''''''''
 
 Default: specific item
@@ -1915,7 +2119,9 @@ Description:
    Item Type Icons to the Left of Result Information
    |image23|
 
-`itemcallnumber <#itemcallnumber>`__
+.. _itemcallnumber-label:
+
+itemcallnumber
 ''''''''''''''''''''''''''''''''''''
 
 Default: 082ab
@@ -1940,7 +2146,9 @@ Examples:
 -  Dewey: 082ab or 092ab; LOC: 050ab or 090ab; from the item record:
    852hi
 
-`marcflavour <#marcflavour>`__
+.. _marcflavour-label:
+
+marcflavour
 ''''''''''''''''''''''''''''''
 
 Default: MARC21
@@ -1973,7 +2181,9 @@ Description:
     Changing the value of this preference will not convert your records
     from one MARC style to an other.
 
-`MARCOrgCode <#MARCOrgCode>`__
+.. _marcorgcode-label:
+
+MARCOrgCode
 ''''''''''''''''''''''''''''''
 
 Default: OSt
@@ -1997,13 +2207,17 @@ Directory <http://www.collectionscanada.gc.ca/illcandir-bin/illsear/l=0/c=1>`__.
     This preference won't have any effect if your records are in
     UNIMARC.
 
-`NewItemsDefaultLocation <#NewItemsDefaultLocation>`__
+.. _newitemsdefaultlocation-label:
+
+NewItemsDefaultLocation
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: When items are created, give them the temporary location of \_\_\_
 (should be a location code, or blank to disable).
 
-`PrefillItem <#PrefillItem>`__
+.. _prefillitem-label:
+
+PrefillItem
 ''''''''''''''''''''''''''''''
 
 Default: the new item is not prefilled with last created item values.
@@ -2022,10 +2236,12 @@ Description:
    Using the options here you can choose to have your next new item
    prefill with the values used in the last item was added to save time
    typing values or to have the item form appear completely blank. Using
-   `SubfieldsToUseWhenPrefill <#SubfieldsToUseWhenPrefill>`__ you can
+   :ref:`SubfieldsToUseWhenPrefill` you can
    control specifically which fields are prefilled.
 
-`SubfieldsToAllowForRestrictedBatchmod <#SubfieldsToAllowForRestrictedBatchmod>`__
+.. _subfieldstoallowforrestrictedbatchmod-label:
+
+SubfieldsToAllowForRestrictedBatchmod
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Define a list of subfields for which editing is authorized when
@@ -2041,7 +2257,7 @@ Examples:
 Description:
 
 -  This preference lets you define what fields can be edited via the
-   `batch item modification tool <#batchmodifyitems>`__ if the
+   :ref:`batch item modification tool <batch-item-modification-label>` if the
    items\_batchmod\_restricted permission is enabled.
 
        **Note**
@@ -2049,7 +2265,9 @@ Description:
        The FA framework is excluded from the permission. If the pref is
        empty, no fields are restricted.
 
-`SubfieldsToAllowForRestrictedEditing <#SubfieldsToAllowForRestrictedEditing>`__
+.. _subfieldstoallowforrestrictedediting-label:
+
+SubfieldsToAllowForRestrictedEditing
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Define a list of subfields for which editing is authorized when
@@ -2074,7 +2292,9 @@ Description:
        The Fast Add (FA) framework is excluded from the permission. If
        the pref is empty, no fields are restricted.
 
-`SubfieldsToUseWhenPrefill <#SubfieldsToUseWhenPrefill>`__
+.. _subfieldstousewhenprefill-label:
+
+SubfieldsToUseWhenPrefill
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Define a list of subfields to use when prefilling items \_\_\_
@@ -2085,13 +2305,15 @@ Asks: Define a list of subfields to use when prefilling items \_\_\_
 
 Description:
 
--  When the `PrefillItem <#PrefillItem>`__ preference is set to prefill
+-  When the :ref:`PrefillItem` preference is set to prefill
    item values with those from the last added item, this preference can
    control which fields are prefilled (and which are not). Enter a space
    separated list of fields that you would like to prefill when adding a
    new item.
 
-`UNIMARCField100Language <#UNIMARCField100Language>`__
+.. _unimarcfield100language-label:
+
+UNIMARCField100Language
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: fre
@@ -2099,7 +2321,9 @@ Default: fre
 Asks: Use the language (ISO 690-2) \_\_\_ as default language in the
 UNIMARC field 100 when creating a new record or in the field plugin.
 
-`z3950NormalizeAuthor & z3950AuthorAuthFields <#z3950NormalizeAuthor>`__
+.. _z3950normalizeauthor-&-z3950authorauthfields-label:
+
+z3950NormalizeAuthor & z3950AuthorAuthFields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Defaults: Don't copy & 701,702,700
@@ -2128,10 +2352,14 @@ Description for z3950AuthorAuthFields:
    'z3950NormalizeAuthor' is set to "Copy". The default field are 700,
    701, and 702.
 
-`Spine Labels <#catspineprefs>`__
+.. _spine-labels-label:
+
+Spine Labels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`SpineLabelAutoPrint <#SpineLabelAutoPrint>`__
+.. _spinelabelautoprint-label:
+
+SpineLabelAutoPrint
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't
@@ -2145,7 +2373,9 @@ Values:
 
 -  don't
 
-`SpineLabelFormat <#SpineLabelFormat>`__
+.. _spinelabelformat-label:
+
+SpineLabelFormat
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: <itemcallnumber><copynumber>
@@ -2154,7 +2384,9 @@ Asks: Include the following fields on a quick-printed spine label:
 (Enter in columns from the biblio, biblioitems or items tables,
 surrounded by < and >.)
 
-`SpineLabelShowPrintOnBibDetails <#SpineLabelShowPrintOnBibDetails>`__
+.. _spinelabelshowprintonbibdetails-label:
+
+SpineLabelShowPrintOnBibDetails
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -2171,7 +2403,9 @@ Values:
 
 -  Don't display
 
-`Circulation <#circprefs>`__
+.. _circulation-label:
+
+Circulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences >
@@ -2180,10 +2414,14 @@ Circulation
 
 
 
-`Article Requests <#articlerequestsprefs>`__
+.. _article-requests-label:
+
+Article Requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`ArticleRequests <#ArticleRequests>`__
+.. _articlerequests-label:
+
+ArticleRequests
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -2200,7 +2438,9 @@ Description:
 
 -  This preference controls whether or not article requests are allowed to be placed by patrons in the OPAC.
 
-`ArticleRequestsMandatoryFields <#ArticleRequestsMandatoryFields>`__
+.. _articlerequestsmandatoryfields-label:
+
+ArticleRequestsMandatoryFields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: None selected
@@ -2232,7 +2472,9 @@ Description:
    listed (Author, Chapters, Date, Issue, Pages, Title, Volume) must be completed before the article
    request can be placed.
 
-`ArticleRequestsMandatoryFieldsItemsOnly <#ArticleRequestsMandatoryFieldsItemsOnly>`__
+.. _articlerequestsmandatoryfieldsitemsonly-label:
+
+ArticleRequestsMandatoryFieldsItemsOnly
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: None selected
@@ -2264,7 +2506,9 @@ Description:
    listed (Author, Chapters, Date, Issue, Pages, Title, Volume) must be completed before the article
    request can be placed.
 
-`ArticleRequestsMandatoryFieldsRecordOnly <#ArticleRequestsMandatoryFieldsRecordOnly>`__
+.. _articlerequestsmandatoryfieldsrecordonly-label:
+
+ArticleRequestsMandatoryFieldsRecordOnly
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: None selected
@@ -2297,10 +2541,14 @@ Description:
    request can be placed.
 
 
-`Batch Checkout <#batchcheckoutprefs>`__
+.. _batch-checkout-label:
+
+Batch Checkout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`BatchCheckouts <#BatchCheckouts>`__
+.. _batchcheckouts-label:
+
+BatchCheckouts
 ''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -2313,16 +2561,22 @@ Values:
 
 -  Don't allow
 
-`BatchCheckoutsValidCategories <#BatchCheckoutsValidCategories>`__
+.. _batchcheckoutsvalidcategories-label:
+
+BatchCheckoutsValidCategories
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Patron categories allowed to checkout in a batch \_\_\_ (list of
 patron categories separated with a pipe '\|')
 
-`Checkin Policy <#checkinpolicyprefs>`__
+.. _checkin-policy-label:
+
+Checkin Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`BlockReturnOfWithdrawnItems <#BlockReturnOfWithdrawnItems>`__
+.. _blockreturnofwithdrawnitems-label:
+
+BlockReturnOfWithdrawnItems
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Block
@@ -2340,7 +2594,9 @@ Description:
 -  This preference controls whether and item with a withdrawn status
    (952$0 in MARC21) can be checked in or not.
 
-`CalculateFinesOnReturn <#CalculateFinesOnReturn>`__
+.. _calculatefinesonreturn-label:
+
+CalculateFinesOnReturn
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do
@@ -2356,8 +2612,8 @@ Values:
 
 Description:
 
--  If this preference is set to "Do" and the `fines cron
-   job <#finescronjob>`__ is off then Koha will calculate fines only
+-  If this preference is set to "Do" and the :ref:`fines cron
+   job <fines-label>` is off then Koha will calculate fines only
    when items are returned. If you have the fines cron job on and this
    preference set to "Do" then this preference will calculate fines
    based on the cron (usually run nightly) and then again when you check
@@ -2369,7 +2625,9 @@ Description:
 
     If you are doing hourly loans then you should have this set to 'Do'.
 
-`CumulativeRestrictionPeriods <#CumulativeRestrictionPeriods>`__
+.. _cumulativerestrictionperiods-label:
+
+CumulativeRestrictionPeriods
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't cumulate
@@ -2382,7 +2640,9 @@ Values:
 
 -  Cumulate
 
-`UpdateNotForLoanStatusOnCheckin <#UpdateNotForLoanStatusOnCheckin>`__
+.. _updatenotforloanstatusoncheckin-label:
+
+UpdateNotForLoanStatusOnCheckin
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: This is a list of value pairs. When an item is checked in, if the
@@ -2391,10 +2651,14 @@ will be updated to the right-hand value. E.g. '-1: 0' will cause an item
 that was set to 'Ordered' to now be available for loan. Each pair of
 values should be on a separate line.
 
-`Checkout Policy <#circcheckoutpolicy>`__
+.. _checkout-policy-label:
+
+Checkout Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AgeRestrictionMarker <#AgeRestrictionMarker>`__
+.. _agerestrictionmarker-label:
+
+AgeRestrictionMarker
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Restrict patrons with the following target audience values from
@@ -2404,15 +2668,15 @@ Description:
 
 -  This preference defines certain keywords that will trigger Koha to
    restrict checkout based on age. These restrictions can be overridden
-   by the `AgeRestrictionOverride <#AgeRestrictionOverride>`__
+   by the :ref:`AgeRestrictionOverride`
    preference. Enter in this field a series of keywords separated by bar
    (\|) with no spaces. For example PG\|R\|E\|EC\|Age\| will look for PG
    followed by an age number, R folllowed by an age number, Age followed
    by an age number, and so on. These values can appear in any MARC
    field, but Library of Congress recommends the 521$a (Target Audience
    Note). Whatever field you decide to use you must map the word
-   agerestriction in the biblioitems table to that field in the `Koha to
-   MARC Mapping <#kohamarcmapping>`__. When cataloging you can enter
+   agerestriction in the biblioitems table to that field in the :ref:`Koha to
+   MARC Mapping <koha-to-marc-mapping-label>`. When cataloging you can enter
    values like PG 13 or E 10 in the 521$a and Koha will then notify
    circulation librarians that the material may not be recommended for
    the patron based on their age.
@@ -2420,10 +2684,12 @@ Description:
        **Important**
 
        You must map the word agerestriction in the biblioitems table to
-       the MARC field where this information will appear via the `Koha
-       to MARC Mapping <#kohamarcmapping>`__ administration area.
+       the MARC field where this information will appear via the :ref:`Koha
+       to MARC Mapping <koha-to-marc-mapping-label>` administration area.
 
-`AgeRestrictionOverride <#AgeRestrictionOverride>`__
+.. _agerestrictionoverride-label:
+
+AgeRestrictionOverride
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -2444,19 +2710,21 @@ Values:
 
 Description:
 
--  When the `AgeRestrictionMarker <#AgeRestrictionMarker>`__ preference
+-  When the :ref:`AgeRestrictionMarker` preference
    is set, Koha will try to warn circulation librarians before checking
    out an item that might have an age restriction listed in the MARC
    record. This preference asks if you would like the staff to be able
    to still check out these items to patrons under the age limit.
 
-`AllFinesNeedOverride <#AllFinesNeedOverride>`__
+.. _allfinesneedoverride-label:
+
+AllFinesNeedOverride
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Require
 
 Asks: \_\_\_ staff to manually override all fines, even fines less than
-`noissuescharge <#noissuescharge>`__.
+:ref:`noissuescharge`.
 
 Values:
 
@@ -2471,13 +2739,15 @@ Description:
    'Require' then no matter how much money the patron owes a message
    will pop up warning you that the patron owes money.
 
-`AllowFineOverride <#AllowFineOverride>`__
+.. _allowfineoverride-label:
+
+AllowFineOverride
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
 
 Asks: \_\_\_ staff to manually override and check out items to patrons
-who have more than `noissuescharge <#noissuescharge>`__ in fines.
+who have more than :ref:`noissuescharge` in fines.
 
 Values:
 
@@ -2492,7 +2762,9 @@ Description:
    If set to 'Allow' staff will be warned that the patrons owes money,
    but it won't stop the staff from checking out to the patron.
 
-`AllowItemsOnHoldCheckout <#AllowItemsOnHoldCheckout>`__
+.. _allowitemsonholdcheckout-label:
+
+AllowItemsOnHoldCheckout
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -2520,7 +2792,9 @@ Description:
    prevent people from checking out books that are on hold for someone
    else set this preference to "Don't allow."
    
-`AllowItemsOnHoldCheckoutSCO <#AllowItemsOnHoldCheckoutSCO>`__
+.. _allowitemsonholdcheckoutsco-label:
+
+AllowItemsOnHoldCheckoutSCO
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -2547,7 +2821,9 @@ Description:
    prevent people from checking out books that are on hold for someone
    else set this preference to "Don't allow".
 
-`AllowMultipleIssuesOnABiblio <#AllowMultipleIssuesOnABiblio>`__
+.. _allowmultipleissuesonabiblio-label:
+
+AllowMultipleIssuesOnABiblio
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -2573,7 +2849,9 @@ Description:
 
        This will only effect records without a subscription attached.
 
-`AllowNotForLoanOverride <#AllowNotForLoanOverride>`__
+.. _allownotforloanoverride-label:
+
+AllowNotForLoanOverride
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -2597,7 +2875,9 @@ Description:
    items meant to stay in the library, such as reference materials, and
    other library resources can be checked out by patrons.
 
-`AllowRenewalLimitOverride <#AllowRenewalLimitOverride>`__
+.. _allowrenewallimitoverride-label:
+
+AllowRenewalLimitOverride
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -2622,7 +2902,9 @@ Description:
    for special cases, setting it to "Don't allow" prevents an
    opportunity for abuse by the library staff.
 
-`AllowReturnToBranch <#AllowReturnToBranch>`__
+.. _allowreturntobranch-label:
+
+AllowReturnToBranch
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: to any library
@@ -2649,7 +2931,9 @@ Description:
    allow you to limit item returns (checkins) to the branch(es) set in
    the value.
 
-`AllowTooManyOverride <#AllowTooManyOverride>`__
+.. _allowtoomanyoverride-label:
+
+AllowTooManyOverride
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -2673,11 +2957,13 @@ Description:
 
 -  If this preference is set to "Allow" then staff all will be presented
    with an option to checkout more items to a patron than are normally
-   allowed in the `Circulation and Fine Rules <#circfinerules>`__. If
+   allowed in the :ref:`Circulation and Fine Rules`. If
    this preference is set to "Don't allow" then no staff member will be
    able to check out more than the circulation limit.
 
-`AutomaticItemReturn <#AutomaticItemReturn>`__
+.. _automaticitemreturn-label:
+
+AutomaticItemReturn
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do
@@ -2702,7 +2988,9 @@ Description:
    ensure that items checked in at a branch other than their home branch
    will be sent to that home branch.
 
-`AutoRemoveOverduesRestrictions <#AutoRemoveOverduesRestrictions>`__
+.. _autoremoveoverduesrestrictions-label:
+
+AutoRemoveOverduesRestrictions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not
@@ -2718,13 +3006,15 @@ Values:
 
 Description:
 
--  Using the `Overdue Notice/Status Triggers <#noticetriggers>`__ you
+-  Using the :ref:`Overdue Notice/Status Triggers` you
    can restrict patrons after they receive an overdue notice. This
    preference lets you define whether Koha will automatically remove
    that restriction once the overdue items in question are returned or
    not.
 
-`CircControl <#CircControl>`__
+.. _circcontrol-label:
+
+CircControl
 ''''''''''''''''''''''''''''''
 
 Default: the library the item is from
@@ -2735,22 +3025,24 @@ Values:
 
 -  the library the item is from
 
-   -  The `circulation and fines policies <#circfinerules>`__ will be
+   -  The :ref:`circulation and fines policies <circulation-and-fine-rules-label>` will be
       determined by the item's library where
-      `HomeOrHoldingBranch <#HomeOrHoldingBranch>`__ chooses if item's
+      :ref:`HomeOrHoldingBranch` chooses if item's
       home library is used or holding library is used.
 
 -  the library the patron is from
 
-   -  The `circulation and fines policies <#circfinerules>`__ will be
+   -  The :ref:`circulation and fines policies <circulation-and-fine-rules-label>` will be
       determined the patron's home library
 
 -  the library you are logged in at
 
-   -  The `circulation and fines policies <#circfinerules>`__ will be
+   -  The :ref:`circulation and fines policies <circulation-and-fine-rules-label>` will be
       determined by the library that checked the item out to the patron
 
-`ConsiderOnSiteCheckoutsAsNormalCheckouts <#ConsiderOnSiteCheckoutsAsNormalCheckouts>`__
+.. _consideronsitecheckoutsasnormalcheckouts-label:
+
+ConsiderOnSiteCheckoutsAsNormalCheckouts
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Consider
@@ -2768,12 +3060,14 @@ Values:
 Description:
 
 -  This preference allows you to decide if checkouts that are
-   `OnSiteCheckouts <#OnSiteCheckouts>`__ are counted toward the total
-   checkouts a patron can have. You can also set your `circulation and
-   fine rules <#circfinerules>`__ to allow only a certain number of
+   :ref:`OnSiteCheckouts` are counted toward the total
+   checkouts a patron can have. You can also set your :ref:`circulation and
+   fine rules <circulation-and-fine-rules-label>` to allow only a certain number of
    normal and OnSite checkouts.
 
-`DefaultLongOverdueChargeValue <#DefaultLongOverdueChargeValue>`__
+.. _defaultlongoverduechargevalue-label:
+
+DefaultLongOverdueChargeValue
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Charge a lost item to the borrower's account when the LOST value
@@ -2784,11 +3078,13 @@ Description:
 -  Leave this field empty if you don't want to charge the user for lost
    items. If you want the user to be charged enter the `LOST authorized
    value <#lost>`__ you are using in the
-   `DefaultLongOverdueLostValue <#DefaultLongOverdueLostValue>`__
-   preference. This preference is used when the `longoverdue cron
-   job <#longoverduecron>`__ is called without the --charge parameter.
+   :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>`
+   preference. This preference is used when the :ref:`longoverdue cron
+   job <long-overdues-label>` is called without the --charge parameter.
 
-`DefaultLongOverdueLostValue & DefaultLongOverdueDays <#DefaultLongOverdueLostValue>`__
+.. _defaultlongoverduelostvalue-&-defaultlongoverduedays-label:
+
+DefaultLongOverdueLostValue & DefaultLongOverdueDays
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: By default, set the LOST value of an item to \_\_\_ when the item
@@ -2796,15 +3092,17 @@ has been overdue for more than \_\_\_ days.
 
 Description:
 
--  These preferences are used when the `longoverdue cron
-   job <#longoverduecron>`__ is called without the --lost parameter. It
-   allows users to set the values of the `longoverdue
-   cron <#longoverduecron>`__ without having to edit the crontab.
+-  These preferences are used when the :ref:`longoverdue cron
+   job <long-overdues-label>` is called without the --lost parameter. It
+   allows users to set the values of the :ref:`longoverdue
+   cron <long-overdues-label>` without having to edit the crontab.
    Setting the values to 1 and 30 for example will mark the item with
    the `LOST authorized value <#lost>`__ of 1 after the item is 30 days
    overdue.
 
-`HoldsInNoissuesCharge <#HoldsInNoissuesCharge>`__
+.. _holdsinnoissuescharge-label:
+
+HoldsInNoissuesCharge
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't include
@@ -2817,7 +3115,9 @@ Values:
 
 -  Include
 
-`HomeOrHoldingBranch <#HomeOrHoldingBranch>`__
+.. _homeorholdingbranch-label:
+
+HomeOrHoldingBranch
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: the library the item was checked out from
@@ -2838,17 +3138,17 @@ Description:
 
 -  This preference does several things.
 
-   -  If `CircControl <#CircControl>`__ is set to 'the library the item
-      is from' then the `circulation and fines
-      policies <#circfinerules>`__ will be determined by the item's
+   -  If :ref:`CircControl` is set to 'the library the item
+      is from' then the :ref:`circulation and fines
+      policies <circulation-and-fine-rules-label>` will be determined by the item's
       library where HomeOrHoldingBranch chooses if item's home library
       is used or holding library is used.
 
-   -  If `IndependentBranches <#IndependentBranches>`__ is set to
+   -  If :ref:`IndependentBranches` is set to
       'Prevent' then the value of this preference is used in figuring
       out if the item can be checked out. If the item's home library
       does not match the logged in library, the item cannot be checked
-      out unless you are a `superlibrarian <#patronpermsdefined>`__.
+      out unless you are a :ref:`superlibrarian <patron-permissions-defined-label>`.
 
     **Important**
 
@@ -2856,7 +3156,9 @@ Description:
     of Koha because it will change the behavior of items already checked
     out.
 
-`InProcessingToShelvingCart <#InProcessingToShelvingCart>`__
+.. _inprocessingtoshelvingcart-label:
+
+InProcessingToShelvingCart
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't move
@@ -2873,17 +3175,17 @@ Values:
 Description:
 
 -  This preference is used to manage automatically changing item
-   locations from processing (PROC) to the book cart (CART). A `cron
-   job <#proccartcron>`__ needs to be set to run at specified intervals
+   locations from processing (PROC) to the book cart (CART). A :ref:`cron
+   job <in-processing/book-cart-label>` needs to be set to run at specified intervals
    to age items from CART to the permanent shelving location. (For
    example, an hourly cron entry of cart\_to\_shelf.pl --hours 3 where
    --hours is the amount of time an item should spend on the cart before
    aging to its permanent location.) More information can be found in
-   the `related chapter <#processinglocations>`__ in this manual.
+   the :ref:`related chapter <in-processing-/-book-cart-locations-label>` in this manual.
 
    -  **Note**
 
-          If the `ReturnToShelvingCart <#ReturnToShelvingCart>`__ system
+          If the :ref:`ReturnToShelvingCart` system
           preference is turned on, any newly checked-in item is also
           automatically put into the shelving cart, to be covered by the
           same script run.
@@ -2894,7 +3196,9 @@ Description:
           cart. If items on the shelving cart are checked out, the cart
           location will be cleared.
 
-`IssueLostItem <#IssueLostItem>`__
+.. _issuelostitem-label:
+
+IssueLostItem
 ''''''''''''''''''''''''''''''''''
 
 Default: display a message
@@ -2926,7 +3230,9 @@ Description:
    'require confirmation.' If you choose to 'do nothing,' there will be
    no notification that the item being checked out is marked as 'lost.'
 
-`IssuingInProcess <#IssuingInProcess>`__
+.. _issuinginprocess-label:
+
+IssuingInProcess
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't prevent
@@ -2954,7 +3260,9 @@ patron has $4 in charges already on their account. One of the videos has
 a rental charge of $1, therefore making the total fines on the patron's
 account suddenly $5 (the limit).
 
-`ManInvInNoissuesCharge <#ManInvInNoissuesCharge>`__
+.. _maninvinnoissuescharge-label:
+
+ManInvInNoissuesCharge
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Include
@@ -2972,14 +3280,16 @@ Description:
 
 -  This preference lets you decide if charges entered as manual invoices
    are included when calculating the
-   `noissuescharge <#noissuescharge>`__. If this is set to include then
+   :ref:`noissuescharge`. If this is set to include then
    Koha will include all manual invoices when deciding if the patron
    owes too much money to check anything else out of the library. If
    it's set to Don't include then Koha will ignore all manual invoice
    charges when figuring out if the patron owes too much money to
    checkout additional materials.
 
-`maxoutstanding <#maxoutstanding>`__
+.. _maxoutstanding-label:
+
+maxoutstanding
 ''''''''''''''''''''''''''''''''''''
 
 Default: 5
@@ -2987,7 +3297,9 @@ Default: 5
 Asks: Prevent patrons from making holds on the OPAC if they owe more
 than \_\_\_ USD in fines.
 
-`noissuescharge <#noissuescharge>`__
+.. _noissuescharge-label:
+
+noissuescharge
 ''''''''''''''''''''''''''''''''''''
 
 Default: 5
@@ -2999,14 +3311,16 @@ Description:
 
 -  This preference is the maximum amount of money owed to the library
    before the user is banned from borrowing more items. Using the
-   `ManInvInNoissuesCharge <#ManInvInNoissuesCharge>`__ and
-   `RentalsInNoissuesCharge <#RentalsInNoissuesCharge>`__ preferences
+   :ref:`ManInvInNoissuesCharge` and
+   :ref:`RentalsInNoissuesCharge` preferences
    you can control which types of charges are considered in this total.
-   This also coincides with `maxoutstanding <#maxoutstanding>`__ that
+   This also coincides with :ref:`maxoutstanding` that
    limits patrons from placing holds when the maximum amount is owed to
    the library.
 
-`NoIssuesChargeGuarantees <#NoIssuesChargeGuarantees>`__
+.. _noissueschargeguarantees-label:
+
+NoIssuesChargeGuarantees
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Prevent a patron from checking out if the patron has guarantees
@@ -3017,7 +3331,9 @@ Description:
 -  Allows a library to prevent patrons from checking out items if his or
    her guarantees owe too much in fines.
 
-`NoRenewalBeforePrecision <#NoRenewalBeforePrecision>`__
+.. _norenewalbeforeprecision-label:
+
+NoRenewalBeforePrecision
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: date
@@ -3038,10 +3354,12 @@ Values:
 Description:
 
 -  This preference allows you to control how the 'No renewal before"
-   option in the `Circulation and fine rules <#circfinerules>`__
+   option in the :ref:`Circulation and fine rules <circulation-and-fine-rules-label>`
    administration area.
 
-`NoticeBcc <#NoticeBcc>`__
+.. _noticebcc-label:
+
+NoticeBcc
 ''''''''''''''''''''''''''''''''''''''''
 
 Asks: Send all notices as a BCC to this email address \_\_\_
@@ -3054,7 +3372,9 @@ notice sent out to patrons.
     If you'd like more than one person to receive the blind copy you can
     simply enter in multiple email addresses separated by commas.
 
-`OnSiteCheckouts <#OnSiteCheckouts>`__
+.. _onsitecheckouts-label:
+
+OnSiteCheckouts
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -3075,7 +3395,9 @@ Description:
    you to track who's using items that are normally not for loan or are
    in a closed stack setting.
 
-`OnSiteCheckoutsForce <#OnSiteCheckoutsForce>`__
+.. _onsitecheckoutsforce-label:
+
+OnSiteCheckoutsForce
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -3096,15 +3418,17 @@ Description:
 
 -  This preference lets the staff override any restrictions a patron
    might have and check out items for use within the library. The
-   `OnSiteCheckouts <#OnSiteCheckouts>`__ preference must first be set
+   :ref:`OnSiteCheckouts` preference must first be set
    to 'Enable' for this preference to be considered.
 
-`OPACFineNoRenewalsBlockAutoRenew <#OPACFineNoRenewalsBlockAutoRenew>`__
+.. _opacfinenorenewalsblockautorenew-label:
+
+OPACFineNoRenewalsBlockAutoRenew
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
 
-Asks: If a patron owes more than the value of `OPACFineNoRenewals <#OPACFineNoRenewals>`__,
+Asks: If a patron owes more than the value of :ref:`OPACFineNoRenewals`,
 \_\_\_ his/her auto renewals.
 
 Values:
@@ -3113,7 +3437,9 @@ Values:
 
 -  Block
 
-`OverdueNoticeCalendar <#OverdueNoticeCalendar>`__
+.. _overduenoticecalendar-label:
+
+OverdueNoticeCalendar
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Ignore calendar
@@ -3132,7 +3458,9 @@ Values:
    -  Notices take holidays into account, so they will not be sent if
       holidays mean the item is not actually overdue yet
 
-`OverduesBlockCirc <#OverduesBlockCirc>`__
+.. _overduesblockcirc-label:
+
+OverduesBlockCirc
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Ask for confirmation
@@ -3155,7 +3483,9 @@ Values:
 
    -  Allow all patrons with overdue items to continue to check out
 
-`OverduesBlockRenewing <#OverduesBlockRenewing>`__
+.. _overduesblockrenewing-label:
+
+OverduesBlockRenewing
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: allow renewing
@@ -3170,7 +3500,9 @@ Values:
 
 -  block renewing for only this item
 
-`PrintNoticesMaxLines <#PrintNoticesMaxLines>`__
+.. _printnoticesmaxlines-label:
+
+PrintNoticesMaxLines
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include up to \_\_\_ item lines in a printed overdue notice.
@@ -3191,7 +3523,9 @@ Asks: Include up to \_\_\_ item lines in a printed overdue notice.
     This preference only refers to the print notices, not those sent via
     email.
 
-`RenewalPeriodBase <#RenewalPeriodBase>`__
+.. _renewalperiodbase-label:
+
+RenewalPeriodBase
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: the old due date of the checkout
@@ -3204,7 +3538,9 @@ Values:
 
 -  the current date
 
-`RenewalSendNotice <#RenewalSendNotice>`__
+.. _renewalsendnotice-label:
+
+RenewalSendNotice
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't send
@@ -3223,17 +3559,19 @@ Description:
 -  If a patron has chosen to receive a check out notice in their
    messaging preferences and this preference is set to 'Send' then those
    patrons will also receive a notice when they renew materials. You
-   will want to set up a `new notice <#addnotices>`__ with the code of
+   will want to set up a :ref:`new notice <adding-notices-&-slips-label>` with the code of
    RENEWAL (if you don't already have it) with custom text for renewing
    items.
 
        **Important**
 
        This preference requires that you have
-       `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+       :ref:`EnhancedMessagingPreferences`
        set to 'Allow'
 
-`RentalFeesCheckoutConfirmation <#RentalFeesCheckoutConfirmation>`__
+.. _rentalfeescheckoutconfirmation-label:
+
+RentalFeesCheckoutConfirmation
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: do not ask
@@ -3253,7 +3591,9 @@ Description:
    it so that you can show (or not show) a confirmation before checking
    out an item that will incur a rental charge.
 
-`RentalsInNoissuesCharge <#RentalsInNoissuesCharge>`__
+.. _rentalsinnoissuescharge-label:
+
+RentalsInNoissuesCharge
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Include
@@ -3269,14 +3609,16 @@ Values:
 Description:
 
 -  This preference lets you decide if rental charges are included when
-   calculating the `noissuescharge <#noissuescharge>`__. If this is set
+   calculating the :ref:`noissuescharge`. If this is set
    to include then Koha will include all rental charges when deciding if
    the patron owes too much money to check anything else out of the
    library. If it's set to Don't include then Koha will ignore all
    rental charges when figuring out if the patron owes too much money to
    checkout additional materials.
 
-`RestrictionBlockRenewing <#RestrictionBlockRenewing>`__
+.. _restrictionblockrenewing-label:
+
+RestrictionBlockRenewing
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3289,7 +3631,9 @@ Values:
 
 -  Block
 
-`ReturnBeforeExpiry <#ReturnBeforeExpiry>`__
+.. _returnbeforeexpiry-label:
+
+ReturnBeforeExpiry
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't require
@@ -3312,7 +3656,9 @@ Description:
    left "Don't require" then item check out dates may exceed the
    expiration date for the patron's library card.
 
-`ReturnToShelvingCart <#ReturnToShelvingCart>`__
+.. _returntoshelvingcart-label:
+
+ReturnToShelvingCart
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't move
@@ -3327,10 +3673,12 @@ Values:
 
 Description:
 
--  More information can be found in the `related
-   chapter <#processinglocations>`__ in this manual.
+-  More information can be found in the :ref:`related
+   chapter <in-processing-/-book-cart-locations-label>` in this manual.
 
-`StaffSearchResultsDisplayBranch <#StaffSearchResultsDisplayBranch>`__
+.. _staffsearchresultsdisplaybranch-label:
+
+StaffSearchResultsDisplayBranch
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: the library the item is held by
@@ -3344,7 +3692,9 @@ Values:
 
 -  the library the items is held by
 
-`SwitchOnSiteCheckouts <#SwitchOnSiteCheckouts>`__
+.. _switchonsitecheckouts-label:
+
+SwitchOnSiteCheckouts
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't switch
@@ -3357,7 +3707,9 @@ Values:
 
 -  Switch
 
-`TransfersMaxDaysWarning <#TransfersMaxDaysWarning>`__
+.. _transfersmaxdayswarning-label:
+
+TransfersMaxDaysWarning
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 3
@@ -3370,10 +3722,12 @@ Description:
 -  The TransferMaxDaysWarning preference is set at a default number of
    days. This preference allows for a warning to appear after a set
    amount of time if an item being transferred between library branches
-   has not been received. The warning will appear in the `Transfers to
-   Receive <#transferstoreceive>`__ report.
+   has not been received. The warning will appear in the :ref:`Transfers to
+   Receive <transfers-to-receive-label>` report.
 
-`UseBranchTransferLimits & BranchTransferLimitsType <#UseBranchTransferLimits>`__
+.. _usebranchtransferlimits-&-branchtransferlimitstype-label:
+
+UseBranchTransferLimits & BranchTransferLimitsType
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Defaults: Don't enforce & collection code
@@ -3399,7 +3753,9 @@ BranchTransferLimitsType Description:
    determines how the library manager is able to restrict what items can
    be transferred between the branches.
 
-`useDaysMode <#useDaysMode>`__
+.. _usedaysmode-label:
+
+useDaysMode
 ''''''''''''''''''''''''''''''
 
 Default: Don't include
@@ -3438,10 +3794,12 @@ Example:
    December to accommodate for the two closed days.
 
 The calendar is defined on a branch by branch basis. To learn more about
-the calendar, check out the '`Calendar & Holidays <#calholidays>`__'
+the calendar, check out the ':ref:`Calendar & Holidays <calendar-label>`'
 section of this manual.
 
-`UseTransportCostMatrix <#UseTransportCostMatrix>`__
+.. _usetransportcostmatrix-label:
+
+UseTransportCostMatrix
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -3457,8 +3815,8 @@ Values:
 
 Description:
 
--  If the system is configured to use the `Transport cost
-   matrix <#transportcostmatrix>`__ for filling holds, then when
+-  If the system is configured to use the :ref:`Transport cost
+   matrix <transport-cost-matrix-label>` for filling holds, then when
    attempting to fill a hold, the system will search for the lowest cost
    branch, and attempt to fill the hold with an item from that branch
    first. Branches of equal cost will be selected from randomly. The
@@ -3470,10 +3828,14 @@ Description:
    determining whether the item can fulfill a hold using the Transport
    Cost Matrix.
 
-`Course Reserves <#coursereserveprefs>`__
+.. _course-reserves-label:
+
+Course Reserves
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`UseCourseReserves <#UseCourseReserves>`__
+.. _usecoursereserves-label:
+
+UseCourseReserves
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -3493,10 +3855,14 @@ Description:
    circulation rules to these items while they are being used for a
    specific course.
 
-`Fines Policy <#circfinespolicy>`__
+.. _fines-policy-label:
+
+Fines Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`finesCalendar <#finesCalendar>`__
+.. _finescalendar-label:
+
+finesCalendar
 ''''''''''''''''''''''''''''''''''
 
 Default: not including the days the library is closed
@@ -3515,16 +3881,18 @@ Description:
    during instances when the library is closed. Examples include
    holidays, library in-service days, etc. Choosing "not including the
    days the library is closed" setting will enable Koha to access its
-   `Calendar <#calholidays>`__ module and be considerate of dates when
+   :ref:`Calendar` module and be considerate of dates when
    the library is closed. To make use of this setting the administrator
    must first access Koha's calendar and mark certain days as "holidays"
    ahead of time.
 
 The calendar is defined on a branch by branch basis. To learn more about
-the calendar, check out the '`Calendar & Holidays <#calholidays>`__'
+the calendar, check out the ':ref:`Calendar & Holidays <calendar-label>`'
 section of this manual.
 
-`FinesIncludeGracePeriod <#FinesIncludeGracePeriod>`__
+.. _finesincludegraceperiod-label:
+
+FinesIncludeGracePeriod
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Include
@@ -3547,7 +3915,9 @@ Description:
    not to include the grace period then Koha will only charge for the
    days overdue after the grace period.
 
-`finesMode <#finesMode>`__
+.. _finesmode-label:
+
+finesMode
 ''''''''''''''''''''''''''
 
 Default: Calculate (but only for mailing to the admin)
@@ -3567,7 +3937,9 @@ Values:
     Requires that you have the fines cron job running
     (misc/cronjobs/fines.pl)
 
-`HoldFeeMode <#HoldFeeMode>`__
+.. _holdfeemode-label:
+
+HoldFeeMode
 ''''''''''''''''''''''''''''''
 
 Default: only if all items are checked out and the record has at least one hold already.
@@ -3582,7 +3954,9 @@ Values:
 
 -  only if all items are checked out and the record has at least one hold already.
 
-`RefundLostOnReturnControl <#RefundLostOnReturnControl>`__
+.. _refundlostonreturncontrol-label:
+
+RefundLostOnReturnControl
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: check-in library.
@@ -3598,7 +3972,9 @@ Values:
 
 -  item home branch.
 
-`WhenLostChargeReplacementFee <#WhenLostChargeReplacementFee>`__
+.. _whenlostchargereplacementfee-label:
+
+WhenLostChargeReplacementFee
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Charge
@@ -3618,7 +3994,9 @@ Description:
    listed on the item they lost or it can do nothing in reference to the
    patron and just mark the item lost in the catalog.
 
-`WhenLostForgiveFine <#WhenLostForgiveFine>`__
+.. _whenlostforgivefine-label:
+
+WhenLostForgiveFine
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't forgive
@@ -3638,10 +4016,14 @@ Description:
    this preference is set to 'Forgive' then the patron won't be charged
    fines in addition to the replacement fee.
 
-`Holds Policy <#circholdspolicy>`__
+.. _holds-policy-label:
+
+Holds Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowHoldDateInFuture <#AllowHoldDateInFuture>`__
+.. _allowholddateinfuture-label:
+
+AllowHoldDateInFuture
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3655,7 +4037,9 @@ Values:
 
 -  Don't allow
 
-`AllowHoldItemTypeSelection <#AllowHoldItemTypeSelection>`__
+.. _allowholditemtypeselection-label:
+
+AllowHoldItemTypeSelection
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -3668,7 +4052,9 @@ Values:
 
 -  Don't allow
 
-`AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__
+.. _allowholdpolicyoverride-label:
+
+AllowHoldPolicyOverride
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3695,7 +4081,9 @@ Description:
    no abuse of the system is possible, but it makes the system entirely
    inflexible in respect to holds.
 
-`AllowHoldsOnDamagedItems <#AllowHoldsOnDamagedItems>`__
+.. _allowholdsondamageditems-label:
+
+AllowHoldsOnDamagedItems
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3724,7 +4112,9 @@ Description:
    patron to place a hold on an item and therefore receive it as soon as
    it becomes available.
 
-`AllowHoldsOnPatronsPossessions <#AllowHoldsOnPatronsPossessions>`__
+.. _allowholdsonpatronspossessions-label:
+
+AllowHoldsOnPatronsPossessions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3744,7 +4134,9 @@ Description:
    holds on items they already have out, thus preventing them from
    blocking anyone else from getting an item.
 
-`AllowRenewalIfOtherItemsAvailable <#AllowRenewalIfOtherItemsAvailable>`__
+.. _allowrenewalifotheritemsavailable-label:
+
+AllowRenewalIfOtherItemsAvailable
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -3758,7 +4150,9 @@ Values:
 
 -  Don't allow
 
-`AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__
+.. _autoresumesuspendedholds-label:
+
+AutoResumeSuspendedHolds
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3776,14 +4170,16 @@ Description:
 -  If this preference is set to 'Allow' then all suspended holds will be
    able to have a date at after which they automatically become
    unsuspended. If you have this preference set to 'Allow' you will also
-   need the `Unsuspend Holds <#unsuspendholdcron>`__ cron job running.
+   need the :ref:`Unsuspend Holds` cron job running.
 
     **Important**
 
     The holds will become unsuspended the date after that entered by the
     patron.
 
-`canreservefromotherbranches <#canreservefromotherbranches>`__
+.. _canreservefromotherbranches-label:
+
+canreservefromotherbranches
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -3807,9 +4203,11 @@ Values:
 
 -  Allow
 
--  Don't allow (with `independent branches <#IndependentBranches>`__)
+-  Don't allow (with :ref:`independent branches <independentbranches-label>`)
 
-`ConfirmFutureHolds <#ConfirmFutureHolds>`__
+.. _confirmfutureholds-label:
+
+ConfirmFutureHolds
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 0
@@ -3833,10 +4231,12 @@ Description:
     **Important**
 
     This preference is only looked at if you're allowing hold dates in
-    the future with `AllowHoldDateInFuture <#AllowHoldDateInFuture>`__
-    or `OPACAllowHoldDateInFuture <#OPACAllowHoldDateInFuture>`__
+    the future with :ref:`AllowHoldDateInFuture`
+    or :ref:`OPACAllowHoldDateInFuture`
 
-`decreaseLoanHighHolds, decreaseLoanHighHoldsDuration, decreaseLoanHighHoldsValue, decreaseLoanHighHoldsControl, and decreaseLoanHighHoldsIgnoreStatuses <#decreaseLoanHighHolds>`__
+.. _decreaseloanhighholds,-decreaseloanhighholdsduration,-decreaseloanhighholdsvalue,-decreaseloanhighholdscontrol,-and-decreaseloanhighholdsignorestatuses-label:
+
+decreaseLoanHighHolds, decreaseLoanHighHoldsDuration, decreaseLoanHighHoldsValue, decreaseLoanHighHoldsControl, and decreaseLoanHighHoldsIgnoreStatuses
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: \_\_\_ the reduction of loan period \_\_\_ to days for items with
@@ -3881,7 +4281,9 @@ Description:
    Warning on checkout
    |image32|
 
-`DisplayMultiPlaceHold <#DisplayMultiPlaceHold>`__
+.. _displaymultiplacehold-label:
+
+DisplayMultiPlaceHold
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -3895,7 +4297,9 @@ Values:
 
 -  Enable
 
-`emailLibrarianWhenHoldIsPlaced <#emailLibrarianWhenHoldIsPlaced>`__
+.. _emaillibrarianwhenholdisplaced-label:
+
+emailLibrarianWhenHoldIsPlaced
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -3923,15 +4327,17 @@ Description:
     **Important**
 
     In order for this email to send you must have a
-    `notice <#notices>`__ template with the code of HOLDPLACED
+    :ref:`notice <notices-&-slips-label>` template with the code of HOLDPLACED
 
     **Important**
 
-    This notice will only be sent if the `process\_message\_queue.pl
-    cronjob <#msgqueuecron>`__ being run periodically to send the
+    This notice will only be sent if the :ref:`process\_message\_queue.pl
+    cronjob <message-queue-label>` being run periodically to send the
     messages.
     
-`ExcludeHolidaysFromMaxPickUpDelay <#ExcludeHolidaysFromMaxPickUpDelay>`__
+.. _excludeholidaysfrommaxpickupdelay-label:
+
+ExcludeHolidaysFromMaxPickUpDelay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -3944,14 +4350,16 @@ Values:
 
 -  Allow
 
-`ExpireReservesMaxPickUpDelay <#ExpireReservesMaxPickUpDelay>`__
+.. _expirereservesmaxpickupdelay-label:
+
+ExpireReservesMaxPickUpDelay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
 
 Asks: \_\_\_ holds to expire automatically if they have not been picked
 by within the time period specified in
-`ReservesMaxPickUpDelay <#ReservesMaxPickUpDelay>`__
+:ref:`ReservesMaxPickUpDelay`
 
 Values:
 
@@ -3963,17 +4371,19 @@ Description:
 
 -  If set to 'allow' this will cancel holds that have been waiting for
    longer than the number of days specified in the
-   `ReservesMaxPickUpDelay <#ReservesMaxPickUpDelay>`__ system
-   preference. Holds will only be cancelled if the `Expire Holds cron
-   job <#expiredholdscron>`__ is runnning.
+   :ref:`ReservesMaxPickUpDelay` system
+   preference. Holds will only be cancelled if the :ref:`Expire Holds cron
+   job <expired-holds-label>` is runnning.
 
-`ExpireReservesMaxPickUpDelayCharge <#ExpireReservesMaxPickUpDelayCharge>`__
+.. _expirereservesmaxpickupdelaycharge-label:
+
+ExpireReservesMaxPickUpDelayCharge
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 0
 
 Asks: If using
-`ExpireReservesMaxPickUpDelay <#ExpireReservesMaxPickUpDelay>`__, charge
+:ref:`ExpireReservesMaxPickUpDelay`, charge
 a borrower who allows his or her waiting hold to expire a fee of \_\_\_
 USD
 
@@ -3983,10 +4393,12 @@ Description:
    this preference to charge the patron for not picking up their hold.
    If you don't charge patrons for items that aren't picked up you can
    leave this set to the default which is 0. Holds will only be
-   cancelled and charged if the `Expire Holds cron
-   job <#expiredholdscron>`__ is running.
+   cancelled and charged if the :ref:`Expire Holds cron
+   job <expired-holds-label>` is running.
 
-`ExpireReservesOnHolidays <#ExpireReservesOnHolidays>`__
+.. _expirereservesonholidays-label:
+
+ExpireReservesOnHolidays
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4000,7 +4412,9 @@ Values:
 
 -  Don't allow
 
-`LocalHoldsPriority, LocalHoldsPriorityPatronControl, LocalHoldsPriorityItemControl <#LocalHoldsPriority>`__
+.. _localholdspriority,-localholdsprioritypatroncontrol,-localholdspriorityitemcontrol-label:
+
+LocalHoldsPriority, LocalHoldsPriorityPatronControl, LocalHoldsPriorityItemControl
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: \_\_\_ priority for filling holds to patrons whose \_\_\_ matches
@@ -4030,14 +4444,18 @@ Description:
    returned, a local hold may be given priority for fulfillment even
    though it is of lower priority in the list of unfilled holds.
 
-`maxreserves <#maxreserves>`__
+.. _maxreserves-label:
+
+maxreserves
 ''''''''''''''''''''''''''''''
 
 Default: 50
 
 Asks: Patrons can only have \_\_\_ holds at once.
 
-`OPACAllowHoldDateInFuture <#OPACAllowHoldDateInFuture>`__
+.. _opacallowholddateinfuture-label:
+
+OPACAllowHoldDateInFuture
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4049,12 +4467,14 @@ Values:
 
 -  Allow
 
-   -  `AllowHoldDateInFuture <#AllowHoldDateInFuture>`__ must also be
+   -  :ref:`AllowHoldDateInFuture` must also be
       enabled for this to work
 
 -  Don't allow
 
-`OPACAllowUserToChooseBranch <#OPACAllowUserToChooseBranch>`__
+.. _opacallowusertochoosebranch-label:
+
+OPACAllowUserToChooseBranch
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4074,7 +4494,9 @@ Description:
    only prevent patrons from saying they plan on picking a book up at a
    branch other than their home branch.
 
-`OPACHoldsIfAvailableAtPickup <#OPACHoldsIfAvailableAtPickup>`__
+.. _opacholdsifavailableatpickup-label:
+
+OPACHoldsIfAvailableAtPickup
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4087,15 +4509,19 @@ Values:
 
 -  Allow
 
-`OPACHoldsIfAvailableAtPickupExceptions <#OPACHoldsIfAvailableAtPickupExceptions>`__
+.. _opacholdsifavailableatpickupexceptions-label:
+
+OPACHoldsIfAvailableAtPickupExceptions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
 
-Asks: Patron categories not affected by `OPACHoldsIfAvailableAtPickup <#OPACHoldsIfAvailableAtPickup>`__
+Asks: Patron categories not affected by :ref:`OPACHoldsIfAvailableAtPickup`
 \_\_\_ (list of patron categories separated with a pipe '|')
 
-`ReservesControlBranch <#ReservesControlBranch>`__
+.. _reservescontrolbranch-label:
+
+ReservesControlBranch
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: item's home library
@@ -4109,7 +4535,9 @@ Values:
 
 -  patron's home library.
 
-`ReservesMaxPickUpDelay <#ReservesMaxPickUpDelay>`__
+.. _reservesmaxpickupdelay-label:
+
+ReservesMaxPickUpDelay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 7
@@ -4119,16 +4547,18 @@ Asks: Mark a hold as problematic if it has been waiting for more than
 
 Description:
 
--  This preference (based on calendar days, not the `Koha holiday
-   calendar <#calholidays>`__) puts an expiration date on an item a
+-  This preference (based on calendar days, not the :ref:`Koha holiday
+   calendar <calendar-label>`) puts an expiration date on an item a
    patron has on hold. After this expiration date the staff will have
    the option to release the unclaimed hold which then may be returned
    to the library shelf or issued to the next patron on the item's hold
    list. Items that are 'expired' by this preference are moved to the
-   'Holds Over' tab on the '`Holds Awaiting Pickup <#holdspickup>`__'
+   'Holds Over' tab on the ':ref:`Holds Awaiting Pickup <holds-awaiting-pickup-label>`'
    report.
 
-`ReservesNeedReturns <#ReservesNeedReturns>`__
+.. _reservesneedreturns-label:
+
+ReservesNeedReturns
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't automatically
@@ -4152,7 +4582,9 @@ Description:
    that their item is 'Waiting' for them at their library and ready for
    check out.
 
-`StaticHoldsQueueWeight, HoldsQueueSkipClosed & RandomizeHoldsQueueWeight <#holdqueueweight>`__
+.. _staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label:
+
+StaticHoldsQueueWeight, HoldsQueueSkipClosed & RandomizeHoldsQueueWeight
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 StaticHoldsQueueWeight Default: 0
@@ -4188,9 +4620,9 @@ RandomizeHoldsQueueWeight Values:
 
 Descriptions:
 
--  These preferences control how the `Holds Queue
-   report <#holdsqueue>`__ is generated using `a cron
-   job <#buildholdscron>`__.
+-  These preferences control how the :ref:`Holds Queue
+   report <holds-queue-label>` is generated using :ref:`a cron
+   job <holds-queue-label>`.
 
    If you do not want all of your libraries to participate in the
    on-shelf holds fulfillment process, you should list the the libraries
@@ -4226,14 +4658,16 @@ Descriptions:
 
     **Important**
 
-    The `Transport Cost Matrix <#transportcostmatrix>`__ takes
+    The :ref:`Transport Cost Matrix <transport-cost-matrix-label>` takes
     precedence in controlling where holds are filled from, if the matrix
     is not used then Koha checks the StaticHoldsQueueWeight. To use the
     Transport Cost Matrix simply set your
-    `UseTransportCostMatrix <#UseTransportCostMatrix>`__ preference to
+    :ref:`UseTransportCostMatrix` preference to
     'Use'
 
-`SuspendHoldsIntranet <#SuspendHoldsIntranet>`__
+.. _suspendholdsintranet-label:
+
+SuspendHoldsIntranet
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4251,10 +4685,12 @@ Description:
 -  The holds suspension feature can be turned on and off in the staff
    client by altering this system preference. If this is set to 'allow'
    you will want to set the
-   `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ system
+   :ref:`AutoResumeSuspendedHolds` system
    preference.
 
-`SuspendHoldsOpac <#SuspendHoldsOpac>`__
+.. _suspendholdsopac-label:
+
+SuspendHoldsOpac
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4272,10 +4708,12 @@ Description:
 -  The holds suspension feature can be turned on and off in the OPAC by
    altering this system preference. If this is set to 'allow' you will
    want to set the
-   `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ system
+   :ref:`AutoResumeSuspendedHolds` system
    preference.
 
-`TransferWhenCancelAllWaitingHolds <#TransferWhenCancelAllWaitingHolds>`__
+.. _transferwhencancelallwaitingholds-label:
+
+TransferWhenCancelAllWaitingHolds
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't transfer
@@ -4298,10 +4736,14 @@ Description:
    go. When that system preference set to "Transfer", branch transfers
    are created, so the holds may be cancelled.
 
-`Housebound module <#circhouseboundmoduleprefs>`__
+.. _housebound-module-label:
+
+Housebound module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`HouseboundModule <#HouseboundModule>`__
+.. _houseboundmodule-label:
+
+HouseboundModule
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -4319,10 +4761,14 @@ Description:
 -  This preference enables or disables the Housebound module which
    handles management of circulation to Housebound readers.
 
-`Interface <#circinterfaceprefs>`__
+.. _interface-label:
+
+Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowAllMessageDeletion <#AllowAllMessageDeletion>`__
+.. _allowallmessagedeletion-label:
+
+AllowAllMessageDeletion
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -4335,7 +4781,9 @@ Values:
 
 -  Don't allow
 
-`AllowCheckoutNotes <#AllowCheckoutNotes>`__
+.. _allowcheckoutnotes-label:
+
+AllowCheckoutNotes
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -4348,7 +4796,9 @@ Values:
 
 -  Allow
 
-`AllowOfflineCirculation <#AllowOfflineCirculation>`__
+.. _allowofflinecirculation-label:
+
+AllowOfflineCirculation
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not enable
@@ -4364,13 +4814,15 @@ Values:
 Description:
 
 -  Setting this preference to 'Enable' allows you to use the Koha
-   interface for `offline circulation <#offlinecirc>`__. This system
-   preference does not affect the `Firefox
-   plugin <#firefoxofflinecirc>`__ or the `desktop
-   application <#windowsofflinecirc>`__, any of these three options can
+   interface for :ref:`offline circulation <offline-circulation-utilities-label>`. This system
+   preference does not affect the :ref:`Firefox
+   plugin <firefox-plugin-label>` or the :ref:`desktop
+   application <offline-circ-tool-for-windows-label>`, any of these three options can
    be used for offline circulation without effecting the other.
 
-`CircAutocompl <#CircAutocompl>`__
+.. _circautocompl-label:
+
+CircAutocompl
 ''''''''''''''''''''''''''''''''''
 
 Default: Try
@@ -4398,7 +4850,9 @@ Values:
    search box
    |image33|
 
-`CircAutoPrintQuickSlip <#CircAutoPrintQuickSlip>`__
+.. _circautoprintquickslip-label:
+
+CircAutoPrintQuickSlip
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: open a print quick slip window
@@ -4416,15 +4870,17 @@ Values:
 Description:
 
 -  If this preference is set to open a quick slip
-   (`ISSUEQSLIP <#existingnotices>`__) or open a slip
-   (`ISSUESLIP <#existingnotices>`__) for printing it will eliminate the
+   (:ref:`ISSUEQSLIP <existing-notices-&-slips-label>`) or open a slip
+   (:ref:`ISSUESLIP <existing-notices-&-slips-label>`) for printing it will eliminate the
    need for the librarian to click the print button to generate a
    checkout receipt for the patron they're checking out to. If the
    preference is set to clear the screen then "checking out" an empty
    barcode will clear the screen of the patron you were last working
    with.
    
-`CircSidebar <#CircSidebar>`__
+.. _circsidebar-label:
+
+CircSidebar
 ''''''''''''''''''''''''''''''
 
 Default: Deactivate
@@ -4437,7 +4893,9 @@ Values:
 
 -  Activate
 
-`DisplayClearScreenButton <#DisplayClearScreenButton>`__
+.. _displayclearscreenbutton-label:
+
+DisplayClearScreenButton
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -4457,7 +4915,9 @@ Values:
    X in the top right will clear the screen
    |image37|
 
-`ExportCircHistory <#ExportCircHistory>`__
+.. _exportcirchistory-label:
+
+ExportCircHistory
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -4470,7 +4930,9 @@ Values:
 
 -  Show
 
-`ExportRemoveFields <#ExportRemoveFields>`__
+.. _exportremovefields-label:
+
+ExportRemoveFields
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The following fields should be excluded from the patron checkout
@@ -4485,7 +4947,9 @@ Description:
    ExportRemoveFields
    |image38|
 
-`FilterBeforeOverdueReport <#FilterBeforeOverdueReport>`__
+.. _filterbeforeoverduereport-label:
+
+FilterBeforeOverdueReport
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't require
@@ -4512,7 +4976,9 @@ Values:
 
 -  Require
 
-`FineNotifyAtCheckin <#FineNotifyAtCheckin>`__
+.. _finenotifyatcheckin-label:
+
+FineNotifyAtCheckin
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't notify
@@ -4538,7 +5004,9 @@ Description:
    Fine notification at checkin
    |image35|
 
-`HoldsToPullStartDate <#HoldsToPullStartDate>`__
+.. _holdstopullstartdate-label:
+
+HoldsToPullStartDate
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 2
@@ -4548,11 +5016,13 @@ day(s) ago.
 
 Description:
 
--  The `Holds to Pull <#holdspull>`__ report in circulation defaults to
+-  The :ref:`Holds to Pull <holds-to-pull-label>` report in circulation defaults to
    filtering holds placed 2 days ago. This preference allows you to set
    this default filter to any number of days.
 
-`itemBarcodeFallbackSearch <#itemBarcodeFallbackSearch>`__
+.. _itembarcodefallbacksearch-label:
+
+itemBarcodeFallbackSearch
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -4585,7 +5055,9 @@ Description:
     title you check out. Only titles with barcodes will appear in the
     search results.
 
-`itemBarcodeInputFilter <#itemBarcodeInputFilter>`__
+.. _itembarcodeinputfilter-label:
+
+itemBarcodeInputFilter
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't filter
@@ -4609,7 +5081,9 @@ Values:
    -  This format is common among those libraries migrating from Follett
       systems
 
-`NoticeCSS <#NoticeCSS>`__
+.. _noticecss-label:
+
+NoticeCSS
 ''''''''''''''''''''''''''
 
 Asks: Include the stylesheet at \_\_\_ on Notices.
@@ -4624,14 +5098,18 @@ Description:
    fonts and colors you can use this preference to point Koha to a
    stylesheet specifically for your notices.
 
-`numReturnedItemsToShow <#numReturnedItemsToShow>`__
+.. _numreturneditemstoshow-label:
+
+numReturnedItemsToShow
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
 
 Asks : Show the \_\_\_ last returned items on the checkin screen.
 
-`previousIssuesDefaultSortOrder <#previousIssuesDefaultSortOrder>`__
+.. _previousissuesdefaultsortorder-label:
+
+previousIssuesDefaultSortOrder
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: earliest to latest
@@ -4645,7 +5123,9 @@ Values:
 
 -  latest to earliest
 
-`RecordLocalUseOnReturn <#RecordLocalUseOnReturn>`__
+.. _recordlocaluseonreturn-label:
+
+RecordLocalUseOnReturn
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't record
@@ -4666,7 +5146,9 @@ Description:
    out to the statistical patron and/or by checking in a book that is
    not currently checked out.
 
-`ShowAllCheckins <#ShowAllCheckins>`__
+.. _showallcheckins-label:
+
+ShowAllCheckins
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Do not show
@@ -4686,7 +5168,9 @@ Description:
    don't show on the list of checked in items. This preference allows
    you to choose how you'd like the log of checked in items displays.
 
-`SpecifyDueDate <#SpecifyDueDate>`__
+.. _specifyduedate-label:
+
+SpecifyDueDate
 ''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -4719,7 +5203,9 @@ Values:
    Specify Due Date Box Doesn't Show
    |image42|
 
-`SpecifyReturnDate <#SpecifyReturnDate>`__
+.. _specifyreturndate-label:
+
+SpecifyReturnDate
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -4738,7 +5224,9 @@ Description:
    return date when checking in items. If an arbitrary return date is
    specified then fines are recalculated accordingly.
 
-`todaysIssuesDefaultSortOrder <#todaysIssuesDefaultSortOrder>`__
+.. _todaysissuesdefaultsortorder-label:
+
+todaysIssuesDefaultSortOrder
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: latest to earliest
@@ -4752,7 +5240,9 @@ Values:
 
 -  latest to earliest
 
-`UpdateTotalIssuesOnCirc <#UpdateTotalIssuesOnCirc>`__
+.. _updatetotalissuesoncirc-label:
+
+UpdateTotalIssuesOnCirc
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not
@@ -4767,7 +5257,7 @@ Values:
        **Important**
 
        This increases server load significantly; if performance is a
-       concern, use the `cron job <#updateissuescron>`__ to update the
+       concern, use the :ref:`cron job <track-total-checkouts-label>` to update the
        total issues count instead.
 
 -  Do not
@@ -4778,10 +5268,12 @@ Description:
    that on the item record in the database. This information is not
    stored by default. Setting this preference to 'Do' will tell Koha to
    track that info everytime the item is checked out in real time.
-   Otherwise you could use the `cron job <#updateissuescron>`__ to have
+   Otherwise you could use the :ref:`cron job <track-total-checkouts-label>` to have
    Koha update that field nightly.
 
-`WaitingNotifyAtCheckin <#WaitingNotifyAtCheckin>`__
+.. _waitingnotifyatcheckin-label:
+
+WaitingNotifyAtCheckin
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't notify
@@ -4806,10 +5298,14 @@ Description:
    time a hold is found for the patron who had the book out last a
    message will appear on your check in screen.
 
-`Self Checkout <#circscoprefs>`__
+.. _self-checkout-label:
+
+Self Checkout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowSelfCheckReturns <#AllowSelfCheckReturns>`__
+.. _allowselfcheckreturns-label:
+
+AllowSelfCheckReturns
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -4829,7 +5325,9 @@ Description:
    allowed to return items through your self check machines. By default
    Koha's self check interface is simply for checking items out.
 
-`AutoSelfCheckAllowed, AutoSelfCheckID & AutoSelfCheckPass <#AutoSelfCheckAllowed>`__
+.. _autoselfcheckallowed,-autoselfcheckid-&-autoselfcheckpass-label:
+
+AutoSelfCheckAllowed, AutoSelfCheckID & AutoSelfCheckPass
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     **Important**
@@ -4853,14 +5351,16 @@ AutoSelfCheckAllowed Values:
 AutoSelfCheckID Value:
 
 -  The username of a staff patron with 'circulate'
-   `permissions <#patronpermissions>`__.
+   :ref:`permissions <patron-permissions-label>`.
 
 AutoSelfCheckPass Value:
 
 -  The password of a staff patron with 'circulate'
-   `permissions <#patronpermissions>`__.
+   :ref:`permissions <patron-permissions-label>`.
 
-`SCOUserCSS <#SCOUserCSS>`__
+.. _scousercss-label:
+
+SCOUserCSS
 ''''''''''''''''''''''''''''
 
 Asks: Include the following CSS on all pages in the web-based self
@@ -4871,7 +5371,9 @@ Description:
 -  The CSS entered in this preference will be used on all of your Koha
    self checkout screens.
 
-`SCOUserJS <#SCOUserJS>`__
+.. _scouserjs-label:
+
+SCOUserJS
 ''''''''''''''''''''''''''
 
 Asks: Include the following JavaScript on all pages in the web-based
@@ -4882,7 +5384,9 @@ Description:
 -  The JavaScript entered in this preference will effect all of your
    Koha self checkout screens.
 
-`SelfCheckHelpMessage <#SelfCheckHelpMessage>`__
+.. _selfcheckhelpmessage-label:
+
+SelfCheckHelpMessage
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include the following HTML in the Help page of the web-based self
@@ -4895,7 +5399,9 @@ Description:
    interface. Adding HTML to this system preference will print that
    additional help text above what's already included.
 
-`SelfCheckoutByLogin <#SelfCheckoutByLogin>`__
+.. _selfcheckoutbylogin-label:
+
+SelfCheckoutByLogin
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Barcode
@@ -4922,7 +5428,9 @@ Description:
    username and password is set using the opac/staff username and
    password fields on the patron record.
 
-`SelfCheckReceiptPrompt <#SelfCheckReceiptPrompt>`__
+.. _selfcheckreceiptprompt-label:
+
+SelfCheckReceiptPrompt
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -4941,7 +5449,9 @@ Description:
 -  This preference controls whether a prompt shows up on the web based
    self check out when the patron clicks the 'Finish' button.
 
-`SelfCheckTimeout <#SelfCheckTimeout>`__
+.. _selfchecktimeout-label:
+
+SelfCheckTimeout
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 120
@@ -4955,7 +5465,9 @@ Description:
    self check out system will log out the current patron and return to
    the starting screen.
 
-`ShowPatronImageInWebBasedSelfCheck <#ShowPatronImageInWebBasedSelfCheck>`__
+.. _showpatronimageinwebbasedselfcheck-label:
+
+ShowPatronImageInWebBasedSelfCheck
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -4969,7 +5481,9 @@ Values:
 
 -  Show
 
-`WebBasedSelfCheck <#WebBasedSelfCheck>`__
+.. _webbasedselfcheck-label:
+
+WebBasedSelfCheck
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -4982,10 +5496,12 @@ Values:
 
 -  Enable
 
-Enabling this preference will allow access to the `self
-checkout <#selfcheckout>`__ module in Koha.
+Enabling this preference will allow access to the :ref:`self
+checkout <self-checkout-label>` module in Koha.
 
-`Enhanced Content <#enhancedcontent>`__
+.. _enhanced-content-label:
+
+Enhanced Content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences >
@@ -5004,10 +5520,14 @@ Enhanced Content
     multiple cover images. Instead choose only one source for cover
     images.
 
-`All <#frbrenhancedprefs>`__
+.. _all-label:
+
+All
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`FRBRizeEditions <#FRBRizeEditions>`__
+.. _frbrizeeditions-label:
+
+FRBRizeEditions
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -5039,17 +5559,19 @@ Description:
    is set to "Show", the OPAC will query one or more ISBN web services
    for associated ISBNs and display an Editions tab on the details
    pages. Once this preference is enabled, the library must select one
-   of the ISBN options (`ThingISBN <#ThingISBN>`__ and/or
-   `XISBN <#XISBN>`__). This option is only for the Staff Client; the
-   `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ option must be enabled
+   of the ISBN options (:ref:`ThingISBN` and/or
+   :ref:`XISBN`). This option is only for the Staff Client; the
+   :ref:`OPACFRBRizeEditions` option must be enabled
    to have the Editions tab appear on the OPAC.
 
     **Important**
 
     Requires that you turn on one or more of the ISBN services
-    (`ThingISBN <#ThingISBN>`__ and/or `XISBN <#XISBN>`__)
+    (:ref:`ThingISBN` and/or :ref:`XISBN`)
 
-`OPACFRBRizeEditions <#OPACFRBRizeEditions>`__
+.. _opacfrbrizeeditions-label:
+
+OPACFRBRizeEditions
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -5072,9 +5594,9 @@ Description:
    is set to "Show", the OPAC will query one or more ISBN web services
    for associated ISBNs and display an Editions tab on the details
    pages. Once this preference is enabled, the library must select one
-   of the ISBN options (`ThingISBN <#ThingISBN>`__ and/or
-   `XISBN <#XISBN>`__). This option is only for the OPAC; the
-   `FRBRizeEditions <#FRBRizeEditions>`__ option must be turned "On" to
+   of the ISBN options (:ref:`ThingISBN` and/or
+   :ref:`XISBN`). This option is only for the OPAC; the
+   :ref:`FRBRizeEditions` option must be turned "On" to
    have the Editions tab appear on the Staff Client.
 
 Values:
@@ -5093,12 +5615,16 @@ collection regardless of material type. Items will appear under an
     **Important**
 
     Requires that you turn on one or more of the ISBN services
-    (`ThingISBN <#ThingISBN>`__ and/or `XISBN <#XISBN>`__)
+    (:ref:`ThingISBN` and/or :ref:`XISBN`)
 
-`Amazon <#amazonprefs>`__
+.. _amazon-label:
+
+Amazon
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AmazonAssocTag <#AmazonAssocTag>`__
+.. _amazonassoctag-label:
+
+AmazonAssocTag
 ''''''''''''''''''''''''''''''''''''
 
 Asks: Put the associate tag \_\_\_ on links to Amazon.
@@ -5122,7 +5648,9 @@ Description:
 
 Sign up at: https://affiliate-program.amazon.com/
 
-`AmazonCoverImages <#AmazonCoverImages>`__
+.. _amazoncoverimages-label:
+
+AmazonCoverImages
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -5149,7 +5677,9 @@ Description:
    If they are not disabled, they will prevent AmazonCoverImages from
    functioning properly.
 
-`AmazonLocale <#AmazonLocale>`__
+.. _amazonlocale-label:
+
+AmazonLocale
 ''''''''''''''''''''''''''''''''
 
 Default: American
@@ -5170,7 +5700,9 @@ Value:
 
 -  Japanese
 
-`OPACAmazonCoverImages <#OPACAmazonCoverImages>`__
+.. _opacamazoncoverimages-label:
+
+OPACAmazonCoverImages
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -5197,10 +5729,14 @@ Description:
    disabled, they will prevent AmazonCoverImages from functioning
    properly.
 
-`Babelthèque <#Babelthequeprefs>`__
+.. _babelth�que-label:
+
+Babelthèque
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Babeltheque <#Babeltheque>`__
+.. _babeltheque-label:
+
+Babeltheque
 ''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -5231,19 +5767,25 @@ Values:
 
 -  Don't
 
-`Babeltheque\_url\_js <#Babeltheque_url_js>`__
+.. _babeltheque\_url\_js-label:
+
+Babeltheque\_url\_js
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: \_\_\_ Defined the url for the Babeltheque javascript file (eg.
 http://www.babeltheque.com/bw\_XX.js)
 
-`Babeltheque\_url\_update <#Babeltheque_url_update>`__
+.. _babeltheque\_url\_update-label:
+
+Babeltheque\_url\_update
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: \_\_\_ Defined the url for the Babeltheque update periodically
 (eq. http://www.babeltheque.com/.../file.csv.bz2).
 
-`Baker & Taylor <#btcontentprefs>`__
+.. _baker-&-taylor-label:
+
+Baker & Taylor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     **Important**
@@ -5251,7 +5793,9 @@ Asks: \_\_\_ Defined the url for the Babeltheque update periodically
     This is a pay service, you must contact Baker & Taylor to subscribe
     to this service before setting these options.
 
-`BakerTaylorBookstoreURL <#BakerTaylorBookstoreURL>`__
+.. _bakertaylorbookstoreurl-label:
+
+BakerTaylorBookstoreURL
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Baker and Taylor "My Library Bookstore" links should be accessed
@@ -5289,7 +5833,9 @@ koha.mylibrarybookstore.com/MLB/actions/searchHandler.do?nextPage=bookDetails&pa
     Be sure to get this information from Baker & Taylor when
     subscribing.
 
-`BakerTaylorEnabled <#BakerTaylorEnabled>`__
+.. _bakertaylorenabled-label:
+
+BakerTaylorEnabled
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5316,10 +5862,12 @@ Description:
 
     **Important**
 
-    To use this you will need to also set the `BakerTaylorUsername &
-    BakerTaylorPassword <#btuserpass>`__ system preferences
+    To use this you will need to also set the :ref:`BakerTaylorUsername &
+    BakerTaylorPassword <bakertaylorusername-&-bakertaylorpassword-label>` system preferences
 
-`BakerTaylorUsername & BakerTaylorPassword <#btuserpass>`__
+.. _bakertaylorusername-&-bakertaylorpassword-label:
+
+BakerTaylorUsername & BakerTaylorPassword
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Access Baker and Taylor using username \_\_\_ and password \_\_\_
@@ -5330,8 +5878,8 @@ Descriptions:
    subscription to the external Content Café service from Baker &
    Taylor. Use the box provided to enter in the library's Content Café
    username and password. Also, ensure that the
-   `BakerTaylorBookstoreURL <#BakerTaylorBookstoreURL>`__ and
-   `BakerTaylorEnabled <#BakerTaylorEnabled>`__ settings are properly
+   :ref:`BakerTaylorBookstoreURL` and
+   :ref:`BakerTaylorEnabled` settings are properly
    set. The Content Café service is a feed of enhanced content such as
    cover art, professional reviews, and summaries that is displayed
    along with Staff Client/OPAC search results. For more information on
@@ -5343,14 +5891,18 @@ Descriptions:
     Be sure to get this information from Baker & Taylor when
     subscribing.
 
-`Coce Cover images cache <#coceimages>`__
+.. _coce-cover-images-cache-label:
+
+Coce Cover images cache
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Coce is a remote image URL cache. With this option, cover images are not
 fetched directly from Amazon, Google, and so on. Their URLs are
 requested via a web service to Coce which manages a cache of URLs.
 
-`Coce <#Coce>`__
+.. _coce-label:
+
+Coce
 ''''''''''''''''
 
 Default: Don't enable
@@ -5387,7 +5939,9 @@ Description:
        up. Instructions on installing and setting up Coce can be found
        on the official github page at https://github.com/fredericd/coce.
 
-`CoceHost <#CoceHost>`__
+.. _cocehost-label:
+
+CoceHost
 ''''''''''''''''''''''''
 
 Asks: Coce server URL \_\_\_
@@ -5397,7 +5951,9 @@ Description:
 -  This will be the full URL (starting with http://) to your Coce
    server.
 
-`CoceProviders <#CoceProviders>`__
+.. _coceproviders-label:
+
+CoceProviders
 ''''''''''''''''''''''''''''''''''
 
 Asks: Use the following providers to fetch the covers \_\_\_
@@ -5417,10 +5973,14 @@ Description:
 -  The providers chosen here will be used to gather cover images for
    display in your Koha catalog.
 
-`Google <#googleprefs>`__
+.. _google-label:
+
+Google
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`GoogleJackets <#GoogleJackets>`__
+.. _googlejackets-label:
+
+GoogleJackets
 ''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5441,10 +6001,14 @@ Description:
    that to use this feature, all other cover services should be turned
    off.
 
-`HTML5 Media <#html5>`__
+.. _html5-media-label:
+
+HTML5 Media
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-`HTML5MediaEnabled <#HTML5MediaEnabled>`__
+.. _html5mediaenabled-label:
+
+HTML5MediaEnabled
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: not at all
@@ -5474,7 +6038,9 @@ Description:
    preference can run/show those media files in a separate tab using
    HTML5.
 
-`HTML5MediaExtensions <#HTML5MediaExtensions>`__
+.. _html5mediaextensions-label:
+
+HTML5MediaExtensions
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: webm\|ogg\|ogv\|oga\|vtt
@@ -5485,7 +6051,9 @@ Description:
 
 -  Enter in file extensions separated with bar (\|)
 
-`HTML5MediaYouTube <#HTML5MediaYouTube>`__
+.. _html5mediayoutube-label:
+
+HTML5MediaYouTube
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't embed
@@ -5493,7 +6061,7 @@ Default: Don't embed
     **Important**
 
     To turn this on first enable
-    `HTML5MediaEnabled <#HTML5MediaEnabled>`__
+    :ref:`HTML5MediaEnabled`
 
 Asks: \_\_\_ YouTube links as videos.
 
@@ -5507,9 +6075,11 @@ Description:
 
 -  This preference will allow MARC21 856$u that points to YouTube to
    appear as a playable video on the pages defined in
-   `HTML5MediaEnabled <#HTML5MediaEnabled>`__.
+   :ref:`HTML5MediaEnabled`.
 
-`IDreamLibraries <#IDreamLibraries>`__
+.. _idreamlibraries-label:
+
+IDreamLibraries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `IDreamBooks.com <http://idreambooks.com/>`__ aggregates book reviews by
@@ -5523,7 +6093,9 @@ week. These preferences let you integrated content from
     these features on new popular titles until the database grows some
     more.
 
-`IDreamBooksReadometer <#IDreamBooksReadometer>`__
+.. _idreambooksreadometer-label:
+
+IDreamBooksReadometer
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5540,7 +6112,9 @@ Values:
 
 -  Don't add
 
-`IDreamBooksResults <#IDreamBooksResults>`__
+.. _idreambooksresults-label:
+
+IDreamBooksResults
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5556,7 +6130,9 @@ Values:
 
 -  Don't add
 
-`IDreamBooksReviews <#IDreamBooksReviews>`__
+.. _idreambooksreviews-label:
+
+IDreamBooksReviews
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5573,7 +6149,9 @@ Values:
 
 -  Don't add
 
-`LibraryThing <#librarythingprefs>`__
+.. _librarything-label:
+
+LibraryThing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 LibraryThing for Libraries is a pay service. You must first contact
@@ -5582,7 +6160,9 @@ more at http://www.librarything.com/forlibraries. Also, for further
 configuration instructions please see the LibraryThing Wiki:
 http://www.librarything.com/wiki/index.php/Koha
 
-`LibraryThingForLibrariesEnabled <#LibraryThingForLibrariesEnabled>`__
+.. _librarythingforlibrariesenabled-label:
+
+LibraryThingForLibrariesEnabled
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -5608,10 +6188,12 @@ Description:
     **Important**
 
     If this is set to 'show' you will need to enter a value in the
-    '`LibraryThingForLibrariesID <#LibraryThingForLibrariesID>`__'
+    ':ref:`LibraryThingForLibrariesID`'
     system preference.
 
-`LibraryThingForLibrariesID <#LibraryThingForLibrariesID>`__
+.. _librarythingforlibrariesid-label:
+
+LibraryThingForLibrariesID
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Access Library Thing for Libraries using the customer ID \_\_\_
@@ -5629,7 +6211,9 @@ Description:
    offer advanced features like tagged browsing, patron written reviews,
    and a virtual library display accessed from the details tab.
 
-`LibraryThingForLibrariesTabbedView <#LibraryThingForLibrariesTabbedView>`__
+.. _librarythingforlibrariestabbedview-label:
+
+LibraryThingForLibrariesTabbedView
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: in line with bibliographic information
@@ -5651,7 +6235,9 @@ Description:
    can offer advanced features like tagged browsing, patron written
    reviews, and a virtual library display accessed from the details tab.
 
-`ThingISBN <#ThingISBN>`__
+.. _thingisbn-label:
+
+ThingISBN
 ''''''''''''''''''''''''''
 
 Default: Don't use
@@ -5674,18 +6260,22 @@ Description:
 
     **Important**
 
-    Requires `FRBRizeEditions <#FRBRizeEditions>`__ and/or
-    `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ set to 'show'
+    Requires :ref:`FRBRizeEditions` and/or
+    :ref:`OPACFRBRizeEditions` set to 'show'
 
     **Important**
 
     This is separate from Library Thing for Libraries and does not have
     a cost associated with it.
 
-`Local Cover Images <#localimages>`__
+.. _local-cover-images-label:
+
+Local Cover Images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowMultipleCovers <#AllowMultipleCovers>`__
+.. _allowmultiplecovers-label:
+
+AllowMultipleCovers
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -5704,14 +6294,16 @@ Description:
 -  If this preference is set to 'Allow' then you can upload multiple
    images that will appear in the images tab on the bib record in the
    OPAC and the staff client. This preference requires that either one
-   or both `LocalCoverImages <#LocalCoverImages>`__ and
-   `OPACLocalCoverImages <#OPACLocalCoverImages>`__ are set to
+   or both :ref:`LocalCoverImages` and
+   :ref:`OPACLocalCoverImages` are set to
    'Display.'
 
    Multiple cover images
    |image54|
 
-`LocalCoverImages <#LocalCoverImages>`__
+.. _localcoverimages-label:
+
+LocalCoverImages
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -5732,7 +6324,9 @@ Description:
    'Images' tab on the holdings table on the detail display, not next to
    the title at the top left or on the search results.
 
-`OPACLocalCoverImages <#OPACLocalCoverImages>`__
+.. _opaclocalcoverimages-label:
+
+OPACLocalCoverImages
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -5751,7 +6345,9 @@ Description:
    cover images to bib records and display them on the detail page and
    search results in the OPAC.
 
-`Novelist Select <#novelistselect>`__
+.. _novelist-select-label:
+
+Novelist Select
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Novelist Select is not a free service. Contact your Ebsco representative
@@ -5762,10 +6358,12 @@ to get your log in information to embed this content in the OPAC.
     Novelist Select does not include cover images for the search results
     and bibliographic detail pages. You can choose any other cover image
     service for this content or you can contract with Ebsco to get
-    access to the `Baker & Taylor Content Cafe <#btcontentprefs>`__ for
+    access to the :ref:`Baker & Taylor Content Cafe <baker-&-taylor-label>` for
     an added fee.
 
-`NovelistSelectEnabled <#NovelistSelectEnabled>`__
+.. _novelistselectenabled-label:
+
+NovelistSelectEnabled
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5781,15 +6379,17 @@ Values:
     **Important**
 
     Enabling this requires that you have entered in a user profile and
-    password in the `NovelistSelectProfile &
-    NovelistSelectPassword <#NovelistSelectProfile>`__ preferences
+    password in the :ref:`NovelistSelectProfile &
+    NovelistSelectPassword <novelistselectprofile-&-novelistselectpassword-label>` preferences
 
 Description:
 
 -  Novelist Select from Ebsco is a subscription service that can provide
    additional content in the OPAC.
 
-`NovelistSelectProfile & NovelistSelectPassword <#NovelistSelectProfile>`__
+.. _novelistselectprofile-&-novelistselectpassword-label:
+
+NovelistSelectProfile & NovelistSelectPassword
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Access Novelist Select using user profile \_\_\_ and password
@@ -5805,7 +6405,9 @@ Description:
 -  Novelist Select from Ebsco is a subscription service that can provide
    additional content in the OPAC.
    
-`NovelistSelectStaffEnabled <#NovelistSelectStaffEnabled>`__
+.. _novelistselectstaffenabled-label:
+
+NovelistSelectStaffEnabled
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5820,7 +6422,9 @@ Values:
 
 -  Add
 
-`NovelistSelectStaffView <#NovelistSelectStaffView>`__
+.. _novelistselectstaffview-label:
+
+NovelistSelectStaffView
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: in a tab
@@ -5835,7 +6439,9 @@ Values:
 
 -  in a tab
 
-`NovelistSelectView <#NovelistSelectView>`__
+.. _novelistselectview-label:
+
+NovelistSelectView
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: in an OPAC tab
@@ -5868,10 +6474,14 @@ Values:
 
 -  under the Save Record dropdown on the right
 
-`OCLC <#oclcprefs>`__
+.. _oclc-label:
+
+OCLC
 ^^^^^^^^^^^^^^^^^^^^^
 
-`OCLCAffiliateID <#OCLCAffiliateID>`__
+.. _oclcaffiliateid-label:
+
+OCLCAffiliateID
 ''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the OCLC affiliate ID \_\_\_ to access the xISBN service.
@@ -5882,8 +6492,8 @@ Description:
    ID. This allows WorldCat searching in the OPAC via the XISBN
    programming interface. Simply enter the library's OCLC Affiliate ID
    in the box provided. Please note that using this data is only
-   necessary if `FRBRizeEditions <#FRBRizeEditions>`__ and/or
-   `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ and `XISBN <#XISBN>`__
+   necessary if :ref:`FRBRizeEditions` and/or
+   :ref:`OPACFRBRizeEditions` and :ref:`XISBN`
    settings are enabled. For more information on this service please
    visit the OCLC website:
    http://www.worldcat.org/affiliate/default.jsp.
@@ -5894,7 +6504,9 @@ Description:
     1000 requests per day. Available at:
     http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
 
-`XISBN <#XISBN>`__
+.. _xisbn-label:
+
+XISBN
 ''''''''''''''''''
 
 Default: Don't use
@@ -5916,10 +6528,12 @@ Values:
 
     **Important**
 
-    Requires `FRBRizeEditions <#FRBRizeEditions>`__ and/or
-    `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ set to 'show'
+    Requires :ref:`FRBRizeEditions` and/or
+    :ref:`OPACFRBRizeEditions` set to 'show'
 
-`XISBNDailyLimit <#XISBNDailyLimit>`__
+.. _xisbndailylimit-label:
+
+XISBNDailyLimit
 ''''''''''''''''''''''''''''''''''''''
 
 Default: 999
@@ -5932,10 +6546,14 @@ Asks: Only use the xISBN service \_\_\_ times a day.
     1000 requests per day. Available at:
     http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
 
-`Open Library <#OpenLibraryPrefs>`__
+.. _open-library-label:
+
+Open Library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`OpenLibraryCovers <#OpenLibraryCovers>`__
+.. _openlibrarycovers-label:
+
+OpenLibraryCovers
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -5956,7 +6574,9 @@ Description:
    that to use this feature, all other cover services should be turned
    off.
 
-`OpenLibrarySearch <#OpenLibrarySearch>`__
+.. _openlibrarysearch-label:
+
+OpenLibrarySearch
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -5969,7 +6589,9 @@ Values:
 
 -  ShowOpen Library results
 
-`Overdrive <#overdriveprefs>`__
+.. _overdrive-label:
+
+Overdrive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 OverDrive is an pay service. You must first contact OverDrive directly
@@ -5983,7 +6605,9 @@ learn more please contact your OverDrive representative.
 Overdrive results
 |image57|
 
-`OverDriveCirculation <#OverDriveCirculation>`__
+.. _overdrivecirculation-label:
+
+OverDriveCirculation
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -5998,7 +6622,9 @@ Values:
 
 -  Enable
 
-`OverDriveClientKey and OverDriveClientSecret <#OverDriveClientKey>`__
+.. _overdriveclientkey-and-overdriveclientsecret-label:
+
+OverDriveClientKey and OverDriveClientSecret
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include OverDrive availability information with the client key
@@ -6010,10 +6636,12 @@ Description:
    `OverDrive Developer
    Portal <https://developer.overdrive.com/docs/getting-started>`__ and
    following the instructions found there to apply as an API developer.
-   Once this data and the `OverDriveLibraryID <#OverDriveLibraryID>`__
+   Once this data and the :ref:`OverDriveLibraryID`
    are populated you will see OverDrive results on your OPAC searches.
 
-`OverDriveLibraryID <#OverDriveLibraryID>`__
+.. _overdrivelibraryid-label:
+
+OverDriveLibraryID
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show items from the OverDrive catalog of library # \_\_\_
@@ -6024,14 +6652,18 @@ Description:
    `OverDrive Developer
    Portal <https://developer.overdrive.com/docs/getting-started>`__ and
    following the instructions found there to apply as an API developer.
-   Once this data and the `OverDriveClientKey and
-   OverDriveClientSecret <#OverDriveClientKey>`__ are populated you will
+   Once this data and the :ref:`OverDriveClientKey and
+   OverDriveClientSecret <overdriveclientkey-and-overdriveclientsecret-label>` are populated you will
    see OverDrive results on your OPAC searches.
 
-`Plugins <#pluginprefs>`__
+.. _plugins-label:
+
+Plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`UseKohaPlugins <#UseKohaPlugins>`__
+.. _usekohaplugins-label:
+
+UseKohaPlugins
 ''''''''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -6050,13 +6682,17 @@ Values:
     file to be fully enabled. Learn more in the `Plugins
     chapter <#pluginsystem>`__.
 
-`Syndetics <#Syndeticsprefs>`__
+.. _syndetics-label:
+
+Syndetics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Syndetics is a pay service. You must first contact Syndetics directly
 for pricing and subscription information.
 
-`SyndeticsAuthorNotes <#SyndeticsAuthorNotes>`__
+.. _syndeticsauthornotes-label:
+
+SyndeticsAuthorNotes
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6078,11 +6714,13 @@ Description:
    Syndetics Author Notes on the OPAC. According to the Syndetics
    Solutions website (http://www.bowker.com/syndetics/), Author Notes
    include lists of contributors for many multi-author texts and
-   compilations. The `SyndeticsClientCode <#SyndeticsClientCode>`__ must
-   be entered and the `SyndeticsEnabled <#SyndeticsEnabled>`__ option
+   compilations. The :ref:`SyndeticsClientCode` must
+   be entered and the :ref:`SyndeticsEnabled` option
    must be activated before this service can be used.
 
-`SyndeticsAwards <#SyndeticsAwards>`__
+.. _syndeticsawards-label:
+
+SyndeticsAwards
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6108,11 +6746,13 @@ Description:
    the user clicks on any title in the list, they will see holdings
    information about that title in their region. This option is a paid
    subscription service. The
-   `SyndeticsClientCode <#SyndeticsClientCode>`__ must be entered and
-   the `SyndeticsEnabled <#SyndeticsEnabled>`__ option must be activated
+   :ref:`SyndeticsClientCode` must be entered and
+   the :ref:`SyndeticsEnabled` option must be activated
    before this service can be used.
 
-`SyndeticsClientCode <#SyndeticsClientCode>`__
+.. _syndeticsclientcode-label:
+
+SyndeticsClientCode
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the client code \_\_\_ to access Syndetics.
@@ -6125,7 +6765,7 @@ Description:
    This is the code that must be entered to access Syndetics'
    subscription services. Syndetics is a paid subscription service. This
    value must be entered before
-   `SyndeticsEditions <#SyndeticsEditions>`__ can be enabled. If the
+   :ref:`SyndeticsEditions` can be enabled. If the
    code is lost, corrupted, or forgotten, a new one can be obtained from
    http://www.bowker.com/syndetics/.
 
@@ -6133,7 +6773,9 @@ Description:
 
     You will need to get your client code directly from Syndetics.
 
-`SyndeticsCoverImages & SyndeticsCoverImageSize <#SyndeticsCoverImages>`__
+.. _syndeticscoverimages-&-syndeticscoverimagesize-label:
+
+SyndeticsCoverImages & SyndeticsCoverImageSize
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 SyndeticsCoverImages Default: Don't show
@@ -6154,8 +6796,8 @@ Descriptions:
    after SyndeticsCoverImages are enabled. Syndetics cover images come
    in two sizes: mid-size (187 x 187 pixels), and large (400 x 400
    pixels). Syndetics is a paid subscription service. The
-   `SyndeticsClientCode <#SyndeticsClientCode>`__ must be entered and
-   the `SyndeticsEnabled <#SyndeticsEnabled>`__ option must be activated
+   :ref:`SyndeticsClientCode` must be entered and
+   the :ref:`SyndeticsEnabled` option must be activated
    before this service can be used. Other cover image preferences should
    also be disabled to avoid interference.
 
@@ -6171,7 +6813,9 @@ SyndeticsCoverImageSize Values:
 
 -  large
 
-`SyndeticsEditions <#SyndeticsEditions>`__
+.. _syndeticseditions-label:
+
+SyndeticsEditions
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6184,8 +6828,8 @@ Description:
 -  When enabled this option shows information on other editions of a
    title from Syndetics on the item detail pages of the OPAC. Syndetics
    is a paid subscription service. The
-   `SyndeticsClientCode <#SyndeticsClientCode>`__ must be entered and
-   the `SyndeticsEnabled <#SyndeticsEnabled>`__ option must be activated
+   :ref:`SyndeticsClientCode` must be entered and
+   the :ref:`SyndeticsEnabled` option must be activated
    before this service can be used.
 
 Values:
@@ -6196,10 +6840,12 @@ Values:
 
     **Important**
 
-    Requires `OPACFRBRizeEditions <#OPACFRBRizeEditions>`__ set to
+    Requires :ref:`OPACFRBRizeEditions` set to
     'show'
 
-`SyndeticsEnabled <#SyndeticsEnabled>`__
+.. _syndeticsenabled-label:
+
+SyndeticsEnabled
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -6219,10 +6865,12 @@ Description:
     **Important**
 
     Requires that you enter your
-    `SyndeticsClientCode <#SyndeticsClientCode>`__ before this content
+    :ref:`SyndeticsClientCode` before this content
     will appear.
 
-`SyndeticsExcerpt <#SyndeticsExcerpt>`__
+.. _syndeticsexcerpt-label:
+
+SyndeticsExcerpt
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6247,7 +6895,9 @@ Description:
    library OPACs. For more information see
    (http://www.bowker.com/syndetics/).
 
-`SyndeticsReviews <#SyndeticsReviews>`__
+.. _syndeticsreviews-label:
+
+SyndeticsReviews
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6273,7 +6923,9 @@ Description:
    secured, high-speed Internet servers to the library OPACs. For more
    information see (http://www.bowker.com/syndetics/).
 
-`SyndeticsSeries <#SyndeticsSeries>`__
+.. _syndeticsseries-label:
+
+SyndeticsSeries
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6297,7 +6949,9 @@ Description:
    speed Internet servers to the library OPACs. For more information see
    (http://www.bowker.com/syndetics/).
 
-`SyndeticsSummary <#SyndeticsSummary>`__
+.. _syndeticssummary-label:
+
+SyndeticsSummary
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6320,7 +6974,9 @@ Description:
    scholarly titles. For more information see
    (http://www.bowker.com/syndetics/).
 
-`SyndeticsTOC <#SyndeticsTOC>`__
+.. _syndeticstoc-label:
+
+SyndeticsTOC
 ''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -6347,10 +7003,14 @@ Description:
    high-speed Internet servers to the library OPACs. For more
    information see (http://www.bowker.com/syndetics/).
 
-`Tagging <#taggingprefs>`__
+.. _tagging-label:
+
+Tagging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`TagsEnabled <#TagsEnabled>`__
+.. _tagsenabled-label:
+
+TagsEnabled
 ''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -6371,7 +7031,9 @@ Description:
    features. TagsEnable must be set to 'Allow' to allow for other
    tagging features.
 
-`TagsExternalDictionary <#TagsExternalDictionary>`__
+.. _tagsexternaldictionary-label:
+
+TagsExternalDictionary
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Allow tags in the dictionary of the ispell executable \_\_\_ on
@@ -6391,7 +7053,9 @@ Description:
    on your server to a local ispell executable, used to set
    $Lingua::Ispell::path.
 
-`TagsInputOnDetail <#TagsInputOnDetail>`__
+.. _tagsinputondetail-label:
+
+TagsInputOnDetail
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -6407,7 +7071,9 @@ Values:
 
 -  Don't allow
 
-`TagsInputOnList <#TagsInputOnList>`__
+.. _tagsinputonlist-label:
+
+TagsInputOnList
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -6423,7 +7089,9 @@ Values:
 
 -  Don't allow
 
-`TagsModeration <#TagsModeration>`__
+.. _tagsmoderation-label:
+
+TagsModeration
 ''''''''''''''''''''''''''''''''''''
 
 Default: Don't require
@@ -6450,9 +7118,11 @@ Description:
 When moderation is required all tags go through the tag moderation tool
 before becoming visible.
 
--  *Get there:* More > Tools > `Tags <#tagsmoderation>`__
+-  *Get there:* More > Tools > :ref:`Tags <tag-moderation-label>`
 
-`TagsShowOnDetail <#TagsShowOnDetail>`__
+.. _tagsshowondetail-label:
+
+TagsShowOnDetail
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 10
@@ -6463,7 +7133,9 @@ Asks: Show \_\_\_ tags on item detail pages on the OPAC.
 
     Set the value to 0 (zero) to turn this feature off.
 
-`TagsShowOnList <#TagsShowOnList>`__
+.. _tagsshowonlist-label:
+
+TagsShowOnList
 ''''''''''''''''''''''''''''''''''''
 
 Default: 6
@@ -6474,7 +7146,9 @@ Asks: Show \_\_\_ tags on search results on the OPAC.
 
     Set the value to 0 (zero) to turn this feature off.
 
-`I18N/L10N <#l18nprefs>`__
+.. _i18n/l10n-label:
+
+I18N/L10N
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These preferences control your Internationalization and Localization
@@ -6483,7 +7157,9 @@ settings.
 *Get there:* More > Administration > Global System Preferences >
 I18N/L10N
 
-`AddressFormat <#AddressFormat>`__
+.. _addressformat-label:
+
+AddressFormat
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: US style ([Street number], [Address] - [City], [Zip/Postal
@@ -6508,7 +7184,9 @@ Description:
    addresses given the information entered in the various fields on
    their record.
 
-`alphabet <#alphabet>`__
+.. _alphabet-label:
+
+alphabet
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
@@ -6524,7 +7202,9 @@ Description:
    Alphabet browse on patron module
    |image60|
 
-`CalendarFirstDayOfWeek <#CalendarFirstDayOfWeek>`__
+.. _calendarfirstdayofweek-label:
+
+CalendarFirstDayOfWeek
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Sunday
@@ -6555,7 +7235,9 @@ Description:
    in your browser try clearing your cache since it makes changes to the
    Javascript on these pages.
 
-`dateformat <#dateformat>`__
+.. _dateformat-label:
+
+dateformat
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: mm/dd/yyyy
@@ -6585,7 +7267,9 @@ Description:
    regarding the ISO date format can be found at
    http://www.iso.org/iso/iso_catalogue.htm.
 
-`language <#languagepref>`__
+.. _language-label:
+
+language
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: English
@@ -6599,7 +7283,9 @@ Values:
 To install additional languages please refer to
 http://wiki.koha-community.org/wiki/Installation_of_additional_languages_for_OPAC_and_INTRANET_staff_client
 
-`opaclanguages <#opaclanguages>`__
+.. _opaclanguages-label:
+
+opaclanguages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: English
@@ -6618,7 +7304,9 @@ Values:
     templates, once they exist and are in the right place then they will
     show up as an option in this preference.
 
-`opaclanguagesdisplay <#opaclanguagesdisplay>`__
+.. _opaclanguagesdisplay-label:
+
+opaclanguagesdisplay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't allow
@@ -6641,11 +7329,13 @@ Values:
 
 Description:
 
--  Using the `OpacLangSelectorMode <#OpacLangSelectorMode>`__ preference
+-  Using the :ref:`OpacLangSelectorMode` preference
    you can decide where these language options will appear in the public
    catalog.
 
-`TimeFormat <#TimeFormat>`__
+.. _timeformat-label:
+
+TimeFormat
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: 24 hour format
@@ -6658,7 +7348,9 @@ Values:
 
 -  24 hour format (eg 14:18)
 
-`TranslateNotices <#TranslateNotices>`__
+.. _translatenotices-label:
+
+TranslateNotices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't allow
@@ -6673,7 +7365,9 @@ Values:
 
 -  Allow
 
-`Labs <#labsprefs>`__
+.. _labs-label:
+
+Labs
 ~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > Labs
@@ -6681,7 +7375,9 @@ Values:
 The preferences in this section are for experimental features that need
 additional testing and debugging.
 
-`EnableAdvancedCatalogingEditor <#EnableAdvancedCatalogingEditor>`__
+.. _enableadvancedcatalogingeditor-label:
+
+EnableAdvancedCatalogingEditor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't enable
@@ -6700,7 +7396,9 @@ Description:
     UNIMARC or NORMARC fixed fields. Please help us test it and report
     any bugs, but do so at your own risk.
 
-`Local Use <#localprefs>`__
+.. _local-use-label:
+
+Local Use
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These preferences are defined locally.
@@ -6714,7 +7412,9 @@ Use
     in this tab, if you didn't add any preferences to this tab then it's
     best to ignore preferences listed here.
 
-`ArticleRequestsMandatoryFieldsItemsOnly <#ArticleRequestsMandatoryFieldsItemsOnly>`__
+.. _articlerequestsmandatoryfieldsitemsonly-label:
+
+ArticleRequestsMandatoryFieldsItemsOnly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: blank
@@ -6722,7 +7422,9 @@ Default: blank
 Asks: Comma delimited list of required fields for bibs where artciel requests
 rule = "item_only"
 
-`INTRAdidyoumean <#INTRAdidyoumean>`__
+.. _intradidyoumean-label:
+
+INTRAdidyoumean
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: blank
@@ -6730,7 +7432,9 @@ Default: blank
 Asks: Did you mean? configuration for the Intranet. Do not change, as this is
 controlled by /cgi-bin/koha/admin/didyoumean.pl.
 
-`OPACdidyoumean <#OPACdidyoumean>`__
+.. _opacdidyoumean-label:
+
+OPACdidyoumean
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: blank
@@ -6738,7 +7442,9 @@ Default: blank
 Asks: Did you mean? configuration for the OPAC. Do not change, as this is
 controlled by /cgi-bin/koha/admin/didyoumean.pl.
 
-`printcirculationships <#printcirculationships>`__
+.. _printcirculationships-label:
+
+printcirculationships
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: ON
@@ -6751,7 +7457,9 @@ Values:
 
 -  OFF
 
-`UsageStatsID <#UsageStatsID>`__
+.. _usagestatsid-label:
+
+UsageStatsID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: blank
@@ -6759,7 +7467,9 @@ Default: blank
 Asks: This preference is part of Koha but it should not be deleted or
 updated manually.
 
-`UsageStatsLastUpdateTime <#UsageStatsLastUpdateTime>`__
+.. _usagestatslastupdatetime-label:
+
+UsageStatsLastUpdateTime
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: blank
@@ -6767,14 +7477,18 @@ Default: blank
 Asks: This preference is part of Koha but it should not be deleted or
 updated manually.
 
-`UsageStatsPublicID <#UsageStatsPublicID>`__
+.. _usagestatspublicid-label:
+
+UsageStatsPublicID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: blank
 
 Asks: Public ID for Hea website
 
-`Version <#Version>`__
+.. _version-label:
+
+Version
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Default: automatically generated
@@ -6782,19 +7496,25 @@ Default: automatically generated
 Asks: The Koha database version. WARNING: Do not change this value
 manually. It is maintained by the webinstaller
 
-`Logs <#logs>`__
+.. _logs-label:
+
+Logs
 ~~~~~~~~~~~~~~~~
 
 Logs keep track of transaction on the system. You can decide which
 actions you want to log and which you don't using these preferences.
-Logs can then be viewed in the `Log Viewer <#logviewer>`__ under Tools.
+Logs can then be viewed in the :ref:`Log Viewer` under Tools.
 
 *Get there:* More > Administration > Global System Preferences > Logs
 
-`Debugging <#debuggingprefs>`__
+.. _debugging-label:
+
+Debugging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`DumpTemplateVarsIntranet <#DumpTemplateVarsIntranet>`__
+.. _dumptemplatevarsintranet-label:
+
+DumpTemplateVarsIntranet
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -6808,7 +7528,9 @@ Value:
 
 -  Do
 
-`DumpTemplateVarsOpac <#DumpTemplateVarsOpac>`__
+.. _dumptemplatevarsopac-label:
+
+DumpTemplateVarsOpac
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -6822,10 +7544,14 @@ Value:
 
 -  Do
 
-`Logging <#loggingprefs>`__
+.. _logging-label:
+
+Logging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AuthoritiesLog <#AuthoritiesLog>`__
+.. _authoritieslog-label:
+
+AuthoritiesLog
 ''''''''''''''''''''''''''''''''''''
 
 Default: Don't log
@@ -6838,7 +7564,9 @@ Values:
 
 -  Log
 
-`BorrowersLog <#BorrowersLog>`__
+.. _borrowerslog-label:
+
+BorrowersLog
 ''''''''''''''''''''''''''''''''
 
 Default: Log
@@ -6851,7 +7579,9 @@ Values:
 
 -  Log
 
-`CataloguingLog <#CataloguingLog>`__
+.. _cataloguinglog-label:
+
+CataloguingLog
 ''''''''''''''''''''''''''''''''''''
 
 Default: Don't log
@@ -6870,7 +7600,9 @@ Values:
     in or out it can be very resource intensive - slowing down your
     system.
 
-`CronjobLog <#CronjobLog>`__
+.. _cronjoblog-label:
+
+CronjobLog
 ''''''''''''''''''''''''''''
 
 Default: Don't log
@@ -6883,7 +7615,9 @@ Values:
 
 -  Log
 
-`FinesLog <#FinesLog>`__
+.. _fineslog-label:
+
+FinesLog
 ''''''''''''''''''''''''
 
 Default: Log
@@ -6896,7 +7630,9 @@ Values:
 
 -  Log
 
-`HoldsLog <#HoldsLog>`__
+.. _holdslog-label:
+
+HoldsLog
 ''''''''''''''''''''''''
 
 Default: Don't log
@@ -6909,7 +7645,9 @@ Values:
 
 -  Log
 
-`IssueLog <#IssueLog>`__
+.. _issuelog-label:
+
+IssueLog
 ''''''''''''''''''''''''
 
 Default: Log
@@ -6922,7 +7660,9 @@ Values:
 
 -  Log
 
-`LetterLog <#LetterLog>`__
+.. _letterlog-label:
+
+LetterLog
 ''''''''''''''''''''''''''
 
 Default: Log
@@ -6940,7 +7680,9 @@ Values:
     This log tracks all notices that go to patrons including the overdue
     notices.
 
-`RenewalLog <#RenewalLog>`__
+.. _renewallog-label:
+
+RenewalLog
 ''''''''''''''''''''''''''''
 
 Default:  Don't log
@@ -6953,7 +7695,9 @@ Values:
 
 - Log
 
-`ReportsLog <#ReportsLog>`__
+.. _reportslog-label:
+
+ReportsLog
 ''''''''''''''''''''''''''''
 
 Default: Don't log
@@ -6966,7 +7710,9 @@ Values:
 
 -  Log
 
-`ReturnLog <#ReturnLog>`__
+.. _returnlog-label:
+
+ReturnLog
 ''''''''''''''''''''''''''
 
 Default: Log
@@ -6979,7 +7725,9 @@ Values:
 
 -  Log
 
-`SubscriptionLog <#SubscriptionLog>`__
+.. _subscriptionlog-label:
+
+SubscriptionLog
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Log
@@ -6992,15 +7740,21 @@ Values:
 
 -  Log
 
-`OPAC <#opacprefs>`__
+.. _opac-label:
+
+OPAC
 ~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > OPAC
 
-`Advanced Search Options <#advancedsearchopt>`__
+.. _advanced-search-options-label:
+
+Advanced Search Options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`OpacAdvSearchMoreOptions <#OpacAdvSearchMoreOptions>`__
+.. _opacadvsearchmoreoptions-label:
+
+OpacAdvSearchMoreOptions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Select All
@@ -7029,7 +7783,9 @@ Description:
    will show when the patron is using the 'More options' mode on the
    advanced search page.
 
-`OpacAdvSearchOptions <#OpacAdvSearchOptions>`__
+.. _opacadvsearchoptions-label:
+
+OpacAdvSearchOptions
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Item types, Language, Location and availability, Publication
@@ -7059,12 +7815,16 @@ Description:
    will show when the patron is using the 'Fewer options' mode on the
    advanced search page.
 
-`Appearance <#opacappearanceprefs>`__
+.. _appearance-label:
+
+Appearance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preferences control how things appear in the OPAC.
 
-`AuthorisedValueImages <#AuthorisedValueImages>`__
+.. _authorisedvalueimages-label:
+
+AuthorisedValueImages
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7078,10 +7838,12 @@ Values:
 
 -  Show
 
-*Get there:* More > Administration > `Authorized
-Values <#authorizedvalues>`__
+*Get there:* More > Administration > :ref:`Authorized
+Values <authorized-values-label>`
 
-`BiblioDefaultView <#BiblioDefaultView>`__
+.. _bibliodefaultview-label:
+
+BiblioDefaultView
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: in simple form
@@ -7092,7 +7854,7 @@ Values:
 
 -  as specified in the ISBD template.
 
-   -  See `ISBD <#isbdpref>`__ preference for more information
+   -  See :ref:`ISBD` preference for more information
 
 -  in simple form.
 
@@ -7106,7 +7868,9 @@ Description:
    ISBD displays the ISBD (International Standard Bibliographic
    Description, AACR2) view.
 
-`COinSinOPACResults <#COinSinOPACResults>`__
+.. _coinsinopacresults-label:
+
+COinSinOPACResults
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Include
@@ -7134,7 +7898,9 @@ Description:
    OpenURL resolver. This allows, for instance, searching for a copy of
    a book in one's own library.
 
-`DisplayOPACiconsXSLT <#DisplayOPACiconsXSLT>`__
+.. _displayopaciconsxslt-label:
+
+DisplayOPACiconsXSLT
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7144,8 +7910,8 @@ for itemtype and authorized values.
 
     **Important**
 
-    `OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__ and/or
-    `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ must be set to
+    :ref:`OPACXSLTResultsDisplay` and/or
+    :ref:`OPACXSLTDetailsDisplay` must be set to
     use an XSLT stylesheet for this to show (default or custom)
 
 Values:
@@ -7162,7 +7928,9 @@ Values:
     See the `XSLT Icon Guide <#XSLTiTypes>`__ for more information on
     these icons.
 
-`GoogleIndicTransliteration <#GoogleIndicTransliteration>`__
+.. _googleindictransliteration-label:
+
+GoogleIndicTransliteration
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7175,7 +7943,9 @@ Values:
 
 -  Show
 
-`hidelostitems <#hidelostitems>`__
+.. _hidelostitems-label:
+
+hidelostitems
 ''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7199,7 +7969,9 @@ Values:
    Lost item showing in the OPAC
    |image63|
 
-`HighlightOwnItemsOnOPAC & HighlightOwnItemsOnOPACWhich <#HighlightOwnItemsOnOPAC>`__
+.. _highlightownitemsonopac-&-highlightownitemsonopacwhich-label:
+
+HighlightOwnItemsOnOPAC & HighlightOwnItemsOnOPACWhich
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 HighlightOwnItemsOnOPAC Default: Don't emphasize
@@ -7233,10 +8005,12 @@ HighlightOwnItemsOnOPACWhich Values:
 
     This preference will only effect sites that are not using an XSLT
     stylesheet. XSLT stylesheets are defined in the
-    `OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__ and
-    `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ preferences.
+    :ref:`OPACXSLTResultsDisplay` and
+    :ref:`OPACXSLTDetailsDisplay` preferences.
 
-`LibraryName <#LibraryName>`__
+.. _libraryname-label:
+
+LibraryName
 ''''''''''''''''''''''''''''''
 
 Asks: Show \_\_\_ as the name of the library on the OPAC.
@@ -7247,13 +8021,15 @@ Asks: Show \_\_\_ as the name of the library on the OPAC.
 
     **Note**
 
-    Edit '`opacheader <#opacheader>`__' if you'd like to add a library
+    Edit ':ref:`opacheader`' if you'd like to add a library
     name above your search box on the OPAC
 
 Browser title and address bar
 |image64|
 
-`NoLoginInstructions <#NoLoginInstructions>`__
+.. _nologininstructions-label:
+
+NoLoginInstructions
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML on the OPAC login form when a patron is
@@ -7274,7 +8050,9 @@ Description:
    Any HTML in this box will replace the above text below the log in
    box.No login instructions
 
-`OpacAdditionalStylesheet <#OpacAdditionalStylesheet>`__
+.. _opacadditionalstylesheet-label:
+
+OpacAdditionalStylesheet
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include the additional CSS stylesheet \_\_\_ to override specified
@@ -7306,7 +8084,9 @@ Description:
     This file will add a linked CSS, not replace the existing default
     CSS.
 
-`OpacAddMastheadLibraryPulldown <#OpacAddMastheadLibraryPulldown>`__
+.. _opacaddmastheadlibrarypulldown-label:
+
+OpacAddMastheadLibraryPulldown
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't add
@@ -7325,7 +8105,9 @@ Values:
    No library select box on Koha OPAC
    |image66|
 
-`OPACBaseURL <#OPACBaseURL>`__
+.. _opacbaseurl-label:
+
+OPACBaseURL
 ''''''''''''''''''''''''''''''
 
 Asks: The OPAC is located at \_\_\_
@@ -7359,7 +8141,9 @@ With OPACBaseURL set, links to the OPAC will appear on each individual
 bib record in the staff client
 |image67|
 
-`opaccredits <#opaccredits>`__
+.. _opaccredits-label:
+
+opaccredits
 ''''''''''''''''''''''''''''''
 
 Asks: Include the following HTML in the footer of all pages in the OPAC:
@@ -7383,9 +8167,11 @@ Description:
    HTML format. This is static information and any updates must be
    entered manually.
 
-Learn more in the `OPAC Editable Regions <#editableopac>`__ section.
+Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
 
-`OpacCustomSearch <#OpacCustomSearch>`__
+.. _opaccustomsearch-label:
+
+OpacCustomSearch
 ''''''''''''''''''''''''''''''''''''''''
 
 Asks: Replace the search box at the top of OPAC pages with the following
@@ -7398,7 +8184,9 @@ Description:
 
    with any HTML you would like :Edited search box area
 
-`OPACDisplay856uAsImage <#OPACDisplay856uAsImage>`__
+.. _opacdisplay856uasimage-label:
+
+OPACDisplay856uAsImage
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Neither details or results page
@@ -7417,7 +8205,7 @@ Values:
 
    -  **Important**
 
-          `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ needs to
+          :ref:`OPACXSLTDetailsDisplay` needs to
           have a value in it for this preference to work.
 
    Showing the 856u as an image
@@ -7442,12 +8230,14 @@ Description:
    will open it in the same way as clicking on the link text. When you
    click on the image it should open to full size, in the current window
    or in a new window depending on the value in the system pref
-   `OPACURLOpenInNewWindow <#OPACURLOpenInNewWindow>`__.
+   :ref:`OPACURLOpenInNewWindow`.
 
    Sample 856 in MARC Record
    |image71|
 
-`OpacExportOptions <#OpacExportOptions>`__
+.. _opacexportoptions-label:
+
+OpacExportOptions
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Default OpacExportOptions options
@@ -7465,7 +8255,9 @@ Description:
    (utf8), Unicode/UTF-8 encoded MARC without local use -9xx, x9x, xx9-
    fields and subfields (marcstd), MODS (mods), and RIS (ris).
 
-`OPACFallback <#OPACFallback>`__
+.. _opacfallback-label:
+
+OPACFallback
 ''''''''''''''''''''''''''''''''
 
 Default: bootstrap
@@ -7479,7 +8271,9 @@ Description:
    The purpose of this preference is to provide a way to choose to what
    theme to fallback on when you have a partial theme in place.
 
-`OpacFavicon <#OpacFavicon>`__
+.. _opacfavicon-label:
+
+OpacFavicon
 ''''''''''''''''''''''''''''''
 
 Asks: Use the image at \_\_\_ for the OPAC's favicon.
@@ -7502,7 +8296,9 @@ Description:
    Default Koha Favicon
    |image72|
 
-`opacheader <#opacheader>`__
+.. _opacheader-label:
+
+opacheader
 ''''''''''''''''''''''''''''
 
 Asks: Include the following HTML in the header of all pages in the OPAC
@@ -7519,12 +8315,14 @@ OPAC display of the value from 'opacheader'
 
     **Note**
 
-    Edit '`LibraryName <#LibraryName>`__' if you'd like to edit the
+    Edit ':ref:`LibraryName`' if you'd like to edit the
     contents of the <title> tag
 
-Learn more in the `OPAC Editable Regions <#editableopac>`__ section.
+Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
 
-`OpacHighlightedWords & NotHighlightedWords <#OpacHighlightedWords>`__
+.. _opachighlightedwords-&-nothighlightedwords-label:
+
+OpacHighlightedWords & NotHighlightedWords
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 OpacHighlightedWords Default: Don't highlight
@@ -7541,7 +8339,9 @@ OpacHighlightedWords Values:
 
 -  Highlight
 
-`OPACHoldingsDefaultSortField <#OPACHoldingsDefaultSortField>`__
+.. _opacholdingsdefaultsortfield-label:
+
+OPACHoldingsDefaultSortField
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: First column of the table
@@ -7556,7 +8356,9 @@ Values:
 
 -  Home library
 
-`OpacKohaUrl <#OpacKohaUrl>`__
+.. _opackohaurl-label:
+
+OpacKohaUrl
 ''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7576,7 +8378,9 @@ Description:
    Powered by Koha
    |image75|
 
-`OpacLangSelectorMode <#OpacLangSelectorMode>`__
+.. _opaclangselectormode-label:
+
+OpacLangSelectorMode
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: only footer
@@ -7593,13 +8397,15 @@ Values:
 
 Description:
 
--  If you have the `opaclanguagesdisplay <#opaclanguagesdisplay>`__
+-  If you have the :ref:`opaclanguagesdisplay`
    preference set to display language options in the public catlaog,
    then this preference will allow you to control where the language
    selector shows. You can choose to show it only on the top or bottom
    or in both places.
 
-`opaclayoutstylesheet <#opaclayoutstylesheet>`__
+.. _opaclayoutstylesheet-label:
+
+opaclayoutstylesheet
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: opac.css
@@ -7627,7 +8433,9 @@ Description:
     Using a custom value in this preference causes Koha to completely
     ignore the default layout stylesheet.
 
-`OpacLocationBranchToDisplay <#OpacLocationBranchToDisplay>`__
+.. _opaclocationbranchtodisplay-label:
+
+OpacLocationBranchToDisplay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: holding library
@@ -7647,7 +8455,9 @@ Description:
 -  Defines whether to display the holding library, the home library, or
    both for the opac details page.
 
-`OpacLocationBranchToDisplayShelving <#OpacLocationBranchToDisplayShelving>`__
+.. _opaclocationbranchtodisplayshelving-label:
+
+OpacLocationBranchToDisplayShelving
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: holding library
@@ -7668,7 +8478,9 @@ Description:
 -  Defines where the shelving location should be displayed, under the
    home library, the holding library, or both.
 
-`OpacMaintenance <#OpacMaintenance>`__
+.. _opacmaintenance-label:
+
+OpacMaintenance
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7697,12 +8509,14 @@ Values:
    -  When this preference is set to show the maintenance message the
       ability to search the OPAC is disabled and a message appears. The
       default message can be altered by using the
-      `OpacMaintenanceNotice <#OpacMaintenanceNotice>`__ preference.
+      :ref:`OpacMaintenanceNotice` preference.
 
       OPAC Maintenance Message
       |image76|
 
-`OpacMaintenanceNotice <#OpacMaintenanceNotice>`__
+.. _opacmaintenancenotice-label:
+
+OpacMaintenanceNotice
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML when OpacMaintenance is enabled
@@ -7710,10 +8524,12 @@ Asks: Show the following HTML when OpacMaintenance is enabled
 Descritpion:
 
 -  This preference will allow you to set the text the OPAC displays when
-   the `OpacMaintenance <#OpacMaintenance>`__ preference is set to
+   the :ref:`OpacMaintenance` preference is set to
    'Show.'
 
-`OpacMainUserBlock <#OpacMainUserBlock>`__
+.. _opacmainuserblock-label:
+
+OpacMainUserBlock
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Welcome to Koha... <hr>
@@ -7729,9 +8545,11 @@ Description:
 Sample OpacMainUserBlock appears below the search bar
 |image77|
 
-Learn more in the `OPAC Editable Regions <#editableopac>`__ section.
+Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
 
-`OpacMaxItemsToDisplay <#OpacMaxItemsToDisplay>`__
+.. _opacmaxitemstodisplay-label:
+
+OpacMaxItemsToDisplay
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 50
@@ -7745,7 +8563,9 @@ Description:
    If the biblio has more items than this, a link is displayed instead
    that allows the user to choose to display all items.
 
-`OPACMySummaryHTML <#OPACMySummaryHTML>`__
+.. _opacmysummaryhtml-label:
+
+OPACMySummaryHTML
 ''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include a "Links" column on the "my summary" tab when a user is
@@ -7774,7 +8594,9 @@ Sample Data:
     <br />ISBN: {ISBN}
     <br />BIBLIONUMBER: {BIBLIONUMBER}</p>
 
-`OPACMySummaryNote <#OPACMySummaryNote>`__
+.. _opacmysummarynote-label:
+
+OPACMySummaryNote
 ''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Note to display on the patron summary page.
@@ -7785,7 +8607,9 @@ Description:
    below the welcome message when the patron logs in to the OPAC and
    view their 'my summary' tab.OPACMySummaryNote in the OPAC
 
-`OpacNav <#OpacNav>`__
+.. _opacnav-label:
+
+OpacNav
 ''''''''''''''''''''''
 
 Default: Important links here.
@@ -7796,25 +8620,29 @@ and patron account on the OPAC (generally navigation links)
 Sample navigation links
 |image79|
 
-Learn more in the `OPAC Editable Regions <#editableopac>`__ section.
+Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
 
-`OpacNavBottom <#OpacNavBottom>`__
+.. _opacnavbottom-label:
+
+OpacNavBottom
 ''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML on the left hand column of the main page
-and patron account on the OPAC, after `OpacNav <#OpacNav>`__, and before
+and patron account on the OPAC, after :ref:`OpacNav`, and before
 patron account links if available:
 
 Description: When a patron is logged in to their account they see a
 series of tabs to access their account information.
-`OpacNav <#OpacNav>`__ appears above this list of tabs and OpacNavBottom
+:ref:`OpacNav` appears above this list of tabs and OpacNavBottom
 will appear below them. When not on the patron account pages the HTML in
-OpacNavBottom will just appear right below `OpacNav <#OpacNav>`__.
+OpacNavBottom will just appear right below :ref:`OpacNav`.
 
 OpacNav and OpacNavBottom on Patron Account
 |image80|
 
-`OpacNavRight <#OpacNavRight>`__
+.. _opacnavright-label:
+
+OpacNavRight
 ''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in the right hand column of the main page
@@ -7827,7 +8655,9 @@ visible this content will move up on the right column.
 OpacNavRight
 |image81|
 
-`OPACNoResultsFound <#OPACNoResultsFound>`__
+.. _opacnoresultsfound-label:
+
+OPACNoResultsFound
 ''''''''''''''''''''''''''''''''''''''''''''
 
 No Default
@@ -7846,7 +8676,9 @@ HTML in OPACNoResultsFound will appear below lines that look like this
     You can insert placeholders {QUERY\_KW} that will be replaced with
     the keywords of the query.
 
-`OpacPublic <#OpacPublic>`__
+.. _opacpublic-label:
+
+OpacPublic
 ''''''''''''''''''''''''''''
 
 Default: Enable
@@ -7869,7 +8701,9 @@ Description:
    OPAC to be searched by anyone and only require login for access to
    personalized content.
 
-`OPACResultsLibrary <#OPACResultsLibrary>`__
+.. _opacresultslibrary-label:
+
+OPACResultsLibrary
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: home library
@@ -7883,7 +8717,9 @@ Values:
 
 -  home library
 
-`OPACResultsSidebar <#OPACResultsSidebar>`__
+.. _opacresultssidebar-label:
+
+OPACResultsSidebar
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include the following HTML under the facets in OPAC search results
@@ -7893,7 +8729,9 @@ Description:
 -  The HTML entered in this preference will appear on the search results
    pages below the list of facets on the left side of the screen.
 
-`OPACSearchForTitleIn <#OPACSearchForTitleIn>`__
+.. _opacsearchfortitlein-label:
+
+OPACSearchForTitleIn
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: <li><a href="http://worldcat.org/search?q={TITLE}"
@@ -7912,7 +8750,9 @@ OPAC, with the following HTML (leave blank to disable)
     {ISSN} and {AUTHOR} will be replaced with information from the
     displayed record.
 
-`OpacSeparateHoldings & OpacSeparateHoldingsBranch <#OpacSeparateHoldings>`__
+.. _opacseparateholdings-&-opacseparateholdingsbranch-label:
+
+OpacSeparateHoldings & OpacSeparateHoldingsBranch
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 OpacSeparateHoldings default: Don't separate
@@ -7944,7 +8784,9 @@ Description:
    Separate holdings tabs
    |image83|
 
-`OPACShowBarcode <#OPACShowBarcode>`__
+.. _opacshowbarcode-label:
+
+OPACShowBarcode
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7968,7 +8810,9 @@ Description:
 -  This preference allows you to control whether patrons can see items'
    barcodes in the OPAC.
 
-`OPACShowCheckoutName <#OPACShowCheckoutName>`__
+.. _opacshowcheckoutname-label:
+
+OPACShowCheckoutName
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -7991,7 +8835,9 @@ Description:
    themselves. In larger public and academic libraries setting this to
    'Show' would pose serious privacy issues.
 
-`OPACShowHoldQueueDetails <#OPACShowHoldQueueDetails>`__
+.. _opacshowholdqueuedetails-label:
+
+OPACShowHoldQueueDetails
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show any hold details
@@ -8016,9 +8862,11 @@ Values:
    their hold.
    |image87|
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
-`OpacShowRecentComments <#OpacShowRecentComments>`__
+.. _opacshowrecentcomments-label:
+
+OpacShowRecentComments
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -8034,14 +8882,16 @@ Values:
 Description:
 
 -  If you have chosen to allow comments in your OPAC by setting
-   `reviewson <#reviewson>`__ to 'Allow' you can include a link to the
+   :ref:`reviewson` to 'Allow' you can include a link to the
    recent comments under the search box at the top of your OPAC with
    this preference.
 
    Recent Comments link on OPAC
    |image88|
 
-`OPACShowUnusedAuthorities <#OPACShowUnusedAuthorities>`__
+.. _opacshowunusedauthorities-label:
+
+OPACShowUnusedAuthorities
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -8056,7 +8906,7 @@ Values:
 
    -  **Important**
 
-          Requires that the `OpacAuthorities <#OpacAuthorities>`__
+          Requires that the :ref:`OpacAuthorities`
           preference is set to 'Allow'
 
 Description:
@@ -8070,7 +8920,9 @@ Description:
    system will show all authority records even if they aren't linked to
    records.
 
-`OpacStarRatings <#OpacStarRatings>`__
+.. _opacstarratings-label:
+
+OpacStarRatings
 ''''''''''''''''''''''''''''''''''''''
 
 Default: no
@@ -8099,7 +8951,9 @@ Description:
    the stars on the details page to leave their own rating. Clicking on
    the stars on the search results will not submit a rating.
 
-`OpacSuggestionManagedBy <#OpacSuggestionManagedBy>`__
+.. _opacsuggestionmanagedby-label:
+
+OpacSuggestionManagedBy
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -8115,13 +8969,15 @@ Values:
 
 Description:
 
--  If you're `allowing patrons to make purchase
-   suggestions <#suggestionspref>`__ then they will see the 'my
+-  If you're :ref:`allowing patrons to make purchase
+   suggestions <suggestion-label>` then they will see the 'my
    suggestions' tab when logged in. This tab shows the patron the
    librarian who approved or rejected the purchase suggestion. This
    preference controls if the patron sees the librarian's name or not.
 
-`opacthemes <#opacthemes>`__
+.. _opacthemes-label:
+
+opacthemes
 ''''''''''''''''''''''''''''
 
 Default: bootstrap
@@ -8136,7 +8992,9 @@ Values:
 
    This theme is completely responsive
 
-`OPACURLOpenInNewWindow <#OPACURLOpenInNewWindow>`__
+.. _opacurlopeninnewwindow-label:
+
+OPACURLOpenInNewWindow
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't
@@ -8156,7 +9014,9 @@ Description:
    window or not. When clicking on a link in the OPAC, a patron does not
    need to worry about navigating away from their search results.
 
-`OPACUserCSS <#OPACUserCSS>`__
+.. _opacusercss-label:
+
+OPACUserCSS
 ''''''''''''''''''''''''''''''
 
 Asks: Include the following CSS on all pages in the OPAC
@@ -8169,11 +9029,13 @@ Description:
    found in the default style sheet. The default stylesheet will likely
    be found at
    http://your\_koha\_address/opac-tmpl/bootstrap/css/opac.css. Unlike
-   `OpacAdditionalStylesheet <#OpacAdditionalStylesheet>`__ and
-   `opaclayoutstylesheet <#opaclayoutstylesheet>`__ this preference will
+   :ref:`OpacAdditionalStylesheet` and
+   :ref:`opaclayoutstylesheet` this preference will
    embed the CSS directly on your OPAC pages.
 
-`OPACUserJS <#opacuserjs>`__
+.. _opacuserjs-label:
+
+OPACUserJS
 ''''''''''''''''''''''''''''
 
 Asks: Include the following JavaScript on all pages in the OPAC
@@ -8197,7 +9059,9 @@ Description:
    can be found on the wiki:
    http://wiki.koha-community.org/wiki/JQuery_Library.
 
-`OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__
+.. _opacxsltdetailsdisplay-label:
+
+OPACXSLTDetailsDisplay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: default
@@ -8236,7 +9100,9 @@ Description:
    either use the default look that comes with Koha or design your own
    stylesheet.
    
-`OPACXSLTListsDisplay <#OPACXSLTListsDisplay>`__
+.. _opacxsltlistsdisplay-label:
+
+OPACXSLTListsDisplay
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: default
@@ -8275,7 +9141,9 @@ Description:
    allow you either use the default look that comes with Koha or design
    your own stylesheet.
 
-`OPACXSLTResultsDisplay <#OPACXSLTResultsDisplay>`__
+.. _opacxsltresultsdisplay-label:
+
+OPACXSLTResultsDisplay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: default
@@ -8314,10 +9182,14 @@ Description:
    allow you either use the default look that comes with Koha or design
    your own stylesheet.
 
-`Features <#opacfeaturesprefs>`__
+.. _features-label:
+
+Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`numSearchRSSResults <#numSearchRSSResults>`__
+.. _numsearchrssresults-label:
+
+numSearchRSSResults
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 50
@@ -8332,7 +9204,9 @@ Description:
    This preference allows you to adjust this number to show the best
    number of results for your patrons.
 
-`OPACAcquisitionDetails <#OPACAcquisitionDetails>`__
+.. _opacacquisitiondetails-label:
+
+OPACAcquisitionDetails
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -8348,10 +9222,12 @@ Values:
 Description:
 
 -  This preference shows the patrons how many items are on order in the
-   Holdings tab if you have the `AcqCreateItem <#AcqCreateItem>`__ set
+   Holdings tab if you have the :ref:`AcqCreateItem` set
    to 'cataloging the record'
 
-`OpacAuthorities <#OpacAuthorities>`__
+.. _opacauthorities-label:
+
+OpacAuthorities
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8376,7 +9252,9 @@ Values:
 
 -  Don't allow
 
-`opacbookbag <#opacbookbag>`__
+.. _opacbookbag-label:
+
+opacbookbag
 ''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8397,7 +9275,9 @@ Description:
    be logged in. This list is temporary and will be emptied, or cleared,
    at the end of the session.
 
-`OpacBrowser <#OpacBrowser>`__
+.. _opacbrowser-label:
+
+OpacBrowser
 ''''''''''''''''''''''''''''''
 
     **Important**
@@ -8416,10 +9296,12 @@ Values:
 
     **Important**
 
-    run the `Authorities Browser Cron Job <#authbrowsercron>`__ to
+    run the :ref:`Authorities Browser Cron Job <authorities-browser-label>` to
     create the browser list
 
-`OpacBrowseResults <#OpacBrowseResults>`__
+.. _opacbrowseresults-label:
+
+OpacBrowseResults
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: enable
@@ -8441,7 +9323,9 @@ Description:
 -  This preference will control the option to return to your results
    and/or browse them from the detail page in the OPAC.
 
-`OpacCloud <#OpacCloud>`__
+.. _opaccloud-label:
+
+OpacCloud
 ''''''''''''''''''''''''''
 
     **Important**
@@ -8460,10 +9344,12 @@ Values:
 
     **Important**
 
-    run the `Authorities Browser Cron Job <#authbrowsercron>`__ to
+    run the :ref:`Authorities Browser Cron Job <authorities-browser-label>` to
     create the browser list
 
-`OPACFinesTab <#OPACFinesTab>`__
+.. _opacfinestab-label:
+
+OPACFinesTab
 ''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8475,11 +9361,13 @@ Values:
 
 -  Allow
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
 -  Don't allow
 
-`OpacHoldNotes <#OpacHoldNotes>`__
+.. _opacholdnotes-label:
+
+OpacHoldNotes
 ''''''''''''''''''''''''''''''''''
 
 Default: Do not allow
@@ -8495,10 +9383,12 @@ Values:
 
 -  Do not allow
 
-`OPACISBD <#OPACISBD>`__
+.. _opacisbd-label:
+
+OPACISBD
 ''''''''''''''''''''''''
 
-Default: `MARC21 Default Appendix <#opacisbdmarcdefault>`__
+Default: :ref:`MARC21 Default Appendix <marc-label>`
 
 Asks: Use the following as the OPAC ISBD template:
 
@@ -8512,7 +9402,9 @@ Description:
    cataloging. The purpose of ISBD is to aid the international exchange
    of bibliographic records for a variety of materials.
 
-`OpacItemLocation <#OpacItemLocation>`__
+.. _opacitemlocation-label:
+
+OpacItemLocation
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: call number only
@@ -8533,7 +9425,9 @@ Description:
    choose to display collection code or location in addition to call
    number.
 
-`OpacNewsLibrarySelect <#OpacNewsLibrarySelect>`__
+.. _opacnewslibraryselect-label:
+
+OpacNewsLibrarySelect
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -8546,7 +9440,9 @@ Values:
 
 -  Display
 
-`OpacPasswordChange <#OpacPasswordChange>`__
+.. _opacpasswordchange-label:
+
+OpacPasswordChange
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8557,7 +9453,7 @@ Values:
 
 -  Allow
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
 -  Don't allow
 
@@ -8565,7 +9461,9 @@ Values:
 
     Enabling this will break LDAP authentication.
 
-`OPACPatronDetails <#OPACPatronDetails>`__
+.. _opacpatrondetails-label:
+
+OPACPatronDetails
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8577,7 +9475,7 @@ Values:
 
 -  Allow
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
 -  Don't allow
 
@@ -8602,11 +9500,13 @@ Description:
 
        You can control what fields patrons see and can modify via the
        OPAC by setting the
-       `PatronSelfRegistrationBorrowerMandatoryField <#PatronSelfRegistrationBorrowerMandatoryField>`__
-       `PatronSelfRegistrationBorrowerUnwantedField <#PatronSelfRegistrationBorrowerUnwantedField>`__
+       :ref:`PatronSelfRegistrationBorrowerMandatoryField`
+       :ref:`PatronSelfRegistrationBorrowerUnwantedField`
        preferences.
 
-`OPACpatronimages <#OPACpatronimages>`__
+.. _opacpatronimages-label:
+
+OPACpatronimages
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -8621,12 +9521,14 @@ Values:
 
 Description:
 
--  If `patronimages <#patronimages>`__ is set to allow the upload of
+-  If :ref:`patronimages` is set to allow the upload of
    patron images via the staff client, then setting this preference to
    'show' will show the patron what image you have on file for them when
    they view their personal information on their account in the OPAC.
 
-`OPACPopupAuthorsSearch <#OPACPopupAuthorsSearch>`__
+.. _opacpopupauthorssearch-label:
+
+OPACPopupAuthorsSearch
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't display
@@ -8644,7 +9546,7 @@ Values:
 
           This will only display the pop up if you are not using an XSLT
           stylesheet. Review your
-          `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ to find
+          :ref:`OPACXSLTDetailsDisplay` to find
           out what stylesheet you're using.
 
 -  Don't display
@@ -8661,7 +9563,9 @@ Description:
    'Search' at the bottom of the pop up. The default behavior is for
    Koha to search just the clicked author or subject.
 
-`OpacResetPassword <#OpacResetPassword>`__
+.. _opacresetpassword-label:
+
+OpacResetPassword
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: not allowed
@@ -8679,9 +9583,11 @@ Description:
 
 -  This preference controls whether you present users of the public
    catalog with a 'Forgot your password' link or not. Learn more in the
-   `OPAC section <#resetpwopac>`__ of this manual.
+   :ref:`OPAC section <resetting-your-password-label>` of this manual.
 
-`OpacTopissue <#OpacTopissue>`__
+.. _opactopissue-label:
+
+OpacTopissue
 ''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -8715,7 +9621,9 @@ Description:
    Sample top issues page
    |image100|
 
-`opacuserlogin <#opacuserlogin>`__
+.. _opacuserlogin-label:
+
+opacuserlogin
 ''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8731,7 +9639,9 @@ Values:
    -  The OPAC will still be searchable if patrons can't log in, this
       just disables the patron account access via the OPAC
 
-`QuoteOfTheDay <#QuoteOfTheDay>`__
+.. _quoteoftheday-label:
+
+QuoteOfTheDay
 ''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -8748,9 +9658,11 @@ Description:
 
 -  This feature will allow you to enter a series of quotes that will
    then show on the OPAC homepage in random order. To add/edit quotes,
-   visit the `Quote of the Day Editor <#QOTDEditor>`__ under Tools.
+   visit the :ref:`Quote of the Day Editor <quote-of-the-day-(qotd)-editor-label>` under Tools.
 
-`RequestOnOpac <#RequestOnOpac>`__
+.. _requestonopac-label:
+
+RequestOnOpac
 ''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8761,11 +9673,13 @@ Values:
 
 -  Allow
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
 -  Don't allow
 
-`reviewson <#reviewson>`__
+.. _reviewson-label:
+
+reviewson
 ''''''''''''''''''''''''''
 
 Default: Allow
@@ -8779,7 +9693,7 @@ Values:
    -  Patrons comments/reviews all require moderation before they appear
       in the OPAC
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'Allow'
+   -  :ref:`opacuserlogin` needs to be set to 'Allow'
 
 -  Don't allow
 
@@ -8790,10 +9704,12 @@ Description:
    first sent to the staff client for staff approval before the review
    is displayed in the OPAC. The staff member who reviews and approves
    comments may find the pending comments on the
-   `Comments <#comments>`__ tool. The staff member can then choose to
+   :ref:`Comments` tool. The staff member can then choose to
    approve or delete the comments.
 
-`ShowReviewer <#ShowReviewer>`__
+.. _showreviewer-label:
+
+ShowReviewer
 ''''''''''''''''''''''''''''''''
 
 Default: full name
@@ -8819,10 +9735,12 @@ Description:
 -  If you would like to protect your patron's privacy in the OPAC you
    can choose to hide their names or parts of their names from any of
    the comments they leave on bib records in your system.
-   `reviewson <#reviewson>`__ needs to be set to 'Allow' for this to
+   :ref:`reviewson` needs to be set to 'Allow' for this to
    preference to come in to play
 
-`ShowReviewerPhoto <#ShowReviewerPhoto>`__
+.. _showreviewerphoto-label:
+
+ShowReviewerPhoto
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -8835,8 +9753,8 @@ Values:
 
 -  Show
 
-   -  `reviewson <#reviewson>`__ needs to be set to 'Allow' and
-      `ShowReviewer <#ShowReviewer>`__ needs to be set to 'Show' for
+   -  :ref:`reviewson` needs to be set to 'Allow' and
+      :ref:`ShowReviewer` needs to be set to 'Show' for
       this to preference to come in to play
 
       ShowReviewerPhoto set to 'Show'
@@ -8851,7 +9769,9 @@ Description:
    display next to their name on various different websites. The library
    has no control over the images the patron chooses to display.
 
-`SocialNetworks <#SocialNetworks>`__
+.. _socialnetworks-label:
+
+SocialNetworks
 ''''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -8876,9 +9796,11 @@ Description:
     **Important**
 
     In order for these share buttons to work when clicked you must have
-    filled in your `OPACBaseURL <#OPACBaseURL>`__ preference.
+    filled in your :ref:`OPACBaseURL` preference.
 
-`suggestion <#suggestionspref>`__
+.. _suggestion-label:
+
+suggestion
 '''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -8889,18 +9811,22 @@ Values:
 
 -  Allow
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
-      unless `AnonSuggestions <#AnonSuggestions>`__ is set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
+      unless :ref:`AnonSuggestions` is set to 'allow'
 
 -  Don't allow
 
-`Payments <#opacpayments>`__
+.. _payments-label:
+
+Payments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preferences will allow you control the tools you use to accept
 online payments from your patrons via the OPAC.
 
-`EnablePayPalOpacPayments & PayPalSandboxMode <#EnablePayPalOpacPayments>`__
+.. _enablepaypalopacpayments-&-paypalsandboxmode-label:
+
+EnablePayPalOpacPayments & PayPalSandboxMode
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 EnablePayPalOpacPayments Default: Don't all
@@ -8941,7 +9867,9 @@ Description:
     for the processing fees and so this plugin will not add additional
     fees to the charges.
 
-`PayPalChargeDescription <#PayPalChargeDescription>`__
+.. _paypalchargedescription-label:
+
+PayPalChargeDescription
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Koha fee payment
@@ -8953,25 +9881,35 @@ Description
 -  This preference controls what the patron will see on their PayPal
    account/Bank account for this charge.
 
-`PayPalPwd <#PayPalPwd>`__
+.. _paypalpwd-label:
+
+PayPalPwd
 ''''''''''''''''''''''''''
 
 Asks: The password for the PayPal account to receive payments is \_\_\_
 
-`PayPalSignature <#PayPalSignature>`__
+.. _paypalsignature-label:
+
+PayPalSignature
 ''''''''''''''''''''''''''''''''''''''
 
 Asks: The signature for the PayPal account to receive payments is \_\_\_
 
-`PayPalUser <#PayPalUser>`__
+.. _paypaluser-label:
+
+PayPalUser
 ''''''''''''''''''''''''''''
 
 Asks: The email address to receive PayPal payments is \_\_\_
 
-`Policy <#opacpolicyprefs>`__
+.. _policy-label:
+
+Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowPurchaseSuggestionBranchChoice <#AllowPurchaseSuggestionBranchChoice>`__
+.. _allowpurchasesuggestionbranchchoice-label:
+
+AllowPurchaseSuggestionBranchChoice
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -8990,7 +9928,9 @@ Description:
    specific branch you can set this preference to 'Allow' to add a
    branch selection option to the purchase suggestion form.
 
-`BlockExpiredPatronOpacActions <#BlockExpiredPatronOpacActions>`__
+.. _blockexpiredpatronopacactions-label:
+
+BlockExpiredPatronOpacActions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't block
@@ -9008,10 +9948,12 @@ Description:
 
 -  This preference lets you set a default value for how Koha handles
    permissions for patrons who are expired. This preference can be
-   overwritten by the setting on `individual patron
-   categories <#patcats>`__.
+   overwritten by the setting on :ref:`individual patron
+   categories <patron-categories-label>`.
 
-`MaxOpenSuggestions <#MaxOpenSuggestions>`__
+.. _maxopensuggestions-label:
+
+MaxOpenSuggestions
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
@@ -9019,7 +9961,9 @@ Default: blank
 Asks: Limit patrons to \_\_\_ open suggestions. Leave empty for no limit.
 **Note: this setting does not affect anonymous suggestions.
 
-`OpacAllowPublicListCreation <#OpacAllowPublicListCreation>`__
+.. _opacallowpubliclistcreation-label:
+
+OpacAllowPublicListCreation
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -9042,9 +9986,11 @@ Description:
     **Important**
 
     This preference will only be taken in to account if you have
-    `virtualshelves <#virtualshelves>`__ set to 'Allow'
+    :ref:`virtualshelves` set to 'Allow'
 
-`OpacAllowSharingPrivateLists <#OpacAllowSharingPrivateLists>`__
+.. _opacallowsharingprivatelists-label:
+
+OpacAllowSharingPrivateLists
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9065,7 +10011,9 @@ Description:
    will ask for the email of the patron they would like to share with.
    Koha will then email the patron an invitation to see the list.
 
-`OPACFineNoRenewals <#OPACFineNoRenewals>`__
+.. _opacfinenorenewals-label:
+
+OPACFineNoRenewals
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 99999
@@ -9079,10 +10027,12 @@ have less than \_\_\_ USD in fines
 
     **Important**
 
-    To allow renewals in the OPAC, `opacuserlogin <#opacuserlogin>`__
+    To allow renewals in the OPAC, :ref:`opacuserlogin`
     needs to be set to 'allow'
 
-`OpacHiddenItems <#OpacHiddenItems>`__
+.. _opachiddenitems-label:
+
+OpacHiddenItems
 ''''''''''''''''''''''''''''''''''''''
 
 Asks: Allows to define custom rules for hiding specific items at opac.
@@ -9113,7 +10063,9 @@ Description:
    STAFF means it's assigned to the staff reading room and ISO means it
    is in the isolation room.
 
-`OpacRenewalAllowed <#OpacRenewalAllowed>`__
+.. _opacrenewalallowed-label:
+
+OpacRenewalAllowed
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9124,7 +10076,7 @@ Values:
 
 -  Allow
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
 -  Don't allow
 
@@ -9138,7 +10090,9 @@ Description:
    the OPAC. It allows patrons to renew their materials without having
    to contact the library or having to return to the library.
 
-`OpacRenewalBranch <#OpacRenewalBranch>`__
+.. _opacrenewalbranch-label:
+
+OpacRenewalBranch
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: the branch the item was checked out from
@@ -9164,7 +10118,9 @@ Description:
    renewals, this preference defines which branch is entered in to the
    table when a patron renews an item for themselves via the OPAC.
 
-`OPACSuggestionMandatoryFields <#OPACSuggestionMandatoryFields>`__
+.. _opacsuggestionmandatoryfields-label:
+
+OPACSuggestionMandatoryFields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
@@ -9199,7 +10155,9 @@ Values:
 
 -  Title
 
-`OPACViewOthersSuggestions <#OPACViewOthersSuggestions>`__
+.. _opacviewotherssuggestions-label:
+
+OPACViewOthersSuggestions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -9212,9 +10170,11 @@ Values:
 
 -  Show
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
-`SearchMyLibraryFirst <#SearchMyLibraryFirst>`__
+.. _searchmylibraryfirst-label:
+
+SearchMyLibraryFirst
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't limit
@@ -9235,12 +10195,16 @@ Values:
       Advanced search page - but will be limited to searches for their
       library only from the basic search box
 
-   -  `opacuserlogin <#opacuserlogin>`__ needs to be set to 'allow'
+   -  :ref:`opacuserlogin` needs to be set to 'allow'
 
-`Privacy <#opacprivacyprefs>`__
+.. _privacy-label:
+
+Privacy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowPatronToSetCheckoutsVisibilityForGuarantor <#AllowPatronToSetCheckoutsVisibilityForGuarantor>`__
+.. _allowpatrontosetcheckoutsvisibilityforguarantor-label:
+
+AllowPatronToSetCheckoutsVisibilityForGuarantor
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9261,9 +10225,11 @@ Description:
    permission to guarantors (guardians) to view their current checkouts
    via the public catalog. This preference requires that you allow
    patrons to se their own privacy with the
-   `OPACPrivacy <#OPACPrivacy>`__ preference.
+   :ref:`OPACPrivacy` preference.
 
-`AnonSuggestions <#AnonSuggestions>`__
+.. _anonsuggestions-label:
+
+AnonSuggestions
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9273,7 +10239,7 @@ Asks: \_\_\_ patrons that aren't logged in to make purchase suggestions.
     **Important**
 
     If set to 'Allow', suggestions are connected to the
-    `AnonymousPatron <#AnonymousPatron>`__
+    :ref:`AnonymousPatron`
 
 Values:
 
@@ -9281,7 +10247,9 @@ Values:
 
 -  Don't allow
 
-`AnonymousPatron <#AnonymousPatron>`__
+.. _anonymouspatron-label:
+
+AnonymousPatron
 ''''''''''''''''''''''''''''''''''''''
 
 Default: 0
@@ -9291,7 +10259,7 @@ suggestions and reading history)
 
     **Note**
 
-    Before setting this preference `create a patron <#addnewpatron>`__
+    Before setting this preference :ref:`create a patron <add-a-new-patron-label>`
     to be used for all anonymous suggestions and/or reading history
     items. This patron can be any type and should be named something to
     make it clear to you that they're anonymous (ex. Anonymous Patron).
@@ -9302,7 +10270,9 @@ suggestions and reading history)
     this value. The borrowernumber can be found on the patron record
     under 'Library use' on the right.Borrowernumber
 
-`EnableOpacSearchHistory <#EnableOpacSearchHistory>`__
+.. _enableopacsearchhistory-label:
+
+EnableOpacSearchHistory
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Keep
@@ -9315,7 +10285,9 @@ Values:
 
 -  Keep
 
-`OPACPrivacy <#OPACPrivacy>`__
+.. _opacprivacy-label:
+
+OPACPrivacy
 ''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9325,8 +10297,8 @@ reading history.
 
     **Important**
 
-    This requires `opacreadinghistory <#opacreadinghistory>`__ set to
-    'Allow' and `AnonymousPatron <#AnonymousPatron>`__ to be set to your
+    This requires :ref:`opacreadinghistory` set to
+    'Allow' and :ref:`AnonymousPatron` to be set to your
     anonymous patron's borrowernumber.
 
 Values:
@@ -9338,18 +10310,20 @@ Values:
 Description:
 
 -  The default privacy setting for each patron category can be set in
-   the `Patrons Categories <#patcats>`__ area. If you set this
+   the :ref:`Patrons Categories <patron-categories-label>` area. If you set this
    preference to 'allow' then patrons can change that for themselves via
    the OPAC.
 
     **Important**
 
     If patron has chosen to have their reading history anonymized and
-    you have `StoreLastBorrower <#StoreLastBorrower>`__ set to "Don't
+    you have :ref:`StoreLastBorrower` set to "Don't
     store" then as soon as the item is checked in the last borrower will
     be anonymized.
 
-`opacreadinghistory <#opacreadinghistory>`__
+.. _opacreadinghistory-label:
+
+opacreadinghistory
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -9361,14 +10335,16 @@ past.
 
     Enabling this will make it so that patrons can view their
     circulation history in the OPAC unless you have
-    `OPACPrivacy <#OPACPrivacy>`__ set to 'Allow.'
+    :ref:`OPACPrivacy` set to 'Allow.'
 
     **Important**
 
     This data is stored in the system regardless of your choice, unless
     your patrons have chosen to never have their reading history kept.
 
-`StoreLastBorrower <#StoreLastBorrower>`__
+.. _storelastborrower-label:
+
+StoreLastBorrower
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't store
@@ -9390,10 +10366,12 @@ Description:
     **Note**
 
     This setting is independent of
-    `opacreadinghistory <#opacreadinghistory>`__ and/or
-    `AnonymousPatron <#AnonymousPatron>`__.
+    :ref:`opacreadinghistory` and/or
+    :ref:`AnonymousPatron`.
 
-`TrackClicks <#TrackClicks>`__
+.. _trackclicks-label:
+
+TrackClicks
 ''''''''''''''''''''''''''''''
 
 Default: Don't track
@@ -9424,7 +10402,9 @@ Description:
        from the OPAC to notify your users that you are tracking their
        information.
 
-`Restricted Page <#opacrestrictedpg>`__
+.. _restricted-page-label:
+
+Restricted Page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the following preference you can create a page within your Koha
@@ -9432,12 +10412,16 @@ system that is accessible by only specific IP addresses. This can be
 used to house links to databases that can only be accessed from with the
 library or other licensed content.
 
-`RestrictedPageContent <#RestrictedPageContent>`__
+.. _restrictedpagecontent-label:
+
+RestrictedPageContent
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: HTML content of your restricted page.
 
-`RestrictedPageLocalIPs <#RestrictedPageLocalIPs>`__
+.. _restrictedpagelocalips-label:
+
+RestrictedPageLocalIPs
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Access from IP addresses beginning with \_\_\_ do not need to be
@@ -9449,7 +10433,9 @@ Description:
    '127.0.0,127.0.1') or just the beginning of the IP range allowed (ex:
    '127.0.')
 
-`RestrictedPageTitle <#RestrictedPageTitle>`__
+.. _restrictedpagetitle-label:
+
+RestrictedPageTitle
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use \_\_\_ as title of your restricted page
@@ -9459,10 +10445,14 @@ Description:
 -  This title will appear in the breadcrumb and on the top of the
    restricted page.
 
-`Self Registration <#opacselfregistrationprefs>`__
+.. _self-registration-label:
+
+Self Registration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`PatronSelfModificationBorrowerUnwantedField <#PatronSelfModificationBorrowerUnwantedField>`__
+.. _patronselfmodificationborrowerunwantedfield-label:
+
+PatronSelfModificationBorrowerUnwantedField
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: password
@@ -9475,14 +10465,16 @@ Description:
 
 -  This preference allows you to define what fields patrons can edit if
    you're allowing them to update their personal information via the
-   public catalog with the `OPACPatronDetails <#OPACPatronDetails>`__
+   public catalog with the :ref:`OPACPatronDetails`
    preference.
 
     **Important**
 
     Separate columns with \|
 
-`PatronSelfRegistration <#PatronSelfRegistration>`__
+.. _patronselfregistration-label:
+
+PatronSelfRegistration
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9498,8 +10490,8 @@ Values:
 Description:
 
 -  Setting this preference to 'Allow' will provide a link on the OPAC to
-   register for a new account. Using the other `Self
-   Registration <#opacselfregistrationprefs>`__ system preferences you
+   register for a new account. Using the other :ref:`Self
+   Registration <self-registration-label>` system preferences you
    can control how this preference will function.
 
    Register link in the OPAC
@@ -9509,14 +10501,16 @@ Description:
 
     Patrons registering via the OPAC will not need to be approved by a
     librarian. For this reason it is recommended that you set up a
-    provisional `patron category <#patcats>`__ with no `circulation
-    rights <#circfinerules>`__. That way patrons will have to come in to
+    provisional :ref:`patron category <patron-categories-label>` with no :ref:`circulation
+    rights <circulation-and-fine-rules-label>`. That way patrons will have to come in to
     the library to verify their identity before given circulation rights
     at the library. Once the patron confirms their identity the library
     staff can change the category to one with permissions to check items
     out and place holds.
 
-`PatronSelfRegistrationAdditionalInstructions <#PatronSelfRegistrationAdditionalInstructions>`__
+.. _patronselfregistrationadditionalinstructions-label:
+
+PatronSelfRegistrationAdditionalInstructions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Display the following additional instructions for patrons who self
@@ -9527,7 +10521,9 @@ Description:
 -  This preference takes any HTML you'd like to display on the page the
    patron sees after successfully registering for their library card.
 
-`PatronSelfRegistrationBorrowerMandatoryField <#PatronSelfRegistrationBorrowerMandatoryField>`__
+.. _patronselfregistrationborrowermandatoryfield-label:
+
+PatronSelfRegistrationBorrowerMandatoryField
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: surname\|firstname
@@ -9556,10 +10552,12 @@ Description:
 
     If you're going to require that patrons verify their accounts via
     email with the
-    `PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
+    :ref:`PatronSelfRegistrationVerifyByEmail`
     preference the email field will automatically be marked as required.
 
-`PatronSelfRegistrationBorrowerUnwantedField <#PatronSelfRegistrationBorrowerUnwantedField>`__
+.. _patronselfregistrationborrowerunwantedfield-label:
+
+PatronSelfRegistrationBorrowerUnwantedField
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: password
@@ -9583,7 +10581,9 @@ Description:
     structure <http://schema.koha-community.org/tables/borrowers.html>`__
     associated with the borrowers table.
 
-`PatronSelfRegistrationDefaultCategory <#PatronSelfRegistrationDefaultCategory>`__
+.. _patronselfregistrationdefaultcategory-label:
+
+PatronSelfRegistrationDefaultCategory
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the patron category code \_\_\_ as the default patron category
@@ -9598,8 +10598,8 @@ Description:
 
     Patrons registering via the OPAC will not need to be approved by a
     librarian. For this reason it is recommended that you set up a
-    provisional `patron category <#patcats>`__ with no `circulation
-    rights <#circfinerules>`__. That way patrons will have to come in to
+    provisional :ref:`patron category <patron-categories-label>` with no :ref:`circulation
+    rights <circulation-and-fine-rules-label>`. That way patrons will have to come in to
     the library to verify their identity before given circulation rights
     at the library. Once the patron confirms their identiy the library
     staff can change the category to one with permissions to check items
@@ -9612,7 +10612,9 @@ Description:
     There will be no errors on the page to explain this, so be sure to
     enter a valid patron category code.
     
-`PatronSelfRegistrationEmailMustBeUnique <#PatronSelfRegistrationEmailMustBeUnique>`__
+.. _patronselfregistrationemailmustbeunique-label:
+
+PatronSelfRegistrationEmailMustBeUnique
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not consider
@@ -9626,7 +10628,9 @@ Values:
 
 -  Consider
 
-`PatronSelfRegistrationExpireTemporaryAccountsDelay <#PatronSelfRegistrationExpireTemporaryAccountsDelay>`__
+.. _patronselfregistrationexpiretemporaryaccountsdelay-label:
+
+PatronSelfRegistrationExpireTemporaryAccountsDelay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 0
@@ -9636,15 +10640,17 @@ Asks: Delete patrons registered via the OPAC, but not yet verified after
 
 Description:
 
--  This preference links to the `delete\_expired\_opac\_registrations.pl
-   cron job <#deleteexpiredregistrationcron>`__. If that cron is set to
+-  This preference links to the :ref:`delete\_expired\_opac\_registrations.pl
+   cron job <unverified-registrations-label>`. If that cron is set to
    run nightly it will clean up any registrations that have not been
    verified via email in the number of days entered on this preference.
    This is dependent on
-   `PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
+   :ref:`PatronSelfRegistrationVerifyByEmail`
    preference.
 
-`PatronSelfRegistrationLibraryList <#PatronSelfRegistrationLibraryList>`__
+.. _patronselfregistrationlibrarylist-label:
+
+PatronSelfRegistrationLibraryList
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
@@ -9652,7 +10658,9 @@ Default: blank
 Asks: Enable the self registration for the following libraries: \_\_\_
 (separate branchcode with |). If empty, all libraries will be listed.
 
-`PatronSelfRegistrationPrefillForm <#PatronSelfRegistrationPrefillForm>`__
+.. _patronselfregistrationprefillform-label:
+
+PatronSelfRegistrationPrefillForm
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Display and prefill
@@ -9665,7 +10673,9 @@ Values:
 
 -  Display and prefill
 
-`PatronSelfRegistrationVerifyByEmail <#PatronSelfRegistrationVerifyByEmail>`__
+.. _patronselfregistrationverifybyemail-label:
+
+PatronSelfRegistrationVerifyByEmail
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't require
@@ -9685,7 +10695,7 @@ Description:
    not be able to log in to the OPAC until they acknowledge the email
    sent by Koha. If you don't require this then patrons will be able to
    log in as soon as they fill in the registration form. You can set the
-   `PatronSelfRegistrationExpireTemporaryAccountsDelay <#PatronSelfRegistrationExpireTemporaryAccountsDelay>`__
+   :ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay`
    preference to delete the un-verified self registrations after a
    certain number of days.
 
@@ -9694,10 +10704,14 @@ Description:
     If you're going to require that patrons verify their accounts via
     email then the email field will automatically be marked as required.
 
-`Shelf Browser <#shelfbrowseprefs>`__
+.. _shelf-browser-label:
+
+Shelf Browser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`OPACShelfBrowser <#OPACShelfBrowser>`__
+.. _opacshelfbrowser-label:
+
+OPACShelfBrowser
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -9729,7 +10743,9 @@ Description:
     This uses up a fairly large amount of resources on your server, and
     should be avoided if your collection has a large number of items.
 
-`ShelfBrowserUsesCcode <#ShelfBrowserUsesCcode>`__
+.. _shelfbrowserusesccode-label:
+
+ShelfBrowserUsesCcode
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -9749,7 +10765,9 @@ Description:
    browser to take into consideration what collection the books belong
    to when populating the virtual shelf browser.
 
-`ShelfBrowserUsesHomeBranch <#ShelfBrowserUsesHomeBranch>`__
+.. _shelfbrowseruseshomebranch-label:
+
+ShelfBrowserUsesHomeBranch
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Use
@@ -9769,7 +10787,9 @@ Description:
    Koha takes into consideration what branch owns the books when
    populating the virtual shelf browser for accuracy.
 
-`ShelfBrowserUsesLocation <#ShelfBrowserUsesLocation>`__
+.. _shelfbrowseruseslocation-label:
+
+ShelfBrowserUsesLocation
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Use
@@ -9788,15 +10808,21 @@ Description:
    browser to take into consideration what shelving location the books
    belong to when populating the virtual shelf browser.
 
-`Patrons <#patronprefs>`__
+.. _patrons-label:
+
+Patrons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > Patrons
 
-`General <#generalpatronpref>`__
+.. _general-label:
+
+General
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AllowStaffToSetCheckoutsVisibilityForGuarantor <#AllowStaffToSetCheckoutsVisibilityForGuarantor>`__
+.. _allowstafftosetcheckoutsvisibilityforguarantor-label:
+
+AllowStaffToSetCheckoutsVisibilityForGuarantor
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -9810,7 +10836,9 @@ Values:
 
 -  Allow
 
-`AutoEmailOpacUser <#AutoEmailOPACUser>`__
+.. _autoemailopacuser-label:
+
+AutoEmailOpacUser
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't send
@@ -9823,7 +10851,7 @@ Description:
 -  AutoEmailOpacUser allows library users to be notified by email of
    their account details when a new account is opened at the email
    address specified in the
-   `AutoEmailPrimaryAddress <#AutoEmailPrimaryAddress>`__ preference.
+   :ref:`AutoEmailPrimaryAddress` preference.
    The email contains the username and password given to or chosen by
    the patron when signing up for their account and can be customized by
    editing the `ACCTDETAILS <#ACCTDETAILS>`__ notice.
@@ -9834,7 +10862,9 @@ Values:
 
 -  Send
 
-`AutoEmailPrimaryAddress <#AutoEmailPrimaryAddress>`__
+.. _autoemailprimaryaddress-label:
+
+AutoEmailPrimaryAddress
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: alternate
@@ -9858,7 +10888,9 @@ Description:
    then alternate. Otherwise the system will use the email address you
    specify.
 
-`autoMemberNum <#autoMemberNum>`__
+.. _automembernum-label:
+
+autoMemberNum
 ''''''''''''''''''''''''''''''''''
 
 Default: Do
@@ -9883,7 +10915,9 @@ Description:
    'Do' the system will calculate a new patron barcode by adding 1 to
    the maximum barcode already present in the database.
 
-`BorrowerMandatoryField <#BorrowerMandatoryField>`__
+.. _borrowermandatoryfield-label:
+
+BorrowerMandatoryField
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: surname\|cardnumber\|barcode
@@ -9911,7 +10945,9 @@ Description:
     structure <http://schema.koha-community.org/tables/borrowers.html>`__
     associated with the borrowers table.
 
-`borrowerRelationship <#borrowerRelationship>`__
+.. _borrowerrelationship-label:
+
+borrowerRelationship
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: father\|mother
@@ -9932,7 +10968,9 @@ Description:
 
     Input multiple choices separated by \|
 
-`BorrowerRenewalPeriodBase <#BorrowerRenewalPeriodBase>`__
+.. _borrowerrenewalperiodbase-label:
+
+BorrowerRenewalPeriodBase
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: current date
@@ -9954,7 +10992,9 @@ Description:
    subscription period to the old expiration date for the patron when
    renewing their account.
 
-`BorrowersTitles <#BorrowersTitles>`__
+.. _borrowerstitles-label:
+
+BorrowersTitles
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Mr\|Mrs\|Miss\|Ms
@@ -9971,7 +11011,9 @@ Description:
 
     Input multiple choices separated by \|
 
-`BorrowerUnwantedField <#BorrowerUnwantedField>`__
+.. _borrowerunwantedfield-label:
+
+BorrowerUnwantedField
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The following database columns will not appear on the patron entry
@@ -9994,7 +11036,9 @@ Description:
     structure <http://schema.koha-community.org/tables/borrowers.html>`__
     associated with the borrowers table.
 
-`CardnumberLength <#CardnumberLength>`__
+.. _cardnumberlength-label:
+
+CardnumberLength
 ''''''''''''''''''''''''''''''''''''''''
 
 Asks: Card numbers for patrons must be \_\_\_ characters long.
@@ -10004,10 +11048,12 @@ Description:
 -  The length can be a single number to specify an exact length, a range
    separated by a comma (i.e., 'Min,Max'), or a maximum with no minimum
    (i.e., ',Max'). If 'cardnumber' is included in the
-   `BorrowerMandatoryField <#BorrowerMandatoryField>`__ list, the
+   :ref:`BorrowerMandatoryField` list, the
    minimum length, if not specified here, defaults to one.
 
-`checkdigit <#checkdigit>`__
+.. _checkdigit-label:
+
+checkdigit
 ''''''''''''''''''''''''''''
 
 Default: Don't
@@ -10023,9 +11069,11 @@ Values:
 
     **Important**
 
-    This overrides `autoMemberNum <#autoMemberNum>`__ if on.
+    This overrides :ref:`autoMemberNum` if on.
     
-`CheckPrevCheckout <#CheckPrevCheckout>`__
+.. _checkprevcheckout-label:
+
+CheckPrevCheckout
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do not
@@ -10042,7 +11090,9 @@ Values:
 
 -  Unless overridden, do not
 
-`DefaultPatronSearchFields <#DefaultPatronSearchFields>`__
+.. _defaultpatronsearchfields-label:
+
+DefaultPatronSearchFields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: surname,firstname,othernames,cardnumber,userid
@@ -10052,7 +11102,9 @@ Asks: \_\_\_ Comma separated list defining the default fields to be used during 
     **Important** possible values can be found in the borrowers table of Koha's schema
     located at http://schema.koha-community.org/
 
-`EnableBorrowerFiles <#EnableBorrowerFiles>`__
+.. _enableborrowerfiles-label:
+
+EnableBorrowerFiles
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -10071,7 +11123,9 @@ Description:
 -  When enabled this will add a 'Files' tab to the left of the patron
    detail page where you can view and upload files to the patron record.
 
-`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+.. _enhancedmessagingpreferences-label:
+
+EnhancedMessagingPreferences
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -10093,7 +11147,7 @@ Values:
     **Note**
 
     To manage if patrons have also access to these settings, use
-    `EnhancedMessagingPreferencesOPAC <#EnhancedMessagingPreferencesOPAC>`__.
+    :ref:`EnhancedMessagingPreferencesOPAC`.
 
 Description:
 
@@ -10118,7 +11172,9 @@ Description:
    -  Advanced Notice : A notice in advance of the patron's items being
       due (Staff can choose the number of days in advance)
 
-`EnhancedMessagingPreferencesOPAC <#EnhancedMessagingPreferencesOPAC>`__
+.. _enhancedmessagingpreferencesopac-label:
+
+EnhancedMessagingPreferencesOPAC
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -10133,7 +11189,7 @@ Values:
 
     **Important**
 
-    `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+    :ref:`EnhancedMessagingPreferences`
     must be enabled for messaging options to show in the OPAC
 
 Description:
@@ -10159,7 +11215,9 @@ Description:
    -  Advanced Notice : A notice in advance of the patron's items being
       due (The patron can choose the number of days in advance)
 
-`ExtendedPatronAttributes <#ExtendedPatronAttributes>`__
+.. _extendedpatronattributes-label:
+
+ExtendedPatronAttributes
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Enable
@@ -10175,8 +11233,8 @@ Values:
 
    -  Define attributes in Koha administration
 
-   -  Get there: More > Administration > `Patron Attribute
-      Types <#patronattributetypes>`__
+   -  Get there: More > Administration > :ref:`Patron Attribute
+      Types <patron-attribute-types-label>`
 
 Description:
 
@@ -10188,7 +11246,9 @@ Description:
     Use custom attributes for fields that the default patron record does
     not support such as driver's license number or student ID number.
 
-`FeeOnChangePatronCategory <#FeeOnChangePatronCategory>`__
+.. _feeonchangepatroncategory-label:
+
+FeeOnChangePatronCategory
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Do
@@ -10202,7 +11262,9 @@ Values:
 
 -  Don't
 
-`intranetreadinghistory <#intranetreadinghistory>`__
+.. _intranetreadinghistory-label:
+
+intranetreadinghistory
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -10211,7 +11273,7 @@ Asks: \_\_\_ staff to access a patron's checkout history.
 
     **Important**
 
-    If you have the `OPACPrivacy <#OPACPrivacy>`__ preference set to
+    If you have the :ref:`OPACPrivacy` preference set to
     'Allow' and the patron has decided to not have their history kept
     staff will only see currently checked out items.
 
@@ -10225,9 +11287,11 @@ Values:
 
     Reading history is still stored, regardless of staff being allowed
     access or not unless the patron has chosen to have their history
-    anonymized via their `privacy page <#opacmyprivacy>`__.
+    anonymized via their :ref:`privacy page <my-privacy-label>`.
 
-`MaxFine <#MaxFine>`__
+.. _maxfine-label:
+
+MaxFine
 ''''''''''''''''''''''
 
 Default: 9999
@@ -10239,10 +11303,12 @@ Description:
 -  This preference controls the default cap on fines accrued by the
    patron. Leaving this preference blank means that there is no cap on
    the amount of fines a patron can accrue. If you'd like, single item
-   caps can be specified in the `circulation rules
-   matrix <#circfinerules>`__.
+   caps can be specified in the :ref:`circulation rules
+   matrix <circulation-and-fine-rules-label>`.
 
-`MembershipExpiryDaysNotice <#MembershipExpiryDaysNotice>`__
+.. _membershipexpirydaysnotice-label:
+
+MembershipExpiryDaysNotice
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Send an account expiration notice when a patron's card will expire
@@ -10252,15 +11318,17 @@ Description:
 
 -  If you would like to notify patrons that their accounts are about to
    expire then you can enter a number of days before expiration in this
-   preference. The notice text can be customized in the `Notices &
-   Slips <#notices>`__ tool.
+   preference. The notice text can be customized in the :ref:`Notices &
+   Slips <notices-&-slips-label>` tool.
 
     **Important**
 
-    You will need to enable the `membership expiry cron
-    job <#patronexpirycron>`__ for this notice to send.
+    You will need to enable the :ref:`membership expiry cron
+    job <notify-patrons-of-expiration-label>` for this notice to send.
 
-`minPasswordLength <#minPasswordLength>`__
+.. _minpasswordlength-label:
+
+minPasswordLength
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: 3
@@ -10272,7 +11340,9 @@ characters long.
 
     This applies to both the staff login and the patron OPAC login.
 
-`NotifyBorrowerDeparture <#NotifyBorrowerDeparture>`__
+.. _notifyborrowerdeparture-label:
+
+NotifyBorrowerDeparture
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 30
@@ -10290,7 +11360,9 @@ Description:
 
     This notice will appear on the patron's record in the staff client.
 
-`patronimages <#patronimages>`__
+.. _patronimages-label:
+
+patronimages
 ''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -10307,15 +11379,17 @@ Values:
 Description:
 
 -  If this preference is set to 'Allow' the staff will be able to upload
-   images of patrons either `one by one <#addpatronimages>`__ or `in
-   bulk <#uploadpatronimages>`__. Patrons images will show on the detail
+   images of patrons either :ref:`one by one <add-patron-images-label>` or :ref:`in
+   bulk <upload-patron-images-label>`. Patrons images will show on the detail
    page to the left of the patron information. They can also show in the
-   OPAC if you set the `OPACpatronimages <#OPACpatronimages>`__ preference
+   OPAC if you set the :ref:`OPACpatronimages` preference
    or in the self check out module if you set the
-   `ShowPatronImageInWebBasedSelfCheck <#ShowPatronImageInWebBasedSelfCheck>`__
+   :ref:`ShowPatronImageInWebBasedSelfCheck`
    preference.
 
-`PatronQuickAddFields <#PatronQuickAddFields>`__
+.. _patronquickaddfields-label:
+
+PatronQuickAddFields
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
@@ -10325,7 +11399,9 @@ quick add form when entering a new patron. Displays only mandatory fields
 and fields specified here. If applicable, the guarantor form will be shown
 as well, individual fields in that form will be ignored.
 
-`PatronsPerPage <#PatronsPerPage>`__
+.. _patronsperpage-label:
+
+PatronsPerPage
 ''''''''''''''''''''''''''''''''''''
 
 Default: 20
@@ -10337,7 +11413,9 @@ Description:
 -  This preference will let you define how many patrons to show on
    patron search results pages.
 
-`SMSSendDriver, SMSSendUsername, and SMSSendPassword <#SMSSendDriver>`__
+.. _smssenddriver,-smssendusername,-and-smssendpassword-label:
+
+SMSSendDriver, SMSSendUsername, and SMSSendPassword
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the SMS::Send:: \_\_\_ driver to send SMS messages. Define a
@@ -10381,10 +11459,12 @@ Description:
     **Important**
 
     You must allow
-    `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ for
+    :ref:`EnhancedMessagingPreferences` for
     this to work.
 
-`StatisticsFields <#StatisticsFields>`__
+.. _statisticsfields-label:
+
+StatisticsFields
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: location\|itype\|ccode
@@ -10404,7 +11484,9 @@ Description:
 -  This preference lets you set which fields will show on the patron
    record on the Statistics tab.
 
-`TalkingTechItivaPhoneNotification <#TalkingTechItivaPhoneNotification>`__
+.. _talkingtechitivaphonenotification-label:
+
+TalkingTechItivaPhoneNotification
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -10426,10 +11508,12 @@ Description:
     **Important**
 
     Requires that you have
-    `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ set
+    :ref:`EnhancedMessagingPreferences` set
     to Allow to use.
     
-`TrackLastPatronActivity <#TrackLastPatronActivity>`__
+.. _tracklastpatronactivity-label:
+
+TrackLastPatronActivity
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -10443,7 +11527,9 @@ Values:
 
 -  Do
 
-`uppercasesurnames <#uppercasesurnames>`__
+.. _uppercasesurnames-label:
+
+uppercasesurnames
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -10456,7 +11542,9 @@ Values:
 
 -  Don't
 
-`useDischarge <#useDischarge>`__
+.. _usedischarge-label:
+
+useDischarge
 ''''''''''''''''''''''''''''''''
 
 Default: Don't allow
@@ -10485,17 +11573,23 @@ Description:
        Academic libraries often require that you have a clear record at
        the library before you can graduate.
 
-`Norwegian patron database <#norwegianpref>`__
+.. _norwegian-patron-database-label:
+
+Norwegian patron database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`FailedLoginAttempts <#FailedLoginAttempts>`__
+.. _failedloginattempts-label:
+
+FailedLoginAttempts
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
 
 Asks: Block a patron's account if it reaches \_\_\_ failed login attempts.
 
-`NorwegianPatronDBEnable & NorwegianPatronDBEndpoint <#NorwegianPatronDBEnable>`__
+.. _norwegianpatrondbenable-&-norwegianpatrondbendpoint-label:
+
+NorwegianPatronDBEnable & NorwegianPatronDBEndpoint
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 NorwegianPatronDBEnable Default: Disable
@@ -10509,7 +11603,9 @@ Values:
 
 -  Enable
 
-`NorwegianPatronDBSearchNLAfterLocalHit <#NorwegianPatronDBSearchNLAfterLocalHit>`__
+.. _norwegianpatrondbsearchnlafterlocalhit-label:
+
+NorwegianPatronDBSearchNLAfterLocalHit
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't
@@ -10523,7 +11619,9 @@ Values:
 
 -  Don't
 
-`NorwegianPatronDBUsername & NorwegianPatronDBPassword <#NorwegianPatronDBUsername>`__
+.. _norwegianpatrondbusername-&-norwegianpatrondbpassword-label:
+
+NorwegianPatronDBUsername & NorwegianPatronDBPassword
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Communicate with the Norwegian national patron database using the
@@ -10534,16 +11632,22 @@ Description:
 -  You can get these from "Base Bibliotek", which is maintained by the
    Norwegian National Library.
 
-`Searching <#searchingprefs>`__
+.. _searching-label:
+
+Searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences >
 Searching
 
-`Features <#searchfeatureprefs>`__
+.. _features-label:
+
+Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`EnableSearchHistory <#EnableSearchHistory>`__
+.. _enablesearchhistory-label:
+
+EnableSearchHistory
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't keep
@@ -10562,7 +11666,9 @@ Description:
    history for logged in users. Search history will be accessible under
    the link to your account in the top right of the staff client.
 
-`IncludeSeeFromInSearches <#IncludeSeeFromInSearches>`__
+.. _includeseefrominsearches-label:
+
+IncludeSeeFromInSearches
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't include
@@ -10589,7 +11695,9 @@ Description:
     You will need to reindex your bibliographic database when changing
     this preference.
 
-`OpacGroupResults <#OpacGroupResults>`__
+.. _opacgroupresults-label:
+
+OpacGroupResults
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't use
@@ -10607,7 +11715,9 @@ Values:
     This requires that `PazPar2 <http://www.indexdata.com/pazpar2>`__ is
     set up and running.
 
-`QueryAutoTruncate <#QueryAutoTruncate>`__
+.. _queryautotruncate-label:
+
+QueryAutoTruncate
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: automatically
@@ -10636,7 +11746,9 @@ Description:
    results. Auto truncation bypasses the necessity to type long search
    strings in their entirety.
 
-`QueryFuzzy <#QueryFuzzy>`__
+.. _queryfuzzy-label:
+
+QueryFuzzy
 ''''''''''''''''''''''''''''
 
 Default: Try
@@ -10659,9 +11771,11 @@ Description:
 
     **Important**
 
-    Requires that `UseICU <#UseICU>`__ set to 'Not using'
+    Requires that :ref:`UseICU` set to 'Not using'
 
-`QueryStemming <#QueryStemming>`__
+.. _querystemming-label:
+
+QueryStemming
 ''''''''''''''''''''''''''''''''''
 
 Default: Try
@@ -10682,7 +11796,9 @@ Description:
    function to return multiple versions of the same word, as well as
    related terms (i.e., both fish and fishing would be returned).
 
-`QueryWeightFields <#QueryWeightFields>`__
+.. _queryweightfields-label:
+
+QueryWeightFields
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Enable
@@ -10695,7 +11811,9 @@ Values:
 
 -  Enable
 
-`TraceCompleteSubfields <#TraceCompleteSubfields>`__
+.. _tracecompletesubfields-label:
+
+TraceCompleteSubfields
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Force
@@ -10725,9 +11843,11 @@ Description:
     **Important**
 
     This preference assumes that you're using XSLT stylesheets as set in
-    the `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ preference.
+    the :ref:`OPACXSLTDetailsDisplay` preference.
 
-`TraceSubjectSubdivisions <#TraceSubjectSubdivisions>`__
+.. _tracesubjectsubdivisions-label:
+
+TraceSubjectSubdivisions
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Include
@@ -10758,9 +11878,11 @@ Description:
     **Important**
 
     This preference assumes that you're using XSLT stylesheets as set in
-    the `OPACXSLTDetailsDisplay <#OPACXSLTDetailsDisplay>`__ preference.
+    the :ref:`OPACXSLTDetailsDisplay` preference.
 
-`UseICU <#UseICU>`__
+.. _useicu-label:
+
+UseICU
 ''''''''''''''''''''
 
 Default: Not using
@@ -10779,7 +11901,7 @@ Description:
    support for software applications. What this means is ICU Zebra
    indexing is only necessary if you use non-roman characters in your
    cataloging. If using ICU Zebra indexing you will want to not use
-   `QueryFuzzy <#QueryFuzzy>`__.
+   :ref:`QueryFuzzy`.
 
     **Important**
 
@@ -10793,7 +11915,9 @@ Description:
     Talk to your system administrator when changing this preference to
     make sure that your system is set up properly for this to work.
 
-`UseQueryParser <#UseQueryParser>`__
+.. _usequeryparser-label:
+
+UseQueryParser
 ''''''''''''''''''''''''''''''''''''
 
 Default: Do not try
@@ -10816,10 +11940,14 @@ Description:
 -  This preference enables an experimental new query parser which opens
    the door for a more expressive and more-effective search syntax.
 
-`Results Display <#searchresultsprefs>`__
+.. _results-display-label:
+
+Results Display
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`defaultSortField & defaultSortOrder <#defaultSortField>`__
+.. _defaultsortfield-&-defaultsortorder-label:
+
+defaultSortField & defaultSortOrder
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 defaultSortField Default: author
@@ -10862,7 +11990,9 @@ defaultSortOrder Values:
 
 -  from Z to A
 
-`displayFacetCount <#displayFacetCount>`__
+.. _displayfacetcount-label:
+
+displayFacetCount
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -10874,7 +12004,7 @@ Description:
 -  This preference lets you decide if you show how many times a facet is
    used in your search results in the OPAC and the staff client. The
    relevance of these numbers highly depends on the value of the
-   `maxRecordsForFacets <#maxRecordsForFacets>`__ preference. Showing
+   :ref:`maxRecordsForFacets` preference. Showing
    these numbers can potentially effect the performance of your
    searching, so test your system with different values for this
    preference to see what works best.
@@ -10888,7 +12018,9 @@ Values:
    Number of times each Facet is found in results
    |image107|
 
-`DisplayLibraryFacets <#DisplayLibraryFacets>`__
+.. _displaylibraryfacets-label:
+
+DisplayLibraryFacets
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: holding library
@@ -10909,7 +12041,9 @@ Description:
    results in the staff and opac. The value selected here will determin
    which library(s) show in the facets when a search is run.
 
-`FacetLabelTruncationLength <#FacetLabelTruncationLength>`__
+.. _facetlabeltruncationlength-label:
+
+FacetLabelTruncationLength
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
@@ -10924,7 +12058,9 @@ Description:
    or two few letters, this preference lets you decide what number is
    best for your library's design.
 
-`FacetMaxCount <#FacetMaxCount>`__
+.. _facetmaxcount-label:
+
+FacetMaxCount
 ''''''''''''''''''''''''''''''''''
 
 Default: 20
@@ -10937,7 +12073,9 @@ Description:
    under each heading (Author, Series, Topics, etc) on the facets in the
    OPAC.
 
-`maxItemsInSearchResults <#maxItemsInSearchResults>`__
+.. _maxitemsinsearchresults-label:
+
+maxItemsInSearchResults
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
@@ -10949,7 +12087,9 @@ Description:
 -  This preference will let you set how many results display by default
    when a search is run on the Staff Client.
 
-`maxRecordsForFacets <#maxRecordsForFacets>`__
+.. _maxrecordsforfacets-label:
+
+maxRecordsForFacets
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
@@ -10965,7 +12105,9 @@ Description:
    search results to return, so test with various different values to
    find the best balance for your library.
 
-`MaxSearchResultsItemsPerRecordStatusCheck <#MaxSearchResultsItemsPerRecordStatusCheck>`__
+.. _maxsearchresultsitemsperrecordstatuscheck-label:
+
+MaxSearchResultsItemsPerRecordStatusCheck
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
@@ -10979,14 +12121,18 @@ Description:
    record has more items than the limit set. Statuses will display
    correctly in the record details. Leave empty for no limit.
 
-`numSearchResults <#numSearchResults>`__
+.. _numsearchresults-label:
+
+numSearchResults
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
 
 Asks: By default, show \_\_\_ results per page in the staff client.
 
-`OPACdefaultSortField & OPACdefaultSortOrder <#opacdefaultsort>`__
+.. _opacdefaultsortfield-and-opacdefaultsortorder-label:
+
+OPACdefaultSortField & OPACdefaultSortOrder
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 OPACdefaultSortField Default: relevance
@@ -11028,7 +12174,9 @@ OPACdefaultSortOrder Values:
 
 -  from Z to A
 
-`OPACItemsResultsDisplay <#OPACItemsResultsDisplay>`__
+.. _opacitemsresultsdisplay-label:
+
+OPACItemsResultsDisplay
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -11051,14 +12199,18 @@ Description:
    be displayed on the search results page, the information can be
    overwhelming for large collections with multiple branches.
 
-`OPACnumSearchResults <#OPACnumSearchResults>`__
+.. _opacnumsearchresults-label:
+
+OPACnumSearchResults
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: 20
 
 Asks: By default, show \_\_\_ results per page in the OPAC.
 
-`SearchWithISBNVariations <#SearchWithISBNVariations>`__
+.. _searchwithisbnvariations-label:
+
+SearchWithISBNVariations
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't search
@@ -11082,19 +12234,25 @@ Descriptions:
     **Important**
 
     This preference has no effect if
-    `UseQueryParser <#UseQueryParser>`__ is on
+    :ref:`UseQueryParser` is on
 
-`UNIMARCAuthorsFacetsSeparator <#UNIMARCAuthorsFacetsSeparator>`__
+.. _unimarcauthorsfacetsseparator-label:
+
+UNIMARCAuthorsFacetsSeparator
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: , (comma)
 
 Asks: Use the following text as separator for UNIMARC authors facets \_\_\_
 
-`Search Form <#searchformprefs>`__
+.. _search-form-label:
+
+Search Form
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AdvancedSearchLanguages <#AdvancedSearchLanguages>`__
+.. _advancedsearchlanguages-label:
+
+AdvancedSearchLanguages
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Limit the languages listed in the advanced search drop-down to the
@@ -11110,7 +12268,9 @@ Description:
    separated by comma ( , ) or bar ( \| ). For example to limit listing
    to French and Italian, enter ita\|fre.
 
-`AdvancedSearchTypes <#AdvancedSearchTypes>`__
+.. _advancedsearchtypes-label:
+
+AdvancedSearchTypes
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: itemtype
@@ -11139,7 +12299,9 @@ Description:
    Searching by Item Type and Shelving Location
    |image108|
 
-`expandedSearchOption <#expandedSearchOption>`__
+.. _expandedsearchoption-label:
+
+expandedSearchOption
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't show
@@ -11153,7 +12315,9 @@ Values:
 
 -  show
 
-`IntranetNumbersPreferPhrase <#IntranetNumbersPreferPhrase>`__
+.. _intranetnumberspreferphrase-label:
+
+IntranetNumbersPreferPhrase
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't use
@@ -11174,7 +12338,9 @@ Description:
    search by setting this preference to 'use.' This will allow for more
    accurate results over doing a general keyword field search.
 
-`LoadSearchHistoryToTheFirstLoggedUser <#LoadSearchHistoryToTheFirstLoggedUser>`__
+.. _loadsearchhistorytothefirstloggeduser-label:
+
+LoadSearchHistoryToTheFirstLoggedUser
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Load
@@ -11187,7 +12353,9 @@ Values:
 
 -  Load
 
-`OPACNumbersPreferPhrase <#OPACNumbersPreferPhrase>`__
+.. _opacnumberspreferphrase-label:
+
+OPACNumbersPreferPhrase
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: don't use
@@ -11208,19 +12376,23 @@ Description:
    search by setting this preference to 'use.' This will allow for more
    accurate results over doing a general keyword field search.
 
-`Serials <#serialsprefs>`__
+.. _serials-label:
+
+Serials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > Serials
 
-`makePreviousSerialAvailable <#makePreviousSerialAvailable>`__
+.. _makepreviousserialavailable-label:
+
+makePreviousSerialAvailable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Do not make
 
 Asks: \_\_\_ previous serial automatically available when receiving a
 new serial issue. The previous issue can also be set to another item
-type when receiving a new one. Please note that the `item-level\_itypes <#item-level_itypes>`__
+type when receiving a new one. Please note that the :ref:`item-level\_itypes <item-level\_itypes-label>`
 syspref must be set to specific item.
 
 Values:
@@ -11229,7 +12401,9 @@ Values:
 
 -  Make
 
-`opacSerialDefaultTab <#opacSerialDefaultTab>`__
+.. _opacserialdefaulttab-label:
+
+opacSerialDefaultTab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Subscriptions tab
@@ -11255,7 +12429,9 @@ Values:
    Subscriptions tab
    |image110|
 
-`OPACSerialIssueDisplayCount <#OPACSerialIssueDisplayCount>`__
+.. _opacserialissuedisplaycount-label:
+
+OPACSerialIssueDisplayCount
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: 3
@@ -11269,7 +12445,9 @@ Description:
    serial is accessed. This is just the default value, patrons can
    always click to see a full list of serials.
 
-`RenewSerialAddsSuggestion <#RenewSerialAddsSuggestion>`__
+.. _renewserialaddssuggestion-label:
+
+RenewSerialAddsSuggestion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't add
@@ -11290,7 +12468,9 @@ Description:
    option. If you don't use the Acquisitions module to manage serials
    purchases it's best to leave this set as 'Don't add.'
 
-`RoutingListAddReserves <#RoutingListAddReserves>`__
+.. _routinglistaddreserves-label:
+
+RoutingListAddReserves
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Place
@@ -11303,7 +12483,9 @@ Values:
 
 -  Don't place
 
-`RoutingListNote <#RoutingListNote>`__
+.. _routinglistnote-label:
+
+RoutingListNote
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Asks: Include following note on all routing lists
@@ -11313,7 +12495,9 @@ Description:
 -  Text entered in this box will appear below the routing list
    information.
 
-`RoutingSerials <#RoutingSerials>`__
+.. _routingserials-label:
+
+RoutingSerials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't add
@@ -11329,7 +12513,7 @@ Description:
    established for each serial to be passed using the Serials module.
    This preference can be used to ensure each person who needs to see a
    serial when it arrives at the library will get it. Learn more in the
-   `routing list <#routinglist>`__ section of this manual.
+   :ref:`routing list <create-a-routing-list-label>` section of this manual.
 
 Values:
 
@@ -11337,7 +12521,9 @@ Values:
 
 -  Don't add
 
-`StaffSerialIssueDisplayCount <#StaffSerialIssueDisplayCount>`__
+.. _staffserialissuedisplaycount-label:
+
+StaffSerialIssueDisplayCount
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: 3
@@ -11351,7 +12537,9 @@ Description:
    the serial is accessed. This is just the default value, staff members
    can always click to see a full list of serials.
 
-`SubscriptionDuplicateDroppedInput <#SubscriptionDuplicateDroppedInput>`__
+.. _subscriptionduplicatedroppedinput-label:
+
+SubscriptionDuplicateDroppedInput
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Asks: List of fields which must not be rewritten when a subscription is
@@ -11367,7 +12555,9 @@ Description:
    Schema <http://schema.koha-community.org/tables/subscription.html>`__
    site.
 
-`SubscriptionHistory <#SubscriptionHistory>`__
+.. _subscriptionhistory-label:
+
+SubscriptionHistory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: full history
@@ -11396,16 +12586,22 @@ Description:
    detailed breakdown of issues per year, including information such as
    the issue date and the status of each issue.
 
-`Staff Client <#staffprefs>`__
+.. _staff-client-label:
+
+Staff Client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > Staff
 Client
 
-`Appearance <#staffappearprefs>`__
+.. _appearance-label:
+
+Appearance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Display856uAsImage <#Display856uAsImage>`__
+.. _display856uasimage-label:
+
+Display856uAsImage
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Neither details or results page
@@ -11424,7 +12620,7 @@ Values:
 
    -  **Important**
 
-          `XSLTDetailsDisplay <#XSLTDetailsDisplay>`__ needs to be on
+          :ref:`XSLTDetailsDisplay` needs to be on
           for this preference to work.
 
    Showing the 856u as an image
@@ -11449,12 +12645,14 @@ Description:
    will open it in the same way as clicking on the link text. When you
    click on the image it should open to full size, in the current window
    or in a new window depending on the value in the system pref
-   `OPACURLOpenInNewWindow <#OPACURLOpenInNewWindow>`__.
+   :ref:`OPACURLOpenInNewWindow`.
 
    Sample 856 Field
    |image114|
 
-`DisplayIconsXSLT <#DisplayIconsXSLT>`__
+.. _displayiconsxslt-label:
+
+DisplayIconsXSLT
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -11464,8 +12662,8 @@ MARC21 results and detail pages in the staff client.
 
     **Important**
 
-    `XSLTResultsDisplay <#XSLTResultsDisplay>`__ and/or
-    `XSLTDetailsDisplay <#XSLTDetailsDisplay>`__ must be set to use an
+    :ref:`XSLTResultsDisplay` and/or
+    :ref:`XSLTDetailsDisplay` must be set to use an
     XSLT stylesheet (default or custom) for these icons to show.
 
 Values:
@@ -11482,7 +12680,9 @@ Values:
     See the `XSLT Icon Guide <#XSLTiTypes>`__ for more information on
     these icons.
 
-`intranet\_includes <#intranet_includes>`__
+.. _intranet\_includes-label:
+
+intranet\_includes
 '''''''''''''''''''''''''''''''''''''''''''
 
 Default: includes
@@ -11490,13 +12690,17 @@ Default: includes
 Asks: Use include files from the \_\_\_ directory in the template
 directory, instead of includes/. (Leave blank to disable)
 
-`IntranetCirculationHomeHTML <#IntranetCirculationHomeHTML>`__
+.. _intranetcirculationhomehtml-label:
+
+IntranetCirculationHomeHTML
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in its own div on the bottom of the home
 page of the circulation module: IntranetCirculationHomeHTML
 
-`intranetcolorstylesheet <#intranetcolorstylesheet>`__
+.. _intranetcolorstylesheet-label:
+
+intranetcolorstylesheet
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Include the additional CSS stylesheet \_\_\_ to override specified
@@ -11517,7 +12721,9 @@ Description:
 
     Leave this field blank to disable.
 
-`IntranetFavicon <#IntranetFavicon>`__
+.. _intranetfavicon-label:
+
+IntranetFavicon
 ''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the image at \_\_\_ for the Staff Client's favicon.
@@ -11540,7 +12746,9 @@ Description:
    Default Koha Favicon
    |image116|
 
-`IntranetmainUserblock <#IntranetmainUserblock>`__
+.. _intranetmainuserblock-label:
+
+IntranetmainUserblock
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in its own column on the main page of the
@@ -11553,19 +12761,25 @@ Message from IntranetmainUserblock as it appears on the Staff Client
 main page
 |image118|
 
-`IntranetNav <#IntranetNav>`__
+.. _intranetnav-label:
+
+IntranetNav
 ''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in the More menu at the top of each page
 on the staff client (should be a list of links or blank)
 
-`IntranetReportsHomeHTML <#IntranetReportsHomeHTML>`__
+.. _intranetreportshomehtml-label:
+
+IntranetReportsHomeHTML
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in its own div on the bottom of the home
 page of the reports module: HTML on Reports page
 
-`IntranetSlipPrinterJS <#IntranetSlipPrinterJS>`__
+.. _intranetslipprinterjs-label:
+
+IntranetSlipPrinterJS
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the following JavaScript for printing slips.
@@ -11578,7 +12792,9 @@ Description:
    wiki at
    http://wiki.koha-community.org/wiki/Setting_up_slip_printer_to_print_silently.
 
-`intranetstylesheet <#intranetstylesheet>`__
+.. _intranetstylesheet-label:
+
+intranetstylesheet
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Use the CSS stylesheet \_\_\_ on all pages in the staff interface,
@@ -11595,12 +12811,16 @@ Description:
    theme and language within the Koha templates directory. A full local
    path is expected to start from your HTTP document root.
 
-`IntranetUserCSS <#IntranetUserCSS>`__
+.. _intranetusercss-label:
+
+IntranetUserCSS
 ''''''''''''''''''''''''''''''''''''''
 
 Asks: Include the following CSS on all pages in the staff client
 
-`IntranetUserJS <#intranetuserjs>`__
+.. _intranetuserjs-label:
+
+IntranetUserJS
 ''''''''''''''''''''''''''''''''''''
 
 Asks: Include the following JavaScript on all pages in the staff
@@ -11616,7 +12836,9 @@ Description:
    can be found on the wiki:
    http://wiki.koha-community.org/wiki/JQuery_Library.
 
-`SlipCSS <#SlipCSS>`__
+.. _slipcss-label:
+
+SlipCSS
 ''''''''''''''''''''''
 
 Asks: Include the stylesheet at \_\_\_ on Issue and Reserve Slips.
@@ -11631,12 +12853,16 @@ Description:
    set of fonts and colors you can use this preference to point Koha to
    a stylesheet specifically for your slips.
 
-`staffClientBaseURL <#staffClientBaseURL>`__
+.. _staffclientbaseurl-label:
+
+staffClientBaseURL
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The staff client is located at http:// \_\_\_
 
-`template <#template>`__
+.. _template-label:
+
+template
 ''''''''''''''''''''''''
 
 Default: prog
@@ -11653,7 +12879,9 @@ Values:
     created using this URL. (example: www.google.com not
     www.google.com/)
 
-`XSLTDetailsDisplay <#XSLTDetailsDisplay>`__
+.. _xsltdetailsdisplay-label:
+
+XSLTDetailsDisplay
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: default
@@ -11699,7 +12927,9 @@ Description:
    either use the default look that comes with Koha or design your own
    stylesheet.
    
-`XSLTListsDisplay <#XSLTListsDisplay>`__
+.. _xsltlistsdisplay-label:
+
+XSLTListsDisplay
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: default
@@ -11739,7 +12969,9 @@ Description:
    either use the default look that comes with Koha or design your own
    stylesheet.
 
-`XSLTResultsDisplay <#XSLTResultsDisplay>`__
+.. _xsltresultsdisplay-label:
+
+XSLTResultsDisplay
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Default: default
@@ -11779,10 +13011,14 @@ Description:
    allow you either use the default look that comes with Koha or design
    your own stylesheet.
 
-`Options <#staffoptsprefs>`__
+.. _options-label:
+
+Options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`AudioAlerts <#AudioAlerts>`__
+.. _audioalerts-label:
+
+AudioAlerts
 ''''''''''''''''''''''''''''''
 
 Default: Don't enable
@@ -11801,7 +13037,9 @@ Values:
     This feature is not supported by all browsers. Requires an HTML5
     compliant browser.
 
-`HidePatronName <#HidePatronName>`__
+.. _hidepatronname-label:
+
+HidePatronName
 ''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -11815,7 +13053,9 @@ Values:
 
 -  Show
 
-`intranetbookbag <#intranetbookbag>`__
+.. _intranetbookbag-label:
+
+intranetbookbag
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Show
@@ -11828,7 +13068,9 @@ Values:
 
 -  Show
 
-`IntranetCatalogSearchPulldown <#IntranetCatalogSearchPulldown>`__
+.. _intranetcatalogsearchpulldown-label:
+
+IntranetCatalogSearchPulldown
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -11841,7 +13083,9 @@ Values:
 
 -  Show
 
-`StaffDetailItemSelection <#StaffDetailItemSelection>`__
+.. _staffdetailitemselection-label:
+
+StaffDetailItemSelection
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Enable
@@ -11864,7 +13108,9 @@ Description:
    Items with the checkboxes enabled
    |image121|
 
-`UseWYSIWYGinSystemPreferences <#UseWYSIWYGinSystemPreferences>`__
+.. _usewysiwyginsystempreferences-label:
+
+UseWYSIWYGinSystemPreferences
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Don't show
@@ -11883,7 +13129,9 @@ Description:
 -  This preference allows you to chang system preferences with HTML in
    them to WYSIWYG editors instead of plain text boxes.
 
-`viewISBD <#viewISBD>`__
+.. _viewisbd-label:
+
+viewISBD
 ''''''''''''''''''''''''
 
 Default: Allow
@@ -11896,7 +13144,9 @@ Values:
 
 -  Don't allow
 
-`viewLabeledMARC <#viewLabeledMARC>`__
+.. _viewlabeledmarc-label:
+
+viewLabeledMARC
 ''''''''''''''''''''''''''''''''''''''
 
 Default: Allow
@@ -11910,7 +13160,9 @@ Values:
 
 -  Don't allow
 
-`viewMARC <#viewMARC>`__
+.. _viewmarc-label:
+
+viewMARC
 ''''''''''''''''''''''''
 
 Default: Allow
@@ -11924,18 +13176,24 @@ Values:
 
 -  Don't allow
 
-`Tools <#toolsprefs>`__
+.. _tools-label:
+
+Tools
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > Tools
 
-`Batch Item <#batchitemprefs>`__
+.. _batch-item-label:
+
+Batch Item
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These preferences are in reference to the `Batch Item
-Modification <#batchmodifyitems>`__ tool.
+These preferences are in reference to the :ref:`Batch Item
+Modification <batch-item-modification-label>` tool.
 
-`MaxItemsForBatchDel <#MaxItemsForBatchDel>`__
+.. _maxitemsforbatchdel-label:
+
+MaxItemsForBatchDel
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 1000
@@ -11944,12 +13202,14 @@ Asks: Display up to \_\_\_ items in a single deletion batch.
 
 Description:
 
--  In the `batch item delete tool <#batchdeleteitems>`__ this will
+-  In the :ref:`batch item delete tool <batch-item-deletion-label>` this will
    prevent the display of more than the items you entered in this
    preference, but you will be able to delete more than the number you
    enter here.
 
-`MaxItemsForBatchMod <#MaxItemsForBatchMod>`__
+.. _maxitemsforbatchmod-label:
+
+MaxItemsForBatchMod
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 1000
@@ -11958,14 +13218,18 @@ Asks: Process up to \_\_\_ items in a single modification batch.
 
 Description:
 
--  In the `batch item modification
-   tool <#batchmodifyitems>`__ this preference will prevent the editing
+-  In the :ref:`batch item modification
+   tool <batch-item-modification-label>` this preference will prevent the editing
    of more than the number entered here.
 
-`News <#newstoolprefs>`__
+.. _news-label:
+
+News
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`NewsAuthorDisplay <#NewsAuthorDisplay>`__
+.. _newsauthordisplay-label:
+
+NewsAuthorDisplay
 ''''''''''''''''''''''''''''''''''''''''''
 
 Default: not at all
@@ -11982,34 +13246,46 @@ Values:
 
 -  Staff client only
 
-`Patron Cards <#patcardprefs>`__
+.. _patron-cards-label:
+
+Patron Cards
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These preferences are in reference to the `Patron Card
-Creator <#patroncardcreator>`__ tool.
+These preferences are in reference to the :ref:`Patron Card
+Creator <patron-card-creator-label>` tool.
 
-`ImageLimit <#ImageLimit>`__
+.. _imagelimit-label:
+
+ImageLimit
 ''''''''''''''''''''''''''''
 
 Asks: Limit the number of creator images stored in the database to
 \_\_\_ images.
 
-`Reports <#reportsprefstools>`__
+.. _reports-label:
+
+Reports
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These preferences are in reference to the Reports module.
 
-`NumSavedReports <#NumSavedReports>`__
+.. _numsavedreports-label:
+
+NumSavedReports
 ''''''''''''''''''''''''''''''''''''''
 
 Default: 20
 
 Asks: By default, show \_\_\_ reports on the Saved Reports page.
 
-`Upload <#uploadprefstools>`__
+.. _upload-label:
+
+Upload
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`UploadPurgeTemporaryFilesDays <#UploadPurgeTemporaryFilesDays>`__
+.. _uploadpurgetemporaryfilesdays-label:
+
+UploadPurgeTemporaryFilesDays
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: blank
@@ -12017,16 +13293,22 @@ Default: blank
 Asks: Automatically delete temporary uploads older than \_\_\_ days in
 cleanup_database cron job.
 
-`Web Services <#webserviceprefs>`__
+.. _web-services-label:
+
+Web Services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Global System Preferences > Web
 Services
 
-`ILS-DI <#ilsdiprefs>`__
+.. _ils-di-label:
+
+ILS-DI
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-`ILS-DI <#ILS-DI>`__
+.. _ils-di-label:
+
+ILS-DI
 ''''''''''''''''''''
 
 Default: Disable
@@ -12039,15 +13321,21 @@ Values:
 
 -  Enable
 
-`ILS-DI:AuthorizedIPs <#ILS-DIAuthorized_IPs>`__
+.. _ils-di:authorizedips-label:
+
+ILS-DI:AuthorizedIPs
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: \_\_\_ allowed IPs to use the ILS-DI services
 
-`IdRef <#idrefprefs>`__
+.. _idref-label:
+
+IdRef
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-`IdRef <#idref>`__
+.. _idref-label:
+
+IdRef
 ''''''''''''''''''
 
 Default: Disable
@@ -12087,10 +13375,14 @@ Description:
        The French Sudoc database should not be confused with the US
        Superintendent of Documents (SuDocs) Classification Scheme.
 
-`OAI-PMH <#oaiprefs>`__
+.. _oai-pmh-label:
+
+OAI-PMH
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-`OAI-PMH <#OAI-PMH>`__
+.. _oai-pmh-label:
+
+OAI-PMH
 ''''''''''''''''''''''
 
 Default: Disable
@@ -12125,14 +13417,18 @@ Description:
 
 Learn more about OAI-PMH at: http://www.openarchives.org/pmh/
 
-`OAI-PMH:archiveID <#OAI-PMHarchiveID>`__
+.. _oai-pmh:archiveid-label:
+
+OAI-PMH:archiveID
 '''''''''''''''''''''''''''''''''''''''''
 
 Default: KOHA-OAI-TEST
 
 Asks: Identify records at this site with the prefix \_\_\_ :
 
-`OAI-PMH:AutoUpdateSets <#OAI-PMHAutoUpdateSets>`__
+.. _oai-pmh:autoupdatesets-label:
+
+OAI-PMH:AutoUpdateSets
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: Disable
@@ -12146,7 +13442,9 @@ Values:
 
 -  Enable
 
-`OAI-PMH:ConfFile <#OAI-PMHConfFile>`__
+.. _oai-pmh:conffile-label:
+
+OAI-PMH:ConfFile
 '''''''''''''''''''''''''''''''''''''''
 
 If this preference is left empty, Koha's OAI Server operates in normal
@@ -12155,10 +13453,12 @@ possible to parameter other formats than marcxml or Dublin Core.
 OAI-PMH:ConfFile specify a YAML configuration file which list available
 metadata formats and XSL file used to create them from marcxml records.
 
-For more information, see the `sample conf file <#oaiconfsample>`__ in
+For more information, see the :ref:`sample conf file <sample-oai-conf-file-label>` in
 the appendix.
 
-`OAI-PMH:DeletedRecord <#OAI-PMHDeletedRecord>`__
+.. _oai-pmh:deletedrecord-label:
+
+OAI-PMH:DeletedRecord
 '''''''''''''''''''''''''''''''''''''''''''''''''
 
 Default: will never be emptied or truncated (persistent)
@@ -12173,7 +13473,9 @@ Values:
 
 -  might be emptied or truncated at some point (transient)
 
-`OAI-PMH:MaxCount <#OAI-PMHMaxCount>`__
+.. _oai-pmh:maxcount-label:
+
+OAI-PMH:MaxCount
 '''''''''''''''''''''''''''''''''''''''
 
 Default: 50
@@ -12188,10 +13490,14 @@ Description:
    harvest the entire records while the ListIdentifier is an abbreviated
    form of ListRecords, retrieving only headers rather than records.
 
-`Reporting <#reportingservice>`__
+.. _reporting-label:
+
+Reporting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`SvcMaxReportRows <#SvcMaxReportRows>`__
+.. _svcmaxreportrows-label:
+
+SvcMaxReportRows
 ''''''''''''''''''''''''''''''''''''''''
 
 Default: 10
@@ -12204,7 +13510,9 @@ Description:
 -  This value will be used to limit the number of results returned by
    `public reports <#publicreport>`__.
 
-`Basic Parameters <#basicparams>`__
+.. _basic-parameters-label:
+
+Basic Parameters
 -----------------------------------
 
 *Get there:* More > Administration
@@ -12213,7 +13521,9 @@ Description:
 
     Configure all 'parameters' in the order they appear.
 
-`Libraries & Groups <#libsgroups>`__
+.. _libraries-&-groups-label:
+
+Libraries & Groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When setting up your Koha system you will want to add information for
@@ -12232,7 +13542,9 @@ Library List
 Group Lists
 |image123|
 
-`Adding a Library <#addingalibrary>`__
+.. _adding-a-library-label:
+
+Adding a Library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new library:
@@ -12252,7 +13564,7 @@ To add a new library:
       displays to the public and should be a name that makes sense to
       your patrons.
 
-   -  If you have `groups <#addinglibgroup>`__ set up you can choose
+   -  If you have :ref:`groups <adding-a-group-label>` set up you can choose
       what group this library belongs to after entering in the code and
       name
 
@@ -12278,7 +13590,7 @@ To add a new library:
       -  **Note**
 
              If you do not fill in this value Koha will use the address
-             in the `ReplytoDefault <#ReplytoDefault>`__ preference
+             in the :ref:`ReplytoDefault` preference
 
    -  If you'd like you can also enter a different 'Return-Path' email
       address. This is the email address that all bounced messages will
@@ -12287,7 +13599,7 @@ To add a new library:
       -  **Note**
 
              If you do not fill in this value Koha will use the address
-             in the `ReturnpathDefault <#ReturnpathDefault>`__
+             in the :ref:`ReturnpathDefault`
              preference
 
    -  If the URL field is populated then the library name will be linked
@@ -12309,7 +13621,7 @@ To add a new library:
       -  **Important**
 
              An IP address is required if you have enabled
-             `AutoLocation <#AutoLocation>`__
+             :ref:`AutoLocation`
 
    -  Finally, if you have any notes you can put them here. These will
       not show in the OPAC
@@ -12318,7 +13630,9 @@ To add a new library:
 
     Of the fields listed, only 'Library code' and 'Name' are required
 
-`Editing/Deleting a Library <#editingalibrary>`__
+.. _editing/deleting-a-library-label:
+
+Editing/Deleting a Library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will be unable to delete any library that has patrons or items
@@ -12335,7 +13649,9 @@ link to edit/alter details associated with the library in question.
 
     You will be unable to edit the 'Library code'
 
-`Adding a group <#addinglibgroup>`__
+.. _adding-a-group-label:
+
+Adding a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a Search Domain or Library Property Group click the 'New Group'
@@ -12347,14 +13663,16 @@ Add group form
 Give the group a 'Category type; of 'searchdomain' and if you would like
 the group to show up in the library pull down at the top of the OPAC
 (with
-`OpacAddMastheadLibraryPulldown <#OpacAddMastheadLibraryPulldown>`__ set
+:ref:`OpacAddMastheadLibraryPulldown` set
 to 'Add') and on the advanced search page you can check the 'Show in
 search pulldown' box.
 
 Of the fields on the group form, 'Category code', 'Name', and 'Category
 type' are the only required fields
 
-`Search Domain Groups <#searchdomaingroups>`__
+.. _search-domain-groups-label:
+
+Search Domain Groups
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Search Domain Groups allow you to search a group of libraries at the
@@ -12369,7 +13687,9 @@ search page in your Koha system:
 Library group search on staff client
 |image131|
 
-`Library Property Groups <#libpropertygroups>`__
+.. _library-property-groups-label:
+
+Library Property Groups
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 You can assign specific categories to your libraries by adding groups
@@ -12384,7 +13704,9 @@ form
 Groups on the Add/Modify library form
 |image133|
 
-`Item Types <#itemtypeadmin>`__
+.. _item-types-label:
+
+Item Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Koha allows you to organize your collection by item types and collection
@@ -12398,7 +13720,9 @@ but can be used in any way that works for your library.
 Item Types
 |image134|
 
-`Adding Item Types <#additemtype>`__
+.. _adding-item-types-label:
+
+Adding Item Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new item type, simply click the 'New Item Type' button at the
@@ -12430,10 +13754,10 @@ New Item Type
    -  **Important**
 
           To have your item type images appear in the OPAC you need to
-          set `noItemTypeImages <#noItemTypeImages>`__ to 'Show'
+          set :ref:`noItemTypeImages` to 'Show'
 
       -  *Get there:*\ More > Administration > Global System Preferences
-         > `Admin <#adminprefs>`__
+         > :ref:`Admin <administration-label>`
 
 -  For items that you are suppressing from the OPAC you can hide their
    item type from being searched in the OPAC
@@ -12488,7 +13812,9 @@ New Item Type
    New DVD Item Type
    |image139|
 
-`Editing Item Types <#edititemtype>`__
+.. _editing-item-types-label:
+
+Editing Item Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each item type has an Edit button beside it. To edit an item simply
@@ -12499,7 +13825,9 @@ click the 'Edit' link.
     You will not be able to edit the code you assigned as the 'Item
     Type' but you will be able to edit the description for the item.
 
-`Deleting Item Types <#deleteitemtype>`__
+.. _deleting-item-types-label:
+
+Deleting Item Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each item has a Delete button beside it. To delete an item, simply click
@@ -12513,7 +13841,9 @@ the 'Delete' link.
 Warning when you try to delete an item that is in use
 |image140|
 
-`Authorized Values <#authorizedvalues>`__
+.. _authorized-values-label:
+
+Authorized Values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Authorized values can be used in several areas of Koha. One reason you
@@ -12523,7 +13853,9 @@ that can be entered into MARC fields by catalogers.
 -  *Get there:* More > Administration > Basic Parameters > Authorized
    Values
 
-`Existing Values <#existingauthvalues>`__
+.. _existing-values-label:
+
+Existing Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Koha installs with pre-defined values that your library is likely to
@@ -12557,8 +13889,8 @@ use, for instance 'Lost'.
 -  CART
 
    -  Is the shelving cart location, used by
-      `InProcessingToShelvingCart <#InProcessingToShelvingCart>`__ and
-      `ReturnToShelvingCart <#ReturnToShelvingCart>`__
+      :ref:`InProcessingToShelvingCart` and
+      :ref:`ReturnToShelvingCart`
 
 -  CCODE
 
@@ -12646,9 +13978,9 @@ use, for instance 'Lost'.
 -  PROC
 
    -  The location to be used for
-      `NewItemsDefaultLocation <#NewItemsDefaultLocation>`__ (change
+      :ref:`NewItemsDefaultLocation` (change
       description as desired), also the location expected by
-      `InProcessingToShelvingCart <#InProcessingToShelvingCart>`__.
+      :ref:`InProcessingToShelvingCart`.
 
 -  REPORT\_GROUP
 
@@ -12679,8 +14011,8 @@ use, for instance 'Lost'.
 
 -  SIP\_MEDIA\_TYPE
 
-   -  Used when `creating <#additemtype>`__ or
-      `editing <#edititemtype>`__ an item type to assign a SIP specific
+   -  Used when :ref:`creating <adding-item-types-label>` or
+      :ref:`editing <editing-item-types-label>` an item type to assign a SIP specific
       media type for devices like lockers and sorters.
 
 -  SUGGEST
@@ -12698,7 +14030,9 @@ use, for instance 'Lost'.
    -  A generic authorized value field that can be used anywhere you
       need a simple yes/no pull down menu.
 
-`Add new Authorized Value Category <#newauthvalcat>`__
+.. _add-new-authorized-value-category-label:
+
+Add new Authorized Value Category
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In addition to the existing categories that come by default with Koha,
@@ -12741,7 +14075,7 @@ that is entered into the system. To add a new category:
 
    -  If you have
       `StaffAuthorisedValueImages <#StaffAuthorisedValueImages>`__
-      and/or `AuthorisedValueImages <#AuthorisedValueImages>`__ set to
+      and/or :ref:`AuthorisedValueImages` set to
       show images for authorized values you can choose the image under
       'Choose an icon'
 
@@ -12753,7 +14087,9 @@ that is entered into the system. To add a new category:
    Custom Authorized Value on list of values
    |image145|
 
-`Add new Authorized Value <#newauthval>`__
+.. _add-new-authorized-value-label:
+
+Add new Authorized Value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 New authorized values can be added to any existing or new category. To
@@ -12784,7 +14120,7 @@ add a value:
 
 -  If you have
    `StaffAuthorisedValueImages <#StaffAuthorisedValueImages>`__ and/or
-   `AuthorisedValueImages <#AuthorisedValueImages>`__ set to show images
+   :ref:`AuthorisedValueImages` set to show images
    for authorized values you can choose the image under 'Choose an icon'
 
 -  Click 'Save'
@@ -12794,12 +14130,16 @@ add a value:
    List of authorized values in MARC504 category
    |image147|
 
-`Patrons & Circulation <#patscirc>`__
+.. _patrons-&-circulation-label:
+
+Patrons & Circulation
 -------------------------------------
 
 Settings for controlling circulation and patron information.
 
-`Patron Categories <#patcats>`__
+.. _patron-categories-label:
+
+Patron Categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Patron categories allow you to organize your patrons into different
@@ -12825,8 +14165,8 @@ Patrons are assigned to one of six main categories:
 -  Staff
 
    -  Librarians (and library workers) should be assigned the staff
-      category so that you can `set their
-      permissions <#patronpermissions>`__ and give them access to the
+      category so that you can :ref:`set their
+      permissions <patron-permissions-label>` and give them access to the
       staff client.
 
 -  Organizational
@@ -12843,7 +14183,9 @@ Patrons are assigned to one of six main categories:
    -  This patron type is used strictly for statistical purposes, such
       as in house use of items.
 
-`Adding a patron category <#addingpatroncat>`__
+.. _adding-a-patron-category-label:
+
+Adding a patron category
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new patron category click 'New Category' at the top of the page
@@ -12900,7 +14242,7 @@ New patron category form
    -  **Important**
 
           This value will only be checked if
-          `BorrowerMandatoryField <#BorrowerMandatoryField>`__ defines
+          :ref:`BorrowerMandatoryField` defines
           the dateofbirth as a required field on the patron record
 
 -  Patron categories can also have a maximum age (in years) associated
@@ -12909,7 +14251,7 @@ New patron category form
    -  **Important**
 
           This value will only be checked if
-          `BorrowerMandatoryField <#BorrowerMandatoryField>`__ defines
+          :ref:`BorrowerMandatoryField` defines
           the dateofbirth as a required field on the patron record
 
 -  If you charge a membership fee for your patrons (such as those who
@@ -12923,7 +14265,7 @@ New patron category form
    -  **Note**
 
           Depending on your value for the
-          `FeeOnChangePatronCategory <#FeeOnChangePatronCategory>`__
+          :ref:`FeeOnChangePatronCategory`
           preference this fee will be charged on patron renewal as well
           as when they are first enrolled.
 
@@ -12971,12 +14313,12 @@ New patron category form
 -  You can decide if this patron category is blocked from performing
    actions in the OPAC if their card is expired using the next option.
    By default it will follow the rule set in the
-   `BlockExpiredPatronOpacActions <#BlockExpiredPatronOpacActions>`__
+   :ref:`BlockExpiredPatronOpacActions`
    preferenceBlock expired patrons
 
 -  Next you can choose the default privacy settings for this patron
    category. This setting can be edited by the patron via the OPAC if
-   you allow it with the `OPACPrivacy <#OPACPrivacy>`__ system
+   you allow it with the :ref:`OPACPrivacy` system
    preference.Default privacy
 
 -  Finally you can assign advanced messaging preferences by default to a
@@ -12985,7 +14327,7 @@ New patron category form
    -  **Important**
 
           Requires that you have
-          `EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+          :ref:`EnhancedMessagingPreferences`
           enabled
 
    -  These defaults will be applied to new patrons that are added to
@@ -13002,7 +14344,9 @@ New patron category form
              *misc/maintenance* folder. Ask your system administrator
              for assistance with this script.
 
-`Circulation and Fine Rules <#circfinerules>`__
+.. _circulation-and-fine-rules-label:
+
+Circulation and Fine Rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These rules define how your items are circulated, how/when fines are
@@ -13030,8 +14374,8 @@ first found in this order:
 
 -  default (all libraries), all patron types, all item types
 
-The `CircControl <#CircControl>`__ and
-`HomeOrHoldingBranch <#HomeOrHoldingBranch>`__ also come in to play when
+The :ref:`CircControl` and
+:ref:`HomeOrHoldingBranch` also come in to play when
 figuring out which circulation rule to follow.
 
 -  If CircControl is set to "the library you are logged in at" circ
@@ -13045,11 +14389,11 @@ figuring out which circulation rule to follow.
    HomeOrHoldingBranch chooses if item's home library is used or holding
    library is used.
 
--  If `IndependentBranches <#IndependentBranches>`__ is set to 'Prevent'
+-  If :ref:`IndependentBranches` is set to 'Prevent'
    then the value of HomeOrHoldingBranch is used in figuring out if the
    item can be checked out. If the item's home library does not match
    the logged in library, the item cannot be checked out unless you are
-   a `superlibrarian <#patronpermsdefined>`__.
+   a :ref:`superlibrarian <patron-permissions-defined-label>`.
 
     **Note**
 
@@ -13069,7 +14413,9 @@ figuring out which circulation rule to follow.
     types to avoid this holds issue. Koha needs to know what rule to
     fall back on.
 
-`Default Circulation Rules <#defaultcircrules>`__
+.. _default-circulation-rules-label:
+
+Default Circulation Rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the issuing rules matrix you can define rules that depend on
@@ -13095,14 +14441,14 @@ Setting issuing rules for your libraries
 -  Limit the number of items a patron can have checked out at the same
    time by entering a number in the 'Current checkouts allowed' field
 
--  If you're allowing `OnSiteCheckouts <#OnSiteCheckouts>`__ then you
+-  If you're allowing :ref:`OnSiteCheckouts` then you
    may also want to set a limit on the number of items patron's can have
    onsite.
 
    -  **Note**
 
           This setting also depends on the
-          `ConsiderOnSiteCheckoutsAsNormalCheckouts <#ConsiderOnSiteCheckoutsAsNormalCheckouts>`__
+          :ref:`ConsiderOnSiteCheckoutsAsNormalCheckouts`
           preference
 
 -  Define the period of time an item can be checked out to a patron by
@@ -13157,7 +14503,7 @@ Setting issuing rules for your libraries
 
           If this field is left blank then Koha will not put a limit on
           the fines this item will accrue. A maximum fine amount can be
-          set using the `MaxFine <#MaxFine>`__ system preference.
+          set using the :ref:`MaxFine` system preference.
 
 -  If you would like to prevent overcharging patrons for a lost items,
    you can check the box under 'Cap fine at replacement price.' This
@@ -13197,7 +14543,7 @@ Setting issuing rules for your libraries
       number in units (days/hours) entered in this box.
 
    -  To control this value on a more granular level please set the
-      `NoRenewalBeforePrecision <#NoRenewalBeforePrecision>`__
+      :ref:`NoRenewalBeforePrecision`
       preference.
 
 -  You can enable automatic renewals for certain items/patrons if you'd
@@ -13206,8 +14552,8 @@ Setting issuing rules for your libraries
 
    -  **Important**
 
-          You will need to enable the `automatic renewal cron
-          job <#autorenewcron>`__ for this to work.
+          You will need to enable the :ref:`automatic renewal cron
+          job <automatic-renewal-label>` for this to work.
 
    -  **Important**
 
@@ -13260,7 +14606,9 @@ message.
 Circulation & Fine Rules Successfully Cloned Message
 |image160|
 
-`Default Checkouts and Hold Policy <#defaultcheckoutpolicy>`__
+.. _default-checkouts-and-hold-policy-label:
+
+Default Checkouts and Hold Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can set a default maximum number of checkouts and hold policy that
@@ -13278,7 +14626,7 @@ patrons in the library if no other option is set in the forms below.
 
 -  In 'Total current on-site checkouts allowed' enter the total number
    of items patrons can have checked out on site at a time
-   (`OnSiteCheckouts <#OnSiteCheckouts>`__ needs to be set to 'Enable')
+   (:ref:`OnSiteCheckouts` needs to be set to 'Enable')
 
 -  Control where patrons can place holds from using the 'Hold Policy'
    menu
@@ -13320,7 +14668,9 @@ patrons in the library if no other option is set in the forms below.
 -  Once your policy is set, you can unset it by clicking the 'Unset'
    link to the right of the rule
 
-`Checkouts Per Patron <#checkoutperpatron>`__
+.. _checkouts-per-patron-label:
+
+Checkouts Per Patron
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For this library, you can specify the maximum number of loans that a
@@ -13341,7 +14691,9 @@ patrons only have a total of 12 things checked out at once. If you enter
 12 here and the patron has 10 books out already they will only be
 allowed 2 DVDs to equal the 12 total they're allowed.
 
-`Item Hold Policies <#holdpolicies>`__
+.. _item-hold-policies-label:
+
+Item Hold Policies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For this library, you can edit hold and return policies for a given item
@@ -13363,7 +14715,7 @@ The various Hold Policies have the following effects:
     **Important**
 
     Note that if the system preference
-    `AllowHoldPolicyOverride <#AllowHoldPolicyOverride>`__ set to
+    :ref:`AllowHoldPolicyOverride` set to
     'allow', these policies can be overridden by your circulation staff.
 
     **Important**
@@ -13393,7 +14745,7 @@ The various Return Policies have the following effects:
 
    -  **Important**
 
-          If the `AutomaticItemReturn <#AutomaticItemReturn>`__
+          If the :ref:`AutomaticItemReturn`
           preference is set to automatically transfer the items home,
           then a prompt will not appear
 
@@ -13402,7 +14754,7 @@ The various Return Policies have the following effects:
 
    -  **Important**
 
-          If the `AutomaticItemReturn <#AutomaticItemReturn>`__
+          If the :ref:`AutomaticItemReturn`
           preference is set to automatically transfer the items home,
           then a prompt will not appear
 
@@ -13418,12 +14770,14 @@ library are the same. You can also block holds completely on specific
 item types from this form. This is also how you can set up floating item
 types and types that remain with their home library.
 
-`Patron Attribute Types <#patronattributetypes>`__
+.. _patron-attribute-types-label:
+
+Patron Attribute Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Patron attributes can be used to define custom fields to associate with
 your patron records. In order to enable the use of custom fields you
-need to set the `ExtendedPatronAttributes <#ExtendedPatronAttributes>`__
+need to set the :ref:`ExtendedPatronAttributes`
 system preference.
 
 -  *Get there:* More > Administration > Patrons & Circulation > Patron
@@ -13435,7 +14789,9 @@ Driver's license number.
 List of Patron Attributes
 |image164|
 
-`Adding Patron Attributes <#addpatattributes>`__
+.. _adding-patron-attributes-label:
+
+Adding Patron Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new Patron Attribute Type, click the 'New Patron Attribute
@@ -13470,8 +14826,8 @@ Add Patron Attribute Type form
    identifier which means, if a value is given to a patron record, the
    same value cannot be given to a different record.
 
-   -  Unique attributes can be used as match points on the `patron
-      import tool <#patronimport>`__
+   -  Unique attributes can be used as match points on the :ref:`patron
+      import tool <patron-import-label>`
 
    -  **Important**
 
@@ -13501,7 +14857,7 @@ Add Patron Attribute Type form
       appear in this menu
 
       -  *Get there:*\ More > Administration > Basic Parameters >
-         `Authorized Values <#authorizedvalues>`__
+         :ref:`Authorized Values`
 
    -  **Important**
 
@@ -13525,7 +14881,7 @@ Add Patron Attribute Type form
 
 -  If you have a lot of attributes it might be handy to group them so
    that you can easily find them for editing. If you create an
-   `Authorized Value <#authorizedvalues>`__ for PA\_CLASS it will show
+   :ref:`Authorized Value <authorized-values-label>` for PA\_CLASS it will show
    in the 'Class' pull down and you can then change your attributes page
    to have sections of attributes
 
@@ -13546,7 +14902,9 @@ that way on the add/edit patron form
 Grouped Attributes
 |image169|
 
-`Editing/Deleting Patron Attributes <#editpatattributes>`__
+.. _editing/deleting-patron-attributes-label:
+
+Editing/Deleting Patron Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each patron attribute has an edit and a delete link beside it on the
@@ -13565,7 +14923,9 @@ You will be unable to delete an attribute if it's in use.
 Warning when trying to delete an attribute that is in use
 |image170|
 
-`Library Transfer Limits <#libtransferlimits>`__
+.. _library-transfer-limits-label:
+
+Library Transfer Limits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Limit the ability to transfer items between libraries based on the
@@ -13576,7 +14936,7 @@ involved.
    Transfer Limits
 
 These rules only go into effect if the preference
-`UseBranchTransferLimits <#UseBranchTransferLimits>`__ is set to
+:ref:`UseBranchTransferLimits <usebranchtransferlimits-&-branchtransferlimitstype-label>` is set to
 'enforce'.
 
 Before you begin you will want to choose which library you are setting
@@ -13586,7 +14946,7 @@ Choose the library you're setting limits for
 |image171|
 
 Transfer limits are set based on the collections codes you have applied
-via the `Authorized Value <#authorizedvalues>`__ administration area.
+via the :ref:`Authorized Value <authorized-values-label>` administration area.
 
 Collection Code values assigned in the Authorized Value area
 |image172|
@@ -13605,20 +14965,22 @@ Example transfer limits set up
 In the above example, Centerville library will allow patrons to return
 items from all libraries except Liberty and Franklin to their branch.
 
-`Transport cost matrix <#transportcostmatrix>`__
+.. _transport-cost-matrix-label:
+
+Transport cost matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Transport cost matrix lets a library system define relative costs to
 transport books to one another. In order for the system to use this
 matrix you must first set the
-`UseTransportCostMatrix <#UseTransportCostMatrix>`__ preference to
+:ref:`UseTransportCostMatrix` preference to
 'Use'.
 
     **Important**
 
     The Transport cost matrix takes precedence in controlling where
     holds are filled from, if the matrix is not used then Koha checks
-    the `StaticHoldsQueueWeight <#holdqueueweight>`__.
+    the :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
 
 Costs are decimal values between some arbitrary maximum value (e.g. 1 or
 100) and 0 which is the minimum (no) cost. For example, you could just
@@ -13646,7 +15008,9 @@ After entering in your cost, hit 'Enter' on your keyboard or click the
     put a number in there ( even if you choose to disable that given
     To/From option ).
 
-`Item Circulation Alerts <#itemcircalerts>`__
+.. _item-circulation-alerts-label:
+
+Item Circulation Alerts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Libraries can decide if they want to have patrons automatically notified
@@ -13682,7 +15046,9 @@ To set up circulation alerts:
    -  In the above example, Juveniles and Kids will not receive check
       out notices.
 
-`Cities and Towns <#citytowns>`__
+.. _cities-and-towns-label:
+
+Cities and Towns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To standardize patron input you can define cities or towns within your
@@ -13693,7 +15059,9 @@ select the town from a list instead of having to type the town and zip
 -  *Get there:* More > Administration > Patrons & Circulation > Cities
    and Towns
 
-`Adding a City <#addingcity>`__
+.. _adding-a-city-label:
+
+Adding a City
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new city, click the 'New City' button at the top of the page
@@ -13710,7 +15078,9 @@ List of Cities
 
 Cities can be edited or deleted at any time.
 
-`Viewing Cities on Patron Add Form <#citiesonpatform>`__
+.. _viewing-cities-on-patron-add-form-label:
+
+Viewing Cities on Patron Add Form
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have defined local cities using the New city form, then when
@@ -13723,14 +15093,18 @@ Cities pull down on the patron record
 This will allow for easy entry of local cities into the patron record
 without risking the potential for typos or mistaken zip/postal codes.
 
-`Catalog Administration <#catadmin>`__
+.. _catalog-administration-label:
+
+Catalog Administration
 --------------------------------------
 
 Set these controls before you start cataloging on your Koha system.
 
 -  *Get there:* More > Administration > Catalog
 
-`MARC Bibliographic Frameworks <#marcbibframeworks>`__
+.. _marc-bibliographic-frameworks-label:
+
+MARC Bibliographic Frameworks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Think of Frameworks as templates for creating new bibliographic records.
@@ -13757,7 +15131,9 @@ the pagination options at the top of the table.
 Pagination options
 |image182|
 
-`Add New Framework <#addframework>`__
+.. _add-new-framework-label:
+
+Add New Framework
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new framework
@@ -13784,10 +15160,12 @@ To add a new framework
       off of, this will make it easier than starting from scratch
 
 -  Once your Framework appears on the screen you can edit or delete each
-   field by following the instructions for `editing
-   subfields <#editsubfields>`__
+   field by following the instructions for :ref:`editing
+   subfields <edit-framework-subfields-label>`
 
-`Edit Existing Frameworks <#editframeworks>`__
+.. _edit-existing-frameworks-label:
+
+Edit Existing Frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Clicking 'Edit' to the right of a Framework will only allow you to edit
@@ -13797,10 +15175,12 @@ Edit Framework
 |image185|
 
 To make edits to the fields associated with the Framework you must first
-click 'MARC Structure' and then follow the instructions for `editing
-subfields <#editsubfields>`__
+click 'MARC Structure' and then follow the instructions for :ref:`editing
+subfields <edit-framework-subfields-label>`
 
-`Add subfields to Frameworks <#addsubfieldsframework>`__
+.. _add-subfields-to-frameworks-label:
+
+Add subfields to Frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a field to a Framework click the 'New Tag' button at the top of
@@ -13840,10 +15220,12 @@ New tag and link to subfields
 To the right of the new field is a link to 'Subfields,' you will need to
 add subfields before this tag will appear in your MARC editor. The
 process of entering the settings for the new subfield is the same as
-those found in the `editing subfields in frameworks <#editsubfields>`__
+those found in the :ref:`editing subfields in frameworks <edit-framework-subfields-label>`
 section of this manual.
 
-`Edit Framework Subfields <#editsubfields>`__
+.. _edit-framework-subfields-label:
+
+Edit Framework Subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Frameworks are made up of MARC fields and subfields. To make edits to
@@ -13857,7 +15239,7 @@ Modify MARC Field
 -  Each field has a tag (which is the MARC tag) that is uneditable
 
    -  The 'Label for lib' is what will show in the staff client if you
-      have `advancedMARCeditor <#advancedMARCeditor>`__ set to display
+      have :ref:`advancedMARCeditor` set to display
       labels
 
    -  The 'Label for OPAC' is what will show on the MARC view in the
@@ -13869,8 +15251,8 @@ Modify MARC Field
    -  If you check 'Mandatory' the record will not be allowed to save
       unless you have a value assigned to this tag
 
-   -  'Authorized value' is where you define an `authorized
-      value <#authorizedvalues>`__ that your catalogers can choose from
+   -  'Authorized value' is where you define an :ref:`authorized
+      value <authorized-values-label>` that your catalogers can choose from
       a pull down to fill this field in
 
 To edit the subfields associated with the tag, click 'Subfields' to the
@@ -13986,8 +15368,8 @@ right of the tag on the 'MARC Structure' listing
    -  Authorized value
 
       -  means the value cannot by typed by the librarian, but must be
-         chosen from a pull down generated by the `authorized
-         value <#authorizedvalues>`__ list
+         chosen from a pull down generated by the :ref:`authorized
+         value <authorized-values-label>` list
 
       -  In the example above, the 504a field will show the MARC504
          Authorized Values when cataloging
@@ -14011,12 +15393,12 @@ right of the tag on the 'MARC Structure' listing
             browser next to the the call number subfield so that you can
             identify which call numbers are in use and which are not.
             Simply choose the cn\_browser.pl plugin. Learn more in the
-            `cataloging section <#addingitems>`__ of this manual.
+            :ref:`cataloging section <adding-items-label>` of this manual.
 
          -  If you'd like to let file uploads via cataloging you can
             choose the upload.pl plugin and this will allow you to
-            `upload files to Koha to link to your
-            records <#uploadbibfile>`__.
+            :ref:`upload files to Koha to link to your
+            records <attaching-files-to-records-label>`.
 
          -  In UNIMARC there are plugins for every 1xx fields that are
             coded fields. The plugin is a huge help for cataloger! There
@@ -14027,13 +15409,17 @@ right of the tag on the 'MARC Structure' listing
 -  To save your changes simply click the 'Save Changes' button at the
    top of the screen
 
-`Import/Export Frameworks <#importexportframeworks>`__
+.. _import/export-frameworks-label:
+
+Import/Export Frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next to each framework is a link to either import or export the
 framework.
 
-`Export Framework <#exportframeworks>`__
+.. _export-framework-label:
+
+Export Framework
 ''''''''''''''''''''''''''''''''''''''''
 
 To export a framework simply click the 'Export' link to the right of
@@ -14051,16 +15437,18 @@ Export formats
 A framework exported this way can be imported into any other Koha
 installation using the import framework option.
 
-`Import Framework <#importframeworks>`__
+.. _import-framework-label:
+
+Import Framework
 ''''''''''''''''''''''''''''''''''''''''
 
 An easy way to create a new framework is to import one created for your
 or another Koha installation. This framework would need to be exported
-from the other system `using the instructions
-above <#exportframeworks>`__ to be available for import here.
+from the other system :ref:`using the instructions
+above <export-framework-label>` to be available for import here.
 
-To import a framework you first need to create `a new
-framework <#addframework>`__. Once you have that framework, click
+To import a framework you first need to create :ref:`a new
+framework <add-new-framework-label>`. Once you have that framework, click
 'Import' to the right of the new framework.
 
 Import link next to framework
@@ -14087,7 +15475,9 @@ Once your import is complete you will be brought to the framework edit
 tool where you can make any changes you need to the framework you
 imported.
 
-`Koha to MARC Mapping <#kohamarcmapping>`__
+.. _koha-to-marc-mapping-label:
+
+Koha to MARC Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 While Koha stores the entire MARC record, it also stores common fields
@@ -14121,7 +15511,9 @@ the 'Click to "Unmap"' button.
     means that you won't be able to map both the 100a and the 700a to
     the author field, you need to choose one or the other.
 
-`Keywords to MARC Mapping <#keywordmapping>`__
+.. _keywords-to-marc-mapping-label:
+
+Keywords to MARC Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tool will allow you to map MARC fields to a set of predefined
@@ -14142,7 +15534,7 @@ screen of the bibliographic record using keywords. The following example
 will use the subtitle field.
 
 Using the Framework pull down menu, choose the
-`Framework <#marcbibframeworks>`__ you would like to apply this rule to.
+:ref:`Framework <marc-bibliographic-frameworks-label>` you would like to apply this rule to.
 For example, the subtitle for books can be found in the 245$b field.
 
 Assigning Book Subtitle
@@ -14170,7 +15562,9 @@ you simply have to map 490 $v to 'subtitle' along with the 245 $b.
 
 Future developments will include additional keyword assigned fields.
 
-`MARC Bibliographic Framework Test <#marcbibframeworkstest>`__
+.. _marc-bibliographic-framework-test-label:
+
+MARC Bibliographic Framework Test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checks the MARC structure.
@@ -14184,24 +15578,28 @@ you run this tool to test for errors in your definition.
 Framework Test
 |image206|
 
-`Authority Types <#authoritiesadmin>`__
+.. _authority-types-label:
+
+Authority Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Authority Types are basically MARC Frameworks for Authority records and
-because of that they follow the same editing rules found in the `MARC
-Bibliographic Frameworks <#marcbibframeworks>`__ section of this manual.
+because of that they follow the same editing rules found in the :ref:`MARC
+Bibliographic Frameworks <marc-bibliographic-frameworks-label>` section of this manual.
 Koha comes with many of the necessary Authority frameworks already
 installed. To learn how to add and edit Authority Types, simply review
-the `MARC Bibliographic Frameworks <#marcbibframeworks>`__ section of
+the :ref:`MARC Bibliographic Frameworks` section of
 this manual.
 
 -  *Get there:* More > Administration > Catalog > Authority Types
 
-`Classification Sources <#classificationsources>`__
+.. _classification-sources-label:
+
+Classification Sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Source of classification or shelving scheme is an `Authorized
-Values <#authorizedvalues>`__ category that is mapped to field 952$2 and
+Source of classification or shelving scheme is an :ref:`Authorized
+Values <authorized-values-label>` category that is mapped to field 952$2 and
 942$2 in Koha's MARC Bibliographic frameworks and stored in the
 items.cn\_source field in the database.
 
@@ -14227,7 +15625,9 @@ installation, you would see other values too:
 
 -  Other/Generic Classification
 
-`Adding/Editing Classification Sources <#addingclasssource>`__
+.. _adding/editing-classification-sources-label:
+
+Adding/Editing Classification Sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can add your own source of classification by using the New
@@ -14243,10 +15643,12 @@ When creating or editing:
 -  Check the 'Source in use?' checkbox if you want the value to appear
    in the drop down list for this category.
 
--  Select the appropriate `filing rule <#classfilingrules>`__ from the
+-  Select the appropriate :ref:`filing rule <classification-filing-rules-label>` from the
    drop down list.
 
-`Classification Filing Rules <#classfilingrules>`__
+.. _classification-filing-rules-label:
+
+Classification Filing Rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Filing rules determine the order in which items are placed on shelves.
@@ -14259,8 +15661,8 @@ Values that are pre-configured in Koha are:
 
 -  Generic
 
-Filing rules are mapped to `Classification
-sources <#addingclasssource>`__. You can setup new filing rules by using
+Filing rules are mapped to :ref:`Classification
+sources <adding/editing-classification-sources-label>`. You can setup new filing rules by using
 the New Filing Rule button. To edit use the Edit link.
 
 When creating or editing:
@@ -14269,15 +15671,17 @@ When creating or editing:
 
 -  Choose an appropriate filing routine - dewey, generic or lcc
 
-`Record Matching Rules <#recordmatchingrules>`__
+.. _record-matching-rules-label:
+
+Record Matching Rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Record matching rules are used when importing MARC records into Koha.
 
 -  *Get there:* More > Administration > Catalog > Record Matching Rules
 
-The rules that you set up here will be referenced with you `Stage MARC
-Records for Import <#stagemarc>`__.
+The rules that you set up here will be referenced with you :ref:`Stage MARC
+Records for Import <stage-marc-records-for-import-label>`.
 
 It is important to understand the difference between Match Points and
 Match Checks before adding new matching rules to Koha.
@@ -14368,7 +15772,9 @@ following indexes will be of use:
 
 Table: Authority Indexes
 
-`Adding Matching Rules <#addrecordmatchrule>`__
+.. _adding-matching-rules-label:
+
+Adding Matching Rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create a new matching rule :
@@ -14416,7 +15822,9 @@ To create a new matching rule :
 
    -  'Required match checks' - ??
 
-`Sample Bibliographic Record Matching Rule: Control Number <#samplerecordmatch>`__
+.. _sample-bibliographic-record-matching-rule:-control-number-label:
+
+Sample Bibliographic Record Matching Rule: Control Number
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 LOC Matching Rule
@@ -14458,12 +15866,16 @@ LOC Matching Rule
    Remove match check
    |image211|
 
-`OAI Sets Configuration <#oaisetsconfig>`__
+.. _oai-sets-configuration-label:
+
+OAI Sets Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On this page you can create, modify and delete OAI-PMH sets
 
-`Create a set <#oaicreate>`__
+.. _create-a-set-label:
+
+Create a set
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create a set:
@@ -14478,7 +15890,9 @@ To create a set:
 
 -  Click on 'Save' button'
 
-`Modify/Delete a set <#oaimodify>`__
+.. _modify/delete-a-set-label:
+
+Modify/Delete a set
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To modify a set, just click on the link 'Modify' on the same line of the
@@ -14488,7 +15902,9 @@ and allow you to modify the setSpec, setName and descriptions.
 To delete a set, just click on the link 'Delete' on the same line of the
 set you want to delete.
 
-`Define mappings <#oaimapping>`__
+.. _define-mappings-label:
+
+Define mappings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Here you can define how a set will be build (what records will belong to
@@ -14518,17 +15934,21 @@ To delete a condition, just leave at least one of 'Field', 'Subfield' or
 And it is case sensitive : a record having 999$9 = 'xxx' will not belong
 to a set where condition is 999$9 = 'XXX'.
 
-`Build sets <#oaibuild>`__
+.. _build-sets-label:
+
+Build sets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have configured all your sets, you have to build the sets. This
 is done by calling the script misc/migration\_tools/build\_oai\_sets.pl.
 
-`Item search fields <#itemsearchadmin>`__
+.. _item-search-fields-label:
+
+Item search fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From here you can add custom search fields to the `item
-search <#searchguide-itemsearch>`__ option in the staff client. Item
+From here you can add custom search fields to the :ref:`item
+search <item-searching-label>` option in the staff client. Item
 search fields
 
 To add a new search term simply click the 'New search field' buttonAdd
@@ -14548,7 +15968,9 @@ new field
 Once your new field is added it will be visible at the top of this page
 and on the item search pageSearch option
 
-`Acquisitions <#acqadmin>`__
+.. _acquisitions-label:
+
+Acquisitions
 ----------------------------
 
 The Koha Acquisitions module provides a way for the library to record
@@ -14559,7 +15981,9 @@ make sure that you have completed all of the set up.
 
 -  *Get there:* More > Administration > Acquisitions
 
-`Currencies and Exchange Rates <#currexchangeadmin>`__
+.. _currencies-and-exchange-rates-label:
+
+Currencies and Exchange Rates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you place orders from more than one country you will want to input
@@ -14589,12 +16013,14 @@ to choose an active currency.
 No active currency warning
 |image213|
 
-`Budgets <#budgetplanning>`__
+.. _budgets-label:
+
+Budgets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Budgets are used for tracking accounting values related to acquisitions.
 For example you could create a Budget for the current year (ex. 2015)
-and then break that into `Funds <#funds>`__ for different areas of the
+and then break that into :ref:`Funds` for different areas of the
 library (ex. Books, Audio, etc).
 
 -  *Get there:* More > Administration > Acquisitions > Budgets
@@ -14605,14 +16031,18 @@ for active and one for inactive budgets.
 Budgets List
 |image214|
 
-`Adding budgets <#addbudget>`__
+.. _adding-budgets-label:
+
+Adding budgets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Budgets can either be created `from scratch <#addnewbudget>`__, by
-`duplicating the previous year's budget <#duplicatebudget>`__ or by
-`closing a previous year's budget <#closebudget>`__.
+Budgets can either be created :ref:`from scratch <add-a-new-budget-label>`, by
+:ref:`duplicating the previous year's budget <duplicate-a-budget-label>` or by
+:ref:`closing a previous year's budget <close-a-budget-label>`.
 
-`Add a new budget <#addnewbudget>`__
+.. _add-a-new-budget-label:
+
+Add a new budget
 ''''''''''''''''''''''''''''''''''''
 
 If you haven't used Koha before for acquisitions then you'll need to
@@ -14645,7 +16075,9 @@ be brought to a list of your existing budgets.
 List of Budgets
 |image216|
 
-`Duplicate a budget <#duplicatebudget>`__
+.. _duplicate-a-budget-label:
+
+Duplicate a budget
 '''''''''''''''''''''''''''''''''''''''''
 
 To duplicate a budget from a previous year, click on the link for the
@@ -14681,13 +16113,15 @@ associated with that budget so that you can reuse budgets and funds from
 year to year and so that you can move unreceived orders and if desired
 unspent funds from a previous budget to the new budget.
 
-`Close a budget <#closebudget>`__
+.. _close-a-budget-label:
+
+Close a budget
 '''''''''''''''''''''''''''''''''
 
 Close a budget to move or roll over unreceived orders and if desired
 unspent funds from a previous budget to a new budget. Before closing
-your budget you might want to `duplicate the previous year's
-budget <#duplicatebudget>`__ so that you have somewhere for the
+your budget you might want to :ref:`duplicate the previous year's
+budget <duplicate-a-budget-label>` so that you have somewhere for the
 unreceived orders to roll to.
 
 Find the previous budget with unreceived orders on the Active budgets or
@@ -14729,19 +16163,23 @@ moved.
 Close report
 |image220|
 
-`Funds <#funds>`__
+.. _funds-label:
+
+Funds
 ~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Administration > Acquisitions > Funds
 
-`Add a Fund <#addbudgetfund>`__
+.. _add-a-fund-label:
+
+Add a Fund
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A fund is added to a budget.
 
     **Important**
 
-    A `budget <#addbudget>`__ must be defined before a fund can be
+    A :ref:`budget <adding-budgets-label>` must be defined before a fund can be
     created.
 
 To add a new fund click the New button and then choose which Budget you
@@ -14794,8 +16232,8 @@ The three first fields are required, the rest are optional
    option from the dropdown lists for the Statiscal 1 done on: and 
    Statistical 2 done on: fields.  
    
--  To learn more about planning categories, check out the `Planning Category
-   FAQ <#planningcatfaq>`__.  
+-  To learn more about planning categories, check out the :ref:`Planning Category
+   FAQ <planning-categories-label>`.  
 
 When complete, click 'Submit' and you will be brought to a list of all
 of the funds for the budget.
@@ -14841,7 +16279,9 @@ that will show you the children funds.
 Child funds
 |image226|
 
-`Budget Planning <#fundsplanning>`__
+.. _budget-planning-label:
+
+Budget Planning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When viewing the list of funds click the 'Planning' button and choose
@@ -14879,7 +16319,9 @@ in the 'Output to a file named' field and clicking the 'Output' button.
 Export planning as CSV
 |image231|
 
-`EDI Accounts <#ediaccounts>`__
+.. _edi-accounts-label:
+
+EDI Accounts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From here you can set up the information needed to connect to your
@@ -14887,8 +16329,8 @@ acquisitions vendors.
 
     **Note**
 
-    Before you begin you will need at least one `Vendor set up in
-    Acquisitions <#addacqvendor>`__.
+    Before you begin you will need at least one :ref:`Vendor set up in
+    Acquisitions <add-a-vendor-label>`.
 
 To add account information click the 'New account' button.New account
 
@@ -14898,7 +16340,9 @@ New account information
 
 Each vendor will have one account.
 
-`Library EANs <#libraryeans>`__
+.. _library-eans-label:
+
+Library EANs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A library EAN is the identifier the vendor gives the library to send
@@ -14913,12 +16357,16 @@ In the form that appears enter the information provided by your vendor.
 
 New EAN Form
 
-`Additional Parameters <#additionaladmin>`__
+.. _additional-parameters-label:
+
+Additional Parameters
 --------------------------------------------
 
 -  *Get there:* More > Administration > Additional Parameters
 
-`Z39.50/SRU servers <#z3950admin>`__
+.. _z39.50/sru-servers-label:
+
+Z39.50/SRU servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Z39.50 is a client–server protocol for searching and retrieving
@@ -14946,7 +16394,9 @@ To find additional Z39.50 targets you use IndexData's IRSpy:
 `http://irspy.indexdata.com <http://irspy.indexdata.com/>`__ or the
 Library of Congress's List of Targets http://www.loc.gov/z3950/
 
-`Add a Z39.50 Target <#addztarget>`__
+.. _add-a-z39.50-target-label:
+
+Add a Z39.50 Target
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  From the main Z39.50 page, click 'New Z39.50 Server'
@@ -15003,7 +16453,9 @@ Library of Congress's List of Targets http://www.loc.gov/z3950/
          -  Del9LinksExcept995.xsl: Remove $9 links. Skip item fields
             (UNIMARC)
 
-`Suggested Bibliographic Z39.50 Targets <#suggestztarget>`__
+.. _suggested-bibliographic-z39.50-targets-label:
+
+Suggested Bibliographic Z39.50 Targets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Koha libraries with open Z39.50 targets can share and find connection
@@ -15054,7 +16506,9 @@ libraries (in the Americas):
 
 -  VANCOUVER PUBLIC LIBRARY z3950.vpl.ca:210 Horizon
 
-`Suggested Authority Z39.50 Targets <#suggestauthz39>`__
+.. _suggested-authority-z39.50-targets-label:
+
+Suggested Authority Z39.50 Targets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following targets have been used successfully by other Koha
@@ -15068,7 +16522,9 @@ libraries (in the Americas):
 
 -  LIBRARY OF CONGRESS SUBJECT AUTHORITIES lx2.loc.gov:210 SAF
 
-`Add a SRU Target <#addsru>`__
+.. _add-a-sru-target-label:
+
+Add a SRU Target
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  From the main Z39.50/SRU page, click 'New SRU Server'
@@ -15152,14 +16608,16 @@ libraries (in the Americas):
          -  Del9LinksExcept995.xsl: Remove $9 links. Skip item fields
             (UNIMARC)
 
-`Did you mean? <#didyoumean>`__
+.. _did-you-mean?-label:
+
+Did you mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Get there:* More > Administration > Additional Parameters > Did you
 mean?
 
 Koha can offer 'Did you mean?' options on searches based on values in
-your `authorities <#catauthorities>`__.
+your :ref:`authorities <authorities-label>`.
 
     **Important**
 
@@ -15202,7 +16660,9 @@ If you choose just the AuthorityFile you'll see just authorities.
 AuthorityFile
 |image238|
 
-`Column settings <#admincolumns>`__
+.. _column-settings-label:
+
+Column settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This administration area will help you hide or display columns on fixed
@@ -15246,10 +16706,12 @@ top right of the page
 Toggle columns
 |image244|
 
-`Audio alerts <#audioadmin>`__
+.. _audio-alerts-label:
+
+Audio alerts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have your `AudioAlerts <#AudioAlerts>`__ preference set to
+If you have your :ref:`AudioAlerts` preference set to
 'Enable' you will be able to control the various alert sounds that Koha
 uses from this area.
 
@@ -15277,13 +16739,15 @@ limit a sound to a specific page
 Any ID selector (where html contains id="name\_of\_id" ) and can also be
 a trigger as: #name\_of\_selector
 
-`SMS cellular providers <#smsadmin>`__
+.. _sms-cellular-providers-label:
+
+SMS cellular providers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Important**
 
     This option will only appear if the
-    `SMSSendDriver <#SMSSendDriver>`__ preference is set to 'Email'
+    :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference is set to 'Email'
 
 From here you can enter as many cellular providers as you need to send
 SMS notices to your patrons using the email protocol.SMS Providers
@@ -15320,6 +16784,6 @@ To add new providers enter the details in the form and click 'Add new'
 to save.Add SMS Provider
 
 These options will appear in the OPAC for patrons to choose from on the
-`messaging tab <#opacmymsgs>`__ if you have
-`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__
+:ref:`messaging tab <my-messaging-label>` if you have
+:ref:`EnhancedMessagingPreferences`
 enabled.Options for providers in the OPAC

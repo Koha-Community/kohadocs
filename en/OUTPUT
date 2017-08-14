@@ -1,1187 +1,90 @@
-.. include:: images.rst
-
-Cataloging
-==========
-
-Before you start cataloging in Koha you're going to want to do some
-basic setup. Refer to the :ref:`Implementation Checklist`
-for a full list of these things. Most importantly you're going to want
-to make sure that your :ref:`MARC Bibliographic Frameworks` are all
-defined the way you want. Once in the cataloging module you will not be
-able to add or remove fields and subfields so your frameworks must be
-ready before you start cataloging.
-
-You can also use OCLC Connexion to send records directly in to Koha. For
-more information on that please review the :ref:`OCLC Connexion Gateway` 
-setup Appendix.
-
--  *Get there:* More > Cataloging
-
-.. _bibliographic-records-label:
-
-Bibliographic Records
-------------------------------------
-
-In Koha the bibliographic record contains the main information related
-to the material. This includes things like the title, author, ISBN, etc.
-This information is stored in Koha in Marc (different flavors of Marc
-are supported in Koha). Once this information is saved, :ref:`Item Records`
-can be attached.
-
-.. _adding-records-label:
-
-Adding Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Records can be added to Koha via original or copy cataloging. You can
-also choose to use the basic or advanced cataloging interface for all of
-your work.
-
-If you would like to catalog a record using a blank template in the
-basic editor
-
--  Click 'New Record'
-
-   New Record Menu
-   |image627|
-
-   -  Choose the framework you would like to base your record off of
-
-If you would like to catalog a record using a blank template in the
-advanced editor
-
--  Enable the
-   :ref:`EnableAdvancedCatalogingEditor`
-   preference
-
--  Click the 'Advanced editor' buttonAdvanced editor button
-
-If you want to catalog a record based on an existing record at another
-library in the editor you last used (basic or advanced)
-
--  Click 'New from Z39.50/SRU'
-
-   Z39.50 Search
-   |image628|
-
-   -  Search for the item you would like to catalog
-
-      -  **Note**
-
-             If no results are found, try searching for fewer fields,
-             not all Z39.50 targets can search all of the fields above.
-
-   -  Search targets can be altered by using the :ref:`Z39.50
-      Admin <z39.50/sru-servers-label>` area.
-
-   -  From the results you can view the MARC or Card view for the
-      records or choose to Import them into Koha
-
-      Z39.50 Search Results
-      |image629|
-
-      -  In addition to the Import link to the right of each title, you
-         can click on the title you're interested in and a menu will pop
-         up with links to preview the record and import it
-
-         Import Link Popup on Z39.50 Search Results
-         |image630|
-
-      -  If you don't find the title you need in your Z39.50 search
-         results you can click the 'Try Another Search' button at the
-         bottom left of your results
-
-         Try another search
-         |image631|
-
-.. _basic-editor-cataloging-label:
-
-Basic Editor Cataloging
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In the basic editor once you've opened a blank framework or imported a
-record via Z39.50 you will be presented with the form to continue
-cataloging
-
-Add MARC Record
-|image632|
-
--  If you would rather not see the MARC tag numbers you can change the
-   value in your :ref:`hide\_marc <hide\_marc-label>` system preference or each
-   user can check the box next to 'Show tags' found under 'Settings'.
-
--  To expand a collapsed tag click on the tag description
-
--  To get help from the Library of Congress on a Marc tag click the
-   question mark (?) to the right of each field number
-
-   -  If you feel that this clutters the screen you can hide the
-      question marks by unchecking the box next to the 'Show MARC tag
-      documentation links' note found under 'Settings'
-
--  Sometimes fields may not be editable due to the value in your
-   :ref:`BiblioAddsAuthorities` system preference.
-   If you have this preference set to not allow catalogers to type in
-   fields controlled by authorities you may see a lock symbol to the
-   left of the field.
-
-   Authority fields locked against editing
-   |image633|
-
-   -  If this icon appears you must click the icon to the right of the
-      field to search for an existing authority.
-
-      Search for authority
-      |image634|
-
-   -  From the results list click 'Choose authority' to bring that into
-      your catalog record
-
-      Authority search results
-      |image635|
-
--  To duplicate a field click on the 'repeat this tag' icon to the right
-   of the tag
-
-   Duplicate a Field
-   |image636|
-
-   -  To move subfields in to the right order, click the up arrow to the
-      left of the field
-
-   -  To duplicate a subfield click on the clone icon (to remove a
-      copied field, click the delete clone icon) to the right of the
-      field
-
-      Clone Subfield
-      |image637|
-
-   -  To remove a subfield (if there is more than one of the same type),
-      click the - (minus sign) to the right of the field
-
--  To use a plugin click on the icon to the right of the filed
-
-   Leader Builder Plugin
-   |image638|
-
-   -  Some fixed fields have editors that will change based on the
-      material type you're cataloging (for example the 006 and the 008
-      fields)
-
-      008 Plugin
-      |image639|
-
--  Once you've finished, click the 'Save' button at the top and choose
-   whether you want to save and view the bib record you have created or
-   continue on to add/edit items attached to the record
-
-   Record save options
-   |image640|
-
-   -  Choosing 'Save and view record' will bring you right to the record
-      you just cataloged
-
-   -  Choosing 'Save and edit items' will bring you to the add/edit item
-      form after saving the bib record so that you can attach holdings
-
-   -  Choosing 'Save and continue editing' will allow you to save your
-      work so far and keep you in the editor to continue working
-
--  If you are about to add a duplicate record to the system you will be
-   warned before saving
-
-   Duplicate Record Warning
-   |image641|
-
-.. _advanced-editor-cataloging-label:
-
-Advanced Editor Cataloging
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In order to use the Advanced cataloging editor you need to enable the
-:ref:`EnableAdvancedCatalogingEditor`
-preference.
-
-    **Important**
-
-    This feature is currently experimental, and may have bugs that cause
-    corruption of records. It also does not include any support for
-    UNIMARC or NORMARC fixed fields. Please help us test it and report
-    any bugs, but do so at your own risk.
-
-In the advanced editor once you've opened a blank framework or imported
-a record via Z39.50 you will be presented with the form to continue
-catalogingAdvanced cataloging editor
-
-Using the search box on the left you can perform Z39.50 searches
-
-Advanced Z39.50 results
-|image642|
-
-And from those Z39.50 results you can view the marc record by clicking
-the link to the right
-
-Advanced Z39.50 results
-|image643|
-
-Clicking 'Import' will bring the record in to the editor where you can
-perform your edits
-
-Advanced Cataloging
-|image644|
-
-    **Note**
-
-    When adding a new field in the Advanced Editor, you need to key
-    underscores for a blank indicator, and surround the indicators with
-    spaces.
-
-    **Note**
-
-    You need to key a space before the first subfield delimiter, but not
-    before or after other subfield delimiters in the field.
-
-At the bottom of the editor you will see help from the Library of
-Congress for the field you are on. In cases where your MARC is invalid
-you will see red highlighting. To edit the record using only keyboard
-functions the Keyboard shortcuts button will inform you of the necessary
-commands
-
-Advanced Z39.50 results
-|image645|
-
-.. _advanced-cataloging-keyboard-shortcuts-label:
-
-Advanced Cataloging Keyboard Shortcuts
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-The following keyboard shortcuts can be used in the advanced cataloging
-module to save time and clicking.
-
-+----------------+--------------------------------+
-| Shortcut       | Behavior                       |
-+================+================================+
-| Ctrl-D         | Insert delimiter (‡)           |
-+----------------+--------------------------------+
-| Ctrl-H         | Get help on current subfield   |
-+----------------+--------------------------------+
-| Ctrl-S         | Save record                    |
-+----------------+--------------------------------+
-| Ctrl-X         | Delete current field           |
-+----------------+--------------------------------+
-| Ctrl-Shift-X   | Delete current subfield        |
-+----------------+--------------------------------+
-| Enter          | New field on next line         |
-+----------------+--------------------------------+
-| Shift-Enter    | Insert line break              |
-+----------------+--------------------------------+
-| Tab            | Move to next position          |
-+----------------+--------------------------------+
-| Shift-Tab      | Move to previous position      |
-+----------------+--------------------------------+
-
-.. _macros-in-advanced-cataloging-label:
-
-Macros in Advanced Cataloging
-'''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-To record a new macro:
-
--  Select the "> Macros..." button
-
--  A window will pop up. In this window, select "New macro...," key the
-   new macro's name in the pop-up box and select OK.
-
--  Now click to the right of the little number 1, and key the first line
-   of your macro. For a multi-line, i.e., multi-field macro, hit the
-   return key so that a little number 2 appears, and key the second
-   line/field, etc.
-
--  Your macros will be automatically saved. When finished you can select
-   the "x" to close the window, or select a macro to run on the record
-   that you're editing, or select another macro to run.
-
-To edit an existing macro:
-
--  Select the "> Macros..." button
-
--  A window will pop up. In this window, select the macro that you wish
-   to edit & make your changes.
-
--  Your work will automatically be saved, and when finished you can
-   select the "x" to close the window, or select a macro to run on the
-   record that you're editing, or select another macro to run.
-
-The basic syntax of the macro language:
-
--  new 500=‡aEdited with Rancor
-
-   -  Creates a new 500 with a ‡a subfield and sets it to "Edited with
-      Rancor".
-
--  245c= by J.K. Rowling.
-
-   -  Sets the first ‡c subfield of the first 245 tag in the record to "
-      by J.K. Rowling", creating it if necessary.
-
--  082a={084a}
-
-   -  Sets the ‡a subfield of the first 082 tag (creating the subfield
-      if necessary) to the contents of the first 084‡a.
-
--  indicators=\_1
-
-   -  Sets the indicators of the last mentioned tag (in this case, 082)
-      to "\_" and "1".
-
--  new 090a=Z674.75.W67
-
-   -  Creates a new ‡a subfield on the first 090 (but only if that field
-      already exists) and sets it to Z674.75.W67.
-
--  new 090a at end=Z674.75.W67
-
-   -  Same as above.
-
--  new 245b after a= a tale of might and magic /
-
-   -  Creates a new ‡b after the first a subfield and sets it to " a
-      tale of might and magic /".
-
--  delete 245b
-
-   -  Deletes the first ‡b subfield on the first 245 to ‡b
-
-.. _adding-analytic-records-label:
-
-Adding Analytic Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Libraries sometimes make journal articles and articles within monographs
-and serials accessible to library patrons through analytics cataloging.
-Analytics cataloging creates separate bibliographic records for these
-articles, chapters, sections, etc. found within a larger resource such
-as a book, an article within a journal, newspaper or serial. In
-analytics cataloging, although a separate bib record is created for the
-title, it is not physically separated from the host item.  Learn more
-about Analytics in Chapter 13 of AACR2.
-
-If you would like to catalog analytic records there are two options. One
-is to use the :ref:`Easy Analytics` funtion; the
-other is the :ref:`Analytics Enhanced Workflow`.
-
-.. _easy-analytics-label:
-
-Easy Analytics
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Easy Analytics feature makes linking analytic records together
-easier. The first thing you need to do is set the
-:ref:`EasyAnalyticalRecords` preference to
-'Display' and the :ref:`UseControlNumber` preference to
-'Don't use.'
-
-After cataloging your analytic record (see :ref:`Adding
-Records <adding-records-label>` for more on creating records) click 'Edit' from
-the normal view and choose to 'Link to Host Item'
-
-Link to Host Item
-|image646|
-
-This will prompt you to enter the barcode for the item this record
-should be linked to.
-
-Barcode for Analytic Linking
-|image647|
-
-After entering the item's barcode and clicking 'Select' you will receive
-a confirmation message.
-
-Analytic Link Success
-|image648|
-
-The record will now have the 773 field filled in properly to complete
-the link.
-
-773
-|image649|
-
-To view all of the items tied to the host record, do a search for the
-record, click the Analytics tab on the left and the analytics tied to
-each barcode will be shown under the "Used in" column.
-
-Analytics Tab
-|image650|
-
-    **Note**
-
-    It is also possible to create analytic records from this screen by
-    clicking on "Create Analytics"
-
-You can also see the analytics attached to this record by clicking the
-'Show Analytic' link towards the top of the record in the normal view.
-
-Show Analytics on Bib Record
-|image651|
-
-When looking at the analytic record you will also see a link to the host
-item under the 'Host records' column in the holdings table when viewing
-the 'Analytics' tab.
-
-Host Record
-|image652|
-
-.. _analytics-enhanced-workflow-label:
-
-Analytics Enhanced Workflow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To use the Enhanced Workflow method of adding analytics, the first thing
-you need to do is set the
-:ref:`EasyAnalyticalRecords` preference to 'Don't
-display' and the :ref:`UseControlNumber` preference to
-'Use.'
-
-After cataloging your original record (see :ref:`Adding
-Records <adding-records-label>` for more on creating records) click 'New' from
-the normal view and choose to 'New child record.'
-
-New child record
-|image653|
-
-This will open a new blank record for cataloging. The blank record will
-only have the 773 field filled in properly to complete the link once the
-record is saved.
-
-773
-|image654|
-
-To view all of the items tied to the host record, do a search for the
-record, click the Analytics tab on the left and the analytics tied to
-each barcode will be shown under the "Used in" column.
-
-Analytics Tab
-|image655|
-
-You can also see the analytics attached to this record by clicking the
-'Show Analytic' link towards the top of the record in the normal view.
-
-Show Analytics on Bib Record
-|image656|
-
-When looking at the analytic record you will also see a link to the host
-item under the 'Host records' column in the holdings table when viewing
-the 'Analytics' tab.
-
-Host Record
-|image657|
-
-.. _editing-analytics-label:
-
-Editing Analytics
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you have linked an analytic record incorrectly you can remove that
-link by editing the item on the analytic record (not the host record).
-To do this, go to the analytic record and click the 'Edit' button and
-choose to 'Edit items'. To the left of each item you will see two
-options.
-
-Edit Analytic Item Record
-|image658|
-
--  Clicking 'Edit in Host' will allow you to edit the item on the host
-   record.
-
--  Clicking 'Delink' will remove the 773 field and the link between the
-   analytic and the host.
-
-.. _editing-records-label:
-
-Editing Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To edit a record you can click 'Edit Biblio' from the search results on
-the cataloging page
-
-Edit Biblio Option on Search Results
-|image659|
-
-or by clicking the Edit button on the Bibliographic Record and choosing
-'Edit Record'
-
-Edit Record Option on Bibliographic Record
-|image660|
-
-The record will open in the MARC editor
-
-Editing MARC Record
-|image661|
-
-The alternative is to search via Z39.50 to overlay your record with a
-fuller record found at another library. You can do this by choosing
-'Replace Record via Z39.50' from the Edit menu.
-
-Replace via Z39.50
-|image662|
-
-Once you choose that you will be brought to a Z39.50 search window to
-search other libraries for the record in question.
-
-Once you have made your edits (via either method) you can click 'Save'
-at the top left of the editor.
-
-You can also use the edit menu to add your own custom cover image if you
-have either :ref:`OPACLocalCoverImages` and/or
-:ref:`LocalCoverImages` set to 'Display' by choosing
-'Upload Image' from the menu.
-
-Upload Image
-|image663|
-
-Choosing to 'Upload Image' will take you to the :ref:`Upload Local Cover
-Image Tool <upload-local-cover-image-label>`.
-
-.. _duplicating-records-label:
-
-Duplicating Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sometimes a copy of the record you need to catalog can't be found via
-Z39.50. In these cases you can create a duplicate of similar record and
-edit the necessary pieces to create a new record. To duplicate an
-existing record click 'Edit as New (Duplicate)' from the Edit menu on
-the Bibliographic Record
-
-Edit as New (Duplicate) Bibliographic Record
-|image664|
-
-This will open a new MARC record with the fields filled in with the
-values from the original Bibliographic Record.
-
-New Duplicate Record
-|image665|
-
-.. _attaching-files-to-records-label:
-
-Attaching files to Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you would like to upload files to Koha you can do so with a few
-settings.
-
--  You will need to ask your system administrator to set the
-   'upload\_path' config variable to point to where the files will be
-   stored
-
-   -  You can see if your upload path is set correctly by visiting About
-      Koha > System Information. If there is an error you will see it
-      there.Upload Path Warning
-
--  You will want to be sure that your :ref:`OPACBaseURL`
-   system preference is set appropriately
-
--  You will want to add the upload.pl plugin to the 856$u subfield in
-   one (or multiple) of your :ref:`frameworks <edit-framework-subfields-label>`
-
-Once you are all set up you can continue with cataloging as regular. You
-will see a plugin icon next to the 856$u that will open up the upload
-and/or search windowUpload file to record
-
-From this menu you can click browse to find a file and attach it, or you
-can search files you have uploaded previously using the search box. From
-the search results you can choose which file to attach.Uploaded files
-
-Once the file is chosen it will appear as a link in the MARC record and
-on the detail display.
-
-.. _merging-records-label:
-
-Merging Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To merge bibliographic records together you will want to go to the
-Cataloging module and perform a search.
-
-If you see duplicates on that search results screen you can check the
-boxes next to the duplicates and click the 'Merge selected' button at
-the top of the results.
-
-Once you have selected the records you want to merge, click the 'Merge
-selected' button at the top of the list. You will be asked which of the
-records you would like to keep as your primary record and which will be
-deleted after the merge. If the records were created using different
-frameworks, Koha will also ask you what Framework you would like the
-newly merged record to use.
-
-Choose Primary Record for Merge
-|image666|
-
-You will be presented with the MARC for all of the records (each
-accessible by tabs labeled with the bib numbers for those records). By
-default the entire first record will be selected, uncheck the fields you
-don't want in the final (destination) record and then move on to the
-second tab to choose which fields should be in the final (destination)
-record.
-
-Merging Records
-|image667|
-
-Should you try to add a field that is not repeatable two times (like
-choosing the 245 field from both record #1 and #2) you will be presented
-with an error
-
-Non-repeatable Error
-|image668|
-
-Below the records you are merging is an option to enter fields to report
-on. This will allow you to control what fields you see on the merge
-confirmation page:
-
-Merge report fields
-|image669|
-
-If you enter nothing you will be presented with a confirmation of
-biblionumbers only
-
-Merge report
-|image670|
-
-If you enter fields you will see those on the confirmation page (you can
-set defaults with the :ref:`MergeReportFields`
-preference)
-
-Merge report
-|image671|
-
-Once you have completed your selections click the 'merge' button. The
-primary record will now CONTAIN the data you chose for it as well as all
-of the items/holdings from both bib records, and the second record will
-be deleted.
-
-    **Important**
-
-    It is important to rebuild your zebra index immediately after
-    merging records. If a search is performed for a record which has
-    been deleted Koha will present the patrons with an error in the
-    OPAC.
-
-    **Note**
-
-    If you would like you can also use the :ref:`Lists` tool for
-    merging records together. :ref:`Learn more here <merging-bibliographic-records-via-lists-label>`.
-
-.. _deleting-records-label:
-
-Deleting Records
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To delete a bibliographic record simply choose the 'Edit' button and
-select 'Delete record'
-
-Delete record
-|image672|
-
-Bibliographic records can only be deleted one all items have been
-deleted. If you try to delete a bibliographic record with items still
-attached you will see that the delete option is grayed out.
-
-Record with items still attached
-|image673|
-
-.. _item-records-label:
-
-Item Records
-----------------------------
-
-In Koha each bibliographic record can have one or more items attached.
-These items are sometimes referred to as holdings. Each item includes
-information to the physical copy the library has.
-
-.. _adding-items-label:
-
-Adding Items
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-After saving a new bibliographic record, you will be redirected to a
-blank item record so that you can attach an item to the bibliographic
-record. You can also click 'Add/Edit Items' from the cataloging search
-results
-
-Add/Edit Items Option on Search Results
-|image674|
-
-or you can add new item at any time by clicking 'New' on the
-bibliographic record and choosing 'New Item'
-
-New Item Button
-|image675|
-
-The item edit form will appear:
-
-Add item form
-|image676|
-
-At the very least, if you plan on circulating the item, the following
-fields should be entered for new items:
-
--  2 - Source of classification
-
--  a - Permanent location
-
--  b - Current location
-
--  o - Full call number
-
-   -  If you'd like you can use the `call number browser
-      plugin <#cnbrowseplugin>`__ for this field. If it's enabled you'll
-      see a ... to the right of the field. When clicked that will open a
-      call number browser window if the row is highlighted in Red then
-      the call number is in use, if there is a thin Green line instead
-      then the call number can be used.Call number browser
-
--  p - Barcode
-
--  v - Cost, replacement price
-
-   -  This value will be charged to patrons when you mark an item they
-      have checked out as 'Lost'
-
--  y - Koha item type
-
-To make sure that these values are filled in you can mark them as
-mandatory in the :ref:`framework <marc-bibliographic-frameworks-label>` you're using and
-then they will appear in red with a 'required' label. The item will not
-save until the required fields are filled in.
-
-Required Item Subfield
-|image677|
-
--  **Note**
-
-       To make item subfields required in a framework you'll want to
-       edit the 952 field in the :ref:`framework
-       editor <marc-bibliographic-frameworks-label>`.
-
-Below the add form there are 3 buttons for adding the item
-
-Add Item Buttons
-|image678|
-
--  Add Item will add just the one item
-
--  Add & Duplicate will add the item and fill in a new form with the
-   same values for your to alter
-
--  Add Multiple items will ask how many items and will then add that
-   number of items adding +1 to the barcode so each barcode is unique
-
-Your added items will appear above the add form once submitted
-
-Items
-|image679|
-
-Your items will also appear below the bibliographic details on the bib
-record display.
-
-List of Items on the Bib Record
-|image680|
-
-If you have
-:ref:`SpineLabelShowPrintOnBibDetails`
-set to 'Display' then there will also be a link to print a quick spine
-label next to each item.
-
-List of Items on the Bib Record with a Print Label link
-|image681|
-
-You can also filter the contents of your holdings table by clicking the
-'Activate filters' links. This will show a row at the top where you can
-type in any column to filter the results in the table.
-
-Filter holdings
-|image682|
-
-.. _editing-items-label:
-
-Editing Items
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Items can be edited in several ways.
-
--  Clicking 'Edit' and 'Edit Items' from the bibliographic record
-
-   Edit Items Menu Option
-   |image683|
-
-   Which will open up a list of items where you can click the 'Actions'
-   button to the left of the specific item you would like to edit and
-   choose 'Edit'.
-
-   Edit individual items
-   |image684|
-
--  Clicking 'Edit Items' beside the item on the 'Items' tab
-
-   Items Tab
-   |image685|
-
-   Which will open up the editor on the item you'd like to edit
-
-   Edit individual items
-   |image686|
-
--  Clicking 'Edit' and then 'Edit items in batch'
-
-   Edit items in a batch
-   |image687|
-
-   This will open up the :ref:`batch item modification
-   tool <batch-item-modification-label>` where you can edit all of the items on
-   this record as a batch.
-
--  You can also enable
-   :ref:`StaffDetailItemSelection` to have
-   checkboxes appear to the left of each item on the detail display. You
-   can then check off the items you would like to edit and click 'Modify
-   selected items' at the top of the list.
-
-   Editing selected items
-   |image688|
-
--  You can click 'Edit' to the right of each item in the Holdings
-   tabEdit individual items
-
--  There is also a link to Edit items from the search results in the
-   staff clientEdit item on the search results
-
--  Finally you can use the :ref:`Batch Item
-   Modification <batch-item-modification-label>` tool
-
-.. _quick-item-status-updates-label:
-
-Quick Item Status Updates
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Often circulation staff need to change the status of an item to Lost or
-Damaged. This doesn't require you to edit the entire item record.
-Instead clicking on the item barcode on the checkout summary or checkin
-history will bring you to an item summary. You can also get to the item
-summary by clicking on the Items tab to the left of the bib detail page.
-
-Item Edit
-|image689|
-
-From this view you can mark an item lost by choosing a lost status from
-the pull down and clicking the 'Set Status' button.
-
-Edit Lost Status
-|image690|
-
-You can also mark an item as damaged by choosing a damaged status from
-the pull down and clicking the 'Set Status' button.
-
-Edit Damaged Status
-|image691|
-
-.. _duplicating-items-label:
-
-Duplicating Items
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can easily duplicate each item by clicking the 'Action' button the
-left of each item on the edit items screen
-
-Edit individual items
-|image692|
-
-From here you can choose to 'Duplicate' the item and this will populate
-the form with the values from the item you chose.
-
-.. _item-information-label:
-
-Item Information
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To the left of every bibliographic record there is a tab to view the
-items.
-
-Items Tab
-|image693|
-
-Clicking that tab will give you basic information about the items. From
-here you can see basic information about the item such as the home
-library, item type, collection code, call number and replacement price.
-You can also see and edit the status information. If an item is marked
-lost or withdrawn you will also see the date that status was applied.
-
-In the History section you will see information about the check out
-history of the item and if you ordered the item via the acquisitions
-module then this section will include information about the order.
-
-History with order info
-|image694|
-
-If the Order or Accession date is linked, clicking it will bring you to
-the acquisitions information for that item.
-
-.. _moving-items-label:
-
-Moving Items
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Items can be moved from one bibliographic record to another using the
-Attach Item option
-
-Attach Item Option
-|image695|
-
-Visit the bibliographic record you want to attach the item to and choose
-'Attach Item' from the 'Edit' menu.
-
-Attach Item Form
-|image696|
-
-Simply enter the barcode for the item you want to move and click
-'Select'
-
-If you want to move all items to a new record creating only one
-bibliographic record you can use the :ref:`Merge Records
-tool <merging-bibliographic-records-via-lists-label>` instead.
-
-.. _deleting-items-label:
-
-Deleting Items
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-There are many ways to delete item records. If you only need to delete
-one item you can do this by opening up the detail page for the bib
-record and clicking the 'Edit' button at the top. From there you can
-choose to 'Edit items'.
-
-'Edit Items' menu option
-|image697|
-
-You will be presented with a list of items and next to each one will be
-a link labeled 'Delete'. Click that link and if the item is not checked
-out it will delete that item.
-
-Delete link on the left
-|image698|
-
-If you know that all of the items attached to your record are not
-currently checked out you can use the 'Delete all items' option under
-the 'Edit menu' and it will remove all items from the record.
-
-You can also enable
-:ref:`StaffDetailItemSelection` to have
-checkboxes appear to the left of each item on the detail display. You
-can then check off the items you would like to delete and click 'Delete
-selected items' at the top of the list.
-
-Deleting selected items
-|image699|
-
-Finally you can use the :ref:`batch delete tool <batch-item-deletion-label>` to
-delete a batch of items.
-
-.. _item-specific-circulation-history-label:
-
-Item Specific Circulation History
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Each bibliographic record keeps a circulation history (with or without
-the patron information depending on your settings), but each item also
-has its own circulation history page. To see this, click on the 'Items'
-tab to the left of the record you are viewing.
-
-Items tab
-|image700|
-
-Below the 'History' heading is a link to 'View item's checkout history,'
-clicking that will open up the item's history which will look slightly
-different from the bibliographic record's history page.
-
-Item Specific Circulation History
-|image701|
-
-.. _authorities-label:
-
-Authorities
----------------------------------
-
-Authority records are a way of controlling fields in your MARC records.
-Using authority records will provide you with control over subject
-headings, personal names and places.
-
-.. _adding-authorities-label:
-
-Adding Authorities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To add a new authority record you can either choose the authority type
-from the 'New Authority' button or search another library by clicking
-the 'New from Z39.50' button.
-
-New Authority Record Options
-|image702|
-
-If you choose to enter a new authority from scratch, the form that
-appears will allow you to enter all of the necessary details regarding
-your authority record.
-
-New Authority Record
-|image703|
-
-To expand collapsed values simply click on the title and the subfields
-will appear. To duplicate a field or subfield just click the plus sign
-(+) to the right of the label. To use field helper plugins simply click
-the ellipsis (...) to the right of the field.
-
-When linking authorities to other headings, you can use the authority
-finder plugin by clicking the ellipsis (...) to the right of the field.
-
-Authority search plugin
-|image704|
-
-From there you can search your authority file for the authority to link.
-If you can't find the authority to link, you can click the 'Create new'
-button and add the necessary authority for the link. This plugin also
-allows for you to choose the link relationship between the authorities.
-
-Authority relationships
-|image705|
-
-If you choose to search another library for the authority record you
-will be presented with a search box
-
-Authority Z39.50 Search
-|image706|
-
-From the results you can choose the 'Import' link to the right of the
-record you would like to add to Koha
-
-Authority Z39.50 Results
-|image707|
-
-You will then be presented with the form to edit the authority before
-saving it to your system
-
-Imported Authority
-|image708|
-
-.. _searching-authorities-label:
-
-Searching Authorities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-From the authorities page you can search for existing terms and the
-bibliographic records they are attached to.
-
-Authority Search
-|image709|
-
-From the results you will see the authority record, how many
-bibliographic records it is attached to, an 'Actions' menu that includes
-the ability to :ref:`edit <editing-authorities-label>`, :ref:`merge <merging-authorities-label>`
-and :ref:`delete <editing-authorities-label>` (if there are no bibliographic records
-attached).
-
-Authority Search Results
-|image710|
-
-Clicking on the Details link to the right of the authority record
-summary will open the full record and the option to edit the record.
-
-Authority Record
-|image711|
-
-If the authority has See Alsos in it you will see those broken out on
-the search results, clicking the linked headings will run a search for
-that heading instead.
-
-See Also in Authorities
-|image712|
-
-.. _editing-authorities-label:
-
-Editing Authorities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Authorities can be edited by clicking on the authority summary from the
-search results and then clicking the 'Edit' button above the record. Or
-by clicking on the 'Edit' link to the left of the authority on the
-search results.
-
-Edit Authority Record
-|image713|
-
-Once you've made the necessary edits, simply click 'Save' and
-`dontmerge <#dontmerge>`__ is set to 'Do', Koha will immediately update
-all of the bib records linked to the authority with the new authority
-record's data. If dontmerge is set to "Don't" then Koha won't edit bib
-records when changes are made to authorities, rather, this is done later
-by the :ref:`merge\_authority.pl cronjob <update-authorities-label>`.
-
-To delete an authority record you first must make sure it's not linked
-to any bibliographic records. If it is not used by any bibliographic
-records a 'Delete' link will appear to the right of the record on the
-search results and as a button that appears after clicking on the
-summary of the authority record.
-
-.. _merging-authorities-label:
-
-Merging Authorities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you have duplicate authority records you can merge them together by
-clicking the 'Merge' link, found in the actions menu, next to two
-results on an authority search.
-
-Duplicate authorities results
-|image714|
-
-After clicking 'Merge' on the first result you will see that authority
-listed at the top of the results.
-
-Merging authorities results
-|image715|
-
-Next you need to click 'Merge' next to the second result you'd like to
-merge.
-
-You will be asked which of the two records you would like to keep as
-your primary record and which will be deleted after the merge.
-
-Merging authorities
-|image716|
-
-You will be presented with the MARC for both of the records (each
-accessible by tabs labeled with the authority numbers for those
-records). By default the entire first record will be selected, uncheck
-the fields you don't want in the final (destination) record and then
-move on to the second tab to choose which fields should be in the final
-(destination) record.
-
-Authorities to merge
-|image717|
-
-Once you have completed your selections click the 'Merge' button. The
-primary record will now contain the data you chose for it and the second
-record will be deleted.
-
-Merged authority
-|image718|
-
-.. _cataloging-guides-label:
-
-Cataloging Guides
-----------------------------------
-
-.. _bibliographic-record-cataloging-cheat-sheet-label:
-
-Bibliographic Record Cataloging Cheat Sheet
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sphinx-build -b html -d build/doctrees   source build/html
+Running Sphinx v1.4.9
+making output directory...
+Initializing Spelling Checker
+loading pickled environment... not yet created
+loading intersphinx inventory from https://docs.python.org/objects.inv...
+intersphinx inventory has moved: https://docs.python.org/objects.inv -> https://docs.python.org/2/objects.inv
+building [mo]: targets for 0 po files that are out of date
+building [html]: targets for 22 source files that are out of date
+updating environment: 22 added, 0 changed, 0 removed
+reading sources... [  4%] 00_intro
+reading sources... [  9%] 01_installation
+reading sources... [ 13%] 02_administration
+reading sources... [ 18%] 03_tools
+reading sources... [ 22%] 04_patrons
+reading sources... [ 27%] 05_circulation
+reading sources... [ 31%] 06_cataloging
+reading sources... [ 36%] 07_course_reserves
+reading sources... [ 40%] 08_serials
+reading sources... [ 45%] 09_acquisitions
+reading sources... [ 50%] 10_lists
+reading sources... [ 54%] 11_reports
+reading sources... [ 59%] 12_opac
+reading sources... [ 63%] 13_searching
+reading sources... [ 68%] 14_plugins
+reading sources... [ 72%] 15_implementation_checklist
+reading sources... [ 77%] 16_sopac
+reading sources... [ 81%] 17_cron_jobs
+reading sources... [ 86%] 18_miscellaneous
+reading sources... [ 90%] 19_license
+reading sources... [ 95%] images
+reading sources... [100%] index
+
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:5732: WARNING: undecodable source characters, replacing with "?": b'.. _babelth>>>\xe3\xa8<<<que-label:'
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:4764: WARNING: Duplicate explicit target name: "interface-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:7415: WARNING: Duplicate explicit target name: "articlerequestsmandatoryfieldsitemsonly-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:9905: WARNING: Duplicate explicit target name: "policy-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:9961: WARNING: Inline strong start-string without end-string.
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:10658: WARNING: Inline substitution_reference start-string without end-string.
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:10818: WARNING: Duplicate explicit target name: "general-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:11397: WARNING: Inline substitution_reference start-string without end-string.
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:11643: WARNING: Duplicate explicit target name: "features-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:12597: WARNING: Duplicate explicit target name: "appearance-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:13309: WARNING: Duplicate explicit target name: "ils-di-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:13336: WARNING: Duplicate explicit target name: "idref-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:13383: WARNING: Duplicate explicit target name: "oai-pmh-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:15971: WARNING: Duplicate explicit target name: "acquisitions-label".
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:347: WARNING: duplicate label administration, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:4767: WARNING: duplicate label interface, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:7418: WARNING: duplicate label articlerequestsmandatoryfieldsitemsonly, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:9908: WARNING: duplicate label policy, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:10821: WARNING: duplicate label general, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:11646: WARNING: duplicate label features, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:12600: WARNING: duplicate label appearance, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:13312: WARNING: duplicate label ils-di, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:13339: WARNING: duplicate label idref, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:13386: WARNING: duplicate label oai-pmh, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:15974: WARNING: duplicate label acquisitions, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1861: WARNING: Duplicate explicit target name: "templates-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1875: WARNING: Duplicate explicit target name: "add-a-template-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1934: WARNING: Duplicate explicit target name: "profiles-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1953: WARNING: Duplicate explicit target name: "add-a-profile-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2007: WARNING: Duplicate explicit target name: "layouts-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2016: WARNING: Duplicate explicit target name: "add-a-layout-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2075: WARNING: Duplicate explicit target name: "batches-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2086: WARNING: Duplicate explicit target name: "add-a-batch-label".
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:3196: WARNING: duplicate label upload-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2920: WARNING: duplicate label news-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:4: WARNING: duplicate label tools, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1864: WARNING: duplicate label templates, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1878: WARNING: duplicate label add a template, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1937: WARNING: duplicate label profiles, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1956: WARNING: duplicate label add a profile, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2010: WARNING: duplicate label layouts, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2019: WARNING: duplicate label add a layout, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2078: WARNING: duplicate label batches, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2089: WARNING: duplicate label add a batch, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:2920: WARNING: duplicate label news, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:3196: WARNING: duplicate label upload, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/04_patrons.rst:4: WARNING: duplicate label patrons, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/05_circulation.rst:1198: ERROR: Unexpected indentation.
+/home/jonathan/workspace/kohadocs/en/source/05_circulation.rst:1401: WARNING: duplicate label self-checkout-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/05_circulation.rst:1188: WARNING: duplicate label article-requests-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/05_circulation.rst:4: WARNING: duplicate label circulation, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/05_circulation.rst:1188: WARNING: duplicate label article requests, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/05_circulation.rst:1401: WARNING: duplicate label self checkout, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/06_cataloging.rst:1186: ERROR: Malformed table.
 
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Tag   | Label                               | Description                                                                                                                                          | Instructions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -1282,16 +185,7 @@ Bibliographic Record Cataloging Cheat Sheet
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 942   | ADDED ENTRY ELEMENTS (KOHA)         | Used for Koha-specific data.                                                                                                                         | Set the subfield 'c' to the appropriate item type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-Table: Cataloging Guide
-
-.. _item/holdings-record-cataloging-guide-label:
-
-Item/Holdings Record Cataloging Guide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This table represents the default embedded holdings data in Koha. This
-information can be used for migration or importing data purposes
+/home/jonathan/workspace/kohadocs/en/source/06_cataloging.rst:1296: ERROR: Malformed table.
 
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MARC21 Tag/subfield   | Data Element                                        | Description                                                                      | Notes                                                                                                                                                                                                                                                                    |
@@ -1378,128 +272,1318 @@ information can be used for migration or importing data purposes
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 952$z                 | Public note                                         |                                                                                  |                                                                                                                                                                                                                                                                          |
 +-----------------------+-----------------------------------------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+/home/jonathan/workspace/kohadocs/en/source/06_cataloging.rst:1011: WARNING: duplicate label authorities-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/06_cataloging.rst:4: WARNING: duplicate label cataloging, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/06_cataloging.rst:1011: WARNING: duplicate label authorities, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/07_course_reserves.rst:4: WARNING: duplicate label course reserves, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/08_serials.rst:4: WARNING: duplicate label serials, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/09_acquisitions.rst:14: WARNING: duplicate label setup-label, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/09_acquisitions.rst:4: WARNING: duplicate label acquisitions, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/09_acquisitions.rst:14: WARNING: duplicate label setup, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/11_reports.rst:514: WARNING: duplicate label tracking-in-house-use-label, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/11_reports.rst:4: WARNING: duplicate label reports, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/11_reports.rst:514: WARNING: duplicate label tracking in house use, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:1282: WARNING: duplicate label purchase-suggestions-label, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:679: WARNING: duplicate label comments-label, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:648: WARNING: duplicate label tagging-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:313: WARNING: duplicate label lists-label, other instance in /home/jonathan/workspace/kohadocs/en/source/10_lists.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:473: WARNING: duplicate label cart-label, other instance in /home/jonathan/workspace/kohadocs/en/source/10_lists.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:643: WARNING: duplicate label enhanced-content-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:4: WARNING: duplicate label opac, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:301: WARNING: duplicate label lists & cart, other instance in /home/jonathan/workspace/kohadocs/en/source/10_lists.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:313: WARNING: duplicate label lists, other instance in /home/jonathan/workspace/kohadocs/en/source/10_lists.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:473: WARNING: duplicate label cart, other instance in /home/jonathan/workspace/kohadocs/en/source/10_lists.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:643: WARNING: duplicate label enhanced content, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:648: WARNING: duplicate label tagging, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:679: WARNING: duplicate label comments, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:1282: WARNING: duplicate label purchase suggestions, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/13_searching.rst:4: WARNING: duplicate label searching, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:1094: WARNING: Duplicate explicit target name: "dependencies-label".
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:1218: WARNING: Duplicate explicit target name: "download-label".
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:1248: WARNING: Duplicate explicit target name: "configuration-label".
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:887: WARNING: duplicate label introduction, other instance in /home/jonathan/workspace/kohadocs/en/source/00_intro.rst
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:1097: WARNING: duplicate label dependencies, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:1221: WARNING: duplicate label download, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst:1251: WARNING: duplicate label configuration, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:216: WARNING: Duplicate explicit target name: "dependencies-label".
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:340: WARNING: Duplicate explicit target name: "download-label".
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:370: WARNING: Duplicate explicit target name: "configuration-label".
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:357: WARNING: duplicate label installation-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:87: WARNING: duplicate label installation-of-insurge-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:56: WARNING: duplicate label creation-of-the-database-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:231: WARNING: duplicate label download-and-compile-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:182: WARNING: duplicate label harvest-records-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:69: WARNING: duplicate label sync-dsn-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:9: WARNING: duplicate label introduction-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:19: WARNING: duplicate label installation-of-locum-and-insurge-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:212: WARNING: duplicate label installation-of-sphinx-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:264: WARNING: duplicate label the-sphinx-daemon-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:336: WARNING: duplicate label installation-of-sopac2-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:134: WARNING: duplicate label installation-of-locum-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:304: WARNING: duplicate label indexing-documents-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:170: WARNING: duplicate label installation-of-koha-connector-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:249: WARNING: duplicate label creation-of-user-and-group-label, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:4: WARNING: duplicate label sopac2 installation, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:9: WARNING: duplicate label introduction, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:19: WARNING: duplicate label installation of locum and insurge, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:30: WARNING: duplicate label dependencies, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:43: WARNING: duplicate label download, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:56: WARNING: duplicate label creation of the database, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:69: WARNING: duplicate label sync dsn, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:87: WARNING: duplicate label installation of insurge, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:134: WARNING: duplicate label installation of locum, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:170: WARNING: duplicate label installation of koha connector, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:182: WARNING: duplicate label harvest records, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:212: WARNING: duplicate label installation of sphinx, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:219: WARNING: duplicate label dependencies, other instance in /home/jonathan/workspace/kohadocs/en/source/16_sopac.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:231: WARNING: duplicate label download and compile, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:249: WARNING: duplicate label creation of user and group, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:264: WARNING: duplicate label the sphinx daemon, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:283: WARNING: duplicate label configuration, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:304: WARNING: duplicate label indexing documents, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:336: WARNING: duplicate label installation of sopac2, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:343: WARNING: duplicate label download, other instance in /home/jonathan/workspace/kohadocs/en/source/16_sopac.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:357: WARNING: duplicate label installation, other instance in /home/jonathan/workspace/kohadocs/en/source/15_implementation_checklist.rst
+/home/jonathan/workspace/kohadocs/en/source/16_sopac.rst:373: WARNING: duplicate label configuration, other instance in /home/jonathan/workspace/kohadocs/en/source/16_sopac.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:244: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:301: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:412: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:497: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:613: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:658: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1044: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1075: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1223: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1318: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1503: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1609: WARNING: Duplicate explicit target name: "perl-documentation-label".
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:51: WARNING: duplicate label holds-queue-label, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:46: WARNING: duplicate label circulation-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:441: WARNING: duplicate label patrons-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1275: WARNING: duplicate label opac-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1058: WARNING: duplicate label catalog-label, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:213: WARNING: duplicate label fines-label, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:571: WARNING: duplicate label notices-label, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:18: WARNING: duplicate label cron jobs, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:27: WARNING: duplicate label search, other instance in /home/jonathan/workspace/kohadocs/en/source/search.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:46: WARNING: duplicate label circulation, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:51: WARNING: duplicate label holds queue, other instance in /home/jonathan/workspace/kohadocs/en/source/05_circulation.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:213: WARNING: duplicate label fines, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:247: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:304: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:415: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:441: WARNING: duplicate label patrons, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:500: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:571: WARNING: duplicate label notices, other instance in /home/jonathan/workspace/kohadocs/en/source/04_patrons.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:616: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:661: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1047: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1058: WARNING: duplicate label catalog, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1078: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1226: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1275: WARNING: duplicate label opac, other instance in /home/jonathan/workspace/kohadocs/en/source/12_opac.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1321: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1420: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1506: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1587: WARNING: duplicate label acquisitions, other instance in /home/jonathan/workspace/kohadocs/en/source/09_acquisitions.rst
+/home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst:1612: WARNING: duplicate label perl documentation, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:1206: WARNING: Duplicate explicit target name: "in-firefox-label".
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3753: WARNING: duplicate label acquisitions-label, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:188: WARNING: duplicate label search-label, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3797: WARNING: duplicate label serials-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:1667: WARNING: duplicate label setup-label, other instance in /home/jonathan/workspace/kohadocs/en/source/09_acquisitions.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3683: WARNING: duplicate label cataloging-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:1808: WARNING: duplicate label troubleshooting-label, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4227: WARNING: duplicate label enhanced-content-label, other instance in /home/jonathan/workspace/kohadocs/en/source/12_opac.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4270: WARNING: duplicate label system-administration-label, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:2441: WARNING: duplicate label sending-notices-file-label, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3844: WARNING: duplicate label reports-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3333: WARNING: duplicate label display-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4125: WARNING: duplicate label searching-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3710: WARNING: duplicate label koha-to-marc-mapping-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4248: WARNING: duplicate label amazon-label, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4: WARNING: duplicate label web services, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:9: WARNING: duplicate label oai-pmh, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:107: WARNING: duplicate label using the sru server, other instance in /home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:188: WARNING: duplicate label search, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:1209: WARNING: duplicate label in firefox, other instance in /home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:1667: WARNING: duplicate label setup, other instance in /home/jonathan/workspace/kohadocs/en/source/09_acquisitions.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:1808: WARNING: duplicate label troubleshooting, other instance in /home/jonathan/workspace/kohadocs/en/source/03_tools.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:2408: WARNING: duplicate label talking tech, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:2441: WARNING: duplicate label sending notices file, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3333: WARNING: duplicate label display, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3683: WARNING: duplicate label cataloging, other instance in /home/jonathan/workspace/kohadocs/en/source/06_cataloging.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3710: WARNING: duplicate label koha to marc mapping, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3753: WARNING: duplicate label acquisitions, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3797: WARNING: duplicate label serials, other instance in /home/jonathan/workspace/kohadocs/en/source/08_serials.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:3844: WARNING: duplicate label reports, other instance in /home/jonathan/workspace/kohadocs/en/source/11_reports.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4125: WARNING: duplicate label searching, other instance in /home/jonathan/workspace/kohadocs/en/source/13_searching.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4227: WARNING: duplicate label enhanced content, other instance in /home/jonathan/workspace/kohadocs/en/source/12_opac.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4248: WARNING: duplicate label amazon, other instance in /home/jonathan/workspace/kohadocs/en/source/02_administration.rst
+/home/jonathan/workspace/kohadocs/en/source/18_miscellaneous.rst:4270: WARNING: duplicate label system administration, other instance in /home/jonathan/workspace/kohadocs/en/source/17_cron_jobs.rst
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [  4%] 00_intro
+writing output... [  9%] 01_installation
+writing output... [ 13%] 02_administration
+writing output... [ 18%] 03_tools
+writing output... [ 22%] 04_patrons
+writing output... [ 27%] 05_circulation
+writing output... [ 31%] 06_cataloging
+writing output... [ 36%] 07_course_reserves
+writing output... [ 40%] 08_serials
+writing output... [ 45%] 09_acquisitions
+writing output... [ 50%] 10_lists
+writing output... [ 54%] 11_reports
+writing output... [ 59%] 12_opac
+writing output... [ 63%] 13_searching
+writing output... [ 68%] 14_plugins
+writing output... [ 72%] 15_implementation_checklist
+writing output... [ 77%] 16_sopac
+writing output... [ 81%] 17_cron_jobs
+writing output... [ 86%] 18_miscellaneous
+writing output... [ 90%] 19_license
+writing output... [ 95%] images
+writing output... [100%] index
 
-Table: Koha Embedded Holdings Data
+/home/jonathan/workspace/kohadocs/en/source/02_administration.rst:659: WARNING: undefined label: item type icon (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:909: WARNING: undefined label: add-a-profile-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:937: WARNING: undefined label: templates-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:979: WARNING: undefined label: add-a-template-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1101: WARNING: undefined label: layouts-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1925: WARNING: undefined label: add-a-profile-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1941: WARNING: undefined label: add-a-template-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/03_tools.rst:1975: WARNING: undefined label: add-a-template-label (if the link has no caption the label must precede a section header)
+/home/jonathan/workspace/kohadocs/en/source/12_opac.rst:84: WARNING: undefined label: opacdefaultsortfield and opacdefaultsortorder (if the link has no caption the label must precede a section header)
+generating indices... genindex
+writing additional pages... search
+copying images... [  0%] images/tools/marcmodtemplates/regexexample.png
+copying images... [  0%] images/serialssamples/backpacker.png
+copying images... [  0%] images/admin/globalprefs/LibraryName.png
+copying images... [  0%] images/appendix-services/sipcommand2.png
+copying images... [  0%] images/installer/create_patron_1_example.png
+copying images... [  0%] images/tools/tagging/tagpending.png
+copying images... [  0%] images/cataloging/edititemstodelete.png
+copying images... [  0%] images/acquisitions/suggestothers.png
+copying images... [  0%] images/admin/cataloging/frameworkvisibility.png
+copying images... [  0%] images/admin/cataloging/editfield.png
+copying images... [  0%] images/admin/acquisitions/newfundform.png
+copying images... [  1%] images/admin/patroncirc/newcity.png
+copying images... [  1%] images/admin/patroncirc/editcircfine.png
+copying images... [  1%] images/circ/syncoffline.png
+copying images... [  1%] images/patrons/patronfilestab.png
+copying images... [  1%] images/tools/marcimport/stagedrecords.png
+copying images... [  1%] images/admin/globalprefs/LabelMARCView-dont.png
+copying images... [  1%] images/admin/patroncirc/holdsperitem.png
+copying images... [  1%] images/installer/staff_interface.png
+copying images... [  1%] images/tools/batchdelete/confirmbatchdel.png
+copying images... [  1%] images/circ/onsitecheckout.png
+copying images... [  1%] images/tools/patronphotos/imageuploadconfirm.png
+copying images... [  2%] images/opac/opacsummary-wlinks.png
+copying images... [  2%] images/opac/totalresults-rss.png
+copying images... [  2%] images/admin/acquisitions/planningbymonths.png
+copying images... [  2%] images/tools/marcmodtemplates/viewactions.png
+copying images... [  2%] images/admin/patroncirc/transferlimits.png
+copying images... [  2%] images/appendix-cms/newpreference.png
+copying images... [  2%] images/tools/exportmarc/marcexport-pt3.png
+copying images... [  2%] images/serials/vendorwarning.png
+copying images... [  2%] images/tools/calendar/calendaredit.png
+copying images... [  2%] images/tools/marcmodtemplates/templatechoice.png
+copying images... [  2%] images/circ/circquickbox.png
+copying images... [  3%] images/admin/acquisitions/closereport.png
+copying images... [  3%] images/admin/basicparams/addlibrarytogroup.png
+copying images... [  3%] images/circ/viewkohaoffline.png
+copying images... [  3%] images/acquisitions/contractonbasket.png
+copying images... [  3%] images/coursereserves/instructorremove.png
+copying images... [  3%] images/tools/marcimport/stagediff.png
+copying images... [  3%] images/admin/additional/setcurrencyhide.png
+copying images... [  3%] images/admin/globalprefs/IntranetmainUserblock-html.png
+copying images... [  3%] images/admin/cataloging/addclasssource.png
+copying images... [  3%] images/cataloging/edititem.png
+copying images... [  3%] images/admin/cataloging/removematchcheck.png
+copying images... [  4%] images/reports/reportfromsql.png
+copying images... [  4%] images/reports/report1.png
+copying images... [  4%] images/cataloging/deleteitemlink.png
+copying images... [  4%] images/opac/noaddress.png
+copying images... [  4%] images/circ/debarwarning.png
+copying images... [  4%] images/tools/calendar/calendar.png
+copying images... [  4%] images/tools/patroncards/manageprofiles.png
+copying images... [  4%] images/admin/cataloging/otheroptssubfield.png
+copying images... [  4%] images/tools/labelcreator/addbatchitems.png
+copying images... [  4%] images/admin/globalprefs/OpacAddMastheadLibraryPulldown-add.png
+copying images... [  4%] images/reports/reportconfirm.png
+copying images... [  5%] images/tools/importpatrons/patronmatching.png
+copying images... [  5%] images/admin/globalprefs/opacSerialDefaultTab-subtab.png
+copying images... [  5%] images/acquisitions/uncertainprices.png
+copying images... [  5%] images/appendix-services/sipcommand16.png
+copying images... [  5%] images/cataloging/newauthrec.png
+copying images... [  5%] images/acquisitions/orderz39form.png
+copying images... [  5%] images/searchhistory/authsearch.png
+copying images... [  5%] images/installer/create_patron_category_1_example.png
+copying images... [  5%] images/admin/globalprefs/prefsearch.png
+copying images... [  5%] images/searching/numresults.png
+copying images... [  5%] images/serials/serialclaimmenu1.png
+copying images... [  5%] images/about/aboutperlmodules.png
+copying images... [  6%] images/tools/labelcreator/profiles.png
+copying images... [  6%] images/appendix-cms/class101-pref.png
+copying images... [  6%] images/searching/advsortby.png
+copying images... [  6%] images/appendix-xslt/map.png
+copying images... [  6%] images/opac/bibdetail/bibcomments.png
+copying images... [  6%] images/serials/advanceserialsearch.png
+copying images... [  6%] images/appendix-services/sipcommand23.png
+copying images... [  6%] images/circ/checkoutinhouse.png
+copying images... [  6%] images/lists/newlistsearch.png
+copying images... [  6%] images/admin/acquisitions/newbudgetform.png
+copying images... [  6%] images/circ/selfcheckout.png
+copying images... [  7%] images/acquisitions/dupwarning.png
+copying images... [  7%] images/opac/zoterotitle.png
+copying images... [  7%] images/acquisitions/basketuncertain.png
+copying images... [  7%] images/tools/patroncards/units.png
+copying images... [  7%] images/serials/createroutinglist.png
+copying images... [  7%] images/appendix-xslt/kit.png
+copying images... [  7%] images/acquisitions/editsuggestion.png
+copying images... [  7%] images/admin/globalprefs/IssueLostItem-msg.png
+copying images... [  7%] images/searching/ex11.png
+copying images... [  7%] images/admin/globalprefs/OPACShowBarcode-show.png
+copying images... [  7%] images/admin/patroncirc/checkoutsperpatron.png
+copying images... [  8%] images/installer/login.png
+copying images... [  8%] images/opac/bibdetail/bibtitlenotes.png
+copying images... [  8%] images/tools/marcimport/matchfound.png
+copying images... [  8%] images/serials/subbuttons.png
+copying images... [  8%] images/serials/addsub.png
+copying images... [  8%] images/acquisitions/suggestpending.png
+copying images... [  8%] images/admin/patroncirc/deletepatronattr.png
+copying images... [  8%] images/serials/opacroutingsubscribe.png
+copying images... [  8%] images/admin/basicparams/authvallist.png
+copying images... [  8%] images/searching/feweropts.png
+copying images... [  8%] images/cataloging/savecataloging.png
+copying images... [  9%] images/serials/serialitem.png
+copying images... [  9%] images/acquisitions/transfersearch.png
+copying images... [  9%] images/opac/addtolistcart.png
+copying images... [  9%] images/opac/searchistory.png
+copying images... [  9%] images/tools/marcimport/stagemarc-pt1.png
+copying images... [  9%] images/patrons/patronpassword.png
+copying images... [  9%] images/admin/globalprefs/IssueLostItem-confirm.png
+copying images... [  9%] images/circ/checkoutpatron.png
+copying images... [  9%] images/serials/serialexpiresearch.png
+copying images... [  9%] images/circ/warnings/checkedoutelse.png
+copying images... [  9%] images/cataloging/attachitemform.png
+copying images... [ 10%] images/lists/listofdups.png
+copying images... [ 10%] images/admin/acquisitions/childfunds.png
+copying images... [ 10%] images/tools/patroncards/newbatch.png
+copying images... [ 10%] images/circ/checkinquickbox.png
+copying images... [ 10%] images/tools/labelcreator/labelform.png
+copying images... [ 10%] images/tools/autoitemmodage/ruleform.png
+copying images... [ 10%] images/circ/forgethold.png
+copying images... [ 10%] images/admin/globalprefs/IDreamBooksResults.png
+copying images... [ 10%] images/cataloging/008plugin.png
+copying images... [ 10%] images/circ/circonholdings.png
+copying images... [ 10%] images/admin/globalprefs/advancedMARCeditor-display.png
+copying images... [ 10%] images/admin/patroncirc/addcircrule.png
+copying images... [ 11%] images/acquisitions/closebasket.png
+copying images... [ 11%] images/tools/qotd/importedsummary.png
+copying images... [ 11%] images/acquisitions/suggestionsfilters.png
+copying images... [ 11%] images/admin/additional/didyoumeandrag.png
+copying images... [ 11%] images/about/systeminfo.jpg
+copying images... [ 11%] images/serials/editissue.png
+copying images... [ 11%] images/patrons/reversed.png
+copying images... [ 11%] images/acquisitions/orderz39.png
+copying images... [ 11%] images/tools/marcimport/cleanbatch.png
+copying images... [ 11%] images/reports/circresults.png
+copying images... [ 11%] images/cataloging/analyticstab.png
+copying images... [ 12%] images/circ/lostitemmsg.png
+copying images... [ 12%] images/opac/bibdetail/bibauthor.png
+copying images... [ 12%] images/cataloging/itemstab-long.png
+copying images... [ 12%] images/acquisitions/contractdisplay.png
+copying images... [ 12%] images/tools/patroncards/addlayout.png
+copying images... [ 12%] images/reports/editreport.png
+copying images... [ 12%] images/opac/holdings-results.png
+copying images... [ 12%] images/admin/cataloging/importfile.png
+copying images... [ 12%] images/appendix-xslt/book.png
+copying images... [ 12%] images/opac/sortingresults.png
+copying images... [ 12%] images/admin/cataloging/frameworkoptions.png
+copying images... [ 13%] images/admin/globalprefs/OPACShowHoldQueueDetails-priority.png
+copying images... [ 13%] images/tools/patronlists/patronlists.png
+copying images... [ 13%] images/admin/globalprefs/SocialNetworks.png
+copying images... [ 13%] images/appendix-xslt/mixed.png
+copying images... [ 13%] images/tools/tagging/pendingtags.png
+copying images... [ 13%] images/opac/chooselist.png
+copying images... [ 13%] images/admin/globalprefs/XSLTDetailsDisplay-on.png
+copying images... [ 13%] images/admin/patroncirc/collectcodes.png
+copying images... [ 13%] images/cataloging/dupfield.png
+copying images... [ 13%] images/reports/circform.png
+copying images... [ 13%] images/searching/ex13.png
+copying images... [ 14%] images/acquisitions/suggestbranchfilter.png
+copying images... [ 14%] images/acquisitions/invoice.png
+copying images... [ 14%] images/serials/fullopac.png
+copying images... [ 14%] images/serials/serialcolllink.png
+copying images... [ 14%] images/circ/holdwaiting.png
+copying images... [ 14%] images/serials/renewsubscription.png
+copying images... [ 14%] images/tools/exportmarc/marcexport-pt2.png
+copying images... [ 14%] images/patrons/patronsearchexpand.png
+copying images... [ 14%] images/opac/commentby.png
+copying images... [ 14%] images/circ/warnings/notforloan.png
+copying images... [ 14%] images/admin/globalprefs/OpacMainUserBlock.png
+copying images... [ 15%] images/tools/triggers.png
+copying images... [ 15%] images/patrons/dischargeletter.png
+copying images... [ 15%] images/cataloging/authoritysearch.png
+copying images... [ 15%] images/searching/resultssummary.png
+copying images... [ 15%] images/acquisitions/invoices.png
+copying images... [ 15%] images/patrons/myaccount.png
+copying images... [ 15%] images/tools/marcimport/templatechoice.png
+copying images... [ 15%] images/installer/data_added_1.png
+copying images... [ 15%] images/admin/basicparams/searchgroup.png
+copying images... [ 15%] images/admin/acquisitions/planningcsv.png
+copying images... [ 15%] images/opac/myfines.png
+copying images... [ 15%] images/admin/patroncirc/pa_class-patron.png
+copying images... [ 16%] images/circ/placeholdmultiple.png
+copying images... [ 16%] images/acquisitions/ordersearch.png
+copying images... [ 16%] images/reports/avercheckout.png
+copying images... [ 16%] images/patrons/circnote.png
+copying images... [ 16%] images/opac/holdnote.png
+copying images... [ 16%] images/serialssamples/cilpattern.png
+copying images... [ 16%] images/patrons/addpatronimage.png
+copying images... [ 16%] images/reports/catalogform.png
+copying images... [ 16%] images/admin/globalprefs/Display856uAsImage.png
+copying images... [ 16%] images/admin/globalprefs/OPACBaseURL.png
+copying images... [ 16%] images/patrons/patronstats.png
+copying images... [ 17%] images/admin/additional/setcurrencynohide.png
+copying images... [ 17%] images/admin/globalprefs/DisplayClearScreenButtonOff.png
+copying images... [ 17%] images/tools/batchpatron/batchmodify.png
+copying images... [ 17%] images/acquisitions/addbasketbutton.png
+copying images... [ 17%] images/admin/basicparams/bor_notes.png
+copying images... [ 17%] images/tools/anonymize/patronanoncomplete.png
+copying images... [ 17%] images/appendix-marcedit/excelimport/step-11.png
+copying images... [ 17%] images/tools/patronlists/patronstoadd.png
+copying images... [ 17%] images/circ/renewed.png
+copying images... [ 17%] images/admin/globalprefs/OpacNav.png
+copying images... [ 17%] images/patrons/patroninvoice.png
+copying images... [ 18%] images/admin/globalprefs/Google/8oauth.png
+copying images... [ 18%] images/circ/transitreceive.png
+copying images... [ 18%] images/acquisitions/transferbasket.png
+copying images... [ 18%] images/admin/basicparams/librarylink.png
+copying images... [ 18%] images/admin/globalprefs/AllowMultipleCovers.png
+copying images... [ 18%] images/opac/opacplaceholdspecific.png
+copying images... [ 18%] images/cataloging/newitem.png
+copying images... [ 18%] images/searching/ex6.png
+copying images... [ 18%] images/cataloging/authorityimported.png
+copying images... [ 18%] images/admin/globalprefs/OpacShowRecentComments.png
+copying images... [ 18%] images/admin/globalprefs/opaccredits.png
+copying images... [ 19%] images/admin/globalprefs/FilterBeforeOverdueReport.png
+copying images... [ 19%] images/installer/create_library_screen_1.png
+copying images... [ 19%] images/circ/batchlocaluse.png
+copying images... [ 19%] images/lists/mergereport.png
+copying images... [ 19%] images/serials/newfrequency.png
+copying images... [ 19%] images/admin/basicparams/authvals.png
+copying images... [ 19%] images/reports/reportsubgroup.png
+copying images... [ 19%] images/acquisitions/orderfromexisting.png
+copying images... [ 19%] images/appendix-marcedit/excelimport/step-14.png
+copying images... [ 19%] images/circ/checkincirc.png
+copying images... [ 19%] images/tools/tasksched/savedreports.png
+copying images... [ 20%] images/patrons/child.png
+copying images... [ 20%] images/cataloging/creatnewauthfromlink.png
+copying images... [ 20%] images/admin/additional/newsru.png
+copying images... [ 20%] images/cataloging/addmarc.png
+copying images... [ 20%] images/tools/notices/notices.png
+copying images... [ 20%] images/opac/opacplacehold.png
+copying images... [ 20%] images/appendix-cms/newpref-settings.png
+copying images... [ 20%] images/tools/patronlists/newpatronlist.png
+copying images... [ 20%] images/searching/ex10.png
+copying images... [ 20%] images/opac/myprivacy.png
+copying images... [ 20%] images/opac/mytags.png
+copying images... [ 21%] images/opac/suggestfrommyaccount.png
+copying images... [ 21%] images/appendix-services/sipcommand25.png
+copying images... [ 21%] images/acquisitions/received.png
+copying images... [ 21%] images/appendix-services/sipcommand22.png
+copying images... [ 21%] images/appendix-marcedit/excelimport/step-3.png
+copying images... [ 21%] images/circ/fastaddcheckedout.png
+copying images... [ 21%] images/installer/redirect.png
+copying images... [ 21%] images/acquisitions/cantdeleteorderline.png
+copying images... [ 21%] images/appendix-marcedit/excelimport/step-18.png
+copying images... [ 21%] images/lists/mergeblankreport.png
+copying images... [ 21%] images/tools/batchmod/batchmodform.png
+copying images... [ 21%] images/admin/basicparams/newitemtype.png
+copying images... [ 22%] images/patrons/parent.png
+copying images... [ 22%] images/circ/koct.png
+copying images... [ 22%] images/admin/globalprefs/saveallprefs.png
+copying images... [ 22%] images/acquisitions/subdetails.png
+copying images... [ 22%] images/admin/additional/didyoumean.png
+copying images... [ 22%] images/acquisitions/receivefromsearch.png
+copying images... [ 22%] images/tools/marcimport/matchrule.png
+copying images... [ 22%] images/opac/bibdetail/biblinks.png
+copying images... [ 22%] images/cataloging/deleterecord.png
+copying images... [ 22%] images/circ/placeholdsingle.png
+copying images... [ 22%] images/tools/labelcreator/exportbatch.png
+copying images... [ 23%] images/appendix-services/sipcommand5.png
+copying images... [ 23%] images/admin/globalprefs/hide_marc-display.png
+copying images... [ 23%] images/circ/suspendholds.png
+copying images... [ 23%] images/patrons/duplicatedpatron.png
+copying images... [ 23%] images/appendix-onorder/addfield.png
+copying images... [ 23%] images/tools/qotd/importquotes.png
+copying images... [ 23%] images/cataloging/catauthoritysearch.png
+copying images... [ 23%] images/admin/additional/currenciesnohide.png
+copying images... [ 23%] images/circ/itemlocations.png
+copying images... [ 23%] images/admin/globalprefs/OPACMySummaryHTML.png
+copying images... [ 23%] images/appendix-opac/opaccustomregions.jpg
+copying images... [ 24%] images/admin/globalprefs/authoritysearch.png
+copying images... [ 24%] images/patrons/addGuarantor.png
+copying images... [ 24%] images/cataloging/editauthority.png
+copying images... [ 24%] images/opac/bibdetail/bibtags.png
+copying images... [ 24%] images/appendix-services/sipcommand6.png
+copying images... [ 24%] images/tools/csvprofiles/deletecsv.png
+copying images... [ 24%] images/admin/globalprefs/HTML5MediaEnabled-staff.png
+copying images... [ 24%] images/cataloging/editdamagedstatus.png
+copying images... [ 24%] images/admin/globalprefs/AgeRestrictionMarker.png
+copying images... [ 24%] images/acquisitions/receivebutton.png
+copying images... [ 24%] images/admin/cataloging/importconfirm.png
+copying images... [ 25%] images/cataloging/importz39.png
+copying images... [ 25%] images/admin/globalprefs/OpacKohaUrl.png
+copying images... [ 25%] images/opac/addtonewlist.png
+copying images... [ 25%] images/admin/globalprefs/OpacBrowseResults.png
+copying images... [ 25%] images/acquisitions/pdforder.png
+copying images... [ 25%] images/searching/ex12.png
+copying images... [ 25%] images/patrons/borrowerlog.png
+copying images... [ 25%] images/tools/news/slipnews.png
+copying images... [ 25%] images/patrons/patronfieldsearch.png
+copying images... [ 25%] images/reports/report3.png
+copying images... [ 25%] images/circ/renewbarcode.png
+copying images... [ 26%] images/tools/marcmodtemplates/ifexample.png
+copying images... [ 26%] images/circ/warnings/agewarning.png
+copying images... [ 26%] images/admin/basicparams/itemtypes.png
+copying images... [ 26%] images/reports/report6.png
+copying images... [ 26%] images/circ/warnings/holdwaiting.png
+copying images... [ 26%] images/tools/qotd/importquotebuttons.png
+copying images... [ 26%] images/acquisitions/receive.png
+copying images... [ 26%] images/opac/paypaypal.png
+copying images... [ 26%] images/reports/acqnumbers.png
+copying images... [ 26%] images/reports/patnocheckout.png
+copying images... [ 26%] images/tools/marcimport/stagemarc-results.png
+copying images... [ 26%] images/appendix-services/sipcommand3.png
+copying images... [ 27%] images/serialssamples/readersserial.png
+copying images... [ 27%] images/opac/mymessages.png
+copying images... [ 27%] images/admin/patroncirc/patcaterror.png
+copying images... [ 27%] images/admin/globalprefs/OpacHoldNotes.png
+copying images... [ 27%] images/appendix-onorder/editrecords.png
+copying images... [ 27%] images/serials/serialrenew.png
+copying images... [ 27%] images/reports/dict1.png
+copying images... [ 27%] images/reports/savedreports.png
+copying images... [ 27%] images/admin/globalprefs/StatisticsFields.png
+copying images... [ 27%] images/admin/globalprefs/IDreamBooksReviews.png
+copying images... [ 27%] images/tools/labelcreator/newtemplate.png
+copying images... [ 28%] images/opac/addedtocart.png
+copying images... [ 28%] images/searchhistory/bibsearch.png
+copying images... [ 28%] images/appendix-marcedit/excelimport/step-7.png
+copying images... [ 28%] images/circ/checkoutmain.png
+copying images... [ 28%] images/patrons/paypartial.png
+copying images... [ 28%] images/reports/dictconfirm.png
+copying images... [ 28%] images/opac/myholds.png
+copying images... [ 28%] images/admin/globalprefs/SMSSendDriver.png
+copying images... [ 28%] images/admin/patroncirc/hidelostitemspatron.png
+copying images... [ 28%] images/searchhistory/searchhistory.png
+copying images... [ 28%] images/reports/reportresults.png
+copying images... [ 29%] images/reports/patronresults.png
+copying images... [ 29%] images/circ/koctparam.png
+copying images... [ 29%] images/cataloging/editingrecord.png
+copying images... [ 29%] images/tools/inventory/importbarcodes.png
+copying images... [ 29%] images/circ/holdconfirmtransfer.png
+copying images... [ 29%] images/lists/listcontents.png
+copying images... [ 29%] images/patrons/patronagelimit.png
+copying images... [ 29%] images/admin/globalprefs/AlternateHoldingsField.png
+copying images... [ 29%] images/admin/basicparams/additemtype.png
+copying images... [ 29%] images/reports/editreportoption.png
+copying images... [ 29%] images/reports/serialsresults.png
+copying images... [ 30%] images/serials/collectionrenew.png
+copying images... [ 30%] images/admin/globalprefs/OPACShelfBrowser.png
+copying images... [ 30%] images/tools/csvprofiles/downloadcsv.png
+copying images... [ 30%] images/acquisitions/createpurchaseorder.png
+copying images... [ 30%] images/patrons/payselected.png
+copying images... [ 30%] images/tools/patroncards/edittemplate.png
+copying images... [ 30%] images/opac/commentstab.png
+copying images... [ 30%] images/acquisitions/basketgroup.png
+copying images... [ 30%] images/opac/OPACSMSSendDriver.png
+copying images... [ 30%] images/admin/globalprefs/HTML5MediaEnabled-opac.png
+copying images... [ 30%] images/acquisitions/BasketConfirmations.png
+copying images... [ 31%] images/admin/additional/columns.png
+copying images... [ 31%] images/tools/qotd/quoteinopac.png
+copying images... [ 31%] images/circ/placeholdfindpatron.png
+copying images... [ 31%] images/serials/numpatterns.png
+copying images... [ 31%] images/cataloging/authzsearch.png
+copying images... [ 31%] images/admin/globalprefs/OpacAddMastheadLibraryPulldown-dontadd.png
+copying images... [ 31%] images/patrons/patronsearchcontains.png
+copying images... [ 31%] images/cataloging/itemstab.png
+copying images... [ 31%] images/admin/globalprefs/novelisttab.png
+copying images... [ 31%] images/admin/patroncirc/newpatroncat.png
+copying images... [ 31%] images/circ/localusecheckin.png
+copying images... [ 31%] images/tools/marcimport/recordtype.png
+copying images... [ 32%] images/admin/patroncirc/addattribute.png
+copying images... [ 32%] images/admin/cataloging/startnewframework.png
+copying images... [ 32%] images/admin/globalprefs/decreaseLoanHighHoldsDuration.png
+copying images... [ 32%] images/patrons/GranularPermissions.png
+copying images... [ 32%] images/tools/patroncards/newprofile.png
+copying images... [ 32%] images/circ/checkinlink.png
+copying images... [ 32%] images/cataloging/replaceviaz39.png
+copying images... [ 32%] images/tools/quickspinelable.png
+copying images... [ 32%] images/appendix-xslt/sound.png
+copying images... [ 32%] images/admin/cataloging/subfieldslink.png
+copying images... [ 32%] images/acquisitions/newvendor1.png
+copying images... [ 33%] images/admin/globalprefs/FineNotifyAtCheckin.png
+copying images... [ 33%] images/circ/holdssummary.png
+copying images... [ 33%] images/tools/rotatingcollections/rotatingcollectionnotice.png
+copying images... [ 33%] images/admin/acquisitions/budgetslist.png
+copying images... [ 33%] images/circ/holdsqueue.png
+copying images... [ 33%] images/appendix-services/sipcommand18.png
+copying images... [ 33%] images/admin/basicparams/opacinfo.png
+copying images... [ 33%] images/admin/globalprefs/novelistside.png
+copying images... [ 33%] images/circ/selfcheckoutuser.png
+copying images... [ 33%] images/searching/ex7.png
+copying images... [ 33%] images/tools/patroncards/imageuploaded.png
+copying images... [ 34%] images/opac/tags-results.png
+copying images... [ 34%] images/opac/opacplaceholdsdetail.png
+copying images... [ 34%] images/cataloging/editwithitemchecks.png
+copying images... [ 34%] images/opac/patronregistrationcomplete.png
+copying images... [ 34%] images/serials/receiveissue.png
+copying images... [ 34%] images/opac/bibdetail/authoritylink.png
+copying images... [ 34%] images/appendix-services/sipcommand14.png
+copying images... [ 34%] images/acquisitions/accounting.png
+copying images... [ 34%] images/circ/holdtab.png
+copying images... [ 34%] images/searching/searchoptions.png
+copying images... [ 34%] images/circ/circmenu.png
+copying images... [ 35%] images/admin/globalprefs/opacheader-html.png
+copying images... [ 35%] images/tools/batchdelete/batchdeldone.png
+copying images... [ 35%] images/tools/marcimport/managestaged.png
+copying images... [ 35%] images/installer/create_circulation_rule_1.png
+copying images... [ 35%] images/acquisitions/spent.png
+copying images... [ 35%] images/patrons/addpatronrestriction.png
+copying images... [ 35%] images/circ/lostitemconfirm.png
+copying images... [ 35%] images/cataloging/analyticdelink.png
+copying images... [ 35%] images/admin/acquisitions/fundactions.png
+copying images... [ 35%] images/acquisitions/acqsearches.png
+copying images... [ 35%] images/serials/serialsearch.png
+copying images... [ 36%] images/coursereserves/courses.png
+copying images... [ 36%] images/circ/checkingout-noshow.png
+copying images... [ 36%] images/patrons/addrestriction.png
+copying images... [ 36%] images/circ/warnings/toomanycheckouts.png
+copying images... [ 36%] images/circ/transfercheckin.png
+copying images... [ 36%] images/admin/globalprefs/AllowTooManyOverride-yes.png
+copying images... [ 36%] images/opac/SHOW_BCODEadd.png
+copying images... [ 36%] images/acquisitions/mysuggestions.png
+copying images... [ 36%] images/circ/offlinecheckouts.png
+copying images... [ 36%] images/admin/globalprefs/XSLTDetailsDisplay-off.png
+copying images... [ 36%] images/admin/globalprefs/prefsearch1.png
+copying images... [ 36%] images/opac/mysearchhistory.png
+copying images... [ 37%] images/cataloging/newfromframework.png
+copying images... [ 37%] images/patrons/manualinvoice.png
+copying images... [ 37%] images/tools/qotd/addquote.png
+copying images... [ 37%] images/admin/globalprefs/OPACShowHoldQueueDetails-showholds.png
+copying images... [ 37%] images/opac/commentpending.png
+copying images... [ 37%] images/appendix-onorder/add942.png
+copying images... [ 37%] images/cataloging/clonesubfield.png
+copying images... [ 37%] images/circ/transferstatus.png
+copying images... [ 37%] images/opac/bibdetail/bibsubjects.png
+copying images... [ 37%] images/circ/warnings/alreadycheckedout.png
+copying images... [ 37%] images/admin/globalprefs/opaclanguagesdisplay.png
+copying images... [ 38%] images/acquisitions/newcontract.png
+copying images... [ 38%] images/acquisitions/addbasket.png
+copying images... [ 38%] images/circ/offlinecheckout.png
+copying images... [ 38%] images/patrons/addlibmanagement.png
+copying images... [ 38%] images/admin/basicparams/report_subgroup.png
+copying images... [ 38%] images/searching/ex4.png
+copying images... [ 38%] images/admin/globalprefs/Babeltheque.png
+copying images... [ 38%] images/tools/batchdelete/batchdel.png
+copying images... [ 38%] images/admin/cataloging/subtitlebookinopac.png
+copying images... [ 38%] images/cataloging/authmerged.png
+copying images... [ 38%] images/admin/globalprefs/opacuserjs.png
+copying images... [ 39%] images/tools/patronphotos/uploadimagetool.png
+copying images... [ 39%] images/circ/lostcardwarning.png
+copying images... [ 39%] images/admin/basicparams/librarylist.png
+copying images... [ 39%] images/cataloging/catalogsearch.png
+copying images... [ 39%] images/patrons/addaltcontact.png
+copying images... [ 39%] images/acquisitions/suborder.png
+copying images... [ 39%] images/appendix-xslt/comp.png
+copying images... [ 39%] images/patrons/readinghistory.png
+copying images... [ 39%] images/installer/ready_for_data.png
+copying images... [ 39%] images/tools/tagging/tagfilters.png
+copying images... [ 39%] images/opac/debarred.png
+copying images... [ 40%] images/circ/circsummary.png
+copying images... [ 40%] images/circ/renewbutton.png
+copying images... [ 40%] images/tools/labelcreator/itemsinbarch.png
+copying images... [ 40%] images/lists/mergerecs.png
+copying images... [ 40%] images/acquisitions/stagedfiles.png
+copying images... [ 40%] images/tools/marcimport/reservoirresults.png
+copying images... [ 40%] images/acquisitions/fromnewemptyrecord.png
+copying images... [ 40%] images/admin/cataloging/subtitlebookmapping.png
+copying images... [ 40%] images/reports/itemtotalsresults.png
+copying images... [ 40%] images/admin/basicparams/nodeleteitemtype.png
+copying images... [ 40%] images/tools/labelcreator/layoutform.png
+copying images... [ 41%] images/patrons/payamount.png
+copying images... [ 41%] images/acquisitions/suggestiondetails.png
+copying images... [ 41%] images/cataloging/newauthtypes.png
+copying images... [ 41%] images/acquisitions/noinvoicefiles.png
+copying images... [ 41%] images/cataloging/dupauth.png
+copying images... [ 41%] images/appendix-services/sipcommand19.png
+copying images... [ 41%] images/admin/basicparams/stafflibgroupsearch.png
+copying images... [ 41%] images/patrons/addcontact.png
+copying images... [ 41%] images/admin/acquisitions/newfund.png
+copying images... [ 41%] images/searching/ex2.png
+copying images... [ 41%] images/tools/tagging/tagblacklisttest-neither.png
+copying images... [ 42%] images/circ/holdpriority.png
+copying images... [ 42%] images/circ/offlinecirclink.png
+copying images... [ 42%] images/circ/refineholdstopull.png
+copying images... [ 42%] images/tools/calendar/copyholidays.png
+copying images... [ 42%] images/lists/newlistform.png
+copying images... [ 42%] images/opac/bibdetail/bibdetails.png
+copying images... [ 42%] images/admin/globalprefs/AgeRestrictionOverride.png
+copying images... [ 42%] images/circ/overridetemporarily.png
+copying images... [ 42%] images/reports/topcircresults.png
+copying images... [ 42%] images/circ/processoffline.png
+copying images... [ 42%] images/reports/duplicatereport.png
+copying images... [ 42%] images/circ/warnings/onhold.png
+copying images... [ 43%] images/admin/cataloging/newtag.png
+copying images... [ 43%] images/lists/mergeprimary.png
+copying images... [ 43%] images/lists/itemsaddedcart.png
+copying images... [ 43%] images/admin/globalprefs/OPACPatronDetails.png
+copying images... [ 43%] images/admin/globalprefs/DisplayIconsXSLT.png
+copying images... [ 43%] images/opac/patronregistration.png
+copying images... [ 43%] images/cataloging/advancedzviewmarc.png
+copying images... [ 43%] images/cataloging/authmergechoice.png
+copying images... [ 43%] images/acquisitions/suborderresults.png
+copying images... [ 43%] images/patrons/patronaccount.png
+copying images... [ 43%] images/cataloging/items-withlabelprint.png
+copying images... [ 44%] images/opac/newlist.png
+copying images... [ 44%] images/circ/selfcheckoutsummary.png
+copying images... [ 44%] images/circ/placeholdbib.png
+copying images... [ 44%] images/cataloging/additem.png
+copying images... [ 44%] images/circ/transferlate.png
+copying images... [ 44%] images/tools/batchmod/batchmodsummary.png
+copying images... [ 44%] images/opac/bibdetail/bibholdings.png
+copying images... [ 44%] images/patrons/payfine.png
+copying images... [ 44%] images/admin/patroncirc/selectissuinglibrary.png
+copying images... [ 44%] images/opac/myaccount.png
+copying images... [ 44%] images/admin/globalprefs/ShowReviewerPhoto.png
+copying images... [ 45%] images/tools/marcmodtemplates/duplicate.png
+copying images... [ 45%] images/acquisitions/itemonorderadded.png
+copying images... [ 45%] images/coursereserves/courseopac.png
+copying images... [ 45%] images/opac/bibdetail/bibtitle.png
+copying images... [ 45%] images/tools/notices/newnotice.png
+copying images... [ 45%] images/circ/checkoutsummary.png
+copying images... [ 45%] images/cataloging/hostrecords.png
+copying images... [ 45%] images/admin/basicparams/report_group.png
+copying images... [ 45%] images/acquisitions/suggestreasons.png
+copying images... [ 45%] images/circ/checkingout.png
+copying images... [ 45%] images/circ/transfer.png
+copying images... [ 46%] images/circ/lowestpriority.png
+copying images... [ 46%] images/coursereserves/coursesblank.png
+copying images... [ 46%] images/appendix-marcedit/excelimport/step-4.png
+copying images... [ 46%] images/admin/globalprefs/OpacStarRatings-details.png
+copying images... [ 46%] images/tools/marcimport/matches.png
+copying images... [ 46%] images/reports/patnocheckout-results.png
+copying images... [ 46%] images/patrons/patronrestrictions-none.png
+copying images... [ 46%] images/cataloging/editinbatch.png
+copying images... [ 46%] images/cataloging/items-withoutlabelprint.png
+copying images... [ 46%] images/opac/suggestfromsearch.png
+copying images... [ 46%] images/circ/holdspickupover.png
+copying images... [ 47%] images/admin/additional/newz39.png
+copying images... [ 47%] images/tools/marcimport/checkitems.png
+copying images... [ 47%] images/circ/exportcheckouts.png
+copying images... [ 47%] images/searching/ex1.png
+copying images... [ 47%] images/tools/qotd/quotebuttons.png
+copying images... [ 47%] images/circ/renewcirc.png
+copying images... [ 47%] images/admin/basicparams/itemtype-alert.png
+copying images... [ 47%] images/circ/uploadofflinecirc.png
+copying images... [ 47%] images/opac/bibdetail/bibleader.png
+copying images... [ 47%] images/appendix-onorder/marcbreaker.png
+copying images... [ 47%] images/appendix-services/sipcommand17.png
+copying images... [ 47%] images/serials/createroutinglink.png
+copying images... [ 48%] images/tools/csvprofiles/addcsv.png
+copying images... [ 48%] images/tools/uploadlocalimg/bibnummarc.png
+copying images... [ 48%] images/cataloging/attachitem.png
+copying images... [ 48%] images/appendix-services/sipcommand13.png
+copying images... [ 48%] images/installer/create_item_type_1.png
+copying images... [ 48%] images/searching/advsearch.png
+copying images... [ 48%] images/patrons/pendingpatronrequest.png
+copying images... [ 48%] images/reports/catalogresults.png
+copying images... [ 48%] images/admin/globalprefs/sortprefs.png
+copying images... [ 48%] images/circ/cancelholds.png
+copying images... [ 48%] images/appendix-extending/colorccode.png
+copying images... [ 49%] images/appendix-marcedit/excelimport/step-8.png
+copying images... [ 49%] images/admin/globalprefs/opacSerialDefaultTab-colltab.png
+copying images... [ 49%] images/reports/reportparameters.png
+copying images... [ 49%] images/cataloging/lockedauthority.png
+copying images... [ 49%] images/patrons/addOrg.png
+copying images... [ 49%] images/installer/create_item_type_1_example.png
+copying images... [ 49%] images/serials/subinfoonbib.png
+copying images... [ 49%] images/admin/globalprefs/opaccredits-html.png
+copying images... [ 49%] images/tools/patronphotos/uploadphotosfile.png
+copying images... [ 49%] images/patrons/patronroutinglists.png
+copying images... [ 49%] images/acquisitions/newvendor2.png
+copying images... [ 50%] images/patrons/statspatcat.png
+copying images... [ 50%] images/tools/labelcreator/newprofile.png
+copying images... [ 50%] images/acquisitions/showalldetails.png
+copying images... [ 50%] images/tools/labelcreator/labelfromstaged.png
+copying images... [ 50%] images/acquisitions/invoicefiles.png
+copying images... [ 50%] images/serials/newsubbutton.png
+copying images... [ 50%] images/opac/bibdetail/bibmoresearch.png
+copying images... [ 50%] images/admin/globalprefs/Google/5consent.png
+copying images... [ 50%] images/opac/bibdetail/bibsave.png
+copying images... [ 50%] images/tools/labelcreator/newbatch.png
+copying images... [ 50%] images/circ/barcodefastadd.png
+copying images... [ 51%] images/admin/basicparams/addauthvalue.png
+copying images... [ 51%] images/admin/additional/togglecolumns.png
+copying images... [ 51%] images/admin/globalprefs/opacuserjs-before.png
+copying images... [ 51%] images/admin/patroncirc/librarytransferselect.png
+copying images... [ 51%] images/admin/acquisitions/fundlist.png
+copying images... [ 51%] images/admin/cataloging/kohamarcmapping.png
+copying images... [ 51%] images/cataloging/authmerging.png
+copying images... [ 51%] images/reports/report2.png
+copying images... [ 51%] images/searching/searchterms.png
+copying images... [ 51%] images/opac/nocard.png
+copying images... [ 51%] images/opac/didyoumeanopac.png
+copying images... [ 52%] images/reports/reportsave.png
+copying images... [ 52%] images/tools/uploadlocalimg/bibnumurl.png
+copying images... [ 52%] images/coursereserves/instructorsearch.png
+copying images... [ 52%] images/appendix-services/sipcommand26.png
+copying images... [ 52%] images/appendix-services/sipcommand20.png
+copying images... [ 52%] images/opac/myprofile-noedit.png
+copying images... [ 52%] images/circ/renewnomatch.png
+copying images... [ 52%] images/cataloging/analyticslink.png
+copying images... [ 52%] images/admin/globalprefs/IDreamBooksReadometer.png
+copying images... [ 52%] images/opac/bibdetail/bibbrowseresults.png
+copying images... [ 52%] images/acquisitions/acqclaimfilter.png
+copying images... [ 52%] images/circ/SelfCheckoutByLogin.png
+copying images... [ 53%] images/tools/tagging/tagapproved.png
+copying images... [ 53%] images/admin/acquisitions/duplicatestartend.png
+copying images... [ 53%] images/tools/comments/commentswaiting.png
+copying images... [ 53%] images/serials/addtorouting.png
+copying images... [ 53%] images/tools/exportmarc/fileexport.png
+copying images... [ 53%] images/acquisitions/receiveitem.png
+copying images... [ 53%] images/serials/newsubfrombib.png
+copying images... [ 53%] images/admin/cataloging/importtimer.png
+copying images... [ 53%] images/patrons/manualcredit.png
+copying images... [ 53%] images/admin/acquisitions/planningpulldown.png
+copying images... [ 53%] images/appendix-services/sipcommand24.png
+copying images... [ 54%] images/admin/patroncirc/cities.png
+copying images... [ 54%] images/circ/holdslist.png
+copying images... [ 54%] images/appendix-services/sipcommand21.png
+copying images... [ 54%] images/serials/serialclaimmenu.png
+copying images... [ 54%] images/opac/mypassword.png
+copying images... [ 54%] images/admin/basicparams/newlibrary.png
+copying images... [ 54%] images/admin/additional/z39list.png
+copying images... [ 54%] images/installer/create_patron_categories_1.png
+copying images... [ 54%] images/tools/comments/commentapproved.png
+copying images... [ 54%] images/serials/compactopac.png
+copying images... [ 54%] images/patrons/newinhouse.png
+copying images... [ 55%] images/opac/addcomment.png
+copying images... [ 55%] images/admin/globalprefs/Google/6credtype.png
+copying images... [ 55%] images/circ/setlibrary.png
+copying images... [ 55%] images/searching/ex5.png
+copying images... [ 55%] images/patrons/addlibsetup.png
+copying images... [ 55%] images/admin/globalprefs/CircAutocompl.png
+copying images... [ 55%] images/appendix-marcedit/marcedit-editsubfield.png
+copying images... [ 55%] images/tools/calendar/calendarexception.png
+copying images... [ 55%] images/reports/acqamounts.png
+copying images... [ 55%] images/tools/news/opacnews.png
+copying images... [ 55%] images/lists/nondupfield.png
+copying images... [ 56%] images/appendix-marcedit/excelimport/step-10.png
+copying images... [ 56%] images/coursereserves/courselinkopac.png
+copying images... [ 56%] images/circ/opacmsg.png
+copying images... [ 56%] images/coursereserves/addbarcode.png
+copying images... [ 56%] images/admin/globalprefs/opacheader.png
+copying images... [ 56%] images/searching/ex9.png
+copying images... [ 56%] images/admin/basicparams/grouplists.png
+copying images... [ 56%] images/circ/koctwarn.png
+copying images... [ 56%] images/reports/topcheckoutsresult.png
+copying images... [ 56%] images/circ/batchcheckoutwarn.png
+copying images... [ 56%] images/opac/bibdetail/bibsearch.png
+copying images... [ 57%] images/reports/runreport.png
+copying images... [ 57%] images/acquisitions/basketwithreceived.png
+copying images... [ 57%] images/serials/noserialclaim.png
+copying images... [ 57%] images/circ/bor_notes.png
+copying images... [ 57%] images/appendix-marcedit/editsubfield.png
+copying images... [ 57%] images/admin/patroncirc/defaultcheckholds.png
+copying images... [ 57%] images/admin/globalprefs/OpacSeparateHoldings.png
+copying images... [ 57%] images/tools/uploadlocalimg/zipfiles.png
+copying images... [ 57%] images/appendix-services/sipcommand8.png
+copying images... [ 57%] images/tools/labelcreator/newprofileform.png
+copying images... [ 57%] images/tools/patronlists/addpatrontolist.png
+copying images... [ 57%] images/acquisitions/basketwithcontracts.png
+copying images... [ 58%] images/tools/autoitemmodage/addeditrules.png
+copying images... [ 58%] images/appendix-marcedit/excelimport/step-13.png
+copying images... [ 58%] images/appendix-marcedit/excelimport/step-2.png
+copying images... [ 58%] images/admin/globalprefs/TagsInputOnList.png
+copying images... [ 58%] images/admin/acquisitions/duplicatebudget.png
+copying images... [ 58%] images/reports/topcircform.png
+copying images... [ 58%] images/reports/newsql.png
+copying images... [ 58%] images/tools/logs/logresults.png
+copying images... [ 58%] images/tools/anonymize/patronanonconfirm.png
+copying images... [ 58%] images/admin/patroncirc/limittocollcode.png
+copying images... [ 58%] images/cataloging/authorityresults.png
+copying images... [ 59%] images/circ/waitingstatus.png
+copying images... [ 59%] images/admin/patroncirc/pa_class.png
+copying images... [ 59%] images/opac/searchbox.png
+copying images... [ 59%] images/opac/listview.png
+copying images... [ 59%] images/tools/comments/commentmoderation.png
+copying images... [ 59%] images/opac/dischargeopac.png
+copying images... [ 59%] images/serials/advancedpattern.png
+copying images... [ 59%] images/installer/perl_modules_installed.png
+copying images... [ 59%] images/tools/batchmod/batchmod.png
+copying images... [ 59%] images/admin/cataloging/editframework.png
+copying images... [ 59%] images/tools/csvprofiles/csvadded.png
+copying images... [ 60%] images/admin/patroncirc/alertmatrix.png
+copying images... [ 60%] images/circ/koctlog.png
+copying images... [ 60%] images/appendix-onorder/add952.png
+copying images... [ 60%] images/cataloging/itemspecifichistory.png
+copying images... [ 60%] images/appendix-xslt/visual.png
+copying images... [ 60%] images/tools/batchdelete/nobatchdel.png
+copying images... [ 60%] images/opac/barcodeoncheckouts.png
+copying images... [ 60%] images/tools/calendar/calendaradd.png
+copying images... [ 60%] images/reports/holdstatsresults.png
+copying images... [ 60%] images/searching/noresults.png
+copying images... [ 60%] images/circ/materialspecified.png
+copying images... [ 61%] images/circ/fastaddbarcode.png
+copying images... [ 61%] images/acquisitions/finalbasket.png
+copying images... [ 61%] images/circ/offlinecirc.png
+copying images... [ 61%] images/serials/subsearch.png
+copying images... [ 61%] images/cataloging/analytics773child.png
+copying images... [ 61%] images/tools/logs/logviewer.png
+copying images... [ 61%] images/installer/connection_established.png
+copying images... [ 61%] images/circ/itemtransferred.png
+copying images... [ 61%] images/cataloging/anayticbib.png
+copying images... [ 61%] images/reports/report4.png
+copying images... [ 61%] images/tools/patroncards/imageupload.png
+copying images... [ 62%] images/tools/patroncards/cards.png
+copying images... [ 62%] images/opac/publiclistpermissions.png
+copying images... [ 62%] images/reports/dictionarylimit.png
+copying images... [ 62%] images/acquisitions/fundconfirmation.png
+copying images... [ 62%] images/patrons/reverselink.png
+copying images... [ 62%] images/patrons/managepatronupdates.png
+copying images... [ 62%] images/tools/patroncards/addprofile.png
+copying images... [ 62%] images/installer/database_settings.png
+copying images... [ 62%] images/patrons/duplicatewarn.png
+copying images... [ 62%] images/admin/globalprefs/WaitingNotifyAtCheckin.png
+copying images... [ 62%] images/cataloging/analyticschildlink.png
+copying images... [ 63%] images/serials/previewroutinglist.png
+copying images... [ 63%] images/tools/marcimport/stagemarc-pt2.png
+copying images... [ 63%] images/patrons/patronaddimage.png
+copying images... [ 63%] images/coursereserves/courseadmin.png
+copying images... [ 63%] images/cataloging/zsearch.png
+copying images... [ 63%] images/admin/patroncirc/attributes.png
+copying images... [ 63%] images/cataloging/duprecordwarn.png
+copying images... [ 63%] images/serials/newasdup.png
+copying images... [ 63%] images/circ/offlinecirclog.png
+copying images... [ 63%] images/circ/warnings/toomanycheckouts-no.png
+copying images... [ 63%] images/patrons/payselected-select.png
+copying images... [ 63%] images/admin/basicparams/itemtype-msg.png
+copying images... [ 64%] images/appendix-marcedit/excelimport/step-17.png
+copying images... [ 64%] images/admin/cataloging/exportoptions.png
+copying images... [ 64%] images/searching/menubar.png
+copying images... [ 64%] images/admin/cataloging/504auth.png
+copying images... [ 64%] images/circ/offlinecircsuccess.png
+copying images... [ 64%] images/admin/globalprefs/alphabet.png
+copying images... [ 64%] images/patrons/nopatronfiles.png
+copying images... [ 64%] images/acquisitions/basketbuttons.png
+copying images... [ 64%] images/circ/holdwaitingwarn.png
+copying images... [ 64%] images/tools/marcmodtemplates/addtemplate.png
+copying images... [ 64%] images/tools/autoitemmodage/savedrule.png
+copying images... [ 65%] images/circ/offlineduedate.png
+copying images... [ 65%] images/opac/myoverdues.png
+copying images... [ 65%] images/opac/deletecirchistory.png
+copying images... [ 65%] images/appendix-marcedit/excelimport/step-12.png
+copying images... [ 65%] images/opac/suggestfromnoresults.png
+copying images... [ 65%] images/admin/patroncirc/clonerules.png
+copying images... [ 65%] images/tools/news/news.png
+copying images... [ 65%] images/admin/patroncirc/patroncity.png
+copying images... [ 65%] images/installer/select_basic_configurations.png
+copying images... [ 65%] images/cataloging/requireditemfields.png
+copying images... [ 65%] images/patrons/resendnotice.png
+copying images... [ 66%] images/admin/acquisitions/nocurrency.png
+copying images... [ 66%] images/circ/searchtohold.png
+copying images... [ 66%] images/admin/globalprefs/StaffDetailItemSelection.png
+copying images... [ 66%] images/opac/newsuggestion.png
+copying images... [ 66%] images/admin/globalprefs/SpecifyDueDate.png
+copying images... [ 66%] images/tools/batchpatron/modifyform.png
+copying images... [ 66%] images/acquisitions/subordersearch.png
+copying images... [ 66%] images/serialssamples/keatsplanning.png
+copying images... [ 66%] images/tools/importpatrons/importpatrons.png
+copying images... [ 66%] images/tools/qotd/confirmdelete.png
+copying images... [ 66%] images/tools/batchmod/editinbatch.png
+copying images... [ 67%] images/appendix-marcedit/excelimport/step-19.png
+copying images... [ 67%] images/opac/smsopac.png
+copying images... [ 67%] images/circ/warnings/norenewals.png
+copying images... [ 67%] images/reports/averloanform.png
+copying images... [ 67%] images/acquisitions/newvendor3.png
+copying images... [ 67%] images/circ/koctdirectly.png
+copying images... [ 67%] images/reports/dict3.png
+copying images... [ 67%] images/cataloging/itemorderinfo.png
+copying images... [ 67%] images/admin/additional/didyoumeanopacexplode.png
+copying images... [ 67%] images/admin/globalprefs/DisplayClearScreenButton.png
+copying images... [ 67%] images/coursereserves/coursesopac.png
+copying images... [ 68%] images/circ/fastadditem.png
+copying images... [ 68%] images/admin/globalprefs/OpacNavRight.png
+copying images... [ 68%] images/admin/globalprefs/SubscriptionHistory-brief.png
+copying images... [ 68%] images/reports/serialsform.png
+copying images... [ 68%] images/circ/overriderenew.png
+copying images... [ 68%] images/patrons/addpatronform.png
+copying images... [ 68%] images/patrons/patronimage.png
+copying images... [ 68%] images/tools/marcimport/importframework.png
+copying images... [ 68%] images/serials/addsub2.png
+copying images... [ 68%] images/tools/tasksched/scheduledreports.png
+copying images... [ 68%] images/opac/mybilling.png
+copying images... [ 68%] images/acquisitions/acqfunds.png
+copying images... [ 69%] images/appendix-marcedit/excelimport/step-20.png
+copying images... [ 69%] images/lists/newlistfromsearch.png
+copying images... [ 69%] images/searching/ex8.png
+copying images... [ 69%] images/admin/cataloging/newmatchrule.png
+copying images... [ 69%] images/circ/holdmultiresults.png
+copying images... [ 69%] images/acquisitions/mergeinvoices.png
+copying images... [ 69%] images/admin/basicparams/librarycontact.png
+copying images... [ 69%] images/cataloging/nodeleterecord.png
+copying images... [ 69%] images/tools/batchdelete/toomanytodelete.png
+copying images... [ 69%] images/circ/warnings/patrondebt.png
+copying images... [ 69%] images/appendix-services/portnumberbig.png
+copying images... [ 70%] images/patrons/cantdischarge.png
+copying images... [ 70%] images/cataloging/quickitemedit.png
+copying images... [ 70%] images/appendix-xslt/cr.png
+copying images... [ 70%] images/admin/globalprefs/topissues.png
+copying images... [ 70%] images/acquisitions/itemonorder.png
+copying images... [ 70%] images/admin/globalprefs/Google/4enable.png
+copying images... [ 70%] images/cataloging/editloststatus.png
+copying images... [ 70%] images/acquisitions/ordersearchexpand.png
+copying images... [ 70%] images/patrons/restricteduntil.png
+copying images... [ 70%] images/circ/printslip.png
+copying images... [ 70%] images/serials/frequencies.png
+copying images... [ 71%] images/reports/datepicker.png
+copying images... [ 71%] images/lists/addtocart.png
+copying images... [ 71%] images/opac/coverresults.png
+copying images... [ 71%] images/opac/dischargeopac-confirm.png
+copying images... [ 71%] images/serials/subopac.png
+copying images... [ 71%] images/cataloging/uploadimage.png
+copying images... [ 71%] images/tools/exportmarc/authexport-pt2.png
+copying images... [ 71%] images/acquisitions/transferconfirm.png
+copying images... [ 71%] images/admin/globalprefs/editions.png
+copying images... [ 71%] images/patrons/patronflags.png
+copying images... [ 71%] images/tools/labelcreator/savebatch.png
+copying images... [ 72%] images/searching/searchbox.png
+copying images... [ 72%] images/cataloging/authmergesearch.png
+copying images... [ 72%] images/admin/basicparams/itemtype-msgsetup.png
+copying images... [ 72%] images/tools/csvprofiles/exportlist.png
+copying images... [ 72%] images/patrons/choosadulttype.png
+copying images... [ 72%] images/circ/holdfound.png
+copying images... [ 72%] images/acquisitions/suggestonacq.png
+copying images... [ 72%] images/admin/cataloging/advancedoptsubfield.png
+copying images... [ 72%] images/tools/tagging/tagsummary.png
+copying images... [ 72%] images/tools/exportmarc/authexport-pt1.png
+copying images... [ 72%] images/cataloging/tryanotherzsearch.png
+copying images... [ 73%] images/admin/basicparams/groupproperties.png
+copying images... [ 73%] images/circ/fineswarning.png
+copying images... [ 73%] images/tools/patroncards/imagedelete.png
+copying images... [ 73%] images/tools/csvprofiles/csvfieldsep.png
+copying images... [ 73%] images/tools/batchbibmod/batchbibmod.png
+copying images... [ 73%] images/admin/additional/currencieshide.png
+copying images... [ 73%] images/tools/labelcreator/newlayout.png
+copying images... [ 73%] images/opac/opacplaceholdsindiv.png
+copying images... [ 73%] images/admin/patroncirc/patroncatpulldown.png
+copying images... [ 73%] images/admin/globalprefs/SpineLabelShowPrintOnBibDetails.png
+copying images... [ 73%] images/admin/globalprefs/itemBarcodeFallbackSearch.png
+copying images... [ 73%] images/serials/serialsearchresults.png
+copying images... [ 74%] images/admin/cataloging/classsources.png
+copying images... [ 74%] images/circ/addresswarning.png
+copying images... [ 74%] images/circ/holditem.png
+copying images... [ 74%] images/installer/marc21_basic_setup.png
+copying images... [ 74%] images/opac/myhistory.png
+copying images... [ 74%] images/opac/leader.png
+copying images... [ 74%] images/opac/emailcart.png
+copying images... [ 74%] images/serials/serialclaims.png
+copying images... [ 74%] images/admin/basicparams/cannotdeletelibrary.png
+copying images... [ 74%] images/admin/cataloging/frameworktest.png
+copying images... [ 74%] images/tools/tasksched/taskscheduler.png
+copying images... [ 75%] images/lists/cart.png
+copying images... [ 75%] images/tools/marcimport/importedrecords.png
+copying images... [ 75%] images/admin/patroncirc/librariesforalert.png
+copying images... [ 75%] images/tools/csvprofiles/modifycsv.png
+copying images... [ 75%] images/admin/globalprefs/Google/3identity.png
+copying images... [ 75%] images/searching/ex3.png
+copying images... [ 75%] images/acquisitions/orderfromsuggest.png
+copying images... [ 75%] images/cataloging/items.png
+copying images... [ 75%] images/patrons/readinghistory-export.png
+copying images... [ 75%] images/opac/zoteroaddressbar.png
+copying images... [ 75%] images/reports/holdstatsform.png
+copying images... [ 76%] images/circ/intransithold.png
+copying images... [ 76%] images/admin/globalprefs/editionstab.png
+copying images... [ 76%] images/tools/batchpatron/attributes.png
+copying images... [ 76%] images/reports/dict4.png
+copying images... [ 76%] images/admin/globalprefs/opacuserjs-after.png
+copying images... [ 76%] images/admin/globalprefs/OpacStarRatings-results.png
+copying images... [ 76%] images/circ/holdratio.png
+copying images... [ 76%] images/tools/labelcreator/batchsearchresults.png
+copying images... [ 76%] images/admin/globalprefs/SpecifyDueDate-no.png
+copying images... [ 76%] images/opac/SHOW_BCODEattribute.png
+copying images... [ 76%] images/admin/patroncirc/transportcostmatrix.png
+copying images... [ 77%] images/installer/login_example.png
+copying images... [ 77%] images/acquisitions/vendorsearch.png
+copying images... [ 77%] images/serials/newnumpattern.png
+copying images... [ 77%] images/admin/globalprefs/OpacNavBottom.png
+copying images... [ 77%] images/patrons/duplicatedpatronfinal.png
+copying images... [ 77%] images/admin/cataloging/newtagform.png
+copying images... [ 77%] images/cataloging/edititemlinkfromtab.png
+copying images... [ 77%] images/tools/labelcreator/searchforbatch.png
+copying images... [ 77%] images/appendix-services/sipcommand28.png
+copying images... [ 77%] images/tools/patroncards/managelayouts.png
+copying images... [ 77%] images/cataloging/catauthoritysearchresults.png
+copying images... [ 78%] images/admin/basicparams/addauthcat.png
+copying images... [ 78%] images/circ/patronnotes.png
+copying images... [ 78%] images/admin/acquisitions/addplanningcol.png
+copying images... [ 78%] images/tools/comments/nocomments.png
+copying images... [ 78%] images/installer/create_library_screen_1_example.png
+copying images... [ 78%] images/acquisitions/vendorpage.png
+copying images... [ 78%] images/admin/globalprefs/AuthDisplayHierarchy.png
+copying images... [ 78%] images/acquisitions/lateorders.png
+copying images... [ 78%] images/admin/globalprefs/OPACDisplay856uAsImage.png
+copying images... [ 78%] images/tools/labelcreator/labeltemplates.png
+copying images... [ 78%] images/circ/offlineupload.png
+copying images... [ 78%] images/admin/globalprefs/Google/2newproject.png
+copying images... [ 79%] images/admin/patroncirc/patroncatlist.png
+copying images... [ 79%] images/tools/importpatrons/patronmatch.png
+copying images... [ 79%] images/admin/globalprefs/saveconfirmation.png
+copying images... [ 79%] images/admin/globalprefs/AllowTooManyOverride-no.png
+copying images... [ 79%] images/admin/cataloging/editsubfield.png
+copying images... [ 79%] images/serials/editroutinglist.png
+copying images... [ 79%] images/circ/holdresults.png
+copying images... [ 79%] images/admin/acquisitions/autofill.png
+copying images... [ 79%] images/admin/globalprefs/856imagemarc.png
+copying images... [ 79%] images/acquisitions/receiveditem.png
+copying images... [ 79%] images/tools/marcimport/managestagedrecords.png
+copying images... [ 80%] images/serials/predictionpattern.png
+copying images... [ 80%] images/opac/patronrequestwaiting.png
+copying images... [ 80%] images/cataloging/advancedkeyshort.png
+copying images... [ 80%] images/patrons/addattributes.png
+copying images... [ 80%] images/circ/koctstatusbar.png
+copying images... [ 80%] images/reports/branchpulldown.png
+copying images... [ 80%] images/acquisitions/pendingsuggestions.png
+copying images... [ 80%] images/reports/itemtotals.png
+copying images... [ 80%] images/admin/patroncirc/showattribute.png
+copying images... [ 80%] images/circ/checkintransfer.png
+copying images... [ 80%] images/tools/patroncards/newtemplate.png
+copying images... [ 81%] images/patrons/makepayment.png
+copying images... [ 81%] images/opac/cartcontents.png
+copying images... [ 81%] images/tools/patronlists/addtopatronlist.png
+copying images... [ 81%] images/lists/addtolist.png
+copying images... [ 81%] images/admin/globalprefs/ExportWithCsvProfile.png
+copying images... [ 81%] images/appendix-services/sipcommand12.png
+copying images... [ 81%] images/opac/nolists.png
+copying images... [ 81%] images/circ/leavecircmsg.png
+copying images... [ 81%] images/reports/inhouse.png
+copying images... [ 81%] images/patrons/patronfileslist.png
+copying images... [ 81%] images/circ/mylibrary.png
+copying images... [ 82%] images/opac/emailist.png
+copying images... [ 82%] images/acquisitions/ordersearchfull.png
+copying images... [ 82%] images/opac/mysuggestions.png
+copying images... [ 82%] images/appendix-cms/editrecommendpref.png
+copying images... [ 82%] images/opac/refineresults.png
+copying images... [ 82%] images/patrons/patronaddress.png
+copying images... [ 82%] images/tools/uploadlocalimg/uploadsummary.png
+copying images... [ 82%] images/tools/calendar/calendarsummary.png
+copying images... [ 82%] images/admin/globalprefs/PatronSelfRegistration.png
+copying images... [ 82%] images/appendix-services/portnumbersmall.png
+copying images... [ 82%] images/tools/news/librariannews.png
+copying images... [ 83%] images/patrons/patnoticestab-full.png
+copying images... [ 83%] images/admin/globalprefs/hidelostitems.png
+copying images... [ 83%] images/patrons/addpatronmsg.png
+copying images... [ 83%] images/installer/onboarding_tool_complete.png
+copying images... [ 83%] images/cataloging/authoritiesseealso.png
+copying images... [ 83%] images/installer/unimarc_basic_setup.png
+copying images... [ 83%] images/circ/overduewfines.png
+copying images... [ 83%] images/appendix-marcedit/excelimport/step-6.png
+copying images... [ 83%] images/appendix-services/sipcommand4.png
+copying images... [ 83%] images/acquisitions/invoicesearch.png
+copying images... [ 83%] images/patrons/patroncardlost.png
+copying images... [ 84%] images/tools/anonymize/patronbulkdelete.png
+copying images... [ 84%] images/installer/install_basic_configurations.png
+copying images... [ 84%] images/coursereserves/coursewithreserves.png
+copying images... [ 84%] images/cataloging/authimport.png
+copying images... [ 84%] images/admin/additional/didyoumeanopacauth.png
+copying images... [ 84%] images/admin/cataloging/importexport.png
+copying images... [ 84%] images/acquisitions/existingitemorder.png
+copying images... [ 84%] images/patrons/routinglisttab.png
+copying images... [ 84%] images/appendix-services/institution.png
+copying images... [ 84%] images/opac/tagaddmultiple-results.png
+copying images... [ 84%] images/cataloging/advancedcataloging.png
+copying images... [ 84%] images/tools/inventory/generateshelflist.png
+copying images... [ 85%] images/admin/globalprefs/OpacTopissue.png
+copying images... [ 85%] images/reports/dict2.png
+copying images... [ 85%] images/admin/cataloging/mapmarc.png
+copying images... [ 85%] images/opac/bibdetail/biboptions.png
+copying images... [ 85%] images/circ/renewnotchecked.png
+copying images... [ 85%] images/patrons/checkoutsummary.png
+copying images... [ 85%] images/acquisitions/fundbreakdown.png
+copying images... [ 85%] images/admin/globalprefs/Overdrive.png
+copying images... [ 85%] images/cataloging/newduprecord.png
+copying images... [ 85%] images/admin/globalprefs/opacmaintenance.png
+copying images... [ 85%] images/appendix-marcedit/excelimport/step-1.png
+copying images... [ 86%] images/admin/globalprefs/OnSiteCheckoutsForce.png
+copying images... [ 86%] images/serials/subscriptiondetail.png
+copying images... [ 86%] images/tools/exportmarc/marcexport-pt1.png
+copying images... [ 86%] images/patrons/patronedit.png
+copying images... [ 86%] images/appendix-services/sipcommand10.png
+copying images... [ 86%] images/cataloging/zsearchresults.png
+copying images... [ 86%] images/appendix-marcedit/excelimport/step-5.png
+copying images... [ 86%] images/reports/acqform.png
+copying images... [ 86%] images/acquisitions/claimletter.png
+copying images... [ 86%] images/cataloging/analyticlinksuccess.png
+copying images... [ 86%] images/patrons/patnoticestab.png
+copying images... [ 87%] images/appendix-services/sipcommand7.png
+copying images... [ 87%] images/cataloging/editrecord.png
+copying images... [ 87%] images/circ/fastadd.png
+copying images... [ 87%] images/serialssamples/hebrewnewspaper.png
+copying images... [ 87%] images/reports/nocheckoutsform.png
+copying images... [ 87%] images/searching/resultssummary2.png
+copying images... [ 87%] images/installer/database_tables_created.png
+copying images... [ 87%] images/lists/mergereportvalues.png
+copying images... [ 87%] images/admin/globalprefs/IntranetmainUserblock.png
+copying images... [ 87%] images/cataloging/items-activatefilters.png
+copying images... [ 87%] images/cataloging/authrecord.png
+copying images... [ 88%] images/appendix-services/sipcommand15.png
+copying images... [ 88%] images/reports/report5.png
+copying images... [ 88%] images/acquisitions/orderz39results.png
+copying images... [ 88%] images/cataloging/authrelationships.png
+copying images... [ 88%] images/reports/nocheckoutsresults.png
+copying images... [ 88%] images/tools/patronlists/patronlist.png
+copying images... [ 88%] images/appendix-marcedit/excelimport/step-15.png
+copying images... [ 88%] images/opac/bibdetail/bibeditions.png
+copying images... [ 88%] images/circ/itemintransit.png
+copying images... [ 88%] images/cataloging/edititemlink.png
+copying images... [ 88%] images/acquisitions/ordersearchresults.png
+copying images... [ 89%] images/installer/create_patron_1.png
+copying images... [ 89%] images/circ/selfcheckoutfines.png
+copying images... [ 89%] images/admin/acquisitions/currencies.png
+copying images... [ 89%] images/admin/cataloging/samplematchrule.png
+copying images... [ 89%] images/opac/PatronSelfRegistration.png
+copying images... [ 89%] images/circ/checkin.png
+copying images... [ 89%] images/acquisitions/orderfromsuggestform.png
+copying images... [ 89%] images/admin/globalprefs/advancedMARCeditor-dontdisplay.png
+copying images... [ 89%] images/opac/deletelist.png
+copying images... [ 89%] images/circ/holdpatronrec.png
+copying images... [ 89%] images/cataloging/createduplicate.png
+copying images... [ 89%] images/patrons/patronsearch.png
+copying images... [ 90%] images/appendix-services/sipcommand1.png
+copying images... [ 90%] images/circ/koctcount.png
+copying images... [ 90%] images/serialssamples/cilreceived.png
+copying images... [ 90%] images/admin/globalprefs/LabelMARCView-do.png
+copying images... [ 90%] images/admin/globalprefs/OPACPatronDetails-approve.png
+copying images... [ 90%] images/patrons/generatedischarge.png
+copying images... [ 90%] images/opac/yourcomment.png
+copying images... [ 90%] images/reports/topcheckoutsform.png
+copying images... [ 90%] images/patrons/updatetoadult.png
+copying images... [ 90%] images/acquisitions/newvendbutton.png
+copying images... [ 90%] images/opac/tagsadded-results.png
+copying images... [ 91%] images/admin/globalprefs/favicon.png
+copying images... [ 91%] images/patrons/editpatronpermissions.png
+copying images... [ 91%] images/reports/patronform.png
+copying images... [ 91%] images/cataloging/advancedzresults.png
+copying images... [ 91%] images/admin/globalprefs/SeparateHoldings.png
+copying images... [ 91%] images/serialssamples/cilirregular.png
+copying images... [ 91%] images/admin/globalprefs/SubscriptionHistory-full.png
+copying images... [ 91%] images/acquisitions/suggestmanage.png
+copying images... [ 91%] images/circ/koctcheckin.png
+copying images... [ 91%] images/admin/globalprefs/Google/7creds.png
+copying images... [ 91%] images/appendix-services/sipcommand11.png
+copying images... [ 92%] images/appendix-oclc/oclcgatewaysetup.png
+copying images... [ 92%] images/admin/globalprefs/OPACShowBarcode-noshow.png
+copying images... [ 92%] images/acquisitions/vendorquicksearch.png
+copying images... [ 92%] images/circ/holdconfirm.png
+copying images... [ 92%] images/reports/acqtotal.png
+copying images... [ 92%] images/circ/warnings/decreaseLoanHighHoldsDuration.png
+copying images... [ 92%] images/admin/patroncirc/rulescloned.png
+copying images... [ 92%] images/patrons/patronrestrictions.png
+copying images... [ 92%] images/tools/patroncards/managetemplates.png
+copying images... [ 92%] images/appendix-services/accounts.png
+copying images... [ 92%] images/circ/selfreceiptprint.png
+copying images... [ 93%] images/reports/dictlist.png
+copying images... [ 93%] images/patrons/relativecheckouts.png
+copying images... [ 93%] images/lists/newlistbutton.png
+copying images... [ 93%] images/appendix-services/sipcommand27.png
+copying images... [ 93%] images/circ/overdues.png
+copying images... [ 93%] images/opac/myprofile.png
+copying images... [ 93%] images/patrons/patronbrowse.png
+copying images... [ 93%] images/opac/downloadcart.png
+copying images... [ 93%] images/admin/globalprefs/displayFacetCount.png
+copying images... [ 93%] images/cataloging/analytics773.png
+copying images... [ 93%] images/admin/globalprefs/ExportRemoveFields.png
+copying images... [ 94%] images/circ/holdstopull.png
+copying images... [ 94%] images/opac/bibdetail/bibviews.png
+copying images... [ 94%] images/cataloging/analyticsbarcode.png
+copying images... [ 94%] images/reports/lostitems.png
+copying images... [ 94%] images/appendix-marcedit/excelimport/step-9.png
+copying images... [ 94%] images/admin/cataloging/frameworks.png
+copying images... [ 94%] images/about/aboutserver.png
+copying images... [ 94%] images/tools/batchmod/batchmodresults.png
+copying images... [ 94%] images/acquisitions/basket.png
+copying images... [ 94%] images/circ/placeholdsearch.png
+copying images... [ 94%] images/appendix-onorder/marcbreaker-summary.png
+copying images... [ 94%] images/acquisitions/ordersuggestlink.png
+copying images... [ 95%] images/circ/checkinmain.png
+copying images... [ 95%] images/appendix-marcedit/marcedit.png
+copying images... [ 95%] images/acquisitions/receiptsummary.png
+copying images... [ 95%] images/installer/installer_login.png
+copying images... [ 95%] images/opac/shareconfirmation.png
+copying images... [ 95%] images/opac/bibdetail/bibsummary.png
+copying images... [ 95%] images/opac/opacplaceholdresults.png
+copying images... [ 95%] images/cataloging/additembuttons.png
+copying images... [ 95%] images/admin/globalprefs/DisplayOPACiconsXSLT.png
+copying images... [ 95%] images/tools/calendar/calendarhelp.png
+copying images... [ 95%] images/serials/serialexpire.png
+copying images... [ 96%] images/patrons/patroneditsection.png
+copying images... [ 96%] images/circ/staffmessages.png
+copying images... [ 96%] images/tools/qotd/selectfordelete.png
+copying images... [ 96%] images/acquisitions/transfervendor.png
+copying images... [ 96%] images/appendix-cms/recommendedreading.png
+copying images... [ 96%] images/appendix-services/sipcommand9.png
+copying images... [ 96%] images/admin/acquisitions/restrictfund.png
+copying images... [ 96%] images/opac/mylists.png
+copying images... [ 96%] images/acquisitions/newcontractform.png
+copying images... [ 96%] images/searching/advoptions.png
+copying images... [ 96%] images/tools/labelcreator/listlabelfields.png
+copying images... [ 97%] images/admin/globalprefs/AdvancedSearchTypes.png
+copying images... [ 97%] images/opac/editlist.png
+copying images... [ 97%] images/circ/localuserecorded.png
+copying images... [ 97%] images/tools/marcimport/encoding.png
+copying images... [ 97%] images/coursereserves/newcourse.png
+copying images... [ 97%] images/circ/offlinesummary.png
+copying images... [ 97%] images/admin/globalprefs/hide_marc-dont.png
+copying images... [ 97%] images/admin/patroncirc/patronattribute.png
+copying images... [ 97%] images/admin/cataloging/subtitledvdmapping.png
+copying images... [ 97%] images/tools/csvprofiles/csvmodified.png
+copying images... [ 97%] images/circ/selfcheckoutlink.png
+copying images... [ 98%] images/installer/installer_start_screen.png
+copying images... [ 98%] images/circ/holdspickup.png
+copying images... [ 98%] images/circ/downloadoffline.png
+copying images... [ 98%] images/tools/csvprofiles/addcsv-sql.png
+copying images... [ 98%] images/opac/recentcomments.png
+copying images... [ 98%] images/admin/globalprefs/item-level_itypes.png
+copying images... [ 98%] images/opac/forgotpwlink.png
+copying images... [ 98%] images/admin/basicparams/addlibgroup.png
+copying images... [ 98%] images/tools/exportmarc/authexport-pt3.png
+copying images... [ 98%] images/admin/cataloging/addframework.png
+copying images... [ 98%] images/appendix-onorder/compile.png
+copying images... [ 99%] images/lists/listslist.png
+copying images... [ 99%] images/tools/qotd/editquote.png
+copying images... [ 99%] images/patrons/newpatron.png
+copying images... [ 99%] images/tools/uploadlocalimg/uploadsingle.png
+copying images... [ 99%] images/admin/globalprefs/TagsInputOnDetail.png
+copying images... [ 99%] images/appendix-services/sipcommand29.png
+copying images... [ 99%] images/tools/news/addnews.png
+copying images... [ 99%] images/tools/inventory/shelflist.png
+copying images... [ 99%] images/admin/globalprefs/OPACNoResultsFound.png
+copying images... [ 99%] images/cataloging/leaderbuilder.png
+copying images... [ 99%] images/tools/qotd/editimported.png
+copying images... [100%] images/circ/LOCvalues.png
 
-\* - required for circulation
+copying static files... WARNING: html_static_path entry '/home/jonathan/workspace/kohadocs/en/source/_static' does not exist
+done
+copying extra files... done
+dumping search index in English (code: en) ... done
+dumping object inventory... done
+build succeeded, 214 warnings.
 
-\*\* - required by Koha
-
-.. _handling-on-order-items-and-holds-label:
-
-Handling On Order Items and Holds
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you tend to import your MARC records when you have ordered the book
-(as opposed to when you receive the books), and allow patrons to place
-holds on those books, you may need to add item records to the \*.mrc
-file before importing.
-
-The easiest way to import your latest order is to first run your records
-through `MARCEdit <http://marcedit.reeset.net/>`__. Download your MARC
-records, saving them to your desktop or some other location you use/will
-remember. If you have MARCEdit already installed you should simply have
-to double click on your MARC records, and they will automatically open
-in MARCEdit.
-
-    **Important**
-
-    This tutorial was written with MARCEdit version 5.2.3769.41641 on
-    Windows XP, instructions may be different if your version or
-    operating system is different.
-
--  Your original file will automatically be in the input; ensure
-   MarcBreaker is chosen, and then click "Execute"
-
-   MarcBreaker
-   |image719|
-
--  You will be presented with a summary of the records processed at the
-   bottom of the screen
-
-   MarcBreaker Summary
-   |image720|
-
--  Click 'Edit Records' to continue on to adding item records
-
--  Your screen will be replaced with a larger screen containing the MARC
-   records
-
-   MARC file for editing
-   |image721|
-
--  Click on Tools > Add/Edit Field
-
-   Add/Delete Field
-   |image722|
-
--  Enter in the Koha specific item info
-
-   Add 942 Field
-   |image723|
-
-   -  In the Field box, type 942
-
-   -  In the Field Data box, type \\\\$c and the item type code
-      (\\\\$cBOOK in this example)
-
-   -  Check the 'Insert last' option
-
-   -  Click 'Add Field'
-
--  Enter in the item record data
-
-   Add 952 Field
-   |image724|
-
-   -  In the Field box, type 952
-
-   -  In the Field Data box, type
-      $7ORDERED\_STATUS$aPERM\_LOC$bCURR\_LOC$cSHELVING\_LOCATION$eSOURCE\_OF\_ACQ$yITEM\_TYPE
-
-      -  ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK
-
-         -  In a default install of Koha -1 is the value for the Ordered
-            status
-
-      -  You may want to look at other subfields you would like data in
-         -- for example, changing the collection code to put all the
-         items in the same collection (8), automatically fill in the
-         acquisition date (d), or put in a public note (z).
-
-      -  Be sure you use the $ to separate subfields; adding each
-         subfield on a separate line will cause that many items to be
-         imported with your MARC record (in the example above, four
-         items, each with one of those subfields corrected)
-
-      -  Make sure you look at the Administration > Authorized Values in
-         Koha to put the correct code into the field
-
-   -  Check the 'Insert last' option
-
-   -  Click 'Add Field'
-
--  Close the field editor window
-
--  Click on File > Compile into MARC
-
-   Compile into MARC
-   |image725|
-
--  Choose where to save your file
-
-Now you want to go into your Koha system and follow the instructions for
-:ref:`importing MARC records <stage-marc-records-for-import-label>`.
-
-Once the item has come in, you will need to go to the item record and
-individually change the item to have the correct barcode, and manually
-change the status from Ordered to the blank line in the Not for Loan
-field.
-
-    **Note**
-
-    If you purchase your cataloged item records, you may want to request
-    your vendor put in the information you need into the MARC records
-    for you; that way, you could import the edited-by-the-vendor file,
-    overwriting the current record, automatically replacing the data
-    with what you need.
+Build finished. The HTML pages are in build/html.

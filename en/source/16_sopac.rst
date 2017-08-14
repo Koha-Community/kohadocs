@@ -3,7 +3,9 @@
 SOPAC2 Installation
 ===================
 
-`Introduction <#sopacintro>`__
+.. _introduction-label:
+
+Introduction
 ------------------------------
 
 This is an installation guide for SOPAC2 and its Koha connector. It has
@@ -11,7 +13,9 @@ been tested on Debian Lenny and Ubuntu Jaunty with Drupal 6.12 and Koha
 3.0.x. It does not cover the installation of Koha and Drupal, only
 SOPAC, its dependencies and the connector.
 
-`Installation of Locum and Insurge <#sopacinstall>`__
+.. _installation-of-locum-and-insurge-label:
+
+Installation of Locum and Insurge
 -----------------------------------------------------
 
 Locum and Insurge are the two libraries used primarily by SOPAC. They
@@ -20,7 +24,9 @@ aspect (tags, reviews, ratings), while Locum manages the connection to
 the ILS via the connector. Both libraries use a different database from
 that of Drupal.
 
-`Dependencies <#sopacdepend>`__
+.. _dependencies-label:
+
+Dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are no packages for Debian MDB2 yet, you can install it via pear:
@@ -31,7 +37,9 @@ There are no packages for Debian MDB2 yet, you can install it via pear:
     # pear install MDB2
     # pear install MDB2#mysql
 
-`Download <#sopacdownload>`__
+.. _download-label:
+
+Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download the Locum and Insurge libraries from SVN:
@@ -42,7 +50,9 @@ Download the Locum and Insurge libraries from SVN:
     # svn co http://dobby.darienlibrary.org/svn/locum/trunk/ locum
     # svn co http://dobby.darienlibrary.org/svn/insurge/trunk/ insurge
 
-`Creation of the Database <#sopaccreatedb>`__
+.. _creation-of-the-database-label:
+
+Creation of the Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -53,7 +63,9 @@ Download the Locum and Insurge libraries from SVN:
     mysql> flush privileges;
     mysql> exit
 
-`Sync DSN <#sopacdsn>`__
+.. _sync-dsn-label:
+
+Sync DSN
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 This file will provide the connection information to a DB libraries:
@@ -69,7 +81,9 @@ It should contain:
     <?php
     $dsn = 'mysql://scas_user:scas_pass@localhost/scas';
 
-`Installation of Insurge <#sopacinstallinsurge>`__
+.. _installation-of-insurge-label:
+
+Installation of Insurge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you customize the name of the database, remember to edit the sql
@@ -114,7 +128,9 @@ Here is a sample of insurge.ini
     group_id = ""
     group_key = ""
 
-`Installation of Locum <#sopacinstallocum>`__
+.. _installation-of-locum-label:
+
+Installation of Locum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The same procedure applies to Locum
@@ -148,7 +164,9 @@ And the information for your Koha installation:
 
 The rest depends on your Koha configuration.
 
-`Installation of Koha Connector <#sopackoha>`__
+.. _installation-of-koha-connector-label:
+
+Installation of Koha Connector
 -----------------------------------------------
 
 Download the Koha connector using SVN:
@@ -158,7 +176,9 @@ Download the Koha connector using SVN:
     # cd /usr/local/lib/locum/connectors/
     # svn co http://dobby.darienlibrary.org/svn/connectors/koha/ locum_koha_30x
 
-`Harvest Records <#sopacharvest>`__
+.. _harvest-records-label:
+
+Harvest Records
 -----------------------------------
 
 Now that the connector is in place, we will be able to launch
@@ -186,12 +206,16 @@ Then start the harvest:
     # chmod +x /usr/local/lib/locum/tools/harvest.php
     $ /usr/local/lib/locum/tools/harvest.php
 
-`Installation of Sphinx <#sopacphinx>`__
+.. _installation-of-sphinx-label:
+
+Installation of Sphinx
 ----------------------------------------
 
 Sphinx is the indexer for the database used by Locum and Insurge.
 
-`Dependencies <#sphinxdepend>`__
+.. _dependencies-label:
+
+Dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is no Debian package for Sphinx so you'll have to compile the
@@ -201,7 +225,9 @@ source directly:
 
     # apt-get install g++ make libmysql++-dev
 
-`Download and Compile <#sphinxdownload>`__
+.. _download-and-compile-label:
+
+Download and Compile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -217,7 +243,9 @@ source directly:
     # cp api/sphinxapi.php /usr/local/sphinx/lib/
     $ rm -R sphinx-0.9.8*
 
-`Creation of User and Group <#sphinxuser>`__
+.. _creation-of-user-and-group-label:
+
+Creation of User and Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Creating a Sphinx user and change the owner:
@@ -230,7 +258,9 @@ Creating a Sphinx user and change the owner:
     # mkdir /usr/local/sphinx/var/run
     # chown -R sphinx.sphinx /usr/local/sphinx/var
 
-`The Sphinx daemon <#demonsphinx>`__
+.. _the-sphinx-daemon-label:
+
+The Sphinx daemon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download:
@@ -247,7 +277,9 @@ Add Sphinx to the default boot services:
 
     # update-rc.d sphinx defaults
 
-`Configuration <#sphinxconfig>`__
+.. _configuration-label:
+
+Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copy the configuration file supplied with the source of Sphinx before
@@ -266,7 +298,9 @@ And if you personalize the name of the database:
 
     # sed 's/scas/MY_DB/g' /usr/local/sphinx/etc/sphinx.conf > tmpfile; mv tmpfile /usr/local/sphinx/etc/sphinx.conf
 
-`Indexing documents <#sphinxindexing>`__
+.. _indexing-documents-label:
+
+Indexing documents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indexing is necessary if you want to use the search features of SOPAC.
@@ -296,12 +330,16 @@ When the daemon is running, you can update the index with:
 
     $ /usr/local/sphinx/bin/indexer --all --rotate
 
-`Installation of SOPAC2 <#installsopac>`__
+.. _installation-of-sopac2-label:
+
+Installation of SOPAC2
 ------------------------------------------
 
 Now to the SOPAC software itself:
 
-`Download <#downloadsopac>`__
+.. _download-label:
+
+Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download from SVN:
@@ -313,7 +351,9 @@ Download from SVN:
     $ cd modules/
     $ svn co http://dobby.darienlibrary.org/svn/sopac/trunk/ sopac
 
-`Installation <#sopacinstallation>`__
+.. _installation-label:
+
+Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In Drupal's administration settings, activate the module. Also, enable
@@ -327,7 +367,9 @@ the dependencies:
 
 The Drupal menu should now list these entries.
 
-`Configuration <#configsopac>`__
+.. _configuration-label:
+
+Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Then go into the settings of SOPAC.
