@@ -11,7 +11,6 @@
 .. |image10| image:: images/admin/globalprefs/Google/7creds.png
 .. |image11| image:: images/admin/globalprefs/Google/8oauth.png
 .. |image12| image:: images/admin/globalprefs/Google/7creds.png
-.. |image13| image:: images/admin/globalprefs/persona.png
 .. |image14| image:: images/admin/globalprefs/AuthDisplayHierarchy.png
 .. |image15| image:: images/admin/globalprefs/hide_marc-display.png
 .. |image16| image:: images/admin/globalprefs/hide_marc-dont.png
