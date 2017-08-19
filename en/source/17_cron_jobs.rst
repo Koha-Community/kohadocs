@@ -12,7 +12,7 @@ sending out email notifications. Koha has many cron jobs in place that
 you can enable (search engine indexing, overdue notice generation, data
 cleanup and more), this chapter will explain those for you.
 
-.. _cron-jobs-label:
+.. _cron-jobs-subchapter-label:
 
 Cron Jobs
 -------------------------
@@ -100,7 +100,7 @@ Description:
    RandomizeHoldsQueueWeight, causing the script to request hold
    fulfillment not randomly, but by alphabetical order.
 
-.. _perl-documentation-label:
+.. _perl-documentation-holds-queue-label:
 
 Perl Documentation
 ''''''''''''''''''''''''''''''''''''''''''''
@@ -241,7 +241,7 @@ Frequency suggestion: nightly
     :ref:`DefaultLongOverdueChargeValue`
     preferences.
 
-.. _perl-documentation-label:
+.. _perl-documentation-long-overdues-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''
@@ -298,7 +298,7 @@ latest tally of checkouts.
 
 Frequency suggestion: nightly
 
-.. _perl-documentation-label:
+.. _perl-documentation-track-total-checkouts-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''
@@ -409,7 +409,7 @@ renewal with your :ref:`circulation and fine rules <circulation-and-fine-rules-l
 
 Frequency suggestion: nightly
 
-.. _perl-documentation-label:
+.. _perl-documentation-automatic-renewal-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''
@@ -494,7 +494,7 @@ when they reach the upper age limit defined in the Patron Categories.
 
 Frequency suggestion: nightly
 
-.. _perl-documentation-label:
+.. _perl-documentation-update-child-to-adult-patron-type-label:
 
 Perl Documentation
 ''''''''''''''''''''''''''''''''''''
@@ -610,7 +610,7 @@ Frequency suggestion: nightly
     This script does not actually send the notices. It queues them in
     the :ref:`message queue <message-queue-label>` for later
 
-.. _perl-documentation-label:
+.. _perl-documentation-advanced-notice-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''
@@ -655,7 +655,7 @@ Frequency suggestion: nightly
     the :ref:`message queue <message-queue-label>` for later or generates the
     HTML for later printing
 
-.. _perl-documentation-label:
+.. _perl-documentation-overdue-notice-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''''
@@ -1041,7 +1041,7 @@ Required by: :ref:`NewItemsDefaultLocation`,
 
 Frequency suggestion: hourly
 
-.. _perl-documentation-label:
+.. _perl-documentation-in-processing-book-cart-label:
 
 Perl Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1072,7 +1072,7 @@ Frequency suggestion: monthly
 
 Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements
 
-.. _perl-documentation-label:
+.. _perl-documentation-check-urls-label:
 
 Perl Documentation
 ''''''''''''''''''''''''''''''''''''''''''
@@ -1220,7 +1220,7 @@ Required by: :ref:`Automatic item modifications by age`
 
 Frequency suggestions: nightly
 
-.. _perl-documentation-label:
+.. _perl-documentation-automatic-item-update-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''''''
@@ -1315,7 +1315,7 @@ operates.
 Frequency: This is the type of script you can run once a month or so,
 the content generated isn't going to change very much over time.
 
-.. _perl-documentation-label:
+.. _perl-documentation-subject-author-clouds-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''''''
@@ -1416,6 +1416,8 @@ Script path: misc/cronjobs/cleanup\_database.pl
 Does: Truncates the sessions table, cleans out old zebraqueue entries,
 action logs and staged MARC files.
 
+.. _perl-documentation-clean-up-database-label:
+
 Perl Documentation
 ''''''''''''''''''
 
@@ -1500,7 +1502,7 @@ website <http://hea.koha-community.org/>`__.
 
 Frequency: monthly
 
-.. _perl-documentation-label:
+.. _perl-documentation-share-usage-stats-label:
 
 Perl Documentation
 '''''''''''''''''''''''''''''''''''''''
@@ -1606,7 +1608,7 @@ Script path: misc/cronjobs/notice\_unprocessed\_suggestions.pl
 Does: Generates a notice to the fund owner that there are suggestions in
 need of processing
 
-.. _perl-documentation-label:
+.. _perl-documentation-email-suggestions-to-process-label:
 
 Perl Documentation
 ''''''''''''''''''''''''''''''''''''''''''''''
