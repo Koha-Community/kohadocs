@@ -309,6 +309,23 @@ MarcItemFieldsToOrder
 Asks: Set the mapping values for new item records created from a MARC record
 in a staged file.
 
+Description: 
+
+- This preference automatically generates items in Koha with populated 
+information based on a 9XX field and subfield. You can use the following 
+fields: homebranch, holdingbranch, itype, nonpublic_note, public_note, loc, 
+ccode, notforloan, uri, copyno, price, replacementprice and itemcallnumber. 
+Special fields: quantity and budget_code 
+
+For example: 
+
+::
+
+       homebranch: 975$a
+       holdingbranch: 975$b
+       public_note: 975$z
+       loc: 975$c
+
 .. _uniqueitemfields-label:
 
 UniqueItemFields
@@ -5729,9 +5746,9 @@ Description:
    disabled, they will prevent AmazonCoverImages from functioning
    properly.
 
-.. _babelth�que-label:
+.. _babelthã¨que-label:
 
-Babelthèque
+BabelthÃ¨que
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _babeltheque-label:
@@ -5742,7 +5759,7 @@ Babeltheque
 Default: Don't
 
 Asks: \_\_\_ include information (such as reviews and citations) from
-Babelthèque in item detail pages on the OPAC.
+BabelthÃ¨que in item detail pages on the OPAC.
 
 Description:
 
@@ -5762,7 +5779,7 @@ Values:
 
 -  Do
 
-   Data from Babelthèque on the bib record
+   Data from BabelthÃ¨que on the bib record
    |image48|
 
 -  Don't
@@ -5875,12 +5892,12 @@ Asks: Access Baker and Taylor using username \_\_\_ and password \_\_\_
 Descriptions:
 
 -  This setting in only applicable if the library has a paid
-   subscription to the external Content Café service from Baker &
-   Taylor. Use the box provided to enter in the library's Content Café
+   subscription to the external Content CafÃ© service from Baker &
+   Taylor. Use the box provided to enter in the library's Content CafÃ©
    username and password. Also, ensure that the
    :ref:`BakerTaylorBookstoreURL` and
    :ref:`BakerTaylorEnabled` settings are properly
-   set. The Content Café service is a feed of enhanced content such as
+   set. The Content CafÃ© service is a feed of enhanced content such as
    cover art, professional reviews, and summaries that is displayed
    along with Staff Client/OPAC search results. For more information on
    this service please see the Baker & Taylor website:
@@ -15690,7 +15707,7 @@ Match Points are the criteria that you enter that must be met in order
 for an incoming record to match an existing MARC record in your catalog.
 You can have multiple match points on an import rule each with its own
 score. An incoming record will be compared against your existing records
-(‘one record at a time’) and given a score for each match point. When
+(âone record at a timeâ) and given a score for each match point. When
 the total score of the matchpoints matches or exceeds the threshold
 given for the matching rule, Koha assumes a good match and
 imports/overlays according your specifications in the import process. An
@@ -15727,7 +15744,7 @@ indexes are stale and out of date. The match checks go right for the
 data instead of relying on the data in the indexes. (If you fear your
 indexes are out of date, a rebuild of your indexes would be a great idea
 and solve that situation!) The other use for a Match Check is as a
-“double check” or “veto” of your matching rule. For example, if you have
+âdouble checkâ or âvetoâ of your matching rule. For example, if you have
 a matching rule as below:
 
 Threshold of 1000
@@ -15739,7 +15756,7 @@ Match Check on 245$a
 Koha will first look at the 020$a tag/subfield to see if the incoming
 record matches an existing record. If it does, it will then move on to
 the Match Check and look directly at the 245$a value in the incoming
-data and compare it to the 245$a in the existing ‘matched’ record in
+data and compare it to the 245$a in the existing âmatchedâ record in
 your catalog. If the 245$a matches, Koha continues on as if a match was
 successful. If the 245$a does not match, then Koha concludes that the
 two records are not a match after all. The Match Checks can be a really
@@ -16369,7 +16386,7 @@ Additional Parameters
 Z39.50/SRU servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Z39.50 is a client–server protocol for searching and retrieving
+Z39.50 is a clientâserver protocol for searching and retrieving
 information from remote computer databases, in short it's a tool used
 for copy cataloging.
 
