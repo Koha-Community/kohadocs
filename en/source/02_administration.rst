@@ -5729,9 +5729,9 @@ Description:
    disabled, they will prevent AmazonCoverImages from functioning
    properly.
 
-.. _babelth�que-label:
+.. _babelthã¨que-label:
 
-Babelthèque
+BabelthÃ¨que
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _babeltheque-label:
@@ -5742,7 +5742,7 @@ Babeltheque
 Default: Don't
 
 Asks: \_\_\_ include information (such as reviews and citations) from
-Babelthèque in item detail pages on the OPAC.
+BabelthÃ¨que in item detail pages on the OPAC.
 
 Description:
 
@@ -5762,7 +5762,7 @@ Values:
 
 -  Do
 
-   Data from Babelthèque on the bib record
+   Data from BabelthÃ¨que on the bib record
    |image48|
 
 -  Don't
@@ -5875,12 +5875,12 @@ Asks: Access Baker and Taylor using username \_\_\_ and password \_\_\_
 Descriptions:
 
 -  This setting in only applicable if the library has a paid
-   subscription to the external Content Café service from Baker &
-   Taylor. Use the box provided to enter in the library's Content Café
+   subscription to the external Content CafÃ© service from Baker &
+   Taylor. Use the box provided to enter in the library's Content CafÃ©
    username and password. Also, ensure that the
    :ref:`BakerTaylorBookstoreURL` and
    :ref:`BakerTaylorEnabled` settings are properly
-   set. The Content Café service is a feed of enhanced content such as
+   set. The Content CafÃ© service is a feed of enhanced content such as
    cover art, professional reviews, and summaries that is displayed
    along with Staff Client/OPAC search results. For more information on
    this service please see the Baker & Taylor website:
@@ -11090,6 +11090,23 @@ Values:
 
 -  Unless overridden, do not
 
+Description:
+
+When the value of this system preference is set to 'do', Koha will look at the 
+patron's circulation history to see if they have checked this item out before. 
+An alert will show up on the screen indicating that patron has indeed checked 
+this item out.  Staff will be prompted to allow the checkout to occur.
+If the vaulue is set to 'don't', Koha will not check the patron's circulation 
+history. When the value is set to 'Unless overridden, do', this will check the 
+patron's circulation history even if there are fines, fees, and/or holds on the 
+patron's account.  Lastly, if the value is set to 'Unless overridden, don't', 
+Koha will not check circulation history regardless of fines, fees, and/or holds. 
+
+     **Note** 
+
+This system preference will not work for patrons that have chosen to anonymize 
+their reading history.
+
 .. _defaultpatronsearchfields-label:
 
 DefaultPatronSearchFields
@@ -15690,7 +15707,7 @@ Match Points are the criteria that you enter that must be met in order
 for an incoming record to match an existing MARC record in your catalog.
 You can have multiple match points on an import rule each with its own
 score. An incoming record will be compared against your existing records
-(‘one record at a time’) and given a score for each match point. When
+(âone record at a timeâ) and given a score for each match point. When
 the total score of the matchpoints matches or exceeds the threshold
 given for the matching rule, Koha assumes a good match and
 imports/overlays according your specifications in the import process. An
@@ -15727,7 +15744,7 @@ indexes are stale and out of date. The match checks go right for the
 data instead of relying on the data in the indexes. (If you fear your
 indexes are out of date, a rebuild of your indexes would be a great idea
 and solve that situation!) The other use for a Match Check is as a
-“double check” or “veto” of your matching rule. For example, if you have
+âdouble checkâ or âvetoâ of your matching rule. For example, if you have
 a matching rule as below:
 
 Threshold of 1000
@@ -15739,7 +15756,7 @@ Match Check on 245$a
 Koha will first look at the 020$a tag/subfield to see if the incoming
 record matches an existing record. If it does, it will then move on to
 the Match Check and look directly at the 245$a value in the incoming
-data and compare it to the 245$a in the existing ‘matched’ record in
+data and compare it to the 245$a in the existing âmatchedâ record in
 your catalog. If the 245$a matches, Koha continues on as if a match was
 successful. If the 245$a does not match, then Koha concludes that the
 two records are not a match after all. The Match Checks can be a really
@@ -16369,7 +16386,7 @@ Additional Parameters
 Z39.50/SRU servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Z39.50 is a client–server protocol for searching and retrieving
+Z39.50 is a clientâserver protocol for searching and retrieving
 information from remote computer databases, in short it's a tool used
 for copy cataloging.
 
