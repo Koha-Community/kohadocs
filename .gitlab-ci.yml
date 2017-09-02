@@ -1,0 +1,13 @@
+image: debian:unstable
+
+pages:
+  script:
+  - apt-get install python3-sphinx  python3-sphinxcontrib.spelling 
+  - cd en
+  - make html
+  - mv _build/html/ public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
