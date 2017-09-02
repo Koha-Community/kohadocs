@@ -2,6 +2,7 @@ image: debian:unstable
 
 pages:
   script:
+  - apt-get update
   - apt-get install python3-sphinx  python3-sphinxcontrib.spelling 
   - cd en
   - make html
