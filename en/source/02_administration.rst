@@ -1652,11 +1652,9 @@ OpacSuppression, OpacSuppressionByIPRange, OpacSuppressionRedirect, and OpacSupp
 
 OpacSuppression Default: Don't hide
 
-Asks: \_\_\_ items marked as suppressed from OPAC search results. Note
-that you must have the Suppress index set up in Zebra and at least one
-suppressed item, or your searches will be broken. Restrict the
-suppression to IP adresses outside of the IP range \_\_\_ (Leave blank
-if not used. Define a range like 192.168..) Redirect the opac detail
+Asks: \_\_\_ items marked as suppressed from OPAC search results. 
+Restrict the suppression to IP addressesoutside of the IP range \_\_\_ 
+(Leave blank if not used. Define a range like 192.168..) Redirect the opac detail
 page for suppressed records to \_\_\_ Display the following message on
 the redirect page for suppressed biblios \_\_\_.
 
