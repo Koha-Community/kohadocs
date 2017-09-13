@@ -686,7 +686,7 @@ Options:
 
 -csv <filename> populate CSV file
 
--html <filename> Output html to file
+-html <filename> Output HTML to file
 
 -itemscontent <list of fields> item information in templates
 

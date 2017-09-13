@@ -7534,7 +7534,7 @@ DumpTemplateVarsIntranet
 
 Default: Don't
 
-Asks: \_\_\_ dump all Template Toolkit variable to a comment in the html
+Asks: \_\_\_ dump all Template Toolkit variable to a comment in the HTML
 source for the staff intranet.
 
 Value:
@@ -7550,7 +7550,7 @@ DumpTemplateVarsOpac
 
 Default: Don't
 
-Asks: \_\_\_ dump all Template Toolkit variable to a comment in the html
+Asks: \_\_\_ dump all Template Toolkit variable to a comment in the HTML
 source for the OPAC.
 
 Value:
@@ -16768,7 +16768,7 @@ Then when you visit the checkin page you will hear an alert.
 Every page in Koha has a unique ID in the body tag which can be used to
 limit a sound to a specific page
 
-Any ID selector (where html contains id="name\_of\_id" ) and can also be
+Any ID selector (where HTML contains id="name\_of\_id" ) and can also be
 a trigger as: #name\_of\_selector
 
 .. _sms-cellular-providers-label:
