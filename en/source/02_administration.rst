@@ -70,7 +70,7 @@ Acquisitions
 *Get there:* More > Administration > Global System Preferences >
 Acquisitions
 
-.. _policy-label:
+.. _acquisitions-policy-label:
 
 Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -311,11 +311,11 @@ in a staged file.
 
 Description: 
 
-- This preference automatically generates items in Koha with populated 
-information based on a 9XX field and subfield. You can use the following 
-fields: homebranch, holdingbranch, itype, nonpublic_note, public_note, loc, 
-ccode, notforloan, uri, copyno, price, replacementprice and itemcallnumber. 
-Special fields: quantity and budget_code 
+-  This preference automatically generates items in Koha with populated
+   information based on a 9XX field and subfield. You can use the following
+   fields: homebranch, holdingbranch, itype, nonpublic_note, public_note, loc,
+   ccode, notforloan, uri, copyno, price, replacementprice and itemcallnumber.
+   Special fields: quantity and budget_code
 
 For example: 
 
@@ -674,7 +674,7 @@ Values:
 Description:
 
 -  This preference allows the system administrator to determine if users
-   will be able to set and see an :ref:`item type icon`
+   will be able to set and see an item type icon
    the catalog on both the OPAC and the Staff Client. The images will
    display in both the OPAC and the Staff Client/Intranet. If images of
    item types are disabled, text labels for item types will still appear
@@ -4776,7 +4776,7 @@ Description:
 -  This preference enables or disables the Housebound module which
    handles management of circulation to Housebound readers.
 
-.. _interface-label:
+.. _housebound-interface-label:
 
 Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -7427,16 +7427,6 @@ Use
     in this tab, if you didn't add any preferences to this tab then it's
     best to ignore preferences listed here.
 
-.. _articlerequestsmandatoryfieldsitemsonly-label:
-
-ArticleRequestsMandatoryFieldsItemsOnly
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Default: blank
-
-Asks: Comma delimited list of required fields for bibs where artciel requests
-rule = "item_only"
-
 .. _intradidyoumean-label:
 
 INTRAdidyoumean
@@ -9974,7 +9964,10 @@ MaxOpenSuggestions
 Default: blank
 
 Asks: Limit patrons to \_\_\_ open suggestions. Leave empty for no limit.
-**Note: this setting does not affect anonymous suggestions.
+
+    **Note**
+
+    This setting does not affect anonymous suggestions.
 
 .. _opacallowpubliclistcreation-label:
 
@@ -9983,7 +9976,7 @@ OpacAllowPublicListCreation
 
 Default: Allow
 
-Asks: \_\_\_ opac users to create public lists
+Asks: \_\_\_ opac users to create public lists.
 
 Values:
 
@@ -12070,7 +12063,7 @@ Values:
 Description:
 
 -  This preferenc controls the libraries facet that displays on search
-   results in the staff and opac. The value selected here will determin
+   results in the staff and opac. The value selected here will determine
    which library(s) show in the facets when a search is run.
 
 .. _facetlabeltruncationlength-label:
@@ -13338,7 +13331,7 @@ Services
 ILS-DI
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _ils-di-label:
+.. _ils-di-pref-label:
 
 ILS-DI
 ''''''''''''''''''''
@@ -13360,7 +13353,7 @@ ILS-DI:AuthorizedIPs
 
 Asks: \_\_\_ allowed IPs to use the ILS-DI services
 
-.. _idref-label:
+.. _idref-pref-label:
 
 IdRef
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -13412,7 +13405,7 @@ Description:
 OAI-PMH
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _oai-pmh-label:
+.. _oai-pmh-pref-label:
 
 OAI-PMH
 ''''''''''''''''''''''
@@ -16000,7 +15993,7 @@ new field
 Once your new field is added it will be visible at the top of this page
 and on the item search pageSearch option
 
-.. _acquisitions-label:
+.. _acquisitions-module-label:
 
 Acquisitions
 ----------------------------
