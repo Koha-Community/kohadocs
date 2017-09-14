@@ -59,7 +59,7 @@ This manual is an ever-changing document and edits to the manual are
 welcome at any time.
 
 The `Koha Manual <http://manual.koha-community.org/>`__ is managed by
-the Documentation Manager, but that doesn't mean we can't all
+the Documentation Team, but that doesn't mean we can't all
 participate in making the best manual possible.
 
 The manual is stored in git at:
