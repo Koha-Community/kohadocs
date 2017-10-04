@@ -20,12 +20,10 @@ Create a List
 
 A list can be created by visiting the Lists page and clicking 'New List'
 
-New List Button
 |image868|
 
 The new list form offers several options for creating your list:
 
-New List Form
 |image869|
 
 -  The name is what will appear on the list of Lists
@@ -56,7 +54,6 @@ New List Form
 
 A list can also be created from the catalog search results
 
-New list from catalog search
 |image870|
 
 -  Check the box to the left of the titles you want to add to the new
@@ -64,7 +61,6 @@ New list from catalog search
 
 -  Choose [New List] from the 'Add to:' pull down menu
 
-   New List from Search Results
    |image871|
 
    -  Name the list and choose what type of list this is
@@ -84,7 +80,6 @@ Add to a List
 To add titles to an existing list click on the list name from the page
 of lists
 
-List of Lists
 |image872|
 
 To open a list you can click the list name.
@@ -92,13 +87,11 @@ To open a list you can click the list name.
 From that page you can add titles by scanning barcodes into the box at
 the bottom of the page
 
-Content of a List
 |image873|
 
 A title can also be added to a list by selecting titles on the search
 results page and choosing the list from the 'Add to' menu
 
-Add to List
 |image874|
 
 .. _viewing-lists-label:
@@ -108,12 +101,10 @@ Viewing Lists
 
 To see the contents of a list, visit the Lists page on the staff client
 
-List of Lists
 |image875|
 
 Clicking on the 'List Name' will show the contents of the list
 
-Content of a List
 |image876|
 
 From this list of items you can perform several actions
@@ -142,7 +133,6 @@ Merging Bibliographic Records Via Lists
 One way to merge together duplicate bibliographic records is to add them
 to a list and use the Merge Tool from there.
 
-List of Duplicate Records
 |image877|
 
 Once you have selected the records to merge together the process is the
@@ -165,18 +155,15 @@ set the :ref:`intranetbookbag` system preference to
 items you would like added to your cart and choose 'Cart' from the 'Add
 to' menu
 
-Add to Cart
 |image878|
 
 A confirmation will appear below the cart button at the top of the staff
 client
 
-Items added to Cart
 |image879|
 
 Clicking on the Cart icon will provide you with the contents of the cart
 
-Cart Contents
 |image880|
 
 From this list of items you can perform several actions

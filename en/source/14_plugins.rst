@@ -37,17 +37,14 @@ preference set to keep your search history then you can access this
 information by clicking on your username in the top right of the staff
 client and choosing 'Search history'.
 
-Search history
 |image1062|
 
 From this page you will see your bibliographic search history
 
-Bibliographic search history
 |image1063|
 
 And your authority search history.
 
-Authority search history
 |image1064|
 
 About Koha
@@ -70,7 +67,6 @@ issues to your support provider or to the various other support avenues
 (mailing lists, chat room, etc), it's always good to give the
 information from this screen.
 
-Server Information on Koha
 |image1065|
 
 .. _perl-modules-label:
@@ -83,7 +79,6 @@ will need to keep your Perl modules up to date. The 'Perl Modules' tab
 will show you all of the modules required by Koha, the version you have
 installed and whether you need to upgrade certain modules.
 
-Perl Modules
 |image1066|
 
 Items listed in bold are required by Koha, items highlighted in red are
@@ -99,5 +94,4 @@ This tab will provide you with warnings if you are using system
 preferences that have since been deprecated or system preferences that
 you have set without other required preferences
 
-System Information
 |image1067|

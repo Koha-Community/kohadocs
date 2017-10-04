@@ -13,33 +13,28 @@ general. Set these preferences before anything else in Koha.
 
 -  *Get there:* More > Administration > Global System Preferences
 
-Global System Preferences Link and Search
 |image0|
 
 System preferences can be searched (using any part of the preference
 name or description) using the search box on the 'Administration' page
 or the search box at the top of each system preferences page.
 
-Preferences search at the top of System Preference page
 |image1|
 
 When editing preferences a '(modified)' tag will appear next to items
 you change until you click the 'Save All' button:
 
-After editing TagsModeration the '(modified)' label appears
 |image2|
 
 After saving your preferences you'll get a confirmation message telling
 you what preferences were saved:
 
-Preference save confirmation message
 |image3|
 
 Each section of preferences can be sorted alphabetically by clicking the
 small down arrow to the right of the word 'Preference' in the header
 column
 
-Sort option at the top right of each section of preferences
 |image4|
 
 If the preference refers to monetary values (like
@@ -417,33 +412,27 @@ Google and your application.
 -  Create a project, and give it some details to help you identify it
    later
 
-   New Project
    |image5|
 
 -  Next search for the Google Identity and Access Management API
 
-   API Search
    |image6|
 
 -  Enable the Google Identity and Access Management API
 
-   Enable Google Identity
    |image7|
 
 -  Go to 'Credentials' and set the OAuth cosent screen values
 
-   OAuth Consent Screen
    |image8|
 
 -  Next choose to 'Create credentials' from the 'Credentials' page
 
-   Create credentials
    |image9|
 
 -  Choose 'Web application' from the 'Application type' menu and fill in
    the form presented
 
-   Create Client ID
    |image10|
 
    -  Set 'Authorized JavaScript origins' to your OPACBaseURL
@@ -454,7 +443,6 @@ Google and your application.
 -  You will be presented with your values for your client ID and your
    client secret after saving
 
-   OAuth Client ID and Secret
    |image11|
 
 .. _googleoauth2clientid-label:
@@ -487,7 +475,6 @@ Asks \_\_\_ Google OpenID Connect login.
     redirect url to
     your\_opac\_url/cgi-bin/koha/svc/auth/googleopenidconnect .
 
-    Create Client ID
     |image12|
 
 Values:
@@ -1137,7 +1124,6 @@ Values:
 
 -  Display
 
-   AuthDisplayHierarchy
    |image14|
 
 -  Don't display
@@ -1526,12 +1512,10 @@ Values:
 
 -  Display -- shows the tag numbers on the cataloging interface
 
-   MARC editor with tags showing
    |image15|
 
 -  Don't display -- shows just descriptive text when cataloging
 
-   MARC editor without tags showing
    |image16|
 
 .. _intranetbibliodefaultview-label:
@@ -1603,13 +1587,11 @@ Values:
 -  Do -- will combine all identical tag numbers under one heading in the
    MARC view in the OPAC and Staff Client
 
-   MARC View in the Staff Client with LabelMARCView set to Do
    |image17|
 
 -  Don't -- will list all of the tags individually in the MARC view in
    the OPAC and Staff Client
 
-   MARC View in the Staff Client with LabelMARCView set to Don't
    |image18|
 
 .. _mergereportfields-label:
@@ -1756,7 +1738,6 @@ Description:
    split in to multiple tabs. The default is to show all holdings on one
    tab.
 
-   Separate holdings tabs
    |image19|
 
 .. _urllinktext-label:
@@ -1951,12 +1932,10 @@ Values:
 
 -  Display
 
-   MARC editor with text labels
    |image20|
 
 -  Don't display
 
-   MARC editor without text labels
    |image21|
 
 .. _defaultclassificationsource-label:
@@ -2051,7 +2030,6 @@ Description:
    AlternateHoldingsSeparator set to a space the holdings would look
    like the following:
 
-   Alternate Holdings Display
    |image22|
 
 .. _autobarcode-label:
@@ -2139,7 +2117,6 @@ Description:
    displays the item type icon on the search results to the left of the
    result info.
 
-   Item Type Icons to the Left of Result Information
    |image23|
 
 .. _itemcallnumber-label:
@@ -2420,8 +2397,6 @@ Values:
 
 -  Display
 
-   'Print Label' link appears on bibliographic record in the staff
-   client
    |image24|
 
 -  Don't display
@@ -2723,12 +2698,10 @@ Values:
 
 -  Allow
 
-   Allow age restriction override
    |image25|
 
 -  Don't allow
 
-   Don't allow age restriction override
    |image26|
 
 Description:
@@ -2968,12 +2941,10 @@ Values:
 
 -  Allow
 
-   Allow too many checkouts override
    |image27|
 
 -  Don't allow
 
-   Don't allow too many checkouts override
    |image28|
 
 Description:
@@ -3232,7 +3203,6 @@ Values:
 
 -  display a message
 
-   Lost message when checking out
    |image29|
 
 -  do nothing
@@ -3242,7 +3212,6 @@ Values:
 
 -  require confirmation
 
-   Confirm checkout of lost item
    |image30|
 
 Description:
@@ -3436,7 +3405,6 @@ Values:
 
 -  Enable
 
-   Force checkouts on restricted patrons
    |image31|
 
 Description:
@@ -4305,7 +4273,6 @@ Description:
    number of days entered in the decreaseLoanHighHoldsDuration
    preference.
 
-   Warning on checkout
    |image32|
 
 .. _displaymultiplacehold-label:
@@ -4873,8 +4840,6 @@ Values:
 
 -  Try
 
-   When CircAutocompl is turned on search results will appear below the
-   search box
    |image33|
 
 .. _circautoprintquickslip-label:
@@ -4934,12 +4899,10 @@ Values:
 
 -  Don't show
 
-   No X in the top right
    |image36|
 
 -  Show
 
-   X in the top right will clear the screen
    |image37|
 
 .. _exportcirchistory-label:
@@ -4971,7 +4934,6 @@ Description:
    automatically be excluded when exporting the patron's current
    checkout history.
 
-   ExportRemoveFields
    |image38|
 
 .. _filterbeforeoverduereport-label:
@@ -4994,7 +4956,6 @@ Description:
    before it's run prevents your staff from running a system heavy
    report and slowing down other operations in the system.
 
-   Overdue Report Filters
    |image34|
 
 Values:
@@ -5028,7 +4989,6 @@ Description:
    see fines owed on the patron record, you just won't have an
    additional notification at check in.
 
-   Fine notification at checkin
    |image35|
 
 .. _holdstopullstartdate-label:
@@ -5064,7 +5024,6 @@ Values:
 
 -  Enable
 
-   Checkout by keyword
    |image40|
 
 Description:
@@ -5222,12 +5181,10 @@ Values:
 
 -  Allow
 
-   Specify Due Date Box Shows
    |image41|
 
 -  Don't allow
 
-   Specify Due Date Box Doesn't Show
    |image42|
 
 .. _specifyreturndate-label:
@@ -5318,7 +5275,6 @@ Values:
 
 -  Notify
 
-   Notification that a hold is waiting
    |image43|
 
 Description:
@@ -5444,12 +5400,10 @@ Values:
 
 -  Barcode
 
-   Self Checkout Patron Card Number
    |image44|
 
 -  Username and password
 
-   Shelf checkout by login
    |image45|
 
 Description:
@@ -5571,7 +5525,6 @@ Values:
 
 -  Show
 
-   Editions tab in staff client
    |image46|
 
 Description:
@@ -5636,7 +5589,6 @@ Values:
 
 -  Show
 
-   Editions tab in the OPAC
    |image47|
 
 This preference pulls all editions of the same title available in your
@@ -5793,7 +5745,6 @@ Values:
 
 -  Do
 
-   Data from BabelthÃ¨que on the bib record
    |image48|
 
 -  Don't
@@ -6053,12 +6004,10 @@ Values:
 
 -  in the OPAC
 
-   HTML5 Media in the OPAC
    |image49|
 
 -  in the staff client
 
-   HTML5 Media in the staff client
    |image50|
 
 -  not at all
@@ -6138,7 +6087,6 @@ Values:
 
 -  Add
 
-   Readometer on the details page
    |image51|
 
 -  Don't add
@@ -6156,7 +6104,6 @@ Values:
 
 -  Add
 
-   iDreamBooks rating on search results
    |image52|
 
 -  Don't add
@@ -6175,7 +6122,6 @@ Values:
 
 -  Add
 
-   Reviews tab on the detail page
    |image53|
 
 -  Don't add
@@ -6329,7 +6275,6 @@ Description:
    :ref:`OPACLocalCoverImages` are set to
    'Display.'
 
-   Multiple cover images
    |image54|
 
 .. _localcoverimages-label:
@@ -6485,14 +6430,12 @@ Description:
    four choices of where to display this content. The default view is in
    a tab in the holdings table.
 
-   Novelist Select in a tab
    |image55|
 
    The content is the same if you choose to show it above the holdings
    table or below it. If shown in the right column of the page it's the
    same content, but displays a bit differently since space is limited.
 
-   Novelist Select on the side
    |image56|
 
 Values:
@@ -6635,7 +6578,6 @@ developer. Overdrive API applications are evaluated once a week so you
 may not be able to use this feature immediately after signing up. To
 learn more please contact your OverDrive representative.
 
-Overdrive results
 |image57|
 
 .. _overdrivecirculation-label:
@@ -7099,7 +7041,6 @@ Values:
 
 -  Allow
 
-   Add Tags on Detail
    |image59|
 
 -  Don't allow
@@ -7117,7 +7058,6 @@ Values:
 
 -  Allow
 
-   Tags on Search Results
    |image58|
 
 -  Don't allow
@@ -7232,7 +7172,6 @@ Description:
 -  This preference allows you define your own alphabet for browsing
    patrons in Koha.
 
-   Alphabet browse on patron module
    |image60|
 
 .. _calendarfirstdayofweek-label:
@@ -7353,7 +7292,6 @@ Values:
    -  Patrons can choose their language from a list at the bottom of the
       public catalog
 
-      Language selector in OPAC
       |image61|
 
 -  Don't allow
@@ -7943,7 +7881,6 @@ Values:
 
 -  Show
 
-   DisplayOPACiconsXSLT
    |image62|
 
     **Note**
@@ -7991,7 +7928,6 @@ Values:
 
 -  Show
 
-   Lost item showing in the OPAC
    |image63|
 
 .. _highlightownitemsonopac-&-highlightownitemsonopacwhich-label:
@@ -8049,7 +7985,6 @@ Asks: Show \_\_\_ as the name of the library on the OPAC.
     Edit ':ref:`opacheader`' if you'd like to add a library
     name above your search box on the OPAC
 
-Browser title and address bar
 |image64|
 
 .. _nologininstructions-label:
@@ -8124,12 +8059,10 @@ Values:
 
 -  Add
 
-   Library select box on Koha OPAC
    |image65|
 
 -  Don't Add
 
-   No library select box on Koha OPAC
    |image66|
 
 .. _opacbaseurl-label:
@@ -8164,8 +8097,6 @@ Description:
     This must be filled in with the URL of your public catalog to show
     'OPAC View' links from bib records in the staff client:
 
-With OPACBaseURL set, links to the OPAC will appear on each individual
-bib record in the staff client
 |image67|
 
 .. _opaccredits-label:
@@ -8180,10 +8111,8 @@ Asks: Include the following HTML in the footer of all pages in the OPAC:
     Click the 'Click to edit; link to enter HTML to appear at the bottom
     of every page in the OPAC
 
-HTML version of a footer for your OPAC
 |image68|
 
-A sample of what can appear in your OPAC credits/footer
 |image69|
 
 Description:
@@ -8239,7 +8168,6 @@ Values:
           :ref:`OPACXSLTDetailsDisplay` needs to
           have a value in it for this preference to work.
 
-   Showing the 856u as an image
    |image70|
 
 -  Neither details or results page
@@ -8263,7 +8191,6 @@ Description:
    or in a new window depending on the value in the system pref
    :ref:`OPACURLOpenInNewWindow`.
 
-   Sample 856 in MARC Record
    |image71|
 
 .. _opacexportoptions-label:
@@ -8326,7 +8253,6 @@ Description:
    address bar in most browsers. The default value for this field (if
    left blank) is the small 'K' in the Koha logo.
 
-   Default Koha Favicon
    |image72|
 
 .. _opacheader-label:
@@ -8336,14 +8262,12 @@ opacheader
 
 Asks: Include the following HTML in the header of all pages in the OPAC
 
-Sample HTML to be displayed at the top of my OPAC
 |image73|
 
     **Note**
 
     This value will appear above the main content of your page
 
-OPAC display of the value from 'opacheader'
 |image74|
 
     **Note**
@@ -8408,7 +8332,6 @@ Description:
    right of the OPAC footer stating 'Powered by Koha' and linking to the
    official Koha website.
 
-   Powered by Koha
    |image75|
 
 .. _opaclangselectormode-label:
@@ -8544,7 +8467,6 @@ Values:
       default message can be altered by using the
       :ref:`OpacMaintenanceNotice` preference.
 
-      OPAC Maintenance Message
       |image76|
 
 .. _opacmaintenancenotice-label:
@@ -8575,7 +8497,6 @@ Description:
 -  HTML entered in this field will appear in the center of the main page
    of your OPAC
 
-Sample OpacMainUserBlock appears below the search bar
 |image77|
 
 Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
@@ -8613,8 +8534,6 @@ Description:
    be used to enter in 'share' links for social networks or generate
    searches against other library catalogs.
 
-   Example of 'Links' column with a value in the OPACMySummaryHTML
-   preference
    |image78|
 
 Sample Data:
@@ -8652,7 +8571,6 @@ Default: Important links here.
 Asks: Show the following HTML on the left hand column of the main page
 and patron account on the OPAC (generally navigation links)
 
-Sample navigation links
 |image79|
 
 Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
@@ -8672,7 +8590,6 @@ series of tabs to access their account information.
 will appear below them. When not on the patron account pages the HTML in
 OpacNavBottom will just appear right below :ref:`OpacNav`.
 
-OpacNav and OpacNavBottom on Patron Account
 |image80|
 
 .. _opacnavright-label:
@@ -8687,7 +8604,6 @@ Description: HTML entered in this preference will appear on the right
 hand side of the OPAC under the log in form. If the log in form is not
 visible this content will move up on the right column.
 
-OpacNavRight
 |image81|
 
 .. _opacnoresultsfound-label:
@@ -8703,7 +8619,6 @@ OPAC
 This HTML will display below the existing notice that no results were
 found for your search.
 
-HTML in OPACNoResultsFound will appear below lines that look like this
 |image82|
 
     **Note**
@@ -8816,7 +8731,6 @@ Description:
    information on the bibliographic detail page in the OPAC split in to
    multiple tabs. The default is to show all holdings on one tab.
 
-   Separate holdings tabs
    |image83|
 
 .. _opacshowbarcode-label:
@@ -8832,12 +8746,10 @@ Values:
 
 -  Don't show
 
-   Barcode not shown in the OPAC
    |image84|
 
 -  Show
 
-   Barcode shown in the OPAC
    |image85|
 
 Description:
@@ -8885,16 +8797,12 @@ Values:
 
 -  Show holds
 
-   The holdings table on the bibliographic record will show the number
-   of holds
    |image86|
 
 -  Show holds and priority level
 
 -  Show priority level
 
-   Patron record in the OPAC shows where in line the patron waits for
-   their hold.
    |image87|
 
    -  :ref:`opacuserlogin` needs to be set to 'allow'
@@ -8921,7 +8829,6 @@ Description:
    recent comments under the search box at the top of your OPAC with
    this preference.
 
-   Recent Comments link on OPAC
    |image88|
 
 .. _opacshowunusedauthorities-label:
@@ -8970,12 +8877,10 @@ Values:
 
 -  only details
 
-   Star Ratings on the Details Page
    |image89|
 
 -  results and details
 
-   OPAC Star Ratings on the Search Results
    |image90|
 
 Description:
@@ -9075,13 +8980,10 @@ OPACUserJS
 
 Asks: Include the following JavaScript on all pages in the OPAC
 
-OPAC login box before OPACUserJS edit
 |image91|
 
-JavaScript in OPACUserJS to change the OPAC login box
 |image92|
 
-New OPAC login box after editing OPACUserJS
 |image93|
 
 Description:
@@ -9284,7 +9186,6 @@ Values:
    -  A link labeled 'Authority search' will appear at the top of your
       OPAC under the search box
 
-      'Browse by Subject' link under search box on OPAC
       |image94|
 
 -  Don't allow
@@ -9352,7 +9253,6 @@ Values:
 
 -  enable
 
-   Browsing and Paging Search Results
    |image95|
 
 Description:
@@ -9415,7 +9315,6 @@ Values:
 
 -  Allow
 
-   Holds notes in the OPAC
    |image96|
 
 -  Do not allow
@@ -9523,14 +9422,12 @@ Description:
    client. Notification of patron account requests will appear on the
    dashaboard below the list of modules with other pending actions.
 
-   Patrons requesting modifications
    |image97|
 
    Once you click the notification you will be presented with the
    changes the patron would like to make to their account and from there
    you can choose how to proceed.
 
-   Patrons modifications
    |image98|
 
        **Note**
@@ -9640,7 +9537,6 @@ Values:
 
    -  A link to 'Most Popular' will appear at the top of your OPAC
 
-      'Most Popular' link under the search box
       |image99|
 
 -  Don't allow
@@ -9657,7 +9553,6 @@ Description:
    that it shows will not be an accurate portrayal of what's popular in
    your library.
 
-   Sample top issues page
    |image100|
 
 .. _opacuserlogin-label:
@@ -9796,7 +9691,6 @@ Values:
       :ref:`ShowReviewer` needs to be set to 'Show' for
       this to preference to come in to play
 
-      ShowReviewerPhoto set to 'Show'
       |image101|
 
 Description:
@@ -9823,7 +9717,6 @@ Values:
 
 -  Enable
 
-   Social Networks
    |image102|
 
 Description:
@@ -10538,7 +10431,6 @@ Description:
    Registration <self-registration-label>` system preferences you
    can control how this preference will function.
 
-   Register link in the OPAC
    |image103|
 
     **Important**
@@ -10769,7 +10661,6 @@ Values:
 
 -  Show
 
-   OPACShelfBrowser
    |image104|
 
 Description:
@@ -11514,7 +11405,6 @@ Description:
    the staff client and the OPAC on the patron messaging form to choose
    to receive messages as SMS
 
-   SMSSendDriver Options
    |image105|
 
     **Important**
@@ -11533,7 +11423,6 @@ Default: location\|itype\|ccode
 Asks: Show the following fields from the items database table as columns
 on the statistics tab on the patron record: \_\_\_
 
-Statistics on Patron Record
 |image106|
 
     **Important**
@@ -12078,7 +11967,6 @@ Values:
 
 -  Show
 
-   Number of times each Facet is found in results
    |image107|
 
 .. _displaylibraryfacets-label:
@@ -12359,7 +12247,6 @@ Description:
    value in AdvancedSearchTypes must match the Authorised Value name,
    and must be indexed with 'mc-' prefixing that name.
 
-   Searching by Item Type and Shelving Location
    |image108|
 
 .. _expandedsearchoption-label:
@@ -12484,12 +12371,10 @@ Values:
        Please note that the Serial Collection tab is currently available
        only for systems using the UNIMARC standard.
 
-   Serial Collection tab
    |image109|
 
 -  Subscriptions tab
 
-   Subscriptions tab
    |image110|
 
 .. _opacserialissuedisplaycount-label:
@@ -12632,12 +12517,10 @@ Values:
 
 -  brief history
 
-   Brief History
    |image111|
 
 -  full history
 
-   Full History
    |image112|
 
 Description:
@@ -12686,7 +12569,6 @@ Values:
           :ref:`XSLTDetailsDisplay` needs to be on
           for this preference to work.
 
-   Showing the 856u as an image
    |image113|
 
 -  Neither details or results page
@@ -12710,7 +12592,6 @@ Description:
    or in a new window depending on the value in the system pref
    :ref:`OPACURLOpenInNewWindow`.
 
-   Sample 856 Field
    |image114|
 
 .. _displayiconsxslt-label:
@@ -12735,7 +12616,6 @@ Values:
 
 -  Show
 
-   DisplayIconsXSLT
    |image115|
 
     **Note**
@@ -12808,7 +12688,6 @@ Description:
    address bar in most browsers. The default value for this field (if
    left blank) is the small 'K' in the Koha logo.
 
-   Default Koha Favicon
    |image116|
 
 .. _intranetmainuserblock-label:
@@ -12819,11 +12698,8 @@ IntranetmainUserblock
 Asks: Show the following HTML in its own column on the main page of the
 staff client
 
-Sample HTML for IntranetmainUserblock
 |image117|
 
-Message from IntranetmainUserblock as it appears on the Staff Client
-main page
 |image118|
 
 .. _intranetnav-label:
@@ -12963,12 +12839,10 @@ Values:
    -  In previous versions of Koha this was the setting that read
       'normally'
 
-      Detail display without XSLT stylesheets
       |image119|
 
 -  enter "default" for the default one
 
-   Detail display using XSLT stylesheets
    |image120|
 
 -  put a path to define a XSLT file
@@ -13172,7 +13046,6 @@ Description:
    record in the staff client. Showing these checkboxes allows the staff
    members to select multiple items to edit or delete at once.
 
-   Items with the checkboxes enabled
    |image121|
 
 .. _usewysiwyginsystempreferences-label:
@@ -13609,10 +13482,8 @@ several areas of Koha.
 When visiting this page you are presented with a list of the libraries
 and groups that have already been added to the system.
 
-Library List
 |image122|
 
-Group Lists
 |image123|
 
 .. _adding-a-library-label:
@@ -13626,7 +13497,6 @@ To add a new library:
 
 -  The top of the form asks for some basics about the library
 
-   Basic Library Info
    |image124|
 
    -  The library code should not contain any spaces and be 10 or fewer
@@ -13643,7 +13513,6 @@ To add a new library:
 
 -  Next you can enter basic contact info about the branch
 
-   Library Contact Info
    |image125|
 
    -  The address and contact fields can be used to make notices custom
@@ -13678,14 +13547,12 @@ To add a new library:
    -  If the URL field is populated then the library name will be linked
       in the holdings table on the OPAC
 
-      Linked Library Name
       |image126|
 
    -  The OPAC Info box is for you to put information about the library
       that will appear in the OPAC when the branch name is moused over
       in the holdings table
 
-      OPAC Info
       |image127|
 
    -  IP Address does not have be filled in unless you plan on limiting
@@ -13711,8 +13578,6 @@ Editing/Deleting a Library
 You will be unable to delete any library that has patrons or items
 attached to it.
 
-Staff will be presented with a warning when trying to delete a library
-that is being used
 |image128|
 
 Each library will have an 'Edit' link to the right of it. Click this
@@ -13730,7 +13595,6 @@ Adding a group
 To add a Search Domain or Library Property Group click the 'New Group'
 button at the top of the screen
 
-Add group form
 |image129|
 
 Give the group a 'Category type; of 'searchdomain' and if you would like
@@ -13751,13 +13615,11 @@ Search Domain Groups
 Search Domain Groups allow you to search a group of libraries at the
 same time instead of searching just one library or all libraries.
 
-Search Domain Groups
 |image130|
 
 To see Search Domain Groups in action visit the staff client advanced
 search page in your Koha system:
 
-Library group search on staff client
 |image131|
 
 .. _library-property-groups-label:
@@ -13768,13 +13630,11 @@ Library Property Groups
 You can assign specific categories to your libraries by adding groups
 for them
 
-Library Property Groups
 |image132|
 
 Properties are then applied to libraries via the add or edit library
 form
 
-Groups on the Add/Modify library form
 |image133|
 
 .. _item-types-label:
@@ -13790,7 +13650,6 @@ codes.
 Item types typically refer to the material type (book, cd, dvd, etc),
 but can be used in any way that works for your library.
 
-Item Types
 |image134|
 
 .. _adding-item-types-label:
@@ -13801,7 +13660,6 @@ Adding Item Types
 To add a new item type, simply click the 'New Item Type' button at the
 top of the Item Types page.
 
-New Item Type
 |image135|
 
 -  In the 'Item Type' field, enter a short code for your item type
@@ -13853,19 +13711,16 @@ New Item Type
 -  If you would like a message or alert to appear when items of this
    type are checked in you can enter that in the 'Checkin message' box
 
-   Checkin message setup
    |image136|
 
    -  The Checkin message type can be a Message or an Alert. The only
       difference between these two is the styling. By default a Message
       is blue
 
-      Checkin Message
       |image137|
 
       and an Alert is yellow.
 
-      Checkin Alert
       |image138|
 
 -  Some SIP devices need you to use a SIP-specific media type instead of
@@ -13882,7 +13737,6 @@ New Item Type
 
 -  Your new item type will now appear on the list
 
-   New DVD Item Type
    |image139|
 
 .. _editing-item-types-label:
@@ -13911,7 +13765,6 @@ the 'Delete' link.
     You will not be able to delete item types that are being used by
     items within your system.
 
-Warning when you try to delete an item that is in use
 |image140|
 
 .. _authorized-values-label:
@@ -13948,7 +13801,6 @@ use, for instance 'Lost'.
       screen and the OPAC. The value in the Description field should be
       the message text and is limited to 200 characters.
 
-      Borrower messages
       |image141|
 
 -  Bsort1
@@ -14061,7 +13913,6 @@ use, for instance 'Lost'.
       category include the Koha modules (Accounts, Acquitisions,
       Catalog, Circulation, Patrons)
 
-      Report Groups
       |image142|
 
 -  REPORT\_SUBGROUP
@@ -14071,7 +13922,6 @@ use, for instance 'Lost'.
       value code from REPORT\_GROUP in the Description (OPAC) field to
       link the subgroup to the appropriate group.
 
-      Report Subgroups
       |image143|
 
 -  RESTRICTED
@@ -14114,7 +13964,6 @@ that is entered into the system. To add a new category:
 
 -  Click 'New Category'
 
-   New Authorized Category form
    |image144|
 
 -  Limit your Category to 10 characters (something short to make it
@@ -14157,7 +14006,6 @@ that is entered into the system. To add a new category:
 -  Your new category and value will appear on the list of Authorized
    Values
 
-   Custom Authorized Value on list of values
    |image145|
 
 .. _add-new-authorized-value-label:
@@ -14170,7 +14018,6 @@ add a value:
 
 -  Click 'New authorized value for ...'
 
-   New Authorized Value form
    |image146|
 
 -  Enter a code for your Authorized Value into the 'Authorized value'
@@ -14200,7 +14047,6 @@ add a value:
 
 -  The new value will appear in the list along with existing values
 
-   List of authorized values in MARC504 category
    |image147|
 
 .. _patrons-&-circulation-label:
@@ -14221,7 +14067,6 @@ roles, age groups, and patron types.
 -  *Get there:* More > Administration > Patrons & Circulation > Patron
    Categories
 
-Patron category list
 |image148|
 
 Patrons are assigned to one of six main categories:
@@ -14263,7 +14108,6 @@ Adding a patron category
 
 To add a new patron category click 'New Category' at the top of the page
 
-New patron category form
 |image149|
 
 -  The 'Category Code' is an identifier for your new code.
@@ -14278,7 +14122,6 @@ New patron category form
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          Missing fields error
           |image150|
 
 -  Enter a plain text version of the category in the 'Description'
@@ -14289,7 +14132,6 @@ New patron category form
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          Missing fields error
           |image151|
 
 -  Enrollment period (in months) should be filled in if you have a
@@ -14306,7 +14148,6 @@ New patron category form
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          Missing fields error
           |image152|
 
 -  Some patron categories can have a minimum age (in years) requirement
@@ -14349,7 +14190,6 @@ New patron category form
    the staff client by making a choice from the 'Lost items in staff
    client' pull down
 
-   Choose a value for 'Hide Lost Items'
    |image153|
 
    -  **Important**
@@ -14368,7 +14208,6 @@ New patron category form
 -  In the 'Category type' field choose one of the six main parent
    categories
 
-   Six main patron categories
    |image154|
 
    -  **Important**
@@ -14376,7 +14215,6 @@ New patron category form
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          Missing fields error
           |image155|
 
 -  The Branch Limitations let you limit this patron category to only
@@ -14500,13 +14338,11 @@ patron/item type combos. To set your rules, choose a library from the
 pull down (or 'all libraries' if you want to apply these rules to all
 branches):
 
-Libraries to apply the rules to
 |image156|
 
 From the matrix you can choose any combination of patron categories and
 item types to apply the rules to
 
-Setting issuing rules for your libraries
 |image157|
 
 -  First choose which patron category you'd like the rule to be applied
@@ -14665,7 +14501,6 @@ When finished, click 'Add' to save your changes. To modify a rule,
 simply click the 'Edit' link to the right of the fule and edit the
 values that appear filled in at the bottom of the form.
 
-Edit circ and fine rule
 |image158|
 
 If you would like to delete your rule, click the 'Delete' link to the
@@ -14674,13 +14509,11 @@ right of the rule.
 To save time you can clone rules from one library to another by choosing
 the clone option above the rules matrix.
 
-Circulation & Fine Rules Clone Tool
 |image159|
 
 After choosing to clone you will be presented with a confirmation
 message.
 
-Circulation & Fine Rules Successfully Cloned Message
 |image160|
 
 .. _default-checkouts-and-hold-policy-label:
@@ -14692,7 +14525,6 @@ You can set a default maximum number of checkouts and hold policy that
 will be used if none is defined below for a particular item type or
 category. This is the fall back rule for defaults.
 
-Default Checkouts and Hold Policy
 |image161|
 
 From this menu you can set a default to apply to all item types and
@@ -14753,7 +14585,6 @@ Checkouts Per Patron
 For this library, you can specify the maximum number of loans that a
 patron of a given category can make, regardless of the item type.
 
-Set default checkouts per patron category
 |image162|
 
     **Note**
@@ -14776,7 +14607,6 @@ Item Hold Policies
 For this library, you can edit hold and return policies for a given item
 type, regardless of the patron's category.
 
-Hold policies per item type
 |image163|
 
 The various Hold Policies have the following effects:
@@ -14863,7 +14693,6 @@ system preference.
 A common use for this field would be for a student ID number or a
 Driver's license number.
 
-List of Patron Attributes
 |image164|
 
 .. _adding-patron-attributes-label:
@@ -14874,7 +14703,6 @@ Adding Patron Attributes
 To add a new Patron Attribute Type, click the 'New Patron Attribute
 Type' button at the top of the page
 
-Add Patron Attribute Type form
 |image165|
 
 -  In the 'Patron attribute type code', enter a short code to identify
@@ -14923,7 +14751,6 @@ Add Patron Attribute Type form
    patron's short detail display on the left of the checkout screen and
    other patron pages
 
-   Show attribute in patron detail on the left
    |image166|
 
 -  Authorized value category; if one is selected, the patron record
@@ -14962,7 +14789,6 @@ Add Patron Attribute Type form
    in the 'Class' pull down and you can then change your attributes page
    to have sections of attributes
 
-   Patron Attributes Sorted
    |image167|
 
 -  Click Save to save your new attribute
@@ -14970,13 +14796,11 @@ Add Patron Attribute Type form
 Once added your attribute will appear on the list of attributes and also
 on the patron record add/edit form
 
-Patron Attributes list on the Patron add/edit form
 |image168|
 
 If you have set up classes for organizing attributes they will appear
 that way on the add/edit patron form
 
-Grouped Attributes
 |image169|
 
 .. _editing/deleting-patron-attributes-label:
@@ -14997,7 +14821,6 @@ Some fields in the attribute will not be editable once created:
 
 You will be unable to delete an attribute if it's in use.
 
-Warning when trying to delete an attribute that is in use
 |image170|
 
 .. _library-transfer-limits-label:
@@ -15019,24 +14842,20 @@ These rules only go into effect if the preference
 Before you begin you will want to choose which library you are setting
 these limits for.
 
-Choose the library you're setting limits for
 |image171|
 
 Transfer limits are set based on the collections codes you have applied
 via the :ref:`Authorized Value <authorized-values-label>` administration area.
 
-Collection Code values assigned in the Authorized Value area
 |image172|
 
 Collection codes will appear as tabs above the checkboxes:
 
-Collection Code tabs
 |image173|
 
 Check the boxes for the libraries that you accept checkins from for the
 item type you have selected at the top (in the example below - FIC)
 
-Example transfer limits set up
 |image174|
 
 In the above example, Centerville library will allow patrons to return
@@ -15069,7 +14888,6 @@ have a cost of 1, adjacent post offices would have a cost of 2, etc.
 To enter transport costs simply click in the cell you would like to
 alter, uncheck the 'Disable' box and enter your 'cost'
 
-Transport cost matrix
 |image175|
 
 After entering in your cost, hit 'Enter' on your keyboard or click the
@@ -15107,7 +14925,6 @@ To set up circulation alerts:
 
 -  Choose your library from the pull down at the top of the screen
 
-   Libraries to set Circulation Alerts
    |image176|
 
    -  To set preferences for all libraries, keep the menu set to
@@ -15117,7 +14934,6 @@ To set up circulation alerts:
    and check outs. To change this, click on the item/patron type combo
    that you would like to stop notices for.
 
-   Circulation Alert Matrix
    |image177|
 
    -  In the above example, Juveniles and Kids will not receive check
@@ -15144,13 +14960,11 @@ Adding a City
 To add a new city, click the 'New City' button at the top of the page
 and enter the city name, state, zip/postal code and country.
 
-New city entry form
 |image178|
 
 One you click Submit, your city will be saved and will be listed on the
 Cities and Towns page
 
-List of Cities
 |image179|
 
 Cities can be edited or deleted at any time.
@@ -15164,7 +14978,6 @@ If you have defined local cities using the New city form, then when
 adding or editing a patron record you will see those cities in a pull
 down menu to make city selection easy.
 
-Cities pull down on the patron record
 |image180|
 
 This will allow for easy entry of local cities into the patron record
@@ -15192,7 +15005,6 @@ specific to their libraries.
 -  *Get there:* More > Administration > Catalog > MARC Bibliographic
    Frameworks
 
-Frameworks List
 |image181|
 
     **Important**
@@ -15205,7 +15017,6 @@ After clicking the 'MARC structure' link to the right of each framework
 you can decide how many fields you want to see on one screen by using
 the pagination options at the top of the table.
 
-Pagination options
 |image182|
 
 .. _add-new-framework-label:
@@ -15217,7 +15028,6 @@ To add a new framework
 
 -  Click 'New Framework'
 
-   Add Framework Form
    |image183|
 
    -  Enter a code of 4 or fewer characters
@@ -15230,7 +15040,6 @@ To add a new framework
 -  Once your Framework is added click 'MARC structure' to the right of
    it on the list of Frameworks
 
-   Choose basis for new Framework
    |image184|
 
    -  You will be asked to choose a Framework to base your new Framework
@@ -15248,7 +15057,6 @@ Edit Existing Frameworks
 Clicking 'Edit' to the right of a Framework will only allow you to edit
 the Description for the Framework:
 
-Edit Framework
 |image185|
 
 To make edits to the fields associated with the Framework you must first
@@ -15263,12 +15071,10 @@ Add subfields to Frameworks
 To add a field to a Framework click the 'New Tag' button at the top of
 the Framework definition
 
-New Tag Button
 |image186|
 
 This will open up a blank form for entering MARC field data
 
-Add a new tag to framework
 |image187|
 
 Enter the information about your new tag:
@@ -15291,7 +15097,6 @@ Enter the information about your new tag:
 When you're finished, click 'Save Changes' and you will be presented
 with your new field
 
-New tag and link to subfields
 |image188|
 
 To the right of the new field is a link to 'Subfields,' you will need to
@@ -15310,7 +15115,6 @@ most Frameworks you must edit the fields and subfields. Clicking 'Edit'
 to the right of each subfield will allow you to make changes to the text
 associated with the field
 
-Modify MARC Field
 |image189|
 
 -  Each field has a tag (which is the MARC tag) that is uneditable
@@ -15342,7 +15146,6 @@ right of the tag on the 'MARC Structure' listing
 
 -  For each subfield you can set the following Basic constraint values
 
-   Editing the 504 Subfield
    |image190|
 
    -  Text for librarian
@@ -15374,7 +15177,6 @@ right of the tag on the 'MARC Structure' listing
 -  For each subfield you can set the following Advanced constraint
    values
 
-   Advanced constraints
    |image191|
 
    -  Default value
@@ -15397,7 +15199,6 @@ right of the tag on the 'MARC Structure' listing
          field to show and uncheck the boxes where you would like it
          hidden.
 
-         Framework visibility
          |image192|
 
    -  Is a URL
@@ -15451,7 +15252,6 @@ right of the tag on the 'MARC Structure' listing
       -  In the example above, the 504a field will show the MARC504
          Authorized Values when cataloging
 
-         Example of an Authorized Subfield
          |image194|
 
    -  Thesaurus
@@ -15502,13 +15302,11 @@ Export Framework
 To export a framework simply click the 'Export' link to the right of
 framework title.
 
-Export link next to framework
 |image195|
 
 When you click 'Export' you will be prompted to choose what format to
 export the file in.
 
-Export formats
 |image196|
 
 A framework exported this way can be imported into any other Koha
@@ -15528,24 +15326,20 @@ To import a framework you first need to create :ref:`a new
 framework <add-new-framework-label>`. Once you have that framework, click
 'Import' to the right of the new framework.
 
-Import link next to framework
 |image197|
 
 You will be prompted to find a file on your computer to import into the
 framework.
 
-Choose a file to import
 |image198|
 
 You will be asked to confirm your actions before the file is imported.
 
-Confirm your desire to import
 |image199|
 
 As your file is uploaded you will see an image that will confirm that
 the system is working.
 
-Import timer
 |image200|
 
 Once your import is complete you will be brought to the framework edit
@@ -15569,13 +15363,11 @@ and can be used at any time.
 The Koha to MARC Mapping page offers you the option of choosing from one
 of three tables in the database to assign values to.
 
-Koha to MARC Mapping Table Pull Down
 |image201|
 
 After choosing the table you would like to view, click 'OK.' To edit any
 mapping click on the 'Koha Filed' or the 'Edit' link.
 
-Map MARC Field to Koha Field
 |image202|
 
 Choose which MARC field you would like to map to this Koha Field and
@@ -15614,18 +15406,15 @@ Using the Framework pull down menu, choose the
 :ref:`Framework <marc-bibliographic-frameworks-label>` you would like to apply this rule to.
 For example, the subtitle for books can be found in the 245$b field.
 
-Assigning Book Subtitle
 |image203|
 
 However the subtitle for DVDs appears in 245$p
 
-Assigning DVD Subtitle
 |image204|
 
 Using this tool you can tell Koha to print the right field as the
 subtitle when viewing the bibliographic record in the OPAC.
 
-Subtitle display in the OPAC
 |image205|
 
 This tool can be used to chain together pieces of the record as well. If
@@ -15652,7 +15441,6 @@ Checks the MARC structure.
 If you change your MARC Bibliographic framework it's recommended that
 you run this tool to test for errors in your definition.
 
-Framework Test
 |image206|
 
 .. _authority-types-label:
@@ -15682,7 +15470,6 @@ items.cn\_source field in the database.
 
 -  *Get there:* More > Administration > Catalog > Classification sources
 
-Classification Sources
 |image207|
 
 Commonly used values of this field are:
@@ -15710,7 +15497,6 @@ Adding/Editing Classification Sources
 You can add your own source of classification by using the New
 Classification Source button. To edit use the Edit link.
 
-Add classification source
 |image208|
 
 When creating or editing:
@@ -15858,7 +15644,6 @@ To create a new matching rule :
 
 -  Click 'New Record Matching Rule'
 
-   Add record matching rule
    |image209|
 
    -  Choose a unique name and enter it in the 'Matching rule code'
@@ -15904,7 +15689,6 @@ To create a new matching rule :
 Sample Bibliographic Record Matching Rule: Control Number
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-LOC Matching Rule
 |image210|
 
 -  Match threshold: 100
@@ -15940,7 +15724,6 @@ LOC Matching Rule
 
 -  Required Match checks: none (remove the blank one)
 
-   Remove match check
    |image211|
 
 .. _oai-sets-configuration-label:
@@ -16074,7 +15857,6 @@ calculate totals.
 -  *Get there:* More > Administration > Acquisitions > Currencies and
    Exchange Rates
 
-Currencies
 |image212|
 
     **Note**
@@ -16091,7 +15873,6 @@ active currency will have a check mark in the 'Active' column. If you
 don't have an active currency you will see an error message telling you
 to choose an active currency.
 
-No active currency warning
 |image213|
 
 .. _budgets-label:
@@ -16109,7 +15890,6 @@ library (ex. Books, Audio, etc).
 When visiting the main budget administration you will see two tabs, one
 for active and one for inactive budgets.
 
-Budgets List
 |image214|
 
 .. _adding-budgets-label:
@@ -16130,7 +15910,6 @@ If you haven't used Koha before for acquisitions then you'll need to
 start fresh with a new budget. To add a new budget click the 'New
 Budget' button.
 
-New Budget Form
 |image215|
 
 -  Choose the time period this budget is for, whether it's an academic
@@ -16153,7 +15932,6 @@ New Budget Form
 Once you have made your edits, click the 'Save Changes' button. You will
 be brought to a list of your existing budgets.
 
-List of Budgets
 |image216|
 
 .. _duplicate-a-budget-label:
@@ -16164,13 +15942,11 @@ Duplicate a budget
 To duplicate a budget from a previous year, click on the link for the
 budget name from the list of budgets
 
-Budgets List
 |image217|
 
 On the screen listing the budget breakdown click the Edit button at the
 top and choose to Duplicate budget
 
-Duplicate Budget
 |image218|
 
 You can also click the 'Actions' button to the right of the budget and
@@ -16181,7 +15957,6 @@ choose 'Duplicate'.
 In both cases you will be presented with a form where you simply need to
 enter the new start and end date and save the budget.
 
-New Duplicate Budget
 |image219|
 
 Check the box for 'Mark the original budget as inactive' if the original
@@ -16247,7 +16022,6 @@ there was a problem. For example, if the new budget does not contain a
 fund with the same name as the previous budget, the order will not be
 moved.
 
-Close report
 |image220|
 
 .. _funds-label:
@@ -16272,12 +16046,10 @@ A fund is added to a budget.
 To add a new fund click the New button and then choose which Budget you
 would like to add the fund to.
 
-Choose which budget to add a fund to
 |image221|
 
 In the form that appears you want to enter the basics about your fund.
 
-New Fund Form
 |image222|
 
 The three first fields are required, the rest are optional
@@ -16302,7 +16074,6 @@ The three first fields are required, the rest are optional
    'owner', 'owner and users' or 'owner, users and library' from the
    'Restrict access to' menu
 
-   Restrict Fund Access
    |image223|
 
    -  **Important**
@@ -16325,7 +16096,6 @@ The three first fields are required, the rest are optional
 When complete, click 'Submit' and you will be brought to a list of all
 of the funds for the budget.
 
-List of funds
 |image224|
 
 The monetary columns in the fund table break down as follows:
@@ -16352,7 +16122,6 @@ The monetary columns in the fund table break down as follows:
 To the right of each fund you will find the 'Actions' button under which
 you will find the 'Edit,' 'Delete,' and 'Add Child Fund' options.
 
-Fund actions
 |image225|
 
 A child fund simply a sub-fund of the fund listed. An example would be
@@ -16363,7 +16132,6 @@ further organize your finances.
 Funds with children will show with a small arrow to the left. Clicking
 that will show you the children funds.
 
-Child funds
 |image226|
 
 .. _budget-planning-label:
@@ -16374,13 +16142,11 @@ Budget Planning
 When viewing the list of funds click the 'Planning' button and choose
 how you would like to plan to spend your budget.
 
-Planning pull down menu
 |image227|
 
 If you choose 'Plan by MONTHS' you will see the budgeted amount broken
 down by months:
 
-Budget Planning Formula
 |image228|
 
 To hide some of the columns you can click the 'hide' link to the right
@@ -16388,7 +16154,6 @@ To hide some of the columns you can click the 'hide' link to the right
 can click the 'Show a column' link found below the 'Fund Remaining'
 heading.
 
-Choose columns to add
 |image229|
 
 From here you can plan your budget spending by manually entering values
@@ -16396,14 +16161,12 @@ or by clicking the 'Auto-fill row' button. If you choose to auto-fill
 the form the system will try to divide the amount accordingly, you may
 have to make some edits to split things more accurately.
 
-Auto-filled columns
 |image230|
 
 Once your changes are made, click the 'Save' button. If you would like
 to export your data as a CSV file you can do so by entering a file name
 in the 'Output to a file named' field and clicking the 'Output' button.
 
-Export planning as CSV
 |image231|
 
 .. _edi-accounts-label:
@@ -16476,7 +16239,6 @@ bibliographic and/or authority records from that source.
 Koha comes with a default list of Z39.50/SRU targets set up that you can
 add to, edit or delete
 
-List of Z39.50 Servers in Koha
 |image232|
 
 To find additional Z39.50 targets you use IndexData's IRSpy:
@@ -16490,7 +16252,6 @@ Add a Z39.50 Target
 
 -  From the main Z39.50 page, click 'New Z39.50 Server'
 
-   New Z39.50 Server Form
    |image233|
 
    -  'Z39.50 server' should be populated with a name that will help you
@@ -16618,7 +16379,6 @@ Add a SRU Target
 
 -  From the main Z39.50/SRU page, click 'New SRU Server'
 
-   New SRU Server Form
    |image234|
 
    -  'Server name' should be populated with a name that will help you
@@ -16716,7 +16476,6 @@ your :ref:`authorities <authorities-label>`.
 Using this page you can control which options Koha gives patrons on
 their search results.
 
-Did you mean?
 |image235|
 
 To turn on the 'Did you mean?' bar on your search results you need to
@@ -16735,18 +16494,15 @@ you have to choose from are:
 If you want one plugin to take priority over another you simply drag it
 above the other.
 
-Drag and drop options
 |image236|
 
 If you choose both plugins you will see several options at the top of
 your search results
 
-Both plugins
 |image237|
 
 If you choose just the AuthorityFile you'll see just authorities.
 
-AuthorityFile
 |image238|
 
 .. _column-settings-label:
@@ -16759,7 +16515,6 @@ tables throughout the staff client.
 
 -  *Get there:* Administration > Additional Parameters > Column settings
 
-Column settings
 |image239|
 
 Clicking on the module you'd like to edit tables for will show you the
@@ -16769,30 +16524,25 @@ This area lets you control the columns that show in the table in
 question. If nothing is hidden you will see no check marks in the 'is
 hidden by default' column.
 
-Column settings
 |image240|
 
 And will see all of the columns when viewing the table on its regular
 page.
 
-Columns on currency table
 |image241|
 
 If columns are hidden they will have checks in the 'is hidden by
 default' column.
 
-Column settings
 |image242|
 
 And hidden when you view the table.
 
-Columns on currency table
 |image243|
 
 You can also toggle columns using the 'Show/Hide Columns button in the
 top right of the page
 
-Toggle columns
 |image244|
 
 .. _audio-alerts-label:

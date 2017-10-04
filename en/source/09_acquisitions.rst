@@ -24,7 +24,6 @@ vendors <add-a-vendor-label>`.
 
 On the main acquisitions page you will see your library's funds listed.
 
-Acquisitions Funds Summary
 |image781|
 
     **Note**
@@ -44,7 +43,6 @@ and inactive' above the funds table.
 To see a history of all orders in a fund you can click on the linked
 amount and it will run a search for you.
 
-Breakdown of orders against the FIC Fund
 |image782|
 
 Learn more in the :ref:`Budget/Fund Tracking` section of
@@ -65,14 +63,12 @@ Add a Vendor
 
 To add a vendor click the 'New Vendor' button on the Acquisitions page
 
-New Vendor Button on Acquisitions
 |image783|
 
 The vendor add form is broken into three pieces
 
 -  The first section is for basic information about the Vendor
 
-   Basic Vendor Information
    |image784|
 
    -  Of these fields, only the Vendor name is required, the rest of the
@@ -82,7 +78,6 @@ The vendor add form is broken into three pieces
 -  The second section is for information regarding your contact at the
    Vendor's office
 
-   Vendor Contact Details
    |image785|
 
    -  None of these fields are required, they should only be entered if
@@ -90,7 +85,6 @@ The vendor add form is broken into three pieces
 
 -  The final section is for billing information
 
-   Vendor Ordering/Billing Information
    |image786|
 
    -  To be able to order from a vendor you must make them 'Active'
@@ -127,13 +121,11 @@ To view a vendor's information page you must search for the vendor from
 the Acquisitions home page. Your search can be for any part of the
 Vendor's name:
 
-Vendor Search Results
 |image787|
 
 From the results, click on the name of the vendor you want to view or
 edit
 
-Vendor Information Page
 |image788|
 
 To make changes to the vendor, simply click the 'Edit vendor' button.
@@ -142,7 +134,6 @@ If the vendor has no baskets attached to it then a 'Delete vendor'
 button will also be visible and the vendor can be deleted. Otherwise you
 will see a 'Receive shipment' button.
 
-Receive shipment button
 |image789|
 
 .. _vendor-contracts-label:
@@ -163,13 +154,11 @@ Add a Contract
 At the top of a Vendor Information Page, you will see a 'New Contract'
 button.
 
-New Contract Button
 |image790|
 
 The contract form will ask for some very basic information about the
 contract
 
-New Contract Form
 |image791|
 
     **Important**
@@ -179,12 +168,10 @@ New Contract Form
 
 Once the contract is saved it will appear below the vendor information.
 
-Vendor with contracts
 |image792|
 
 It will also be an option when creating a basket
 
-Contract Pull Down on New Basket Form
 |image793|
 
 .. _managing-suggestions-label:
@@ -200,12 +187,10 @@ preference, patrons may also be able to make purchase suggestions via
 the OPAC. When a suggestion is waiting for library review, it will
 appear on the Acquisitions home page under the vendor search.
 
-Pending suggestions on Acquisitions
 |image794|
 
 It will also appear on the main staff dashboard under the module labels:
 
-Pending suggestions on main page
 |image795|
 
 Clicking 'Manage suggestions' will take you to the suggestion management
@@ -213,7 +198,6 @@ tool. If there are no pending suggestions you can access the suggestion
 management tool by clicking the 'Manage suggestions' link on the menu on
 the left of the Acquisitions page.
 
-Suggestion Management
 |image796|
 
 Your suggestions will be sorted into several tabs: Accepted, Pending,
@@ -234,7 +218,6 @@ For libraries with lots of suggestions, there are filters on the left
 hand side of the Manage Suggestions page to assist in limiting the
 number of titles displayed on the screen.
 
-Suggestion Filtering
 |image797|
 
 Clicking on the blue headings will expand the filtering options and
@@ -247,7 +230,6 @@ clicking '[clear]' will clear all filters and show all suggestions.
     libraries click on the 'Acquisition information' filter and change
     the library.
 
-    Branch filter
     |image798|
 
 When reviewing 'Pending' suggestions you can choose to check the box
@@ -255,7 +237,6 @@ next to the item(s) you want to approve/reject and then choose the
 status and reason for your selection. You can also choose to completely
 delete the suggestion by checking the 'Delete selected' box.
 
-Pending Suggestions
 |image799|
 
 Another option for libraries with long lists of suggestions is to
@@ -263,13 +244,11 @@ approve or reject suggestions one by one by clicking on the title of the
 suggestion to open a summary of the suggestion, including information if
 the item was purchased.
 
-Suggestion Information
 |image800|
 
 Clicking 'edit' to the right of the suggested title or at the to pof the
 suggestion detail page will open a suggestion editing page.
 
-Edit Purchase Suggestion
 |image801|
 
 From this form you can make edits to the suggestion (adding more details
@@ -282,14 +261,12 @@ choose to accept or reject the suggestion on an individual basis.
 Reasons for accepting and rejecting suggestions are defined by the
 `SUGGEST <#suggestauthorized>`__ authorized value.
 
-Reasons for approving or rejecting suggestions
 |image802|
 
 If you choose 'Others...' as your reason you will be prompted to enter
 your reason in a text box. Clicking 'Cancel' to the right of the box
 will bring back the pull down menu with authorized reasons.
 
-Enter reason for 'Others...'
 |image803|
 
 You can also assign this suggestion to a fund.
@@ -307,7 +284,6 @@ matching tab. The status will also be updated on the patron's account in
 the OPAC and an :ref:`email notice <notices-&-slips-label>` will be sent to the patron
 using the template that matches the status you have chosen.
 
-Purchase suggestions in the OPAC
 |image804|
 
 .. _placing-orders-label:
@@ -337,7 +313,6 @@ Create a basket
 To create a basket you must first search for the vendor you're ordering
 from:
 
-New Basket / Add Basket Options
 |image805|
 
 And click the 'New basket' button to the right of the vendor name.
@@ -351,7 +326,6 @@ And click the 'New basket' button to the right of the vendor name.
 After clicking 'New basket' you will be asked to enter some information
 about the order:
 
-Add Basket Form
 |image806|
 
 -  When adding a basket you want to give it a name that will help you
@@ -372,12 +346,10 @@ If you have :ref:`added contracts <add-a-contract-label>` to the vendor
 you're ordering from, you will also have an option to choose which
 contract you're ordering these items under.
 
-Basket with contract options
 |image807|
 
 When finished, click 'Save'
 
-New Empty Basket
 |image808|
 
 Once your basket is created you are presented with several options for
@@ -386,13 +358,11 @@ adding items to the order.
 -  If you are ordering another copy of an existing item, you can simply
    search for the record in your system.
 
-   Search for existing records
    |image809|
 
    -  From the results, simply click 'Order' to be brought to the order
       form.
 
-      Order form
       |image810|
 
       -  All of the details associated with the item will already be
@@ -404,14 +374,12 @@ adding items to the order.
    track of suggestions that have been ordered and received you must
    place the order using this link.
 
-   Approved Suggestions to Order From
    |image811|
 
    -  From the results, click 'Order' next to the item you want to order
       and you will be presented with the order form including a link to
       the suggestion
 
-      Order from a Suggestion
       |image812|
 
       -  From this form you can make changes to the Catalog Details if
@@ -420,7 +388,6 @@ adding items to the order.
       -  When the item appears in your basket it will include a link to
          the suggestion.
 
-         Suggestion Link in basket
          |image813|
 
    -  Orders added to the basket in this way will notify the patron via
@@ -435,26 +402,22 @@ adding items to the order.
    -  After clicking the order link you will be brought to a search page
       that will help you find your subscription
 
-      Subscription order search
       |image814|
 
    -  Your results will appear to the right of the form and each
       subscription will have an 'Order' link to the right
 
-      Subscription results
       |image815|
 
    -  Clicking 'Order' will bring the subscription info in to the order
       form without an 'Add item' section since you are just ordering a
       subscription and an item isn't needed
 
-      Order from subscription
       |image816|
 
 -  To order from a record that can't be found anywhere else, choose the
    'From a new (empty) record.'
 
-   Order a new record
    |image817|
 
    -  You will be presented with an empty form to fill in all of the
@@ -464,20 +427,17 @@ adding items to the order.
    can use the 'From an external source' option that will allow you to
    order from a MARC record found via a Z39.50 search.
 
-   Search for record to add
    |image818|
 
    -  From the results, click the Order link next to the item you want
       to purchase.
 
-      Search Results to Order From
       |image819|
 
    -  If the item you're ordering from an external source looks like it
       might be a duplicate, Koha will warn you and give you options on
       how to proceed.
 
-      Duplicate order warning
       |image820|
 
       -  From the warning, you can choose to order another copy on the
@@ -487,7 +447,6 @@ adding items to the order.
    -  In the order form that pops up, you will not be able to edit the
       catalog details.
 
-      New order from Z39.50 Search
       |image821|
 
 -  The next option for ordering is to order from a staged record (:ref:`learn
@@ -501,7 +460,6 @@ adding items to the order.
 Order from a staged file
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Staged Files to Order From
    |image822|
 
    -  From the list of files you are presented with, choose the 'Add
@@ -563,20 +521,17 @@ preference is set to add an item when ordering you will enter the item
 info next. You need to fill out at least one item record and then click
 the 'Add' button at the bottom left of the item form.
 
-Item order
 |image823|
 
 After clicking the 'Add item' button below the item record the item will
 appear above the form and then you can enter your next item the same way
 (if ordering more than one item).
 
-Item ordered
 |image824|
 
 Once you have entered the info about the item, you need to enter the
 Accounting information.
 
-Accounting Details
 |image825|
 
 -  Quantity is populated by the number of items you've added to the
@@ -615,7 +570,6 @@ Once you have filled in all of the fields click 'Save' to add the item
 to your basket. If your price goes over the amount available in the fund
 you will be presented with a confirmation.
 
-Fund warning
 |image826|
 
 The confirmation warning will allow you order past your fund amount if
@@ -624,13 +578,11 @@ you so choose.
 After an item is added to the basket you will be presented with a basket
 summary.
 
-Basket with item info
 |image827|
 
 If you would like to see more details you can check the 'Show all
 details' checkbox
 
-Show all details
 |image828|
 
 From here, you can edit or remove the items that you have added.
@@ -644,7 +596,6 @@ From here, you can edit or remove the items that you have added.
    -  The catalog record cannot always be deleted. You might see notes
       explaining why.
 
-      Can't delete order line
       |image829|
 
 On the summary page, you also have the option to edit the information
@@ -653,7 +604,6 @@ information' button, to delete the basket altogether by clicking the
 'Delete this basket' button, or to export your basket as a CSV file by
 clicking the 'Export this basket as CSV' button.
 
-Basket Buttons
 |image830|
 
 If you're using EDI for your order you can click the 'Create EDIFACT
@@ -676,7 +626,6 @@ If you have your :ref:`BasketConfirmations`
 preference set to show a confirmation, you will be asked if you are sure
 about closing the basket.
 
-Basket Closure Confirmation
 |image831|
 
 When closing the basket you can choose to add the basket to a group for
@@ -684,7 +633,6 @@ easy printing and retrieval. If you check the box to 'Attach this basket
 to a new basket group' you will be brought to the group list where you
 can print a PDF of the order.
 
-Closed Baskets
 |image832|
 
     **Important**
@@ -692,14 +640,12 @@ Closed Baskets
     A basket with at least one item marked as 'uncertain price' will not
     be able to be closed.
 
-    A basket with items where the price is uncertain
     |image833|
 
 Clicking the 'Uncertain Prices' button will call up a list of items with
 uncertain prices to quick editing. From that list, you can quickly edit
 the items by entering new prices and quantities.
 
-Uncertain Prices
 |image834|
 
     **Important**
@@ -734,20 +680,17 @@ Printing baskets
 When you are finished adding items to your basket, click 'Close this
 Basket.'
 
-Close Basket
 |image835|
 
 You will be asked if you want to 'Attach this basket to a new basket
 group with the same name'. A basket group is necessary if you want to be
 able to print PDFs of your orders.
 
-Create Purchase Order
 |image836|
 
 Your completed order will be listed on the Basket Grouping page for
 printing or further modification.
 
-Basket Grouping
 |image837|
 
 If you closed the basket before generating the EDIFACT order you can do
@@ -759,7 +702,6 @@ Clicking the 'Print' button next to your order will generate a PDF for
 printing, which will have all of your library information followed by
 the items in your order.
 
-Order found on PDF
 |image838|
 
 .. _receiving-orders-label:
@@ -775,31 +717,26 @@ Receiving Orders
 
 Orders can be received from the vendor information page
 
-Receive from Vendor Information
 |image839|
 
 or the vendor search results page
 
-Vendor Search Results
 |image840|
 
 After clicking 'Receive shipment' you will be asked to enter a vendor
 invoice number, a shipment received date, a shipping cost and a budget
 to subtract that shipping amount from.
 
-Receive Shipment
 |image841|
 
 The receive page will list all items still on order with the vendor
 regardless of the basket the item is from.
 
-Receipt Summary
 |image842|
 
 To receive a specific item, click the 'Receive' link to the right of the
 item.
 
-Receive Item Form
 |image843|
 
 From this form you can alter the cost information. You can also choose
@@ -810,7 +747,6 @@ cost' and 'Actual cost' will automatically populate the item record by
 filling in subfield v (Cost, replacement price) and subfield g (Cost,
 normal purchase price) on the item record after saving.
 
-Item record after receipt
 |image844|
 
 You can also make edits to the item record from this form by clicking
@@ -826,32 +762,27 @@ and/or items, click 'Save' to mark the item(s) as received.
     preference set to add or change values on received items those
     changes will take place after you hit 'Save'.
 
-Already Received Items
 |image845|
 
 If the item is no longer available from this vendor you can transfer the
 order to another vendor's basket by clicking the 'Transfer' link to the
 right of the title. This will pop up a vendor search box.
 
-Transfer search
 |image846|
 
 From the results you can click 'Choose' to the right of the vendor you
 would like to reorder this item from.
 
-Transfer vendor
 |image847|
 
 You will then be presented with the open baskets for that vendor to
 choose from. To move the item simply click 'Choose' to the right of the
 basket you would like to add the item to.
 
-Basket choice
 |image848|
 
 Once you have chosen you will be presented with a confirmation message.
 
-Confirm transfer
 |image849|
 
 When you're finished receiving items you can navigate away from this
@@ -866,7 +797,6 @@ your reason and confirm cancellation.
 You will also see that the item is received and/or cancelled if you view
 the basket.
 
-One item marked (rcvd) in basket
 |image850|
 
 .. _invoices-label:
@@ -877,19 +807,16 @@ Invoices
 When orders are received invoices are generated. Invoices can be
 searched by clicking on 'Invoices' in the left of the Acquisitions page.
 
-Invoices page
 |image851|
 
 After searching, your results will appear to the right of the search
 options.
 
-Invoice search results
 |image852|
 
 From the results you can click the 'Details' link to see the full
 invoice or 'Close' to note that the invoice is closed/paid for.
 
-Invoice details
 |image853|
 
 If you're allowing the uploading of acquisitions files with the
@@ -901,13 +828,11 @@ page'
 
 To see or attach new files click the 'Manage invoice files' link
 
-No invoice files
 |image854|
 
 From here you can find a file to upload and/or see the files you have
 already attached.
 
-Invoice files
 |image855|
 
 From the invoice search results you can also merge together two invoices
@@ -916,7 +841,6 @@ invoices you would like to merge and click the 'Merge selected invoices'
 button at the bottom of the page. You will be presented with a
 confirmation screen:
 
-Merge invoices
 |image856|
 
 Click on the row of the invoice number you would like to keep and it
@@ -938,7 +862,6 @@ Upon clicking on the link to 'Late Orders' from the Acquisitions page
 you will be presented with a series of filter options on the left hand
 side. These filters will be applied only closed baskets.
 
-Acquisitions Late Order Filters
 |image857|
 
     **Note**
@@ -949,7 +872,6 @@ Acquisitions Late Order Filters
 Once you filter your orders to show you the things you consider to be
 late you will be presented with a list of these items.
 
-Late Orders
 |image858|
 
 To the right of each late title you will be see a checkbox. Check off
@@ -966,7 +888,6 @@ If you would rather use a different acquisition claim letter (other than
 the default) you can :ref:`create that in the notices module <adding-notices-&-slips-label>`
 and choose it from the menu above the list of late items.
 
-Choose a Claim Letter
 |image859|
 
 .. _acquisition-searches-label:
@@ -977,37 +898,31 @@ Acquisition Searches
 At the top of the various Acquisition pages there is a quick search box
 where you can perform either a Vendor Search or an Order Search.
 
-Acquisition Searches
 |image860|
 
 In the Vendor Search you can enter any part of the vendor name to get
 results.
 
-Vendor Search Results
 |image861|
 
 Using the Orders Search you can search for items that have been ordered
 with or without the vendor.
 
-Order Search Box
 |image862|
 
 You can enter info in one or both fields and you can enter any part of
 the title and/or vendor name.
 
-Order Search Results
 |image863|
 
 Clicking the plus sign to the right of the Vendor search box will expand
 the search and allow you to search for additional fields.
 
-Expanded Orders Search
 |image864|
 
 Clicking Advanced Search to the right of the search button will give you
 all of the order search options available.
 
-Full Order Search
 |image865|
 
 .. _budget/fund-tracking-label:
@@ -1019,13 +934,11 @@ On the main acquisitions page there will be a table showing you all of
 your active funds and a breakdown of what has been ordered or spent
 against them.
 
-Fund Table
 |image866|
 
 Clicking on the linked amounts under spent or ordered will show you a
 summary of the titles ordered/received on that budget.
 
-Titles Spent
 |image867|
 
 .. _edi-process-label:

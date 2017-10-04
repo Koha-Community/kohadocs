@@ -42,7 +42,6 @@ basic editor
 
 -  Click 'New Record'
 
-   New Record Menu
    |image627|
 
    -  Choose the framework you would like to base your record off of
@@ -63,7 +62,6 @@ library in the editor you last used (basic or advanced)
 
 -  Click 'New from Z39.50/SRU'
 
-   Z39.50 Search
    |image628|
 
    -  Search for the item you would like to catalog
@@ -79,21 +77,18 @@ library in the editor you last used (basic or advanced)
    -  From the results you can view the MARC or Card view for the
       records or choose to Import them into Koha
 
-      Z39.50 Search Results
       |image629|
 
       -  In addition to the Import link to the right of each title, you
          can click on the title you're interested in and a menu will pop
          up with links to preview the record and import it
 
-         Import Link Popup on Z39.50 Search Results
          |image630|
 
       -  If you don't find the title you need in your Z39.50 search
          results you can click the 'Try Another Search' button at the
          bottom left of your results
 
-         Try another search
          |image631|
 
 .. _basic-editor-cataloging-label:
@@ -105,7 +100,6 @@ In the basic editor once you've opened a blank framework or imported a
 record via Z39.50 you will be presented with the form to continue
 cataloging
 
-Add MARC Record
 |image632|
 
 -  If you would rather not see the MARC tag numbers you can change the
@@ -127,25 +121,21 @@ Add MARC Record
    fields controlled by authorities you may see a lock symbol to the
    left of the field.
 
-   Authority fields locked against editing
    |image633|
 
    -  If this icon appears you must click the icon to the right of the
       field to search for an existing authority.
 
-      Search for authority
       |image634|
 
    -  From the results list click 'Choose authority' to bring that into
       your catalog record
 
-      Authority search results
       |image635|
 
 -  To duplicate a field click on the 'repeat this tag' icon to the right
    of the tag
 
-   Duplicate a Field
    |image636|
 
    -  To move subfields in to the right order, click the up arrow to the
@@ -155,7 +145,6 @@ Add MARC Record
       copied field, click the delete clone icon) to the right of the
       field
 
-      Clone Subfield
       |image637|
 
    -  To remove a subfield (if there is more than one of the same type),
@@ -163,21 +152,18 @@ Add MARC Record
 
 -  To use a plugin click on the icon to the right of the filed
 
-   Leader Builder Plugin
    |image638|
 
    -  Some fixed fields have editors that will change based on the
       material type you're cataloging (for example the 006 and the 008
       fields)
 
-      008 Plugin
       |image639|
 
 -  Once you've finished, click the 'Save' button at the top and choose
    whether you want to save and view the bib record you have created or
    continue on to add/edit items attached to the record
 
-   Record save options
    |image640|
 
    -  Choosing 'Save and view record' will bring you right to the record
@@ -192,7 +178,6 @@ Add MARC Record
 -  If you are about to add a duplicate record to the system you will be
    warned before saving
 
-   Duplicate Record Warning
    |image641|
 
 .. _advanced-editor-cataloging-label:
@@ -219,19 +204,16 @@ cataloging
 
 Using the search box on the left you can perform Z39.50 searches
 
-Advanced Z39.50 results
 |image642|
 
 And from those Z39.50 results you can view the marc record by clicking
 the link to the right
 
-Advanced Z39.50 results
 |image643|
 
 Clicking 'Import' will bring the record in to the editor where you can
 perform your edits
 
-Advanced Cataloging
 |image644|
 
     **Note**
@@ -251,7 +233,6 @@ you will see red highlighting. To edit the record using only keyboard
 functions the Keyboard shortcuts button will inform you of the necessary
 commands
 
-Advanced Z39.50 results
 |image645|
 
 .. _advanced-cataloging-keyboard-shortcuts-label:
@@ -389,32 +370,27 @@ After cataloging your analytic record (see :ref:`Adding
 Records <adding-records-label>` for more on creating records) click 'Edit' from
 the normal view and choose to 'Link to Host Item'
 
-Link to Host Item
 |image646|
 
 This will prompt you to enter the barcode for the item this record
 should be linked to.
 
-Barcode for Analytic Linking
 |image647|
 
 After entering the item's barcode and clicking 'Select' you will receive
 a confirmation message.
 
-Analytic Link Success
 |image648|
 
 The record will now have the 773 field filled in properly to complete
 the link.
 
-773
 |image649|
 
 To view all of the items tied to the host record, do a search for the
 record, click the Analytics tab on the left and the analytics tied to
 each barcode will be shown under the "Used in" column.
 
-Analytics Tab
 |image650|
 
     **Note**
@@ -425,14 +401,12 @@ Analytics Tab
 You can also see the analytics attached to this record by clicking the
 'Show Analytic' link towards the top of the record in the normal view.
 
-Show Analytics on Bib Record
 |image651|
 
 When looking at the analytic record you will also see a link to the host
 item under the 'Host records' column in the holdings table when viewing
 the 'Analytics' tab.
 
-Host Record
 |image652|
 
 .. _analytics-enhanced-workflow-label:
@@ -450,34 +424,29 @@ After cataloging your original record (see :ref:`Adding
 Records <adding-records-label>` for more on creating records) click 'New' from
 the normal view and choose to 'New child record.'
 
-New child record
 |image653|
 
 This will open a new blank record for cataloging. The blank record will
 only have the 773 field filled in properly to complete the link once the
 record is saved.
 
-773
 |image654|
 
 To view all of the items tied to the host record, do a search for the
 record, click the Analytics tab on the left and the analytics tied to
 each barcode will be shown under the "Used in" column.
 
-Analytics Tab
 |image655|
 
 You can also see the analytics attached to this record by clicking the
 'Show Analytic' link towards the top of the record in the normal view.
 
-Show Analytics on Bib Record
 |image656|
 
 When looking at the analytic record you will also see a link to the host
 item under the 'Host records' column in the holdings table when viewing
 the 'Analytics' tab.
 
-Host Record
 |image657|
 
 .. _editing-analytics-label:
@@ -491,7 +460,6 @@ To do this, go to the analytic record and click the 'Edit' button and
 choose to 'Edit items'. To the left of each item you will see two
 options.
 
-Edit Analytic Item Record
 |image658|
 
 -  Clicking 'Edit in Host' will allow you to edit the item on the host
@@ -508,25 +476,21 @@ Editing Records
 To edit a record you can click 'Edit Biblio' from the search results on
 the cataloging page
 
-Edit Biblio Option on Search Results
 |image659|
 
 or by clicking the Edit button on the Bibliographic Record and choosing
 'Edit Record'
 
-Edit Record Option on Bibliographic Record
 |image660|
 
 The record will open in the MARC editor
 
-Editing MARC Record
 |image661|
 
 The alternative is to search via Z39.50 to overlay your record with a
 fuller record found at another library. You can do this by choosing
 'Replace Record via Z39.50' from the Edit menu.
 
-Replace via Z39.50
 |image662|
 
 Once you choose that you will be brought to a Z39.50 search window to
@@ -540,7 +504,6 @@ have either :ref:`OPACLocalCoverImages` and/or
 :ref:`LocalCoverImages` set to 'Display' by choosing
 'Upload Image' from the menu.
 
-Upload Image
 |image663|
 
 Choosing to 'Upload Image' will take you to the :ref:`Upload Local Cover
@@ -557,13 +520,11 @@ edit the necessary pieces to create a new record. To duplicate an
 existing record click 'Edit as New (Duplicate)' from the Edit menu on
 the Bibliographic Record
 
-Edit as New (Duplicate) Bibliographic Record
 |image664|
 
 This will open a new MARC record with the fields filled in with the
 values from the original Bibliographic Record.
 
-New Duplicate Record
 |image665|
 
 .. _attaching-files-to-records-label:
@@ -624,7 +585,6 @@ deleted after the merge. If the records were created using different
 frameworks, Koha will also ask you what Framework you would like the
 newly merged record to use.
 
-Choose Primary Record for Merge
 |image666|
 
 You will be presented with the MARC for all of the records (each
@@ -634,34 +594,29 @@ don't want in the final (destination) record and then move on to the
 second tab to choose which fields should be in the final (destination)
 record.
 
-Merging Records
 |image667|
 
 Should you try to add a field that is not repeatable two times (like
 choosing the 245 field from both record #1 and #2) you will be presented
 with an error
 
-Non-repeatable Error
 |image668|
 
 Below the records you are merging is an option to enter fields to report
 on. This will allow you to control what fields you see on the merge
 confirmation page:
 
-Merge report fields
 |image669|
 
 If you enter nothing you will be presented with a confirmation of
 biblionumbers only
 
-Merge report
 |image670|
 
 If you enter fields you will see those on the confirmation page (you can
 set defaults with the :ref:`MergeReportFields`
 preference)
 
-Merge report
 |image671|
 
 Once you have completed your selections click the 'merge' button. The
@@ -689,14 +644,12 @@ Deleting Records
 To delete a bibliographic record simply choose the 'Edit' button and
 select 'Delete record'
 
-Delete record
 |image672|
 
 Bibliographic records can only be deleted one all items have been
 deleted. If you try to delete a bibliographic record with items still
 attached you will see that the delete option is grayed out.
 
-Record with items still attached
 |image673|
 
 .. _item-records-label:
@@ -718,18 +671,15 @@ blank item record so that you can attach an item to the bibliographic
 record. You can also click 'Add/Edit Items' from the cataloging search
 results
 
-Add/Edit Items Option on Search Results
 |image674|
 
 or you can add new item at any time by clicking 'New' on the
 bibliographic record and choosing 'New Item'
 
-New Item Button
 |image675|
 
 The item edit form will appear:
 
-Add item form
 |image676|
 
 At the very least, if you plan on circulating the item, the following
@@ -766,7 +716,6 @@ mandatory in the :ref:`framework <marc-bibliographic-frameworks-label>` you're u
 then they will appear in red with a 'required' label. The item will not
 save until the required fields are filled in.
 
-Required Item Subfield
 |image677|
 
 -  **Note**
@@ -777,7 +726,6 @@ Required Item Subfield
 
 Below the add form there are 3 buttons for adding the item
 
-Add Item Buttons
 |image678|
 
 -  Add Item will add just the one item
@@ -790,13 +738,11 @@ Add Item Buttons
 
 Your added items will appear above the add form once submitted
 
-Items
 |image679|
 
 Your items will also appear below the bibliographic details on the bib
 record display.
 
-List of Items on the Bib Record
 |image680|
 
 If you have
@@ -804,14 +750,12 @@ If you have
 set to 'Display' then there will also be a link to print a quick spine
 label next to each item.
 
-List of Items on the Bib Record with a Print Label link
 |image681|
 
 You can also filter the contents of your holdings table by clicking the
 'Activate filters' links. This will show a row at the top where you can
 type in any column to filter the results in the table.
 
-Filter holdings
 |image682|
 
 .. _editing-items-label:
@@ -823,29 +767,24 @@ Items can be edited in several ways.
 
 -  Clicking 'Edit' and 'Edit Items' from the bibliographic record
 
-   Edit Items Menu Option
    |image683|
 
    Which will open up a list of items where you can click the 'Actions'
    button to the left of the specific item you would like to edit and
    choose 'Edit'.
 
-   Edit individual items
    |image684|
 
 -  Clicking 'Edit Items' beside the item on the 'Items' tab
 
-   Items Tab
    |image685|
 
    Which will open up the editor on the item you'd like to edit
 
-   Edit individual items
    |image686|
 
 -  Clicking 'Edit' and then 'Edit items in batch'
 
-   Edit items in a batch
    |image687|
 
    This will open up the :ref:`batch item modification
@@ -858,7 +797,6 @@ Items can be edited in several ways.
    can then check off the items you would like to edit and click 'Modify
    selected items' at the top of the list.
 
-   Editing selected items
    |image688|
 
 -  You can click 'Edit' to the right of each item in the Holdings
@@ -885,19 +823,16 @@ Instead clicking on the item barcode on the checkout summary or checkin
 history will bring you to an item summary. You can also get to the item
 summary by clicking on the Items tab to the left of the bib detail page.
 
-Item Edit
 |image689|
 
 From this view you can mark an item lost by choosing a lost status from
 the pull down and clicking the 'Set Status' button.
 
-Edit Lost Status
 |image690|
 
 You can also mark an item as damaged by choosing a damaged status from
 the pull down and clicking the 'Set Status' button.
 
-Edit Damaged Status
 |image691|
 
 .. _duplicating-items-label:
@@ -908,7 +843,6 @@ Duplicating Items
 You can easily duplicate each item by clicking the 'Action' button the
 left of each item on the edit items screen
 
-Edit individual items
 |image692|
 
 From here you can choose to 'Duplicate' the item and this will populate
@@ -922,7 +856,6 @@ Item Information
 To the left of every bibliographic record there is a tab to view the
 items.
 
-Items Tab
 |image693|
 
 Clicking that tab will give you basic information about the items. From
@@ -937,7 +870,6 @@ In the History section you will see information about the check out
 history of the item and if you ordered the item via the acquisitions
 module then this section will include information about the order.
 
-History with order info
 |image694|
 
 If the Order or Accession date is linked, clicking it will bring you to
@@ -951,13 +883,11 @@ Moving Items
 Items can be moved from one bibliographic record to another using the
 Attach Item option
 
-Attach Item Option
 |image695|
 
 Visit the bibliographic record you want to attach the item to and choose
 'Attach Item' from the 'Edit' menu.
 
-Attach Item Form
 |image696|
 
 Simply enter the barcode for the item you want to move and click
@@ -977,14 +907,12 @@ one item you can do this by opening up the detail page for the bib
 record and clicking the 'Edit' button at the top. From there you can
 choose to 'Edit items'.
 
-'Edit Items' menu option
 |image697|
 
 You will be presented with a list of items and next to each one will be
 a link labeled 'Delete'. Click that link and if the item is not checked
 out it will delete that item.
 
-Delete link on the left
 |image698|
 
 If you know that all of the items attached to your record are not
@@ -997,7 +925,6 @@ checkboxes appear to the left of each item on the detail display. You
 can then check off the items you would like to delete and click 'Delete
 selected items' at the top of the list.
 
-Deleting selected items
 |image699|
 
 Finally you can use the :ref:`batch delete tool <batch-item-deletion-label>` to
@@ -1013,14 +940,12 @@ the patron information depending on your settings), but each item also
 has its own circulation history page. To see this, click on the 'Items'
 tab to the left of the record you are viewing.
 
-Items tab
 |image700|
 
 Below the 'History' heading is a link to 'View item's checkout history,'
 clicking that will open up the item's history which will look slightly
 different from the bibliographic record's history page.
 
-Item Specific Circulation History
 |image701|
 
 .. _authorities-label:
@@ -1041,14 +966,12 @@ To add a new authority record you can either choose the authority type
 from the 'New Authority' button or search another library by clicking
 the 'New from Z39.50' button.
 
-New Authority Record Options
 |image702|
 
 If you choose to enter a new authority from scratch, the form that
 appears will allow you to enter all of the necessary details regarding
 your authority record.
 
-New Authority Record
 |image703|
 
 To expand collapsed values simply click on the title and the subfields
@@ -1059,7 +982,6 @@ the ellipsis (...) to the right of the field.
 When linking authorities to other headings, you can use the authority
 finder plugin by clicking the ellipsis (...) to the right of the field.
 
-Authority search plugin
 |image704|
 
 From there you can search your authority file for the authority to link.
@@ -1067,25 +989,21 @@ If you can't find the authority to link, you can click the 'Create new'
 button and add the necessary authority for the link. This plugin also
 allows for you to choose the link relationship between the authorities.
 
-Authority relationships
 |image705|
 
 If you choose to search another library for the authority record you
 will be presented with a search box
 
-Authority Z39.50 Search
 |image706|
 
 From the results you can choose the 'Import' link to the right of the
 record you would like to add to Koha
 
-Authority Z39.50 Results
 |image707|
 
 You will then be presented with the form to edit the authority before
 saving it to your system
 
-Imported Authority
 |image708|
 
 .. _searching-authorities-label:
@@ -1096,7 +1014,6 @@ Searching Authorities
 From the authorities page you can search for existing terms and the
 bibliographic records they are attached to.
 
-Authority Search
 |image709|
 
 From the results you will see the authority record, how many
@@ -1105,20 +1022,17 @@ the ability to :ref:`edit <editing-authorities-label>`, :ref:`merge <merging-aut
 and :ref:`delete <editing-authorities-label>` (if there are no bibliographic records
 attached).
 
-Authority Search Results
 |image710|
 
 Clicking on the Details link to the right of the authority record
 summary will open the full record and the option to edit the record.
 
-Authority Record
 |image711|
 
 If the authority has See Alsos in it you will see those broken out on
 the search results, clicking the linked headings will run a search for
 that heading instead.
 
-See Also in Authorities
 |image712|
 
 .. _editing-authorities-label:
@@ -1131,7 +1045,6 @@ search results and then clicking the 'Edit' button above the record. Or
 by clicking on the 'Edit' link to the left of the authority on the
 search results.
 
-Edit Authority Record
 |image713|
 
 Once you've made the necessary edits, simply click 'Save' and
@@ -1156,13 +1069,11 @@ If you have duplicate authority records you can merge them together by
 clicking the 'Merge' link, found in the actions menu, next to two
 results on an authority search.
 
-Duplicate authorities results
 |image714|
 
 After clicking 'Merge' on the first result you will see that authority
 listed at the top of the results.
 
-Merging authorities results
 |image715|
 
 Next you need to click 'Merge' next to the second result you'd like to
@@ -1171,7 +1082,6 @@ merge.
 You will be asked which of the two records you would like to keep as
 your primary record and which will be deleted after the merge.
 
-Merging authorities
 |image716|
 
 You will be presented with the MARC for both of the records (each
@@ -1181,14 +1091,12 @@ the fields you don't want in the final (destination) record and then
 move on to the second tab to choose which fields should be in the final
 (destination) record.
 
-Authorities to merge
 |image717|
 
 Once you have completed your selections click the 'Merge' button. The
 primary record will now contain the data you chose for it and the second
 record will be deleted.
 
-Merged authority
 |image718|
 
 .. _cataloging-guides-label:
@@ -1429,13 +1337,11 @@ in MARCEdit.
 -  Your original file will automatically be in the input; ensure
    MarcBreaker is chosen, and then click "Execute"
 
-   MarcBreaker
    |image719|
 
 -  You will be presented with a summary of the records processed at the
    bottom of the screen
 
-   MarcBreaker Summary
    |image720|
 
 -  Click 'Edit Records' to continue on to adding item records
@@ -1443,17 +1349,14 @@ in MARCEdit.
 -  Your screen will be replaced with a larger screen containing the MARC
    records
 
-   MARC file for editing
    |image721|
 
 -  Click on Tools > Add/Edit Field
 
-   Add/Delete Field
    |image722|
 
 -  Enter in the Koha specific item info
 
-   Add 942 Field
    |image723|
 
    -  In the Field box, type 942
@@ -1467,7 +1370,6 @@ in MARCEdit.
 
 -  Enter in the item record data
 
-   Add 952 Field
    |image724|
 
    -  In the Field box, type 952
@@ -1501,7 +1403,6 @@ in MARCEdit.
 
 -  Click on File > Compile into MARC
 
-   Compile into MARC
    |image725|
 
 -  Choose where to save your file

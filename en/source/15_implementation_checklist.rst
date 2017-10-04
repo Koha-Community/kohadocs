@@ -703,7 +703,6 @@ Using the OPAC system preferences you can customize various regions, the
 following graphic will define what preferences update each of the
 regions in the Bootstrap theme.
 
-OPAC Editable Regions
 |image1068|
 
 .. _enhanced-content-configuration-label:

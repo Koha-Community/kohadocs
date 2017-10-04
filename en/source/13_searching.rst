@@ -187,7 +187,6 @@ The search box that library staff and library patrons will see most
 often is the persistent search box at the top of the page. Koha
 interprets the searches as keyword searches.
 
-Koha search box
 |image1037|
 
 To start a search, you enter a word or multiple words in the search box.
@@ -206,25 +205,21 @@ Suppose you want to find material about how libraries are using mashups.
 You'll select the major words and enter them into the persistent search
 box.
 
-Keyword Search
 |image1038|
 
 The response to this search is:
 
-Results
 |image1039|
 
 The order of the words does not affect the retrieval results, so you
 could also enter the search as "mashups library". The response to this
 search is results
 
-Results
 |image1040|
 
 Too many words in the search box will find very few matches, as the
 following example illustrates:
 
-No results found
 |image1041|
 
 .. _advanced-searching-label:
@@ -236,7 +231,6 @@ When you can't find the most appropriate material with a general search,
 you can move to the Advanced Search page by clicking on the Search
 option on the persistent toolbar.
 
-Koha Menu
 |image1042|
 
 The Advanced Search page offers many ways to limit the results of your
@@ -252,7 +246,6 @@ found on the Administration > System Preferences > Searching page. The
 option called :ref:`expandedSearchOption` must be
 set to 'show' to see the following display.
 
-Advanced Search Options
 |image1043|
 
 In this section you can choose among the many indexes by clicking on the
@@ -266,10 +259,8 @@ your search.
 
 A sample search is shown next, followed by its results:
 
-Advanced Search
 |image1044|
 
-Results from Advanced Search
 |image1045|
 
 When you use the Boolean operators to broaden or narrow a search,
@@ -283,7 +274,6 @@ follows the operator.
 Note: If you leave this :ref:`expandedSearchOption`
 set to 'don't show', this is the display you will see:
 
-Fewer Search Options
 |image1046|
 
 The Advanced Search page then shows the multiple kinds of limits that
@@ -291,13 +281,11 @@ can be applied to your search results. Either check a box or select from
 the drop down menus to narrow your search. You will type the year, year
 range, or a 'greater than (>)' or 'less than (<)' year.
 
-Other Advanced Search Options
 |image1047|
 
 Finally, you can choose how the results will be sorted. The pre-defined
 sort options are in the final area of the Advanced Search screen.
 
-Sort Results By
 |image1048|
 
 The default sort is by relevance, although you can choose to sort by
@@ -543,31 +531,22 @@ and the word order make a difference in search results. Only the results
 count and the search itself is in these examples. The search executed
 will always be between the single quotes.
 
-Sample Search 1
 |image1049|
 
-Sample Search 2
 |image1050|
 
-Sample Search 3
 |image1051|
 
-Sample Search 4
 |image1052|
 
-Sample Search 5
 |image1053|
 
-Sample Search 6
 |image1054|
 
-Sample Search 7
 |image1055|
 
-Sample Search 8
 |image1056|
 
-Sample Search 9
 |image1057|
 
 You can also choose to use limiters in your search query. Some common
@@ -578,7 +557,6 @@ in the following examples. In all
 
 *By Date: su=supreme court and yr,st-numeric=>2000*
 
-Sample Search 10
 |image1058|
 
 When you limit by date, you can use the '>' (greater than), '<' (less
@@ -586,7 +564,6 @@ than), '=' (equal), or 'yyyy-yyyy' (range) symbols.
 
 *By Item Type: su=nursing and itype:BK*
 
-Sample Search 11
 |image1059|
 
 Each library will have a different set of item types defined in their
@@ -616,7 +593,6 @@ type limiters follow.
 
 *By format: su=supreme court not l-format:sr*
 
-Sample Search 12
 |image1060|
 
 The format limiters are derived from a combination of LDR, 006 and 007
@@ -642,7 +618,6 @@ positions. The formats that are currently defined are the following.
 
 *By content type: su=supreme court not ctype:l*
 
-Sample Search 13
 |image1061|
 
 The content types are taken from the 008 MARC tag, positions 24-27.

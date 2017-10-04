@@ -38,13 +38,11 @@ Adding Courses
 Once you have completed your set up for Course Reserves you can start
 creating courses and adding titles to the reserve list.
 
-Course Reserves Admin
 |image726|
 
 From the main course reserves page you can add a new course by clicking
 the 'New course' button at the top left.
 
-Add a new course
 |image727|
 
 Your new course will need a Department, Number and Name at the bare
@@ -53,7 +51,6 @@ number and term. To link an instructor to this course simply start
 typing their name and Koha will search your patron database to find you
 the right person.
 
-Instructor search
 |image728|
 
 Once the instructor you want appears just click their name and they will
@@ -61,7 +58,6 @@ be added. You can repeat this for all instructors on this course. Each
 instructor will appear above the search box and can be removed by
 clicking the 'Remove' link to the right of their name.
 
-Instructors
 |image729|
 
 If you would like your course to show publicly you'll want to be sure to
@@ -70,7 +66,6 @@ check the 'Enabled?' box before saving your new course.
 Once your course is saved it will show on the main course reserves page
 and be searchable by any field in the course.
 
-Courses
 |image730|
 
 .. _adding-reserve-materials-label:
@@ -81,25 +76,21 @@ Adding Reserve Materials
 Before adding reserve materials you will need at least one course to add
 them to. To add materials visit the Course Reserves module.
 
-Courses
 |image731|
 
 Click on the title of the course you would like to add materials to.
 
-Course administration
 |image732|
 
 At the top of the course description click the 'Add reserves' button to
 add titles to this reserve list. You will be asked to enter the barcode
 for the reserve item.
 
-Add item to reserve
 |image733|
 
 After you are done scanning the barcodes to add to the course you can
 see them on the course page
 
-Course with reserves
 |image734|
 
 .. _course-reserves-in-the-opac-label:
@@ -110,18 +101,15 @@ Course Reserves in the OPAC
 Once you have enabled Course Reserves and added courses you will see a
 link to Course Reserves below your search box in the OPAC.
 
-Course Reserves Link
 |image735|
 
 Clicking that link will show you your list of enabled courses (if you
 have only one course you will just see the contents of that one course).
 
-Course list in the OPAC
 |image736|
 
 You can search course reserves by any field (course number, course name,
 instructor name, department) that is visible in the list of courses.
 Clicking a course name will show you the details and reserve items.
 
-Course listing
 |image737|

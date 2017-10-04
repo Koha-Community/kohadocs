@@ -19,7 +19,6 @@ Once there you can add a new patron.
 
 -  Click 'New patron'
 
-   Choose patron type
    |image407|
 
 -  The fields that appear on the patron add form can be controlled by
@@ -28,7 +27,6 @@ Once there you can add a new patron.
 
 -  First enter the identifying information regarding your patron
 
-   Add Patron Form
    |image408|
 
    -  Required fields are defined in the
@@ -70,7 +68,6 @@ Once there you can add a new patron.
 
 -  Next enter the contact information
 
-   Patron Contact Information
    |image409|
 
    -  For contact information, note that the primary phone and email
@@ -82,7 +79,6 @@ Once there you can add a new patron.
 -  If this patron is a child, you will be asked to attach the child
    patron to an adult patron
 
-   Guarantor Linking
    |image410|
 
    -  Click 'Set to Patron' to search your system for an existing patron
@@ -96,14 +92,12 @@ Once there you can add a new patron.
 -  If this patron is a professional, you will be asked to attach the
    patron to an organizational patron
 
-   Organization Linking
    |image411|
 
    -  Click 'Set to Patron to search your system for an existing patron
 
 -  Each patron can have an alternate contact
 
-   Alternate Contact
    |image412|
 
    -  An alternate contact could be a parent or guardian. It can also be
@@ -112,7 +106,6 @@ Once there you can add a new patron.
 -  The library management section includes values that are used within
    the library
 
-   Library Management
    |image413|
 
    -  The card number field is automatically calculated if you have the
@@ -133,7 +126,6 @@ Once there you can add a new patron.
 
 -  Next, the Library Setup section includes additional library settings
 
-   Library set-up options
    |image414|
 
    -  The registration date will automatically be filled in with today's
@@ -150,7 +142,6 @@ Once there you can add a new patron.
       will appear when the circulation staff goes to check an item out
       to the patron
 
-      Sample Circulation Note
       |image415|
 
    -  The Staff/OPAC asks for the username and password to be used by
@@ -164,14 +155,12 @@ Once there you can add a new patron.
 -  If you have set :ref:`additional patron
    attributes <patron-attribute-types-label>` up, these will appear next
 
-   Additional Patron Attributes
    |image416|
 
 -  Finally, if you have
    :ref:`EnhancedMessagingPreferences` set
    to 'allow,' you can choose the messaging preferences for this patron.
 
-   Patron Messaging Settings
    |image417|
 
    -  These notices are:
@@ -212,7 +201,6 @@ Once there you can add a new patron.
 If the system suspects this patron is a duplicate of another it will
 warn you.
 
-Patron Duplicate Suspected
 |image418|
 
     **Note**
@@ -228,7 +216,6 @@ are requiring that the birth date be filled in, Koha will warn you if
 the patron you're adding is too old or young for the patron category you
 have selected:
 
-Patron age warning
 |image419|
 
 .. _add-a-staff-patron-label:
@@ -257,12 +244,10 @@ out, but instead tracks an in house use of the item. To use this method
 for tracking in house use you first will need a :ref:`patron
 category <patron-categories-label>` set up for your Statistical patron.
 
-In House Patron Category
 |image420|
 
 Next, you will need to create a new patron of the statistical type
 
-New In House Patron
 |image421|
 
 Next, follow the steps put forth in the ':ref:`Add a new
@@ -288,14 +273,12 @@ change.
 
 -  Click the 'Duplicate' button at the top of their record
 
-   The Duplicate Button is the 3rd one in
    |image422|
 
 -  All of the fields with the exception of first name, card number,
    username and password have been duplicated. Fill in the missing
    pieces and click 'Save'
 
-   Duplicating Patron Form
    |image423|
 
    -  **Note**
@@ -306,7 +289,6 @@ change.
 
 -  You will be brought to your new patron
 
-   Newly created patron
    |image424|
 
 .. _add-patron-images-label:
@@ -322,13 +304,11 @@ If the preference is set to 'Allow' you will see a placeholder image
 under the patron's name and box to upload a patron image below the basic
 contact information.
 
-Add patron image
 |image425|
 
 In the 'Upload Patron Image' box click 'Browse' to find the image on
 your computer and 'Upload' to load the image on to the patron record.
 
-Patron image
 |image426|
 
     **Important**
@@ -347,7 +327,6 @@ Patrons in Koha can be edited using one of many edit buttons.
 -  To edit the entire patron record simply click the 'Edit' button at
    the top of the patron record.
 
-   Main Patron Edit Menu
    |image427|
 
 -  Patron passwords are not recoverable. The stars show on the patron
@@ -356,7 +335,6 @@ Patrons in Koha can be edited using one of many edit buttons.
    reset their password. To change the patron's password, click the
    'Change Password' button
 
-   Patron Password Change Form
    |image428|
 
    -  Koha cannot display existing passwords. Leave the field blank to
@@ -369,13 +347,11 @@ Patrons in Koha can be edited using one of many edit buttons.
 -  To edit a specific section of the patron record (for example the
    Library Use section) click the 'Edit' link below the section
 
-   Library Use Section of Patron Record
    |image429|
 
 -  A patron image can be added by browsing for the image on your machine
    from the 'Manage Patron Image' section
 
-   Manage Patron Image Form
    |image430|
 
    -  This form will not appear if you have the
@@ -388,27 +364,23 @@ Patrons in Koha can be edited using one of many edit buttons.
 -  Patrons can also be blocked from checking items out by setting Patron
    Flags
 
-   Patron Warning Flags
    |image431|
 
    -  If you would like your circulation staff to confirm a patron's
       address before checking items out to the patron, you can see the
       'Gone no Address' flag
 
-      Patron's address in doubt
       |image432|
 
    -  If the patron reports that they have lost their card you can set
       the 'Lost Card' flag to prevent someone else from using that card
       to check items out
 
-      Patron lost card
       |image433|
 
    -  If you would like to bar a patron from the library you can add a
       manual restriction
 
-      Add manual restriction
       |image434|
 
       -  **Note**
@@ -419,7 +391,6 @@ Patrons in Koha can be edited using one of many edit buttons.
    -  If you enter in a date and/or note related to the restriction you
       will see that in the restricted message as well
 
-      Restricted until message
       |image435|
 
 -  Children patrons do not become adults automatically in Koha unless
@@ -427,13 +398,11 @@ Patrons in Koha can be edited using one of many edit buttons.
    upgrade a child patron to and adult patron category manually go to
    the 'More' menu and choose 'Update Child to Adult Patron'
 
-   Update Child to Adult Patron
    |image436|
 
    -  You will then be presented with a pop up window asking which one
       of your adult patron categories this Child should be updated to
 
-      Choose Adult Category to Update To
       |image437|
 
 .. _managing-patron-self-edits-label:
@@ -448,7 +417,6 @@ there are patron edits awaiting action they will appear on the staff
 client dashboard below the modules list (along with other items awaiting
 action).
 
-Patron requests waiting
 |image438|
 
     **Note**
@@ -460,7 +428,6 @@ Patron requests waiting
 When you click the 'Patrons requesting modifications' link you will be
 brought to a list of patrons with requested changes.
 
-Manage patron updates
 |image439|
 
 From here you can 'Approve' and apply the changes to the patron record,
@@ -496,14 +463,12 @@ type <add-a-staff-patron-label>` open
 -  On the patron record click More and choose Set Permissions to alter
    patron permissions
 
-   Set Patron Permissions
    |image440|
 
 -  You will be presented with a list of preferences, some of which can
    be expanded by clicking the plus sign to the left of the section
    title.
 
-   Patron Permissions
    |image441|
 
 .. _patron-permissions-defined-label:
@@ -1203,13 +1168,11 @@ their Guarantors additional information will appear on their record.
 
 -  A child patron will list their Guarantor
 
-   Guarantor listed and linked from the child record
    |image443|
 
 -  On the Guarantor's record, all children and/or professionals will be
    listed
 
-   Guarantees listed on the Guarantor's profile
    |image444|
 
 .. _circulation-summary-label:
@@ -1220,31 +1183,26 @@ Circulation Summary
 Below the patron's information on the details screen is a tabbed display
 of the items they have checked out, overdue, and on hold.
 
-Checkout summary
 |image445|
 
 If they have family at the library staff can see what the other family
 members have checked out.
 
-Relative checkouts
 |image446|
 
 The Restrictions tab will show for all patrons. If the patron has no
 restrictions you will see that on the tab.
 
-Patron restrictions
 |image447|
 
 If the patron has restrictions on their account the tab will show the
 number and the description.
 
-Patron restrictions
 |image448|
 
 Using the 'Add manual restriction' button you can add a restriction to
 the patron record from here.
 
-Add restriction
 |image449|
 
 .. _fines-label:
@@ -1257,7 +1215,6 @@ Contrary to its name, the Fines tab does not just show fine data, it
 also shows membership fees, rental fees, reserve fees and any other
 charge you may have for patrons.
 
-Patron Accounting Summary
 |image450|
 
 The table will show you the following columns:
@@ -1318,7 +1275,6 @@ Pay/Reverse Fines
 Each line item can be paid in full (or written off) using the 'Pay
 Fines' tab.
 
-Paying Fines
 |image451|
 
 -  Each line item can be paid in full, partially paid, or written off.
@@ -1333,7 +1289,6 @@ Paying Fines
    -  The full amount of the fine will be populated for you in the
       "Collect From Patron" box
 
-      Pay fine
       |image452|
 
    -  Click "Confirm"
@@ -1348,7 +1303,6 @@ Paying Fines
    -  Enter the amount you are collecting from the patron in the
       "Collect From Patron" box
 
-      Pay partial fine
       |image453|
 
    -  Click "Confirm"
@@ -1364,7 +1318,6 @@ Paying Fines
       from Patron." The sum of all fines is shown in "Total Amount
       Outstanding"
 
-      Pay Amount
       |image454|
 
    -  Click "Confirm"
@@ -1377,12 +1330,10 @@ Paying Fines
    -  Check the selection boxes next to the fines you wish to pay, click
       "Pay Selected"
 
-      Select lines to pay
       |image455|
 
    -  Enter an amount to pay towards the fines.
 
-      Pay Selected
       |image456|
 
    -  Click "Confirm"
@@ -1407,13 +1358,11 @@ Paying Fines
 -  If you accidentally mark and item as paid, you can reverse that line
    item by clicking 'Reverse' to the right of the line
 
-   Reverse Link
    |image457|
 
    -  Once clicked a new line item will be added to the account, showing
       the payment as reversed
 
-      Reversed Payment
       |image458|
 
 .. _creating-manual-invoices-label:
@@ -1424,7 +1373,6 @@ Creating Manual Invoices
 For fees that are not automatically charged, librarians can create a
 manual invoice
 
-Create Manual Invoice
 |image459|
 
 -  First choose the type of invoice you would like to create
@@ -1456,7 +1404,6 @@ Creating Manual Credits
 Manual credits can be used to pay off parts of fines, or to forgive a
 fine amount.
 
-Create Manual Credit
 |image460|
 
 -  First choose the type of credit you'd like to apply
@@ -1480,7 +1427,6 @@ link will print an invoice for the line item that includes the date and
 description of the line item along with the total outstanding on the
 account.
 
-Sample Invoice
 |image461|
 
 .. _routing-lists-label:
@@ -1491,13 +1437,11 @@ Routing Lists
 A list of all of the serial routing lists the patron belongs to will be
 accessible via the 'Routing Lists' tab on the patron record.
 
-Routing Lists
 |image462|
 
 On this tab you will be able to see and edit all of the routing lists
 that this patron is on.
 
-Patron's routing lists
 |image463|
 
 .. _circulation-history-label:
@@ -1512,14 +1456,12 @@ preference set to 'Allow' and the patron has decided that the library
 cannot keep this information this tab will only show currently checked
 out items.
 
-Patron Circulation History
 |image464|
 
 If you would like to export a list of barcodes for the items checked in
 today you can find that option under the More menu on the top right of
 the page.
 
-Export today's checkins
 |image465|
 
 This will generate a text file with one barcode per line.
@@ -1535,7 +1477,6 @@ show when changes were made to the patron record. If you also have
 turned on the :ref:`IssueLog` and :ref:`ReturnLog`
 you will see checkins and outs on this screen as well.
 
-Changes to Patron
 |image466|
 
 -  The Librarian field shows the patron number for the librarian who
@@ -1558,20 +1499,17 @@ when :ref:`adding <add-a-new-patron-label>` or :ref:`editing <editing-patrons-la
 patron. This tab will show the messages that have been sent and those
 that are queued to be sent:
 
-Patron Notices Tab
 |image467|
 
 Clicking on the message title will expand the view to show you the full
 text of the message that was sent.
 
-Full message text
 |image468|
 
 If the message has a status of sent or failed you will have the option
 to 'resend' the message to the patron by clicking the 'resentd button
 found under the status.
 
-Resend notice
 |image469|
 
 .. _statistics-label:
@@ -1583,7 +1521,6 @@ Depending on what you set for the values of your
 :ref:`StatisticsFields` system preference, you can see
 statistics for one patron's circulation actions.
 
-Patron's Statistics
 |image470|
 
 .. _files-label:
@@ -1594,18 +1531,15 @@ Files
 If you set the :ref:`EnableBorrowerFiles` preference
 to 'Do' the Files tab will be visible on the patron information page.
 
-Patron Files Tab
 |image471|
 
 From here you can upload files to attach to the patron record.
 
-Upload patron files
 |image472|
 
 All files that are uploaded will appear above a form where additional
 files can be uploaded from.
 
-List of files on the patron record
 |image473|
 
 .. _purchase-suggestions-label:
@@ -1664,18 +1598,15 @@ on the left of the patron record
 If the patron can have a discharge generated then it will have a button
 that says 'Generate discharge'
 
-Generate discharge
 |image474|
 
 If not then you'll see an error explaining why you can't discharge the
 patron.
 
-Cannot discharge
 |image475|
 
 Once the letter is generated you will have a PDF to download
 
-Discharge letter
 |image476|
 
     **Note**
@@ -1701,14 +1632,12 @@ Clicking on the link to the Patron module will bring you to a
 search/browse screen for patrons. From here you can search for a patron
 by any part of their name or their card number.
 
-Patron Search
 |image477|
 
 Clicking the small plus sign [+] to the right of the search box will
 open up an advanced patron search with more filters including the
 ability to limit to a specific category and/or library.
 
-Expanded patron search
 |image478|
 
 You can also filter your patron results using the search options on the
@@ -1719,7 +1648,6 @@ left hand side of the page.
 Depending on what you have chosen for the 'Search fields' you can search
 for patrons in various different ways.
 
-Patron Search Fields
 |image479|
 
 -  Standard:
@@ -1768,11 +1696,9 @@ You can also choose to either search for fields that start with the
 string you entered or contain the string. Choosing 'Contains' will work
 like a wildcard search.
 
-Contains or Starts with Search
 |image480|
 
 You can also browse through the patron records by clicking on the linked
 letters across the top.
 
-Patron Browse
 |image481|
