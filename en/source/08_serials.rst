@@ -26,12 +26,10 @@ duplication.
 From this page you can view all of the existing frequencies in your
 system
 
-Frequencies
 |image738|
 
 and create new ones.
 
-New frequency
 |image739|
 
 .. _manage-serial-numbering-patterns-label:
@@ -48,7 +46,6 @@ patterns page.
 This page will list for you the numbering patterns you have saved in the
 past as well as a few canned patterns.
 
-Number patterns
 |image740|
 
     **Note**
@@ -62,7 +59,6 @@ It will also allow you to create a new numbering pattern without first
 adding a subscription. To add new new pattern click 'New numbering
 pattern' at the top of the list of patterns.
 
-New number pattern
 |image741|
 
 .. _custom-subscription-fields-label:
@@ -103,19 +99,16 @@ Add a subscription
 Subscriptions can be added by clicking the 'New' button on any
 bibliographic record
 
-New Subscription Button
 |image742|
 
 Or by visiting the Serials module and clicking 'New Subscription'
 
-New Subscription Button
 |image743|
 
 If you are entering a new subscription from the Serials module you will
 be presented with a blank form (if creating new from a bibliographic
 record the form will include the bib info).
 
-Add a new subscription (1/2)
 |image744|
 
 -  'Librarian' field will show the logged in librarian's username
@@ -128,7 +121,6 @@ Add a new subscription (1/2)
    -  In order to claim missing and late issues you need to enter vendor
       information
 
-      Vendor Missing Warning
       |image745|
 
 -  'Biblio' is the MARC record you'd like to link this subscription to
@@ -162,7 +154,6 @@ Add a new subscription (1/2)
       option found on the subscription information page and changing
       only the 'Library' field
 
-      New Duplicate Subscription
       |image746|
 
 -  Use the 'Public Note' for any notes you would like to appear in the
@@ -196,7 +187,6 @@ Add a new subscription (1/2)
 Once that data is filled in you can click 'Next' to enter the prediction
 pattern information.
 
-Add a new subscription (2/2)
 |image747|
 
 -  In 'First issue publication date' you want to enter the date of the
@@ -267,7 +257,6 @@ Add a new subscription (2/2)
       'None of the above' and clicking the 'Show/Hide Advanced Pattern'
       button at the bottom of the form
 
-      Advanced prediction pattern
       |image748|
 
 -  The 'Locale' option is useful when you want to display days, month or
@@ -292,7 +281,6 @@ Add a new subscription (2/2)
       irregularities you can choose which issues don't exist from the
       list presented.
 
-      Prediction pattern
       |image749|
 
 -  If you have added a :ref:`custom subscription field <custom-subscription-fields-label>`, it
@@ -311,31 +299,26 @@ Issues can be marked as received from several locations. To find a
 subscription, use the search box at the top of the Serials page to
 search for the serial you'd like to receive issues for:
 
-Subscription Search
 |image750|
 
 From the search results you can click the 'Serial Receive' link or you
 can click on the subscription title and then click the 'Receive' button.
 
-Subscription Buttons
 |image751|
 
 The final way to receive serials is from the 'Serial Collection' page.
 To the left of the Subscription summary page there is a menu with a link
 to 'Serial Collection'
 
-Serial Subscription Menu
 |image752|
 
 From the page that opens up you can click 'Edit Serial' with the issue
 you want to receive checked.
 
-Edit Issues
 |image753|
 
 All three of these options will open up the issue receive form:
 
-Receive Serials
 |image754|
 
 -  Choose 'Arrived' from the status pull down to mark a serial as
@@ -344,7 +327,6 @@ Receive Serials
 -  If you have decided to have an item record created for each issue an
    :ref:`item add form <adding-items-label>` will appear after choosing 'Arrived'
 
-   Serial item record
    |image755|
 
 -  If your issue has a supplemental issue with it, fill in the
@@ -369,7 +351,6 @@ If you are receiving multiple issues at once, or have marked an issue as
 'Late' or 'Missing' there you can click the 'Generate Next' button below
 the list of issues.
 
-Generate Next Button
 |image756|
 
 Clicking this button will generate the next issue for you and mark the
@@ -389,26 +370,22 @@ to the shelf. To enable routing lists you want to set your
 When on the subscription page you will see a link to the left that reads
 'Create Routing List' or 'Edit Routing List'
 
-Subscription Routing List Link
 |image757|
 
 Clicking that link will bring you to the menu to add a new routing list.
 
-Routing List Creation
 |image758|
 
 From here you want to click 'Add recipients' in order to add people to
 the routing list. In the menu that appears you can filter patrons by
 part of their name, their library and/or patron category.
 
-Add Members to Routing List
 |image759|
 
 Clicking 'Add' to the right of each name will add them to the routing
 list. When you have chosen all of the people for the list, click the
 'Close' link to be redirected to the routing list.
 
-Routing List
 |image760|
 
 If the list looks the way you expect it to, then click 'Save'. Next you
@@ -416,7 +393,6 @@ will be brought to a preview of the routing list. To print the list
 click 'Save and preview routing slip.' This will open a printable
 version of the list.
 
-Preview Routing List
 |image761|
 
 If :ref:`RoutingListAddReserves` is set to on
@@ -434,20 +410,17 @@ Subscriptions in Staff Client
 Subscription information will appear on bibliographic records under the
 'Subscriptions' tab
 
-Subscription Tab on Bibliographic Record
 |image762|
 
 Clicking the 'Subscription Details' link will take you to the
 Subscription summary page in the staff client.
 
-Subscription Detail
 |image763|
 
 If you are using the `Acquisitions <#acqmodule>`__ module to keep `track
 of serial subscriptions <#ordersubscription>`__ you will see that info
 before your subscription details.
 
-Acquisitions information for subscription
 |image764|
 
 .. _subscriptions-in-opac-label:
@@ -460,7 +433,6 @@ When viewing the subscription in the OPAC there will be several options.
 Like in the staff client, there will be a Subscriptions tab on the
 bibliographic record.
 
-Subscriptions Tab in OPAC
 |image765|
 
 Under this tab will appear the number of issues you chose when setting
@@ -474,7 +446,6 @@ view of a serial in the OPAC with the
 There are two views, compact and full. The compact serial subscription
 will show basic information regarding the subscription
 
-Compact Serial View
 |image766|
 
 From this compact display patrons can subscribe to be notified of new
@@ -483,7 +454,6 @@ notifications of new issues' button. For this link to appear you will
 want to have chosen to notify patrons :ref:`on the
 subscription <add-a-subscription-label>` itself.
 
-Subscribe link in the OPAC
 |image767|
 
 You can see those who subscribe to new issue alerts by going to the
@@ -493,7 +463,6 @@ subscription page in the staff client and looking on the right of the
 Whereas the full view shows extensive details, broken out by year,
 regarding the subscription
 
-Full Serial View
 |image768|
 
 .. _claim-late-serials-label:
@@ -504,25 +473,21 @@ Claim Late Serials
 Koha can send email messages to your serial vendors if you have late
 issues. To the left of the main serials page there is a link to 'Claims'
 
-Link to Claims on Serials Menu
 |image769|
 
 The links to claims also appears to the left of the subscription detail
 page
 
-Link to Claims on the Serials Menu
 |image770|
 
 If you don't have a claim notice defined yet you will see a warning
 message that you need to first define a notice.
 
-Missing Claims Notice Warning
 |image771|
 
 Clicking 'Claims' will open a report that will ask you to choose from
 your various serial vendors to generate claims for late issues.
 
-Serial Claims
 |image772|
 
 From the list of late issues you can choose which ones you want to send
@@ -540,7 +505,6 @@ expiration tool you can see when your subscriptions are about to expire.
 To use the tool click the link to 'Check expiration' on the serials
 menu.
 
-Check Serial Expiration
 |image773|
 
 In the form that appears you need to enter at least a date to search by.
@@ -549,7 +513,6 @@ In your results you will see all subscriptions that will expire before
 the date you entered. From there you can choose to view the subscription
 further or renew it in one click.
 
-Serial Expiration Search Results
 |image774|
 
 .. _renewing-serials-label:
@@ -561,19 +524,16 @@ If your serial subscription has expired you won't be able to receive
 issues. To renew your subscription you can click the 'Renew' button at
 the top of your subscription detail page.
 
-Renew option on subscription detail
 |image775|
 
 Another option is to click the 'Renew' link to the right of the
 subscription on the Serial Collection page.
 
-Renew option on serial collection
 |image776|
 
 Once you click the 'Renew' link or button you will be presenting with
 renewal options.
 
-Subscription renewal form
 |image777|
 
 -  The start date should be the date your subscription period starts.
@@ -592,18 +552,15 @@ Searching Serials
 Once in the Serials module there is basic search box at the top that you
 can use to find subscriptions using any part of the ISSN and/or title.
 
-Basic Serials Search
 |image778|
 
 You can also click the 'Advanced Search' link to the right of the
 'Submit' button to do a more thorough search of your serials.
 
-Advanced Serials Search
 |image779|
 
 From your results you can filter by using the search boxes at the bottom
 of each column and adjust the number of results using the toolbar at the
 top of the results set.
 
-Serial Search Results
 |image780|

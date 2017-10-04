@@ -1428,7 +1428,6 @@ Reader's Digest (0034-0375)
 -  The Volume number changes every 6 months and the numbers continues on
    (requires an advanced pattern).
 
-   Sample Reader's Digest Subscription
    |image1069|
 
 .. _people-weekly-(1076-0091)-label:
@@ -1479,7 +1478,6 @@ This journal is published with the following rules:
 
 The planning would look like this:
 
-Sample for this Hebrew Journal
 |image1070|
 
 .. _backpacker-(0277-867x)-label:
@@ -1492,7 +1490,6 @@ volume and number rolls over every 9 issues. If you're holding Volume
 41, Number 3, Issue 302 in your hand the prediction would look like
 this:
 
-Backpacker numbering pattern
 |image1071|
 
 And the received issues would number like this:
@@ -1535,7 +1532,6 @@ this pattern:  
 
 Setup should look like this (if you're starting in July 2014):
 
-Serial planning
 |image1072|
 
 .. _computers-in-libraries-(1041-7915)-label:
@@ -1546,13 +1542,10 @@ Computers in Libraries (1041-7915)
 Computers in Libraries is published ten times per year (monthly with
 January/February and July/August combined issues).
 
-Subscription details
 |image1073|
 
-Serial Planning
 |image1074|
 
-Received details
 |image1075|
 
 Sample List & Cart Emails
@@ -1853,7 +1846,6 @@ To add a new page you need to add a system preference under Local Use.
 
 -  Enter starting HTML in the Value field
 
-   Add a new preference
    |image1076|
 
 -  Set the Variable Type to Textarea
@@ -1861,7 +1853,6 @@ To add a new page you need to add a system preference under Local Use.
 -  Set the Variable options to something like 20\|20 for 20 rows and 20
    columns
 
-   Settings for the new preference
    |image1077|
 
 .. _viewing-your-page-label:
@@ -1883,21 +1874,18 @@ Koha. So once the code changes have been made per the instructions on
 'Koha as a CMS' you go through the 'Adding a New Page' instructions
 above to great a page for 'Recommended Reading Lists'
 
-Create page by modifying a system preference
 |image1078|
 
 Next we need to create pages for our various classes (or categories). To
 do this, return to the 'Adding a New Page' section and create a
 preference for the first class.
 
-Add a new sys pref for another page
 |image1079|
 
 Next you'll want to link your first page to your new second page, go to
 the page\_recommend preference and click 'Edit.' Now you want to edit
 the HTML to include a link to your newest page:
 
-Edit original preference to add new page
 |image1080|
 
 .. _live-examples-label:
@@ -2115,7 +2103,6 @@ see item type icons on the related screen.
     :ref:`DisplayOPACiconsXSLT` preference (which
     can be done while leaving the other XSLT preferences turned on).
 
-Book image
 |image1081|
 
 -  Book [BK]
@@ -2132,14 +2119,12 @@ Book image
 
    -  leader6 = t
 
-Computer Image
 |image1082|
 
 -  Computer File [CF]
 
    -  leader6 = m
 
-Continuing Resource Image
 |image1083|
 
 -  Continuing Resource [CR]
@@ -2150,7 +2135,6 @@ Continuing Resource Image
 
    -  leader7 = s
 
-Map Image
 |image1084|
 
 -  Map [MP]
@@ -2159,14 +2143,12 @@ Map Image
 
    -  leader6 = f
 
-Mixed Materials Image
 |image1085|
 
 -  Mixed [MX]
 
    -  leader6 = p
 
-Sound Image
 |image1086|
 
 -  Sound [MU]
@@ -2179,7 +2161,6 @@ Sound Image
 
    -  leader6 = j
 
-Visual Material Image
 |image1087|
 
 -  Visual Material [VM]
@@ -2190,7 +2171,6 @@ Visual Material Image
 
    -  leader6 = r
 
-Kit Image
 |image1088|
 
 -  Kit
@@ -2220,21 +2200,18 @@ common action among Koha users is to add a prefix to the call number.
 
 -  Open MarcEdit
 
-   MarcEdit
    |image1089|
 
 -  Click 'MarcEditor'
 
 -  Go to Tools > Edit Subfield Data
 
-   Edit subfield data
    |image1090|
 
 -  To prepend data the special character is: ^b  To simply prepend data
    to the beginning of a subfield, add ^b to the Field Data: textbox and
    the data to be appended in the Replace
 
-   Prepend data to a field
    |image1091|
 
    -  To prepend data to the beginning of the subfield while replacing a
@@ -2265,28 +2242,23 @@ use MarcEdit. You can download it from http://marcedit.reeset.net/
 
 Now open it and select Add-ins-->Delimited Text Translator.
 
-Delimited Text Translator
 |image1092|
 
 Click Next when the following window appears.
 
-Delimited Text Translator
 |image1093|
 
 Browse for your excel file.
 
-Delimited Text Translator
 |image1094|
 
 Locate your excel file by choosing the format Excel File(\*.xls).
 
-Delimited Text Translator
 |image1095|
 
 Similarly, fill all the other entries such as Output File, Excel Sheet
 Name and check UTF-8 Encoded (if required) and Click Next.
 
-Delimited Text Translator
 |image1096|
 
 Now you will be prompted for mapping the fields to recognise the fields
@@ -2295,7 +2267,6 @@ by standard marc format.
 Suppose for Field 0 that is first column I entered Map to: 022$a( Valid
 ISSN for the continuing resource) and then click on Apply.
 
-Delimited Text Translator
 |image1097|
 
     **Note**
@@ -2306,13 +2277,11 @@ Delimited Text Translator
 
 Similarly map all other fields and then Click on Finish.
 
-Delimited Text Translator
 |image1098|
 
 And then a window will appear indicating that your Marc Text
 File(\*.mrk) has been created.
 
-Delimited Text Translator
 |image1099|
 
 Click Close and we have created a .mrk file from .xls file in this step.
@@ -2328,22 +2297,18 @@ raw Marc format that can be directly imported into Koha.
 
 For this again open MarcEdit and Select MARC Tools.
 
-MARC Tools
 |image1100|
 
 Next Select MarcMaker to convert .mrk file into .mrc format.
 
-MarcMaker
 |image1101|
 
 Locate your input file and name your output file. Then Click Execute.
 
-MarcMaker
 |image1102|
 
 And it will show you the Result.
 
-MarcMaker
 |image1103|
 
 Click Close and now we have raw Marc records with us (.mrc file).
@@ -2360,36 +2325,30 @@ Finally we will import above created .mrc file into Koha.
 
 Click on Tools in your Koha staff client.
 
-Koha Staff Client
 |image1104|
 
 Next Click on Stage MARC Records for Import.
 
-Stage MARC Records for Import
 |image1105|
 
 After this, choose your previously created .mrc file and click on
 Upload.
 
-Stage File
 |image1106|
 
 You can also add comment about file and finally click on Stage For
 Import.
 
-Stage for Import
 |image1107|
 
 When the import is done, you will get a result something like this
 
-Staged Records Summary
 |image1108|
 
 Next, click on Manage staged records.
 
 Here you can even change matching rules.
 
-Manage Staged Records
 |image1109|
 
 Click on Import this batch into catalog when you are done.
@@ -2397,7 +2356,6 @@ Click on Import this batch into catalog when you are done.
 Thats it. After all the records get imported, check Status and it should
 read "imported"
 
-Finalize Import
 |image1110|
 
 You can even undo the Import operation.
@@ -3213,7 +3171,6 @@ Tools > Options, then choose the Export tab. Connexion Export Tab
 
       -  "Send Local System Logon ID Password" = checked.
 
-   OCLC Gateway Export Settings
    |image1111|
 
 -  Select "OK" when finished, and you should see your new "Gateway
@@ -3471,19 +3428,16 @@ in the OPAC. You can set up a :ref:`patron
 attribute <patron-attribute-types-label>` with the value of SHOW\_BCODE and
 :ref:`authorized value <authorized-values-label>` of YES\_NO to make this happen.
 
-Add SHOW\_BCODE patron attribute
 |image1112|
 
 Then on the :ref:`patron's record set the value <editing-patrons-label>` for
 SHOW\_BCODE to yes.
 
-Setting value for SHOW\_BCODE on patron record
 |image1113|
 
 This will add a column to the check out summary in the OPAC that shows
 the patrons the barcodes of the items they have checked out.
 
-Barcode number on checkout list in OPAC
 |image1114|
 
 Clicking on the 'Overdue' tab will show only the items that are overdue.
@@ -3701,7 +3655,6 @@ field with. To allow typing in these authority fields set
 
     Fields affected by this preference will show a lock symbol in them
 
-Fields affected by this preference show a lock in the field
 |image1115|
 
 .. _koha-to-marc-mapping-label:
@@ -4088,7 +4041,6 @@ Examples:
     running a report you can use the 'date' keyword like this: <<Enter
     Date\|date>>
 
-    Date Picker
     |image1116|
 
     **Note**
@@ -4104,7 +4056,6 @@ Examples:
     Patron Categories (categorycode). For example a branch pull down
     would be generated like this <<Branch\|branches>>
 
-    Branch pull down
     |image1117|
 
 .. _results-limited-label:
@@ -4678,7 +4629,6 @@ category:
 If you would like to choose the colors manually you can do that via the
 :ref:`Authorized Values` administration area.
 
-Colors for CCODE
 |image1118|
 
 Next you'll want to :ref:`update the frameworks <marc-bibliographic-frameworks-label>` so

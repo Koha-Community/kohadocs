@@ -40,12 +40,10 @@ of their name. The checkout option appears in three main places:
 
 -  Check out option on the top of the main staff client
 
-   Check out box on main Koha Staff Client page
    |image482|
 
 -  Check out option on the patron record
 
-   Check out tab on a patron record
    |image483|
 
 -  If you have enabled :ref:`batch checkouts <batch-checkout-label>` then
@@ -53,7 +51,6 @@ of their name. The checkout option appears in three main places:
 
 -  Check out option on the quick search bar on the circulation page
 
-   Check out tab on quick search bar
    |image484|
 
 .. _checking-items-out-label:
@@ -65,13 +62,11 @@ To check an item out to a patron, first search for that patron using one
 of the many options listed above. You will then be presented with the
 checkout screen.
 
-Check Out Screen
 |image485|
 
 If you have chosen to 'Always show checkouts immediately' then you will
 see the list of checkouts below the check out box.
 
-Check Out Screen
 |image486|
 
 At the top of the Check Out screen is a box for you to type or scan the
@@ -126,26 +121,22 @@ hourly loan), items checked out today will appear at the top.
     Items that are hourly loan items will include the time with the due
     date.
 
-Patron's checkout summary
 |image487|
 
 If you checked out an item for on site use you will see that highlighted
 in red in the checkout summary.
 
-Patron's on-site checkout
 |image488|
 
 If you have set your `ExportWithCsvProfile <#ExportWithCsvProfile>`__
 preference, you will also see the option to export the patron's current
 checkout information using a CSV Profile or ISO2709 (MARC21) format.
 
-Export patron's checkout information
 |image489|
 
 Also at the bottom of the page is the list of items the patron has on
 hold
 
-Holds summary on check out screen
 |image490|
 
 From the holds list you can suspend or resume patrons holds using the
@@ -163,20 +154,17 @@ options at the bottom of the list if you have the
 If there are notes on the patron record these will appear to the right
 of the checkout box
 
-Patron notes on check out screen
 |image491|
 
 If the patron has a hold waiting at the library that too will appear to
 the right of the check out box making it easy for the circulation
 librarian to see that there is another item to give the patron
 
-Hold waiting message on check out screen
 |image492|
 
 The details of the checkouts will appear on the bib detail page in the
 staff client as well.
 
-Circulation information on holdings tab
 |image493|
 
 .. _printing-receipts-label:
@@ -196,7 +184,6 @@ triggers Koha to print the 'Quick slip.'
 You can also click the Print button at the top of the screen and choose
 'Print slip' or 'Print quick slip'.
 
-Print receipt to slip printer
 |image494|
 
 If you choose 'Print slip' it will print all of the items the patron has
@@ -222,7 +209,6 @@ to 'Show' you can clear the current patron by clicking the X in the top
 right of the patron's info to remove the current patron from the screen
 and start over.
 
-Clear Screen Button
 |image495|
 
 If you have the :ref:`CircAutoPrintQuickSlip`
@@ -247,13 +233,11 @@ From this screen you can scan several barcodes or load a file of
 barcodes. If those items cannot be checked out they will provide a
 warning on the following screen
 
-Batch checkout warnings
 |image496|
 
 If you are using a statistical patron type then you'll see that local
 use was recorded for each item you scanned.
 
-Batch local use
 |image497|
 
 .. _check-out-messages-label:
@@ -266,7 +250,6 @@ that information in subfield 3 of the item record (in MARC21) a message
 will pop up when you check out that item telling you how many pieces
 should be there.
 
-Materials in the checked out item
 |image498|
 
 There are times when Koha will prevent the librarian from being able to
@@ -275,7 +258,6 @@ notifying the librarian of why the patron cannot check items out.
 
 -  Patron owes too much in fines
 
-   Patron owes too much in fines
    |image499|
 
    -  You can set the amount at which patron checkouts are blocked with
@@ -283,7 +265,6 @@ notifying the librarian of why the patron cannot check items out.
 
 -  Patron has a restriction on their account
 
-   Patron account restricted
    |image500|
 
    -  This can be set by the librarian editing a patron record and
@@ -293,12 +274,10 @@ notifying the librarian of why the patron cannot check items out.
    -  If the staff member has the right permission they can override the
       restriction temporarily
 
-      Patron account restricted
       |image501|
 
 -  Patron needs to confirm their address
 
-   Patron's address warning
    |image502|
 
    -  This can be set by the librarian editing a patron record and
@@ -306,7 +285,6 @@ notifying the librarian of why the patron cannot check items out.
 
 -  Patrons has lost their library card
 
-   Lost patron card warning
    |image503|
 
    -  This can be set by the librarian editing a patron record and
@@ -323,27 +301,22 @@ acknowledged before you will be able to continue checking items out.
 
 -  Patron has outstanding fines
 
-   Patron has a debt
    |image504|
 
 -  Item on hold for someone else
 
-   Item is on hold for someone else
    |image505|
 
 -  Item should be on the hold shelf waiting for someone else
 
-   Item is on hold shelf waiting for someone else
    |image506|
 
 -  Item already checked out to this patron
 
-   Item is currently checked out to this patron
    |image507|
 
 -  Item checked out to another patron
 
-   Item checked out to another patron
    |image508|
 
    -  This warning will allow you to place a hold on the item for the
@@ -351,25 +324,21 @@ acknowledged before you will be able to continue checking items out.
 
 -  Item not for loan
 
-   Item is not normally for loan
    |image509|
 
 -  Patron has too many things checked out and
    :ref:`AllowTooManyOverride` is set to 'Allow'
 
-   Too many checkouts
    |image510|
 
 -  Patron has too many things checked out and
    :ref:`AllowTooManyOverride` is set to "Don't
    allow"
 
-   Too many checkouts
    |image511|
 
 -  Item cannot be renewed
 
-   No more renewals
    |image512|
 
    -  This can be overridden with the
@@ -378,7 +347,6 @@ acknowledged before you will be able to continue checking items out.
 
 -  Barcode not found
 
-   Barcode not found
    |image513|
 
    -  Learn more about :ref:`fast cataloging <fast-add-cataloging-label>` later in this
@@ -389,24 +357,20 @@ acknowledged before you will be able to continue checking items out.
    -  Depending on the value in your :ref:`IssueLostItem`
       preference, you may just see a warning
 
-      Warning that item is lost
       |image514|
 
       or a confirmation box
 
-      Confirm checkout of lost item
       |image515|
 
 -  Item being checked out is not recommended for a patron of this age
 
-   Age warning
    |image516|
 
 -  Item being checked out meets the
    :ref:`decreaseLoanHighHolds <decreaseloanhighholds,-decreaseloanhighholdsduration,-decreaseloanhighholdsvalue,-decreaseloanhighholdscontrol,-and-decreaseloanhighholdsignorestatuses-label>` system preference
    criteria
 
-   Too many holds
    |image517|
 
 .. _renewing-label:
@@ -427,7 +391,6 @@ To renew items checked out to a patron, you can do one of two things.
 The first is to visit their details page or checkout page and review
 their checkout summary at the bottom.
 
-Circulation Summary
 |image518|
 
 In the Renew column you will see how many times each item has been
@@ -436,7 +399,6 @@ of the items you would like to renew and click the 'Renew or Return
 checked items' button, or to renew all items checked out to the patron
 simply click the 'Renew all' button.
 
-Renew buttons
 |image519|
 
 Sometimes renewals will be blocked based on your circulation rules, to
@@ -446,7 +408,6 @@ set to 'Allow'. If you allow renewal limit overrides, you will see a
 checkbox at the bottom left of the circulation summary. Check that box
 and then choose the items you would like to renew.
 
-Override renewal limit
 |image520|
 
 Checking that box will add checkboxes in the renew column above where
@@ -455,27 +416,22 @@ before the item was not renewable.
 The second option is to visit the 'Renew' page found under the
 Circulation menu.
 
-Renew
 |image521|
 
 And scan the barcodes of the items you would like to renew.
 
-Barcode to renew
 |image522|
 
 If the item is renewed you will receive a confirmation message.
 
-Item renewed
 |image523|
 
 If the barcode is not found you will be presented with an error.
 
-No barcode found
 |image524|
 
 If the item is not actually checked out you will also receive an error.
 
-Item not checked out
 |image525|
 
 .. _check-in-(returning)-label:
@@ -487,23 +443,19 @@ Checking in items can be performed from various different locations
 
 -  The check in box on the top of the main staff client
 
-   Check out box on main Koha Staff Client page
    |image526|
 
 -  The check in option on the quick search bar on the Circulation page
 
-   Check in tab on quick search bar
    |image527|
 
 -  The check in link on the patron's checkout summary (and on the
    checkout summary page)
 
-   Patron checkout summary includes 'Check In' link
    |image528|
 
 -  The Check in page under the Circulation menu
 
-   Check in link on Circulation Module
    |image529|
 
 .. _checking-items-in-label:
@@ -514,7 +466,6 @@ Checking Items In
 To check an item in scan the barcode for the item into the box provided.
 A summary of all items checked in will appear below the checkin box
 
-Check In Summary
 |image530|
 
 If you are checking items in that were put in the book drop while the
@@ -544,19 +495,16 @@ There are several messages that can appear when checking items in:
    branch, a message will appear asking you to transfer the book to the
    home library
 
-   Check in Transfer Message
    |image531|
 
    -  After this item is checked in the status of the item will be
       changed in the catalog to 'in transit'
 
-      In Transit Status
       |image532|
 
    -  To mark an item as back at the home branch, check the item in at
       the home branch
 
-      Check In Transferred Item
       |image533|
 
       -  A message will appear tell you that the item is not checked
@@ -567,19 +515,16 @@ There are several messages that can appear when checking items in:
    pieces a message will appear warning you about the number of pieces
    you should have in your hand
 
-   Materials Specified
    |image534|
 
 -  If you're checking an item in that has a hold on it, you will be
    prompted to confirm the hold
 
-   Hold Found Check In Message
    |image535|
 
    -  Clicking the Confirm hold button will mark the item as waiting for
       pickup from the library
 
-      Hold waiting at the library
       |image536|
 
    -  Clicking the Print Slip and Confirm button will mark the item as
@@ -593,13 +538,11 @@ There are several messages that can appear when checking items in:
 -  If you're checking in an item that has a hold on it at another branch
    you will be prompted to confirm and transfer the item
 
-   Hold found for another branch
    |image537|
 
    -  Clicking the Confirm hold and Transfer button will mark the item
       as in transit to the library where the hold was placed
 
-      In transit hold status
       |image538|
 
    -  Clicking the Print Slip, Transfer and Confirm button will mark the
@@ -615,7 +558,6 @@ There are several messages that can appear when checking items in:
    message telling you about the fine and providing you a link to the
    payment page for that patron
 
-   FineNotifyAtCheckin
    |image539|
 
 .. _circulation-messages-label:
@@ -636,7 +578,6 @@ Circulation messages are set up as :ref:`Authorized
 Values <authorized-values-label>`. To add or edit Circulation Messages you
 want to work with the `BOR\_NOTES <#bornotes>`__ value.
 
-BOR\_NOTES Authorized Values
 |image540|
 
 The 'Description' field can hold a canned message that you would like to
@@ -657,14 +598,12 @@ When on the patron's check out tab you will see a link to 'Add a new
 message' to the right of the check out box and a button at the top to
 'Add message'.
 
-Circulation Message in Staff Client
 |image541|
 
 When you click either of these options you will be asked to choose if
 the message is for the librarians or the patron and the message you
 would like to leave.
 
-Leave a Circulation Message
 |image542|
 
     **Note**
@@ -682,13 +621,11 @@ Messages in bold and red are meant for the library staff only, whereas
 messages in regular italics font are meant for the patron and the
 librarian.
 
-Circulation Message in Staff Client
 |image543|
 
 Circulation messages meant for the patron will also appear when they log
 into the OPAC.
 
-Circulation Message in OPAC
 |image544|
 
 .. _holds-label:
@@ -711,41 +648,35 @@ There are several ways to place holds from the staff client. The most
 obvious is using the 'Place Hold' button at the top of any bibliographic
 record.
 
-Place Hold Button on Bib Record
 |image545|
 
 You can also click the smaller 'Place Hold' link found at the top of
 your catalog search results, or the 'Holds' link found below each
 result.
 
-Hold options on search results
 |image546|
 
 You will be asked to search for a patron by barcode or any part of their
 name to start the hold process.
 
-Find Patron For Hold
 |image547|
 
 If you'd like to search for the patron first and then the bib record for
 the hold, you can open the patron record and click on the 'Search to
 Hold' button at the top of the patron record.
 
-Search to Hold on Patron Record
 |image548|
 
 After clicking the button you will be brought to the catalog search page
 where you can find the book(s) you want to place a hold on. Under each
 title on the results you'll see an option to 'Hold for Patron Name.'
 
-Hold for Patron links on Search Results
 |image549|
 
 If you want to place a hold on multiple items, simply check the boxes to
 the left of them and click the arrow to the right of the 'Place Hold'
 button.
 
-Hold Multiple Items for Patron
 |image550|
 
 Depending on how many items you choose to place a hold on at once you
@@ -753,7 +684,6 @@ will see a different place hold form. If you are placing a hold on one
 bibliographic record you will see a list of all of the items you can
 place a hold on.
 
-Place Hold Form
 |image551|
 
 -  Enter any notes that might apply to this hold
@@ -789,7 +719,6 @@ If you're placing a hold on multiple items you will be presented with
 the next available option for all titles. If no items are available for
 hold it will say so on the confirmation screen.
 
-Place multiple items on hold
 |image552|
 
 Once your hold is placed, if you'd like to have Koha forget that you
@@ -797,7 +726,6 @@ used the 'Search to Hold' function, you can choose to have Koha 'forget'
 the patron's name by clicking the arrow to the right of the 'Place Hold'
 button on the search results and choosing the 'Forget' option.
 
-Forget Search to Hold Option
 |image553|
 
 .. _managing-holds-label:
@@ -808,13 +736,11 @@ Managing Holds
 Holds can be altered and cancelled from the Holds tab found on the left
 of the bibliographic record.
 
-Bibliographic Record Tabs
 |image554|
 
 From the list of holds you can change the order of the holds, the pickup
 location, suspend and/or cancel the hold.
 
-Lists of Holds
 |image555|
 
     **Note**
@@ -834,7 +760,6 @@ To rearrange or delete holds, simply make a selection from the
 'Priority' pull down or click the arrows to the right of the priority
 pull down.
 
-Hold Priority Menu
 |image556|
 
 If you use the priority pull down to rearrange or delete holds you will
@@ -850,7 +775,6 @@ and keep it for months. For this reason, the home-bound patron's hold
 request would stay at the bottom of the queue until everyone else who
 wanted to read that book has already done so.
 
-Lowest Priority & Delete Options for Holds
 |image557|
 
 If a patron asks to have their hold suspended and you have the
@@ -860,7 +784,6 @@ the patron gives you a date for the items to become unsuspended you can
 enter that in the date box and click the 'Update hold(s)' button to save
 your changes.
 
-Hold suspension column
 |image558|
 
 To delete or cancel a hold click the red 'X' to the right of the hold
@@ -868,7 +791,6 @@ line. To delete/cancel a bunch of holds you can choose 'del' from pull
 down to the left of each line and then click 'Update hold(s)' at the
 bottom of the list.
 
-Cancel Holds
 |image559|
 
 .. _receiving-holds-label:
@@ -883,12 +805,10 @@ that the item is on hold and offer them options for managing the hold.
 When you check in an item that has a hold on it the system will ask you
 to either confirm and transfer the item
 
-Confirm Hold & Transfer
 |image560|
 
 or just confirm the hold
 
-Confirm Hold
 |image561|
 
 Clicking the Confirm button will mark the item as on hold for the
@@ -902,7 +822,6 @@ information.
 Once confirmed the hold will show on the patron record and on the
 checkout screen under the 'Hold' tab.
 
-Hold on Patron Record
 |image562|
 
 From here if the patron would like you suspend their holds you can do so
@@ -910,7 +829,6 @@ one by one or in bulk.
 
 The item record will also show that the item is on hold.
 
-Hold on Item Record
 |image563|
 
 In some cases a patron may come in to pick up a hold for their partner
@@ -919,7 +837,6 @@ that the hold is cancelled when you check the item out to someone else.
 When trying to check out an item that is already waiting for someone
 else you will be presented with a warning message.
 
-Hold waiting for someone else
 |image564|
 
 From here you can check the item out to the patron at the desk and
@@ -939,7 +856,6 @@ To transfer an item
 
 -  Click 'Transfer' on the Circulation page
 
-   Transfer Tool
    |image565|
 
    -  Enter the library you would like to transfer the item to
@@ -948,12 +864,10 @@ To transfer an item
 
 -  Click 'Submit'
 
-   Transfer Summary
    |image566|
 
 -  The item will now say that it is in transit
 
-   Item in Transit
    |image567|
 
 -  When the item arrives at the other branch the librarian must check
@@ -961,7 +875,6 @@ To transfer an item
 
 -  The item will not be permanently moved to the new library
 
-   Item record
    |image568|
 
    -  The item shows the same 'Home Library' but has updated the
@@ -975,7 +888,6 @@ Set Library
 By default you will enter the staff client as if you are at your home
 library. This library will appear in the top right of the Staff Client.
 
-My Library
 |image569|
 
 This is the library that all circulation transactions will take place
@@ -983,7 +895,6 @@ at. If you are at another library (or on a bookmobile) you will want to
 set your library before you start circulating items. To do this you can
 click 'Set' at the top right or on the Circulation page.
 
-Set Library Form
 |image570|
 
 Once you have saved your changes you new library will appear in the top
@@ -1003,12 +914,10 @@ ways to add titles via fast add. If you know that you're about to check
 out an item that isn't in you catalog you can go to the Circulation
 module and click 'Fast cataloging.'
 
-Circulation Menu
 |image571|
 
 The cataloging interface will open up with the short cataloging record:
 
-Fast Add Framework
 |image572|
 
 After adding your cataloging data you will be asked to enter item data.
@@ -1019,27 +928,23 @@ The other way to fast catalog is from the checkout screen. When you
 enter a barcode at checkout that Koha can't find, it will prompt you to
 use fast cataloging to add the item to Koha and check it out.
 
-Barcode not found
 |image573|
 
 Clicking 'Fast cataloging' will bring you to the fast cataloging form
 where you can enter the title information
 
-Fast cataloging
 |image574|
 
 After clicking 'Save' you will be brought to the item record where the
 barcode will already be filled in with the barcode you're trying to
 check out.
 
-Fast cataloging item record
 |image575|
 
 After clicking the 'Add item' button the item will automatically be
 checked out the patron you were trying to check the book out to
 originally.
 
-Checked out item
 |image576|
 
 .. _circulation-reports-label:
@@ -1060,7 +965,6 @@ Holds Queue
 
 This report will show you all of the holds at your library.
 
-Sample Holds Queue
 |image577|
 
 To generate this report, you must have the :ref:`Build Holds Queue cron
@@ -1114,13 +1018,11 @@ are available at the library for pulling. If the items are available at
 multiple branches then all branches with that item available will see
 the hold to pull until one library triggers the hold.
 
-Holds to Pull
 |image578|
 
 You can limit the results you see by using the Refine box on the left
 side of the page:
 
-Refine Holds to Pull Report
 |image579|
 
 .. _holds-awaiting-pickup-label:
@@ -1131,7 +1033,6 @@ Holds awaiting pickup
 This report will show all of the holds that are waiting for patrons to
 pick them up.
 
-Holds Awaiting Pickup
 |image580|
 
 Items that have been on the hold shelf longer than you normally allow
@@ -1141,7 +1042,6 @@ automatically be cancelled unless you have set the :ref:`cron
 job <expired-holds-label>` to do that for you, but you can cancel all
 holds using the button at the top of the list.
 
-Items waiting on the hold shelf too long
 |image581|
 
 .. _hold-ratios-label:
@@ -1155,7 +1055,6 @@ you should buy more. By default it will be set to the library needing 3
 items per hold that has been placed. The report will tell you how many
 additional items need to be purchased to meet this quota.
 
-Hold Ratios
 |image582|
 
 .. _transfers-to-receive-label:
@@ -1166,13 +1065,11 @@ Transfers to receive
 This report will list all of the items that Koha thinks are in transit
 to your library.
 
-Transfers to Receive
 |image583|
 
 If your transfers are late in arriving at your library you will see a
 message stating how late your items are.
 
-Late transfers include warning messages
 |image584|
 
     **Important**
@@ -1255,7 +1152,6 @@ Overdues
 
 This report will list all items that are overdue at your library.
 
-Overdues List
 |image585|
 
 The report can be filtered using the menu options found on the left of
@@ -1275,7 +1171,6 @@ Overdues with fines
 This report will show you any overdues at your library that have accrued
 fines on them.
 
-Overdues with fines
 |image586|
 
 If you would like to limit the report you can use the pull down menu at
@@ -1322,13 +1217,11 @@ be done in Koha one of two ways. The first is to create one or more
 have been used within the library, you will want to check them out to
 your statistical patron:
 
-Check Out Items to Stats Patron
 |image587|
 
 Instead of marking the item as 'checked out' the system will record that
 the item was used in house:
 
-Local Use Recorded
 |image588|
 
 Repeat these steps for all items that have been used within the library
@@ -1339,7 +1232,6 @@ The other way to record local use of items is to set your
 'Record.' Then whenever you check an item in that is not checked out and
 not on hold a local use will be recorded.
 
-Local Use Recorded
 |image589|
 
     **Note**
@@ -1359,7 +1251,6 @@ must first make sure you have :ref:`authorized values <authorized-values-label>`
 set in the `LOC <#shelvelocvals>`__ category for PROC (Processing
 Center) and CART (Book Cart).
 
-CART & PROC values in LOC
 |image590|
 
 Next you need to set the
@@ -1430,7 +1321,6 @@ the :ref:`IntranetUserJS` system preference can add one.
 
 The link will then appear at the bottom of the log in page:
 
-Self Checkout Link on Staff Login
 |image591|
 
 You can also access this module by going to :
@@ -1440,30 +1330,25 @@ When on the self checkout page depending on your value in the
 :ref:`SelfCheckoutByLogin` preference you will be
 asked to enter you cardnumber
 
-Self Checkout Patron Card Number
 |image592|
 
 or your username and password:
 
-Shelf checkout by login
 |image593|
 
 Once you're logged in to the self check module you will be asked to scan
 the items you are checking out
 
-Self Checkout
 |image594|
 
 As you scan items they will appear below the barcode box
 
-Self Checkout Summary
 |image595|
 
 When you are finished scanning items it is important to click the
 'Finish' button. This will prompt you to print a receipt and log you out
 of the self check module.
 
-Self Checkout Receipt
 |image596|
 
 When attempting to check items out there are some instances where error
@@ -1472,7 +1357,6 @@ This will happen even if you are allowing overrides on circulation
 functions. Only a librarian can override a circulation block and so
 patrons must go to the librarian for help in these situations.
 
-Self Checkout Error Message
 |image597|
 
 .. _offline-circulation-utilities-label:
@@ -1513,13 +1397,11 @@ Setup
 Before the first time the system goes offline go to Circulation and
 choose 'Built-in offline circulation interface'
 
-Built-in offline circulation interface
 |image598|
 
 And synchronize your data on every circulation computer by clicking the
 'Synchronize' link on the right of the screen.
 
-Synchronize data
 |image599|
 
     **Important**
@@ -1536,7 +1418,6 @@ This will allow you download a local copy of your patrons and
 circulation data. Click the 'Download records' link at the top of the
 page to synchronize your data.
 
-Download records for offline use
 |image600|
 
 Once your data is downloaded you will see the dates your data was last
@@ -1556,18 +1437,15 @@ Checking out is done by searching for the patron by barcode or name at
 the top of the 'Check out' screen. After selecting a patron you will be
 presented with the synced patron info, including fines and check outs.
 
-Check out offline
 |image601|
 
 Scan the barcode of the item you would like to check out and enter a due
 date. If you don't enter a due date Koha will prompt you for one.
 
-Offline due date
 |image602|
 
 Once the item is checked out it will appear below the patron's info.
 
-Offline checkouts
 |image603|
 
 .. _koha-offline-uploading-label:
@@ -1578,20 +1456,17 @@ Koha Offline Uploading
 Once the system is back online visit the Synchronize page on the Offline
 Circulation module and click 'Upload transactions'
 
-Upload transactions
 |image604|
 
 After the files are uploaded you can click 'View pending offline
 circulation actions' on the right.
 
-View pending offline circulation actions
 |image605|
 
 After clicking 'View pending offline circulation actions' you will be
 brought to a summary of all of the actions you loaded in to Koha in your
 \*.koc file.
 
-Offline Circulation
 |image606|
 
 -  Once all of the logs from all of the circulation computers are loaded
@@ -1612,7 +1487,6 @@ Offline Circulation
 
 Once finished you will have a summary of all of your transactions
 
-Offline Circulation Summary
 |image607|
 
 .. _firefox-plugin-label:
@@ -1630,12 +1504,10 @@ installation.
 Once you have installed the plugins and restarted Firefox, you will see
 the Koha logo in the download bar at the bottom right of Firefox.
 
-Koha Icon on Add-on Bar
 |image608|
 
 A click on the logo will open the tool in its own window.
 
-Koha Offline Circ Tool
 |image609|
 
 The plugin consists of four tabs:
@@ -1650,7 +1522,6 @@ The plugin consists of four tabs:
    -  The log will keep information until you empty it. Each time you
       open the plugin and it contains data in the log it will warn you
 
-      Koha Offline Circ Warning
       |image610|
 
       If you'd like to clear the log, check the 'I want to delete rows'
@@ -1663,7 +1534,6 @@ The plugin consists of four tabs:
 The first thing you want to do then is to set up the plugin. Go to the
 Param tab to set up the plugin
 
-Koha Offline CIrc Params
 |image611|
 
 Answer the 4 questions presented:
@@ -1692,7 +1562,6 @@ Once you have everything set up you can start checking items in and out.
 
 Checking out:
 
-Koha Offline Circulation Check Out
 |image612|
 
 -  Go to the Check Out tab
@@ -1705,7 +1574,6 @@ Koha Offline Circulation Check Out
 
 Checking in:
 
-Koha Offline Circulation Check In
 |image613|
 
 -  Go to the Check In tab
@@ -1720,13 +1588,11 @@ the plugin how many transactions has been made during the offline
 circulation. For example, "10 Row(s) Added" means you did 10
 transactions.
 
-Koha Offline Circulation Tool Count
 |image614|
 
 Then, if you want an overview of every transaction, go to the Log tab.
 This tab will show you the transactions in the plugin database
 
-Koha Offline Circulation Log
 |image615|
 
     **Note**
@@ -1766,12 +1632,10 @@ You have two options for adding this data to Koha
       every plugin/computer you worked with. This way, the log will go
       to Koha and be accessible from the Offline Circulation page.
 
-      Circulation Menu
       |image616|
 
    -  *Get there:* Circulation > Pending offline circulation actions
 
-      Offline Circulation
       |image617|
 
    -  Once all of the logs from all of the circulation computers are
@@ -1792,7 +1656,6 @@ You have two options for adding this data to Koha
 
    -  Once finished you will have a summary of all of your transactions
 
-      Offline Circulation Summary
       |image618|
 
 -  Apply directly
@@ -1815,13 +1678,11 @@ You have two options for adding this data to Koha
    -  Once you're finished you can review all of the items right in the
       Log tab
 
-      Koha Offline Circulation Apply Directly
       |image619|
 
 Once you are done you can clear the log by clicking Clear. If you don't
 you will be warned the next time you open the Offline Circulation tool.
 
-Koha Offline Circulation Tool Warning
 |image620|
 
 .. _offline-circ-tool-for-windows-label:
@@ -1847,30 +1708,25 @@ back up.
 
 On the Circulation menu click 'Upload offline circulation file (.koc)'
 
-Circulation menu
 |image621|
 
 Browse your computer for the \*.koc file
 
-Upload KOC File
 |image622|
 
 Once the file is uploaded, click the process the file
 
-Process offline circulation file
 |image623|
 
 When this is complete you'll be able to upload another file or tend to
 pending offline circulation actions.
 
-Summary of offline actions
 |image624|
 
 After clicking 'View pending offline circulation actions' you will be
 brought to a summary of all of the actions you loaded in to Koha in your
 \*.koc file.
 
-Offline Circulation
 |image625|
 
 -  Once all of the logs from all of the circulation computers are loaded
@@ -1891,5 +1747,4 @@ Offline Circulation
 
 Once finished you will have a summary of all of your transactions
 
-Offline Circulation Summary
 |image626|

@@ -64,7 +64,6 @@ To search the OPAC you can either choose to enter your search words in
 the box at the top of the OPAC or click on the 'Advanced Search' link to
 perform a more detailed search.
 
-OPAC Search Box
 |image937|
 
 For more on searching check the '`Searching <#searching>`__' chapter in
@@ -78,7 +77,6 @@ Results Overview
 After performing a search the number of results found for your search
 will appear above the results
 
-Total Results
 |image938|
 
 By default your search results will be sorted based on your
@@ -86,7 +84,6 @@ By default your search results will be sorted based on your
 system preference values. To change this you can choose another sorting
 method from the pull down on the right.
 
-Results Sorting Options
 |image939|
 
 Under each title on your results list a series of values from your
@@ -96,7 +93,6 @@ records, this data is all pulled from your fixed fields. This can be
 turned on or off with the
 :ref:`DisplayOPACiconsXSLT` system preference.
 
-Leader Visualization
 |image940|
 
 Below each title you will see the availability for the items attached to
@@ -114,20 +110,17 @@ the record.
     on-shelf holds will show as available until a librarian has pulled
     them from the shelf and checked the item in make it show 'waiting'.
 
-Holdings Information
 |image941|
 
 If you have turned on :ref:`Enhanced Content`
 preferences you may have book jackets on your search results.
 
-Book Jacket on Results
 |image942|
 
 If you have set your :ref:`Did you mean? <did-you-mean?-label>` options you will
 see a yellow bar across the top of your results will other related
 searches.
 
-Did you mean?
 |image943|
 
 If you performed an advanced search you see an option to go back and
@@ -142,7 +135,6 @@ Filters
 To filter your results click on the links below the 'Refine Your Search'
 menu on the left of your screen
 
-Refine Your Results
 |image944|
 
 Depending on your setting for the
@@ -163,7 +155,6 @@ clicking the RSS icon in your address bar or next to the number of
 results. To learn more about what RSS feeds are check out `this tutorial
 video <http://www.youtube.com/watch?v=0klgLsSxGsU>`__.
 
-RSS Feed Icon
 |image945|
 
 Subscribing to search results as RSS feeds will allow you to see when a
@@ -180,21 +171,18 @@ different areas.
 
 At the top of your screen will be the title and the GMD:
 
-Title
 |image946|
 
 Below the title the authors will be listed. These come from your 1xx and
 7xx fields. Clicking the author will run a search for other titles with
 that author.
 
-Author Display
 |image947|
 
 If you have an authority file you will see a magnifying glass to the
 right of author (and other) authorities. Clicking that magnifying glass
 will take you directly to the authority record.
 
-Authority link
 |image948|
 
 If you have your :ref:`DisplayOPACiconsXSLT`
@@ -202,37 +190,31 @@ preference set to 'show' you will see a material type that is determined
 by values in your fixed fields (learn more in the `XSLT Item
 Types <#XSLTiTypes>`__ Appendix).
 
-XSLT Item Type
 |image949|
 
 Next you'll see the description of the record you're viewing:
 
-Basic Details
 |image950|
 
 Following that information you'll find the subject headings which can be
 clicked to search for other titles on similar topics
 
-Bibliographic Subjects
 |image951|
 
 If your record has a table of contents or summary it will appear next to
 the 'Summary' or 'Table of Contents' label
 
-Summary
 |image952|
 
 If your record has data in the 856 fields you'll see the links to the
 right of the 'Online Resources' label
 
-Online Resources
 |image953|
 
 If the title you're viewing is in a public list then you'll see a list
 of those to the right of the 'List(s) this item appears in' label and if
 it has tags they will appear below the 'Tags from this library' label
 
-Tags
 |image954|
 
 In the tabs below the details you will find your holdings data
@@ -242,18 +224,15 @@ In the tabs below the details you will find your holdings data
 Any notes (5xx fields) that have been cataloged will appear under 'Title
 Notes'
 
-Title notes
 |image956|
 
 If you're allowing comments they will appear in the next tab
 
-Comments
 |image957|
 
 And finally if you have enabled FRBR and you have other editions of the
 title in your collection you will see the 'Editions' tab.
 
-Editions
 |image958|
 
 To the right of the details you'll find a series of boxes. The first box
@@ -261,38 +240,32 @@ is a list of buttons to help navigate the search results. From there you
 can see the next or previous result from your search or return to the
 results.
 
-Search Options
 |image959|
 
 Clicking Browse Results at the top of the right column will open up your
 search results on the detail page
 
-Search Results
 |image960|
 
 Below the search buttons you'll find the links to place a hold, print
 the record, save the record to your lists, or add it to your cart
 
-More options
 |image961|
 
 Clicking 'More Searches' will show the list of libraries you entered in
 your :ref:`OPACSearchForTitleIn` preference
 
-More Searches
 |image962|
 
 Under the 'Save Record' label you will find a series of file formats you
 can save the record as. This list can be customized by altering the
 :ref:`OpacExportOptions` system preference.
 
-Save Record
 |image963|
 
 If at any time you want to change the view from the 'Normal' view to see
 the Marc or the ISBD you can click the tabs across the top of the record
 
-Record Views
 |image964|
 
 .. _lists-&-cart-label:
@@ -315,7 +288,6 @@ Lists
 Patrons can manage their own private lists by visiting the 'my lists'
 section of their account.
 
-Lists Management
 |image965|
 
 .. _creating-lists-label:
@@ -326,13 +298,11 @@ Creating Lists
 Lists can also be created by choosing the 'New List' option in the 'Add
 to' menu on the search results
 
-Add to New List
 |image966|
 
 To create a list the patron simply needs to click the 'New List' link
 and populate the form that appears
 
-Create a new list
 |image967|
 
 The only field required is the 'List Name,' but the patron can also
@@ -351,7 +321,6 @@ private.
     :ref:`OpacAllowPublicListCreation`
     preference then patrons will only be able to create private lists.
 
-    Create a new private list
     |image968|
 
 -  Finally decide what your permissions will be on the list. You can all
@@ -377,7 +346,6 @@ Titles can be added to lists from the search results and/or from the
 bibliographic record. On the search results options to add items to the
 list appear below each result and across the top of the results page
 
-Add to Lists from Results
 |image969|
 
 To add a single title to a list, click the 'Save to Lists' option and
@@ -394,14 +362,12 @@ Viewing Lists Contents
 To view the contents of a list, click on the list name under the Lists
 button.
 
-Lists
 |image970|
 
 The contents of the list will look similar to your search results pages
 except that there will be different menu options across the top of the
 list.
 
-List View
 |image971|
 
 To the right of the list title there is an RSS icon that will allow you
@@ -420,7 +386,6 @@ hold, download the list contents, email the list or print the list out.
    enter in your email details in the form that pops up (:ref:`view a sample
    Lists email <example-email-from-list-label>`)
 
-   Email List Contents
    |image972|
 
 -  To print the contents of your list out click the 'Print List' link
@@ -435,19 +400,16 @@ Once the list is saved patrons can begin adding items to it. From the
 lists they have created by clicking the appropriate link to the right of
 the list name.
 
-My Lists
 |image973|
 
 To edit the list's title or sorting patrons click the 'Edit' link to the
 right of the list description.
 
-Editing List
 |image974|
 
 When clicking 'Delete' next to a list you will be asked to confirm that
 you want to delete the list.
 
-Delete list confirmation
 |image975|
 
 The list will not be deleted until the 'Confirm' button is clicked to
@@ -462,7 +424,6 @@ will ask you to enter the email address of a patron.Share list
 Once the email address is entered Koha will present you with a
 confirmation message
 
-Share list confirmation
 |image976|
 
 and will send a message to that patron.
@@ -481,7 +442,6 @@ Titles can be added to the cart from the search results and/or from the
 bibliographic record. On the search results options to add items to the
 cart appear below each result and across the top of the results page
 
-Add to Cart on Search Results
 |image977|
 
 Clicking the 'Add to Cart' button will add the one title to your cart.
@@ -490,7 +450,6 @@ and then choose 'Cart' from the 'Add to' pull down at the top of the
 screen. Once titles are added to the cart you will be presented with a
 confirmation
 
-Items added to Cart
 |image978|
 
 From the results you will see which items are in your cart and will be
@@ -505,7 +464,6 @@ Once you have titles in your cart you can manage the contents by
 clicking on the 'Cart' button usually found at the top of the screen.
 Your cart will open in a new window.
 
-Contents of your cart
 |image979|
 
 From this window you are presented with several options. Across the top
@@ -522,7 +480,6 @@ patron researching a specific topic. Clicking this link will open up a
 new window that asks for the email address and message to send. :ref:`View a
 sample Cart email <example-email-from-cart-label>`.
 
-Email Cart
 |image980|
 
     **Important**
@@ -534,7 +491,6 @@ In addition to sending your cart you can download the contents of your
 cart in several pre-defined formats or using a :ref:`CSV
 Profile <csv-profiles-label>` that you defined in the Tools module.
 
-Download Cart
 |image981|
 
 Finally you can print out the contents of your cart by choosing the
@@ -561,25 +517,21 @@ hold will appear in several different places.
    place hold on multiple items by checking the boxes to the left of the
    results and clicking 'Place Hold' at the top
 
-   Place Hold from Results
    |image982|
 
 -  When viewing a list or search results page you'll see the option to
    place the item on hold below the basic information about the title
 
-   Place Hold
    |image983|
 
 -  When viewing an individual title you'll see the option to place a
    hold in the box on the right side of the screen
 
-   Place Hold
    |image984|
 
 No matter which of the above links you click to place your hold you'll
 be brought to the same hold screen.
 
-Place Hold Form
 |image985|
 
 -  Check the box to the left of the items you'd like to place on hold
@@ -623,7 +575,6 @@ Place Hold Form
    patrons can leave notes about their holds for the library by clicking
    the 'Edit notes' button
 
-   Hold notes
    |image986|
 
 -  Depending on the rules you set regarding item specific holds in your
@@ -631,7 +582,6 @@ Place Hold Form
    allowed to choose whether to place the hold on the next available
    copy and/or a specific copy
 
-   Specific Copy Hold
    |image987|
 
 After clicking the Place Hold button the patron will be brought to their
@@ -655,14 +605,12 @@ bibliographic records. If you are allowing patrons to add tags from the
 search results screen you will see an input box below each result and a
 'Tag' option at the top of the screen.
 
-Tagging Options on Results
 |image988|
 
 To add a tag to one item, type the tabs (separated by commas) in the
 'New tag' box and click 'Add'. You will be presented with a confirmation
 of your tags being added.
 
-Tags Added on Results
 |image989|
 
 From the results you can also tag items in bulk by clicking the
@@ -670,7 +618,6 @@ checkboxes on the left and then clicking the 'Tag' button at the top.
 After clicking the button it will change into an input box for you to
 add tags to all of the items you have selected.
 
-Add Tags to Multiple Items
 |image990|
 
 .. _comments-label:
@@ -683,21 +630,18 @@ Patrons can leave comments in the OPAC if you have the
 bibliographic record has a comments tab below the bibliographic
 information.
 
-Comments Tab
 |image991|
 
 If the patron is logged in they will see a link to add a comment to the
 item. Clicking this link will open a pop up window with a box for their
 comments.
 
-Add a Comment
 |image992|
 
 Once the comment has been typed and the 'Submit' button clicked, the
 patron will see their comment as pending and other patrons will simply
 see that there are no comments on the item.
 
-Pending Comment
 |image993|
 
 Once the comment is approved the patron will see the number of comments
@@ -707,20 +651,17 @@ comments. If you have set your
 you'll see the patron's photo pulled from the
 `Libravatar <https://www.libravatar.org>`__ library.
 
-Your Comments
 |image994|
 
 Other patrons will see the comment with the name of the patron who left
 the comment (unless you have set the :ref:`ShowReviewer`
 preference to not show patron names).
 
-Comment by other patron
 |image995|
 
 If you have your :ref:`OpacShowRecentComments`
 set to show then you'll see the approved comments on that page.
 
-Recent Comments List
 |image996|
 
 From this page patrons can subscribe to the recent comments using RSS if
@@ -740,14 +681,12 @@ installed, you will see a folder icon in the address bar to the right of
 the URL. Clicking that folder will open up a list of titles on the page
 for you to pick from to add to Zotero.
 
-Zotero pop up
 |image997|
 
 Select the titles you want to add to Zotero and then click the 'OK'
 button. This will add the title to Zotero. You can see the title by
 opening your Zotero library.
 
-Title in the Zotero Library
 |image998|
 
 .. _custom-rss-feeds-label:
@@ -794,7 +733,6 @@ OPAC. If you have the
 'Allow' then patrons will see a link to register below the log in box on
 the right of the main OPAC page.
 
-Registration link in OPAC
 |image999|
 
 When the patron clicks the 'Register here' link they will be brough to a
@@ -805,7 +743,6 @@ and the
 :ref:`PatronSelfRegistrationBorrowerUnwantedField`
 preferences.
 
-Registration form
 |image1000|
 
 Once the patron has confirmed submitted their registration they will
@@ -814,7 +751,6 @@ either be sent an email to confirm their account (if you have the
 preference to require this) or presented with their new username and
 password.
 
-New account confirmation
 |image1001|
 
 Patrons registered in this way will not have a cardnumber until assigned
@@ -859,7 +795,6 @@ If you have the :ref:`OpacResetPassword` set to allow
 patrons to reset their password they can click 'Forgot your password?'
 link found under the log in box to reset their passwords.
 
-'Forgot your password?' link
 |image1002|
 
 Once clicked they will be presented with a form asking for their
@@ -874,7 +809,6 @@ password.Reset password confirmation
 My Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-My Summary
 |image1003|
 
 From the 'my summary' tab, patrons will see all of the items they have
@@ -884,7 +818,6 @@ patrons will be able to renew their books right from the OPAC. If you
 have HTML entered in the :ref:`OPACMySummaryHTML`
 preference then you will see that to the right of the 'Fines' column.
 
-Checked out tab with OPACMySummaryHTML set
 |image1004|
 
 If your patrons would like to see the items barcodes on their list of
@@ -892,19 +825,16 @@ checked out items you can set up a :ref:`patron
 attribute <patron-attribute-types-label>` with the value of SHOW\_BCODE and
 :ref:`authorized value <authorized-values-label>` of YES\_NO.
 
-Add SHOW\_BCODE patron attribute
 |image1005|
 
 Then on the :ref:`patron's record set the value <editing-patrons-label>` for
 SHOW\_BCODE to yes.
 
-Setting value for SHOW\_BCODE on patron record
 |image1006|
 
 This will add a column to the check out summary in the OPAC that shows
 the patrons the barcodes of the items they have checked out.
 
-Barcode number on checkout list in OPAC
 |image1007|
 
 If their guarantee has allowed it via :ref:`their
@@ -914,7 +844,6 @@ checkouts
 
 Clicking on the 'Overdue' tab will show only the items that are overdue.
 
-Overdue Items
 |image1008|
 
 The 'Fines' tab will show just a total of what the patron owes. Clicking
@@ -923,13 +852,11 @@ complete breakdown of their fines and bills. If you don't charge fines
 at your library you can turn the display of these tabs off by setting
 the :ref:`OPACFinesTab` preference to 'Don't Allow.'
 
-Patron Fines
 |image1009|
 
 Finally, clicking on the 'Holds' tab will show the patron the status of
 all of the items they have on hold.
 
-Patron holds status
 |image1010|
 
 Patrons can cancel or suspend (depending on the value of your
@@ -959,12 +886,10 @@ see one of the following error messages at the top of their account.
 
 -  Card marked as lost
 
-   Library card lost
    |image1011|
 
 -  Patron address in question
 
-   Patron address in question
    |image1012|
 
    -  **Note**
@@ -975,7 +900,6 @@ see one of the following error messages at the top of their account.
 
 -  Patron marked restricted
 
-   Patron restricted
    |image1013|
 
 .. _my-fines-label:
@@ -987,7 +911,6 @@ If your library charges fines the next tab on the left is 'my fines.'
 Opening this tab will show the patron an entire history of their
 accounting at the library.
 
-Library Fines & Charges
 |image1014|
 
 If you are allowing patrons to pay their fines using PayPal with the
@@ -998,7 +921,6 @@ amount.Fines with checkboxes
 At the bottom the patron will see the option to pay with PayPal for the
 items they have checked.
 
-PayPal Payment
 |image1015|
 
 After paying they will be presented with a confirmationPayPal
@@ -1021,7 +943,6 @@ setting the
 :ref:`PatronSelfRegistrationBorrowerUnwantedField`
 preferences.
 
-Patron's personal details
 |image1016|
 
 Patrons can edit their details in this form and click 'Submit Changes'
@@ -1030,14 +951,12 @@ is updated. Staff will see all patrons requesting modification to their
 record listed below the modules on the main dashboard along with
 anything else awaiting library attention.
 
-Patron requests waiting review
 |image1017|
 
 If the :ref:`OPACPatronDetails` preference is set to
 'Don't allow' then patrons will simply see their details and a message
 stating that they should contact the library for changes.
 
-Patron's personal details with no edits
 |image1018|
 
 .. _my-tags-label:
@@ -1051,7 +970,6 @@ all of the tags in the system as a cloud and then all of the tags they
 have applied in a list format. From here patrons have the ability to
 remove tags that they have added if they want.
 
-Patron's tags
 |image1019|
 
 .. _change-my-password-label:
@@ -1065,7 +983,6 @@ change their password for logging into the OPAC. Patrons will be
 presented with a standard form asking them to enter their old password
 and then their new password twice.
 
-Change my password
 |image1020|
 
 .. _my-search-history-label:
@@ -1077,7 +994,6 @@ If you have your :ref:`EnableOpacSearchHistory`
 preference set to 'Allow' then your patrons can access their search
 history via the 'my search history' tab.
 
-my search history tab
 |image1021|
 
 The search history is a record of all searches run by the patron.
@@ -1087,7 +1003,6 @@ clicking the 'Delete your search history' link found at the top of this
 tab or by clicking the little red 'x' next to the 'Search history' link
 at the top right of the OPAC.
 
-Search history link at the top right of the OPAC
 |image1022|
 
 .. _my-reading-history-label:
@@ -1102,7 +1017,6 @@ reading history unless they have asked the library to not keep that
 information via the 'my privacy' tab which will appear if you have the
 :ref:`OPACPrivacy` preference set to 'Allow.'
 
-Patron reading history
 |image1023|
 
 If you have HTML entered in the
@@ -1120,7 +1034,6 @@ The 'my privacy' tab will appear if you have both the
 allow the patrons to decide how the library keeps their circulation
 history data.
 
-my privacy tab
 |image1024|
 
 The patron can choose from three options:
@@ -1142,7 +1055,6 @@ History <circulation-history-label>`' tab in the staff client may change.
 Regardless of the patron's choice they can delete their reading history
 in bulk at any time by clicking the 'Immediate deletion' button.
 
-Delete Circulation History
 |image1025|
 
 Clicking this button will not delete items that are currently checked
@@ -1173,7 +1085,6 @@ will show all suggestions that the patron made to the library and their
 statuses. To disable this tab and the suggestion functionality set the
 :ref:`suggestion` preference to 'Don't allow.'
 
-Patron purchase suggestions
 |image1026|
 
 If you have :ref:`OPACViewOthersSuggestions`
@@ -1192,7 +1103,6 @@ preferences set to 'Allow' then your patrons will be able to choose
 which messages they receive from the library (with the exception of
 overdue notices which the library controls).
 
-Patron messaging preferences
 |image1027|
 
 If you use an outside driver for sending text messages set with the
@@ -1200,7 +1110,6 @@ If you use an outside driver for sending text messages set with the
 additional column to receive these messages as SMS (or text messages)
 and a field for a cell (or SMS) number.
 
-SMSSendDriver in the OPAC
 |image1028|
 
 If you are using the Email protocol for sending text messages set with
@@ -1209,7 +1118,6 @@ additional column to receive these messages as SMS (or text messages), a
 field for a cell (or SMS) number, and a pull down listing :ref:`cellular
 providers entered in administration <sms-cellular-providers-label>`.
 
-SMSSendDriver in the OPAC
 |image1029|
 
 If you are using the :ref:`Itiva Talking
@@ -1255,7 +1163,6 @@ set to 'Allow' then the last tab will by 'my lists.' From here your
 patrons can review public lists and create or edit their own private
 lists.
 
-Patron lists
 |image1030|
 
 .. _ask-for-a-discharge-label:
@@ -1268,12 +1175,10 @@ patrons will be able to request a discharge via the OPAC.Discharge tab
 
 From here patrons can request a discharge
 
-Request discharge
 |image1031|
 
 And will receive confirmation of their request.
 
-Discharge confirmation
 |image1032|
 
 .. _purchase-suggestions-label:
@@ -1290,23 +1195,19 @@ others with the
 :ref:`OPACViewOthersSuggestions` preference,
 then there will be a link at the top of your OPAC under the search box.
 
-Purchase Suggestions Link on Search Box
 |image1033|
 
 There will be a link when the patron finds nothing for their search.
 
-Purchase Suggestion Link from Search Results
 |image1034|
 
 And there will be a link on the patron's :ref:`My Purchase
 Suggestions <my-purchase-suggestions-label>` tab.
 
-Purchase Suggestion from My Purchase Suggestions Tab
 |image1035|
 
 Clicking any one of these links will open the purchase suggestion form.
 
-New Purchase Suggestion
 |image1036|
 
 -  From the form on the 'Title' is required by the library.
