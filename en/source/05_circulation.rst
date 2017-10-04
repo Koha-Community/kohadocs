@@ -49,7 +49,9 @@ of their name. The checkout option appears in three main places:
    |image483|
 
 -  If you have enabled :ref:`batch checkouts <batch-checkout-label>` then
-   click the batch check out option on the patron recordBatch checkout
+   click the batch check out option on the patron record
+
+   |image1254|
 
 -  Check out option on the quick search bar on the circulation page
 
@@ -93,7 +95,9 @@ item's barcode into.
    and/or call number).
 
 To see more checkout options click the 'Checkout settings' link to
-expand the checkout area.Checkout settings
+expand the checkout area.
+
+|image1255|
 
 Below the box for the barcode there may be options for you to override
 the default due date for the item.
@@ -115,7 +119,9 @@ If you're allowing the :ref:`checkout of items on site <onsitecheckouts-label>`
 to patrons (these are usually items that are not for loan that you would
 like to check for in library use) then you will see the 'On-site
 checkout' checkbox after clicking the 'Checkout settings' link to expand
-your circulation options.On-site checkout
+your circulation options.
+
+|image1256|
 
 At the bottom of the page there is a summary of the patron's current
 checked out items along with the due date (and time if the item is an
@@ -240,8 +246,9 @@ on the :ref:`BatchCheckouts` system preference and
 assigning the proper patron categories via the
 :ref:`BatchCheckoutsValidCategories`
 preference. This will allow you to use an RFID pad that reads multiple
-barcodes or perform a batch check out for training internal use.Batch
-checkouts
+barcodes or perform a batch check out for training internal use.
+
+|image1257|
 
 From this screen you can scan several barcodes or load a file of
 barcodes. If those items cannot be checked out they will provide a
@@ -531,7 +538,9 @@ scanning items.
 
 If you have the :ref:`SpecifyReturnDate` preference
 set to 'Allow' you will be able to arbitrarily set the return date from
-below the check in box.Specify check in date
+below the check in box.
+
+|image1258|
 
 .. _check-in-messages-label:
 
@@ -764,7 +773,9 @@ Place Hold Form
    :ref:`AllowHoldItemTypeSelection`
    preference set to 'Allow' and the record had more than one item type
    attached you will see an option to choose to limit the hold to a
-   specific item typeAllowHoldItemTypeSelection
+   specific item type
+
+   |image1259|
 
 -  If the patron wants the hold to start on a date other than today,
    enter that in the 'Hold starts on date' field
@@ -1295,8 +1306,9 @@ Pending on-site checkouts
 
 If you are using the on site checkouts functionality
 (:ref:`OnSiteCheckouts`) then you'll have a report to
-view all items that are currently checked out on site.Pending onsite
-checkouts
+view all items that are currently checked out on site.
+
+|image1260|
 
 This will list the due date (overdues in red), who has the item, item
 information and what library the item is at.
@@ -1540,8 +1552,11 @@ Download records for offline use
 |image600|
 
 Once your data is downloaded you will see the dates your data was last
-synced to the right of each data set.Synced offline dataThis should be
-done regularly in preparation for any unexpected connection losses.
+synced to the right of each data set.
+
+|image1261|
+
+This should be done regularly in preparation for any unexpected connection losses.
 
 .. _circulating-label:
 

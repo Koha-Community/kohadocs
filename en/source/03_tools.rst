@@ -38,8 +38,9 @@ Enter a list name and save the list.
 Empty patron list
 |image247|
 
-Each list has an 'Actions' menu with more list options.Patron list
-actions
+Each list has an 'Actions' menu with more list options.
+
+|image1218|
 
 To add patrons to the list click the 'Add patrons' link in the 'Actions'
 menu.
@@ -74,7 +75,9 @@ below the module list:
 Comments pending approval
 |image251|
 
-and next to the Comments tool on the Tools ModuleComment count on Tools
+and next to the Comments tool on the Tools Module
+
+|image1219|
 
 To moderate comments click on the notification on the main dashboard or
 go directly to the Comments Tool and click 'Approve' or 'Delete' to the
@@ -279,19 +282,26 @@ To add a new notice or slip
 
 -  Next you can customize the notice for every possible delivery method
 
-   -  Every notice should have an Email template set for itNew Email
-      notice
+   -  Every notice should have an Email template set for it
+
+      |image1220|
 
    -  If you're using the
       :ref:`TalkingTechItivaPhoneNotification`
-      service you can set up a Phone notificationNew Phone notice
+      service you can set up a Phone notification
+
+      |image1221|
 
    -  If you plan on printing this notice you can set the Print template
-      nextNew Print notice
+      next
+
+      |image1222|
 
    -  If you have enabled SMS notices with the
       :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference you can set the text
-      for your SMS notices nextNew SMS notice
+      for your SMS notices next
+
+      |image1223|
 
 -  Each notice offers you the same options
 
@@ -767,7 +777,9 @@ Add a Layout
 '''''''''''''''''''''''''''''''''
 
 If you have no layouts defined, you will add a new layout by clicking
-the 'New' button and choosing 'Layout'.New layout button
+the 'New' button and choosing 'Layout'.
+
+|image1224|
 
 You may also choose to press 'Manage layout' on the left side. Here you
 are offered a list of available layouts you can select for editing. But
@@ -1038,21 +1050,28 @@ New Batch Button
 |image272|
 
 For a new batch a message pops up and directs you to select patrons to
-be processed in this batch.No items in batch
+be processed in this batch.
+
+|image1225|
 
 After choosing the 'Add item(s)' button the Patron Search window pops
-up.Patron search
+up.
+
+|image1226|
 
 From here you can search for patrons to add to your batch by any part of
 their name, their category and/or library. Entering \* in the search box
-will display all the patrons. Patron search results
+will display all the patrons.
+
+|image1227|
 
 From the results you can add patrons to the batch by clicking the 'Add'
 button. After adding patrons from the results you can start over and
 perform another search or click 'Close' at the bottom of the screen to
 indicate that you are done. You will then be presented with your
-batch.Patron batch
+batch.
 
+|image1228|
 If you are satisfied with your batch you can proceed to export. If you
 want to correct or even delete that batch the buttons to do so can be
 found at the top of your screen. You can always come back here through
@@ -1072,10 +1091,12 @@ position (where on the sheet should printing begin).
     used on your sheet you can start printing on label in position 7 on
     the sheet. The labels are numbered left to right from top to bottom.
 
-Export batch
+|image1229|
 
 Once you click 'Export' you will be presented with a PDF of your labels
-for printingPDF Export
+for printing
+
+|image1230|
 
 When you open the PDF you will see the cards for printing
 
@@ -1262,7 +1283,9 @@ Tags pending moderation
 |image284|
 
 -  To see all of the titles this tag was added to simply click on the
-   termTitles with a specific tag
+   term
+
+   |image1230|
 
    -  From this list of titles you can remove a tag without outright
       rejecting it from being used in the future by clicking the 'Remove
@@ -1550,13 +1573,17 @@ Batch record deletion
 
 This tool will take a batch of record numbers for either bibliographic
 records or authority records and allow you to delete all those records
-and any items attached to them in a batch. Batch record deletion
+and any items attached to them in a batch.
+
+|image1231|
 
 First you need to tell the tool if you're deleting bibliographic or
 authority records. Next you can load a file with biblionumbers or
 authids or enter a list of those numbers in the box provided. Once you
 submit the form you will be presented with a summary of the records you
-are trying to delete.Summary
+are trying to delete.
+
+|image1232|
 
 If a record you want to delete can't be deleted it will be highlighted.
 
@@ -1591,14 +1618,18 @@ When you visit the tool it will ask you:
 -  Finally choose the MARC Modification Template you'd like to use to
    edit these records.
 
-Once you've entered your criteria click 'Continue'Records to edit
+Once you've entered your criteria click 'Continue'
+
+|image1233|
 
 You will be presented with a list of records that will be edited. Next
 to each one is a checkbox so you can uncheck any items you would rather
 not edit at this time.
 
 Clicking Preview MARC will allow you to see what edits will be made when
-you finalize the edit.Modified MARC Preview
+you finalize the edit.
+
+|image1234|
 
 Once you're sure everything is the way you want you can click the
 'Modify selected records' button and your records will be modified.
@@ -1624,8 +1655,9 @@ reaches a certain age.
     cron job <automatic-item-update-label>`
 
 If you haven't created any rules you will see the option to 'Add rules'
-on the Tool page. Click this button to create rules.Automatic item
-modifications by age
+on the Tool page. Click this button to create rules.
+
+|image1235|
 
 If you have rules already there will be a button that reads 'Edit
 rules'. To create a new rule click the 'Edit rules' button at the top of
@@ -1757,7 +1789,11 @@ authority records' tab.
    Export authorities
    |image312|
 
--  Or you can choose a file of authids to exportAuthorities file.  File type needs to be .csv or .txt
+-  Or you can choose a file of authids to export
+
+  |image1236|
+
+  File type needs to be .csv or .txt
 
 -  Next choose fields that you would like to exclude from the export
    separated by a space (no commas)
@@ -2191,8 +2227,9 @@ Add a new template
 
 Next you can add actions to the template by filling in the Action box.
 For example if you're loading in a batch of files from your EBook vendor
-you might want to add the biblio item type of EBOOK to the 942$c.Add
-action
+you might want to add the biblio item type of EBOOK to the 942$c.
+
+|image1237|
 
 -  Choose 'Add/Update'
 
@@ -2272,7 +2309,9 @@ Add regex action
     is replaced with the current date in ISO format ( YYYY-MM-DD ).
 
 You could also use regular expressions to add your library's proxy URL
-in front of links in your MARC record.Add proxy URL
+in front of links in your MARC record.
+
+|iamge1238|
 
 -  Choose 'Copy and replace'
 
@@ -2543,7 +2582,9 @@ to set your :ref:`LocalCoverImages` and/or
     one uploaded) will be the one used as a thumbnail cover in search
     results and on the detail page. There is no way to reorder cover
     images uploaded in this way, so be sure to upload them in the order
-    you'd like them to appear.Multiple cover images on one record
+    you'd like them to appear.
+
+    |image1239|
 
 If uploading a single image:
 
@@ -2937,7 +2978,9 @@ receipt:
 
    -  Under 'Display Location' choose whether to put the news on the
       OPAC, Slip (circulation receipt) or the Librarian (Staff)
-      Interface.Display location
+      Interface.
+
+      |image1240|
 
    -  Choose the library this news item will show for
 
@@ -2970,7 +3013,9 @@ receipt:
    |image389|
 
    -  Below the news in the OPAC there will be an RSS icon allowing you
-      to subscribe to library newsNews RSS feed
+      to subscribe to library news
+
+    |image1241|
 
 -  News in the Staff Client will appear on the far left of the screen
 
@@ -3206,18 +3251,23 @@ Upload Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you first visit the Upload tool you might see a warning about
-missing a category.Upload to temprorary
+missing a category.
+
+|image1242|
 
 Categories are defined in the :ref:`authorized value <authorized-values-label>`
 in the UPLOAD category. If you do not have upload categories then your
 files will be temporary and will be deleted the next time the server is
 rebooted. Once you have a value in the UPLOAD authorized value category
-you will see a Category pull down below the 'Browse' button.Upload to
-category
+you will see a Category pull down below the 'Browse' button.
+
+|image1243|
 
 Browse your computer a file, choose a category and decide if the public
 will be able to download this file via the OPAC. Once your file is
-uploaded you will be presented with a confirmation.Upload confirmation
+uploaded you will be presented with a confirmation.
+
+|image1244|
 
 .. _search-files-label:
 
@@ -3228,4 +3278,6 @@ All uploaded files are searchable from below the upload form. Using the
 form you can search any part of the filename and/or the Hashvalue.Search
 uploaded files
 
-You will be presened with the results of your search.Search results
+You will be presened with the results of your search.
+
+|image1245|

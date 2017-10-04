@@ -54,7 +54,9 @@ advanced editor
    :ref:`EnableAdvancedCatalogingEditor`
    preference
 
--  Click the 'Advanced editor' buttonAdvanced editor button
+-  Click the 'Advanced editor' button
+
+|image1262|
 
 If you want to catalog a record based on an existing record at another
 library in the editor you last used (basic or advanced)
@@ -211,7 +213,9 @@ preference.
 
 In the advanced editor once you've opened a blank framework or imported
 a record via Z39.50 you will be presented with the form to continue
-catalogingAdvanced cataloging editor
+cataloging
+
+|image1263|
 
 Using the search box on the left you can perform Z39.50 searches
 
@@ -576,7 +580,9 @@ settings.
 
    -  You can see if your upload path is set correctly by visiting About
       Koha > System Information. If there is an error you will see it
-      there.Upload Path Warning
+      there.
+
+      |image1264|
 
 -  You will want to be sure that your :ref:`OPACBaseURL`
    system preference is set appropriately
@@ -586,11 +592,15 @@ settings.
 
 Once you are all set up you can continue with cataloging as regular. You
 will see a plugin icon next to the 856$u that will open up the upload
-and/or search windowUpload file to record
+and/or search window
+
+|image1265|
 
 From this menu you can click browse to find a file and attach it, or you
 can search files you have uploaded previously using the search box. From
-the search results you can choose which file to attach.Uploaded files
+the search results you can choose which file to attach.
+
+|image1266|
 
 Once the file is chosen it will appear as a link in the MARC record and
 on the detail display.
@@ -738,7 +748,9 @@ fields should be entered for new items:
       see a ... to the right of the field. When clicked that will open a
       call number browser window if the row is highlighted in Red then
       the call number is in use, if there is a thin Green line instead
-      then the call number can be used.Call number browser
+      then the call number can be used.
+
+      |image1267|
 
 -  p - Barcode
 
@@ -850,10 +862,14 @@ Items can be edited in several ways.
    |image688|
 
 -  You can click 'Edit' to the right of each item in the Holdings
-   tabEdit individual items
+   tab
+
+   |image1268|
 
 -  There is also a link to Edit items from the search results in the
-   staff clientEdit item on the search results
+   staff client
+
+   |image1269|
 
 -  Finally you can use the :ref:`Batch Item
    Modification <batch-item-modification-label>` tool
@@ -914,6 +930,8 @@ here you can see basic information about the item such as the home
 library, item type, collection code, call number and replacement price.
 You can also see and edit the status information. If an item is marked
 lost or withdrawn you will also see the date that status was applied.
+
+|image1270|
 
 In the History section you will see information about the check out
 history of the item and if you ordered the item via the acquisitions

@@ -1180,7 +1180,9 @@ Out <check-out-(issuing)-label>` section of this manual.
 
 Staff members can access their own check out screen by clicking their
 username in the top right of the staff client and choosing 'My
-checkouts'My checkouts
+checkouts'
+
+|image1178|
 
 .. _details-label:
 
@@ -1190,7 +1192,6 @@ Details
 Staff members can access their own account details by clicking their
 username in the top right of the staff client and choosing 'My account'
 
-My account
 |image442|
 
 All patron information will appear on the Details tab. This includes all
@@ -1273,8 +1274,9 @@ The table will show you the following columns:
 
    -  If you're allowing patrons to pay fines via the OPAC with PayPal
       (:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-&-paypalsandboxmode-label>`) you
-      will see a Note that says 'PayPal' for items paid this wayPayPal
-      Fines
+      will see a Note that says 'PayPal' for items paid this way
+
+      |image1246|
 
 -  Amount: the total amount of the payment or charge
 
@@ -1612,7 +1614,9 @@ Purchase Suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the patron has made any purchase suggestions you will see a purchase
-suggestions tab on the patron record.Patron purchase suggestions
+suggestions tab on the patron record.
+
+|image1247|
 
 From here you can see all suggestions made by the patron and their
 status, you can also create a purchase suggestion on the patron's behalf
@@ -1643,13 +1647,19 @@ system preference to 'Allow'.
 
 Patrons can :ref:`request discharges via the OPAC <ask-for-a-discharge-label>`. Any
 pending discharges will be listed below the menu buttons on the main
-staff client pagePending discharges
+staff client page
+
+|image1248|
 
 Clicking the pending requests will open a screen where you can allow
-those dischargesPending discharges
+those discharges
+
+|image1249|
 
 To generate a discharge for a specific patron click the 'Discharge' tab
-on the left of the patron recordDischarge
+on the left of the patron record
+
+|image1250|
 
 If the patron can have a discharge generated then it will have a button
 that says 'Generate discharge'
@@ -1673,11 +1683,14 @@ Discharge letter
     You can style the PDF using the :ref:`NoticeCSS`
     preference.
 
-The patron will have a restriction added to their accountDischarge
-restriction
+The patron will have a restriction added to their account
+
+|image1251|
 
 And a history of discharges will be added to the 'Discharge'
-tabDischarge history
+tab
+
+|image1252|
 
 .. _patron-search-label:
 
@@ -1699,7 +1712,9 @@ Expanded patron search
 |image478|
 
 You can also filter your patron results using the search options on the
-left hand side of the page.Patron search filters
+left hand side of the page.
+
+|image1253|
 
 Depending on what you have chosen for the 'Search fields' you can search
 for patrons in various different ways.

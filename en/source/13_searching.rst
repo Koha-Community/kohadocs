@@ -318,15 +318,20 @@ in the staff client to find them.
 -  *Get there:* Search > Go to item search
 
 At the top of the advanced search page in the staff client you will see
-a link to 'Go to item search'Item search link
+a link to 'Go to item search'
 
-Clicking that link will open up a item specific search engine.Item
-search
+|image1313|
+
+Clicking that link will open up a item specific search engine.
+
+|image1314|
 
 Using the search form that is presented you can find a list of specific
 items that can be output to the screen or to a CSV file. If your results
 are printed to the screen you will have the option to narrow your search
-further using filters at the top.Item search results
+further using filters at the top.
+
+|image1315|
 
 .. _common-command-language-searching-label:
 

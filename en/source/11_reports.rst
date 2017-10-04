@@ -54,7 +54,9 @@ Chose Module for Report
     might see one more option for the Cache expiry. This is related to
     your public reports. If you make the report public then it's
     constantly running and will cause a large load on your system.
-    Setting this value prevents that.Cache expiry
+    Setting this value prevents that.
+
+    |image1292|
 
 Step 2: Choose a report type. For now, Tabular is the only option
 available.
@@ -146,7 +148,11 @@ Create Report from SQL
    can easily filter reports by groups. Report groups are set in the
    `REPORT\_GROUP <#reportgroup>`__ authorized value category or can be
    added on the fly when creating the report by choosing the 'or create'
-   radio button.Report groups set up in the authorised value category
+   radio button.
+
+   |image1293|
+
+   Report groups set up in the authorised value category
    need to have unique authorised values and descriptions.
 
    -  **Note**
@@ -270,7 +276,9 @@ Create Report from SQL
     might see one more option for the Cache expiry. This is related to
     your public reports. If you make the report public then it's
     constantly running and will cause a large load on your system.
-    Setting this value prevents that.Cache expiry
+    Setting this value prevents that.
+
+    |image1294|
 
 Once everything is entered click the 'Save Report' button and you'll be
 presented with options to run it. Once a report is saved you do not have
