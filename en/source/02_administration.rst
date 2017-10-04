@@ -410,7 +410,9 @@ Google OpenID Connect
 Visit the `Google Developers
 Console <https://console.developers.google.com/>`__ to obtain OAuth 2.0
 credentials such as a client ID and client secret that are known to both
-Google and your application.Developers Console
+Google and your application.
+
+   |image1179|
 
 -  Create a project, and give it some details to help you identify it
    later
@@ -1498,6 +1500,8 @@ Description:
    for the title. This tab will include links to order information
    stored in the acquisitions module.
 
+   |image1180|
+
 .. _authorityseparator-label:
 
 AuthoritySeparator
@@ -1710,11 +1714,15 @@ Description:
     **Note**
 
     Suppressed records will show a note in the staff client indicating
-    that they are suppressed from view in the OPAC.Suppressed in Staff
+    that they are suppressed from view in the OPAC.
+
+    |image1181|
 
     This note can be styled by using the
     :ref:`IntranetUserCSS` preference to stand out more
-    if you'd like.Style suppression note
+    if you'd like.
+
+    |image1182|
 
 .. _separateholdings-&-separateholdingsbranch-label:
 
@@ -3400,7 +3408,9 @@ Values:
 
 -  Disable
 
--  EnableOnSiteCheckouts
+-  Enable
+
+   |image1184|
 
 Description:
 
@@ -3596,7 +3606,9 @@ confirmation.
 
 Values:
 
--  askRentalFeesCheckoutConfirmation
+-  ask
+
+  |image1183|
 
 -  do not ask
 
@@ -5229,9 +5241,13 @@ Asks: \_\_\_ staff to specify a return date for a check in.
 
 Values:
 
--  AllowAllow return date edits
+-  Allow
 
--  Don't allowDon't allow return date edits
+  |image1185|
+
+-  Don't allow
+
+  |image1186|
 
 Description:
 
@@ -6602,7 +6618,9 @@ Values:
 
 -  Don't show
 
--  ShowOpen Library results
+-  Show
+
+  |image1187|
 
 .. _overdrive-label:
 
@@ -7948,6 +7966,8 @@ Values:
 
 -  Show
 
+  |image1188|
+
 .. _hidelostitems-label:
 
 hidelostitems
@@ -8053,7 +8073,9 @@ Description:
        <p> If you don't have a library card, stop by your local library to sign up.</p>
 
    Any HTML in this box will replace the above text below the log in
-   box.No login instructions
+   box.
+
+   |image1189|
 
 .. _opacadditionalstylesheet-label:
 
@@ -8185,9 +8207,13 @@ HTML
 Description:
 
 -  This preference allows you to replace the default search box at the
-   top of the OPAC : Default search box
+   top of the OPAC :
 
-   with any HTML you would like :Edited search box area
+    |image1190|
+
+   with any HTML you would like :
+
+    |image1191|
 
 .. _opacdisplay856uasimage-label:
 
@@ -8245,7 +8271,9 @@ Description:
 OpacExportOptions
 ''''''''''''''''''''''''''''''''''''''''''
 
-Default: Default OpacExportOptions options
+Default:
+
+    |image1192|
 
 Asks: List export options that should be available from OPAC detail page
 : \_\_\_
@@ -8610,7 +8638,9 @@ Description:
 
 -  This preference will display text above the patron's summary and
    below the welcome message when the patron logs in to the OPAC and
-   view their 'my summary' tab.OPACMySummaryNote in the OPAC
+   view their 'my summary' tab.
+
+    |image1193|
 
 .. _opacnav-label:
 
@@ -9220,7 +9250,9 @@ Asks: \_\_\_ the acquisition details on OPAC detail pages.
 
 Values:
 
--  DisplayAcquisitions details in the OPAC
+-  Display
+
+    |image1194|
 
 -  Don't display
 
@@ -9580,7 +9612,9 @@ the OPAC.
 
 Values:
 
--  allowedForgot your password link
+-  allowed
+
+    |image1195|
 
 -  not allowed
 
@@ -10276,7 +10310,9 @@ suggestions and reading history)
 
     Remember to use the borrowernumber note the patron's cardnumber for
     this value. The borrowernumber can be found on the patron record
-    under 'Library use' on the right.Borrowernumber
+    under 'Library use' on the right.
+
+    |image1196|
 
 .. _enableopacsearchhistory-label:
 
@@ -11683,7 +11719,9 @@ Values:
 
 -  Don't keep
 
--  KeepEnableSearchHistory
+-  Keep
+
+    |image1197|
 
 Description:
 
@@ -12721,7 +12759,9 @@ IntranetCirculationHomeHTML
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in its own div on the bottom of the home
-page of the circulation module: IntranetCirculationHomeHTML
+page of the circulation module:
+
+    |image1198|
 
 .. _intranetcolorstylesheet-label:
 
@@ -12800,7 +12840,9 @@ IntranetReportsHomeHTML
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: Show the following HTML in its own div on the bottom of the home
-page of the reports module: HTML on Reports page
+page of the reports module:
+
+    |image1199|
 
 .. _intranetslipprinterjs-label:
 
@@ -13147,7 +13189,9 @@ Values:
 
 -  Don't show
 
--  ShowWYSIWYG Editor in Sys Prefs
+-  Show
+
+    |image1200|
 
 Description:
 
@@ -13381,10 +13425,14 @@ Description:
    modify / add authorities. If a record comes from the Sudoc (so 009 is
    filled with an integer), at the OPAC you will see "Author: Idref" if
    a 7..$3 (unimarc author) if filled with a ppn. On clicking on the
-   Idref link, a popup will display. IdRef link
+   Idref link, a popup will display.
+
+    |image1201|
 
    The Idref webservice is requested and all records (by roles) for this
-   author will be displayedSudoc
+   author will be displayed
+
+   |image1202|
 
    There is 1 line / record and 2 links at the end. 1 will request Koha
    (cgi-bin/koha/opac-search.pl?q=ident:003381862), the other one will
@@ -14339,12 +14387,16 @@ New patron category form
    actions in the OPAC if their card is expired using the next option.
    By default it will follow the rule set in the
    :ref:`BlockExpiredPatronOpacActions`
-   preferenceBlock expired patrons
+   preference
+
+    |image1203|
 
 -  Next you can choose the default privacy settings for this patron
    category. This setting can be edited by the patron via the OPAC if
    you allow it with the :ref:`OPACPrivacy` system
-   preference.Default privacy
+   preference.
+
+    |image1204|
 
 -  Finally you can assign advanced messaging preferences by default to a
    patron category
@@ -15973,11 +16025,13 @@ Item search fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From here you can add custom search fields to the :ref:`item
-search <item-searching-label>` option in the staff client. Item
-search fields
+search <item-searching-label>` option in the staff client.
 
-To add a new search term simply click the 'New search field' buttonAdd
-new field
+    |image1205|
+
+To add a new search term simply click the 'New search field' button
+
+    |image1206|
 
 -  Name is a field for you to identify the search term
 
@@ -15991,7 +16045,9 @@ new field
    to a pull down instead of a free text field
 
 Once your new field is added it will be visible at the top of this page
-and on the item search pageSearch option
+and on the item search page
+
+    |image1207|
 
 .. _acquisitions-module-label:
 
@@ -16118,7 +16174,9 @@ Duplicate Budget
 |image218|
 
 You can also click the 'Actions' button to the right of the budget and
-choose 'Duplicate'.Duplicate budget
+choose 'Duplicate'.
+
+|image1208|
 
 In both cases you will be presented with a form where you simply need to
 enter the new start and end date and save the budget.
@@ -16150,8 +16208,9 @@ budget <duplicate-a-budget-label>` so that you have somewhere for the
 unreceived orders to roll to.
 
 Find the previous budget with unreceived orders on the Active budgets or
-the Inactive budgets tab and select 'Close' under 'Actions'. Close a
-budget
+the Inactive budgets tab and select 'Close' under 'Actions'.
+
+    |image1209|
 
     **Note**
 
@@ -16159,8 +16218,9 @@ budget
     new budget, the fund structures in the previous budget must exist in
     the new budget. Budgets without unreceived orders cannot be closed.
 
-When you select 'Close' you will be presented with a form.Closing a
-budget
+When you select 'Close' you will be presented with a form.
+
+    |image1210|
 
 Use the 'Select a budget' drop down to choose the new budget for the
 unreceived orders.
@@ -16173,7 +16233,9 @@ Once you have made your choices, click the 'Move unreceived orders'
 button. You will be presented with a dialog box that says 'You have
 chosen to move all unreceived orders from 'Budget X' to 'Budget Y'. This
 action cannot be reversed. Do you wish to continue?' Budget X is the
-budget to be closed and Budget Y is the selected budget. Close warning
+budget to be closed and Budget Y is the selected budget.
+
+    |image1211|
 
 If everything seems correct click 'OK' and the unreceived orders and, if
 selected, unspent funds will be moved.
@@ -16357,7 +16419,9 @@ acquisitions vendors.
     Before you begin you will need at least one :ref:`Vendor set up in
     Acquisitions <add-a-vendor-label>`.
 
-To add account information click the 'New account' button.New account
+To add account information click the 'New account' button.
+
+    |image1212|
 
 In the form that appears you will want to enter your vendor information.
 
@@ -16744,10 +16808,14 @@ uses from this area.
    alerts
 
 Each dialog box in Koha has a CSS class assigned to it that can be used
-as a selector for a sound.Audio alerts
+as a selector for a sound.
+
+    |image1213|
 
 You can edit the defaults by clicking the 'Edit' button to the right of
-each alertEdit alert
+each alert.
+
+    |image1214|
 
 You can assign alerts to other CSS classes in Koha by entering that
 information in the selector box. For example if you enter
@@ -16775,7 +16843,9 @@ SMS cellular providers
     :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference is set to 'Email'
 
 From here you can enter as many cellular providers as you need to send
-SMS notices to your patrons using the email protocol.SMS Providers
+SMS notices to your patrons using the email protocol.
+
+    |image1215|
 
 Some examples in the US are:
 
@@ -16806,9 +16876,13 @@ Some examples in the US are:
 Table: SMS Provider Examples
 
 To add new providers enter the details in the form and click 'Add new'
-to save.Add SMS Provider
+to save.
+
+    |image1216|
 
 These options will appear in the OPAC for patrons to choose from on the
 :ref:`messaging tab <my-messaging-label>` if you have
 :ref:`EnhancedMessagingPreferences`
-enabled.Options for providers in the OPAC
+enabled.
+
+    |image1217|

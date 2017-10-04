@@ -131,8 +131,9 @@ Did you mean?
 |image943|
 
 If you performed an advanced search you see an option to go back and
-edit your advanced search blow the list of results pages.Return to the
-last advanced search
+edit your advanced search blow the list of results pages.
+
+|image1295|
 
 .. _filters-label:
 
@@ -147,11 +148,14 @@ Refine Your Results
 
 Depending on your setting for the
 :ref:`DisplayLibraryFacets` system preference you
-will see filters for your home, holding or both libraries.Library Facet
+will see filters for your home, holding or both libraries.
+
+|image1296|
 
 After clicking a facet you can remove that filter from your results by
-clicking the small 'x' that appears to the right of the facet.Remove
-library facet
+clicking the small 'x' that appears to the right of the facet.
+
+|image1297|
 
 .. _search-rss-feeds-label:
 
@@ -457,7 +461,9 @@ If the library is allowing you to share private lists with the
 :ref:`OpacAllowSharingPrivateLists`
 preference then you will see the 'Share' link on your list of lists and
 the 'Share list' link at the top of each individual list. Clicking this
-will ask you to enter the email address of a patron.Share list
+will ask you to enter the email address of a patron.
+
+|image1298|
 
 Once the email address is entered Koha will present you with a
 confirmation message
@@ -494,7 +500,9 @@ Items added to Cart
 |image978|
 
 From the results you will see which items are in your cart and will be
-able to remove those items by clicking '(remove)'.Item in your cart
+able to remove those items by clicking '(remove)'.
+
+|image1299|
 
 .. _managing-the-cart-label:
 
@@ -513,7 +521,9 @@ of the cart are several buttons.
 
 First is the 'More details' button. Clicking this will show you
 additional information about the titles in your cart (ISBNs, Subjects,
-Publisher Info, Notes and more).More details in the cart
+Publisher Info, Notes and more).
+
+|image1300|
 
 Next is the option to send the contents of your cart to an email
 address. This is handy if you want to send the resources you found at
@@ -602,7 +612,9 @@ Place Hold Form
       :ref:`AllowHoldItemTypeSelection`
       preference set to 'Allow' and the record had more than one item
       type attached you will see an option to choose to limit the hold
-      to a specific item typeAllowHoldItemTypeSelection
+      to a specific item type
+
+      |image1301|
 
 -  If allowed by your
    :ref:`OPACAllowHoldDateInFuture`
@@ -864,10 +876,14 @@ link found under the log in box to reset their passwords.
 
 Once clicked they will be presented with a form asking for their
 username and their email address (patrons must have an email address on
-file to reset their password).Recover password
+file to reset their password).
+
+|image1302|
 
 The system will then email the patron instructions for resetting their
-password.Reset password confirmation
+password.
+
+|image1303|
 
 .. _my-summary-label:
 
@@ -909,8 +925,9 @@ Barcode number on checkout list in OPAC
 
 If their guarantee has allowed it via :ref:`their
 privacy <my-privacy-label>`, when the guarantor logs in they will see a
-tab labeled "Relatives' checkouts" on their summary tab.Relatives'
-checkouts
+tab labeled "Relatives' checkouts" on their summary tab.
+
+|image1304|
 
 Clicking on the 'Overdue' tab will show only the items that are overdue.
 
@@ -936,7 +953,9 @@ Patrons can cancel or suspend (depending on the value of your
 :ref:`SuspendHoldsOpac` system preference) their own
 holds if they are not in transit or already waiting for them. When they
 click 'Suspend' they will be presented with the option to choose a date
-for their hold to resume.Suspend until
+for their hold to resume.
+
+|image1305|
 
 They can also suspend all of their holds indefinitely or until a
 specific date if they choose by filling in the suspend options at the
@@ -993,7 +1012,9 @@ Library Fines & Charges
 If you are allowing patrons to pay their fines using PayPal with the
 :ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-&-paypalsandboxmode-label>` preference
 there will be checkboxes to the left of each fine with an outstanding
-amount.Fines with checkboxes
+amount.
+
+|image1306|
 
 At the bottom the patron will see the option to pay with PayPal for the
 items they have checked.
@@ -1001,11 +1022,14 @@ items they have checked.
 PayPal Payment
 |image1015|
 
-After paying they will be presented with a confirmationPayPal
-Confirmation
+After paying they will be presented with a confirmation
+
+|image1307|
 
 And you will see that the fine was paid using PayPal on the staff
-side.Staff side fines
+side.
+
+|image1308|
 
 .. _my-details-label:
 
@@ -1158,10 +1182,14 @@ If you're allowing guarantees to grand permission to their guarantors to
 view their current checkouts with the
 :ref:`AllowPatronToSetCheckoutsVisibilityForGuarantor`
 preference they will see that option on this
-screen.AllowPatronToSetCheckoutsVisibilityForGuarantor
+screen.
+
+|image1309|
 
 When the guarantor logs in they will see a tab labeled "Relatives'
-checkouts" on their summary tab.Relatives' checkouts
+checkouts" on their summary tab.
+
+|image1310|
 
 .. _my-purchase-suggestions-label:
 
@@ -1214,8 +1242,9 @@ SMSSendDriver in the OPAC
 
 If you are using the :ref:`Itiva Talking
 Tech <talkingtechitivaphonenotification-label>` service you will see an
-additional column to receive these messages via Phone.Phone messaging
-preferences in the OPAC
+additional column to receive these messages via Phone.
+
+|image1311|
 
 -  These notices are:
 
@@ -1264,7 +1293,9 @@ Ask for a Discharge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have enabled the :ref:`useDischarge` preference then
-patrons will be able to request a discharge via the OPAC.Discharge tab
+patrons will be able to request a discharge via the OPAC.
+
+|image1312|
 
 From here patrons can request a discharge
 

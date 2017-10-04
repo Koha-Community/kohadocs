@@ -420,7 +420,9 @@ OpacMainUserBlock:
 Once that is in place, you need only refresh your OPAC page, and there
 you have it, your very own catalog coverflow widget! Not only do these
 coverflows look great on a computer screen, but they look great on
-mobile platforms as well, and are even touch responsive!Coverflow Widget
+mobile platforms as well, and are even touch responsive!
+
+|image1316|
 
 System Preference Defaults
 ==========================
@@ -3190,7 +3192,9 @@ Setting up your OCLC desktop client
     Screenshots are OCLC Connexion Client v.2.50, Koha v.3.12
 
 To set up the OCLC Connexion desktop client to connect to Koha, go to
-Tools > Options, then choose the Export tab. Connexion Export Tab
+Tools > Options, then choose the Export tab. 
+
+|image1317|
 
 -  Click the "Create..." button to set up a new destination, then choose
    "OCLC Gateway Export" and click OK.
@@ -3250,16 +3254,21 @@ Exporting records one by one
 To export bibliographic records one by one, be sure your "Batch" options
 are correct: from the "Tools" menu, select "Options", and select the
 "Batch" tab. In the "Perform local actions in batch" area,
-"Bibliographic Record Export" should be uncheckedConnexion batch options
+"Bibliographic Record Export" should be unchecked
+
+|image1318|
 
 When ready to export, from the "Action" menu, select "Export" or use the
 F5 key. You will see a screen similar to the following if the import is
 successful and if the record is new to the Catalog; you may copy & paste
-the resulting URL into your Koha catalog to see the new record.Connexion
-Export
+the resulting URL into your Koha catalog to see the new record.
+
+|image1319|
 
 If the record was overlaid, you will see a message to that effect in the
-"OCLC Gateway Export Status" windowOverlay confirmation
+"OCLC Gateway Export Status" window
+
+|image1319|
 
 .. _exporting-records-in-a-batch-label:
 
@@ -3269,14 +3278,17 @@ Exporting records in a batch
 To export bibliographic records in a batch, be sure your "Batch" options
 are correct: from the "Tools" menu, select "Options", and select the
 "Batch" tab. In the "Perform local actions in batch" area,
-"Bibliographic Record Export" should be checkedOCLC Batch Export Options
+"Bibliographic Record Export" should be checkedOCLC
+
+|image1320|
 
 When a record is ready to export, from the "Action" menu, select
 "Export" or use the F5 key, and it’s export status will be "ready."
 
 When ready to export the batch, from the "Batch" menu, select "Process
-batch" and check the appropriate "Path" and "Export" boxesBatch import
-process
+batch" and check the appropriate "Path" and "Export" boxes
+
+|image1321|
 
 The export will begin, and the bib records will be exported & imported
 into Koha one by one; you will see "OCLC Gateway Export Status" windows,

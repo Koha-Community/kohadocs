@@ -292,7 +292,9 @@ will bring back the pull down menu with authorized reasons.
 Enter reason for 'Others...'
 |image803|
 
-You can also assign this suggestion to a fund. Edit suggestion fund
+You can also assign this suggestion to a fund.
+
+|image1280|
 
 This edit can trigger a notice (defined in the :ref:`Notices &
 Slips <notices-&-slips-label>` tool with the `TO\_PROCESS <#toprocessnotice>`__
@@ -504,22 +506,29 @@ Order from a staged file
 
    -  From the list of files you are presented with, choose the 'Add
       orders' link to add the records in the staged file to your order.
-      Staged records
+
+      |image1281|
 
    -  Next to each title is a checkbox, check the items you would like
       to order, or choose 'Check all' at the top. Depending on your
       settings in the :ref:`MarcFieldsToOrder`
       preference Koha will populate the next screen with with the
       relevant Quantity, Price, Fund, Statistic 1, and Statistic 2 found
-      within the staged file.Add orders from staged file
+      within the staged file.
+
+      |image1282|
 
    -  In the 'Item Information' tab you can enter information that will
       be added to every ordered item such as item type, collection code
-      and not for loan status.Item information
+      and not for loan status.
+
+      |image1283|
 
    -  If no information is imported from the MARC record regarding fund
       information the 'Default accounting details' tab can be used to
-      apply values related to the accounting.Accounting details
+      apply values related to the accounting.
+
+      |image1284|
 
 -  The final option for ordering is to order from a list of titles with
    the highest hold ratios
@@ -527,8 +536,9 @@ Order from a staged file
    -  This option will take you to the Holds Ratio report where you can
       find items with a high hold ratio and order additional copies.
       Next to each title will be a link with the number of items to
-      order, click that and it will add the item to your basket.Holds
-      Ratio Order
+      order, click that and it will add the item to your basket.
+
+      |image1285|
 
 With any of the above ordering options you're presented with an option
 to notify patrons of the new item when it's received. The contents of
@@ -543,7 +553,9 @@ Patron notification search
    notify and click 'Select'
 
 -  Once you're done you can close the window and you'll see the list of
-   patrons under the 'Patrons' sectionPatrons
+   patrons under the 'Patrons' section
+
+   |image1286|
 
 After bringing in the bib information (for all import methods except for
 the staged file), if your :ref:`AcqCreateItem` system
@@ -646,7 +658,9 @@ Basket Buttons
 
 If you're using EDI for your order you can click the 'Create EDIFACT
 order' button when you're done to send the file to the vendor and close
-the basket.EDIFACT Order
+the basket.
+
+|image1287|
 
 Once you're sure your basket is complete, you can click 'Close this
 basket' button to indicate that this basket is complete and has been
@@ -697,7 +711,9 @@ Uncertain Prices
 Once your order is entered you can search for it through acquisitions or
 view the information on the biblio detail page in the staff client (if
 the :ref:`AcquisitionDetails` preference is set to
-'Display).Acquisitions details
+'Display).
+
+|image1288|
 
 .. _create-a-basket-group-label:
 
@@ -843,7 +859,9 @@ page or click the 'Finish receiving' button at the bottom of the screen.
 
 If the item cannot be found anywhere you can cancel the order by
 clicking 'Delete order' to the far right. This will prompt you to enter
-your reason and confirm cancellation.Cancel order
+your reason and confirm cancellation.
+
+|image1289|
 
 You will also see that the item is received and/or cancelled if you view
 the basket.
@@ -877,7 +895,9 @@ Invoice details
 If you're allowing the uploading of acquisitions files with the
 :ref:`AcqEnableFiles` preference you will see the option
 to manage invoice files next to the link to 'Go to receipt
-page'AcqEnableFiles
+page'
+
+|image1290|
 
 To see or attach new files click the 'Manage invoice files' link
 
@@ -1235,4 +1255,6 @@ EDIFACT Messages
 ----------------------------------
 
 A log of all messages sent and received via EDIFACT can be found under
-EDIFACT Messages. EDIFACT Messages
+EDIFACT Messages.
+
+|image1291|

@@ -76,24 +76,33 @@ subscriptions for reporting and searching.
 -  *Get there:* Serials > Add subscription fields
 
 To add custom fields simply click the 'Add subscription fields' link on
-the left of the Serial page and choose the 'New field' buttonAdd
-subscription fields
+the left of the Serial page and choose the 'New field' button
+
+|image1271|
 
 The form that appears will ask for either an authorized value or a marc
 field to populate the field with
 
-Add field
+|image1272|
 
 For example you might want to track which department you're ordering for
-or the collection code for this serialAdd department
+or the collection code for this serial
+
+|image1273|
 
 This data will then show when you are adding a subscriptionAdd field
 value
 
-and when you view the subscriptionShow field
+|image1274|
+
+and when you view the subscription
+
+|image1275|
 
 and when you search subscriptions (if you chose to make it
-'searchable')Searchable field
+'searchable')
+
+|image1276|
 
 .. _add-a-subscription-label:
 
@@ -148,8 +157,9 @@ Add a new subscription (1/2)
 
 -  Checking the 'Manual history' box will allow you to enter serials
    outside the prediction pattern once the subscription is saved by
-   going to the 'Planning' tab on the subscription detail page.Manual
-   History
+   going to the 'Planning' tab on the subscription detail page.
+
+   |image1277|
 
 -  'Call Number' is for your item's call number or call number prefix
 
@@ -275,7 +285,9 @@ Add a new subscription (2/2)
    German locale option to display days, etc. in German.
 
 -  Once a 'Numbering pattern' is chosen the number formula will
-   appear.Numbering Formula
+   appear.
+
+   |image1278|
 
    -  The 'Begins with' number is the number of the issue you're holding
       in your hand.
@@ -296,8 +308,9 @@ Add a new subscription (2/2)
       |image749|
 
 -  If you have added a :ref:`custom subscription field <custom-subscription-fields-label>`, it
-   will be editable above the buttons at the bottom of the screenShow
-   field
+   will be editable above the buttons at the bottom of the screen
+
+   |image1274|
 
 Click 'Save Subscription' to save the information you have entered.
 `Find sample serial examples in the appendix <#sampleserialsapp>`__.
@@ -488,7 +501,9 @@ Subscribe link in the OPAC
 
 You can see those who subscribe to new issue alerts by going to the
 subscription page in the staff client and looking on the right of the
-'Information' tab.Serial notification subscribers
+'Information' tab.
+
+|image1279|
 
 Whereas the full view shows extensive details, broken out by year,
 regarding the subscription
