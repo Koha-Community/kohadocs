@@ -22,9 +22,9 @@ Full system recommendations can be found on the official Koha wiki along
 with the developer documentation: http://wiki.koha-community.org
 
 When working in the Koha staff client it is strongly recommended that
-you use the Firefox browser. Koha's staff client is not supported in
-Internet Explorer and has not yet been fully optimized for Google
-Chrome.
+you use an up-to-date version of either Mozilla Firefox or Google Chrome.
+Koha's staff client may not work well in Microsoft Internet Explorer,
+especially older versions.
 
 .. _using-this-manual-label:
 
