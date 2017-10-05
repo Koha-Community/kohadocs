@@ -174,51 +174,6 @@ Frequency suggestion: nightly
     :ref:`DefaultLongOverdueChargeValue`
     preferences.
 
-.. _perl-documentation-long-overdues-label:
-
-Perl Documentation
-'''''''''''''''''''''''''''''''''''''''''''''
-
-**NAME**
-
-longoverdue.pl cron script to set lost statuses on overdue materials.
-Execute without options for help.
-
-**DESCRIPTION**
-
---lost \| -l
-
-This option takes the form of n=lv, where n is num days overdue, and lv
-is the lost value. See warning below.
-
---charge \| -c
-
-This specifies what lost value triggers Koha to charge the account for
-the lost item. Replacement costs are not charged if this is not
-specified.
-
---verbose \| v
-
-verbose.
-
---confirm
-
-confirm. without this option, the script will report the number of
-affected items and return without modifying any records.
-
---quiet
-
-suppress summary output.
-
---maxdays
-
-Specifies the end of the range of overdue days to deal with (defaults to
-366). This value is universal to all lost num days overdue passed.
-
---mark-returned
-
-When an item is marked lost, remove it from the borrowers issued items.
-
 .. _track-total-checkouts-label:
 
 Track total checkouts
