@@ -226,32 +226,6 @@ renewal with your :ref:`circulation and fine rules <circulation-and-fine-rules-l
 
 Frequency suggestion: nightly
 
-.. _perl-documentation-automatic-renewal-label:
-
-Perl Documentation
-'''''''''''''''''''''''''''''''''''''''''''
-
-**NAME**
-
-automatic\_renewals.pl - cron script to renew loans
-
-**SYNOPSIS**
-
-./automatic\_renewals.pl
-
-or, in crontab: 0 3 \* \* \* automatic\_renewals.pl
-
-**DESCRIPTION**
-
-This script searches for issues scheduled for automatic renewal
-(issues.auto\_renew). If there are still renews left (Renewals allowed)
-and the renewal isn't premature (No Renewal before) the issue is
-renewed.
-
-**OPTIONS**
-
-No options.
-
 .. _patrons-label:
 
 Patrons
@@ -311,76 +285,24 @@ when they reach the upper age limit defined in the Patron Categories.
 
 Frequency suggestion: nightly
 
-.. _perl-documentation-update-child-to-adult-patron-type-label:
+    **DESCRIPTION**
+    
+    This script is designed to update patrons from juvenile to adult patron
+    types, remove the guarantor, and update their category codes
+    appropriately when they reach the upper age limit defined in the Patron
+    Categories.
 
-Perl Documentation
-''''''''''''''''''''''''''''''''''''
-
-**NAME**
-
-juv2adult.pl - convert juvenile/child patrons from juvenile patron
-category and category code to corresponding adult patron category and
-category code when they reach the upper age limit defined in the Patron
-Categories.
-
-**SYNOPSIS**
-
-juv2adult.pl [ -b=<branchcode> -f=<categorycode> -t=<categorycode> ]
-
-Options:
-
---help brief help message
-
---man full documentation
-
--v verbose mode
-
--n take no action, display only
-
--b <branchname> only deal with patrons from this library/branch
-
--f <categorycode> change patron category from this category
-
--t <categorycode> change patron category to this category
-
-=head1 OPTIONS
-
---help Print a brief help message and exits.
-
---man Prints the manual page and exits.
-
--v Verbose. Without this flag set, only fatal errors are reported.
-
--n No Action. With this flag set, script will report changes but not
-actually execute them on the database.
-
--b changes patrons for one specific branch. Use the value in the
-branches.branchcode table.
-
--f \*required\* defines the juvenile category to update. Expects the
-code from categories.categorycode.
-
--t \*required\* defines the category juvenile patrons will be converted
-to. Expects the code from categories.categorycode.
-
-**DESCRIPTION**
-
-This script is designed to update patrons from juvenile to adult patron
-types, remove the guarantor, and update their category codes
-appropriately when they reach the upper age limit defined in the Patron
-Categories.
-
-**USAGE EXAMPLES**
-
-"juv2adult.pl" - Suggests that you read this help. :)
-
-"juv2adult.pl" -b=<branchcode> -f=<categorycode> -t=<categorycode> -
-Processes a single branch, and updates the patron categories from
-fromcat to tocat.
-
-"juv2adult.pl" -f=<categorycode> -t=<categorycode> -v -n - Processes all
-branches, shows all messages, and reports the patrons who would be
-affected. Takes no action on the database.
+    **USAGE EXAMPLES**
+    
+    "juv2adult.pl"
+    
+    "juv2adult.pl" -b=<branchcode> -f=<categorycode> -t=<categorycode> 
+    (Processes a single branch, and updates the patron categories from
+    category to category)
+    
+    "juv2adult.pl" -f=<categorycode> -t=<categorycode> -v -n (Processes all
+    branches, shows all messages, and reports the patrons who would be
+    affected. Takes no action on the database)
 
 .. _notices-label:
 
@@ -426,33 +348,6 @@ Frequency suggestion: nightly
 
     This script does not actually send the notices. It queues them in
     the :ref:`message queue <message-queue-label>` for later
-
-.. _perl-documentation-advanced-notice-label:
-
-Perl Documentation
-'''''''''''''''''''''''''''''''''''''''''''
-
-**NAME**
-
-advance\_notices.pl - cron script to put item due reminders into message
-queue
-
-**SYNOPSIS**
-
-./advance\_notices.pl -c
-
-or, in crontab: 0 1 \* \* \* advance\_notices.pl -c
-
-**DESCRIPTION**
-
-This script prepares pre-due and item due reminders to be sent to
-patrons. It queues them in the message queue, which is processed by the
-process\_message\_queue.pl cronjob. The type and timing of the messages
-can be configured by the patrons in their "My Alerts" tab in the OPAC.
-
-**METHODS**
-
-parse\_letter
 
 .. _overdue-notice-label:
 
