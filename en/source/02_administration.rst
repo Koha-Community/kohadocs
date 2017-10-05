@@ -13942,6 +13942,13 @@ use, for instance 'Lost'.
 
    -  List of patron suggestion reject or accept reasons (appears when
       managing suggestions)
+      
+      
+ -  TERM
+ 
+   - Terms to be used in Course Reserves Module.  Enter Terms that will show 
+     in the drop down menu when setting up a Course Reserve.  (For example: 
+     Spring, Summer, Winter, Fall).
 
 -  WITHDRAWN
 
