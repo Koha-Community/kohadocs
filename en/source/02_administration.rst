@@ -13942,6 +13942,12 @@ use, for instance 'Lost'.
 
    -  List of patron suggestion reject or accept reasons (appears when
       managing suggestions)
+      
+ -  SUGGEST_FORMAT
+ 
+   - List of Item Types to display in a drop down menu on the Purchase Suggestion
+   form on the OPAC. When creating the authorized values for SUGGEST_FORMAT, 
+   enter a description into this form so it is visible on the OPAC to patrons.
 
 -  WITHDRAWN
 
