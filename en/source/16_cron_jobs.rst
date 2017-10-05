@@ -176,102 +176,31 @@ Frequency suggestion: nightly
 
 .. _track-total-checkouts-label:
 
-Track total checkouts
+Track Total Checkouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/update\_totalissues.pl
 
 Does: updates the biblioitems.totalissues field in the database with the
-latest tally of checkouts.
+latest tally of checkouts based on historical issue statistics.
 
 Frequency suggestion: nightly
 
-.. _perl-documentation-track-total-checkouts-label:
+    **Warning**
+    
+    Updating immediately increases server load significantly
 
-Perl Documentation
-'''''''''''''''''''''''''''''''''''''''''''''
+    **Warning**
 
-**NAME**
+    If the time on your database server does not match the time on your Koha
+    server you will need to take that into account, and probably use the
+    --since argument instead of the --interval argument for incremental
+    updating.
 
-update\_totalissues.pl
+    **Note**
 
-**SYNOPSIS**
-
-update\_totalissues.pl --use-stats
-
-update\_totalissues.pl --use-items
-
-update\_totalissues.pl --commit=1000
-
-update\_totalissues.pl --since='2012-01-01'
-
-update\_totalissues.pl --interval=30d
-
-**DESCRIPTION**
-
-This batch job populates bibliographic records' total issues count based
-on historical issue statistics.
-
---help Prints this help
-
--v\|--verbose
-
-Provide verbose log information (list every bib modified).
-
---use-stats
-
-Use the data in the statistics table for populating total issues.
-
---use-items
-
-Use items.issues data for populating total issues. Note that issues data
-from the items table does not respect the --since or --interval options,
-by definition. Also note that if both --use-stats and --use-items are
-specified, the count of biblios processed will be misleading.
-
--s\|--since=DATE
-
-Only process issues recorded in the statistics table since DATE.
-
--i\|--interval=S
-
-Only process issues recorded in the statistics table in the last N units
-of time. The interval should consist of a number with a one- letter unit
-suffix. The valid suffixes are h (hours), d (days), w (weeks), m
-(months), and y (years). The default unit is days.
-
---incremental
-
-Add the number of issues found in the statistics table to the existing
-total issues count. Intended so that this script can be used as a cron
-job to update popularity information during low-usage periods. If
-neither --since or --interval are specified, incremental mode will
-default to processing the last twenty-four hours.
-
---commit=N
-
-Commit the results to the database after every N records are processed.
-
---test
-
-Only test the popularity population script.
-
-**WARNING**
-
-If the time on your database server does not match the time on your Koha
-server you will need to take that into account, and probably use the
---since argument instead of the --interval argument for incremental
-updating.
-
-**CREDITS**
-
-This patch to Koha was sponsored by the Arcadia Public Library and the
-Arcadia Public Library Foundation in honor of Jackie Faust-Moreno, late
-director of the Arcadia Public Library.
-
-**AUTHOR**
-
-Jared Camins-Esakov <jcamins AT cpbibliography DOT com>
+    This cronjob can be used if there is a performance concern. Otherwise,
+    use the UpdateTotalIssuesOnCirc System Preference.
 
 .. _generate-patron-file-for-offline-circulation-label:
 
