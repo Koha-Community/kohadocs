@@ -13854,6 +13854,17 @@ use, for instance 'Lost'.
 -  HINGS\_UT
 
    -  General Holdings: Type of Unit Designator
+   
+-  ITEMTYPECAT
+
+   - Allows multiple Item Types to be searched in a category.  Categories can be
+   entered into the Authorized Value ITEMTYPECAT. To combine Item Types to this 
+   category, enter this Search Category to any Item Types.  
+   
+   For example, an ITEMTYPECAT could be NEW, then in the Item Type 
+   for NEW BOOKS NEW DVDS, etc the search category could be added NEW.  
+   This is helpful when a patron chooses the Search Category of NEW, they could 
+   get Koha to search multiple Item Types with a single search.
 
 -  LOC
 
