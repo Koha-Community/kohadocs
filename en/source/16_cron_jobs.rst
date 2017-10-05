@@ -12,6 +12,14 @@ sending out email notifications. Koha has many cron jobs in place that
 you can enable (search engine indexing, overdue notice generation, data
 cleanup and more), this chapter will explain those for you.
 
+Crontab example
+-------------------------
+
+An example of a Koha crontab can be found in misc/cronjobs/crontab.example
+
+The example includes sample boilerplate cronjob entries for the most
+commonly-used cronjobs.
+
 .. _cron-jobs-subchapter-label:
 
 Cron Jobs
