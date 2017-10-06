@@ -592,87 +592,6 @@ website <http://hea.koha-community.org/>`__.
 
 Frequency: monthly
 
-.. _perl-documentation-share-usage-stats-label:
-
-Perl Documentation
-'''''''''''''''''''''''''''''''''''''''
-
-**NAME**
-
-share\_usage\_with\_koha\_community.pl - Share your library's usage with
-the Koha community
-
-**SYNOPSIS**
-
-share\_usage\_with\_koha\_community.pl [-h\|--help] [-v\|--verbose]
-
-If the :ref:`UsageStats` system preference is set, you can
-launch this script to share your usage data anonymously with the Koha
-community.
-
-Collecting Koha usage statistics will help developers to know how Koha
-is used across the world.
-
-This script will send the usage data for the bibliographic and authority
-records, checkouts, holds, orders, and subscriptions.
-
-Only the total number is retrieved. In no case will private data be
-shared!
-
-In order to know which parts of Koha modules are used, this script will
-collect some system preference values.
-
-If you want to tell us who you are, you can fill the
-:ref:`UsageStatsLibraryName` system preference
-with your library name,
-:ref:`UsageStatsLibraryUrl`,
-:ref:`UsageStatsLibraryType` and/or
-:ref:`UsageStatsCountry`.
-
-All these data will be analyzed on the http://hea.koha-community.org
-Koha community website.
-
-IMPORTANT : please do NOT run the cron on the 1st, but on another day.
-The idea is to avoid all Koha libraries sending their data at the same
-time ! So choose any day between 1 and 28 !
-
-**OPTIONS**
-
--h\|--help
-
-Print a brief help message
-
--v\|--verbose
-
-Verbose mode.
-
--f\|--force
-
-Force the update.
-
-**AUTHOR**
-
-Alex Arnaud <alex.arnaud@biblibre.com>
-
-Jonathan Druart <jonathan.druart@biblibre.com>
-
-**COPYRIGHT**
-
-Copyright 2014 BibLibre
-
-**LICENSE**
-
-This file is part of Koha.
-
-Koha is free software; you can redistribute it and/or modify it under
-the terms of the GNU General Public License as published by the Free
-Software Foundation; either version 3 of the License, or (at your
-option) any later version.
-
-You should have received a copy of the GNU General Public License along
-with Koha; if not, write to the Free Software Foundation, Inc., 51
-Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
 .. _acquisitions-label:
 
 Acquisitions
@@ -697,39 +616,6 @@ Script path: misc/cronjobs/notice\_unprocessed\_suggestions.pl
 
 Does: Generates a notice to the fund owner that there are suggestions in
 need of processing
-
-.. _perl-documentation-email-suggestions-to-process-label:
-
-Perl Documentation
-''''''''''''''''''''''''''''''''''''''''''''''
-
-**NAME**
-
-notice\_unprocessed\_suggestions.pl - Generate notification for
-unprocessed suggestions.
-
-The budget owner will be notified.
-
-The letter template 'TO\_PROCESS' will be used.
-
-**SYNOPSIS**
-
-notice\_unprocessed\_suggestions.pl [-h\|--help] [-v\|--verbose]
-[-c\|--confirm] [--days=NUMBER\_OF\_DAYS]
-
-**OPTIONS**
-
--h\|--help Print a brief help message
-
--c\|--confirm This flag must be provided in order for the script to
-actually generate notices. If it is not supplied, the script will only
-report on the patron it would have noticed.
-
---days This parameter is mandatory. It must contain an integer
-representing the number of days elapsed since the last modification of
-suggestions to process.
-
--v\|--verbose Verbose mode.
 
 .. _edi-message-processing-label:
 
