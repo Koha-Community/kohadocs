@@ -29,6 +29,20 @@ The locations below assume a dev install which puts the crons in misc/,
 if you have a standard install you may want to look in bin/ for these
 files if you cannot find them in misc/
 
+.. _daily-backup-label:
+
+Backup
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Daily Backup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/backup.sh
+
+Does: Creates a daily backup of the Koha database.
+
+Frequency suggestion: daily
+
 .. _search-label:
 
 Search
@@ -454,6 +468,30 @@ Frequency suggestion: hourly
 
 Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _delete-items-label:
+
+Batch Item Deletion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/delete\_items.pl
+
+Does: A batch item deletion tool, which generates a query against the items
+database and deletes the items matching the criteria specified in the
+command line arguments.
+
+.. _check-url-quick-label:
+
+Check URL Quick
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/check-url-quick.pl
+
+Does: Check URLs from biblio records.
+
+    **Note**
+    
+    This script replaces the check-url.pl script
 
 .. _check-urls-label:
 
