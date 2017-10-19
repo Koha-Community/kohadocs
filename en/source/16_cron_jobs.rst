@@ -241,6 +241,16 @@ Frequency suggestion: nightly
 Patrons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _delete-patrons-label:
+
+Batch Delete Patrons
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/delete\_patrons.pl
+
+Does: Deletes patron records in batch based on date not borrowed since,
+expired before, last seen, category code, or library branch.
+
 .. _unverified-registrations-label:
 
 Unverified Registrations
@@ -507,6 +517,15 @@ editor.
 Frequency suggestion: monthly
 
 Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements
+
+.. _delete-records-via-leader-label:
+
+Delete Records via Leader
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/delete\_records\_via\_leader.pl
+
+Does: Attempt to delete any MARC records where the leader character 5 equals 'd'
 
 .. _update-authorities-label:
 
