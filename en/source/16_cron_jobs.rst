@@ -63,7 +63,7 @@ of site traffic and server workload.
 
     **Note**
     A file named sitemapindex.xml is generated. It contains references to multiple
-    sitemap files. Each file contains at most 50,000 URLs and it named
+    sitemap files. Each file contains at most 50,000 URLs and is named
     sitemapXXXX.xml.
     
     The files must be stored on the Koha OPAC's root directory. In the same directory
