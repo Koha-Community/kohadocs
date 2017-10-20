@@ -479,6 +479,35 @@ Frequency suggestion: hourly
 Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _import-webservice-batch-label:
+
+Import Webservice Batch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/import\_webservice\_batch.pl
+
+Does: A cron job for processing impoort bach queues of type 'webservice'.
+Batches can also be processed through the UI.
+
+    **Note**
+    
+    This script is used for OCLC Connexion
+    
+.. _connexion-import-daemon-label:
+
+Connexion Import Daemon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/bin/connexion\_import\_daemon.pl
+
+Does: A daemon that listens for OCLC Connexion requests and is compliant with
+OCLC Gateway specification. It takes requests with MARC XML and import batch
+parameters from a configuration file and forwards it to svc/import_bib
+
+    **Note**
+    
+    This script is used for OCLC Connexion
+
 .. _delete-items-label:
 
 Batch Item Deletion
@@ -532,7 +561,7 @@ Does: Attempt to delete any MARC records where the leader character 5 equals 'd'
 Update Authorities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Script path: misc/migration\_tools/merge\_authority.pl
+Script path: misc/cronjobs/merge\_authorities.pl
 
 Does: Updates biblio data with changes to authorities records
 
