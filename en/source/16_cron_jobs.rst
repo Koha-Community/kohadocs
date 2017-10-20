@@ -48,6 +48,32 @@ Frequency suggestion: daily
 Search
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _sitemap-label:
+
+Sitemap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/sitemap.pl
+
+Does: Processes all biblio records from a Koha instance and generates sitemap files
+complying with the protocol as described on http://sitemaps.org. The goal of this
+script is to be able to provide to search engines direct access to biblio records.
+It avoids leaving search engines browsing Koha's OPAC which would generate a lot
+of site traffic and server workload.
+
+    **Note**
+    A file named sitemapindex.xml is generated. It contains references to multiple
+    sitemap files. Each file contains at most 50,000 URLs and it named
+    sitemapXXXX.xml.
+    
+    The files must be stored on the Koha OPAC's root directory. In the same directory
+    a robots.txt file with the following contents is required:
+    
+    
+    ``Sitemap: sitemapindex.xml
+    User-agent: *
+    Disallow: /cgi-bin/``
+
 .. _rebuild-index-label:
 
 Rebuild Index
@@ -166,6 +192,22 @@ Does: Calculates and posts fines to patron accounts.
 Required by: :ref:`finesMode` system preference
 
 Frequency suggestion: nightly
+
+.. _staticfines-label:
+
+Static Fines
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/staticfines.pl
+
+Does: this script calculates and charges overdue fines to patron accounts
+
+    **Note**
+    If the Koha System Preference 'finesMode' is set to 'production', the fines
+    are charged to the patron accounts. If set to 'test', the fines are calculated but not applied.
+    
+    **Note**
+    Fines won't be applied on a holiday.
 
 .. _long-overdues-label:
 
@@ -393,6 +435,15 @@ Frequency suggestion: nightly
     messages to patrons in advance of their items becoming due, or to alert
     them of items that have just become due.
 
+.. _printoverdues-label:
+
+Print Overdues
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/printoverdues.sh
+
+Does: generates PDF files from HTML files in directories and prints them
+
 .. _print-hold-notices-label:
 
 Print Hold Notices
@@ -486,7 +537,7 @@ Import Webservice Batch
 
 Script path: misc/cronjobs/import\_webservice\_batch.pl
 
-Does: A cron job for processing impoort bach queues of type 'webservice'.
+Does: A cron job for processing import bach queues of type 'webservice'.
 Batches can also be processed through the UI.
 
     **Note**
@@ -655,6 +706,17 @@ the content generated isn't going to change very much over time.
 System Administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _services-throttle-label:
+
+Services Throttle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/services\_throttle.pl
+
+Does: resets the xISBN services throttle
+
+Frequency suggestion: nightly
+
 .. _clean-up-database-label:
 
 Clean up Database
@@ -714,7 +776,28 @@ Does: Sends and received EDI messages
 
 Frequency: Every 15 minutes
 
+.. _remove-temporary-edi-files-label:
+
+Remove Temporary EDI Files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/remove\_temporary\_edifiles.pl
+
+Does: removes temporary EDI files that are older than 5 days
+
 .. _deprecated-scripts-label:
+
+.. _reports-label:
+
+Reports
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Run Report
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/runreport.pl
+
+Does: run pre-existing saved reports
 
 Deprecated scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
