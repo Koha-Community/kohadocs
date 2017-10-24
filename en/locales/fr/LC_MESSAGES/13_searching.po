@@ -1,0 +1,2621 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Koha Community
+# This file is distributed under the same license as the Koha Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Koha Manual 17.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-24 15:36-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/13_searching.rst:4
+msgid "Searching"
+msgstr ""
+
+#: ../../source/13_searching.rst:9
+msgid "Advanced Search Prefixes"
+msgstr ""
+
+#: ../../source/13_searching.rst:11
+msgid ""
+"The following prefixes can be added to search terms in the keyword search"
+" box to limit items returned"
+msgstr ""
+
+#: ../../source/13_searching.rst:14
+msgid "ti: title search"
+msgstr ""
+
+#: ../../source/13_searching.rst:16
+msgid "ex. ti:hamlet"
+msgstr ""
+
+#: ../../source/13_searching.rst:18
+msgid "su: subject search"
+msgstr ""
+
+#: ../../source/13_searching.rst:20
+msgid "ex. su:cooking"
+msgstr ""
+
+#: ../../source/13_searching.rst:22
+msgid "pb: publisher search"
+msgstr ""
+
+#: ../../source/13_searching.rst:24
+msgid "ex. pb:penguin"
+msgstr ""
+
+#: ../../source/13_searching.rst:26
+msgid "au: author search"
+msgstr ""
+
+#: ../../source/13_searching.rst:28
+msgid "ex. au:rowling"
+msgstr ""
+
+#: ../../source/13_searching.rst:30
+msgid "su-geo: geographic subjects"
+msgstr ""
+
+#: ../../source/13_searching.rst:32
+msgid "ex. su-geo:wales and kw:description and kw:travel"
+msgstr ""
+
+#: ../../source/13_searching.rst:34
+msgid "bc: barcode"
+msgstr ""
+
+#: ../../source/13_searching.rst:36
+msgid "ex. bc:502326000912"
+msgstr ""
+
+#: ../../source/13_searching.rst:38
+msgid "lex: lexile"
+msgstr ""
+
+#: ../../source/13_searching.rst:40
+msgid "levels lex:510"
+msgstr ""
+
+#: ../../source/13_searching.rst:45
+msgid "Guide to Searching"
+msgstr ""
+
+#: ../../source/13_searching.rst:47 ../../source/13_searching.rst:76
+msgid ""
+"This brief guide will explain a chart that shows a sample of how a MARC21"
+" database can be configured, as well as a brief introductory searching "
+"guide. The indexing fields described in this document relate to the "
+"bibliographic data and does not address authority database indexing."
+msgstr ""
+
+#: ../../source/13_searching.rst:56
+msgid "Indexing and Searching Description"
+msgstr ""
+
+#: ../../source/13_searching.rst:58
+msgid ""
+"Koha's databases are indexed by the Zebra open-source software. The "
+"overview to the documentation describes Zebra as:"
+msgstr ""
+
+#: ../../source/13_searching.rst:61
+msgid ""
+"\"...Zebra is a high-performance, general-purpose structured text "
+"indexing and retrieval engine. It reads records in a variety of input "
+"formats (eg. email, XML, MARC) and provides access to them through a "
+"powerful combination of Boolean search expressions and relevance-ranked "
+"free-text queries."
+msgstr ""
+
+#: ../../source/13_searching.rst:67
+msgid ""
+"Zebra supports large databases (tens of millions of records, tens of "
+"gigabytes of data). It allows safe, incremental database updates on live "
+"systems. Because Zebra supports the industry-standard information "
+"retrieval protocol, Z39.50, you can search Zebra databases using an "
+"enormous variety of programs and toolkits, both commercial and free, "
+"which understands this protocol...\" Zebra - User's Guide and Reference, "
+"p. 1, http://www.indexdata.dk/zebra/doc/zebra.pdf"
+msgstr ""
+
+#: ../../source/13_searching.rst:82
+msgid "**Note**"
+msgstr ""
+
+#: ../../source/13_searching.rst:84
+msgid ""
+"The indexing described in this document is the set used by SouthEastern "
+"University. Your local indexing may vary."
+msgstr ""
+
+#: ../../source/13_searching.rst:90
+msgid "Indexing Configuration"
+msgstr ""
+
+#: ../../source/13_searching.rst:92
+msgid "There are three configuration files that Koha uses while indexing."
+msgstr ""
+
+#: ../../source/13_searching.rst:94
+msgid ""
+"The first configuration file (etc/zebradb/biblios/etc/bib1.att) contains "
+"the Z39.50 bib-1 attribute list, plus the Koha local use attributes for "
+"Biblio Indexes, Items Index, and Fixed Fields and other special indexes. "
+"The Z39.50 Bib-1 profile is made up of several different types of "
+"attributes: Use, Relation, Position, Structure, Truncation, and "
+"Completeness. The bib-1 'Use' attribute is represented on the chart; the "
+"other attributes are used primarily when doing searches. While there are "
+"over 150+ use attributes that could be used to define your indexing set, "
+"it's unlikely that you will choose to use them all. The attributes you "
+"elect to use are those that become the indexing rules for your database. "
+"The other five attribute sets define the various ways that a search can "
+"be further defined, and will not specifically be addressed in this "
+"document. For a complete list of the standard Bib-1 attributes, go to "
+"http://www.loc.gov/z3950/agency/defns/bib1.html."
+msgstr ""
+
+#: ../../source/13_searching.rst:109
+msgid ""
+"The second file is "
+"etc/zebradb/marc\\_defs/[marc21\\|unimarc]/biblios/record.abs if you use "
+"grs1 indexing [the default until 3.16] or "
+"etc/zebradb/marc\\_defs/[marc21\\|unimarc]/biblios/biblio-koha-"
+"indexdefs.xml if you use dom indexing [the default from 3.18]. Either "
+"files contains the abstract syntax which maps the MARC21 tags to the set "
+"of Use Attributes you choose to use. To be more precise the xml file to "
+"be activate needs to be transform into biblio-zebra-indexdefs.xsl, read "
+"the head of biblio-zebra-indexdefs.xsl to know more about this topic. The"
+" rules established in this file provides a passable Bath level 0 and 1 "
+"service, which includes author, title, subject, keyword and exact "
+"services such as standard identifiers (LCCN, ISBN, ISSN, etc.)"
+msgstr ""
+
+#: ../../source/13_searching.rst:122
+msgid ""
+"The third file (etc/zebradb/ccl.properties) is the Common Command "
+"Language (CCL) field mappings. This file combines the bib-1 attribute set"
+" file and the abstract file and adds the qualifiers, usually known as "
+"index names. The qualifiers, or indexes, for this database are: pn, cpn, "
+"cfn, ti, se, ut, nb, ns, sn, lcn, callnum, su, su-to, su-geo, su-ut, "
+"yr,pubdate, acqdate, ln, pl, ab, nt, rtype, mc-rtype, mus, au, su-na, kw,"
+" pb, ctype, and an."
+msgstr ""
+
+#: ../../source/13_searching.rst:130
+msgid ""
+"The :ref:`Koha Indexing Chart <koha-search-indexes-label>` summarizes the"
+" contents of all three of these files in a more readable format. The "
+"first two columns labeled Z39.50 attribute and Z39.50 name matches the "
+"Z39.50 bib-1 attributes file. The third column labeled MARC tags indexed "
+"is where you find which MARC tags are mapped to an attribute. The fourth "
+"column labeled Qualifiers identifies the search abbreviations used in the"
+" internal CCL query. The following description provides a definition for "
+"the word 'qualifiers'."
+msgstr ""
+
+#: ../../source/13_searching.rst:139
+msgid ""
+"*Qualifiers are used to direct the search to a particular searchable "
+"index, such as title (ti) and author indexes (au). The CCL standard "
+"itself doesn't specify a particular set of qualifiers, but it does "
+"suggest a few shorthand notations. You can customize the CCL parser to "
+"support a particular set of qualifiers to reflect the current target "
+"profile. Traditionally, a qualifier would map to a particular use-"
+"attribute within the BIB-1attribute set. It is also possible to set other"
+" attributes, such as the structure attribute.*"
+msgstr ""
+
+#: ../../source/13_searching.rst:148
+msgid ""
+"In the MARC tags indexed column, there are some conventions used that "
+"have specific meanings. They are:"
+msgstr ""
+
+#: ../../source/13_searching.rst:151
+msgid ""
+"A three digit tag (100) means that all subfields in the tag can be used "
+"in a search query. So, if you enter a search for 'Jackson' as an author, "
+"you will retrieve records where Jackson could be the last name or the "
+"first name."
+msgstr ""
+
+#: ../../source/13_searching.rst:156
+msgid ""
+"A three digit tag that has a '$' followed by a letter (600$a) means that "
+"a search query will only search the 'a' subfield."
+msgstr ""
+
+#: ../../source/13_searching.rst:159
+msgid ""
+"A three digit tag that is followed by a ':' and a letter (240:w) means "
+"that a search query can be further qualified. The letter following the "
+"':' identifies how to conduct the search. The most common values you'll "
+"see are 'w' (word), 'p' (phrase), 's' (sort), and 'n' (numeric)."
+msgstr ""
+
+#: ../../source/13_searching.rst:165
+msgid ""
+"The contents of the MARC tags, subfields, and/or fixed field elements "
+"that are listed in this chart are all indexed. You'll see that every "
+"attribute line is not mapped to a specific qualifier (index)-LC card "
+"number, line 9 is one example. However, every indexed word (a string of "
+"characters preceded and succeeded by a space) can be searched using a "
+"keyword (kw) search. So, although an LC card number specific index "
+"doesn't exist, you can still search by the LCCN since tag 010 is assigned"
+" to the LC-card-number attribute. To verify this, enter 72180055 in the "
+"persistent search box. You should retrieve The gods themselves, by Isaac "
+"Asimov."
+msgstr ""
+
+#: ../../source/13_searching.rst:176
+msgid ""
+"Examples of fixed field elements indexing can be seen on the chart "
+"between Attribute 8822 and Attribute 8703. These attributes are most "
+"commonly used for limiting. The fixed field attributes currently "
+"represent the BK codes. Other format codes, if needed, could be defined."
+msgstr ""
+
+#: ../../source/13_searching.rst:184
+msgid "Basic Searching"
+msgstr ""
+
+#: ../../source/13_searching.rst:186
+msgid ""
+"The search box that library staff and library patrons will see most often"
+" is the persistent search box at the top of the page. Koha interprets the"
+" searches as keyword searches."
+msgstr ""
+
+#: ../../source/13_searching.rst:190
+msgid "|image1037|"
+msgstr ""
+
+#: ../../source/13_searching.rst:192
+msgid ""
+"To start a search, you enter a word or multiple words in the search box. "
+"When a single word is entered, a keyword search is performed. You can "
+"check this out by typing one word into the form and note the number of "
+"results located. Then, repeat the search with a minor change. In front of"
+" the search word, type 'kw=' followed by the same search term. The "
+"results will be identical."
+msgstr ""
+
+#: ../../source/13_searching.rst:199
+msgid ""
+"When you have more than one word in the search box, Koha will still do a "
+"keyword search, but a bit differently. Each word will be searched on its "
+"own, then the Boolean connector 'and' will narrow your search to those "
+"items with all words contained in matching records."
+msgstr ""
+
+#: ../../source/13_searching.rst:204
+msgid ""
+"Suppose you want to find material about how libraries are using mashups. "
+"You'll select the major words and enter them into the persistent search "
+"box."
+msgstr ""
+
+#: ../../source/13_searching.rst:208
+msgid "|image1038|"
+msgstr ""
+
+#: ../../source/13_searching.rst:210
+msgid "The response to this search is:"
+msgstr ""
+
+#: ../../source/13_searching.rst:212
+msgid "|image1039|"
+msgstr ""
+
+#: ../../source/13_searching.rst:214
+msgid ""
+"The order of the words does not affect the retrieval results, so you "
+"could also enter the search as \"mashups library\". The response to this "
+"search is results"
+msgstr ""
+
+#: ../../source/13_searching.rst:218
+msgid "|image1040|"
+msgstr ""
+
+#: ../../source/13_searching.rst:220
+msgid ""
+"Too many words in the search box will find very few matches, as the "
+"following example illustrates:"
+msgstr ""
+
+#: ../../source/13_searching.rst:223
+msgid "|image1041|"
+msgstr ""
+
+#: ../../source/13_searching.rst:228
+msgid "Advanced Searching"
+msgstr ""
+
+#: ../../source/13_searching.rst:230
+msgid ""
+"When you can't find the most appropriate material with a general search, "
+"you can move to the Advanced Search page by clicking on the Search option"
+" on the persistent toolbar."
+msgstr ""
+
+#: ../../source/13_searching.rst:234
+msgid "|image1042|"
+msgstr ""
+
+#: ../../source/13_searching.rst:236
+msgid ""
+"The Advanced Search page offers many ways to limit the results of your "
+"search. You can search using the Boolean operators AND, OR, and NOT; "
+"limit by item type; limit by year and language; limit by subtypes "
+"audience, content, format, or additional content types; by location and "
+"by availability."
+msgstr ""
+
+#: ../../source/13_searching.rst:242
+msgid ""
+"The first limiting section on the Advanced Search page provides a quick "
+"and simple way to use the Boolean operators in your search. Note that "
+"this display depends on a system preference setting. This option can be "
+"found on the Administration > System Preferences > Searching page. The "
+"option called :ref:`expandedSearchOption` must be set to 'show' to see "
+"the following display."
+msgstr ""
+
+#: ../../source/13_searching.rst:249
+msgid "|image1043|"
+msgstr ""
+
+#: ../../source/13_searching.rst:251
+msgid ""
+"In this section you can choose among the many indexes by clicking on the "
+"arrow in the first box. The blank box that follows is where you enter "
+"your first search term or terms. On the second line, you can choose the "
+"Boolean operator you want to use in your search. The options are 'and', "
+"'or', and 'not'. Then, you would again choose the index to search, "
+"followed by the second term or terms. If you have more concepts you want "
+"to include in your search, you can click the [+] to add another line for "
+"your search."
+msgstr ""
+
+#: ../../source/13_searching.rst:260
+msgid "A sample search is shown next, followed by its results:"
+msgstr ""
+
+#: ../../source/13_searching.rst:262
+msgid "|image1044|"
+msgstr ""
+
+#: ../../source/13_searching.rst:264
+msgid "|image1045|"
+msgstr ""
+
+#: ../../source/13_searching.rst:266
+msgid ""
+"When you use the Boolean operators to broaden or narrow a search, "
+"remember the action of each operator. The 'and' operator narrows the "
+"results you'll retrieve because the search will retrieve the records that"
+" include all your search terms. The 'or' operator expands the results "
+"because the search will look for occurrences of all of your search terms."
+" The 'not' operator excludes records with the term that follows the "
+"operator."
+msgstr ""
+
+#: ../../source/13_searching.rst:274
+msgid ""
+"Note: If you leave this :ref:`expandedSearchOption` set to 'don't show', "
+"this is the display you will see:"
+msgstr ""
+
+#: ../../source/13_searching.rst:277
+msgid "|image1046|"
+msgstr ""
+
+#: ../../source/13_searching.rst:279
+msgid ""
+"The Advanced Search page then shows the multiple kinds of limits that can"
+" be applied to your search results. Either check a box or select from the"
+" drop down menus to narrow your search. You will type the year, year "
+"range, or a 'greater than (>)' or 'less than (<)' year."
+msgstr ""
+
+#: ../../source/13_searching.rst:284
+msgid "|image1047|"
+msgstr ""
+
+#: ../../source/13_searching.rst:286
+msgid ""
+"Finally, you can choose how the results will be sorted. The pre-defined "
+"sort options are in the final area of the Advanced Search screen."
+msgstr ""
+
+#: ../../source/13_searching.rst:289
+msgid "|image1048|"
+msgstr ""
+
+#: ../../source/13_searching.rst:291
+msgid ""
+"The default sort is by relevance, although you can choose to sort by "
+"author, by title, by call number, by dates, or by popularity (which uses "
+"the information on total issues found in the items table). If you would "
+"prefer a different default sort, you can set :ref:`defaultSortField "
+"<defaultsortfield-&-defaultsortorder-label>` to one of the other choices "
+"in Administration > System Preferences > Searching."
+msgstr ""
+
+#: ../../source/13_searching.rst:301
+msgid "Item Searching"
+msgstr ""
+
+#: ../../source/13_searching.rst:303
+msgid ""
+"If you are looking for specific items you can use the item search engine "
+"in the staff client to find them."
+msgstr ""
+
+#: ../../source/13_searching.rst:306
+msgid "*Get there:* Search > Go to item search"
+msgstr ""
+
+#: ../../source/13_searching.rst:308
+msgid ""
+"At the top of the advanced search page in the staff client you will see a"
+" link to 'Go to item search'Item search link"
+msgstr ""
+
+#: ../../source/13_searching.rst:311
+msgid "Clicking that link will open up a item specific search engine.Item search"
+msgstr ""
+
+#: ../../source/13_searching.rst:314
+msgid ""
+"Using the search form that is presented you can find a list of specific "
+"items that can be output to the screen or to a CSV file. If your results "
+"are printed to the screen you will have the option to narrow your search "
+"further using filters at the top.Item search results"
+msgstr ""
+
+#: ../../source/13_searching.rst:322
+msgid "Common Command Language Searching"
+msgstr ""
+
+#: ../../source/13_searching.rst:324
+msgid ""
+"Koha uses the Common Command Language (CCL) (ISO 8777) as its internal "
+"search protocol. Searches initiated in the graphical interface use this "
+"protocol as well, although the searcher doesn't know which indexes, "
+"operators and limiters are available and being used to conduct their "
+"search. The searcher can use the Advanced Search when more precise "
+"results set are desired and where the search indexes are somewhat known. "
+"However, some library users and many library staff prefer using a command"
+" based structure. This part of the document will present and explain the "
+"use of the Koha command based structure. The indexes, operators, and "
+"limiters used are identical to those used in the graphical interface."
+msgstr ""
+
+#: ../../source/13_searching.rst:339
+msgid "Indexes"
+msgstr ""
+
+#: ../../source/13_searching.rst:341
+msgid ""
+"The CCL standard itself doesn't specify a particular set of qualifiers "
+"(indexes), but it does suggest a few short-hand notations such as 'ti', "
+"'au', and 'su'. Koha has a default set of indexes; it's possible to "
+"customize that set by adding needed indexes based on local requirements. "
+"A qualifier (index) maps to a particular use-attribute within the Z39.50 "
+"BIB-1 attribute set. The complete Z39.50 Bib-1 Attribute can be viewed at"
+" http://www.loc.gov/z3950/agency/defns/bib1.html."
+msgstr ""
+
+#: ../../source/13_searching.rst:349
+msgid ""
+"The standard Koha set of indexes is a fairly common example of MARC21 "
+"indexing rules. The indexes that are defined in Koha are indexes "
+"typically used by other integrated library systems. The defined Z39.50 "
+"Bib-1 Attribute mapped to the indexes include:"
+msgstr ""
+
+#: ../../source/13_searching.rst:355
+msgid "Bib-1 Attribute"
+msgstr ""
+
+#: ../../source/13_searching.rst:355
+msgid "Qualifier (index)"
+msgstr ""
+
+#: ../../source/13_searching.rst:357
+msgid "Personal-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:357
+msgid "pn"
+msgstr ""
+
+#: ../../source/13_searching.rst:359
+msgid "Corporate-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:359
+msgid "cpn"
+msgstr ""
+
+#: ../../source/13_searching.rst:361 ../../source/13_searching.rst:858
+msgid "Conference-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:361
+msgid "cfn"
+msgstr ""
+
+#: ../../source/13_searching.rst:363 ../../source/13_searching.rst:826
+#: ../../source/13_searching.rst:952
+msgid "Title"
+msgstr ""
+
+#: ../../source/13_searching.rst:363
+msgid "ti"
+msgstr ""
+
+#: ../../source/13_searching.rst:365
+msgid "Title-series"
+msgstr ""
+
+#: ../../source/13_searching.rst:365
+msgid "se"
+msgstr ""
+
+#: ../../source/13_searching.rst:367
+msgid "Title-uniform"
+msgstr ""
+
+#: ../../source/13_searching.rst:367
+msgid "ut"
+msgstr ""
+
+#: ../../source/13_searching.rst:369
+msgid "ISBN"
+msgstr ""
+
+#: ../../source/13_searching.rst:369
+msgid "nb"
+msgstr ""
+
+#: ../../source/13_searching.rst:371
+msgid "ISSN"
+msgstr ""
+
+#: ../../source/13_searching.rst:371
+msgid "ns"
+msgstr ""
+
+#: ../../source/13_searching.rst:373
+msgid "Local number"
+msgstr ""
+
+#: ../../source/13_searching.rst:373
+msgid "sn"
+msgstr ""
+
+#: ../../source/13_searching.rst:375
+msgid "Local-classification"
+msgstr ""
+
+#: ../../source/13_searching.rst:375
+msgid "lcn and callnum"
+msgstr ""
+
+#: ../../source/13_searching.rst:377 ../../source/13_searching.rst:874
+#: ../../source/13_searching.rst:892 ../../source/13_searching.rst:896
+#: ../../source/13_searching.rst:900 ../../source/13_searching.rst:904
+msgid "Subject"
+msgstr ""
+
+#: ../../source/13_searching.rst:377
+msgid "su, su-to, su-geo, su-ut"
+msgstr ""
+
+#: ../../source/13_searching.rst:379
+msgid "Pubdate"
+msgstr ""
+
+#: ../../source/13_searching.rst:379
+msgid "yr,pubdate"
+msgstr ""
+
+#: ../../source/13_searching.rst:381
+msgid "Date-of-Acquisition"
+msgstr ""
+
+#: ../../source/13_searching.rst:381
+msgid "acqdate"
+msgstr ""
+
+#: ../../source/13_searching.rst:383
+msgid "Language"
+msgstr ""
+
+#: ../../source/13_searching.rst:383 ../../source/13_searching.rst:694
+msgid "ln"
+msgstr ""
+
+#: ../../source/13_searching.rst:385
+msgid "Place-of-publication"
+msgstr ""
+
+#: ../../source/13_searching.rst:385
+msgid "pl"
+msgstr ""
+
+#: ../../source/13_searching.rst:387
+msgid "Abstract"
+msgstr ""
+
+#: ../../source/13_searching.rst:387
+msgid "ab"
+msgstr ""
+
+#: ../../source/13_searching.rst:389
+msgid "Notes"
+msgstr ""
+
+#: ../../source/13_searching.rst:389
+msgid "nt"
+msgstr ""
+
+#: ../../source/13_searching.rst:391
+msgid "Record-type"
+msgstr ""
+
+#: ../../source/13_searching.rst:391
+msgid "rtype, mc-rtype, mus"
+msgstr ""
+
+#: ../../source/13_searching.rst:393 ../../source/13_searching.rst:824
+msgid "Author"
+msgstr ""
+
+#: ../../source/13_searching.rst:393
+msgid "au, aut"
+msgstr ""
+
+#: ../../source/13_searching.rst:395
+msgid "Subject-person-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:395
+msgid "su-na"
+msgstr ""
+
+#: ../../source/13_searching.rst:397
+msgid "Any (keyword)"
+msgstr ""
+
+#: ../../source/13_searching.rst:397
+msgid "kw"
+msgstr ""
+
+#: ../../source/13_searching.rst:399
+msgid "Publisher"
+msgstr ""
+
+#: ../../source/13_searching.rst:399
+msgid "pb"
+msgstr ""
+
+#: ../../source/13_searching.rst:401
+msgid "Content-type"
+msgstr ""
+
+#: ../../source/13_searching.rst:401
+msgid "ctype"
+msgstr ""
+
+#: ../../source/13_searching.rst:403 ../../source/13_searching.rst:720
+#: ../../source/13_searching.rst:724 ../../source/13_searching.rst:732
+#: ../../source/13_searching.rst:786 ../../source/13_searching.rst:796
+#: ../../source/13_searching.rst:810 ../../source/13_searching.rst:818
+#: ../../source/13_searching.rst:846 ../../source/13_searching.rst:854
+#: ../../source/13_searching.rst:864 ../../source/13_searching.rst:872
+#: ../../source/13_searching.rst:876 ../../source/13_searching.rst:880
+#: ../../source/13_searching.rst:884 ../../source/13_searching.rst:886
+#: ../../source/13_searching.rst:890 ../../source/13_searching.rst:894
+#: ../../source/13_searching.rst:898 ../../source/13_searching.rst:902
+#: ../../source/13_searching.rst:906 ../../source/13_searching.rst:928
+#: ../../source/13_searching.rst:936 ../../source/13_searching.rst:944
+#: ../../source/13_searching.rst:968 ../../source/13_searching.rst:976
+#: ../../source/13_searching.rst:982 ../../source/13_searching.rst:988
+msgid "Koha-Auth-Number"
+msgstr ""
+
+#: ../../source/13_searching.rst:403
+msgid "an"
+msgstr ""
+
+#: ../../source/13_searching.rst:405
+msgid "Author-personal-bibliography"
+msgstr ""
+
+#: ../../source/13_searching.rst:405
+msgid "aub"
+msgstr ""
+
+#: ../../source/13_searching.rst:407
+msgid "Author-in-order"
+msgstr ""
+
+#: ../../source/13_searching.rst:407
+msgid "auo"
+msgstr ""
+
+#: ../../source/13_searching.rst:410
+msgid "Table: Attributes"
+msgstr ""
+
+#: ../../source/13_searching.rst:412
+msgid ""
+"Refer to the :ref:`Koha Indexing Chart <koha-search-indexes-label>` for "
+"the MARC21 tags mapped to each Bib-1 Attribute and index combination."
+msgstr ""
+
+#: ../../source/13_searching.rst:418
+msgid "Audience Examples"
+msgstr ""
+
+#: ../../source/13_searching.rst:420
+msgid "aud:a Preschool"
+msgstr ""
+
+#: ../../source/13_searching.rst:422
+msgid "aud:b Primary"
+msgstr ""
+
+#: ../../source/13_searching.rst:424
+msgid "aud:c Pre-Adolescent"
+msgstr ""
+
+#: ../../source/13_searching.rst:426
+msgid "aud:d Adolescent"
+msgstr ""
+
+#: ../../source/13_searching.rst:428
+msgid "aud:e Adult"
+msgstr ""
+
+#: ../../source/13_searching.rst:430
+msgid "aud:f Specialized"
+msgstr ""
+
+#: ../../source/13_searching.rst:432
+msgid "aud:g General"
+msgstr ""
+
+#: ../../source/13_searching.rst:434
+msgid "aud:j Juvenile"
+msgstr ""
+
+#: ../../source/13_searching.rst:439
+msgid "Contents Examples"
+msgstr ""
+
+#: ../../source/13_searching.rst:441
+msgid "fic:1 Fiction"
+msgstr ""
+
+#: ../../source/13_searching.rst:443
+msgid "fic:0 Non Fiction"
+msgstr ""
+
+#: ../../source/13_searching.rst:445
+msgid "bio:b Biography"
+msgstr ""
+
+#: ../../source/13_searching.rst:447
+msgid "mus:j Musical recording"
+msgstr ""
+
+#: ../../source/13_searching.rst:449
+msgid "mus:I Non musical record"
+msgstr ""
+
+#: ../../source/13_searching.rst:454
+msgid "Search Syntax"
+msgstr ""
+
+#: ../../source/13_searching.rst:456
+msgid ""
+"In the persistent search box, single words generally retrieve large sets."
+" To narrow a search, you can use multiple words. Koha automatically uses "
+"the 'and' Boolean operator to create a set of records matching your "
+"input. When you want to narrow the search to an author or a title or a "
+"subject or some other specific field or use a Boolean operator, there "
+"isn't an obvious way to accomplish that specificity. The library user "
+"can, of course, go to the Advanced Search page; however, if you know how "
+"to construct a CCL search, you can achieve more specificity while using "
+"the persistent search box on any page."
+msgstr ""
+
+#: ../../source/13_searching.rst:466
+msgid ""
+"There is a specific order to the CCL search syntax. Although it can be "
+"used for simple searches, it is an especially effective way to perform "
+"complex searches, as it affords you a great deal of control over your "
+"search results. To construct a CCL search, first enter a desired index "
+"code, then an equal sign, followed by your search word(s). Following are "
+"examples of simple CCL searches."
+msgstr ""
+
+#: ../../source/13_searching.rst:473
+msgid "ti=principles of accounting"
+msgstr ""
+
+#: ../../source/13_searching.rst:475
+msgid "au=brown joseph"
+msgstr ""
+
+#: ../../source/13_searching.rst:477
+msgid "su=poetry"
+msgstr ""
+
+#: ../../source/13_searching.rst:479
+msgid "su-na=Shakespeare"
+msgstr ""
+
+#: ../../source/13_searching.rst:481
+msgid "kw=marlin"
+msgstr ""
+
+#: ../../source/13_searching.rst:483
+msgid ""
+"You can refine your search by combining search terms with Boolean "
+"operators 'and', 'or', or 'not'. Following are examples of searches using"
+" Boolean operators."
+msgstr ""
+
+#: ../../source/13_searching.rst:487
+msgid "ti=principles of accounting and au=brown joseph"
+msgstr ""
+
+#: ../../source/13_searching.rst:489
+msgid "su=poetry not su-na=Shakespeare"
+msgstr ""
+
+#: ../../source/13_searching.rst:491
+msgid "kw=communication and su=debate"
+msgstr ""
+
+#: ../../source/13_searching.rst:493
+msgid ""
+"You can also choose to search for things that start with a character or "
+"series of characters"
+msgstr ""
+
+#: ../../source/13_searching.rst:496
+msgid ""
+"ti,first-in-subfield=C (will show you all titles that start with the "
+"letter 'C')"
+msgstr ""
+
+#: ../../source/13_searching.rst:499
+msgid ""
+"Other string location searches can be performed with the following "
+"keywords:"
+msgstr ""
+
+#: ../../source/13_searching.rst:502
+msgid "rtrn : right truncation"
+msgstr ""
+
+#: ../../source/13_searching.rst:504
+msgid "ltrn : left truncation"
+msgstr ""
+
+#: ../../source/13_searching.rst:506
+msgid "lrtrn : left and right truncation"
+msgstr ""
+
+#: ../../source/13_searching.rst:508
+msgid "st-date : type date"
+msgstr ""
+
+#: ../../source/13_searching.rst:510
+msgid "st-numeric : type number (integer)"
+msgstr ""
+
+#: ../../source/13_searching.rst:512
+msgid "ext : exact search on whole subfield (does not work with icu)"
+msgstr ""
+
+#: ../../source/13_searching.rst:514
+msgid "phr : search on phrase anywhere in the subfield"
+msgstr ""
+
+#: ../../source/13_searching.rst:516
+msgid "startswithnt : subfield starts with"
+msgstr ""
+
+#: ../../source/13_searching.rst:518
+msgid ""
+"Using specific indexes and Boolean operators are not the only way a "
+"search can be refined. You can also refine your search as a phrase when "
+"looking for a title, author, or subject. The syntax for this search is "
+"*index,phr=search words*."
+msgstr ""
+
+#: ../../source/13_searching.rst:523
+msgid ""
+"To illustrate the results of various search types, a search was done for "
+"the words 'supreme court'. The results illustrate that the search index "
+"and the word order make a difference in search results. Only the results "
+"count and the search itself is in these examples. The search executed "
+"will always be between the single quotes."
+msgstr ""
+
+#: ../../source/13_searching.rst:529
+msgid "|image1049|"
+msgstr ""
+
+#: ../../source/13_searching.rst:531
+msgid "|image1050|"
+msgstr ""
+
+#: ../../source/13_searching.rst:533
+msgid "|image1051|"
+msgstr ""
+
+#: ../../source/13_searching.rst:535
+msgid "|image1052|"
+msgstr ""
+
+#: ../../source/13_searching.rst:537
+msgid "|image1053|"
+msgstr ""
+
+#: ../../source/13_searching.rst:539
+msgid "|image1054|"
+msgstr ""
+
+#: ../../source/13_searching.rst:541
+msgid "|image1055|"
+msgstr ""
+
+#: ../../source/13_searching.rst:543
+msgid "|image1056|"
+msgstr ""
+
+#: ../../source/13_searching.rst:545
+msgid "|image1057|"
+msgstr ""
+
+#: ../../source/13_searching.rst:547
+msgid ""
+"You can also choose to use limiters in your search query. Some common "
+"limiters include dates, languages, record types, and item types. In the "
+"Advance Search, you can either click a box or key in data to limit your "
+"search. You can also apply the same limits with CCL by using the syntax "
+"in the following examples. In all"
+msgstr ""
+
+#: ../../source/13_searching.rst:553
+msgid "*By Date: su=supreme court and yr,st-numeric=>2000*"
+msgstr ""
+
+#: ../../source/13_searching.rst:555
+msgid "|image1058|"
+msgstr ""
+
+#: ../../source/13_searching.rst:557
+msgid ""
+"When you limit by date, you can use the '>' (greater than), '<' (less "
+"than), '=' (equal), or 'yyyy-yyyy' (range) symbols."
+msgstr ""
+
+#: ../../source/13_searching.rst:560
+msgid "*By Item Type: su=nursing and itype:BK*"
+msgstr ""
+
+#: ../../source/13_searching.rst:562
+msgid "|image1059|"
+msgstr ""
+
+#: ../../source/13_searching.rst:564
+msgid ""
+"Each library will have a different set of item types defined in their "
+"circulation configuration. When you set up item types, you define a code "
+"and a name for each one. The name will appear on the Advance Search page."
+" The code you assigned is used as a CCL search limit, formatted as "
+"'itype:x', where 'x' is the assigned code. The initial set of item types "
+"in Koha will usually be edited to reflect your collections, so your item "
+"type limiters may be different than the initial ones. The initial item "
+"type limiters follow."
+msgstr ""
+
+#: ../../source/13_searching.rst:573
+msgid "itype:BKS Books, Booklets, Workbooks"
+msgstr ""
+
+#: ../../source/13_searching.rst:575
+msgid "itype:SR Audio Cassettes, CDs"
+msgstr ""
+
+#: ../../source/13_searching.rst:577
+msgid "itype:IR Binders"
+msgstr ""
+
+#: ../../source/13_searching.rst:579
+msgid "itype:CF CD-ROMs, DVD-ROMs, General Online Resources"
+msgstr ""
+
+#: ../../source/13_searching.rst:581
+msgid "itype:VR DVDs, VHS"
+msgstr ""
+
+#: ../../source/13_searching.rst:583
+msgid "itype:KT Kit"
+msgstr ""
+
+#: ../../source/13_searching.rst:585
+msgid "itype:AR Models"
+msgstr ""
+
+#: ../../source/13_searching.rst:587
+msgid "itype:SER Serials"
+msgstr ""
+
+#: ../../source/13_searching.rst:589
+msgid "*By format: su=supreme court not l-format:sr*"
+msgstr ""
+
+#: ../../source/13_searching.rst:591
+msgid "|image1060|"
+msgstr ""
+
+#: ../../source/13_searching.rst:593
+msgid ""
+"The format limiters are derived from a combination of LDR, 006 and 007 "
+"positions. The formats that are currently defined are the following."
+msgstr ""
+
+#: ../../source/13_searching.rst:596
+msgid "l-format:ta Regular print"
+msgstr ""
+
+#: ../../source/13_searching.rst:598
+msgid "l-format:tb Large print"
+msgstr ""
+
+#: ../../source/13_searching.rst:600
+msgid "l-format:fk Braille"
+msgstr ""
+
+#: ../../source/13_searching.rst:602
+msgid "l-format:sd CD audio"
+msgstr ""
+
+#: ../../source/13_searching.rst:604
+msgid "l-format:ss Cassette recording"
+msgstr ""
+
+#: ../../source/13_searching.rst:606
+msgid "l-format:vf VHS tape"
+msgstr ""
+
+#: ../../source/13_searching.rst:608
+msgid "l-format:vd DVD video"
+msgstr ""
+
+#: ../../source/13_searching.rst:610
+msgid "l-format:co CD software"
+msgstr ""
+
+#: ../../source/13_searching.rst:612
+msgid "l-format:cr Website"
+msgstr ""
+
+#: ../../source/13_searching.rst:614
+msgid "*By content type: su=supreme court not ctype:l*"
+msgstr ""
+
+#: ../../source/13_searching.rst:616
+msgid "|image1061|"
+msgstr ""
+
+#: ../../source/13_searching.rst:618
+msgid "The content types are taken from the 008 MARC tag, positions 24-27."
+msgstr ""
+
+#: ../../source/13_searching.rst:620
+msgid ""
+"There are two other limiter types that are not described in this "
+"document. They are: Audience and Content. The only difference in the "
+"syntax of the CCL is the actual limiter. They are reproduced here just in"
+" case you would like to use these limiters."
+msgstr ""
+
+#: ../../source/13_searching.rst:628
+msgid "Koha Search Indexes"
+msgstr ""
+
+#: ../../source/13_searching.rst:630
+msgid ""
+"By default, not all fields are indexed in the Zebra search engine, but "
+"many are. Below are the MARC21 fields that are indexed in Zebra."
+msgstr ""
+
+#: ../../source/13_searching.rst:634
+msgid "Field"
+msgstr ""
+
+#: ../../source/13_searching.rst:634
+msgid "Description"
+msgstr ""
+
+#: ../../source/13_searching.rst:636
+msgid "Leader/06"
+msgstr ""
+
+#: ../../source/13_searching.rst:636
+msgid "Record-type, rtype"
+msgstr ""
+
+#: ../../source/13_searching.rst:638
+msgid "Leader/07"
+msgstr ""
+
+#: ../../source/13_searching.rst:638
+msgid "Bib-level"
+msgstr ""
+
+#: ../../source/13_searching.rst:640
+msgid "Leader/06-07"
+msgstr ""
+
+#: ../../source/13_searching.rst:640 ../../source/13_searching.rst:822
+msgid "Material-type"
+msgstr ""
+
+#: ../../source/13_searching.rst:642
+msgid "001"
+msgstr ""
+
+#: ../../source/13_searching.rst:642
+msgid "Control-number"
+msgstr ""
+
+#: ../../source/13_searching.rst:644
+msgid "005"
+msgstr ""
+
+#: ../../source/13_searching.rst:644
+msgid "Date/time-last-modified, dtlm, date-time-last-modified"
+msgstr ""
+
+#: ../../source/13_searching.rst:646
+msgid "007"
+msgstr ""
+
+#: ../../source/13_searching.rst:646
+msgid ""
+"Microform-generation:n:range(data,11,1), Material-"
+"type,ff7-00:w:range(data,0,1), ff7-01:w:range(data,1,1), "
+"ff7-02:w:range(data,2,1), ff7-01-02:w:range(data,0,2)"
+msgstr ""
+
+#: ../../source/13_searching.rst:648
+msgid "008"
+msgstr ""
+
+#: ../../source/13_searching.rst:648
+msgid ""
+"date-entered-on-file:n:range(data,0,5), date-entered-on-"
+"file:s:range(data,0,5), pubdate:w:range(data,7,4), "
+"pubdate:n:range(data,7,4), pubdate:y:range(data,7,4), "
+"pubdate:s:range(data,7,4), pl:w:range(data,15,3), ta:w:range(data,22,1), "
+"ff8-23:w:range(data,23,1), ff8-29:w:range(data,29,1), "
+"lf:w:range(data,33,1), bio:w:range(data,34,1), ln:n:range(data,35,3), "
+"ctype:w:range(data,24,4), Record-source:w:range(data,39,0)"
+msgstr ""
+
+#: ../../source/13_searching.rst:650
+msgid "010"
+msgstr ""
+
+#: ../../source/13_searching.rst:650 ../../source/13_searching.rst:652
+msgid "LC-card-number, Identifier-standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:652
+msgid "011"
+msgstr ""
+
+#: ../../source/13_searching.rst:654
+msgid "015"
+msgstr ""
+
+#: ../../source/13_searching.rst:654
+msgid ""
+"BNB-card-number, BGF-number, Number-db, Number-natl-biblio, Identifier-"
+"standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:656
+msgid "017"
+msgstr ""
+
+#: ../../source/13_searching.rst:656
+msgid "Number-legal-deposit, Identifier-standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:658
+msgid "018"
+msgstr ""
+
+#: ../../source/13_searching.rst:658 ../../source/13_searching.rst:662
+#: ../../source/13_searching.rst:666 ../../source/13_searching.rst:668
+#: ../../source/13_searching.rst:672 ../../source/13_searching.rst:674
+msgid "Identifier-standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:660
+msgid "020$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:660
+msgid "ISBN:w, Identifier-standard:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:662
+msgid "020"
+msgstr ""
+
+#: ../../source/13_searching.rst:664
+msgid "022$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:664
+msgid "ISSN:w, Identifier-standard:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:666
+msgid "022"
+msgstr ""
+
+#: ../../source/13_searching.rst:668
+msgid "023"
+msgstr ""
+
+#: ../../source/13_searching.rst:670
+msgid "024$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:670
+msgid "Identifier-other"
+msgstr ""
+
+#: ../../source/13_searching.rst:672
+msgid "024"
+msgstr ""
+
+#: ../../source/13_searching.rst:674
+msgid "025"
+msgstr ""
+
+#: ../../source/13_searching.rst:676
+msgid "027"
+msgstr ""
+
+#: ../../source/13_searching.rst:676
+msgid "Report-number, Identifier-standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:678
+msgid "028"
+msgstr ""
+
+#: ../../source/13_searching.rst:678
+msgid "Number-music-publisher, Identifier-standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:680
+msgid "030"
+msgstr ""
+
+#: ../../source/13_searching.rst:680
+msgid "CODEN, Identifier-standard"
+msgstr ""
+
+#: ../../source/13_searching.rst:682
+msgid "034"
+msgstr ""
+
+#: ../../source/13_searching.rst:682
+msgid "Map-scale"
+msgstr ""
+
+#: ../../source/13_searching.rst:684
+msgid "037"
+msgstr ""
+
+#: ../../source/13_searching.rst:684
+msgid "Identifier-standard, Stock-number"
+msgstr ""
+
+#: ../../source/13_searching.rst:686
+msgid "040"
+msgstr ""
+
+#: ../../source/13_searching.rst:686
+msgid "Code-institution, Record-source"
+msgstr ""
+
+#: ../../source/13_searching.rst:688
+msgid "041$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:688
+msgid "ln-audio"
+msgstr ""
+
+#: ../../source/13_searching.rst:690
+msgid "041$h"
+msgstr ""
+
+#: ../../source/13_searching.rst:690
+msgid "language-original"
+msgstr ""
+
+#: ../../source/13_searching.rst:692
+msgid "041$j"
+msgstr ""
+
+#: ../../source/13_searching.rst:692
+msgid "ln-subtitle"
+msgstr ""
+
+#: ../../source/13_searching.rst:694
+msgid "041"
+msgstr ""
+
+#: ../../source/13_searching.rst:696
+msgid "043"
+msgstr ""
+
+#: ../../source/13_searching.rst:696
+msgid "Code-geographic"
+msgstr ""
+
+#: ../../source/13_searching.rst:698
+msgid "050$b"
+msgstr ""
+
+#: ../../source/13_searching.rst:698 ../../source/13_searching.rst:700
+msgid "LC-call-number:w, LC-call-number:p, LC-call-number:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:700
+msgid "050"
+msgstr ""
+
+#: ../../source/13_searching.rst:702
+msgid "052"
+msgstr ""
+
+#: ../../source/13_searching.rst:702
+msgid "Geographic-class"
+msgstr ""
+
+#: ../../source/13_searching.rst:704
+msgid "060"
+msgstr ""
+
+#: ../../source/13_searching.rst:704
+msgid "NLM-call-number"
+msgstr ""
+
+#: ../../source/13_searching.rst:706
+msgid "070"
+msgstr ""
+
+#: ../../source/13_searching.rst:706
+msgid "NAL-call-number"
+msgstr ""
+
+#: ../../source/13_searching.rst:708
+msgid "080"
+msgstr ""
+
+#: ../../source/13_searching.rst:708
+msgid "UDC-classification"
+msgstr ""
+
+#: ../../source/13_searching.rst:710
+msgid "082"
+msgstr ""
+
+#: ../../source/13_searching.rst:710
+msgid "Dewey-classification:w, Dewey-classification:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:712
+msgid "086"
+msgstr ""
+
+#: ../../source/13_searching.rst:712
+msgid "Number-govt-pub"
+msgstr ""
+
+#: ../../source/13_searching.rst:714
+msgid "100$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:714 ../../source/13_searching.rst:762
+msgid "Cross-Reference:w, Koha-Auth-Number"
+msgstr ""
+
+#: ../../source/13_searching.rst:716
+msgid "100$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:716
+msgid ""
+"Author,Author:p, Author:s, Editor, Author-personal-bibliography, Author-"
+"personal-bibliography:p, Author-personal-bibliography:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:718
+msgid "100"
+msgstr ""
+
+#: ../../source/13_searching.rst:718
+msgid ""
+"Author, Author-title, Author-name-personal, Name, Name-and-title, "
+"Personal-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:720
+msgid "110$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:722
+msgid "110"
+msgstr ""
+
+#: ../../source/13_searching.rst:722
+msgid ""
+"Author, Author-title, Author-name-corporate, Name, Name-and-title, "
+"Corporate-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:724
+msgid "111$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:726
+msgid "111"
+msgstr ""
+
+#: ../../source/13_searching.rst:726
+msgid ""
+"Author, Author-title, Author-name-corporate, Name, Name-and-title, "
+"Conference-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:728
+msgid "130$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:728 ../../source/13_searching.rst:748
+#: ../../source/13_searching.rst:752 ../../source/13_searching.rst:868
+#: ../../source/13_searching.rst:914 ../../source/13_searching.rst:940
+msgid "Thematic-number"
+msgstr ""
+
+#: ../../source/13_searching.rst:730
+msgid "130$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:730 ../../source/13_searching.rst:746
+#: ../../source/13_searching.rst:754 ../../source/13_searching.rst:870
+#: ../../source/13_searching.rst:916 ../../source/13_searching.rst:942
+msgid "Music-key"
+msgstr ""
+
+#: ../../source/13_searching.rst:732
+msgid "130$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:734
+msgid "130"
+msgstr ""
+
+#: ../../source/13_searching.rst:734 ../../source/13_searching.rst:946
+msgid "Title, Title-uniform"
+msgstr ""
+
+#: ../../source/13_searching.rst:736
+msgid "210"
+msgstr ""
+
+#: ../../source/13_searching.rst:736 ../../source/13_searching.rst:738
+msgid "Title, Title-abbreviated"
+msgstr ""
+
+#: ../../source/13_searching.rst:738
+msgid "211"
+msgstr ""
+
+#: ../../source/13_searching.rst:740
+msgid "212"
+msgstr ""
+
+#: ../../source/13_searching.rst:740 ../../source/13_searching.rst:948
+msgid "Title, Title-other-variant"
+msgstr ""
+
+#: ../../source/13_searching.rst:742
+msgid "214"
+msgstr ""
+
+#: ../../source/13_searching.rst:742
+msgid "Title, Title-expanded"
+msgstr ""
+
+#: ../../source/13_searching.rst:744
+msgid "222"
+msgstr ""
+
+#: ../../source/13_searching.rst:744
+msgid "Title, Title-key"
+msgstr ""
+
+#: ../../source/13_searching.rst:746
+msgid "240$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:748
+msgid "240$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:750
+msgid "240"
+msgstr ""
+
+#: ../../source/13_searching.rst:750
+msgid "Title:w, Title:p, Title-uniform"
+msgstr ""
+
+#: ../../source/13_searching.rst:752
+msgid "243$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:754
+msgid "243$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:756
+msgid "243"
+msgstr ""
+
+#: ../../source/13_searching.rst:756
+msgid "Title:w, Title:p, Title-collective"
+msgstr ""
+
+#: ../../source/13_searching.rst:758
+msgid "245$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:758
+msgid "Title-cover:w, Title-cover:p, Title-cover:s, Title:w, Title:p, Title:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:760
+msgid "245$c"
+msgstr ""
+
+#: ../../source/13_searching.rst:760
+msgid "Author, Author-in-order:w, Author-in-order:p, Author-in-order:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:762
+msgid "245$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:764
+msgid "245"
+msgstr ""
+
+#: ../../source/13_searching.rst:764
+msgid "Title:w, Title:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:766
+msgid "246"
+msgstr ""
+
+#: ../../source/13_searching.rst:766
+msgid "Title, Title:p, Title-abbreviated, Title-expanded, Title-former"
+msgstr ""
+
+#: ../../source/13_searching.rst:768
+msgid "247"
+msgstr ""
+
+#: ../../source/13_searching.rst:768
+msgid "Title, Title:p, Title-former, Title-other-variant, Related-periodical"
+msgstr ""
+
+#: ../../source/13_searching.rst:770
+msgid "260$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:770
+msgid "pl:w, pl:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:772
+msgid "260$b"
+msgstr ""
+
+#: ../../source/13_searching.rst:772
+msgid "Publisher:w, Publisher:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:774
+msgid "260$c"
+msgstr ""
+
+#: ../../source/13_searching.rst:774
+msgid "copydate, copydate:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:776
+msgid "260"
+msgstr ""
+
+#: ../../source/13_searching.rst:776
+msgid "Provider, pl"
+msgstr ""
+
+#: ../../source/13_searching.rst:778
+msgid "264"
+msgstr ""
+
+#: ../../source/13_searching.rst:778
+msgid "Provider"
+msgstr ""
+
+#: ../../source/13_searching.rst:780
+msgid "300"
+msgstr ""
+
+#: ../../source/13_searching.rst:780
+msgid "Extent:w, Extent:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:782
+msgid "400$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:782 ../../source/13_searching.rst:792
+#: ../../source/13_searching.rst:802 ../../source/13_searching.rst:850
+#: ../../source/13_searching.rst:860 ../../source/13_searching.rst:926
+#: ../../source/13_searching.rst:932 ../../source/13_searching.rst:964
+#: ../../source/13_searching.rst:972 ../../source/13_searching.rst:980
+msgid "Name-and-title"
+msgstr ""
+
+#: ../../source/13_searching.rst:784
+msgid "400$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:784 ../../source/13_searching.rst:966
+#: ../../source/13_searching.rst:974 ../../source/13_searching.rst:984
+msgid "Author-title, Name-and-title, Title, Title-series"
+msgstr ""
+
+#: ../../source/13_searching.rst:786
+msgid "400$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:788
+msgid "400"
+msgstr ""
+
+#: ../../source/13_searching.rst:788 ../../source/13_searching.rst:970
+msgid "Author, Author-name-personal, Name, Personal-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:790 ../../source/13_searching.rst:798
+msgid "410"
+msgstr ""
+
+#: ../../source/13_searching.rst:790 ../../source/13_searching.rst:922
+msgid "Author, Corporate-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:792
+msgid "410$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:794
+msgid "410$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:794
+msgid "Author-title, Title, Title-series"
+msgstr ""
+
+#: ../../source/13_searching.rst:796
+msgid "410$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:798 ../../source/13_searching.rst:806
+msgid "Author-name-corporate, Name"
+msgstr ""
+
+#: ../../source/13_searching.rst:800 ../../source/13_searching.rst:806
+msgid "411"
+msgstr ""
+
+#: ../../source/13_searching.rst:800
+msgid "Author, Conference-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:802
+msgid "411$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:804
+msgid "411$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:804
+msgid "Author-title, Title-series"
+msgstr ""
+
+#: ../../source/13_searching.rst:808
+msgid "440$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:808 ../../source/13_searching.rst:814
+msgid "Title-series:w, Title-series:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:810
+msgid "440$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:812
+msgid "440"
+msgstr ""
+
+#: ../../source/13_searching.rst:812
+msgid "Title-series:w, Title-series:p, Title, Title-series"
+msgstr ""
+
+#: ../../source/13_searching.rst:814
+msgid "490$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:816
+msgid "490"
+msgstr ""
+
+#: ../../source/13_searching.rst:816 ../../source/13_searching.rst:990
+#: ../../source/13_searching.rst:992
+msgid "Title, Title-series"
+msgstr ""
+
+#: ../../source/13_searching.rst:818
+msgid "490$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:820
+msgid "500"
+msgstr ""
+
+#: ../../source/13_searching.rst:820 ../../source/13_searching.rst:828
+#: ../../source/13_searching.rst:840 ../../source/13_searching.rst:1074
+msgid "Note:w, Note:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:822
+msgid "502"
+msgstr ""
+
+#: ../../source/13_searching.rst:824
+msgid "505$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:826
+msgid "505$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:828
+msgid "505"
+msgstr ""
+
+#: ../../source/13_searching.rst:830
+msgid "510"
+msgstr ""
+
+#: ../../source/13_searching.rst:830
+msgid "Indexed-by"
+msgstr ""
+
+#: ../../source/13_searching.rst:832
+msgid "520"
+msgstr ""
+
+#: ../../source/13_searching.rst:832
+msgid "Abstract:w, Abstract:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:834
+msgid "521$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:834
+msgid "lex:n"
+msgstr ""
+
+#: ../../source/13_searching.rst:836
+msgid "526$c"
+msgstr ""
+
+#: ../../source/13_searching.rst:836
+msgid "arl, arl:n"
+msgstr ""
+
+#: ../../source/13_searching.rst:838
+msgid "526$d"
+msgstr ""
+
+#: ../../source/13_searching.rst:838
+msgid "arp, arp:n"
+msgstr ""
+
+#: ../../source/13_searching.rst:840
+msgid "590"
+msgstr ""
+
+#: ../../source/13_searching.rst:842
+msgid "600$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:842
+msgid "Name-and-title, Name, Personal-name, Subject-name-personal, Subject"
+msgstr ""
+
+#: ../../source/13_searching.rst:844
+msgid "600$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:844
+msgid "Name-and-title, Title, Subject"
+msgstr ""
+
+#: ../../source/13_searching.rst:846
+msgid "600$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:848
+msgid "600"
+msgstr ""
+
+#: ../../source/13_searching.rst:848
+msgid "Name, Personal-name, Subject-name-personal, Subject"
+msgstr ""
+
+#: ../../source/13_searching.rst:850
+msgid "610$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:852
+msgid "610$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:852 ../../source/13_searching.rst:862
+msgid "Name-and-title, Title"
+msgstr ""
+
+#: ../../source/13_searching.rst:854
+msgid "610$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:856
+msgid "610"
+msgstr ""
+
+#: ../../source/13_searching.rst:856
+msgid "Name, Subject, Corporate-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:858 ../../source/13_searching.rst:866
+msgid "611"
+msgstr ""
+
+#: ../../source/13_searching.rst:860
+msgid "611$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:862
+msgid "611$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:864
+msgid "611$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:866
+msgid "Name, Subject"
+msgstr ""
+
+#: ../../source/13_searching.rst:868
+msgid "630$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:870
+msgid "630$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:872
+msgid "630$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:874
+msgid "630"
+msgstr ""
+
+#: ../../source/13_searching.rst:876
+msgid "650$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:878
+msgid "650"
+msgstr ""
+
+#: ../../source/13_searching.rst:878 ../../source/13_searching.rst:888
+#: ../../source/13_searching.rst:908
+msgid "Subject, Subject:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:880
+msgid "651$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:882
+msgid "651"
+msgstr ""
+
+#: ../../source/13_searching.rst:882
+msgid "Name-geographic, Subject,Subject:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:884
+msgid "652$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:886
+msgid "653$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:888
+msgid "653"
+msgstr ""
+
+#: ../../source/13_searching.rst:890
+msgid "654$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:892
+msgid "654"
+msgstr ""
+
+#: ../../source/13_searching.rst:894
+msgid "655$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:896
+msgid "655"
+msgstr ""
+
+#: ../../source/13_searching.rst:898
+msgid "656$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:900
+msgid "656"
+msgstr ""
+
+#: ../../source/13_searching.rst:902
+msgid "657$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:904
+msgid "657"
+msgstr ""
+
+#: ../../source/13_searching.rst:906
+msgid "690$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:908
+msgid "690"
+msgstr ""
+
+#: ../../source/13_searching.rst:910
+msgid "700$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:910
+msgid "Cross-Reference, Koha-Auth-Number"
+msgstr ""
+
+#: ../../source/13_searching.rst:912
+msgid "700$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:912
+msgid "Author, Author:p"
+msgstr ""
+
+#: ../../source/13_searching.rst:914
+msgid "700$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:916
+msgid "700$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:918
+msgid "700$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:918 ../../source/13_searching.rst:924
+msgid "Author-title, Name-and-title, Title, Title-uniform"
+msgstr ""
+
+#: ../../source/13_searching.rst:920
+msgid "700"
+msgstr ""
+
+#: ../../source/13_searching.rst:920
+msgid ""
+"Author, Author-name-corporate, Author-name-personal, Name, Editor, "
+"Personal-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:922 ../../source/13_searching.rst:930
+msgid "710"
+msgstr ""
+
+#: ../../source/13_searching.rst:924
+msgid "710$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:926
+msgid "710$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:928
+msgid "710$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:930
+msgid "Author, Name"
+msgstr ""
+
+#: ../../source/13_searching.rst:932
+msgid "711$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:934
+msgid "711$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:934
+msgid "Author-title, Title, Title-uniform"
+msgstr ""
+
+#: ../../source/13_searching.rst:936
+msgid "711$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:938
+msgid "711"
+msgstr ""
+
+#: ../../source/13_searching.rst:938
+msgid "Author-name-corporate, Name, Conference-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:940
+msgid "730$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:942
+msgid "730$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:944
+msgid "730$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:946
+msgid "730"
+msgstr ""
+
+#: ../../source/13_searching.rst:948
+msgid "740"
+msgstr ""
+
+#: ../../source/13_searching.rst:950
+msgid "773$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:950
+msgid "Host-item"
+msgstr ""
+
+#: ../../source/13_searching.rst:952
+msgid "780$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:954
+msgid "780$w"
+msgstr ""
+
+#: ../../source/13_searching.rst:954 ../../source/13_searching.rst:958
+#: ../../source/13_searching.rst:962
+msgid "Record-control-number"
+msgstr ""
+
+#: ../../source/13_searching.rst:956
+msgid "780"
+msgstr ""
+
+#: ../../source/13_searching.rst:956
+msgid "Title, Title-former, Related-periodical"
+msgstr ""
+
+#: ../../source/13_searching.rst:958
+msgid "785$w"
+msgstr ""
+
+#: ../../source/13_searching.rst:960
+msgid "785"
+msgstr ""
+
+#: ../../source/13_searching.rst:960
+msgid "Related-periodical"
+msgstr ""
+
+#: ../../source/13_searching.rst:962
+msgid "787$w"
+msgstr ""
+
+#: ../../source/13_searching.rst:964
+msgid "800$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:966
+msgid "800$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:968
+msgid "800$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:970
+msgid "800"
+msgstr ""
+
+#: ../../source/13_searching.rst:972
+msgid "810$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:974
+msgid "810$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:976
+msgid "810$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:978
+msgid "810"
+msgstr ""
+
+#: ../../source/13_searching.rst:978
+msgid "Author, Corporate-name, Author-name-corporate, Name"
+msgstr ""
+
+#: ../../source/13_searching.rst:980
+msgid "811$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:982
+msgid "811$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:984
+msgid "811$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:986
+msgid "811"
+msgstr ""
+
+#: ../../source/13_searching.rst:986
+msgid "Author, Author-name-corporate, Name, Conference-name"
+msgstr ""
+
+#: ../../source/13_searching.rst:988
+msgid "830$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:990
+msgid "830"
+msgstr ""
+
+#: ../../source/13_searching.rst:992
+msgid "840"
+msgstr ""
+
+#: ../../source/13_searching.rst:994
+msgid "942$0"
+msgstr ""
+
+#: ../../source/13_searching.rst:994
+msgid "totalissues:n, totalissues:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:996
+msgid "942$2"
+msgstr ""
+
+#: ../../source/13_searching.rst:996
+msgid "cn-bib-source"
+msgstr ""
+
+#: ../../source/13_searching.rst:998
+msgid "942$6"
+msgstr ""
+
+#: ../../source/13_searching.rst:998
+msgid "cn-bib-sort:n, cn-bib-sort:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1000
+msgid "942$c"
+msgstr ""
+
+#: ../../source/13_searching.rst:1000
+msgid "itemtype:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1002
+msgid "942$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:1002
+msgid "Suppress:w, Suppress:n"
+msgstr ""
+
+#: ../../source/13_searching.rst:1004
+msgid "942$h"
+msgstr ""
+
+#: ../../source/13_searching.rst:1004
+msgid "cn-class"
+msgstr ""
+
+#: ../../source/13_searching.rst:1006
+msgid "942$i"
+msgstr ""
+
+#: ../../source/13_searching.rst:1006
+msgid "cn-item"
+msgstr ""
+
+#: ../../source/13_searching.rst:1008
+msgid "942$k"
+msgstr ""
+
+#: ../../source/13_searching.rst:1008
+msgid "cn-prefix"
+msgstr ""
+
+#: ../../source/13_searching.rst:1010
+msgid "942$m"
+msgstr ""
+
+#: ../../source/13_searching.rst:1010
+msgid "cn-suffix"
+msgstr ""
+
+#: ../../source/13_searching.rst:1012
+msgid "952$0"
+msgstr ""
+
+#: ../../source/13_searching.rst:1012
+msgid "withdrawn:n, withdrawn:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1014
+msgid "952$1"
+msgstr ""
+
+#: ../../source/13_searching.rst:1014
+msgid "lost, lost:n"
+msgstr ""
+
+#: ../../source/13_searching.rst:1016
+msgid "952$2"
+msgstr ""
+
+#: ../../source/13_searching.rst:1016
+msgid "classification-source"
+msgstr ""
+
+#: ../../source/13_searching.rst:1018
+msgid "952$3"
+msgstr ""
+
+#: ../../source/13_searching.rst:1018
+msgid "materials-specified"
+msgstr ""
+
+#: ../../source/13_searching.rst:1020
+msgid "952$4"
+msgstr ""
+
+#: ../../source/13_searching.rst:1020
+msgid "damaged:n, damaged:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1022
+msgid "952$5"
+msgstr ""
+
+#: ../../source/13_searching.rst:1022
+msgid "restricted:n, restricted:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1024
+msgid "952$6"
+msgstr ""
+
+#: ../../source/13_searching.rst:1024
+msgid "cn-sort:n, cn-sort:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1026
+msgid "952$7"
+msgstr ""
+
+#: ../../source/13_searching.rst:1026
+msgid "notforloan:n, notforloan:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1028
+msgid "952$8"
+msgstr ""
+
+#: ../../source/13_searching.rst:1028
+msgid "ccode"
+msgstr ""
+
+#: ../../source/13_searching.rst:1030
+msgid "952$9"
+msgstr ""
+
+#: ../../source/13_searching.rst:1030
+msgid "itemnumber:n, itemnumber:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1032
+msgid "952$a"
+msgstr ""
+
+#: ../../source/13_searching.rst:1032
+msgid "homebranch"
+msgstr ""
+
+#: ../../source/13_searching.rst:1034
+msgid "952$b"
+msgstr ""
+
+#: ../../source/13_searching.rst:1034
+msgid "holdingbranch"
+msgstr ""
+
+#: ../../source/13_searching.rst:1036
+msgid "952$c"
+msgstr ""
+
+#: ../../source/13_searching.rst:1036
+msgid "location"
+msgstr ""
+
+#: ../../source/13_searching.rst:1038
+msgid "952$d"
+msgstr ""
+
+#: ../../source/13_searching.rst:1038
+msgid "Date-of-acquisition, Date-of-acquisition:d, Date-of-acquisition:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1040
+msgid "952$e"
+msgstr ""
+
+#: ../../source/13_searching.rst:1040
+msgid "acqsource"
+msgstr ""
+
+#: ../../source/13_searching.rst:1042
+msgid "952$f"
+msgstr ""
+
+#: ../../source/13_searching.rst:1042
+msgid "coded-location-qualifier"
+msgstr ""
+
+#: ../../source/13_searching.rst:1044
+msgid "952$g"
+msgstr ""
+
+#: ../../source/13_searching.rst:1044
+msgid "price"
+msgstr ""
+
+#: ../../source/13_searching.rst:1046
+msgid "952$j"
+msgstr ""
+
+#: ../../source/13_searching.rst:1046
+msgid "stack:n, stack:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1048
+msgid "952$l"
+msgstr ""
+
+#: ../../source/13_searching.rst:1048
+msgid "issues:n, issues:w, issues:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1050
+msgid "952$m"
+msgstr ""
+
+#: ../../source/13_searching.rst:1050
+msgid "renewals:n, renewals:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1052
+msgid "952$n"
+msgstr ""
+
+#: ../../source/13_searching.rst:1052
+msgid "reserves:n, reserves:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1054
+msgid "952$o"
+msgstr ""
+
+#: ../../source/13_searching.rst:1054
+msgid "Local-classification:w, Local-classification:p, Local-classification:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1056
+msgid "952$p"
+msgstr ""
+
+#: ../../source/13_searching.rst:1056
+msgid "barcode, barcode:n"
+msgstr ""
+
+#: ../../source/13_searching.rst:1058
+msgid "952$q"
+msgstr ""
+
+#: ../../source/13_searching.rst:1058
+msgid "onloan:n, onloan:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1060
+msgid "952$r"
+msgstr ""
+
+#: ../../source/13_searching.rst:1060
+msgid "datelastseen"
+msgstr ""
+
+#: ../../source/13_searching.rst:1062
+msgid "952$s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1062
+msgid "datelastborrowed"
+msgstr ""
+
+#: ../../source/13_searching.rst:1064
+msgid "952$t"
+msgstr ""
+
+#: ../../source/13_searching.rst:1064
+msgid "copynumber"
+msgstr ""
+
+#: ../../source/13_searching.rst:1066
+msgid "952$u"
+msgstr ""
+
+#: ../../source/13_searching.rst:1066
+msgid "uri:u"
+msgstr ""
+
+#: ../../source/13_searching.rst:1068
+msgid "952$v"
+msgstr ""
+
+#: ../../source/13_searching.rst:1068
+msgid "replacementprice"
+msgstr ""
+
+#: ../../source/13_searching.rst:1070
+msgid "952$w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1070
+msgid "replacementpricedate"
+msgstr ""
+
+#: ../../source/13_searching.rst:1072
+msgid "952$y"
+msgstr ""
+
+#: ../../source/13_searching.rst:1072
+msgid "itype:w"
+msgstr ""
+
+#: ../../source/13_searching.rst:1074
+msgid "952$z"
+msgstr ""
+
+#: ../../source/13_searching.rst:1076
+msgid "999$c"
+msgstr ""
+
+#: ../../source/13_searching.rst:1076
+msgid "Local-Number:n, Local-Number:w, Local-Number:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1078
+msgid "999$d"
+msgstr ""
+
+#: ../../source/13_searching.rst:1078
+msgid "biblioitemnumber:n, biblioitemnumber:w, biblioitemnumber:s"
+msgstr ""
+
+#: ../../source/13_searching.rst:1081
+msgid "Table: Indexes"
+msgstr ""
+
