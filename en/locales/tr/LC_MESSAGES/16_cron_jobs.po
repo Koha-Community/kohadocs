@@ -1,0 +1,3057 @@
+# Compendium of tr.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-25 12:27-0300\n"
+"PO-Revision-Date: 2017-08-31 15:30-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/16_cron_jobs.rst:5 ../../source/16_cron_jobs.rst:26
+msgid "Cron Jobs"
+msgstr "Cron Jobs"
+
+#: ../../source/16_cron_jobs.rst:7
+msgid ""
+"A cron job is a Linux command for scheduling a command or script on your "
+"server to complete repetitive tasks automatically. Scripts executed as a "
+"cron job are typically used to modify files or databases; however, they can "
+"perform other tasks that do not modify data on the server, like sending out "
+"email notifications. Koha has many cron jobs in place that you can enable "
+"(search engine indexing, overdue notice generation, data cleanup and more), "
+"this chapter will explain those for you."
+msgstr ""
+"Bir cron job, tekrar eden görevleri otomatik olarak tamamlamak için "
+"sunucunuz üzerinde bir komut ya da komut dizisi zamanlamak için bir linux "
+"komutudur. Bir cron job olarak çalıştırılan komut dizileri sıklıkla dosyalar "
+"veya veri tabanları üzerinde değişiklik yapmak için kullanılır, bununla "
+"birlikte, sunucu üzerindeki veri üzerinde değişiklik yapmayan diğer "
+"görevleri de gerçekleştirebilirler, e-posta bildirimleri göndermek gibi. "
+"Koha, beraberinde etkinleştirebileceğiniz bir çok cron job ile gelmektedir "
+"(arama motoru dizinleme, gecikme bildirimi oluşturma, veri temizleme ve daha "
+"fazlası), sizin için bu bölümde bu konular açıklanacaktır."
+
+#: ../../source/16_cron_jobs.rst:16
+msgid "Crontab example"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:18
+msgid ""
+"An example of a Koha crontab can be found in misc/cronjobs/crontab.example"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:20
+msgid ""
+"The example includes sample boilerplate cronjob entries for the most "
+"commonly-used cronjobs."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:28
+msgid ""
+"The locations below assume a dev install which puts the crons in misc/, if "
+"you have a standard install you may want to look in bin/ for these files if "
+"you cannot find them in misc/"
+msgstr ""
+"Aşağıdaki konumlar bir kurulumun cron dosyalarını misc/ içine koyduğunu "
+"varsayar, Standart bir kurulum yaptıysanız, bu dosyaları misc/ içinde "
+"bulamazsanız bin/ içine bakın."
+
+#: ../../source/16_cron_jobs.rst:35
+msgid "Backup"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:38
+msgid "Daily Backup"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:40
+#, fuzzy
+msgid "Script path: misc/cronjobs/backup.sh"
+msgstr "Komut dosyası yolu: misc/cronjobs/j2a.pl"
+
+#: ../../source/16_cron_jobs.rst:42
+msgid "Does: Creates a daily backup of the Koha database."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:44 ../../source/16_cron_jobs.rst:166
+#: ../../source/16_cron_jobs.rst:181
+msgid "Frequency suggestion: daily"
+msgstr "Frekans önerisi: günlük"
+
+#: ../../source/16_cron_jobs.rst:49
+msgid "Search"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:54
+msgid "Sitemap"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:56
+#, fuzzy
+msgid "Script path: misc/cronjobs/sitemap.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:58
+msgid ""
+"Does: Processes all biblio records from a Koha instance and generates "
+"sitemap files complying with the protocol as described on http://sitemaps."
+"org. The goal of this script is to be able to provide to search engines "
+"direct access to biblio records. It avoids leaving search engines browsing "
+"Koha's OPAC which would generate a lot of site traffic and server workload."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:64
+msgid ""
+"**Note** A file named sitemapindex.xml is generated. It contains references "
+"to multiple sitemap files. Each file contains at most 50,000 URLs and is "
+"named sitemapXXXX.xml."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:69
+msgid ""
+"The files must be stored on the Koha OPAC's root directory. In the same "
+"directory a robots.txt file with the following contents is required:"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:73
+msgid "``Sitemap: sitemapindex.xml User-agent: * Disallow: /cgi-bin/``"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:80
+msgid "Rebuild Index"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:82
+#, fuzzy
+msgid "Script path: misc/migration\\_tools/rebuild\\_zebra.pl"
+msgstr "Komut dizisi yolu: misc/migration_tools/rebuild_zebra.pl"
+
+#: ../../source/16_cron_jobs.rst:84
+msgid "Does: Updates Zebra indexes with recently changed data."
+msgstr "Ne yapar: Zebra dizinlerini son değiştirilen verilerle güncelleştirir."
+
+#: ../../source/16_cron_jobs.rst:86
+msgid "Required by: Zebra"
+msgstr "Gerek duyan: Zebra"
+
+#: ../../source/16_cron_jobs.rst:88
+msgid ""
+"Frequency suggestion: every x minutes, (between 5-15 minutes) depending on "
+"performance needs"
+msgstr ""
+"Frekans önerisi: her x dakikada, (5-15 dakika arası) performans "
+"ihtiyaçlarına bağlı olarak"
+
+#: ../../source/16_cron_jobs.rst:94
+#, fuzzy
+msgid "Circulation"
+msgstr "Yapılandırma"
+
+#: ../../source/16_cron_jobs.rst:99
+msgid "Holds Queue"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:101
+#, fuzzy
+msgid "Script path: misc/cronjobs/holds/build\\_holds\\_queue.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/holds/build_holds_queue.pl"
+
+#: ../../source/16_cron_jobs.rst:103
+msgid "Does: Updates holds queue report"
+msgstr "Ne yapar: Ayırtma sırası raporunu günceller"
+
+#: ../../source/16_cron_jobs.rst:105
+#, fuzzy
+msgid "Required by: :ref:`Holds Queue Report <holds-queue-label>`"
+msgstr "Gerek duyan: `Ayırma Sırası Raporu <#holdsqueue>`__"
+
+#: ../../source/16_cron_jobs.rst:107
+msgid "Frequency suggestion: every 1-4 hours"
+msgstr "Frekans önerisi: her 1-4 saatte"
+
+#: ../../source/16_cron_jobs.rst:109
+msgid "Description:"
+msgstr "Tanım:"
+
+#: ../../source/16_cron_jobs.rst:111
+msgid ""
+"A script that should be run periodically if your library system allows "
+"borrowers to place on-shelf holds. This script decides which library should "
+"be responsible for fulfilling a given hold request."
+msgstr ""
+"Kütüphane sisteminiz okuyucuların raftaki materyaller üzerinde ayırtma "
+"yapmalarına izin veriyorsa periyodik olarak çalıştırılması gereken bir "
+"betiktir. Bu betik, gelen bir ayırtma talebini karşılamak için hangi "
+"kütüphanenin sorumlu olacağını belirler."
+
+#: ../../source/16_cron_jobs.rst:115
+#, fuzzy
+msgid ""
+"It's behavior is controlled by the system preferences :ref:"
+"`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-"
+"randomizeholdsqueueweight-label>` and :ref:`RandomizeHoldsQueueWeight "
+"<staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-"
+"label>`."
+msgstr ""
+"Davranışı `StaticHoldsQueueWeight <#holdqueueweight>`__ ve "
+"`RandomizeHoldsQueueWeight <#holdqueueweight>`__ sistem tercihleri "
+"tarafından kontrol edilir."
+
+#: ../../source/16_cron_jobs.rst:119
+#, fuzzy
+msgid ""
+"If you do not want all of your libraries to participate in the on-shelf "
+"holds fulfillment process, you should list the the libraries that \\*do\\* "
+"participate in the process here by inputting all the participating library's "
+"branchcodes, separated by commas ( e.g. \"MPL,CPL,SPL,BML\" etc. )."
+msgstr ""
+"Tüm kütüphanelerinizin raflarda ayırma yapma işleminde yer almasını "
+"istemiyorsanız, işlemde *yer alan* tüm katılımcı kütüphanelerin virgüllerle "
+"ayrılmış branş kodlarını girerek kütüphaneleri listelemeniz gerekir. "
+"( örneğin, \"MPL,CPL,SPL,BML\" vb. )."
+
+#: ../../source/16_cron_jobs.rst:125
+#, fuzzy
+msgid ""
+"By default, the holds queue will be generated such that the system will "
+"first attempt to hold fulfillment using items already at the pickup library "
+"if possible. If there are no items available at the pickup library to fill a "
+"hold, build\\_holds\\_queue.pl will then use the list of libraries defined "
+"in StaticHoldsQueueWeight. If RandomizeHoldsQueueWeight is disabled ( which "
+"it is by default ), the script will assign fulfillment requests in the order "
+"the branches are placed in the StaticHoldsQueueWeight system preference."
+msgstr ""
+"Ayırmalar sırası varsayılan olarak, sistemin öncelikle ayırma isteğini "
+"halihazırda alınacağı kütüphanede mevcut olan materyalleri kullanarak "
+"gerçekleştireceği şekilde oluşturulacaktır. Bir ayırma isteğini yerine "
+"getirecek materyal kütüphanede yoksa, build_holds_queue.pl bu sefer "
+"StaticHoldsQueueWeight içerisinde tanımlı kütüphanelerin listesini "
+"kullanacaktır. Eğer RandomizeHoldsQueueWeight devre dışı ise (varsayılan "
+"olarak devre dışıdır), komut dizini ayırma isteklerini birimlerin "
+"StaticHoldsQueueWeight sistem tercihinde yer alma sırasına göre atayacaktır."
+
+#: ../../source/16_cron_jobs.rst:134
+msgid ""
+"For example, if your system has three libraries, of varying sizes ( small, "
+"medium and large ) and you want the burden of holds fulfillment to be on "
+"larger libraries before smaller libraries, you would want "
+"StaticHoldsQueueWeight to look something like \"LRG,MED,SML\"."
+msgstr ""
+"Örneğin, sisteminizin değişen boyutlarda (küçük, orta ve büyük) 3 "
+"kütüphanesi varsa ve siz ayırmaları daha küçük kütüphanelerden önce daha "
+"büyük kütüphanelere yüklemek istiyorsanız, Ayırma Kuyruğundaki Statik "
+"Tercihlerin \"LRG,MED,SML\" şeklinde gözükmesini isteyeceksiniz."
+
+#: ../../source/16_cron_jobs.rst:140
+msgid ""
+"If you want the burden of holds fulfillment to be spread out equally "
+"throughout your library system, simply enable RandomizeHoldsQueueWeight. "
+"When this system preference is enabled, the order in which libraries will be "
+"requested to fulfill an on-shelf hold will be randomized each time the list "
+"is regenerated."
+msgstr ""
+"Ayırma yapma işlemleri yükünün kütüphane sisteminizin genelinde eşit olarak "
+"dağılmasını istiyorsanız, Ayırma Kuyruğu Rastgele Tercihlerini "
+"etkinleştiriniz. Bu sistem tercihi etkinleştirildiğinde, kütüphanelerdeki "
+"raflarda ayırma yapma isteği liste her defasında tekrar oluşturulduğunda "
+"rastgele hale getirilecektir."
+
+#: ../../source/16_cron_jobs.rst:146
+#, fuzzy
+msgid ""
+"Leaving StaticHoldsQueueWeight empty is contraindicated at this time. Doing "
+"so will cause the build\\_holds\\_queue script to ignore "
+"RandomizeHoldsQueueWeight, causing the script to request hold fulfillment "
+"not randomly, but by alphabetical order."
+msgstr ""
+"Ayırma Kuyruğu Statik Tercihlerini Boş Bırakma ters etki yapmaktadır. Bu "
+"şekilde yapmak, ayırma_kuyruğu_oluştur kodunun Ayırma Kuyruğu Rastgele "
+"Tercihlerini görmezden gelmesine, bu da kodun rastgele yerine alfabetik "
+"sıraya göre ayırma yapmasına sebep olacaktır."
+
+#: ../../source/16_cron_jobs.rst:154
+msgid "Expired Holds"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:156
+#, fuzzy
+msgid "Script path: misc/cronjobs/holds/cancel\\_expired\\_holds.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/holds/cancel_expired_holds.pl"
+
+#: ../../source/16_cron_jobs.rst:158
+#, fuzzy
+msgid ""
+"Does: By default, this cron job will only automatically cancel holds where "
+"the user has set an expiration date. If the library is using the :ref:"
+"`ExpireReservesMaxPickUpDelay` and :ref:`ExpireReservesMaxPickUpDelayCharge` "
+"preferences then this script will also cancel holds that have been sitting "
+"on the hold shelf for too long and will (if the library does) charge the "
+"patron for not picking up the hold."
+msgstr ""
+"Ne yapar: Varsayılan olarak, bu cronjob yalnızca kullanıcının bir sona erme "
+"tarihi ayarladığı ayırtma işlemlerini otomatik olarak iptal edecektir. Eğer "
+"kütüphaneniz `ExpireReservesMaxPickUpDelay "
+"<#ExpireReservesMaxPickUpDelay>`__ ve `ExpireReservesMaxPickUpDelayCharge "
+"<#ExpireReservesMaxPickUpDelayCharge>`__ sistem tercihlerini kullanıyorsa, "
+"bu betik aynı zamanda ayırtma rafında çok üzün süredir beklemekte olan "
+"ayırtma işlemlerini de iptal edecek ve (kütüphanenizin böyle bir uygulaması "
+"varsa) kullanıcı üzerinde ayırtma yaptığı materyali almadığı için ceza "
+"uygulayacaktır."
+
+#: ../../source/16_cron_jobs.rst:171
+msgid "Unsuspend Holds"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:173
+#, fuzzy
+msgid "Script path: misc/cronjobs/holds/auto\\_unsuspend\\_holds.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/holds/auto_unsuspend_holds.pl"
+
+#: ../../source/16_cron_jobs.rst:175
+#, fuzzy
+msgid ""
+"Does: This script checks to find holds that should no longer be suspended "
+"and removes the suspension if the :ref:`AutoResumeSuspendedHolds` preference "
+"is set to 'allow'. This puts the patron back in to the queue where they were "
+"when the hold was suspended."
+msgstr ""
+"Ne yapar: Bu betik artık askıda olmayan ayırtma işlemlerini bulmak için "
+"denetler ve eğer `AutoResumeSuspendedHolds <#AutoResumeSuspendedHolds>`__ "
+"sistem tercihi 'izin ver' olarak ayarlanmışsa askıya alma işlemini kaldırır. "
+"Bu işlem, kullanıcıyı ayırtma askıya alınmadan önceki sırasına geri getirir."
+
+#: ../../source/16_cron_jobs.rst:186
+msgid "Fines"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:188
+msgid "Script path: misc/cronjobs/fines.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:190
+msgid "Does: Calculates and posts fines to patron accounts."
+msgstr "Ne yapar: Cezaları hesaplar ve kullanıcıların hesaplarına gönderir."
+
+#: ../../source/16_cron_jobs.rst:192
+#, fuzzy
+msgid "Required by: :ref:`finesMode` system preference"
+msgstr "Gerek duyan: `finesMode <#finesMode>`__ sistem tercihi"
+
+#: ../../source/16_cron_jobs.rst:194 ../../source/16_cron_jobs.rst:223
+#: ../../source/16_cron_jobs.rst:243 ../../source/16_cron_jobs.rst:279
+#: ../../source/16_cron_jobs.rst:308 ../../source/16_cron_jobs.rst:348
+#: ../../source/16_cron_jobs.rst:407 ../../source/16_cron_jobs.rst:424
+#: ../../source/16_cron_jobs.rst:458 ../../source/16_cron_jobs.rst:481
+#: ../../source/16_cron_jobs.rst:496 ../../source/16_cron_jobs.rst:629
+#: ../../source/16_cron_jobs.rst:642 ../../source/16_cron_jobs.rst:718
+msgid "Frequency suggestion: nightly"
+msgstr "Frekans önerisi: gecelik"
+
+#: ../../source/16_cron_jobs.rst:199
+msgid "Static Fines"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:201
+#, fuzzy
+msgid "Script path: misc/cronjobs/staticfines.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:203
+#, fuzzy
+msgid ""
+"Does: this script calculates and charges overdue fines to patron accounts"
+msgstr "Ne yapar: Cezaları hesaplar ve kullanıcıların hesaplarına gönderir."
+
+#: ../../source/16_cron_jobs.rst:205
+msgid ""
+"**Note** If the Koha System Preference 'finesMode' is set to 'production', "
+"the fines are charged to the patron accounts. If set to 'test', the fines "
+"are calculated but not applied."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:209
+msgid "**Note** Fines won't be applied on a holiday."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:215
+msgid "Long Overdues"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:217
+msgid "Script path: misc/cronjobs/longoverdue.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/longoverdue.pl"
+
+#: ../../source/16_cron_jobs.rst:219
+msgid ""
+"Does: allows one to specify delays for changing items to different lost "
+"statuses, and optionally charge for them using the replacement price listed "
+"on the item record."
+msgstr ""
+"Ne yapar: materyallerin farklı kayıp durumlarına değiştirilmesi için "
+"gecikmeler belirlemenizi sağlar, ve isteğe bağlı olarak materyal kaydında "
+"belirtilen liste fiyatına göre yerine koyma bedeli tahsil etmenizi sağlar."
+
+#: ../../source/16_cron_jobs.rst:225 ../../source/16_cron_jobs.rst:252
+#: ../../source/16_cron_jobs.rst:409 ../../source/16_cron_jobs.rst:426
+#: ../../source/16_cron_jobs.rst:543 ../../source/16_cron_jobs.rst:558
+#: ../../source/16_cron_jobs.rst:582 ../../source/16_cron_jobs.rst:619
+#, fuzzy
+msgid "**Note**"
+msgstr "Not"
+
+#: ../../source/16_cron_jobs.rst:227
+#, fuzzy
+msgid ""
+"Staff can control some of the parameters for the longoverdue cron job with "
+"the :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-"
+"defaultlongoverduedays-label>` and :ref:`DefaultLongOverdueChargeValue` "
+"preferences."
+msgstr ""
+"Personel, `DefaultLongOverdueLostValue <#DefaultLongOverdueLostValue>`__ ve "
+"`DefaultLongOverdueChargeValue <#DefaultLongOverdueChargeValue>`__ sistem "
+"tercihleri ile longoverdue cron job için bazı parametreleri kontrol "
+"edebilirler."
+
+#: ../../source/16_cron_jobs.rst:236
+msgid "Track Total Checkouts"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:238
+#, fuzzy
+msgid "Script path: misc/cronjobs/update\\_totalissues.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/update_totalissues.pl"
+
+#: ../../source/16_cron_jobs.rst:240
+#, fuzzy
+msgid ""
+"Does: updates the biblioitems.totalissues field in the database with the "
+"latest tally of checkouts based on historical issue statistics."
+msgstr ""
+"Ne yapar: en son ödünç alma verileri ile birlikte veri tabanındaki "
+"biblioitems.totalissues alanını günceller."
+
+#: ../../source/16_cron_jobs.rst:245
+msgid "**Warning**"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:247
+msgid ""
+"If the time on your database server does not match the time on your Koha "
+"server you will need to take that into account, and probably use the --since "
+"argument instead of the --interval argument for incremental updating."
+msgstr ""
+"Veritabanı sunucunuzun zamanı, Koha sunucunuzun zamanı ile eşleşmiyorsa bu "
+"durumu dikkate almanız ve artımlı güncelleştirme için muhtemelen --interval "
+"bağımsız değişkeni yerine --since bağımsız değişkenini kullanmanız "
+"gerekecektir."
+
+#: ../../source/16_cron_jobs.rst:254
+msgid ""
+"This cronjob can be used if there is a performance concern. Otherwise, use "
+"the UpdateTotalIssuesOnCirc System Preference."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:260
+#, fuzzy
+msgid "Generate Patron File for Offline Circulation"
+msgstr ""
+"`Çevrimdışı Dolaşım için Kullanıcı Dosyası Oluştur <#offlinecirccron>`__"
+
+#: ../../source/16_cron_jobs.rst:262
+#, fuzzy
+msgid "Script path: misc/cronjobs/create\\_koc\\_db.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/create_koc_db.pl"
+
+#: ../../source/16_cron_jobs.rst:264
+#, fuzzy
+msgid ""
+"Does: Generates the borrowers.db file for use with the :ref:`Koha Offline "
+"Circulation <offline-circ-tool-for-windows-label>` tool"
+msgstr ""
+"Ne yapar: `Koha çevrimdışı dolaşım <#windowsofflinecirc>`__ aracı ile "
+"kullanmak için borrowers.db dosyası oluşturur"
+
+#: ../../source/16_cron_jobs.rst:267
+msgid "Frequency suggestion: weekly"
+msgstr "Frekans önerisi: haftalık"
+
+#: ../../source/16_cron_jobs.rst:272
+#, fuzzy
+msgid "Automatic renewal"
+msgstr "./automatic_renewals.pl"
+
+#: ../../source/16_cron_jobs.rst:274
+#, fuzzy
+msgid "Script path: misc/cronjobs/automatic\\_renewals.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/automatic_renewals.pl"
+
+#: ../../source/16_cron_jobs.rst:276
+#, fuzzy
+msgid ""
+"Does: Will automatically renew items if you're allowing automatic renewal "
+"with your :ref:`circulation and fine rules <circulation-and-fine-rules-"
+"label>`."
+msgstr ""
+"Ne yapar: `dolaşım ve ceza kuralları <#circfinerules>`__ ile otomatik süre "
+"uzatılmasına izin veriyorsanız, materyallerin sürelerini otomatik olarak "
+"uzatır."
+
+#: ../../source/16_cron_jobs.rst:284
+msgid "Patrons"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:289
+msgid "Batch Delete Patrons"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:291
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_patrons.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/edi_cron.pl"
+
+#: ../../source/16_cron_jobs.rst:293
+msgid ""
+"Does: Deletes patron records in batch based on date not borrowed since, "
+"expired before, last seen, category code, or library branch."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:299
+msgid "Unverified Registrations"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:301
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_expired\\_opac\\_registrations.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/delete_expired_opac_registrations.pl"
+
+#: ../../source/16_cron_jobs.rst:303
+#, fuzzy
+msgid ""
+"Does: Deletes patron registrations that were submitted via the OPAC but not "
+"reviewed by the library within the number of days entered in the :ref:"
+"`PatronSelfRegistrationExpireTemporaryAccountsDelay` preference."
+msgstr ""
+"Ne yapar: OPAC aracılığıyla gönderilmiş ancak "
+"`PatronSelfRegistrationExpireTemporaryAccountsDelay "
+"<#PatronSelfRegistrationExpireTemporaryAccountsDelay>`__ sistem tercihinde "
+"girilmiş gün sayısınca kütüphane tarafından gözden geçirilmemiş kullanıcı "
+"kayıtlarını siler."
+
+#: ../../source/16_cron_jobs.rst:313
+#, fuzzy
+msgid "Unconfirmed Registrations"
+msgstr "`Onaylanmamış Kayıtlar <#deleteunverifiedcron>`__"
+
+#: ../../source/16_cron_jobs.rst:315
+#, fuzzy
+msgid ""
+"Script path: misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
+msgstr ""
+"Komut dosyası yolu: misc/cronjobs/delete_unverified_opac_registrations.pl"
+
+#: ../../source/16_cron_jobs.rst:317
+#, fuzzy
+msgid ""
+"Does: Deletes patron self registrations that were submitted via the OPAC but "
+"not confirmed via email within 24 hours. This is only necessary if you are "
+"requiring patrons to confirm their registrations via email with the :ref:"
+"`PatronSelfRegistrationVerifyByEmail` preference."
+msgstr ""
+"Ne yapar: OPAC vasıtasıyla gönderilen ancak 24 saat süre içinde e-posta ile "
+"onaylanmayan kullanıcı kayıtlarını siler.Bu işlem yalnızca "
+"`PatronSelfRegistrationVerifyByEmail "
+"<#PatronSelfRegistrationVerifyByEmail>`__ tercihi ile kullanıcıların kayıt "
+"olma işlemlerini e-posta vasıtasıyla onaylatmalarını zorunlu kılmanız "
+"halinde gereklidir."
+
+#: ../../source/16_cron_jobs.rst:324 ../../source/16_cron_jobs.rst:526
+#: ../../source/16_cron_jobs.rst:673
+msgid "Frequency suggestion: hourly"
+msgstr "Frekans önerisi: saatlik"
+
+#: ../../source/16_cron_jobs.rst:329
+#, fuzzy
+msgid "Anonymize Patron Data"
+msgstr "`Kullanıcı Verisi Anonimleştirme <#anonymizecron>`__"
+
+#: ../../source/16_cron_jobs.rst:331
+#, fuzzy
+msgid "Script path: misc/cronjobs/batch\\_anonymise.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/batch_anonymise.pl"
+
+#: ../../source/16_cron_jobs.rst:333
+msgid ""
+"Does: Used to anonymize patron data. This will remove borrowernumbers from "
+"circulation history so that the stats are kept, but the patron information "
+"is removed for privacy reasons."
+msgstr ""
+"Ne yapar: Kullanıcı verisini anonimleştirmek için kullanılır. Bu, dolaşım "
+"geçmişinden kullanıcı numaralarını silecektir, böylece istatistikler "
+"muhafaza edilecek ancak kullanıcı bilgileri gizlilik nedeniyle "
+"kaldırılacaktır."
+
+#: ../../source/16_cron_jobs.rst:340
+#, fuzzy
+msgid "Update Child to Adult Patron Type"
+msgstr "`Çocuk Kullanıcıyı Yetişkin Kullanıcıya Güncelle <#j2acron>`__"
+
+#: ../../source/16_cron_jobs.rst:342
+msgid "Script path: misc/cronjobs/j2a.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/j2a.pl"
+
+#: ../../source/16_cron_jobs.rst:344
+msgid ""
+"Does: Convert juvenile/child patrons from juvenile patron category and "
+"category code to corresponding adult patron category and category code when "
+"they reach the upper age limit defined in the Patron Categories."
+msgstr ""
+"Ne yapar: Kullanıcı kategorisinde tanımladığınız üst yaş sınırına "
+"ulaştığında genç kullanıcı kategorisinden genç/çocuk kullanıcıları ve "
+"kategori kodunu karşılık gelen yetişkin kullanıcı kategorisi ve kategori "
+"koduna dönüştürür."
+
+#: ../../source/16_cron_jobs.rst:350
+#, fuzzy
+msgid "**DESCRIPTION**"
+msgstr "FİZİKSEL AÇIKLAMA"
+
+#: ../../source/16_cron_jobs.rst:352
+msgid ""
+"This script is designed to update patrons from juvenile to adult patron "
+"types, remove the guarantor, and update their category codes appropriately "
+"when they reach the upper age limit defined in the Patron Categories."
+msgstr ""
+"Bu komut dosyası, kullanıcıları çocuk statüsünden yetişkin statüsüne "
+"güncellemek, garantörlerini kaldırmak ve Kullanıcı Kategorisinde tanımlanan "
+"üst yaş sınırına ulaştığınızda kategori kodlarını uygun şekilde güncellemek "
+"için tasarlanmıştır."
+
+#: ../../source/16_cron_jobs.rst:357
+msgid "**USAGE EXAMPLES**"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:359
+msgid "\"juv2adult.pl\""
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:361
+#, fuzzy
+msgid ""
+"\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> "
+"(Processes a single branch, and updates the patron categories from category "
+"to category)"
+msgstr ""
+"\"juv2adult.pl\" -b=&lt;branchcode&gt; -f=&lt;categorycode&gt; -t=&lt;"
+"categorycode&gt; - tek bir alt grup işler ve kullanıcı kategorilerini "
+"fromcat kategorisinden tocat kategorisine günceller."
+
+#: ../../source/16_cron_jobs.rst:365
+#, fuzzy
+msgid ""
+"\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (Processes all "
+"branches, shows all messages, and reports the patrons who would be affected. "
+"Takes no action on the database)"
+msgstr ""
+"\"juv2adult.pl\" -f=&lt;categorycode&gt; -t=&lt;categorycode&gt; -v -n - Tüm "
+"alt grupları işler, tüm mesajları gösterir ve etkilenecek olan kullanıcıları "
+"raporlar. Veri tabanı üzerinde herhangi bir eylemde bulunmaz."
+
+#: ../../source/16_cron_jobs.rst:372
+msgid "Notices"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:377
+msgid "Message Queue"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:379
+#, fuzzy
+msgid "Script path: misc/cronjobs/process\\_message\\_queue.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/process_message_queue.pl"
+
+#: ../../source/16_cron_jobs.rst:381
+#, fuzzy
+msgid ""
+"Does: processes the message queue to send the check out, check in and hold "
+"filled emails and SMS message to users and sends outgoing emails to patrons. "
+"requires :ref:`EnhancedMessagingPreferences` to be on"
+msgstr ""
+"Ne yapar: ödünç verme, iade alma ve onaylanan ayırtma işlemlerini "
+"kullanıcılara SMS ve e-posta ile göndermek için ileti sırasını işler. "
+"`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ sistem "
+"tercihinin açık olmasını gerektirir"
+
+#: ../../source/16_cron_jobs.rst:387
+msgid "Frequency suggestion: 1-4 hours"
+msgstr "Frekans önerisi: 1-4 saat "
+
+#: ../../source/16_cron_jobs.rst:389 ../../source/16_cron_jobs.rst:686
+#, fuzzy
+msgid "**Important**"
+msgstr "Önemli"
+
+#: ../../source/16_cron_jobs.rst:391
+#, fuzzy
+msgid ""
+"Item due and Advanced due notices are controlled by the :ref:`advance"
+"\\_notices cron <advanced-notice-label>`."
+msgstr ""
+"Materyal iade tarihi ve Gelişmiş iade tarihi bildirimleri `advance_notices "
+"cron <#advnoticecron>`__ tarafından kontrol edilir."
+
+#: ../../source/16_cron_jobs.rst:397
+msgid "Advanced Notice"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:399
+#, fuzzy
+msgid "Script path: misc/cronjobs/advance\\_notices.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/advance_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:401
+#, fuzzy
+msgid ""
+"Does: prepares \"pre-due\" notices and \"item due\" notices for patrons who "
+"request them prepares notices for patrons for items just due or coming due "
+"soon. requires :ref:`EnhancedMessagingPreferences` to be on"
+msgstr ""
+"Ne yapar: Talep eden kullanıcılar için \"pre-due\" ve \"item due\" "
+"bildirimlerini hazırlar, kullanıcılar için süresi yeni dolmuş ve yakında "
+"süresi dolacak olan materyallerin bildirimlerini hazırlar. "
+"`EnhancedMessagingPreferences <#EnhancedMessagingPreferences>`__ sistem "
+"tercihinin açık olmasını gerektirir."
+
+#: ../../source/16_cron_jobs.rst:411
+#, fuzzy
+msgid ""
+"This script does not actually send the notices. It queues them in the :ref:"
+"`message queue <message-queue-label>` for later"
+msgstr ""
+"Bu betik aslında bildirimleri göndermez. Daha sonra kullanmak için bunları "
+"`mesaj sırası <#msgqueuecron>`__ içinde sıraya koyar"
+
+#: ../../source/16_cron_jobs.rst:417
+msgid "Overdue Notice"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:419
+#, fuzzy
+msgid "Script path: misc/cronjobs/overdue\\_notices.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/overdue_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:421
+msgid ""
+"Does: prepares messages to alert patrons of overdue messages (both via email "
+"and print)"
+msgstr ""
+"Ne yapar: Gecikmeye kalan kullanıcıları uyarmak için gecikme mesajlarını "
+"hazırlar (hem e-posta hem de basılı olarak)"
+
+#: ../../source/16_cron_jobs.rst:428
+#, fuzzy
+msgid ""
+"This script does not actually send the notices. It queues them in the :ref:"
+"`message queue <message-queue-label>` for later or generates the HTML for "
+"later printing"
+msgstr ""
+"Bu komut dizisi aslında herhangi bir bildirim göndermez. Bildirimleri "
+"`message queue <#msgqueuecron>`__ içerisinde sıraya alır veya daha sonra "
+"yazdırmak için HTML oluşturur."
+
+#: ../../source/16_cron_jobs.rst:432
+msgid "**See also**"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:434
+#, fuzzy
+msgid ""
+"The misc/cronjobs/advance\\_notices.pl program allows you to send messages "
+"to patrons in advance of their items becoming due, or to alert them of items "
+"that have just become due."
+msgstr ""
+"The misc/cronjobs/advance_notices.pl programı kullanıcılara ödünç aldıkları "
+"materyallerin iade zamanı gelmeden önce mesaj gönderebilmenizi, veya "
+"üzerlerindeki materyallerin iade zamanı gelir gelmez uyarmanızı sağlar."
+
+#: ../../source/16_cron_jobs.rst:441
+msgid "Print Overdues"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:443
+#, fuzzy
+msgid "Script path: misc/cronjobs/printoverdues.sh"
+msgstr "Komut dizisi yolu: misc/cronjobs/longoverdue.pl"
+
+#: ../../source/16_cron_jobs.rst:445
+msgid ""
+"Does: generates PDF files from HTML files in directories and prints them"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:450
+#, fuzzy
+msgid "Print Hold Notices"
+msgstr "`Ayırma Bildirimlerini Yazdır <#printholdcron>`__"
+
+#: ../../source/16_cron_jobs.rst:452
+#, fuzzy
+msgid "Script path: misc/cronjobs/gather\\_print\\_notices.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/gather_print_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:454
+msgid ""
+"Does: looks through the message queue for hold notices that didn't go "
+"through because the patron didn't have an email address and generates a "
+"print notice"
+msgstr ""
+"Ne yapar: Kullanıcının bir e-posta adresi olmadığı için gönderilmeyen "
+"ayırtma bildirimleri için mesaj kuyruğu boyunca arama yapar ve bir yazdırma "
+"bildirimi oluşturur"
+
+#: ../../source/16_cron_jobs.rst:463
+msgid "Talking Tech"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:465
+msgid ""
+"To learn more about setting up this third party product view the `Talking "
+"Tech Appendix <#talkingtechappendix>`__."
+msgstr ""
+"Bu üçüncü parti ürün ayarlama hakkında daha fazla bilgi için `Talking Tech "
+"Appendix <#talkingtechappendix>`__ sayfasına gidiniz."
+
+#: ../../source/16_cron_jobs.rst:471
+msgid "Sending Notices File"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:473
+#, fuzzy
+msgid "Script path: misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_outbound.pl"
+msgstr ""
+"Komut dosyası yolu: misc/cronjobs/thirdparty/TalkingTech_itiva_outbound.pl"
+
+#: ../../source/16_cron_jobs.rst:475
+msgid ""
+"Does: Script to generate Spec C outbound notifications file for Talking Tech "
+"i-tiva phone notification system."
+msgstr ""
+"Ne yapar: Talking Tech i-tiva telefonla bildirim sistemi için Spec C giden "
+"bildirimler dosyası oluşturmak için komut dizisi."
+
+#: ../../source/16_cron_jobs.rst:478 ../../source/16_cron_jobs.rst:493
+#, fuzzy
+msgid "Required by: :ref:`TalkingTechItivaPhoneNotification`"
+msgstr ""
+"Gerek duyan: `TalkingTechItivaPhoneNotification "
+"<#TalkingTechItivaPhoneNotification>`__"
+
+#: ../../source/16_cron_jobs.rst:486
+msgid "Receiving Notices File"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:488
+#, fuzzy
+msgid "Script path: misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_inbound.pl"
+msgstr ""
+"Komut dosyası yolu: misc/cronjobs/thirdparty/TalkingTech_itiva_inbound.pl"
+
+#: ../../source/16_cron_jobs.rst:490
+msgid ""
+"Does: Script to process received Results files for Talking Tech i-tiva phone "
+"notification system."
+msgstr ""
+"Ne yapar: Talking Tech i-tiva telefonla bildirim sistemi için alınan sonuç "
+"dosyalarını işlemek için komut dizisi."
+
+#: ../../source/16_cron_jobs.rst:501
+#, fuzzy
+msgid "Notify Patrons of Expiration"
+msgstr ""
+"`Kullanıcıları Bitiş Tarihi Konusunda Bilgilendir <#patronexpirycron>`__"
+
+#: ../../source/16_cron_jobs.rst:503
+#, fuzzy
+msgid "Script path: misc/cronjobs/membership\\_expiry.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/membership_expiry.pl"
+
+#: ../../source/16_cron_jobs.rst:505
+#, fuzzy
+msgid ""
+"Does: Sends messages to warn patrons of their card expiration to the :ref:"
+"`messaage queue <message-queue-label>` cron."
+msgstr ""
+"Ne yapar: Kullanıcıları kartlarının süresinin dolması hakkında uyarmak için "
+"iletileri `ileti sırası <#msgqueuecron>`__ cronuna gönderir."
+
+#: ../../source/16_cron_jobs.rst:508
+#, fuzzy
+msgid "Requires: :ref:`MembershipExpiryDaysNotice`"
+msgstr ""
+"Şunu gerektirir: `MembershipExpiryDaysNotice <#MembershipExpiryDaysNotice>`__"
+
+#: ../../source/16_cron_jobs.rst:510
+msgid "Frequency: nightly"
+msgstr "Frekans: her gece"
+
+#: ../../source/16_cron_jobs.rst:515
+#, fuzzy
+msgid "In Processing/Book Cart"
+msgstr "`İşlemde/Kitap Sepetinde <#proccartcron>`__"
+
+#: ../../source/16_cron_jobs.rst:517
+#, fuzzy
+msgid "Script path: misc/cronjobs/cart\\_to\\_shelf.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/cart_to_shelf.pl"
+
+#: ../../source/16_cron_jobs.rst:519
+msgid ""
+"Does: Updates all items with a location of CART to the item's permanent "
+"location."
+msgstr ""
+"Ne yapar: CART konumundaki tüm materyalleri, materyalin kalıcı konumuna "
+"günceller."
+
+#: ../../source/16_cron_jobs.rst:522
+#, fuzzy
+msgid ""
+"Required by: :ref:`NewItemsDefaultLocation`, :ref:"
+"`InProcessingToShelvingCart`, & :ref:`ReturnToShelvingCart` system "
+"preferences"
+msgstr ""
+"Gerek duyan: `NewItemsDefaultLocation <#NewItemsDefaultLocation>`__, "
+"`InProcessingToShelvingCart <#InProcessingToShelvingCart>`__, &amp; "
+"`ReturnToShelvingCart <#ReturnToShelvingCart>`__ system preferences"
+
+#: ../../source/16_cron_jobs.rst:531
+msgid "Catalog"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:536
+msgid "Import Webservice Batch"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:538
+#, fuzzy
+msgid "Script path: misc/cronjobs/import\\_webservice\\_batch.pl"
+msgstr "Komut dosyası yolu:misc/cronjobs/reservefix.pl"
+
+#: ../../source/16_cron_jobs.rst:540
+msgid ""
+"Does: A cron job for processing import bach queues of type 'webservice'. "
+"Batches can also be processed through the UI."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:545 ../../source/16_cron_jobs.rst:560
+msgid "This script is used for OCLC Connexion"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:550
+msgid "Connexion Import Daemon"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:552
+#, fuzzy
+msgid "Script path: misc/bin/connexion\\_import\\_daemon.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/edi_cron.pl"
+
+#: ../../source/16_cron_jobs.rst:554
+msgid ""
+"Does: A daemon that listens for OCLC Connexion requests and is compliant "
+"with OCLC Gateway specification. It takes requests with MARC XML and import "
+"batch parameters from a configuration file and forwards it to svc/import_bib"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:565
+msgid "Batch Item Deletion"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:567
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_items.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/update_items.pl"
+
+#: ../../source/16_cron_jobs.rst:569
+msgid ""
+"Does: A batch item deletion tool, which generates a query against the items "
+"database and deletes the items matching the criteria specified in the "
+"command line arguments."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:576
+msgid "Check URL Quick"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:578
+#, fuzzy
+msgid "Script path: misc/cronjobs/check-url-quick.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/check-url.pl"
+
+#: ../../source/16_cron_jobs.rst:580
+msgid "Does: Check URLs from biblio records."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:584
+msgid "This script replaces the check-url.pl script"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:589
+msgid "Check URLs"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:591
+msgid "Script path: misc/cronjobs/check-url.pl"
+msgstr "Komut dosyası yolu: misc/cronjobs/check-url.pl"
+
+#: ../../source/16_cron_jobs.rst:593
+msgid ""
+"Does: checks URLs in 856$u field. Script output can now be formatted in CSV "
+"or HTML. The HTML version links directly to MARC biblio record editor."
+msgstr ""
+"Ne yapar: 856$u alanındaki URL'leri denetler. Komut dizisi çıktısı şimdi CSV "
+"veya HTML biçiminde olabilir. HTML sürümü doğrudan MARC biblio kayıt "
+"editörüne bağlantılıdır."
+
+#: ../../source/16_cron_jobs.rst:597
+msgid "Frequency suggestion: monthly"
+msgstr "Frekans önerisi: aylık"
+
+#: ../../source/16_cron_jobs.rst:599
+#, fuzzy
+msgid "Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements"
+msgstr ""
+"Daha fazla bilgi için: `http://wiki.koha-community.org/wiki/Check-"
+"url_enhancements <#http://wiki.koha-community.org/wiki/Check-"
+"url_enhancements>`__"
+
+#: ../../source/16_cron_jobs.rst:604
+msgid "Delete Records via Leader"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:606
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_records\\_via\\_leader.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/delete_expired_opac_registrations.pl"
+
+#: ../../source/16_cron_jobs.rst:608
+msgid ""
+"Does: Attempt to delete any MARC records where the leader character 5 equals "
+"'d'"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:613
+#, fuzzy
+msgid "Update Authorities"
+msgstr "`Otoriteleri Güncelle <#mergeauthcron>`__"
+
+#: ../../source/16_cron_jobs.rst:615
+#, fuzzy
+msgid "Script path: misc/cronjobs/merge\\_authorities.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/overdue_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:617
+msgid "Does: Updates biblio data with changes to authorities records"
+msgstr ""
+"Ne yapar: Bibliyo verisini, otorite kayıtlara yapılan değişikliklerle "
+"güncelleştirir"
+
+#: ../../source/16_cron_jobs.rst:621
+msgid ""
+"The name of this script is misleading. This script does not merge "
+"authorities together it instead merges authority data with linked bib "
+"records. Edits to authority records will be applied to bibliographic records "
+"that use that authority when this script is run."
+msgstr ""
+"Bu komut dosyasının adı yanıltıcıdır. Bu komut dosyası otoriteleri bir arada "
+"birleştirmez, bunun yerine otorite verilerini bağlantılı bibliyografik "
+"kayıtlarla birleştirir. Otorite kayıtları üzerinde yapılan düzenlemeler bu "
+"komut dosyası çalıştırıldığında o otoriteleri kullanan kayıtlar üzerine "
+"uygulanacaktır."
+
+#: ../../source/16_cron_jobs.rst:627
+msgid "Required by: `dontmerge <#dontmerge>`__ system preference"
+msgstr "Gerek duyan: `dontmerge <#dontmerge>`__ sistem tercihi"
+
+#: ../../source/16_cron_jobs.rst:634
+msgid "Serials Update"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:636
+msgid "Script path: misc/cronjobs/serialsUpdate.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/serialsUpdate.pl"
+
+#: ../../source/16_cron_jobs.rst:638
+msgid ""
+"Does: checks if there is a \"late\" issue on active subscriptions, and if "
+"there is, the script will set it as late, and add the next one as expected."
+msgstr ""
+"Ne yapar: Aktif aboneliklerde \"gecikmiş\" bir sayı olup olmadığını kontrol "
+"eder, eğer gecikmiş bir sayı varsa, komut dizisi bunu 'gecikmiş' olarak "
+"ayarlayacak ve bir sonrakini 'bekleniyor' olarak ekleyecektir."
+
+#: ../../source/16_cron_jobs.rst:647
+#, fuzzy
+msgid "Automatic item update"
+msgstr "Güncellemeyi zorla."
+
+#: ../../source/16_cron_jobs.rst:649
+#, fuzzy
+msgid ""
+"Script path: misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
+msgstr ""
+"Komut dosyası yolu: misc/cronjobs/automatic_item_modification_by_age.pl"
+
+#: ../../source/16_cron_jobs.rst:651
+#, fuzzy
+msgid ""
+"Does: updates items based on the list of rules set forth in the :ref:"
+"`Automatic item modifications by age` tool"
+msgstr ""
+"Ne yapar: `Yaşa göre otomatik materyal değişiklikleri <#autoitemagemod>`__ "
+"aracında belirtilen kurallar listesini temel alarak materyalleri günceller"
+
+#: ../../source/16_cron_jobs.rst:654
+#, fuzzy
+msgid "Required by: :ref:`Automatic item modifications by age`"
+msgstr ""
+"Gerek duyan: `Yaşa göre otomatik materyal değişiklikleri <#autoitemagemod>`__"
+
+#: ../../source/16_cron_jobs.rst:656
+msgid "Frequency suggestions: nightly"
+msgstr "Sıklık önerileri: her gece"
+
+#: ../../source/16_cron_jobs.rst:661
+msgid "OPAC"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:666
+msgid "RSS Feeds"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:668
+msgid "Script path: misc/cronjobs/rss/rss.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/rss/rss.pl"
+
+#: ../../source/16_cron_jobs.rst:670
+#, fuzzy
+msgid ""
+"Does: Produces an RSS XML document for any SQL query (not used for search "
+"results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`."
+msgstr ""
+"Ne yapar: Herhangi bir SQL sorgusu için bir RSS XML belgesini üretir (arama "
+"sonuçları RSS beslemesi için kullanılmaz). `Daha fazla bilgi edinin "
+"<#customrss>`__."
+
+#: ../../source/16_cron_jobs.rst:678
+#, fuzzy
+msgid "Authorities Browser"
+msgstr "`Otorite Tarayıcı <#authbrowsercron>`__"
+
+#: ../../source/16_cron_jobs.rst:680
+#, fuzzy
+msgid "Script path: misc/cronjobs/build\\_browser\\_and\\_cloud.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/build_browser_and_cloud.pl"
+
+#: ../../source/16_cron_jobs.rst:682
+msgid "Does: Generate content for authorities browse in OPAC"
+msgstr "Ne yapar: OPAC içerisindeki otorite tarama için içerik üretir"
+
+#: ../../source/16_cron_jobs.rst:684
+#, fuzzy
+msgid "Required by: :ref:`OpacBrowser` system preference"
+msgstr "Gerek duyan: `OpacBrowser <#OpacBrowser>`__ sistem tercihi"
+
+#: ../../source/16_cron_jobs.rst:688
+msgid "This preference and cron job should only be used on French systems."
+msgstr ""
+"Bu sistem tercihi ve cron işi yalnızca Fransızca sistemlerde kullanılmalıdır."
+
+#: ../../source/16_cron_jobs.rst:693
+#, fuzzy
+msgid "Subject/Author Clouds"
+msgstr "`Konu/Yazar Bulutları <#keywordclouds>`__"
+
+#: ../../source/16_cron_jobs.rst:695
+msgid "Script path: misc/cronjobs/cloud-kw.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/cloud-kw.pl"
+
+#: ../../source/16_cron_jobs.rst:697
+msgid ""
+"Does: Generates HTML keywords clouds from Koha Zebra indexes. misc/cronjobs/"
+"cloud-sample.conf has a sample of how this script operates."
+msgstr ""
+"Ne yapar: Koha Zebra İndekslerinden HTML anahtar kelime bulutları üretir. "
+"misc/cronjobs/cloud-sample.conf'da bu script'in nasıl çalıştığının bir "
+"örneği vardır."
+
+#: ../../source/16_cron_jobs.rst:701
+msgid ""
+"Frequency: This is the type of script you can run once a month or so, the "
+"content generated isn't going to change very much over time."
+msgstr ""
+"Sıklık: Bu, takriben ayda bir kez çalıştırabileceğiniz script türüdür, "
+"oluşturulan içerik zaman içerisinde fazla değişiklik göstermeyecektir."
+
+#: ../../source/16_cron_jobs.rst:707
+#, fuzzy
+msgid "System Administration"
+msgstr "`Sistem Yönetimi <#systemcron>`__"
+
+#: ../../source/16_cron_jobs.rst:712
+msgid "Services Throttle"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:714
+#, fuzzy
+msgid "Script path: misc/cronjobs/services\\_throttle.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/edi_cron.pl"
+
+#: ../../source/16_cron_jobs.rst:716
+msgid "Does: resets the xISBN services throttle"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:723
+#, fuzzy
+msgid "Clean up Database"
+msgstr "`Veri tabanını temizle <#cleandbcron>`__"
+
+#: ../../source/16_cron_jobs.rst:725
+#, fuzzy
+msgid "Script path: misc/cronjobs/cleanup\\_database.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/cleanup_database.pl"
+
+#: ../../source/16_cron_jobs.rst:727
+msgid ""
+"Does: Truncates the sessions table, cleans out old zebraqueue entries, "
+"action logs and staged MARC files."
+msgstr ""
+"Ne yapar: Oturumlar tablosunu kırpar, eski zebraqueue girişlerini, eylem "
+"günlüklerini ve çok aşamalı MARC dosyalarını temizler."
+
+#: ../../source/16_cron_jobs.rst:733
+#, fuzzy
+msgid "Share Usage Stats"
+msgstr "`Kullanım İstatistiklerini Paylaş <#usagecron>`__"
+
+#: ../../source/16_cron_jobs.rst:735
+#, fuzzy
+msgid "Script path: misc/cronjobs/share\\_usage\\_with\\_koha\\_community.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/share_usage_with_koha_community.pl"
+
+#: ../../source/16_cron_jobs.rst:737
+#, fuzzy
+msgid ""
+"Does: If you're sharing information via the :ref:`UsageStats` feature this "
+"will send your info to the `Hea website <http://hea.koha-community.org/>`__."
+msgstr ""
+"Ne yapar: `UsageStats <#UsageStats>`__ özelliği vasıtasıyla bilgilerinizi "
+"paylaşıyorsanız bilgilerinizi `Hea website <#http://hea.koha-community.org/"
+">`__ web sayfasına gönderecektir."
+
+#: ../../source/16_cron_jobs.rst:741
+msgid "Frequency: monthly"
+msgstr "Frekans: aylık"
+
+#: ../../source/16_cron_jobs.rst:746
+#, fuzzy
+msgid "Acquisitions"
+msgstr "`Sağlama <#acqcrons>`__"
+
+#: ../../source/16_cron_jobs.rst:751
+#, fuzzy
+msgid "Clean up old suggestions"
+msgstr "`Eski önerileri temizle <#cleansuggcron>`__"
+
+#: ../../source/16_cron_jobs.rst:753
+#, fuzzy
+msgid "Script path: misc/cronjobs/purge\\_suggestions.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/purge_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:755
+msgid ""
+"Does: Removes old (defined by you) suggestions from the suggestion "
+"management area."
+msgstr ""
+"Ne yapar: (Sizin tarafınızdan tanımlanan) eski önerileri, öneri yönetimi "
+"alanından kaldırır."
+
+#: ../../source/16_cron_jobs.rst:761
+#, fuzzy
+msgid "Email suggestions to process"
+msgstr "`İşlenecek E-posta önerileri <#emailsuggestfund>`__"
+
+#: ../../source/16_cron_jobs.rst:763
+#, fuzzy
+msgid "Script path: misc/cronjobs/notice\\_unprocessed\\_suggestions.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/notice_unprocessed_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:765
+msgid ""
+"Does: Generates a notice to the fund owner that there are suggestions in "
+"need of processing"
+msgstr ""
+"Ne yapar: İşlenmesi gereken öneriler olduğu konusunda fon sahibi için bir "
+"bildirim oluşturur"
+
+#: ../../source/16_cron_jobs.rst:771
+#, fuzzy
+msgid "EDI Message Processing"
+msgstr "`EDI İleti İşleme <#edicron>`__"
+
+#: ../../source/16_cron_jobs.rst:773
+#, fuzzy
+msgid "Script path: misc/cronjobs/edi\\_cron.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/edi_cron.pl"
+
+#: ../../source/16_cron_jobs.rst:775
+msgid "Does: Sends and received EDI messages"
+msgstr "Ne yapar: EDI iletilerini gönderir ve alır"
+
+#: ../../source/16_cron_jobs.rst:777
+msgid "Frequency: Every 15 minutes"
+msgstr "Frekans: Her 15 dakikada bir"
+
+#: ../../source/16_cron_jobs.rst:782
+msgid "Remove Temporary EDI Files"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:784
+#, fuzzy
+msgid "Script path: misc/cronjobs/remove\\_temporary\\_edifiles.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/create_koc_db.pl"
+
+#: ../../source/16_cron_jobs.rst:786
+msgid "Does: removes temporary EDI files that are older than 5 days"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:793
+msgid "Reports"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:796
+msgid "Run Report"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:798
+#, fuzzy
+msgid "Script path: misc/cronjobs/runreport.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:800
+msgid "Does: run pre-existing saved reports"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:803
+#, fuzzy
+msgid "Deprecated scripts"
+msgstr "`Artık kullanılmayan komut dosyaları <#deprecatedcrons>`__"
+
+#: ../../source/16_cron_jobs.rst:805
+msgid "These should not be run without modification:"
+msgstr "Bunlar üzerlerinde değişiklik yapılmadan çalıştırılmamalıdır:"
+
+#: ../../source/16_cron_jobs.rst:807
+#, fuzzy
+msgid "Script path: misc/cronjobs/update\\_items.pl"
+msgstr "Komut dizisi yolu: misc/cronjobs/update_items.pl"
+
+#: ../../source/16_cron_jobs.rst:809
+msgid "Script path:misc/cronjobs/smsoverdues.pl"
+msgstr "Komut dizisi yolu:misc/cronjobs/smsoverdues.pl"
+
+#: ../../source/16_cron_jobs.rst:811
+msgid "Script path:misc/cronjobs/notifyMailsOp.pl"
+msgstr "Komut dizisi yolu:misc/cronjobs/notifyMailsOp.pl"
+
+#: ../../source/16_cron_jobs.rst:813
+msgid "Script path:misc/cronjobs/reservefix.pl"
+msgstr "Komut dosyası yolu:misc/cronjobs/reservefix.pl"
+
+#: ../../source/16_cron_jobs.rst:815
+#, fuzzy
+msgid "Script path:misc/cronjobs/zebraqueue\\_start.pl"
+msgstr "Komut dizisi yolu:misc/cronjobs/zebraqueue_start.pl"
+
+#~ msgid "`Cron Jobs <#cronjobs>`__"
+#~ msgstr "`Cron Jobs <#cronjobs>`__"
+
+#~ msgid "`Search <#searchcron>`__"
+#~ msgstr "`Ara <#searchcron>`__"
+
+#~ msgid "`Rebuild Index <#rebuildsearchcron>`__"
+#~ msgstr "`Dizini yeniden oluştur <#rebuildsearchcron>`__"
+
+#~ msgid "`Circulation <#circcron>`__"
+#~ msgstr "`Dolaşım <#circcron>`__"
+
+#~ msgid "`Holds Queue <#buildholdscron>`__"
+#~ msgstr "`Ayırma Sırası <#buildholdscron>`__"
+
+#~ msgid "`Perl Documentation <#buildholdscronperl>`__"
+#~ msgstr "`Perl Dokümanları <#buildholdscronperl>`__"
+
+#, fuzzy
+#~ msgid "**GetBibsWithPendingHoldRequests**"
+#~ msgstr "my $biblionumber_aref = GetBibsWithPendingHoldRequests();"
+
+#, fuzzy
+#~ msgid "my $biblionumber\\_aref = GetBibsWithPendingHoldRequests();"
+#~ msgstr "my $biblionumber_aref = GetBibsWithPendingHoldRequests();"
+
+#~ msgid ""
+#~ "Return an arrayref of the biblionumbers of all bibs that have one or more "
+#~ "unfilled hold requests."
+#~ msgstr ""
+#~ "Bir ya da daha fazla karşılanmayan ayırtma istekleri olan tüm "
+#~ "bibliyoların bibliyo numaralarının bir arrayefini getirir."
+
+#, fuzzy
+#~ msgid "**GetPendingHoldRequestsForBib**"
+#~ msgstr "my $requests = GetPendingHoldRequestsForBib($biblionumber);"
+
+#~ msgid "my $requests = GetPendingHoldRequestsForBib($biblionumber);"
+#~ msgstr "my $requests = GetPendingHoldRequestsForBib($biblionumber);"
+
+#~ msgid ""
+#~ "Returns an arrayref of hashrefs to pending, unfilled hold requests on"
+#~ msgstr ""
+#~ "karşılanmamış ayırtma istekleri üzerinde, bir hashrefs arrayref'ini "
+#~ "beklemeye döndürür"
+
+#~ msgid ""
+#~ "the bib identified by $biblionumber. The following keys are present in "
+#~ "each hashref:"
+#~ msgstr ""
+#~ "$biblionumber tarafından tanımlanan bibliyografik kayıt. Aşağıdaki "
+#~ "anahtarlar her hashref içinde mevcuttur:"
+
+#~ msgid "biblionumber"
+#~ msgstr "biblionumber"
+
+#~ msgid "borrowernumber"
+#~ msgstr "okuyucunumarası"
+
+#~ msgid "itemnumber"
+#~ msgstr "itemnumber"
+
+#~ msgid "priority"
+#~ msgstr "öncelik"
+
+#~ msgid "branchcode"
+#~ msgstr "branchcode"
+
+#~ msgid "reservedate"
+#~ msgstr "reservedate"
+
+#~ msgid "reservenotes"
+#~ msgstr "reservenotes"
+
+#~ msgid "borrowerbranch"
+#~ msgstr "borrowerbranch"
+
+#~ msgid "The arrayref is sorted in order of increasing priority."
+#~ msgstr "arrayef artan öncelik sırasına göre sıralanır."
+
+#, fuzzy
+#~ msgid "**GetItemsAvailableToFillHoldRequestsForBib**"
+#~ msgstr "GetItemsAvailableToFillHoldRequestsForBib($biblionumber);"
+
+#, fuzzy
+#~ msgid "my $available\\_items ="
+#~ msgstr "my $available_items ="
+
+#~ msgid "GetItemsAvailableToFillHoldRequestsForBib($biblionumber);"
+#~ msgstr "GetItemsAvailableToFillHoldRequestsForBib($biblionumber);"
+
+#~ msgid ""
+#~ "Returns an arrayref of items available to fill hold requests for the bib "
+#~ "identified by $biblionumber. An item is available to fill a hold"
+#~ msgstr ""
+#~ "$biblionumber tarafından tanımlanan bibliyolar için ayırtma isteklerini "
+#~ "karşılamak için kullanılabilir olan materyallerin arrayrefini getirir. "
+#~ "Bir materyal bir ayırtma isteğini karşılamak için kullanılabilir"
+
+#~ msgid "request if and only if:"
+#~ msgstr "istekte bulun ancak ve ancak:"
+
+#~ msgid "it is not on loan"
+#~ msgstr "ödünç verilmiş değilse"
+
+#~ msgid "it is not withdrawn"
+#~ msgstr "sistemden düşülmüş değilse"
+
+#~ msgid "it is not marked notforloan"
+#~ msgstr "ödünç verilmez olarak işaretli değilse"
+
+#~ msgid "it is not currently in transit"
+#~ msgstr "şu anda aktarımda değilse"
+
+#~ msgid "it is not lost"
+#~ msgstr "kayıp değilse"
+
+#~ msgid "it is not sitting on the hold shelf"
+#~ msgstr "ayırtmalar rafında beklemede değilse"
+
+#, fuzzy
+#~ msgid "MapItemsToHoldRequests($hold\\_requests, $available\\_items);"
+#~ msgstr "MapItemsToHoldRequests($hold_requests, $available_items);"
+
+#~ msgid ""
+#~ "Query system preferences to get ordered list of branches to use to fill "
+#~ "hold requests."
+#~ msgstr ""
+#~ "Ayırtma isteklerini karşılamak için kullanmak için birimlerin sıralı "
+#~ "listesini alacak sorgu sistem tercihleri."
+
+#~ msgid "`Expired Holds <#expiredholdscron>`__"
+#~ msgstr "`Süresi Dolan Ayırmalar <#expiredholdscron>`__"
+
+#~ msgid "`Unsuspend Holds <#unsuspendholdcron>`__"
+#~ msgstr "`Askıya alınmış ayırtmaları geri al <#unsuspendholdcron>`__"
+
+#~ msgid "`Fines <#finescronjob>`__"
+#~ msgstr "`Cezalar <#finescronjob>`__"
+
+#~ msgid "`Long Overdues <#longoverduecron>`__"
+#~ msgstr "`Çok uzun süreli gecikmeler <#longoverduecron>`__"
+
+#~ msgid "`Perl Documentation <#longoverduecronperl>`__"
+#~ msgstr "`Perl Dokümanları <#longoverduecronperl>`__"
+
+#~ msgid ""
+#~ "longoverdue.pl cron script to set lost statuses on overdue materials. "
+#~ "Execute without options for help."
+#~ msgstr ""
+#~ "iade zamanı geçmiş materyaller üzerinde kayıp durumlarını ayarlamak üzere "
+#~ "longoverdue.pl cron komut dosyası. Yardım seçenekleri olmadan çalıştırın."
+
+#, fuzzy
+#~ msgid "--lost \\| -l"
+#~ msgstr "--lost | -l"
+
+#~ msgid ""
+#~ "This option takes the form of n=lv, where n is num days overdue, and lv "
+#~ "is the lost value. See warning below."
+#~ msgstr ""
+#~ "Bu seçenek n=lv şeklindedir, burada n gecikmeye kalan günlerin sayısı ve "
+#~ "lv kayıp değeridir. Aşağıdaki uyarıya bakınız."
+
+#, fuzzy
+#~ msgid "--charge \\| -c"
+#~ msgstr "--charge | -c"
+
+#~ msgid ""
+#~ "This specifies what lost value triggers Koha to charge the account for "
+#~ "the lost item. Replacement costs are not charged if this is not specified."
+#~ msgstr ""
+#~ "Bu, Koha'yı kayıp materyal için hesap üzerinde yerine koyma bedeli "
+#~ "uygulamak için hangi kayıp değerinin tetikleyeceğini belirtir. Bu "
+#~ "belirtilmezse yerine koyma bedeli tahsil edilmez."
+
+#, fuzzy
+#~ msgid "--verbose \\| v"
+#~ msgstr "--verbose|-v"
+
+#~ msgid "verbose."
+#~ msgstr "ayrıntılı."
+
+#~ msgid "--confirm"
+#~ msgstr "--confirm"
+
+#~ msgid ""
+#~ "confirm. without this option, the script will report the number of "
+#~ "affected items and return without modifying any records."
+#~ msgstr ""
+#~ "confirm. Bu seçenek kullanılmazsa, komut dosyası etkilenen öğelerin "
+#~ "sayısını rapor verecek ve herhangi bir kayıt değiştirmeden dönüş "
+#~ "yapacaktır."
+
+#~ msgid "--quiet"
+#~ msgstr "--quiet"
+
+#~ msgid "suppress summary output."
+#~ msgstr "özet çıkışını durdur."
+
+#~ msgid "--maxdays"
+#~ msgstr "--maxdays"
+
+#~ msgid ""
+#~ "Specifies the end of the range of overdue days to deal with (defaults to "
+#~ "366). This value is universal to all lost num days overdue passed."
+#~ msgstr ""
+#~ "Ele alınacak olan gecikmiş gün aralığının sonunu belirtir (varsayılan "
+#~ "olarak 366). Bu değer gecikmiş olan tüm kayıp gün sayısı için evrenseldir."
+
+#~ msgid "--mark-returned"
+#~ msgstr "--mark-returned"
+
+#~ msgid ""
+#~ "When an item is marked lost, remove it from the borrowers issued items."
+#~ msgstr ""
+#~ "Bir materyal kayıp olarak işaretlendiğinde, bu materyali kullanıcıların "
+#~ "ödünç aldığı materyallerden kaldırın."
+
+#~ msgid "`Track total checkouts <#updateissuescron>`__"
+#~ msgstr "`Toplam ödünç vermelerin izlenmesi <#updateissuescron>`__"
+
+#~ msgid "`Perl Documentation <#updateissuesperldoc>`__"
+#~ msgstr "`Perl Dokümanları <#updateissuesperldoc>`__"
+
+#, fuzzy
+#~ msgid "update\\_totalissues.pl"
+#~ msgstr "update_totalissues.pl"
+
+#, fuzzy
+#~ msgid "update\\_totalissues.pl --use-stats"
+#~ msgstr "update_totalissues.pl --use-stats"
+
+#, fuzzy
+#~ msgid "update\\_totalissues.pl --use-items"
+#~ msgstr "update_totalissues.pl --use-items"
+
+#, fuzzy
+#~ msgid "update\\_totalissues.pl --commit=1000"
+#~ msgstr "update_totalissues.pl --commit=1000"
+
+#, fuzzy
+#~ msgid "update\\_totalissues.pl --since='2012-01-01'"
+#~ msgstr "update_totalissues.pl --since='2012-01-01'"
+
+#, fuzzy
+#~ msgid "update\\_totalissues.pl --interval=30d"
+#~ msgstr "update_totalissues.pl --interval=30d"
+
+#~ msgid ""
+#~ "This batch job populates bibliographic records' total issues count based "
+#~ "on historical issue statistics."
+#~ msgstr ""
+#~ "Bu toplu işlem, bibliyografik kayıtların toplam sirkülasyon sayısını "
+#~ "geçmiş sirkülasyon istatistiklerini temel alarak yerleştirir."
+
+#~ msgid "--help Prints this help"
+#~ msgstr "--help Bu yardımı yazdırır"
+
+#, fuzzy
+#~ msgid "-v\\|--verbose"
+#~ msgstr "-v|--verbose"
+
+#~ msgid "Provide verbose log information (list every bib modified)."
+#~ msgstr ""
+#~ "Ayrıntılı sistem günlüğü bilgilerini getir (değiştirilmiş her "
+#~ "bibliyografik kayıtı listele)."
+
+#~ msgid "--use-stats"
+#~ msgstr "--use-stats"
+
+#~ msgid "Use the data in the statistics table for populating total issues."
+#~ msgstr ""
+#~ "Toplam ödünç/iade işlemlerini yerleştirmek için istatistikler "
+#~ "tablosundaki verileri kullanın."
+
+#~ msgid "--use-items"
+#~ msgstr "--use-items"
+
+#~ msgid ""
+#~ "Use items.issues data for populating total issues. Note that issues data "
+#~ "from the items table does not respect the --since or --interval options, "
+#~ "by definition. Also note that if both --use-stats and --use-items are "
+#~ "specified, the count of biblios processed will be misleading."
+#~ msgstr ""
+#~ "Toplam sayıları yerleştirmek için items.issues verisini kullanın. "
+#~ "Materyal tablosundaki sayı verisinin yapısı gereği --since veya --"
+#~ "interval seçeneklerine riayet etmediğini unutmayın. Ayrıca --use-stats ve "
+#~ "--use-items öğelerinin her ikiside belirtilirse işlenmiş bibliyoların "
+#~ "sayısının yanıltıcı olacağını göz önünde bulundurun."
+
+#, fuzzy
+#~ msgid "-s\\|--since=DATE"
+#~ msgstr "-s|--since=DATE"
+
+#~ msgid "Only process issues recorded in the statistics table since DATE."
+#~ msgstr ""
+#~ "Yalnızca TARİH'ten itibaren istatistikler tablosunda kaydedilen sayıları "
+#~ "işler."
+
+#, fuzzy
+#~ msgid "-i\\|--interval=S"
+#~ msgstr "-i|--interval=S"
+
+#~ msgid ""
+#~ "Only process issues recorded in the statistics table in the last N units "
+#~ "of time. The interval should consist of a number with a one- letter unit "
+#~ "suffix. The valid suffixes are h (hours), d (days), w (weeks), m "
+#~ "(months), and y (years). The default unit is days."
+#~ msgstr ""
+#~ "İstatistik tablosundaki yalnızca en son N zaman biriminde kaydedilmiş "
+#~ "sayıları işler. Zaman aralığının tek harfli soneki birimli bir sayıdan "
+#~ "oluşması gerekir. Geçerli sonekler şunlardır; h (saatler), d (günler), w "
+#~ "(haftalar), m (aylar) ve y (yıllar). Varsayılan birim günlerdir."
+
+#~ msgid "--incremental"
+#~ msgstr "--incremental"
+
+#~ msgid ""
+#~ "Add the number of issues found in the statistics table to the existing "
+#~ "total issues count. Intended so that this script can be used as a cron "
+#~ "job to update popularity information during low-usage periods. If neither "
+#~ "--since or --interval are specified, incremental mode will default to "
+#~ "processing the last twenty-four hours."
+#~ msgstr ""
+#~ "İstatistik tablosunda bulunan sayıların numarasını mevcut sayıların "
+#~ "numarasına ekleyin. Burada amaçlanan bu komut dosyasının düşük-kullanım "
+#~ "dönemlerinde popülerlik bilgisini güncellemek için bir cron job olarak "
+#~ "kullanılabilmesidir. --since veya --interval belirtilmezse, artımlı mod "
+#~ "son yirmidört saati işlemek için varsayılan olacaktır."
+
+#~ msgid "--commit=N"
+#~ msgstr "--commit=N"
+
+#~ msgid ""
+#~ "Commit the results to the database after every N records are processed."
+#~ msgstr "Her N kayıt işlendikten sonra sonuçları veri tabanına uygula."
+
+#~ msgid "--test"
+#~ msgstr "--test"
+
+#~ msgid "Only test the popularity population script."
+#~ msgstr "Sadece popülerlik popülasyonu komut dosyasını test edin."
+
+#, fuzzy
+#~ msgid "**WARNING**"
+#~ msgstr "UYARI:"
+
+#~ msgid ""
+#~ "This patch to Koha was sponsored by the Arcadia Public Library and the "
+#~ "Arcadia Public Library Foundation in honor of Jackie Faust-Moreno, late "
+#~ "director of the Arcadia Public Library."
+#~ msgstr ""
+#~ "Koha için bu yama Arcadia Public Library'nin merhum müdürü Jackie Faust-"
+#~ "Moreno onuruna Arcadia Public Library ve Arcadia Public Library "
+#~ "Foundation tarafından sponsor olundu."
+
+#, fuzzy
+#~ msgid "Jared Camins-Esakov <jcamins AT cpbibliography DOT com>"
+#~ msgstr "Jared Camins-Esakov &lt;jcamins AT cpbibliography DOT com&gt;"
+
+#~ msgid "`Automatic renewal <#autorenewcron>`__"
+#~ msgstr "`Otomatik süre uzatma <#autorenewcron>`__"
+
+#~ msgid "`Perl Documentation <#autorenewcronperl>`__"
+#~ msgstr "`Perl Dokümanları <#autorenewcronperl>`__"
+
+#, fuzzy
+#~ msgid "automatic\\_renewals.pl - cron script to renew loans"
+#~ msgstr ""
+#~ "automatic_renewals.pl - ödünç alımların süresini uzatmak için cron komut "
+#~ "dizisi"
+
+#, fuzzy
+#~ msgid "or, in crontab: 0 3 \\* \\* \\* automatic\\_renewals.pl"
+#~ msgstr "veya crontab içinde: 0 3 * * * automatic_renewals.pl"
+
+#, fuzzy
+#~ msgid ""
+#~ "This script searches for issues scheduled for automatic renewal (issues."
+#~ "auto\\_renew). If there are still renews left (Renewals allowed) and the "
+#~ "renewal isn't premature (No Renewal before) the issue is renewed."
+#~ msgstr ""
+#~ "Bu betik, süresinin otomatik olarak uzatılması için zamanlanmış sayıları "
+#~ "arar (issues.auto_renew). Eğer süre uzatma sayısı dolmadıysa (Süre "
+#~ "uzatılmasına izin veriliyorsa) ve süre uzatılması zamanından önce değilse "
+#~ "(Süre uzatılması için izin verilen tarih) ilgili sayının süresi uzatılır."
+
+#~ msgid "No options."
+#~ msgstr "Seçenek yok."
+
+#~ msgid "`Patrons <#patroncrons>`__"
+#~ msgstr "`Kullanıcılar <#patroncrons>`__"
+
+#~ msgid "`Unverified Registrations <#deleteexpiredregistrationcron>`__"
+#~ msgstr "`Onaylanmamış Kayıtlar <#deleteexpiredregistrationcron>`__"
+
+#~ msgid "`Perl Documentation <#j2aperldoc>`__"
+#~ msgstr "`Perl Dokümanları <#j2aperldoc>`__"
+
+#~ msgid ""
+#~ "juv2adult.pl - convert juvenile/child patrons from juvenile patron "
+#~ "category and category code to corresponding adult patron category and "
+#~ "category code when they reach the upper age limit defined in the Patron "
+#~ "Categories."
+#~ msgstr ""
+#~ "juv2adult.pl - Kullanıcı kategorisinde tanımladığınız üst yaş sınırına "
+#~ "ulaştığında genç kullanıcı kategorisinden genç/çocuk kullanıcıları ve "
+#~ "kategori kodunu karşılık gelen yetişkin kullanıcı kategorisi ve kategori "
+#~ "koduna dönüştürür."
+
+#, fuzzy
+#~ msgid "juv2adult.pl [ -b=<branchcode> -f=<categorycode> -t=<categorycode> ]"
+#~ msgstr ""
+#~ "juv2adult.pl [ -b=&amp;lt;branchcode&amp;gt; -f=&amp;lt;categorycode&amp;"
+#~ "gt; -t=&amp;lt;categorycode&amp;gt; ]"
+
+#~ msgid "Options:"
+#~ msgstr "Seçenekler:"
+
+#~ msgid "--help brief help message"
+#~ msgstr "--help kısa yardım mesajı"
+
+#~ msgid "--man full documentation"
+#~ msgstr "--man tam dokümantasyon"
+
+#~ msgid "-v verbose mode"
+#~ msgstr "-v ayrıntılı kip"
+
+#~ msgid "-n take no action, display only"
+#~ msgstr "-n eylemde bulunma, yalnızca görüntüle"
+
+#, fuzzy
+#~ msgid "-b <branchname> only deal with patrons from this library/branch"
+#~ msgstr ""
+#~ "-b &lt;branchname&gt; yalnızca bu kütüphane/birim'den olan kullanıcılarla "
+#~ "ilgilen"
+
+#, fuzzy
+#~ msgid "-f <categorycode> change patron category from this category"
+#~ msgstr ""
+#~ "-f &lt;categorycode&gt; kullanıcı kategorisini bu kategoriden değiştir"
+
+#, fuzzy
+#~ msgid "-t <categorycode> change patron category to this category"
+#~ msgstr ""
+#~ "-t &lt;categorycode&gt; kullanıcı kategorisini bu kategoriye değiştir"
+
+#~ msgid "=head1 OPTIONS"
+#~ msgstr "=head1 SEÇENEKLER"
+
+#~ msgid "--help Print a brief help message and exits."
+#~ msgstr "--help Kısa bir yardım mesajı yazdırır ve çıkar."
+
+#~ msgid "--man Prints the manual page and exits."
+#~ msgstr "--man İstenilen sayfayı yazdırır ve çıkar."
+
+#~ msgid "-v Verbose. Without this flag set, only fatal errors are reported."
+#~ msgstr ""
+#~ "-v Ayrıntılı. Bu bayrak seti olmadan, sadece önemli hatalar raporlanır."
+
+#~ msgid ""
+#~ "-n No Action. With this flag set, script will report changes but not "
+#~ "actually execute them on the database."
+#~ msgstr ""
+#~ "-n Hiçbir eylem gerçekleştirme. Bu bayrak seti ile, komut dosyası "
+#~ "değişiklikleri bildirecektir ancak fiilen veritabanı üzerinde "
+#~ "çalıştırmayacaktır."
+
+#~ msgid ""
+#~ "-b changes patrons for one specific branch. Use the value in the branches."
+#~ "branchcode table."
+#~ msgstr ""
+#~ "-b belirli bir alt grup için kullanıcıları değiştirir. branches."
+#~ "branchcode tablosundaki değerleri kullanın."
+
+#, fuzzy
+#~ msgid ""
+#~ "-f \\*required\\* defines the juvenile category to update. Expects the "
+#~ "code from categories.categorycode."
+#~ msgstr ""
+#~ "-f *zorunlu* güncellemek için çocuk kategorisini tanımlar. categories."
+#~ "categorycode içerisinden kod bekler."
+
+#, fuzzy
+#~ msgid ""
+#~ "-t \\*required\\* defines the category juvenile patrons will be converted "
+#~ "to. Expects the code from categories.categorycode."
+#~ msgstr ""
+#~ "-t *zorunlu* çocuk kullanıcıların dönüştürüleceği kategoriyi tanımlar. "
+#~ "categories.categorycode içerisinden kod bekler."
+
+#~ msgid "\"juv2adult.pl\" - Suggests that you read this help. :)"
+#~ msgstr "\"juv2adult.pl\" - Bu yardımı okumanızı önerir. :)"
+
+#~ msgid "`Notices <#noticescron>`__"
+#~ msgstr "`Uyarılar <#noticescron>`__"
+
+#~ msgid "`Message Queue <#msgqueuecron>`__"
+#~ msgstr "`İleti Sırası <#msgqueuecron>`__"
+
+#~ msgid "`Advanced Notice <#advnoticecron>`__"
+#~ msgstr "`Gelişmiş Bildirim <#advnoticecron>`__"
+
+#~ msgid "`Perl Documentation <#advnoticecronperl>`__"
+#~ msgstr "`Perl Dokümanları <#advnoticecronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "advance\\_notices.pl - cron script to put item due reminders into message "
+#~ "queue"
+#~ msgstr ""
+#~ "advance_notices.pl - cron komut dosyası materyal iade tarihi "
+#~ "hatırlatıcılarını ileti sırasına koymak için"
+
+#, fuzzy
+#~ msgid "./advance\\_notices.pl -c"
+#~ msgstr "./advance_notices.pl -c"
+
+#, fuzzy
+#~ msgid "or, in crontab: 0 1 \\* \\* \\* advance\\_notices.pl -c"
+#~ msgstr "veya, crontab: 0 1 * * * advance_notices.pl -c içinde"
+
+#, fuzzy
+#~ msgid ""
+#~ "This script prepares pre-due and item due reminders to be sent to "
+#~ "patrons. It queues them in the message queue, which is processed by the "
+#~ "process\\_message\\_queue.pl cronjob. The type and timing of the messages "
+#~ "can be configured by the patrons in their \"My Alerts\" tab in the OPAC."
+#~ msgstr ""
+#~ "Bu komut dosyası kullanıcılara gönderilecek olan iade zamanı öncesi ve "
+#~ "materyal iade zamanı uyarılarını hazırlar. Bu uyarıları the "
+#~ "process_message_queue.pl cronjob tarafından işlenen bildirim sırasında "
+#~ "sıraya koyar. Bildirimlerin türü ve zamanlaması kullanıcılar tarafından "
+#~ "OPAC'da bulunan \"Uyarılarım\" sekmesinde yapılandırılabilir."
+
+#, fuzzy
+#~ msgid "parse\\_letter"
+#~ msgstr "parse_letter"
+
+#~ msgid "`Overdue Notice <#overduenoticecron>`__"
+#~ msgstr "`Gecikme Bildirimi <#overduenoticecron>`__"
+
+#~ msgid "`Perl Documentation <#overduenoticecronperl>`__"
+#~ msgstr "`Perl Dokümanları <#overduenoticecronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "overdue\\_notices.pl - prepare messages to be sent to patrons for overdue "
+#~ "items"
+#~ msgstr ""
+#~ "overdue_notices.pl - gecikmiş materyaller için kullanıcılara gönderilecek "
+#~ "bildirimleri hazırla"
+
+#, fuzzy
+#~ msgid ""
+#~ "overdue\\_notices.pl [ -n ] [ -library <branchcode> ] [ -library "
+#~ "<branchcode>...] [ -max <number of days> ] [ -csv [ <filename> ] ] [-"
+#~ "itemscontent <field list> ]"
+#~ msgstr ""
+#~ "overdue_notices.pl [ -n ] [ -library &amp;lt;branchcode&amp;gt; ] [ -"
+#~ "library &amp;lt;branchcode&amp;gt;...] [ -max &amp;lt;number of days&amp;"
+#~ "gt; ] [ -csv [ &amp;lt;filename&amp;gt; ] ] [-itemscontent &amp;lt;field "
+#~ "list&amp;gt; ]"
+
+#~ msgid "-help brief help message"
+#~ msgstr "-help kısa yardım mesajı"
+
+#~ msgid "-man full documentation"
+#~ msgstr "-man tam dokümantasyon"
+
+#~ msgid "-n No email will be sent"
+#~ msgstr "-n Hiç bir e-posta gönderilmeyecektir"
+
+#, fuzzy
+#~ msgid "-max <days> maximum days overdue to deal with"
+#~ msgstr "-max &lt;days&gt; ele alınacak maksimum gecikme günleri"
+
+#, fuzzy
+#~ msgid ""
+#~ "-library <branchname> only deal with overdues from this library "
+#~ "(repeatable : several libraries can be given)"
+#~ msgstr ""
+#~ "-library &lt;branchname&gt; sadece bu kütüphanenin gecikmeye kalmış "
+#~ "materyalleri ile ilgilenir (yinelenebilir : birden fazla kütüphane "
+#~ "verilebilir)"
+
+#, fuzzy
+#~ msgid "-csv <filename> populate CSV file"
+#~ msgstr "-csv &lt;filename&gt; CSV dosyası doldur"
+
+#, fuzzy
+#~ msgid "-html <filename> Output html to file"
+#~ msgstr "-html &lt;filename&gt; html'i dosyaya çıktıla"
+
+#, fuzzy
+#~ msgid "-itemscontent <list of fields> item information in templates"
+#~ msgstr ""
+#~ "-itemscontent &lt;list of fields&gt; şablon içerisinde materyal bilgileri"
+
+#, fuzzy
+#~ msgid "-borcat <categorycode> category code that must be included"
+#~ msgstr ""
+#~ "-borcat &lt;categorycode&gt; dahil edilmesi zorunlu olan kategori kodu"
+
+#, fuzzy
+#~ msgid "-borcatout <categorycode> category code that must be excluded"
+#~ msgstr ""
+#~ "-borcatout &lt;categorycode&gt; hariç tutulması zorunlu olan kategori kodu"
+
+#~ msgid "-help Print a brief help message and exits."
+#~ msgstr "-help Kısa bir yardım mesajı yazdırır ve çıkar."
+
+#~ msgid "-man Prints the manual page and exits."
+#~ msgstr "-man İstenilen sayfayı yazdırır ve çıkar."
+
+#~ msgid ""
+#~ "-n Do not send any email. Overdue notices that would have been sent to "
+#~ "the patrons or to the admin are printed to standard out. CSV data (if the "
+#~ "-csv flag is set) is written to standard out or to any csv filename given."
+#~ msgstr ""
+#~ "-n Herhangi bir e-posta göndermeyin. Kullanıcılar ya da admin için "
+#~ "gönderilen gecikme bildirimleri standart çıktıya yazdırılır. CSV verisi (-"
+#~ "csv flag ayarlı ise) verilen herhangi bir csv dosya adına ya da standart "
+#~ "çıktıya yazdırılır."
+
+#~ msgid ""
+#~ "-max Items older than max days are assumed to be handled somewhere else, "
+#~ "probably the longoverdues.pl script. They are therefore ignored by this "
+#~ "program. No notices are sent for them, and they are not added to any CSV "
+#~ "files. Defaults to 90 to match longoverdues.pl."
+#~ msgstr ""
+#~ "belirli bir günden daha eski olan -max materyallerin başka bir yerde, "
+#~ "muhtemelen longoverdues.pl komut dosyasında ele alınacağı kabul "
+#~ "edilmiştir. Onlar bu nedenle bu program tarafından göz ardı edilir. "
+#~ "Kendileri için herhangi bir bildirim gönderilmez, ve herhangi bir CSV "
+#~ "dosyasına eklenmezler. longoverdues.pl. eşleşmesi için 90 ön tanımlıdır."
+
+#~ msgid "-library"
+#~ msgstr "-library"
+
+#~ msgid ""
+#~ "select overdues for one specific library. Use the value in the branches."
+#~ "branchcode table. This option can be repeated in order to select overdues "
+#~ "for a group of libraries."
+#~ msgstr ""
+#~ "Belirli tek bir kütüphane için gecikmeler seçin. branches.branchcode "
+#~ "tablosundaki değeri kullanın. Bu seçenek, bir kütüphane grubunun "
+#~ "gecikenlerini seçmek için tekrar edilebilir."
+
+#~ msgid ""
+#~ "-csv Produces CSV data. if -n (no mail) flag is set, then this CSV data "
+#~ "is sent to standard out or to a filename if provided. Otherwise, only "
+#~ "overdues that could not be emailed are sent in CSV format to the admin."
+#~ msgstr ""
+#~ "-csv CSV verisi üretir. Eğer -n (no mail) bayrağı ayarlı değilse, CSV "
+#~ "verisi standart çıktıya ya da eğer varsa bir dosya adına gönderilir. Aksi "
+#~ "takdirde, yalnızca e-posta ile gönderilemeyen gecikmeler CSV biçiminde "
+#~ "yöneticiye gönderilir."
+
+#~ msgid "-itemscontent"
+#~ msgstr "-itemscontent"
+
+#, fuzzy
+#~ msgid ""
+#~ "comma separated list of fields that get substituted into templates in "
+#~ "places of the <<items.content>> placeholder. This defaults to issuedate,"
+#~ "title,barcode,author"
+#~ msgstr ""
+#~ "&lt;&lt;items.content&gt;&gt; yer tutucuları içindeki şablonlara ikame "
+#~ "olan alanların virgülle ayrılmış listesi. Bunun varsayılanları issuedate,"
+#~ "title,barcode,author öğeleridir."
+
+#~ msgid ""
+#~ "Other possible values come from fields in the biblios, items, and issues "
+#~ "tables."
+#~ msgstr ""
+#~ "Bibliyolar, materyaller ve ödünç verme tablolarındaki alanlardan gelen "
+#~ "diğer olası değerler."
+
+#~ msgid ""
+#~ "-borcat Repetable field, that permit to select only few of patrons "
+#~ "categories."
+#~ msgstr ""
+#~ "-borcat tekrarlanabilir alanı, yalnızca birkaç kullanıcı kategorisi "
+#~ "seçmenize izin verir."
+
+#~ msgid "-borcatout"
+#~ msgstr "-borcatout"
+
+#~ msgid "Repetable field, permis to exclude some patrons categories."
+#~ msgstr ""
+#~ "Tekrarlayan alan, bazı kullanıcı kategorilerinin hariç tutulmasına izin "
+#~ "verir."
+
+#, fuzzy
+#~ msgid "-t \\| --triggered"
+#~ msgstr "-t | --triggered"
+
+#~ msgid ""
+#~ "This option causes a notice to be generated if and only if an item is "
+#~ "overdue by the number of days defined in a notice trigger."
+#~ msgstr ""
+#~ "Bu seçenek bir materyal ancak ve ancak bildirim tetikleyici içinde "
+#~ "tanımlanan gün sayısınca gecikmeye kaldığında bir bildirimin "
+#~ "oluşturulmasına neden olur."
+
+#~ msgid ""
+#~ "By default, a notice is sent each time the script runs, which is suitable "
+#~ "for less frequent run cron script, but requires syncing notice triggers "
+#~ "with the cron schedule to ensure proper behavior. Add the --triggered "
+#~ "option for daily cron, at the risk of no notice being generated if the "
+#~ "cron fails to run on time."
+#~ msgstr ""
+#~ "Varsayılan olarak komut dosyasının çalıştığı her zaman için bir bildirim "
+#~ "gönderilir, daha az sıklıkla çalışan cron komut dosyaları için uygundur, "
+#~ "ancak doğru davranışı sağlamak için bildirim tetikleyicilerinin cron "
+#~ "zamanlayıcısı ile senkronizasyonunu gerektirir. Eğer cron zamanında "
+#~ "çalışmazsa hiç bir bildirimin oluşturulmayacağını göze alarak, günlük "
+#~ "cronlar için --triggered seçeneğini ekleyin."
+
+#~ msgid "-list-all"
+#~ msgstr "-list-all"
+
+#~ msgid ""
+#~ "Default items.content lists only those items that fall in the range of "
+#~ "the currently processing notice. Choose list-all to include all overdue "
+#~ "items in the list (limited by -max setting)."
+#~ msgstr ""
+#~ "Default items.content, yalnızca mevcut durumda işlenen bildirim "
+#~ "aralığında sıraya giren materyalleri listeler. Tüm geciken materyalleri "
+#~ "listeye dahil etmek için list-all seçeneğini seçin (-max setting "
+#~ "tarafından kısıtlanmıştır)."
+
+#~ msgid ""
+#~ "This script is designed to alert patrons and administrators of overdue "
+#~ "items."
+#~ msgstr ""
+#~ "Bu betik, kullanıcıları ve yöneticileri iade tarihi geçmiş materyaller "
+#~ "hakkında uyarmak için tasarlanmıştır."
+
+#~ msgid ""
+#~ "This script pays attention to the overdue notice configuration performed "
+#~ "in the \"Overdue notice/status triggers\" section of the \"Tools\" area "
+#~ "of the staff interface to Koha. There, you can choose which letter "
+#~ "templates are sent out after a configurable number of days to patrons of "
+#~ "each library. More information about the use of this section of Koha is "
+#~ "available in the Koha manual."
+#~ msgstr ""
+#~ "Bu komut dosyası Koha'nın personel arayüzü \"Araçlar\" bölümünün "
+#~ "\"Gecikme bildirimi/durum tetikleyicileri\" bölümünde gerçekleştirilen "
+#~ "gecikme bildirimlerinin yapılandırmasına önem vermektedir. Orada, her "
+#~ "kütüphanenin kullanıcılarına yapılandırılabilir bir gün sayısından sonra "
+#~ "hangi ileti şablonlarının gönderileceğini seçebilirsiniz. Koha'nın bu "
+#~ "bölümünün kullanımı hakkında daha fazla bilgi Koha kılavuzunda mevcuttur."
+
+#~ msgid ""
+#~ "The templates used to craft the emails are defined in the \"Tools: Notices"
+#~ "\" section of the staff interface to Koha."
+#~ msgstr ""
+#~ "E-postaları oluşturmak için kullanılan şablonlar, Koha personel "
+#~ "arayüzünün \"Araçlar: Bildirimler\" bölümünde tanımlanır."
+
+#~ msgid "Outgoing emails"
+#~ msgstr "Giden e-postalar"
+
+#~ msgid ""
+#~ "Typically, messages are prepared for each patron with overdue items. "
+#~ "Messages for whom there is no email address on file are collected and "
+#~ "sent as attachments in a single email to each library administrator, or "
+#~ "if that is not set, then to the email address in the "
+#~ "\"KohaAdminEmailAddress\" system preference."
+#~ msgstr ""
+#~ "Genellikle iletiler, üzerinde iade tarihi geçmiş materyal bulunan tüm "
+#~ "kullanıcılar için hazırlanır. E-posta adresi bulunmayanlar için iletiler "
+#~ "bir dosyada toplanır ve her kütüphane yöneticisine tek bir e-posta eki "
+#~ "olarak gönderilir, veya, bu sistem ayarlanmamışsa, \"KohaAdminEmailAddress"
+#~ "\" sistem tercihinde verilen e-posta adresine gönderilir."
+
+#, fuzzy
+#~ msgid ""
+#~ "These emails are staged in the outgoing message queue, as are messages "
+#~ "produced by other features of Koha. This message queue must be processed "
+#~ "regularly by the misc/cronjobs/process\\_message\\_queue.pl program."
+#~ msgstr ""
+#~ "Bu e-postalar, Koha'nın diğer özellikleri tarafından üretilen mesajlar "
+#~ "ile olduğu gibi giden iletiler sırası içinde hazırlanır. Bu ileti "
+#~ "sırasının düzenli olarak misc/cronjobs/process_message_queue.pl programı "
+#~ "tarafından işlenmesi gerekir."
+
+#~ msgid ""
+#~ "In the event that the \"-n\" flag is passed to this program, no emails "
+#~ "are sent. Instead, messages are sent on standard output from this "
+#~ "program. They may be redirected to a file if desired."
+#~ msgstr ""
+#~ "\"-n\" bayrağının bu programa geçirildiği durumda hiç bir e-posta "
+#~ "gönderilmez. Bunun yerine mesajlar bu programdan standart çıktıda "
+#~ "gönderilir. Eğer istenilirse bunlar bir dosyaya yeniden "
+#~ "yönlendirilebilirler."
+
+#~ msgid "Templates"
+#~ msgstr "Şablonlar"
+
+#, fuzzy
+#~ msgid ""
+#~ "Templates can contain variables enclosed in double angle brackets like "
+#~ "<<this>>. Those variables will be replaced with values specific to the "
+#~ "overdue items or relevant patron. Available variables are:"
+#~ msgstr ""
+#~ "Şablonlar &lt;&lt;this&gt;&gt; gibi çift köşeli parantez içine alınmış "
+#~ "değişkenleri içerebilir. Bu değişkenler geciken materyallere veya ilgili "
+#~ "kullanıcıya özel değerler ile değiştirilecektir. Mevcut değişkenler "
+#~ "şunlardır:"
+
+#~ msgid "the name of the library"
+#~ msgstr "kütüphanenin adı"
+
+#, fuzzy
+#~ msgid "<<items.content>>"
+#~ msgstr "-itemscontent"
+
+#~ msgid ""
+#~ "one line for each item, each line containing a tab separated list of "
+#~ "title, author, barcode, issuedate"
+#~ msgstr ""
+#~ "her materyal için her satırda sekme ile ayrılmış bir başlık, yazar, "
+#~ "barkod, ödünç verme tarihi listesi içeren bir satır"
+
+#, fuzzy
+#~ msgid "<<borrowers.\\*>>"
+#~ msgstr "ödünç alanlar"
+
+#~ msgid "any field from the borrowers table"
+#~ msgstr "ödünç alanlar tablosundan herhangi bir alan"
+
+#, fuzzy
+#~ msgid "<<branches.\\*>>"
+#~ msgstr "şube"
+
+#~ msgid "any field from the branches table"
+#~ msgstr "birimler tablosundan herhangi bir alan"
+
+#~ msgid "CSV output"
+#~ msgstr "CSV çıktısı"
+
+#~ msgid ""
+#~ "The \"-csv\" command line option lets you specify a file to which "
+#~ "overdues data should be output in CSV format."
+#~ msgstr ""
+#~ "\"-csv\" komut satırı seçeneği hangi overdues verisinin çıktısının CSV "
+#~ "biçiminde olması gerektiğine bir dosya belirlemenizi sağlar."
+
+#~ msgid ""
+#~ "With the \"-n\" flag set, data about all overdues is written to the file. "
+#~ "Without that flag, only information about overdues that were unable to be "
+#~ "sent directly to the patrons will be written. In other words, this CSV "
+#~ "file replaces the data that is typically sent to the administrator email "
+#~ "address."
+#~ msgstr ""
+#~ "\"-n\" bayrak ayarı ile, tüm gecikenlerle ilgili veriler dosyaya yazılır. "
+#~ "Bu bayrak olmadan, yalnızca kullanıcılara doğrudan gönderilemeyen "
+#~ "gecikenler hakkındaki bilgiler yazılır. Başka bir deyişle, bu CSV dosyası "
+#~ "genellikle yönetici e-posta adresine gönderilen verileri değiştirir."
+
+#, fuzzy
+#~ msgid ""
+#~ "\"overdue\\_notices.pl\" - In this most basic usage, with no command line "
+#~ "arguments, all libraries are processed individually, and notices are "
+#~ "prepared for all patrons with overdue items for whom we have email "
+#~ "addresses. Messages for those patrons for whom we have no email address "
+#~ "are sent in a single attachment to the library administrator's email "
+#~ "address, or to the address in the KohaAdminEmailAddress system preference."
+#~ msgstr ""
+#~ "\"overdue_notices.pl\" - Bu en temel kullanımda, hiç bir komut satırı "
+#~ "bağımsız değişkeni olmadan tüm kütüphaneler ayrı ayrı işlenir ve tüm "
+#~ "bildirimler, üzerinde gecikmeye kalmış materyal bulunan ve e-posta "
+#~ "adresleri olan kullanıcılar için hazırlanır. E-posta adresi olmayan "
+#~ "kullanıcılar için bildirimler kütüphane yöneticisinin e-posta adresine ya "
+#~ "da KohaAdminEmailAddress sistem tercihindeki e-posta adresine dosya eki "
+#~ "olarak gönderilir."
+
+#, fuzzy
+#~ msgid ""
+#~ "\"overdue\\_notices.pl -n -csv /tmp/overdues.csv\" - sends no email and "
+#~ "populates /tmp/overdues.csv with information about all overdue items."
+#~ msgstr ""
+#~ "\"overdue_notices.pl -n -csv /tmp/overdues.csv\" - e-posta göndermez ve /"
+#~ "tmp/overdues.csv'i tüm iade zamanı geçmiş materyallerin bilgileriyle "
+#~ "doldurur."
+
+#, fuzzy
+#~ msgid ""
+#~ "\"overdue\\_notices.pl -library MAIN max 14\" - prepare notices of "
+#~ "overdues in the last 2 weeks for the MAIN library."
+#~ msgstr ""
+#~ "\"overdue_notices.pl -library MAIN max 14\" - ana kütüphane için son 2 "
+#~ "hafta içinde geciken materyallerin bildirimlerini hazırla."
+
+#, fuzzy
+#~ msgid "These methods are internal to the operation of overdue\\_notices.pl."
+#~ msgstr "Bu yöntemler, overdue_notices.pl çalışması için dahilidir."
+
+#~ msgid ""
+#~ "parses the letter template, replacing the placeholders with data specific "
+#~ "to this patron, biblio, or item"
+#~ msgstr ""
+#~ "Yer belirleyicileri bu kullanıcı, bibliyo veya materyale özel verilerle "
+#~ "değiştirerek harf şablonunu ayrıştırır"
+
+#~ msgid "named parameters:"
+#~ msgstr "adlandırılmış parametreler:"
+
+#~ msgid "letter - required hashref"
+#~ msgstr "betik - gerekli hashref"
+
+#~ msgid "borrowernumber - required integer"
+#~ msgstr "borrowernumber - gerekli tam sayı"
+
+#~ msgid ""
+#~ "substitute - optional hashref of other key/value pairs that should be "
+#~ "substituted in the letter content"
+#~ msgstr ""
+#~ "substitute - letter içeriği içine ikame olması gereken diğer anahtar/"
+#~ "değer çiftlerinin isteğe bağlı hashref'i"
+
+#~ msgid ""
+#~ "returns the \"letter\" hashref, with the content updated to reflect the "
+#~ "substituted keys and values."
+#~ msgstr ""
+#~ "ikame edilen anahtarları ve değerleri yansıtacak şekilde güncellenen "
+#~ "içeriği ile, \"letter\" hashref'ini getirir."
+
+#, fuzzy
+#~ msgid "prepare\\_letter\\_for\\_printing"
+#~ msgstr "prepare_letter_for_printing"
+
+#~ msgid ""
+#~ "returns a string of text appropriate for printing in the event that an "
+#~ "overdue notice will not be sent to the patron's email address. Depending "
+#~ "on the desired output format, this may be a CSV string, or a human-"
+#~ "readable representation of the notice."
+#~ msgstr ""
+#~ "Gecikme bildiriminin kullanıcının e-posta adresine gönderilemediği "
+#~ "durumlarda yazdırmaya uygun bir metin dizesi getirir. Arzu edilen çıkış "
+#~ "biçimine göre bu bir CVS dizesi veya bildirimin okunabilir bir gösterimi "
+#~ "olabilir."
+
+#~ msgid "required parameters:"
+#~ msgstr "gerekli parametreler:"
+
+#~ msgid "letter"
+#~ msgstr "harf"
+
+#~ msgid "optional parameters:"
+#~ msgstr "isteğe bağlı parametreler:"
+
+#~ msgid "outputformat"
+#~ msgstr "outputformat"
+
+#~ msgid "`Talking Tech <#talkingtechcrons>`__"
+#~ msgstr "`Talking Tech <#talkingtechcrons>`__"
+
+#~ msgid "`Sending Notices File <#talkingtechsendcron>`__"
+#~ msgstr "`Bildirimler Dosyası Gönderme <#talkingtechsendcron>`__"
+
+#~ msgid "`Perl Documentation <#talkingsendcronperl>`__"
+#~ msgstr "`Perl Dokümanları <#talkingsendcronperl>`__"
+
+#, fuzzy
+#~ msgid "TalkingTech\\_itiva\\_outbound.pl"
+#~ msgstr "TalkingTech_itiva_outbound.pl"
+
+#, fuzzy
+#~ msgid ""
+#~ "TalkingTech\\_itiva\\_outbound.pl --type=OVERDUE -w 0 -w 2 -w 6 --output=/"
+#~ "tmp/talkingtech/outbound.csv"
+#~ msgstr ""
+#~ "TalkingTech_itiva_outbound.pl --type=OVERDUE -w 0 -w 2 -w 6 --output=/tmp/"
+#~ "talkingtech/outbound.csv"
+
+#, fuzzy
+#~ msgid ""
+#~ "TalkingTech\\_itiva\\_outbound.pl --type=RESERVE --type=PREOVERDUE --"
+#~ "lang=FR"
+#~ msgstr ""
+#~ "TalkingTech_itiva_outbound.pl --type=RESERVE --type=PREOVERDUE --lang=FR"
+
+#~ msgid ""
+#~ "Script to generate Spec C outbound notifications file for Talking Tech i-"
+#~ "tiva phone notification system."
+#~ msgstr ""
+#~ "Talking Tech i-TIVA telefon bildirim sistemi için, Spec C giden "
+#~ "bildirimler dosyası oluşturmak için betik."
+
+#~ msgid "--help -h"
+#~ msgstr "--help -h"
+
+#~ msgid "Prints this help"
+#~ msgstr "Bu yardımı yazdırır"
+
+#~ msgid "-v Provide verbose log information."
+#~ msgstr "-v Ayrıntılı sistem günlüğü bilgilerini sağlar."
+
+#~ msgid "--output -o"
+#~ msgstr "--output -o"
+
+#~ msgid ""
+#~ "Destination for outbound notifications file (CSV format). If no value is "
+#~ "specified, output is dumped to screen."
+#~ msgstr ""
+#~ "Giden bildirimler dosyası (CSV formatında) için hedef. Hiçbir değer "
+#~ "belirtilmemişse, çıkış ekrana döküm alınır."
+
+#~ msgid "--lang"
+#~ msgstr "--lang"
+
+#~ msgid ""
+#~ "Sets the language for all outbound messages. Currently supported values "
+#~ "are EN, FR and ES. If no value is specified, EN will be used by default."
+#~ msgstr ""
+#~ "Tüm giden iletiler için dili ayarlar. Şu anda desteklenen değerler EN, FR "
+#~ "ve ES dilleridir. Hiçbir değer belirtilmemişse, EN varsayılan dil olarak "
+#~ "kullanılacaktır."
+
+#~ msgid "--type"
+#~ msgstr "--type"
+
+#~ msgid ""
+#~ "REQUIRED. Sets which messaging types are to be used. Can be given "
+#~ "multiple times, to specify multiple types in a single output file. "
+#~ "Currently supported values are RESERVE, PREOVERDUE and OVERDUE. If no "
+#~ "value is given, this script will not produce any outbound notifications."
+#~ msgstr ""
+#~ "REQUIRED. Hangi mesajlaşma türlerinin kullanılacağını ayarlar. Tek bir "
+#~ "çıktı dosyasındaki birden çok türü belirtmek için birden çok verilebilir. "
+#~ "Şu anda desteklenen değerler RESERVE, PREOVERDUE ve OVERDUE değerleridir. "
+#~ "Hiçbir değer belirtilmezse, bu komut dosyası herhangi bir giden bildirim "
+#~ "oluşturmayacaktır."
+
+#~ msgid "--waiting-hold-day -w"
+#~ msgstr "--waiting-hold-day -w"
+
+#~ msgid ""
+#~ "OPTIONAL for --type=RESERVE. Sets the days after a hold has been set to "
+#~ "waiting on which to call. Use switch as many times as desired. For "
+#~ "example, passing \"-w 0 -w 2 -w 6\" will cause calls to be placed on the "
+#~ "day the hold was set to waiting, 2 days after the waiting date, and 6 "
+#~ "days after. See example above. If this switch is not used with --"
+#~ "type=RESERVE, calls will be placed every day until the waiting reserve is "
+#~ "picked up or canceled."
+#~ msgstr ""
+#~ "--type=RESERVE için OPTIONAL. Ayırtma yapıldıktan sonra çağrı yapmak için "
+#~ "beklenecek günleri ayarlar. Anahtarı istediğiniz kadar kullanabilirsiniz. "
+#~ "Örneğin \"-w 0 -w 2 -w 6\" çağrıların ayırtmanın ayarlandığı gün üzerinde "
+#~ "yapılmasını sağlayacaktır, bekleme tarihinden 2 gün sonra, ve 6 gün "
+#~ "sonra. Yukarıda örneğe bakınız. Eğer bu anahtar --type=RESERVE ile "
+#~ "kullanılmazsa, çağrılar bekleyen rezerv alınana ya da iptal edilene kadar "
+#~ "her gün yapılacaktır."
+
+#~ msgid "--library-code --code -c"
+#~ msgstr "--library-code --code -c"
+
+#~ msgid ""
+#~ "OPTIONAL The code of the source library of the message. The library code "
+#~ "is used to group notices together for consortium purposes and apply "
+#~ "library specific settings, such as prompts, to those notices. This field "
+#~ "can be blank if all messages are from a single library."
+#~ msgstr ""
+#~ "İSTEĞE BAĞLI İletinin kaynak kütüphane kodu. Kütüphane kodu konsorsiyum "
+#~ "amaçlı olarak bildirimleri bir arada gruplamak ve bu bildirimlere "
+#~ "istemler uygulamak gibi kütüphaneye özgü ayarları uygulamak için "
+#~ "kullanılır. Tüm bildirimler tek bir kütüphaneden geliyorsa bu alan boş "
+#~ "bırakılabilir."
+
+#~ msgid "`Receiving Notices File <#talkingtechreceivecron>`__"
+#~ msgstr "`Uyarılar Dosyasını Alma <#talkingtechreceivecron>`__"
+
+#~ msgid "`Perl Documentation <#talkingreceivecronperl>`__"
+#~ msgstr "`Perl Dokümanları <#talkingreceivecronperl>`__"
+
+#, fuzzy
+#~ msgid "TalkingTech\\_itiva\\_inbound.pl"
+#~ msgstr "TalkingTech_itiva_inbound.pl"
+
+#, fuzzy
+#~ msgid ""
+#~ "TalkingTech\\_itiva\\_inbound.pl -v --input=/tmp/talkingtech/results.csv"
+#~ msgstr ""
+#~ "TalkingTech_itiva_inbound.pl -v --input=/tmp/talkingtech/results.csv"
+
+#~ msgid ""
+#~ "Script to process received Results files for Talking Tech i-tiva phone "
+#~ "notification system."
+#~ msgstr ""
+#~ "Talking Tech i-tiva telefonla bildirim sistemi için alınan sonuç "
+#~ "dosyalarını işlemek için komut dosyası."
+
+#~ msgid "--input -i"
+#~ msgstr "--input -i"
+
+#~ msgid "REQUIRED. Path to incoming results file."
+#~ msgstr "GEREKLİ. Gelen sonuç dosyasının yolu."
+
+#~ msgid "`Perl Documentation <#proccartcronperl>`__"
+#~ msgstr "`Perl Dokümanları <#proccartcronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "cart\\_to\\_shelf.pl cron script to set items with location of CART to "
+#~ "original shelving location after X hours. Execute without options for "
+#~ "help."
+#~ msgstr ""
+#~ "cart_to_shelf.pl cron komut dosyası, X saatten sonra materyalleri özgün "
+#~ "raf konumlarına CART konumu ile birlikte ayarlamak içindir. Yardım için "
+#~ "seçenekler olmadan çalıştırın."
+
+#~ msgid "`Catalog <#catalogcron>`__"
+#~ msgstr "`Katalog <#catalogcron>`__"
+
+#~ msgid "`Check URLs <#checkurlcron>`__"
+#~ msgstr "`URL'leri denetleyin <#checkurlcron>`__"
+
+#~ msgid "`Perl Documentation <#checkurlcronperl>`__"
+#~ msgstr "`Perl Dokümanları <#checkurlcronperl>`__"
+
+#~ msgid "C4::URL::Checker - base object for checking URL stored in Koha DB"
+#~ msgstr ""
+#~ "C4::URL::Checker - Koha veri tabanı içinde depolanan URL'yi kontrol etmek "
+#~ "için temel nesne"
+
+#~ msgid "new"
+#~ msgstr "yeni"
+
+#~ msgid ""
+#~ "Create a URL Checker. The returned object can be used to set default host "
+#~ "variable :"
+#~ msgstr ""
+#~ "Bir URL denetleyicisi oluşturun. Döndürülen nesne varsayılan ana "
+#~ "bilgisayar değişkenini ayarlamak için kullanılabilir :"
+
+#, fuzzy
+#~ msgid "check\\_biblio"
+#~ msgstr "check_biblio"
+
+#~ msgid ""
+#~ "Check all URL from a biblio record. Returns a pointer to an array "
+#~ "containing all URLs with checking for each of them."
+#~ msgstr ""
+#~ "Bir biblio kaydından tüm URL'yi kontrol edin. Bunların her birinin "
+#~ "kontrolü ile tüm URL'leri içeren bir dizi için bir işaretçi getirir."
+
+#~ msgid "With 2 URLs, the returned array will look like that:"
+#~ msgstr "2 URL ile, dönen dizilim şu şekilde görünecektir:"
+
+#~ msgid "check-url.pl - Check URLs from 856$u field."
+#~ msgstr "check-url.pl - 856$u alanı URL'lerini kontrol et."
+
+#, fuzzy
+#~ msgid "check-url.pl [--verbose\\|--help] [--host=http://default.tld]"
+#~ msgstr "check-url.pl [--verbose|--help] [--host=http://default.tld]"
+
+#~ msgid ""
+#~ "Scan all URLs found in 856$u of bib records and display if resources are "
+#~ "available or not."
+#~ msgstr ""
+#~ "Bibliyografik kayıtların 856$u alanı içinde bulunan bütün URL'leri tara "
+#~ "ve kaynakların kullanılabilir olup olmadıklarını göster."
+
+#~ msgid "--host=http://default.tld"
+#~ msgstr "--host=http://default.tld"
+
+#~ msgid ""
+#~ "Server host used when URL doesn't have one, ie doesn't begin with "
+#~ "'http:'. For example, if --host=http://www.mylib.com, then when 856$u "
+#~ "contains 'img/image.jpg', the url checked is: http://www.mylib.com/image."
+#~ "jpg'."
+#~ msgstr ""
+#~ "URL'de bir tane bulunmadığında, örneğin 'http:' ile başlamazsa sunucu ana "
+#~ "bilgisayarı kullanılır. Örneğin, eğer ana sunucu bilgisayarı=http://www."
+#~ "mylib.com ise, 856$u 'img/image.jpg' dosyasını içerdiği zaman kontrol "
+#~ "edilen url: http://www.mylib.com/image.jpg'. olacaktır."
+
+#, fuzzy
+#~ msgid "--verbose\\|-v"
+#~ msgstr "--verbose|-v"
+
+#~ msgid "Outputs both successful and failed URLs."
+#~ msgstr "Hem başarılı hem de başarısız olan URL'leri çıktılar."
+
+#~ msgid "--html"
+#~ msgstr "--html"
+
+#~ msgid ""
+#~ "Formats output in HTML. The result can be redirected to a file accessible "
+#~ "by http. This way, it's possible to link directly to biblio record in "
+#~ "edit mode. With this parameter --host-pro is required."
+#~ msgstr ""
+#~ "Çıktıyı HTML formatında biçimlendirir. Sonuç, http üzerinden erişilebilir "
+#~ "bir dosyaya yönlendirilebilir. Bu şekilde, düzenleme modunda biblio kayda "
+#~ "doğrudan bağlantı kurmak mümkündür. Bu parametre ile birlikte --host-pro "
+#~ "gereklidir."
+
+#~ msgid "--host-pro=http://koha-pro.tld"
+#~ msgstr "--host-pro=http://koha-pro.tld"
+
+#~ msgid "Server host used to link to biblio record editing page."
+#~ msgstr ""
+#~ "Bibliyo kayıt düzenleme sayfasına bağlantı kurmak için kullanılan ana "
+#~ "sunucu."
+
+#, fuzzy
+#~ msgid "--help\\|-h"
+#~ msgstr "--help|-h"
+
+#~ msgid "Print this help page."
+#~ msgstr "Bu yardım sayfası yazdırın."
+
+#, fuzzy
+#~ msgid "Script path: misc/migration\\_tools/merge\\_authority.pl"
+#~ msgstr "Komut dizisi yolu: misc/migration_tools/merge_authority.pl"
+
+#~ msgid "`Serials Update <#serialscron>`__"
+#~ msgstr "`Süreli Yayınlar Güncelleme <#serialscron>`__"
+
+#~ msgid "`Automatic item update <#autoitemupdatecron>`__"
+#~ msgstr "`Otomatik materyal güncelleme <#autoitemupdatecron>`__"
+
+#~ msgid "`Perl Documentation <#autoitemupdatecrondoc>`__"
+#~ msgstr "`Perl Dokümanları <#autoitemupdatecrondoc>`__"
+
+#, fuzzy
+#~ msgid "automatic\\_item\\_modification\\_by\\_age.pl"
+#~ msgstr "automatic_item_modification_by_age.pl"
+
+#, fuzzy
+#~ msgid "./automatic\\_item\\_modification\\_by\\_age.pl -h"
+#~ msgstr "./automatic_item_modification_by_age.pl -h"
+
+#~ msgid ""
+#~ "Toggle recent acquisitions status. Use this script to delete \"new\" "
+#~ "status for items."
+#~ msgstr ""
+#~ "Son satın alma durumunu aç/kapat. Materyaller için \"yeni\" durumunu "
+#~ "silmek için bu komut dosyasını kullanın."
+
+#, fuzzy
+#~ msgid "-h\\|--help Prints this help message."
+#~ msgstr "-h|--help Bu yardım iletisini yazdırır."
+
+#, fuzzy
+#~ msgid "-v\\|--verbose Set the verbose flag."
+#~ msgstr "-v |--verbose Ayrıntılı bayrağı ayarlayın."
+
+#, fuzzy
+#~ msgid "-c\\|--confirm The script will modify the items."
+#~ msgstr "-c|--confirm Komut dosyası materyalleri değiştirecektir."
+
+#, fuzzy
+#~ msgid "Jonathan Druart <jonathan.druart@biblibre.com>"
+#~ msgstr "Jonathan Druart &lt;jonathan.druart@biblibre.com&gt;"
+
+#~ msgid "Copyright 2013 BibLibre"
+#~ msgstr "Telif hakkı 2013 BibLibre"
+
+#~ msgid "This file is part of Koha."
+#~ msgstr "Bu dosya Koha'nın bir parçasıdır."
+
+#~ msgid ""
+#~ "Koha is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version 3 of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "Koha ücretsiz bir yazılımdır; bu yazılımı Free Software Foundation "
+#~ "tarafınca yayınlanan General Public License koşulları altında yeniden "
+#~ "dağıtabilirsiniz ve/veya Lisanslı 3. Sürümle ya da (seçiminize bağlı "
+#~ "olarak) daha yeni bir sürümle değiştirebilirsiniz."
+
+#~ msgid ""
+#~ "Koha is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE. See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "Koha kullanışlı olması maksadıyla dağıtılmaktadır, ancak HİÇBİR GARANTİSİ "
+#~ "YOKTUR; aynı zamanda BİR AMACA UYGUNLUĞU ya da SATILABİLİRLİĞİ garanti "
+#~ "etmez. Daha fazla ayrıntı için GNU Genel Kamu Lisansını inceleyin."
+
+#, fuzzy
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with Koha; if not, see <http://www.gnu.org/licenses>."
+#~ msgstr ""
+#~ "Koha ile birlikte GNU Genel Kamu Lisansının bir kopyasını almış "
+#~ "olmalısınız. Aksi halde, bakınız &lt;http://www.gnu.org/licenses&gt;."
+
+#~ msgid "`OPAC <#opaccrons>`__"
+#~ msgstr "`OPAC <#opaccrons>`__"
+
+#~ msgid "`RSS Feeds <#customrssfeedcron>`__"
+#~ msgstr "`RSS Beslemeleri <#customrssfeedcron>`__"
+
+#~ msgid "`Perl Documentation <#keywordcloudsperl>`__"
+#~ msgstr "`Perl Dokümanları <#keywordcloudsperl>`__"
+
+#~ msgid "cloud-kw.pl - Creates HTML keywords clouds from Koha Zebra Indexes"
+#~ msgstr ""
+#~ "cloud-kw.pl - Koha Zebra Dizinlerinden HTML anahtar kelime bulutları "
+#~ "oluşturur"
+
+#, fuzzy
+#~ msgid "cloud-kw.pl [--verbose\\|--help] --conf=cloud.conf"
+#~ msgstr "cloud-kw.pl [--verbose|--help] --conf=cloud.conf"
+
+#~ msgid ""
+#~ "Creates multiple HTML files containing keywords cloud with top terms "
+#~ "sorted by their logarithmic weight. cloud.conf is a YAML configuration "
+#~ "file driving cloud generation process."
+#~ msgstr ""
+#~ "Logaritmik ağırlıklarına göre sıralanmış en iyi koşullarla anahtar "
+#~ "kelimeler bulutu içeren birden çok HTML dosyaları oluşturur. cloud.conf, "
+#~ "bulut oluşturma sürecini çalıştıran bir YAML yapılandırma dosyasıdır."
+
+#~ msgid "--conf=configuration file"
+#~ msgstr "--conf=yapılandırma dosyası"
+
+#~ msgid "Specify configuration file name"
+#~ msgstr "Yapılandırma dosyasının adını belirtin"
+
+#~ msgid "Enable script verbose mode."
+#~ msgstr "Komut dosyası ayrıntılandırma modunu etkinleştir."
+
+#~ msgid "Configuration file looks like that:"
+#~ msgstr "Yapılandırma dosyası buna benzer:"
+
+#~ msgid ""
+#~ "Generated top terms have more informations than those outputted from the "
+#~ "time being. Some parameters could be easily added to improve this script:"
+#~ msgstr ""
+#~ "Oluşturulan ana terimlerde şimdiye kadar üretilmiş olanlardan daha fazla "
+#~ "bilgi vardır. Bu komut dosyasını geliştirmek için bazı parametreler "
+#~ "kolaylıkla eklenebilir:"
+
+#~ msgid "WithCount"
+#~ msgstr "WithCount"
+
+#~ msgid ""
+#~ "In order to output terms with the number of occurrences they have been "
+#~ "found in Koha Catalogue by Zebra."
+#~ msgstr ""
+#~ "Terimleri Zebra tarafından Koha kataloğunda bulunan olay sayısı ile "
+#~ "birlikte çıktı vermek için."
+
+#~ msgid "CloudLevels"
+#~ msgstr "CloudLevels"
+
+#~ msgid "Number of levels in the cloud. Now 24 levels are hardcoded."
+#~ msgstr ""
+#~ "Bulut içerisindeki düzey sayısı. Şimdi 24 düzeyin kodu doğrudan programın "
+#~ "içine gömülüdür."
+
+#~ msgid "Weighting"
+#~ msgstr "Ağırlıklandırma"
+
+#~ msgid ""
+#~ "Weighting method used to distribute terms in the cloud. We could have two "
+#~ "values: Logarithmic and Linear. Now it's Logarithmic by default."
+#~ msgstr ""
+#~ "Bulut içerisindeki terimleri dağıtmak için kullanılan ağırlıklandırma "
+#~ "yöntemi. İki değerimiz olabilir: Logaritmik ve doğrusal. Şu anda "
+#~ "varsayılan olarak Logaritmik değer var."
+
+#~ msgid "Order"
+#~ msgstr "Sipariş"
+
+#~ msgid ""
+#~ "Now terms are outputted in the lexical order. They could be sorted by "
+#~ "their weight."
+#~ msgstr ""
+#~ "Şimdi terimler sözlük sırasına göre çıkarılmaktadır. Bunlar ağırlıklarına "
+#~ "göre sıralanmış olabilir."
+
+#~ msgid "Perl Documentation"
+#~ msgstr "Perl Dokümanları"
+
+#, fuzzy
+#~ msgid ""
+#~ "kohaclone/misc/cronjobs/cleanup\\_database.pl [-h\\|--help] [--sessions] "
+#~ "[--sessdays DAYS] [-v\\|--verbose] [--zebraqueue DAYS] [-m\\|--mail] [--"
+#~ "merged] [--import DAYS] [--logs DAYS] [--searchhistory DAYS]"
+#~ msgstr ""
+#~ "kohaclone/misc/cronjobs/cleanup_database.pl [-h|--help] [--sessions] [--"
+#~ "sessdays DAYS] [-v|--verbose] [--zebraqueue DAYS] [-m|--mail] [--merged] "
+#~ "[--import DAYS] [--logs DAYS] [--searchhistory DAYS]"
+
+#~ msgid "-h --help"
+#~ msgstr "-h --help"
+
+#~ msgid "prints this help message, and exits, ignoring all other options"
+#~ msgstr ""
+#~ "diğer tüm seçenekleri yok sayarak yardım iletisini yazdırır ve çıkar"
+
+#~ msgid "--sessions"
+#~ msgstr "--sessions"
+
+#~ msgid ""
+#~ "purge the sessions table. If you use this while users are logged into "
+#~ "Koha, they will have to reconnect."
+#~ msgstr ""
+#~ "oturum tablolarını temizler. Bunu kullanıcılar Koha'da oturum açtıkları "
+#~ "zaman kullanırsanız, kullanıcıların Koha'da yeniden oturum açmaları "
+#~ "gerekecektir."
+
+#~ msgid "--sessdays DAYS"
+#~ msgstr "--sessdays DAYS"
+
+#~ msgid "purge only sessions older than DAYS days"
+#~ msgstr "yalnızca DAYS günden daha eski oturumları temizle"
+
+#~ msgid "-v --verbose"
+#~ msgstr "-v --verbose"
+
+#~ msgid ""
+#~ "will cause the script to give you a bit more information about the run."
+#~ msgstr "komut dosyasının, işlemle ilgili daha fazla bilgi vermesini sağlar."
+
+#~ msgid "--zebraqueue DAYS"
+#~ msgstr "--zebraqueue DAYS"
+
+#~ msgid ""
+#~ "purge completed zebraqueue entries older than DAYS days. Defaults to 30 "
+#~ "days if no days specified."
+#~ msgstr ""
+#~ "DAYS günden daha eski tamamlanmış zebraqueue girişlerini temizle. Hiçbir "
+#~ "gün belirtilmezse varsayılan 30 gündür."
+
+#~ msgid "-m --mail DAYS"
+#~ msgstr "-m --mail DAYS"
+
+#~ msgid ""
+#~ "purge items from the mail queue that are older than DAYS days. Defaults "
+#~ "to 30 days if no days specified."
+#~ msgstr ""
+#~ "Mail sırasındaki DAYS günden daha eski materyalleri temizle. Hiçbir gün "
+#~ "belirtilmezse varsayılan 30 gündür."
+
+#~ msgid "--merged"
+#~ msgstr "--merged"
+
+#, fuzzy
+#~ msgid "purged completed entries from need\\_merge\\_authorities."
+#~ msgstr "need_merge_authorities'den tamamlanmış girişler temizlenmiştir."
+
+#~ msgid "--import DAYS"
+#~ msgstr "--import DAYS"
+
+#~ msgid ""
+#~ "purge records from import tables older than DAYS days. Defaults to 60 "
+#~ "days if no days specified"
+#~ msgstr ""
+#~ "İçe aktarma tablolarından DAYS günden daha eski kayıtları temizle. Hiçbir "
+#~ "gün belirtilmezse varsayılan 60 gündür"
+
+#~ msgid "--z3950"
+#~ msgstr "--z3950"
+
+#~ msgid ""
+#~ "purge records from import tables that are the result of Z39.50 searches"
+#~ msgstr ""
+#~ "İçe aktarma tablolarından Z39.50 arama sonuçları olan kayıtları temizle"
+
+#~ msgid "--logs DAYS"
+#~ msgstr "--logs DAYS"
+
+#, fuzzy
+#~ msgid ""
+#~ "purge entries from action\\_logs older than DAYS days. Defaults to 180 "
+#~ "days if no days specified"
+#~ msgstr ""
+#~ "action_logs'dan DAYS günden daha eski girişleri temizle. Hiçbir gün "
+#~ "belirtilmezse varsayılan 180 gündür."
+
+#~ msgid "--searchhistory DAYS"
+#~ msgstr "--searchhistory DAYS"
+
+#, fuzzy
+#~ msgid ""
+#~ "purge entries from search\\_history older than DAYS days. Defaults to 30 "
+#~ "days if no days specified"
+#~ msgstr ""
+#~ "search_history'den DAYS günden daha eski girişleri temizle. Hiçbir gün "
+#~ "belirtilmezse varsayılan 30 gündür."
+
+#~ msgid "--list-invites DAYS"
+#~ msgstr "--list-invites DAYS"
+
+#~ msgid ""
+#~ "purge (unaccepted) list share invites older than DAYS days. Defaults to "
+#~ "14 days if no days specified."
+#~ msgstr ""
+#~ "DAYS günden daha eski (kabul edilmemiş) liste paylaşımı davetlerini "
+#~ "temizle. Hiçbir gün belirtilmezse varsayılan 14 gündür."
+
+#~ msgid "--restrictions DAYS"
+#~ msgstr "--sınırlandırma DAYS"
+
+#~ msgid ""
+#~ "purge patrons restrictions expired since more than DAYS days. Defaults to "
+#~ "30 days if no days specified."
+#~ msgstr ""
+#~ "Süresi DAYS günden itibaren sona ermiş kullanıcı kısıtlamalarını temizle. "
+#~ "Hiçbir gün belirtilmemiş olması durumunda varsayılan 30 gündür."
+
+#~ msgid "`Perl Documentation <#usagecronperl>`__"
+#~ msgstr "`Perl Dokümanları <#usagecronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "share\\_usage\\_with\\_koha\\_community.pl - Share your library's usage "
+#~ "with the Koha community"
+#~ msgstr ""
+#~ "share_usage_with_koha_community.pl -Kütüphane kullanımınızı Koha "
+#~ "topluluğu ile paylaşın"
+
+#, fuzzy
+#~ msgid ""
+#~ "share\\_usage\\_with\\_koha\\_community.pl [-h\\|--help] [-v\\|--verbose]"
+#~ msgstr "share_usage_with_koha_community.pl [-h|--help] [-v|--verbose]"
+
+#~ msgid ""
+#~ "If the `UsageStats <#UsageStats>`__ system preference is set, you can "
+#~ "launch this script to share your usage data anonymously with the Koha "
+#~ "community."
+#~ msgstr ""
+#~ "`UsageStats <#UsageStats>`__ sistem tercihi ayarlı ise, kullanım "
+#~ "verilerini anonim olarak Koha topluluğu ile paylaşmak için bu komut "
+#~ "dizisini başlatabilirsiniz."
+
+#~ msgid ""
+#~ "Collecting Koha usage statistics will help developers to know how Koha is "
+#~ "used across the world."
+#~ msgstr ""
+#~ "Koha kullanım istatistiklerini toplamak, geliştiricilerin Koha'nın dünya "
+#~ "çapında nasıl kullanıldığını bilmelerine yardımcı olacaktır."
+
+#~ msgid ""
+#~ "This script will send the usage data for the bibliographic and authority "
+#~ "records, checkouts, holds, orders, and subscriptions."
+#~ msgstr ""
+#~ "Bu komut dosyası bibliyografik ve otorite kayıtlar, ödünç verme, "
+#~ "ayırtmalar, siparişler ve abonelikler için kullanım verilerini "
+#~ "gönderecektir."
+
+#~ msgid ""
+#~ "Only the total number is retrieved. In no case will private data be "
+#~ "shared!"
+#~ msgstr ""
+#~ "Yalnızca toplam sayı alınır. Hiç bir durumda özel veriler "
+#~ "paylaşılmayacaktır!"
+
+#~ msgid ""
+#~ "In order to know which parts of Koha modules are used, this script will "
+#~ "collect some system preference values."
+#~ msgstr ""
+#~ "Koha modüllerinin hangi kısımlarının kullanıldığını bilmek için bu komut "
+#~ "dosyası bazı sistem tercihi değerlerini toplayacaktır."
+
+#~ msgid ""
+#~ "If you want to tell us who you are, you can fill the "
+#~ "`UsageStatsLibraryName <#UsageStatsLibraryName>`__ system preference with "
+#~ "your library name, `UsageStatsLibraryUrl <#UsageStatsLibraryUrl>`__, "
+#~ "`UsageStatsLibraryType <#UsageStatsLibraryType>`__ and/or "
+#~ "`UsageStatsCountry <#UsageStatsCountry>`__."
+#~ msgstr ""
+#~ "Bize kim olduğunuzu anlatmak isterseniz, `UsageStatsLibraryName "
+#~ "<#UsageStatsLibraryName>`__ sistem tercihini kütüphane adınız ile "
+#~ "birlikte , `UsageStatsLibraryUrl <#UsageStatsLibraryUrl>`__, "
+#~ "`UsageStatsLibraryType <#UsageStatsLibraryType>`__ ve/veya "
+#~ "`UsageStatsCountry <#UsageStatsCountry>`__ tercihlerini doldurabilirsiniz."
+
+#, fuzzy
+#~ msgid ""
+#~ "All these data will be analyzed on the http://hea.koha-community.org Koha "
+#~ "community website."
+#~ msgstr ""
+#~ "Tüm bu veriler `http://hea.koha-community.org <#http://hea.koha-community."
+#~ "org>`__ Koha topluluğu web sayfasında analiz edilecektir."
+
+#~ msgid ""
+#~ "IMPORTANT : please do NOT run the cron on the 1st, but on another day. "
+#~ "The idea is to avoid all Koha libraries sending their data at the same "
+#~ "time ! So choose any day between 1 and 28 !"
+#~ msgstr ""
+#~ "ÖNEMLİ : lütfen zamanlayıcıyı (cron) 1. günde ÇALIŞTIRMAYIN, diğer "
+#~ "günlerde çalıştırın. Buradaki amaç tüm Koha kütüphanelerinin verilerini "
+#~ "aynı zamanda göndermesinin önüne geçmektir ! Bu nedenle 1 ve 28 arasında "
+#~ "her hangi bir gün seçin !"
+
+#, fuzzy
+#~ msgid "-h\\|--help"
+#~ msgstr "-h|--help"
+
+#~ msgid "Print a brief help message"
+#~ msgstr "Kısa bir yardım mesajı yazdır"
+
+#~ msgid "Verbose mode."
+#~ msgstr "Ayrıntılı mod."
+
+#, fuzzy
+#~ msgid "-f\\|--force"
+#~ msgstr "-f|--force"
+
+#, fuzzy
+#~ msgid "Alex Arnaud <alex.arnaud@biblibre.com>"
+#~ msgstr "Alex Arnaud &lt;alex.arnaud@biblibre.com&gt;"
+
+#~ msgid "Copyright 2014 BibLibre"
+#~ msgstr "Telif hakkı 2014 BibLibre"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with Koha; if not, write to the Free Software Foundation, Inc., 51 "
+#~ "Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
+#~ msgstr ""
+#~ "Koha ile birlikte GNU Genel Kamu Lisansının bir kopyasını almış "
+#~ "olmalısınız. Aksi halde bu adrese yazılı olarak bildirin: Free Software "
+#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 "
+#~ "USA."
+
+#~ msgid "`Perl Documentation <#emailsuggestfundperl>`__"
+#~ msgstr "`Perl Dokümanları <#emailsuggestfundperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "notice\\_unprocessed\\_suggestions.pl - Generate notification for "
+#~ "unprocessed suggestions."
+#~ msgstr ""
+#~ "notice_unprocessed_suggestions.pl - İşlenmemiş öneriler için bildirim "
+#~ "oluştur."
+
+#~ msgid "The budget owner will be notified."
+#~ msgstr "Bütçe sahibi bildirilecektir."
+
+#, fuzzy
+#~ msgid "The letter template 'TO\\_PROCESS' will be used."
+#~ msgstr "'TO_PROCESS' mektup şablonu kullanılacaktır."
+
+#, fuzzy
+#~ msgid ""
+#~ "notice\\_unprocessed\\_suggestions.pl [-h\\|--help] [-v\\|--verbose] [-c"
+#~ "\\|--confirm] [--days=NUMBER\\_OF\\_DAYS]"
+#~ msgstr ""
+#~ "notice_unprocessed_suggestions.pl [-h|--help] [-v|--verbose] [-c|--"
+#~ "confirm] [--days=NUMBER_OF_DAYS]"
+
+#, fuzzy
+#~ msgid "-h\\|--help Print a brief help message"
+#~ msgstr "-h|--help Kısa bir yardım mesajı yazdır"
+
+#, fuzzy
+#~ msgid ""
+#~ "-c\\|--confirm This flag must be provided in order for the script to "
+#~ "actually generate notices. If it is not supplied, the script will only "
+#~ "report on the patron it would have noticed."
+#~ msgstr ""
+#~ "-c | --confirm Bu bayrak aslında komut dosyasının uyarılar üretmesi için "
+#~ "sağlanmalıdır. Sağlanmazsa, komut dosyası yalnızca fark ettiği kullanıcı "
+#~ "hakkında rapor verecektir."
+
+#~ msgid ""
+#~ "--days This parameter is mandatory. It must contain an integer "
+#~ "representing the number of days elapsed since the last modification of "
+#~ "suggestions to process."
+#~ msgstr ""
+#~ "--days Bu parametre zorunludur. İşlenecek önerilerin son "
+#~ "değiştirilmesinden bu yana geçen gün sayısını temsil eden bir tam sayı "
+#~ "içermelidir."
+
+#, fuzzy
+#~ msgid "-v\\|--verbose Verbose mode."
+#~ msgstr "-v|--verbose ayrıntılı kip."

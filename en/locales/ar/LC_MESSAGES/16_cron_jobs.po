@@ -1,0 +1,2410 @@
+# Compendium of ar.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-ar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-25 12:27-0300\n"
+"PO-Revision-Date: 2017-06-05 19:54-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/16_cron_jobs.rst:5 ../../source/16_cron_jobs.rst:26
+msgid "Cron Jobs"
+msgstr "وظيفة كرون"
+
+#: ../../source/16_cron_jobs.rst:7
+msgid ""
+"A cron job is a Linux command for scheduling a command or script on your "
+"server to complete repetitive tasks automatically. Scripts executed as a "
+"cron job are typically used to modify files or databases; however, they can "
+"perform other tasks that do not modify data on the server, like sending out "
+"email notifications. Koha has many cron jobs in place that you can enable "
+"(search engine indexing, overdue notice generation, data cleanup and more), "
+"this chapter will explain those for you."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:16
+msgid "Crontab example"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:18
+msgid ""
+"An example of a Koha crontab can be found in misc/cronjobs/crontab.example"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:20
+msgid ""
+"The example includes sample boilerplate cronjob entries for the most "
+"commonly-used cronjobs."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:28
+msgid ""
+"The locations below assume a dev install which puts the crons in misc/, if "
+"you have a standard install you may want to look in bin/ for these files if "
+"you cannot find them in misc/"
+msgstr ""
+"المواقع أدناه تفرض تنصيب dev الذي يضع الكرون في misc/, إذا كان لديك تنصيب "
+"قياسي قد ترغب في في النظر في bin/ لهذه الملفات إذا كنت لاتستطيع العثور على "
+"misc/."
+
+#: ../../source/16_cron_jobs.rst:35
+msgid "Backup"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:38
+msgid "Daily Backup"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:40
+#, fuzzy
+msgid "Script path: misc/cronjobs/backup.sh"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:42
+msgid "Does: Creates a daily backup of the Koha database."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:44 ../../source/16_cron_jobs.rst:166
+#: ../../source/16_cron_jobs.rst:181
+msgid "Frequency suggestion: daily"
+msgstr "إقتراح التردد : يومياً"
+
+#: ../../source/16_cron_jobs.rst:49
+msgid "Search"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:54
+msgid "Sitemap"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:56
+#, fuzzy
+msgid "Script path: misc/cronjobs/sitemap.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:58
+msgid ""
+"Does: Processes all biblio records from a Koha instance and generates "
+"sitemap files complying with the protocol as described on http://sitemaps."
+"org. The goal of this script is to be able to provide to search engines "
+"direct access to biblio records. It avoids leaving search engines browsing "
+"Koha's OPAC which would generate a lot of site traffic and server workload."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:64
+msgid ""
+"**Note** A file named sitemapindex.xml is generated. It contains references "
+"to multiple sitemap files. Each file contains at most 50,000 URLs and is "
+"named sitemapXXXX.xml."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:69
+msgid ""
+"The files must be stored on the Koha OPAC's root directory. In the same "
+"directory a robots.txt file with the following contents is required:"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:73
+msgid "``Sitemap: sitemapindex.xml User-agent: * Disallow: /cgi-bin/``"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:80
+msgid "Rebuild Index"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:82
+#, fuzzy
+msgid "Script path: misc/migration\\_tools/rebuild\\_zebra.pl"
+msgstr "مسارالسكربت: misc/migration_tools/rebuild_zebra.pl"
+
+#: ../../source/16_cron_jobs.rst:84
+msgid "Does: Updates Zebra indexes with recently changed data."
+msgstr "يَعمَلُ: تحديثات فهارس زيبرا مع البيانات التي تم تغيرها مؤخراً."
+
+#: ../../source/16_cron_jobs.rst:86
+msgid "Required by: Zebra"
+msgstr "المطلوبة من قبل: زيبرا"
+
+#: ../../source/16_cron_jobs.rst:88
+msgid ""
+"Frequency suggestion: every x minutes, (between 5-15 minutes) depending on "
+"performance needs"
+msgstr ""
+"إقتراح التردد: كل X دقيقة ، (بين 5-15 دقيقة) اعتمادا على احتياجات أدائها"
+
+#: ../../source/16_cron_jobs.rst:94
+#, fuzzy
+msgid "Circulation"
+msgstr "التهيئة"
+
+#: ../../source/16_cron_jobs.rst:99
+msgid "Holds Queue"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:101
+#, fuzzy
+msgid "Script path: misc/cronjobs/holds/build\\_holds\\_queue.pl"
+msgstr "مسار السكربت: misc/cronjobs/holds/build_holds_queue.pl"
+
+#: ../../source/16_cron_jobs.rst:103
+msgid "Does: Updates holds queue report"
+msgstr "يَعمَلُ: تحديثات تقرير الحجوزات في قائمة الأنتظار"
+
+#: ../../source/16_cron_jobs.rst:105
+#, fuzzy
+msgid "Required by: :ref:`Holds Queue Report <holds-queue-label>`"
+msgstr "المطلوبة من قبل: ` تقرير حجوزات قائمة الأنتظار  <#holdsqueue>`__"
+
+#: ../../source/16_cron_jobs.rst:107
+msgid "Frequency suggestion: every 1-4 hours"
+msgstr "اقتراح التردد: كل 1-4  ساعة "
+
+#: ../../source/16_cron_jobs.rst:109
+msgid "Description:"
+msgstr "وصف:"
+
+#: ../../source/16_cron_jobs.rst:111
+msgid ""
+"A script that should be run periodically if your library system allows "
+"borrowers to place on-shelf holds. This script decides which library should "
+"be responsible for fulfilling a given hold request."
+msgstr ""
+"السكربت الذي يجب تنفيذ النظام بشكل دوري أذا مكتبة النظام تسمح للمستعيرين "
+"بوضعة على رف الحجوزات. هذا السكربت يقرر ماإذا كانت المكتبة يجب أن تكون "
+"مسؤولة عن تحقيق طلب حجز معين."
+
+#: ../../source/16_cron_jobs.rst:115
+#, fuzzy
+msgid ""
+"It's behavior is controlled by the system preferences :ref:"
+"`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-"
+"randomizeholdsqueueweight-label>` and :ref:`RandomizeHoldsQueueWeight "
+"<staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-"
+"label>`."
+msgstr ""
+"يتم التحكم بالسلوك من خلال تفضيلات النظام `StaticHoldsQueueWeight "
+"<#holdqueueweight>`__ و `RandomizeHoldsQueueWeight <#holdqueueweight>`__."
+
+#: ../../source/16_cron_jobs.rst:119
+#, fuzzy
+msgid ""
+"If you do not want all of your libraries to participate in the on-shelf "
+"holds fulfillment process, you should list the the libraries that \\*do\\* "
+"participate in the process here by inputting all the participating library's "
+"branchcodes, separated by commas ( e.g. \"MPL,CPL,SPL,BML\" etc. )."
+msgstr ""
+"إذا كنت لا تريد كل ما تبذلونه من المكتبات المشاركة في عملية حجز مكان، يجب أن "
+"قائمة هنا المكتبات المشاركة في هذه العملية عن طريق إدخال كافة \"branchcodes"
+"\" المشاركة المكتبات، مفصولة بفواصل (مثل \"DPB، LC ، SPL، BML، الخ.)"
+
+#: ../../source/16_cron_jobs.rst:125
+#, fuzzy
+msgid ""
+"By default, the holds queue will be generated such that the system will "
+"first attempt to hold fulfillment using items already at the pickup library "
+"if possible. If there are no items available at the pickup library to fill a "
+"hold, build\\_holds\\_queue.pl will then use the list of libraries defined "
+"in StaticHoldsQueueWeight. If RandomizeHoldsQueueWeight is disabled ( which "
+"it is by default ), the script will assign fulfillment requests in the order "
+"the branches are placed in the StaticHoldsQueueWeight system preference."
+msgstr ""
+"قائمة الانتظار سيتم انشائها افترضيا، وسوف يقوم النظام في البداية اجراء تحقق "
+"مع المواد  الموجودة اصلا في الشحنة المخصصة للمكتبة، اذا كان ذلك ممكنا. فاذا "
+"لم تكن موجودة يتم اكمال القائمة في.  build_ holds_queue.pl . الذي سوف يقوم "
+"باستخدام قائمة المكتبات الموجودة. في قائمة الانتظار ذات الحمل الثابت، اذا تم "
+"تعطيل الوزن الثابت للقائمة الافتراضية عشوائيا، سيقوم البرنامج النصي بطلب "
+"التحقق من ترتيب فروع المكتبة في قائمة الانتظار الثابته حسب الافضلية."
+
+#: ../../source/16_cron_jobs.rst:134
+msgid ""
+"For example, if your system has three libraries, of varying sizes ( small, "
+"medium and large ) and you want the burden of holds fulfillment to be on "
+"larger libraries before smaller libraries, you would want "
+"StaticHoldsQueueWeight to look something like \"LRG,MED,SML\"."
+msgstr "على سبيل المثال نظامك يتكون من ثلاث مكتبات، باحجام مختلفة (صغيرة ،"
+
+#: ../../source/16_cron_jobs.rst:140
+msgid ""
+"If you want the burden of holds fulfillment to be spread out equally "
+"throughout your library system, simply enable RandomizeHoldsQueueWeight. "
+"When this system preference is enabled, the order in which libraries will be "
+"requested to fulfill an on-shelf hold will be randomized each time the list "
+"is regenerated."
+msgstr ""
+"إذا ما أردتَ أن تقوم بنشر عبء الحجوزات بالتساوي في نظام مكتبتك. ببساطة مكِّن "
+"التفضيل RandomizeHoldsQueueWeight . فعندما يكون هذا التفضيل ممكَّناً، فإن "
+"الترتيب الذي سيطلب من المكتبات إنجازحجز لمواد على الرف سيكون عشوائياً في كل "
+"مرة يتم إعادة توليد القائمة."
+
+#: ../../source/16_cron_jobs.rst:146
+#, fuzzy
+msgid ""
+"Leaving StaticHoldsQueueWeight empty is contraindicated at this time. Doing "
+"so will cause the build\\_holds\\_queue script to ignore "
+"RandomizeHoldsQueueWeight, causing the script to request hold fulfillment "
+"not randomly, but by alphabetical order."
+msgstr ""
+"من غير المستحسن ترك التفضيل StaticHoldsQueueWeight فارغاً في هذا الوقت. فعل "
+"ذلك سيؤدي أن السكربت build_holds_queue سيتجاهل التفضيل "
+"RandomizeHoldsQueueWeight ، مما سيسبب أن السكربت الذي يطلب الحجوزات سيعمل "
+"على الترتيب بشكل غير تلقائي ، ولكن بترتيب أبجدي."
+
+#: ../../source/16_cron_jobs.rst:154
+msgid "Expired Holds"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:156
+#, fuzzy
+msgid "Script path: misc/cronjobs/holds/cancel\\_expired\\_holds.pl"
+msgstr "مسار السكربت: misc/cronjobs/holds/cancel_expired_holds.pl"
+
+#: ../../source/16_cron_jobs.rst:158
+#, fuzzy
+msgid ""
+"Does: By default, this cron job will only automatically cancel holds where "
+"the user has set an expiration date. If the library is using the :ref:"
+"`ExpireReservesMaxPickUpDelay` and :ref:`ExpireReservesMaxPickUpDelayCharge` "
+"preferences then this script will also cancel holds that have been sitting "
+"on the hold shelf for too long and will (if the library does) charge the "
+"patron for not picking up the hold."
+msgstr ""
+"يَعمَلُ: أفتراضياً, هذه وظيفة ركون ستقوم فقط بإلغاء الحجوزات تلقائياً حيث "
+"المستخدم قام بتعيين البيانات المنتهية. إذا كانت المكتبة تستخدم تفضيلات "
+"`ExpireReservesMaxPickUpDelay <#ExpireReservesMaxPickUpDelay>`__ و "
+"`ExpireReservesMaxPickUpDelayCharge <#ExpireReservesMaxPickUpDelayCharge>`__ "
+"فأن هذا السكربت سيقوم بإلغاء الحجوزات التي كانت موجودة على رف الحجز لفترة "
+"طويلة وسوف (إذا المكتبة تَعمَلُ) تغيير رسوم المستفيد لعدم إختياره الحجز."
+
+#: ../../source/16_cron_jobs.rst:171
+msgid "Unsuspend Holds"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:173
+#, fuzzy
+msgid "Script path: misc/cronjobs/holds/auto\\_unsuspend\\_holds.pl"
+msgstr "مسار السكربت: misc/cronjobs/holds/auto_unsuspend_holds.pl"
+
+#: ../../source/16_cron_jobs.rst:175
+#, fuzzy
+msgid ""
+"Does: This script checks to find holds that should no longer be suspended "
+"and removes the suspension if the :ref:`AutoResumeSuspendedHolds` preference "
+"is set to 'allow'. This puts the patron back in to the queue where they were "
+"when the hold was suspended."
+msgstr ""
+"يَعمَلُ: هذا السكربت يتأكد من إيجاد الحجوزات التي يجب أن لا يعد التعليق و حذف "
+"التعليق أذا تعيين التفضيل الى 'السماح' `AutoResumeSuspendedHolds "
+"<#AutoResumeSuspendedHolds>`__ حيث هذا يضع المستفيد مرة أخرى الى قائمة "
+"الأنتظار حيث كان عندما تم حجز التعليق."
+
+#: ../../source/16_cron_jobs.rst:186
+msgid "Fines"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:188
+msgid "Script path: misc/cronjobs/fines.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:190
+msgid "Does: Calculates and posts fines to patron accounts."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:192
+#, fuzzy
+msgid "Required by: :ref:`finesMode` system preference"
+msgstr "المطلوبة من قبل: `finesMode <#finesMode>`__ تفضيلات النظام"
+
+#: ../../source/16_cron_jobs.rst:194 ../../source/16_cron_jobs.rst:223
+#: ../../source/16_cron_jobs.rst:243 ../../source/16_cron_jobs.rst:279
+#: ../../source/16_cron_jobs.rst:308 ../../source/16_cron_jobs.rst:348
+#: ../../source/16_cron_jobs.rst:407 ../../source/16_cron_jobs.rst:424
+#: ../../source/16_cron_jobs.rst:458 ../../source/16_cron_jobs.rst:481
+#: ../../source/16_cron_jobs.rst:496 ../../source/16_cron_jobs.rst:629
+#: ../../source/16_cron_jobs.rst:642 ../../source/16_cron_jobs.rst:718
+msgid "Frequency suggestion: nightly"
+msgstr "إقتراح التردد: ليلاً"
+
+#: ../../source/16_cron_jobs.rst:199
+msgid "Static Fines"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:201
+#, fuzzy
+msgid "Script path: misc/cronjobs/staticfines.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:203
+msgid ""
+"Does: this script calculates and charges overdue fines to patron accounts"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:205
+msgid ""
+"**Note** If the Koha System Preference 'finesMode' is set to 'production', "
+"the fines are charged to the patron accounts. If set to 'test', the fines "
+"are calculated but not applied."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:209
+msgid "**Note** Fines won't be applied on a holiday."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:215
+msgid "Long Overdues"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:217
+msgid "Script path: misc/cronjobs/longoverdue.pl"
+msgstr "مسار السكربت: misc/cronjobs/longoverdue.pl"
+
+#: ../../source/16_cron_jobs.rst:219
+msgid ""
+"Does: allows one to specify delays for changing items to different lost "
+"statuses, and optionally charge for them using the replacement price listed "
+"on the item record."
+msgstr ""
+"يَفعل: يسمح لواحد بتحديد التأخير من تغيير المواد المختلفة لحالات الفقدان, و "
+"إختيار الرسوم لهذه المستخدمة في سعر إستبدال القائمه لسجل المادة."
+
+#: ../../source/16_cron_jobs.rst:225 ../../source/16_cron_jobs.rst:252
+#: ../../source/16_cron_jobs.rst:409 ../../source/16_cron_jobs.rst:426
+#: ../../source/16_cron_jobs.rst:543 ../../source/16_cron_jobs.rst:558
+#: ../../source/16_cron_jobs.rst:582 ../../source/16_cron_jobs.rst:619
+#, fuzzy
+msgid "**Note**"
+msgstr "ملاحظة"
+
+#: ../../source/16_cron_jobs.rst:227
+msgid ""
+"Staff can control some of the parameters for the longoverdue cron job with "
+"the :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-"
+"defaultlongoverduedays-label>` and :ref:`DefaultLongOverdueChargeValue` "
+"preferences."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:236
+msgid "Track Total Checkouts"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:238
+#, fuzzy
+msgid "Script path: misc/cronjobs/update\\_totalissues.pl"
+msgstr "مسار السكربت: misc/cronjobs/update_items.pl"
+
+#: ../../source/16_cron_jobs.rst:240
+msgid ""
+"Does: updates the biblioitems.totalissues field in the database with the "
+"latest tally of checkouts based on historical issue statistics."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:245
+msgid "**Warning**"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:247
+msgid ""
+"If the time on your database server does not match the time on your Koha "
+"server you will need to take that into account, and probably use the --since "
+"argument instead of the --interval argument for incremental updating."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:254
+msgid ""
+"This cronjob can be used if there is a performance concern. Otherwise, use "
+"the UpdateTotalIssuesOnCirc System Preference."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:260
+#, fuzzy
+msgid "Generate Patron File for Offline Circulation"
+msgstr "أُنظر إلى التوثيق الكامل للإعارة بدون إتصال في "
+
+#: ../../source/16_cron_jobs.rst:262
+#, fuzzy
+msgid "Script path: misc/cronjobs/create\\_koc\\_db.pl"
+msgstr "مسار الملف: misc/cronjobs/cart_to_shelf.pl"
+
+#: ../../source/16_cron_jobs.rst:264
+msgid ""
+"Does: Generates the borrowers.db file for use with the :ref:`Koha Offline "
+"Circulation <offline-circ-tool-for-windows-label>` tool"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:267
+msgid "Frequency suggestion: weekly"
+msgstr "إقتراح التردد : يومياً"
+
+#: ../../source/16_cron_jobs.rst:272
+#, fuzzy
+msgid "Automatic renewal"
+msgstr "التجديد التلقائي"
+
+#: ../../source/16_cron_jobs.rst:274
+#, fuzzy
+msgid "Script path: misc/cronjobs/automatic\\_renewals.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:276
+msgid ""
+"Does: Will automatically renew items if you're allowing automatic renewal "
+"with your :ref:`circulation and fine rules <circulation-and-fine-rules-"
+"label>`."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:284
+msgid "Patrons"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:289
+msgid "Batch Delete Patrons"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:291
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_patrons.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:293
+msgid ""
+"Does: Deletes patron records in batch based on date not borrowed since, "
+"expired before, last seen, category code, or library branch."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:299
+msgid "Unverified Registrations"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:301
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_expired\\_opac\\_registrations.pl"
+msgstr "مسار السكربت: misc/cronjobs/purge_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:303
+msgid ""
+"Does: Deletes patron registrations that were submitted via the OPAC but not "
+"reviewed by the library within the number of days entered in the :ref:"
+"`PatronSelfRegistrationExpireTemporaryAccountsDelay` preference."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:313
+#, fuzzy
+msgid "Unconfirmed Registrations"
+msgstr "تأكيد الحجز"
+
+#: ../../source/16_cron_jobs.rst:315
+#, fuzzy
+msgid ""
+"Script path: misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
+msgstr "مسار السكربت: misc/cronjobs/purge_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:317
+msgid ""
+"Does: Deletes patron self registrations that were submitted via the OPAC but "
+"not confirmed via email within 24 hours. This is only necessary if you are "
+"requiring patrons to confirm their registrations via email with the :ref:"
+"`PatronSelfRegistrationVerifyByEmail` preference."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:324 ../../source/16_cron_jobs.rst:526
+#: ../../source/16_cron_jobs.rst:673
+msgid "Frequency suggestion: hourly"
+msgstr "إقتراح التردد: كل ساعة"
+
+#: ../../source/16_cron_jobs.rst:329
+#, fuzzy
+msgid "Anonymize Patron Data"
+msgstr "`AnonymousPatron <#AnonymousPatron>`__"
+
+#: ../../source/16_cron_jobs.rst:331
+#, fuzzy
+msgid "Script path: misc/cronjobs/batch\\_anonymise.pl"
+msgstr "مسار السكربت: misc/cronjobs/advance_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:333
+msgid ""
+"Does: Used to anonymize patron data. This will remove borrowernumbers from "
+"circulation history so that the stats are kept, but the patron information "
+"is removed for privacy reasons."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:340
+#, fuzzy
+msgid "Update Child to Adult Patron Type"
+msgstr "ترقية المستفيد من فئة الأطفال إلى فئة الراشدين "
+
+#: ../../source/16_cron_jobs.rst:342
+msgid "Script path: misc/cronjobs/j2a.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:344
+msgid ""
+"Does: Convert juvenile/child patrons from juvenile patron category and "
+"category code to corresponding adult patron category and category code when "
+"they reach the upper age limit defined in the Patron Categories."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:350
+#, fuzzy
+msgid "**DESCRIPTION**"
+msgstr "الوصف المادي"
+
+#: ../../source/16_cron_jobs.rst:352
+msgid ""
+"This script is designed to update patrons from juvenile to adult patron "
+"types, remove the guarantor, and update their category codes appropriately "
+"when they reach the upper age limit defined in the Patron Categories."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:357
+msgid "**USAGE EXAMPLES**"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:359
+msgid "\"juv2adult.pl\""
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:361
+msgid ""
+"\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> "
+"(Processes a single branch, and updates the patron categories from category "
+"to category)"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:365
+msgid ""
+"\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (Processes all "
+"branches, shows all messages, and reports the patrons who would be affected. "
+"Takes no action on the database)"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:372
+msgid "Notices"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:377
+msgid "Message Queue"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:379
+#, fuzzy
+msgid "Script path: misc/cronjobs/process\\_message\\_queue.pl"
+msgstr "مسار السكربت: misc/cronjobs/process_message_queue.pl"
+
+#: ../../source/16_cron_jobs.rst:381
+#, fuzzy
+msgid ""
+"Does: processes the message queue to send the check out, check in and hold "
+"filled emails and SMS message to users and sends outgoing emails to patrons. "
+"requires :ref:`EnhancedMessagingPreferences` to be on"
+msgstr ""
+"يَعمَلُ: تحضير إشعارات \"pre-due\" و ‘شعارات \"إستحقاق المادة\" للمستفيدين "
+"الذين يطلبونها لتحضير الإشعارات للمستفيدين للمواد المستحقة فقط أو المادة "
+"التي إستحقاقها قادم قريباً. يتطلب ان يكون على`EnhancedMessagingPreferences "
+"<#EnhancedMessagingPreferences>`__"
+
+#: ../../source/16_cron_jobs.rst:387
+msgid "Frequency suggestion: 1-4 hours"
+msgstr "اقتراح التردد: كل 1-4  ساعة "
+
+#: ../../source/16_cron_jobs.rst:389 ../../source/16_cron_jobs.rst:686
+#, fuzzy
+msgid "**Important**"
+msgstr "هام"
+
+#: ../../source/16_cron_jobs.rst:391
+#, fuzzy
+msgid ""
+"Item due and Advanced due notices are controlled by the :ref:`advance"
+"\\_notices cron <advanced-notice-label>`."
+msgstr ""
+"إذا تم الضبط بـ 'اسمح' سيتم ربط المقترحات لـ  `AnonymousPatron "
+"<#AnonymousPatron>`__"
+
+#: ../../source/16_cron_jobs.rst:397
+msgid "Advanced Notice"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:399
+#, fuzzy
+msgid "Script path: misc/cronjobs/advance\\_notices.pl"
+msgstr "مسار السكربت: misc/cronjobs/advance_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:401
+#, fuzzy
+msgid ""
+"Does: prepares \"pre-due\" notices and \"item due\" notices for patrons who "
+"request them prepares notices for patrons for items just due or coming due "
+"soon. requires :ref:`EnhancedMessagingPreferences` to be on"
+msgstr ""
+"يَعمَلُ: تحضير إشعارات \"pre-due\" و ‘شعارات \"إستحقاق المادة\" للمستفيدين "
+"الذين يطلبونها لتحضير الإشعارات للمستفيدين للمواد المستحقة فقط أو المادة "
+"التي إستحقاقها قادم قريباً. يتطلب ان يكون على`EnhancedMessagingPreferences "
+"<#EnhancedMessagingPreferences>`__"
+
+#: ../../source/16_cron_jobs.rst:411
+#, fuzzy
+msgid ""
+"This script does not actually send the notices. It queues them in the :ref:"
+"`message queue <message-queue-label>` for later"
+msgstr ""
+"هذا السكربت في الحقيقة لا يرسل الإشعارات. من قوائم الانتظار في ` قائمة "
+"إنتظار الرسائل e <#msgqueuecron>`__ في وقت لاحق"
+
+#: ../../source/16_cron_jobs.rst:417
+msgid "Overdue Notice"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:419
+#, fuzzy
+msgid "Script path: misc/cronjobs/overdue\\_notices.pl"
+msgstr "مسار السكربت: misc/cronjobs/overdue_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:421
+msgid ""
+"Does: prepares messages to alert patrons of overdue messages (both via email "
+"and print)"
+msgstr ""
+"يَفعلُ: يحضر الرسائل لتنبيه المستفيدين بخصوص الرسائل المتأخرة (كلاهما عبر "
+"البريد الألكتروني و الطباعة)"
+
+#: ../../source/16_cron_jobs.rst:428
+#, fuzzy
+msgid ""
+"This script does not actually send the notices. It queues them in the :ref:"
+"`message queue <message-queue-label>` for later or generates the HTML for "
+"later printing"
+msgstr ""
+"هذا السكربت بالحقيقة لا يرسل الإشعارات. من قوائم الأنتظار في ` قائمة إنتظار "
+"الرسائل  <#msgqueuecron>`__ في وقت لاحق أو توليد صفحات الـ HTML لطباعتها "
+"فيما بعد"
+
+#: ../../source/16_cron_jobs.rst:432
+msgid "**See also**"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:434
+#, fuzzy
+msgid ""
+"The misc/cronjobs/advance\\_notices.pl program allows you to send messages "
+"to patrons in advance of their items becoming due, or to alert them of items "
+"that have just become due."
+msgstr ""
+"برنامج  misc/cronjobs/advance_notices.pl يسمح لك دائماً بإرسال الرسائل الى "
+"المستفيدين قبل أن تصبح المواد مستحقة أوتنبيههم عن المواد التي فقط ستصبح "
+"مستحقة. "
+
+#: ../../source/16_cron_jobs.rst:441
+msgid "Print Overdues"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:443
+#, fuzzy
+msgid "Script path: misc/cronjobs/printoverdues.sh"
+msgstr "مسار السكربت: misc/cronjobs/longoverdue.pl"
+
+#: ../../source/16_cron_jobs.rst:445
+msgid ""
+"Does: generates PDF files from HTML files in directories and prints them"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:450
+#, fuzzy
+msgid "Print Hold Notices"
+msgstr "`طباعة إشعارات الحجز <#printholdcron>`__"
+
+#: ../../source/16_cron_jobs.rst:452
+#, fuzzy
+msgid "Script path: misc/cronjobs/gather\\_print\\_notices.pl"
+msgstr "مسار السكربت: misc/cronjobs/gather_print_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:454
+msgid ""
+"Does: looks through the message queue for hold notices that didn't go "
+"through because the patron didn't have an email address and generates a "
+"print notice"
+msgstr ""
+"يَفعلُ: يبدوا من خلال قائمة الإنتظار لإشعارات الحجز التي لم ترسل من خلالها  "
+"بسبب المستفيد لايملك عنوان بريد الكتروني و يوليد إشعار الطباعة"
+
+#: ../../source/16_cron_jobs.rst:463
+msgid "Talking Tech"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:465
+msgid ""
+"To learn more about setting up this third party product view the `Talking "
+"Tech Appendix <#talkingtechappendix>`__."
+msgstr ""
+"لمعرفة المزيد حول عرض منتج الطرف الثالث `للتحدث بالتقنية الملحقة  "
+"<#talkingtechappendix>`__."
+
+#: ../../source/16_cron_jobs.rst:471
+msgid "Sending Notices File"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:473
+#, fuzzy
+msgid "Script path: misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_outbound.pl"
+msgstr "مسار السكربت: misc/cronjobs/thirdparty/TalkingTech_itiva_outbound.pl"
+
+#: ../../source/16_cron_jobs.rst:475
+msgid ""
+"Does: Script to generate Spec C outbound notifications file for Talking Tech "
+"i-tiva phone notification system."
+msgstr ""
+"يَفعلُ: سكربت توليد مواصفات سي لملف الإشعارات الصادرة لتقنية التحدث i-tiva "
+"لنظام إشعارات الهاتف."
+
+#: ../../source/16_cron_jobs.rst:478 ../../source/16_cron_jobs.rst:493
+#, fuzzy
+msgid "Required by: :ref:`TalkingTechItivaPhoneNotification`"
+msgstr ""
+"المطلوبة من قبل: `TalkingTechItivaPhoneNotification "
+"<#TalkingTechItivaPhoneNotification>`__"
+
+#: ../../source/16_cron_jobs.rst:486
+msgid "Receiving Notices File"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:488
+#, fuzzy
+msgid "Script path: misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_inbound.pl"
+msgstr "مسار السكربت: misc/cronjobs/thirdparty/TalkingTech_itiva_inbound.pl"
+
+#: ../../source/16_cron_jobs.rst:490
+msgid ""
+"Does: Script to process received Results files for Talking Tech i-tiva phone "
+"notification system."
+msgstr ""
+"يَفعلُ: سكربت معالجة ملفات النتائج المستلمة لتقنية التحدث i-tiva لنظام إشعارات "
+"الهاتف."
+
+#: ../../source/16_cron_jobs.rst:501
+#, fuzzy
+msgid "Notify Patrons of Expiration"
+msgstr "`معلومات المستفيد <#patroninformation>`__"
+
+#: ../../source/16_cron_jobs.rst:503
+#, fuzzy
+msgid "Script path: misc/cronjobs/membership\\_expiry.pl"
+msgstr "مسارالسكربت:misc/cronjobs/reservefix.pl"
+
+#: ../../source/16_cron_jobs.rst:505
+msgid ""
+"Does: Sends messages to warn patrons of their card expiration to the :ref:"
+"`messaage queue <message-queue-label>` cron."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:508
+msgid "Requires: :ref:`MembershipExpiryDaysNotice`"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:510
+#, fuzzy
+msgid "Frequency: nightly"
+msgstr "إقتراح التردد: ليلاً"
+
+#: ../../source/16_cron_jobs.rst:515
+#, fuzzy
+msgid "In Processing/Book Cart"
+msgstr "`في المعالجة / سلة الكتب <#proccartcron>`__"
+
+#: ../../source/16_cron_jobs.rst:517
+#, fuzzy
+msgid "Script path: misc/cronjobs/cart\\_to\\_shelf.pl"
+msgstr "مسار الملف: misc/cronjobs/cart_to_shelf.pl"
+
+#: ../../source/16_cron_jobs.rst:519
+msgid ""
+"Does: Updates all items with a location of CART to the item's permanent "
+"location."
+msgstr "يَعمَلُ: تحديثات كل المواد مع موقع السلة الى موقع الموادة الدائم."
+
+#: ../../source/16_cron_jobs.rst:522
+#, fuzzy
+msgid ""
+"Required by: :ref:`NewItemsDefaultLocation`, :ref:"
+"`InProcessingToShelvingCart`, & :ref:`ReturnToShelvingCart` system "
+"preferences"
+msgstr ""
+"المطلوبة من قبل: `NewItemsDefaultLocation <#NewItemsDefaultLocation>`__, "
+"`InProcessingToShelvingCart <#InProcessingToShelvingCart>`__, &amp; "
+"`ReturnToShelvingCart <#ReturnToShelvingCart>`__ تفضيلات النظام"
+
+#: ../../source/16_cron_jobs.rst:531
+msgid "Catalog"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:536
+msgid "Import Webservice Batch"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:538
+#, fuzzy
+msgid "Script path: misc/cronjobs/import\\_webservice\\_batch.pl"
+msgstr "مسارالسكربت:misc/cronjobs/reservefix.pl"
+
+#: ../../source/16_cron_jobs.rst:540
+msgid ""
+"Does: A cron job for processing import bach queues of type 'webservice'. "
+"Batches can also be processed through the UI."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:545 ../../source/16_cron_jobs.rst:560
+msgid "This script is used for OCLC Connexion"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:550
+msgid "Connexion Import Daemon"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:552
+#, fuzzy
+msgid "Script path: misc/bin/connexion\\_import\\_daemon.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:554
+msgid ""
+"Does: A daemon that listens for OCLC Connexion requests and is compliant "
+"with OCLC Gateway specification. It takes requests with MARC XML and import "
+"batch parameters from a configuration file and forwards it to svc/import_bib"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:565
+msgid "Batch Item Deletion"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:567
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_items.pl"
+msgstr "مسار السكربت: misc/cronjobs/update_items.pl"
+
+#: ../../source/16_cron_jobs.rst:569
+msgid ""
+"Does: A batch item deletion tool, which generates a query against the items "
+"database and deletes the items matching the criteria specified in the "
+"command line arguments."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:576
+msgid "Check URL Quick"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:578
+#, fuzzy
+msgid "Script path: misc/cronjobs/check-url-quick.pl"
+msgstr "مسار السكربت: misc/cronjobs/check-url.pl"
+
+#: ../../source/16_cron_jobs.rst:580
+msgid "Does: Check URLs from biblio records."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:584
+msgid "This script replaces the check-url.pl script"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:589
+msgid "Check URLs"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:591
+msgid "Script path: misc/cronjobs/check-url.pl"
+msgstr "مسار السكربت: misc/cronjobs/check-url.pl"
+
+#: ../../source/16_cron_jobs.rst:593
+msgid ""
+"Does: checks URLs in 856$u field. Script output can now be formatted in CSV "
+"or HTML. The HTML version links directly to MARC biblio record editor."
+msgstr ""
+"يَعمَلُ: تأكيد العنوان في حقل 856$u.السكربت يمكن الآن إخراجه ويتم تهيئته في "
+"CSV  أو HTML.  إصدار روابط الــ HTML مباشرة  الى محرر تسجيلة مارك "
+"الببليوغرافية."
+
+#: ../../source/16_cron_jobs.rst:597
+msgid "Frequency suggestion: monthly"
+msgstr "إقتراح التردد: كل شهر"
+
+#: ../../source/16_cron_jobs.rst:599
+#, fuzzy
+msgid "Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements"
+msgstr ""
+"لمزيد من المعلومات: `http://wiki.koha-community.org/wiki/Check-"
+"url_enhancements <#http://wiki.koha-community.org/wiki/Check-"
+"url_enhancements>`__"
+
+#: ../../source/16_cron_jobs.rst:604
+msgid "Delete Records via Leader"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:606
+#, fuzzy
+msgid "Script path: misc/cronjobs/delete\\_records\\_via\\_leader.pl"
+msgstr "مسار السكربت: misc/cronjobs/purge_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:608
+msgid ""
+"Does: Attempt to delete any MARC records where the leader character 5 equals "
+"'d'"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:613
+#, fuzzy
+msgid "Update Authorities"
+msgstr "`إستناد <#authprefs>`__"
+
+#: ../../source/16_cron_jobs.rst:615
+#, fuzzy
+msgid "Script path: misc/cronjobs/merge\\_authorities.pl"
+msgstr "مسار السكربت: misc/cronjobs/overdue_notices.pl"
+
+#: ../../source/16_cron_jobs.rst:617
+msgid "Does: Updates biblio data with changes to authorities records"
+msgstr "المطلوب: ___ التغييرات على السجلات الإستنادية."
+
+#: ../../source/16_cron_jobs.rst:621
+msgid ""
+"The name of this script is misleading. This script does not merge "
+"authorities together it instead merges authority data with linked bib "
+"records. Edits to authority records will be applied to bibliographic records "
+"that use that authority when this script is run."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:627
+msgid "Required by: `dontmerge <#dontmerge>`__ system preference"
+msgstr "المطلوب من قبل: `dontmerge <#dontmerge>`__ تفضيلات النظام"
+
+#: ../../source/16_cron_jobs.rst:634
+msgid "Serials Update"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:636
+msgid "Script path: misc/cronjobs/serialsUpdate.pl"
+msgstr "مسار السكربت: misc/cronjobs/serialsUpdate.pl"
+
+#: ../../source/16_cron_jobs.rst:638
+msgid ""
+"Does: checks if there is a \"late\" issue on active subscriptions, and if "
+"there is, the script will set it as late, and add the next one as expected."
+msgstr ""
+"يَعمَلُ: التأكد منإذا كان هناك منشورات\"متأخرة\" على الإشتراكات الفعالة, و إذا "
+"كان هناك, السكربت سوف يتم تعيينه في وقت متأخر, وتضيف التالية كما هو متوقع."
+
+#: ../../source/16_cron_jobs.rst:647
+#, fuzzy
+msgid "Automatic item update"
+msgstr "تم تحديث الحقل"
+
+#: ../../source/16_cron_jobs.rst:649
+#, fuzzy
+msgid ""
+"Script path: misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
+msgstr "نص ال cronjob  هو misc/cronjobs/automatic_item_modification_by_age.pl."
+
+#: ../../source/16_cron_jobs.rst:651
+msgid ""
+"Does: updates items based on the list of rules set forth in the :ref:"
+"`Automatic item modifications by age` tool"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:654
+#, fuzzy
+msgid "Required by: :ref:`Automatic item modifications by age`"
+msgstr "قواعد للتعديلات التلقائية للمادة بواسطة العمر"
+
+#: ../../source/16_cron_jobs.rst:656
+#, fuzzy
+msgid "Frequency suggestions: nightly"
+msgstr "إقتراح التردد: ليلاً"
+
+#: ../../source/16_cron_jobs.rst:661
+msgid "OPAC"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:666
+msgid "RSS Feeds"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:668
+msgid "Script path: misc/cronjobs/rss/rss.pl"
+msgstr "مسار السكربت: misc/cronjobs/rss/rss.pl"
+
+#: ../../source/16_cron_jobs.rst:670
+#, fuzzy
+msgid ""
+"Does: Produces an RSS XML document for any SQL query (not used for search "
+"results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`."
+msgstr ""
+"يَعمَلُ: تنتج وثيقة تغذية RSS XML لأي إستعلام SQL (لا يستخدم في نتائج بحث تغذية "
+"RSS  ) . ` لمزيد من المعلومات  <#customrss>`__."
+
+#: ../../source/16_cron_jobs.rst:678
+#, fuzzy
+msgid "Authorities Browser"
+msgstr "`صلاحيات المستعير <#authbrowsercron>`__"
+
+#: ../../source/16_cron_jobs.rst:680
+#, fuzzy
+msgid "Script path: misc/cronjobs/build\\_browser\\_and\\_cloud.pl"
+msgstr "مسار السكربت: misc/cronjobs/build_browser_and_cloud.pl"
+
+#: ../../source/16_cron_jobs.rst:682
+msgid "Does: Generate content for authorities browse in OPAC"
+msgstr "يَعمَلُ: إنشاء المحتوى لإستعراض المؤلفين في الأوباك"
+
+#: ../../source/16_cron_jobs.rst:684
+#, fuzzy
+msgid "Required by: :ref:`OpacBrowser` system preference"
+msgstr "المطلوب من قبل: `dontmerge <#dontmerge>`__ تفضيلات النظام"
+
+#: ../../source/16_cron_jobs.rst:688
+msgid "This preference and cron job should only be used on French systems."
+msgstr "هذا التفضيل ينطبق فقط على الأنظمة الفرنسية في هذا الوقت."
+
+#: ../../source/16_cron_jobs.rst:693
+#, fuzzy
+msgid "Subject/Author Clouds"
+msgstr "`الموضوع / مؤلف السحب <#keywordclouds>`__"
+
+#: ../../source/16_cron_jobs.rst:695
+msgid "Script path: misc/cronjobs/cloud-kw.pl"
+msgstr "مسار السكربت: misc/cronjobs/cloud-kw.pl"
+
+#: ../../source/16_cron_jobs.rst:697
+msgid ""
+"Does: Generates HTML keywords clouds from Koha Zebra indexes. misc/cronjobs/"
+"cloud-sample.conf has a sample of how this script operates."
+msgstr ""
+"يَعمَلُ: يولد الـHTML لسحب الكلمات من مفهرس نظام كوها زيبرا.misc/cronjobs/cloud-"
+"sample.conf وهو يملك عينة من كيفية عمل هذا السكربت."
+
+#: ../../source/16_cron_jobs.rst:701
+msgid ""
+"Frequency: This is the type of script you can run once a month or so, the "
+"content generated isn't going to change very much over time."
+msgstr ""
+"التردد: وهذا هو النوع من السكربت يمكنك من التنفيذ مرة واحدة في كل شهر أو نحو "
+"ذلك، وتوليد المحتويات لن تتغير كثيرا مع مرور الوقت."
+
+#: ../../source/16_cron_jobs.rst:707
+#, fuzzy
+msgid "System Administration"
+msgstr "`نظام الإدارة <#systemcron>`__"
+
+#: ../../source/16_cron_jobs.rst:712
+msgid "Services Throttle"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:714
+#, fuzzy
+msgid "Script path: misc/cronjobs/services\\_throttle.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:716
+msgid "Does: resets the xISBN services throttle"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:723
+#, fuzzy
+msgid "Clean up Database"
+msgstr "`تنظيف قاعدة البيانات <#cleandbcron>`__"
+
+#: ../../source/16_cron_jobs.rst:725
+#, fuzzy
+msgid "Script path: misc/cronjobs/cleanup\\_database.pl"
+msgstr "مسار السكربت: misc/cronjobs/cleanup_database.pl"
+
+#: ../../source/16_cron_jobs.rst:727
+msgid ""
+"Does: Truncates the sessions table, cleans out old zebraqueue entries, "
+"action logs and staged MARC files."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:733
+#, fuzzy
+msgid "Share Usage Stats"
+msgstr "`وثائق بيرل <#usagecronperl>`__"
+
+#: ../../source/16_cron_jobs.rst:735
+#, fuzzy
+msgid "Script path: misc/cronjobs/share\\_usage\\_with\\_koha\\_community.pl"
+msgstr "مسار الملف: misc/cronjobs/cart_to_shelf.pl"
+
+#: ../../source/16_cron_jobs.rst:737
+msgid ""
+"Does: If you're sharing information via the :ref:`UsageStats` feature this "
+"will send your info to the `Hea website <http://hea.koha-community.org/>`__."
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:741
+#, fuzzy
+msgid "Frequency: monthly"
+msgstr "إقتراح التردد: كل شهر"
+
+#: ../../source/16_cron_jobs.rst:746
+#, fuzzy
+msgid "Acquisitions"
+msgstr "`التزويد <#acqcrons>`__"
+
+#: ../../source/16_cron_jobs.rst:751
+#, fuzzy
+msgid "Clean up old suggestions"
+msgstr "`تنظيف الإقتراحات القديمة <#cleansuggcron>`__"
+
+#: ../../source/16_cron_jobs.rst:753
+#, fuzzy
+msgid "Script path: misc/cronjobs/purge\\_suggestions.pl"
+msgstr "مسار السكربت: misc/cronjobs/purge_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:755
+msgid ""
+"Does: Removes old (defined by you) suggestions from the suggestion "
+"management area."
+msgstr ""
+"يَعمَلُ: إزالة الإقتراحات القديمة (التي يحددها لك) من اقتراح مجال الإدارة."
+
+#: ../../source/16_cron_jobs.rst:761
+#, fuzzy
+msgid "Email suggestions to process"
+msgstr "`وثائق بيرل <#emailsuggestfundperl>`__"
+
+#: ../../source/16_cron_jobs.rst:763
+#, fuzzy
+msgid "Script path: misc/cronjobs/notice\\_unprocessed\\_suggestions.pl"
+msgstr "مسار السكربت: misc/cronjobs/purge_suggestions.pl"
+
+#: ../../source/16_cron_jobs.rst:765
+msgid ""
+"Does: Generates a notice to the fund owner that there are suggestions in "
+"need of processing"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:771
+#, fuzzy
+msgid "EDI Message Processing"
+msgstr "`رسالة قائمة الانتظار <#msgqueuecron>`__"
+
+#: ../../source/16_cron_jobs.rst:773
+#, fuzzy
+msgid "Script path: misc/cronjobs/edi\\_cron.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:775
+msgid "Does: Sends and received EDI messages"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:777
+#, fuzzy
+msgid "Frequency: Every 15 minutes"
+msgstr "اقتراح التردد: كل 1-4  ساعة "
+
+#: ../../source/16_cron_jobs.rst:782
+msgid "Remove Temporary EDI Files"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:784
+#, fuzzy
+msgid "Script path: misc/cronjobs/remove\\_temporary\\_edifiles.pl"
+msgstr "مسار الملف: misc/cronjobs/cart_to_shelf.pl"
+
+#: ../../source/16_cron_jobs.rst:786
+msgid "Does: removes temporary EDI files that are older than 5 days"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:793
+msgid "Reports"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:796
+msgid "Run Report"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:798
+#, fuzzy
+msgid "Script path: misc/cronjobs/runreport.pl"
+msgstr "مسار السكربت: misc/cronjobs/fines.pl"
+
+#: ../../source/16_cron_jobs.rst:800
+msgid "Does: run pre-existing saved reports"
+msgstr ""
+
+#: ../../source/16_cron_jobs.rst:803
+#, fuzzy
+msgid "Deprecated scripts"
+msgstr "`تطوير السكربت <#deprecatedcrons>`__"
+
+#: ../../source/16_cron_jobs.rst:805
+msgid "These should not be run without modification:"
+msgstr "هذه لا ينبغي أن تنفذ بدون تعديل:"
+
+#: ../../source/16_cron_jobs.rst:807
+#, fuzzy
+msgid "Script path: misc/cronjobs/update\\_items.pl"
+msgstr "مسار السكربت: misc/cronjobs/update_items.pl"
+
+#: ../../source/16_cron_jobs.rst:809
+msgid "Script path:misc/cronjobs/smsoverdues.pl"
+msgstr "مسار السكربت:misc/cronjobs/smsoverdues.pl"
+
+#: ../../source/16_cron_jobs.rst:811
+msgid "Script path:misc/cronjobs/notifyMailsOp.pl"
+msgstr "مسار السكربت:misc/cronjobs/notifyMailsOp.pl"
+
+#: ../../source/16_cron_jobs.rst:813
+msgid "Script path:misc/cronjobs/reservefix.pl"
+msgstr "مسارالسكربت:misc/cronjobs/reservefix.pl"
+
+#: ../../source/16_cron_jobs.rst:815
+#, fuzzy
+msgid "Script path:misc/cronjobs/zebraqueue\\_start.pl"
+msgstr "مسار السكربت:misc/cronjobs/zebraqueue_start.pl"
+
+#~ msgid "`Cron Jobs <#cronjobs>`__"
+#~ msgstr "`وظيفة كرون <#cronjobs>`__"
+
+#~ msgid "`Search <#searchcron>`__"
+#~ msgstr "`البحث <#searchcron>`__"
+
+#~ msgid "`Rebuild Index <#rebuildsearchcron>`__"
+#~ msgstr "`إعادة بناء الفهرس <#rebuildsearchcron>`__"
+
+#~ msgid "`Circulation <#circcron>`__"
+#~ msgstr "`الإعارة <#circcron>`__"
+
+#~ msgid "`Holds Queue <#buildholdscron>`__"
+#~ msgstr "`حجوزات في قائمة الانتظار <#buildholdscron>`__"
+
+#~ msgid "`Perl Documentation <#buildholdscronperl>`__"
+#~ msgstr "`وثائق بيرل <#buildholdscronperl>`__"
+
+#, fuzzy
+#~ msgid "**GetBibsWithPendingHoldRequests**"
+#~ msgstr "my $biblionumber_aref = GetBibsWithPendingHoldRequests();"
+
+#, fuzzy
+#~ msgid "my $biblionumber\\_aref = GetBibsWithPendingHoldRequests();"
+#~ msgstr "my $biblionumber_aref = GetBibsWithPendingHoldRequests();"
+
+#~ msgid ""
+#~ "Return an arrayref of the biblionumbers of all bibs that have one or more "
+#~ "unfilled hold requests."
+#~ msgstr ""
+#~ "لإرجاع مصفوفة الرقم المرجعي لأرقام الببليوغرافية لكل الببليوغرافية الذي "
+#~ "لديه واحد أو أكثر من طلبات الحجز الغير مملوءة."
+
+#, fuzzy
+#~ msgid "**GetPendingHoldRequestsForBib**"
+#~ msgstr "my $requests = GetPendingHoldRequestsForBib($biblionumber);"
+
+#~ msgid "my $requests = GetPendingHoldRequestsForBib($biblionumber);"
+#~ msgstr "my $requests = GetPendingHoldRequestsForBib($biblionumber);"
+
+#~ msgid ""
+#~ "Returns an arrayref of hashrefs to pending, unfilled hold requests on"
+#~ msgstr "لإرجاع arrayref من hashrefs الى أن, طلبات الحجز الغير مملوءه على"
+
+#~ msgid ""
+#~ "the bib identified by $biblionumber. The following keys are present in "
+#~ "each hashref:"
+#~ msgstr ""
+#~ "الببليوغرافية تعرف بواسطة $biblionumber. المفاتيح التالية تقدم في كل "
+#~ "hashref:"
+
+#~ msgid "biblionumber"
+#~ msgstr "رقم الببليوغرافية"
+
+#~ msgid "borrowernumber"
+#~ msgstr "عددالإستعارة"
+
+#~ msgid "itemnumber"
+#~ msgstr "رقم المادة"
+
+#~ msgid "priority"
+#~ msgstr "الأولوية"
+
+#~ msgid "branchcode"
+#~ msgstr "رمز الفرع"
+
+#~ msgid "reservedate"
+#~ msgstr "تأريخ الحفظ"
+
+#~ msgid "reservenotes"
+#~ msgstr "ملاحظات الحفظ"
+
+#~ msgid "borrowerbranch"
+#~ msgstr "فرع المستعير"
+
+#~ msgid "The arrayref is sorted in order of increasing priority."
+#~ msgstr "يتم خزن arrayref في ترتيب الأولوية المتزايدة."
+
+#, fuzzy
+#~ msgid "**GetItemsAvailableToFillHoldRequestsForBib**"
+#~ msgstr "GetItemsAvailableToFillHoldRequestsForBib($biblionumber);"
+
+#, fuzzy
+#~ msgid "my $available\\_items ="
+#~ msgstr "my $available_items ="
+
+#~ msgid "GetItemsAvailableToFillHoldRequestsForBib($biblionumber);"
+#~ msgstr "GetItemsAvailableToFillHoldRequestsForBib($biblionumber);"
+
+#~ msgid ""
+#~ "Returns an arrayref of items available to fill hold requests for the bib "
+#~ "identified by $biblionumber. An item is available to fill a hold"
+#~ msgstr ""
+#~ "لإرجاع arrayref من المواد المتوفرة لملئ طلبات الحجز تعريف الببليوغرافية "
+#~ "بواسطة $biblionumber.لملئ طلب حجز المادة المتوفرة"
+
+#~ msgid "request if and only if:"
+#~ msgstr "اطلب إذا وحصراً إذا :"
+
+#~ msgid "it is not on loan"
+#~ msgstr "أنها ليست مُعارة"
+
+#~ msgid "it is not withdrawn"
+#~ msgstr "أنها غير مسحوبه"
+
+#~ msgid "it is not marked notforloan"
+#~ msgstr "لم توضع علامه توضح بأنها غير مُعارة"
+
+#~ msgid "it is not currently in transit"
+#~ msgstr "إنها حالياً ليست منقوله"
+
+#~ msgid "it is not lost"
+#~ msgstr "إنها ليست مفقودة"
+
+#~ msgid "it is not sitting on the hold shelf"
+#~ msgstr "أنها غير موجودة على رف الحجز"
+
+#, fuzzy
+#~ msgid "MapItemsToHoldRequests($hold\\_requests, $available\\_items);"
+#~ msgstr "MapItemsToHoldRequests($hold_requests, $available_items);"
+
+#~ msgid ""
+#~ "Query system preferences to get ordered list of branches to use to fill "
+#~ "hold requests."
+#~ msgstr ""
+#~ "إستعلام تفضيلات النظام للحصول على قائمة أمر الفروع لأستخدامها لملئ طلبات "
+#~ "الحجز"
+
+#~ msgid "`Expired Holds <#expiredholdscron>`__"
+#~ msgstr "`الحجوزات المنتهية <#expiredholdscron>`__"
+
+#~ msgid "`Unsuspend Holds <#unsuspendholdcron>`__"
+#~ msgstr "`إلغاء تعليق الحجوزات <#unsuspendholdcron>`__"
+
+#~ msgid "`Fines <#finescronjob>`__"
+#~ msgstr "`غرامات <#finescronjob>`__"
+
+#~ msgid "`Long Overdues <#longoverduecron>`__"
+#~ msgstr "`المستحقات الكثيرة <#longoverduecron>`__"
+
+#~ msgid "`Perl Documentation <#longoverduecronperl>`__"
+#~ msgstr "`وثائق بيرل <#longoverduecronperl>`__"
+
+#~ msgid ""
+#~ "longoverdue.pl cron script to set lost statuses on overdue materials. "
+#~ "Execute without options for help."
+#~ msgstr ""
+#~ "longoverdue.pl سكربت كرون لتعيين الحالات المفقودة على مستحقات المواد. "
+#~ "للتنفيذ بدون خيارات الحصول على المساعدة."
+
+#, fuzzy
+#~ msgid "--verbose \\| v"
+#~ msgstr "--verbose|-v"
+
+#, fuzzy
+#~ msgid "verbose."
+#~ msgstr "--verbose|-v"
+
+#, fuzzy
+#~ msgid "--confirm"
+#~ msgstr "تأكيد"
+
+#, fuzzy
+#~ msgid "suppress summary output."
+#~ msgstr "ملخص الأعداد"
+
+#, fuzzy
+#~ msgid "--mark-returned"
+#~ msgstr "تمت الإعادة"
+
+#, fuzzy
+#~ msgid "`Track total checkouts <#updateissuescron>`__"
+#~ msgstr "إجمالي الإعارات"
+
+#~ msgid "`Perl Documentation <#updateissuesperldoc>`__"
+#~ msgstr "`وثائق بيرل <#updateissuesperldoc>`__"
+
+# Circulation > Interface
+#, fuzzy
+#~ msgid "update\\_totalissues.pl"
+#~ msgstr "القيام"
+
+#~ msgid "--help Prints this help"
+#~ msgstr "طباعة هذه المساعدة"
+
+#, fuzzy
+#~ msgid "-v\\|--verbose"
+#~ msgstr "--verbose|-v"
+
+#~ msgid "Provide verbose log information (list every bib modified)."
+#~ msgstr "- توفير عرض تفصيلي لمعلومات سجل الدخول."
+
+#, fuzzy
+#~ msgid "--use-stats"
+#~ msgstr "المواد"
+
+#~ msgid "--use-items"
+#~ msgstr "المواد"
+
+#~ msgid "--incremental"
+#~ msgstr "f- intergovernmental"
+
+#, fuzzy
+#~ msgid "**WARNING**"
+#~ msgstr "تحذير :"
+
+#~ msgid "`Automatic renewal <#autorenewcron>`__"
+#~ msgstr "`التجديد التلقائي <#autorenewcron>`__"
+
+#~ msgid "`Perl Documentation <#autorenewcronperl>`__"
+#~ msgstr "`وثائق بيرل <#autorenewcronperl>`__"
+
+#, fuzzy
+#~ msgid "or, in crontab: 0 3 \\* \\* \\* automatic\\_renewals.pl"
+#~ msgstr "أو , في تبويب كرون: 0 1 * * * advance_notices.pl -c"
+
+#, fuzzy
+#~ msgid "No options."
+#~ msgstr "المزيد من الخيارات"
+
+#~ msgid "`Patrons <#patroncrons>`__"
+#~ msgstr "`مستخدمين <#patroncrons>`__"
+
+#~ msgid "`Perl Documentation <#j2aperldoc>`__"
+#~ msgstr "`وثائق بيرل <#j2aperldoc>`__"
+
+#~ msgid "Options:"
+#~ msgstr "الخيارات:"
+
+#~ msgid "--help brief help message"
+#~ msgstr "- ملخص المساعدة لرسالة المساعدة"
+
+#~ msgid "--man full documentation"
+#~ msgstr "- رجل التوثيق الكامل"
+
+#~ msgid "-v verbose mode"
+#~ msgstr "--verbose|-v"
+
+#, fuzzy
+#~ msgid "-b <branchname> only deal with patrons from this library/branch"
+#~ msgstr ""
+#~ "- المكتبة &lt;أسم الفرع&gt; فقط تتعامل مع المتاخرات من هذه المكتبة (قابلة "
+#~ "للتكرار : العديد من المكتبات يمكن إعطائها)"
+
+#, fuzzy
+#~ msgid "-f <categorycode> change patron category from this category"
+#~ msgstr "-borcat &lt;رمز الفئة&gt; رمز الفئة التي يجب تضمينها"
+
+#, fuzzy
+#~ msgid "-t <categorycode> change patron category to this category"
+#~ msgstr "-borcat &lt;رمز الفئة&gt; رمز الفئة التي يجب تضمينها"
+
+#~ msgid "--help Print a brief help message and exits."
+#~ msgstr "- مساعدة الطباعة رسالة مختصرة للمساعدة والخروج."
+
+#~ msgid "--man Prints the manual page and exits."
+#~ msgstr "- رجل الطباعة لصفحة الدليل و الخروج."
+
+#~ msgid "-v Verbose. Without this flag set, only fatal errors are reported."
+#~ msgstr ""
+#~ "- العرض التفصيلي. بدون تعيين الإشعار, يتم الإعلان عن الأخطاء الفادحة فقط."
+
+#~ msgid "`Notices <#noticescron>`__"
+#~ msgstr "`الإخطارات <#noticescron>`__"
+
+#~ msgid "`Message Queue <#msgqueuecron>`__"
+#~ msgstr "`رسالة قائمة الانتظار <#msgqueuecron>`__"
+
+#~ msgid "`Advanced Notice <#advnoticecron>`__"
+#~ msgstr "`الإشعارات المتقدمة <#advnoticecron>`__"
+
+#~ msgid "`Perl Documentation <#advnoticecronperl>`__"
+#~ msgstr "`وثائق بيرل <#advnoticecronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "advance\\_notices.pl - cron script to put item due reminders into message "
+#~ "queue"
+#~ msgstr ""
+#~ "advance_notices.pl - سكربت كرون لوضع رسائل تذكير بأستحقاق المادة في قائمة "
+#~ "إنتظار الرسائل"
+
+#, fuzzy
+#~ msgid "./advance\\_notices.pl -c"
+#~ msgstr "./advance_notices.pl -c"
+
+#, fuzzy
+#~ msgid "or, in crontab: 0 1 \\* \\* \\* advance\\_notices.pl -c"
+#~ msgstr "أو , في تبويب كرون: 0 1 * * * advance_notices.pl -c"
+
+#, fuzzy
+#~ msgid ""
+#~ "This script prepares pre-due and item due reminders to be sent to "
+#~ "patrons. It queues them in the message queue, which is processed by the "
+#~ "process\\_message\\_queue.pl cronjob. The type and timing of the messages "
+#~ "can be configured by the patrons in their \"My Alerts\" tab in the OPAC."
+#~ msgstr ""
+#~ "هذا السكربت يقدم pre-due و رسائل التذكير بإستحقاقات المواد ليتم إرسالها "
+#~ "الى المستفيدين.من قوائم الأنتظار الخاصة بهم في قائمة إنتظار الرسائل, "
+#~ "والتي تتم معالجتها من قبل وظيفة كرون process_message_queue.pl . النوع "
+#~ "وتوقيت الرسائل يمكن تهيئتها من قبل المستفيدين في تبويب \"تنبيهاتي\" في "
+#~ "الأوباك."
+
+#, fuzzy
+#~ msgid "parse\\_letter"
+#~ msgstr "parse_letter"
+
+#~ msgid "`Overdue Notice <#overduenoticecron>`__"
+#~ msgstr "`الإشعارات المتأخرة <#overduenoticecron>`__"
+
+#~ msgid "`Perl Documentation <#overduenoticecronperl>`__"
+#~ msgstr "`وثائق بيرل <#overduenoticecronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "overdue\\_notices.pl - prepare messages to be sent to patrons for overdue "
+#~ "items"
+#~ msgstr ""
+#~ "overdue_notices.pl - إعداد الرسائل لإرسالها للمستفيدين بخصوص المواد "
+#~ "المتأخرة"
+
+#, fuzzy
+#~ msgid ""
+#~ "overdue\\_notices.pl [ -n ] [ -library <branchcode> ] [ -library "
+#~ "<branchcode>...] [ -max <number of days> ] [ -csv [ <filename> ] ] [-"
+#~ "itemscontent <field list> ]"
+#~ msgstr ""
+#~ "الإشعارات_المتأخرة.pl [ -n ] [ -المكتبة&lt;رمز الفرع &gt; ] [ -المكتبة "
+#~ "&lt;رمز الفرع &gt;...] [ -أقصى حد &lt;عدد الأيام&gt; ] [ -csv [ &lt;أسم "
+#~ "الملف &gt; ] ] [-محتويات المواد &lt;قائمة الحقل &gt; ]"
+
+#~ msgid "-help brief help message"
+#~ msgstr "- ملخص المساعدة لرسالة المساعدة"
+
+#~ msgid "-man full documentation"
+#~ msgstr "- رجل التوثيق الكامل"
+
+#~ msgid "-n No email will be sent"
+#~ msgstr "- لايوجد بريد الكتروني سوف يرسل"
+
+#, fuzzy
+#~ msgid "-max <days> maximum days overdue to deal with"
+#~ msgstr "- أقصى حد &lt;الأيام&gt; أقصى عدد من الأيام المتأخرة للتعامل مع"
+
+#, fuzzy
+#~ msgid ""
+#~ "-library <branchname> only deal with overdues from this library "
+#~ "(repeatable : several libraries can be given)"
+#~ msgstr ""
+#~ "- المكتبة &lt;أسم الفرع&gt; فقط تتعامل مع المتاخرات من هذه المكتبة (قابلة "
+#~ "للتكرار : العديد من المكتبات يمكن إعطائها)"
+
+#, fuzzy
+#~ msgid "-csv <filename> populate CSV file"
+#~ msgstr "-csv &lt;أسم الملف&gt; تأهيل CSV الملف"
+
+#, fuzzy
+#~ msgid "-html <filename> Output html to file"
+#~ msgstr "-html &lt;أسم الملف&gt; إخراج الـ html الى الملف"
+
+#, fuzzy
+#~ msgid "-itemscontent <list of fields> item information in templates"
+#~ msgstr "- محتويات المواد &lt;قائمة الحقول &gt; معلومات المواد في القوالب"
+
+#, fuzzy
+#~ msgid "-borcat <categorycode> category code that must be included"
+#~ msgstr "-borcat &lt;رمز الفئة&gt; رمز الفئة التي يجب تضمينها"
+
+#, fuzzy
+#~ msgid "-borcatout <categorycode> category code that must be excluded"
+#~ msgstr "-borcatout &lt;رمز الفئة&gt; رمز الفئة التي يجب ان تستثناه"
+
+#~ msgid "-help Print a brief help message and exits."
+#~ msgstr "- مساعدة الطباعة رسالة مختصرة للمساعدة والخروج."
+
+#~ msgid "-man Prints the manual page and exits."
+#~ msgstr "- رجل الطباعة لصفحة الدليل و الخروج."
+
+#~ msgid ""
+#~ "-n Do not send any email. Overdue notices that would have been sent to "
+#~ "the patrons or to the admin are printed to standard out. CSV data (if the "
+#~ "-csv flag is set) is written to standard out or to any csv filename given."
+#~ msgstr ""
+#~ "- لا ترسل أي بريد الكتروني. الإشعارات المتاخرة التي كانت ترسل الى "
+#~ "المستفيدين أو الى المدير لطباعة القياسية. بيانات CSV  (إذا تم تعيين إشعار "
+#~ "-csv) هو مكتوب للقياسية الخارجية أو الى أي csv أسم ملف معين."
+
+#~ msgid ""
+#~ "-max Items older than max days are assumed to be handled somewhere else, "
+#~ "probably the longoverdues.pl script. They are therefore ignored by this "
+#~ "program. No notices are sent for them, and they are not added to any CSV "
+#~ "files. Defaults to 90 to match longoverdues.pl."
+#~ msgstr ""
+#~ "- أقصى عدد من المواد التي مضى عليها ايام كثيرة يفترض التعامل معها في مكان "
+#~ "آخر, وربما سكربت longoverdues.pl ولذلك يتم تجاهلها من قبل هذا البرنامج. "
+#~ "لا إشعارات يتم إرسالها لهم, ولا يتم إضافتها الى اي من ملفات CSV. أفتراضياً "
+#~ "الى 90 لمطابقتها longoverdues.pl."
+
+#~ msgid "-library"
+#~ msgstr "- المكتبة"
+
+#~ msgid ""
+#~ "select overdues for one specific library. Use the value in the branches."
+#~ "branchcode table. This option can be repeated in order to select overdues "
+#~ "for a group of libraries."
+#~ msgstr ""
+#~ "أختار المتأخرات لمكتبة واحدة محددة. بأستخدام القيمة في جدول branches."
+#~ "branchcode. هذا الخيار يمكن تكراره الترتيب من أجل إختيار المتأخرات "
+#~ "لمجموعة من المكتبات."
+
+#~ msgid ""
+#~ "-csv Produces CSV data. if -n (no mail) flag is set, then this CSV data "
+#~ "is sent to standard out or to a filename if provided. Otherwise, only "
+#~ "overdues that could not be emailed are sent in CSV format to the admin."
+#~ msgstr ""
+#~ "- csv منتج بيانات CSV. إذا تعيين إشارة (لا بريد الكتروني), ثم بيانات CSV "
+#~ "يتم ارسالها بصورة قياسية للخارج أو إسم الملف إذا قدمها. عدا ذلك, فقد "
+#~ "المتأخرات لا يمكن ارسالها عبر البريد الألكتروني في شكل CSV للمدير."
+
+#~ msgid "-itemscontent"
+#~ msgstr "- محتويات المواد"
+
+#, fuzzy
+#~ msgid ""
+#~ "comma separated list of fields that get substituted into templates in "
+#~ "places of the <<items.content>> placeholder. This defaults to issuedate,"
+#~ "title,barcode,author"
+#~ msgstr ""
+#~ "قائمة مفصول بفواصل من الحقول التي تحصل على إستبدال في القوالب في أماكن "
+#~ "العناصر النائبة &lt;&lt;محتويات.المواد&gt;&gt; . هذه الأفتراضات لمنشورات "
+#~ "التأريخ, العنوان, الباركود,المؤلف."
+
+#~ msgid ""
+#~ "Other possible values come from fields in the biblios, items, and issues "
+#~ "tables."
+#~ msgstr ""
+#~ "غيرها من القيم المحتملة تأتي من الحقول في الببليوغرافية, المواد, و جداول "
+#~ "المنشورات."
+
+#~ msgid ""
+#~ "-borcat Repetable field, that permit to select only few of patrons "
+#~ "categories."
+#~ msgstr ""
+#~ "- حقول borcat Repetable, التي تسمح بتحديد عدد قليل فقط من فئات المستفيدين."
+
+#~ msgid "-borcatout"
+#~ msgstr "-borcatout "
+
+#~ msgid "Repetable field, permis to exclude some patrons categories."
+#~ msgstr "حقول Repetable . تسمح لأستثناء بعض فئات المستفيدين."
+
+#, fuzzy
+#~ msgid "-t \\| --triggered"
+#~ msgstr "-t | -- مسبب"
+
+#~ msgid ""
+#~ "This option causes a notice to be generated if and only if an item is "
+#~ "overdue by the number of days defined in a notice trigger."
+#~ msgstr ""
+#~ "هذا الخيار يسبب الإشعار إلى أن يتم توليد إذا وفقط إذا المادة تأخرت بعدد "
+#~ "من الأيام المحددة في مسبب الإشعار."
+
+#~ msgid ""
+#~ "By default, a notice is sent each time the script runs, which is suitable "
+#~ "for less frequent run cron script, but requires syncing notice triggers "
+#~ "with the cron schedule to ensure proper behavior. Add the --triggered "
+#~ "option for daily cron, at the risk of no notice being generated if the "
+#~ "cron fails to run on time."
+#~ msgstr ""
+#~ "بشكل افتراضي، يتم إرسال إشعار كل مرة تشغيل السكربت، الذي هو مناسب لأقل "
+#~ "تكرار لتشغيل سكربت وظيفة كرون، لكنها تتطلب مزامنة مسبب الإشعار للجدول "
+#~ "الزمني لوظيفة كرون لضمان السلوك السليم. إضافة - خيار المسبب لتشغيل كرون "
+#~ "يوميا، في خطر أي إشعار يتم إنشاؤه إذا كان كرون فشل لتشغيله في الوقت "
+#~ "المحدد."
+
+#~ msgid "-list-all"
+#~ msgstr "- كل - القائمة"
+
+#~ msgid ""
+#~ "Default items.content lists only those items that fall in the range of "
+#~ "the currently processing notice. Choose list-all to include all overdue "
+#~ "items in the list (limited by -max setting)."
+#~ msgstr ""
+#~ "أفتراضياً قوائم محتويات.المواد فقط تلك المواد التي تتدرج في مدى معالجة "
+#~ "الإشعارات الحالية. إختيار قائمة-للجميع التي تتضمن المواد المتأخرة في "
+#~ "قائمة (محدودة بواسطة الإعدادات القصوى)."
+
+#~ msgid ""
+#~ "This script is designed to alert patrons and administrators of overdue "
+#~ "items."
+#~ msgstr ""
+#~ "هذا السكربت تم تصميمه لتنبيه المستفيدين والإدارة بشأن المواد التأخره."
+
+#~ msgid ""
+#~ "This script pays attention to the overdue notice configuration performed "
+#~ "in the \"Overdue notice/status triggers\" section of the \"Tools\" area "
+#~ "of the staff interface to Koha. There, you can choose which letter "
+#~ "templates are sent out after a configurable number of days to patrons of "
+#~ "each library. More information about the use of this section of Koha is "
+#~ "available in the Koha manual."
+#~ msgstr ""
+#~ "هذا السكربت يدفع الى الإنتباه الى تهيئة إشعارات المتأخرة لإداء \"الإشعار "
+#~ "المتأخرة / حالات المسبب\" قسم من مجال \"الأدوات\" في واجهة الموظفين في "
+#~ "نظام كوها.هناك, يمكن إختيار قالب الرسالة التي يتم إرسالها الى الخارج بعد "
+#~ "تهيئة عدد الأيام للمستفيدين في كل مكتبة. المزيد من المعلومات حول إستخدام "
+#~ "هذا القسم في نظام كوها هو متوفر في دليل نظام كوها."
+
+#~ msgid ""
+#~ "The templates used to craft the emails are defined in the \"Tools: Notices"
+#~ "\" section of the staff interface to Koha."
+#~ msgstr ""
+#~ "القوالب المستخدمة لصياغة رسائل البريد الألكتروني يتم تحديدها في قسم  "
+#~ "\"الأدوات: الإشعارات\" لواجهة المستفيدين في نظام كوها."
+
+#~ msgid "Outgoing emails"
+#~ msgstr "رسائل البريد الألكترونية الخارجة"
+
+#~ msgid ""
+#~ "Typically, messages are prepared for each patron with overdue items. "
+#~ "Messages for whom there is no email address on file are collected and "
+#~ "sent as attachments in a single email to each library administrator, or "
+#~ "if that is not set, then to the email address in the "
+#~ "\"KohaAdminEmailAddress\" system preference."
+#~ msgstr ""
+#~ "عادة الرسالة يتم إعدادها لكل مستفيد مع المواد المتأخرة, الرسائل لمن لا "
+#~ "يوجد بريد الكتروني في ملفه يتم جمعها و ترسل كمرفقات في بريد الكتروني واحد "
+#~ "الى مدير كل مكتبة, أو إذا لم يتم تعيينه, ثم الى عنوان البريد الألكتروني "
+#~ "في تفضيلات النظام \"KohaAdminEmailAddress\" ."
+
+#, fuzzy
+#~ msgid ""
+#~ "These emails are staged in the outgoing message queue, as are messages "
+#~ "produced by other features of Koha. This message queue must be processed "
+#~ "regularly by the misc/cronjobs/process\\_message\\_queue.pl program."
+#~ msgstr ""
+#~ "رسائل البريد الألكتروني هذه نظمت في قائمة إنتظار الرسائل الصادرة,وكذلك "
+#~ "الرسائل التي تنتجها الميزات الأخرى من نظام كوها. هذه قائمة إنتظار الرسالة "
+#~ "يجب أن تتم معالجتها بأنتظام من قبل برنامج misc/cronjobs/"
+#~ "process_message_queue.pl."
+
+#~ msgid ""
+#~ "In the event that the \"-n\" flag is passed to this program, no emails "
+#~ "are sent. Instead, messages are sent on standard output from this "
+#~ "program. They may be redirected to a file if desired."
+#~ msgstr ""
+#~ "في حال إن إشارة \"-n\" يتم تمريرها في البرنامج, لا يتم إرسال رسائل البريد "
+#~ "الألكتروني, بدلاً من ذلك, يتم إرسال الرسائل على الإخراج القياسي من هذا "
+#~ "البرنامج. ويمكن إعادة توجيهها الى الملف إذا اردت ذلك."
+
+#~ msgid "Templates"
+#~ msgstr "القوالب"
+
+#, fuzzy
+#~ msgid ""
+#~ "Templates can contain variables enclosed in double angle brackets like "
+#~ "<<this>>. Those variables will be replaced with values specific to the "
+#~ "overdue items or relevant patron. Available variables are:"
+#~ msgstr ""
+#~ "القوالب يمكن أن تحتوي على المتغيرات داخل أقواس زاوية مزدوجة مغلقة &lt;&lt;"
+#~ "this&gt;&gt;. هذه المتغيرات سوف يتم إستبدالها مع القيم المحددة للمواد "
+#~ "المتأخرة أو المتعلقة بالمستفيد. المتغيرات المتوفرة هي:"
+
+#~ msgid "the name of the library"
+#~ msgstr "إسم المكتبة"
+
+#, fuzzy
+#~ msgid "<<items.content>>"
+#~ msgstr "- محتويات المواد"
+
+#~ msgid ""
+#~ "one line for each item, each line containing a tab separated list of "
+#~ "title, author, barcode, issuedate"
+#~ msgstr ""
+#~ "سطر واحد لكل مادة، كل سطر يحتوي على تبويب فصلقائمة  العنوان، الكاتب، "
+#~ "الباركود، تأريخ المنشورات"
+
+#, fuzzy
+#~ msgid "<<borrowers.\\*>>"
+#~ msgstr "المستعيرين "
+
+#~ msgid "any field from the borrowers table"
+#~ msgstr "أي حقل من جدول المستعيرين"
+
+#, fuzzy
+#~ msgid "<<branches.\\*>>"
+#~ msgstr "فروع"
+
+#~ msgid "any field from the branches table"
+#~ msgstr "أي حقل من جدول الفروع"
+
+#~ msgid "CSV output"
+#~ msgstr "إخراج CSV "
+
+#~ msgid ""
+#~ "The \"-csv\" command line option lets you specify a file to which "
+#~ "overdues data should be output in CSV format."
+#~ msgstr ""
+#~ "الـ \"-csv\" في خيار سطر الأوامر يتيح لك تحديد ملف البيانات المتاخرة التي "
+#~ "يجب أن تُخرج في هيئة CSV ."
+
+#, fuzzy
+#~ msgid ""
+#~ "\"overdue\\_notices.pl\" - In this most basic usage, with no command line "
+#~ "arguments, all libraries are processed individually, and notices are "
+#~ "prepared for all patrons with overdue items for whom we have email "
+#~ "addresses. Messages for those patrons for whom we have no email address "
+#~ "are sent in a single attachment to the library administrator's email "
+#~ "address, or to the address in the KohaAdminEmailAddress system preference."
+#~ msgstr ""
+#~ "\"overdue_notices.pl\" - في هذا أكثر الأستخدام الأساسي, مع عدم وجود وسائط "
+#~ "سطر الأوامر, كل المكتبات تتم معالجتها بشكل فردي, والإشعارات يتم إعدادها "
+#~ "لكل المستفيدين مع المواد المتأخرة الذين يملكون على عنوان البريد الكتروني. "
+#~ "الرسائل لأؤلئك المستفيدين الذين لايملكون عنوان بريد الكتروني ترسل كمرفقات "
+#~ "منفردة الى عنوان البريد الألكتروني لمدير المكتبة, أو الى عنوان تفضيلات "
+#~ "النظام KohaAdminEmailAddress."
+
+#, fuzzy
+#~ msgid ""
+#~ "\"overdue\\_notices.pl -n -csv /tmp/overdues.csv\" - sends no email and "
+#~ "populates /tmp/overdues.csv with information about all overdue items."
+#~ msgstr ""
+#~ "\"overdue_notices.pl -n -csv /tmp/overdues.csv\" - لن يرسل أي رسالة بريد "
+#~ "الكتروني ويملئ /tmp/overdues.csv مع معلومات حول كافة المواد المتأخرة."
+
+#, fuzzy
+#~ msgid ""
+#~ "\"overdue\\_notices.pl -library MAIN max 14\" - prepare notices of "
+#~ "overdues in the last 2 weeks for the MAIN library."
+#~ msgstr ""
+#~ "\"overdue_notices.pl -library MAIN max 14\" - إعداد الإشعارات المتأخرة في "
+#~ "الأسابيع (2) المتأخرة للمكتبة الرئيسية."
+
+#, fuzzy
+#~ msgid "These methods are internal to the operation of overdue\\_notices.pl."
+#~ msgstr "هذه الطرق داخلية لتشغيل overdue_notices.pl."
+
+#~ msgid ""
+#~ "parses the letter template, replacing the placeholders with data specific "
+#~ "to this patron, biblio, or item"
+#~ msgstr ""
+#~ "تحليل قالب الرسالة, لتحل محل عناصر المواد النائبة مع البيانات المحددة "
+#~ "لهذا المستفيد, الببليوغرافية, أو المادة"
+
+#~ msgid "named parameters:"
+#~ msgstr "إسم المعاملات:"
+
+#~ msgid "letter - required hashref"
+#~ msgstr "الرسالة - المطلوبة hashref"
+
+#~ msgid "borrowernumber - required integer"
+#~ msgstr "رقم المستعير - المطلوب عدد صحيح"
+
+#~ msgid ""
+#~ "substitute - optional hashref of other key/value pairs that should be "
+#~ "substituted in the letter content"
+#~ msgstr ""
+#~ "البديل - إختياري hashref من الاخرى مفتاح / قيمة أزواج التي ينبغي أن تكون "
+#~ "بديلاً عن محتوى الرسالة"
+
+#~ msgid ""
+#~ "returns the \"letter\" hashref, with the content updated to reflect the "
+#~ "substituted keys and values."
+#~ msgstr ""
+#~ "إرجاع \"الرسالة\" hashref, مع تحديث المحتوى أو لعكس إستبدال المفاتيح و "
+#~ "القيم."
+
+#, fuzzy
+#~ msgid "prepare\\_letter\\_for\\_printing"
+#~ msgstr "prepare_letter_for_printing"
+
+#~ msgid ""
+#~ "returns a string of text appropriate for printing in the event that an "
+#~ "overdue notice will not be sent to the patron's email address. Depending "
+#~ "on the desired output format, this may be a CSV string, or a human-"
+#~ "readable representation of the notice."
+#~ msgstr ""
+#~ "إرجاع السلسلة مع النص المناسب لطباعتة في حالة الإشعارات المتأخرة سوف لن "
+#~ "ترسل الى عنوان البريد الألكتروني للمستفيدين. إعتماداً على تنسيق الإخراج "
+#~ "المطلوب, وهذا قد يكون سلسلة CSV, أو تمثيل الإشعار الإنسان - قابل للقراءة."
+
+#~ msgid "required parameters:"
+#~ msgstr "متطلبات المعاملات:"
+
+#~ msgid "letter"
+#~ msgstr "الرسالة"
+
+#~ msgid "optional parameters:"
+#~ msgstr "خيارات المعاملات:"
+
+#~ msgid "outputformat"
+#~ msgstr "هيئة الخروج"
+
+#~ msgid "`Talking Tech <#talkingtechcrons>`__"
+#~ msgstr "`تقنية التحدث الى <#talkingtechcrons>`__"
+
+#~ msgid "`Sending Notices File <#talkingtechsendcron>`__"
+#~ msgstr "`إرسال إشعارات الملف <#talkingtechsendcron>`__"
+
+#~ msgid "`Perl Documentation <#talkingsendcronperl>`__"
+#~ msgstr "`وثائق بيرل <#talkingsendcronperl>`__"
+
+#, fuzzy
+#~ msgid "TalkingTech\\_itiva\\_outbound.pl"
+#~ msgstr "TalkingTech_itiva_outbound.pl"
+
+#, fuzzy
+#~ msgid ""
+#~ "TalkingTech\\_itiva\\_outbound.pl --type=OVERDUE -w 0 -w 2 -w 6 --output=/"
+#~ "tmp/talkingtech/outbound.csv"
+#~ msgstr ""
+#~ "TalkingTech_itiva_outbound.pl --type=OVERDUE -w 0 -w 2 -w 6 --output=/tmp/"
+#~ "talkingtech/outbound.csv"
+
+#, fuzzy
+#~ msgid ""
+#~ "TalkingTech\\_itiva\\_outbound.pl --type=RESERVE --type=PREOVERDUE --"
+#~ "lang=FR"
+#~ msgstr ""
+#~ "TalkingTech_itiva_outbound.pl --type=RESERVE --type=PREOVERDUE --lang=FR"
+
+#~ msgid ""
+#~ "Script to generate Spec C outbound notifications file for Talking Tech i-"
+#~ "tiva phone notification system."
+#~ msgstr ""
+#~ "سكربت توليد مواصفات سي لملف الإشعارات الصادرة لتقنية التحدث i-tiva لنظام "
+#~ "إشعارات الهاتف."
+
+#~ msgid "--help -h"
+#~ msgstr "--المساعدة-h"
+
+#~ msgid "Prints this help"
+#~ msgstr "طباعة هذه المساعدة"
+
+#~ msgid "-v Provide verbose log information."
+#~ msgstr "- توفير عرض تفصيلي لمعلومات سجل الدخول."
+
+#~ msgid "--output -o"
+#~ msgstr "--الإخراج-o"
+
+#~ msgid ""
+#~ "Destination for outbound notifications file (CSV format). If no value is "
+#~ "specified, output is dumped to screen."
+#~ msgstr ""
+#~ "الوجهة لملف الإشعارات الصادرة (هيئة CSV). إذا لم يتم تحديد القيمة, يتم "
+#~ "عرض الإخراج على الشاشة."
+
+#~ msgid "--lang"
+#~ msgstr "--اللغة"
+
+#~ msgid ""
+#~ "Sets the language for all outbound messages. Currently supported values "
+#~ "are EN, FR and ES. If no value is specified, EN will be used by default."
+#~ msgstr ""
+#~ "بتعيين اللغة لكل الرسائل الصادرة. اللغة المدعومة حالياً هي اللغة "
+#~ "الأنكليزية,اللغة الفرنسية, واللغة الأسبانية. وإذا لم يتم تحديد اللغة, سوف "
+#~ "يتم إستخدام اللغة الأنكليزية بشكل إفتراضي."
+
+#~ msgid "--type"
+#~ msgstr "--النوع"
+
+#~ msgid ""
+#~ "REQUIRED. Sets which messaging types are to be used. Can be given "
+#~ "multiple times, to specify multiple types in a single output file. "
+#~ "Currently supported values are RESERVE, PREOVERDUE and OVERDUE. If no "
+#~ "value is given, this script will not produce any outbound notifications."
+#~ msgstr ""
+#~ "المطلوب. تعيين أنواع الرسائل التي سوف تستخدم. التي يمكن أن تعطى عدة مرات, "
+#~ "لتحديد أنواع متعددة من ملف الإخراج. القيم المدعومة حالياً هي المحفوظة, و "
+#~ "الغير متأخرة, والمتاخرة. إذا لم يتم تعيين أي قيمة, هذا السكربت لا ينتج أي "
+#~ "من الإشعارات الصادرة."
+
+#~ msgid "--waiting-hold-day -w"
+#~ msgstr "--إنتظار-أيام-الحجز-w"
+
+#~ msgid ""
+#~ "OPTIONAL for --type=RESERVE. Sets the days after a hold has been set to "
+#~ "waiting on which to call. Use switch as many times as desired. For "
+#~ "example, passing \"-w 0 -w 2 -w 6\" will cause calls to be placed on the "
+#~ "day the hold was set to waiting, 2 days after the waiting date, and 6 "
+#~ "days after. See example above. If this switch is not used with --"
+#~ "type=RESERVE, calls will be placed every day until the waiting reserve is "
+#~ "picked up or canceled."
+#~ msgstr ""
+#~ "الإختيار لـ -- نوع= المحفوظة. تحديد الأيام بعد تعيين الحجز على الإستدعاء. "
+#~ "استخدام التبديل عدة مرات على النحو المرغوب فيه.على سبيل المثال، مروراً بـ"
+#~ "\"-w 0 -w 2 -w 6\" سوف يتسبب بالإستدعاء في يوم الحجز لتعيين الإنتظار, "
+#~ "يومين بعد تأريخ الإنتظار, وبعد ستة أيام, أنظر الى المثال إعلاه. إذا لم "
+#~ "يتم إستخدام التبديل مع -- نوع=المحفوظة, سيتم الإستدعاء كل يوم حتى إنتظار "
+#~ "إختيار المحفوظة أو إلغاؤها."
+
+#~ msgid "--library-code --code -c"
+#~ msgstr "--رمز-المكتبة--الرمز-c"
+
+#~ msgid ""
+#~ "OPTIONAL The code of the source library of the message. The library code "
+#~ "is used to group notices together for consortium purposes and apply "
+#~ "library specific settings, such as prompts, to those notices. This field "
+#~ "can be blank if all messages are from a single library."
+#~ msgstr ""
+#~ "إختيارية رمز مصدر المكتبة في الرسالة. يتم إستخدام رمز المكتبة في مجموعة "
+#~ "الإشعارات معاً لغرض الإتحاد و تطبيق إعدادات تحديد المكتبة, كمطالبات, تلك "
+#~ "الإشعارات. هذ الحقل يمكن تركه فارغ إذا كل الرسائل من مكتبة واحدة."
+
+#~ msgid "`Receiving Notices File <#talkingtechreceivecron>`__"
+#~ msgstr "`إستلام إشعارات الملف <#talkingtechreceivecron>`__"
+
+#~ msgid "`Perl Documentation <#talkingreceivecronperl>`__"
+#~ msgstr "`وثائق بيرل <#talkingreceivecronperl>`__"
+
+#, fuzzy
+#~ msgid "TalkingTech\\_itiva\\_inbound.pl"
+#~ msgstr "TalkingTech_itiva_inbound.pl"
+
+#, fuzzy
+#~ msgid ""
+#~ "TalkingTech\\_itiva\\_inbound.pl -v --input=/tmp/talkingtech/results.csv"
+#~ msgstr ""
+#~ "TalkingTech_itiva_inbound.pl -v --input=/tmp/talkingtech/results.csv"
+
+#~ msgid ""
+#~ "Script to process received Results files for Talking Tech i-tiva phone "
+#~ "notification system."
+#~ msgstr ""
+#~ "سكربت معالجة ملفات النتائج المستلمة لتقنية التحدث i-tiva لنظام إشعارات "
+#~ "الهاتف."
+
+#~ msgid "--input -i"
+#~ msgstr "--الإدخال -i"
+
+#~ msgid "REQUIRED. Path to incoming results file."
+#~ msgstr "المطلوب. مسار ملف النتائج الواردة."
+
+#~ msgid "`Perl Documentation <#proccartcronperl>`__"
+#~ msgstr "`وثائق بيرل <#proccartcronperl>`__"
+
+#, fuzzy
+#~ msgid ""
+#~ "cart\\_to\\_shelf.pl cron script to set items with location of CART to "
+#~ "original shelving location after X hours. Execute without options for "
+#~ "help."
+#~ msgstr ""
+#~ "cart_to_shelf.pl سكربت وظيفة كرون لتعين المواد مع موقع السلة الى موقع "
+#~ "الرفوف الأصلي بعد عدد محدد (X) من الساعات. تنفيذها بدون خيارات الحصول على "
+#~ "المساعدة."
+
+#~ msgid "`Catalog <#catalogcron>`__"
+#~ msgstr "`الفهرس <#catalogcron>`__"
+
+#~ msgid "`Check URLs <#checkurlcron>`__"
+#~ msgstr "`تأكيد عنوان URLs <#checkurlcron>`__"
+
+#~ msgid "`Perl Documentation <#checkurlcronperl>`__"
+#~ msgstr "`وثائق بيرل <#checkurlcronperl>`__"
+
+#~ msgid "C4::URL::Checker - base object for checking URL stored in Koha DB"
+#~ msgstr ""
+#~ "C4::URL::Checker - قاعدة المواد لفحص رابط URL المخزنة في قاعدة بيانات "
+#~ "نظام كوها"
+
+#~ msgid "new"
+#~ msgstr "الجديد"
+
+#~ msgid ""
+#~ "Create a URL Checker. The returned object can be used to set default host "
+#~ "variable :"
+#~ msgstr ""
+#~ "إنشاء مدقق رابط URL : إرجاع المواد يمكن إستخدامها لتعيين متغير المضيف "
+#~ "الأفتراضي :"
+
+#, fuzzy
+#~ msgid "check\\_biblio"
+#~ msgstr "check_biblio"
+
+#~ msgid ""
+#~ "Check all URL from a biblio record. Returns a pointer to an array "
+#~ "containing all URLs with checking for each of them."
+#~ msgstr ""
+#~ "تأكيد كل الروابط URL من سجل الببليوغرافية. عودة المؤشر الى مصفوفة محتويات "
+#~ "كل الروابط URLs مع التأكد من كل واحد منهم."
+
+#~ msgid "With 2 URLs, the returned array will look like that:"
+#~ msgstr "مع عناوين URLs, المصفوفة المعادة سوف تبدوا مثل هذا:"
+
+#~ msgid "check-url.pl - Check URLs from 856$u field."
+#~ msgstr "check-url.pl - التاكد من الرابط URLs  من حقل 856$u."
+
+#, fuzzy
+#~ msgid "check-url.pl [--verbose\\|--help] [--host=http://default.tld]"
+#~ msgstr "check-url.pl [--verbose|--help] [--host=http://default.tld]"
+
+#~ msgid ""
+#~ "Scan all URLs found in 856$u of bib records and display if resources are "
+#~ "available or not."
+#~ msgstr ""
+#~ "فحص جميع عناوين URL الموجودة في U $ 856 من السجلات الببليوغرافية وعرضها "
+#~ "إذا كانت مصادر متوفرة أم لا."
+
+#~ msgid "--host=http://default.tld"
+#~ msgstr "--host=http://default.tld"
+
+#~ msgid ""
+#~ "Server host used when URL doesn't have one, ie doesn't begin with "
+#~ "'http:'. For example, if --host=http://www.mylib.com, then when 856$u "
+#~ "contains 'img/image.jpg', the url checked is: http://www.mylib.com/image."
+#~ "jpg'."
+#~ msgstr ""
+#~ "يستخدم مضيف المخدم عندما يكون ليس لديه رابطURL واحدة,على سبيل المثال إذا "
+#~ "كان لا يبدأ بـ 'http:'. على سبيل المثال, إذا --المضيف=http://www.mylib."
+#~ "com, عندما 856$u يحتوي على 'img/image.jpg', تأكيد العنوان هو: http://www."
+#~ "mylib.com/image.jpg'."
+
+#, fuzzy
+#~ msgid "--verbose\\|-v"
+#~ msgstr "--verbose|-v"
+
+#~ msgid "Outputs both successful and failed URLs."
+#~ msgstr "نواتج كلا العناوين URLs الناجحة والفاشلة."
+
+#~ msgid "--html"
+#~ msgstr "--html"
+
+#~ msgid ""
+#~ "Formats output in HTML. The result can be redirected to a file accessible "
+#~ "by http. This way, it's possible to link directly to biblio record in "
+#~ "edit mode. With this parameter --host-pro is required."
+#~ msgstr ""
+#~ "تنسيقات الإخراج في HTML. النتيجة يمكن إعادة توجيها إلى ملف الوصول إليها "
+#~ "عن طريق HTTP. بهذه الطريقة، من الممكن ربطها مباشرةً إلى سجل ببليوغرافىة في "
+#~ "وضع التعديل. مع هذا المعامل- مطلوب برنامج المضيف."
+
+#~ msgid "--host-pro=http://koha-pro.tld"
+#~ msgstr "--host-pro=http://koha-pro.tld"
+
+#~ msgid "Server host used to link to biblio record editing page."
+#~ msgstr "مخادم المضيف يمستخدم لربط صفحة تعديل ببليوغرافىية."
+
+#, fuzzy
+#~ msgid "--help\\|-h"
+#~ msgstr "--المساعدة|-h"
+
+#~ msgid "Print this help page."
+#~ msgstr "طباعة هذه صفحة المساعدة:"
+
+#, fuzzy
+#~ msgid "Script path: misc/migration\\_tools/merge\\_authority.pl"
+#~ msgstr "مسارالسكربت: misc/migration_tools/rebuild_zebra.pl"
+
+#~ msgid "`Serials Update <#serialscron>`__"
+#~ msgstr "`تحديث الدوريات <#serialscron>`__"
+
+#, fuzzy
+#~ msgid "`Automatic item update <#autoitemupdatecron>`__"
+#~ msgstr "`التجديد التلقائي <#autorenewcron>`__"
+
+#~ msgid "`Perl Documentation <#autoitemupdatecrondoc>`__"
+#~ msgstr "`وثائق بيرل <#autoitemupdatecrondoc>`__"
+
+#, fuzzy
+#~ msgid "automatic\\_item\\_modification\\_by\\_age.pl"
+#~ msgstr "تعديلات تلقائية للمادة بواسطة العمر"
+
+#, fuzzy
+#~ msgid "./automatic\\_item\\_modification\\_by\\_age.pl -h"
+#~ msgstr "تعديلات تلقائية للمادة بواسطة العمر"
+
+#, fuzzy
+#~ msgid "-h\\|--help Prints this help message."
+#~ msgstr "طباعة هذه المساعدة"
+
+#, fuzzy
+#~ msgid "This file is part of Koha."
+#~ msgstr "هذا المادة لا تُعار. %s "
+
+#~ msgid ""
+#~ "Koha is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version 3 of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "كوها برنامج مجاني; يمكنك إعادة توزيعه و/أو تعديله تحت شروط GNU الرخصة "
+#~ "العمومية العامة كما نشر بواسطة مؤسسة البرامج المجانية; سواء الإصدار 2 من "
+#~ "ارخصة, أو(في حالة اختيارك) أي إصدار تالي."
+
+#, fuzzy
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with Koha; if not, see <http://www.gnu.org/licenses>."
+#~ msgstr ""
+#~ "هذا الدليل مرخص تحتَ `رخصة جنو العمومية الإصدار ، 3 <#http://www.gnu.org/"
+#~ "licenses/gpl.html>`__ أو أكثر"
+
+#~ msgid "`OPAC <#opaccrons>`__"
+#~ msgstr "`أوباك <#opaccrons>`__"
+
+#~ msgid "`RSS Feeds <#customrssfeedcron>`__"
+#~ msgstr "`تغذية الـ RSS  <#customrssfeedcron>`__"
+
+#~ msgid "`Perl Documentation <#keywordcloudsperl>`__"
+#~ msgstr "`وثائق بيرل <#keywordcloudsperl>`__"
+
+#~ msgid "cloud-kw.pl - Creates HTML keywords clouds from Koha Zebra Indexes"
+#~ msgstr "cloud-kw.pl - ينشئ الـ HTML سحب الكلمات من مفهرس نظام كوها زيبرا"
+
+#, fuzzy
+#~ msgid "cloud-kw.pl [--verbose\\|--help] --conf=cloud.conf"
+#~ msgstr "cloud-kw.pl [--verbose|--help] --conf=cloud.conf"
+
+#~ msgid ""
+#~ "Creates multiple HTML files containing keywords cloud with top terms "
+#~ "sorted by their logarithmic weight. cloud.conf is a YAML configuration "
+#~ "file driving cloud generation process."
+#~ msgstr ""
+#~ "بإنشاء ملفات HTML المتعددة تحتوي على سحابة الكلمات من الأعلى حيث تم فرزها "
+#~ "حسب وزنهم الوغاريتمي. cloud.conf هو YAML لقيادة تهيئة الملف لمعالجة توليد "
+#~ "السحب من الكلمات."
+
+#~ msgid "--conf=configuration file"
+#~ msgstr "--conf=تهيئة الملف"
+
+#~ msgid "Specify configuration file name"
+#~ msgstr "تحديد إسم ملف التهيئة"
+
+#~ msgid "Enable script verbose mode."
+#~ msgstr "تفعيل سكربت نمط العرض التفصيلي."
+
+#~ msgid "Configuration file looks like that:"
+#~ msgstr "ملف التهيئة يشبة ما يلي:"
+
+#~ msgid ""
+#~ "Generated top terms have more informations than those outputted from the "
+#~ "time being. Some parameters could be easily added to improve this script:"
+#~ msgstr ""
+#~ "توليد الشروط العليا التي لديها المزيد من المعلومات من تلك التي أخرجت في "
+#~ "الوقت الحالي. بعض المعاملات يمكن بسهولة إضافتها لتحسين هذا السكربت."
+
+#~ msgid "WithCount"
+#~ msgstr "مع العداد"
+
+#~ msgid ""
+#~ "In order to output terms with the number of occurrences they have been "
+#~ "found in Koha Catalogue by Zebra."
+#~ msgstr ""
+#~ "من أجل شروط الإخراج مع عدد من الأحداث التي تم العثور عليها في دليل نظام "
+#~ "كوها بواسطة المفهرس زيبرا."
+
+#~ msgid "CloudLevels"
+#~ msgstr "CloudLevels"
+
+#~ msgid "Number of levels in the cloud. Now 24 levels are hardcoded."
+#~ msgstr "عدد من مستويات السحابة. الآن 24 مستوى يتم ضمنية."
+
+#~ msgid "Weighting"
+#~ msgstr "الوزن"
+
+#~ msgid ""
+#~ "Weighting method used to distribute terms in the cloud. We could have two "
+#~ "values: Logarithmic and Linear. Now it's Logarithmic by default."
+#~ msgstr ""
+#~ "تستخدم طريقة الوزن لتوزيع الشروط في السحابة. نحن لدينا اثنين من القيم: "
+#~ "لوغاريتمي وخطية. الآن يستخدم الوغاريتمي بشكل افتراضي."
+
+#~ msgid "Order"
+#~ msgstr "طلب"
+
+#~ msgid ""
+#~ "Now terms are outputted in the lexical order. They could be sorted by "
+#~ "their weight."
+#~ msgstr "الآن ترتيب شروط الإخراج بشكل معجمي. يمكن فرزها بواسطة الوزن."
+
+#~ msgid "Perl Documentation"
+#~ msgstr "وثائق بيرل"
+
+#~ msgid "-h --help"
+#~ msgstr "--المساعدة-h"
+
+#~ msgid "--sessions"
+#~ msgstr "الجلسات"
+
+#, fuzzy
+#~ msgid "--sessdays DAYS"
+#~ msgstr "سِجل البحث"
+
+#~ msgid "-v --verbose"
+#~ msgstr "--verbose|-v"
+
+#~ msgid ""
+#~ "will cause the script to give you a bit more information about the run."
+#~ msgstr "يمكنك استخدام وصف القالب لإضافة معلومات إضافية حول القالب"
+
+#~ msgid "--zebraqueue DAYS"
+#~ msgstr "قائمة إنتظار زيبرا"
+
+#~ msgid "--merged"
+#~ msgstr "دمج"
+
+#~ msgid "--import DAYS"
+#~ msgstr "يستورد"
+
+#, fuzzy
+#~ msgid "--logs DAYS"
+#~ msgstr "يستورد"
+
+#~ msgid "--searchhistory DAYS"
+#~ msgstr "سِجل البحث"
+
+#, fuzzy
+#~ msgid "--restrictions DAYS"
+#~ msgstr "استخدم القيود"
+
+#~ msgid "`Perl Documentation <#usagecronperl>`__"
+#~ msgstr "`وثائق بيرل <#usagecronperl>`__"
+
+# Administration > Share anonymous usage statistics
+#, fuzzy
+#~ msgid ""
+#~ "All these data will be analyzed on the http://hea.koha-community.org Koha "
+#~ "community website."
+#~ msgstr ""
+#~ "سيظهر في href=\"http://hea.koha-community.org\">Hea موقع مجتمع كوها</a>."
+
+#, fuzzy
+#~ msgid "-h\\|--help"
+#~ msgstr "--المساعدة-h"
+
+#, fuzzy
+#~ msgid "Print a brief help message"
+#~ msgstr "- ملخص المساعدة لرسالة المساعدة"
+
+#, fuzzy
+#~ msgid "Verbose mode."
+#~ msgstr "--verbose|-v"
+
+#~ msgid "`Perl Documentation <#emailsuggestfundperl>`__"
+#~ msgstr "`وثائق بيرل <#emailsuggestfundperl>`__"
+
+#, fuzzy
+#~ msgid "The budget owner will be notified."
+#~ msgstr "تاريخ الإعارة سيكون مجهول"
+
+#, fuzzy
+#~ msgid "-h\\|--help Print a brief help message"
+#~ msgstr "- مساعدة الطباعة رسالة مختصرة للمساعدة والخروج."
+
+#, fuzzy
+#~ msgid "-v\\|--verbose Verbose mode."
+#~ msgstr "--verbose|-v"

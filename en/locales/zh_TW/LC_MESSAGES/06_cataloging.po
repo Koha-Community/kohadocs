@@ -1,0 +1,4025 @@
+# Compendium of zh.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-zh\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-25 12:27-0300\n"
+"PO-Revision-Date: 2017-08-31 15:34-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/06_cataloging.rst:4
+msgid "Cataloging"
+msgstr "編目"
+
+#: ../../source/06_cataloging.rst:6
+#, fuzzy
+msgid ""
+"Before you start cataloging in Koha you're going to want to do some basic "
+"setup. Refer to the :ref:`Implementation Checklist` for a full list of these "
+"things. Most importantly you're going to want to make sure that your :ref:"
+"`MARC Bibliographic Frameworks` are all defined the way you want. Once in "
+"the cataloging module you will not be able to add or remove fields and "
+"subfields so your frameworks must be ready before you start cataloging."
+msgstr ""
+"編目之前應參照應用核對清單，先處理基本的設定，最重要的是確認您的框架已設定完"
+"成，進入編目模組後，就不能新增或移除欄位與分欄。"
+
+#: ../../source/06_cataloging.rst:14
+#, fuzzy
+msgid ""
+"You can also use OCLC Connexion to send records directly in to Koha. For "
+"more information on that please review the :ref:`OCLC Connexion Gateway` "
+"setup Appendix."
+msgstr ""
+"有些 Koha 使用者訂購 OCLC 的線上編目工具 Connexion 取得書目記錄。詳情見 "
+"`OCLC Connexion 設定附錄 <#oclcappendix>`__。"
+
+#: ../../source/06_cataloging.rst:18
+#, fuzzy
+msgid "*Get there:* More > Cataloging"
+msgstr "<emphasis>到那裡：</emphasis> 更多 &gt; 編目"
+
+#: ../../source/06_cataloging.rst:23
+#, fuzzy
+msgid "Bibliographic Records"
+msgstr "`書目紀錄 <#catbibs>`__"
+
+#: ../../source/06_cataloging.rst:25
+#, fuzzy
+msgid ""
+"In Koha the bibliographic record contains the main information related to "
+"the material. This includes things like the title, author, ISBN, etc. This "
+"information is stored in Koha in Marc (different flavors of Marc are "
+"supported in Koha). Once this information is saved, :ref:`Item Records` can "
+"be attached."
+msgstr ""
+"在Koha的書目紀錄裡包括與資料有關的資訊，包括題名、著者、國際標準書號等。這些"
+"資訊儲存在Koha的機讀編目格式裡；儲存後，就能加入館藏資料。"
+
+#: ../../source/06_cataloging.rst:34
+#, fuzzy
+msgid "Adding Records"
+msgstr "`新增紀錄 <#addbibrec>`__"
+
+#: ../../source/06_cataloging.rst:36
+msgid ""
+"Records can be added to Koha via original or copy cataloging. You can also "
+"choose to use the basic or advanced cataloging interface for all of your "
+"work."
+msgstr ""
+"經由原始編目或複本編目可以新增紀錄入 Koha。也可使用基本或進階編目介面。"
+
+#: ../../source/06_cataloging.rst:40
+msgid ""
+"If you would like to catalog a record using a blank template in the basic "
+"editor"
+msgstr "您可在基本編輯器中使用空白的模板編目"
+
+#: ../../source/06_cataloging.rst:43
+msgid "Click 'New Record'"
+msgstr "勾選 '新增紀錄'"
+
+#: ../../source/06_cataloging.rst:45
+#, fuzzy
+msgid "|image627|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:47
+msgid "Choose the framework you would like to base your record off of"
+msgstr "選擇編目基礎的框架"
+
+#: ../../source/06_cataloging.rst:49
+msgid ""
+"If you would like to catalog a record using a blank template in the advanced "
+"editor"
+msgstr "您可在進階編輯器中使用空白的模板編目"
+
+#: ../../source/06_cataloging.rst:52
+#, fuzzy
+msgid "Enable the :ref:`EnableAdvancedCatalogingEditor` preference"
+msgstr ""
+"啟用 `EnableAdvancedCatalogingEditor <#EnableAdvancedCatalogingEditor>`__ 偏"
+"好"
+
+#: ../../source/06_cataloging.rst:56
+#, fuzzy
+msgid "Click the 'Advanced editor' button"
+msgstr "按 '進階編輯器' 鈕"
+
+#: ../../source/06_cataloging.rst:58
+msgid "|image1262|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:60
+msgid ""
+"If you want to catalog a record based on an existing record at another "
+"library in the editor you last used (basic or advanced)"
+msgstr ""
+"以上次使用的編輯器 (基本或進階)， 依照其他圖書館既有的紀錄，編目新的紀錄"
+
+#: ../../source/06_cataloging.rst:63
+msgid "Click 'New from Z39.50/SRU'"
+msgstr "按 '新增自 Z39.50/SRU'"
+
+#: ../../source/06_cataloging.rst:65
+#, fuzzy
+msgid "|image628|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:67
+msgid "Search for the item you would like to catalog"
+msgstr "搜尋打算編目的館藏"
+
+#: ../../source/06_cataloging.rst:69 ../../source/06_cataloging.rst:219
+#: ../../source/06_cataloging.rst:225 ../../source/06_cataloging.rst:396
+#: ../../source/06_cataloging.rst:634 ../../source/06_cataloging.rst:721
+#: ../../source/06_cataloging.rst:1418
+#, fuzzy
+msgid "**Note**"
+msgstr "說明"
+
+#: ../../source/06_cataloging.rst:71
+msgid ""
+"If no results are found, try searching for fewer fields, not all Z39.50 "
+"targets can search all of the fields above."
+msgstr ""
+"若找不到，試著搜尋較少的欄位，不是所有的 Z39.50 伺服器都接受所有欄位的搜尋。"
+
+#: ../../source/06_cataloging.rst:74
+#, fuzzy
+msgid ""
+"Search targets can be altered by using the :ref:`Z39.50 Admin <z39.50/sru-"
+"servers-label>` area."
+msgstr "從 `Z39.50 管理 <#z3950admin>`__ 區塊可以改變搜尋的伺服器。"
+
+#: ../../source/06_cataloging.rst:77
+msgid ""
+"From the results you can view the MARC or Card view for the records or "
+"choose to Import them into Koha"
+msgstr "找到後可將用 MARC 或卡片格式檢視紀錄或選擇匯入 Koha"
+
+#: ../../source/06_cataloging.rst:80
+#, fuzzy
+msgid "|image629|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:82
+msgid ""
+"In addition to the Import link to the right of each title, you can click on "
+"the title you're interested in and a menu will pop up with links to preview "
+"the record and import it"
+msgstr "點選題名，彈出選單與連結，再選擇題名，就能正確匯入連結"
+
+#: ../../source/06_cataloging.rst:86
+#, fuzzy
+msgid "|image630|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:88
+msgid ""
+"If you don't find the title you need in your Z39.50 search results you can "
+"click the 'Try Another Search' button at the bottom left of your results"
+msgstr "從Z39.50搜尋結果裡找不到預期的題名，可勾選左下方的'其他搜尋'"
+
+#: ../../source/06_cataloging.rst:92
+#, fuzzy
+msgid "|image631|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:97
+#, fuzzy
+msgid "Basic Editor Cataloging"
+msgstr "`基本編目編輯器 <#basicatalog>`__"
+
+#: ../../source/06_cataloging.rst:99
+msgid ""
+"In the basic editor once you've opened a blank framework or imported a "
+"record via Z39.50 you will be presented with the form to continue cataloging"
+msgstr ""
+"在基本編輯器內，打開空白的框架或經由 Z39.50 匯入紀錄後，將出現繼續編目的表單"
+
+#: ../../source/06_cataloging.rst:103
+#, fuzzy
+msgid "|image632|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:105
+#, fuzzy
+msgid ""
+"If you would rather not see the MARC tag numbers you can change the value in "
+"your :ref:`hide\\_marc <hide\\_marc-label>` system preference or each user "
+"can check the box next to 'Show tags' found under 'Settings'."
+msgstr ""
+"改變 `hide_marc <#hide_marc>`__ 系統偏好的值或按 '設定' 下的 '顯示欄號' 勾選"
+"盒，就可以不顯示 MARC 欄號。"
+
+#: ../../source/06_cataloging.rst:109
+msgid "To expand a collapsed tag click on the tag description"
+msgstr "按下欄號說明，就能展開欄號"
+
+#: ../../source/06_cataloging.rst:111
+msgid ""
+"To get help from the Library of Congress on a Marc tag click the question "
+"mark (?) to the right of each field number"
+msgstr "按欄號旁的問號 (?) 就連結至美國國會圖書館有關該欄號的說明"
+
+#: ../../source/06_cataloging.rst:114
+msgid ""
+"If you feel that this clutters the screen you can hide the question marks by "
+"unchecking the box next to the 'Show MARC tag documentation links' note "
+"found under 'Settings'"
+msgstr ""
+"若覺得螢幕太擁擠，可以不勾選 '設定' 下，位於 '顯示 MARC 欄號文件連結' 說明盒"
+"旁的勾選盒，就能隱藏問號"
+
+#: ../../source/06_cataloging.rst:118
+#, fuzzy
+msgid ""
+"Sometimes fields may not be editable due to the value in your :ref:"
+"`BiblioAddsAuthorities` system preference. If you have this preference set "
+"to not allow catalogers to type in fields controlled by authorities you may "
+"see a lock symbol to the left of the field."
+msgstr ""
+"依照 `BiblioAddsAuthorities <#BiblioAddsAuthorities>`__ 系統偏好的設定，部份"
+"欄位不能編輯。若將此偏好設為不允許編目員鍵入權威值的欄位，在該等欄位左方出現"
+"鎖的符號。"
+
+#: ../../source/06_cataloging.rst:124
+#, fuzzy
+msgid "|image633|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:126
+msgid ""
+"If this icon appears you must click the icon to the right of the field to "
+"search for an existing authority."
+msgstr "若此圖示顯示，您必須勾選欄位旁的該圖示，以搜尋既有的權威紀錄。"
+
+#: ../../source/06_cataloging.rst:129
+#, fuzzy
+msgid "|image634|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:131
+msgid ""
+"From the results list click 'Choose authority' to bring that into your "
+"catalog record"
+msgstr "從結果清單裡，點選'選擇權威'，進入目錄紀錄"
+
+#: ../../source/06_cataloging.rst:134
+#, fuzzy
+msgid "|image635|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:136
+msgid ""
+"To duplicate a field click on the 'repeat this tag' icon to the right of the "
+"tag"
+msgstr "按欄號右方的 '重複此欄號' 圖示，就能複製此欄位"
+
+#: ../../source/06_cataloging.rst:139
+#, fuzzy
+msgid "|image636|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:141
+msgid ""
+"To move subfields in to the right order, click the up arrow to the left of "
+"the field"
+msgstr "勾選欄位左方的向上箭，把分欄移到正確的位置"
+
+#: ../../source/06_cataloging.rst:144
+msgid ""
+"To duplicate a subfield click on the clone icon (to remove a copied field, "
+"click the delete clone icon) to the right of the field"
+msgstr "勾選欄位右方的複製(按下刪除圖示，就能移除複製欄位)圖示，就能複製分欄"
+
+#: ../../source/06_cataloging.rst:148
+#, fuzzy
+msgid "|image637|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:150
+msgid ""
+"To remove a subfield (if there is more than one of the same type), click the "
+"- (minus sign) to the right of the field"
+msgstr "勾選欄位右方的 - (減號)，就能刪除分欄 (若有多個同樣類型)"
+
+#: ../../source/06_cataloging.rst:153
+msgid "To use a plugin click on the icon to the right of the filed"
+msgstr "按欄位右方的圖示，啟用外掛程式"
+
+#: ../../source/06_cataloging.rst:155
+#, fuzzy
+msgid "|image638|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:157
+msgid ""
+"Some fixed fields have editors that will change based on the material type "
+"you're cataloging (for example the 006 and the 008 fields)"
+msgstr "部份固定欄位有編輯器，根據編目的資料類型而改變(如：006與008欄位)"
+
+#: ../../source/06_cataloging.rst:161
+#, fuzzy
+msgid "|image639|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:163
+msgid ""
+"Once you've finished, click the 'Save' button at the top and choose whether "
+"you want to save and view the bib record you have created or continue on to "
+"add/edit items attached to the record"
+msgstr ""
+"完成後，按上方的 '儲存' 鈕儲存並檢視剛才新增書目記錄，或繼續新增/編輯該筆書目"
+"記錄的館藏記錄"
+
+#: ../../source/06_cataloging.rst:167
+#, fuzzy
+msgid "|image640|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:169
+msgid ""
+"Choosing 'Save and view record' will bring you right to the record you just "
+"cataloged"
+msgstr "按下 '儲存與檢視記錄' 進入剛才編目的記錄"
+
+#: ../../source/06_cataloging.rst:172
+msgid ""
+"Choosing 'Save and edit items' will bring you to the add/edit item form "
+"after saving the bib record so that you can attach holdings"
+msgstr "按下 '儲存與編輯館藏' 先儲存書目紀錄，再進入新增/編輯館藏表單"
+
+#: ../../source/06_cataloging.rst:175
+#, fuzzy
+msgid ""
+"Choosing 'Save and continue editing' will allow you to save your work so far "
+"and keep you in the editor to continue working"
+msgstr "按下 '儲存與繼續編輯' 儲存書目記錄，並繼續編輯該書目記錄"
+
+#: ../../source/06_cataloging.rst:178
+msgid ""
+"If you are about to add a duplicate record to the system you will be warned "
+"before saving"
+msgstr "新增重複的紀錄時，系統會提示您先儲存"
+
+#: ../../source/06_cataloging.rst:181
+#, fuzzy
+msgid "|image641|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:186
+#, fuzzy
+msgid "Advanced Editor Cataloging"
+msgstr "`進階編目編輯器 <#advancededitor>`__"
+
+#: ../../source/06_cataloging.rst:188
+#, fuzzy
+msgid ""
+"In order to use the Advanced cataloging editor you need to enable the :ref:"
+"`EnableAdvancedCatalogingEditor` preference."
+msgstr ""
+"必須啟用 `EnableAdvancedCatalogingEditor "
+"<#EnableAdvancedCatalogingEditor>`__ 偏好才能使用進階編目編輯器。"
+
+#: ../../source/06_cataloging.rst:192 ../../source/06_cataloging.rst:627
+#: ../../source/06_cataloging.rst:1331
+#, fuzzy
+msgid "**Important**"
+msgstr "重要 "
+
+#: ../../source/06_cataloging.rst:194
+msgid ""
+"This feature is currently experimental, and may have bugs that cause "
+"corruption of records. It also does not include any support for UNIMARC or "
+"NORMARC fixed fields. Please help us test it and report any bugs, but do so "
+"at your own risk."
+msgstr ""
+"此功能還在實驗階段，其錯誤可能造成記錄不完全。也不支援 UNIMARC 或 NORMARC 的"
+"固定欄位。請協助我們測試並報告錯誤，責任自負。"
+
+#: ../../source/06_cataloging.rst:199
+#, fuzzy
+msgid ""
+"In the advanced editor once you've opened a blank framework or imported a "
+"record via Z39.50 you will be presented with the form to continue cataloging"
+msgstr ""
+"在基本編輯器內，打開空白的框架或經由 Z39.50 匯入紀錄後，將出現繼續編目的表單"
+
+#: ../../source/06_cataloging.rst:203
+msgid "|image1263|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:205
+msgid "Using the search box on the left you can perform Z39.50 searches"
+msgstr "從左方的搜尋盒可執行 Z39.50 搜尋"
+
+#: ../../source/06_cataloging.rst:207
+#, fuzzy
+msgid "|image642|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:209
+msgid ""
+"And from those Z39.50 results you can view the marc record by clicking the "
+"link to the right"
+msgstr "從這些 Z39.50 結果按右方的連結可檢視 MARC 記錄"
+
+#: ../../source/06_cataloging.rst:212
+#, fuzzy
+msgid "|image643|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:214
+msgid ""
+"Clicking 'Import' will bring the record in to the editor where you can "
+"perform your edits"
+msgstr "按 '匯入' 鈕將把記錄帶入編輯器供編輯之用"
+
+#: ../../source/06_cataloging.rst:217
+#, fuzzy
+msgid "|image644|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:221
+msgid ""
+"When adding a new field in the Advanced Editor, you need to key underscores "
+"for a blank indicator, and surround the indicators with spaces."
+msgstr "在進階編輯器內新增欄位時，必須在空白的指標鍵入底線，並在前後加入空白。"
+
+#: ../../source/06_cataloging.rst:227
+msgid ""
+"You need to key a space before the first subfield delimiter, but not before "
+"or after other subfield delimiters in the field."
+msgstr ""
+"需在第一個分欄分隔符號前鍵入一個空白，但不必在其他分欄分隔符號前後加入空白。"
+
+#: ../../source/06_cataloging.rst:230
+msgid ""
+"At the bottom of the editor you will see help from the Library of Congress "
+"for the field you are on. In cases where your MARC is invalid you will see "
+"red highlighting. To edit the record using only keyboard functions the "
+"Keyboard shortcuts button will inform you of the necessary commands"
+msgstr ""
+"在編輯器下方有來自美國國會圖書館的欄位說明。不合用的 MARC 將標示為紅色。祗以"
+"鍵盤編輯記錄時將提示快捷鍵供必要指令使用"
+
+#: ../../source/06_cataloging.rst:236
+#, fuzzy
+msgid "|image645|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:241
+#, fuzzy
+msgid "Advanced Cataloging Keyboard Shortcuts"
+msgstr "`進階編目鍵盤快捷鍵 <#advancedkeyshortcuts>`__"
+
+#: ../../source/06_cataloging.rst:243
+msgid ""
+"The following keyboard shortcuts can be used in the advanced cataloging "
+"module to save time and clicking."
+msgstr "以下的鍵盤快捷鍵可用於進階編目模組以節省時間。"
+
+#: ../../source/06_cataloging.rst:247
+msgid "Shortcut"
+msgstr "快捷鍵"
+
+#: ../../source/06_cataloging.rst:247
+msgid "Behavior"
+msgstr "行為"
+
+#: ../../source/06_cataloging.rst:249
+msgid "Ctrl-D"
+msgstr "Ctrl-D"
+
+#: ../../source/06_cataloging.rst:249
+msgid "Insert delimiter (‡)"
+msgstr "插入分隔符號 (‡)"
+
+#: ../../source/06_cataloging.rst:251
+msgid "Ctrl-H"
+msgstr "Ctrl-H"
+
+#: ../../source/06_cataloging.rst:251
+msgid "Get help on current subfield"
+msgstr "當前分欄的說明"
+
+#: ../../source/06_cataloging.rst:253
+msgid "Ctrl-S"
+msgstr "Ctrl-S"
+
+#: ../../source/06_cataloging.rst:253
+msgid "Save record"
+msgstr "儲存紀錄"
+
+#: ../../source/06_cataloging.rst:255
+msgid "Ctrl-X"
+msgstr "Ctrl-X"
+
+#: ../../source/06_cataloging.rst:255
+msgid "Delete current field"
+msgstr "刪除此分欄"
+
+#: ../../source/06_cataloging.rst:257
+msgid "Ctrl-Shift-X"
+msgstr "Ctrl-Shift-X"
+
+#: ../../source/06_cataloging.rst:257
+msgid "Delete current subfield"
+msgstr "刪除此分欄"
+
+#: ../../source/06_cataloging.rst:259
+msgid "Enter"
+msgstr "輸入"
+
+#: ../../source/06_cataloging.rst:259
+msgid "New field on next line"
+msgstr "新欄位在下一列"
+
+#: ../../source/06_cataloging.rst:261
+msgid "Shift-Enter"
+msgstr "Shift-Enter"
+
+#: ../../source/06_cataloging.rst:261
+msgid "Insert line break"
+msgstr "搜入斷列標記"
+
+#: ../../source/06_cataloging.rst:263
+msgid "Tab"
+msgstr "定位鍵"
+
+#: ../../source/06_cataloging.rst:263
+msgid "Move to next position"
+msgstr "移動至下個位置"
+
+#: ../../source/06_cataloging.rst:265
+msgid "Shift-Tab"
+msgstr "Shift-Tab"
+
+#: ../../source/06_cataloging.rst:265
+msgid "Move to previous position"
+msgstr "移動至前個位置"
+
+#: ../../source/06_cataloging.rst:271
+#, fuzzy
+msgid "Macros in Advanced Cataloging"
+msgstr "`進階編目的巨集 <#macroscataloging>`__"
+
+#: ../../source/06_cataloging.rst:273
+msgid "To record a new macro:"
+msgstr "記錄新的巨集："
+
+#: ../../source/06_cataloging.rst:275 ../../source/06_cataloging.rst:291
+#, fuzzy
+msgid "Select the \"> Macros...\" button"
+msgstr "選擇 \"&gt; 巨集...\" 鈕"
+
+#: ../../source/06_cataloging.rst:277
+msgid ""
+"A window will pop up. In this window, select \"New macro...,\" key the new "
+"macro's name in the pop-up box and select OK."
+msgstr ""
+"將彈出視窗。在此視窗內，選擇 \"新增巨集...\"，在彈出盒內鍵入新的巨集名稱並選"
+"擇 OK。"
+
+#: ../../source/06_cataloging.rst:280
+msgid ""
+"Now click to the right of the little number 1, and key the first line of "
+"your macro. For a multi-line, i.e., multi-field macro, hit the return key so "
+"that a little number 2 appears, and key the second line/field, etc."
+msgstr ""
+"現在按數字 1 右方，並鍵入巨集的第一列。若有多列，如多欄位巨集，按歸位鍵才會出"
+"現數字2，並鍵入第二列/欄位等。"
+
+#: ../../source/06_cataloging.rst:285
+msgid ""
+"Your macros will be automatically saved. When finished you can select the \"x"
+"\" to close the window, or select a macro to run on the record that you're "
+"editing, or select another macro to run."
+msgstr ""
+"自動儲存您的巨集。做好後按 \"x\" 關閉視窗，或選擇編輯後要執行的記錄，或選擇其"
+"他要執行的巨集。"
+
+#: ../../source/06_cataloging.rst:289
+msgid "To edit an existing macro:"
+msgstr "編輯既有的巨集："
+
+#: ../../source/06_cataloging.rst:293
+#, fuzzy
+msgid ""
+"A window will pop up. In this window, select the macro that you wish to edit "
+"& make your changes."
+msgstr "將彈出視窗。在此視窗內，選擇要編輯的巨集 &amp; 變更它。"
+
+#: ../../source/06_cataloging.rst:296
+msgid ""
+"Your work will automatically be saved, and when finished you can select the "
+"\"x\" to close the window, or select a macro to run on the record that "
+"you're editing, or select another macro to run."
+msgstr ""
+"將自動儲存您的工作，並且在完成後選擇 \"x\" 關閉視窗，或選擇編輯後記錄內要執行"
+"的巨集，或選擇另個要執行的巨集。"
+
+#: ../../source/06_cataloging.rst:300
+msgid "The basic syntax of the macro language:"
+msgstr "巨集語言的基本語法："
+
+#: ../../source/06_cataloging.rst:302
+msgid "new 500=‡aEdited with Rancor"
+msgstr "新增 500=‡a以 Rancor 編輯"
+
+#: ../../source/06_cataloging.rst:304
+msgid ""
+"Creates a new 500 with a ‡a subfield and sets it to \"Edited with Rancor\"."
+msgstr "新增 500 欄位的 ‡a 分欄並 \"以 Rancor 編輯\"。"
+
+#: ../../source/06_cataloging.rst:307
+msgid "245c= by J.K. Rowling."
+msgstr "245c= by J.K. Rowling."
+
+#: ../../source/06_cataloging.rst:309
+msgid ""
+"Sets the first ‡c subfield of the first 245 tag in the record to \" by J.K. "
+"Rowling\", creating it if necessary."
+msgstr "需要的話，在第一個245欄位的第一個 ‡c 分欄著錄 \" by J.K. Rowling\"。"
+
+#: ../../source/06_cataloging.rst:312
+msgid "082a={084a}"
+msgstr "082a={084a}"
+
+#: ../../source/06_cataloging.rst:314
+msgid ""
+"Sets the ‡a subfield of the first 082 tag (creating the subfield if "
+"necessary) to the contents of the first 084‡a."
+msgstr "在第一個082欄位的 ‡a 分欄 (需要時新增分欄) 設定內容為第一個 084‡a。"
+
+#: ../../source/06_cataloging.rst:317
+#, fuzzy
+msgid "indicators=\\_1"
+msgstr "指標=_1"
+
+#: ../../source/06_cataloging.rst:319
+#, fuzzy
+msgid ""
+"Sets the indicators of the last mentioned tag (in this case, 082) to \"\\_\" "
+"and \"1\"."
+msgstr "將最後提及欄號的指標 (在此例是，082) 設為 \"_\" 與 \"1\"。"
+
+#: ../../source/06_cataloging.rst:322
+msgid "new 090a=Z674.75.W67"
+msgstr "新增 090a=Z674.75.W67"
+
+#: ../../source/06_cataloging.rst:324
+msgid ""
+"Creates a new ‡a subfield on the first 090 (but only if that field already "
+"exists) and sets it to Z674.75.W67."
+msgstr "新增第一個 900 欄位 (僅限已有該欄位) 的 ‡a 分欄並設定為 Z674.75.W67。"
+
+#: ../../source/06_cataloging.rst:327
+msgid "new 090a at end=Z674.75.W67"
+msgstr "新增 090a 於 end=Z674.75.W67"
+
+#: ../../source/06_cataloging.rst:329
+msgid "Same as above."
+msgstr "同上。"
+
+#: ../../source/06_cataloging.rst:331
+msgid "new 245b after a= a tale of might and magic /"
+msgstr "在 a= a tale of might and magic / 之後新增 245a"
+
+#: ../../source/06_cataloging.rst:333
+msgid ""
+"Creates a new ‡b after the first a subfield and sets it to \" a tale of "
+"might and magic /\"."
+msgstr ""
+"在第一個分欄後面，新增 ‡b，並將其內容設定為 \" a tale of might and magic /"
+"\"。"
+
+#: ../../source/06_cataloging.rst:336
+msgid "delete 245b"
+msgstr "刪除 245b"
+
+#: ../../source/06_cataloging.rst:338
+msgid "Deletes the first ‡b subfield on the first 245 to ‡b"
+msgstr "刪除第一個 245 欄位的 ‡b 分欄"
+
+#: ../../source/06_cataloging.rst:343
+#, fuzzy
+msgid "Adding Analytic Records"
+msgstr "`新增分析紀錄 <#cataloganalytics>`__"
+
+#: ../../source/06_cataloging.rst:345
+msgid ""
+"Libraries sometimes make journal articles and articles within monographs and "
+"serials accessible to library patrons through analytics cataloging. "
+"Analytics cataloging creates separate bibliographic records for these "
+"articles, chapters, sections, etc. found within a larger resource such as a "
+"book, an article within a journal, newspaper or serial. In analytics "
+"cataloging, although a separate bib record is created for the title, it is "
+"not physically separated from the host item.  Learn more about Analytics in "
+"Chapter 13 of AACR2."
+msgstr ""
+"有時圖書館需要以分析編目技術，處理期刊裡的論文或專書裡的章節，供讀者使用。分"
+"析編目可編目期刊、報紙或期刊等書目記錄的部份內容，包括論文、章節、段落等。分"
+"析編目時，每個題名都有獨立的書目紀錄，但並未脫離主館藏的實體。詳情見中國編目"
+"規則第十四章分析與 AACR2 第 13 章。"
+
+#: ../../source/06_cataloging.rst:354
+#, fuzzy
+msgid ""
+"If you would like to catalog analytic records there are two options. One is "
+"to use the :ref:`Easy Analytics` funtion; the other is the :ref:`Analytics "
+"Enhanced Workflow`."
+msgstr ""
+"Koha 提供兩種編目分析的選擇。一個是 `簡易分析 <#catalogeasyanalytics>`__ 另個"
+"是 `分析強化流程 <#catalogenhanceanalytics>`__。"
+
+#: ../../source/06_cataloging.rst:361
+msgid "Easy Analytics"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:363
+#, fuzzy
+msgid ""
+"The Easy Analytics feature makes linking analytic records together easier. "
+"The first thing you need to do is set the :ref:`EasyAnalyticalRecords` "
+"preference to 'Display' and the :ref:`UseControlNumber` preference to 'Don't "
+"use.'"
+msgstr ""
+"簡易分析功能可輕易地連結多個分析記錄。首先，設定 `EasyAnalyticalRecords "
+"<#EasyAnalyticalRecords>`__ 偏好為 '顯示' 並把 `UseControlNumber "
+"<#UseControlNumber>`__ 偏好設為 '不使用'。"
+
+#: ../../source/06_cataloging.rst:369
+#, fuzzy
+msgid ""
+"After cataloging your analytic record (see :ref:`Adding Records <adding-"
+"records-label>` for more on creating records) click 'Edit' from the normal "
+"view and choose to 'Link to Host Item'"
+msgstr ""
+"編目分析紀錄後 (詳情見 `新增記錄 <#addbibrec>`__)，在標準檢視模式下點選 '編"
+"輯'，並選擇 '連結至主館藏'"
+
+#: ../../source/06_cataloging.rst:373
+#, fuzzy
+msgid "|image646|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:375
+msgid ""
+"This will prompt you to enter the barcode for the item this record should be "
+"linked to."
+msgstr "提示鍵入館藏的條碼，以連結至紀錄。"
+
+#: ../../source/06_cataloging.rst:378
+#, fuzzy
+msgid "|image647|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:380
+msgid ""
+"After entering the item's barcode and clicking 'Select' you will receive a "
+"confirmation message."
+msgstr "鍵入館藏條碼並按下 '選擇' 鈕後，出現確認訊息。"
+
+#: ../../source/06_cataloging.rst:383
+#, fuzzy
+msgid "|image648|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:385
+msgid ""
+"The record will now have the 773 field filled in properly to complete the "
+"link."
+msgstr "此紀錄的773欄位鍵入完整的連結。"
+
+#: ../../source/06_cataloging.rst:388
+#, fuzzy
+msgid "|image649|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:390 ../../source/06_cataloging.rst:435
+msgid ""
+"To view all of the items tied to the host record, do a search for the "
+"record, click the Analytics tab on the left and the analytics tied to each "
+"barcode will be shown under the \"Used in\" column."
+msgstr ""
+"檢視與主紀錄連結的所有館藏、搜尋紀錄、勾選左方的分析分頁並分析每個條碼，顯示"
+"在 \"使用於\" 欄。"
+
+#: ../../source/06_cataloging.rst:394
+#, fuzzy
+msgid "|image650|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:398
+msgid ""
+"It is also possible to create analytic records from this screen by clicking "
+"on \"Create Analytics\""
+msgstr "在此畫面按 \"新增分析\" 也可新增分析紀錄"
+
+#: ../../source/06_cataloging.rst:401 ../../source/06_cataloging.rst:441
+msgid ""
+"You can also see the analytics attached to this record by clicking the 'Show "
+"Analytic' link towards the top of the record in the normal view."
+msgstr "在正常檢視下，按紀錄上方的 '分析' 連結，可看到該紀錄的分析。"
+
+#: ../../source/06_cataloging.rst:404
+#, fuzzy
+msgid "|image651|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:406 ../../source/06_cataloging.rst:446
+#, fuzzy
+msgid ""
+"When looking at the analytic record you will also see a link to the host "
+"item under the 'Host records' column in the holdings table when viewing the "
+"'Analytics' tab."
+msgstr ""
+"檢視分析記錄時，從 '分析' 分頁館藏表的 '主記錄' 欄裡，也可看到連結至主記錄的"
+"分析。"
+
+#: ../../source/06_cataloging.rst:410
+#, fuzzy
+msgid "|image652|"
+msgstr "主紀錄"
+
+#: ../../source/06_cataloging.rst:415
+#, fuzzy
+msgid "Analytics Enhanced Workflow"
+msgstr "`分析強化工作流程 <#catalogenhanceanalytics>`__"
+
+#: ../../source/06_cataloging.rst:417
+#, fuzzy
+msgid ""
+"To use the Enhanced Workflow method of adding analytics, the first thing you "
+"need to do is set the :ref:`EasyAnalyticalRecords` preference to 'Don't "
+"display' and the :ref:`UseControlNumber` preference to 'Use.'"
+msgstr ""
+"以強化工作流程新增分析時，首先應設定 `EasyAnalyticalRecords "
+"<#EasyAnalyticalRecords>`__ 偏好為 '不顯示' 並把 `UseControlNumber "
+"<#UseControlNumber>`__偏好設為 '使用'。"
+
+#: ../../source/06_cataloging.rst:423
+#, fuzzy
+msgid ""
+"After cataloging your original record (see :ref:`Adding Records <adding-"
+"records-label>` for more on creating records) click 'New' from the normal "
+"view and choose to 'New child record.'"
+msgstr ""
+"編好原始記錄後 (詳情見 `新增記錄 <#addbibrec>`__)，從標準檢視裡勾選 '新增' 並"
+"選擇 '新增子記錄'。"
+
+#: ../../source/06_cataloging.rst:427
+#, fuzzy
+msgid "|image653|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:429
+msgid ""
+"This will open a new blank record for cataloging. The blank record will only "
+"have the 773 field filled in properly to complete the link once the record "
+"is saved."
+msgstr "開啟空白的記錄供編目之用。祗需填入 773 欄位的內容建立連結就可以儲存。"
+
+#: ../../source/06_cataloging.rst:433
+#, fuzzy
+msgid "|image654|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:439
+#, fuzzy
+msgid "|image655|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:444
+#, fuzzy
+msgid "|image656|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:450
+#, fuzzy
+msgid "|image657|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:455
+msgid "Editing Analytics"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:457
+msgid ""
+"If you have linked an analytic record incorrectly you can remove that link "
+"by editing the item on the analytic record (not the host record). To do "
+"this, go to the analytic record and click the 'Edit' button and choose to "
+"'Edit items'. To the left of each item you will see two options."
+msgstr ""
+"若連結至分析紀錄錯誤，您可在分析紀錄(不是主紀錄)裡編輯該館藏，移除此連結。進"
+"入分析連結，勾選'編輯'鈕，選擇'編輯館藏'，從每個館藏的左方，可以看到兩個選"
+"項。"
+
+#: ../../source/06_cataloging.rst:463
+#, fuzzy
+msgid "|image658|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:465
+msgid ""
+"Clicking 'Edit in Host' will allow you to edit the item on the host record."
+msgstr "勾選'編輯主紀錄'，將允許您從主紀錄編輯館藏。"
+
+#: ../../source/06_cataloging.rst:468
+msgid ""
+"Clicking 'Delink' will remove the 773 field and the link between the "
+"analytic and the host."
+msgstr "勾選 '不連結'，將移除 773 欄位以及分析與主紀錄的連結。"
+
+#: ../../source/06_cataloging.rst:474
+#, fuzzy
+msgid "Editing Records"
+msgstr "`編輯紀錄 <#editbibrec>`__"
+
+#: ../../source/06_cataloging.rst:476
+msgid ""
+"To edit a record you can click 'Edit Biblio' from the search results on the "
+"cataloging page"
+msgstr "從編目頁面的搜尋結果點選 '編輯書目' 就能夠編輯記錄"
+
+#: ../../source/06_cataloging.rst:479
+#, fuzzy
+msgid "|image659|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:481
+msgid ""
+"or by clicking the Edit button on the Bibliographic Record and choosing "
+"'Edit Record'"
+msgstr "或在書目記錄裡按編輯鈕並選擇 '編輯記錄'"
+
+#: ../../source/06_cataloging.rst:484
+#, fuzzy
+msgid "|image660|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:486
+msgid "The record will open in the MARC editor"
+msgstr "將以 MARC 編輯器打開此紀錄"
+
+#: ../../source/06_cataloging.rst:488
+#, fuzzy
+msgid "|image661|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:490
+msgid ""
+"The alternative is to search via Z39.50 to overlay your record with a fuller "
+"record found at another library. You can do this by choosing 'Replace Record "
+"via Z39.50' from the Edit menu."
+msgstr ""
+"另一個選項是經由 Z39.50 搜尋，以其他圖書館較完整的記錄覆蓋本館原來的記錄。從"
+"編輯選單裡，選取 '經由 Z39.50 覆蓋原記錄'。"
+
+#: ../../source/06_cataloging.rst:494
+#, fuzzy
+msgid "|image662|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:496
+msgid ""
+"Once you choose that you will be brought to a Z39.50 search window to search "
+"other libraries for the record in question."
+msgstr "選定之後，進入Z39.50搜尋視窗，搜尋其他圖書館的紀錄。"
+
+#: ../../source/06_cataloging.rst:499
+msgid ""
+"Once you have made your edits (via either method) you can click 'Save' at "
+"the top left of the editor."
+msgstr "編輯之後 (任何方式均可) 可按下編輯器左上方的 '儲存' 鈕。"
+
+#: ../../source/06_cataloging.rst:502
+#, fuzzy
+msgid ""
+"You can also use the edit menu to add your own custom cover image if you "
+"have either :ref:`OPACLocalCoverImages` and/or :ref:`LocalCoverImages` set "
+"to 'Display' by choosing 'Upload Image' from the menu."
+msgstr ""
+"若已經把 `OPACLocalCoverImages <#OPACLocalCoverImages>`__ 與 "
+"`LocalCoverImages <#LocalCoverImages>`__ 設為 '顯示' 就可以從編輯選單裡，經"
+"由 '上傳封面' 使用客製化的封面。"
+
+#: ../../source/06_cataloging.rst:507
+#, fuzzy
+msgid "|image663|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:509
+#, fuzzy
+msgid ""
+"Choosing to 'Upload Image' will take you to the :ref:`Upload Local Cover "
+"Image Tool <upload-local-cover-image-label>`."
+msgstr "選擇 '上傳封面' 進入 `上傳在地封面工具 <#uploadlocalimages>`__。"
+
+#: ../../source/06_cataloging.rst:515
+#, fuzzy
+msgid "Duplicating Records"
+msgstr "`複製紀錄 <#dupbibrec>`__"
+
+#: ../../source/06_cataloging.rst:517
+msgid ""
+"Sometimes a copy of the record you need to catalog can't be found via "
+"Z39.50. In these cases you can create a duplicate of similar record and edit "
+"the necessary pieces to create a new record. To duplicate an existing record "
+"click 'Edit as New (Duplicate)' from the Edit menu on the Bibliographic "
+"Record"
+msgstr ""
+"無法從 Z39.50 取得記錄。祗好複製一個類似的記錄，並編輯幾個必要的欄位產生新的"
+"紀錄。從書目錄的編輯選單裡，按 '編輯成新記錄 (複製)' 就可以做到"
+
+#: ../../source/06_cataloging.rst:523
+#, fuzzy
+msgid "|image664|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:525
+msgid ""
+"This will open a new MARC record with the fields filled in with the values "
+"from the original Bibliographic Record."
+msgstr "將從原來的書目紀錄複製所有的欄位及其值，開啟成新的 MARC 紀錄。"
+
+#: ../../source/06_cataloging.rst:528
+#, fuzzy
+msgid "|image665|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:533
+#, fuzzy
+msgid "Attaching files to Records"
+msgstr "`新增紀錄的檔案 <#uploadbibfile>`__"
+
+#: ../../source/06_cataloging.rst:535
+msgid ""
+"If you would like to upload files to Koha you can do so with a few settings."
+msgstr "藉由幾個設定可以上傳檔案給 Koha。"
+
+#: ../../source/06_cataloging.rst:538
+#, fuzzy
+msgid ""
+"You will need to ask your system administrator to set the 'upload\\_path' "
+"config variable to point to where the files will be stored"
+msgstr "需要系統管理員設定 'upload_path' 變數指定檔案的儲存地"
+
+#: ../../source/06_cataloging.rst:542
+#, fuzzy
+msgid ""
+"You can see if your upload path is set correctly by visiting About Koha > "
+"System Information. If there is an error you will see it there."
+msgstr "從關於 Koha &gt; 系統資訊可查看上傳路徑。若有錯誤則在此顯示。"
+
+#: ../../source/06_cataloging.rst:546
+msgid "|image1264|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:548
+#, fuzzy
+msgid ""
+"You will want to be sure that your :ref:`OPACBaseURL` system preference is "
+"set appropriately"
+msgstr "必須正確設定`OPACBaseURL <#OPACBaseURL>`__ 偏好"
+
+#: ../../source/06_cataloging.rst:551
+#, fuzzy
+msgid ""
+"You will want to add the upload.pl plugin to the 856$u subfield in one (or "
+"multiple) of your :ref:`frameworks <edit-framework-subfields-label>`"
+msgstr "在一個 (或多個) `框架 <#editsubfields>`__ 中新增 upload.pl 於 856$u 內"
+
+#: ../../source/06_cataloging.rst:554
+#, fuzzy
+msgid ""
+"Once you are all set up you can continue with cataloging as regular. You "
+"will see a plugin icon next to the 856$u that will open up the upload and/or "
+"search window"
+msgstr ""
+"設定後就可以正常編目。在 856$u 旁可看到外掛圖示點選後可開啟上傳或搜尋視窗"
+
+#: ../../source/06_cataloging.rst:558
+msgid "|image1265|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:560
+#, fuzzy
+msgid ""
+"From this menu you can click browse to find a file and attach it, or you can "
+"search files you have uploaded previously using the search box. From the "
+"search results you can choose which file to attach."
+msgstr ""
+"從這個選單點選瀏覽找到檔案並上傳，或可搜尋以搜尋盒上傳的檔案。從搜尋結果選擇"
+"上傳的檔案。"
+
+#: ../../source/06_cataloging.rst:564
+msgid "|image1266|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:566
+msgid ""
+"Once the file is chosen it will appear as a link in the MARC record and on "
+"the detail display."
+msgstr "選定的檔案將出現在 MARC 記錄內及詳細顯示的連結。"
+
+#: ../../source/06_cataloging.rst:572
+#, fuzzy
+msgid "Merging Records"
+msgstr "合併紀錄"
+
+#: ../../source/06_cataloging.rst:574
+msgid ""
+"To merge bibliographic records together you will want to go to the "
+"Cataloging module and perform a search."
+msgstr "從編目模組搜尋到欲合併的兩個書目記錄。"
+
+#: ../../source/06_cataloging.rst:577
+msgid ""
+"If you see duplicates on that search results screen you can check the boxes "
+"next to the duplicates and click the 'Merge selected' button at the top of "
+"the results."
+msgstr "可勾選搜尋的重複結果，並按上方的 '合併館藏' 鈕。"
+
+#: ../../source/06_cataloging.rst:581
+msgid ""
+"Once you have selected the records you want to merge, click the 'Merge "
+"selected' button at the top of the list. You will be asked which of the "
+"records you would like to keep as your primary record and which will be "
+"deleted after the merge. If the records were created using different "
+"frameworks, Koha will also ask you what Framework you would like the newly "
+"merged record to use."
+msgstr ""
+"選定合併的紀錄後，按上方的 '合併館藏' 鈕。系統會詢問何者為合併後保留的主要紀"
+"錄、何者為刪除的紀錄。若使用不同的框架，Koha 會詢問保留的框架。"
+
+#: ../../source/06_cataloging.rst:588
+#, fuzzy
+msgid "|image666|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:590
+msgid ""
+"You will be presented with the MARC for all of the records (each accessible "
+"by tabs labeled with the bib numbers for those records). By default the "
+"entire first record will be selected, uncheck the fields you don't want in "
+"the final (destination) record and then move on to the second tab to choose "
+"which fields should be in the final (destination) record."
+msgstr ""
+"顯示兩筆紀錄的 MARC 內容 (從標示欄號的分頁進入)。預設是勾選第一筆紀錄的所有欄"
+"位，可剔除不要進入合併後記錄 (目標) 的欄位，再移入第二個分頁，選擇要保留在合"
+"併後紀錄 (目標) 的欄位。"
+
+#: ../../source/06_cataloging.rst:597
+#, fuzzy
+msgid "|image667|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:599
+msgid ""
+"Should you try to add a field that is not repeatable two times (like "
+"choosing the 245 field from both record #1 and #2) you will be presented "
+"with an error"
+msgstr ""
+"應試著新增不重複的欄位，兩個館藏 (如從紀錄 1 與紀錄 2 選擇 245 欄位) 將顯示錯"
+"誤"
+
+#: ../../source/06_cataloging.rst:603
+#, fuzzy
+msgid "|image668|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:605
+msgid ""
+"Below the records you are merging is an option to enter fields to report on. "
+"This will allow you to control what fields you see on the merge confirmation "
+"page:"
+msgstr "記錄之下可鍵入待合併的欄位。藉以控制在合併確認頁面出現的欄位："
+
+#: ../../source/06_cataloging.rst:609
+#, fuzzy
+msgid "|image669|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:611
+msgid ""
+"If you enter nothing you will be presented with a confirmation of "
+"biblionumbers only"
+msgstr "未鍵入資料則出現確認書目號的訊息"
+
+#: ../../source/06_cataloging.rst:614
+#, fuzzy
+msgid "|image670|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:616
+#, fuzzy
+msgid ""
+"If you enter fields you will see those on the confirmation page (you can set "
+"defaults with the :ref:`MergeReportFields` preference)"
+msgstr ""
+"鍵入欄位後可從確認頁面看到 (可以從 `MergeReportFields "
+"<#MergeReportFields>`__ 偏好設定)"
+
+#: ../../source/06_cataloging.rst:620
+#, fuzzy
+msgid "|image671|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:622
+msgid ""
+"Once you have completed your selections click the 'merge' button. The "
+"primary record will now CONTAIN the data you chose for it as well as all of "
+"the items/holdings from both bib records, and the second record will be "
+"deleted."
+msgstr ""
+"選好之後按下 '合併' 鈕。主要紀錄將包括您選定的資料以及兩筆書目紀錄的館藏資"
+"料，並刪除第二筆紀錄。"
+
+#: ../../source/06_cataloging.rst:629
+msgid ""
+"It is important to rebuild your zebra index immediately after merging "
+"records. If a search is performed for a record which has been deleted Koha "
+"will present the patrons with an error in the OPAC."
+msgstr ""
+"合併紀錄後應立即重建 Zebra 索引。若搜尋已被刪除的記錄 Koha 將在 OPAC 顯示錯誤"
+"的訊息。"
+
+#: ../../source/06_cataloging.rst:636
+#, fuzzy
+msgid ""
+"If you would like you can also use the :ref:`Lists` tool for merging records "
+"together. :ref:`Learn more here <merging-bibliographic-records-via-lists-"
+"label>`."
+msgstr ""
+"經由 `清單 <#lists>`__ 工具合併多筆紀錄。`詳情在此 <#mergebibrecs>`__。"
+
+#: ../../source/06_cataloging.rst:642
+#, fuzzy
+msgid "Deleting Records"
+msgstr "`刪除紀錄 <#deleterecord>`__"
+
+#: ../../source/06_cataloging.rst:644
+msgid ""
+"To delete a bibliographic record simply choose the 'Edit' button and select "
+"'Delete record'"
+msgstr "按下 '編輯' 鈕選擇 '刪除記錄' 就能刪除書目記錄"
+
+#: ../../source/06_cataloging.rst:647
+#, fuzzy
+msgid "|image672|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:649
+msgid ""
+"Bibliographic records can only be deleted one all items have been deleted. "
+"If you try to delete a bibliographic record with items still attached you "
+"will see that the delete option is grayed out."
+msgstr ""
+"必須先刪除該書目記錄的館藏記錄，才能刪除書目記錄。書目紀錄內還有館藏紀錄時，"
+"刪除的選項是灰色的，不可刪除它。"
+
+#: ../../source/06_cataloging.rst:653
+#, fuzzy
+msgid "|image673|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:658
+#, fuzzy
+msgid "Item Records"
+msgstr "儲存紀錄"
+
+#: ../../source/06_cataloging.rst:660
+msgid ""
+"In Koha each bibliographic record can have one or more items attached. These "
+"items are sometimes referred to as holdings. Each item includes information "
+"to the physical copy the library has."
+msgstr ""
+"在 Koha 裡，每筆書目記錄可以有多筆館藏記錄。這些館藏記錄也被稱為館藏。每個館"
+"藏包括圖書館擁有該館藏的物理資訊。"
+
+#: ../../source/06_cataloging.rst:667
+msgid "Adding Items"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:669
+msgid ""
+"After saving a new bibliographic record, you will be redirected to a blank "
+"item record so that you can attach an item to the bibliographic record. You "
+"can also click 'Add/Edit Items' from the cataloging search results"
+msgstr ""
+"儲存書目記錄後，進入空白的館藏資訊，可以新增附屬於該書目紀錄的館藏。從編目搜"
+"尋結果，勾選 '新增/編輯館藏' 即可"
+
+#: ../../source/06_cataloging.rst:674
+#, fuzzy
+msgid "|image674|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:676
+msgid ""
+"or you can add new item at any time by clicking 'New' on the bibliographic "
+"record and choosing 'New Item'"
+msgstr "或者勾選書目記錄的 '新增' 再選新增 '館藏'"
+
+#: ../../source/06_cataloging.rst:679
+#, fuzzy
+msgid "|image675|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:681
+msgid "The item edit form will appear:"
+msgstr "將顯示館藏編輯表單："
+
+#: ../../source/06_cataloging.rst:683
+#, fuzzy
+msgid "|image676|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:685
+msgid ""
+"At the very least, if you plan on circulating the item, the following fields "
+"should be entered for new items:"
+msgstr "若打算借出館藏，以下欄位應鍵入新的館藏："
+
+#: ../../source/06_cataloging.rst:688
+msgid "2 - Source of classification"
+msgstr "2- 分類法來源"
+
+#: ../../source/06_cataloging.rst:690
+msgid "a - Permanent location"
+msgstr "a - 永久位置"
+
+#: ../../source/06_cataloging.rst:692
+msgid "b - Current location"
+msgstr "b - 現在典藏地"
+
+#: ../../source/06_cataloging.rst:694
+msgid "o - Full call number"
+msgstr "o - 完整索書號"
+
+#: ../../source/06_cataloging.rst:696
+#, fuzzy
+msgid ""
+"If you'd like you can use the `call number browser plugin "
+"<#cnbrowseplugin>`__ for this field. If it's enabled you'll see a ... to the "
+"right of the field. When clicked that will open a call number browser window "
+"if the row is highlighted in Red then the call number is in use, if there is "
+"a thin Green line instead then the call number can be used."
+msgstr ""
+"在這個欄位可以使用 `瀏覽索書號外掛 <#cnbrowseplugin>`__ 軟體。啟用後可在欄位"
+"右方看到 ... 之類的內容。點選後開啟索書號瀏覽視窗紅色表示索書號使用中，若為淡"
+"綠色則可以使用索書號。"
+
+#: ../../source/06_cataloging.rst:703
+#, fuzzy
+msgid "|image1267|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:705
+msgid "p - Barcode"
+msgstr "p- 條碼"
+
+#: ../../source/06_cataloging.rst:707
+msgid "v - Cost, replacement price"
+msgstr "v - 價格，重置費用"
+
+#: ../../source/06_cataloging.rst:709
+msgid ""
+"This value will be charged to patrons when you mark an item they have "
+"checked out as 'Lost'"
+msgstr "借出的館藏被申報為 '遺失' 時，向讀者收取的費用"
+
+#: ../../source/06_cataloging.rst:712
+msgid "y - Koha item type"
+msgstr "y - Koha館藏類型"
+
+#: ../../source/06_cataloging.rst:714
+#, fuzzy
+msgid ""
+"To make sure that these values are filled in you can mark them as mandatory "
+"in the :ref:`framework <marc-bibliographic-frameworks-label>` you're using "
+"and then they will appear in red with a 'required' label. The item will not "
+"save until the required fields are filled in."
+msgstr ""
+"可以在 `框架 <#marcbibframeworks>`__ 裡，把這些欄位設為必備，就會以紅色標示"
+"為 '必備' 標籤。必須鍵入資料才能儲存它。"
+
+#: ../../source/06_cataloging.rst:719
+#, fuzzy
+msgid "|image677|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:723
+#, fuzzy
+msgid ""
+"To make item subfields required in a framework you'll want to edit the 952 "
+"field in the :ref:`framework editor <marc-bibliographic-frameworks-label>`."
+msgstr ""
+"在 `框架編輯器 <#marcbibframeworks>`__ 裡編輯 952 欄位，才能讓館藏分欄設為必"
+"備。"
+
+#: ../../source/06_cataloging.rst:727
+msgid "Below the add form there are 3 buttons for adding the item"
+msgstr "在新增表單下有 3 個鈕可供新增館藏"
+
+#: ../../source/06_cataloging.rst:729
+#, fuzzy
+msgid "|image678|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:731
+msgid "Add Item will add just the one item"
+msgstr "新增館藏時祗新增一筆館藏"
+
+#: ../../source/06_cataloging.rst:733
+#, fuzzy
+msgid ""
+"Add & Duplicate will add the item and fill in a new form with the same "
+"values for your to alter"
+msgstr "新增 &amp; 複製將新增該館藏，並以相同的值填入新的表單供編輯"
+
+#: ../../source/06_cataloging.rst:736
+msgid ""
+"Add Multiple items will ask how many items and will then add that number of "
+"items adding +1 to the barcode so each barcode is unique"
+msgstr "新增多筆館藏將詢問新增的館藏數，並將依館藏數對條碼號逐個加 1"
+
+#: ../../source/06_cataloging.rst:739
+msgid "Your added items will appear above the add form once submitted"
+msgstr "送出後水，新增的館藏將顯示在新增表單上"
+
+#: ../../source/06_cataloging.rst:741
+#, fuzzy
+msgid "|image679|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:743
+msgid ""
+"Your items will also appear below the bibliographic details on the bib "
+"record display."
+msgstr "館藏將顯示在書目記錄頁面的書目詳情之下。"
+
+#: ../../source/06_cataloging.rst:746
+#, fuzzy
+msgid "|image680|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:748
+#, fuzzy
+msgid ""
+"If you have :ref:`SpineLabelShowPrintOnBibDetails` set to 'Display' then "
+"there will also be a link to print a quick spine label next to each item."
+msgstr ""
+"若已將 `SpineLabelShowPrintOnBibDetails "
+"<#SpineLabelShowPrintOnBibDetails>`__ 設為 '顯示' 則在每個館藏旁出現可列印書"
+"標的連結。"
+
+#: ../../source/06_cataloging.rst:753
+#, fuzzy
+msgid "|image681|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:755
+msgid ""
+"You can also filter the contents of your holdings table by clicking the "
+"'Activate filters' links. This will show a row at the top where you can type "
+"in any column to filter the results in the table."
+msgstr ""
+"按下 '啟用篩選器' 就可篩選館藏表單的內容。將在頁面上方出現一列可以鍵入篩選的"
+"內容。"
+
+#: ../../source/06_cataloging.rst:759
+#, fuzzy
+msgid "|image682|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:764
+msgid "Editing Items"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:766
+msgid "Items can be edited in several ways."
+msgstr "館藏曾被多方編輯。"
+
+#: ../../source/06_cataloging.rst:768
+msgid "Clicking 'Edit' and 'Edit Items' from the bibliographic record"
+msgstr "從書目紀錄內按 '編輯' 與 '編輯館藏'"
+
+#: ../../source/06_cataloging.rst:770
+#, fuzzy
+msgid "|image683|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:772
+msgid ""
+"Which will open up a list of items where you can click the 'Actions' button "
+"to the left of the specific item you would like to edit and choose 'Edit'."
+msgstr ""
+"打開館藏清單後，可按下館藏左方的 '作業' 鈕，選擇 '編輯' 並開始編輯該館藏。"
+
+#: ../../source/06_cataloging.rst:776
+#, fuzzy
+msgid "|image684|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:778
+msgid "Clicking 'Edit Items' beside the item on the 'Items' tab"
+msgstr "在館藏內按 '館藏' 分頁旁的 '編輯館藏'"
+
+#: ../../source/06_cataloging.rst:780
+#, fuzzy
+msgid "|image685|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:782
+msgid "Which will open up the editor on the item you'd like to edit"
+msgstr "將打開館藏編輯器供編輯之用"
+
+#: ../../source/06_cataloging.rst:784
+#, fuzzy
+msgid "|image686|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:786
+msgid "Clicking 'Edit' and then 'Edit items in batch'"
+msgstr "按 '編輯' 再按 '批次編輯館藏'"
+
+#: ../../source/06_cataloging.rst:788
+#, fuzzy
+msgid "|image687|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:790
+#, fuzzy
+msgid ""
+"This will open up the :ref:`batch item modification tool <batch-item-"
+"modification-label>` where you can edit all of the items on this record as a "
+"batch."
+msgstr ""
+"將彈出 `批次修改館藏工具 <#batchmodifyitems>`__ 編輯此筆書目記錄的所有館藏。"
+
+#: ../../source/06_cataloging.rst:794
+#, fuzzy
+msgid ""
+"You can also enable :ref:`StaffDetailItemSelection` to have checkboxes "
+"appear to the left of each item on the detail display. You can then check "
+"off the items you would like to edit and click 'Modify selected items' at "
+"the top of the list."
+msgstr ""
+"設定 `StaffDetailItemSelection  <#StaffDetailItemSelection>`__ 偏好為啟用，在"
+"詳細顯示的館藏左方出現勾選用方塊。勾選要編輯的館藏，再點選上方的 '修改指定館"
+"藏' 鈕。"
+
+#: ../../source/06_cataloging.rst:800
+#, fuzzy
+msgid "|image688|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:802
+#, fuzzy
+msgid "You can click 'Edit' to the right of each item in the Holdings tab"
+msgstr "按館藏分頁內每個館藏右方的 '編輯' 鈕"
+
+#: ../../source/06_cataloging.rst:805
+msgid "|image1268|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:807
+#, fuzzy
+msgid ""
+"There is also a link to Edit items from the search results in the staff "
+"client"
+msgstr "館員介面的搜尋結果，也有編輯館藏的連結"
+
+#: ../../source/06_cataloging.rst:810
+#, fuzzy
+msgid "|image1269|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:812
+#, fuzzy
+msgid ""
+"Finally you can use the :ref:`Batch Item Modification <batch-item-"
+"modification-label>` tool"
+msgstr "最後您可使用 `批次修改館藏 <#batchmodifyitems>`__ 工具"
+
+#: ../../source/06_cataloging.rst:818
+#, fuzzy
+msgid "Quick Item Status Updates"
+msgstr "`快速更新館藏狀態 <#itemquickedit>`__"
+
+#: ../../source/06_cataloging.rst:820
+msgid ""
+"Often circulation staff need to change the status of an item to Lost or "
+"Damaged. This doesn't require you to edit the entire item record. Instead "
+"clicking on the item barcode on the checkout summary or checkin history will "
+"bring you to an item summary. You can also get to the item summary by "
+"clicking on the Items tab to the left of the bib detail page."
+msgstr ""
+"流通館員的工作需要改變館藏的狀態為'遺失'或'毀損'。不需編輯整個館藏紀錄，祗要"
+"在借出摘要或還入紀錄裡勾選館藏條碼，進入館藏摘要，或勾選館藏分頁左方的書目詳"
+"情頁面，就能改變館藏狀態。"
+
+#: ../../source/06_cataloging.rst:826
+#, fuzzy
+msgid "|image689|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:828
+msgid ""
+"From this view you can mark an item lost by choosing a lost status from the "
+"pull down and clicking the 'Set Status' button."
+msgstr "從這個檢視裡，可以從下拉選單的 '設定狀態' 鈕，指定館藏為遺失狀態。"
+
+#: ../../source/06_cataloging.rst:831
+#, fuzzy
+msgid "|image690|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:833
+msgid ""
+"You can also mark an item as damaged by choosing a damaged status from the "
+"pull down and clicking the 'Set Status' button."
+msgstr "從下拉選單裡按 '設定狀態' 鈕，就能標記館藏為毀損。"
+
+#: ../../source/06_cataloging.rst:836
+#, fuzzy
+msgid "|image691|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:841
+#, fuzzy
+msgid "Duplicating Items"
+msgstr "`複製館藏 <#duplicateitem>`__"
+
+#: ../../source/06_cataloging.rst:843
+msgid ""
+"You can easily duplicate each item by clicking the 'Action' button the left "
+"of each item on the edit items screen"
+msgstr "按下編輯館藏頁面每筆館藏左方的 '行動' 鈕就可複製該館藏"
+
+#: ../../source/06_cataloging.rst:846
+#, fuzzy
+msgid "|image692|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:848
+msgid ""
+"From here you can choose to 'Duplicate' the item and this will populate the "
+"form with the values from the item you chose."
+msgstr "從這裡可選擇 '複製' 館藏把選定的館藏複製。"
+
+#: ../../source/06_cataloging.rst:854
+#, fuzzy
+msgid "Item Information"
+msgstr "`館藏資訊 <#iteminfo>`__"
+
+#: ../../source/06_cataloging.rst:856
+msgid ""
+"To the left of every bibliographic record there is a tab to view the items."
+msgstr "每個書目紀錄左方有個分頁可檢視館藏。"
+
+#: ../../source/06_cataloging.rst:859
+#, fuzzy
+msgid "|image693|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:861
+msgid ""
+"Clicking that tab will give you basic information about the items. From here "
+"you can see basic information about the item such as the home library, item "
+"type, collection code, call number and replacement price. You can also see "
+"and edit the status information. If an item is marked lost or withdrawn you "
+"will also see the date that status was applied."
+msgstr ""
+"經由該分頁可檢視館藏的基本資訊。包括所屬圖書館、館藏類型、書架代碼、索書號與"
+"重置價格。並可編輯狀態資訊。若館藏被標記為遺失或撤架您可看到發生的日期。"
+
+#: ../../source/06_cataloging.rst:867
+msgid "|image1270|"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:869
+#, fuzzy
+msgid ""
+"In the History section you will see information about the check out history "
+"of the item and if you ordered the item via the acquisitions module then "
+"this section will include information about the order."
+msgstr ""
+"在紀錄區塊可看到該館藏的借出紀錄，若經由採訪模組排序館藏則也抱括採訪的資訊。"
+
+#: ../../source/06_cataloging.rst:873
+#, fuzzy
+msgid "|image694|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:875
+msgid ""
+"If the Order or Accession date is linked, clicking it will bring you to the "
+"acquisitions information for that item."
+msgstr "若含採訪日期連結，按它就進入該館藏的採訪資訊。"
+
+#: ../../source/06_cataloging.rst:881
+msgid "Moving Items"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:883
+msgid ""
+"Items can be moved from one bibliographic record to another using the Attach "
+"Item option"
+msgstr "附加館藏選項可以把館藏移至另個書目紀錄"
+
+#: ../../source/06_cataloging.rst:886
+#, fuzzy
+msgid "|image695|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:888
+msgid ""
+"Visit the bibliographic record you want to attach the item to and choose "
+"'Attach Item' from the 'Edit' menu."
+msgstr "進入書目紀錄並從 '編輯' 選單選取 '附加館藏' 就能把館藏加入此書目紀錄。"
+
+#: ../../source/06_cataloging.rst:891
+#, fuzzy
+msgid "|image696|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:893
+msgid ""
+"Simply enter the barcode for the item you want to move and click 'Select'"
+msgstr "鍵入打算移動的館藏條碼，再點選 '選擇'"
+
+#: ../../source/06_cataloging.rst:896
+#, fuzzy
+msgid ""
+"If you want to move all items to a new record creating only one "
+"bibliographic record you can use the :ref:`Merge Records tool <merging-"
+"bibliographic-records-via-lists-label>` instead."
+msgstr ""
+"使用 `合併紀錄工具 <#mergebibrecs>`__ 可以把新增書目紀錄的所有館藏置於一筆書"
+"目紀錄內。"
+
+#: ../../source/06_cataloging.rst:903
+msgid "Deleting Items"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:905
+msgid ""
+"There are many ways to delete item records. If you only need to delete one "
+"item you can do this by opening up the detail page for the bib record and "
+"clicking the 'Edit' button at the top. From there you can choose to 'Edit "
+"items'."
+msgstr ""
+"有很多方法刪除館藏紀錄，祗刪除一筆館藏紀錄時，可打開書目紀錄詳情，勾選上方"
+"的'編輯'鈕；從這書再勾選'編輯館藏'。"
+
+#: ../../source/06_cataloging.rst:910
+#, fuzzy
+msgid "|image697|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:912
+msgid ""
+"You will be presented with a list of items and next to each one will be a "
+"link labeled 'Delete'. Click that link and if the item is not checked out it "
+"will delete that item."
+msgstr ""
+"顯示館藏清單，每個館藏旁有'刪除'連結。按下此連結，若該館藏未借出，則可刪除"
+"它。"
+
+#: ../../source/06_cataloging.rst:916
+#, fuzzy
+msgid "|image698|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:918
+msgid ""
+"If you know that all of the items attached to your record are not currently "
+"checked out you can use the 'Delete all items' option under the 'Edit menu' "
+"and it will remove all items from the record."
+msgstr ""
+"若能確認附屬於書目紀錄的館藏都未借出，可以使用 '編輯選單' 下的 '刪除全部館"
+"藏' 選項，移除該紀錄的館藏。"
+
+#: ../../source/06_cataloging.rst:922
+#, fuzzy
+msgid ""
+"You can also enable :ref:`StaffDetailItemSelection` to have checkboxes "
+"appear to the left of each item on the detail display. You can then check "
+"off the items you would like to delete and click 'Delete selected items' at "
+"the top of the list."
+msgstr ""
+"也可以啟用 `StaffDetailItemSelection <#StaffDetailItemSelection>`__ 設定，在"
+"詳細顯示頁面每個館藏左方出現小方塊。勾選該等方塊，再按選單上方的 '刪除選定館"
+"藏' 鈕，即可刪除多筆館藏。"
+
+#: ../../source/06_cataloging.rst:928
+#, fuzzy
+msgid "|image699|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:930
+#, fuzzy
+msgid ""
+"Finally you can use the :ref:`batch delete tool <batch-item-deletion-label>` "
+"to delete a batch of items."
+msgstr "最後，使用 `批次刪除工具 <#batchdeleteitems>`__ 批次刪除館藏。"
+
+#: ../../source/06_cataloging.rst:936
+#, fuzzy
+msgid "Item Specific Circulation History"
+msgstr "館藏的流通紀錄"
+
+#: ../../source/06_cataloging.rst:938
+msgid ""
+"Each bibliographic record keeps a circulation history (with or without the "
+"patron information depending on your settings), but each item also has its "
+"own circulation history page. To see this, click on the 'Items' tab to the "
+"left of the record you are viewing."
+msgstr ""
+"每筆書目紀錄有其流通紀錄(含或不含讀者資訊，視您的設定)，但每筆館藏也有其自身"
+"的流通紀錄，勾選紀錄左方的'館藏'分頁，即可看到。"
+
+#: ../../source/06_cataloging.rst:943
+#, fuzzy
+msgid "|image700|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:945
+msgid ""
+"Below the 'History' heading is a link to 'View item's checkout history,' "
+"clicking that will open up the item's history which will look slightly "
+"different from the bibliographic record's history page."
+msgstr ""
+"在 '紀錄' 標題下有個連結至 '檢視館藏借出紀錄'，點選之後，開啟館藏的紀錄，看起"
+"來與書目紀錄的頁面略有不同。"
+
+#: ../../source/06_cataloging.rst:949
+#, fuzzy
+msgid "|image701|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:954
+msgid "Authorities"
+msgstr ""
+
+#: ../../source/06_cataloging.rst:956
+msgid ""
+"Authority records are a way of controlling fields in your MARC records. "
+"Using authority records will provide you with control over subject headings, "
+"personal names and places."
+msgstr ""
+"權威紀錄是一種控制 MARC 紀錄欄位的方法。以權威紀錄控制主題標目、個人名稱與地"
+"名。"
+
+#: ../../source/06_cataloging.rst:963
+#, fuzzy
+msgid "Adding Authorities"
+msgstr "`新增權威 <#addauthorities>`__"
+
+#: ../../source/06_cataloging.rst:965
+msgid ""
+"To add a new authority record you can either choose the authority type from "
+"the 'New Authority' button or search another library by clicking the 'New "
+"from Z39.50' button."
+msgstr ""
+"勾選 '新增權威' 鈕，或點選 '從Z39.50新增' 鈕搜尋其他圖書館，就能新增權威紀"
+"錄。"
+
+#: ../../source/06_cataloging.rst:969
+#, fuzzy
+msgid "|image702|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:971
+msgid ""
+"If you choose to enter a new authority from scratch, the form that appears "
+"will allow you to enter all of the necessary details regarding your "
+"authority record."
+msgstr "顯示的表單允許您鍵入權威紀錄的所有必要詳情。"
+
+#: ../../source/06_cataloging.rst:975
+#, fuzzy
+msgid "|image703|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:977
+msgid ""
+"To expand collapsed values simply click on the title and the subfields will "
+"appear. To duplicate a field or subfield just click the plus sign (+) to the "
+"right of the label. To use field helper plugins simply click the ellipsis "
+"(...) to the right of the field."
+msgstr ""
+"勾選題名出現分欄後，就能展開其值。勾選標籤右方的加號，就能複製欄位或分欄。勾"
+"選欄位右方的刪節號，就能使用外掛的說明。"
+
+#: ../../source/06_cataloging.rst:982
+msgid ""
+"When linking authorities to other headings, you can use the authority finder "
+"plugin by clicking the ellipsis (...) to the right of the field."
+msgstr "連結權威至其他標目時，可按下欄位右方的刪節號，啟用權威尋找外掛程式。"
+
+#: ../../source/06_cataloging.rst:985
+#, fuzzy
+msgid "|image704|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:987
+msgid ""
+"From there you can search your authority file for the authority to link. If "
+"you can't find the authority to link, you can click the 'Create new' button "
+"and add the necessary authority for the link. This plugin also allows for "
+"you to choose the link relationship between the authorities."
+msgstr ""
+"從此可搜尋權威紀錄檔找尋權威連結。若找不到，可點選'新增'鈕，加入必要的權威給"
+"此連結；此外掛程式允許您選擇權威間的關係。"
+
+#: ../../source/06_cataloging.rst:992
+#, fuzzy
+msgid "|image705|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:994
+msgid ""
+"If you choose to search another library for the authority record you will be "
+"presented with a search box"
+msgstr "選擇搜尋其他圖書館的權威記錄，將出現該搜尋框"
+
+#: ../../source/06_cataloging.rst:997
+#, fuzzy
+msgid "|image706|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:999
+msgid ""
+"From the results you can choose the 'Import' link to the right of the record "
+"you would like to add to Koha"
+msgstr "從結果頁面可以點選記錄右方的 '匯入' 連結，將資料加入 Koha"
+
+#: ../../source/06_cataloging.rst:1002
+#, fuzzy
+msgid "|image707|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1004
+msgid ""
+"You will then be presented with the form to edit the authority before saving "
+"it to your system"
+msgstr "儲存之前顯示可編輯的權威表單"
+
+#: ../../source/06_cataloging.rst:1007
+#, fuzzy
+msgid "|image708|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1012
+#, fuzzy
+msgid "Searching Authorities"
+msgstr "合併權威"
+
+#: ../../source/06_cataloging.rst:1014
+msgid ""
+"From the authorities page you can search for existing terms and the "
+"bibliographic records they are attached to."
+msgstr "可從權威紀錄頁面搜尋既有的詞彙以及相關的書目紀錄。"
+
+#: ../../source/06_cataloging.rst:1017
+#, fuzzy
+msgid "|image709|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1019
+#, fuzzy
+msgid ""
+"From the results you will see the authority record, how many bibliographic "
+"records it is attached to, an 'Actions' menu that includes the ability to :"
+"ref:`edit <editing-authorities-label>`, :ref:`merge <merging-authorities-"
+"label>` and :ref:`delete <editing-authorities-label>` (if there are no "
+"bibliographic records attached)."
+msgstr ""
+"從此結果，可看到附加在此權威記錄的書目記錄，'作業' 選單包括 ` 編輯 "
+"<#editauthorities>`__、`合併 <#authoritymerge>`__ 與 `刪除 "
+"<#editauthorities>`__ 等連結 (若沒有任何書目記錄附加於此)。"
+
+#: ../../source/06_cataloging.rst:1025
+#, fuzzy
+msgid "|image710|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1027
+msgid ""
+"Clicking on the Details link to the right of the authority record summary "
+"will open the full record and the option to edit the record."
+msgstr "從權威紀錄摘要右方的詳情連結，打開完整的紀錄並可編輯該紀錄。"
+
+#: ../../source/06_cataloging.rst:1030
+#, fuzzy
+msgid "|image711|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1032
+msgid ""
+"If the authority has See Alsos in it you will see those broken out on the "
+"search results, clicking the linked headings will run a search for that "
+"heading instead."
+msgstr ""
+"若權威紀錄包括參見，您將看到它們分列在搜尋結果，勾選連結的標題，將執行搜尋該"
+"標題。"
+
+#: ../../source/06_cataloging.rst:1036
+#, fuzzy
+msgid "|image712|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1041
+#, fuzzy
+msgid "Editing Authorities"
+msgstr "`編輯權威 <#editauthorities>`__"
+
+#: ../../source/06_cataloging.rst:1043
+msgid ""
+"Authorities can be edited by clicking on the authority summary from the "
+"search results and then clicking the 'Edit' button above the record. Or by "
+"clicking on the 'Edit' link to the left of the authority on the search "
+"results."
+msgstr ""
+"從搜尋結果裡勾選權威摘要，再點選記錄上方的 '編輯' 鈕就可以編輯它。或點選搜尋"
+"結果內權威記錄左方的 '編輯' 連結。"
+
+#: ../../source/06_cataloging.rst:1048
+#, fuzzy
+msgid "|image713|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1050
+#, fuzzy
+msgid ""
+"Once you've made the necessary edits, simply click 'Save' and `dontmerge "
+"<#dontmerge>`__ is set to 'Do', Koha will immediately update all of the bib "
+"records linked to the authority with the new authority record's data. If "
+"dontmerge is set to \"Don't\" then Koha won't edit bib records when changes "
+"are made to authorities, rather, this is done later by the :ref:`merge"
+"\\_authority.pl cronjob <update-authorities-label>`."
+msgstr ""
+"編輯之後，按下 '儲存' 鈕並把 `dontmerge <#dontmerge>`__ 設為 '做'，Koha 立即"
+"更新權威紀錄資料以及與該權威有關的書目紀錄。若設定為 \"不做\" Koha 不會編輯書"
+"目紀錄，而是在下次執行 `merge_authority.pl 工作排程 <#mergeauthcron>`__ 時，"
+"才更新所有附加於該權威的書目記錄。"
+
+#: ../../source/06_cataloging.rst:1057
+msgid ""
+"To delete an authority record you first must make sure it's not linked to "
+"any bibliographic records. If it is not used by any bibliographic records a "
+"'Delete' link will appear to the right of the record on the search results "
+"and as a button that appears after clicking on the summary of the authority "
+"record."
+msgstr ""
+"必須先確定沒有被任何書目紀錄連結，才能刪除權威紀錄。未被連結的權威紀錄在右方"
+"顯示 '刪除' 連結，點選後，出現權威紀錄摘要。"
+
+#: ../../source/06_cataloging.rst:1066
+#, fuzzy
+msgid "Merging Authorities"
+msgstr "合併權威"
+
+#: ../../source/06_cataloging.rst:1068
+msgid ""
+"If you have duplicate authority records you can merge them together by "
+"clicking the 'Merge' link, found in the actions menu, next to two results on "
+"an authority search."
+msgstr "重複的權威記錄，可以經由作業選單旁的 '合併' 連結，將兩筆記錄合併。"
+
+#: ../../source/06_cataloging.rst:1072
+#, fuzzy
+msgid "|image714|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1074
+msgid ""
+"After clicking 'Merge' on the first result you will see that authority "
+"listed at the top of the results."
+msgstr "在第一筆結果按 '合併' 可看見在結果上方的權威清單。"
+
+#: ../../source/06_cataloging.rst:1077
+#, fuzzy
+msgid "|image715|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1079
+msgid ""
+"Next you need to click 'Merge' next to the second result you'd like to merge."
+msgstr "接著需按第二個結果旁的 '合併' 鈕。"
+
+#: ../../source/06_cataloging.rst:1082
+msgid ""
+"You will be asked which of the two records you would like to keep as your "
+"primary record and which will be deleted after the merge."
+msgstr "Koha 要求編目員指定合併後保留的紀錄與刪除的紀錄。"
+
+#: ../../source/06_cataloging.rst:1085
+#, fuzzy
+msgid "|image716|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1087
+msgid ""
+"You will be presented with the MARC for both of the records (each accessible "
+"by tabs labeled with the authority numbers for those records). By default "
+"the entire first record will be selected, uncheck the fields you don't want "
+"in the final (destination) record and then move on to the second tab to "
+"choose which fields should be in the final (destination) record."
+msgstr ""
+"顯示兩筆紀錄的 MARC(從權威號碼的分頁進入)。預設是勾選第一筆紀錄的所有欄位，剔"
+"除不要的欄位；再移入第二個分頁，選擇要合併紀錄的欄位。"
+
+#: ../../source/06_cataloging.rst:1094
+#, fuzzy
+msgid "|image717|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1096
+msgid ""
+"Once you have completed your selections click the 'Merge' button. The "
+"primary record will now contain the data you chose for it and the second "
+"record will be deleted."
+msgstr "選好之後按 '合併' 鈕。主紀錄將保留而第二筆紀錄將被刪除。"
+
+#: ../../source/06_cataloging.rst:1100
+#, fuzzy
+msgid "|image718|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1105
+#, fuzzy
+msgid "Cataloging Guides"
+msgstr "編目指南"
+
+#: ../../source/06_cataloging.rst:1110
+#, fuzzy
+msgid "Bibliographic Record Cataloging Cheat Sheet"
+msgstr "`書目紀錄編目速查表 <#bibcatcheatsheet>`__"
+
+#: ../../source/06_cataloging.rst:1212
+#, fuzzy
+msgid "Table: Cataloging Guide"
+msgstr "編目指南"
+
+#: ../../source/06_cataloging.rst:1217
+#, fuzzy
+msgid "Item/Holdings Record Cataloging Guide"
+msgstr "`館藏紀錄編目指南 <#itemcatguide>`__"
+
+#: ../../source/06_cataloging.rst:1219
+msgid ""
+"This table represents the default embedded holdings data in Koha. This "
+"information can be used for migration or importing data purposes"
+msgstr "此表單的內容係指 Koha 預設的館藏記錄。此等資訊可用於匯出與匯入資料"
+
+#: ../../source/06_cataloging.rst:1308
+#, fuzzy
+msgid "Table: Koha Embedded Holdings Data"
+msgstr "Koha 內建館藏資料"
+
+#: ../../source/06_cataloging.rst:1310
+#, fuzzy
+msgid "\\* - required for circulation"
+msgstr "* - 流通必備"
+
+#: ../../source/06_cataloging.rst:1312
+#, fuzzy
+msgid "\\*\\* - required by Koha"
+msgstr "** - Koha 必備"
+
+#: ../../source/06_cataloging.rst:1317
+#, fuzzy
+msgid "Handling On Order Items and Holds"
+msgstr "`處理館藏訂購 <#onorderitemholds>`__"
+
+#: ../../source/06_cataloging.rst:1319
+#, fuzzy
+msgid ""
+"If you tend to import your MARC records when you have ordered the book (as "
+"opposed to when you receive the books), and allow patrons to place holds on "
+"those books, you may need to add item records to the \\*.mrc file before "
+"importing."
+msgstr ""
+"若打算匯入採訪中 (還沒有簽收) 的 MARC 資訊，且允許讀者預約它們，在匯入前需先"
+"新增館藏記錄於 *.mrc 檔案。"
+
+#: ../../source/06_cataloging.rst:1324
+#, fuzzy
+msgid ""
+"The easiest way to import your latest order is to first run your records "
+"through `MARCEdit <http://marcedit.reeset.net/>`__. Download your MARC "
+"records, saving them to your desktop or some other location you use/will "
+"remember. If you have MARCEdit already installed you should simply have to "
+"double click on your MARC records, and they will automatically open in "
+"MARCEdit."
+msgstr ""
+"最簡單的方式是先經由 `MARCEdit <#http://marcedit.reeset.net/>`__ 軟體執行書目"
+"記錄。下載 MARC 記錄，儲存於桌面或其他地方。若已安裝 MARCEdit，則以滑鼠在 "
+"MARC 記錄點兩下，就可以打開該記錄。"
+
+#: ../../source/06_cataloging.rst:1333
+msgid ""
+"This tutorial was written with MARCEdit version 5.2.3769.41641 on Windows "
+"XP, instructions may be different if your version or operating system is "
+"different."
+msgstr ""
+"以下的畫面擷取自 Windows XP 下的 MARCEdit 版本 5.2.3769.41641，可能與現在的內"
+"容略有不同。"
+
+#: ../../source/06_cataloging.rst:1337
+msgid ""
+"Your original file will automatically be in the input; ensure MarcBreaker is "
+"chosen, and then click \"Execute\""
+msgstr "自動載入原始檔案；選擇 MarcBreaker，按下 \"執行\" 鈕"
+
+#: ../../source/06_cataloging.rst:1340
+#, fuzzy
+msgid "|image719|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1342
+msgid ""
+"You will be presented with a summary of the records processed at the bottom "
+"of the screen"
+msgstr "在螢幕下方將出現處理記錄的摘要"
+
+#: ../../source/06_cataloging.rst:1345
+#, fuzzy
+msgid "|image720|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1347
+msgid "Click 'Edit Records' to continue on to adding item records"
+msgstr "按 '編輯紀錄' 繼續新增館藏紀錄"
+
+#: ../../source/06_cataloging.rst:1349
+msgid ""
+"Your screen will be replaced with a larger screen containing the MARC records"
+msgstr "畫面出現 MARC 記錄"
+
+#: ../../source/06_cataloging.rst:1352
+#, fuzzy
+msgid "|image721|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1354
+#, fuzzy
+msgid "Click on Tools > Add/Edit Field"
+msgstr "按工具 &gt; 新增/編輯欄位"
+
+#: ../../source/06_cataloging.rst:1356
+#, fuzzy
+msgid "|image722|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1358
+msgid "Enter in the Koha specific item info"
+msgstr "進入 Koha 的館藏資訊"
+
+#: ../../source/06_cataloging.rst:1360
+#, fuzzy
+msgid "|image723|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1362
+msgid "In the Field box, type 942"
+msgstr "在欄位盒鍵入 942"
+
+#: ../../source/06_cataloging.rst:1364
+#, fuzzy
+msgid ""
+"In the Field Data box, type \\\\\\\\$c and the item type code (\\\\\\\\"
+"$cBOOK in this example)"
+msgstr "在欄位資料盒，鍵入 \\\\$c 及其館藏類型代碼 (在此例是 \\\\$cBOOK)"
+
+#: ../../source/06_cataloging.rst:1367 ../../source/06_cataloging.rst:1398
+msgid "Check the 'Insert last' option"
+msgstr "按 '插入最後' 選項"
+
+#: ../../source/06_cataloging.rst:1369 ../../source/06_cataloging.rst:1400
+msgid "Click 'Add Field'"
+msgstr "按 '新增欄位'"
+
+#: ../../source/06_cataloging.rst:1371
+msgid "Enter in the item record data"
+msgstr "鍵入館藏紀錄資料"
+
+#: ../../source/06_cataloging.rst:1373
+#, fuzzy
+msgid "|image724|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1375
+msgid "In the Field box, type 952"
+msgstr "在欄位盒，鍵入 952"
+
+#: ../../source/06_cataloging.rst:1377
+#, fuzzy
+msgid ""
+"In the Field Data box, type $7ORDERED\\_STATUS$aPERM\\_LOC$bCURR\\_LOC"
+"$cSHELVING\\_LOCATION$eSOURCE\\_OF\\_ACQ$yITEM\\_TYPE"
+msgstr ""
+"在欄位資料盒，鍵入 $7ORDERED_STATUS$aPERM_LOC$bCURR_LOC$cSHELVING_LOCATION"
+"$eSOURCE_OF_ACQ$yITEM_TYPE"
+
+#: ../../source/06_cataloging.rst:1380
+msgid "ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK"
+msgstr "ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK"
+
+#: ../../source/06_cataloging.rst:1382
+msgid "In a default install of Koha -1 is the value for the Ordered status"
+msgstr "安裝 Koha 時，-1 是訂購狀態的預設值"
+
+#: ../../source/06_cataloging.rst:1385
+msgid ""
+"You may want to look at other subfields you would like data in -- for "
+"example, changing the collection code to put all the items in the same "
+"collection (8), automatically fill in the acquisition date (d), or put in a "
+"public note (z)."
+msgstr ""
+"可以編修其他欄位的資料 -- 如：改變館藏代碼，讓所有的館藏放在一起 (8)、自動填"
+"入採訪日期 (d)、填入公開附註 (z)。"
+
+#: ../../source/06_cataloging.rst:1390
+msgid ""
+"Be sure you use the $ to separate subfields; adding each subfield on a "
+"separate line will cause that many items to be imported with your MARC "
+"record (in the example above, four items, each with one of those subfields "
+"corrected)"
+msgstr ""
+"使用 $ 做為分欄代碼；每列新增一個分欄讓多個館藏可以匯入 MARC 紀錄 (在上例中，"
+"四個館藏，各有對應的分欄)"
+
+#: ../../source/06_cataloging.rst:1395
+#, fuzzy
+msgid ""
+"Make sure you look at the Administration > Authorized Values in Koha to put "
+"the correct code into the field"
+msgstr "確認在管理 &gt; 容許值裡，在欄位鍵入正確的代碼"
+
+#: ../../source/06_cataloging.rst:1402
+msgid "Close the field editor window"
+msgstr "關閉欄位編輯視窗"
+
+#: ../../source/06_cataloging.rst:1404
+#, fuzzy
+msgid "Click on File > Compile into MARC"
+msgstr "按檔案 &gt; 進入 MARC 編輯"
+
+#: ../../source/06_cataloging.rst:1406
+#, fuzzy
+msgid "|image725|"
+msgstr "館藏毀損"
+
+#: ../../source/06_cataloging.rst:1408
+msgid "Choose where to save your file"
+msgstr "選定儲存檔案的位置"
+
+#: ../../source/06_cataloging.rst:1410
+#, fuzzy
+msgid ""
+"Now you want to go into your Koha system and follow the instructions for :"
+"ref:`importing MARC records <stage-marc-records-for-import-label>`."
+msgstr "進入 Koha 系統，遵照 `匯入 MARC 紀錄 <#stagemarc>`__ 的指示。"
+
+#: ../../source/06_cataloging.rst:1413
+msgid ""
+"Once the item has come in, you will need to go to the item record and "
+"individually change the item to have the correct barcode, and manually "
+"change the status from Ordered to the blank line in the Not for Loan field."
+msgstr ""
+"進入之後，到館藏記錄並分別修改其條碼，將把館藏狀態由訂購中改為不外借欄位的空"
+"白列。"
+
+#: ../../source/06_cataloging.rst:1420
+msgid ""
+"If you purchase your cataloged item records, you may want to request your "
+"vendor put in the information you need into the MARC records for you; that "
+"way, you could import the edited-by-the-vendor file, overwriting the current "
+"record, automatically replacing the data with what you need."
+msgstr ""
+"向代理商取得館藏記錄時，可要求代理商提供 MARC 記錄；這樣，才能夠匯入它，覆寫"
+"原來的記錄，並自動置換需要的資料。"
+
+#, fuzzy
+#~ msgid "New Record Menu |image627|"
+#~ msgstr "新增紀錄選單"
+
+#, fuzzy
+#~ msgid "Z39.50 Search |image628|"
+#~ msgstr "搜尋Z39.50"
+
+#, fuzzy
+#~ msgid "Z39.50 Search Results |image629|"
+#~ msgstr "Z39.50 搜尋結果"
+
+#, fuzzy
+#~ msgid "Import Link Popup on Z39.50 Search Results |image630|"
+#~ msgstr "匯入連結彈出於 Z39.50 搜尋結果"
+
+#, fuzzy
+#~ msgid "Try another search |image631|"
+#~ msgstr "試其他搜尋"
+
+#, fuzzy
+#~ msgid "Add MARC Record |image632|"
+#~ msgstr "新增機讀編目格式記錄說明"
+
+#, fuzzy
+#~ msgid "Authority fields locked against editing |image633|"
+#~ msgstr "權威欄位被鎖住不能編輯"
+
+#, fuzzy
+#~ msgid "Search for authority |image634|"
+#~ msgstr "搜尋權威"
+
+#, fuzzy
+#~ msgid "Authority search results |image635|"
+#~ msgstr "權威搜尋結果"
+
+#, fuzzy
+#~ msgid "Duplicate a Field |image636|"
+#~ msgstr "複製欄位"
+
+#, fuzzy
+#~ msgid "Clone Subfield |image637|"
+#~ msgstr "複製分欄"
+
+#, fuzzy
+#~ msgid "Leader Builder Plugin |image638|"
+#~ msgstr "記錄標示編輯器"
+
+#, fuzzy
+#~ msgid "008 Plugin |image639|"
+#~ msgstr "008 外掛"
+
+#, fuzzy
+#~ msgid "Record save options |image640|"
+#~ msgstr "儲存紀錄選項"
+
+#, fuzzy
+#~ msgid "Duplicate Record Warning |image641|"
+#~ msgstr "紀錄重複警示"
+
+#, fuzzy
+#~ msgid ""
+#~ "In the advanced editor once you've opened a blank framework or imported a "
+#~ "record via Z39.50 you will be presented with the form to continue "
+#~ "catalogingAdvanced cataloging editor"
+#~ msgstr ""
+#~ "打開空白的框架或經由Z39.50匯入紀錄後，進階編輯器將出現繼續編目的表單"
+
+#, fuzzy
+#~ msgid "Advanced Z39.50 results |image642|"
+#~ msgstr "進階 Z39.50 結果"
+
+#, fuzzy
+#~ msgid "Advanced Z39.50 results |image643|"
+#~ msgstr "進階 Z39.50 結果"
+
+#, fuzzy
+#~ msgid "Advanced Cataloging |image644|"
+#~ msgstr "進階編目"
+
+#, fuzzy
+#~ msgid "Advanced Z39.50 results |image645|"
+#~ msgstr "進階 Z39.50 結果"
+
+#~ msgid "`Easy Analytics <#catalogeasyanalytics>`__"
+#~ msgstr "`簡易分析 <#catalogeasyanalytics>`__"
+
+#, fuzzy
+#~ msgid "Link to Host Item |image646|"
+#~ msgstr "連結至主館藏"
+
+#, fuzzy
+#~ msgid "Barcode for Analytic Linking |image647|"
+#~ msgstr "分析連結的條碼"
+
+#, fuzzy
+#~ msgid "Analytic Link Success |image648|"
+#~ msgstr "分析連結成功"
+
+#, fuzzy
+#~ msgid "Analytics Tab |image650|"
+#~ msgstr "分析分頁"
+
+#, fuzzy
+#~ msgid "Show Analytics on Bib Record |image651|"
+#~ msgstr "在書目紀錄顯示分析"
+
+#, fuzzy
+#~ msgid "New child record |image653|"
+#~ msgstr "新增兒童讀者紀錄"
+
+#, fuzzy
+#~ msgid "Analytics Tab |image655|"
+#~ msgstr "分析分頁"
+
+#, fuzzy
+#~ msgid "Show Analytics on Bib Record |image656|"
+#~ msgstr "在書目紀錄顯示分析"
+
+#, fuzzy
+#~ msgid "Host Record |image657|"
+#~ msgstr "主紀錄"
+
+#~ msgid "`Editing Analytics <#analyticediting>`__"
+#~ msgstr "`編輯分析 <#analyticediting>`__"
+
+#, fuzzy
+#~ msgid "Edit Analytic Item Record |image658|"
+#~ msgstr "編輯分析館藏紀錄"
+
+#, fuzzy
+#~ msgid "Edit Biblio Option on Search Results |image659|"
+#~ msgstr "從搜尋結果編輯書目選項"
+
+#, fuzzy
+#~ msgid "Edit Record Option on Bibliographic Record |image660|"
+#~ msgstr "書目紀錄裡的編輯紀錄選項"
+
+#, fuzzy
+#~ msgid "Editing MARC Record |image661|"
+#~ msgstr "編輯 MARC 紀錄"
+
+#, fuzzy
+#~ msgid "Replace via Z39.50 |image662|"
+#~ msgstr "經由 Z39.50 取代"
+
+#, fuzzy
+#~ msgid "Upload Image |image663|"
+#~ msgstr "上傳更多照片"
+
+#, fuzzy
+#~ msgid "Edit as New (Duplicate) Bibliographic Record |image664|"
+#~ msgstr "編輯成新 (複製) 書目紀錄"
+
+#, fuzzy
+#~ msgid "New Duplicate Record |image665|"
+#~ msgstr "新增複製紀錄"
+
+#~ msgid "`Merging Records <#mergebibs>`__"
+#~ msgstr "`合併紀錄 <#mergebibs>`__"
+
+#, fuzzy
+#~ msgid "Choose Primary Record for Merge |image666|"
+#~ msgstr "選擇合併後的主要紀錄"
+
+#, fuzzy
+#~ msgid "Non-repeatable Error |image668|"
+#~ msgstr "不可重複的錯誤"
+
+#, fuzzy
+#~ msgid "Merge report fields |image669|"
+#~ msgstr "合併報表欄位"
+
+#, fuzzy
+#~ msgid "Merge report |image670|"
+#~ msgstr "合併報表欄位"
+
+#, fuzzy
+#~ msgid "Merge report |image671|"
+#~ msgstr "合併報表欄位"
+
+#, fuzzy
+#~ msgid "Delete record |image672|"
+#~ msgstr "刪除紀錄對映規則"
+
+#, fuzzy
+#~ msgid "Record with items still attached |image673|"
+#~ msgstr "還有館藏紀錄的書目紀錄"
+
+#~ msgid "`Item Records <#catitems>`__"
+#~ msgstr "`館藏紀錄 <#catitems>`__"
+
+#~ msgid "`Adding Items <#addingitems>`__"
+#~ msgstr "`新增館藏 <#addingitems>`__"
+
+#, fuzzy
+#~ msgid "Add/Edit Items Option on Search Results |image674|"
+#~ msgstr "在搜尋結果的新增/編輯館藏選項"
+
+#, fuzzy
+#~ msgid "New Item Button |image675|"
+#~ msgstr "新增館藏鈕"
+
+#, fuzzy
+#~ msgid "Add item form |image676|"
+#~ msgstr "新增館藏表單"
+
+#, fuzzy
+#~ msgid "Required Item Subfield |image677|"
+#~ msgstr "館藏的必備分欄"
+
+#, fuzzy
+#~ msgid "Add Item Buttons |image678|"
+#~ msgstr "新增館藏鈕"
+
+#, fuzzy
+#~ msgid "List of Items on the Bib Record |image680|"
+#~ msgstr "書目紀錄裡的館藏清單"
+
+#, fuzzy
+#~ msgid "List of Items on the Bib Record with a Print Label link |image681|"
+#~ msgstr "書目紀錄裡含有列印書標連結的館藏清單"
+
+#, fuzzy
+#~ msgid "Filter holdings |image682|"
+#~ msgstr "篩選館藏"
+
+#~ msgid "`Editing Items <#editingitems>`__"
+#~ msgstr "`編輯館藏 <#editingitems>`__"
+
+#, fuzzy
+#~ msgid "Edit Items Menu Option |image683|"
+#~ msgstr "編輯館藏選單選項"
+
+#, fuzzy
+#~ msgid "Edit individual items |image684|"
+#~ msgstr "編輯個別館藏"
+
+#, fuzzy
+#~ msgid "Edit individual items |image686|"
+#~ msgstr "編輯個別館藏"
+
+#, fuzzy
+#~ msgid "Edit items in a batch |image687|"
+#~ msgstr "批次編輯館藏"
+
+#, fuzzy
+#~ msgid "Editing selected items |image688|"
+#~ msgstr "編輯選定館藏"
+
+#, fuzzy
+#~ msgid "Item Edit |image689|"
+#~ msgstr "館藏毀損"
+
+#, fuzzy
+#~ msgid "Edit Lost Status |image690|"
+#~ msgstr "編輯遺失狀態"
+
+#, fuzzy
+#~ msgid "Edit Damaged Status |image691|"
+#~ msgstr "編輯損壞狀態"
+
+#, fuzzy
+#~ msgid "Edit individual items |image692|"
+#~ msgstr "編輯個別館藏"
+
+#, fuzzy
+#~ msgid "Items Tab |image693|"
+#~ msgstr "館藏毀損"
+
+#, fuzzy
+#~ msgid "History with order info |image694|"
+#~ msgstr "採訪資訊紀錄"
+
+#~ msgid "`Moving Items <#moveitemrec>`__"
+#~ msgstr "`移動館藏 <#moveitemrec>`__"
+
+#, fuzzy
+#~ msgid "Attach Item Option |image695|"
+#~ msgstr "附加館藏選項"
+
+#, fuzzy
+#~ msgid "Attach Item Form |image696|"
+#~ msgstr "附加館藏表單"
+
+#~ msgid "`Deleting Items <#deleteitems>`__"
+#~ msgstr "`刪除館藏 <#deleteitems>`__"
+
+#, fuzzy
+#~ msgid "'Edit Items' menu option |image697|"
+#~ msgstr "'編輯館藏' 選單選項"
+
+#, fuzzy
+#~ msgid "Delete link on the left |image698|"
+#~ msgstr "刪除左方的連結"
+
+#, fuzzy
+#~ msgid "Deleting selected items |image699|"
+#~ msgstr "刪除選定館藏"
+
+#~ msgid "`Item Specific Circulation History <#itemcirchistory>`__"
+#~ msgstr "`館藏的流通紀錄 <#itemcirchistory>`__"
+
+#~ msgid "`Authorities <#catauthorities>`__"
+#~ msgstr "`權威 <#catauthorities>`__"
+
+#, fuzzy
+#~ msgid "New Authority Record Options |image702|"
+#~ msgstr "新增權威紀錄選項"
+
+#, fuzzy
+#~ msgid "New Authority Record |image703|"
+#~ msgstr "新增權威紀錄"
+
+#, fuzzy
+#~ msgid "Authority search plugin |image704|"
+#~ msgstr "搜尋權威紀錄外掛程式"
+
+#, fuzzy
+#~ msgid "Authority relationships |image705|"
+#~ msgstr "權威關係"
+
+#, fuzzy
+#~ msgid "Authority Z39.50 Search |image706|"
+#~ msgstr "Z39.50 權威紀錄搜尋"
+
+#, fuzzy
+#~ msgid "Authority Z39.50 Results |image707|"
+#~ msgstr "Z39.50 權威紀錄結果"
+
+#, fuzzy
+#~ msgid "Imported Authority |image708|"
+#~ msgstr "匯入權威"
+
+#~ msgid "`Searching Authorities <#searchauthorities>`__"
+#~ msgstr "`搜尋權威 <#searchauthorities>`__"
+
+#, fuzzy
+#~ msgid "Authority Search |image709|"
+#~ msgstr "搜尋權威"
+
+#, fuzzy
+#~ msgid "Authority Search Results |image710|"
+#~ msgstr "權威搜尋結果"
+
+#, fuzzy
+#~ msgid "Authority Record |image711|"
+#~ msgstr "權威紀錄欄號"
+
+#, fuzzy
+#~ msgid "See Also in Authorities |image712|"
+#~ msgstr "參見權威紀錄"
+
+#, fuzzy
+#~ msgid "Edit Authority Record |image713|"
+#~ msgstr "編輯權威紀錄"
+
+#~ msgid "`Merging Authorities <#authoritymerge>`__"
+#~ msgstr "`合併權威 <#authoritymerge>`__"
+
+#, fuzzy
+#~ msgid "Duplicate authorities results |image714|"
+#~ msgstr "權威記錄的重複結果"
+
+#, fuzzy
+#~ msgid "Merging authorities results |image715|"
+#~ msgstr "合併權威結果"
+
+#, fuzzy
+#~ msgid "Authorities to merge |image717|"
+#~ msgstr "待合併的權威"
+
+#, fuzzy
+#~ msgid "Merged authority |image718|"
+#~ msgstr "合併權威"
+
+#~ msgid "`Cataloging Guides <#catguides>`__"
+#~ msgstr "`編目指南 <#catguides>`__"
+
+#~ msgid "Tag"
+#~ msgstr "欄號"
+
+#~ msgid "Label"
+#~ msgstr "書標"
+
+#~ msgid "Description"
+#~ msgstr "說明"
+
+#~ msgid "Instructions"
+#~ msgstr "指示"
+
+#~ msgid "000"
+#~ msgstr "000"
+
+#~ msgid "LEADER"
+#~ msgstr "記錄標示"
+
+#~ msgid ""
+#~ "Describes the record(i.e. surrogate) -- is it a record for a monograph? A "
+#~ "serial?"
+#~ msgstr "紀錄敘述 (即代用品) -- 是書目紀錄？期刊？"
+
+#~ msgid ""
+#~ "Click in this field to fill it in. Then set \"Bibliographic level\" to "
+#~ "'a' for articles or 's' for serials. Otherwise, leave everything as is."
+#~ msgstr ""
+#~ "按此欄位填入資料。設定 \"書目性質\" 為 'a' 表示為論文或 's' 表示為期刊。否"
+#~ "則，保持原樣。"
+
+#~ msgid "001"
+#~ msgstr "001"
+
+#~ msgid "CONTROL NUMBER"
+#~ msgstr "控制碼"
+
+#~ msgid "Accession number."
+#~ msgstr "近用碼。"
+
+#~ msgid ""
+#~ "Enter the accession number written inside the item here. For articles and "
+#~ "items which do not have accession numbers, leave blank."
+#~ msgstr "鍵入在館藏內找到的近用碼。沒有近用碼的論文與館藏，則保持空白。"
+
+#~ msgid "003"
+#~ msgstr "003"
+
+#~ msgid "CONTROL NUMBER IDENTIFIER"
+#~ msgstr "控制碼辨識單位"
+
+#~ msgid "Your MARC Organizational Code"
+#~ msgstr "您的 MARC 機構碼"
+
+#~ msgid ""
+#~ "Click in this field to fill it in (will auto fill if you have your "
+#~ "`MARCOrgCode <#MARCOrgCode>`__ preference set)."
+#~ msgstr ""
+#~ "按此欄位填入資料 (若已設定 `MARCOrgCode <#MARCOrgCode>`__ 偏好則自動填"
+#~ "入)。"
+
+#~ msgid "005"
+#~ msgstr "005"
+
+#, fuzzy
+#~ msgid "D & T LATEST TRANSACTION"
+#~ msgstr "D &amp; T LATEST TRANSACTION"
+
+#~ msgid "Current date and time."
+#~ msgstr "今天日期與現在時間。"
+
+#~ msgid "Click in this field to fill it in."
+#~ msgstr "按此欄位填入資料。"
+
+#~ msgid "008"
+#~ msgstr "008"
+
+#~ msgid "FIXED-LENGTH DATA ELEMENTS"
+#~ msgstr "定長資料細目"
+
+#~ msgid ""
+#~ "Field containing computer-readable representations of a number of things."
+#~ msgstr "包括電腦可讀的若干事項。"
+
+#~ msgid ""
+#~ "Generally you will only use 's' (single) or 'm' (multiple) options for "
+#~ "position 06- use the former when the item was published in a single year, "
+#~ "the latter when it was published over the course of several. If there is "
+#~ "a single date, only enter a date in the first date field (positions "
+#~ "07-10). Enter the three-digit country code in positions 15-17, being sure "
+#~ "to add spaces if the country code is fewer than three characters long. If "
+#~ "there is an index, note that fact in position 31. Enter the three-letter "
+#~ "language code in positions 35-37."
+#~ msgstr ""
+#~ "在位址 06 鍵入 's' (單件) 或 'm' (多件)，在一年內出版的館藏使用 s，跨年出"
+#~ "版的館藏使用 m。祗有一個年份，則鍵入出版年1 (位址 07-10)。在位址 15-17 鍵"
+#~ "入三位數的國家代碼，少於三位數時應加入空白。在位址 31，記載其索引。在位址 "
+#~ "35-37 鍵入語文代碼。"
+
+#~ msgid "010"
+#~ msgstr "010"
+
+#~ msgid "LCCN"
+#~ msgstr "美國國會圖書館控制號碼"
+
+#~ msgid ""
+#~ "A number assigned by the Library of Congress to uniquely identify the "
+#~ "work."
+#~ msgstr "美國國會圖書館管制其編目紀錄流程用的號碼。"
+
+#~ msgid ""
+#~ "Check on the copyright page of the book (if it was published in the US) "
+#~ "or the LC catalog for this number. If you can't find it, don't worry "
+#~ "about it."
+#~ msgstr ""
+#~ "從館藏的版權頁 (若在美國出版) 或 LC的目錄取得該號碼。若找不到，別理它。"
+
+#~ msgid "020"
+#~ msgstr "020"
+
+#~ msgid "ISBN"
+#~ msgstr "ISBN"
+
+#~ msgid "Unique number used by publishers to identify books."
+#~ msgstr "出版社使用的號碼用於辨識圖書之用。"
+
+#~ msgid "If this number isn't listed on the book, there probably isn't one."
+#~ msgstr "若出版品本身無此號碼，可能就沒有。"
+
+#~ msgid "022"
+#~ msgstr "022"
+
+#~ msgid "ISSN"
+#~ msgstr "ISSN"
+
+#~ msgid "Unique number used by publishers to identify serials."
+#~ msgstr "出版社使用的號碼用於辨識期刊之用。"
+
+#~ msgid "033"
+#~ msgstr "033"
+
+#~ msgid "DATE/TIME OF EVENT"
+#~ msgstr "事件的日期/時間與地點"
+
+#~ msgid "Used for auction dates. Required for auction catalogs."
+#~ msgstr "適用於拍賣日期。拍賣目錄的必備欄位。"
+
+#~ msgid ""
+#~ "For auctions that took place on only one day, enter the date of the "
+#~ "auction in the format YYYYMMDD in the subfield 'a' and a '0' in the first "
+#~ "indicator. For auctions that took place over two consecutive days or any "
+#~ "number of non-consecutive days, create a subfield 'a' for each day with "
+#~ "the date in the format YYYYMMDD, and put a '1' in the first indicator. "
+#~ "For auctions that took place over more than two consecutive days, create "
+#~ "a subfield 'a' (in format YYYYMMDD) for the first day and a subfield "
+#~ "'a' (also in format YYYYMMDD) for the last day, and put a '2' in the "
+#~ "first indicator."
+#~ msgstr ""
+#~ "祗進行一天的拍賣，以 YYYYMMDD 格式在分欄 'a' 鍵入日期並在第一個指標鍵入 "
+#~ "'0'。連續或不連續進行兩天的拍賣，新增重複的分欄 'a' 以 YYYYMMDD 格式著錄每"
+#~ "個拍賣日期，並且在第一個指標鍵入 '1'。連續進行兩天以上的拍賣，以分欄 "
+#~ "'a' (以 YYYYMMDD 格式) 著錄拍賣的第一天，並且新增重複的分欄 'a' (也是 "
+#~ "YYYYMMDD 格式) 著錄拍賣的第最後一天，在第一個指標鍵入 '2'。"
+
+#~ msgid "040"
+#~ msgstr "040"
+
+#~ msgid "CATALOGING SOURCE"
+#~ msgstr "編目來源"
+
+#~ msgid "Identifies which libraries created and modified the record."
+#~ msgstr "著錄新增與修改紀錄的機構。"
+
+#~ msgid ""
+#~ "For imported records, add a subfield 'd' with your OCLC code as the "
+#~ "value. For new records, make sure that the subfield 'c' with your OCLC "
+#~ "code as the value."
+#~ msgstr ""
+#~ "匯入的紀錄，應新增分欄 'd' 與 OCLC 代碼為其值。新增的紀錄，其分欄 'c' 含"
+#~ "有 OCLC 代碼為其值。"
+
+#~ msgid "041"
+#~ msgstr "041"
+
+#~ msgid "LANGUAGE CODE"
+#~ msgstr "語文代碼"
+
+#~ msgid ""
+#~ "Identifies all the languages used in an item, when two or more languages "
+#~ "are present."
+#~ msgstr "若館藏有多個語文，用以辨識所有的語文。"
+
+#~ msgid ""
+#~ "For significant portions of a text in a given language, there should be a "
+#~ "subfield 'a' with that language code. If there are only summaries or "
+#~ "abstracts in a specific language, create a subfield 'b' with that "
+#~ "language code."
+#~ msgstr ""
+#~ "文字的主要部份祗有一種語文時，在分欄 'a' 著錄其語文代碼。若摘要以特定語文"
+#~ "呈現，則新增分欄 'b' 著錄其語文代碼。"
+
+#~ msgid "100"
+#~ msgstr "100"
+
+#~ msgid "MAIN ENTRY--PERSONAL"
+#~ msgstr "主要款目--個人名稱"
+
+#~ msgid "Authorized form of the main author's name"
+#~ msgstr "主要著者名稱的權威型式"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. The first indicator should "
+#~ "generally be a '1', to indicate that the entry is surname first. If the "
+#~ "name consists only of a forename, however, the first indicator should be "
+#~ "'0'."
+#~ msgstr ""
+#~ "見權威標題速查表與 AACR2。第一個指標的值通常為 '1'，表示該款目先著錄的是"
+#~ "姓。若姓名裡祗有名，則第一個指標應為 '0'。"
+
+#~ msgid "110"
+#~ msgstr "110"
+
+#~ msgid "MAIN ENTRY--CORPORATE"
+#~ msgstr "主要款目--團體名稱"
+
+#~ msgid ""
+#~ "Authorized form of the name of the main corporate author. Required for "
+#~ "auction catalogs."
+#~ msgstr "主要團體著者名稱的權威型式。拍賣目錄的必備欄位。"
+
+#~ msgid ""
+#~ "Auction catalogs should use a 110 field rather than a 100 field. See "
+#~ "Authorized headings sheet and AACR2. Set the first indicator to '2'."
+#~ msgstr ""
+#~ "拍賣目錄應使用欄位 110 而不是 100。見權威標題速查表與 AACR2。設定第一個指"
+#~ "標為 '2'。"
+
+#~ msgid "111"
+#~ msgstr "111"
+
+#~ msgid "MAIN ENTRY--MEETING"
+#~ msgstr "主要款目--會議名稱"
+
+#~ msgid ""
+#~ "Authorized form of the name of a meeting which acted as a main offer (e."
+#~ "g. conference proceedings)"
+#~ msgstr "做為會議主要提供者 (如會議刊物) 的權威型式"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. Set the first indicator to '2'."
+#~ msgstr "見權威標題速查表與 AACR2。設定第一個指標為 '2'。"
+
+#~ msgid "245"
+#~ msgstr "245"
+
+#~ msgid "TITLE STATEMENT"
+#~ msgstr "題名敘述"
+
+#~ msgid ""
+#~ "Transcription of the title statement from the title page (or chief source "
+#~ "of information)"
+#~ msgstr "著錄題名頁 (或主要著錄來源) 的題名敘述"
+
+#~ msgid ""
+#~ "Enter the title in subfield 'a', the subtitle in subfield 'b', and the "
+#~ "statement of responsibility in subfield 'c'. If you are creating a record "
+#~ "for a single volume or part of a multi-part item, you should put the part "
+#~ "number in subfield 'n' and the part title in subfield 'p.' For auction "
+#~ "catalogs, the date (in 'MM/DD/YYYY' format) should be listed in square "
+#~ "brackets in subfield 'f'. See ISBD punctuation sheet. Set the first "
+#~ "indicator to '0' if there is no author, otherwise set it to '1'. Set the "
+#~ "second indicator to the number of non-filing characters (i.e. characters "
+#~ "in an initial articles plus the space... for \"The \" set the second "
+#~ "indicator to '4')."
+#~ msgstr ""
+#~ "將題名著錄於分欄 'a'、副題名於分欄 'b'、著者敘述於分欄 'c'。若新增紀錄給多"
+#~ "冊館藏的其中一冊或部份，則應將該部份的編號著錄於分欄 'n' 並將該部份的題名"
+#~ "著錄於分欄 'p'。拍賣目錄的日期 (格式為 'MM/DD/YYYY')，應以方括弧圈住置於分"
+#~ "欄 'f'。見 ISBD 標點符號速查表。若沒有著者則把第一個指標設為 '0'，否則設"
+#~ "為 '1'。第二個指標用於不排序的字元數 (即，起首的冠詞加其空格 ... 對 \"The "
+#~ "\" 而言第二個指標為 '4')。"
+
+#~ msgid "246"
+#~ msgstr "246"
+
+#~ msgid "VARYING FORM OF TITLE"
+#~ msgstr "其他題名"
+
+#~ msgid "Alternate form of title for searching and filing purposes"
+#~ msgstr "搜尋與排序用題名的其他型式"
+
+#~ msgid ""
+#~ "If the patron might look for the work under a different title, enter it "
+#~ "here. Do not include initial articles. The first indicator should be '3', "
+#~ "unless the title is merely a variant spelling, in which case the first "
+#~ "indicator should be '1'."
+#~ msgstr ""
+#~ "把讀者可能搜尋的其他題名，著錄於此。不要納入起首的冠詞。第一個指標應為 "
+#~ "'3'，若題名祗是不同的拚法，則第一個指標應為 '1'。"
+
+#~ msgid "250"
+#~ msgstr "250"
+
+#~ msgid "EDITION STATEMENT"
+#~ msgstr "版本敘述"
+
+#~ msgid ""
+#~ "Transcription of the edition statement from the title page (or chief "
+#~ "source of information)"
+#~ msgstr "著錄來自題名頁 (或主要著錄來源) 的版本資訊"
+
+#~ msgid ""
+#~ "Transcribe the edition statement exactly as it appears on the title-page. "
+#~ "You may abbreviate if the edition statement is very long."
+#~ msgstr "原樣照錄來自題名頁的版本資訊。可以縮寫太冗長的版本資訊。"
+
+#~ msgid "260"
+#~ msgstr "260"
+
+#~ msgid "PUBLICATION (IMPRINT)"
+#~ msgstr "出版 (印刷)"
+
+#~ msgid "Publication information."
+#~ msgstr "出版資訊。"
+
+#~ msgid ""
+#~ "Put the location of publication in subfield 'a', the publisher in "
+#~ "subfield 'b', and the year (or probable year) in subfield 'c'. See ISBD "
+#~ "punctuation sheet."
+#~ msgstr ""
+#~ "出版地置於分欄 'a'、出版者在分欄 'b'、出版年 (或可能的年代) 在分欄 'c'。"
+#~ "見 ISBD 速查表。"
+
+#~ msgid "300"
+#~ msgstr "300"
+
+#~ msgid "PHYSICAL DESCRIPTION"
+#~ msgstr "稽核項"
+
+#~ msgid "Physical description"
+#~ msgstr "稽核項"
+
+#~ msgid ""
+#~ "Enter the pagination statement in subfield 'a', a brief description of "
+#~ "\"special\" contents such as illustrations or maps in subfield 'b' (see "
+#~ "AACR2), and the size of the item in subfield 'c'. See ISBD punctuation "
+#~ "sheet."
+#~ msgstr ""
+#~ "數量單位置於分欄 'a'、簡述插圖或地圖等 \"特殊\" 稽核細節於分欄 'b' (見 "
+#~ "AACR2)、高廣與尺寸置於分欄 'c'。見 ISBD 速查表。"
+
+#~ msgid "490"
+#~ msgstr "490"
+
+#~ msgid "SERIES STATEMENT"
+#~ msgstr "集叢項"
+
+#~ msgid "Shows the series statement exactly as it appears on the item."
+#~ msgstr "照錄館藏記載的集叢項內容。"
+
+#~ msgid ""
+#~ "Transcribe the series statement into subfield 'a' with the volume number "
+#~ "in subfield 'v'. See ISBD punctuation sheet. Set the first indicator to "
+#~ "'1' if you are using an 830. As a general rule, you should do so."
+#~ msgstr ""
+#~ "把集叢題名著錄於分欄 'a' 集叢號著錄於分欄 'v'。參見 ISBD 標點符號速查表。"
+#~ "若使用欄位 830 則把第一個指標設為 '1'。做為一般規則，必須照做。"
+
+#~ msgid "500"
+#~ msgstr "500"
+
+#~ msgid "GENERAL NOTE"
+#~ msgstr "一般附註"
+
+#~ msgid "Notes that don't fit anywhere else."
+#~ msgstr "不適用於其他地方的附註。"
+
+#~ msgid ""
+#~ "Enter notes as full sentences, with a separate 500 field for each "
+#~ "distinct topic."
+#~ msgstr "以完整的句子記載附註，每個主題各有獨立的 500 欄位。"
+
+#~ msgid "501"
+#~ msgstr "501"
+
+#~ msgid "WITH NOTE"
+#~ msgstr "合刊註"
+
+#~ msgid ""
+#~ "Notes whether the work is bound with the works described by other records."
+#~ msgstr "與其他紀錄裝訂在一起的作品。"
+
+#~ msgid "Put description of relationship in subfield 'a'."
+#~ msgstr "將其關係記載於分欄 'a'。"
+
+#~ msgid "504"
+#~ msgstr "504"
+
+#~ msgid "BIBLIOGRAPHY, ETC. NOTE"
+#~ msgstr "書目註"
+
+#~ msgid "Indicates whether the work includes a bibliography."
+#~ msgstr "說明作品包括書目。"
+
+#~ msgid ""
+#~ "If the work includes a bibliography and index, put the text \"Includes "
+#~ "bibliographical references (p. XXX-XXX) and index.\" in subfield 'a'. If "
+#~ "the work does not include an index, remove that part of the sentence. If "
+#~ "the references are scattered throughout the work and not gathered into a "
+#~ "distinct sentence, remove the parenthetical statement."
+#~ msgstr ""
+#~ "若作品包括書目與索引，文字記載為 \"含參考書目 (面：XXX-XXX) 及索引。\" 於"
+#~ "分欄 'a'。若作品沒有索引，移除該部份的文字。若參考資料分散作品各處沒有聚在"
+#~ "一起，則移除括號及其敘述。"
+
+#~ msgid "505"
+#~ msgstr "505"
+
+#~ msgid "FORMATTED CONTENTS"
+#~ msgstr "內容註"
+
+#~ msgid ""
+#~ "List of contents in a standard format. Unformatted contents can be listed "
+#~ "in a 500 (General Note) field."
+#~ msgstr "標準格式的內容清單。未格式化的內容可列在欄位 500 (一般附註)。"
+
+#~ msgid ""
+#~ "See ISBD punctuation sheet. Set the first indicator to '0'. If you are "
+#~ "separately coding authors and titles, set the second indicator to '0'. "
+#~ "Otherwise, leave the second indicator blank."
+#~ msgstr ""
+#~ "見 ISBD 速查表。設定第一個指標為 '0'。若含獨立的著者與題名代碼，則設定第二"
+#~ "個指標為 '0'。否則，讓第二個指標為空白。"
+
+#~ msgid "518"
+#~ msgstr "518"
+
+#~ msgid "DATE/TIME OF EVENT NOTE"
+#~ msgstr "事件之日期/時間與地點註"
+
+#~ msgid "Used for auction dates."
+#~ msgstr "適用於拍賣日期。"
+
+#~ msgid ""
+#~ "For auction catalogs, enter the date of the auction in the format "
+#~ "'January 2, 1984' in the subfield 'a'"
+#~ msgstr "在拍賣目錄裡，以 'January 2, 1984' 格式把拍賣日期鍵入分欄 'a'"
+
+#~ msgid "520"
+#~ msgstr "520"
+
+#~ msgid "SUMMARY, ETC."
+#~ msgstr "摘要、提要註。"
+
+#~ msgid "A brief summary or abstract of the book or article."
+#~ msgstr "圖書或論文的摘要。"
+
+#~ msgid ""
+#~ "In general you do not need to write a summary. A summary might be called "
+#~ "for, however, with items that cannot be easily reviewed by a patron, such "
+#~ "as books with highly acidic paper or CD-ROMs."
+#~ msgstr ""
+#~ "大部份情況下，編目員不需自行撰寫摘要。摘要可能來自讀者無法自行評論的館藏，"
+#~ "印刷於酸紙的圖書或 CD-ROM。"
+
+#~ msgid "546"
+#~ msgstr "546"
+
+#~ msgid "LANGUAGE NOTE"
+#~ msgstr "語文註"
+
+#~ msgid "Note describing the languages used in the work"
+#~ msgstr "作品使用的語文註"
+
+#~ msgid ""
+#~ "Only needed for works in multiple languages. See ISBD punctuation sheet."
+#~ msgstr "祗適用於多語文的作品。見 ISBD 標點符號速查表。"
+
+#~ msgid "561"
+#~ msgstr "561"
+
+#~ msgid "PROVENANCE INFORMATION"
+#~ msgstr "館藏所有權與館藏歷史註"
+
+#~ msgid "Describes the previous ownership of the item."
+#~ msgstr "著錄館藏前手所有權。"
+
+#~ msgid "Used only for rare books."
+#~ msgstr "祗適用於善本書。"
+
+#~ msgid "563"
+#~ msgstr "563"
+
+#~ msgid "BINDING INFORMATION"
+#~ msgstr "裝訂資訊註"
+
+#~ msgid "Describes the binding of the item."
+#~ msgstr "著錄館藏的裝訂。"
+
+#~ msgid "590"
+#~ msgstr "590"
+
+#~ msgid "LOCAL NOTE"
+#~ msgstr "在地使用註"
+
+#~ msgid "Local notes. Required for auction catalogs."
+#~ msgstr "在地使用註。拍賣目錄的必備欄位。"
+
+#~ msgid ""
+#~ "Used for auction catalogs to indicate what types of coins are sold in the "
+#~ "auction- Roman, Greek, etc."
+#~ msgstr "用於拍賣目錄指出拍賣售出的硬幣類型- 羅馬、希臘等。"
+
+#~ msgid "600"
+#~ msgstr "600"
+
+#~ msgid "SUBJECT ADDED--PERSONAL"
+#~ msgstr "主題附加款目--個人名稱"
+
+#~ msgid "Authorized form of personal names for people discussed in the work"
+#~ msgstr "個人姓名的權威型式使用於作品討論的人"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. The first indicator should "
+#~ "generally be a '1', to indicate that the entry is surname first. If the "
+#~ "name consists only of a forename, however, the first indicator should be "
+#~ "'0'. If you found the name in the LC authority file, set the second "
+#~ "indicator to '0'. Otherwise set the second indicator to '4'."
+#~ msgstr ""
+#~ "見權威標題速查表與 AACR2。第一個指標應為 '1'，表示該款目以姓在前。若名稱祗"
+#~ "有名，則第一個指標設為 '0'。若在美國國會圖書館權威檔案找到該名稱，則第二個"
+#~ "指標設為 '0'。否則第二個指標設為 '4'。"
+
+#~ msgid "610"
+#~ msgstr "610"
+
+#~ msgid "SUBJECT ADDED--CORPORATE"
+#~ msgstr "標題附加款目--團體名稱"
+
+#~ msgid ""
+#~ "Authorized form of corporate names for organizations discussed in the work"
+#~ msgstr "團體名稱的權威型式用於作品討論的機構"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. Set the first indicator to '2'. "
+#~ "If you found the name in the LC authority file, set the second indicator "
+#~ "to '0'. Otherwise set the second indicator to '4'."
+#~ msgstr ""
+#~ "見權威標題速見表與 AACR2。第一個指標設為 '2'。若在美國國會圖書館權威檔案找"
+#~ "到該名稱，則設定第二個指標為 '0'。否則第二個指標設為 '4'。"
+
+#~ msgid "611"
+#~ msgstr "611"
+
+#~ msgid "SUBJECT ADDED--MEETING"
+#~ msgstr "標題附加款目--會議名稱"
+
+#~ msgid "Authorized form of meeting names for meetings discussed in the work"
+#~ msgstr "會議名稱的權威型式用於作品討論的會議"
+
+#~ msgid "630"
+#~ msgstr "630"
+
+#~ msgid "SUBJECT ADDED--UNIFORM TITLE"
+#~ msgstr "標題附加款目--劃一題名"
+
+#~ msgid "Authorized form of titles for other works discussed in the work"
+#~ msgstr "其他作品題名的權威型式用於原作品"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. Set the first indicator to the "
+#~ "number of non-filing characters (i.e. characters in an initial articles "
+#~ "plus the space... for \"The \" set the first indicator to '4'). If you "
+#~ "found the name in the LC authority file, set the second indicator to '0'. "
+#~ "Otherwise set the second indicator to '4'."
+#~ msgstr ""
+#~ "見權威標題速見表與 AACR2。第一個指標設為不排序字元數 (首字為冠詞及其空"
+#~ "格 ... \"The \" 的第一個指標設為 '4')。若在 LC 權威檔案找到該名稱，則設定"
+#~ "第二個指標為 '0'。否則第二個指標設為 '4'。"
+
+#~ msgid "650"
+#~ msgstr "650"
+
+#~ msgid "SUBJECT ADDED--TOPICAL"
+#~ msgstr "標題附加款目--主題用語"
+
+#~ msgid ""
+#~ "Library of Congress Subject Heading terms describing the subject of the "
+#~ "work"
+#~ msgstr "以美國國會圖書館主題標題表描述作品的主題"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. If you found the name in the LC "
+#~ "authority file, set the second indicator to '0'. Otherwise set the second "
+#~ "indicator to '4'."
+#~ msgstr ""
+#~ "見權威標題速見表與 AACR2。若在美國國會圖書館權威檔案找到該名稱，則設定第二"
+#~ "個指標為 '0'。否則第二個指標設為 '4'。"
+
+#~ msgid "651"
+#~ msgstr "651"
+
+#~ msgid "SUBJECT ADDED--GEOGRAPHICAL"
+#~ msgstr "標題附加款目--地理名詞"
+
+#~ msgid ""
+#~ "Library of Congress Subject Heading geographical terms describing the "
+#~ "subject of the work"
+#~ msgstr "以美國國會圖書館主題標題地理名詞表描述作品的主題"
+
+#~ msgid "655"
+#~ msgstr "655"
+
+#~ msgid "INDEX TERM--GENRE/FORM"
+#~ msgstr "索引詞彙--體裁/型式"
+
+#~ msgid "Describes what an item is as opposed to what the item is about."
+#~ msgstr "著錄館藏是什麼，而不是該館藏關於什麼。"
+
+#~ msgid ""
+#~ "Generally used only for auction catalogs, which should have the genre "
+#~ "heading \"Auction catalogs.\" (make sure to find the authorized heading!) "
+#~ "If you found the name in the LC authority file, set the second indicator "
+#~ "to '0'. If you are using a term from a specific thesaurus, set the second "
+#~ "indicator to '7' and put the code for the thesaurus in subfield '2'. "
+#~ "Otherwise set the second indicator to '4'."
+#~ msgstr ""
+#~ "通常適用於拍賣目錄，有個體裁標題 \"拍賣目錄\" (確認找到權威標題！) 若在 "
+#~ "LC 權威檔案找到該名稱，則設定第二個指標為 '0'。若使用專業辭語典，則設定第"
+#~ "二個指標為 '7' 並將該辭語典的代碼著錄於分欄 '2'。否則第二個指標設為 '4'。"
+
+#~ msgid "690"
+#~ msgstr "690"
+
+#~ msgid "LOCAL SUBJECT ADDED--TOPICAL"
+#~ msgstr "在地標題附加款目--主題用語"
+
+#~ msgid "Used for headings from any custom subject authority file."
+#~ msgstr "取自任何客製化的主題權威檔案。"
+
+#~ msgid ""
+#~ "If there is no appropriate LCSH term, you can use a 690 with subject "
+#~ "headings you find on other items in the catalog."
+#~ msgstr ""
+#~ "若沒有適合的 LCSH 術語，可以把其他目錄找到的術語當成主題標目置於 690。"
+
+#~ msgid "691"
+#~ msgstr "691"
+
+#~ msgid "LOCAL SUBJECT ADDED--GEOGRAPHICAL"
+#~ msgstr "在地標題附加款目--地理名稱"
+
+#~ msgid ""
+#~ "If there is no appropriate LCSH term, you can use a 691 with subject "
+#~ "headings you find on other items in the catalog."
+#~ msgstr ""
+#~ "若沒有適合的 LCSH 術語，可以把其他目錄找到的術語當成主題標目置於 691。"
+
+#~ msgid "700"
+#~ msgstr "700"
+
+#~ msgid "ADDED ENTRY--PERSONAL"
+#~ msgstr "附加款目--個人名稱"
+
+#~ msgid ""
+#~ "Used for second authors and other persons related to the production of "
+#~ "the work."
+#~ msgstr "適用於第二著者和作品產製有關的其他人。"
+
+#~ msgid "710"
+#~ msgstr "710"
+
+#~ msgid "ADDED ENTRY--CORPORATE"
+#~ msgstr "附加款目--團體名稱"
+
+#~ msgid ""
+#~ "Used for corporate bodies related to the production of the work (e.g. "
+#~ "publishers)."
+#~ msgstr "適用於和作品產製有關的團體 (如，出版者)。"
+
+#~ msgid "711"
+#~ msgstr "711"
+
+#~ msgid "ADDED ENTRY--MEETING"
+#~ msgstr "附加款目--會議名稱"
+
+#~ msgid ""
+#~ "Used for meetings related to the production of the work (e.g. symposia "
+#~ "that contributed to the work)."
+#~ msgstr "適用於和作品產製有關的會議 (如，貢獻給作品的討論會)。"
+
+#~ msgid "730"
+#~ msgstr "730"
+
+#~ msgid "ADDED ENTRY--UNIFORM TITLE"
+#~ msgstr "附加款目--劃一題名"
+
+#~ msgid ""
+#~ "Used for uniform titles related to the production of the work (e.g. a "
+#~ "work that inspired the present work)"
+#~ msgstr "適用於和作品產製有關的劃一題名 (如，啟發現在的作品)"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. Set the first indicator to the "
+#~ "number of non-filing characters (i.e. characters in an initial articles "
+#~ "plus the space... for \"The \" set the first indicator to '4')."
+#~ msgstr ""
+#~ "見權威標題速見表與 AACR2。設定第一個指標為不排序字元數 (即，首字為冠詞及其"
+#~ "空格 ... \"The \" 的第一個指標設為 '4')。"
+
+#~ msgid "773"
+#~ msgstr "773"
+
+#~ msgid "HOST ITEM ENTRY"
+#~ msgstr "主館藏款目"
+
+#~ msgid ""
+#~ "Describes the larger bibliographic unit that contains the work (e.g. book "
+#~ "or journal containing the article being described in the current record)"
+#~ msgstr "著錄包括此作品的較大書目單位 (即，包括篇章與論文的圖書或期刊紀錄)"
+
+#, fuzzy
+#~ msgid ""
+#~ "If the host publication is author main entry, enter the authorized form "
+#~ "of the author's name in subfield 'a'. Put the title in subfield 't'. If "
+#~ "the host publication is an independent work, put publication information "
+#~ "in subfield 'd'. When available, ISSN and ISBN should always be used in, "
+#~ "in subfields 'x' and 'z' respectively. Relationship information (e.g. "
+#~ "volume number, page number, etc.) goes in subfield 'g'. Subfield 'q' "
+#~ "contains an encoded representation of the location of the item: volume, "
+#~ "issue, and section numbers are separated by colons, and the first page is "
+#~ "entered following a '<' at the end of the subfield. See ISBD punctuation "
+#~ "sheet. Set the first indicator to '0'. If you want the label \"In:\" to "
+#~ "be generated, leave the second indicator blank. If you want something "
+#~ "else displayed before the 773 text, set the second indicator to '8' and "
+#~ "add a subfield 'i' with the label you want at the beginning of the field "
+#~ "(e.g. \"$iOffprint from:\")."
+#~ msgstr ""
+#~ "主出版品是著者主要款目，則把該著者名稱的權威型式置入分欄 'a'。題名置入分"
+#~ "欄 't'。若主山版品是獨立作品，把出版資訊置入分欄 'd'。若使用 ISSN 與 "
+#~ "ISBN，則應分別置於分欄 'x' 與 'z'。關係資訊 (如，卷期編號、頁碼等) 應置入"
+#~ "分欄 'g'。分欄 'q' 包括館藏位置的編碼資料：卷、期與號以冒號分隔，在分欄最"
+#~ "後鍵入 '&lt;' 及首頁頁碼。設定第一個指標為 '0'。若想產生 \"在：\" 標籤，則"
+#~ "讓第二個指標空白。若希望在欄位 773 顯示文字，則設定第二個指標為 '8' 並新增"
+#~ "分欄 'i' 在欄位開始置入標籤 (如 \"$i 抽印本來自：\")。"
+
+#~ msgid "830"
+#~ msgstr "830"
+
+#~ msgid "SERIES ENTRY--UNIFORM TITLE"
+#~ msgstr "集叢附加款--劃一題名"
+
+#~ msgid ""
+#~ "Authorized form of the series name transcribed in the 490 field. Often "
+#~ "this will just be the same as the 490."
+#~ msgstr "著錄集叢名稱的權威格式於欄位 490。通常等同於 490。"
+
+#~ msgid ""
+#~ "See Authorized headings sheet and AACR2. Set the second indicator to the "
+#~ "number of non-filing characters (i.e. characters in an initial articles "
+#~ "plus the space... for \"The \" set the second indicator to '4')."
+#~ msgstr ""
+#~ "見權威標題速見表與 AACR2。設定第二個指標為不排序字元數 (即，首字為冠詞及其"
+#~ "空格 ... \"The \" 的第二個指標設為 '4')。"
+
+#~ msgid "852"
+#~ msgstr "852"
+
+#~ msgid "LOCATION/CALL NUMBER"
+#~ msgstr "書架位置/索書號"
+
+#~ msgid ""
+#~ "Provides the section name for pre-barcode books, pamphlets, and some "
+#~ "articles and serials."
+#~ msgstr "圖書、小冊子與論文期刊等館藏的書架位置。"
+
+#~ msgid ""
+#~ "Do not put anything in this field if you are cataloging a volume which "
+#~ "gets only one record and a barcode. If the item does not get a barcode, "
+#~ "or you are currently creating a record for an article in a volume, put "
+#~ "the section in subfield 'a' (see ANS cataloging documentation), and the "
+#~ "call number in subfield 'i'. Set the first indicator to '8'."
+#~ msgstr ""
+#~ "祗有一筆紀錄與一個條碼的單冊館藏不要置於此欄位。若館藏沒有條碼，或建立其中"
+#~ "一篇文章的紀錄，將書架位置存於分欄 'a' (見 ANS 編目文件)、索書號置於分欄 "
+#~ "'i'。設定第一個指標為 '8'。"
+
+#~ msgid "856"
+#~ msgstr "856"
+
+#~ msgid "ELECTRONIC ACCESS"
+#~ msgstr "電子資源位址及取得方法"
+
+#~ msgid "Links to material available online."
+#~ msgstr "連結至線上資料。"
+
+#~ msgid ""
+#~ "Put the URL of any electronic copies or summaries, etc. in subfield 'u' "
+#~ "and a link title in subfield 'y'. Set the first indicator to '4'."
+#~ msgstr ""
+#~ "將電子版或摘要等的 URL 置於分欄 'u' 並把連結的題名置於分欄 'y'。設定第一指"
+#~ "標為 '4'。"
+
+#~ msgid "942"
+#~ msgstr "942"
+
+#~ msgid "ADDED ENTRY ELEMENTS (KOHA)"
+#~ msgstr "新增款目細目 (Koha)"
+
+#~ msgid "Used for Koha-specific data."
+#~ msgstr "供 Koha 使用的專屬資料。"
+
+#~ msgid "Set the subfield 'c' to the appropriate item type."
+#~ msgstr "設定分欄 'c' 給適當的館藏類型。"
+
+#~ msgid "MARC21 Tag/subfield"
+#~ msgstr "MARC21 欄號/分欄"
+
+#~ msgid "Data Element"
+#~ msgstr "資料細目"
+
+#~ msgid "Notes"
+#~ msgstr "說明"
+
+#~ msgid "952$0"
+#~ msgstr "952$0"
+
+#~ msgid "Withdrawn status"
+#~ msgstr "註銷狀態"
+
+#~ msgid "Default values:"
+#~ msgstr "預設值："
+
+#~ msgid "0 = Not withdrawn"
+#~ msgstr "0 = 未報廢"
+
+#~ msgid "1 = Withdrawn"
+#~ msgstr "1 = 報廢"
+
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('WITHDRAWN' in default installation)"
+#~ msgstr ""
+#~ "編碼值，對應於 `容許值 <#authorizedvalues>`__ ('WITHDRAWN' 於預設安裝)"
+
+#~ msgid "952$1"
+#~ msgstr "952$1"
+
+#~ msgid "Lost status"
+#~ msgstr "遺失狀態"
+
+#~ msgid "0 = Available"
+#~ msgstr "0 = 可得"
+
+#~ msgid "1 = Lost"
+#~ msgstr "1 = 遺失"
+
+#~ msgid "2 = Long Overdue (Lost)"
+#~ msgstr "2 = 逾期太久 (遺失)"
+
+#~ msgid "3 = Lost and Paid For"
+#~ msgstr "3 = 遺失與賠償"
+
+#~ msgid "4 = Missing in Inventory"
+#~ msgstr "4 = 盤點時遺失"
+
+#~ msgid "5 = Missing in Hold Queue"
+#~ msgstr "5 = 預約序列中遺失"
+
+#~ msgid ""
+#~ "It's possible to configure OPAC so that lost items don't display with the "
+#~ "`hidelostitems <#hidelostitems>`__ system preference."
+#~ msgstr ""
+#~ "設定 `hidelostitems <#hidelostitems>`__ 系統偏好重新組態 OPAC，不顯示遺失"
+#~ "的館藏。"
+
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('LOST' in default installation)"
+#~ msgstr "編碼值，對應於 `容許值 <#authorizedvalues>`__ ('LOST' 於預設安裝)"
+
+#~ msgid "952$2"
+#~ msgstr "952$2"
+
+#~ msgid "Classification"
+#~ msgstr "分類法"
+
+#~ msgid ""
+#~ "Classification scheme that defines filing rules used for sorting call "
+#~ "numbers."
+#~ msgstr "分類法定義索書號的排序規則。"
+
+#~ msgid ""
+#~ "A choice of `classification sources <#classificationsources>`__ as they "
+#~ "are defined in administration. If no classification scheme is entered, "
+#~ "the system will use the value entered in the `DefaultClassificationSource "
+#~ "<#DefaultClassificationSource>`__ preference."
+#~ msgstr ""
+#~ "從管理區塊選擇 `分類法來源 <#classificationsources>`__。若未鍵入分類法，系"
+#~ "統使用 `DefaultClassificationSource <#DefaultClassificationSource>`__ 偏好"
+#~ "的預設值。"
+
+#~ msgid "952$3"
+#~ msgstr "952$3"
+
+#~ msgid "Materials specified"
+#~ msgstr "指定的資料"
+
+#~ msgid "Specific issues of serials or multi-part items."
+#~ msgstr "期刊的指定卷期或成套館藏。"
+
+#~ msgid ""
+#~ "Displayed when items are checked out and in to tell the staff how many "
+#~ "pieces the item has. Copy/volume data is stored in 952$h and $t for "
+#~ "display in Normal views."
+#~ msgstr ""
+#~ "借出與還入時，系統顯示該館藏的件數。複本/卷數資料儲存在 952$h 與 $t 顯示在"
+#~ "一般檢視狀態。"
+
+#~ msgid "952$4"
+#~ msgstr "952$4"
+
+#~ msgid "Damaged status"
+#~ msgstr "毀損狀態"
+
+#~ msgid "0 = Not damaged"
+#~ msgstr "0 = 未毀損"
+
+#~ msgid "1 = Damaged"
+#~ msgstr "1 = 已毀損"
+
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('DAMAGE' in default installation)"
+#~ msgstr ""
+#~ "代碼值，對映於 `容許值 <#authorizedvalues>`__ 範疇 (預設安裝為 'DAMAGE')"
+
+#~ msgid "952$5"
+#~ msgstr "952$5"
+
+#~ msgid "Use restrictions"
+#~ msgstr "使用限制"
+
+#~ msgid "0 = No use restrictions"
+#~ msgstr "0 = 無使用限制"
+
+#~ msgid "1 = Restricted Access"
+#~ msgstr "1 = 限制近用"
+
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('RESTRICT' in default installation). This value has no effect on "
+#~ "circulation."
+#~ msgstr ""
+#~ "代碼值，對映於 `容許值 <#authorizedvalues>`__ 範疇 (預設安裝為 "
+#~ "'RESTRICT')。此值對流通沒有影響。"
+
+#~ msgid "952$7"
+#~ msgstr "952$7"
+
+#~ msgid "Not for loan"
+#~ msgstr "不外借"
+
+#~ msgid "-1 = Ordered"
+#~ msgstr "-1 = 已採購"
+
+#~ msgid "0 = Available for loans"
+#~ msgstr "0 = 可借外"
+
+#~ msgid "1 = Not for Loan"
+#~ msgstr "1 = 不外借"
+
+#~ msgid "2 = Staff Collection"
+#~ msgstr "2 = 內部館藏"
+
+#, fuzzy
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('NOT\\_LOAN' in default installation). Negative number values can still "
+#~ "be placed on hold."
+#~ msgstr ""
+#~ "代碼值，對映於 `容許值 <#authorizedvalues>`__ 範疇 (預設安裝為 "
+#~ "'NOT_LOAN')。負數仍可預約。"
+
+#~ msgid "952$8"
+#~ msgstr "952$8"
+
+#~ msgid "Collection code"
+#~ msgstr "館藏代碼"
+
+#~ msgid "Coded value"
+#~ msgstr "代碼值"
+
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('CCODE' in default installation)"
+#~ msgstr ""
+#~ "代碼值，對映於 `容許值 <#authorizedvalues>`__ 範疇 (預設安裝為 'CCODE')"
+
+#~ msgid "952$9"
+#~ msgstr "952$9"
+
+#~ msgid "Item number"
+#~ msgstr "館藏號"
+
+#~ msgid "System-generated item number."
+#~ msgstr "系統產生的館藏號。"
+
+#~ msgid "Does not display in the item record."
+#~ msgstr "不顯示於館藏紀錄。"
+
+#~ msgid "952$a"
+#~ msgstr "952$a"
+
+#, fuzzy
+#~ msgid "Owning Library \\*\\*"
+#~ msgstr "所屬圖書館 **"
+
+#~ msgid "Branch code"
+#~ msgstr "條碼"
+
+#, fuzzy
+#~ msgid ""
+#~ "**Required**. Code must be defined in `Libraries, Branches and Groups "
+#~ "<#libsgroups>`__"
+#~ msgstr ""
+#~ "<emphasis role=\"bold\">必備</emphasis>。代碼必須設定於 `圖書館、分館與群"
+#~ "組 <#libsgroups>`__"
+
+#~ msgid "952$b"
+#~ msgstr "952$b"
+
+#, fuzzy
+#~ msgid "Holding library \\*\\* (usually the same as 952$a )"
+#~ msgstr "典藏圖書館 ** (通常與 952$a 相同)"
+
+#~ msgid "952$c"
+#~ msgstr "952$c"
+
+#~ msgid "Shelving location code"
+#~ msgstr "書架位置代碼"
+
+#~ msgid ""
+#~ "Coded value, matching `Authorized Value <#authorizedvalues>`__ category "
+#~ "('LOC' in default installation)"
+#~ msgstr ""
+#~ "代碼值，對映於 `容許值 <#authorizedvalues>`__ 範疇 (預設安裝為 'LOC')"
+
+#~ msgid "952$d"
+#~ msgstr "952$d"
+
+#~ msgid "Date acquired"
+#~ msgstr "到館日期"
+
+#~ msgid "YYYY-MM-DD"
+#~ msgstr "YYYY-MM-DD"
+
+#~ msgid ""
+#~ "Date formats in the 952 subfields are required to be in the system "
+#~ "internal format for data loading and subsequent item editing: YYYY-MM-DD"
+#~ msgstr ""
+#~ "在欄位 952 分欄的日期格式是系統內部必備的格式，供資料載入與後續館藏編輯之"
+#~ "用：YYYY-MM-DD"
+
+#~ msgid "952$e"
+#~ msgstr "952$e"
+
+#~ msgid "Source of acquisition"
+#~ msgstr "採訪來源"
+
+#~ msgid "Coded value or vendor string"
+#~ msgstr "代碼值或代理商字串"
+
+#~ msgid ""
+#~ "Filled in automatically with the Koha assigned vendor id by Acquisitions "
+#~ "when an item is received."
+#~ msgstr "收到館藏時，經由採訪模組自動填入代理商。"
+
+#~ msgid "952$g"
+#~ msgstr "952$g"
+
+#~ msgid "Purchase price"
+#~ msgstr "購買價格"
+
+#~ msgid "Decimal number, no currency symbol (ex. 10.00)"
+#~ msgstr "小數，不含幣值符號 (如，10.00)"
+
+#~ msgid "Filled in automatically by Acquisitions when an item is received."
+#~ msgstr "收到館藏時，經由採訪模組自動填入。"
+
+#~ msgid "952$h"
+#~ msgstr "952$h"
+
+#~ msgid "Serial enumeration"
+#~ msgstr "期刊細節"
+
+#~ msgid "Filled in automatically by Serials if the issue is received there."
+#~ msgstr "收到新刊時，經由期刊模組自動填入。"
+
+#~ msgid "952$o"
+#~ msgstr "952$o"
+
+#~ msgid "Koha full call number"
+#~ msgstr "Koha完整索書號"
+
+#~ msgid ""
+#~ "Can be filled in automatically based on the `itemcallnumber "
+#~ "<#itemcallnumber>`__ system preference."
+#~ msgstr "根據 `itemcallnumber <#itemcallnumber>`__ 系統偏好的設定自動填入。"
+
+#~ msgid "952$p"
+#~ msgstr "952$p"
+
+#, fuzzy
+#~ msgid "Barcode \\*"
+#~ msgstr "條碼 *"
+
+#~ msgid "Max 20 characters"
+#~ msgstr "最多 20 個字元"
+
+#~ msgid "952$t"
+#~ msgstr "952$t"
+
+#~ msgid "Copy number"
+#~ msgstr "複本號"
+
+#~ msgid "Max 32 characters"
+#~ msgstr "最多 32 個字元"
+
+#~ msgid "952$u"
+#~ msgstr "952$u"
+
+#~ msgid "Uniform Resource Identifier"
+#~ msgstr "唯一辨識碼"
+
+#~ msgid "Item specific URL"
+#~ msgstr "館藏指定 URL"
+
+#~ msgid ""
+#~ "Full URL starting with http:// Only needed if your item has its own URL, "
+#~ "not necessary if the bib record has a 856$u that applies to all items on "
+#~ "the record."
+#~ msgstr ""
+#~ "館藏有自己的 URL 才需要以 http:// 開始完整的 URL，若書目紀錄已有適用於所有"
+#~ "的館藏 856 $u 內容則不需要。"
+
+#~ msgid "952$v"
+#~ msgstr "952$v"
+
+#~ msgid "Replacement price"
+#~ msgstr "重置價格"
+
+#~ msgid "952$w"
+#~ msgstr "952$w"
+
+#~ msgid "Price effective from"
+#~ msgstr "售價啟用自"
+
+#~ msgid ""
+#~ "Date formats in the 952 subfields are required to be in the system "
+#~ "internal format for data loading and subsequent item editing: YYYY-MM-DD. "
+#~ "Filled in automatically by Acquisitions when an item is received."
+#~ msgstr ""
+#~ "在欄位 952 分欄的日期格式是系統內部必備的格式，供資料載入與後續館藏編輯之"
+#~ "用：YYYY-MM-DD。簽收館藏時經由採訪模組自動填入。"
+
+#~ msgid "952$x"
+#~ msgstr "952$x"
+
+#
+#~ msgid "Nonpublic note"
+#~ msgstr "非公開說明"
+
+#~ msgid ""
+#~ "This is a note field for notes that will not appear in the OPAC. Right "
+#~ "now this note does not appear anywhere but in the item edit screen in the "
+#~ "staff client."
+#~ msgstr ""
+#~ "此附註欄位的說明不會顯示在 OPAC。目前祗顯示在館員介面的館藏編輯頁面。"
+
+#~ msgid "952$y"
+#~ msgstr "952$y"
+
+#, fuzzy
+#~ msgid "Koha item type \\*\\*"
+#~ msgstr "Koha 館藏類型 **"
+
+#~ msgid "Coded value, required field for circulation"
+#~ msgstr "代碼值，流通必備的欄位"
+
+#, fuzzy
+#~ msgid ""
+#~ "**Required**. Coded value, must be defined in `Item types "
+#~ "<#itemtypeadmin>`__"
+#~ msgstr ""
+#~ "<emphasis role=\"bold\">必備</emphasis>。代碼值，必須設定於 `館藏類型 "
+#~ "<#itemtypeadmin>`__"
+
+#~ msgid "952$z"
+#~ msgstr "952$z"
+
+#
+#~ msgid "Public note"
+#~ msgstr "公開說明"
+
+#, fuzzy
+#~ msgid "MarcBreaker |image719|"
+#~ msgstr "MarcBreaker 摘要"
+
+#, fuzzy
+#~ msgid "MarcBreaker Summary |image720|"
+#~ msgstr "MarcBreaker 摘要"
+
+#, fuzzy
+#~ msgid "MARC file for editing |image721|"
+#~ msgstr "供編輯的 MARC 檔案"
+
+#, fuzzy
+#~ msgid "Add/Delete Field |image722|"
+#~ msgstr "新增/編輯欄位"
+
+#, fuzzy
+#~ msgid "Add 942 Field |image723|"
+#~ msgstr "新增 942 欄位"
+
+#, fuzzy
+#~ msgid "Add 952 Field |image724|"
+#~ msgstr "新增 952 欄位"
+
+#, fuzzy
+#~ msgid "Compile into MARC |image725|"
+#~ msgstr "編輯 MARC"

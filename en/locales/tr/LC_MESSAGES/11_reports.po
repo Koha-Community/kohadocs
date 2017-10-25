@@ -1,0 +1,1406 @@
+# Compendium of tr.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-25 12:27-0300\n"
+"PO-Revision-Date: 2017-08-31 15:30-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/11_reports.rst:4
+msgid "Reports"
+msgstr "Raporlar"
+
+#: ../../source/11_reports.rst:6
+msgid ""
+"Reports in Koha are a way to gather data. Reports are used to generate "
+"statistics, member lists, shelving lists, or any list of data in your "
+"database."
+msgstr ""
+"Koha'da raporlar bir veri toplama yöntemidir. Raporlar istatistik, üye "
+"listeleri, raf listeleri oluşturmak veya veritabanınızdaki herhangi bir veri "
+"listesini oluşturmak için kullanılır."
+
+#: ../../source/11_reports.rst:10
+#, fuzzy
+msgid "*Get there:* More > Reports"
+msgstr "<emphasis>Gidiş yolu:</emphasis> Daha fazla &amp;gt;  Raporlar"
+
+#: ../../source/11_reports.rst:15
+#, fuzzy
+msgid "Custom Reports"
+msgstr "Raporlar"
+
+#: ../../source/11_reports.rst:17
+#, fuzzy
+msgid ""
+"Koha's data is stored in a MySQL database which means that librarians can "
+"generate nearly any report they would like by either using the :ref:`Guided "
+"Reports Wizard <guided-report-wizard-label>` or writing their own :ref:`SQL "
+"query <report-from-sql-label>`."
+msgstr ""
+"Koha verileri bir MySQL veri tabanında depolanır, bu demek oluyor ki "
+"kütüphaneciler ya `Guided Reports Wizard <#quidedreportwizard>`__ kullanarak "
+"ya da kendi `SQL sorguları <#reportfromsql>`__'nı yazarak neredeyse "
+"istedikleri her raporu oluşturabilmektedirler."
+
+#: ../../source/11_reports.rst:25
+#, fuzzy
+msgid "Add Custom Report"
+msgstr "`Özel Rapor Ekle <#customreport>`__"
+
+#: ../../source/11_reports.rst:30
+#, fuzzy
+msgid "Guided Report Wizard"
+msgstr "`Rehberli Rapor Sihirbazı <#quidedreportwizard>`__"
+
+#: ../../source/11_reports.rst:32
+msgid ""
+"The guided report wizard will walk you through a six step process to "
+"generate a report."
+msgstr ""
+"Kılavuzlu rapor sihirbazı sizi rapor oluşturmanız için 6 basamaklı bir "
+"işleme yönlendirecek."
+
+#: ../../source/11_reports.rst:35
+msgid ""
+"Step 1: Choose the module you want to report on. This will determine what "
+"tables and fields are available for you to query."
+msgstr ""
+"Adım 1: Raporlamak istediğiniz modülü seçin. Bu, sorgulamak için hangi "
+"tabloları ve alanları kullanabileceğinizi belirler."
+
+#: ../../source/11_reports.rst:38 ../../source/11_reports.rst:170
+msgid ""
+"'Report is public' should be left to the default of 'No' in most cases. A "
+"report can be made public if you intend to allow access to it through the "
+"JSON webservice interface. This is a system that can be used by developers "
+"to make custom presentations of the data from the report, for example "
+"displaying it using a graphing API. To learn more speak to your local "
+"developer."
+msgstr ""
+"'Report is public' çoğu durumda 'Hayır' varsayılan olarak bırakılmalıdır. "
+"Eğer JSON web hizmeti arabirimi üzerinden erişime izin vermek istiyorsanız, "
+"bir rapor genele açık hale getirilebilir. Bu, rapordan verilerinin özel "
+"sunumlar yapmak için geliştiriciler tarafından kullanılabilecek bir "
+"sistemdir. Örneğin bir grafik API kullanarak görüntüleme. Daha fazla bilgi "
+"için yerel geliştiriciniz ile konuşunuz."
+
+#: ../../source/11_reports.rst:45 ../../source/11_reports.rst:177
+msgid ""
+"A public report is accessible via a URL that looks like this: http://MYOPAC/"
+"cgi-bin/koha/svc/report?id=REPORTID"
+msgstr ""
+"Ortak erişime açık bir rapor, şu şekilde görünen bir URL üzerinden "
+"erişilebilir olacaktır: http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID"
+
+#: ../../source/11_reports.rst:48
+msgid "|image881|"
+msgstr ""
+
+#: ../../source/11_reports.rst:50 ../../source/11_reports.rst:147
+#: ../../source/11_reports.rst:164 ../../source/11_reports.rst:228
+#: ../../source/11_reports.rst:236 ../../source/11_reports.rst:253
+#: ../../source/11_reports.rst:259 ../../source/11_reports.rst:340
+#: ../../source/11_reports.rst:362 ../../source/11_reports.rst:396
+#: ../../source/11_reports.rst:421 ../../source/11_reports.rst:445
+#: ../../source/11_reports.rst:464 ../../source/11_reports.rst:504
+#: ../../source/11_reports.rst:528
+#, fuzzy
+msgid "**Note**"
+msgstr "Not"
+
+#: ../../source/11_reports.rst:52 ../../source/11_reports.rst:261
+#, fuzzy
+msgid ""
+"If your system administrator has set up memcache on your server you might "
+"see one more option for the Cache expiry. This is related to your public "
+"reports. If you make the report public then it's constantly running and will "
+"cause a large load on your system. Setting this value prevents that."
+msgstr ""
+"Sistem yöneticiniz sunucunuz üzerinde memcached kurmuş ise önbellek süre "
+"sonu için bir seçenek daha görebilirsiniz. Bu genel raporlar ile ilgilidir. "
+"Raporu genel yaparsanız sürekli çalışacak ve sistemin üzerine büyük bir yük "
+"binmesine neden olacaktır. Bu değerin ayarlanması bu durumun önüne "
+"geçecektir."
+
+#: ../../source/11_reports.rst:58
+msgid "|image1292|"
+msgstr ""
+
+#: ../../source/11_reports.rst:60
+msgid ""
+"Step 2: Choose a report type. For now, Tabular is the only option available."
+msgstr ""
+"Adım 2: Bir rapor türü seçin. Şimdilik Sekmeli kullanılabilen tek seçenektir."
+
+#: ../../source/11_reports.rst:63
+#, fuzzy
+msgid "|image882|"
+msgstr "Rapor Türü"
+
+#: ../../source/11_reports.rst:65
+msgid ""
+"Step 3: Choose the fields you want in your report. You can select multiple "
+"fields and add them all at once by using CTRL+Click on each item you want to "
+"add before clicking the Add button."
+msgstr ""
+"Adım 3: Raporunuzda yer almasını istediğiniz alanları seçin. Ekle butonuna "
+"basmadan önce birden çok alan seçebilir ve eklemek istediğiniz her "
+"materyalin üzerine CTRL tuşuna basılı olarak tıklayarak bunları tek seferde "
+"ekleyebilirsiniz."
+
+#: ../../source/11_reports.rst:69
+msgid "|image883|"
+msgstr ""
+
+#: ../../source/11_reports.rst:71
+msgid ""
+"Step 4: Choose any limits you might want to apply to your report (such as "
+"item types or branches). If you don't want to apply any limits, simply click "
+"Next instead of making an option."
+msgstr ""
+"Adım 4: Raporunuza uygulamak istediğiniz herhangi bir limit seçin (materyal "
+"türü veya birimler gibi). Herhangi bir limit uygulamak istemiyorsanız, bir "
+"seçenek yapmak yerine İleri'yi tıklayın."
+
+#: ../../source/11_reports.rst:75
+msgid "|image884|"
+msgstr ""
+
+#: ../../source/11_reports.rst:77
+msgid ""
+"Step 5: Perform math functions. If you don't want to do any calculations, "
+"simply click Next instead of making an option."
+msgstr ""
+"Adım 5: Matematiksel işlevleri gerçekleştirin. Herhangi bir hesaplama yapmak "
+"istemiyorsanız bir seçenek yapmak yerine İleri'yi tıklayın."
+
+#: ../../source/11_reports.rst:80
+msgid "|image885|"
+msgstr ""
+
+#: ../../source/11_reports.rst:82
+msgid ""
+"Step 6: Choose data order. If you want the data to print out in the order "
+"it's found in the database, simply click Finish."
+msgstr ""
+"Adım 6: Veri sırasını seçin. Eğer verinin çıktısını veritabanında bulunduğu "
+"sırada almak istiyorsanız yalnızca Bitir üzerine tıklamanız yeterlidir."
+
+#: ../../source/11_reports.rst:85
+msgid "|image886|"
+msgstr ""
+
+#: ../../source/11_reports.rst:87
+msgid ""
+"When you are finished you will be presented with the SQL generated by the "
+"report wizard. From here you can choose to save the report by clicking "
+"'Save' or copy the SQL and make edits to it by hand."
+msgstr ""
+"İşiniz bittiğinde, size rapor sihirbazı tarafından oluşturulan SQL "
+"sunulacak. Buradan 'Kaydet' üzerine tıklayarak raporu kaydetmeyi ya da SQL'i "
+"kopyalayıp üzerindeki değişiklikleri manuel olarak yapmayı seçebilirsiniz."
+
+#: ../../source/11_reports.rst:91
+msgid "|image887|"
+msgstr ""
+
+#: ../../source/11_reports.rst:93
+msgid ""
+"If you choose to save the report you will be asked to name your report, sort "
+"it in to groups and subgroups and enter any notes regarding it."
+msgstr ""
+"Raporu kaydetmeyi seçerseniz, raporu adlandırmanız, bu raporu gruplara ve "
+"alt gruplara göre sıralamanız ve bununla ilgili her hangi bir not girmeniz "
+"istenecektir."
+
+#: ../../source/11_reports.rst:96
+msgid "|image888|"
+msgstr ""
+
+#: ../../source/11_reports.rst:98
+msgid ""
+"Once your report is saved it will appear on the 'Use Saved' page with all "
+"other saved reports."
+msgstr ""
+"Raporunuz kaydedildiğinde, diğer kaydedilen raporlarla birlikte ‘Kaydedilmiş "
+"Olan Raporlar’ sayfasında gözükecektir."
+
+#: ../../source/11_reports.rst:101
+msgid "|image889|"
+msgstr ""
+
+#: ../../source/11_reports.rst:103
+msgid ""
+"From here you can make edits, run the report, or schedule a time to have the "
+"report run. To find the report you created you can sort by any of the "
+"columns by clicking the on the column header (creation date is the best bet "
+"for finding the report you just added). You can also filter your results "
+"using the filter menu on the left or use the tabs to find reports based on "
+"your custom groups."
+msgstr ""
+"Buradan, düzenlemeler yapabilir, raporu çalıştırabilir ya da raporun "
+"çalıştırılması için zamanı programlayabilirsiniz. Oluşturduğunuz raporu "
+"bulmak için, sütunların her hangi birinin başlığına tıklayarak raporları "
+"sıralayabilirsiniz(oluşturma tarihi henüz eklemiş olduğunuz raporu bulmak "
+"için en iyisidir). Sonuçlarınızı aynı zamanda soldaki filtre menüsünü "
+"kullanarak filtreleyebilirsiniz ya da özelleştirilmiş gruplara bağlı "
+"raporları bulmak için sekmeleri kullanabilirsiniz."
+
+#: ../../source/11_reports.rst:113
+#, fuzzy
+msgid "Report from SQL"
+msgstr "SQL raporu oluştur"
+
+#: ../../source/11_reports.rst:115
+#, fuzzy
+msgid ""
+"In addition to the report wizard, you have the option to write your own "
+"queries using SQL. To find reports written by other Koha users, visit the "
+"Koha Wiki: http://wiki.koha-community.org/wiki/SQL_Reports_Library. You can "
+"also find your database structure in /installer/data/mysql/kohastructure.sql "
+"or online at: `http://schema.koha-community.org <http://schema.koha-"
+"community.org/>`__."
+msgstr ""
+"Rapor Sihirbazına ek olarak, SQL kullanarak kendi sorgularınızı yazmak için "
+"seçeneğiniz vardır. Diğer Koha kullanıcıları tarafından yazılmış raporları "
+"bulmak için, Koha Wiki: `http://wiki.koha-community.org/wiki/"
+"SQL_Reports_Library <#http://wiki.koha-community.org/wiki/"
+"SQL_Reports_Library>`__ sayfasını ziyaret edin. Aynı zamanda veri tabanı "
+"yapınızı /installer/data/mysql/kohastructure.sql içerisinde ya da çevrimiçi "
+"olarak: `http://schema.koha-community.org <#http://schema.koha-community.org/"
+">`__ sayfasında bulabilirsiniz."
+
+#: ../../source/11_reports.rst:122
+msgid ""
+"To add your query, click the link to 'Create from SQL' on the main reports "
+"module or the 'New report' button at the top of the 'Saved reports' page."
+msgstr ""
+"Sorgunuzu eklemek için, ana rapor modülündeki  'SQL’den oluştur' "
+"bağlantısına ya da Kaydedilmiş Raporlar sayfasının en üstündeki Yeni "
+"butonuna tıklayınız."
+
+#: ../../source/11_reports.rst:126
+msgid "|image890|"
+msgstr ""
+
+#: ../../source/11_reports.rst:128
+msgid "Fill in the form presented"
+msgstr "Sunulan formu doldurunuz"
+
+#: ../../source/11_reports.rst:130
+msgid "|image891|"
+msgstr ""
+
+#: ../../source/11_reports.rst:132
+msgid ""
+"The 'Name' is what will appear on the Saved Reports page to help you "
+"identify the report later. It will also be searchable using the filters "
+"found the left of the Saved Reports page."
+msgstr ""
+"'İsim' size daha sonra Kaydedilmiş Raporlar sayfasında beliren, raporu "
+"tanımlamanızda yardımcı olan öğedir. Kaydedilmiş Raporlar sayfasının solunda "
+"bulunan filtreleri kullanarak da araştırma yapılabilir."
+
+#: ../../source/11_reports.rst:136
+#, fuzzy
+msgid ""
+"You can use the 'Report group' to organize your reports so that you can "
+"easily filter reports by groups. Report groups are set in the `REPORT"
+"\\_GROUP <#reportgroup>`__ authorized value category or can be added on the "
+"fly when creating the report by choosing the 'or create' radio button."
+msgstr ""
+"Raporlarınızı organize etmek için 'Rapor grubu' opsiyonunu kullanabilirsiniz "
+"böylece raporları kolaylıkla gruplara göre filtreleyebilirsiniz. Rapor "
+"grupları `REPORT_GROUP <#reportgroup>`__ otorize değeri içerisinde "
+"ayarlanabilir ya da 'oluştur' onay düğmesi seçilerek rapor oluşturma "
+"esnasında eklenebilir."
+
+#: ../../source/11_reports.rst:142
+msgid "|image1293|"
+msgstr ""
+
+#: ../../source/11_reports.rst:144
+msgid ""
+"Report groups set up in the authorised value category need to have unique "
+"authorised values and descriptions."
+msgstr ""
+
+#: ../../source/11_reports.rst:149
+msgid ""
+"If you're adding a report group on the fly, remember that you code should be "
+"fewer than 10 characters and should not include special characters or spaces."
+msgstr ""
+"Çalışma anında bir rapor grubu ekliyorsanız, kodun 10 karakterden az "
+"karakter uzunluğunda olması ve özel karakterler veya boşluklar içermemesi "
+"gerektiğini unutmayın."
+
+#: ../../source/11_reports.rst:153
+#, fuzzy
+msgid ""
+"You can use 'Report subgroup' to further organize your reports so that you "
+"can easily filter reports by groups and subgroups. Report subgroups are set "
+"in the `REPORT\\_SUBGROUP <#reportsubgroup>`__ authorized value category or "
+"can be added on the fly when creating the report by choosing the 'or create' "
+"radio button.  Report Subgroups are set up with unique values in Authorised "
+"Value, and Description. The Description (OPAC) field needs to contain the "
+"authorised value for the Report Group that the Subgroup falls under."
+msgstr ""
+"Raporlarınızı daha ileri düzeyde organize etmek için 'Rapor alt grubu' "
+"opsiyonunu kullanabilirsiniz böylece raporlarınızı kolaylıkla gruplar ve alt "
+"gruplara göre filtreleyebilirsiniz. Rapor alt grupları ` REPORT_SUBGROUP "
+"<#reportsubgroup>`__ otorize değeri içerisinde ayarlanabilir ya da 'oluştur' "
+"onay düğmesi seçilerek rapor oluşturma esnasında eklenebilir."
+
+#: ../../source/11_reports.rst:162
+msgid "|image892|"
+msgstr ""
+
+#: ../../source/11_reports.rst:166
+msgid ""
+"If you're adding a report subgroup on the fly, remember that you code should "
+"be fewer than 10 characters and should not include special characters or "
+"spaces."
+msgstr ""
+"Çalışma anında bir rapor alt grubu ekliyorsanız, kodun 10 karakter "
+"uzunluğundan daha az olması ve özel karakterler ya da boşluk içermemesi "
+"gerektiğini unutmayın."
+
+#: ../../source/11_reports.rst:180
+msgid ""
+"'Notes' will also appear on the Saved Reports page, this can be used to "
+"provide more details about the report or tips on how to enter values when it "
+"runs"
+msgstr ""
+"'Notlar' aynı zamanda kaydedilmiş raporlar sayfasında da görüntülenecektir. "
+"Bu, rapor hakkında daha fazla ayrıntı sağlamak ya da çalıştırıldığında "
+"değerlerin nasıl girildiği üzerine ipuçları sağlamak için kullanılabilir"
+
+#: ../../source/11_reports.rst:184
+msgid ""
+"The type should always be 'Tabular' at this time since the other formats "
+"have not been implemented"
+msgstr ""
+"Diğer biçimler uygulanmadığından dolayı bu tür her zaman için ‘Sekmeli’ "
+"olmalıdır"
+
+#: ../../source/11_reports.rst:187
+msgid "In the 'SQL' box you will type or paste the SQL for the report"
+msgstr ""
+"'SQL' kutusuna rapor için gerekli olan SQL’i girecek ya da yapıştıracaksınız"
+
+#: ../../source/11_reports.rst:189
+msgid ""
+"If you feel that your report might be too resource intensive you might want "
+"to consider using runtime parameters to your query. Runtime parameters "
+"basically make a filter appear before the report is run to save your system "
+"resources."
+msgstr ""
+"Raporunuzun sistem kaynaklarına çok fazla yüklendiğini düşünüyorsanız "
+"sorgulamalarınız için çalışma zamanı parametreleri kullanmayı "
+"düşünebilirsiniz. Çalışma zamanı parametreleri temelde rapor çalıştırılmadan "
+"önce sistem kaynaklarınızı korumak için bir filtrenin ekrana gelmesini "
+"sağlar."
+
+#: ../../source/11_reports.rst:194
+#, fuzzy
+msgid ""
+"There is a specific syntax that Koha will understand as 'ask for values when "
+"running the report'. The syntax is <<Question to ask\\|authorized\\_value>>."
+msgstr ""
+"Koha'nın 'raporu çalıştırırken değerleri sor' gibi' anlayacağı belirli bir "
+"söz dizimi vardır. Bu söz dizimi: &amp;lt;&amp;lt;Question to ask|"
+"authorized_value&amp;gt;&amp;gt;."
+
+#: ../../source/11_reports.rst:198
+#, fuzzy
+msgid ""
+"The << and >> are just delimiters. You must put << at the beginning and >> "
+"at the end of your parameter"
+msgstr ""
+"&lt;&lt; ve &gt;&gt; sadece ayraçtır. &lt;&lt yi parametrenizin başına; ve "
+"&gt;&gt yi de parametrenizin sonuna koymanız gerekir."
+
+#: ../../source/11_reports.rst:201
+msgid ""
+"The 'Question to ask' will be displayed on the left of the string to enter."
+msgstr "'Sorulacak soru' girilecek metnin solunda görüntülenecektir."
+
+#: ../../source/11_reports.rst:204
+#, fuzzy
+msgid ""
+"The authorized\\_value can be omitted if not applicable. If it contains an "
+"authorized value category, or branches or itemtype or categorycode or biblio"
+"\\_framework, a list with the Koha authorized values will be displayed "
+"instead of a free field Note that you can have more than one parameter in a "
+"given SQL Note that entering nothing at run time won't probably work as you "
+"expect. It will be considered as \"value empty\" not as \"ignore this "
+"parameter\". For example entering nothing for : \"title=<<Enter title>>\" "
+"will display results with title='' (no title). If you want to have to have "
+"something not mandatory, use \"title like <<Enter title>>\" and enter a % at "
+"run time instead of nothing"
+msgstr ""
+"Authorized_value geçerli değilse atlanabilir. Eğer bir authorized value "
+"kategorisi, branches veya itemtype veya categorycode veya biblio_framework "
+"içeriyorsa, bir boş alan yerine Koha otorize değerlerine sahip bir liste "
+"görüntülenir. Belirli bir SQL içerisinde birden fazla parametre "
+"olabileceğini unutmayın, uygulama zamanına hiç bir şey girmemenin muhtemelen "
+"beklediğiniz gibi işlemeyeceğini unutmayın. Bu, \"bu parametreyi yoksay\" "
+"olarak değil \"boş değer\" olarak dikkate alınacaktır. Örneğin : \"title=&lt;"
+"&lt;Enter title&gt;&gt;\" için hiç bir şey girmezseniz sonuçlar title='' (no "
+"title) olarak görüntülenecektir. Zorunlu olmayan bir şey olsun istiyorsanız, "
+"\"title like &lt;&lt;Enter title&gt;&gt;\" kullanın ve uygulama zamanını boş "
+"bırakmak yerine % girin."
+
+#: ../../source/11_reports.rst:216
+msgid "Examples:"
+msgstr "Örnekler:"
+
+#: ../../source/11_reports.rst:218
+#, fuzzy, python-format
+msgid ""
+"SELECT surname,firstname FROM borrowers WHERE branchcode=<<Enter patrons "
+"library\\|branches>> AND surname like <<Enter filter for patron surname "
+"(% if none)>>"
+msgstr ""
+"SELECT surname,firstname FROM borrowers WHERE branchcode=&lt;&lt;Enter "
+"patrons library|branches&gt;&gt; AND surname like &lt;&lt;Kullanıcının "
+"soyadı için filtre girin (yoksa % girin)&gt;&gt;"
+
+#: ../../source/11_reports.rst:222
+#, fuzzy
+msgid ""
+"SELECT \\* FROM items WHERE homebranch = <<Pick your branch\\|branches>> and "
+"barcode like <<Partial barcode value here>>"
+msgstr ""
+"SELECT * FROM items WHERE homebranch = &lt;&lt;Pick your branch|branches&gt;"
+"&gt; and barcode like &lt;&lt;Partial barcode value here&gt;&gt;"
+
+#: ../../source/11_reports.rst:225
+#, fuzzy
+msgid ""
+"SELECT title , author FROM biblio WHERE frameworkcode=<<Enter the "
+"frameworkcode\\|biblio\\_framework>>"
+msgstr ""
+"SELECT title , author FROM biblio WHERE frameworkcode=&lt;&lt;Enter the "
+"frameworkcode|biblio_framework&gt;&gt;"
+
+#: ../../source/11_reports.rst:230
+#, fuzzy
+msgid ""
+"To generate a date picker calendar to the right of the field when running a "
+"report you can use the 'date' keyword like this: <<Enter Date\\|date>>"
+msgstr ""
+"Bir rapor çalıştırırken alanın sağında bir tarih seçici takvim oluşturmak "
+"için 'tarih' anahtar kelimesini şu şekilde kullanabilirsiniz: &lt;&lt;Enter "
+"Date|date&gt;&gt;"
+
+#: ../../source/11_reports.rst:234
+#, fuzzy
+msgid "|image893|"
+msgstr "Tarih Seçici"
+
+#: ../../source/11_reports.rst:238
+msgid ""
+"You have to put \"%\" in a text box to 'leave it blank'. Otherwise, it "
+"literally looks for \"\" (empty string) as the value for the field."
+msgstr ""
+"Bir metin kutusuna 'boş bırakmak için' \"%\" yerleştirmelisiniz. Aksi halde "
+"alan değeri için gerçek anlamda \"\"(boş dizgi) arayacaktır."
+
+#: ../../source/11_reports.rst:242
+#, fuzzy
+msgid "**Important**"
+msgstr "Önemli"
+
+#: ../../source/11_reports.rst:244
+#, fuzzy
+msgid ""
+"In addition to using any authorized value code to generate a dropdown, you "
+"can use the following values as well: Framework codes (biblio\\_framework), "
+"Branches (branches), Item Types (itemtypes) and Patron Categories "
+"(categorycode). For example a branch pull down would be generated like this "
+"<<Branch\\|branches>>"
+msgstr ""
+"Bir açılır liste oluşturmak için herhangi bir otorize değer kullanmanın yanı "
+"sıra yandaki değerleri de kullanabilirsiniz: Çerçeve kodları "
+"(biblio_framework), Birimler (branches), Materyal Türleri (itemtypes) ve "
+"Kullanıcı Kategorileri (categorycode). Örneğin birimler için bir açılır "
+"liste şu şekilde oluşturulabilir &lt;&lt;Branch|branches&gt;&gt;"
+
+#: ../../source/11_reports.rst:251
+msgid "|image894|"
+msgstr ""
+
+#: ../../source/11_reports.rst:255
+msgid ""
+"There is a limit of 10,000 records put on SQL statements entered in Koha. To "
+"get around this you want to add 'LIMIT 100000' to the end of your SQL "
+"statement (or any other number above 10,000)."
+msgstr ""
+": Koha’da girilen SQL ifadelerinde 10,000 kayıt limiti mevcuttur. Bunu "
+"artırmak için, SQL ifadenizin sonuna 'SINIR 100000' ekleyebilirsiniz. (ya da "
+"10,000 üzerinde her hangi bir numara)."
+
+#: ../../source/11_reports.rst:267
+msgid "|image1294|"
+msgstr ""
+
+#: ../../source/11_reports.rst:269
+#, fuzzy
+msgid ""
+"Once everything is entered click the 'Save Report' button and you'll be "
+"presented with options to run it. Once a report is saved you do not have to "
+"recreate it you can simply find it on the Saved Reports page and :ref:`run "
+"<running-custom-reports-label>` or :ref:`edit <edit-custom-reports-label>` "
+"it."
+msgstr ""
+"Her şey girildikten sonra, 'Raporu Kaydet' butonuna tıklayın ve raporu "
+"çalıştırmak için size seçenekler sunulacaktır. Rapor kaydedildiğinde, aynı "
+"raporu tekrar oluşturmanıza gerek yoktur. Raporu Kaydedilmiş Raporlar "
+"sayfasında bulabilir ve `çalıştır <#runcustomreport>`__ ya da `düzenle "
+"<#editcustomreports>`__ işlemlerini yapabilirsiniz."
+
+#: ../../source/11_reports.rst:277
+msgid "Duplicate Report"
+msgstr ""
+
+#: ../../source/11_reports.rst:279
+msgid ""
+"Reports can also be added by duplicating an existing report. Visit the "
+"'Saved reports' page to see all of the reports listed on your system already."
+msgstr ""
+"Raporlar aynı zamanda varolan bir rapor çoğaltılarak da eklenebilir. "
+"Sisteminizde hali hazırda listelenmiş tüm raporları görmek için 'Kaydedilen "
+"Raporlar' sayfasını ziyaret edin."
+
+#: ../../source/11_reports.rst:283
+msgid "|image895|"
+msgstr ""
+
+#: ../../source/11_reports.rst:285
+#, fuzzy
+msgid ""
+"To the right of every report there is an 'Actions' pull down. Clicking that "
+"and choose 'Duplicate' to use an existing report as the basis for your new "
+"report. That will populate the new report form with the existing SQL for "
+"easy editing and resaving."
+msgstr ""
+"Her raporun sağında 'Eylemler' açılır menüsü mevcuttur. Yeni raporunuza "
+"temel olarak, mevcut bir raporu kullanmak için ‘Çoğalt’ bağlantısını seçip "
+"tıklayın. Bu işlem, kolay düzenleme ve yeniden kayıt için yeni rapor "
+"biçimini mevcut SQL ile dolduracaktır."
+
+#: ../../source/11_reports.rst:293
+#, fuzzy
+msgid "Edit Custom Reports"
+msgstr "`Özel Raporları Düzenle <#editcustomreports>`__"
+
+#: ../../source/11_reports.rst:295
+msgid ""
+"Every report can be edited from the reports lists. To see the list of "
+"reports already stored in Koha, click 'Use Saved.'"
+msgstr ""
+"Rapor listelerinden her rapor düzenlenebilir. Koha’da halen kaydedilmiş "
+"raporların listesini görmek için, 'Kaydedileni Kullan'a tıklayınız."
+
+#: ../../source/11_reports.rst:298
+msgid "|image896|"
+msgstr ""
+
+#: ../../source/11_reports.rst:300
+msgid ""
+"To find the report you'd like to edit you can sort by any of the columns by "
+"clicking the on the column header. You can also filter your results using "
+"the filter menu on the left or use the tabs to find reports based on your "
+"custom groups."
+msgstr ""
+"Düzenlemek istediğiniz raporu bulmak için, sütun başlığına tıklayarak "
+"sütunları sıralayabilirsiniz. Aynı zamanda soldaki filtre menüsünü "
+"kullanarak da sonuçlarınızı filtreleyebilir ya da özel gruplarınıza bağlı "
+"olarak, raporları bulmak için sekmeleri kullanabilirsiniz."
+
+#: ../../source/11_reports.rst:305
+msgid ""
+"From this list you can edit any custom report by clicking 'Actions' to the "
+"right of the report and choosing 'Edit' from the menu that appears."
+msgstr ""
+"Bu listeden, raporun sağındaki 'Eylemler' üzerine tıklayarak ve açılan "
+"menüden 'Düzenle' opsiyonunu seçerek herhangi bir özel bir rapor "
+"düzenleyebilirsiniz."
+
+#: ../../source/11_reports.rst:308
+msgid "|image897|"
+msgstr ""
+
+#: ../../source/11_reports.rst:310
+msgid "The form to edit the report will appear."
+msgstr "Raporu düzenlemek için form görüntülenecektir."
+
+#: ../../source/11_reports.rst:312
+msgid "|image898|"
+msgstr ""
+
+#: ../../source/11_reports.rst:317
+#, fuzzy
+msgid "Running Custom Reports"
+msgstr "`Özel Raporlar Çalıştırılıyor <#runcustomreport>`__"
+
+#: ../../source/11_reports.rst:319
+msgid ""
+"Once custom reports are saved to Koha, you can run them by going to the "
+"Saved Reports page and clicking the 'Actions' button to the right of the "
+"report and choosing 'Run'."
+msgstr ""
+"Koha’ya özel raporlar kaydedildiğinde, bu raporları Kaydedilmiş Raporlar "
+"sayfasına giderek ve raporun sağındaki 'Çalıştır' bağlantısına tıklayarak ve "
+"'Çalıştır' opsiyonunu seçerek çalıştırabilirsiniz."
+
+#: ../../source/11_reports.rst:323
+#, fuzzy
+msgid "|image899|"
+msgstr "Rapor Çalıştır"
+
+#: ../../source/11_reports.rst:325
+msgid "When you report runs you will either be asked for some values"
+msgstr "Raporu çalıştırdığınızda ya sizden bazı değerler girmeniz istenecektir"
+
+#: ../../source/11_reports.rst:327
+msgid "|image900|"
+msgstr ""
+
+#: ../../source/11_reports.rst:329
+msgid "or you will see the results right away"
+msgstr "ya da hemen sonuçları göreceksiniz"
+
+#: ../../source/11_reports.rst:331
+msgid "|image901|"
+msgstr ""
+
+#: ../../source/11_reports.rst:333
+msgid ""
+"From the results you can choose to rerun the report by clicking 'Run report' "
+"at the top, edit the report by clicking the 'Edit' button or starting over "
+"and creating a new report by using the 'New' button. You can also download "
+"your results by choosing a file type at the bottom of the results next to "
+"the 'Download the report' label and clicking 'Download.'"
+msgstr ""
+"Sonuçlardan en üstteki ‘Raporu çalıştır’a tıklayarak raporu tekrar "
+"çalıştırmayı seçebilir, raporu ‘Düzenle’butonuna tıklayarak ya da ‘Yeni’ "
+"butonunu kullanarak yeni bir rapor oluşturup düzenleyebilirsiniz. "
+"Sonuçlarınızı aynı zamanda ‘Raporu yükle’ etiketinin yanındaki sonuçların "
+"altında olan dosya türünü seçerek ve ‘Yükle’ye tıklayarak yükleyebilirsiniz."
+
+#: ../../source/11_reports.rst:342
+msgid ""
+"A Comma Separated Text file is a CSV file and it can be opened by any "
+"spreadsheet application."
+msgstr ""
+"Virgülle ayrılmış Metin dosyası bir CSV dosyasıdır ve her hangi bir "
+"tablolama programı uygulamasıyla açılabilir."
+
+#: ../../source/11_reports.rst:348
+#, fuzzy
+msgid "Statistics Reports"
+msgstr "`İstatistik Raporları <#statsreports>`__"
+
+#: ../../source/11_reports.rst:350
+#, fuzzy
+msgid ""
+"Statistic reports will show you counts and sums. These reports are all about "
+"numbers and statistics, for reports that return more detailed data, use the :"
+"ref:`Guided Report Wizard`. These reports are limited in what data they can "
+"look at, so it's often recommended to use :ref:`custom reports <custom-"
+"reports-label>` for official end of the year statistics."
+msgstr ""
+"İstatistik raporları, sayıları ve toplamları gösterir. Bu raporlar tümüyle "
+"sayılar ve istatistikler hakkındadır, daha ayrıntılı veri getirecek raporlar "
+"için, `Guided Report Wizard <#quidedreportwizard>`__ özelliğini kullanın. Bu "
+"raporların içine baktığı veriler kısıtlıdır, bu nedenle resmi yıl sonu "
+"istatistikleri için `custom reports <#customreports>`__ özelliğinin "
+"kullanılması önerilir."
+
+#: ../../source/11_reports.rst:360
+#, fuzzy
+msgid "Acquisitions Statistics"
+msgstr "Sağlama İstatistikleri"
+
+#: ../../source/11_reports.rst:364 ../../source/11_reports.rst:398
+#: ../../source/11_reports.rst:423 ../../source/11_reports.rst:447
+#: ../../source/11_reports.rst:506 ../../source/11_reports.rst:530
+#, fuzzy
+msgid ""
+"These reports are limited in what data they can look at, so it's often "
+"recommended to use :ref:`custom reports <custom-reports-label>` for official "
+"end of the year statistics."
+msgstr ""
+"Bu raporların içine baktığı veriler kısıtlıdır, bu nedenle resmi yıl sonu "
+"istatistikleri için `custom reports <#customreports>`__ özelliğinin "
+"kullanılması önerilir."
+
+#: ../../source/11_reports.rst:368 ../../source/11_reports.rst:402
+#: ../../source/11_reports.rst:427 ../../source/11_reports.rst:451
+msgid ""
+"Using the form provided, choose which value you would like to appear in the "
+"Column and which will appear in the Row."
+msgstr ""
+"Sağlanan formu kullanarak hangi değerin sütunda hangi değerin satırda "
+"görüneceğini seçin."
+
+#: ../../source/11_reports.rst:371
+msgid "|image902|"
+msgstr ""
+
+#: ../../source/11_reports.rst:373 ../../source/11_reports.rst:407
+#: ../../source/11_reports.rst:432 ../../source/11_reports.rst:456
+#: ../../source/11_reports.rst:515 ../../source/11_reports.rst:541
+#: ../../source/11_reports.rst:558 ../../source/11_reports.rst:576
+#: ../../source/11_reports.rst:594 ../../source/11_reports.rst:612
+#: ../../source/11_reports.rst:630 ../../source/11_reports.rst:658
+msgid ""
+"If you choose to output to the browser your results will print to the screen."
+msgstr ""
+"Tarayıcınızı çıktı olarak seçerseniz sonuçlarınız ekrana yazdırılacaktır."
+
+#: ../../source/11_reports.rst:376
+msgid "|image903|"
+msgstr ""
+
+#: ../../source/11_reports.rst:378 ../../source/11_reports.rst:437
+#: ../../source/11_reports.rst:461 ../../source/11_reports.rst:520
+#: ../../source/11_reports.rst:546 ../../source/11_reports.rst:563
+#: ../../source/11_reports.rst:581 ../../source/11_reports.rst:599
+#: ../../source/11_reports.rst:617 ../../source/11_reports.rst:635
+#: ../../source/11_reports.rst:663
+msgid ""
+"You can also choose to export to a file that you can manipulate to your "
+"needs."
+msgstr ""
+"Ayrıca ihtiyaçlarınızı işleyebileceğiniz bir dosyaya aktarmayı "
+"seçebilirsiniz."
+
+#: ../../source/11_reports.rst:381
+msgid ""
+"When generating your report, note that you get to choose between counting or "
+"summing the values."
+msgstr ""
+"Raporunuzu oluştururken, değerleri sayma ya da toplama şeklinde yapmanız "
+"gerektiğini unutmayınız."
+
+#: ../../source/11_reports.rst:384
+msgid "|image904|"
+msgstr ""
+
+#: ../../source/11_reports.rst:386
+msgid ""
+"Choosing amount will change your results to appear as the sum of the amounts "
+"spent."
+msgstr ""
+"Tutarı seçmek, harcanan tutarın toplamı olarak sonuçlarınızı değiştirecektir."
+
+#: ../../source/11_reports.rst:389
+msgid "|image905|"
+msgstr ""
+
+#: ../../source/11_reports.rst:394
+#, fuzzy
+msgid "Patron Statistics"
+msgstr "`Kullanıcı İstatistikleri <#patstats>`__"
+
+#: ../../source/11_reports.rst:405
+msgid "|image906|"
+msgstr ""
+
+#: ../../source/11_reports.rst:410
+msgid "|image907|"
+msgstr ""
+
+#: ../../source/11_reports.rst:412
+msgid ""
+"Based on your selections, you may see some query information above your "
+"results table. You can also choose to export to a file that you can "
+"manipulate to your needs."
+msgstr ""
+"Seçimlerinize bağlı olarak, sonuç tablonuzun üzerinde sorgulama bilgilerini "
+"görebilirsiniz. İhtiyaçlarınızı karşılayabilecek bir dosyayı dışa aktarmayı "
+"da seçebilirsiniz."
+
+#: ../../source/11_reports.rst:419
+#, fuzzy
+msgid "Catalog Statistics"
+msgstr "`Katalog İstatistikleri <#catstats>`__"
+
+#: ../../source/11_reports.rst:430
+msgid "|image908|"
+msgstr ""
+
+#: ../../source/11_reports.rst:435
+msgid "|image909|"
+msgstr ""
+
+#: ../../source/11_reports.rst:443
+#, fuzzy
+msgid "Circulation Statistics"
+msgstr "Dolaşım İstatistikleri"
+
+#: ../../source/11_reports.rst:454
+msgid "|image910|"
+msgstr ""
+
+#: ../../source/11_reports.rst:459
+msgid "|image911|"
+msgstr ""
+
+#: ../../source/11_reports.rst:466
+msgid ""
+"To get a complete picture of your monthly or daily circulation, you can run "
+"the report twice, once for 'Type' of 'Checkout' and again for 'Renewal.'"
+msgstr ""
+"Aylık ya da günlük dolaşımın tüm kopyasını alabilmek için raporu iki kez "
+"çalıştırabilirsiniz; ilk olarak 'Ödünç Verme Türü' ve ikinci kez de 'Süre "
+"Uzatma' için."
+
+#: ../../source/11_reports.rst:470
+msgid ""
+"This report uses 'Period,' or date, filtering that allows you to limit to a "
+"month by simply selecting the first day of the first month through the first "
+"day of the next month. For example, 10/1 to 11/1 to find statistics for the "
+"month of October."
+msgstr ""
+"Bu rapor basitçe ilk ayın ilk gününü ve sonraki ayın ilk gününü seçerek bir "
+"ayla sınırlayabileceğiniz dönem ya da tarih filtresi kullanır. Örneğin, 1/10 "
+"dan 1/11 tarihine kadar Ekim ayı için istatistikleri bulmak için. "
+
+#: ../../source/11_reports.rst:475
+#, fuzzy
+msgid ""
+"To find daily statistics, set your date range.</br> Example: \"I want "
+"circulation data starting with date XXX up to, but not including, date XXX.\""
+msgstr ""
+"Günlük istatistiklerinizi bulmak için tarih aralığınızı ayarlayın. Örnek: "
+"“XXX gününe kadar olan dolaşım bilgisini istiyorum fakat XXX tarihi dahil "
+"olmasın.”"
+
+#: ../../source/11_reports.rst:479
+msgid "For a whole month, an example range would be: 11/01/2009 to 12/01/2009"
+msgstr ""
+"Tüm aya örnek aralığı şu şekilde olabilir: 11.01.2009’dan 12.01.2009’e kadar"
+
+#: ../../source/11_reports.rst:482
+msgid "For a whole year, an example range would be: 01/01/2009 to 01/01/2010"
+msgstr ""
+"Tüm yıla örnek aralığı şu şekilde olabilir: 01.01.2009’dan 01.01.2010’e kadar"
+
+#: ../../source/11_reports.rst:485
+msgid ""
+"For a single day, an example would be: 11/15/2009 to 11/16/2009 to find what "
+"circulated on the 15th"
+msgstr ""
+"Tek güne örnek şu şekilde olabilir:  15.günde hangi dolaşımın olduğunu "
+"görmek için 11.15.2009’dan 11.16.2009’a kadar."
+
+#: ../../source/11_reports.rst:491
+#, fuzzy
+msgid "Tracking in house use"
+msgstr "`Ev kullanımını izlemek <#inhouseuse>`__"
+
+#: ../../source/11_reports.rst:493
+msgid ""
+"Using the Circulation statistics reporting wizard you can run reports on in "
+"house usage of items simply by choosing 'Local Use' from the 'Type' pull "
+"down:"
+msgstr ""
+"Sağlama istatistikleri rapor sihirbazını kullanarak, materyallerin kurum "
+"içindeki kullanımları hakkındaki raporları 'Tür' açılır menüsünden 'Yerel "
+"Kullanım' opsiyonunu seçerek kolaylıkla çalıştırabilirsiniz:"
+
+#: ../../source/11_reports.rst:497
+msgid "|image912|"
+msgstr ""
+
+#: ../../source/11_reports.rst:502
+#, fuzzy
+msgid "Serials Statistics"
+msgstr "Süreli Yayın İstatistikleri"
+
+#: ../../source/11_reports.rst:510
+msgid ""
+"Using the form provided, choose how you would like to list the serials in "
+"your system."
+msgstr ""
+"Sağlanan formu kullanarak sisteminizdeki süreli yayınları nasıl "
+"listeleyeceğinizi seçin."
+
+#: ../../source/11_reports.rst:513
+msgid "|image913|"
+msgstr ""
+
+#: ../../source/11_reports.rst:518
+msgid "|image914|"
+msgstr ""
+
+#: ../../source/11_reports.rst:526
+#, fuzzy
+msgid "Holds Statistics"
+msgstr "`Ayırma İstatistikleri <#holdstats>`__"
+
+#: ../../source/11_reports.rst:534
+msgid ""
+"Using the form provided you can see statistics for holds placed, filled, "
+"cancelled and more at your library. From the form choose what value you want "
+"to display in the column and what value to show in the row. You can also "
+"choose from the filters on the far right of the form."
+msgstr ""
+"Sağlanan formu kullanarak, kütüphanenizdeki ayırmaların ayrıldığını, "
+"dolduğunu, iptal edildiğini ve daha fazlasını görebilirsiniz. Formdan, "
+"sütundaki hangi değeri görüntülemek istediğinizi ve satırdaki hangi değeri "
+"göstereceğinizi seçiniz. Formun en sağındaki filtrelerden de seçebilirsiniz."
+
+#: ../../source/11_reports.rst:539
+msgid "|image915|"
+msgstr ""
+
+#: ../../source/11_reports.rst:544
+msgid "|image916|"
+msgstr ""
+
+#: ../../source/11_reports.rst:552
+#, fuzzy
+msgid "Patrons with the most checkouts"
+msgstr "En çok ödünç materyal alan kullanıcılar formu"
+
+#: ../../source/11_reports.rst:554
+msgid "This report will simply list the patrons who have the most checkouts."
+msgstr ""
+"Bu rapor size basit bir şekilde en çok ödünç alan kullanıcıların listesini "
+"gösterecektir."
+
+#: ../../source/11_reports.rst:556
+msgid "|image917|"
+msgstr ""
+
+#: ../../source/11_reports.rst:561
+msgid "|image918|"
+msgstr ""
+
+#: ../../source/11_reports.rst:569
+#, fuzzy
+msgid "Most Circulated Items"
+msgstr "`Dolaşımda En Çok Yer Alan Materyaller <#mostcirculated>`__"
+
+#: ../../source/11_reports.rst:571
+msgid ""
+"This report will simply list the items that have the been checked out the "
+"most."
+msgstr "Bu rapor basitçe en çok ödünç verilen materyalleri listeleyecektir."
+
+#: ../../source/11_reports.rst:574
+msgid "|image919|"
+msgstr ""
+
+#: ../../source/11_reports.rst:579
+msgid "|image920|"
+msgstr ""
+
+#: ../../source/11_reports.rst:587
+#, fuzzy
+msgid "Patrons with no checkouts"
+msgstr "Hiç ödünç almamış olan kullanıcılar"
+
+#: ../../source/11_reports.rst:589
+msgid ""
+"This report will list for you the patrons in your system who haven't checked "
+"any items out."
+msgstr ""
+"Bu rapor sizin için sisteminizde herhangi bir materyal ödünç almayan "
+"kullanıcıları listeleyecektir."
+
+#: ../../source/11_reports.rst:592
+msgid "|image921|"
+msgstr ""
+
+#: ../../source/11_reports.rst:597
+msgid "|image922|"
+msgstr ""
+
+#: ../../source/11_reports.rst:605
+#, fuzzy
+msgid "Items with no checkouts"
+msgstr "Hiç ödünç alınmamış materyaller"
+
+#: ../../source/11_reports.rst:607
+msgid ""
+"This report will list items in your collection that have never been checked "
+"out."
+msgstr ""
+"Bu rapor koleksiyonunuz içinde hiç ödünç verilmemiş materyalleri "
+"listeleyecektir."
+
+#: ../../source/11_reports.rst:610
+msgid "|image923|"
+msgstr ""
+
+#: ../../source/11_reports.rst:615
+msgid "|image924|"
+msgstr ""
+
+#: ../../source/11_reports.rst:623
+#, fuzzy
+msgid "Catalog by Item Type"
+msgstr "Materyal türüne göre katalog"
+
+#: ../../source/11_reports.rst:625
+msgid ""
+"This report will list the total number of items of each item type per branch."
+msgstr ""
+"Bu rapor, birimlere göre her materyal türünün toplam materyal sayısını "
+"listeleyecektir."
+
+#: ../../source/11_reports.rst:628
+msgid "|image925|"
+msgstr ""
+
+#: ../../source/11_reports.rst:633
+msgid "|image926|"
+msgstr ""
+
+#: ../../source/11_reports.rst:641
+msgid "Lost Items"
+msgstr ""
+
+#: ../../source/11_reports.rst:643
+msgid ""
+"This report will allow you to generate a list of items that have been marked "
+"as Lost within the system"
+msgstr ""
+"Bu rapor, sistem içerisinde kayıp olarak işaretlenmiş materyallerin bir "
+"listesini oluşturmanızı sağlayacaktır"
+
+#: ../../source/11_reports.rst:646
+msgid "|image927|"
+msgstr ""
+
+#: ../../source/11_reports.rst:651
+#, fuzzy
+msgid "Average Loan Time"
+msgstr "`Ortalama Ödünç Süresi <#avloantime>`__"
+
+#: ../../source/11_reports.rst:653
+msgid ""
+"This report will list the average time items are out on loan based on the "
+"criteria you enter:"
+msgstr ""
+"Bu rapor, ödünç verilen materyallerin ödünçte kalma sürelerini girdiğiniz "
+"kritere dayalı olarak listeleyecektir:"
+
+#: ../../source/11_reports.rst:656
+msgid "|image928|"
+msgstr ""
+
+#: ../../source/11_reports.rst:661
+msgid "|image929|"
+msgstr ""
+
+#: ../../source/11_reports.rst:669
+#, fuzzy
+msgid "Report Dictionary"
+msgstr "`Rapor Sözlüğü <#reportdic>`__"
+
+#: ../../source/11_reports.rst:671
+msgid ""
+"The report dictionary is a way to pre-define common filters you'd like to "
+"apply to your reports. This is a good way to add in filters that the report "
+"wizard doesn't include by default. To add a new definition, or filter, click "
+"'New Definition' on the Reports Dictionary page and follow the 4 step "
+"process."
+msgstr ""
+"Rapor sözlüğü raporlarınıza uygulamak istediğiniz yaygın filtreleri ön "
+"tanımlamak için bir yöntemdir. Rapor sihirbazının varsayılanında bulunmayan "
+"bu yöntem, filtrelere ekleme yapmak için iyi bir yöntemdir. Yeni bir tanım "
+"ya da filtre eklemek için, Rapor Sözlüğü sayfasındaki 'Yeni Tanım' "
+"tıklayınız ve 4 basamaklı aşamayı takip ediniz."
+
+#: ../../source/11_reports.rst:677
+msgid "Step 1: Name the definition and provide a description if necessary"
+msgstr ""
+"Adım 1: Yeni tanıma isim verin ve eğer gerekiyorsa bir açıklama getirin"
+
+#: ../../source/11_reports.rst:679
+msgid "|image930|"
+msgstr ""
+
+#: ../../source/11_reports.rst:681
+msgid "Step 2: Choose the module that the will be queried."
+msgstr "Adım 2: Sorgulanan modülü seçin."
+
+#: ../../source/11_reports.rst:683
+msgid "|image931|"
+msgstr ""
+
+#: ../../source/11_reports.rst:685
+msgid "Step 3: Choose columns to query from the tables presented."
+msgstr "Adım 3: Sunulan tablolardan sorgulamak için sütunları seçin."
+
+#: ../../source/11_reports.rst:687
+msgid "|image932|"
+msgstr ""
+
+#: ../../source/11_reports.rst:689
+msgid ""
+"Step 4: Choose the value(s) from the field(s). These will be automatically "
+"populated with options available in your database."
+msgstr ""
+"Basamak 4: Değer(leri) alan(lar)dan seçin. Bu değerler veri tabanınızda "
+"kullanılabilir olan seçeneklerle otomatik olarak doldurulacaktır."
+
+#: ../../source/11_reports.rst:692
+msgid "|image933|"
+msgstr ""
+
+#: ../../source/11_reports.rst:694
+msgid "Confirm your selections to save the definition."
+msgstr "Tanımını kaydetmek için seçimlerinizi onaylayın"
+
+#: ../../source/11_reports.rst:696
+msgid "|image934|"
+msgstr ""
+
+#: ../../source/11_reports.rst:698
+msgid "Your definitions will all appear on the Reports Dictionary page"
+msgstr ""
+"Tanımlamalarınızın tümü Raporlar Sözlüğü sayfası üzerinde görüntülenecektir"
+
+#: ../../source/11_reports.rst:700
+msgid "|image935|"
+msgstr ""
+
+#: ../../source/11_reports.rst:702
+msgid ""
+"Then when generating reports on the module you created the value for you "
+"will see an option to limit by the definition at the bottom of the usual "
+"filters."
+msgstr ""
+"Modüldeki raporları oluştururken, oluşturduğunuz değer için mevcut "
+"filtrelerin altındaki tanımla sınırlandırmak üzere bir seçenek göreceksiniz."
+
+#: ../../source/11_reports.rst:706
+msgid "|image936|"
+msgstr ""
+
+#~ msgid "`Custom Reports <#customreports>`__"
+#~ msgstr "`Özel Raporlar <#customreports>`__"
+
+#, fuzzy
+#~ msgid "Chose Module for Report |image881|"
+#~ msgstr "Rapor için Modül Seç"
+
+#, fuzzy
+#~ msgid "Select database fields to query |image883|"
+#~ msgstr "Sorgulanacak veri tabanı alanlarını seçin"
+
+#, fuzzy
+#~ msgid "Choose limits |image884|"
+#~ msgstr "Sınırları Seç"
+
+#, fuzzy
+#~ msgid "Choose math functions |image885|"
+#~ msgstr "Matematik fonksiyonları seç"
+
+#, fuzzy
+#~ msgid "Choose ordering |image886|"
+#~ msgstr "Sıralamayı seçin"
+
+#, fuzzy
+#~ msgid "Custom Report Confirmation |image887|"
+#~ msgstr "Özel Rapor Onayı"
+
+#, fuzzy
+#~ msgid "Save custom report |image888|"
+#~ msgstr "Özel rapor kaydet"
+
+#, fuzzy
+#~ msgid "Saved Reports list |image889|"
+#~ msgstr "Kaydedilen Raporlar listesi"
+
+#~ msgid "`Report from SQL <#reportfromsql>`__"
+#~ msgstr "`SQL'den rapor oluştur <#reportfromsql>`__"
+
+#, fuzzy
+#~ msgid "New SQL Report |image890|"
+#~ msgstr "Yeni SQL Raporu"
+
+#, fuzzy
+#~ msgid "Report subgroup |image892|"
+#~ msgstr "Rapor altgrup:"
+
+#, fuzzy
+#~ msgid "Branch pull down |image894|"
+#~ msgstr "Birim açılır menüsü"
+
+#~ msgid "`Duplicate Report <#duplicatereport>`__"
+#~ msgstr "`Raporu Çoğalt <#duplicatereport>`__"
+
+#, fuzzy
+#~ msgid "Saved Reports |image895|"
+#~ msgstr "Kaydedilmiş Raporlar Sayfası"
+
+#, fuzzy
+#~ msgid "Saved Reports |image896|"
+#~ msgstr "Kaydedilmiş Raporlar Sayfası"
+
+#, fuzzy
+#~ msgid "Edit Report Option |image897|"
+#~ msgstr "Rapor Seçeneği Düzenle"
+
+#, fuzzy
+#~ msgid "Edit SQL Form |image898|"
+#~ msgstr "SQL Formu Düzenle"
+
+#, fuzzy
+#~ msgid "Enter report parameters |image900|"
+#~ msgstr "Rapor parametrelerini girin"
+
+#, fuzzy
+#~ msgid "Report results |image901|"
+#~ msgstr "Rapor sonuçları"
+
+#~ msgid "`Acquisitions Statistics <#acqstats>`__"
+#~ msgstr "`Sağlama İstatistikleri <#acqstats>`__"
+
+#, fuzzy
+#~ msgid "Acquisitions Statistics Results |image903|"
+#~ msgstr "Sağlama İstatistik Sonuçları"
+
+#, fuzzy
+#~ msgid "Acquisitions Stats Options |image904|"
+#~ msgstr "Sağlama İstatistikleri Seçenekleri"
+
+#, fuzzy
+#~ msgid "Acquisitions statistics with totals |image905|"
+#~ msgstr "Toplamları ile sağlama istatistikleri"
+
+#, fuzzy
+#~ msgid "Patron Statistics Options |image906|"
+#~ msgstr "Kullanıcı İstatistikleri Seçenekleri"
+
+#, fuzzy
+#~ msgid "Patron Statistics Results |image907|"
+#~ msgstr "Kullanıcı İstatistikleri Sonuçları"
+
+#, fuzzy
+#~ msgid "Catalog Statistics Form |image908|"
+#~ msgstr "Katalog İstatistikleri Biçimi"
+
+#, fuzzy
+#~ msgid "Catalog Statistic Results |image909|"
+#~ msgstr "Katalog İstatistik Sonuçları"
+
+#~ msgid "`Circulation Statistics <#circstats>`__"
+#~ msgstr "`Dolaşım İstatistikleri <#circstats>`__"
+
+#, fuzzy
+#~ msgid "Circulation Statistic Results |image911|"
+#~ msgstr "Dolaşım İstatistik Sonuçları"
+
+#, fuzzy
+#~ msgid "In House Use Stats |image912|"
+#~ msgstr "Kurum İçi Kullanım İstatistikleri"
+
+#~ msgid "`Serials Statistics <#serialstats>`__"
+#~ msgstr "`Süreli Yayın İstatistikleri <#serialstats>`__"
+
+#, fuzzy
+#~ msgid "Serials Results |image914|"
+#~ msgstr "Süreli Yayın Sonuçları"
+
+#, fuzzy
+#~ msgid "Hold Statistics Form |image915|"
+#~ msgstr "Ayırma İstatistikleri Formu"
+
+#, fuzzy
+#~ msgid "Hold Stats Results |image916|"
+#~ msgstr "Ayırma İstatistikleri Sonuçları"
+
+#~ msgid "`Patrons with the most checkouts <#mostcheckouts>`__"
+#~ msgstr "`En çok ödünç materyal alan kullanıcılar <#mostcheckouts>`__"
+
+#, fuzzy
+#~ msgid "Top checkouts results |image918|"
+#~ msgstr "En çok ödünç alınan materyaller sonuçları"
+
+#, fuzzy
+#~ msgid "Most Circulation Items Form |image919|"
+#~ msgstr "Dolaşımda En Çok Yer Alan Materyaller Formu"
+
+#, fuzzy
+#~ msgid "Top Circulation Items Results |image920|"
+#~ msgstr "Dolaşımda En Fazla Yer Alan Materyal Sonuçları"
+
+#~ msgid "`Patrons with no checkouts <#patnocheckouts>`__"
+#~ msgstr "`Ödünç materyal almayan kullanıcılar <#patnocheckouts>`__"
+
+#, fuzzy
+#~ msgid "Results for Patrons with no Checkouts |image922|"
+#~ msgstr "Hiç ödünç almamış kullanıcılar için sonuçlar"
+
+#~ msgid "`Items with no checkouts <#itemnocheckouts>`__"
+#~ msgstr "`Hiç ödünç alınmamış materyaller <#itemnocheckouts>`__"
+
+#, fuzzy
+#~ msgid "Items with no checkouts results |image924|"
+#~ msgstr "Hiç ödünç alınmamış materyaller için sonuçlar"
+
+#~ msgid "`Catalog by Item Type <#catbyitem>`__"
+#~ msgstr "`Materyal türüne göre katalog <#catbyitem>`__"
+
+#, fuzzy
+#~ msgid "Total of Items by Type and Branch |image926|"
+#~ msgstr "Tür ve birime göre materyallerin toplamı"
+
+#~ msgid "`Lost Items <#lostreport>`__"
+#~ msgstr "`Kayıp Materyaller <#lostreport>`__"
+
+#, fuzzy
+#~ msgid "Lost Items Report |image927|"
+#~ msgstr "Kayıp Materyaller Raporu"
+
+#, fuzzy
+#~ msgid "Average Checkout Period Form |image928|"
+#~ msgstr "Ortalama Ödünç Verme Süreci Formu"
+
+#, fuzzy
+#~ msgid "Average Checkout Period Results |image929|"
+#~ msgstr "Ortalama Ödünç Verme Süreci Sonuçları"
+
+#, fuzzy
+#~ msgid "Create a Definition |image930|"
+#~ msgstr "Bir tanım oluşturun"
+
+#, fuzzy
+#~ msgid "Select Koha Module |image931|"
+#~ msgstr "Koha Modülü Seçin"
+
+#, fuzzy
+#~ msgid "Choose columns |image932|"
+#~ msgstr "Sütunları seçin"
+
+#, fuzzy
+#~ msgid "Choose fields and values |image933|"
+#~ msgstr "Alanları ve değerleri seçin"
+
+#, fuzzy
+#~ msgid "Confirm Definition |image934|"
+#~ msgstr "Tanımı Onaylayın"
+
+#, fuzzy
+#~ msgid "Reports Dictionary Listing |image935|"
+#~ msgstr "Raporlar Sözlüğü Listeleme"
+
+#, fuzzy
+#~ msgid "Dictionary Limit Option |image936|"
+#~ msgstr "Sözlük Sınırlama Seçeneği"
