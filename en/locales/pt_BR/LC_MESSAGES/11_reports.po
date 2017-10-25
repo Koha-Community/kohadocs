@@ -1,0 +1,946 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Koha Community
+# This file is distributed under the same license as the Koha Manual
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Koha Manual 17.11\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-25 12:27-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/11_reports.rst:4
+msgid "Reports"
+msgstr ""
+
+#: ../../source/11_reports.rst:6
+msgid ""
+"Reports in Koha are a way to gather data. Reports are used to generate "
+"statistics, member lists, shelving lists, or any list of data in your "
+"database."
+msgstr ""
+
+#: ../../source/11_reports.rst:10
+msgid "*Get there:* More > Reports"
+msgstr ""
+
+#: ../../source/11_reports.rst:15
+msgid "Custom Reports"
+msgstr ""
+
+#: ../../source/11_reports.rst:17
+msgid ""
+"Koha's data is stored in a MySQL database which means that librarians can"
+" generate nearly any report they would like by either using the "
+":ref:`Guided Reports Wizard <guided-report-wizard-label>` or writing "
+"their own :ref:`SQL query <report-from-sql-label>`."
+msgstr ""
+
+#: ../../source/11_reports.rst:25
+msgid "Add Custom Report"
+msgstr ""
+
+#: ../../source/11_reports.rst:30
+msgid "Guided Report Wizard"
+msgstr ""
+
+#: ../../source/11_reports.rst:32
+msgid ""
+"The guided report wizard will walk you through a six step process to "
+"generate a report."
+msgstr ""
+
+#: ../../source/11_reports.rst:35
+msgid ""
+"Step 1: Choose the module you want to report on. This will determine what"
+" tables and fields are available for you to query."
+msgstr ""
+
+#: ../../source/11_reports.rst:38 ../../source/11_reports.rst:170
+msgid ""
+"'Report is public' should be left to the default of 'No' in most cases. A"
+" report can be made public if you intend to allow access to it through "
+"the JSON webservice interface. This is a system that can be used by "
+"developers to make custom presentations of the data from the report, for "
+"example displaying it using a graphing API. To learn more speak to your "
+"local developer."
+msgstr ""
+
+#: ../../source/11_reports.rst:45 ../../source/11_reports.rst:177
+msgid ""
+"A public report is accessible via a URL that looks like this: "
+"http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID"
+msgstr ""
+
+#: ../../source/11_reports.rst:48
+msgid "|image881|"
+msgstr ""
+
+#: ../../source/11_reports.rst:50 ../../source/11_reports.rst:147
+#: ../../source/11_reports.rst:164 ../../source/11_reports.rst:228
+#: ../../source/11_reports.rst:236 ../../source/11_reports.rst:253
+#: ../../source/11_reports.rst:259 ../../source/11_reports.rst:340
+#: ../../source/11_reports.rst:362 ../../source/11_reports.rst:396
+#: ../../source/11_reports.rst:421 ../../source/11_reports.rst:445
+#: ../../source/11_reports.rst:464 ../../source/11_reports.rst:504
+#: ../../source/11_reports.rst:528
+msgid "**Note**"
+msgstr ""
+
+#: ../../source/11_reports.rst:52 ../../source/11_reports.rst:261
+msgid ""
+"If your system administrator has set up memcache on your server you might"
+" see one more option for the Cache expiry. This is related to your public"
+" reports. If you make the report public then it's constantly running and "
+"will cause a large load on your system. Setting this value prevents that."
+msgstr ""
+
+#: ../../source/11_reports.rst:58
+msgid "|image1292|"
+msgstr ""
+
+#: ../../source/11_reports.rst:60
+msgid ""
+"Step 2: Choose a report type. For now, Tabular is the only option "
+"available."
+msgstr ""
+
+#: ../../source/11_reports.rst:63
+msgid "|image882|"
+msgstr ""
+
+#: ../../source/11_reports.rst:65
+msgid ""
+"Step 3: Choose the fields you want in your report. You can select "
+"multiple fields and add them all at once by using CTRL+Click on each item"
+" you want to add before clicking the Add button."
+msgstr ""
+
+#: ../../source/11_reports.rst:69
+msgid "|image883|"
+msgstr ""
+
+#: ../../source/11_reports.rst:71
+msgid ""
+"Step 4: Choose any limits you might want to apply to your report (such as"
+" item types or branches). If you don't want to apply any limits, simply "
+"click Next instead of making an option."
+msgstr ""
+
+#: ../../source/11_reports.rst:75
+msgid "|image884|"
+msgstr ""
+
+#: ../../source/11_reports.rst:77
+msgid ""
+"Step 5: Perform math functions. If you don't want to do any calculations,"
+" simply click Next instead of making an option."
+msgstr ""
+
+#: ../../source/11_reports.rst:80
+msgid "|image885|"
+msgstr ""
+
+#: ../../source/11_reports.rst:82
+msgid ""
+"Step 6: Choose data order. If you want the data to print out in the order"
+" it's found in the database, simply click Finish."
+msgstr ""
+
+#: ../../source/11_reports.rst:85
+msgid "|image886|"
+msgstr ""
+
+#: ../../source/11_reports.rst:87
+msgid ""
+"When you are finished you will be presented with the SQL generated by the"
+" report wizard. From here you can choose to save the report by clicking "
+"'Save' or copy the SQL and make edits to it by hand."
+msgstr ""
+
+#: ../../source/11_reports.rst:91
+msgid "|image887|"
+msgstr ""
+
+#: ../../source/11_reports.rst:93
+msgid ""
+"If you choose to save the report you will be asked to name your report, "
+"sort it in to groups and subgroups and enter any notes regarding it."
+msgstr ""
+
+#: ../../source/11_reports.rst:96
+msgid "|image888|"
+msgstr ""
+
+#: ../../source/11_reports.rst:98
+msgid ""
+"Once your report is saved it will appear on the 'Use Saved' page with all"
+" other saved reports."
+msgstr ""
+
+#: ../../source/11_reports.rst:101
+msgid "|image889|"
+msgstr ""
+
+#: ../../source/11_reports.rst:103
+msgid ""
+"From here you can make edits, run the report, or schedule a time to have "
+"the report run. To find the report you created you can sort by any of the"
+" columns by clicking the on the column header (creation date is the best "
+"bet for finding the report you just added). You can also filter your "
+"results using the filter menu on the left or use the tabs to find reports"
+" based on your custom groups."
+msgstr ""
+
+#: ../../source/11_reports.rst:113
+msgid "Report from SQL"
+msgstr ""
+
+#: ../../source/11_reports.rst:115
+msgid ""
+"In addition to the report wizard, you have the option to write your own "
+"queries using SQL. To find reports written by other Koha users, visit the"
+" Koha Wiki: http://wiki.koha-community.org/wiki/SQL_Reports_Library. You "
+"can also find your database structure in "
+"/installer/data/mysql/kohastructure.sql or online at: `http://schema"
+".koha-community.org <http://schema.koha-community.org/>`__."
+msgstr ""
+
+#: ../../source/11_reports.rst:122
+msgid ""
+"To add your query, click the link to 'Create from SQL' on the main "
+"reports module or the 'New report' button at the top of the 'Saved "
+"reports' page."
+msgstr ""
+
+#: ../../source/11_reports.rst:126
+msgid "|image890|"
+msgstr ""
+
+#: ../../source/11_reports.rst:128
+msgid "Fill in the form presented"
+msgstr ""
+
+#: ../../source/11_reports.rst:130
+msgid "|image891|"
+msgstr ""
+
+#: ../../source/11_reports.rst:132
+msgid ""
+"The 'Name' is what will appear on the Saved Reports page to help you "
+"identify the report later. It will also be searchable using the filters "
+"found the left of the Saved Reports page."
+msgstr ""
+
+#: ../../source/11_reports.rst:136
+msgid ""
+"You can use the 'Report group' to organize your reports so that you can "
+"easily filter reports by groups. Report groups are set in the "
+"`REPORT\\_GROUP <#reportgroup>`__ authorized value category or can be "
+"added on the fly when creating the report by choosing the 'or create' "
+"radio button."
+msgstr ""
+
+#: ../../source/11_reports.rst:142
+msgid "|image1293|"
+msgstr ""
+
+#: ../../source/11_reports.rst:144
+msgid ""
+"Report groups set up in the authorised value category need to have unique"
+" authorised values and descriptions."
+msgstr ""
+
+#: ../../source/11_reports.rst:149
+msgid ""
+"If you're adding a report group on the fly, remember that you code should"
+" be fewer than 10 characters and should not include special characters or"
+" spaces."
+msgstr ""
+
+#: ../../source/11_reports.rst:153
+msgid ""
+"You can use 'Report subgroup' to further organize your reports so that "
+"you can easily filter reports by groups and subgroups. Report subgroups "
+"are set in the `REPORT\\_SUBGROUP <#reportsubgroup>`__ authorized value "
+"category or can be added on the fly when creating the report by choosing "
+"the 'or create' radio button.  Report Subgroups are set up with unique "
+"values in Authorised Value, and Description. The Description (OPAC) field"
+" needs to contain the authorised value for the Report Group that the "
+"Subgroup falls under."
+msgstr ""
+
+#: ../../source/11_reports.rst:162
+msgid "|image892|"
+msgstr ""
+
+#: ../../source/11_reports.rst:166
+msgid ""
+"If you're adding a report subgroup on the fly, remember that you code "
+"should be fewer than 10 characters and should not include special "
+"characters or spaces."
+msgstr ""
+
+#: ../../source/11_reports.rst:180
+msgid ""
+"'Notes' will also appear on the Saved Reports page, this can be used to "
+"provide more details about the report or tips on how to enter values when"
+" it runs"
+msgstr ""
+
+#: ../../source/11_reports.rst:184
+msgid ""
+"The type should always be 'Tabular' at this time since the other formats "
+"have not been implemented"
+msgstr ""
+
+#: ../../source/11_reports.rst:187
+msgid "In the 'SQL' box you will type or paste the SQL for the report"
+msgstr ""
+
+#: ../../source/11_reports.rst:189
+msgid ""
+"If you feel that your report might be too resource intensive you might "
+"want to consider using runtime parameters to your query. Runtime "
+"parameters basically make a filter appear before the report is run to "
+"save your system resources."
+msgstr ""
+
+#: ../../source/11_reports.rst:194
+msgid ""
+"There is a specific syntax that Koha will understand as 'ask for values "
+"when running the report'. The syntax is <<Question to "
+"ask\\|authorized\\_value>>."
+msgstr ""
+
+#: ../../source/11_reports.rst:198
+msgid ""
+"The << and >> are just delimiters. You must put << at the beginning and "
+">> at the end of your parameter"
+msgstr ""
+
+#: ../../source/11_reports.rst:201
+msgid ""
+"The 'Question to ask' will be displayed on the left of the string to "
+"enter."
+msgstr ""
+
+#: ../../source/11_reports.rst:204
+msgid ""
+"The authorized\\_value can be omitted if not applicable. If it contains "
+"an authorized value category, or branches or itemtype or categorycode or "
+"biblio\\_framework, a list with the Koha authorized values will be "
+"displayed instead of a free field Note that you can have more than one "
+"parameter in a given SQL Note that entering nothing at run time won't "
+"probably work as you expect. It will be considered as \"value empty\" not"
+" as \"ignore this parameter\". For example entering nothing for : "
+"\"title=<<Enter title>>\" will display results with title='' (no title). "
+"If you want to have to have something not mandatory, use \"title like "
+"<<Enter title>>\" and enter a % at run time instead of nothing"
+msgstr ""
+
+#: ../../source/11_reports.rst:216
+msgid "Examples:"
+msgstr ""
+
+#: ../../source/11_reports.rst:218
+#, python-format
+msgid ""
+"SELECT surname,firstname FROM borrowers WHERE branchcode=<<Enter patrons "
+"library\\|branches>> AND surname like <<Enter filter for patron surname "
+"(% if none)>>"
+msgstr ""
+
+#: ../../source/11_reports.rst:222
+msgid ""
+"SELECT \\* FROM items WHERE homebranch = <<Pick your branch\\|branches>> "
+"and barcode like <<Partial barcode value here>>"
+msgstr ""
+
+#: ../../source/11_reports.rst:225
+msgid ""
+"SELECT title , author FROM biblio WHERE frameworkcode=<<Enter the "
+"frameworkcode\\|biblio\\_framework>>"
+msgstr ""
+
+#: ../../source/11_reports.rst:230
+msgid ""
+"To generate a date picker calendar to the right of the field when running"
+" a report you can use the 'date' keyword like this: <<Enter Date\\|date>>"
+msgstr ""
+
+#: ../../source/11_reports.rst:234
+msgid "|image893|"
+msgstr ""
+
+#: ../../source/11_reports.rst:238
+msgid ""
+"You have to put \"%\" in a text box to 'leave it blank'. Otherwise, it "
+"literally looks for \"\" (empty string) as the value for the field."
+msgstr ""
+
+#: ../../source/11_reports.rst:242
+msgid "**Important**"
+msgstr ""
+
+#: ../../source/11_reports.rst:244
+msgid ""
+"In addition to using any authorized value code to generate a dropdown, "
+"you can use the following values as well: Framework codes "
+"(biblio\\_framework), Branches (branches), Item Types (itemtypes) and "
+"Patron Categories (categorycode). For example a branch pull down would be"
+" generated like this <<Branch\\|branches>>"
+msgstr ""
+
+#: ../../source/11_reports.rst:251
+msgid "|image894|"
+msgstr ""
+
+#: ../../source/11_reports.rst:255
+msgid ""
+"There is a limit of 10,000 records put on SQL statements entered in Koha."
+" To get around this you want to add 'LIMIT 100000' to the end of your SQL"
+" statement (or any other number above 10,000)."
+msgstr ""
+
+#: ../../source/11_reports.rst:267
+msgid "|image1294|"
+msgstr ""
+
+#: ../../source/11_reports.rst:269
+msgid ""
+"Once everything is entered click the 'Save Report' button and you'll be "
+"presented with options to run it. Once a report is saved you do not have "
+"to recreate it you can simply find it on the Saved Reports page and "
+":ref:`run <running-custom-reports-label>` or :ref:`edit <edit-custom-"
+"reports-label>` it."
+msgstr ""
+
+#: ../../source/11_reports.rst:277
+msgid "Duplicate Report"
+msgstr ""
+
+#: ../../source/11_reports.rst:279
+msgid ""
+"Reports can also be added by duplicating an existing report. Visit the "
+"'Saved reports' page to see all of the reports listed on your system "
+"already."
+msgstr ""
+
+#: ../../source/11_reports.rst:283
+msgid "|image895|"
+msgstr ""
+
+#: ../../source/11_reports.rst:285
+msgid ""
+"To the right of every report there is an 'Actions' pull down. Clicking "
+"that and choose 'Duplicate' to use an existing report as the basis for "
+"your new report. That will populate the new report form with the existing"
+" SQL for easy editing and resaving."
+msgstr ""
+
+#: ../../source/11_reports.rst:293
+msgid "Edit Custom Reports"
+msgstr ""
+
+#: ../../source/11_reports.rst:295
+msgid ""
+"Every report can be edited from the reports lists. To see the list of "
+"reports already stored in Koha, click 'Use Saved.'"
+msgstr ""
+
+#: ../../source/11_reports.rst:298
+msgid "|image896|"
+msgstr ""
+
+#: ../../source/11_reports.rst:300
+msgid ""
+"To find the report you'd like to edit you can sort by any of the columns "
+"by clicking the on the column header. You can also filter your results "
+"using the filter menu on the left or use the tabs to find reports based "
+"on your custom groups."
+msgstr ""
+
+#: ../../source/11_reports.rst:305
+msgid ""
+"From this list you can edit any custom report by clicking 'Actions' to "
+"the right of the report and choosing 'Edit' from the menu that appears."
+msgstr ""
+
+#: ../../source/11_reports.rst:308
+msgid "|image897|"
+msgstr ""
+
+#: ../../source/11_reports.rst:310
+msgid "The form to edit the report will appear."
+msgstr ""
+
+#: ../../source/11_reports.rst:312
+msgid "|image898|"
+msgstr ""
+
+#: ../../source/11_reports.rst:317
+msgid "Running Custom Reports"
+msgstr ""
+
+#: ../../source/11_reports.rst:319
+msgid ""
+"Once custom reports are saved to Koha, you can run them by going to the "
+"Saved Reports page and clicking the 'Actions' button to the right of the "
+"report and choosing 'Run'."
+msgstr ""
+
+#: ../../source/11_reports.rst:323
+msgid "|image899|"
+msgstr ""
+
+#: ../../source/11_reports.rst:325
+msgid "When you report runs you will either be asked for some values"
+msgstr ""
+
+#: ../../source/11_reports.rst:327
+msgid "|image900|"
+msgstr ""
+
+#: ../../source/11_reports.rst:329
+msgid "or you will see the results right away"
+msgstr ""
+
+#: ../../source/11_reports.rst:331
+msgid "|image901|"
+msgstr ""
+
+#: ../../source/11_reports.rst:333
+msgid ""
+"From the results you can choose to rerun the report by clicking 'Run "
+"report' at the top, edit the report by clicking the 'Edit' button or "
+"starting over and creating a new report by using the 'New' button. You "
+"can also download your results by choosing a file type at the bottom of "
+"the results next to the 'Download the report' label and clicking "
+"'Download.'"
+msgstr ""
+
+#: ../../source/11_reports.rst:342
+msgid ""
+"A Comma Separated Text file is a CSV file and it can be opened by any "
+"spreadsheet application."
+msgstr ""
+
+#: ../../source/11_reports.rst:348
+msgid "Statistics Reports"
+msgstr ""
+
+#: ../../source/11_reports.rst:350
+msgid ""
+"Statistic reports will show you counts and sums. These reports are all "
+"about numbers and statistics, for reports that return more detailed data,"
+" use the :ref:`Guided Report Wizard`. These reports are limited in what "
+"data they can look at, so it's often recommended to use :ref:`custom "
+"reports <custom-reports-label>` for official end of the year statistics."
+msgstr ""
+
+#: ../../source/11_reports.rst:360
+msgid "Acquisitions Statistics"
+msgstr ""
+
+#: ../../source/11_reports.rst:364 ../../source/11_reports.rst:398
+#: ../../source/11_reports.rst:423 ../../source/11_reports.rst:447
+#: ../../source/11_reports.rst:506 ../../source/11_reports.rst:530
+msgid ""
+"These reports are limited in what data they can look at, so it's often "
+"recommended to use :ref:`custom reports <custom-reports-label>` for "
+"official end of the year statistics."
+msgstr ""
+
+#: ../../source/11_reports.rst:368 ../../source/11_reports.rst:402
+#: ../../source/11_reports.rst:427 ../../source/11_reports.rst:451
+msgid ""
+"Using the form provided, choose which value you would like to appear in "
+"the Column and which will appear in the Row."
+msgstr ""
+
+#: ../../source/11_reports.rst:371
+msgid "|image902|"
+msgstr ""
+
+#: ../../source/11_reports.rst:373 ../../source/11_reports.rst:407
+#: ../../source/11_reports.rst:432 ../../source/11_reports.rst:456
+#: ../../source/11_reports.rst:515 ../../source/11_reports.rst:541
+#: ../../source/11_reports.rst:558 ../../source/11_reports.rst:576
+#: ../../source/11_reports.rst:594 ../../source/11_reports.rst:612
+#: ../../source/11_reports.rst:630 ../../source/11_reports.rst:658
+msgid ""
+"If you choose to output to the browser your results will print to the "
+"screen."
+msgstr ""
+
+#: ../../source/11_reports.rst:376
+msgid "|image903|"
+msgstr ""
+
+#: ../../source/11_reports.rst:378 ../../source/11_reports.rst:437
+#: ../../source/11_reports.rst:461 ../../source/11_reports.rst:520
+#: ../../source/11_reports.rst:546 ../../source/11_reports.rst:563
+#: ../../source/11_reports.rst:581 ../../source/11_reports.rst:599
+#: ../../source/11_reports.rst:617 ../../source/11_reports.rst:635
+#: ../../source/11_reports.rst:663
+msgid ""
+"You can also choose to export to a file that you can manipulate to your "
+"needs."
+msgstr ""
+
+#: ../../source/11_reports.rst:381
+msgid ""
+"When generating your report, note that you get to choose between counting"
+" or summing the values."
+msgstr ""
+
+#: ../../source/11_reports.rst:384
+msgid "|image904|"
+msgstr ""
+
+#: ../../source/11_reports.rst:386
+msgid ""
+"Choosing amount will change your results to appear as the sum of the "
+"amounts spent."
+msgstr ""
+
+#: ../../source/11_reports.rst:389
+msgid "|image905|"
+msgstr ""
+
+#: ../../source/11_reports.rst:394
+msgid "Patron Statistics"
+msgstr ""
+
+#: ../../source/11_reports.rst:405
+msgid "|image906|"
+msgstr ""
+
+#: ../../source/11_reports.rst:410
+msgid "|image907|"
+msgstr ""
+
+#: ../../source/11_reports.rst:412
+msgid ""
+"Based on your selections, you may see some query information above your "
+"results table. You can also choose to export to a file that you can "
+"manipulate to your needs."
+msgstr ""
+
+#: ../../source/11_reports.rst:419
+msgid "Catalog Statistics"
+msgstr ""
+
+#: ../../source/11_reports.rst:430
+msgid "|image908|"
+msgstr ""
+
+#: ../../source/11_reports.rst:435
+msgid "|image909|"
+msgstr ""
+
+#: ../../source/11_reports.rst:443
+msgid "Circulation Statistics"
+msgstr ""
+
+#: ../../source/11_reports.rst:454
+msgid "|image910|"
+msgstr ""
+
+#: ../../source/11_reports.rst:459
+msgid "|image911|"
+msgstr ""
+
+#: ../../source/11_reports.rst:466
+msgid ""
+"To get a complete picture of your monthly or daily circulation, you can "
+"run the report twice, once for 'Type' of 'Checkout' and again for "
+"'Renewal.'"
+msgstr ""
+
+#: ../../source/11_reports.rst:470
+msgid ""
+"This report uses 'Period,' or date, filtering that allows you to limit to"
+" a month by simply selecting the first day of the first month through the"
+" first day of the next month. For example, 10/1 to 11/1 to find "
+"statistics for the month of October."
+msgstr ""
+
+#: ../../source/11_reports.rst:475
+msgid ""
+"To find daily statistics, set your date range.</br> Example: \"I want "
+"circulation data starting with date XXX up to, but not including, date "
+"XXX.\""
+msgstr ""
+
+#: ../../source/11_reports.rst:479
+msgid "For a whole month, an example range would be: 11/01/2009 to 12/01/2009"
+msgstr ""
+
+#: ../../source/11_reports.rst:482
+msgid "For a whole year, an example range would be: 01/01/2009 to 01/01/2010"
+msgstr ""
+
+#: ../../source/11_reports.rst:485
+msgid ""
+"For a single day, an example would be: 11/15/2009 to 11/16/2009 to find "
+"what circulated on the 15th"
+msgstr ""
+
+#: ../../source/11_reports.rst:491
+msgid "Tracking in house use"
+msgstr ""
+
+#: ../../source/11_reports.rst:493
+msgid ""
+"Using the Circulation statistics reporting wizard you can run reports on "
+"in house usage of items simply by choosing 'Local Use' from the 'Type' "
+"pull down:"
+msgstr ""
+
+#: ../../source/11_reports.rst:497
+msgid "|image912|"
+msgstr ""
+
+#: ../../source/11_reports.rst:502
+msgid "Serials Statistics"
+msgstr ""
+
+#: ../../source/11_reports.rst:510
+msgid ""
+"Using the form provided, choose how you would like to list the serials in"
+" your system."
+msgstr ""
+
+#: ../../source/11_reports.rst:513
+msgid "|image913|"
+msgstr ""
+
+#: ../../source/11_reports.rst:518
+msgid "|image914|"
+msgstr ""
+
+#: ../../source/11_reports.rst:526
+msgid "Holds Statistics"
+msgstr ""
+
+#: ../../source/11_reports.rst:534
+msgid ""
+"Using the form provided you can see statistics for holds placed, filled, "
+"cancelled and more at your library. From the form choose what value you "
+"want to display in the column and what value to show in the row. You can "
+"also choose from the filters on the far right of the form."
+msgstr ""
+
+#: ../../source/11_reports.rst:539
+msgid "|image915|"
+msgstr ""
+
+#: ../../source/11_reports.rst:544
+msgid "|image916|"
+msgstr ""
+
+#: ../../source/11_reports.rst:552
+msgid "Patrons with the most checkouts"
+msgstr ""
+
+#: ../../source/11_reports.rst:554
+msgid "This report will simply list the patrons who have the most checkouts."
+msgstr ""
+
+#: ../../source/11_reports.rst:556
+msgid "|image917|"
+msgstr ""
+
+#: ../../source/11_reports.rst:561
+msgid "|image918|"
+msgstr ""
+
+#: ../../source/11_reports.rst:569
+msgid "Most Circulated Items"
+msgstr ""
+
+#: ../../source/11_reports.rst:571
+msgid ""
+"This report will simply list the items that have the been checked out the"
+" most."
+msgstr ""
+
+#: ../../source/11_reports.rst:574
+msgid "|image919|"
+msgstr ""
+
+#: ../../source/11_reports.rst:579
+msgid "|image920|"
+msgstr ""
+
+#: ../../source/11_reports.rst:587
+msgid "Patrons with no checkouts"
+msgstr ""
+
+#: ../../source/11_reports.rst:589
+msgid ""
+"This report will list for you the patrons in your system who haven't "
+"checked any items out."
+msgstr ""
+
+#: ../../source/11_reports.rst:592
+msgid "|image921|"
+msgstr ""
+
+#: ../../source/11_reports.rst:597
+msgid "|image922|"
+msgstr ""
+
+#: ../../source/11_reports.rst:605
+msgid "Items with no checkouts"
+msgstr ""
+
+#: ../../source/11_reports.rst:607
+msgid ""
+"This report will list items in your collection that have never been "
+"checked out."
+msgstr ""
+
+#: ../../source/11_reports.rst:610
+msgid "|image923|"
+msgstr ""
+
+#: ../../source/11_reports.rst:615
+msgid "|image924|"
+msgstr ""
+
+#: ../../source/11_reports.rst:623
+msgid "Catalog by Item Type"
+msgstr ""
+
+#: ../../source/11_reports.rst:625
+msgid ""
+"This report will list the total number of items of each item type per "
+"branch."
+msgstr ""
+
+#: ../../source/11_reports.rst:628
+msgid "|image925|"
+msgstr ""
+
+#: ../../source/11_reports.rst:633
+msgid "|image926|"
+msgstr ""
+
+#: ../../source/11_reports.rst:641
+msgid "Lost Items"
+msgstr ""
+
+#: ../../source/11_reports.rst:643
+msgid ""
+"This report will allow you to generate a list of items that have been "
+"marked as Lost within the system"
+msgstr ""
+
+#: ../../source/11_reports.rst:646
+msgid "|image927|"
+msgstr ""
+
+#: ../../source/11_reports.rst:651
+msgid "Average Loan Time"
+msgstr ""
+
+#: ../../source/11_reports.rst:653
+msgid ""
+"This report will list the average time items are out on loan based on the"
+" criteria you enter:"
+msgstr ""
+
+#: ../../source/11_reports.rst:656
+msgid "|image928|"
+msgstr ""
+
+#: ../../source/11_reports.rst:661
+msgid "|image929|"
+msgstr ""
+
+#: ../../source/11_reports.rst:669
+msgid "Report Dictionary"
+msgstr ""
+
+#: ../../source/11_reports.rst:671
+msgid ""
+"The report dictionary is a way to pre-define common filters you'd like to"
+" apply to your reports. This is a good way to add in filters that the "
+"report wizard doesn't include by default. To add a new definition, or "
+"filter, click 'New Definition' on the Reports Dictionary page and follow "
+"the 4 step process."
+msgstr ""
+
+#: ../../source/11_reports.rst:677
+msgid "Step 1: Name the definition and provide a description if necessary"
+msgstr ""
+
+#: ../../source/11_reports.rst:679
+msgid "|image930|"
+msgstr ""
+
+#: ../../source/11_reports.rst:681
+msgid "Step 2: Choose the module that the will be queried."
+msgstr ""
+
+#: ../../source/11_reports.rst:683
+msgid "|image931|"
+msgstr ""
+
+#: ../../source/11_reports.rst:685
+msgid "Step 3: Choose columns to query from the tables presented."
+msgstr ""
+
+#: ../../source/11_reports.rst:687
+msgid "|image932|"
+msgstr ""
+
+#: ../../source/11_reports.rst:689
+msgid ""
+"Step 4: Choose the value(s) from the field(s). These will be "
+"automatically populated with options available in your database."
+msgstr ""
+
+#: ../../source/11_reports.rst:692
+msgid "|image933|"
+msgstr ""
+
+#: ../../source/11_reports.rst:694
+msgid "Confirm your selections to save the definition."
+msgstr ""
+
+#: ../../source/11_reports.rst:696
+msgid "|image934|"
+msgstr ""
+
+#: ../../source/11_reports.rst:698
+msgid "Your definitions will all appear on the Reports Dictionary page"
+msgstr ""
+
+#: ../../source/11_reports.rst:700
+msgid "|image935|"
+msgstr ""
+
+#: ../../source/11_reports.rst:702
+msgid ""
+"Then when generating reports on the module you created the value for you "
+"will see an option to limit by the definition at the bottom of the usual "
+"filters."
+msgstr ""
+
+#: ../../source/11_reports.rst:706
+msgid "|image936|"
+msgstr ""
+
