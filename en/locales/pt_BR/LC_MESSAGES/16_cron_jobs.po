@@ -1,22 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2017, Koha Community
-# This file is distributed under the same license as the Koha Manual
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
-#
-#, fuzzy
+# Compendium of pt.
 msgid ""
 msgstr ""
-"Project-Id-Version: Koha Manual 17.11\n"
+"Project-Id-Version: compendium-pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-25 12:27-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-06-05 20:24-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
 
 #: ../../source/16_cron_jobs.rst:5 ../../source/16_cron_jobs.rst:26
 msgid "Cron Jobs"
@@ -26,11 +19,11 @@ msgstr ""
 msgid ""
 "A cron job is a Linux command for scheduling a command or script on your "
 "server to complete repetitive tasks automatically. Scripts executed as a "
-"cron job are typically used to modify files or databases; however, they "
-"can perform other tasks that do not modify data on the server, like "
-"sending out email notifications. Koha has many cron jobs in place that "
-"you can enable (search engine indexing, overdue notice generation, data "
-"cleanup and more), this chapter will explain those for you."
+"cron job are typically used to modify files or databases; however, they can "
+"perform other tasks that do not modify data on the server, like sending out "
+"email notifications. Koha has many cron jobs in place that you can enable "
+"(search engine indexing, overdue notice generation, data cleanup and more), "
+"this chapter will explain those for you."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:16
@@ -38,7 +31,8 @@ msgid "Crontab example"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:18
-msgid "An example of a Koha crontab can be found in misc/cronjobs/crontab.example"
+msgid ""
+"An example of a Koha crontab can be found in misc/cronjobs/crontab.example"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:20
@@ -49,9 +43,9 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:28
 msgid ""
-"The locations below assume a dev install which puts the crons in misc/, "
-"if you have a standard install you may want to look in bin/ for these "
-"files if you cannot find them in misc/"
+"The locations below assume a dev install which puts the crons in misc/, if "
+"you have a standard install you may want to look in bin/ for these files if "
+"you cannot find them in misc/"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:35
@@ -62,9 +56,13 @@ msgstr ""
 msgid "Daily Backup"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:40
+#, fuzzy
 msgid "Script path: misc/cronjobs/backup.sh"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:42
 msgid "Does: Creates a daily backup of the Koha database."
@@ -72,8 +70,9 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:44 ../../source/16_cron_jobs.rst:166
 #: ../../source/16_cron_jobs.rst:181
+#, fuzzy
 msgid "Frequency suggestion: daily"
-msgstr ""
+msgstr "Selecionar sugestões para: "
 
 #: ../../source/16_cron_jobs.rst:49
 msgid "Search"
@@ -83,25 +82,28 @@ msgstr ""
 msgid "Sitemap"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:56
+#, fuzzy
 msgid "Script path: misc/cronjobs/sitemap.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:58
 msgid ""
 "Does: Processes all biblio records from a Koha instance and generates "
-"sitemap files complying with the protocol as described on "
-"http://sitemaps.org. The goal of this script is to be able to provide to "
-"search engines direct access to biblio records. It avoids leaving search "
-"engines browsing Koha's OPAC which would generate a lot of site traffic "
-"and server workload."
+"sitemap files complying with the protocol as described on http://sitemaps."
+"org. The goal of this script is to be able to provide to search engines "
+"direct access to biblio records. It avoids leaving search engines browsing "
+"Koha's OPAC which would generate a lot of site traffic and server workload."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:64
 msgid ""
-"**Note** A file named sitemapindex.xml is generated. It contains "
-"references to multiple sitemap files. Each file contains at most 50,000 "
-"URLs and is named sitemapXXXX.xml."
+"**Note** A file named sitemapindex.xml is generated. It contains references "
+"to multiple sitemap files. Each file contains at most 50,000 URLs and is "
+"named sitemapXXXX.xml."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:69
@@ -127,18 +129,20 @@ msgid "Does: Updates Zebra indexes with recently changed data."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:86
+#, fuzzy
 msgid "Required by: Zebra"
-msgstr ""
+msgstr "Campo obrigatório"
 
 #: ../../source/16_cron_jobs.rst:88
 msgid ""
-"Frequency suggestion: every x minutes, (between 5-15 minutes) depending "
-"on performance needs"
+"Frequency suggestion: every x minutes, (between 5-15 minutes) depending on "
+"performance needs"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:94
+#, fuzzy
 msgid "Circulation"
-msgstr ""
+msgstr ": Configuração OK!"
 
 #: ../../source/16_cron_jobs.rst:99
 msgid "Holds Queue"
@@ -149,12 +153,14 @@ msgid "Script path: misc/cronjobs/holds/build\\_holds\\_queue.pl"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:103
+#, fuzzy
 msgid "Does: Updates holds queue report"
-msgstr ""
+msgstr "Prioridade de reserva do item"
 
 #: ../../source/16_cron_jobs.rst:105
+#, fuzzy
 msgid "Required by: :ref:`Holds Queue Report <holds-queue-label>`"
-msgstr ""
+msgstr "`Fila de reservas <#holdsqueue>`__"
 
 #: ../../source/16_cron_jobs.rst:107
 msgid "Frequency suggestion: every 1-4 hours"
@@ -162,70 +168,104 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:109
 msgid "Description:"
-msgstr ""
+msgstr "Descrição:"
 
 #: ../../source/16_cron_jobs.rst:111
+#, fuzzy
 msgid ""
 "A script that should be run periodically if your library system allows "
-"borrowers to place on-shelf holds. This script decides which library "
-"should be responsible for fulfilling a given hold request."
+"borrowers to place on-shelf holds. This script decides which library should "
+"be responsible for fulfilling a given hold request."
 msgstr ""
+"Para gerar este relatório, você precisará ter a tarefa BuildHoldsQueue "
+"rodando. Esta tarefa é um script que precisa ser periodicamente acionado se "
+"o seus sistema de bibliotecas permitir que os usuários façam reservas. Este "
+"script determina qual biblioteca é responsável por atender a uma determinada "
+"reserva."
 
 #: ../../source/16_cron_jobs.rst:115
+#, fuzzy
 msgid ""
-"It's behavior is controlled by the system preferences "
-":ref:`StaticHoldsQueueWeight "
-"<staticholdsqueueweight,-holdsqueueskipclosed"
-"-&-randomizeholdsqueueweight-label>` and :ref:`RandomizeHoldsQueueWeight "
-"<staticholdsqueueweight,-holdsqueueskipclosed"
-"-&-randomizeholdsqueueweight-label>`."
+"It's behavior is controlled by the system preferences :ref:"
+"`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-"
+"randomizeholdsqueueweight-label>` and :ref:`RandomizeHoldsQueueWeight "
+"<staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-"
+"label>`."
 msgstr ""
+"Este ambiente é controlado na preferencia do sistema StaticHoldsQueueWeight "
+"e RandomizeHoldsQueueWeight."
 
 #: ../../source/16_cron_jobs.rst:119
+#, fuzzy
 msgid ""
 "If you do not want all of your libraries to participate in the on-shelf "
-"holds fulfillment process, you should list the the libraries that "
-"\\*do\\* participate in the process here by inputting all the "
-"participating library's branchcodes, separated by commas ( e.g. "
-"\"MPL,CPL,SPL,BML\" etc. )."
+"holds fulfillment process, you should list the the libraries that \\*do\\* "
+"participate in the process here by inputting all the participating library's "
+"branchcodes, separated by commas ( e.g. \"MPL,CPL,SPL,BML\" etc. )."
 msgstr ""
+"Caso você não queira que todas as suas bibliotecas façam parte dos "
+"empréstimos por reserva automática, você pode listar quais bibliotecas "
+"participam deste processo inserindo o código de todas as bibliotecas "
+"participantes, separados por vírgulas (ex. \"MPL, CPL, SPL, BML\" etc.)."
 
 #: ../../source/16_cron_jobs.rst:125
+#, fuzzy
 msgid ""
 "By default, the holds queue will be generated such that the system will "
-"first attempt to hold fulfillment using items already at the pickup "
-"library if possible. If there are no items available at the pickup "
-"library to fill a hold, build\\_holds\\_queue.pl will then use the list "
-"of libraries defined in StaticHoldsQueueWeight. If "
-"RandomizeHoldsQueueWeight is disabled ( which it is by default ), the "
-"script will assign fulfillment requests in the order the branches are "
-"placed in the StaticHoldsQueueWeight system preference."
+"first attempt to hold fulfillment using items already at the pickup library "
+"if possible. If there are no items available at the pickup library to fill a "
+"hold, build\\_holds\\_queue.pl will then use the list of libraries defined "
+"in StaticHoldsQueueWeight. If RandomizeHoldsQueueWeight is disabled ( which "
+"it is by default ), the script will assign fulfillment requests in the order "
+"the branches are placed in the StaticHoldsQueueWeight system preference."
 msgstr ""
+"Por padrão, a fila de reservas será gerada de maneira que o sistema tente "
+"primeiro atender às reservas com os exemplares que estão disponíveis na "
+"biblioteca de retirada. Caso não haja exemplares disponíveis nesta "
+"biblioteca, build_holds_queue.pl irá seguir a lista de bibliotecas definida "
+"em StaticHoldsQueueWeight. Caso a opção RandomizeHoldsQueueWeight esteja "
+"desativada (o que é o padrão), o script irá preencher os pedidos na ordem na "
+"qual as bibliotecas tenham sido inseridas na preferência do sistema "
+"StaticHoldsQueueWeight."
 
 #: ../../source/16_cron_jobs.rst:134
 msgid ""
-"For example, if your system has three libraries, of varying sizes ( "
-"small, medium and large ) and you want the burden of holds fulfillment to"
-" be on larger libraries before smaller libraries, you would want "
+"For example, if your system has three libraries, of varying sizes ( small, "
+"medium and large ) and you want the burden of holds fulfillment to be on "
+"larger libraries before smaller libraries, you would want "
 "StaticHoldsQueueWeight to look something like \"LRG,MED,SML\"."
 msgstr ""
+"Por exemplo, se o seu sistema tem três bibliotecas de tamanhos variados "
+"(pequena, média e grande) e você deseja que a maior incidência de reservas "
+"recaia sobre as bibliotecas maiores antes das menores, você pode configurar "
+"StaticHoldsQueueWeight para algo como \"GDE,MED,PEQ\"."
 
 #: ../../source/16_cron_jobs.rst:140
 msgid ""
 "If you want the burden of holds fulfillment to be spread out equally "
 "throughout your library system, simply enable RandomizeHoldsQueueWeight. "
-"When this system preference is enabled, the order in which libraries will"
-" be requested to fulfill an on-shelf hold will be randomized each time "
-"the list is regenerated."
+"When this system preference is enabled, the order in which libraries will be "
+"requested to fulfill an on-shelf hold will be randomized each time the list "
+"is regenerated."
 msgstr ""
+"Caso você queira que o encargo das reservas recaia de maneira equânime na "
+"rede de bibliotecas, simplesmente ative a preferência "
+"RandomizeHoldsQueueWeight.Quando esta preferência do sistema está ativa, a "
+"ordem na qual cada biblioteca será solicitada a atender reservas será "
+"aleatória a cada vez que a lista for gerada."
 
 #: ../../source/16_cron_jobs.rst:146
+#, fuzzy
 msgid ""
-"Leaving StaticHoldsQueueWeight empty is contraindicated at this time. "
-"Doing so will cause the build\\_holds\\_queue script to ignore "
-"RandomizeHoldsQueueWeight, causing the script to request hold fulfillment"
-" not randomly, but by alphabetical order."
+"Leaving StaticHoldsQueueWeight empty is contraindicated at this time. Doing "
+"so will cause the build\\_holds\\_queue script to ignore "
+"RandomizeHoldsQueueWeight, causing the script to request hold fulfillment "
+"not randomly, but by alphabetical order."
 msgstr ""
+"Deixar StaticHoldsQueueWeight vazio é contraindicado neste ponto. Isso irá "
+"fazer com que o script build_holds_queue ignore RandomizeHoldsQueueWeight, "
+"fazendo com que o script preencha as reservas de forma não aleatória, mas "
+"sim seguindo a ordem alfabética."
 
 #: ../../source/16_cron_jobs.rst:154
 msgid "Expired Holds"
@@ -237,13 +277,12 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:158
 msgid ""
-"Does: By default, this cron job will only automatically cancel holds "
-"where the user has set an expiration date. If the library is using the "
-":ref:`ExpireReservesMaxPickUpDelay` and "
-":ref:`ExpireReservesMaxPickUpDelayCharge` preferences then this script "
-"will also cancel holds that have been sitting on the hold shelf for too "
-"long and will (if the library does) charge the patron for not picking up "
-"the hold."
+"Does: By default, this cron job will only automatically cancel holds where "
+"the user has set an expiration date. If the library is using the :ref:"
+"`ExpireReservesMaxPickUpDelay` and :ref:`ExpireReservesMaxPickUpDelayCharge` "
+"preferences then this script will also cancel holds that have been sitting "
+"on the hold shelf for too long and will (if the library does) charge the "
+"patron for not picking up the hold."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:171
@@ -256,10 +295,10 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:175
 msgid ""
-"Does: This script checks to find holds that should no longer be suspended"
-" and removes the suspension if the :ref:`AutoResumeSuspendedHolds` "
-"preference is set to 'allow'. This puts the patron back in to the queue "
-"where they were when the hold was suspended."
+"Does: This script checks to find holds that should no longer be suspended "
+"and removes the suspension if the :ref:`AutoResumeSuspendedHolds` preference "
+"is set to 'allow'. This puts the patron back in to the queue where they were "
+"when the hold was suspended."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:186
@@ -275,8 +314,11 @@ msgid "Does: Calculates and posts fines to patron accounts."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:192
+#, fuzzy
 msgid "Required by: :ref:`finesMode` system preference"
 msgstr ""
+"Campos obrigatórios são definidos na preferência de sistema "
+"BorrowerMandatoryField"
 
 #: ../../source/16_cron_jobs.rst:194 ../../source/16_cron_jobs.rst:223
 #: ../../source/16_cron_jobs.rst:243 ../../source/16_cron_jobs.rst:279
@@ -285,26 +327,32 @@ msgstr ""
 #: ../../source/16_cron_jobs.rst:458 ../../source/16_cron_jobs.rst:481
 #: ../../source/16_cron_jobs.rst:496 ../../source/16_cron_jobs.rst:629
 #: ../../source/16_cron_jobs.rst:642 ../../source/16_cron_jobs.rst:718
+#, fuzzy
 msgid "Frequency suggestion: nightly"
-msgstr ""
+msgstr "Selecionar sugestões para: "
 
 #: ../../source/16_cron_jobs.rst:199
 msgid "Static Fines"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:201
+#, fuzzy
 msgid "Script path: misc/cronjobs/staticfines.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:203
-msgid "Does: this script calculates and charges overdue fines to patron accounts"
+msgid ""
+"Does: this script calculates and charges overdue fines to patron accounts"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:205
 msgid ""
-"**Note** If the Koha System Preference 'finesMode' is set to "
-"'production', the fines are charged to the patron accounts. If set to "
-"'test', the fines are calculated but not applied."
+"**Note** If the Koha System Preference 'finesMode' is set to 'production', "
+"the fines are charged to the patron accounts. If set to 'test', the fines "
+"are calculated but not applied."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:209
@@ -322,23 +370,24 @@ msgstr ""
 #: ../../source/16_cron_jobs.rst:219
 msgid ""
 "Does: allows one to specify delays for changing items to different lost "
-"statuses, and optionally charge for them using the replacement price "
-"listed on the item record."
+"statuses, and optionally charge for them using the replacement price listed "
+"on the item record."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:225 ../../source/16_cron_jobs.rst:252
 #: ../../source/16_cron_jobs.rst:409 ../../source/16_cron_jobs.rst:426
 #: ../../source/16_cron_jobs.rst:543 ../../source/16_cron_jobs.rst:558
 #: ../../source/16_cron_jobs.rst:582 ../../source/16_cron_jobs.rst:619
+#, fuzzy
 msgid "**Note**"
-msgstr ""
+msgstr "Nota"
 
 #: ../../source/16_cron_jobs.rst:227
 msgid ""
-"Staff can control some of the parameters for the longoverdue cron job "
-"with the :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue"
-"-&-defaultlongoverduedays-label>` and "
-":ref:`DefaultLongOverdueChargeValue` preferences."
+"Staff can control some of the parameters for the longoverdue cron job with "
+"the :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-"
+"defaultlongoverduedays-label>` and :ref:`DefaultLongOverdueChargeValue` "
+"preferences."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:236
@@ -362,15 +411,14 @@ msgstr ""
 #: ../../source/16_cron_jobs.rst:247
 msgid ""
 "If the time on your database server does not match the time on your Koha "
-"server you will need to take that into account, and probably use the "
-"--since argument instead of the --interval argument for incremental "
-"updating."
+"server you will need to take that into account, and probably use the --since "
+"argument instead of the --interval argument for incremental updating."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:254
 msgid ""
-"This cronjob can be used if there is a performance concern. Otherwise, "
-"use the UpdateTotalIssuesOnCirc System Preference."
+"This cronjob can be used if there is a performance concern. Otherwise, use "
+"the UpdateTotalIssuesOnCirc System Preference."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:260
@@ -383,17 +431,19 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:264
 msgid ""
-"Does: Generates the borrowers.db file for use with the :ref:`Koha Offline"
-" Circulation <offline-circ-tool-for-windows-label>` tool"
+"Does: Generates the borrowers.db file for use with the :ref:`Koha Offline "
+"Circulation <offline-circ-tool-for-windows-label>` tool"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:267
+#, fuzzy
 msgid "Frequency suggestion: weekly"
-msgstr ""
+msgstr "Selecionar sugestões para: "
 
 #: ../../source/16_cron_jobs.rst:272
+#, fuzzy
 msgid "Automatic renewal"
-msgstr ""
+msgstr "Renovação automática"
 
 #: ../../source/16_cron_jobs.rst:274
 msgid "Script path: misc/cronjobs/automatic\\_renewals.pl"
@@ -401,8 +451,8 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:276
 msgid ""
-"Does: Will automatically renew items if you're allowing automatic renewal"
-" with your :ref:`circulation and fine rules <circulation-and-fine-rules-"
+"Does: Will automatically renew items if you're allowing automatic renewal "
+"with your :ref:`circulation and fine rules <circulation-and-fine-rules-"
 "label>`."
 msgstr ""
 
@@ -414,9 +464,13 @@ msgstr ""
 msgid "Batch Delete Patrons"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:291
+#, fuzzy
 msgid "Script path: misc/cronjobs/delete\\_patrons.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:293
 msgid ""
@@ -434,9 +488,9 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:303
 msgid ""
-"Does: Deletes patron registrations that were submitted via the OPAC but "
-"not reviewed by the library within the number of days entered in the "
-":ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay` preference."
+"Does: Deletes patron registrations that were submitted via the OPAC but not "
+"reviewed by the library within the number of days entered in the :ref:"
+"`PatronSelfRegistrationExpireTemporaryAccountsDelay` preference."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:313
@@ -444,25 +498,28 @@ msgid "Unconfirmed Registrations"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:315
-msgid "Script path: misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
+msgid ""
+"Script path: misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:317
 msgid ""
-"Does: Deletes patron self registrations that were submitted via the OPAC "
-"but not confirmed via email within 24 hours. This is only necessary if "
-"you are requiring patrons to confirm their registrations via email with "
-"the :ref:`PatronSelfRegistrationVerifyByEmail` preference."
+"Does: Deletes patron self registrations that were submitted via the OPAC but "
+"not confirmed via email within 24 hours. This is only necessary if you are "
+"requiring patrons to confirm their registrations via email with the :ref:"
+"`PatronSelfRegistrationVerifyByEmail` preference."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:324 ../../source/16_cron_jobs.rst:526
 #: ../../source/16_cron_jobs.rst:673
+#, fuzzy
 msgid "Frequency suggestion: hourly"
-msgstr ""
+msgstr "Selecionar sugestões para: "
 
 #: ../../source/16_cron_jobs.rst:329
+#, fuzzy
 msgid "Anonymize Patron Data"
-msgstr ""
+msgstr "`Usuários <#patroncrons>`__"
 
 #: ../../source/16_cron_jobs.rst:331
 msgid "Script path: misc/cronjobs/batch\\_anonymise.pl"
@@ -470,14 +527,15 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:333
 msgid ""
-"Does: Used to anonymize patron data. This will remove borrowernumbers "
-"from circulation history so that the stats are kept, but the patron "
-"information is removed for privacy reasons."
+"Does: Used to anonymize patron data. This will remove borrowernumbers from "
+"circulation history so that the stats are kept, but the patron information "
+"is removed for privacy reasons."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:340
+#, fuzzy
 msgid "Update Child to Adult Patron Type"
-msgstr ""
+msgstr "Atualizar usuário criança para usuário adulto."
 
 #: ../../source/16_cron_jobs.rst:342
 msgid "Script path: misc/cronjobs/j2a.pl"
@@ -486,20 +544,20 @@ msgstr ""
 #: ../../source/16_cron_jobs.rst:344
 msgid ""
 "Does: Convert juvenile/child patrons from juvenile patron category and "
-"category code to corresponding adult patron category and category code "
-"when they reach the upper age limit defined in the Patron Categories."
+"category code to corresponding adult patron category and category code when "
+"they reach the upper age limit defined in the Patron Categories."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:350
+#, fuzzy
 msgid "**DESCRIPTION**"
-msgstr ""
+msgstr "DESCRIÇÃO FÍSICA"
 
 #: ../../source/16_cron_jobs.rst:352
 msgid ""
 "This script is designed to update patrons from juvenile to adult patron "
-"types, remove the guarantor, and update their category codes "
-"appropriately when they reach the upper age limit defined in the Patron "
-"Categories."
+"types, remove the guarantor, and update their category codes appropriately "
+"when they reach the upper age limit defined in the Patron Categories."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:357
@@ -513,15 +571,15 @@ msgstr ""
 #: ../../source/16_cron_jobs.rst:361
 msgid ""
 "\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> "
-"(Processes a single branch, and updates the patron categories from "
-"category to category)"
+"(Processes a single branch, and updates the patron categories from category "
+"to category)"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:365
 msgid ""
-"\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (Processes all"
-" branches, shows all messages, and reports the patrons who would be "
-"affected. Takes no action on the database)"
+"\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (Processes all "
+"branches, shows all messages, and reports the patrons who would be affected. "
+"Takes no action on the database)"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:372
@@ -538,9 +596,9 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:381
 msgid ""
-"Does: processes the message queue to send the check out, check in and "
-"hold filled emails and SMS message to users and sends outgoing emails to "
-"patrons. requires :ref:`EnhancedMessagingPreferences` to be on"
+"Does: processes the message queue to send the check out, check in and hold "
+"filled emails and SMS message to users and sends outgoing emails to patrons. "
+"requires :ref:`EnhancedMessagingPreferences` to be on"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:387
@@ -548,13 +606,14 @@ msgid "Frequency suggestion: 1-4 hours"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:389 ../../source/16_cron_jobs.rst:686
+#, fuzzy
 msgid "**Important**"
-msgstr ""
+msgstr "Importante"
 
 #: ../../source/16_cron_jobs.rst:391
 msgid ""
-"Item due and Advanced due notices are controlled by the "
-":ref:`advance\\_notices cron <advanced-notice-label>`."
+"Item due and Advanced due notices are controlled by the :ref:`advance"
+"\\_notices cron <advanced-notice-label>`."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:397
@@ -567,15 +626,15 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:401
 msgid ""
-"Does: prepares \"pre-due\" notices and \"item due\" notices for patrons "
-"who request them prepares notices for patrons for items just due or "
-"coming due soon. requires :ref:`EnhancedMessagingPreferences` to be on"
+"Does: prepares \"pre-due\" notices and \"item due\" notices for patrons who "
+"request them prepares notices for patrons for items just due or coming due "
+"soon. requires :ref:`EnhancedMessagingPreferences` to be on"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:411
 msgid ""
-"This script does not actually send the notices. It queues them in the "
-":ref:`message queue <message-queue-label>` for later"
+"This script does not actually send the notices. It queues them in the :ref:"
+"`message queue <message-queue-label>` for later"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:417
@@ -588,15 +647,15 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:421
 msgid ""
-"Does: prepares messages to alert patrons of overdue messages (both via "
-"email and print)"
+"Does: prepares messages to alert patrons of overdue messages (both via email "
+"and print)"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:428
 msgid ""
-"This script does not actually send the notices. It queues them in the "
-":ref:`message queue <message-queue-label>` for later or generates the "
-"HTML for later printing"
+"This script does not actually send the notices. It queues them in the :ref:"
+"`message queue <message-queue-label>` for later or generates the HTML for "
+"later printing"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:432
@@ -605,26 +664,32 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:434
 msgid ""
-"The misc/cronjobs/advance\\_notices.pl program allows you to send "
-"messages to patrons in advance of their items becoming due, or to alert "
-"them of items that have just become due."
+"The misc/cronjobs/advance\\_notices.pl program allows you to send messages "
+"to patrons in advance of their items becoming due, or to alert them of items "
+"that have just become due."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:441
 msgid "Print Overdues"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:443
+#, fuzzy
 msgid "Script path: misc/cronjobs/printoverdues.sh"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:445
-msgid "Does: generates PDF files from HTML files in directories and prints them"
+msgid ""
+"Does: generates PDF files from HTML files in directories and prints them"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:450
+#, fuzzy
 msgid "Print Hold Notices"
-msgstr ""
+msgstr "`Políticas de reserva <#holdpolicies>`__"
 
 #: ../../source/16_cron_jobs.rst:452
 msgid "Script path: misc/cronjobs/gather\\_print\\_notices.pl"
@@ -643,8 +708,8 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:465
 msgid ""
-"To learn more about setting up this third party product view the `Talking"
-" Tech Appendix <#talkingtechappendix>`__."
+"To learn more about setting up this third party product view the `Talking "
+"Tech Appendix <#talkingtechappendix>`__."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:471
@@ -657,13 +722,16 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:475
 msgid ""
-"Does: Script to generate Spec C outbound notifications file for Talking "
-"Tech i-tiva phone notification system."
+"Does: Script to generate Spec C outbound notifications file for Talking Tech "
+"i-tiva phone notification system."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:478 ../../source/16_cron_jobs.rst:493
+#, fuzzy
 msgid "Required by: :ref:`TalkingTechItivaPhoneNotification`"
 msgstr ""
+"Se você estiver utilizando o serviço TalkingTechItivaPhoneNotification, você "
+"poderá configurar uma notificação por telefone"
 
 #: ../../source/16_cron_jobs.rst:486
 msgid "Receiving Notices File"
@@ -675,13 +743,14 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:490
 msgid ""
-"Does: Script to process received Results files for Talking Tech i-tiva "
-"phone notification system."
+"Does: Script to process received Results files for Talking Tech i-tiva phone "
+"notification system."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:501
+#, fuzzy
 msgid "Notify Patrons of Expiration"
-msgstr ""
+msgstr "`Usuários e circulação <#patrontools>`__"
 
 #: ../../source/16_cron_jobs.rst:503
 msgid "Script path: misc/cronjobs/membership\\_expiry.pl"
@@ -689,8 +758,8 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:505
 msgid ""
-"Does: Sends messages to warn patrons of their card expiration to the "
-":ref:`messaage queue <message-queue-label>` cron."
+"Does: Sends messages to warn patrons of their card expiration to the :ref:"
+"`messaage queue <message-queue-label>` cron."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:508
@@ -698,8 +767,9 @@ msgid "Requires: :ref:`MembershipExpiryDaysNotice`"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:510
+#, fuzzy
 msgid "Frequency: nightly"
-msgstr ""
+msgstr "Periodicidade:"
 
 #: ../../source/16_cron_jobs.rst:515
 msgid "In Processing/Book Cart"
@@ -717,8 +787,8 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:522
 msgid ""
-"Required by: :ref:`NewItemsDefaultLocation`, "
-":ref:`InProcessingToShelvingCart`, & :ref:`ReturnToShelvingCart` system "
+"Required by: :ref:`NewItemsDefaultLocation`, :ref:"
+"`InProcessingToShelvingCart`, & :ref:`ReturnToShelvingCart` system "
 "preferences"
 msgstr ""
 
@@ -730,9 +800,13 @@ msgstr ""
 msgid "Import Webservice Batch"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:538
+#, fuzzy
 msgid "Script path: misc/cronjobs/import\\_webservice\\_batch.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:540
 msgid ""
@@ -748,40 +822,51 @@ msgstr ""
 msgid "Connexion Import Daemon"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:552
+#, fuzzy
 msgid "Script path: misc/bin/connexion\\_import\\_daemon.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:554
 msgid ""
 "Does: A daemon that listens for OCLC Connexion requests and is compliant "
-"with OCLC Gateway specification. It takes requests with MARC XML and "
-"import batch parameters from a configuration file and forwards it to "
-"svc/import_bib"
+"with OCLC Gateway specification. It takes requests with MARC XML and import "
+"batch parameters from a configuration file and forwards it to svc/import_bib"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:565
 msgid "Batch Item Deletion"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:567
+#, fuzzy
 msgid "Script path: misc/cronjobs/delete\\_items.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:569
 msgid ""
-"Does: A batch item deletion tool, which generates a query against the "
-"items database and deletes the items matching the criteria specified in "
-"the command line arguments."
+"Does: A batch item deletion tool, which generates a query against the items "
+"database and deletes the items matching the criteria specified in the "
+"command line arguments."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:576
 msgid "Check URL Quick"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:578
+#, fuzzy
 msgid "Script path: misc/cronjobs/check-url-quick.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:580
 msgid "Does: Check URLs from biblio records."
@@ -801,51 +886,62 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:593
 msgid ""
-"Does: checks URLs in 856$u field. Script output can now be formatted in "
-"CSV or HTML. The HTML version links directly to MARC biblio record "
-"editor."
+"Does: checks URLs in 856$u field. Script output can now be formatted in CSV "
+"or HTML. The HTML version links directly to MARC biblio record editor."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:597
+#, fuzzy
 msgid "Frequency suggestion: monthly"
-msgstr ""
+msgstr "Selecionar sugestões para: "
 
 #: ../../source/16_cron_jobs.rst:599
+#, fuzzy
 msgid "Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements"
-msgstr ""
+msgstr "http://wiki.koha-community.org/wiki/SQL_Reports_Library"
 
 #: ../../source/16_cron_jobs.rst:604
 msgid "Delete Records via Leader"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:606
+#, fuzzy
 msgid "Script path: misc/cronjobs/delete\\_records\\_via\\_leader.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:608
 msgid ""
-"Does: Attempt to delete any MARC records where the leader character 5 "
-"equals 'd'"
+"Does: Attempt to delete any MARC records where the leader character 5 equals "
+"'d'"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:613
+#, fuzzy
 msgid "Update Authorities"
-msgstr ""
+msgstr "`Autoridades <#authprefs>`__"
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:615
+#, fuzzy
 msgid "Script path: misc/cronjobs/merge\\_authorities.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:617
+#, fuzzy
 msgid "Does: Updates biblio data with changes to authorities records"
-msgstr ""
+msgstr "Prove acesso para editar o registro de autoridade"
 
 #: ../../source/16_cron_jobs.rst:621
 msgid ""
 "The name of this script is misleading. This script does not merge "
 "authorities together it instead merges authority data with linked bib "
-"records. Edits to authority records will be applied to bibliographic "
-"records that use that authority when this script is run."
+"records. Edits to authority records will be applied to bibliographic records "
+"that use that authority when this script is run."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:627
@@ -862,32 +958,35 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:638
 msgid ""
-"Does: checks if there is a \"late\" issue on active subscriptions, and if"
-" there is, the script will set it as late, and add the next one as "
-"expected."
+"Does: checks if there is a \"late\" issue on active subscriptions, and if "
+"there is, the script will set it as late, and add the next one as expected."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:647
+#, fuzzy
 msgid "Automatic item update"
-msgstr ""
+msgstr "Falha para atualizar campo."
 
 #: ../../source/16_cron_jobs.rst:649
-msgid "Script path: misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
+msgid ""
+"Script path: misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:651
 msgid ""
-"Does: updates items based on the list of rules set forth in the "
-":ref:`Automatic item modifications by age` tool"
+"Does: updates items based on the list of rules set forth in the :ref:"
+"`Automatic item modifications by age` tool"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:654
+#, fuzzy
 msgid "Required by: :ref:`Automatic item modifications by age`"
-msgstr ""
+msgstr "`Modificação de itens em lote <#batchmodifyitems>`__"
 
 #: ../../source/16_cron_jobs.rst:656
+#, fuzzy
 msgid "Frequency suggestions: nightly"
-msgstr ""
+msgstr "Selecionar sugestões para: "
 
 #: ../../source/16_cron_jobs.rst:661
 msgid "OPAC"
@@ -903,25 +1002,33 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:670
 msgid ""
-"Does: Produces an RSS XML document for any SQL query (not used for search"
-" results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`."
+"Does: Produces an RSS XML document for any SQL query (not used for search "
+"results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:678
+#, fuzzy
 msgid "Authorities Browser"
-msgstr ""
+msgstr "`Autoridades <#authprefs>`__"
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:680
+#, fuzzy
 msgid "Script path: misc/cronjobs/build\\_browser\\_and\\_cloud.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:682
 msgid "Does: Generate content for authorities browse in OPAC"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:684
+#, fuzzy
 msgid "Required by: :ref:`OpacBrowser` system preference"
 msgstr ""
+"Campos obrigatórios são definidos na preferência de sistema "
+"BorrowerMandatoryField"
 
 #: ../../source/16_cron_jobs.rst:688
 msgid "This preference and cron job should only be used on French systems."
@@ -937,27 +1044,32 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:697
 msgid ""
-"Does: Generates HTML keywords clouds from Koha Zebra indexes. "
-"misc/cronjobs/cloud-sample.conf has a sample of how this script operates."
+"Does: Generates HTML keywords clouds from Koha Zebra indexes. misc/cronjobs/"
+"cloud-sample.conf has a sample of how this script operates."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:701
 msgid ""
-"Frequency: This is the type of script you can run once a month or so, the"
-" content generated isn't going to change very much over time."
+"Frequency: This is the type of script you can run once a month or so, the "
+"content generated isn't going to change very much over time."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:707
+#, fuzzy
 msgid "System Administration"
-msgstr ""
+msgstr "Administração do sistema"
 
 #: ../../source/16_cron_jobs.rst:712
 msgid "Services Throttle"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:714
+#, fuzzy
 msgid "Script path: misc/cronjobs/services\\_throttle.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:716
 msgid "Does: resets the xISBN services throttle"
@@ -987,22 +1099,24 @@ msgstr ""
 
 #: ../../source/16_cron_jobs.rst:737
 msgid ""
-"Does: If you're sharing information via the :ref:`UsageStats` feature "
-"this will send your info to the `Hea website <http://hea.koha-"
-"community.org/>`__."
+"Does: If you're sharing information via the :ref:`UsageStats` feature this "
+"will send your info to the `Hea website <http://hea.koha-community.org/>`__."
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:741
+#, fuzzy
 msgid "Frequency: monthly"
-msgstr ""
+msgstr "Periodicidade:"
 
 #: ../../source/16_cron_jobs.rst:746
+#, fuzzy
 msgid "Acquisitions"
-msgstr ""
+msgstr "`Aquisições <#acqcrons>`__"
 
 #: ../../source/16_cron_jobs.rst:751
+#, fuzzy
 msgid "Clean up old suggestions"
-msgstr ""
+msgstr "`Sugestões de aquisição <#patronsuggestions>`__"
 
 #: ../../source/16_cron_jobs.rst:753
 msgid "Script path: misc/cronjobs/purge\\_suggestions.pl"
@@ -1015,8 +1129,9 @@ msgid ""
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:761
+#, fuzzy
 msgid "Email suggestions to process"
-msgstr ""
+msgstr "`Sugestões de aquisição <#purchasesuggest>`__"
 
 #: ../../source/16_cron_jobs.rst:763
 msgid "Script path: misc/cronjobs/notice\\_unprocessed\\_suggestions.pl"
@@ -1041,16 +1156,21 @@ msgid "Does: Sends and received EDI messages"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:777
+#, fuzzy
 msgid "Frequency: Every 15 minutes"
-msgstr ""
+msgstr "2 Frequência"
 
 #: ../../source/16_cron_jobs.rst:782
 msgid "Remove Temporary EDI Files"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:784
+#, fuzzy
 msgid "Script path: misc/cronjobs/remove\\_temporary\\_edifiles.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:786
 msgid "Does: removes temporary EDI files that are older than 5 days"
@@ -1064,21 +1184,27 @@ msgstr ""
 msgid "Run Report"
 msgstr ""
 
+# OPAC > Features
 #: ../../source/16_cron_jobs.rst:798
+#, fuzzy
 msgid "Script path: misc/cronjobs/runreport.pl"
 msgstr ""
+"uma nuvem de assuntos no OPAC (executar misc/cronjobs/"
+"build_browser_and_cloud.pl to build)"
 
 #: ../../source/16_cron_jobs.rst:800
 msgid "Does: run pre-existing saved reports"
 msgstr ""
 
 #: ../../source/16_cron_jobs.rst:803
+#, fuzzy
 msgid "Deprecated scripts"
-msgstr ""
+msgstr "`Duplicar Relatório <#duplicatereport>`__"
 
 #: ../../source/16_cron_jobs.rst:805
+#, fuzzy
 msgid "These should not be run without modification:"
-msgstr ""
+msgstr "Não existem modificações pendentes de usuários."
 
 #: ../../source/16_cron_jobs.rst:807
 msgid "Script path: misc/cronjobs/update\\_items.pl"
@@ -1100,3 +1226,409 @@ msgstr ""
 msgid "Script path:misc/cronjobs/zebraqueue\\_start.pl"
 msgstr ""
 
+#, fuzzy
+#~ msgid "`Cron Jobs <#cronjobs>`__"
+#~ msgstr "`Multas <#finescronjob>`__"
+
+#~ msgid "`Search <#searchcron>`__"
+#~ msgstr "`Pesquisar <#searchcron>`__"
+
+#, fuzzy
+#~ msgid "`Rebuild Index <#rebuildsearchcron>`__"
+#~ msgstr "`Fila de reservas <#buildholdscron>`__"
+
+#~ msgid "`Circulation <#circcron>`__"
+#~ msgstr "`Circulação <#circcron>`__"
+
+#~ msgid "`Holds Queue <#buildholdscron>`__"
+#~ msgstr "`Fila de reservas <#buildholdscron>`__"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#buildholdscronperl>`__"
+#~ msgstr "`Fila de reservas <#buildholdscron>`__"
+
+#, fuzzy
+#~ msgid "biblionumber"
+#~ msgstr ";biblionumber="
+
+#~ msgid "borrowernumber"
+#~ msgstr "número da carteirinha"
+
+#, fuzzy
+#~ msgid "itemnumber"
+#~ msgstr "Número de exemplar"
+
+#, fuzzy
+#~ msgid "priority"
+#~ msgstr "Prioridade"
+
+#, fuzzy
+#~ msgid "branchcode"
+#~ msgstr "bibliotecas"
+
+#, fuzzy
+#~ msgid "reservedate"
+#~ msgstr "Data da Reserva"
+
+#, fuzzy
+#~ msgid "reservenotes"
+#~ msgstr "reserveforothers "
+
+#, fuzzy
+#~ msgid "borrowerbranch"
+#~ msgstr "número da carteirinha"
+
+#, fuzzy
+#~ msgid "my $available\\_items ="
+#~ msgstr "Nenhum item disponível."
+
+#, fuzzy
+#~ msgid "it is not on loan"
+#~ msgstr "Exemplar não emprestável"
+
+#, fuzzy
+#~ msgid "it is not withdrawn"
+#~ msgstr "não está retirado E,"
+
+#, fuzzy
+#~ msgid "it is not marked notforloan"
+#~ msgstr "não está marcado como não circula E,"
+
+#, fuzzy
+#~ msgid "it is not currently in transit"
+#~ msgstr ") está atualmente restrito."
+
+#, fuzzy
+#~ msgid "it is not lost"
+#~ msgstr "não está perdido E,"
+
+#, fuzzy
+#~ msgid "`Expired Holds <#expiredholdscron>`__"
+#~ msgstr "`Fila de reservas <#buildholdscron>`__"
+
+#, fuzzy
+#~ msgid "`Unsuspend Holds <#unsuspendholdcron>`__"
+#~ msgstr "`Fila de reservas <#buildholdscron>`__"
+
+#~ msgid "`Fines <#finescronjob>`__"
+#~ msgstr "`Multas <#finescronjob>`__"
+
+#, fuzzy
+#~ msgid "`Long Overdues <#longoverduecron>`__"
+#~ msgstr "`Atrasos <#overduesreport>`__"
+
+#, fuzzy
+#~ msgid "--confirm"
+#~ msgstr "Confirmar"
+
+#, fuzzy
+#~ msgid "suppress summary output."
+#~ msgstr "Sumário do número"
+
+#, fuzzy
+#~ msgid "`Track total checkouts <#updateissuescron>`__"
+#~ msgstr "`Usuários sem empréstimos <#patnocheckouts>`__"
+
+#, fuzzy
+#~ msgid "--help Prints this help"
+#~ msgstr "Imprimir esta etiqueta"
+
+#, fuzzy
+#~ msgid "--use-items"
+#~ msgstr "itens"
+
+#, fuzzy
+#~ msgid "--incremental"
+#~ msgstr "f- intergovernamental"
+
+#, fuzzy
+#~ msgid "**WARNING**"
+#~ msgstr "ATENÇÃO:"
+
+#~ msgid "`Automatic renewal <#autorenewcron>`__"
+#~ msgstr "`Renovação automática <#autorenewcron>`__"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#autorenewcronperl>`__"
+#~ msgstr "`Renovação automática <#autorenewcron>`__"
+
+#, fuzzy
+#~ msgid "No options."
+#~ msgstr "Mais opções"
+
+#~ msgid "`Patrons <#patroncrons>`__"
+#~ msgstr "`Usuários <#patroncrons>`__"
+
+#, fuzzy
+#~ msgid "Options:"
+#~ msgstr "Opções"
+
+#, fuzzy
+#~ msgid "--man full documentation"
+#~ msgstr "Ver a documentação completa para "
+
+#~ msgid "`Notices <#noticescron>`__"
+#~ msgstr "`Correspondências <#noticescron>`__"
+
+#, fuzzy
+#~ msgid "`Message Queue <#msgqueuecron>`__"
+#~ msgstr "`Fila de reservas <#holdsqueue>`__"
+
+#, fuzzy
+#~ msgid "`Advanced Notice <#advnoticecron>`__"
+#~ msgstr "`Correspondências <#noticescron>`__"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#advnoticecronperl>`__"
+#~ msgstr "`Circulação <#circcron>`__"
+
+#, fuzzy
+#~ msgid "parse\\_letter"
+#~ msgstr "Primeira letra"
+
+#, fuzzy
+#~ msgid "`Overdue Notice <#overduenoticecron>`__"
+#~ msgstr "`Correspondências <#noticescron>`__"
+
+#, fuzzy
+#~ msgid "-help brief help message"
+#~ msgstr "Verificar mensagens"
+
+#, fuzzy
+#~ msgid "-man full documentation"
+#~ msgstr "Ver a documentação completa para "
+
+#, fuzzy
+#~ msgid "-library"
+#~ msgstr "Biblioteca"
+
+# Traduzido do Francês por Ricardo Dias Marques (em 28-Mai-2009)
+#, fuzzy
+#~ msgid "-itemscontent"
+#~ msgstr "tabela dos conteúdos"
+
+#, fuzzy
+#~ msgid ""
+#~ "Other possible values come from fields in the biblios, items, and issues "
+#~ "tables."
+#~ msgstr ""
+#~ ": Quais são os códigos possíveis para o campo encontrado na tabela "
+#~ "reserver e old_reserves?"
+
+#, fuzzy
+#~ msgid "Outgoing emails"
+#~ msgstr "Detalhes Financeiros"
+
+#~ msgid "Templates"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "the name of the library"
+#~ msgstr "Mensagem da biblioteca"
+
+#, fuzzy
+#~ msgid "<<borrowers.\\*>>"
+#~ msgstr "usuários "
+
+#, fuzzy
+#~ msgid "any field from the borrowers table"
+#~ msgstr "Importar para a tabela de usuários"
+
+#, fuzzy
+#~ msgid "<<branches.\\*>>"
+#~ msgstr "bibliotecas"
+
+#, fuzzy
+#~ msgid "CSV output"
+#~ msgstr "Saída"
+
+#, fuzzy
+#~ msgid "named parameters:"
+#~ msgstr "parâmetros"
+
+#, fuzzy
+#~ msgid "borrowernumber - required integer"
+#~ msgstr "Um número de usuário por linha."
+
+#, fuzzy
+#~ msgid "required parameters:"
+#~ msgstr "Preferências e parâmetros"
+
+#~ msgid "letter"
+#~ msgstr "carta"
+
+#, fuzzy
+#~ msgid "optional parameters:"
+#~ msgstr "Parâmetros adicionais"
+
+#, fuzzy
+#~ msgid "outputformat"
+#~ msgstr "Formato de saída"
+
+#, fuzzy
+#~ msgid "`Talking Tech <#talkingtechcrons>`__"
+#~ msgstr "`Catálogo <#catalogcron>`__"
+
+#, fuzzy
+#~ msgid "`Sending Notices File <#talkingtechsendcron>`__"
+#~ msgstr "`Correspondências <#noticescron>`__"
+
+#, fuzzy
+#~ msgid "Prints this help"
+#~ msgstr "Imprimir esta etiqueta"
+
+#, fuzzy
+#~ msgid "-v Provide verbose log information."
+#~ msgstr "Informação de pedidos"
+
+#, fuzzy
+#~ msgid "--type"
+#~ msgstr "Itype"
+
+#, fuzzy
+#~ msgid "--waiting-hold-day -w"
+#~ msgstr "reservas aguardando:"
+
+#, fuzzy
+#~ msgid "--library-code --code -c"
+#~ msgstr "Código da biblioteca: "
+
+#, fuzzy
+#~ msgid "`Receiving Notices File <#talkingtechreceivecron>`__"
+#~ msgstr "`Recebendo reservas <#receiveholds>`__"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#talkingreceivecronperl>`__"
+#~ msgstr "`Circulação <#circcron>`__"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#proccartcronperl>`__"
+#~ msgstr "`Circulação <#circcron>`__"
+
+#~ msgid "`Catalog <#catalogcron>`__"
+#~ msgstr "`Catálogo <#catalogcron>`__"
+
+#, fuzzy
+#~ msgid "`Check URLs <#checkurlcron>`__"
+#~ msgstr "`Empréstimo <#patcheckout>`__"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#checkurlcronperl>`__"
+#~ msgstr "`Circulação <#circcron>`__"
+
+#, fuzzy
+#~ msgid "new"
+#~ msgstr "Renovar"
+
+#, fuzzy
+#~ msgid "check\\_biblio"
+#~ msgstr "Ver biblio"
+
+#, fuzzy
+#~ msgid "Print this help page."
+#~ msgstr "Imprimir esta etiqueta"
+
+#, fuzzy
+#~ msgid "`Serials Update <#serialscron>`__"
+#~ msgstr "`Periódicos <#serialsprefs>`__"
+
+#, fuzzy
+#~ msgid "`Automatic item update <#autoitemupdatecron>`__"
+#~ msgstr "`Renovação automática <#autorenewcron>`__"
+
+#, fuzzy
+#~ msgid "This file is part of Koha."
+#~ msgstr "Este item não sai para empréstimo. %s "
+
+#~ msgid ""
+#~ "Koha is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version 3 of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "O Koha é um programa livre; pode distribuir-lo e/ou modificar-lo de "
+#~ "acordo com os termos da GNU General Public License publicada pela Free "
+#~ "Software Foundation; tanto a versão 3 da Licença, ou (a seu critério) "
+#~ "qualquer versão posterior."
+
+#~ msgid "`OPAC <#opaccrons>`__"
+#~ msgstr "`OPAC <#opaccrons>`__"
+
+#, fuzzy
+#~ msgid "--conf=configuration file"
+#~ msgstr "arquivo de configuração."
+
+#, fuzzy
+#~ msgid "Specify configuration file name"
+#~ msgstr "arquivo de configuração."
+
+#, fuzzy
+#~ msgid "Configuration file looks like that:"
+#~ msgstr "arquivo de configuração."
+
+#, fuzzy
+#~ msgid "WithCount"
+#~ msgstr "Contador"
+
+#, fuzzy
+#~ msgid "CloudLevels"
+#~ msgstr "Cobertura da nuvem"
+
+#, fuzzy
+#~ msgid "Weighting"
+#~ msgstr "Peso"
+
+#~ msgid "Order"
+#~ msgstr "Encomenda"
+
+#, fuzzy
+#~ msgid "Perl Documentation"
+#~ msgstr "Ler documentação do Koha"
+
+#, fuzzy
+#~ msgid "--sessions"
+#~ msgstr "permissões"
+
+#, fuzzy
+#~ msgid ""
+#~ "will cause the script to give you a bit more information about the run."
+#~ msgstr ""
+#~ "Pode usar Descrição do Modelo para adicionar informação adicionar sobre o "
+#~ "modelo"
+
+#, fuzzy
+#~ msgid "--merged"
+#~ msgstr "Unificar"
+
+#, fuzzy
+#~ msgid "--import DAYS"
+#~ msgstr "importar"
+
+#, fuzzy
+#~ msgid "--searchhistory DAYS"
+#~ msgstr "Histórico de pesquisa"
+
+#, fuzzy
+#~ msgid "--restrictions DAYS"
+#~ msgstr "Usar restrições"
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#usagecronperl>`__"
+#~ msgstr "`Informação do servidor <#aboutserver>`__"
+
+# Administration > Share anonymous usage statistics
+#, fuzzy
+#~ msgid ""
+#~ "All these data will be analyzed on the http://hea.koha-community.org Koha "
+#~ "community website."
+#~ msgstr ""
+#~ "será exibido no <a href=\"http://hea.koha-community.org\">Hea Koha "
+#~ "community website</a>."
+
+#, fuzzy
+#~ msgid "Verbose mode."
+#~ msgstr "Modo \"caixa de devolução\""
+
+#, fuzzy
+#~ msgid "`Perl Documentation <#emailsuggestfundperl>`__"
+#~ msgstr "`sugestão <#suggestionspref>`__"
