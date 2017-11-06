@@ -799,6 +799,48 @@ Script path: misc/cronjobs/runreport.pl
 
 Does: run pre-existing saved reports
 
+Norwegian patron database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NL sync to Koha
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/nl-sync-to-koha.pl
+
+Does: sync patrons from the Norwegian national patron database (NL) to Koha
+
+    **Note**
+    Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences
+    
+NL sync from Koha
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/nl-sync-from-koha.pl
+
+Does: sync patrons from Koha to the Norwegian national patron database (NL)
+
+    **Note**
+    Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences
+    
+Social data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Get report social data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/social_data/get\_report\_social\_data.pl
+
+Does: downloads data from Babeltheque to add to OPAC records
+
+Frequency suggestion: nightly
+
+Update social data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Script path: misc/cronjobs/social_data/update\_social\_data.pl
+
+Does: updates OPAC records with Babeltheque social data
+
 Deprecated scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
