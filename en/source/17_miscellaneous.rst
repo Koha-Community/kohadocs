@@ -1678,13 +1678,13 @@ easily add pages, and do not want to support a complete CMS.
 
    ::
 
-       template_name  => "opac-main.tmpl",
+       template_name  => "opac-main.tt",
 
 -  To this code:
 
    ::
 
-       template_name  => "pages.tmpl",
+       template_name  => "pages.tt",
 
 -  At approximately line 62 after this code:
 
@@ -1802,7 +1802,7 @@ remove the following code from your pages.tt template.
 Troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have problems check file permissions on pages.pl and pages.tmpl.
+If you have problems check file permissions on pages.pl and pages.tt.
 They should have the same user and group as other Koha files like
 opac-main.pl.
 
