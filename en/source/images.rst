@@ -1319,3 +1319,4 @@
 .. |image1319| image:: images/appendix-oclc/oclcstatus.png
 .. |image1320| image:: images/appendix-oclc/oclcexportbatch.png
 .. |image1321| image:: images/appendix-oclc/oclcprocessbatch.png
+.. |image1322| image:: images/opac/allowcheckoutnotes.png
