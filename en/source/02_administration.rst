@@ -4790,6 +4790,10 @@ Values:
 
 -  Allow
 
+This preference if set to allow will give your patrons the option to add
+a note to an item they have checked out on the OPAC side.  This note will be 
+seen on the staff side when the item is checked in.
+
 .. _allowofflinecirculation-label:
 
 AllowOfflineCirculation
