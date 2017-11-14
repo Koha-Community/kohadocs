@@ -853,6 +853,15 @@ the patrons the barcodes of the items they have checked out.
 
 |image1007|
 
+If you would like your patrons to leave a note on an item they have checked out
+ :ref:`allowcheckoutnotes` preference must be set to allow.  
+In the patron's summary of checkouts, there will be an added column 
+to allow the patron to leave a note (for example:  missing first page, or DVD is
+scratched).  This note once confirmed by the patron will appear to the staff
+when this item is checked in. 
+
+
+
 If their guarantee has allowed it via :ref:`their
 privacy <my-privacy-label>`, when the guarantor logs in they will see a
 tab labeled "Relatives' checkouts" on their summary tab.
