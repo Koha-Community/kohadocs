@@ -1135,7 +1135,7 @@ Properties:
 
 -  OK your way out of there.
 
-.. _in-firefox-label:
+.. _in-firefox-1-label:
 
 In Firefox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1205,7 +1205,7 @@ website <https://www.epsonexpert.com/login>`__ to gain access to the
 drivers; go to Technical Resources, then choose the printer model from
 the Printers drop-down list.
 
-.. _in-firefox-label:
+.. _in-firefox-2-label:
 
 In Firefox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3669,7 +3669,7 @@ field with. To allow typing in these authority fields set
 
 |image1115|
 
-.. _koha-to-marc-mapping-label:
+.. _faq-koha-to-marc-mapping-label:
 
 Koha to MARC Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3803,7 +3803,7 @@ Inner counter says to Koha to take into account the first issues of the
 year, even if they are not received with Koha. If you begin with first
 issue of the year write nothing or 0.
 
-.. _reports-label:
+.. _faq-reports-label:
 
 Reports
 -------------------------
@@ -4205,7 +4205,7 @@ that ISBN. So both XISBN and your internal ISBN (in biblio table) have
 to be normalized. You could therefore use the script
 misc/batchupdateISBNs.pl (it removes all the - in your local ISBNs)
 
-.. _amazon-label:
+.. _faq-amazon-label:
 
 Amazon
 ~~~~~~~~~~~~~~~~~~~~

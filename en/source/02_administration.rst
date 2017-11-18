@@ -5716,29 +5716,28 @@ Description:
    disabled, they will prevent AmazonCoverImages from functioning
    properly.
 
-.. _babelthã¨que-label:
 
-BabelthÃ¨que
+Babelthèque
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _babeltheque-label:
 
-Babeltheque
+Babelthèque
 ''''''''''''''''''''''''''''''
 
 Default: Don't
 
 Asks: \_\_\_ include information (such as reviews and citations) from
-BabelthÃ¨que in item detail pages on the OPAC.
+Babelthèque in item detail pages on the OPAC.
 
 Description:
 
--  This preference makes it possible to display a Babeltheque tab in the
+-  This preference makes it possible to display a Babelthèque tab in the
    OPAC, allowing patrons to access tags, reviews, and additional title
-   information provided by Babeltheque. The information which
-   Babeltheque supplies is drawn from the French language-based
+   information provided by Babelthèque. The information which
+   Babelthèque supplies is drawn from the French language-based
    `Babelio.com <http://www.babelio.com/>`__, a French service similar
-   to LibraryThing for Libraries. More information about Babeltheque is
+   to LibraryThing for Libraries. More information about Babelthèque is
    available through its website,
    `http://www.babeltheque.com <http://www.babeltheque.com/>`__.
    Libraries that wish to allow access to this information must first
@@ -5758,7 +5757,7 @@ Values:
 Babeltheque\_url\_js
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-Asks: \_\_\_ Defined the url for the Babeltheque javascript file (eg.
+Asks: \_\_\_ Defined the url for the Babelthèque javascript file (eg.
 http://www.babeltheque.com/bw\_XX.js)
 
 .. _babeltheque\_url\_update-label:
@@ -5766,7 +5765,7 @@ http://www.babeltheque.com/bw\_XX.js)
 Babeltheque\_url\_update
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-Asks: \_\_\_ Defined the url for the Babeltheque update periodically
+Asks: \_\_\_ Defined the url for the Babelthèque update periodically
 (eq. http://www.babeltheque.com/.../file.csv.bz2).
 
 .. _baker-&-taylor-label:
@@ -9123,7 +9122,7 @@ Description:
    allow you either use the default look that comes with Koha or design
    your own stylesheet.
 
-.. _features-label:
+.. _opacfeatures-label:
 
 Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -10596,7 +10595,7 @@ PatronSelfRegistrationLibraryList
 Default: blank
 
 Asks: Enable the self registration for the following libraries: \_\_\_
-(separate branchcode with |). If empty, all libraries will be listed.
+(separate branchcode with \|). If empty, all libraries will be listed.
 
 .. _patronselfregistrationprefillform-label:
 
@@ -10754,7 +10753,7 @@ Patrons
 
 *Get there:* More > Administration > Global System Preferences > Patrons
 
-.. _general-label:
+.. _patronsgeneral-label:
 
 General
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -11350,7 +11349,7 @@ PatronQuickAddFields
 
 Default: blank
 
-Asks: \_\_\_ (separate columns with |) add these fields to the patron
+Asks: \_\_\_ (separate columns with \|) add these fields to the patron
 quick add form when entering a new patron. Displays only mandatory fields
 and fields specified here. If applicable, the guarantor form will be shown
 as well, individual fields in that form will be ignored.
@@ -11594,7 +11593,7 @@ Searching
 *Get there:* More > Administration > Global System Preferences >
 Searching
 
-.. _features-label:
+.. _searchingfeatures-label:
 
 Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -12544,7 +12543,7 @@ Staff Client
 *Get there:* More > Administration > Global System Preferences > Staff
 Client
 
-.. _appearance-label:
+.. _staffappearance-label:
 
 Appearance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -13862,13 +13861,13 @@ use, for instance 'Lost'.
 -  ITEMTYPECAT
 
    - Allows multiple Item Types to be searched in a category.  Categories can be
-   entered into the Authorized Value ITEMTYPECAT. To combine Item Types to this 
-   category, enter this Search Category to any Item Types.  
-   
-   For example, an ITEMTYPECAT could be NEW, then in the Item Type 
-   for NEW BOOKS NEW DVDS, etc the search category could be added NEW.  
-   This is helpful when a patron chooses the Search Category of NEW, they could 
-   get Koha to search multiple Item Types with a single search.
+     entered into the Authorized Value ITEMTYPECAT. To combine Item Types to this
+     category, enter this Search Category to any Item Types.
+
+     For example, an ITEMTYPECAT could be NEW, then in the Item Type
+     for NEW BOOKS NEW DVDS, etc the search category could be added NEW.
+     This is helpful when a patron chooses the Search Category of NEW, they could
+     get Koha to search multiple Item Types with a single search.
 
 -  LOC
 
@@ -13961,8 +13960,8 @@ use, for instance 'Lost'.
  -  SUGGEST_FORMAT
  
    - List of Item Types to display in a drop down menu on the Purchase Suggestion
-   form on the OPAC. When creating the authorized values for SUGGEST_FORMAT, 
-   enter a description into this form so it is visible on the OPAC to patrons.
+     form on the OPAC. When creating the authorized values for SUGGEST_FORMAT,
+     enter a description into this form so it is visible on the OPAC to patrons.
 
  -  TERM
  

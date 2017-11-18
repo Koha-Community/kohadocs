@@ -807,7 +807,7 @@ of the features of the Patron Card Creator module:
 
 -  Export (as PDF) single or multiple patron cards from within a batch
 
-.. _layouts-label:
+.. _patron-card-layouts-label:
 
 Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -822,7 +822,7 @@ and where it will appear.
     Up to three lines of text, the patron's number in barcode
     representation and up to two images can be printed on to the card.
 
-.. _add-a-layout-label:
+.. _patron-add-a-layout-label:
 
 Add a Layout
 '''''''''''''''''''''''''''''''''
@@ -899,7 +899,7 @@ After saving, your layouts will appear on the 'Manage layouts' page.
 
 |image263|
 
-.. _templates-label:
+.. _patron-templates-label:
 
 Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -915,7 +915,7 @@ for setting up a template may be on the packaging, and if not it can
 usually be found on the vendor's website or can be measured from a
 sample sheet.
 
-.. _add-a-template-label:
+.. _patron-add-a-template-label:
 
 Add a Template
 '''''''''''''''''''''''''''''''''''''
@@ -964,7 +964,7 @@ template'you can define the template for your sheet of labels or cards.
       adjustments for your printer/template combination.
 
    -  After finding and documenting any anomalies in the printed
-      document, then you can :ref:`create a profile <add-a-profile-label>` and
+      document, then you can :ref:`create a profile <patron-add-a-profile-label>` and
       assign it to the template.
 
    -  **Important**
@@ -983,7 +983,7 @@ After saving, your templates will appear on the 'Manage templates' page.
 
 |image267|
 
-.. _profiles-label:
+.. _patron-profiles-label:
 
 Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -991,7 +991,7 @@ Profiles
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Profiles
 
 A profile is a set of "adjustments" applied to a given
-:ref:`template <templates-label>` just prior to printing which compensates
+:ref:`template <patron-templates-label>` just prior to printing which compensates
 for anomalies unique and peculiar to a given printer. This means if you
 set a template up and then print a sample set of data and find that the
 items are not all aligned the same on each card, you need to set up a
@@ -1002,7 +1002,7 @@ shifting of text to the left, right, top or bottom.
 If your cards are printing just the way you want, you will not need a
 profile.
 
-.. _add-a-profile-label:
+.. _patron-add-a-profile-label:
 
 Add a Profile
 '''''''''''''''''''''''''''''''''''
@@ -1031,7 +1031,7 @@ currently available profiles for editing.
           desk'
 
 -  Template will be filled in once you have chosen which template to
-   apply the profile to on the :ref:`template edit form <add-a-template-label>`
+   apply the profile to on the :ref:`template edit form <patron-add-a-template-label>`
 
 -  The Units pull down is used to define what measurement scale you're
    going to be using for your profile.
@@ -1066,7 +1066,7 @@ page.
 Once you have saved your new profile, you can return to the list of
 templates and choose to edit the template that this profile is for.
 
-.. _batches-label:
+.. _patron-batches-label:
 
 Batches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1076,7 +1076,7 @@ Batches
 
 A batch is a collection of patrons for whom you want to generate cards.
 
-.. _add-a-batch-label:
+.. _patron-add-a-batch-label:
 
 Add a Batch
 '''''''''''''''''''''''''''''''
@@ -1158,7 +1158,7 @@ Manage Images
 -  *Get there:* More > Tools > Patron Card Creator > Manage > Images
 
 Images uploaded using this tool will appear on the menu when creating
-:ref:`patron card layouts <layouts-label>`. You are limited in how many
+:ref:`patron card layouts <patron-card-layouts-label>`. You are limited in how many
 images you can upload (not counting patron images) by the
 :ref:`ImageLimit` system preference.
 
@@ -1888,7 +1888,7 @@ Here are some of the features of the Label Creator module:
 
    -  XML - Included as an alternate export format
 
-.. _templates-label:
+.. _label-templates-label:
 
 Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1902,7 +1902,7 @@ labels will include all of the information you will need for setting up
 a Koha, this information may be on the packaging, and if not it can
 usually be found on the vendor's website.
 
-.. _add-a-template-label:
+.. _label-add-a-template-label:
 
 Add a Template
 ''''''''''''''''''''''''''''''''''''''
@@ -1950,14 +1950,14 @@ of labels or cards.
       printer/template combination.
 
    -  After finding any anomalies in the printed document, :ref:`create a
-      profile <add-a-profile-label>` and assign it to the template.
+      profile <label-add-a-profile-label>` and assign it to the template.
 
 After saving, your templates will appear on the 'Manage' area under
 'Label templates'.
 
 |image321|
 
-.. _profiles-label:
+.. _label-profiles-label:
 
 Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1965,7 +1965,7 @@ Profiles
 -  *Get there:* More > Tools > Label Creator > Manage > Printer Profiles
 
 A profile is a set of "adjustments" applied to a given
-:ref:`template <add-a-template-label>` just prior to printing which
+:ref:`template <label-add-a-template-label>` just prior to printing which
 compensates for anomalies unique and peculiar to a given printer (to
 which the profile is assigned). This means if you set a template up and
 then print a sample set of data and find that the items are not all
@@ -1976,7 +1976,7 @@ shifting of text to the left, right, top or bottom.
 If your labels are printing just the way you want, you will not need a
 profile.
 
-.. _add-a-profile-label:
+.. _label-add-a-profile-label:
 
 Add a Profile
 ''''''''''''''''''''''''''''''''''''
@@ -1998,7 +1998,7 @@ with your template.
 
 -  Template will be filled in once you have chosen which template to
    apply the profile to on the :ref:`template edit
-   form <add-a-template-label>`
+   form <label-add-a-template-label>`
 
 -  The Units pull down is used to define what measurement scale you're
    going to be using for your profile.
@@ -2026,7 +2026,7 @@ After saving, your profiles will appear on the 'Manage' area under
 Once you have saved your new profile, you can return to the list of
 templates and choose to edit the template that this profile is for.
 
-.. _layouts-label:
+.. _label-layouts-label:
 
 Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2035,7 +2035,7 @@ Layouts
 
 A layout is used to define the fields you want to appear on your labels.
 
-.. _add-a-layout-label:
+.. _label-add-a-layout-label:
 
 Add a Layout
 ''''''''''''''''''''''''''''''''''
@@ -2091,7 +2091,7 @@ with your template.
 
 After saving, your layouts will appear on the 'Manage Layouts' page.
 
-.. _batches-label:
+.. _label-batches-label:
 
 Batches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2102,7 +2102,7 @@ Batches are made up of the barcodes you would like to print. Once in
 this tool you can search for the item records you would like to print
 out labels for.
 
-.. _add-a-batch-label:
+.. _label-add-a-batch-label:
 
 Add a Batch
 ''''''''''''''''''''''''''''''''
@@ -2282,7 +2282,7 @@ example would be to strip out the '$' character in field 020$c.
 You could also use regular expressions to add your library's proxy URL
 in front of links in your MARC record.
 
-|iamge1238|
+|image1238|
 
 -  Choose 'Copy and replace'
 

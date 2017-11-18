@@ -1096,23 +1096,25 @@ Article Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First enable your system preference for ArticleRequests. 
-    Set to Enable patrons to place article requests.
-    
+
+Set to Enable patrons to place article requests.
+
 Next you will need to decide how your patrons will make requests, 
 either record only, item only, or both record and item level.
 
 You can set 3 different system preferences for mandatory fields to be filled 
 in dependent on how your records are requested.
-    ArticleRequestsMandatoryFields: make the following fields 
-    mandatory for records that are record level or item level requestable
-    
-    ArticleRequestsMandatoryFieldsItemOnly make the following 
-    fields mandatory for records that are only item level requestable
-    
-    ArticleRequestsMandatoryFieldsRecordOnly make the 
-    following fields mandatory for records that are only record level 
-    requestable
-    
+
+ArticleRequestsMandatoryFields: make the following fields
+mandatory for records that are record level or item level requestable
+
+ArticleRequestsMandatoryFieldsItemOnly make the following
+fields mandatory for records that are only item level requestable
+
+ArticleRequestsMandatoryFieldsRecordOnly make the
+following fields mandatory for records that are only record level
+requestable
+
 Next you will want to go into your circulation and fine rules matrix and select 
 each rule that you want to allow requests.
 

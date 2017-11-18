@@ -80,7 +80,7 @@ will appear above the results
 |image938|
 
 By default your search results will be sorted based on your
-:ref:`OPACdefaultSortField and OPACdefaultSortOrder`
+:ref:`OPACdefaultSortField and OPACdefaultSortOrder <opacdefaultsortfield-and-opacdefaultsortorder-label>`
 system preference values. To change this you can choose another sorting
 method from the pull down on the right.
 
@@ -604,7 +604,7 @@ account page where they'll see all of the items they have on hold.
 Enhanced Content
 -------------------------------------------
 
-.. _tagging-label:
+.. _opac-tagging-label:
 
 Tagging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -854,13 +854,12 @@ the patrons the barcodes of the items they have checked out.
 |image1007|
 
 If you would like your patrons to leave a note on an item they have checked out
- :ref:`allowcheckoutnotes` preference must be set to allow.  
+:ref:`allowcheckoutnotes` preference must be set to allow.
+
 In the patron's summary of checkouts, there will be an added column 
 to allow the patron to leave a note (for example:  missing first page, or DVD is
 scratched).  This note once confirmed by the patron will appear to the staff
 when this item is checked in. 
-
-
 
 If their guarantee has allowed it via :ref:`their
 privacy <my-privacy-label>`, when the guarantor logs in they will see a

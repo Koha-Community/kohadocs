@@ -714,14 +714,14 @@ Koha allows you to pull in content from outside sources to enhance your
 bib records. All of this content can be toggled on and off using the
 enhanced content system preferences.
 
--  :ref:`FRBR/Editions <all-label>`
+-  :ref:`FRBR/Editions <frbrizeeditions-label>`
 
    -  If you would like to have your OPAC and/or staff client show an
       'Editions' tab on the bib record, you want to enable one or the
       other FRBR preferences and then either one or both of the ISBN
       services (XISBN and ThingISBN).
 
--  :ref:`Amazon` : This service is free and just requires
+-  :ref:`Amazon <amazon-label>` : This service is free and just requires
    that you visit http://aws.amazon.com to sign up
 
    -  Using the Amazon preferences you can choose to show cover images
@@ -787,7 +787,7 @@ enhanced content system preferences.
       records. Contact Syndetics for the information to enter into these
       preferences.
 
--  :ref:`Tagging`
+-  :ref:`Tagging <tagging-label>`
 
    -  Choose whether or not you want to allow patrons to add tags to
       records in Koha.
