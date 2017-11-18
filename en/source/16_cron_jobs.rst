@@ -1,5 +1,6 @@
 .. include:: images.rst
 
+.. _cron-jobs-label:
 
 Cron Jobs
 =========
@@ -88,7 +89,7 @@ Required by: Zebra
 Frequency suggestion: every x minutes, (between 5-15 minutes) depending
 on performance needs
 
-.. _circulation-label:
+.. _cron-circulation-label:
 
 Circulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -787,7 +788,7 @@ Does: removes temporary EDI files that are older than 5 days
 
 .. _deprecated-scripts-label:
 
-.. _reports-label:
+.. _cron-reports-label:
 
 Reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -830,7 +831,7 @@ Get report social data
 
 Script path: misc/cronjobs/social_data/get\_report\_social\_data.pl
 
-Does: downloads data from Babeltheque to add to OPAC records
+Does: downloads data from Babelthèque to add to OPAC records
 
 Frequency suggestion: nightly
 
@@ -839,7 +840,7 @@ Update social data
 
 Script path: misc/cronjobs/social_data/update\_social\_data.pl
 
-Does: updates OPAC records with Babeltheque social data
+Does: updates OPAC records with Babelthèque social data
 
 Deprecated scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
