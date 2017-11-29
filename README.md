@@ -13,8 +13,6 @@ Setup
 Outputing Docs
 --------------
 
-> cd en/
-
 ### For HTML
 > make html
 
@@ -28,7 +26,6 @@ Other useful commands
 ---------------------
 
 To find everything that you can do, you can just do
-> cd en/
 
 > make
 
