@@ -82,12 +82,18 @@ The vendor add form is broken into three pieces
 
    -  None of these fields are required, they should only be entered if
       you want to keep track of your contact's information within Koha
-      -  Primary acquisitions contact: check this box if this person is your primary contact regarding acquisitions from this vendor
-      -  Primary serials contact: check this box if this person is your primary contact regarding serial acquisitions from this vendor
-      -  Contact when ordering? check this box if you want to be able to send your orders by email directly to this person
-      -  Contact about late orders? check this box if you want to be able to send your acquisitions claims by email directly to this person
-      -  Contact about late issues? check this box if you want to be able to send your serials claims by email directly to this person
-   -  You can add more than one contact per vendor by clicking on the 'Add another contact' button
+      -  Primary acquisitions contact: check this box if this person is your
+         primary contact regarding acquisitions from this vendor
+      -  Primary serials contact: check this box if this person is your primary
+         contact regarding serial acquisitions from this vendor
+      -  Contact when ordering? check this box if you want to be able to send
+         your orders by email directly to this person
+      -  Contact about late orders? check this box if you want to be able to
+         send your acquisitions claims by email directly to this person
+      -  Contact about late issues? check this box if you want to be able to
+         send your serials claims by email directly to this person
+   -  You can add more than one contact per vendor by clicking on the 'Add
+      another contact' button
 
 -  The final section is for billing information
 
