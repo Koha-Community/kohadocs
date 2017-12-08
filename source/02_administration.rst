@@ -464,9 +464,9 @@ Asks: Google OAuth2 Client Secret \_\_\_
 GoogleOpenIDConnect
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: Don't use
+Default: No
 
-Asks \_\_\_ Google OpenID Connect login.
+Asks: Use Google OpenID Connect login: \_\_\_ 
 
     **Important**
 
@@ -479,9 +479,41 @@ Asks \_\_\_ Google OpenID Connect login.
 
 Values:
 
--  Don't use
+-  No
 
--  Use
+-  Yes
+
+.. _googleopenidconnectautoregister-label:
+
+GoogleOpenIDConnectAutoRegister
+''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't Allow
+
+Asks: \_\_\_ users logging in with Google Open ID to automatically register.
+
+Values:
+
+-  Don't Allow
+
+-  Allow
+
+.. _googleopenidconnectdefaultbranch-label:
+
+GoogleOpenIDConnectDefaultBranch
+''''''''''''''''''''''''''''''''''''''''''''''
+
+
+Asks: \_\_\_ Use this branchcode when automatically registering a Google
+Open ID patron.
+
+.. _googleopenidconnectdefaultcategory-label:
+
+GoogleOpenIDConnectDefaultCategory
+''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: \_\_\_ Use this category when automatically registering a Google
+Open ID patron.
 
 .. _googleopenidconnectdomain-label:
 
