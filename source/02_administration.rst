@@ -12959,6 +12959,23 @@ staffClientBaseURL
 
 Asks: The staff client is located at http:// \_\_\_
 
+.. _stafflangselectormode-label:
+
+StaffLangSelectorMode
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: only footer
+
+Asks: Display language selector on \_\_\_
+
+Values:
+
+-  both top and footer
+
+-  only footer
+
+-  top
+
 .. _template-label:
 
 template
