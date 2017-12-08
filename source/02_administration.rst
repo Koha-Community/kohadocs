@@ -5481,6 +5481,17 @@ AutoSelfCheckPass Value:
 -  The password of a staff patron with 'circulate'
    :ref:`permissions <patron-permissions-label>`.
 
+.. _scomainuserblock-label:
+
+SCOUserCSS
+''''''''''''''''''''''''''''
+
+Asks: Include the following HTML on the web-based self checkout screen:
+
+Description:
+
+-  The HTML entered in this preference will be used on the self chekcout screen.
+
 .. _scousercss-label:
 
 SCOUserCSS
