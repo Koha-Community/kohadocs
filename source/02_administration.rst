@@ -2068,6 +2068,29 @@ Description:
    Learn more about editing frameworks under the :ref:`MARC Bibliographic
    Frameworks <marc-bibliographic-frameworks-label>` section of this manual.
 
+.. _defaultcountryfield008-label:
+
+DefaultCountryField008
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Empty defaults to xxu for United States
+
+Asks: Fill in the default country code for field 008 Range 15-17 of MARC21 - 
+Place of publication, production, or execution. \_\_\_.
+
+Description:
+
+-  This preference will allow you to set the country code for your MARC21
+   008 field by default. If this is left empty it will default to
+   United States (xxu). See the `MARC Code List for
+   Countries <http://www.loc.gov/marc/countries/countries_code.html>`__
+   for additional values for this preference.
+
+    **Note**
+
+    This preference won't have any effect if your records are in
+    UNIMARC.
+
 .. _defaultlanguagefield008-label:
 
 DefaultLanguageField008
