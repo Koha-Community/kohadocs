@@ -5386,8 +5386,7 @@ Values:
 
 Description:
 
--  This preference is used to enable Koha's ILL module which is used to manage
-ILL requests.
+-  This preference is used to enable Koha's ILL module which is used to manage ILL requests.
 
 .. _illmodule-label:
 
