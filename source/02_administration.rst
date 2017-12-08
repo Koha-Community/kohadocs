@@ -5483,7 +5483,7 @@ AutoSelfCheckPass Value:
 
 .. _scomainuserblock-label:
 
-SCOUserCSS
+SCOMainUserBlock
 ''''''''''''''''''''''''''''
 
 Asks: Include the following HTML on the web-based self checkout screen:
