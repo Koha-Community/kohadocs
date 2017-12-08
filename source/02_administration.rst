@@ -5538,14 +5538,14 @@ Description:
 SelfCheckoutByLogin
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: Barcode
+Default: Cardnumber
 
 Asks: Have patrons login into the web-based self checkout system with
 their \_\_\_
 
 Values:
 
--  Barcode
+-  Cardnumber
 
    |image44|
 
