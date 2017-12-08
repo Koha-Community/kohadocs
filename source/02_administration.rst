@@ -8430,8 +8430,6 @@ Values:
 
 -  on a separate column
 
--  holding library
-
 -  below the holding library
 
 -  below the home library
