@@ -3353,6 +3353,25 @@ Description:
    it's set to Don't include then Koha will ignore all manual invoice
    charges when figuring out if the patron owes too much money to
    checkout additional materials.
+   
+.. _marklostitemsasreturned-label:
+
+MarkLostItemsAsReturned
+''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Mark
+
+Asks: \_\_\_ items as returned when flagged as lost.
+
+Values:
+
+-  Do not mark
+
+-  Mark
+
+Description:
+
+-  This preference lets you decide if an item marked as lost is automatically returned from the user's file or not.
 
 .. _maxoutstanding-label:
 
