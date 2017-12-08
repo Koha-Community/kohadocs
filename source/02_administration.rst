@@ -8414,28 +8414,32 @@ Description:
 -  Defines whether to display the holding library, the home library, or
    both for the opac details page.
 
-.. _opaclocationbranchtodisplayshelving-label:
+.. _opaclocationondetail-label:
 
-OpacLocationBranchToDisplayShelving
+OpacLocationOnDetail
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: holding library
+Default: below the holding library
 
-Asks: Display the shelving location under the \_\_\_ for items on the
+Asks: Display the shelving location \_\_\_ for items on the
 OPAC record details page.
 
 Values:
 
+-  below both home and holding libraries
+
+-  on a separate column
+
 -  holding library
 
--  home and holding library
+-  below the holding library
 
--  home library
+-  below the home library
 
 Description:
 
 -  Defines where the shelving location should be displayed, under the
-   home library, the holding library, or both.
+   home library, the holding library, or both, or in a separate column.
 
 .. _opacmaintenance-label:
 
