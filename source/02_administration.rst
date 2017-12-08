@@ -4043,6 +4043,13 @@ Values:
 
 -  only if all items are checked out and the record has at least one hold already.
 
+.. _processingfeenote-label:
+
+ProcessingFeeNote
+''''''''''''''''''''''''''''''
+
+Asks: Set the text to be recorded in the column 'note', table 'accountlines' when the processing fee (defined in item type) is applied.
+
 .. _refundlostonreturncontrol-label:
 
 RefundLostOnReturnControl
