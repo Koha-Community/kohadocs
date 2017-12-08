@@ -4068,6 +4068,25 @@ Values:
 
 -  item home branch.
 
+.. _usedefaultreplacementcost-label:
+
+useDefaultReplacementCost
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't use
+
+Asks: \_\_\_ the default replacement cost defined in item type.
+
+Values:
+
+-  Don't use
+
+-  Use
+
+Description:
+
+-  This preference enables the use of the replacement cost set on the item type level
+
 .. _whenlostchargereplacementfee-label:
 
 WhenLostChargeReplacementFee
