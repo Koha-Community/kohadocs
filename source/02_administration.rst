@@ -9101,6 +9101,19 @@ Description:
    prompts, for example. Sample JQuery scripts used by Koha libraries
    can be found on the wiki:
    http://wiki.koha-community.org/wiki/JQuery_Library.
+   
+.. _opacusersummary-label:
+
+OPACUserSummary
+''''''''''''''''''''''''''''
+
+Default: Show
+
+Asks: \_\_\_ a summary of a logged in user's checkouts, overdues, holds and fines on the mainpage
+
+Description:
+
+-  When activated, this preference system replaces the login form on the OPAC main page by a summary when the user is logged in.
 
 .. _opacxsltdetailsdisplay-label:
 
