@@ -2572,6 +2572,26 @@ patron categories separated with a pipe '\|')
 Checkin Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _blockreturnoflostitems-label:
+
+BlockReturnOfLostItems
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't block
+
+Asks: \_\_\_ returning of items that have been lost.
+
+Values:
+
+-  Block
+
+-  Don't block
+
+Description:
+
+-  This preference controls whether and item with a lost status
+   (952$1 in MARC21) can be checked in or not.
+
 .. _blockreturnofwithdrawnitems-label:
 
 BlockReturnOfWithdrawnItems
