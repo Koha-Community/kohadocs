@@ -11490,6 +11490,25 @@ Description:
 
 -  This preference will let you define how many patrons to show on
    patron search results pages.
+   
+.. _requirestrongpassword-label:
+
+RequireStrongPassword
+''''''''''''''''''''''''''''''''''''
+
+Default: Don't require
+
+Asks: \_\_\_ a strong password for staff and patrons
+
+Values:
+
+-  Don't require
+
+-  Require
+
+Description:
+
+-  If set to 'require' this system preference will require patron and staff passwords to contain at least one digit, one lowercase and one uppercase.
 
 .. _smssenddriver,-smssendusername,-and-smssendpassword-label:
 
