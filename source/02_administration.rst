@@ -5364,7 +5364,39 @@ Description:
    time a hold is found for the patron who had the book out last a
    message will appear on your check in screen.
 
-.. _self-checkout-label:
+.. _interlibrary-loans-label:
+
+Interlibrary Loans
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _illmodule-label:
+
+ILLModule
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Disable
+
+Asks: \_\_\_ the interlibrary loans module (master switch).
+
+Values:
+
+-  Disable
+
+-  Enable
+
+Description:
+
+-  This preference is used to enable Koha's ILL module which is used to manage
+ILL requests.
+
+.. _illmodule-label:
+
+ILLModuleCopyrightClearance
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: Adding text will enable the copyright clearance stage in request creation.
+The text you enter will be the text displayed.
+
 
 Self Checkout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
