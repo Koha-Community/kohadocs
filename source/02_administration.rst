@@ -8738,30 +8738,6 @@ Description:
 
    |image83|
 
-.. _opacshowbarcode-label:
-
-OPACShowBarcode
-''''''''''''''''''''''''''''''''''''''
-
-Default: Don't show
-
-Asks: \_\_\_ the item's barcode on the holdings tab.
-
-Values:
-
--  Don't show
-
-   |image84|
-
--  Show
-
-   |image85|
-
-Description:
-
--  This preference allows you to control whether patrons can see items'
-   barcodes in the OPAC.
-
 .. _opacshowcheckoutname-label:
 
 OPACShowCheckoutName
