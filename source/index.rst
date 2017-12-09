@@ -1,8 +1,8 @@
 ======================
-Koha 17.11 Manual (en)
+Koha 18.05 Manual (en)
 ======================
 
-:Author: Nicole C. Engard & The Koha Community
+:Author: The Koha Community
 
 .. include:: images.rst
 .. toctree::
