@@ -36,7 +36,9 @@ test:
 production:
     stage: deploy
     script:
-        - scp -r build/html chrisc@www.koha-community.org:/home/chrisc
+    - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
+    - make html
+    - scp -r build/html chrisc@www.koha-community.org:/home/chrisc
     only:
         - master
     environment: production
