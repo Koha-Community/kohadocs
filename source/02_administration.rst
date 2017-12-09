@@ -464,9 +464,9 @@ Asks: Google OAuth2 Client Secret \_\_\_
 GoogleOpenIDConnect
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: Don't use
+Default: No
 
-Asks \_\_\_ Google OpenID Connect login.
+Asks: Use Google OpenID Connect login: \_\_\_ 
 
     **Important**
 
@@ -479,9 +479,41 @@ Asks \_\_\_ Google OpenID Connect login.
 
 Values:
 
--  Don't use
+-  No
 
--  Use
+-  Yes
+
+.. _googleopenidconnectautoregister-label:
+
+GoogleOpenIDConnectAutoRegister
+''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't Allow
+
+Asks: \_\_\_ users logging in with Google Open ID to automatically register.
+
+Values:
+
+-  Don't Allow
+
+-  Allow
+
+.. _googleopenidconnectdefaultbranch-label:
+
+GoogleOpenIDConnectDefaultBranch
+''''''''''''''''''''''''''''''''''''''''''''''
+
+
+Asks: \_\_\_ Use this branchcode when automatically registering a Google
+Open ID patron.
+
+.. _googleopenidconnectdefaultcategory-label:
+
+GoogleOpenIDConnectDefaultCategory
+''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: \_\_\_ Use this category when automatically registering a Google
+Open ID patron.
 
 .. _googleopenidconnectdomain-label:
 
@@ -2068,6 +2100,29 @@ Description:
    Learn more about editing frameworks under the :ref:`MARC Bibliographic
    Frameworks <marc-bibliographic-frameworks-label>` section of this manual.
 
+.. _defaultcountryfield008-label:
+
+DefaultCountryField008
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Empty defaults to xxu for United States
+
+Asks: Fill in the default country code for field 008 Range 15-17 of MARC21 - 
+Place of publication, production, or execution. \_\_\_.
+
+Description:
+
+-  This preference will allow you to set the country code for your MARC21
+   008 field by default. If this is left empty it will default to
+   United States (xxu). See the `MARC Code List for
+   Countries <http://www.loc.gov/marc/countries/countries_code.html>`__
+   for additional values for this preference.
+
+    **Note**
+
+    This preference won't have any effect if your records are in
+    UNIMARC.
+
 .. _defaultlanguagefield008-label:
 
 DefaultLanguageField008
@@ -2571,6 +2626,26 @@ patron categories separated with a pipe '\|')
 
 Checkin Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _blockreturnoflostitems-label:
+
+BlockReturnOfLostItems
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't block
+
+Asks: \_\_\_ returning of items that have been lost.
+
+Values:
+
+-  Block
+
+-  Don't block
+
+Description:
+
+-  This preference controls whether and item with a lost status
+   (952$1 in MARC21) can be checked in or not.
 
 .. _blockreturnofwithdrawnitems-label:
 
@@ -3278,6 +3353,25 @@ Description:
    it's set to Don't include then Koha will ignore all manual invoice
    charges when figuring out if the patron owes too much money to
    checkout additional materials.
+   
+.. _marklostitemsasreturned-label:
+
+MarkLostItemsAsReturned
+''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Mark
+
+Asks: \_\_\_ items as returned when flagged as lost.
+
+Values:
+
+-  Do not mark
+
+-  Mark
+
+Description:
+
+-  This preference lets you decide if an item marked as lost is automatically returned from the user's file or not.
 
 .. _maxoutstanding-label:
 
@@ -3949,6 +4043,13 @@ Values:
 
 -  only if all items are checked out and the record has at least one hold already.
 
+.. _processingfeenote-label:
+
+ProcessingFeeNote
+''''''''''''''''''''''''''''''
+
+Asks: Set the text to be recorded in the column 'note', table 'accountlines' when the processing fee (defined in item type) is applied.
+
 .. _refundlostonreturncontrol-label:
 
 RefundLostOnReturnControl
@@ -3966,6 +4067,25 @@ Values:
 -  item holding branch.
 
 -  item home branch.
+
+.. _usedefaultreplacementcost-label:
+
+useDefaultReplacementCost
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Don't use
+
+Asks: \_\_\_ the default replacement cost defined in item type.
+
+Values:
+
+-  Don't use
+
+-  Use
+
+Description:
+
+-  This preference enables the use of the replacement cost set on the item type level
 
 .. _whenlostchargereplacementfee-label:
 
@@ -5289,7 +5409,38 @@ Description:
    time a hold is found for the patron who had the book out last a
    message will appear on your check in screen.
 
-.. _self-checkout-label:
+.. _interlibrary-loans-label:
+
+Interlibrary Loans
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _illmodule-label:
+
+ILLModule
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Default: Disable
+
+Asks: \_\_\_ the interlibrary loans module (master switch).
+
+Values:
+
+-  Disable
+
+-  Enable
+
+Description:
+
+-  This preference is used to enable Koha's ILL module which is used to manage ILL requests.
+
+.. _illmodule-label:
+
+ILLModuleCopyrightClearance
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Asks: Adding text will enable the copyright clearance stage in request creation.
+The text you enter will be the text displayed.
+
 
 Self Checkout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -5349,6 +5500,17 @@ AutoSelfCheckPass Value:
 -  The password of a staff patron with 'circulate'
    :ref:`permissions <patron-permissions-label>`.
 
+.. _scomainuserblock-label:
+
+SCOMainUserBlock
+''''''''''''''''''''''''''''
+
+Asks: Include the following HTML on the web-based self checkout screen:
+
+Description:
+
+-  The HTML entered in this preference will be used on the self chekcout screen.
+
 .. _scousercss-label:
 
 SCOUserCSS
@@ -5395,14 +5557,14 @@ Description:
 SelfCheckoutByLogin
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: Barcode
+Default: Cardnumber
 
 Asks: Have patrons login into the web-based self checkout system with
 their \_\_\_
 
 Values:
 
--  Barcode
+-  Cardnumber
 
    |image44|
 
@@ -8414,28 +8576,30 @@ Description:
 -  Defines whether to display the holding library, the home library, or
    both for the opac details page.
 
-.. _opaclocationbranchtodisplayshelving-label:
+.. _opaclocationondetail-label:
 
-OpacLocationBranchToDisplayShelving
+OpacLocationOnDetail
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-Default: holding library
+Default: below the holding library
 
-Asks: Display the shelving location under the \_\_\_ for items on the
+Asks: Display the shelving location \_\_\_ for items on the
 OPAC record details page.
 
 Values:
 
--  holding library
+-  below both home and holding libraries
 
--  home and holding library
+-  on a separate column
 
--  home library
+-  below the holding library
+
+-  below the home library
 
 Description:
 
 -  Defines where the shelving location should be displayed, under the
-   home library, the holding library, or both.
+   home library, the holding library, or both, or in a separate column.
 
 .. _opacmaintenance-label:
 
@@ -8736,30 +8900,6 @@ Description:
 
    |image83|
 
-.. _opacshowbarcode-label:
-
-OPACShowBarcode
-''''''''''''''''''''''''''''''''''''''
-
-Default: Don't show
-
-Asks: \_\_\_ the item's barcode on the holdings tab.
-
-Values:
-
--  Don't show
-
-   |image84|
-
--  Show
-
-   |image85|
-
-Description:
-
--  This preference allows you to control whether patrons can see items'
-   barcodes in the OPAC.
-
 .. _opacshowcheckoutname-label:
 
 OPACShowCheckoutName
@@ -8998,6 +9138,19 @@ Description:
    prompts, for example. Sample JQuery scripts used by Koha libraries
    can be found on the wiki:
    http://wiki.koha-community.org/wiki/JQuery_Library.
+   
+.. _opacusersummary-label:
+
+OPACUserSummary
+''''''''''''''''''''''''''''
+
+Default: Show
+
+Asks: \_\_\_ a summary of a logged in user's checkouts, overdues, holds and fines on the mainpage
+
+Description:
+
+-  When activated, this preference system replaces the login form on the OPAC main page by a summary when the user is logged in.
 
 .. _opacxsltdetailsdisplay-label:
 
@@ -11367,6 +11520,25 @@ Description:
 
 -  This preference will let you define how many patrons to show on
    patron search results pages.
+   
+.. _requirestrongpassword-label:
+
+RequireStrongPassword
+''''''''''''''''''''''''''''''''''''
+
+Default: Don't require
+
+Asks: \_\_\_ a strong password for staff and patrons
+
+Values:
+
+-  Don't require
+
+-  Require
+
+Description:
+
+-  If set to 'require' this system preference will require patron and staff passwords to contain at least one digit, one lowercase and one uppercase.
 
 .. _smssenddriver,-smssendusername,-and-smssendpassword-label:
 
@@ -12805,6 +12977,23 @@ staffClientBaseURL
 ''''''''''''''''''''''''''''''''''''''''''''
 
 Asks: The staff client is located at http:// \_\_\_
+
+.. _stafflangselectormode-label:
+
+StaffLangSelectorMode
+''''''''''''''''''''''''''''''''''''''''''''
+
+Default: only footer
+
+Asks: Display language selector on \_\_\_
+
+Values:
+
+-  both top and footer
+
+-  only footer
+
+-  top
 
 .. _template-label:
 
