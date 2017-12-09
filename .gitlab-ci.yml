@@ -38,7 +38,7 @@ production:
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
     - make html
-    - scp -r build/html chrisc@www.koha-community.org:/home/chrisc
+    - scp -r build/html chrisc@www.koha-community.org:/var/www/manual/18.05/en/
     only:
         - master
     environment: production
