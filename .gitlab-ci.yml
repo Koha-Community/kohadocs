@@ -36,7 +36,8 @@ test:
 production:
     stage: deploy
     script:
-        - scp -r build/html chrisc@www.koha-community.org:
+    - scp -r build/html chrisc@www.koha-community.org:
     only:
         - master
     environment: production
+    
