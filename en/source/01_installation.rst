@@ -3,7 +3,7 @@
 Introduction to the Koha Installation Process
 ================================================
 
-This is the Koha Installation Manual 17.05 for Koha 17.05.
+This is the Koha Installation Manual
 
 The Koha Library Management System installation process uses 2 tools:
 
