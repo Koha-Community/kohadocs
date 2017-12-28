@@ -32,14 +32,15 @@ test-17.11:
   - cd en/
   - make html
   only:
-  - master
+  - manual17.11.x
 
 production-17.11:
     stage: deploy
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
+    - cd en/
     - make html
     - scp -r build/html chrisc@www.koha-community.org:/var/www/manual/17.11/en/
     only:
-        - master
+        - manual17.11.x
     environment: production
