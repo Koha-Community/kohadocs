@@ -32,7 +32,7 @@ test-17.11:
   - cd en/
   - make html
   only:
-  - master
+  - manual17.11.x
 
 production-17.11:
     stage: deploy
@@ -41,5 +41,5 @@ production-17.11:
     - make html
     - scp -r build/html chrisc@www.koha-community.org:/var/www/manual/17.11/en/
     only:
-        - master
+        - manual17.11.x
     environment: production
