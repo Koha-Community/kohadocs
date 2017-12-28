@@ -24,7 +24,7 @@ before_script:
 
 image: debian:unstable
 
-test:
+test-17.11:
   stage: test
   script:
   - apt-get update
@@ -34,7 +34,7 @@ test:
   only:
   - master
 
-production:
+production-17.11:
     stage: deploy
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
