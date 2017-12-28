@@ -65,53 +65,53 @@ Patron clubs create clubs which patrons may be enrolled in. It is
 useful for tracking summer reading programs, book clubs and other such clubs.
 
     **Important**
-    Staff will need permission to edit clubs, templates and enroll patrons. Go 
+    Staff will need permission to edit clubs, templates and enroll patrons. Go
     to your staff members account tab and click on the More drop down menu.
-    Select Set Permissions and make sure patron clubs have checkmarks next to 
-    each of the functions you want your staff to have. Remember if your staff 
+    Select Set Permissions and make sure patron clubs have checkmarks next to
+    each of the functions you want your staff to have. Remember if your staff
     is a superlibrarian, they will have the permission.
-    
+
 Creating a new club template
-Here you can add fields that can be filled out at the time a new club is 
-created based on the template, or a new enrollment is created for a given club 
+Here you can add fields that can be filled out at the time a new club is
+created based on the template, or a new enrollment is created for a given club
 based on the template. Click on the New Club template button
 
-Name is required. This could be something like Adult Book Club, Children’s 
-Book Club or Summer Reading Program. Remember these templates will be starting 
+Name is required. This could be something like Adult Book Club, Children’s
+Book Club or Summer Reading Program. Remember these templates will be starting
 point for each club you create.
 
 Description can be any additional information
 
-Allow Public Enrollment: if this box is checked it will allow patrons to enroll 
+Allow Public Enrollment: if this box is checked it will allow patrons to enroll
 in a club based on this template from the OPAC
 
-Require valid email address: if this box is checked only patrons with a patrons 
-with a valid email address can enroll. So they will need a email address 
+Require valid email address: if this box is checked only patrons with a patrons
+with a valid email address can enroll. So they will need a email address
 to enroll.
 
-The library drop down gives you the flexibility to enroll patrons from specific 
+The library drop down gives you the flexibility to enroll patrons from specific
 branches. If you let it set to blank, all branches will be able to enroll.
 
-Club Fields: these fields will be used when creating a club based on this 
+Club Fields: these fields will be used when creating a club based on this
 template you can connect authorized values here
-Enrollment Fields: you can add any additional fields you want to have filled 
+Enrollment Fields: you can add any additional fields you want to have filled
 out by your patrons like you can connect authorized values here.
 
 Creating a new club based on a template
 Here you can add information about a new club using a template you created.
 Click on the New Club dropdown menu and select the template you want to use.
 
-Name is required, this will be the name of the specific club using the 
-template you created. For example, if I used my Kids Club template, I can 
+Name is required, this will be the name of the specific club using the
+template you created. For example, if I used my Kids Club template, I can
 create Kids Club 2017
 
 Description – any additional information
 
-Start  and End date will depict when this club runs, the entire duration 
-of the club. Once the club expires, it will be removed from the OPAC for users 
+Start  and End date will depict when this club runs, the entire duration
+of the club. Once the club expires, it will be removed from the OPAC for users
 to enroll if that option is selected.
 
-The library drop down gives you the flexibility to enroll patrons from specific 
+The library drop down gives you the flexibility to enroll patrons from specific
 branches. If you let it set to blank, all branches will be able to enroll.
 
 Enrolling a patron in a club
@@ -1738,6 +1738,14 @@ information you want to click the 'Export bibliographic records' tab.
                 preference set to 'biblio record'.
 
       -  Limit to a specific library or group of libraries
+
+         -  **Important**
+
+                This is a filter: if you leave this set to the default
+                (all libraries selected) or select one or more libraries,
+                bib records with no items attached will not be exported. To get
+                bib records with no items you will need to 'clear all'
+                (i.e. de-select all libraries).
 
       -  Limit to a call number range
 
