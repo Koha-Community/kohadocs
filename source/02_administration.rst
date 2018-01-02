@@ -39,7 +39,7 @@ column
 
 If the preference refers to monetary values (like
 :ref:`maxoutstanding`) the currency displayed will be the
-default you set in your :ref:`Currencies and Exchange Rates` 
+default you set in your :ref:`Currencies and Exchange Rates`
 administration area. In the examples to
 follow they will all read USD for U.S. Dollars.
 
@@ -304,7 +304,7 @@ MarcItemFieldsToOrder
 Asks: Set the mapping values for new item records created from a MARC record
 in a staged file.
 
-Description: 
+Description:
 
 -  This preference automatically generates items in Koha with populated
    information based on a 9XX field and subfield. You can use the following
@@ -312,7 +312,7 @@ Description:
    ccode, notforloan, uri, copyno, price, replacementprice and itemcallnumber.
    Special fields: quantity and budget_code
 
-For example: 
+For example:
 
 ::
 
@@ -466,7 +466,7 @@ GoogleOpenIDConnect
 
 Default: No
 
-Asks: Use Google OpenID Connect login: \_\_\_ 
+Asks: Use Google OpenID Connect login: \_\_\_
 
     **Important**
 
@@ -1670,8 +1670,8 @@ OpacSuppression, OpacSuppressionByIPRange, OpacSuppressionRedirect, and OpacSupp
 
 OpacSuppression Default: Don't hide
 
-Asks: \_\_\_ items marked as suppressed from OPAC search results. 
-Restrict the suppression to IP addressesoutside of the IP range \_\_\_ 
+Asks: \_\_\_ items marked as suppressed from OPAC search results.
+Restrict the suppression to IP addressesoutside of the IP range \_\_\_
 (Leave blank if not used. Define a range like 192.168..) Redirect the opac detail
 page for suppressed records to \_\_\_ Display the following message on
 the redirect page for suppressed biblios \_\_\_.
@@ -1994,7 +1994,7 @@ Values:
 -  Universal Decimal Classification
 
     **Note**
-    
+
     Adding another classification under Administration > Classification Sources
     will make it show up in this list as well.
 
@@ -2107,7 +2107,7 @@ DefaultCountryField008
 
 Default: Empty defaults to xxu for United States
 
-Asks: Fill in the default country code for field 008 Range 15-17 of MARC21 - 
+Asks: Fill in the default country code for field 008 Range 15-17 of MARC21 -
 Place of publication, production, or execution. \_\_\_.
 
 Description:
@@ -2862,7 +2862,7 @@ Description:
    even if it's on hold for someone else. If you would like Koha to
    prevent people from checking out books that are on hold for someone
    else set this preference to "Don't allow."
-   
+
 .. _allowitemsonholdcheckoutsco-label:
 
 AllowItemsOnHoldCheckoutSCO
@@ -2881,7 +2881,7 @@ Values:
 -  Don't allow
 
     **Important**
-    
+
     This system preference relates only to Koha's web based self checkout.
 
 Description:
@@ -3353,7 +3353,7 @@ Description:
    it's set to Don't include then Koha will ignore all manual invoice
    charges when figuring out if the patron owes too much money to
    checkout additional materials.
-   
+
 .. _marklostitemsasreturned-label:
 
 MarkLostItemsAsReturned
@@ -4448,7 +4448,7 @@ Description:
     This notice will only be sent if the :ref:`process\_message\_queue.pl
     cronjob <message-queue-label>` being run periodically to send the
     messages.
-    
+
 .. _excludeholidaysfrommaxpickupdelay-label:
 
 ExcludeHolidaysFromMaxPickUpDelay
@@ -4911,7 +4911,7 @@ Values:
 -  Allow
 
 This preference if set to allow will give your patrons the option to add
-a note to an item they have checked out on the OPAC side.  This note will be 
+a note to an item they have checked out on the OPAC side.  This note will be
 seen on the staff side when the item is checked in.
 
 .. _allowofflinecirculation-label:
@@ -4993,7 +4993,7 @@ Description:
    preference is set to clear the screen then "checking out" an empty
    barcode will clear the screen of the patron you were last working
    with.
-   
+
 .. _circsidebar-label:
 
 CircSidebar
@@ -6545,7 +6545,7 @@ Description:
 
 -  Novelist Select from Ebsco is a subscription service that can provide
    additional content in the OPAC.
-   
+
 .. _novelistselectstaffenabled-label:
 
 NovelistSelectStaffEnabled
@@ -9138,7 +9138,7 @@ Description:
    prompts, for example. Sample JQuery scripts used by Koha libraries
    can be found on the wiki:
    http://wiki.koha-community.org/wiki/JQuery_Library.
-   
+
 .. _opacusersummary-label:
 
 OPACUserSummary
@@ -9192,7 +9192,7 @@ Description:
    the screen when viewing a bib record. This preference will allow you
    either use the default look that comes with Koha or design your own
    stylesheet.
-   
+
 .. _opacxsltlistsdisplay-label:
 
 OPACXSLTListsDisplay
@@ -10703,7 +10703,7 @@ Description:
     will still be able to register but will not be given a username.
     There will be no errors on the page to explain this, so be sure to
     enter a valid patron category code.
-    
+
 .. _patronselfregistrationemailmustbeunique-label:
 
 PatronSelfRegistrationEmailMustBeUnique
@@ -11161,7 +11161,7 @@ Values:
     **Important**
 
     This overrides :ref:`autoMemberNum` if on.
-    
+
 .. _checkprevcheckout-label:
 
 CheckPrevCheckout
@@ -11183,19 +11183,19 @@ Values:
 
 Description:
 
-When the value of this system preference is set to 'do', Koha will look at the 
-patron's circulation history to see if they have checked this item out before. 
-An alert will show up on the screen indicating that patron has indeed checked 
+When the value of this system preference is set to 'do', Koha will look at the
+patron's circulation history to see if they have checked this item out before.
+An alert will show up on the screen indicating that patron has indeed checked
 this item out.  Staff will be prompted to allow the checkout to occur.
-If the vaulue is set to 'don't', Koha will not check the patron's circulation 
-history. When the value is set to 'Unless overridden, do', this will check the 
-patron's circulation history even if there are fines, fees, and/or holds on the 
-patron's account.  Lastly, if the value is set to 'Unless overridden, don't', 
-Koha will not check circulation history regardless of fines, fees, and/or holds. 
+If the vaulue is set to 'don't', Koha will not check the patron's circulation
+history. When the value is set to 'Unless overridden, do', this will check the
+patron's circulation history even if there are fines, fees, and/or holds on the
+patron's account.  Lastly, if the value is set to 'Unless overridden, don't',
+Koha will not check circulation history regardless of fines, fees, and/or holds.
 
-     **Note** 
+     **Note**
 
-This system preference will not work for patrons that have chosen to anonymize 
+This system preference will not work for patrons that have chosen to anonymize
 their reading history.
 
 .. _defaultpatronsearchfields-label:
@@ -11520,7 +11520,7 @@ Description:
 
 -  This preference will let you define how many patrons to show on
    patron search results pages.
-   
+
 .. _requirestrongpassword-label:
 
 RequireStrongPassword
@@ -11635,7 +11635,7 @@ Description:
     Requires that you have
     :ref:`EnhancedMessagingPreferences` set
     to Allow to use.
-    
+
 .. _tracklastpatronactivity-label:
 
 TrackLastPatronActivity
@@ -13059,7 +13059,7 @@ Description:
    the screen when viewing a bib record. This preference will allow you
    either use the default look that comes with Koha or design your own
    stylesheet.
-   
+
 .. _xsltlistsdisplay-label:
 
 XSLTListsDisplay
@@ -14003,12 +14003,6 @@ use, for instance 'Lost'.
 
    -  Values that can be entered to fill in the patron's sort 2 field
 
--  CART
-
-   -  Is the shelving cart location, used by
-      :ref:`InProcessingToShelvingCart` and
-      :ref:`ReturnToShelvingCart`
-
 -  CCODE
 
    -  Collection codes (appears when cataloging and working with items)
@@ -14046,7 +14040,7 @@ use, for instance 'Lost'.
 -  HINGS\_UT
 
    -  General Holdings: Type of Unit Designator
-   
+
 -  ITEMTYPECAT
 
    - Allows multiple Item Types to be searched in a category.  Categories can be
@@ -14060,7 +14054,20 @@ use, for instance 'Lost'.
 
 -  LOC
 
-   -  Shelving location (usually appears when adding or editing an item)
+   Shelving location (usually appears when adding or editing an item). LOC maps to items.location in the Koha database.
+
+   -  CART
+
+      Is the shelving cart location, used by
+      :ref:`InProcessingToShelvingCart` and
+      :ref:`ReturnToShelvingCart`
+
+   -  PROC
+
+      The location to be used for
+      :ref:`NewItemsDefaultLocation` (change
+      description as desired), also the location expected by
+      :ref:`InProcessingToShelvingCart`.
 
 -  LOST
 
@@ -14097,18 +14104,11 @@ use, for instance 'Lost'.
 
           Negative number values will still allow holds (use for on
           order statuses for example) where as positive numbers will not
-          allow holds or checkouts
+          allow holds or checkouts. A value of 0 means 'for loan'.
 
 -  ORDER\_CANCELLATION\_REASON
 
    -  Reasons why an order might have been cancelled
-
--  PROC
-
-   -  The location to be used for
-      :ref:`NewItemsDefaultLocation` (change
-      description as desired), also the location expected by
-      :ref:`InProcessingToShelvingCart`.
 
 -  REPORT\_GROUP
 
@@ -14147,15 +14147,15 @@ use, for instance 'Lost'.
       managing suggestions)
 
  -  SUGGEST_FORMAT
- 
+
    - List of Item Types to display in a drop down menu on the Purchase Suggestion
      form on the OPAC. When creating the authorized values for SUGGEST_FORMAT,
      enter a description into this form so it is visible on the OPAC to patrons.
 
  -  TERM
- 
-   - Terms to be used in Course Reserves Module.  Enter Terms that will show 
-     in the drop down menu when setting up a Course Reserve.  (For example: 
+
+   - Terms to be used in Course Reserves Module.  Enter Terms that will show
+     in the drop down menu when setting up a Course Reserve.  (For example:
      Spring, Summer, Winter, Fall).
 
 -  WITHDRAWN
@@ -15877,7 +15877,7 @@ To create a new matching rule :
 
    -  'Search index' can be found by looking at the ccl.properties file
       on your system which tells the zebra indexing what data to search
-      for in the MARC data".  Or you can review the index for standard 
+      for in the MARC data".  Or you can review the index for standard
       index names used.  :ref:`Koha Search Indexes`
 
    -  'Score' - The number of 'points' a match on this field is worth.
@@ -16300,13 +16300,13 @@ The three first fields are required, the rest are optional
    that librarians know when to use this fund
 
 -  Planning categories are used for statistical purposes. If you will be
-   using the Asort1 and/or Asort2 authorised values lists to track your orders 
+   using the Asort1 and/or Asort2 authorised values lists to track your orders
    you need to select them when setting up the fund.  Select the Asort1/Asort2
-   option from the dropdown lists for the Statiscal 1 done on: and 
-   Statistical 2 done on: fields.  
-   
+   option from the dropdown lists for the Statiscal 1 done on: and
+   Statistical 2 done on: fields.
+
 -  To learn more about planning categories, check out the :ref:`Planning Category
-   FAQ <planning-categories-label>`.  
+   FAQ <planning-categories-label>`.
 
 When complete, click 'Submit' and you will be brought to a list of all
 of the funds for the budget.
