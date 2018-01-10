@@ -8,7 +8,7 @@ Documentation is generated with Sphinx.
 Setup
 -----
 
-> sudo apt-get install python3-sphinx  python3-sphinxcontrib.spelling 
+> sudo apt-get install python3-sphinx  python3-sphinxcontrib.spelling
 
 Outputing Docs
 --------------
@@ -21,6 +21,14 @@ Outputing Docs
 
 ### For an epub
 >  make epub
+
+### For a pdf (Work in progress)
+> apt install latexmk # the latexpdf builder needs it
+> apt install texlive-full # Attention, this is very huge
+                           # We should to list the individual packages we need
+> make latex # Generate the latex files
+> make latexpdf # Will generate the pdf file
+
 
 Other useful commands
 ---------------------
