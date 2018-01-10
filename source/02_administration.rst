@@ -15768,7 +15768,7 @@ Match Points are the criteria that you enter that must be met in order
 for an incoming record to match an existing MARC record in your catalog.
 You can have multiple match points on an import rule each with its own
 score. An incoming record will be compared against your existing records
-(âone record at a timeâ) and given a score for each match point. When
+('one record at a time') and given a score for each match point. When
 the total score of the matchpoints matches or exceeds the threshold
 given for the matching rule, Koha assumes a good match and
 imports/overlays according your specifications in the import process. An
@@ -15805,7 +15805,7 @@ indexes are stale and out of date. The match checks go right for the
 data instead of relying on the data in the indexes. (If you fear your
 indexes are out of date, a rebuild of your indexes would be a great idea
 and solve that situation!) The other use for a Match Check is as a
-âdouble checkâ or âvetoâ of your matching rule. For example, if you have
+'double check' or 'veto' of your matching rule. For example, if you have
 a matching rule as below:
 
 Threshold of 1000
@@ -15817,7 +15817,7 @@ Match Check on 245$a
 Koha will first look at the 020$a tag/subfield to see if the incoming
 record matches an existing record. If it does, it will then move on to
 the Match Check and look directly at the 245$a value in the incoming
-data and compare it to the 245$a in the existing âmatchedâ record in
+data and compare it to the 245$a in the existing 'matched' record in
 your catalog. If the 245$a matches, Koha continues on as if a match was
 successful. If the 245$a does not match, then Koha concludes that the
 two records are not a match after all. The Match Checks can be a really
@@ -16436,7 +16436,7 @@ Additional Parameters
 Z39.50/SRU servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Z39.50 is a clientâserver protocol for searching and retrieving
+Z39.50 is a client/server protocol for searching and retrieving
 information from remote computer databases, in short it's a tool used
 for copy cataloging.
 
