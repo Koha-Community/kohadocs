@@ -24,20 +24,20 @@ before_script:
 
 image: debian:unstable
 
-test:
-  stage: test
-  script:
-  - apt-get update
-  - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
-  - for l in `ls locales` ; do make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" html ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" epub ; done
-  only:
-  - master
+#test:
+#  stage: test
+#  script:
+#  - apt-get update
+#  - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
+#  - for l in `ls locales` ; do make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" html ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" epub ; done
+#  only:
+#  - master
 
 production:
     stage: deploy
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
-    - make html
+    - for l in `ls locales` ; do make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" html ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" epub ; done
     - scp -r build/* chrisc@www.koha-community.org:/var/www/manual/18.05/
     only:
         - master
