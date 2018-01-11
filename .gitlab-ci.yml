@@ -29,10 +29,7 @@ test:
   script:
   - apt-get update
   - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
-  - for l in `ls locales` ; do mkdir public/$l ;  make -e SPHINXOPTS="-D language='$l'" html; mv build/html/ public/$l ; make -e SPHINXOPTS="-D language='$l'" epub; mv build/epub/ public/$l; done
-  artifacts:
-    paths:
-    - public
+  - for l in `ls locales` ; do ;  mkdir build/$l ; make -e SPHINXOPTS="-D language='$l'" html source/ build/$l; make -e SPHINXOPTS="-D language='$l'" epub source/ build/$l ; done
   only:
   - master
 
@@ -41,7 +38,7 @@ production:
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
     - make html
-    - scp -r public/* chrisc@www.koha-community.org:/var/www/manual/18.05/
+    - scp -r build/* chrisc@www.koha-community.org:/var/www/manual/18.05/
     only:
         - master
     environment: production
