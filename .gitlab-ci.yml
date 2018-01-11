@@ -36,7 +36,7 @@ image: debian:unstable
 production:
     stage: deploy
     script:
-    - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
+    - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make rsync
 #    - for l in `ls locales` ; do make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" html ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" epub ; done
 #    - scp -r build/* chrisc@www.koha-community.org:/var/www/manual/18.05/
     - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/18.05/
