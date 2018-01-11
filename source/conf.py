@@ -440,3 +440,10 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 locale_dirs = ['../locales/']
+
+# Remove blank pages
+# https://evolvingweb.ca/blog/writing-documentation-restructured-text-and-sphinx
+latex_elements = {
+  'classoptions': ',oneside',
+  'babel': '\\usepackage[english]{babel}'
+}
