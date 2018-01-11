@@ -29,7 +29,7 @@ test:
   script:
   - apt-get update
   - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
-  - for l in `ls locales` ; do ;  mkdir build/$l ; make -e SPHINXOPTS="-D language='$l'" html source/ build/$l; make -e SPHINXOPTS="-D language='$l'" epub source/ build/$l ; done
+  - for l in `ls locales` ; do ;  mkdir build/$l ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" html ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" epub ; done
   only:
   - master
 
