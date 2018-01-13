@@ -24,23 +24,14 @@ before_script:
 
 image: debian:unstable
 
-test-17.11:
-  stage: test
-  script:
-  - apt-get update
-  - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
-  - cd en/
-  - make html
-  only:
-  - manual17.11.x
-
 production-17.11:
     stage: deploy
     script:
-    - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make
+    - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make rsync
     - cd en/
-    - make html
-    - scp -r build/html chrisc@www.koha-community.org:/var/www/manual/17.11/en/
+    - make all_epub # build/LANG/epub
+    - make all_html # build/LANG/html
+    - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/17.11/
     only:
         - manual17.11.x
     environment: production
