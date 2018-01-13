@@ -6,6 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
+SHELL         := /bin/bash
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -54,6 +55,22 @@ html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+.PHONY: all_html
+all_html:
+	for l in $$(echo "en `ls locales`");                                   \
+	do                                                                     \
+		make -e SPHINXOPTS="-D language='$$l' -d build/doctrees" BUILDDIR="build/$$l" html ; \
+	done;
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/LANG/html."
+
+.PHONY: all_epub
+all_epub:
+	for l in $$(echo "en `ls locales`");                                   \
+	do                                                                     \
+		make -e SPHINXOPTS="-D language='$$l' -d build/doctrees" BUILDDIR="build/$$l" epub ; \
+	done;
+	@echo "Build finished. The epub files are in $(BUILDDIR)/LANG/epub."
 
 .PHONY: dirhtml
 dirhtml:

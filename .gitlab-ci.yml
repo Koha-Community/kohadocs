@@ -37,7 +37,8 @@ production:
     stage: deploy
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make rsync
-    - for l in `ls locales` ; do make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" html ; make -e SPHINXOPTS="-D language='$l'" BUILDDIR="build/$l" epub ; done
+    - make all_epub # build/LANG/epub
+    - make all_html # build/LANG/html
     - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/18.05/
     only:
         - master
