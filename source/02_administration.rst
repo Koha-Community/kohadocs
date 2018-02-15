@@ -11035,6 +11035,12 @@ Description:
     the database
     structure <http://schema.koha-community.org/tables/borrowers.html>`__
     associated with the borrowers table.
+    
+    **Note**
+    
+    If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
+    (or both) is set, a button labeled "Quick add new patron" will be displayed
+    in the "Patrons" toolbar.
 
 .. _borrowerrelationship-label:
 
@@ -11506,6 +11512,12 @@ Asks: \_\_\_ (separate columns with \|) add these fields to the patron
 quick add form when entering a new patron. Displays only mandatory fields
 and fields specified here. If applicable, the guarantor form will be shown
 as well, individual fields in that form will be ignored.
+
+    **Note**
+    
+    If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
+    (or both) is set, a button labeled "Quick add new patron" will be displayed
+    in the "Patrons" toolbar.
 
 .. _patronsperpage-label:
 
