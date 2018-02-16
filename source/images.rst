@@ -1320,3 +1320,6 @@
 .. |image1320| image:: images/appendix-oclc/oclcexportbatch.png
 .. |image1321| image:: images/appendix-oclc/oclcprocessbatch.png
 .. |image1322| image:: images/opac/allowcheckoutnotes.png
+.. |image1323| image:: images/admin/basicparams/addsubgroup.png
+.. |image1324| image:: images/admin/basicparams/deletegroup.png
+.. |image1325| image:: images/admin/basicparams/deletegroupconfirm.png

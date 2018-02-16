@@ -13659,24 +13659,21 @@ Basic Parameters
 
     Configure all 'parameters' in the order they appear.
 
-.. _libraries-&-groups-label:
+.. _libraries-label:
 
-Libraries & Groups
+Libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When setting up your Koha system you will want to add information for
 every library that will be sharing your system. This data is used in
 several areas of Koha.
 
--  *Get there:* More > Administration > Basic Parameters > Libraries and
-   Groups
+-  *Get there:* More > Administration > Basic Parameters > Libraries
 
-When visiting this page you are presented with a list of the libraries
-and groups that have already been added to the system.
+When visiting this page you are presented with a list of the libraries that have already been added to the system.
 
 |image122|
 
-|image123|
 
 .. _adding-a-library-label:
 
@@ -13699,13 +13696,10 @@ To add a new library:
       displays to the public and should be a name that makes sense to
       your patrons.
 
-   -  If you have :ref:`groups <adding-a-group-label>` set up you can choose
-      what group this library belongs to after entering in the code and
-      name
-
 -  Next you can enter basic contact info about the branch
 
    |image125|
+   .. screenshot is missing the OPAC info box
 
    -  The address and contact fields can be used to make notices custom
       for each library
@@ -13755,6 +13749,8 @@ To add a new library:
              An IP address is required if you have enabled
              :ref:`AutoLocation`
 
+   -  If this library has a specific `MARC organization code <http://www.loc.gov/marc/organizations/orgshome.html>`_, you can enter it   here. If left blank, the code entered in the :ref:`MARCOrgCode` preference will be used for this library.
+
    -  Finally, if you have any notes you can put them here. These will
       not show in the OPAC
 
@@ -13779,55 +13775,64 @@ link to edit/alter details associated with the library in question.
 
     You will be unable to edit the 'Library code'
 
+Library groups
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Library groups are used in searches to limit the search to a group of libraries (for example in a neigbourhood).
+
+-  *Get there:* More > Administration > Basic Parameters > Library groups
+
+When visiting this page you are presented with a list of the groups that have already been added to the system.
+
+|image123|
+
 .. _adding-a-group-label:
 
 Adding a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a Search Domain or Library Property Group click the 'New Group'
-button at the top of the screen
+Click the 'Add Group' button at the top of the screen
 
 |image129|
 
-Give the group a 'Category type; of 'searchdomain' and if you would like
-the group to show up in the library pull down at the top of the OPAC
-(with
-:ref:`OpacAddMastheadLibraryPulldown` set
-to 'Add') and on the advanced search page you can check the 'Show in
-search pulldown' box.
+- Give the group a title and a description. Only the title is mandatory as it will show up in the staff client and in the OPAC. The description is only used in this page to give an idea of what the group is used for.
 
-Of the fields on the group form, 'Category code', 'Name', and 'Category
-type' are the only required fields
+- You can limit staff from seeing other groups' patrons by checking the box next to the 'Limit patron data access by group' option.
 
-.. _search-domain-groups-label:
+- If you would like the group to show up in the library pulldown menu at the top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add') and on the advanced search page you can check the 'Use for OPAC search groups' box.
 
-Search Domain Groups
-''''''''''''''''''''''''''''''''''''''''''''''
-
-Search Domain Groups allow you to search a group of libraries at the
-same time instead of searching just one library or all libraries.
-
-|image130|
-
-To see Search Domain Groups in action visit the staff client advanced
-search page in your Koha system:
+- If you want the group to appear in the library pulldown in the staff client advanced search, check the 'Use for staff search groups' box.
 
 |image131|
 
-.. _library-property-groups-label:
+.. _adding-a-library-to-a-group-label:
 
-Library Property Groups
-''''''''''''''''''''''''''''''''''''''''''''''''
+Adding a library to a group
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can assign specific categories to your libraries by adding groups
-for them
-
-|image132|
-
-Properties are then applied to libraries via the add or edit library
-form
+Click on the 'Add library' button next to the group to add a library to this group. You will be presented with a list of the libraries that are not already in the group.
 
 |image133|
+
+.. _adding-a-sub-group-label:
+
+Adding a sub-group
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your system is very large, you can create sub-groups. Click on the 'Actions' button next to the group and select the 'Add a sub-group' option. Fill in the title and the description (optional) of the sub-group. The features will be inherited from the parent group.
+
+|image1323|
+
+.. _deleting-a-group-label:
+
+Deleting a group
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To delete a group, click on the 'Actions' button next to the group and select the 'Delete' option.
+
+|image1324|
+
+|image1325|
 
 .. _item-types-label:
 
@@ -13854,7 +13859,7 @@ top of the Item Types page.
 
 |image135|
 
--  In the 'Item Type' field, enter a short code for your item type
+-  In the 'Item Type' field, enter a short code for your item type (maximum of 10 characters)
 
 -  The description is the plain text definition of the item type (for
    those with multiple languages installed you can translate the item
@@ -13891,14 +13896,28 @@ top of the Item Types page.
       be checked out to patrons
 
 -  For items that you charge a rental fee for, enter the total fee you
-   charge in the 'Rental charge' field
+   charge in the 'Rental charge' field. This will charge the patron on checkout.
 
    -  **Important**
 
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
 
-   -  This will charge the patron on checkout
+-  You can add a default replacement cost for this type of item. If left blank, the replacement price of the item itelf will be cherged to the user when the item is lost.
+
+    -  **Important**
+          Do not enter symbols in this field, only numbers and decimal
+          points (ex. $5.00 should be entered as 5 or 5.00)
+
+
+- You can also add a processing fee that will be added to the replacement cost.
+
+   -  **Important**
+
+          Do not enter symbols in this field, only numbers and decimal
+          points (ex. $5.00 should be entered as 5 or 5.00)
+
+
 
 -  If you would like a message or alert to appear when items of this
    type are checked in you can enter that in the 'Checkin message' box
@@ -13949,7 +13968,7 @@ click the 'Edit' link.
 Deleting Item Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each item has a Delete button beside it. To delete an item, simply click
+Each item has a Delete button beside it. To delete an item type, simply click
 the 'Delete' link.
 
     **Important**
