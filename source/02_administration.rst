@@ -11035,6 +11035,12 @@ Description:
     the database
     structure <http://schema.koha-community.org/tables/borrowers.html>`__
     associated with the borrowers table.
+    
+    **Note**
+    
+    If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
+    (or both) is set, a button labeled "Quick add new patron" will be displayed
+    in the "Patrons" toolbar.
 
     **Note**
 
@@ -11514,7 +11520,6 @@ and fields specified here. If applicable, the guarantor form will be shown
 as well, individual fields in that form will be ignored.
 
     **Note**
-
     If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
     (or both) is set, a button labeled "Quick add new patron" will be displayed
     in the "Patrons" toolbar.
@@ -13928,7 +13933,6 @@ top of the Item Types page.
 
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
-
 
 
 -  If you would like a message or alert to appear when items of this
