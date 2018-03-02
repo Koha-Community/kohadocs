@@ -31,7 +31,7 @@ If you installed sample data for library, patron category, and/or item type then
 You will, however, always have to create a patron (to log into the staff interface at the end of the onboarding tool) and a circulation rule.
 
 
-Web Installer 
+Web Installer
 ====================
 
 Web installer login
@@ -47,13 +47,13 @@ This login screen is the first screen that appears when installing Koha.
 
    Web Installer login
 
-1. **Koha version name**: This will display whatever Koha version number you are installing. 
+1. **Koha version name**: This will display whatever Koha version number you are installing.
 
 2. **Username**: This is database administrator username which is *koha_kohadev* by default.
 
-3. **Password**: This is the database administrator password which is *password* by default. 
+3. **Password**: This is the database administrator password which is *password* by default.
 
-4. *Log in*: Select this button to login 
+4. *Log in*: Select this button to login
 
 
 Language picker
@@ -195,7 +195,7 @@ MARC21 setup
 
 1. **Default MARC21 Standard Authority Types:** An authority type is a template of an authority record (stores the search fields used to search an institutions catalog for an item). This option will install sample authority types.
 
-2. **Default MACR21 bibliographic framework:** Following on from the MARC21 selection in the previous screen selecting this checkbox (and the *Import* button) will actually setup the MARC21 bibliographic framework as the desired MARC flavour.
+2. **Default MARC21 bibliographic framework:** Following on from the MARC21 selection in the previous screen selecting this checkbox (and the *Import* button) will actually setup the MARC21 bibliographic framework as the desired MARC flavour.
 
 3. **Selected matching rules for MARC21 bibliographic records:** The MARC21 matching rules are used to find all the information about specific bibliographic records using the authority type search values.
 
@@ -231,7 +231,7 @@ MARC21 setup
 
 19. **Some basic currencies with USA dollar as default for ACQ module:** Install US dollar, Great British Pound, Canadian Dollar and Euro currencies. Set the US dollar as the default acquisition currency. Not installing these will mean that a currency will need to be defined before Acquisitions can be used.
 
-20. **Useful patron attribute types:** Not required to use Koha. Patrons have a barcode which identifies them. By clicking this checkbox your making sure that this patron barcode is displayed on the patron summary screen.
+20. **Useful patron attribute types:** Not required to use Koha. Patrons have a barcode which identifies them. By clicking this checkbox you are making sure that this patron barcode is displayed on the patron summary screen.
 
 21. **Sample patron types and categories:** Not required to use Koha. Selecting this will install sample patron categories into the database. This will mean the Create patron category step in the onboarding tool is skipped.
 
@@ -245,7 +245,7 @@ MARC21 setup
 
 26. **Sample news items:** Not required for Koha. Selecting this will insert sample news items that are displayed on the OPAC (Online Public Access Catalog) and staff client into the database.
 
-27. **Sample patrons:** Not required for Koha. Patrons are the people who use the Koha Library Management System, for example: library users and staff. Selecting this will insert a number of sample patrons into the database. Developers will often want this for demo or development purposes. 
+27. **Sample patrons:** Not required for Koha. Patrons are the people who use the Koha Library Management System, for example: library users and staff. Selecting this will insert a number of sample patrons into the database. Developers will often want this for demo or development purposes.
 
 28. **Sample quotes:** Not required for Koha. Quotes of the day can be displayed to library users on the OPAC (Online Public Access Catalog) interface. Selecting this will install a few library related sample quotes.
 
@@ -350,7 +350,7 @@ For example:
 Create a patron category
 _____________________________
 
-All patrons in Koha must have a patron category. The patron category is like a jelly mold; multiple individual patron accounts can share common characteristics, such as circulation rules, notice frequency, holds allowed, and much more. Koha requires at least one patron category in order to add patrons. 
+All patrons in Koha must have a patron category. The patron category is like a jelly mold; multiple individual patron accounts can share common characteristics, such as circulation rules, notice frequency, holds allowed, and much more. Koha requires at least one patron category in order to add patrons.
 
 A patron category requires:
 
@@ -365,7 +365,7 @@ A patron category requires:
 
   Create a patron category
 
-1. **Library creation message:** Indicates whether the library was created successfully
+1. **Library creation message:** Indicates whether the library was created successfully.
 
 2. **Category code:** Code consisting of up to 10 letters.
 
@@ -381,7 +381,7 @@ A patron category requires:
 
 8. **Enrolment period-Until date:** Select a date from the interactive datepicker calendar icon which appears when you click on this input box. The date you choose will be the enrolment end date for patrons created from this patron category.
 
-9. **Path to create patron category:** More patron categories can be created or altered by going to Administration -> Patron categories
+9. **Path to create patron category:** More patron categories can be created or altered by going to Administration -> Patron categories.
 
 10. Click the *Submit* button to create the patron category.
 
@@ -548,7 +548,3 @@ The staff interface should now appear
 
 .. seealso::
   For more information about how to use the staff interface, please visit `<https://koha-community.org/documentation/>`_
-
-
-
-
