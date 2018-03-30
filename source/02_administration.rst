@@ -4623,6 +4623,11 @@ Values:
 
 -  Allow
 
+Description:
+
+-  Prevents borrowers from requesting items that are on the shelf
+   at the same branch at which they wish to pick up those items.
+
 .. _opacholdsifavailableatpickupexceptions-label:
 
 OPACHoldsIfAvailableAtPickupExceptions
