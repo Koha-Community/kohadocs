@@ -1481,6 +1481,49 @@ collection, also letting them know where the item needs to be sent.
 Catalog
 ---------------------------
 
+.. _batch-item-deletion-label:
+
+Batch item deletion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  *Get there:* More > Tools > Catalog > Batch item deletion
+
+This tool will allow you to delete a batch of item records from Koha.
+
+From the tool you can choose to upload a file of barcodes or item ids,
+or you can scan items one by one into the box below the upload tool.
+
+|image298|
+
+Once you have your file uploaded or the barcodes scanned you can click
+'Continue.'
+
+You will be presented with a confirmation screen. From here you can
+uncheck the items you don't want to delete and decide if Koha should
+delete the bib record if the last item is being deleted before clicking
+'Delete selected items.' If you'd like you can delete the bibliogrphic
+record if you're deleting the last item by clicking the checkbox next to
+'Delete records if no items remain'.
+
+|image299|
+
+If your file (or list of scanned barcodes) has more than 1000 barcodes,
+Koha will be unable to present you with a list of the items. You will
+still be able to delete them, but not able to choose which items
+specifically to delete or delete the biblio records.
+
+|image300|
+
+If the items are checked out you will be presented with an error after
+clicking 'Delete selected items' and the items will not be deleted.
+
+|image301|
+
+If the items can be deleted they will be and you will be presented with
+a confirmation of your deletion.
+
+|image302|
+
 .. _batch-item-modification-label:
 
 Batch item modification
@@ -1532,49 +1575,6 @@ items.
 
 |image297|
 
-.. _batch-item-deletion-label:
-
-Batch item deletion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  *Get there:* More > Tools > Catalog > Batch item deletion
-
-This tool will allow you to delete a batch of item records from Koha.
-
-From the tool you can choose to upload a file of barcodes or item ids,
-or you can scan items one by one into the box below the upload tool.
-
-|image298|
-
-Once you have your file uploaded or the barcodes scanned you can click
-'Continue.'
-
-You will be presented with a confirmation screen. From here you can
-uncheck the items you don't want to delete and decide if Koha should
-delete the bib record if the last item is being deleted before clicking
-'Delete selected items.' If you'd like you can delete the bibliogrphic
-record if you're deleting the last item by clicking the checkbox next to
-'Delete records if no items remain'.
-
-|image299|
-
-If your file (or list of scanned barcodes) has more than 1000 barcodes,
-Koha will be unable to present you with a list of the items. You will
-still be able to delete them, but not able to choose which items
-specifically to delete or delete the biblio records.
-
-|image300|
-
-If the items are checked out you will be presented with an error after
-clicking 'Delete selected items' and the items will not be deleted.
-
-|image301|
-
-If the items can be deleted they will be and you will be presented with
-a confirmation of your deletion.
-
-|image302|
-
 .. _batch-record-deletion-label:
 
 Batch record deletion
@@ -1601,7 +1601,7 @@ records' button to finish the process.
 
 .. _batch-record-modification-label:
 
-Batch Record Modification
+Batch record modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Batch record modification
