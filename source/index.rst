@@ -28,6 +28,7 @@ Koha 18.05 Manual (en)
    16_cron_jobs
    17_webservices
    18_miscellaneous
-   19_license
+   19_faq
+   20_license
 
   
