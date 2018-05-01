@@ -9,26 +9,26 @@ Koha 18.05 Manual (en)
    :maxdepth: 2
 
 
-   00_intro
-   01_installation
-   02_administration
-   03_tools
-   04_patrons
-   05_circulation
-   06_cataloging
-   07_course_reserves
-   08_serials
-   09_acquisitions
-   10_lists
-   11_reports
-   12_opac
-   13_searching
-   14_plugins
-   15_implementation_checklist
-   16_cron_jobs
-   17_webservices
-   18_miscellaneous
-   19_faq
-   20_license
+   intro
+   installation
+   administration
+   tools
+   patrons
+   circulation
+   cataloging
+   course_reserves
+   serials
+   acquisitions
+   lists
+   reports
+   opac
+   searching
+   plugins
+   implementation_checklist
+   cron_jobs
+   webservices
+   miscellaneous
+   faq
+   license
 
   
