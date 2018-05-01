@@ -35,15 +35,10 @@ generate a report.
 Step 1: Choose the module you want to report on. This will determine
 what tables and fields are available for you to query.
 
-'Report is public' should be left to the default of 'No' in most cases.
-A report can be made public if you intend to allow access to it through
-the JSON webservice interface. This is a system that can be used by
-developers to make custom presentations of the data from the report, for
-example displaying it using a graphing API. To learn more speak to your
-local developer.
-
--  A public report is accessible via a URL that looks like this:
-   http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID
+'Report is public' should be left to the default of 'No' in most cases 
+especially if the report contains patron or other sensitive information.
+A public report can be accessed using the :ref:`JSON reports services 
+<json-reports-services-label>` by anyone and without authentication.
 
 |image881|
 
@@ -167,15 +162,10 @@ Fill in the form presented
           you code should be fewer than 10 characters and should not
           include special characters or spaces.
 
--  'Report is public' should be left to the default of 'No' in most
-   cases. A report can be made public if you intend to allow access to
-   it through the JSON webservice interface. This is a system that can
-   be used by developers to make custom presentations of the data from
-   the report, for example displaying it using a graphing API. To learn
-   more speak to your local developer.
-
-   -  A public report is accessible via a URL that looks like this:
-      http://MYOPAC/cgi-bin/koha/svc/report?id=REPORTID
+-  'Report is public' should be left to the default of 'No' in most cases 
+    especially if the report contains patron or other sensitive information.
+    A public report can be accessed using the :ref:`JSON reports services 
+    <json-reports-services-label>` by anyone and without authentication.
 
 -  'Notes' will also appear on the Saved Reports page, this can be used
    to provide more details about the report or tips on how to enter

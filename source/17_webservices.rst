@@ -96,3 +96,40 @@ Services provided in 1.4 version are:
                POST /suggestions
                PUT /suggestions/:suggestionid
                DELETE /suggestions/:suggestionid
+
+.. _json-reports-services-label:
+
+JSON reports services
+----------------------------------
+
+Koha implements a JSON reports service for every report saved
+using the :ref:`Guided Reports Wizard <guided-report-wizard-label>`
+or :ref:`Report from SQL <report-from-sql-label>` features.
+
+By default reports will be non-public and only accessible by authenticated
+users. If a report is explicitly set to *public* it will be accessible
+without authentication by anyone. This feature should only be used
+when the data can be shared safely not containing any patron information.
+
+The reports can be accessed using the following URLs:
+
+-  Public reports
+
+   -  OpacBaseURL/cgi-bin/koha/svc/report?id=REPORTID
+
+-  Non-public reports
+
+   -  StaffBaseURL/cgi-bin/koha/svc/report?id=REPORTID
+
+There are also some additional parameters available:
+
+-  Instead of accessing the report by REPORTID you can also use the 
+   report's name:
+
+   -  .../cgi-bin/koha/svc/report?name=REPORTNAME
+
+-  For easier development there is also an option to generate an
+   annotated output of the data. It will generate an array of hashes 
+   that include the field names as keys.
+
+   -  .../cgi-bin/koha/svc/report?name=REPORTNAME&annotated=1
