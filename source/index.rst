@@ -11,6 +11,7 @@ Koha 18.05 Manual (en)
 
    intro
    installation
+   systempreferences
    administration
    tools
    patrons
