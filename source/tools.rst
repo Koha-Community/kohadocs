@@ -291,9 +291,9 @@ If you have a style you'd like applied to all slips you can point the
 notices, using the :ref:`NoticeCSS` preference to define a
 stylesheet.
 
-You will also want to review the :ref:`Notices & Slips Field
-Guide <field-guide-for-notices-&-slips-label>` for more information on formatting these
-notices.
+You will also want to review the `Customising Notices and Slips
+<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+wiki page for more information on formatting these notices.
 
 .. _adding-notices-&-slips-label:
 
@@ -311,8 +311,8 @@ To add a new notice or slip
    -  **Important**
 
           Not all notices can be branch specific for more information
-          review the :ref:`Notices & Slips Field
-          Guide <field-guide-for-notices-&-slips-label>` in this manual.
+          review the `Customising Notices and Slips <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+          wiki page.
 
 -  Choose the module this notice is related to
 
@@ -370,9 +370,8 @@ To add a new notice or slip
 
       -  **Note**
 
-             Review the :ref:`Notices & Slip Field
-             Guide <field-guide-for-notices-&-slips-label>` for info on what fields can
-             be used here.
+             Review the `Customising Notices and Slips <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+             wiki page for more information.
 
       -  **Important**
 
@@ -419,8 +418,9 @@ Overdue Notice Markup
 
 When creating your overdue notices there are two tags in addition to the
 various database fields that you can use in your notices. You will also
-want to review the :ref:`Notices & Slips Field Guide <field-guide-for-notices-&-slips-label>`
-for information on formatting item information in these notices.
+want to review the `Customising Notices and Slips
+<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+wiki page for information on formatting item information in these notices.
 
     **Important**
 
@@ -456,8 +456,9 @@ Among the default notices are notices for several common actions within
 Koha. All of these notices can be customized by altering their text via
 the Notices & Slips tool and their style using the
 :ref:`NoticeCSS` preference to define a stylesheet. You will
-also want to review the :ref:`Notices & Slips Field
-Guide <field-guide-for-notices-&-slips-label>` for information on formatting item
+also want to review the `Customising Notices and Slips
+<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+wiki page for information on formatting item
 information in these notices. Here are some of what those notices do:
 
 -  ACCTDETAILS
