@@ -197,7 +197,7 @@ patron's behalf <purchase-suggestions-label>` from their record. Depending on
 your settings in the :ref:`suggestion` system
 preference, patrons may also be able to make purchase suggestions via
 the OPAC. When a suggestion is waiting for library review, it will
-appear on the Acquisitions home page under the vendor search.
+appear on the Acquisitions home page next to the vendor search.
 
 |image794|
 
@@ -494,8 +494,9 @@ Order from a staged file
 
       |image1283|
 
-   -  If no information is imported from the MARC record regarding fund
-      information the 'Default accounting details' tab can be used to
+   -  If no information is imported in the fund information from the MARC
+      with the :ref:`MarcFieldsToOrder` preference, 
+      the 'Default accounting details' tab can be used to
       apply values related to the accounting.
 
       |image1284|
