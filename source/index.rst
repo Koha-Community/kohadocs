@@ -29,6 +29,7 @@ Koha 18.05 Manual (en)
    cron_jobs
    webservices
    miscellaneous
+   extending_koha
    links
    faq
    license

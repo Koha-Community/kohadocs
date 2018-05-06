@@ -227,7 +227,7 @@ MARC21 setup
 
 17. **Coded values conforming to the Z39.71-2006 holdings statements for bibliographic items:** Not required to use Koha. A holding statement tells the user if the library has a specific item and where it is located. Selecting will install sample code values for items in the holding statements.
 
-18. **MARC code list for relators:** Not required to use Koha. A relator is a person who was invloved in the development of the item (e.g. author). Selecting this will insert sample relator records into the database.
+18. **MARC code list for relators:** Not required to use Koha. A relator is a person who was involved in the development of the item (e.g. author). Selecting this will insert sample relator records into the database.
 
 19. **Some basic currencies with USA dollar as default for ACQ module:** Install US dollar, Great British Pound, Canadian Dollar and Euro currencies. Set the US dollar as the default acquisition currency. Not installing these will mean that a currency will need to be defined before Acquisitions can be used.
 
