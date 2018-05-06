@@ -136,8 +136,8 @@ record the form will include the bib info).
 
    -  This can be done by searching for an existing record by clicking
       on the 'Search for Biblio' link below the boxes or by entering the
-      bib number for a record in the first box. Only if you search with
-      the field between the parenthesis.
+      bib number for a record in the first box. Only if you search will
+      the field between the parenthesis be filled in.
 
 -  Next you can choose whether a new item is created when receiving an
    issue (if you barcode issues you'll want to create an item at this
@@ -546,7 +546,7 @@ subscription on the Serial Collection page.
 
 |image776|
 
-Once you click the 'Renew' link or button you will be presenting with
+Once you click the 'Renew' link or button you will be presented with
 renewal options.
 
 |image777|

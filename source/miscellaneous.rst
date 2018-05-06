@@ -310,14 +310,14 @@ href="/cgi-bin/koha/catalogue/search.pl?op=do\_search{&q=200f&idx=au}">{200f
 href="/cgi-bin/koha/catalogue/search.pl?op=do\_search{&q=200g&idx=au}">{200g
 ; }</a>\|<br/>
 
-#210a\|<br/><label class="ipt">Place of pubblication : </label>\|<a
+#210a\|<br/><label class="ipt">Place of publication : </label>\|<a
 href="/cgi-bin/koha/catalogue/search.pl?op=do\_search&idx=pl&q={210a}">{210a}</a>\|<br/>
 
 #210c\|<label class="ipt">Publisher : </label>\|<a
 href="/cgi-bin/koha/catalogue/search.pl?op=do\_search&idx=pb&q={210c}">{210c
 ; }</a>\|<br/>
 
-#210d\|<label class="ipt">Date of pubblication : </label>\|{
+#210d\|<label class="ipt">Date of publication : </label>\|{
 210d}\|<br/>
 
 #215\|<label class="ipt">Description : </label>\|{215a}{ : 215c}{ ;
@@ -1862,7 +1862,7 @@ e.g.
 
 **Account**
 
-The account(s) you define in the SIPconfig.xml file are simply account(s) permitted to use the SIP2 service i.e. your defining who can send and receive SIP2 commands.
+The account(s) you define in the SIPconfig.xml file are simply account(s) permitted to use the SIP2 service i.e. you're defining who can send and receive SIP2 commands.
 
 	.. warning:: Account information that you write here must also exist in the Koha database i.e. you need to create a patron in the Koha staff interface with the same username, password (making sure to assign them circulate permissions) as the user account you write into the SIPconfig.xml file.
 
