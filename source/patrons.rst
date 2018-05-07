@@ -438,6 +438,32 @@ If you would like to see the entire patron record you can click the
 'Patron details' links to the right of the buttons. This will open in a
 new tab.
 
+Merging Patron Records
+-----------------------------------
+
+If you accidentally end up with one patron with two cards it is possible
+to merge their records together so that you don't lose their loan history
+or holds.
+
+-  In the patron list, check the boxes next to the records you want to
+   merge and click on the 'Merge selected patrons' button.
+
+|image1326|
+
+    **Note**
+
+    It is possible to merge more than two records at a time.
+
+-  Select the patron record you want to keep and click on the 'Merge
+   patrons' button.
+
+|image1327|
+
+The checkouts and statistics will be transferred to the right record and
+the other one will be deleted.
+
+|image1328|
+
 .. _patron-permissions-label:
 
 Patron Permissions

@@ -1323,3 +1323,6 @@
 .. |image1323| image:: images/admin/basicparams/addsubgroup.png
 .. |image1324| image:: images/admin/basicparams/deletegroup.png
 .. |image1325| image:: images/admin/basicparams/deletegroupconfirm.png
+.. |image1326| image:: images/patrons/mergepatrons1.png
+.. |image1327| image:: images/patrons/mergepatrons2.png
+.. |image1328| image:: images/patrons/mergepatrons3.png
