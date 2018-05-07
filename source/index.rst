@@ -30,6 +30,7 @@ Koha 18.05 Manual (en)
    webservices
    miscellaneous
    extending_koha
+   links
    faq
    license
 
