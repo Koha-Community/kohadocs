@@ -28,8 +28,10 @@ Koha 18.05 Manual (en)
    implementation_checklist
    cron_jobs
    webservices
+   apis_protocols
    miscellaneous
    extending_koha
+   third_party_software
    links
    faq
    license
