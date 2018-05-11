@@ -1623,6 +1623,19 @@ Values:
 
    |image18|
 
+.. _marcfielddocurl-label:
+
+MARCFieldDocURL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: Use \_\_\_ as the URL for MARC field documentation. Possible substitutions are {MARC} (marc flavour, eg. "MARC21" or "UNIMARC"), {FIELD} (field number, eg. "000" or "048"), {LANG} (user language, eg. "en" or "fi-FI"). If left empty, the format documentation on http://loc.gov (MARC21) or http://archive.ifla.org (UNIMARC) is used. For example http://fielddoc.example.com/?marc={MARC}&field={FIELD}&language={LANG}
+
+Description:
+
+-  This preference lets you choose the source of the MARC documentation available through the "?" next to MARC fields.
+
 .. _mergereportfields-label:
 
 MergeReportFields
@@ -4940,6 +4953,28 @@ Description:
    application <offline-circ-tool-for-windows-label>`, any of these three options can
    be used for offline circulation without effecting the other.
 
+.. _autoswitchpatron-label:
+
+AutoSwitchPatron
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't enable
+
+Asks: \_\_\_ the automatic redirection to another patron when a patron
+barcode is scanned instead of a book. This should not be enabled if you
+have overlapping patron and book barcodes.
+
+Values:
+
+-  Don't enable
+
+-  Enable
+
+Description:
+
+-  Enabling this system preference allows staff to scan a patron barcode instead
+   of an item barcode in the checkout box to switch patron files.
+
 .. _circautocompl-label:
 
 CircAutocompl
@@ -8149,7 +8184,7 @@ Asks: Show \_\_\_ as the name of the library on the OPAC.
 
     **Note**
 
-    Edit ^:ref:`opacheader`^ if you'd like to add a library
+    Edit :ref:`opacheader` if you'd like to add a library
     name above your search box on the OPAC
 
 |image64|
@@ -11788,6 +11823,22 @@ Searching
 
 Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _browseresultselection-label:
+
+BrowseResultSelection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Disable
+
+Asks: \_\_\_ browsing search results fromt the bibliographic record detail page in staff client.
+
+Values:
+
+-  Disable
+
+-  Enable
+
 
 .. _enablesearchhistory-label:
 
