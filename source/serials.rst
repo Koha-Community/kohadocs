@@ -301,7 +301,7 @@ pattern information.
    |image1274|
 
 Click 'Save Subscription' to save the information you have entered.
-`Find sample serial examples in the appendix <#sampleserialsapp>`__.
+`Find sample serial examples in the Serial Pattern Library on the wiki <https://wiki.koha-community.org/wiki/Serial_Pattern_Library>`__.
 
 .. _receive-issues-label:
 
