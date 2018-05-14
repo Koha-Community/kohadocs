@@ -89,6 +89,9 @@ item's barcode into.
    just a barcode (this will make it possible to check out using title
    and/or call number).
 
+-  If you have :ref:`AutoSwitchPatron <autoswitchpatron-label>` set to 'Enable',
+   scanning a patron barcode here will take you to that patron's file.
+
 To see more checkout options click the 'Checkout settings' link to
 expand the checkout area.
 

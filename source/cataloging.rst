@@ -111,6 +111,9 @@ cataloging
 -  To get help from the Library of Congress on a Marc tag click the
    question mark (?) to the right of each field number
 
+   -  It is possible to change the source of the MARC documentation using the
+      :ref:`MARCFieldDocURL <marcfielddocurl-label>` system preference
+
    -  If you feel that this clutters the screen you can hide the
       question marks by unchecking the box next to the 'Show MARC tag
       documentation links' note found under 'Settings'
