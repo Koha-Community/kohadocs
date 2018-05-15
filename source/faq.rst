@@ -891,6 +891,30 @@ The moral of the story is that single word searches, particularly on
 common words, will always struggle a bit; it can't evaluate relevance
 well, because you've not given it enough input.
 
+.. _reset-the-zebra-index-label:
+
+Reset the Zebra index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Run the following commands to reset the authorities and biblios Zebra
+indices.
+
+::
+
+    $ zebraidx -c /etc/koha/zebradb/zebra-authorities-dom.cfg -g iso2709 -d authorities init
+    $ zebraidx -c /etc/koha/zebradb/zebra-biblios.cfg -g iso2709 -d biblios init
+
+If you are running a package install then you'll want to run the
+following commands to reset the authorities and biblios Zebra indices
+instead:
+
+::
+
+    $ sudo zebraidx -c /etc/koha/sites/YOURLIBRARY/zebra-authorities-dom.cfg  -g iso2709 -d authorities init
+    $ sudo zebraidx -c /etc/koha/sites/YOURLIBRARY/zebra-biblios.cfg  -g iso2709 -d biblios init
+
+Replacing YOURLIBRARY with your Koha installation name.
+
 .. _enhanced-content-label:
 
 Enhanced Content
