@@ -6626,6 +6626,23 @@ Values:
 
 -  Add
 
+.. _novelistselectstaffprofile-label:
+
+NovelistSelectStaffProfile
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Access Novelist Select using user profile \_\_\_ on the staff client
+
+Description:
+
+-  Without this value being set, Novelist features will be disabled on the staff
+   client until a correct profile is obtained from Novelist and entered into
+   the field.
+   
+      **Note**
+      
+      This value must be set independently of the OPAC profile for Novelist
+
 .. _novelistselectstaffview-label:
 
 NovelistSelectStaffView
