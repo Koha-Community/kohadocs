@@ -467,6 +467,12 @@ information in these notices. Here are some of what those notices do:
       :ref:`AutoEmailOPACUser <autoemailopacuser-label>` preference is set to
       'Send'
 
+   -  *Important:* The notice will only be sent correctly if a username,
+      password and email address is added to the patron record before
+      saving it for the first time.
+      The notice can't be resend or triggered again after the patron account
+      has been created.
+
 -  ACQCLAIM (Acquisition Claim)
 
    -  Used in the claim acquisition module
@@ -712,7 +718,8 @@ those slips are used for:
 
    -  Used to print a holds slip
 
-   -  The holds slip is generated when a hold is confirmed
+   -  The holds slip is generated when a hold is confirmed and set to 
+      waiting.
 
 -  TRANSFERSLIP
 
