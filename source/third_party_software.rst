@@ -417,6 +417,7 @@ you'd like. Most libraries will enter a call number in subfield o and a
 barcode in subfield p as well. Review the :ref:`Item/Holdings Cataloging
 Guide <item/holdings-record-cataloging-guide-label>` for a full list of subfields and values.
 
+.. _talking-tech-label:
 
 Talking Tech
 -------------------------------------------------
