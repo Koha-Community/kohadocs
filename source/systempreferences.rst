@@ -11726,7 +11726,7 @@ Values:
 Description:
 
 -  To learn more about setting up this third party product view the
-   `Talking Tech Appendix <#talkingtechappendix>`__.
+   :ref:`Talking Tech <talking-tech-label>` chapter.
 
     **Important**
 
@@ -13705,8 +13705,8 @@ possible to parameter other formats than marcxml or Dublin Core.
 OAI-PMH:ConfFile specify a YAML configuration file which list available
 metadata formats and XSL file used to create them from marcxml records.
 
-For more information, see the :ref:`sample conf file <sample-oai-conf-file-label>` in
-the appendix.
+For more information, see the :ref:`sample conf file <sample-oai-conf-file-label>`
+section.
 
 .. _oai-pmh:deletedrecord-label:
 

@@ -464,7 +464,7 @@ Talking Tech
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To learn more about setting up this third party product view the
-`Talking Tech Appendix <#talkingtechappendix>`__.
+:ref:`Talking Tech <talking-tech-label>` chapter.
 
 .. _sending-notices-file-label:
 
