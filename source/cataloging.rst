@@ -1314,6 +1314,101 @@ Table: Koha Embedded Holdings Data
 
 \*\* - required by Koha
 
+.. _material-type-cataloging-guide-label:
+
+Koha XSLT material type icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you have any of the XSLT system preferences
+(:ref:`OPACXSLTDetailsDisplay`,
+:ref:`OPACXSLTResultsDisplay`,
+:ref:`XSLTDetailsDisplay`, and/or
+:ref:`XSLTResultsDisplay`) along with the
+:ref:`DisplayOPACiconsXSLT` and
+:ref:`DisplayIconsXSLT` preferences turned on you will
+see material type icons on the related screen.
+
+    **Important**
+
+    These images are coming from values found in your leader, if your
+    leader is not cataloged properly it might be best to turn off the
+    :ref:`DisplayOPACiconsXSLT` preference (which
+    can be done while leaving the other XSLT preferences turned on).
+
+|image1081|
+
+-  Book [BK]
+
+   -  leader6 = a (and one of the leader7 values below)
+
+      -  leader7 = a
+
+      -  leader7 = c
+
+      -  leader7 = d
+
+      -  leader7 = m
+
+   -  leader6 = t
+
+|image1082|
+
+-  Computer File [CF]
+
+   -  leader6 = m
+
+|image1083|
+
+-  Continuing Resource [CR]
+
+   -  leader7 = b
+
+   -  leader7 = i
+
+   -  leader7 = s
+
+|image1084|
+
+-  Map [MP]
+
+   -  leader6 = e
+
+   -  leader6 = f
+
+|image1085|
+
+-  Mixed [MX]
+
+   -  leader6 = p
+
+|image1086|
+
+-  Sound [MU]
+
+   -  leader6 = c
+
+   -  leader6 = d
+
+   -  leader6 = i
+
+   -  leader6 = j
+
+|image1087|
+
+-  Visual Material [VM]
+
+   -  leader6 = g
+
+   -  leader6 = k
+
+   -  leader6 = r
+
+|image1088|
+
+-  Kit
+
+   -  leader6 = o
+
 .. _handling-on-order-items-and-holds-label:
 
 Handling On Order Items and Holds
