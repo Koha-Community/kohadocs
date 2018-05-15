@@ -473,11 +473,37 @@ information in these notices. Here are some of what those notices do:
       The notice can't be resend or triggered again after the patron account
       has been created.
 
--  ACQCLAIM (Acquisition Claim)
+-  ACQCLAIM (Acquisition claim)
 
-   -  Used in the claim acquisition module
+   -  Used for claiming orders in the aquisitions module
 
-   -  *Get there:* More > Acquisitions > Late issues
+   -  ACQCLAIM is the code of the sample notice, but it's possible to define
+      several notices choosing any code. Only the module 'Claim
+      aquisition' will be taken into account. All notices with this module
+      will appear in the pull down on the late orders page.
+
+   -  *Get there:* More > Acquisitions > Late orders
+
+   -  This notice is sent if several criteria are met:
+
+      #. The staff patron triggering the email has a valid email address.
+
+      #. The vendor contact marked as 'Contact about late orders?' has 
+         a valid email address.
+
+-  ACQORDER (Acquisition order)
+
+   -  Used in the acquisitions module to send order information to the vendor
+
+   -  The notice is triggered manually from the basket summary page using
+      the 'Email order' button in the toolbar.
+
+   -  This notice is sent if several criteria are met:
+
+      #. The staff patron triggering the email has a valid email address.
+
+      #. The vendor contact marked as 'Primary acquisitions contact' and
+         'Contact when ordering' has a valid email address.
 
 -  CHECKIN
 
