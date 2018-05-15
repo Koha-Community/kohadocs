@@ -1163,6 +1163,32 @@ Description:
    to broader and/or narrower see also references this preference will
    turn on a display of those authorities at the top of the record.
 
+.. _authoritycontrolledindicators-label:
+
+AuthorityControlledIndicators
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Use the following text to edit how authority records control indicators
+of attached biblio fields (and possibly subfield $2). Lines starting with a
+comment symbol (#) are skipped. Each line should be of the form: (marc21|unimarc),
+tag, ind1:(auth1|auth2|some_value), ind2:(auth1|auth2|thesaurus|some_value).
+Here auth1 and auth2 refer to the indicators of the authority record, tag is a
+biblio field number or an asterisk (*), and some_value is a fixed value
+(one character). The MARC21 option thesaurus refers to indicators controlled by
+authority field 008/11 and 040$f.
+
+Description:
+
+-  Used when merging authorities.
+
+-  Controls how the indicators of linked authority records affect the
+   corresponding biblio indicators. Currently, the default valueis fine-tuned
+   for MARC21 and copies the authority indicators for UNIMARC.
+
+-  For example,a MARC21 field 100 in a biblio record should pick its first
+   indicator from the linked authority record. The second indicator is not
+   controlled by the authority. This report supports such MARC conventions.
+
 .. _authoritymergelimit-label:
 
 AuthorityMergeLimit
