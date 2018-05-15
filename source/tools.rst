@@ -505,10 +505,15 @@ information in these notices. Here are some of what those notices do:
       #. The vendor contact marked as 'Primary acquisitions contact' and
          'Contact when ordering' has a valid email address.
 
+-  ACQ_NOTIF_ON_REVEIV
+
+   -  Used in the acquisition module to inform patrons on receiving orders
+      they have been added to. 
+
 -  AR\_CANCELLED
 
    -  This notice is sent to the patron when an article request is cancelled
-       by staff.
+      by staff.
 
 -  AR\_COMPLETED
 
