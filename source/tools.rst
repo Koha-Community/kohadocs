@@ -701,6 +701,15 @@ the Notices & Slips tool and their style using the
 :ref:`SlipCSS` preference to define a stylesheet. Here is what
 those slips are used for:
 
+-  AR\_SLIP
+
+   -  Used to print a slip for an article request
+
+   -  The slip or receipt can be printed manually when managing article
+      requests from the staff interface.
+
+   -  *Get there:* Circulation > Article requests > Actions > Print slip
+
 -  ISSUEQSLIP
 
    -  Used to print the quick slip in circulation
@@ -720,6 +729,13 @@ those slips are used for:
 
    -  The holds slip is generated when a hold is confirmed and set to 
       waiting.
+
+-  OVERDUE\_SLIP
+
+   -  Used to print an overdues slip
+
+   -  The overdues slip can be generated manually using the 'print' menu
+      in the patron account in staff. It will show all items overdue.
 
 -  TRANSFERSLIP
 
