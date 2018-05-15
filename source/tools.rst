@@ -645,17 +645,24 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ Staff Client > Patron Record >
             :ref:`Notices`
 
--  RLIST (Routing List)
+-  SERIAL_ALERT (New serial issue)
 
-   -  Used in the serials module to notify patrons/staff of new issues
-      of a serial
+   -  Notice used in the serials module to notify patrons/staff
+      of new issues of a serial. SERIAL_ALERT (RLIST in older verisons)
+      is provided as a sample notice, but the notice code can be chosen
+      freely as only the module is taken into account. Multiple notices
+      can also be managed.
 
       -  *Get there:* More > Serials > :ref:`New
          Subscription <add-a-subscription-label>`
 
-   -  You have the option to select the 'Routing List' notice when
-      creating a new subscription (Choose from the 'Patron notification'
-      drop down).
+   -  You have the option to select the notice used to inform the patron
+      about a received serial issue for a subscription. Choose from the
+      'Patron notification' drop down.
+
+   -  If a notice has been selected for a subscription, patrons can
+      subscribe to the email notification from the subscription tab
+      in the detail view in the OPAC.
 
    -  **Note**
 
