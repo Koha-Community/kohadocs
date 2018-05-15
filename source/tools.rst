@@ -505,6 +505,26 @@ information in these notices. Here are some of what those notices do:
       #. The vendor contact marked as 'Primary acquisitions contact' and
          'Contact when ordering' has a valid email address.
 
+-  AR\_CANCELLED
+
+   -  This notice is sent to the patron when an article request is cancelled
+       by staff.
+
+-  AR\_COMPLETED
+
+   -  This notice is sent to the patron when an article request is marked
+      as completed by staff.
+
+-  AR\_PENDING
+
+   -  This notice is sent to the patron when an article request has been
+      made in order to confirm the request.
+
+-  AR\_PROCESSING
+
+   -  This notice is sent to the patron when an article request is marked
+      as being processed by staff.
+
 -  CHECKIN
 
    -  This notice is sent as the 'Check in' notice for all items that
