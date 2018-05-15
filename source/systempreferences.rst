@@ -1612,8 +1612,8 @@ Description:
 ISBD
 ^^^^^^^^^^^^^^^^^^^^
 
-Default: :ref:`MARC21 Default Appendix <marc-default-label>` or :ref:`UNIMARC Default
-Appendix <unimarc-default-label>`
+Default: See :ref:`ISBD view configuration
+<https://wiki.koha-community.org/wiki/ISBD_view_configuration>` on the wiki.
 
 Asks: Use the following as the ISBD template:
 
@@ -9560,7 +9560,8 @@ Values:
 OPACISBD
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Default: :ref:`MARC21 Default Appendix <marc-label>`
+Default: See :ref:`ISBD view configuration 
+<https://wiki.koha-community.org/wiki/ISBD_view_configuration>` on the wiki.
 
 Asks: Use the following as the OPAC ISBD template:
 

@@ -29,7 +29,6 @@ Koha 18.05 Manual (en)
    cron_jobs
    webservices
    apis_protocols
-   miscellaneous
    extending_koha
    third_party_software
    hardware
