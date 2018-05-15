@@ -32,6 +32,7 @@ Koha 18.05 Manual (en)
    miscellaneous
    extending_koha
    third_party_software
+   hardware
    links
    faq
    license
