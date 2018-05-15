@@ -435,6 +435,13 @@ adding items to the order.
    -  You will be presented with an empty form to fill in all of the
       necessary details about the item you are ordering.
 
+      **Note**
+      
+      If the default form does not have catalog details fields necessary to
+      place an order, enable the :ref:`UseACQFrameworkForBiblioRecords` preference
+      which will allow the ACQ MARC framework to customize the display of fields
+      when ordering.
+
 -  If you want to search other libraries for an item to purchase, you
    can use the 'From an external source' option that will allow you to
    order from a MARC record found via a Z39.50 search.
