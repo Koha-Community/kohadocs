@@ -191,8 +191,8 @@ will take you directly to the authority record.
 
 If you have your :ref:`DisplayOPACiconsXSLT`
 preference set to 'show' you will see a material type that is determined
-by values in your fixed fields (learn more in the `XSLT Item
-Types <#XSLTiTypes>`__ Appendix).
+by values in your fixed fields (learn more in the :ref:`XSLT material 
+type icons <_material-type-cataloging-guide-label>` catalouging guide.
 
 |image949|
 

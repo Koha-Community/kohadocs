@@ -8130,8 +8130,8 @@ Values:
 
     **Note**
 
-    See the `XSLT Icon Guide <#XSLTiTypes>`__ for more information on
-    these icons.
+    See the :ref:`XSLT material type icons <_material-type-cataloging-guide-label>` 
+    for more information on these icons.
 
 .. _googleindictransliteration-label:
 
@@ -12908,8 +12908,8 @@ Values:
 
     **Note**
 
-    See the `XSLT Icon Guide <#XSLTiTypes>`__ for more information on
-    these icons.
+    See the :ref:`XSLT material type icons <_material-type-cataloging-guide-label>` 
+    for more information on these icons.
 
 .. _intranet\_includes-label:
 
