@@ -461,6 +461,12 @@ also want to review the `Customising Notices and Slips
 wiki page for information on formatting item
 information in these notices. Here are some of what those notices do:
 
+-  ACCEPTED
+
+   -  This notice is sent when a patron's suggestion is accepted.
+
+   -  *Note:* If you don't want to send this notice, just delete it.
+
 -  ACCTDETAILS
 
    -  Sent to patrons when their account is set up if the
@@ -504,6 +510,38 @@ information in these notices. Here are some of what those notices do:
 
       #. The vendor contact marked as 'Primary acquisitions contact' and
          'Contact when ordering' has a valid email address.
+
+-  ACQ_NOTIF_ON_REVEIV
+
+   -  Used in the acquisition module to inform patrons on receiving orders
+      they have been added to. 
+
+-  AR\_CANCELLED
+
+   -  This notice is sent to the patron when an article request is cancelled
+      by staff.
+
+-  AR\_COMPLETED
+
+   -  This notice is sent to the patron when an article request is marked
+      as completed by staff.
+
+-  AR\_PENDING
+
+   -  This notice is sent to the patron when an article request has been
+      made in order to confirm the request.
+
+-  AR\_PROCESSING
+
+   -  This notice is sent to the patron when an article request is marked
+      as being processed by staff.
+
+-  AVAILABLE
+
+   -  This notice is sent to the patron who made a suggestion, when the
+      order created from the suggestion is received.
+
+   -  *Note:* If you don't want to send this notice, just delete it.
 
 -  CHECKIN
 
@@ -621,6 +659,13 @@ information in these notices. Here are some of what those notices do:
    -  Requires that you set :ref:`Overdue Notice/Status
       Triggers <overdue-notice/status-triggers-label>`
 
+-  ORDERED
+
+   -  This notice is sent to the patron who made a suggestion, when the
+      'from a suggestion' option is used to create an order from it.
+
+   -  Note: If you don't want to send this notice, just delete it.
+
 -  PREDUE
 
    -  This notice is sent as the 'Advanced notice' for an item is due
@@ -655,6 +700,12 @@ information in these notices. Here are some of what those notices do:
 
          -  *Get there:*\ Staff Client > Patron Record >
             :ref:`Notices`
+
+-  REJECTED
+
+   -  This notice is sent when a patron's suggestion is rejected.
+
+   -  Note: If you don't want to send this notice, just delete it.
 
 -  RENEWAL
 
