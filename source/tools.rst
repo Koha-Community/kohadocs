@@ -467,11 +467,43 @@ information in these notices. Here are some of what those notices do:
       :ref:`AutoEmailOPACUser <autoemailopacuser-label>` preference is set to
       'Send'
 
--  ACQCLAIM (Acquisition Claim)
+   -  *Important:* The notice will only be sent correctly if a username,
+      password and email address is added to the patron record before
+      saving it for the first time.
+      The notice can't be resend or triggered again after the patron account
+      has been created.
 
-   -  Used in the claim acquisition module
+-  ACQCLAIM (Acquisition claim)
 
-   -  *Get there:* More > Acquisitions > Late issues
+   -  Used for claiming orders in the aquisitions module
+
+   -  ACQCLAIM is the code of the sample notice, but it's possible to define
+      several notices choosing any code. Only the module 'Claim
+      aquisition' will be taken into account. All notices with this module
+      will appear in the pull down on the late orders page.
+
+   -  *Get there:* More > Acquisitions > Late orders
+
+   -  This notice is sent if several criteria are met:
+
+      #. The staff patron triggering the email has a valid email address.
+
+      #. The vendor contact marked as 'Contact about late orders?' has 
+         a valid email address.
+
+-  ACQORDER (Acquisition order)
+
+   -  Used in the acquisitions module to send order information to the vendor
+
+   -  The notice is triggered manually from the basket summary page using
+      the 'Email order' button in the toolbar.
+
+   -  This notice is sent if several criteria are met:
+
+      #. The staff patron triggering the email has a valid email address.
+
+      #. The vendor contact marked as 'Primary acquisitions contact' and
+         'Contact when ordering' has a valid email address.
 
 -  CHECKIN
 
@@ -702,6 +734,15 @@ the Notices & Slips tool and their style using the
 :ref:`SlipCSS` preference to define a stylesheet. Here is what
 those slips are used for:
 
+-  AR\_SLIP
+
+   -  Used to print a slip for an article request
+
+   -  The slip or receipt can be printed manually when managing article
+      requests from the staff interface.
+
+   -  *Get there:* Circulation > Article requests > Actions > Print slip
+
 -  ISSUEQSLIP
 
    -  Used to print the quick slip in circulation
@@ -719,7 +760,15 @@ those slips are used for:
 
    -  Used to print a holds slip
 
-   -  The holds slip is generated when a hold is confirmed
+   -  The holds slip is generated when a hold is confirmed and set to 
+      waiting.
+
+-  OVERDUE\_SLIP
+
+   -  Used to print an overdues slip
+
+   -  The overdues slip can be generated manually using the 'print' menu
+      in the patron account in staff. It will show all items overdue.
 
 -  TRANSFERSLIP
 
