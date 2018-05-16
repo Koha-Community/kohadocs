@@ -1,0 +1,4405 @@
+# Compendium of es.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:49-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/cataloging.rst:4
+msgid "Cataloging"
+msgstr "Catalogación"
+
+#: ../../source/cataloging.rst:6
+#, fuzzy
+msgid ""
+"Before you start cataloging in Koha you're going to want to do some basic "
+"setup. Refer to the :ref:`Implementation Checklist` for a full list of these "
+"things. Most importantly you're going to want to make sure that your :ref:"
+"`MARC Bibliographic Frameworks` are all defined the way you want. Once in "
+"the cataloging module you will not be able to add or remove fields and "
+"subfields so your frameworks must be ready before you start cataloging."
+msgstr ""
+"Antes de comenzar a catalogar con Koha deberá realizar una configuración "
+"básica. Refiérase a la lista de control de implementación para un listado "
+"completo. Más importante deberá asegurarse que tiene definidas sus hojas de "
+"trabajo en la forma que desea. Una vez en el módulo de catalogación no podrá "
+"agregar o remover campos y subcampos de modo que sus hojas de trabajo "
+"deberán estar listas antes de comenzar a catalogar."
+
+#: ../../source/cataloging.rst:14
+msgid ""
+"You can also use OCLC Connexion to send records directly in to Koha. For "
+"more information on that please review the :ref:`OCLC Connexion Gateway` "
+"setup Appendix."
+msgstr ""
+"También puede utilizar la Conexión OCLC para enviar registros directamente a "
+"Koha. Para obtener más información al respecto puede consultar el anexo de "
+"configuración :ref:`OCLC Connexion Gateway`."
+
+#: ../../source/cataloging.rst:18
+msgid "*Get there:* More > Cataloging"
+msgstr "*Ir a:* Más > Catalogación"
+
+#: ../../source/cataloging.rst:23
+msgid "Bibliographic Records"
+msgstr "Registros bibliográficos"
+
+#: ../../source/cataloging.rst:25
+#, fuzzy
+msgid ""
+"In Koha the bibliographic record contains the main information related to "
+"the material. This includes things like the title, author, ISBN, etc. This "
+"information is stored in Koha in Marc (different flavors of Marc are "
+"supported in Koha). Once this information is saved, :ref:`Item Records` can "
+"be attached."
+msgstr ""
+"En Koha los registros bibliográficos contiene la información principal "
+"relacionada con el material. Esto incluye cosas como el título, autor, ISBN, "
+"etc. Esta información es almacenada en Koha en Marc (Koha soporta diferentes "
+"sabores de Marc). Una vez esta información es guardada, se pueden adjuntar "
+"ejemplares o existencias."
+
+#: ../../source/cataloging.rst:34
+msgid "Adding Records"
+msgstr "Agregar registros"
+
+#: ../../source/cataloging.rst:36
+msgid ""
+"Records can be added to Koha via original or copy cataloging. You can also "
+"choose to use the basic or advanced cataloging interface for all of your "
+"work."
+msgstr ""
+"Los registros se pueden agregar catalogando el material original o copian la "
+"catalogación de un servidor remoto. Si usted desea catalogar directamente "
+"debe usar una hoja de trabajo en blanco"
+
+#: ../../source/cataloging.rst:40
+msgid ""
+"If you would like to catalog a record using a blank template in the basic "
+"editor"
+msgstr ""
+"Si usted desea catalogar el material basándose en un registro existente en "
+"otra biblioteca"
+
+#: ../../source/cataloging.rst:43
+msgid "Click 'New Record'"
+msgstr "Haga clic en 'Nuevo registro'"
+
+#: ../../source/cataloging.rst:45
+#, fuzzy
+msgid "|image627|"
+msgstr "|image62|"
+
+#: ../../source/cataloging.rst:47
+msgid "Choose the framework you would like to base your record off of"
+msgstr "Seleccione la hoja de trabajo en que desea basar su registro"
+
+#: ../../source/cataloging.rst:49
+msgid ""
+"If you would like to catalog a record using a blank template in the advanced "
+"editor"
+msgstr ""
+"Si usted desea catalogar el material basándose en un registro existente en "
+"otra biblioteca"
+
+#: ../../source/cataloging.rst:52
+msgid "Enable the :ref:`EnableAdvancedCatalogingEditor` preference"
+msgstr "Habilite la preferencia :ref:`EnableAdvancedCatalogingEditor`"
+
+#: ../../source/cataloging.rst:56
+#, fuzzy
+msgid "Click the 'Advanced editor' button"
+msgstr "Haga clic en el botón avanzado (o propiedades)"
+
+#: ../../source/cataloging.rst:58
+#, fuzzy
+msgid "|image1262|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:60
+msgid ""
+"If you want to catalog a record based on an existing record at another "
+"library in the editor you last used (basic or advanced)"
+msgstr ""
+"Si usted desea catalogar el material basándose en un registro existente en "
+"otra biblioteca"
+
+#: ../../source/cataloging.rst:63
+msgid "Click 'New from Z39.50/SRU'"
+msgstr "Nuevo desde Z39.50/SRU"
+
+#: ../../source/cataloging.rst:65
+#, fuzzy
+msgid "|image628|"
+msgstr "|image62|"
+
+#: ../../source/cataloging.rst:67
+msgid "Search for the item you would like to catalog"
+msgstr "Busque el ejemplar que desea catalogar"
+
+#: ../../source/cataloging.rst:69 ../../source/cataloging.rst:222
+#: ../../source/cataloging.rst:228 ../../source/cataloging.rst:399
+#: ../../source/cataloging.rst:637 ../../source/cataloging.rst:724
+#: ../../source/cataloging.rst:1516
+msgid "**Note**"
+msgstr "**Nota**"
+
+#: ../../source/cataloging.rst:71
+msgid ""
+"If no results are found, try searching for fewer fields, not all Z39.50 "
+"targets can search all of the fields above."
+msgstr ""
+"Si no se encuentran resultados, trate de buscar menos campos, no todos los "
+"servidores Z39.50 pueden buscar en todos los campos del formulario."
+
+#: ../../source/cataloging.rst:74
+msgid ""
+"Search targets can be altered by using the :ref:`Z39.50 Admin <z39.50/sru-"
+"servers-label>` area."
+msgstr ""
+"Los servidores de búsqueda se pueden modificar utilizando el área :ref:"
+"`Z39.50 Admin <z39.50/sru-servers-label>`."
+
+#: ../../source/cataloging.rst:77
+msgid ""
+"From the results you can view the MARC or Card view for the records or "
+"choose to Import them into Koha"
+msgstr ""
+"En la pantalla de resultados se puede optar por la vista MARC o de tarjeta "
+"de los registros, o por importarlos a Koha"
+
+#: ../../source/cataloging.rst:80
+#, fuzzy
+msgid "|image629|"
+msgstr "|image62|"
+
+#: ../../source/cataloging.rst:82
+msgid ""
+"In addition to the Import link to the right of each title, you can click on "
+"the title you're interested in and a menu will pop up with links to preview "
+"the record and import it"
+msgstr ""
+"Además del enlace Importar a la derecha de cada título, puede hacer clic en "
+"el título que le interese y aparecerá un menú con enlaces para vista previa "
+"del registro e importarlo"
+
+#: ../../source/cataloging.rst:86
+#, fuzzy
+msgid "|image630|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:88
+msgid ""
+"If you don't find the title you need in your Z39.50 search results you can "
+"click the 'Try Another Search' button at the bottom left of your results"
+msgstr ""
+"Si no encuentra el título que necesita en sus resultados de búsqueda Z39.50 "
+"puede hacer clic en el botón 'Intentar otra búsqueda' abajo a la izquierda "
+"de sus resultados"
+
+#: ../../source/cataloging.rst:92
+#, fuzzy
+msgid "|image631|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:97
+msgid "Basic Editor Cataloging"
+msgstr "Catalogación por edición básica"
+
+#: ../../source/cataloging.rst:99
+msgid ""
+"In the basic editor once you've opened a blank framework or imported a "
+"record via Z39.50 you will be presented with the form to continue cataloging"
+msgstr ""
+"Una vez que haya abierto una hoja de trabajo en blanco o importado un "
+"registro a través de Z39.50 se le presentará un formulario para continuar la "
+"catalogación"
+
+#: ../../source/cataloging.rst:103
+#, fuzzy
+msgid "|image632|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:105
+msgid ""
+"If you would rather not see the MARC tag numbers you can change the value in "
+"your :ref:`hide\\_marc <hide\\_marc-label>` system preference or each user "
+"can check the box next to 'Show tags' found under 'Settings'."
+msgstr ""
+"Si prefiere no ver los números de etiqueta MARC, puede cambiar el valor de "
+"su preferencia del sistema :ref:`hide\\_marc <hide\\_marc-label>` o cada "
+"usuario puede marcar la casilla junto a 'Mostrar etiquetas' en la parte "
+"superior del editor."
+
+#: ../../source/cataloging.rst:109
+msgid "To expand a collapsed tag click on the tag description"
+msgstr ""
+"Para expandir una etiqueta colapsada haga clic en la descripción de la misma"
+
+#: ../../source/cataloging.rst:111
+msgid ""
+"To get help from the Library of Congress on a Marc tag click the question "
+"mark (?) to the right of each field number"
+msgstr ""
+"Para obtener ayuda de la Library of Congress de una etiqueta MARC haga clic "
+"en el signo de interrogación (?) a la derecha de cada número de campo"
+
+#: ../../source/cataloging.rst:114
+msgid ""
+"It is possible to change the source of the MARC documentation using the :ref:"
+"`MARCFieldDocURL <marcfielddocurl-label>` system preference"
+msgstr ""
+
+#: ../../source/cataloging.rst:117
+msgid ""
+"If you feel that this clutters the screen you can hide the question marks by "
+"unchecking the box next to the 'Show MARC tag documentation links' note "
+"found under 'Settings'"
+msgstr ""
+"Si usted siente que esto estorba su pantalla, puede ocultar los signos de "
+"interrogación desmarcando la casilla que aparece junto a la nota de los "
+"'Mostrar vínculos de documentación de etiquetas MARC' en la parte superior "
+"derecha del editor"
+
+#: ../../source/cataloging.rst:121
+msgid ""
+"Sometimes fields may not be editable due to the value in your :ref:"
+"`BiblioAddsAuthorities` system preference. If you have this preference set "
+"to not allow catalogers to type in fields controlled by authorities you may "
+"see a lock symbol to the left of the field."
+msgstr ""
+"A veces, los campos no pueden ser editables por el valor de su preferencia "
+"del sistema :ref:`BiblioAddsAuthorities`. Si usted tiene esta preferencia "
+"configurada para no permitir que los catalogadores escribir en los campos "
+"controlados por las autoridades es posible que aparezca un candado a la "
+"izquierda del campo."
+
+#: ../../source/cataloging.rst:127
+#, fuzzy
+msgid "|image633|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:129
+msgid ""
+"If this icon appears you must click the icon to the right of the field to "
+"search for an existing authority."
+msgstr ""
+"Si aparece este icono debe hacer clic en el icono a la derecha del campo "
+"para buscar una autoridad existente."
+
+#: ../../source/cataloging.rst:132
+#, fuzzy
+msgid "|image634|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:134
+msgid ""
+"From the results list click 'Choose authority' to bring that into your "
+"catalog record"
+msgstr ""
+"Desde los resultados haga clic en 'Elegir autoridad' para traerla dentro de "
+"su registro"
+
+#: ../../source/cataloging.rst:137
+#, fuzzy
+msgid "|image635|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:139
+msgid ""
+"To duplicate a field click on the 'repeat this tag' icon to the right of the "
+"tag"
+msgstr ""
+"Para duplicar un campo haga clic en el icono 'repetir esta etiqueta' icono a "
+"la derecha de la etiqueta"
+
+#: ../../source/cataloging.rst:142
+#, fuzzy
+msgid "|image636|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:144
+msgid ""
+"To move subfields in to the right order, click the up arrow to the left of "
+"the field"
+msgstr ""
+"Para mostrar los subcampos en el orden correcto, haga clic en la flecha "
+"hacia arriba a la izquierda del campo"
+
+#: ../../source/cataloging.rst:147
+msgid ""
+"To duplicate a subfield click on the clone icon (to remove a copied field, "
+"click the delete clone icon) to the right of the field"
+msgstr ""
+"Para duplicar un campo, haga clic en el signo + (más) a la derecha del el "
+"campo"
+
+#: ../../source/cataloging.rst:151
+#, fuzzy
+msgid "|image637|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:153
+msgid ""
+"To remove a subfield (if there is more than one of the same type), click the "
+"- (minus sign) to the right of the field"
+msgstr ""
+"Para borrar un subcampo (si hay mas de uno del mismo tipo), haga clic en el "
+"signo de menos (-) a la derecha del campo"
+
+#: ../../source/cataloging.rst:156
+msgid "To use a plugin click on the icon to the right of the filed"
+msgstr ""
+"Para utilizar un plugin haga clic en el cuadro a la derecha del subcampo"
+
+#: ../../source/cataloging.rst:158
+#, fuzzy
+msgid "|image638|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:160
+msgid ""
+"Some fixed fields have editors that will change based on the material type "
+"you're cataloging (for example the 006 and the 008 fields)"
+msgstr ""
+"Algunos campos fijos tienen editores que cambiarán según el tipo de material "
+"que está catalogando (por ejemplo, los campos 006 y el 008)"
+
+#: ../../source/cataloging.rst:164
+#, fuzzy
+msgid "|image639|"
+msgstr "|image63|"
+
+#: ../../source/cataloging.rst:166
+msgid ""
+"Once you've finished, click the 'Save' button at the top and choose whether "
+"you want to save and view the bib record you have created or continue on to "
+"add/edit items attached to the record"
+msgstr ""
+"Una vez que haya terminado, haga clic en el botón \"Guardar\" en la parte "
+"superior y seleccione si desea guardar y ver el registro bib que haya creado "
+"o continuar para añadir / editar los elementos agregados al registro"
+
+#: ../../source/cataloging.rst:170
+#, fuzzy
+msgid "|image640|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:172
+msgid ""
+"Choosing 'Save and view record' will bring you right to the record you just "
+"cataloged"
+msgstr ""
+"Eligiendo 'Guardar y ver registro' lo llevará directamente al registro que "
+"usted acaba de catalogar"
+
+#: ../../source/cataloging.rst:175
+msgid ""
+"Choosing 'Save and edit items' will bring you to the add/edit item form "
+"after saving the bib record so that you can attach holdings"
+msgstr ""
+"Eligiendo 'Guardar y editar ítems' lo llevará al formulario de agregar/"
+"editar ítems después de haber guardo el registro bibliográfico, de ese modo, "
+"usted puede ajuntar las existencias"
+
+#: ../../source/cataloging.rst:178
+#, fuzzy
+msgid ""
+"Choosing 'Save and continue editing' will allow you to save your work so far "
+"and keep you in the editor to continue working"
+msgstr ""
+"Eligiendo 'Guardar y continuar editando' le permitirá guardar su trabajo "
+"hasta el momento y lo mantendrá en el editor para continuar trabajando"
+
+#: ../../source/cataloging.rst:181
+msgid ""
+"If you are about to add a duplicate record to the system you will be warned "
+"before saving"
+msgstr ""
+"Si está por agregar un registro duplicado el sistema le avisará antes de "
+"guardar"
+
+#: ../../source/cataloging.rst:184
+#, fuzzy
+msgid "|image641|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:189
+msgid "Advanced Editor Cataloging"
+msgstr "Catalogación por editor avanzado"
+
+#: ../../source/cataloging.rst:191
+#, fuzzy
+msgid ""
+"In order to use the Advanced cataloging editor you need to enable the :ref:"
+"`EnableAdvancedCatalogingEditor` preference."
+msgstr "Habilite la preferencia :ref:`EnableAdvancedCatalogingEditor`"
+
+#: ../../source/cataloging.rst:195 ../../source/cataloging.rst:630
+#: ../../source/cataloging.rst:1331 ../../source/cataloging.rst:1429
+msgid "**Important**"
+msgstr "**Importante**"
+
+# Labs > All
+#: ../../source/cataloging.rst:197
+msgid ""
+"This feature is currently experimental, and may have bugs that cause "
+"corruption of records. It also does not include any support for UNIMARC or "
+"NORMARC fixed fields. Please help us test it and report any bugs, but do so "
+"at your own risk."
+msgstr ""
+"Esta funcionalidad es aun experimental, y podría tener errores que causen "
+"corrupción de registros. Tampoco incluye ningún soporte para campos fijos de "
+"UNIMARC y NORMARC. Por favor ayúdenos a probarla y reportar cualquier error, "
+"pero hágalo bajo su propia responsabilidad."
+
+#: ../../source/cataloging.rst:202
+#, fuzzy
+msgid ""
+"In the advanced editor once you've opened a blank framework or imported a "
+"record via Z39.50 you will be presented with the form to continue cataloging"
+msgstr ""
+"Una vez que haya abierto una hoja de trabajo en blanco o importado un "
+"registro a través de Z39.50 se le presentará un formulario para continuar la "
+"catalogación"
+
+#: ../../source/cataloging.rst:206
+#, fuzzy
+msgid "|image1263|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:208
+msgid "Using the search box on the left you can perform Z39.50 searches"
+msgstr ""
+"Utilizando el cuadro de búsqueda al lado izquierdo, puede realizar búsquedas "
+"Z39.50"
+
+#: ../../source/cataloging.rst:210
+#, fuzzy
+msgid "|image642|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:212
+msgid ""
+"And from those Z39.50 results you can view the marc record by clicking the "
+"link to the right"
+msgstr ""
+"Y desde los resultados de Z39.50 puede ver los registros marc haciendo clic "
+"en el enlace a la derecha"
+
+#: ../../source/cataloging.rst:215
+#, fuzzy
+msgid "|image643|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:217
+msgid ""
+"Clicking 'Import' will bring the record in to the editor where you can "
+"perform your edits"
+msgstr ""
+"Haciendo clic en 'Importar' lo llevará al registro editor donde puede "
+"realizar cambios"
+
+#: ../../source/cataloging.rst:220
+#, fuzzy
+msgid "|image644|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:224
+msgid ""
+"When adding a new field in the Advanced Editor, you need to key underscores "
+"for a blank indicator, and surround the indicators with spaces."
+msgstr ""
+"Cuando agrega un nuevo campo en el Editor avanzado, necesita presionar "
+"guiones bajos para un indicador en blanco, y rodear los indicadores con "
+"espacios."
+
+#: ../../source/cataloging.rst:230
+msgid ""
+"You need to key a space before the first subfield delimiter, but not before "
+"or after other subfield delimiters in the field."
+msgstr ""
+"Necesita dejar un espacio después del primer delimitador de subcampo, pero "
+"no después de otro delimitador de un subcampo en el mismo campo."
+
+#: ../../source/cataloging.rst:233
+msgid ""
+"At the bottom of the editor you will see help from the Library of Congress "
+"for the field you are on. In cases where your MARC is invalid you will see "
+"red highlighting. To edit the record using only keyboard functions the "
+"Keyboard shortcuts button will inform you of the necessary commands"
+msgstr ""
+"En la parte de abajo del editor encontrará la ayuda de la Biblioteca del "
+"Congreso para el campo en el que se encuentra. En los casos en el que su "
+"MARC no es válido verá un resaltado en rojo. Para editar el registro "
+"utilizando solamente las funciones del teclado, el botón de Atajos del "
+"teclado le informará sobre los comando necesarios"
+
+#: ../../source/cataloging.rst:239
+#, fuzzy
+msgid "|image645|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:244
+#, fuzzy
+msgid "Advanced Cataloging Keyboard Shortcuts"
+msgstr "Atajos de teclado"
+
+#: ../../source/cataloging.rst:246
+msgid ""
+"The following keyboard shortcuts can be used in the advanced cataloging "
+"module to save time and clicking."
+msgstr ""
+"Los siguientes atajos de teclado pueden ser utilizados en el módulo de "
+"catalogación avanzada esto con el fin de ahorrase tiempo al hacer clic."
+
+#: ../../source/cataloging.rst:250
+msgid "Shortcut"
+msgstr "Atajo de teclado"
+
+#: ../../source/cataloging.rst:250
+msgid "Behavior"
+msgstr "Comportamiento"
+
+#: ../../source/cataloging.rst:252
+msgid "Ctrl-D"
+msgstr "Ctrl+D"
+
+#: ../../source/cataloging.rst:252
+msgid "Insert delimiter (‡)"
+msgstr "Insertar delimitador (‡)"
+
+#: ../../source/cataloging.rst:254
+msgid "Ctrl-H"
+msgstr "Ctrl+H"
+
+#: ../../source/cataloging.rst:254
+msgid "Get help on current subfield"
+msgstr "Obtenga ayuda del subcampo actual"
+
+#: ../../source/cataloging.rst:256
+msgid "Ctrl-S"
+msgstr "Ctrl+S"
+
+#: ../../source/cataloging.rst:256
+msgid "Save record"
+msgstr "Guardar registro"
+
+#: ../../source/cataloging.rst:258
+msgid "Ctrl-X"
+msgstr "Ctrl-X"
+
+#: ../../source/cataloging.rst:258
+msgid "Delete current field"
+msgstr "Eliminar el campo actual"
+
+#: ../../source/cataloging.rst:260
+msgid "Ctrl-Shift-X"
+msgstr "Ctrl+Mayús+X"
+
+#: ../../source/cataloging.rst:260
+msgid "Delete current subfield"
+msgstr "Eliminar el subcampo actual"
+
+#: ../../source/cataloging.rst:262
+msgid "Enter"
+msgstr "Intro"
+
+#: ../../source/cataloging.rst:262
+msgid "New field on next line"
+msgstr "Nuevo campo en la siguiente línea"
+
+#: ../../source/cataloging.rst:264
+msgid "Shift-Enter"
+msgstr "Mayús+Intro"
+
+#: ../../source/cataloging.rst:264
+msgid "Insert line break"
+msgstr "Insertar salto de línea"
+
+#: ../../source/cataloging.rst:266
+msgid "Tab"
+msgstr "Tabulador"
+
+#: ../../source/cataloging.rst:266
+msgid "Move to next position"
+msgstr "Mover a la siguiente posición"
+
+#: ../../source/cataloging.rst:268
+msgid "Shift-Tab"
+msgstr "Mayús+Tab"
+
+#: ../../source/cataloging.rst:268
+msgid "Move to previous position"
+msgstr "Mover a la posición anterior"
+
+#: ../../source/cataloging.rst:274
+#, fuzzy
+msgid "Macros in Advanced Cataloging"
+msgstr "Catalogación rápida"
+
+#: ../../source/cataloging.rst:276
+msgid "To record a new macro:"
+msgstr "Para grabar una nueva macro:"
+
+#: ../../source/cataloging.rst:278 ../../source/cataloging.rst:294
+msgid "Select the \"> Macros...\" button"
+msgstr "Seleccione el botón \"> Macros...\""
+
+#: ../../source/cataloging.rst:280
+msgid ""
+"A window will pop up. In this window, select \"New macro...,\" key the new "
+"macro's name in the pop-up box and select OK."
+msgstr ""
+"Una ventana aparecerá. En esta ventana, seleccione \"Nuevo macro...,\" "
+"ingrese el nuevo nombre de la macro en el cuadro emergente y seleccione OK."
+
+#: ../../source/cataloging.rst:283
+msgid ""
+"Now click to the right of the little number 1, and key the first line of "
+"your macro. For a multi-line, i.e., multi-field macro, hit the return key so "
+"that a little number 2 appears, and key the second line/field, etc."
+msgstr ""
+"Ahora haga clic a la derecha en número pequeño 1, e ingrese la primer línea "
+"de su macro. Para una línea múltiple, es decir, una macro con múltiples "
+"campos, presione la tecla Intro del modo que un número pequeño 2 aparezca, e "
+"introduzca la segunda línea/campo, etc."
+
+#: ../../source/cataloging.rst:288
+msgid ""
+"Your macros will be automatically saved. When finished you can select the \"x"
+"\" to close the window, or select a macro to run on the record that you're "
+"editing, or select another macro to run."
+msgstr ""
+"Sus macros serán guardados automáticamente. Cuando finalice puede "
+"seleccionar cerrar la ventana en \"x\", o seleccionar un macro para "
+"ejecutarlo en el registro que se encuentra en edición, o seleccione otro "
+"macro para ejecutarlo."
+
+#: ../../source/cataloging.rst:292
+msgid "To edit an existing macro:"
+msgstr "Para editar un macro existente:"
+
+#: ../../source/cataloging.rst:296
+#, fuzzy
+msgid ""
+"A window will pop up. In this window, select the macro that you wish to edit "
+"& make your changes."
+msgstr ""
+"Una ventana aparecerá. En esta ventana, seleccione \"Nuevo macro...,\" "
+"ingrese el nuevo nombre de la macro en el cuadro emergente y seleccione OK."
+
+#: ../../source/cataloging.rst:299
+msgid ""
+"Your work will automatically be saved, and when finished you can select the "
+"\"x\" to close the window, or select a macro to run on the record that "
+"you're editing, or select another macro to run."
+msgstr ""
+"Su trabajó se guardará automáticamente y, cuando finalice, podrá seleccionar "
+"\"x\" para cerrar la ventana o seleccionar un macro para ejecutar en el "
+"registro que se está editando o seleccione otro macro par ejecutarse."
+
+#: ../../source/cataloging.rst:303
+msgid "The basic syntax of the macro language:"
+msgstr "Sintaxis básica del lenguaje del macro:"
+
+#: ../../source/cataloging.rst:305
+msgid "new 500=‡aEdited with Rancor"
+msgstr "new 500=‡aEditado con Rancor"
+
+#: ../../source/cataloging.rst:307
+msgid ""
+"Creates a new 500 with a ‡a subfield and sets it to \"Edited with Rancor\"."
+msgstr ""
+"Crea un campo 500 con un subcampo ‡a y lo establece a \"Editado con Rancor.\""
+
+#: ../../source/cataloging.rst:310
+msgid "245c= by J.K. Rowling."
+msgstr "245c= by J.K. Rowling."
+
+#: ../../source/cataloging.rst:312
+msgid ""
+"Sets the first ‡c subfield of the first 245 tag in the record to \" by J.K. "
+"Rowling\", creating it if necessary."
+msgstr ""
+"Establece el primer subcampo ‡c de la primer etiqueta 245 en el registro a "
+"\"by J.k. Rowling, creándolo si es necesario."
+
+#: ../../source/cataloging.rst:315
+msgid "082a={084a}"
+msgstr "082a={084a}"
+
+#: ../../source/cataloging.rst:317
+msgid ""
+"Sets the ‡a subfield of the first 082 tag (creating the subfield if "
+"necessary) to the contents of the first 084‡a."
+msgstr ""
+"Establece el subcampo ‡a en la primer etiqueta 082 (creando el subcampo si "
+"es necesario) al contenido del primer 084‡a."
+
+#: ../../source/cataloging.rst:320
+#, fuzzy
+msgid "indicators=\\_1"
+msgstr "Indicadores no válidos"
+
+#: ../../source/cataloging.rst:322
+msgid ""
+"Sets the indicators of the last mentioned tag (in this case, 082) to \"\\_\" "
+"and \"1\"."
+msgstr ""
+
+#: ../../source/cataloging.rst:325
+msgid "new 090a=Z674.75.W67"
+msgstr "new 090a=Z674.75.W67"
+
+#: ../../source/cataloging.rst:327
+msgid ""
+"Creates a new ‡a subfield on the first 090 (but only if that field already "
+"exists) and sets it to Z674.75.W67."
+msgstr ""
+"Crea un nuevo subcampo ‡a en el primer 090 (pero solamente si ese campo "
+"existe) y lo establece a Z674.75.W67."
+
+#: ../../source/cataloging.rst:330
+msgid "new 090a at end=Z674.75.W67"
+msgstr "new 090a at end=Z674.75.W67"
+
+#: ../../source/cataloging.rst:332
+msgid "Same as above."
+msgstr "Lo mismo que arriba."
+
+#: ../../source/cataloging.rst:334
+msgid "new 245b after a= a tale of might and magic /"
+msgstr "new 245b after a= a tale of might and magic /"
+
+#: ../../source/cataloging.rst:336
+msgid ""
+"Creates a new ‡b after the first a subfield and sets it to \" a tale of "
+"might and magic /\"."
+msgstr ""
+"Crea un nuevo ‡b después del primer subcampo y lo establece a \" a tale of "
+"might and magic /\"."
+
+#: ../../source/cataloging.rst:339
+msgid "delete 245b"
+msgstr "delete 245b"
+
+#: ../../source/cataloging.rst:341
+msgid "Deletes the first ‡b subfield on the first 245 to ‡b"
+msgstr "Elimina el primer subcampo ‡b en el primer 245 ‡b"
+
+#: ../../source/cataloging.rst:346
+msgid "Adding Analytic Records"
+msgstr "Agregar Registros Analiticos"
+
+#: ../../source/cataloging.rst:348
+msgid ""
+"Libraries sometimes make journal articles and articles within monographs and "
+"serials accessible to library patrons through analytics cataloging. "
+"Analytics cataloging creates separate bibliographic records for these "
+"articles, chapters, sections, etc. found within a larger resource such as a "
+"book, an article within a journal, newspaper or serial. In analytics "
+"cataloging, although a separate bib record is created for the title, it is "
+"not physically separated from the host item.  Learn more about Analytics in "
+"Chapter 13 of AACR2."
+msgstr ""
+"Las bibliotecas a veces hacen artículos de revistas y artículos dentro de "
+"monografías y publicaciones seriadas accesibles a los usuarios de la "
+"biblioteca a través de análisis de catalogación. La catalogación analítica "
+"crea registros bibliográficos separados para estos artículos, capítulos, "
+"secciones, etc encuentra dentro de un recurso más grande, como un libro, un "
+"artículo en una revista, un periódico o en serie. En catalogación analítica, "
+"aunque un registro bib separado se crea para el título, no está físicamente "
+"separado del elemento padre. Más información acerca de Analiticos esta en el "
+"Capítulo 13 de las AACR2."
+
+#: ../../source/cataloging.rst:357
+#, fuzzy
+msgid ""
+"If you would like to catalog analytic records there are two options. One is "
+"to use the :ref:`Easy Analytics` funtion; the other is the :ref:`Analytics "
+"Enhanced Workflow`."
+msgstr ""
+"Si desea catalogar registros analíticos en Koha querrá primero actualizar la "
+"preferencia EasyAnalyticalRecords a 'Mostrar'."
+
+#: ../../source/cataloging.rst:364
+msgid "Easy Analytics"
+msgstr "Analíticas sencillas"
+
+#: ../../source/cataloging.rst:366
+msgid ""
+"The Easy Analytics feature makes linking analytic records together easier. "
+"The first thing you need to do is set the :ref:`EasyAnalyticalRecords` "
+"preference to 'Display' and the :ref:`UseControlNumber` preference to 'Don't "
+"use.'"
+msgstr ""
+
+# TRANSLATORS: El término 'Link to host item' ha sido cambiado a 'Enlace al documento fuente' debido a la traducción de MARC 21 de la BNE en el campo 773.
+#: ../../source/cataloging.rst:372
+#, fuzzy
+msgid ""
+"After cataloging your analytic record (see :ref:`Adding Records <adding-"
+"records-label>` for more on creating records) click 'Edit' from the normal "
+"view and choose to 'Link to Host Item'"
+msgstr ""
+"Luego de catalogar su registro analítico (vea Agregar registros para más en "
+"crear registros) haga clic en 'Editar' desde la vista normal y seleccione "
+"'Enlace al documento fuente'"
+
+#: ../../source/cataloging.rst:376
+#, fuzzy
+msgid "|image646|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:378
+msgid ""
+"This will prompt you to enter the barcode for the item this record should be "
+"linked to."
+msgstr ""
+"Esto le pedirá ingresar el código de barras para el ejemplar al cual debe "
+"enlazarse este registro."
+
+#: ../../source/cataloging.rst:381
+#, fuzzy
+msgid "|image647|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:383
+msgid ""
+"After entering the item's barcode and clicking 'Select' you will receive a "
+"confirmation message."
+msgstr ""
+"Luego de ingresar el código de barras del ejemplar y hacer clic en "
+"'Seleccionar' recibirá un mensaje de confirmación."
+
+#: ../../source/cataloging.rst:386
+#, fuzzy
+msgid "|image648|"
+msgstr "|image64|"
+
+#: ../../source/cataloging.rst:388
+msgid ""
+"The record will now have the 773 field filled in properly to complete the "
+"link."
+msgstr ""
+"El registro tendrá ahora el campo 773 completado apropiadamente para "
+"completar el enlace."
+
+#: ../../source/cataloging.rst:391
+#, fuzzy
+msgid "|image649|"
+msgstr "|image64|"
+
+# TRANSLATORS: El término 'Link to host item' ha sido cambiado a 'Enlace al documento fuente' debido a la traducción de MARC 21 de la BNE en el campo 773.
+#: ../../source/cataloging.rst:393 ../../source/cataloging.rst:438
+msgid ""
+"To view all of the items tied to the host record, do a search for the "
+"record, click the Analytics tab on the left and the analytics tied to each "
+"barcode will be shown under the \"Used in\" column."
+msgstr ""
+"Para ver todos los ítems vinculados al registro fuente, haga una búsqueda "
+"para el registro, haga clic en la pestaña Analíticas de la izquierda y las "
+"analíticas vinculadas a cada código de barras se mostrará debajo de la "
+"columna \"Usada en\"."
+
+#: ../../source/cataloging.rst:397
+#, fuzzy
+msgid "|image650|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:401
+msgid ""
+"It is also possible to create analytic records from this screen by clicking "
+"on \"Create Analytics\""
+msgstr ""
+"También es posible crear registros analíticos desde la pantalla haciendo "
+"clic en 'Crear analíticas'"
+
+#: ../../source/cataloging.rst:404 ../../source/cataloging.rst:444
+msgid ""
+"You can also see the analytics attached to this record by clicking the 'Show "
+"Analytic' link towards the top of the record in the normal view."
+msgstr ""
+"Puede también ver la analíticas asociadas a este registro haciendo clic en "
+"el enlace 'Mostrar analíticas' en el tope del registro en la vista normal."
+
+#: ../../source/cataloging.rst:407
+#, fuzzy
+msgid "|image651|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:409 ../../source/cataloging.rst:449
+#, fuzzy
+msgid ""
+"When looking at the analytic record you will also see a link to the host "
+"item under the 'Host records' column in the holdings table when viewing the "
+"'Analytics' tab."
+msgstr ""
+"Cuando se observa el registro de analíticas, usted también vera un enlace al "
+"documento fuente bajo la columna 'Registros fuente' en la tabla de "
+"existencias cuando se está viendo la pestaña 'Analíticas'"
+
+#: ../../source/cataloging.rst:413
+#, fuzzy
+msgid "|image652|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:418
+msgid "Analytics Enhanced Workflow"
+msgstr "Analíticas mejoradas"
+
+#: ../../source/cataloging.rst:420
+msgid ""
+"To use the Enhanced Workflow method of adding analytics, the first thing you "
+"need to do is set the :ref:`EasyAnalyticalRecords` preference to 'Don't "
+"display' and the :ref:`UseControlNumber` preference to 'Use.'"
+msgstr ""
+
+# TRANSLATORS: El término 'Link to host item' ha sido cambiado a 'Enlace al documento fuente' debido a la traducción de MARC 21 de la BNE en el campo 773.
+#: ../../source/cataloging.rst:426
+#, fuzzy
+msgid ""
+"After cataloging your original record (see :ref:`Adding Records <adding-"
+"records-label>` for more on creating records) click 'New' from the normal "
+"view and choose to 'New child record.'"
+msgstr ""
+"Luego de catalogar su registro analítico (vea Agregar registros para más en "
+"crear registros) haga clic en 'Editar' desde la vista normal y seleccione "
+"'Enlace al documento fuente'"
+
+#: ../../source/cataloging.rst:430
+#, fuzzy
+msgid "|image653|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:432
+msgid ""
+"This will open a new blank record for cataloging. The blank record will only "
+"have the 773 field filled in properly to complete the link once the record "
+"is saved."
+msgstr ""
+"Esto abrirá un nuevo registro en blanco para la catalogación. El registro en "
+"blanco sólo tendrá el campo 773 cumplimentado correctamente para completar "
+"el enlace cuando se guarde el registro."
+
+#: ../../source/cataloging.rst:436
+#, fuzzy
+msgid "|image654|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:442
+#, fuzzy
+msgid "|image655|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:447
+#, fuzzy
+msgid "|image656|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:453
+#, fuzzy
+msgid "|image657|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:458
+msgid "Editing Analytics"
+msgstr "Editando analíticas"
+
+# TRANSLATORS: El término 'Link to host item' ha sido cambiado a 'Enlace al documento fuente' debido a la traducción de MARC 21 de la BNE en el campo 773.
+#: ../../source/cataloging.rst:460
+msgid ""
+"If you have linked an analytic record incorrectly you can remove that link "
+"by editing the item on the analytic record (not the host record). To do "
+"this, go to the analytic record and click the 'Edit' button and choose to "
+"'Edit items'. To the left of each item you will see two options."
+msgstr ""
+"Si ha vinculado un registro analítico incorrectamente puede eliminar dicho "
+"enlace modificando el ítem en el registro analítico (no el registro fuente). "
+"Para ello, vaya al registro analítico y haga clic en el botón 'Editar' y "
+"elija 'Editar ítems'. A la izquierda de cada ítem verá dos opciones."
+
+#: ../../source/cataloging.rst:466
+#, fuzzy
+msgid "|image658|"
+msgstr "|image65|"
+
+# TRANSLATORS: El término 'Link to host item' ha sido cambiado a 'Enlace al documento fuente' debido a la traducción de MARC 21 de la BNE en el campo 773.
+#: ../../source/cataloging.rst:468
+msgid ""
+"Clicking 'Edit in Host' will allow you to edit the item on the host record."
+msgstr ""
+"Al hacer clic en 'Editar en fuente' le permite editar el ítem en el registro "
+"fuente."
+
+# TRANSLATORS: Aquí 'Delink' traducido como Desvincular y no Desligar.
+#: ../../source/cataloging.rst:471
+msgid ""
+"Clicking 'Delink' will remove the 773 field and the link between the "
+"analytic and the host."
+msgstr ""
+"Al hacer clic en 'Desconectar' se eliminará el campo 773 y el enlace entre "
+"la analítica y la fuente."
+
+#: ../../source/cataloging.rst:477
+msgid "Editing Records"
+msgstr "Edición de registros"
+
+#: ../../source/cataloging.rst:479
+msgid ""
+"To edit a record you can click 'Edit Biblio' from the search results on the "
+"cataloging page"
+msgstr ""
+"Para editar un registro puede hacer clic en 'Editar Biblio' en los "
+"resultados de búsqueda en la página de catalogación"
+
+#: ../../source/cataloging.rst:482
+#, fuzzy
+msgid "|image659|"
+msgstr "|image65|"
+
+#: ../../source/cataloging.rst:484
+msgid ""
+"or by clicking the Edit button on the Bibliographic Record and choosing "
+"'Edit Record'"
+msgstr ""
+"o haciendo clic en el botón 'Editar' en el registro bibliográfico y "
+"eligiendo 'Editar registro'"
+
+#: ../../source/cataloging.rst:487
+#, fuzzy
+msgid "|image660|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:489
+msgid "The record will open in the MARC editor"
+msgstr "El registro se abrirá en editor de MARC"
+
+#: ../../source/cataloging.rst:491
+#, fuzzy
+msgid "|image661|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:493
+msgid ""
+"The alternative is to search via Z39.50 to overlay your record with a fuller "
+"record found at another library. You can do this by choosing 'Replace Record "
+"via Z39.50' from the Edit menu."
+msgstr ""
+"La alternativa es buscar a través de Z39.50 para superponer su registro con "
+"un registro más completo encontrado en otra biblioteca. Usted puede hacer "
+"esto con la opción 'Reemplazar Record vía Z39.50' en el menú Editar."
+
+#: ../../source/cataloging.rst:497
+#, fuzzy
+msgid "|image662|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:499
+msgid ""
+"Once you choose that you will be brought to a Z39.50 search window to search "
+"other libraries for the record in question."
+msgstr ""
+"Una vez seleccionada será llevado a una ventana de búsqueda Z39.50 para "
+"buscar en otras bibliotecas por el registro en cuestión."
+
+#: ../../source/cataloging.rst:502
+msgid ""
+"Once you have made your edits (via either method) you can click 'Save' at "
+"the top left of the editor."
+msgstr ""
+"Una vez haya editado (por cualquier método) puede hacer clic en 'Guardar' "
+"arriba a la izquierda del editor."
+
+#: ../../source/cataloging.rst:505
+msgid ""
+"You can also use the edit menu to add your own custom cover image if you "
+"have either :ref:`OPACLocalCoverImages` and/or :ref:`LocalCoverImages` set "
+"to 'Display' by choosing 'Upload Image' from the menu."
+msgstr ""
+
+#: ../../source/cataloging.rst:510
+#, fuzzy
+msgid "|image663|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:512
+msgid ""
+"Choosing to 'Upload Image' will take you to the :ref:`Upload Local Cover "
+"Image Tool <upload-local-cover-image-label>`."
+msgstr ""
+
+#: ../../source/cataloging.rst:518
+msgid "Duplicating Records"
+msgstr "Duplicación de registros"
+
+#: ../../source/cataloging.rst:520
+msgid ""
+"Sometimes a copy of the record you need to catalog can't be found via "
+"Z39.50. In these cases you can create a duplicate of similar record and edit "
+"the necessary pieces to create a new record. To duplicate an existing record "
+"click 'Edit as New (Duplicate)' from the Edit menu on the Bibliographic "
+"Record"
+msgstr ""
+"A veces no es posible encontrar a través de Z39.50 una copia del registro "
+"que se desea ingresar al catálogo. En estos casos se puede crear un "
+"duplicado de un registro similar y editar las partes necesarias para crear "
+"un nuevo registro. Para duplicar un registro existente, haga clic en 'Editar "
+"como nuevo (duplicar)' desde el menú 'Editar' en el registro bibliográfico"
+
+#: ../../source/cataloging.rst:526
+#, fuzzy
+msgid "|image664|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:528
+msgid ""
+"This will open a new MARC record with the fields filled in with the values "
+"from the original Bibliographic Record."
+msgstr ""
+"Esto abrirá un nuevo registro MARC con los campos con los valores del "
+"registro bibliográfico original."
+
+#: ../../source/cataloging.rst:531
+#, fuzzy
+msgid "|image665|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:536
+#, fuzzy
+msgid "Attaching files to Records"
+msgstr "Adjuntar ítem a %s "
+
+#: ../../source/cataloging.rst:538
+msgid ""
+"If you would like to upload files to Koha you can do so with a few settings."
+msgstr ""
+"Si usted desea bloquear a un usuario de la biblioteca puede indicarlo con "
+"una restricción manual"
+
+#: ../../source/cataloging.rst:541
+msgid ""
+"You will need to ask your system administrator to set the 'upload\\_path' "
+"config variable to point to where the files will be stored"
+msgstr ""
+
+#: ../../source/cataloging.rst:545
+msgid ""
+"You can see if your upload path is set correctly by visiting About Koha > "
+"System Information. If there is an error you will see it there."
+msgstr ""
+
+#: ../../source/cataloging.rst:549
+#, fuzzy
+msgid "|image1264|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:551
+msgid ""
+"You will want to be sure that your :ref:`OPACBaseURL` system preference is "
+"set appropriately"
+msgstr ""
+
+#: ../../source/cataloging.rst:554
+msgid ""
+"You will want to add the upload.pl plugin to the 856$u subfield in one (or "
+"multiple) of your :ref:`frameworks <edit-framework-subfields-label>`"
+msgstr ""
+
+#: ../../source/cataloging.rst:557
+msgid ""
+"Once you are all set up you can continue with cataloging as regular. You "
+"will see a plugin icon next to the 856$u that will open up the upload and/or "
+"search window"
+msgstr ""
+
+#: ../../source/cataloging.rst:561
+#, fuzzy
+msgid "|image1265|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:563
+msgid ""
+"From this menu you can click browse to find a file and attach it, or you can "
+"search files you have uploaded previously using the search box. From the "
+"search results you can choose which file to attach."
+msgstr ""
+
+#: ../../source/cataloging.rst:567
+#, fuzzy
+msgid "|image1266|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:569
+msgid ""
+"Once the file is chosen it will appear as a link in the MARC record and on "
+"the detail display."
+msgstr ""
+"Un vez la fila ha sido escogida, aparecerá como un enlace en el registro "
+"MARC y en los destalles mostrados."
+
+#: ../../source/cataloging.rst:575
+msgid "Merging Records"
+msgstr "Unión de registros"
+
+#: ../../source/cataloging.rst:577
+msgid ""
+"To merge bibliographic records together you will want to go to the "
+"Cataloging module and perform a search."
+msgstr ""
+"Para combinar registros bibliográficos, querrá ir al módulo de Catalogación "
+"y realizar una búsqueda."
+
+#: ../../source/cataloging.rst:580
+msgid ""
+"If you see duplicates on that search results screen you can check the boxes "
+"next to the duplicates and click the 'Merge selected' button at the top of "
+"the results."
+msgstr ""
+"Si usted ve duplicados en esa pantalla de resultados de búsqueda, usted "
+"puede marcar las casillas junto a los duplicados y hacer clic en el botón "
+"'Combinar seleccionados' en la parte superior de los resultados."
+
+#: ../../source/cataloging.rst:584
+msgid ""
+"Once you have selected the records you want to merge, click the 'Merge "
+"selected' button at the top of the list. You will be asked which of the "
+"records you would like to keep as your primary record and which will be "
+"deleted after the merge. If the records were created using different "
+"frameworks, Koha will also ask you what Framework you would like the newly "
+"merged record to use."
+msgstr ""
+"Una vez que haya seleccionado los registros que desea combinar, haga clic en "
+"el botón 'Combinar seleccionados' en la parte superior de la lista. Se le "
+"preguntará cuál de los dos registros desea mantener como su registro "
+"primario y cuál será eliminado después de la combinación. Si los registros "
+"fueron creados usando diferentes hojas de trabajo, Koha también le pedirá "
+"qué Hoja de trabajo le gustaría utilizar para el registro recién combinado."
+
+#: ../../source/cataloging.rst:591
+#, fuzzy
+msgid "|image666|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:593
+msgid ""
+"You will be presented with the MARC for all of the records (each accessible "
+"by tabs labeled with the bib numbers for those records). By default the "
+"entire first record will be selected, uncheck the fields you don't want in "
+"the final (destination) record and then move on to the second tab to choose "
+"which fields should be in the final (destination) record."
+msgstr ""
+"Se mostrará el MARC para los dos registros (cada uno accesible por la "
+"etiqueta que tiene el número de registro de cada uno). Por defecto, todos "
+"los campos del registro principal estarán marcados y no habrá ningún campo "
+"marcado en el otro registro. Desactive los campos del primer registro que no "
+"desee en registro final (destino) y después en la segunda pestaña elija los "
+"campos que deben estar en el registro final (destino)."
+
+#: ../../source/cataloging.rst:600
+#, fuzzy
+msgid "|image667|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:602
+msgid ""
+"Should you try to add a field that is not repeatable two times (like "
+"choosing the 245 field from both record #1 and #2) you will be presented "
+"with an error"
+msgstr ""
+"Si intenta agregar un campo que no es repetible dos veces (como la selección "
+"del campo 245 de ambos registros #1 y #2) se le presentará con un error"
+
+#: ../../source/cataloging.rst:606
+#, fuzzy
+msgid "|image668|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:608
+msgid ""
+"Below the records you are merging is an option to enter fields to report on. "
+"This will allow you to control what fields you see on the merge confirmation "
+"page:"
+msgstr ""
+"Por debajo de los registros que está combinando existe una opción para "
+"ingresar los campos que se mostrarán en el informe. Esto le permitirá "
+"controlar qué campos ver en la página de confirmación de la combinación:"
+
+#: ../../source/cataloging.rst:612
+#, fuzzy
+msgid "|image669|"
+msgstr "|image66|"
+
+#: ../../source/cataloging.rst:614
+msgid ""
+"If you enter nothing you will be presented with a confirmation of "
+"biblionumbers only"
+msgstr "Luego de elegir cargar, se le presentará un mensaje de confirmación"
+
+#: ../../source/cataloging.rst:617
+#, fuzzy
+msgid "|image670|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:619
+msgid ""
+"If you enter fields you will see those on the confirmation page (you can set "
+"defaults with the :ref:`MergeReportFields` preference)"
+msgstr ""
+
+#: ../../source/cataloging.rst:623
+#, fuzzy
+msgid "|image671|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:625
+msgid ""
+"Once you have completed your selections click the 'merge' button. The "
+"primary record will now CONTAIN the data you chose for it as well as all of "
+"the items/holdings from both bib records, and the second record will be "
+"deleted."
+msgstr ""
+"Una vez ha cumplimentado su selección haga clic en el botón 'combinar'. El "
+"registro primario contendrá ahora los datos que escogió para ello así como "
+"todos los ítems/existencias de ambos registros bibliográficos y, el segundo "
+"registro será eliminado."
+
+#: ../../source/cataloging.rst:632
+msgid ""
+"It is important to rebuild your zebra index immediately after merging "
+"records. If a search is performed for a record which has been deleted Koha "
+"will present the patrons with an error in the OPAC."
+msgstr ""
+"Es importante regenerar el índice Zebra inmediatamente después de combinar "
+"registros. Si una búsqueda se realiza para un registro que ha sido borrado, "
+"Koha retornará a los usuarios un error en el OPAC."
+
+#: ../../source/cataloging.rst:639
+#, fuzzy
+msgid ""
+"If you would like you can also use the :ref:`Lists` tool for merging records "
+"together. :ref:`Learn more here <merging-bibliographic-records-via-lists-"
+"label>`."
+msgstr ""
+"Nota: Si usted lo desea, puede también utilizar la herramienta de Listas "
+"para combinar registros."
+
+#: ../../source/cataloging.rst:645
+msgid "Deleting Records"
+msgstr "Borrando registros"
+
+#: ../../source/cataloging.rst:647
+msgid ""
+"To delete a bibliographic record simply choose the 'Edit' button and select "
+"'Delete record'"
+msgstr ""
+"Para editar el registro completo del usuario simplemente haga clic en el "
+"botón \"Editar\" en la parte superior de dicho registro"
+
+#: ../../source/cataloging.rst:650
+#, fuzzy
+msgid "|image672|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:652
+msgid ""
+"Bibliographic records can only be deleted one all items have been deleted. "
+"If you try to delete a bibliographic record with items still attached you "
+"will see that the delete option is grayed out."
+msgstr ""
+"Los registros bibliográficos pueden ser eliminados solamente si todos los "
+"ítems han sido eliminados. Si usted trata de eliminar un registro "
+"bibliográfico con los ítems todavía adjuntos, podrá observar que la opción "
+"eliminar está deshabilitada marcada en gris."
+
+#: ../../source/cataloging.rst:656
+#, fuzzy
+msgid "|image673|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:661
+msgid "Item Records"
+msgstr "Registros de ítems"
+
+#: ../../source/cataloging.rst:663
+msgid ""
+"In Koha each bibliographic record can have one or more items attached. These "
+"items are sometimes referred to as holdings. Each item includes information "
+"to the physical copy the library has."
+msgstr ""
+"En Koha cada registro bibliográfico puede tener uno o más elementos unidos. "
+"Estos items se refieren a veces como formatos. Cada item incluye información "
+"de la copia física que la biblioteca tiene."
+
+#: ../../source/cataloging.rst:670
+msgid "Adding Items"
+msgstr "Añadiendo items"
+
+#: ../../source/cataloging.rst:672
+msgid ""
+"After saving a new bibliographic record, you will be redirected to a blank "
+"item record so that you can attach an item to the bibliographic record. You "
+"can also click 'Add/Edit Items' from the cataloging search results"
+msgstr ""
+"Después de guardar un nuevo registro bibliográfico, se le redirige a una "
+"ventanam donde puede agregar ítems al registro bibliográfico. También puede "
+"hacer clic en 'Agregar existencias' en la página de resultados de búsqueda "
+"del módulo de catalogación"
+
+#: ../../source/cataloging.rst:677
+#, fuzzy
+msgid "|image674|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:679
+msgid ""
+"or you can add new item at any time by clicking 'New' on the bibliographic "
+"record and choosing 'New Item'"
+msgstr ""
+"o puede agregar un nuevo ítem en cualquier momento haciendo clic en 'Nuevo' "
+"en el registro bibliográfico y eligiendo 'Nuevo ítem'"
+
+#: ../../source/cataloging.rst:682
+#, fuzzy
+msgid "|image675|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:684
+msgid "The item edit form will appear:"
+msgstr "El formulario de edición del ítem aparecerá:"
+
+#: ../../source/cataloging.rst:686
+#, fuzzy
+msgid "|image676|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:688
+msgid ""
+"At the very least, if you plan on circulating the item, the following fields "
+"should be entered for new items:"
+msgstr ""
+"Como mínimo, si Usted planea prestar el ítem, los siguientes campos deben "
+"ser ingresados para nuevos ítems:"
+
+#: ../../source/cataloging.rst:691
+msgid "2 - Source of classification"
+msgstr "2- Fuente de la clasificación"
+
+#: ../../source/cataloging.rst:693
+msgid "a - Permanent location"
+msgstr "a- Ubicación permanente"
+
+#: ../../source/cataloging.rst:695
+msgid "b - Current location"
+msgstr "b - Lugar en las estanterías"
+
+#: ../../source/cataloging.rst:697
+msgid "o - Full call number"
+msgstr "o- Signatura topográfica completa"
+
+#: ../../source/cataloging.rst:699
+msgid ""
+"If you'd like you can use the `call number browser plugin "
+"<#cnbrowseplugin>`__ for this field. If it's enabled you'll see a ... to the "
+"right of the field. When clicked that will open a call number browser window "
+"if the row is highlighted in Red then the call number is in use, if there is "
+"a thin Green line instead then the call number can be used."
+msgstr ""
+
+#: ../../source/cataloging.rst:706
+#, fuzzy
+msgid "|image1267|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:708
+msgid "p - Barcode"
+msgstr "p- Código de barras"
+
+#: ../../source/cataloging.rst:710
+msgid "v - Cost, replacement price"
+msgstr "v - Costo, precio de reposición"
+
+#: ../../source/cataloging.rst:712
+msgid ""
+"This value will be charged to patrons when you mark an item they have "
+"checked out as 'Lost'"
+msgstr ""
+"Este valor será cargado a los clientes cuando marca unítem que ha sido "
+"prestado como 'Perdido'"
+
+#: ../../source/cataloging.rst:715
+msgid "y - Koha item type"
+msgstr "y- Tipo de ítem de Koha"
+
+#: ../../source/cataloging.rst:717
+#, fuzzy
+msgid ""
+"To make sure that these values are filled in you can mark them as mandatory "
+"in the :ref:`framework <marc-bibliographic-frameworks-label>` you're using "
+"and then they will appear in red with a 'required' label. The item will not "
+"save until the required fields are filled in."
+msgstr ""
+"Para asegurar que estos valores se completan puede marcarlos como "
+"obligatorios en la hoja de trabajo que está utilizando y ellos aparecerán en "
+"rojo con una etiqueta 'requerido'. El ejemplar no se guardará hasta que se "
+"completen los campos requeridos."
+
+#: ../../source/cataloging.rst:722
+#, fuzzy
+msgid "|image677|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:726
+#, fuzzy
+msgid ""
+"To make item subfields required in a framework you'll want to edit the 952 "
+"field in the :ref:`framework editor <marc-bibliographic-frameworks-label>`."
+msgstr ""
+"Sugerencia: Para que subcampos sean requeridos en la hoja de trabajo querrá "
+"editar el campo 952 en el editor de hojas de trabajo."
+
+#: ../../source/cataloging.rst:730
+msgid "Below the add form there are 3 buttons for adding the item"
+msgstr "Bajo el formulario hay 3 botones para agregar un ítem"
+
+#: ../../source/cataloging.rst:732
+#, fuzzy
+msgid "|image678|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:734
+msgid "Add Item will add just the one item"
+msgstr "Agregar ítem sólo agregará un ítem"
+
+#: ../../source/cataloging.rst:736
+#, fuzzy
+msgid ""
+"Add & Duplicate will add the item and fill in a new form with the same "
+"values for your to alter"
+msgstr ""
+"'Agregar &amp; duplicar' agregará el ítem y generará un nuevo formulario con "
+"los mismos datos, para que los modifique"
+
+#: ../../source/cataloging.rst:739
+msgid ""
+"Add Multiple items will ask how many items and will then add that number of "
+"items adding +1 to the barcode so each barcode is unique"
+msgstr ""
+"'Agregar varios ítems' le preguntará cuantos ítems y luego los agregará "
+"adicionando +1 al código de barras de modo que cada uno sea único"
+
+#: ../../source/cataloging.rst:742
+msgid "Your added items will appear above the add form once submitted"
+msgstr ""
+"Sus ítems agregados aparecerán encima del formulario una vez enviado el "
+"formulario"
+
+#: ../../source/cataloging.rst:744
+#, fuzzy
+msgid "|image679|"
+msgstr "|image67|"
+
+#: ../../source/cataloging.rst:746
+msgid ""
+"Your items will also appear below the bibliographic details on the bib "
+"record display."
+msgstr ""
+"Sus ítems también aparecerán bajo los detalles bibliográficos en la pantalla "
+"de los registros bibliográficos."
+
+#: ../../source/cataloging.rst:749
+#, fuzzy
+msgid "|image680|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:751
+#, fuzzy
+msgid ""
+"If you have :ref:`SpineLabelShowPrintOnBibDetails` set to 'Display' then "
+"there will also be a link to print a quick spine label next to each item."
+msgstr ""
+"Si usted tiene SpineLabelShowPrintOnBibDetails en 'Mostrar', entonces "
+"también habrá un enlace para imprimir una etiqueta rápida junto a cada "
+"artículo."
+
+#: ../../source/cataloging.rst:756
+#, fuzzy
+msgid "|image681|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:758
+msgid ""
+"You can also filter the contents of your holdings table by clicking the "
+"'Activate filters' links. This will show a row at the top where you can type "
+"in any column to filter the results in the table."
+msgstr ""
+"Usted también pude filtrar el contenido de su tabla de existencias haciendo "
+"clic en el enlace 'Activar filtros.' Esto le mostrará una fila en la parte "
+"superior de donde puede ingresar datos en cualquier columna para filtrar los "
+"resultados en la tabla."
+
+#: ../../source/cataloging.rst:762
+#, fuzzy
+msgid "|image682|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:767
+msgid "Editing Items"
+msgstr "Editar ítems"
+
+#: ../../source/cataloging.rst:769
+msgid "Items can be edited in several ways."
+msgstr "Los ítems pueden ser editados de varias formas."
+
+#: ../../source/cataloging.rst:771
+msgid "Clicking 'Edit' and 'Edit Items' from the bibliographic record"
+msgstr ""
+"Al hacer clic en 'Editar' y 'Editar ítems' en el registro bibliográfico"
+
+#: ../../source/cataloging.rst:773
+#, fuzzy
+msgid "|image683|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:775
+msgid ""
+"Which will open up a list of items where you can click the 'Actions' button "
+"to the left of the specific item you would like to edit and choose 'Edit'."
+msgstr ""
+"Que abrirá una lista de ítems que podrá hacer clic en 'Editar' a la "
+"izquierda del ítem específico que desea editar."
+
+#: ../../source/cataloging.rst:779
+#, fuzzy
+msgid "|image684|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:781
+msgid "Clicking 'Edit Items' beside the item on the 'Items' tab"
+msgstr "Al hacer clic en 'Editar ítems' junto al ítem en la pestaña 'Ítems'"
+
+#: ../../source/cataloging.rst:783
+#, fuzzy
+msgid "|image685|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:785
+msgid "Which will open up the editor on the item you'd like to edit"
+msgstr "Marque la casilla a la izquierda de los ítems que desea reservar"
+
+#: ../../source/cataloging.rst:787
+#, fuzzy
+msgid "|image686|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:789
+msgid "Clicking 'Edit' and then 'Edit items in batch'"
+msgstr "Hacer clic en 'Editar' y después en 'Editar ítems en lotes'"
+
+#: ../../source/cataloging.rst:791
+#, fuzzy
+msgid "|image687|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:793
+#, fuzzy
+msgid ""
+"This will open up the :ref:`batch item modification tool <batch-item-"
+"modification-label>` where you can edit all of the items on this record as a "
+"batch."
+msgstr ""
+"Esto abrirá la herramienta de modificación de ejemplares en lote donde puede "
+"todos los ejemplares de este registro en lote."
+
+#: ../../source/cataloging.rst:797
+msgid ""
+"You can also enable :ref:`StaffDetailItemSelection` to have checkboxes "
+"appear to the left of each item on the detail display. You can then check "
+"off the items you would like to edit and click 'Modify selected items' at "
+"the top of the list."
+msgstr ""
+
+#: ../../source/cataloging.rst:803
+#, fuzzy
+msgid "|image688|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:805
+#, fuzzy
+msgid "You can click 'Edit' to the right of each item in the Holdings tab"
+msgstr ""
+"Desde la lista de subcampos puede hacer clic en 'Eliminar' a la derecha de "
+"cada uno para eliminarlos."
+
+#: ../../source/cataloging.rst:808
+#, fuzzy
+msgid "|image1268|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:810
+#, fuzzy
+msgid ""
+"There is also a link to Edit items from the search results in the staff "
+"client"
+msgstr ""
+"Para editar un registro puede hacer clic en 'Editar Biblio' en los "
+"resultados de búsqueda en la página de catalogación"
+
+#: ../../source/cataloging.rst:813
+#, fuzzy
+msgid "|image1269|"
+msgstr "|image126|"
+
+#: ../../source/cataloging.rst:815
+msgid ""
+"Finally you can use the :ref:`Batch Item Modification <batch-item-"
+"modification-label>` tool"
+msgstr ""
+
+#: ../../source/cataloging.rst:821
+msgid "Quick Item Status Updates"
+msgstr "Actualizaciones de estado de Ítem rápido"
+
+#: ../../source/cataloging.rst:823
+msgid ""
+"Often circulation staff need to change the status of an item to Lost or "
+"Damaged. This doesn't require you to edit the entire item record. Instead "
+"clicking on the item barcode on the checkout summary or checkin history will "
+"bring you to an item summary. You can also get to the item summary by "
+"clicking on the Items tab to the left of the bib detail page."
+msgstr ""
+"A menudo el personal de circulación necesita cambiar el estado de un ítem a "
+"Perdido o Dañado. Esto no requiere editar el registro completo. EN cambio "
+"haciendo clic en el código de barras del ítem en el resumen de préstamo o el "
+"historial de préstamo le llevará al un resumen del ítem. Puede llebar al "
+"resumen del ítem haciendo clic en la pestaña Ítems a la izquierda de la "
+"página de detalles del registro."
+
+#: ../../source/cataloging.rst:829
+#, fuzzy
+msgid "|image689|"
+msgstr "|image68|"
+
+#: ../../source/cataloging.rst:831
+msgid ""
+"From this view you can mark an item lost by choosing a lost status from the "
+"pull down and clicking the 'Set Status' button."
+msgstr ""
+"Desde esta vista puede marcar un ítem como perdido seleccionando el estado "
+"en el menú desplegable y haciendo clic en el botón 'Establecer estado'."
+
+#: ../../source/cataloging.rst:834
+#, fuzzy
+msgid "|image690|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:836
+msgid ""
+"You can also mark an item as damaged by choosing a damaged status from the "
+"pull down and clicking the 'Set Status' button."
+msgstr ""
+"También puede marcar un ítem como dañado eligiendo un estado de dañado en el "
+"menú desplegable y haciendo clic en el botón 'Establecer estado'."
+
+#: ../../source/cataloging.rst:839
+#, fuzzy
+msgid "|image691|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:844
+#, fuzzy
+msgid "Duplicating Items"
+msgstr "Duplicación de registros"
+
+#: ../../source/cataloging.rst:846
+msgid ""
+"You can easily duplicate each item by clicking the 'Action' button the left "
+"of each item on the edit items screen"
+msgstr ""
+"Fácilmente puede duplicar cada ítem dando clic en el botón 'Acción' a la "
+"izquierda de cada ítem en la pantalla de edición de ítems"
+
+#: ../../source/cataloging.rst:849
+#, fuzzy
+msgid "|image692|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:851
+msgid ""
+"From here you can choose to 'Duplicate' the item and this will populate the "
+"form with the values from the item you chose."
+msgstr ""
+"Desde aquí puede elegir 'Duplicar' el ítem y esto rellenará el formulario "
+"con los valores del ítem que se eligió."
+
+#: ../../source/cataloging.rst:857
+msgid "Item Information"
+msgstr "Información de ítem"
+
+#: ../../source/cataloging.rst:859
+msgid ""
+"To the left of every bibliographic record there is a tab to view the items."
+msgstr ""
+"A la izquierda de cada registro bibliográfico hay una pestaña para ver los "
+"ítems."
+
+#: ../../source/cataloging.rst:862
+#, fuzzy
+msgid "|image693|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:864
+msgid ""
+"Clicking that tab will give you basic information about the items. From here "
+"you can see basic information about the item such as the home library, item "
+"type, collection code, call number and replacement price. You can also see "
+"and edit the status information. If an item is marked lost or withdrawn you "
+"will also see the date that status was applied."
+msgstr ""
+"Haciendo clic en esa pestaña le proporcionará información básica acerca de "
+"los ítems. Desde aquí puede observar información básica acerca del ítem, tal "
+"como, la biblioteca de origen, tipo de ítem, código de colección, signatura "
+"topográfica y precio de reemplazo. También puede ver y editar la información "
+"del estado. Si un ítem es marcado como perdido o retirado, también verá la "
+"fecha en que el estado fue aplicado."
+
+#: ../../source/cataloging.rst:870
+#, fuzzy
+msgid "|image1270|"
+msgstr "|image127|"
+
+#: ../../source/cataloging.rst:872
+#, fuzzy
+msgid ""
+"In the History section you will see information about the check out history "
+"of the item and if you ordered the item via the acquisitions module then "
+"this section will include information about the order."
+msgstr ""
+"Dando clic en la pestaña dará información básica sobre los ítems. Si  usted "
+"hizo el pedido de los ítems a través del módulo de adquisiciones entonces el "
+"historial incluirá información sobre el pedido."
+
+#: ../../source/cataloging.rst:876
+#, fuzzy
+msgid "|image694|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:878
+msgid ""
+"If the Order or Accession date is linked, clicking it will bring you to the "
+"acquisitions information for that item."
+msgstr ""
+"Si la fecha de pedido o de entrada están enlazadas, haciendo clic le llevará "
+"a la información de adquisición de ese ítem."
+
+#: ../../source/cataloging.rst:884
+msgid "Moving Items"
+msgstr "Mover ítems"
+
+#: ../../source/cataloging.rst:886
+msgid ""
+"Items can be moved from one bibliographic record to another using the Attach "
+"Item option"
+msgstr ""
+"Los ítems se pueden mover de un registro bibliográfico a otro usando la "
+"opción Adjuntar ítem"
+
+#: ../../source/cataloging.rst:889
+#, fuzzy
+msgid "|image695|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:891
+msgid ""
+"Visit the bibliographic record you want to attach the item to and choose "
+"'Attach Item' from the 'Edit' menu."
+msgstr ""
+"Visite el registro bibliográfico al que desea adjuntar el ítem y seleccione "
+"'Adjuntar ítem' en el menú 'Editar'."
+
+#: ../../source/cataloging.rst:894
+#, fuzzy
+msgid "|image696|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:896
+msgid ""
+"Simply enter the barcode for the item you want to move and click 'Select'"
+msgstr ""
+"Ingrese el código de barras del ítem a ser movido y haga clic en 'Elegir'"
+
+#: ../../source/cataloging.rst:899
+#, fuzzy
+msgid ""
+"If you want to move all items to a new record creating only one "
+"bibliographic record you can use the :ref:`Merge Records tool <merging-"
+"bibliographic-records-via-lists-label>` instead."
+msgstr ""
+"Si desea mover todos los ítems a un nuevo registro creando un solo registro "
+"bibliográfico puede utilizar la herramienta 'Combinar registros' en su lugar."
+
+#: ../../source/cataloging.rst:906
+msgid "Deleting Items"
+msgstr "Eliminando ítems"
+
+#: ../../source/cataloging.rst:908
+msgid ""
+"There are many ways to delete item records. If you only need to delete one "
+"item you can do this by opening up the detail page for the bib record and "
+"clicking the 'Edit' button at the top. From there you can choose to 'Edit "
+"items'."
+msgstr ""
+"Hay varias maneras de eliminar registros. Si solo necesita eliminar un ítem "
+"puede hacerlo abriendo la página de detalles del registro bibliográfico y "
+"haciendo clic en el botón 'Editar' en el tope. Desde aquí puede elegir "
+"'Editar ítems'."
+
+#: ../../source/cataloging.rst:913
+#, fuzzy
+msgid "|image697|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:915
+msgid ""
+"You will be presented with a list of items and next to each one will be a "
+"link labeled 'Delete'. Click that link and if the item is not checked out it "
+"will delete that item."
+msgstr ""
+"Se le presentará una lista de ítems y a lado de cada uno un enlace "
+"etiquetado 'Eliminar'. Haga clic en ese enlace y si el ítem no está prestado "
+"se eliminará ese ítem."
+
+#: ../../source/cataloging.rst:919
+#, fuzzy
+msgid "|image698|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:921
+msgid ""
+"If you know that all of the items attached to your record are not currently "
+"checked out you can use the 'Delete all items' option under the 'Edit menu' "
+"and it will remove all items from the record."
+msgstr ""
+"Si sabe que todos los ítem del registro no están prestados puede utilizar la "
+"opción 'Eliminar todos los ítems' en 'Menú de edición' y removerá todos los "
+"ítems del registro."
+
+#: ../../source/cataloging.rst:925
+msgid ""
+"You can also enable :ref:`StaffDetailItemSelection` to have checkboxes "
+"appear to the left of each item on the detail display. You can then check "
+"off the items you would like to delete and click 'Delete selected items' at "
+"the top of the list."
+msgstr ""
+
+#: ../../source/cataloging.rst:931
+#, fuzzy
+msgid "|image699|"
+msgstr "|image69|"
+
+#: ../../source/cataloging.rst:933
+#, fuzzy
+msgid ""
+"Finally you can use the :ref:`batch delete tool <batch-item-deletion-label>` "
+"to delete a batch of items."
+msgstr ""
+"Finalmente puede utilizar la herramienta de eliminación de ítems en lote."
+
+#: ../../source/cataloging.rst:939
+msgid "Item Specific Circulation History"
+msgstr "Historial de circulación específica de ítem"
+
+#: ../../source/cataloging.rst:941
+msgid ""
+"Each bibliographic record keeps a circulation history (with or without the "
+"patron information depending on your settings), but each item also has its "
+"own circulation history page. To see this, click on the 'Items' tab to the "
+"left of the record you are viewing."
+msgstr ""
+"Cada registro bibliográfico mantiene un historial de circulación (con o sin "
+"la información de los usuarios dependiendo de su configuración), pero cada "
+"ítem tiene también su página de historial propio. Para verla, haga clic en "
+"la pestaña 'Ítems' a la izquierda del registro que está viendo."
+
+#: ../../source/cataloging.rst:946
+#, fuzzy
+msgid "|image700|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:948
+msgid ""
+"Below the 'History' heading is a link to 'View item's checkout history,' "
+"clicking that will open up the item's history which will look slightly "
+"different from the bibliographic record's history page."
+msgstr ""
+"Bajo el encabezado 'Historia' hay un enlace a 'Ver historial de préstamos "
+"del ítem', haciendo clic le mostrará el historial del ítem el cual se ve "
+"levemente diferente de la página del historial de registros bibliográficos."
+
+#: ../../source/cataloging.rst:952
+#, fuzzy
+msgid "|image701|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:957
+msgid "Authorities"
+msgstr "Autoridades"
+
+#: ../../source/cataloging.rst:959
+msgid ""
+"Authority records are a way of controlling fields in your MARC records. "
+"Using authority records will provide you with control over subject headings, "
+"personal names and places."
+msgstr ""
+"Los registros de autoridad son una manera de controlar campos en sus "
+"registros MARC. El utilizar registros de autoridad le provee control sobre "
+"temas, nombres personales y lugares."
+
+#: ../../source/cataloging.rst:966
+msgid "Adding Authorities"
+msgstr "Agregando autoridades"
+
+#: ../../source/cataloging.rst:968
+msgid ""
+"To add a new authority record you can either choose the authority type from "
+"the 'New Authority' button or search another library by clicking the 'New "
+"from Z39.50' button."
+msgstr ""
+"Para agregar un nuevo registro de autoridad, usted puede elegir el tipo de "
+"autoridad desde el botón 'Nueva autoridad' o buscar en otra biblioteca "
+"seleccionando el botón 'Nuevo desde Z39.50'."
+
+#: ../../source/cataloging.rst:972
+#, fuzzy
+msgid "|image702|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:974
+msgid ""
+"If you choose to enter a new authority from scratch, the form that appears "
+"will allow you to enter all of the necessary details regarding your "
+"authority record."
+msgstr ""
+"Si elije ingresar una nueva autoridad desde cero, el formulario que aparece "
+"le permitirá introducir todos los datos necesarios de su registro de "
+"autoridad."
+
+#: ../../source/cataloging.rst:978
+#, fuzzy
+msgid "|image703|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:980
+msgid ""
+"To expand collapsed values simply click on the title and the subfields will "
+"appear. To duplicate a field or subfield just click the plus sign (+) to the "
+"right of the label. To use field helper plugins simply click the ellipsis "
+"(...) to the right of the field."
+msgstr ""
+"Para expandir valores colapsados simplemente haga clic en el título y los "
+"subcampos aparecerán. Para duplicar un campo o subcampo solo haga clic en el "
+"signo mas (+) a la derecha de la etiqueta. Para utilizar plugins de ayuda de "
+"campo haga clic en la elipsis (...) a la derecha del campo."
+
+#: ../../source/cataloging.rst:985
+msgid ""
+"When linking authorities to other headings, you can use the authority finder "
+"plugin by clicking the ellipsis (...) to the right of the field."
+msgstr ""
+"Cuando enlace autoridades a otros encabezados, puede utilizar el buscador de "
+"autoridades haciendo clic en las elipsis (...) a la derecha del campo."
+
+#: ../../source/cataloging.rst:988
+#, fuzzy
+msgid "|image704|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:990
+msgid ""
+"From there you can search your authority file for the authority to link. If "
+"you can't find the authority to link, you can click the 'Create new' button "
+"and add the necessary authority for the link. This plugin also allows for "
+"you to choose the link relationship between the authorities."
+msgstr ""
+"Desde allí podrá buscar el archivo de autoridad para enlazar con la "
+"autoridad. Si no puede encontrar la autoridad para enlazar, puede hacer clic "
+"en el botón 'Crear nueva' y agregar la autoridad necesaria para el enlace. "
+"Este plugin también le permite seleccionar el enlace de relación entre las "
+"autoridades."
+
+#: ../../source/cataloging.rst:995
+#, fuzzy
+msgid "|image705|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:997
+msgid ""
+"If you choose to search another library for the authority record you will be "
+"presented with a search box"
+msgstr ""
+"Si elije buscar en otra biblioteca a su registro de autoridad se le "
+"presentará una caja de búsqueda"
+
+#: ../../source/cataloging.rst:1000
+#, fuzzy
+msgid "|image706|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:1002
+msgid ""
+"From the results you can choose the 'Import' link to the right of the record "
+"you would like to add to Koha"
+msgstr ""
+"De los resultados puede elegir el enlace 'Importar' a la derecha del "
+"registro que desea agregar a Koha"
+
+#: ../../source/cataloging.rst:1005
+#, fuzzy
+msgid "|image707|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:1007
+msgid ""
+"You will then be presented with the form to edit the authority before saving "
+"it to your system"
+msgstr ""
+"Se le presentará entonces el formulario para editar la autoridad antes de "
+"grabarla en su sistema"
+
+#: ../../source/cataloging.rst:1010
+#, fuzzy
+msgid "|image708|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:1015
+msgid "Searching Authorities"
+msgstr "Buscando autoridades"
+
+#: ../../source/cataloging.rst:1017
+msgid ""
+"From the authorities page you can search for existing terms and the "
+"bibliographic records they are attached to."
+msgstr ""
+"Desde la página de autoridades puede buscar términos existentes y sus "
+"registros bibliográficos asociados."
+
+#: ../../source/cataloging.rst:1020
+#, fuzzy
+msgid "|image709|"
+msgstr "|image70|"
+
+#: ../../source/cataloging.rst:1022
+#, fuzzy
+msgid ""
+"From the results you will see the authority record, how many bibliographic "
+"records it is attached to, an 'Actions' menu that includes the ability to :"
+"ref:`edit <editing-authorities-label>`, :ref:`merge <merging-authorities-"
+"label>` and :ref:`delete <editing-authorities-label>` (if there are no "
+"bibliographic records attached)."
+msgstr ""
+"Desde los resultados podrá ver el registro de autoridad, a cuantos registros "
+"bibliográficos está asociado, y un enlace para eliminarla (si no hay "
+"registros asociados)"
+
+#: ../../source/cataloging.rst:1028
+#, fuzzy
+msgid "|image710|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1030
+msgid ""
+"Clicking on the Details link to the right of the authority record summary "
+"will open the full record and the option to edit the record."
+msgstr ""
+"Haciendo clic en el resumen del registro de autoridad abrirá el registro "
+"completo y la opción de editarlo."
+
+#: ../../source/cataloging.rst:1033
+#, fuzzy
+msgid "|image711|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1035
+msgid ""
+"If the authority has See Alsos in it you will see those broken out on the "
+"search results, clicking the linked headings will run a search for that "
+"heading instead."
+msgstr ""
+"Si la autoridad tiene Ver además en ella verá eso en los resultados de "
+"búsqueda, haciendo clic en las cabeceras enlazadas se buscará por las mismas."
+
+#: ../../source/cataloging.rst:1039
+#, fuzzy
+msgid "|image712|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1044
+msgid "Editing Authorities"
+msgstr "Editando autoridades"
+
+#: ../../source/cataloging.rst:1046
+msgid ""
+"Authorities can be edited by clicking on the authority summary from the "
+"search results and then clicking the 'Edit' button above the record. Or by "
+"clicking on the 'Edit' link to the left of the authority on the search "
+"results."
+msgstr ""
+"Las autoridades pueden editarse haciendo clic en el resumen de la autoridad "
+"desde le resultado de búsqueda y haciendo clic en el botón 'Editar' encima "
+"del registro."
+
+#: ../../source/cataloging.rst:1051
+#, fuzzy
+msgid "|image713|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1053
+msgid ""
+"Once you've made the necessary edits, simply click 'Save' and `dontmerge "
+"<#dontmerge>`__ is set to 'Do', Koha will immediately update all of the bib "
+"records linked to the authority with the new authority record's data. If "
+"dontmerge is set to \"Don't\" then Koha won't edit bib records when changes "
+"are made to authorities, rather, this is done later by the :ref:`merge"
+"\\_authority.pl cronjob <update-authorities-label>`."
+msgstr ""
+
+#: ../../source/cataloging.rst:1060
+msgid ""
+"To delete an authority record you first must make sure it's not linked to "
+"any bibliographic records. If it is not used by any bibliographic records a "
+"'Delete' link will appear to the right of the record on the search results "
+"and as a button that appears after clicking on the summary of the authority "
+"record."
+msgstr ""
+"Para eliminar un registro de autoridad primero debe asegurarse de que no "
+"está vinculado con registros bibliográficos. Si no es utilizado por "
+"registros bibliográficos aparecerá el enlace 'Eliminar\" a la derecha del "
+"registro en los resultados de búsqueda y como un botón que aparece después "
+"de hacer clic en el resumen del registro de autoridad."
+
+#: ../../source/cataloging.rst:1069
+msgid "Merging Authorities"
+msgstr "Buscando autoridades"
+
+#: ../../source/cataloging.rst:1071
+msgid ""
+"If you have duplicate authority records you can merge them together by "
+"clicking the 'Merge' link, found in the actions menu, next to two results on "
+"an authority search."
+msgstr ""
+"Si posee registros de autoridad duplicados, puede combinarlos haciendo clic "
+"en el enlace 'Combinar', encontrado en el menú de acciones, a la par de dos "
+"resultado en la búsqueda de autoridades."
+
+#: ../../source/cataloging.rst:1075
+#, fuzzy
+msgid "|image714|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1077
+msgid ""
+"After clicking 'Merge' on the first result you will see that authority "
+"listed at the top of the results."
+msgstr ""
+"Después de hacer clic en 'Combinar' en el primer resultado, usted verá esa "
+"autoridad listada en la parte superior de los resultados."
+
+#: ../../source/cataloging.rst:1080
+#, fuzzy
+msgid "|image715|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1082
+msgid ""
+"Next you need to click 'Merge' next to the second result you'd like to merge."
+msgstr ""
+"A continuación, necesitará de dar clic en 'Combinar' a la par del segundo "
+"resultado el cual le gustaría combinar."
+
+#: ../../source/cataloging.rst:1085
+msgid ""
+"You will be asked which of the two records you would like to keep as your "
+"primary record and which will be deleted after the merge."
+msgstr ""
+"Primero se le preguntará cual de los dos registros desea conservar como "
+"primario y cual será eliminado luego de la combinación."
+
+#: ../../source/cataloging.rst:1088
+#, fuzzy
+msgid "|image716|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1090
+msgid ""
+"You will be presented with the MARC for both of the records (each accessible "
+"by tabs labeled with the authority numbers for those records). By default "
+"the entire first record will be selected, uncheck the fields you don't want "
+"in the final (destination) record and then move on to the second tab to "
+"choose which fields should be in the final (destination) record."
+msgstr ""
+"Se le presentará la vista MARC de ambos registros (cada uno accesible por "
+"pestañas identificadas con el número propio de esos registros). Por defecto "
+"el primer registro estará seleccionado, desmarque los campos que no desee en "
+"el registro final (destino) y luego muévase a la segunda pestaña y "
+"seleccione cuales campos deben ir en el registro final (destino)."
+
+#: ../../source/cataloging.rst:1097
+#, fuzzy
+msgid "|image717|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1099
+msgid ""
+"Once you have completed your selections click the 'Merge' button. The "
+"primary record will now contain the data you chose for it and the second "
+"record will be deleted."
+msgstr ""
+"Una vez haya completado su selección haga clic en el botón 'combinar'. El "
+"registro primario contendrá ahora los datos que eligió para el registro, así "
+"como, los ítems/existencias de ambos registros, y el segundo registro será "
+"eliminado."
+
+#: ../../source/cataloging.rst:1103
+#, fuzzy
+msgid "|image718|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1108
+msgid "Cataloging Guides"
+msgstr "Guías de Catalogación"
+
+#: ../../source/cataloging.rst:1113
+msgid "Bibliographic Record Cataloging Cheat Sheet"
+msgstr "Registro Bibliográfico de Catalogación Hoja de Referencia"
+
+#: ../../source/cataloging.rst:1116
+msgid "Tag"
+msgstr "Campo"
+
+#: ../../source/cataloging.rst:1116
+msgid "Label"
+msgstr "Etiqueta"
+
+#: ../../source/cataloging.rst:1116 ../../source/cataloging.rst:1226
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../source/cataloging.rst:1116
+msgid "Instructions"
+msgstr "Instrucciones"
+
+#: ../../source/cataloging.rst:1118
+msgid "000"
+msgstr "000"
+
+#: ../../source/cataloging.rst:1118
+msgid "LEADER"
+msgstr "LEADER"
+
+#: ../../source/cataloging.rst:1118
+msgid ""
+"Describes the record(i.e. surrogate) -- is it a record for a monograph? A "
+"serial?"
+msgstr ""
+"Describe el registro(i.e. surrogate) -- es un registro para una monografía? "
+"Una serie?"
+
+#: ../../source/cataloging.rst:1118
+msgid ""
+"Click in this field to fill it in. Then set \"Bibliographic level\" to 'a' "
+"for articles or 's' for serials. Otherwise, leave everything as is."
+msgstr ""
+"De clic en este campo para rellenarlo. Depués establezca el \"Nivel "
+"Bibliográfico\" a 'a' para artículos o  's' para seriales. De otra manera, "
+"deje todo como esta."
+
+#: ../../source/cataloging.rst:1120
+msgid "001"
+msgstr "001"
+
+#: ../../source/cataloging.rst:1120
+msgid "CONTROL NUMBER"
+msgstr "NÚMERO DE CONTROL"
+
+#: ../../source/cataloging.rst:1120
+msgid "Accession number."
+msgstr "Número de accesión."
+
+#: ../../source/cataloging.rst:1120
+msgid ""
+"Enter the accession number written inside the item here. For articles and "
+"items which do not have accession numbers, leave blank."
+msgstr ""
+"Introducir el número de accesión escrito dentro del item aquí. Para "
+"artículos y elementos que no tienen números de accesión, dejarlo en blanco."
+
+#: ../../source/cataloging.rst:1122
+msgid "003"
+msgstr "003"
+
+#: ../../source/cataloging.rst:1122
+msgid "CONTROL NUMBER IDENTIFIER"
+msgstr "IDENTIFICADOR DE NÚMERO DE CONTROL"
+
+#: ../../source/cataloging.rst:1122
+msgid "Your MARC Organizational Code"
+msgstr "Su Código Organizacional MARC"
+
+#: ../../source/cataloging.rst:1122
+msgid ""
+"Click in this field to fill it in (will auto fill if you have your :ref:"
+"`MARCOrgCode` preference set)."
+msgstr ""
+
+#: ../../source/cataloging.rst:1124
+msgid "005"
+msgstr "005"
+
+#: ../../source/cataloging.rst:1124
+#, fuzzy
+msgid "D & T LATEST TRANSACTION"
+msgstr "FECHA Y HORA DE LA ÚLTIMA TRANSACCIÓN"
+
+#: ../../source/cataloging.rst:1124
+msgid "Current date and time."
+msgstr "Tiempo y fecha actuales."
+
+#: ../../source/cataloging.rst:1124
+msgid "Click in this field to fill it in."
+msgstr "De clic en este campo para rellenarlo."
+
+#: ../../source/cataloging.rst:1126
+msgid "008"
+msgstr "008"
+
+#: ../../source/cataloging.rst:1126
+msgid "FIXED-LENGTH DATA ELEMENTS"
+msgstr "ELEMENTOS DE DATO DE LONGITUD-FIJA"
+
+#: ../../source/cataloging.rst:1126
+msgid ""
+"Field containing computer-readable representations of a number of things."
+msgstr ""
+"El campo que contiene ordenador-representaciones legibles de un número de "
+"cosas."
+
+#: ../../source/cataloging.rst:1126
+msgid ""
+"Generally you will only use 's' (single) or 'm' (multiple) options for "
+"position 06- use the former when the item was published in a single year, "
+"the latter when it was published over the course of several. If there is a "
+"single date, only enter a date in the first date field (positions 07-10). "
+"Enter the three-digit country code in positions 15-17, being sure to add "
+"spaces if the country code is fewer than three characters long. If there is "
+"an index, note that fact in position 31. Enter the three-letter language "
+"code in positions 35-37."
+msgstr ""
+"En general, usted sólo utilizará opciones 's' (solo) o 'm' (múltiple) para "
+"la posición 06 - usar el primero, cuando el item fue publicado en un solo "
+"año, este último cuando se publicó en el transcurso de varios. Si hay una "
+"sola fecha, sólo se escribe una fecha en el campo de fecha primero "
+"(posiciones 07 a 10). Ingrese el código de país de tres dígitos en las "
+"posiciones 15-17, asegurándose de añadir espacios si el código del país es "
+"de menos de tres caracteres. Si hay un índice, tenga en cuenta este hecho en "
+"la posición 31. Introduzca el código de idioma de tres letras en las "
+"posiciones 35-37."
+
+#: ../../source/cataloging.rst:1128
+msgid "010"
+msgstr "010"
+
+#: ../../source/cataloging.rst:1128
+msgid "LCCN"
+msgstr "LCCN"
+
+#: ../../source/cataloging.rst:1128
+msgid ""
+"A number assigned by the Library of Congress to uniquely identify the work."
+msgstr ""
+"Un número asignado por la Biblioteca de Congreso singularmente identifica el "
+"trabajo."
+
+#: ../../source/cataloging.rst:1128
+msgid ""
+"Check on the copyright page of the book (if it was published in the US) or "
+"the LC catalog for this number. If you can't find it, don't worry about it."
+msgstr ""
+"Verifique en la página de copyright del libro (si esta publicado en los EE."
+"UU.) o las catalogaciones LC para este número. Si no lo puedes encontrar, no "
+"se preocupe."
+
+#: ../../source/cataloging.rst:1130
+msgid "020"
+msgstr "020"
+
+#: ../../source/cataloging.rst:1130
+msgid "ISBN"
+msgstr "ISBN"
+
+#: ../../source/cataloging.rst:1130
+msgid "Unique number used by publishers to identify books."
+msgstr "Número unico utilizada por editores para identificar libros."
+
+#: ../../source/cataloging.rst:1130 ../../source/cataloging.rst:1132
+msgid "If this number isn't listed on the book, there probably isn't one."
+msgstr "Si este número no está en la lista en el libro, probablemente no este."
+
+#: ../../source/cataloging.rst:1132
+msgid "022"
+msgstr "022"
+
+#: ../../source/cataloging.rst:1132
+msgid "ISSN"
+msgstr "ISSN"
+
+#: ../../source/cataloging.rst:1132
+msgid "Unique number used by publishers to identify serials."
+msgstr "Número unico utilizado por editores para identificar seriales."
+
+#: ../../source/cataloging.rst:1134
+msgid "033"
+msgstr "033"
+
+#: ../../source/cataloging.rst:1134
+msgid "DATE/TIME OF EVENT"
+msgstr "TIEMPO/FECHA DE EVENTO"
+
+#: ../../source/cataloging.rst:1134
+msgid "Used for auction dates. Required for auction catalogs."
+msgstr ""
+"Utilizado para fechas de presentación. Requerido para catalogos de "
+"presentación."
+
+#: ../../source/cataloging.rst:1134
+msgid ""
+"For auctions that took place on only one day, enter the date of the auction "
+"in the format YYYYMMDD in the subfield 'a' and a '0' in the first indicator. "
+"For auctions that took place over two consecutive days or any number of non-"
+"consecutive days, create a subfield 'a' for each day with the date in the "
+"format YYYYMMDD, and put a '1' in the first indicator. For auctions that "
+"took place over more than two consecutive days, create a subfield 'a' (in "
+"format YYYYMMDD) for the first day and a subfield 'a' (also in format "
+"YYYYMMDD) for the last day, and put a '2' in the first indicator."
+msgstr ""
+"Para las presentaciones que tienen lugar un único día, introducir la fecha "
+"de la presentación en el formato YYYYMMDD en el subcampo 'a' y un '0' en el "
+"primer indicador. Para presentaciones que tienen lugar mas de dos días "
+"consecutivos o cualquier número de días no consecutivos, crear un subcampo "
+"'a' para cada día con la fecha en el formato YYYYMMDD, y poner un '1' en el "
+"primer indicador. Para presentaciones que tiene más de dos días "
+"consecutivos, crear un subcampo 'a' (en formato YYYYMMDD) para el primer día "
+"y un subfield 'a' (también en formato YYYYMMDD) para el último día, y poner "
+"un '2' en el primer indicador."
+
+#: ../../source/cataloging.rst:1136
+msgid "040"
+msgstr "040"
+
+#: ../../source/cataloging.rst:1136
+msgid "CATALOGING SOURCE"
+msgstr "FUENTE DE CATALOGACIÓN"
+
+#: ../../source/cataloging.rst:1136
+msgid "Identifies which libraries created and modified the record."
+msgstr "Identifica qué bibliotecas crean y modifican el registro."
+
+#: ../../source/cataloging.rst:1136
+msgid ""
+"For imported records, add a subfield 'd' with your OCLC code as the value. "
+"For new records, make sure that the subfield 'c' with your OCLC code as the "
+"value."
+msgstr ""
+"Para importar registros, añadir un subfield 'd' con el código OCLC como "
+"valor. Para nuevos registros, asegurese que el subfield 'c' con el código "
+"OCLC como valor."
+
+#: ../../source/cataloging.rst:1138
+msgid "041"
+msgstr "041"
+
+#: ../../source/cataloging.rst:1138
+msgid "LANGUAGE CODE"
+msgstr "CÓDIGO DE IDIOMA"
+
+#: ../../source/cataloging.rst:1138
+msgid ""
+"Identifies all the languages used in an item, when two or more languages are "
+"present."
+msgstr ""
+"Identifica todas los idiomas que utilizaron en un item, cuándo dos o más "
+"idiomas están presentes."
+
+#: ../../source/cataloging.rst:1138
+msgid ""
+"For significant portions of a text in a given language, there should be a "
+"subfield 'a' with that language code. If there are only summaries or "
+"abstracts in a specific language, create a subfield 'b' with that language "
+"code."
+msgstr ""
+"Para porciones significativas de un texto en una lengua dada, tendría que "
+"haber un subfield 'a' con esel código de idioma. Si hay resúmenes únicos o "
+"abstractos en una lengua específica, crear un subcampo 'b' con ese código de "
+"idioma."
+
+#: ../../source/cataloging.rst:1140
+msgid "100"
+msgstr "100"
+
+#: ../../source/cataloging.rst:1140
+msgid "MAIN ENTRY--PERSONAL"
+msgstr "ENTRADA PRINCIPAL--PERSONAL"
+
+#: ../../source/cataloging.rst:1140
+msgid "Authorized form of the main author's name"
+msgstr "Forma autorizada del nombre del autor principal"
+
+#: ../../source/cataloging.rst:1140 ../../source/cataloging.rst:1196
+msgid ""
+"See Authorized headings sheet and AACR2. The first indicator should "
+"generally be a '1', to indicate that the entry is surname first. If the name "
+"consists only of a forename, however, the first indicator should be '0'."
+msgstr ""
+"Ver hoja de encabezamientos Autorizados y AACR2. El primer indicador "
+"generalmente tendría que ser un '1', para indicar que la entrada es apellido "
+"primero. Si el nombre consiste sólo de un nombre, aun así, el primer "
+"indicador tendría que ser '0'."
+
+#: ../../source/cataloging.rst:1142
+msgid "110"
+msgstr "110"
+
+#: ../../source/cataloging.rst:1142
+msgid "MAIN ENTRY--CORPORATE"
+msgstr "ENTRADA PRINCIPAL--CORPORATIVO"
+
+#: ../../source/cataloging.rst:1142
+msgid ""
+"Authorized form of the name of the main corporate author. Required for "
+"auction catalogs."
+msgstr ""
+"Forma autorizada del nombre del autor corporativo principal. Requerido para "
+"la presentación de la catalogación."
+
+#: ../../source/cataloging.rst:1142
+msgid ""
+"Auction catalogs should use a 110 field rather than a 100 field. See "
+"Authorized headings sheet and AACR2. Set the first indicator to '2'."
+msgstr ""
+"La subastas en los catalogos tendría que utilizar un 110 campo más que un "
+"campo 100. Ir a hoja de encabezamientos Autorizado y AACR2. Poner el primer "
+"indicador a '2'."
+
+#: ../../source/cataloging.rst:1144
+msgid "111"
+msgstr "111"
+
+#: ../../source/cataloging.rst:1144
+msgid "MAIN ENTRY--MEETING"
+msgstr "ENTRADA PRINCIPAL--CONOCIENDO"
+
+#: ../../source/cataloging.rst:1144
+msgid ""
+"Authorized form of the name of a meeting which acted as a main offer (e.g. "
+"conference proceedings)"
+msgstr ""
+"Forma autorizada del nombre de una reunión qué esta como oferta principal "
+"(p. ej. procesos de conferencia)"
+
+#: ../../source/cataloging.rst:1144 ../../source/cataloging.rst:1198
+#: ../../source/cataloging.rst:1200
+msgid ""
+"See Authorized headings sheet and AACR2. Set the first indicator to '2'."
+msgstr ""
+"Vea hojas de encabezamientos Autorizado y AACR2. Pone el primer indicador a "
+"'2'."
+
+#: ../../source/cataloging.rst:1146
+msgid "245"
+msgstr "245"
+
+#: ../../source/cataloging.rst:1146
+msgid "TITLE STATEMENT"
+msgstr "MENCIÓN DEL TÍTULO"
+
+#: ../../source/cataloging.rst:1146
+msgid ""
+"Transcription of the title statement from the title page (or chief source of "
+"information)"
+msgstr ""
+"Transcripción de la mención de título de la página de título (o fuente "
+"principal de información)"
+
+#: ../../source/cataloging.rst:1146
+msgid ""
+"Enter the title in subfield 'a', the subtitle in subfield 'b', and the "
+"statement of responsibility in subfield 'c'. If you are creating a record "
+"for a single volume or part of a multi-part item, you should put the part "
+"number in subfield 'n' and the part title in subfield 'p.' For auction "
+"catalogs, the date (in 'MM/DD/YYYY' format) should be listed in square "
+"brackets in subfield 'f'. See ISBD punctuation sheet. Set the first "
+"indicator to '0' if there is no author, otherwise set it to '1'. Set the "
+"second indicator to the number of non-filing characters (i.e. characters in "
+"an initial articles plus the space... for \"The \" set the second indicator "
+"to '4')."
+msgstr ""
+"Introducir el título en subfield 'a', el subtitulo en subfield 'b', y la "
+"mención de responsabilidad en subfield 'c'. Si  estás creando un registro "
+"para un volumen solo o parte de un item,  tendrías que poner el número de la "
+"parte en subfield 'n' y el título de parte en subcampo 'p.' Para la subasta "
+"de catalogos, la fecha (en 'MM/DD/YYYY' formato) tendría que ser listado en "
+"paréntesis cuadrados en subfield 'f'. Ver hoja ISBD de puntuación. Poner el "
+"primer indicador a '0' si no hay ningún autor, de otra forma poner a '1'. "
+"Poner el segundo indicador al número de caracteres vacios (i.e. caracteres "
+"en unos artículos iniciales más el espacio... Para \"El \" puesto el segundo "
+"indicador a '4')."
+
+#: ../../source/cataloging.rst:1148
+msgid "246"
+msgstr "246"
+
+#: ../../source/cataloging.rst:1148
+msgid "VARYING FORM OF TITLE"
+msgstr "FORMA VARIANTE DEL TITULO"
+
+#: ../../source/cataloging.rst:1148
+msgid "Alternate form of title for searching and filing purposes"
+msgstr "Forma alterna del título para buscar y propósitos de completado"
+
+#: ../../source/cataloging.rst:1148
+msgid ""
+"If the patron might look for the work under a different title, enter it "
+"here. Do not include initial articles. The first indicator should be '3', "
+"unless the title is merely a variant spelling, in which case the first "
+"indicator should be '1'."
+msgstr ""
+"Si el usuario podría estar buscando para el trabajo bajo un título "
+"diferente, introducirlo aquí. No incluye artículos iniciales. El primer "
+"indicador tendría que ser '3', a no ser que el título es meramente una "
+"variante en la ortografía, en tal caso el primer indicador tendría que ser "
+"'1'."
+
+#: ../../source/cataloging.rst:1150
+msgid "250"
+msgstr "250"
+
+#: ../../source/cataloging.rst:1150
+msgid "EDITION STATEMENT"
+msgstr "MENCION DE EDICION"
+
+#: ../../source/cataloging.rst:1150
+msgid ""
+"Transcription of the edition statement from the title page (or chief source "
+"of information)"
+msgstr ""
+"Transcripción de la mención de la edición de la página de título (o fuente "
+"principal de información)"
+
+#: ../../source/cataloging.rst:1150
+msgid ""
+"Transcribe the edition statement exactly as it appears on the title-page. "
+"You may abbreviate if the edition statement is very long."
+msgstr ""
+"Transcribir la mención de la edición exactamente como aparece en el título-"
+"página.  Puedes abreviar si la declaración de edición es muy grande."
+
+#: ../../source/cataloging.rst:1152
+msgid "260"
+msgstr "260"
+
+#: ../../source/cataloging.rst:1152
+msgid "PUBLICATION (IMPRINT)"
+msgstr "PUBLICACIÓN (IMPRENTA)"
+
+#: ../../source/cataloging.rst:1152
+msgid "Publication information."
+msgstr "Información de publicación."
+
+#: ../../source/cataloging.rst:1152
+msgid ""
+"Put the location of publication in subfield 'a', the publisher in subfield "
+"'b', and the year (or probable year) in subfield 'c'. See ISBD punctuation "
+"sheet."
+msgstr ""
+"Poner la ubicación de publicación en subcampo 'a', el editor en subcampo "
+"'b', y el año (o año probable) en subcampo 'c'. Ver hoja de puntuación de "
+"ISBD."
+
+#: ../../source/cataloging.rst:1154
+msgid "300"
+msgstr "300"
+
+#: ../../source/cataloging.rst:1154
+msgid "PHYSICAL DESCRIPTION"
+msgstr "DESCRIPCIÓN FÍSICA"
+
+#: ../../source/cataloging.rst:1154
+msgid "Physical description"
+msgstr "Descripción física"
+
+#: ../../source/cataloging.rst:1154
+msgid ""
+"Enter the pagination statement in subfield 'a', a brief description of "
+"\"special\" contents such as illustrations or maps in subfield 'b' (see "
+"AACR2), and the size of the item in subfield 'c'. See ISBD punctuation sheet."
+msgstr ""
+"Introducir la mención de paginación en subfield 'a', una descripción breve "
+"de contenidos \"especiales\" como ilustraciones o mapas en subfield 'b' (ver "
+"AACR2), y la medida del item en subcampo 'c'. Ver ISBD hoja de puntuación."
+
+#: ../../source/cataloging.rst:1156
+msgid "490"
+msgstr "490"
+
+#: ../../source/cataloging.rst:1156
+msgid "SERIES STATEMENT"
+msgstr "MENCIÓN DE SERIE"
+
+#: ../../source/cataloging.rst:1156
+msgid "Shows the series statement exactly as it appears on the item."
+msgstr "Muestra la mención de serie exactamente como aparece en el item."
+
+#: ../../source/cataloging.rst:1156
+msgid ""
+"Transcribe the series statement into subfield 'a' with the volume number in "
+"subfield 'v'. See ISBD punctuation sheet. Set the first indicator to '1' if "
+"you are using an 830. As a general rule, you should do so."
+msgstr ""
+"Transcribir la mención de serie en el subcampo 'a' con el número de volumen "
+"en subcampo 'v'. Ver ISBD hoja de puntuación. Pone el primer indicador a '1' "
+"si  estás utilizando 830. Como regla general,  tendrías que hacer así."
+
+#: ../../source/cataloging.rst:1158
+msgid "500"
+msgstr "500"
+
+#: ../../source/cataloging.rst:1158
+msgid "GENERAL NOTE"
+msgstr "NOTA GENERAL"
+
+#: ../../source/cataloging.rst:1158
+msgid "Notes that don't fit anywhere else."
+msgstr "Notas que no caben en ningun lugar más."
+
+#: ../../source/cataloging.rst:1158
+msgid ""
+"Enter notes as full sentences, with a separate 500 field for each distinct "
+"topic."
+msgstr ""
+"Introducir notas como oraciones completas, con un separados de campo 500 "
+"para cada tema distinto."
+
+#: ../../source/cataloging.rst:1160
+msgid "501"
+msgstr "501"
+
+#: ../../source/cataloging.rst:1160
+msgid "WITH NOTE"
+msgstr "NOTA DE CON"
+
+#: ../../source/cataloging.rst:1160
+msgid ""
+"Notes whether the work is bound with the works described by other records."
+msgstr ""
+"Notas si el trabajo está atado con los trabajos descritos por otros "
+"registros."
+
+#: ../../source/cataloging.rst:1160
+msgid "Put description of relationship in subfield 'a'."
+msgstr "Poner la descripción de relación en subfield 'a'."
+
+#: ../../source/cataloging.rst:1162
+msgid "504"
+msgstr "504"
+
+#: ../../source/cataloging.rst:1162
+msgid "BIBLIOGRAPHY, ETC. NOTE"
+msgstr "NOTA DE BIBLIOGRAFÍA, ETC."
+
+#: ../../source/cataloging.rst:1162
+msgid "Indicates whether the work includes a bibliography."
+msgstr "Indica si el trabajo incluye una bibliografía."
+
+#: ../../source/cataloging.rst:1162
+msgid ""
+"If the work includes a bibliography and index, put the text \"Includes "
+"bibliographical references (p. XXX-XXX) and index.\" in subfield 'a'. If the "
+"work does not include an index, remove that part of the sentence. If the "
+"references are scattered throughout the work and not gathered into a "
+"distinct sentence, remove the parenthetical statement."
+msgstr ""
+"Si el trabajo incluye una bibliografía y índice, poner el texto \"Incluye "
+"referencias bibliográficas  (p. XXX-XXX) y índice.\" En el subcampo 'a'. Si "
+"el trabajo no incluye un índice, sacar esa parte de la frase. Si las "
+"referencias están esparcidas durante el trabajo y no reunido a una frase "
+"distinta, sacar la mención en parentesis."
+
+#: ../../source/cataloging.rst:1164
+msgid "505"
+msgstr "505"
+
+#: ../../source/cataloging.rst:1164
+msgid "FORMATTED CONTENTS"
+msgstr "CONTENIDO CON FORMATO"
+
+#: ../../source/cataloging.rst:1164
+msgid ""
+"List of contents in a standard format. Unformatted contents can be listed in "
+"a 500 (General Note) field."
+msgstr ""
+"Lista de contenidos en un formato estándar. Los contenidos no formateados "
+"pueden ser listados en el campo 500 (Nota General)."
+
+#: ../../source/cataloging.rst:1164
+msgid ""
+"See ISBD punctuation sheet. Set the first indicator to '0'. If you are "
+"separately coding authors and titles, set the second indicator to '0'. "
+"Otherwise, leave the second indicator blank."
+msgstr ""
+"Ver ISBD hoja de puntuación. Pone el primer indicador a '0'. Si estan "
+"separado los autores de codificación y títulos, ponerlos en el segundo "
+"indicador a '0'. De otra manera, dejar el segundo indicador en blanco."
+
+#: ../../source/cataloging.rst:1166
+msgid "518"
+msgstr "518"
+
+#: ../../source/cataloging.rst:1166
+msgid "DATE/TIME OF EVENT NOTE"
+msgstr "NOTA DE FECHA/HORA DE UN EVENTO"
+
+#: ../../source/cataloging.rst:1166
+msgid "Used for auction dates."
+msgstr "Utilizado para fechas de acontecimientos."
+
+#: ../../source/cataloging.rst:1166
+msgid ""
+"For auction catalogs, enter the date of the auction in the format 'January "
+"2, 1984' in the subfield 'a'"
+msgstr ""
+"Para los acontecimientos de los catalogos, introducir la fecha del "
+"acontecimiento en el formato 'enero 2, 1984' en el subfield 'a'"
+
+#: ../../source/cataloging.rst:1168
+msgid "520"
+msgstr "520"
+
+#: ../../source/cataloging.rst:1168
+msgid "SUMMARY, ETC."
+msgstr "RESUMEN, ETC."
+
+#: ../../source/cataloging.rst:1168
+msgid "A brief summary or abstract of the book or article."
+msgstr "Un resumen breve o abstracto del libro o artículo."
+
+#: ../../source/cataloging.rst:1168
+msgid ""
+"In general you do not need to write a summary. A summary might be called "
+"for, however, with items that cannot be easily reviewed by a patron, such as "
+"books with highly acidic paper or CD-ROMs."
+msgstr ""
+"En general no necesitas escribir un resumen. Un resumen se podría llamar, "
+"aun así, con elementos que no puede ser fácilmente revisado por un usuario, "
+"como libros con altamente papel acídico o CD-ROMs."
+
+#: ../../source/cataloging.rst:1170
+msgid "546"
+msgstr "546"
+
+#: ../../source/cataloging.rst:1170
+msgid "LANGUAGE NOTE"
+msgstr "NOTA DE IDIOMA"
+
+#: ../../source/cataloging.rst:1170
+msgid "Note describing the languages used in the work"
+msgstr "Nota describiendo los idiomas utilizados en el trabajo"
+
+#: ../../source/cataloging.rst:1170
+msgid ""
+"Only needed for works in multiple languages. See ISBD punctuation sheet."
+msgstr ""
+"Sólo necesitado para trabajos en múltiples idiomas. Ver ISBD hoja de "
+"puntuación."
+
+#: ../../source/cataloging.rst:1172
+msgid "561"
+msgstr "561"
+
+#: ../../source/cataloging.rst:1172
+msgid "PROVENANCE INFORMATION"
+msgstr "INFORMACIÓN DE LA PROPIEDAD"
+
+#: ../../source/cataloging.rst:1172
+msgid "Describes the previous ownership of the item."
+msgstr "Describe la propiedad anterior del elemento."
+
+#: ../../source/cataloging.rst:1172 ../../source/cataloging.rst:1174
+msgid "Used only for rare books."
+msgstr "Utilizó sólo para libros raros."
+
+#: ../../source/cataloging.rst:1174
+msgid "563"
+msgstr "563"
+
+#: ../../source/cataloging.rst:1174
+msgid "BINDING INFORMATION"
+msgstr "INFORMACIÓN DE ENCUADERNACIÓN"
+
+#: ../../source/cataloging.rst:1174
+msgid "Describes the binding of the item."
+msgstr "Describe el enlace de el item."
+
+#: ../../source/cataloging.rst:1176
+msgid "590"
+msgstr "590"
+
+#: ../../source/cataloging.rst:1176
+msgid "LOCAL NOTE"
+msgstr "NOTA LOCAL"
+
+#: ../../source/cataloging.rst:1176
+msgid "Local notes. Required for auction catalogs."
+msgstr "Notas locales. Requerido para los acontecimientos en los catalogos."
+
+#: ../../source/cataloging.rst:1176
+msgid ""
+"Used for auction catalogs to indicate what types of coins are sold in the "
+"auction- Roman, Greek, etc."
+msgstr ""
+"Utilizado para catalogos de subastas para indicar que tipos de monedas están "
+"vendidos en subasta- Romano, Griego, etc."
+
+#: ../../source/cataloging.rst:1178
+msgid "600"
+msgstr "600"
+
+#: ../../source/cataloging.rst:1178
+msgid "SUBJECT ADDED--PERSONAL"
+msgstr "ASIENTO SECUNDARIO--NOMBRE PERSONAL"
+
+#: ../../source/cataloging.rst:1178
+msgid "Authorized form of personal names for people discussed in the work"
+msgstr ""
+"Forma autorizada de nombres personales para las personas discutidas en el "
+"trabajo"
+
+#: ../../source/cataloging.rst:1178
+msgid ""
+"See Authorized headings sheet and AACR2. The first indicator should "
+"generally be a '1', to indicate that the entry is surname first. If the name "
+"consists only of a forename, however, the first indicator should be '0'. If "
+"you found the name in the LC authority file, set the second indicator to "
+"'0'. Otherwise set the second indicator to '4'."
+msgstr ""
+"Ver hojas de encabezamientos Autorizado y AACR2. El primer indicador "
+"generalmente tendría que ser un '1', para indicar que la entrada es apellido "
+"primero. Si el nombre consiste sólo de un nombre, aun así, el primer "
+"indicador tendría que ser '0'. Si  se encuentra el nombre en el LC archivo "
+"de autoridad, se pone el segundo indicador a '0'. De otra manera poner el "
+"segundo indicador a '4'."
+
+#: ../../source/cataloging.rst:1180
+msgid "610"
+msgstr "610"
+
+#: ../../source/cataloging.rst:1180
+msgid "SUBJECT ADDED--CORPORATE"
+msgstr "ASIENTO SECUNDARIO--NOMBRE CORPORATIVO"
+
+#: ../../source/cataloging.rst:1180
+msgid ""
+"Authorized form of corporate names for organizations discussed in the work"
+msgstr ""
+"Forma autorizada de nombres corporativos para las organizaciones discutidas "
+"en el trabajo"
+
+#: ../../source/cataloging.rst:1180 ../../source/cataloging.rst:1182
+msgid ""
+"See Authorized headings sheet and AACR2. Set the first indicator to '2'. If "
+"you found the name in the LC authority file, set the second indicator to "
+"'0'. Otherwise set the second indicator to '4'."
+msgstr ""
+"Ver hoja de encabezamientos Autorizado y AACR2. Poner el primer indicador a "
+"'2'. Si se encontro el nombre en el LC archivo de autoridad, se pone el "
+"segundo indicador a '0'. De otra forma Poner el segundo indicador a '4'."
+
+#: ../../source/cataloging.rst:1182
+msgid "611"
+msgstr "611"
+
+#: ../../source/cataloging.rst:1182
+msgid "SUBJECT ADDED--MEETING"
+msgstr "ASIENTO SECUNDARIO--REUNION"
+
+#: ../../source/cataloging.rst:1182
+msgid "Authorized form of meeting names for meetings discussed in the work"
+msgstr ""
+"Forma autorizada de conocer nombres para las reuniones discutidas en el "
+"trabajo"
+
+#: ../../source/cataloging.rst:1184
+msgid "630"
+msgstr "630"
+
+#: ../../source/cataloging.rst:1184
+msgid "SUBJECT ADDED--UNIFORM TITLE"
+msgstr "ASIENTO SECUNDARIO DE MATERIA--TITULO UNIFORME"
+
+#: ../../source/cataloging.rst:1184
+msgid "Authorized form of titles for other works discussed in the work"
+msgstr ""
+"Forma autorizada de títulos para otros trabajos discutidos en el trabajo"
+
+#: ../../source/cataloging.rst:1184
+msgid ""
+"See Authorized headings sheet and AACR2. Set the first indicator to the "
+"number of non-filing characters (i.e. characters in an initial articles plus "
+"the space... for \"The \" set the first indicator to '4'). If you found the "
+"name in the LC authority file, set the second indicator to '0'. Otherwise "
+"set the second indicator to '4'."
+msgstr ""
+"Ver hoja de encabezamientos Autorizado y AACR2. Poner el primer indicador al "
+"número de caracteres vaciosr (i.e. caracteres en unos artículos iniciales "
+"más el espacio... Para \"El \" poner el primer indicador a '4'). Si "
+"encontraste el nombre en LC archivo de autoridad, puesto el segundo "
+"indicador a '0'. De otra forma poner el segundo indicador a '4'."
+
+#: ../../source/cataloging.rst:1186
+msgid "650"
+msgstr "650"
+
+#: ../../source/cataloging.rst:1186
+msgid "SUBJECT ADDED--TOPICAL"
+msgstr "ASIENTO SECUNDARIO DE MATERIA--TERMINO TEMATICO"
+
+#: ../../source/cataloging.rst:1186
+msgid ""
+"Library of Congress Subject Heading terms describing the subject of the work"
+msgstr ""
+"Los terminos de los encabezamientos de materias de la Biblioteca de Congreso "
+"que describen el trabajo"
+
+#: ../../source/cataloging.rst:1186 ../../source/cataloging.rst:1188
+msgid ""
+"See Authorized headings sheet and AACR2. If you found the name in the LC "
+"authority file, set the second indicator to '0'. Otherwise set the second "
+"indicator to '4'."
+msgstr ""
+"Ver hoja de encabezamientos Autorizado y AACR2. Si se encuentra el nombre en "
+"el archivo de autoridad LC, poner el segundo indicador a '0'. De otra forma "
+"Poner el segundo indicador a '4'."
+
+#: ../../source/cataloging.rst:1188
+msgid "651"
+msgstr "651"
+
+#: ../../source/cataloging.rst:1188
+msgid "SUBJECT ADDED--GEOGRAPHICAL"
+msgstr "ASIENTO SECUNDARIO DE MATERIA--NOMBRE GEOGRAFICO"
+
+#: ../../source/cataloging.rst:1188
+msgid ""
+"Library of Congress Subject Heading geographical terms describing the "
+"subject of the work"
+msgstr ""
+"Los terminos geográficos de los encabezamientos de materias de la Biblioteca "
+"de Congreso que describen el trabajo"
+
+#: ../../source/cataloging.rst:1190
+msgid "655"
+msgstr "655"
+
+#: ../../source/cataloging.rst:1190
+msgid "INDEX TERM--GENRE/FORM"
+msgstr "TERMINO DE INDIZACIÓN--GENERO/FORMA"
+
+#: ../../source/cataloging.rst:1190
+msgid "Describes what an item is as opposed to what the item is about."
+msgstr "Describe lo que un item es contrario de lo que es acerca el item."
+
+#: ../../source/cataloging.rst:1190
+msgid ""
+"Generally used only for auction catalogs, which should have the genre "
+"heading \"Auction catalogs.\" (make sure to find the authorized heading!) If "
+"you found the name in the LC authority file, set the second indicator to "
+"'0'. If you are using a term from a specific thesaurus, set the second "
+"indicator to '7' and put the code for the thesaurus in subfield '2'. "
+"Otherwise set the second indicator to '4'."
+msgstr ""
+"Generalmente utilizado sólo para los catalogos de subasta, el cual tendría "
+"que tener el género que encabeza \"subasta de catalogos\" (Asegurarse de "
+"encontrar el encabezamiento autorizado) Si se encuentra el nombre del "
+"archivo de autoridad LC, poner el segundo indicador a '0'. Si se está "
+"utilizando un termino de un tesaurio específico, poner el segundo indicador "
+"a '7' y poner el código para el tesaurio en el subcampo '2'. De otra manera "
+"poner el segundo indicador a '4'."
+
+#: ../../source/cataloging.rst:1192
+msgid "690"
+msgstr "690"
+
+#: ../../source/cataloging.rst:1192
+msgid "LOCAL SUBJECT ADDED--TOPICAL"
+msgstr "CAMPOS LOCALES SECUNDARIO--ACCESO TEMATICO"
+
+#: ../../source/cataloging.rst:1192 ../../source/cataloging.rst:1194
+msgid "Used for headings from any custom subject authority file."
+msgstr ""
+"Utilizado para encabezamientos de cualquier archivo de autoridad de materia "
+"personalizado."
+
+#: ../../source/cataloging.rst:1192
+msgid ""
+"If there is no appropriate LCSH term, you can use a 690 with subject "
+"headings you find on other items in the catalog."
+msgstr ""
+"Si hay no un termino apropiado LCSH,  puedes utilizar el campo 690 con el "
+"encabezamietno de materia que encuentras en otros items en el catalogo."
+
+#: ../../source/cataloging.rst:1194
+msgid "691"
+msgstr "691"
+
+#: ../../source/cataloging.rst:1194
+msgid "LOCAL SUBJECT ADDED--GEOGRAPHICAL"
+msgstr "CAMPOS LOCALES SECUNDARIO--ACCESO GEOGRÁFICO"
+
+#: ../../source/cataloging.rst:1194
+msgid ""
+"If there is no appropriate LCSH term, you can use a 691 with subject "
+"headings you find on other items in the catalog."
+msgstr ""
+"Si hay no un termino apropiado LCSH,  puedes utilizar el campo 691 para "
+"encuentrae en otros items en el catalogo."
+
+#: ../../source/cataloging.rst:1196
+msgid "700"
+msgstr "700"
+
+#: ../../source/cataloging.rst:1196
+msgid "ADDED ENTRY--PERSONAL"
+msgstr "ASIENTO SECUNDARIO--NOMBRE PERSONAL"
+
+#: ../../source/cataloging.rst:1196
+msgid ""
+"Used for second authors and other persons related to the production of the "
+"work."
+msgstr ""
+"Utilizado para segundos autores y otras personas relacionaron a la "
+"producción del trabajo."
+
+#: ../../source/cataloging.rst:1198
+msgid "710"
+msgstr "710"
+
+#: ../../source/cataloging.rst:1198
+msgid "ADDED ENTRY--CORPORATE"
+msgstr "ASIENTO SECUNDARIO--NOMBRE CORPORATIVO"
+
+#: ../../source/cataloging.rst:1198
+msgid ""
+"Used for corporate bodies related to the production of the work (e.g. "
+"publishers)."
+msgstr ""
+"Utilizado para los cuerpos corporativos relacionaron a la producción del "
+"trabajo (p. ej. editores)."
+
+#: ../../source/cataloging.rst:1200
+msgid "711"
+msgstr "711"
+
+#: ../../source/cataloging.rst:1200
+msgid "ADDED ENTRY--MEETING"
+msgstr "ASIENTO SECUNDARIO--NOMBRE DE REUNION"
+
+#: ../../source/cataloging.rst:1200
+msgid ""
+"Used for meetings related to the production of the work (e.g. symposia that "
+"contributed to the work)."
+msgstr ""
+"Utilizado para las reuniones relacionadas a la producción del trabajo (p. "
+"ej. symposio que contribuyó al trabajo)."
+
+#: ../../source/cataloging.rst:1202
+msgid "730"
+msgstr "730"
+
+#: ../../source/cataloging.rst:1202
+msgid "ADDED ENTRY--UNIFORM TITLE"
+msgstr "ASIENTO SECUNDARIO--TITULO UNIFORME"
+
+#: ../../source/cataloging.rst:1202
+msgid ""
+"Used for uniform titles related to the production of the work (e.g. a work "
+"that inspired the present work)"
+msgstr ""
+"Utilizado para los títulos uniformes relacionados a la producción del "
+"trabajo (p. ej. un trabajo que inspirado el trabajo presente)"
+
+#: ../../source/cataloging.rst:1202
+msgid ""
+"See Authorized headings sheet and AACR2. Set the first indicator to the "
+"number of non-filing characters (i.e. characters in an initial articles plus "
+"the space... for \"The \" set the first indicator to '4')."
+msgstr ""
+"Ver hojas de encabezamiento Autorizado y AACR2. Poner el primer indicador al "
+"número de caracteres vacios (i.e. caracteres en artículos iniciales más el "
+"espacio... Para \"El \" poner el primer indicador a '4')."
+
+#: ../../source/cataloging.rst:1204
+msgid "773"
+msgstr "773"
+
+#: ../../source/cataloging.rst:1204
+msgid "HOST ITEM ENTRY"
+msgstr "ASIENTO DE ITEM FUENTE"
+
+#: ../../source/cataloging.rst:1204
+msgid ""
+"Describes the larger bibliographic unit that contains the work (e.g. book or "
+"journal containing the article being described in the current record)"
+msgstr ""
+"Describe la unidad bibliográfica más grande que contiene el trabajo (p. ej. "
+"el libro o la revista que contienen el artículo que es descrito en el "
+"registro actual)"
+
+#: ../../source/cataloging.rst:1204
+msgid ""
+"If the host publication is author main entry, enter the authorized form of "
+"the author's name in subfield 'a'. Put the title in subfield 't'. If the "
+"host publication is an independent work, put publication information in "
+"subfield 'd'. When available, ISSN and ISBN should always be used in, in "
+"subfields 'x' and 'z' respectively. Relationship information (e.g. volume "
+"number, page number, etc.) goes in subfield 'g'. Subfield 'q' contains an "
+"encoded representation of the location of the item: volume, issue, and "
+"section numbers are separated by colons, and the first page is entered "
+"following a '<' at the end of the subfield. See ISBD punctuation sheet. Set "
+"the first indicator to '0'. If you want the label \"In:\" to be generated, "
+"leave the second indicator blank. If you want something else displayed "
+"before the 773 text, set the second indicator to '8' and add a subfield 'i' "
+"with the label you want at the beginning of the field (e.g. \"$iOffprint "
+"from:\")."
+msgstr ""
+
+#: ../../source/cataloging.rst:1206
+msgid "830"
+msgstr "830"
+
+#: ../../source/cataloging.rst:1206
+msgid "SERIES ENTRY--UNIFORM TITLE"
+msgstr "ASIENTO SECUNDARIO DE SERIE--TITULO UNIFORME"
+
+#: ../../source/cataloging.rst:1206
+msgid ""
+"Authorized form of the series name transcribed in the 490 field. Often this "
+"will just be the same as the 490."
+msgstr ""
+"Forma autorizada del nombre de serie transcrito en el campo 490. A menudo "
+"esto será igual como el 490."
+
+#: ../../source/cataloging.rst:1206
+msgid ""
+"See Authorized headings sheet and AACR2. Set the second indicator to the "
+"number of non-filing characters (i.e. characters in an initial articles plus "
+"the space... for \"The \" set the second indicator to '4')."
+msgstr ""
+"Ver hoja de encabezamientos Autorizado y AACR2. Poner el segundo indicador "
+"al número de caracteres vacios (i.e. caracteres en unos artículos iniciales "
+"más el espacio... Para \"El \" poner el segundo indicador a '4')."
+
+#: ../../source/cataloging.rst:1208
+msgid "852"
+msgstr "852"
+
+#: ../../source/cataloging.rst:1208
+msgid "LOCATION/CALL NUMBER"
+msgstr "UBICACIÓN/SIGNATURA TOPOGRÁFICA"
+
+#: ../../source/cataloging.rst:1208
+msgid ""
+"Provides the section name for pre-barcode books, pamphlets, and some "
+"articles and serials."
+msgstr ""
+"Proporciona el nombre de sección para código de barras de libros, panfletos, "
+"y algunos artículos y seriales establecidos."
+
+#: ../../source/cataloging.rst:1208
+msgid ""
+"Do not put anything in this field if you are cataloging a volume which gets "
+"only one record and a barcode. If the item does not get a barcode, or you "
+"are currently creating a record for an article in a volume, put the section "
+"in subfield 'a' (see ANS cataloging documentation), and the call number in "
+"subfield 'i'. Set the first indicator to '8'."
+msgstr ""
+"No poner cualquier cosa en este campo si estás catalogando un volumen qué "
+"tiene sólo un registro y un código de barras. Si el item no tiene un código "
+"de barras, o actualmente estás creando un registro para un artículo en un "
+"volumen, poner la sección en subcampo 'a' (ver ANS documentación de "
+"catalogación), y la signatura topográfica en el  subcampo 'i'. Poner el "
+"primer indicador a '8'."
+
+#: ../../source/cataloging.rst:1210
+msgid "856"
+msgstr "856"
+
+#: ../../source/cataloging.rst:1210
+msgid "ELECTRONIC ACCESS"
+msgstr "ACCESO ELECTRONICOS"
+
+#: ../../source/cataloging.rst:1210
+msgid "Links to material available online."
+msgstr "Enlaces a materiales disponibles online."
+
+#: ../../source/cataloging.rst:1210
+msgid ""
+"Put the URL of any electronic copies or summaries, etc. in subfield 'u' and "
+"a link title in subfield 'y'. Set the first indicator to '4'."
+msgstr ""
+"Poner el URL de cualesquier copias electrónicas o resúmenes, etc. en "
+"subcampos 'u' y un título de enlace en el subcampo 'y'. Poner el primer "
+"indicador a '4'."
+
+#: ../../source/cataloging.rst:1212
+msgid "942"
+msgstr "942"
+
+#: ../../source/cataloging.rst:1212
+msgid "ADDED ENTRY ELEMENTS (KOHA)"
+msgstr "ELEMENTOS DE ENTRADA SECUNDARIOS (KOHA)"
+
+#: ../../source/cataloging.rst:1212
+msgid "Used for Koha-specific data."
+msgstr "Utilizado para datos específicos de Koha."
+
+#: ../../source/cataloging.rst:1212
+msgid "Set the subfield 'c' to the appropriate item type."
+msgstr "Colocar el subcampo 'c' al tipo de item apropiado."
+
+#: ../../source/cataloging.rst:1215
+#, fuzzy
+msgid "Table: Cataloging Guide"
+msgstr "Guías de Catalogación"
+
+#: ../../source/cataloging.rst:1220
+msgid "Item/Holdings Record Cataloging Guide"
+msgstr "Guía de Catalogación de Registros Item/Formato"
+
+#: ../../source/cataloging.rst:1222
+msgid ""
+"This table represents the default embedded holdings data in Koha. This "
+"information can be used for migration or importing data purposes"
+msgstr ""
+"Esta tabla representa el formato por defecto de ejemplares embebidos en "
+"Koha. Esta información puede ser utilizada con vistas a la migración o "
+"importación de datos"
+
+#: ../../source/cataloging.rst:1226
+msgid "MARC21 Tag/subfield"
+msgstr "MARC21 Etiquetas/subcampos"
+
+#: ../../source/cataloging.rst:1226
+msgid "Data Element"
+msgstr "Elemento de dato"
+
+#: ../../source/cataloging.rst:1226
+msgid "Notes"
+msgstr "Notas"
+
+#: ../../source/cataloging.rst:1228
+msgid "952$0"
+msgstr "952$0"
+
+#: ../../source/cataloging.rst:1228
+msgid "Withdrawn status"
+msgstr "Estatus retirado"
+
+#: ../../source/cataloging.rst:1228 ../../source/cataloging.rst:1234
+#: ../../source/cataloging.rst:1252 ../../source/cataloging.rst:1258
+#: ../../source/cataloging.rst:1264
+msgid "Default values:"
+msgstr "Valores por defecto:"
+
+#: ../../source/cataloging.rst:1230
+msgid "0 = Not withdrawn"
+msgstr "0 = No retirado"
+
+#: ../../source/cataloging.rst:1232
+msgid "1 = Withdrawn"
+msgstr "1 = Retirado"
+
+#: ../../source/cataloging.rst:1228
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('WITHDRAWN' in default installation)"
+msgstr ""
+
+#: ../../source/cataloging.rst:1234
+msgid "952$1"
+msgstr "952$1"
+
+#: ../../source/cataloging.rst:1234
+msgid "Lost status"
+msgstr "Estado de pérdida"
+
+#: ../../source/cataloging.rst:1236
+msgid "0 = Available"
+msgstr "0 = Disponible"
+
+#: ../../source/cataloging.rst:1238
+msgid "1 = Lost"
+msgstr "1 = Perdido"
+
+#: ../../source/cataloging.rst:1240
+msgid "2 = Long Overdue (Lost)"
+msgstr "2 = Vencimiento Largo (Perdido)"
+
+#: ../../source/cataloging.rst:1242
+msgid "3 = Lost and Paid For"
+msgstr "3 = Perdido y Pagado Para"
+
+#: ../../source/cataloging.rst:1244
+msgid "4 = Missing in Inventory"
+msgstr "4 = Perdido en Inventario"
+
+#: ../../source/cataloging.rst:1246
+msgid "5 = Missing in Hold Queue"
+msgstr "5 = Perdido en cola de Reserva"
+
+#: ../../source/cataloging.rst:1234
+msgid ""
+"It's possible to configure OPAC so that lost items don't display with the :"
+"ref:`hidelostitems` system preference."
+msgstr ""
+
+#: ../../source/cataloging.rst:1236
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('LOST' in default installation)"
+msgstr ""
+
+#: ../../source/cataloging.rst:1248
+msgid "952$2"
+msgstr "952$2"
+
+#: ../../source/cataloging.rst:1248
+msgid "Classification"
+msgstr "Clasificación"
+
+#: ../../source/cataloging.rst:1248
+msgid ""
+"Classification scheme that defines filing rules used for sorting call "
+"numbers."
+msgstr ""
+"El esquema de clasificación que define las reglas utilizadas para rellenar "
+"para ordenar la signatura topográfica."
+
+#: ../../source/cataloging.rst:1248
+msgid ""
+"A choice of :ref:`classification sources <classification-sources-label>` as "
+"they are defined in administration. If no classification scheme is entered, "
+"the system will use the value entered in the :ref:"
+"`DefaultClassificationSource` preference."
+msgstr ""
+
+#: ../../source/cataloging.rst:1250
+msgid "952$3"
+msgstr "952$3"
+
+#: ../../source/cataloging.rst:1250
+msgid "Materials specified"
+msgstr "Materiales especificados"
+
+#: ../../source/cataloging.rst:1250
+msgid "Specific issues of serials or multi-part items."
+msgstr "Asuntos específicos de seriales o de items multi-partes."
+
+#: ../../source/cataloging.rst:1250
+msgid ""
+"Displayed when items are checked out and in to tell the staff how many "
+"pieces the item has. Copy/volume data is stored in 952$h and $t for display "
+"in Normal views."
+msgstr ""
+"Mostrado cuándo los items están prestados y registrados y dice a el personal "
+"cuántas piezas del item tiene. Copias/Volumen de la copia está almacenado en "
+"952$h y $t para mostrar en vistas Normales."
+
+#: ../../source/cataloging.rst:1252
+msgid "952$4"
+msgstr "952$4"
+
+#: ../../source/cataloging.rst:1252
+msgid "Damaged status"
+msgstr "Estado de daño"
+
+#: ../../source/cataloging.rst:1254
+msgid "0 = Not damaged"
+msgstr "0 = No dañado"
+
+#: ../../source/cataloging.rst:1256
+msgid "1 = Damaged"
+msgstr "1 = Dañado"
+
+#: ../../source/cataloging.rst:1252
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('DAMAGE' in default installation)"
+msgstr ""
+
+#: ../../source/cataloging.rst:1258
+msgid "952$5"
+msgstr "952$5"
+
+#: ../../source/cataloging.rst:1258
+msgid "Use restrictions"
+msgstr "Restricciones de uso"
+
+#: ../../source/cataloging.rst:1260
+msgid "0 = No use restrictions"
+msgstr "0 = Ninguno uso de restricciones"
+
+#: ../../source/cataloging.rst:1262
+msgid "1 = Restricted Access"
+msgstr "1 = Acceso Restringido"
+
+#: ../../source/cataloging.rst:1258
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('RESTRICT' in default installation). This value has no effect on "
+"circulation."
+msgstr ""
+
+#: ../../source/cataloging.rst:1264
+msgid "952$7"
+msgstr "952$7"
+
+#: ../../source/cataloging.rst:1264
+msgid "Not for loan"
+msgstr "No para préstamo"
+
+#: ../../source/cataloging.rst:1266
+msgid "-1 = Ordered"
+msgstr "-1 = Ordenado"
+
+#: ../../source/cataloging.rst:1268
+msgid "0 = Available for loans"
+msgstr "0 = Disponible para préstamos"
+
+#: ../../source/cataloging.rst:1270
+msgid "1 = Not for Loan"
+msgstr "1 = No para Préstamo"
+
+#: ../../source/cataloging.rst:1272
+msgid "2 = Staff Collection"
+msgstr "2 = Colección de Personal"
+
+#: ../../source/cataloging.rst:1264
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('NOT\\_LOAN' in default installation). Negative number values can "
+"still be placed on hold."
+msgstr ""
+
+#: ../../source/cataloging.rst:1274
+msgid "952$8"
+msgstr "952$8"
+
+#: ../../source/cataloging.rst:1274
+msgid "Collection code"
+msgstr "Código de colección"
+
+#: ../../source/cataloging.rst:1274
+msgid "Coded value"
+msgstr "Valor codificado"
+
+#: ../../source/cataloging.rst:1274
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('CCODE' in default installation)"
+msgstr ""
+
+#: ../../source/cataloging.rst:1276
+msgid "952$9"
+msgstr "952$9"
+
+#: ../../source/cataloging.rst:1276
+msgid "Item number"
+msgstr "Número de ítem"
+
+#: ../../source/cataloging.rst:1276
+msgid "System-generated item number."
+msgstr "Número de item generado por el sistema."
+
+#: ../../source/cataloging.rst:1276
+msgid "Does not display in the item record."
+msgstr "No se muestra en el registro del item."
+
+#: ../../source/cataloging.rst:1278
+msgid "952$a"
+msgstr "952$a"
+
+#: ../../source/cataloging.rst:1278
+#, fuzzy
+msgid "Owning Library \\*\\*"
+msgstr "Open Library: "
+
+#: ../../source/cataloging.rst:1278 ../../source/cataloging.rst:1280
+msgid "Branch code"
+msgstr "Código de la sucursal"
+
+#: ../../source/cataloging.rst:1278 ../../source/cataloging.rst:1280
+msgid ""
+"**Required**. Code must be defined in :ref:`Libraries, Branches and Groups "
+"<libraries-&-groups-label>`"
+msgstr ""
+
+#: ../../source/cataloging.rst:1280
+msgid "952$b"
+msgstr "952$b"
+
+#: ../../source/cataloging.rst:1280
+msgid "Holding library \\*\\* (usually the same as 952$a )"
+msgstr ""
+
+#: ../../source/cataloging.rst:1282
+msgid "952$c"
+msgstr "952$c"
+
+#: ../../source/cataloging.rst:1282
+msgid "Shelving location code"
+msgstr "Código de ubicación topográfica"
+
+#: ../../source/cataloging.rst:1282
+msgid ""
+"Coded value, matching :ref:`Authorized Value <authorized-values-label>` "
+"category ('LOC' in default installation)"
+msgstr ""
+
+#: ../../source/cataloging.rst:1284
+msgid "952$d"
+msgstr "952$d"
+
+#: ../../source/cataloging.rst:1284
+msgid "Date acquired"
+msgstr "Fecha de adquisición"
+
+#: ../../source/cataloging.rst:1284 ../../source/cataloging.rst:1302
+msgid "YYYY-MM-DD"
+msgstr "AAAA-MM-DD"
+
+#: ../../source/cataloging.rst:1284
+msgid ""
+"Date formats in the 952 subfields are required to be in the system internal "
+"format for data loading and subsequent item editing: YYYY-MM-DD"
+msgstr ""
+"Es necesario que los formatos de fecha en los subcampos del 952 estén en el "
+"formato interno del sistema para cargar los datos y consecuentemente editar "
+"los items: AAAA-MM-DD"
+
+#: ../../source/cataloging.rst:1286
+msgid "952$e"
+msgstr "952$e"
+
+#: ../../source/cataloging.rst:1286
+msgid "Source of acquisition"
+msgstr "Fuente de adquisición"
+
+#: ../../source/cataloging.rst:1286
+msgid "Coded value or vendor string"
+msgstr "Valor codificado o cadena de proveedores"
+
+#: ../../source/cataloging.rst:1286
+msgid ""
+"Filled in automatically with the Koha assigned vendor id by Acquisitions "
+"when an item is received."
+msgstr ""
+"Cumplimentado automáticamente con el identificador del proveedor asignado "
+"por Koha en el módulo de Adquisiciones cuando se recibe un ítem."
+
+#: ../../source/cataloging.rst:1288
+msgid "952$g"
+msgstr "952$g"
+
+#: ../../source/cataloging.rst:1288
+msgid "Purchase price"
+msgstr "Precio de compra"
+
+#: ../../source/cataloging.rst:1288 ../../source/cataloging.rst:1300
+msgid "Decimal number, no currency symbol (ex. 10.00)"
+msgstr "Número decimal, ningún símbolo de moneda (ej. 10.00)"
+
+#: ../../source/cataloging.rst:1288 ../../source/cataloging.rst:1300
+msgid "Filled in automatically by Acquisitions when an item is received."
+msgstr ""
+"Rellenado automáticamente por Adquisiciones cuándo un item es recibido."
+
+#: ../../source/cataloging.rst:1290
+msgid "952$h"
+msgstr "952$h"
+
+#: ../../source/cataloging.rst:1290
+msgid "Serial enumeration"
+msgstr "Enumeración de seriada"
+
+#: ../../source/cataloging.rst:1290
+msgid "Filled in automatically by Serials if the issue is received there."
+msgstr "Rellenado automáticamente por Seriales si el asunto es recibido allí."
+
+#: ../../source/cataloging.rst:1292
+msgid "952$o"
+msgstr "952$o"
+
+#: ../../source/cataloging.rst:1292
+msgid "Koha full call number"
+msgstr "Signatura topográfica completa Koha"
+
+#: ../../source/cataloging.rst:1292
+#, fuzzy
+msgid ""
+"Can be filled in automatically based on the :ref:`itemcallnumber` system "
+"preference."
+msgstr ""
+"El campo de número del carné de usuario se calcula automáticamente si usted "
+"tiene la preferencia del sistema autoMemberNum establecida de esa manera"
+
+#: ../../source/cataloging.rst:1294
+msgid "952$p"
+msgstr "952$p"
+
+#: ../../source/cataloging.rst:1294
+#, fuzzy
+msgid "Barcode \\*"
+msgstr "Código de barras: "
+
+#: ../../source/cataloging.rst:1294
+msgid "Max 20 characters"
+msgstr "Máx 20 caracteres"
+
+#: ../../source/cataloging.rst:1296
+msgid "952$t"
+msgstr "952$t"
+
+#: ../../source/cataloging.rst:1296
+msgid "Copy number"
+msgstr "Copia número"
+
+#: ../../source/cataloging.rst:1296
+msgid "Max 32 characters"
+msgstr "Máx 32 caracteres"
+
+#: ../../source/cataloging.rst:1298
+msgid "952$u"
+msgstr "952$u"
+
+#: ../../source/cataloging.rst:1298
+msgid "Uniform Resource Identifier"
+msgstr "Identificador Uniforme de Recursos"
+
+#: ../../source/cataloging.rst:1298
+msgid "Item specific URL"
+msgstr "URL de Item específico"
+
+#: ../../source/cataloging.rst:1298
+msgid ""
+"Full URL starting with http:// Only needed if your item has its own URL, not "
+"necessary if the bib record has a 856$u that applies to all items on the "
+"record."
+msgstr ""
+"URL completo comenzando con http:// Sólo es necesario si el ítem tiene su "
+"propio URL, no es necesario si el registro bibliográfico tiene un 856$u que "
+"aplica a todos los ítems en el registro."
+
+#: ../../source/cataloging.rst:1300
+msgid "952$v"
+msgstr "952$v"
+
+#: ../../source/cataloging.rst:1300
+msgid "Replacement price"
+msgstr "Precio de reposición"
+
+#: ../../source/cataloging.rst:1302
+msgid "952$w"
+msgstr "952$w"
+
+#: ../../source/cataloging.rst:1302
+msgid "Price effective from"
+msgstr "Precio de reemplazo"
+
+#: ../../source/cataloging.rst:1302
+msgid ""
+"Date formats in the 952 subfields are required to be in the system internal "
+"format for data loading and subsequent item editing: YYYY-MM-DD. Filled in "
+"automatically by Acquisitions when an item is received."
+msgstr ""
+"Los formatos de fecha en los subcampos 952 deben estar en el formato del "
+"sistema interno de carga de datos y edición de items posteriores: AAAA-MM-"
+"DD. Se rellena automáticamente mediante Adquisiciones cuando un ítem se "
+"recibe."
+
+#: ../../source/cataloging.rst:1304
+msgid "952$x"
+msgstr "952$x"
+
+#: ../../source/cataloging.rst:1304
+msgid "Nonpublic note"
+msgstr "Nota no pública"
+
+#: ../../source/cataloging.rst:1304
+msgid ""
+"This is a note field for notes that will not appear in the OPAC. Right now "
+"this note does not appear anywhere but in the item edit screen in the staff "
+"client."
+msgstr ""
+"Este es un campo para las notas que no aparecerán en el OPAC. Esta nota "
+"aparece solo en la pantalla de edición de ítem en la interfaz del personal."
+
+#: ../../source/cataloging.rst:1306
+msgid "952$y"
+msgstr "952$y"
+
+#: ../../source/cataloging.rst:1306
+#, fuzzy
+msgid "Koha item type \\*\\*"
+msgstr "Tipo de ítem Koha"
+
+#: ../../source/cataloging.rst:1306
+msgid "Coded value, required field for circulation"
+msgstr "Valor codificado, campo requerido para circulación"
+
+#: ../../source/cataloging.rst:1306
+msgid ""
+"**Required**. Coded value, must be defined in :ref:`Item types <item-types-"
+"label>`"
+msgstr ""
+
+#: ../../source/cataloging.rst:1308
+msgid "952$z"
+msgstr "952$z"
+
+#: ../../source/cataloging.rst:1308
+msgid "Public note"
+msgstr "Nota pública"
+
+#: ../../source/cataloging.rst:1311
+msgid "Table: Koha Embedded Holdings Data"
+msgstr ""
+
+#: ../../source/cataloging.rst:1313
+#, fuzzy
+msgid "\\* - required for circulation"
+msgstr "Valor codificado, campo requerido para circulación"
+
+#: ../../source/cataloging.rst:1315
+msgid "\\*\\* - required by Koha"
+msgstr ""
+
+#: ../../source/cataloging.rst:1320
+#, fuzzy
+msgid "Koha XSLT material type icons"
+msgstr "Tipos de ítem XSLT de Koha"
+
+#: ../../source/cataloging.rst:1322
+msgid ""
+"When you have any of the XSLT system preferences (:ref:"
+"`OPACXSLTDetailsDisplay`, :ref:`OPACXSLTResultsDisplay`, :ref:"
+"`XSLTDetailsDisplay`, and/or :ref:`XSLTResultsDisplay`) along with the :ref:"
+"`DisplayOPACiconsXSLT` and :ref:`DisplayIconsXSLT` preferences turned on you "
+"will see material type icons on the related screen."
+msgstr ""
+
+#: ../../source/cataloging.rst:1333
+msgid ""
+"These images are coming from values found in your leader, if your leader is "
+"not cataloged properly it might be best to turn off the :ref:"
+"`DisplayOPACiconsXSLT` preference (which can be done while leaving the other "
+"XSLT preferences turned on)."
+msgstr ""
+
+#: ../../source/cataloging.rst:1338
+#, fuzzy
+msgid "|image1081|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1340
+msgid "Book [BK]"
+msgstr "Libro [BK]"
+
+#: ../../source/cataloging.rst:1342
+msgid "leader6 = a (and one of the leader7 values below)"
+msgstr "leader6 = a (y uno de los valores de leader7 más abajo)"
+
+#: ../../source/cataloging.rst:1344
+msgid "leader7 = a"
+msgstr "leader7 = a"
+
+#: ../../source/cataloging.rst:1346
+msgid "leader7 = c"
+msgstr "leader7 = c"
+
+#: ../../source/cataloging.rst:1348
+msgid "leader7 = d"
+msgstr "leader7 = d"
+
+#: ../../source/cataloging.rst:1350
+msgid "leader7 = m"
+msgstr "leader7 = m"
+
+#: ../../source/cataloging.rst:1352
+msgid "leader6 = t"
+msgstr "leader6 = t"
+
+#: ../../source/cataloging.rst:1354
+#, fuzzy
+msgid "|image1082|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1356
+msgid "Computer File [CF]"
+msgstr "Fichero de ordenador[CF]"
+
+#: ../../source/cataloging.rst:1358
+msgid "leader6 = m"
+msgstr "leader6 = m"
+
+#: ../../source/cataloging.rst:1360
+#, fuzzy
+msgid "|image1083|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1362
+msgid "Continuing Resource [CR]"
+msgstr "Publicaciones periódicas [CR]"
+
+#: ../../source/cataloging.rst:1364
+msgid "leader7 = b"
+msgstr "leader7 = b"
+
+#: ../../source/cataloging.rst:1366
+msgid "leader7 = i"
+msgstr "leader7 = i"
+
+#: ../../source/cataloging.rst:1368
+msgid "leader7 = s"
+msgstr "leader7 = s"
+
+#: ../../source/cataloging.rst:1370
+#, fuzzy
+msgid "|image1084|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1372
+msgid "Map [MP]"
+msgstr "Mapa [MP]"
+
+#: ../../source/cataloging.rst:1374
+msgid "leader6 = e"
+msgstr "leader6 = e"
+
+#: ../../source/cataloging.rst:1376
+msgid "leader6 = f"
+msgstr "leader6 = f"
+
+#: ../../source/cataloging.rst:1378
+#, fuzzy
+msgid "|image1085|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1380
+msgid "Mixed [MX]"
+msgstr "Mixtos [MX]"
+
+#: ../../source/cataloging.rst:1382
+msgid "leader6 = p"
+msgstr "leader6 = p"
+
+#: ../../source/cataloging.rst:1384
+#, fuzzy
+msgid "|image1086|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1386
+msgid "Sound [MU]"
+msgstr "Sonido [MU]"
+
+#: ../../source/cataloging.rst:1388
+msgid "leader6 = c"
+msgstr "leader6 = c"
+
+#: ../../source/cataloging.rst:1390
+msgid "leader6 = d"
+msgstr "leader6 = d"
+
+#: ../../source/cataloging.rst:1392
+msgid "leader6 = i"
+msgstr "leader6 = i"
+
+#: ../../source/cataloging.rst:1394
+msgid "leader6 = j"
+msgstr "leader6 = j"
+
+#: ../../source/cataloging.rst:1396
+#, fuzzy
+msgid "|image1087|"
+msgstr "|image108|"
+
+#: ../../source/cataloging.rst:1398
+msgid "Visual Material [VM]"
+msgstr "Material visual [VM]"
+
+#: ../../source/cataloging.rst:1400
+msgid "leader6 = g"
+msgstr "leader6 = g"
+
+#: ../../source/cataloging.rst:1402
+msgid "leader6 = k"
+msgstr "leader6 = k"
+
+#: ../../source/cataloging.rst:1404
+msgid "leader6 = r"
+msgstr "leader6 = r"
+
+#: ../../source/cataloging.rst:1406
+#, fuzzy
+msgid "|image1088|"
+msgstr "|image108|"
+
+# Traducción según MARC 21 BNE
+#: ../../source/cataloging.rst:1408
+msgid "Kit"
+msgstr "Equipo"
+
+#: ../../source/cataloging.rst:1410
+msgid "leader6 = o"
+msgstr "leader6 = o"
+
+#: ../../source/cataloging.rst:1415
+msgid "Handling On Order Items and Holds"
+msgstr "Administración de pedidos y reservas"
+
+#: ../../source/cataloging.rst:1417
+msgid ""
+"If you tend to import your MARC records when you have ordered the book (as "
+"opposed to when you receive the books), and allow patrons to place holds on "
+"those books, you may need to add item records to the \\*.mrc file before "
+"importing."
+msgstr ""
+
+#: ../../source/cataloging.rst:1422
+msgid ""
+"The easiest way to import your latest order is to first run your records "
+"through `MARCEdit <http://marcedit.reeset.net/>`__. Download your MARC "
+"records, saving them to your desktop or some other location you use/will "
+"remember. If you have MARCEdit already installed you should simply have to "
+"double click on your MARC records, and they will automatically open in "
+"MARCEdit."
+msgstr ""
+"La forma más fácil de importar su último pedido es, ejecutar primero sus "
+"registros a través de `MARC Edit <http://marcedit.reeset.net/>`__. Descargue "
+"sus registros MARC guardándolos en su escritorio o en alguna otra ubicación "
+"que use/recordará. Si ya tiene instalado MARCEdit, debe simplemente hacer "
+"doble clic en sus registros MARC, y se abrirán automáticamente en MARCEdit."
+
+#: ../../source/cataloging.rst:1431
+msgid ""
+"This tutorial was written with MARCEdit version 5.2.3769.41641 on Windows "
+"XP, instructions may be different if your version or operating system is "
+"different."
+msgstr ""
+"Este tutorial se escribió utilizando la versión 5.2.3769.41641 de MARCEdit "
+"en Windows XP, las instrucciones pueden ser diferentes si su versión o "
+"sistema operativo son diferentes."
+
+#: ../../source/cataloging.rst:1435
+msgid ""
+"Your original file will automatically be in the input; ensure MarcBreaker is "
+"chosen, and then click \"Execute\""
+msgstr ""
+"El fichero original se mostrará automáticamente en la entrada; hay que "
+"asegurarse de que está marcado el MarcBreaker, después haremos clic en "
+"\"Ejecutar\""
+
+#: ../../source/cataloging.rst:1438
+#, fuzzy
+msgid "|image719|"
+msgstr "|image71|"
+
+#: ../../source/cataloging.rst:1440
+msgid ""
+"You will be presented with a summary of the records processed at the bottom "
+"of the screen"
+msgstr ""
+"Se mostrará un resumen de los registros procesados en la parte inferior de "
+"la pantalla"
+
+#: ../../source/cataloging.rst:1443
+#, fuzzy
+msgid "|image720|"
+msgstr "|image72|"
+
+#: ../../source/cataloging.rst:1445
+msgid "Click 'Edit Records' to continue on to adding item records"
+msgstr ""
+"Haga clic en 'Editar registros' para continuar añadiendo ejemplares a los "
+"registros"
+
+#: ../../source/cataloging.rst:1447
+msgid ""
+"Your screen will be replaced with a larger screen containing the MARC records"
+msgstr ""
+"La pantalla se reemplazará con otra pantalla que contiene los registros MARC"
+
+#: ../../source/cataloging.rst:1450
+#, fuzzy
+msgid "|image721|"
+msgstr "|image72|"
+
+#: ../../source/cataloging.rst:1452
+msgid "Click on Tools > Add/Edit Field"
+msgstr "Haga clic en Herramientas > Añadir/Editar Campos"
+
+#: ../../source/cataloging.rst:1454
+#, fuzzy
+msgid "|image722|"
+msgstr "|image72|"
+
+#: ../../source/cataloging.rst:1456
+msgid "Enter in the Koha specific item info"
+msgstr "Introduzca la información específica de ítem de Koha"
+
+#: ../../source/cataloging.rst:1458
+#, fuzzy
+msgid "|image723|"
+msgstr "|image72|"
+
+#: ../../source/cataloging.rst:1460
+msgid "In the Field box, type 942"
+msgstr "En el recuadro de campo, escriba 942"
+
+#: ../../source/cataloging.rst:1462
+msgid ""
+"In the Field Data box, type \\\\\\\\$c and the item type code (\\\\\\\\"
+"$cBOOK in this example)"
+msgstr ""
+
+#: ../../source/cataloging.rst:1465 ../../source/cataloging.rst:1496
+msgid "Check the 'Insert last' option"
+msgstr "Marque la opción 'insertar al final' (insert last)"
+
+#: ../../source/cataloging.rst:1467 ../../source/cataloging.rst:1498
+msgid "Click 'Add Field'"
+msgstr "Haga clic en 'Añadir Campo' (Add Field)"
+
+#: ../../source/cataloging.rst:1469
+msgid "Enter in the item record data"
+msgstr "Introduzca los datos de ejemplar del registro"
+
+#: ../../source/cataloging.rst:1471
+#, fuzzy
+msgid "|image724|"
+msgstr "|image72|"
+
+#: ../../source/cataloging.rst:1473
+msgid "In the Field box, type 952"
+msgstr "En el recuadro de Campo (Field), escriba 952"
+
+#: ../../source/cataloging.rst:1475
+msgid ""
+"In the Field Data box, type $7ORDERED\\_STATUS$aPERM\\_LOC$bCURR\\_LOC"
+"$cSHELVING\\_LOCATION$eSOURCE\\_OF\\_ACQ$yITEM\\_TYPE"
+msgstr ""
+
+#: ../../source/cataloging.rst:1478
+msgid "ex. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK"
+msgstr "ej. $7-1$aCPL$bCPL$cNEW$eBrodart$yBOOK"
+
+#: ../../source/cataloging.rst:1480
+msgid "In a default install of Koha -1 is the value for the Ordered status"
+msgstr ""
+"En una instalación por defecto de Koha -1 es el valor para el estado Pedido"
+
+#: ../../source/cataloging.rst:1483
+msgid ""
+"You may want to look at other subfields you would like data in -- for "
+"example, changing the collection code to put all the items in the same "
+"collection (8), automatically fill in the acquisition date (d), or put in a "
+"public note (z)."
+msgstr ""
+"Puede querer consultar otros subcampos en los que desee datos -- por "
+"ejemplo, cambiar el código de colección para incluir todos los registros en "
+"la misma colección (8), cumplimentar automáticamente la fecha de adquisición "
+"(d), o incluir una nota pública (z)."
+
+#: ../../source/cataloging.rst:1488
+msgid ""
+"Be sure you use the $ to separate subfields; adding each subfield on a "
+"separate line will cause that many items to be imported with your MARC "
+"record (in the example above, four items, each with one of those subfields "
+"corrected)"
+msgstr ""
+"Asegúrese de usar los $ para separar subcampos; si agrega cada subcampo en "
+"una línea separada causará que se importen tantos ejemplares como líneas en "
+"su registro MARC( en el ejemplo de arriba, cuatro ejemplares, cada uno con "
+"uno de esos subcampos corregido)"
+
+#: ../../source/cataloging.rst:1493
+msgid ""
+"Make sure you look at the Administration > Authorized Values in Koha to put "
+"the correct code into the field"
+msgstr ""
+"Asegúrese de mirar Administración > Valores autorizados de Koha para poner "
+"el código correcto en el campo"
+
+#: ../../source/cataloging.rst:1500
+msgid "Close the field editor window"
+msgstr "Cerrar la ventana de editor del campo"
+
+#: ../../source/cataloging.rst:1502
+msgid "Click on File > Compile into MARC"
+msgstr "Haga clic en Archivo > Compilar a MARC"
+
+#: ../../source/cataloging.rst:1504
+#, fuzzy
+msgid "|image725|"
+msgstr "|image72|"
+
+#: ../../source/cataloging.rst:1506
+msgid "Choose where to save your file"
+msgstr "Elija dónde desea guardar el archivo"
+
+#: ../../source/cataloging.rst:1508
+#, fuzzy
+msgid ""
+"Now you want to go into your Koha system and follow the instructions for :"
+"ref:`importing MARC records <stage-marc-records-for-import-label>`."
+msgstr ""
+"El siguiente opción para ordenar es hacerlo desde un registro preparado (:"
+"ref:`aprenda más sobre registros preparados <stage-marc-records-for-import-"
+"label>`)."
+
+#: ../../source/cataloging.rst:1511
+msgid ""
+"Once the item has come in, you will need to go to the item record and "
+"individually change the item to have the correct barcode, and manually "
+"change the status from Ordered to the blank line in the Not for Loan field."
+msgstr ""
+"Una vez que el ítem se ha ingresado, tendrá que ir al registro del ítem y de "
+"forma individual cambiar el ítem para que tenga el código de barras "
+"correcto, y cambiar manualmente el estado de 'Pedido' a 'No para préstamo'."
+
+#: ../../source/cataloging.rst:1518
+msgid ""
+"If you purchase your cataloged item records, you may want to request your "
+"vendor put in the information you need into the MARC records for you; that "
+"way, you could import the edited-by-the-vendor file, overwriting the current "
+"record, automatically replacing the data with what you need."
+msgstr ""
+"Si usted compra sus registros ya catalogados, es posible que desee solicitar "
+"a su proveedor que ponga la información que necesita en los registros MARC, "
+"de esta manera, se puede importar el archivo editado por el vendedor, "
+"remplazando el registro actual, y de forma automática se hará una "
+"sustitución de los datos con lo que usted necesita."

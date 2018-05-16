@@ -1,0 +1,1347 @@
+# Compendium of zh_TW.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-zh_TW\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:54-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/apis_protocols.rst:4
+msgid "Other APIs and protocols"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:9
+msgid "SIP2"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:11
+msgid ""
+"SIP2 (Session Initiation Protocol) is a protocol for communication between "
+"devices."
+msgstr "SIP2 (Session Initiation Protocol) 是設備關的通信協定。"
+
+#: ../../source/apis_protocols.rst:13
+msgid ""
+"In the context of Koha SIP2 is used for communication between Self Check "
+"(SC) machines i.e. self checkout machines, and the Automated Circulation "
+"System (also known as ACS which in this case is the server running Koha)."
+msgstr ""
+"SIP2 使用於 Koha 與自助借出設備 (Self Check, SC) 以及自動流通系統 (Automated "
+"Circulation System, ACS 即執行 Koha 的伺服器)。"
+
+#: ../../source/apis_protocols.rst:15
+msgid "SIP2 communications consist of requests and responses."
+msgstr "SIP2 包括請求與回應兩部份。"
+
+#: ../../source/apis_protocols.rst:17
+msgid ""
+"The self checkout machines are ‘dumb’ and so they send requests to the Koha "
+"server which runs logic which determines a particular outcome which is sent "
+"as a response message back to the client self checkout machine, and this is "
+"then conveyed to the user."
+msgstr ""
+"自助借出機器是 ‘笨的’，送出請求至 Koha 伺服器，運算後再回應給客戶端的自助借出"
+"機器，藉以協助使用者。"
+
+#: ../../source/apis_protocols.rst:19
+msgid ""
+"Security notice regarding using SIP2 service: To ensure that your SIP2 "
+"traffic is secure as it passes over the internet you need to make sure that "
+"you are using a VPN or   stunnel."
+msgstr ""
+"使用 SIP2 的安全通知：為了確保 SIP2 流量通過網際網路的安全，需使用 VPN 或安全"
+"通道。"
+
+#: ../../source/apis_protocols.rst:26
+msgid "Setting up SIP2"
+msgstr "設定 SIP2"
+
+#: ../../source/apis_protocols.rst:28
+msgid ""
+"If you installed Koha using Debian packages then SIP2 setup is easy, simply "
+"follow these steps:"
+msgstr "以 Debian 套件方式安裝的 Koha，其 SIP2 的設定就簡單多，祗需幾個步驟："
+
+#: ../../source/apis_protocols.rst:31
+msgid ""
+"1. In your terminal (in the root Koha directory) write in: *sudo koha-enable-"
+"sip <instancename>*"
+msgstr ""
+"1. 在終端機 (Koha 伺服器的根目錄) 鍵入命令：*sudo koha-enable-sip "
+"<instancename>*"
+
+#: ../../source/apis_protocols.rst:35
+msgid ""
+"2. Now you need to configure the SIP2 settings, to do this you need to edit "
+"the SIPconfig.xml file which exists in the /etc/koha/sites/<instancename>/ "
+"directory. You will need to edit this file as root because it contains "
+"passwords (to do so write ‘sudo’  at the start of your command)."
+msgstr ""
+"2. 組態 SIP2 的設定，需先編輯在 /etc/koha/sites/<instancename>/ 目錄的"
+"SIPconfig.xml 檔案。必須以 root 權限才能編輯它，因為需要密碼 (在命令前加入 "
+"‘sudo’)。"
+
+#: ../../source/apis_protocols.rst:38
+msgid "e.g. *sudo vi /etc/koha/sites/<instancename>/SIPconfig.xml*"
+msgstr "如：*sudo vi /etc/koha/sites/<instancename>/SIPconfig.xml*"
+
+#: ../../source/apis_protocols.rst:41
+msgid ""
+"Important note: There are three areas of interest in the SIPconfig.xml file "
+"that you need to change. These are: service, account and institution."
+msgstr ""
+"重要通知：有三個地方與 SIPconfig.xml 檔案有關。它們是：服務、帳號與機構。"
+
+#: ../../source/apis_protocols.rst:44
+msgid "**Service**"
+msgstr "**服務**"
+
+#: ../../source/apis_protocols.rst:47
+msgid ""
+"2.1 Change the port value near the top of the SIPconfig.xml file (identified "
+"by the number 1 in the below screen shot), so it has the same IP address as "
+"set further down the SIPconfig.xml file identified by 2."
+msgstr ""
+"2.1 變更 SIPconfig.xml 檔案前端的埠號值 (在以下的畫面以 1 識別)，同個 IP 位址"
+"可以 SIPconfig.xml 檔案識別 2 另個它用。"
+
+#: ../../source/apis_protocols.rst:49
+msgid ""
+"Make sure the two port values don’t have the same port number as you cannot "
+"have the same port being listened to by two different services. When "
+"deciding upon the port number make sure it is a high number (i.e. above "
+"1000) because all ports below 1000 require root permissions."
+msgstr ""
+"確認使用不同的埠號，不同的服務不能使用相同的埠號。應使用高埠號 (如 1000 以"
+"上)，因為 1000 以上的埠號需要 root 權限。"
+
+#: ../../source/apis_protocols.rst:51
+msgid "|image1122|"
+msgstr "|image1122|"
+
+#: ../../source/apis_protocols.rst:55
+msgid "**Account**"
+msgstr "**帳號**"
+
+#: ../../source/apis_protocols.rst:57
+#, fuzzy
+msgid ""
+"The account(s) you define in the SIPconfig.xml file are simply account(s) "
+"permitted to use the SIP2 service i.e. you're defining who can send and "
+"receive SIP2 commands."
+msgstr ""
+"在 SIPconfig.xml 檔案內設定的帳號權限僅供 SIP2 服務使用，即祗能發送及收取 "
+"SIP2 命令。"
+
+#: ../../source/apis_protocols.rst:59
+msgid ""
+"Account information that you write here must also exist in the Koha database "
+"i.e. you need to create a patron in the Koha staff interface with the same "
+"username, password (making sure to assign them circulate permissions) as the "
+"user account you write into the SIPconfig.xml file."
+msgstr ""
+"寫在此處的帳號資訊必須同時存在於 Koha 資料庫，也就是必須在 Koha 館員介面新增"
+"該使用者及密碼 (確認授予流通權限) 做為寫入 SIPconfig.xml 檔案的帳號。"
+
+#: ../../source/apis_protocols.rst:61
+msgid ""
+"It is highly recommended that you only write in Koha user accounts with "
+"circulate permissions."
+msgstr "強烈建議祗給該 Koha 使用者帳號流通權限。"
+
+#: ../../source/apis_protocols.rst:63
+msgid ""
+"The reason we want SIP2 users to only have circulate permissions rather than "
+"superlibrarian permissions is to reduce the access SIP2 users have to "
+"confidential patron data in case the system was compromised."
+msgstr ""
+"把 SIP2 使用者的權限限制於流通而不是超級圖書館員的權限，係為了減少 SIP2 使用"
+"者查看讀者的隱私。"
+
+#: ../../source/apis_protocols.rst:65
+msgid ""
+"If the ACS or the SC were compromised then having all SIP2 users only having "
+"circulation permissions means that an intruder would only be able to access "
+"patron data via the terminal rather than the web interface as well (which "
+"would be available with superlibrarian permissions). So it is simply a "
+"matter of protecting your users."
+msgstr ""
+"若自動流通系統 ACS 或自助借出設備 SC 妥協後，所有的 SIP2 使用者祗有流通權限，"
+"限制闖入者祗能經由終端機進來，無法從網頁介面進來搗亂 (超級圖書館員的權限才能"
+"這麼做)。所以，就是保護使用者的一個措施。"
+
+#: ../../source/apis_protocols.rst:67
+msgid "|image1119|"
+msgstr "|image1119|"
+
+#: ../../source/apis_protocols.rst:70
+msgid "**Account value definitions:**"
+msgstr "**設定帳號值：**"
+
+#: ../../source/apis_protocols.rst:73
+msgid "Login id: This is the account username. - Modify this accordingly"
+msgstr "登入帳號：這是帳號名稱。- 適度修改它"
+
+#: ../../source/apis_protocols.rst:74
+msgid "Password: Account password - Modify this accordingly"
+msgstr "密碼：帳號密碼 - 適度修改密碼"
+
+#: ../../source/apis_protocols.rst:75
+msgid ""
+"Delimiter: The type of delimiter for account information - Leave as default"
+msgstr "分隔值：帳號資訊的分隔值 - 使用預設值"
+
+#: ../../source/apis_protocols.rst:76
+msgid "error-detect -  Leave as default"
+msgstr "錯誤偵測 - 使用預設值"
+
+#: ../../source/apis_protocols.rst:77
+msgid ""
+"Institution: This is the branchcode for the library that the user belongs "
+"to. NOTE: This institution needs to be defined further down in the "
+"institution area of the SIPconfig.xml file and it must also exist in the "
+"Koha database. i.e. you need to create a library with the same branchcode in "
+"Koha staff interface."
+msgstr ""
+"機構：使用者所屬圖書館的分館代碼。說明：需在 SIPconfig.xml 檔案先設定該機構並"
+"且需存在於 Koha 資料庫。即從 Koha 館員介面新增該分館代碼的圖書館。"
+
+#: ../../source/apis_protocols.rst:78
+msgid "encoding: This is the standard used to encode the account data"
+msgstr "編碼：這是編碼帳號資料的標準"
+
+#: ../../source/apis_protocols.rst:79
+msgid ""
+"Terminator: This needs to match the terminator value of the SIP2 server. - "
+"Modify this if you know the terminator value of the SIP2 server."
+msgstr ""
+"終止符號：必須符合 SIP2 伺服器的終止符號值。- 如果知道 SIP2 伺服器的終止符號"
+"值，修改它。"
+
+#: ../../source/apis_protocols.rst:81
+msgid "**Institution**"
+msgstr "**機構**"
+
+#: ../../source/apis_protocols.rst:84
+msgid ""
+"The institution information you define here must match a library created in "
+"the Koha staff interface."
+msgstr "此處設定的機構資料必須與 Koha 館員介面的新增圖書館相符。"
+
+#: ../../source/apis_protocols.rst:86
+msgid ""
+"You need to make sure all the institutions that accounts are assigned to "
+"further up in the SIPconfig.xml file are also defined in the institution "
+"area of the same file."
+msgstr ""
+"設定的所有機構必須與 SIPconfig.xml 檔案相符也必須與同檔案的機構區塊內容一致。"
+
+#: ../../source/apis_protocols.rst:88
+msgid "|image1120|"
+msgstr "|image1120|"
+
+#: ../../source/apis_protocols.rst:90
+msgid "**Institution value definitions:**"
+msgstr "**設定機構值：**"
+
+#: ../../source/apis_protocols.rst:93
+msgid ""
+"1. Institution id: The branchcode of the library. - Modify this accordingly. "
+"Must be the same as created in Koha and the account area."
+msgstr ""
+"1. 機構代碼：即圖書館的分館代碼。- 適度修改它。必須等同於 Koha 內的代碼及帳號"
+"區塊。"
+
+#: ../../source/apis_protocols.rst:96
+msgid "Implementation: Defines the code that will be run. - Leave as default"
+msgstr "應用：定義執行的代碼。- 使用預設值"
+
+#: ../../source/apis_protocols.rst:98
+msgid ""
+"3. Policy: Policy defines the permitted SIP2 commands allowed from SC’s in "
+"this institution. For example: renewal=”true” means that SC’s at that "
+"institution have permission to send renewal item SIP2 commands."
+msgstr ""
+"3. 政策：允許來自 SC 的 SIP2 命令可以使用在此機構。如：renewal=”true” 表示機"
+"構的 SC 有權送出續借館藏的 SIP2 命令。"
+
+#: ../../source/apis_protocols.rst:101
+msgid ""
+"4. Starting SIP2 Simply write in the command: *sudo koha-start-sip "
+"<instancename>*"
+msgstr "4. 啟用 SIP2 簡單地輸入此命令：*sudo koha-start-sip <instancename>*"
+
+#: ../../source/apis_protocols.rst:105
+msgid "Now you have a running SIP2 server."
+msgstr "現在可以執行 SIP2 伺服器。"
+
+#: ../../source/apis_protocols.rst:111
+msgid "Using SIP2"
+msgstr "使用 SIP2"
+
+#: ../../source/apis_protocols.rst:113
+msgid ""
+"SIP2 is a communication protocol. The messages sent in SIP2 are either "
+"requests or responses. The SC’s send request messages to the ACS which will "
+"run some logic and send back the resulting value to the SC as a response "
+"message."
+msgstr ""
+"SIP2 是通訊協定。送給 SIP2 的訊息是請求或回應。SC 送出請求訊息給 ACS，執行若"
+"干邏輯並送回結果值給 SC 做為回應訊息。"
+
+#: ../../source/apis_protocols.rst:115
+msgid ""
+"The request messages contain arguments, which are data values used by the "
+"ACS in its functions to perform the required task such as renewing items."
+msgstr "請求訊息包括參數，就是被 ACS 使用於其函數的資料，執行諸如續借的請求。"
+
+#: ../../source/apis_protocols.rst:117
+msgid "**SIP2 commands**"
+msgstr "**SIP2 命令**"
+
+#: ../../source/apis_protocols.rst:119
+msgid ""
+"If you want to manually use/test SIP2 then you will be writing and receiving "
+"messages via the Linux terminal."
+msgstr "必須經由 Linux 終端機撰寫與接數訊息，才能以人工設定/測試 SIP2。"
+
+#: ../../source/apis_protocols.rst:121
+msgid ""
+"To be able to send and receive messages with the SIP2 server you need to use "
+"telnet to open a SIP2 connection. You need to specify the port number you "
+"want telnet to use."
+msgstr ""
+"為了對 SIP2 伺服器送出與接收訊息，需以 telnet 打開 SIP2 連結。需指定 telnet "
+"連結的埠號。"
+
+#: ../../source/apis_protocols.rst:123
+msgid ""
+"To find this information look at the service area at the top of the "
+"SIPconfig.xml file (look for the port number as pointed out by the arrow in "
+"the below screenshot)."
+msgstr ""
+"查詢 SIPconfig.xml 檔案服務區塊上方，即可找到該等資訊 (注意螢幕下方箭頭所示的"
+"埠號)。"
+
+#: ../../source/apis_protocols.rst:125
+msgid "|image1121|"
+msgstr "|image1121|"
+
+#: ../../source/apis_protocols.rst:128
+msgid "Write into the terminal"
+msgstr "寫入終端機"
+
+#: ../../source/apis_protocols.rst:130 ../../source/apis_protocols.rst:138
+msgid "*telnet localhost <portnumber>*"
+msgstr "*telnet localhost <portnumber>*"
+
+#: ../../source/apis_protocols.rst:132
+msgid "e.g. *telnet localhost 8023*"
+msgstr "如：*telnet localhost 8023*"
+
+#: ../../source/apis_protocols.rst:134
+msgid ""
+"Now write in the username and password set in one of the accounts in the     "
+"SIPconfig.xml file."
+msgstr "將帳號與密碼寫入 SIPconfig.xml 檔案的其中一個帳號。"
+
+#: ../../source/apis_protocols.rst:136
+msgid ""
+"Now you are connected to the SIP2 server you can start writing and sending "
+"request commands. The connection to the SIP2 server does time out fast so if "
+"haven’t finished writing and receiving commands simply write in:"
+msgstr ""
+"現在你可以連結至 SIP2 伺服器，你可以開始撰寫並傳送指令當與 SIP2 服務器的連接"
+"超時，如果沒有完成寫入和接收命令，只需寫入："
+
+#: ../../source/apis_protocols.rst:140
+msgid "to restart the SIP2 connection."
+msgstr "重新啟用 SIP2 連結。"
+
+#: ../../source/apis_protocols.rst:142
+msgid "**SIP2 command syntax**"
+msgstr "**SIP2 命令語法**"
+
+#: ../../source/apis_protocols.rst:144
+msgid ""
+"Every SIP2 command has a 2 digit numerical prefix which defines what the "
+"command is doing."
+msgstr "每個 SIP2 命令有 2 個數字前置告知命令的作用。"
+
+#: ../../source/apis_protocols.rst:146
+msgid ""
+"e.g. To get information about a patron you start your command with the "
+"prefix: 63. The response from the server also has a corresponding numerical "
+"prefix."
+msgstr "例如，取得讀者資訊，必須加上前置數字：63。伺服器的回應也是前置數字。"
+
+#: ../../source/apis_protocols.rst:148
+msgid ""
+"Below is an example of a SIP2 request message to request patron information "
+"(in this example a Koha patron account with the user name ‘joe’, password "
+"‘joes’, and card number ‘y76t5r43’ has been created in the Koha staff "
+"interface)."
+msgstr ""
+"以下是請求讀者資訊的 SIP2 請求訊息樣本 (在樣本中是已經新增的 Koha 讀者，帳號"
+"是 ‘joe’、密碼是 ‘joes’、讀者證號碼是 ‘y76t5r43’)。"
+
+#: ../../source/apis_protocols.rst:150
+msgid ""
+"Additionally a library with the branchcode of ‘WEL’ has been created in the "
+"Koha staff interface and is also defined in the institution area of the "
+"SIPconfig.xml file):"
+msgstr ""
+"此外，已經從 Koha 館員介面新增分館代號為‘WEL’的圖書館，也設定在 SIPconfig."
+"xml 檔案的機構區)："
+
+#: ../../source/apis_protocols.rst:152
+msgid "|image1123|"
+msgstr "|image1123|"
+
+#: ../../source/apis_protocols.rst:154
+msgid "So the format of this SIP2 request message is:"
+msgstr "所以，SIP2 的請求訊息格式是："
+
+#: ../../source/apis_protocols.rst:156
+msgid "|image1124|"
+msgstr "|image1124|"
+
+#: ../../source/apis_protocols.rst:158
+msgid ""
+"The summary value is a 10 character value. If a Y is written in for the "
+"summary value then you will be able to get both a summary and more detailed "
+"informational output."
+msgstr "摘要值是 10 字元長度。若寫入 Y 則可以取得摘要與更詳細的資訊性輸出。"
+
+#: ../../source/apis_protocols.rst:160
+msgid ""
+"The value in the <YYYYMMDD>       <HHMMSS> is the current datetime, by "
+"leaving a 4 space gap between the YYYYMMDD and HHMMSS this indicates you "
+"want to use local time rather than UTC."
+msgstr ""
+"其值是 <YYYYMMDD>    <HHMMSS> 格式，現在的時間與日期，在YYYYMMDD 與 HHMMSS 之"
+"間空 4 格，表示使用的是當地時間不是 UTC 時間。"
+
+#: ../../source/apis_protocols.rst:162
+msgid ""
+"In this manual letter codes for the various fields are used where possible "
+"in describing the SIP2 message fields e.g. AO<institutionid>."
+msgstr "本手冊以欄位字母代碼表示 SIP2 的訊息欄位，如 AO<institutionid>。"
+
+#: ../../source/apis_protocols.rst:164
+msgid ""
+"These letter codes can be written in the SIP2 commands into the Linux "
+"terminal, but make sure when substituting values in for the fields (values "
+"inside the <>) that you do not write in the <> brackets."
+msgstr ""
+"可以把字母代碼寫入 Linux 終端機的 SIP2 命令，但需確認取代值在欄位 (在 <> 內) "
+"就不必寫入 <> 括號內。"
+
+#: ../../source/apis_protocols.rst:167
+msgid "**SIP2 messages:**"
+msgstr "**SIP2 訊息**"
+
+#: ../../source/apis_protocols.rst:170
+msgid "**Block patron**"
+msgstr "**封鎖讀者**"
+
+#: ../../source/apis_protocols.rst:172
+msgid ""
+"This uses the prefix 01 for request messages and 24 for response messages."
+msgstr "請求的訊息以前綴號 01 表示，而回應的訊息則以前綴號 24 表示。"
+
+#: ../../source/apis_protocols.rst:174 ../../source/apis_protocols.rst:195
+#: ../../source/apis_protocols.rst:226 ../../source/apis_protocols.rst:243
+#: ../../source/apis_protocols.rst:257 ../../source/apis_protocols.rst:273
+#: ../../source/apis_protocols.rst:291 ../../source/apis_protocols.rst:301
+#: ../../source/apis_protocols.rst:332 ../../source/apis_protocols.rst:344
+#: ../../source/apis_protocols.rst:365 ../../source/apis_protocols.rst:381
+#: ../../source/apis_protocols.rst:397 ../../source/apis_protocols.rst:424
+msgid "Request message:"
+msgstr "請求的訊息："
+
+#: ../../source/apis_protocols.rst:176
+msgid "|image1125|"
+msgstr "|image1125|"
+
+#: ../../source/apis_protocols.rst:179
+msgid ""
+"Card retained is a single character field of either ‘Y’ or ‘N’  which tells "
+"the ACS that a card has been retained by the self checkout machine."
+msgstr ""
+"鎖卡欄位的狀態值以字元 ‘Y’ 或 ‘N’ 表示，分別代表是、否，做為 ACS 判別該借閱卡"
+"是否受到自助借書機鎖卡限制。"
+
+#: ../../source/apis_protocols.rst:181 ../../source/apis_protocols.rst:205
+#: ../../source/apis_protocols.rst:232 ../../source/apis_protocols.rst:251
+#: ../../source/apis_protocols.rst:263 ../../source/apis_protocols.rst:277
+#: ../../source/apis_protocols.rst:295 ../../source/apis_protocols.rst:313
+#: ../../source/apis_protocols.rst:336 ../../source/apis_protocols.rst:354
+#: ../../source/apis_protocols.rst:369 ../../source/apis_protocols.rst:385
+#: ../../source/apis_protocols.rst:436
+msgid "Response message:"
+msgstr "回應的訊息："
+
+#: ../../source/apis_protocols.rst:183
+msgid "|image1126|"
+msgstr "|image1126|"
+
+#: ../../source/apis_protocols.rst:185
+msgid ""
+"<patronstatus> is a 14 character long value. The value Y in the string means "
+"true. Each position in this string (starting at 0) has a single "
+"corresponding value (Y or N) in the string."
+msgstr ""
+"<patronstatus> 可以儲存 14 個字元的字串資料(第一個字元的位置為0)，此設定值的"
+"每一個字元位置之有效設定值包含 Y、N 兩種(字元)。"
+
+#: ../../source/apis_protocols.rst:187
+msgid ""
+"e.g. a Y at position 1 (the second value in the string) means that the "
+"patrons renewal privileges are denied."
+msgstr ""
+"舉例來說：若字元位置 1 (代表在該字串資料中的第 2 個字元)之值為 Y，其對應的設"
+"定結果為 拒絕讀者變更權限。"
+
+#: ../../source/apis_protocols.rst:190
+msgid "**Check-in items**"
+msgstr "**還入的館藏**"
+
+#: ../../source/apis_protocols.rst:193
+msgid ""
+"This uses the request message (messages sent to the ACS) prefix of 09 and "
+"the response prefix of 10 (sent to the SC)."
+msgstr ""
+"請求訊息 (傳送給 ACS 的訊息) 之前綴碼採用 09，而回應訊息 (傳送給 SC 的訊息) "
+"之前綴碼為 10。"
+
+#: ../../source/apis_protocols.rst:197
+msgid "|image1127|"
+msgstr "|image1127|"
+
+#: ../../source/apis_protocols.rst:199
+msgid ""
+"<no block (Offline)> is a single character field of either ‘Y’ or ‘N’ which "
+"indicates if the transaction is being performed offline. As offline "
+"transactions are not supported you need to write ‘N’ if you are testing this "
+"message out manually."
+msgstr ""
+"<no block (Offline)>  此項為單字元資料欄位，其設定值包含 ‘Y’ 或 ‘N’ 兩種(字"
+"元)，代表是否啟用離線流通。若您需要手動測試此訊息功能，又您的系統若不支援離線"
+"流通，則此欄位之設定值應為 ‘N’。"
+
+#: ../../source/apis_protocols.rst:201
+msgid ""
+"<transactiondate> this is a 18 character field with the date is the format: "
+"YYYYMMDDZZZZHHMMSS."
+msgstr ""
+"<transactiondate> 此項為 18 個字元的資料欄位，其格式如下："
+"YYYYMMDDZZZZHHMMSS。"
+
+#: ../../source/apis_protocols.rst:203
+msgid ""
+"ZZZZ is the timezone, if you want to set it to local you need to leave 4 "
+"blank spaces, but if you want to set it to the UTC (Coordinated Universal "
+"Time) then you need to write in 3 blank spaces and a Z."
+msgstr ""
+"ZZZZ 代表時區，若要設定成當地時區，您必須以 4 個空白字元代表之，但如果要設定"
+"成 UTC (全球協調時間)，則必須以 3 個空格和一個 Z 代表之。"
+
+#: ../../source/apis_protocols.rst:207
+msgid "|image1128|"
+msgstr "|image1128|"
+
+#: ../../source/apis_protocols.rst:209
+msgid ""
+"Alert type could have one of several values: 00 : Unknown 01: local hold 02: "
+"remote hold 03: ILL Transfer 04: transfer 99: Other"
+msgstr ""
+"其他類型可能為：00 : 不明 01: 在地 02: 遠端 03: ILL 轉移 04: 轉移 99: 其他"
+
+#: ../../source/apis_protocols.rst:217
+msgid ""
+"If an item is resensitized then the value of <resentitize> should be Y "
+"otherwise it should be N. Rensensitizing items is done to ensure that if "
+"someone tries to steal the item they are detected."
+msgstr ""
+"再感應後的館藏其 <resentitize> 值應為 Y 不是 N。再感應的館藏可以偵測被偷竊的"
+"行為。"
+
+#: ../../source/apis_protocols.rst:219
+msgid "**Checkout items**"
+msgstr "**借出的館藏**"
+
+#: ../../source/apis_protocols.rst:221
+msgid ""
+"This uses the request message prefix of 11 and the response message prefix "
+"of 12. It has similar syntax to the check-in command, outlined above except "
+"the prefixes are different."
+msgstr ""
+"請求訊息前置 11 且回應訊息前置為 12。類似還入命令的語法，除了前置之外是不同"
+"的。"
+
+#: ../../source/apis_protocols.rst:224
+msgid ""
+"**Hold** – May not yet be supported on some systems. This has a request "
+"message numerical prefix of 15 and a response message prefix of 16."
+msgstr ""
+"**預約** – 有些系統可能不支援此功能。就是前置碼為 15 的請求訊息且回應訊息前置"
+"碼為 16。"
+
+#: ../../source/apis_protocols.rst:228
+msgid "|image1129|"
+msgstr "|image1129|"
+
+#: ../../source/apis_protocols.rst:230
+msgid ""
+"<holdmode> is a single character value. + means add a hold, - means delete a "
+"hold and * means change a hold."
+msgstr ""
+"<holdmode> 其值為一個字元。+ 表示新增預約，- 表示刪除預約 * 表示變更預約。"
+
+#: ../../source/apis_protocols.rst:234
+msgid "|image1130|"
+msgstr "|image1130|"
+
+#: ../../source/apis_protocols.rst:236
+msgid ""
+"<ok> is a single length value which is either 0 (for hold is not permitted "
+"or was not successful) or 1 (for hold is permitted and was successful)."
+msgstr "<ok> 其值可能為 0 (不允許預約或預約失敗) 或 1 (允許預約或預約成功)。"
+
+#: ../../source/apis_protocols.rst:238
+msgid ""
+"<available> is a single length value which is either Y or N. Y means the "
+"item is currently in the library, whilst N means the item is currently on "
+"loan/someone else has created a hold on the item."
+msgstr ""
+"<available> 其值為 Y 或 N。Y 表示該館藏在館內，N 表示該館藏外借中/被預約。"
+
+#: ../../source/apis_protocols.rst:241
+msgid ""
+"**Item information: This uses the request command prefix of 17, and the "
+"response command prefix of 18**"
+msgstr "**館藏資訊：請求命令的前置碼為 17，回應命令的前置碼為 18**"
+
+#: ../../source/apis_protocols.rst:245
+msgid "|image1131|"
+msgstr "|image1131|"
+
+#: ../../source/apis_protocols.rst:247
+msgid ""
+"See the check-in items command (described above) to find out what the "
+"<xact_date> value is."
+msgstr "參見還入館藏命令 (如前所述) 找出 <xact_date> 的值。"
+
+#: ../../source/apis_protocols.rst:249
+msgid "The terminal password is optional."
+msgstr "您可以自行決定是否設定終端機的密碼。"
+
+#: ../../source/apis_protocols.rst:253
+msgid "|image1132|"
+msgstr "|image1132|"
+
+#: ../../source/apis_protocols.rst:255
+msgid ""
+"**Item status update  This uses the request message prefix of 19 and the "
+"response message prefix of 20**"
+msgstr ""
+"**館藏狀態更新以前綴號 19 表示請求的訊息，而以前綴號 20 表示回應的訊息**"
+
+#: ../../source/apis_protocols.rst:259
+msgid "|image1133|"
+msgstr "|image1133|"
+
+#: ../../source/apis_protocols.rst:261
+msgid ""
+"<itemproperties> is not a fixed length value, and you can optionally write "
+"in values such as item size and these values will be stored in the Koha "
+"database for the item."
+msgstr ""
+"<itemproperties> 不是固定長度的值，可以寫入館藏大小儲存在 Koha 資料庫內。"
+
+#: ../../source/apis_protocols.rst:265
+msgid "|image1134|"
+msgstr "|image1134|"
+
+#: ../../source/apis_protocols.rst:267
+msgid ""
+"<itempropertiesok> is a single length character value which is either 0 or "
+"1. 1 identifies that the <itemproperties> value defined in the item status "
+"update request message was successfully stored in the Koha database."
+msgstr ""
+"<itempropertiesok> 的值是 0 或 1。1 表示設定館藏狀態更新的請求訊息 "
+"<itemproperties> 已經儲存在 Koha 資料庫。"
+
+#: ../../source/apis_protocols.rst:269
+msgid "**Patron status**"
+msgstr "**讀者狀態**"
+
+#: ../../source/apis_protocols.rst:271
+msgid ""
+"This uses the request message prefix 23 and the response message prefix of "
+"24."
+msgstr "以前綴號 23 表示請求的訊息，而用前綴號 24 表示回應的訊息。"
+
+#: ../../source/apis_protocols.rst:275
+msgid "|image1135|"
+msgstr "|image1135|"
+
+#: ../../source/apis_protocols.rst:279
+msgid "|image1136|"
+msgstr "|image1136|"
+
+#: ../../source/apis_protocols.rst:281
+msgid ""
+"The value displayed for <patronvalidity> is Y (valid) and N (invalid) The "
+"value in the <YYYYMMDD>    < HHMMSS> is the current date/time."
+msgstr ""
+"顯示在 <patronvalidity> 的值是 Y (有效) 與 N (無效) 在 <YYYYMMDD>    < "
+"HHMMSS> 內的值是現在的日期/時間。"
+
+#: ../../source/apis_protocols.rst:284
+msgid ""
+"The reason for the gap between the two values is to define that you want to "
+"use localtime rather than UTC."
+msgstr "兩個值之間的空格表示使用在地時間而不是 UTC 時間。"
+
+#: ../../source/apis_protocols.rst:287
+msgid ""
+"**Patron enable - This is not yet supported. This uses the request message "
+"prefix of 25 and the response message prefix of 26**"
+msgstr ""
+"**啟用讀者 - 此功能尚未完備。使用前置碼 25 的請求訊息與前置碼為 26 的回應訊息"
+"**"
+
+#: ../../source/apis_protocols.rst:289
+msgid "This command undoes the block patron command."
+msgstr "這個指令可以取消封鎖讀者的指令。"
+
+#: ../../source/apis_protocols.rst:293
+msgid "|image1137|"
+msgstr "|image1137|"
+
+#: ../../source/apis_protocols.rst:297
+msgid "|image1138|"
+msgstr "|image1138|"
+
+#: ../../source/apis_protocols.rst:299
+msgid ""
+"**Renew This uses the request message prefix of 29 and the response message "
+"prefix of 30**"
+msgstr "**更新以前綴號 29 表示請求的訊息，而以前綴號 30 表示回應的訊息**"
+
+#: ../../source/apis_protocols.rst:303
+msgid "|image1139|"
+msgstr "|image1139|"
+
+#: ../../source/apis_protocols.rst:305
+msgid ""
+"<thirdpartyallowed> is  a single character value which is either Y or N. If "
+"it is Y then third parties can renew items."
+msgstr "<thirdpartyallowed> 其值為 Y 或 N。Y 表示第三方可以更新該館藏。"
+
+#: ../../source/apis_protocols.rst:307
+msgid ""
+"<noblock> is a single character value which is either Y or N. If it is Y "
+"then this means that the item was checkin/out when the ACS was offline."
+msgstr "<noblock> 其值為 Y 或 N。Y 表示 ASC 離線時館藏被借出/還入。"
+
+#: ../../source/apis_protocols.rst:309
+msgid ""
+"<nbduedate> is the transaction date of checkin/checkout when the ACS was "
+"offline."
+msgstr "<nbduedate> 是 ACS 離線時還入/借出的日期。"
+
+#: ../../source/apis_protocols.rst:311
+msgid ""
+"<feeacknowledged> is a single character value which is either Y or N. This "
+"indicates if the user accepts the fee associated with the item they are "
+"renewing."
+msgstr "<feeacknowledged> 的值是 Y 或 N。表示讀者接受續借館藏的費用。"
+
+#: ../../source/apis_protocols.rst:315
+msgid "|image1140|"
+msgstr "|image1140|"
+
+#: ../../source/apis_protocols.rst:317
+msgid ""
+"<ok> is a single character value which is either 0 or 1. A value of 1 means "
+"the item was successfully renewed, 0 means item was not successfully renewed."
+msgstr "<ok> 的值為 0 或 1。1 表示續借館藏成功，0 表示續借館藏失敗。"
+
+#: ../../source/apis_protocols.rst:319
+msgid ""
+"<renewalok> is a single character value which is either Y or N. The logic "
+"for the setting of the value of <renewalok> is Y is set when the item is "
+"already checkout by the user and so it should be desensitized thereby "
+"renewing it, whereas N is set if the item is not already checkout to the "
+"patron and so it should not be renewed."
+msgstr ""
+"<renewalok> 的值是 Y 或 N。把 <renewalok> 設為 Y 表示館藏已經被借出，續借時應"
+"消磁，設為 N 表示館藏未被借出，不可續借。"
+
+#: ../../source/apis_protocols.rst:321
+msgid ""
+"In other words don’t let patrons renew books when they are not currently "
+"checked out to them."
+msgstr "換句話說，不要讓讀者在目前沒有借出該書籍的時候，更新其借閱狀態。"
+
+#: ../../source/apis_protocols.rst:323
+msgid ""
+"<magneticmedia> is a single character value which is either Y (for yes), N "
+"( for no), or U (for unknown)."
+msgstr ""
+"<magneticmedia> 的值為 Y (表示 yes)、N (表示 no)、或 U (表示不明 unknown)。"
+
+#: ../../source/apis_protocols.rst:325
+msgid ""
+"<mediatype> is a three numerical character long value. For a list of the "
+"values go to: http://multimedia.3m.com/mws/media/355361O/sip2-protocol.pdf"
+msgstr ""
+"<mediatype> 的值為三個數字。參見：http://multimedia.3m.com/mws/media/355361O/"
+"sip2-protocol.pdf"
+
+#: ../../source/apis_protocols.rst:328
+msgid "**End session**"
+msgstr "**作業階段結束**"
+
+#: ../../source/apis_protocols.rst:330
+msgid ""
+"This uses the request message prefix of 35 and the response message prefix "
+"of 36"
+msgstr "此地的請求訊息前置碼為 35，回應訊息前置碼為 36"
+
+#: ../../source/apis_protocols.rst:334
+msgid "|image1141|"
+msgstr "|image1141|"
+
+#: ../../source/apis_protocols.rst:338
+msgid "|image1142|"
+msgstr "|image1142|"
+
+#: ../../source/apis_protocols.rst:340
+msgid "<success_or_failure> is either Y for success or N for failure."
+msgstr "<success_or_failure> 的值是 Y 表示成功或 N 表示失敗。"
+
+#: ../../source/apis_protocols.rst:342
+msgid ""
+"**Fee Paid – May not be implemented yet. This uses a request message prefix "
+"of 37 and a response message prefix of 38**"
+msgstr "**付款 – 可能尚未完成。需使用前置 37 的請求訊息及前置 38 的回應訊息**"
+
+#: ../../source/apis_protocols.rst:346
+msgid "|image1143|"
+msgstr "|image1143|"
+
+#: ../../source/apis_protocols.rst:348
+msgid ""
+"<feetype> is a two numerical character value which is between 01 and 99. To "
+"see a list of fee type values go to http://multimedia.3m.com/mws/"
+"media/355361O/sip2-protocol.pdf"
+msgstr ""
+"<feetype> 的值是介於 01 與 99 之間的數值。參見：http://multimedia.3m.com/mws/"
+"media/355361O/sip2-protocol.pdf"
+
+#: ../../source/apis_protocols.rst:350
+msgid ""
+"<paymenttype> is a two character numerical value between 00 and 99. 00 is "
+"cash, 01 is Visa, and 02 is credit card."
+msgstr ""
+"<paymenttype> 的值是介於 00 與 99 之間的數值。00 表示現金、01 為 Visa、02 是"
+"信用卡。"
+
+#: ../../source/apis_protocols.rst:352
+msgid ""
+"<currencytype> is a 3 alphanumeric character long value identifying the "
+"currency the fee paid was in."
+msgstr "<currencytype> 的值為長度 3 的文數字用以識別付費的金額。"
+
+#: ../../source/apis_protocols.rst:356
+msgid "|image1144|"
+msgstr "|image1144|"
+
+#: ../../source/apis_protocols.rst:358
+msgid ""
+"<paymentaccepted> is a single alphanumeric character long value which is "
+"either Y (payment has been accepted) or N (payment has not been accepted)."
+msgstr "<paymentaccepted> 的值是 Y (付費成功) 或 N (付費失敗)。"
+
+#: ../../source/apis_protocols.rst:361
+msgid "**Patron information**"
+msgstr "**讀者資訊**"
+
+#: ../../source/apis_protocols.rst:363
+msgid ""
+"This uses the request message prefix of 63 and the response message prefix "
+"of 64"
+msgstr "使用前綴號63表示請求的訊息，而以前綴號64表示回應的訊息"
+
+#: ../../source/apis_protocols.rst:367
+msgid "|image1145|"
+msgstr "|image1145|"
+
+#: ../../source/apis_protocols.rst:371
+msgid "|image1146|"
+msgstr "|image1146|"
+
+#: ../../source/apis_protocols.rst:373
+msgid "<valid patron> is Y for valid and N for not valid."
+msgstr "<valid patron> 的值是 Y 表示成功與 N 表示失敗。"
+
+#: ../../source/apis_protocols.rst:375
+msgid ""
+"<hold "
+"itemcount><overdueitemcount><chargeditemscount><fienitemscount><recallitemscount><unavaliableholdscount> "
+"are all 4 numerical character long values."
+msgstr ""
+"<hold "
+"itemcount><overdueitemcount><chargeditemscount><fienitemscount><recallitemscount><unavaliableholdscount> "
+"的值都是長度為 4 的文數字。"
+
+#: ../../source/apis_protocols.rst:377
+msgid "**Renew all**"
+msgstr "**更新全部**"
+
+#: ../../source/apis_protocols.rst:379
+msgid ""
+"This uses the request message prefix of 65 and the  response message prefix "
+"of 66."
+msgstr "請求訊息前置碼為 65 回應訊息前置碼為 66。"
+
+#: ../../source/apis_protocols.rst:383
+msgid "|image1147|"
+msgstr "|image1147|"
+
+#: ../../source/apis_protocols.rst:387
+msgid "|image1148|"
+msgstr "|image1148|"
+
+#: ../../source/apis_protocols.rst:389
+msgid ""
+"<renewedcount> is a 4 numerical character long value denoting the number of "
+"items that were renewed."
+msgstr "<renewedcount> 的值是長度為 4 的數值表示允許續借的館藏數。"
+
+#: ../../source/apis_protocols.rst:391
+msgid ""
+"<unrenewedcount>, has the same format as the <renewedcount> but it denotes "
+"the number of items not renewed."
+msgstr ""
+"<unrenewedcount> 的格式與 <renewedcount> 相同，但表示不能續借的館藏數。"
+
+#: ../../source/apis_protocols.rst:393
+msgid "**Login**"
+msgstr "**登入**"
+
+#: ../../source/apis_protocols.rst:395
+msgid ""
+"This uses the request message prefix of 93, and the response message prefix "
+"of 94."
+msgstr "請求訊息前置碼為 93 回應訊息前置碼為 94。"
+
+#: ../../source/apis_protocols.rst:399
+msgid "|image1149|"
+msgstr "|image1149|"
+
+#: ../../source/apis_protocols.rst:401
+msgid ""
+"<UIDalgorithm> and <PWDalgorithm> are one character long values indicating "
+"the type of algorithm to use to encrypt the loginuserid and loginpassword "
+"respectively."
+msgstr ""
+"<UIDalgorithm> 與 <PWDalgorithm> 的值都是一個字元，表示加密 loginuserid 與 "
+"loginpassword 的演算法類型。"
+
+#: ../../source/apis_protocols.rst:403
+msgid "Writing in the value of 0 means these values will not be encrypted."
+msgstr "寫入的值為 0 表示該值未加密。"
+
+#: ../../source/apis_protocols.rst:405
+msgid ""
+"Response message: *941* is a successful login. *940* is an unsuccessful "
+"login *[connection closed by foreign host.]* is a unsuccessful login"
+msgstr ""
+"回應訊息：*941* 表示登入成功。*940* 表示登入失敗 *[被不明主機關閉連結。]* 表"
+"示登入失敗"
+
+#: ../../source/apis_protocols.rst:411
+msgid "**Resend**"
+msgstr "**重送**"
+
+#: ../../source/apis_protocols.rst:413
+msgid "This requests the receiving device to resend its last message."
+msgstr "請求接收裝置重送最後收到的訊息。"
+
+#: ../../source/apis_protocols.rst:415
+msgid "SC -> ACS resend request is *97*"
+msgstr "SC -> ACS 重送請求是 *97*"
+
+#: ../../source/apis_protocols.rst:417
+msgid "ACS -> SC resend request is *96*"
+msgstr "ACS -> SC 重送請求是 *96*"
+
+#: ../../source/apis_protocols.rst:420
+msgid "**Status of the ACS and SC**"
+msgstr "**ACS 與 SC 的狀態**"
+
+#: ../../source/apis_protocols.rst:422
+msgid ""
+"This has the request message prefix of 99 and the response message prefix of "
+"98."
+msgstr "請求訊息前置碼為 99 回應訊息前置碼為 98。"
+
+#: ../../source/apis_protocols.rst:426
+msgid "|image1150|"
+msgstr "|image1150|"
+
+#: ../../source/apis_protocols.rst:429
+msgid ""
+"The status code is one of 3 values. * 0: SC is ok * 1: SC is out of paper * "
+"2: SC is shutting down max print width is a 3 character long value which is "
+"the integer number of characters the client can print Protocol version is a "
+"4 character value in the format x.xx"
+msgstr ""
+"狀態代碼有 3 ：* 0: 表示 SC ok * 1: 表示 SC 沒有紙 * 2: 表示 SC 關機。列印最"
+"大寬度昰 3 個整數字元，使用 x.xx 格式時可以用到 4 個字元"
+
+#: ../../source/apis_protocols.rst:438
+msgid "|image1151|"
+msgstr "|image1151|"
+
+#: ../../source/apis_protocols.rst:440
+msgid ""
+"If you get the response message ‘96’ this means that the request message is "
+"not valid/understood."
+msgstr "回應訊息 ‘96’ 表示請求訊息無效或無法理解。"
+
+#: ../../source/apis_protocols.rst:443
+msgid "**Troubleshooting SIP2**"
+msgstr "**故障排除 SIP2**"
+
+#: ../../source/apis_protocols.rst:445
+msgid ""
+"Can’t connect to remote host when writing in the command telnet localhost "
+"<portnumber>"
+msgstr "寫入 telnet localhost <portnumber> 命令時無法連結至遠端主機"
+
+#: ../../source/apis_protocols.rst:447
+msgid "3 solutions for this issue to try are:"
+msgstr "此問題有 3 個解決方式："
+
+#: ../../source/apis_protocols.rst:449
+msgid ""
+"1. Check the portnumber your writing in the above command is the port number "
+"written in the SIPconfig.xml file at the location indicated by the number 1. "
+"i.e. in the below example because the portnumber is 6001 the correct command "
+"would be: telnet localhost 6001"
+msgstr ""
+"1. 檢查命令的埠號是否在 SIPconfig.xml 檔案編號 1 的位置。如，下例的埠號是 "
+"6001 時，正確的命令是：telnet localhost 6001"
+
+#: ../../source/apis_protocols.rst:453
+msgid ""
+"2. Check if any userid is written more than once in the SIPconfig.xml file. "
+"The userid (which is simply the username of the Koha user)  needs to be "
+"unique within the SIPconfig.xml file. If you have the same userid multiple "
+"times in your SIPconfig.xml file this will cause the connection to SIP2 to "
+"fail before you get a chance to authenticate."
+msgstr ""
+"2. 檢查 SIPconfig.xml 檔案內的 userid 是否寫了多次。SIPconfig.xml 內的 "
+"userid (就是 Koha 使用者名稱) 不能重複。若在 SIPconfig.xml 內重複 userid 於認"
+"證前就無法連結至 SIP2。"
+
+#: ../../source/apis_protocols.rst:456
+msgid ""
+"3. Check the account defined in the SIPconfig.xml file also exists in the "
+"Koha database with the same username, password and has circulate "
+"permissions. If you have dropped and recreated the Koha database after "
+"creating the patron account in the Koha staff interface and the SIPconfig."
+"xml file then that patron account will not exist in the Koha database and so "
+"you will need to recreate them in the Koha staff interface."
+msgstr ""
+"3. 檢查 SIPconfig.xml 檔案內的帳號是否以同名、同密碼、同樣的流通權限存在於 "
+"Koha 資料庫內。在 Koha 館員介面新增帳號後，曾退出並再新增 Koha 資料庫，"
+"SIPconfig.xml 檔案內的讀者帳號將不會在 Koha 資料庫內，必須於 Koha 館員介面重"
+"新建置該帳號。"
+
+#: ../../source/apis_protocols.rst:459
+msgid ""
+"To access the SIP2 logs in your Koha home directory navigate to the "
+"following directory: /var/log/koha/<instancename>"
+msgstr "至以下的資料庫近用 SIP2 紀錄：/var/log/koha/<instancename>"
+
+#: ../../source/apis_protocols.rst:462
+msgid ""
+"Then view the output of the sip-error.log and the sip-output.log files which "
+"give more detailed information about the SIP2 error."
+msgstr ""
+"然後檢視 sip-error.log 與 sip-output.log 的輸出，可得到 SIP2 錯誤的詳情。"
+
+#: ../../source/apis_protocols.rst:464
+msgid "cat sip-error.log"
+msgstr "cat sip-error.log"
+
+#: ../../source/apis_protocols.rst:465
+msgid "cat sip-output.log"
+msgstr "cat sip-output.log"
+
+#: ../../source/apis_protocols.rst:468
+msgid "**Useful links on SIP2 commands:**"
+msgstr "**有用的 SIP2 命令連結：**"
+
+#: ../../source/apis_protocols.rst:470
+msgid "http://multimedia.3m.com/mws/media/355361O/sip2-protocol.pdf"
+msgstr "http://multimedia.3m.com/mws/media/355361O/sip2-protocol.pdf"
+
+#: ../../source/apis_protocols.rst:475
+msgid "LDAP"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:477
+msgid ""
+"Setting up LDAP (Lightweight Directory Access Protocol) for Koha allows you "
+"to store all user information in a central database which is accessed both "
+"by your organisations Koha instance and for users to authenticate on other "
+"existing systems."
+msgstr ""
+"設定 Koha 的 LDAP (輕型目錄存取協定 Lightweight Directory Access Protocol) 就"
+"能夠把所有的讀者資訊儲存在中央資料庫內，供 Koha 實例與其他系統認證使用者。"
+
+#: ../../source/apis_protocols.rst:479
+msgid ""
+"LDAP is a protocol used for file discovery over networks and network "
+"authentication."
+msgstr "LDAP 是跨網路及其認證的通訊協定。"
+
+#: ../../source/apis_protocols.rst:481
+msgid ""
+"LDAP configurations are powerful allowing you to customise how Koha and LDAP "
+"interact. LDAP  can be configured so that new accounts created in LDAP can "
+"be synced down into the Koha database, additionally updates to the LDAP user "
+"account are synced down to the Koha database."
+msgstr ""
+"客製化 Koha 與 LDAP 互動的組態極具威力。LDAP 組態後可讓 LDAP 新增的帳號與 "
+"Koha 資料庫同步，而且更新 LDAP 使用者帳號的同時，也更新 Koha 資料庫。"
+
+#: ../../source/apis_protocols.rst:483
+msgid ""
+"However Koha cannot sync data up to the LDAP server, thus the data traffic "
+"when using LDAP is only one directional."
+msgstr "不過 Koha 不能同步更新 LDAP 伺服器，祗能單向地由 LDAP 傳往 Koha。"
+
+#: ../../source/apis_protocols.rst:485
+msgid ""
+"Auth_By_Bind is set to 1 where a Microsoft Windows Active Directory system "
+"is in use in the LDAP database."
+msgstr ""
+"在 LDAP 資料庫使用 Microsoft Windows Active Directory 系統時，Auth_By_Bind 設"
+"為 1。"
+
+#: ../../source/apis_protocols.rst:487
+msgid ""
+"**Before going through the steps to configure LDAP you will need the "
+"following information/actions from the organisation**"
+msgstr "**組態 LDAP 前需從機構取得以下的資訊/作為**"
+
+#: ../../source/apis_protocols.rst:490
+msgid ""
+"The organisation will need to open a port to allow access to their AD from "
+"the server."
+msgstr "機構需開啟埠號供伺服器的 AD 近用。"
+
+#: ../../source/apis_protocols.rst:492
+msgid ""
+"Information on the access to the AD server (IP address/hostname, port, SSL "
+"info)"
+msgstr "近用 AD 伺服器的資訊 (IP 位址/主機名稱、埠號、SSL 資訊)"
+
+#: ../../source/apis_protocols.rst:494
+msgid ""
+"Information on the configuration of the AD server (relevant OUs, DCs, CN "
+"formats relative to usernames)"
+msgstr "組態 AD 伺服器的資訊 (相關的 OU、DC、與使用者名稱有關的 CN 格式)"
+
+#: ../../source/apis_protocols.rst:496
+msgid "Mapping between AD fields and Koha fields, including defaults"
+msgstr "對映包括預設值在內的 AD 與 Koha 欄位"
+
+#: ../../source/apis_protocols.rst:498
+msgid ""
+"Default values for things not provided by AD (categorycode, branchcode for "
+"example)"
+msgstr "AD 不提供的預設值 (屬性代碼、分館代碼等)"
+
+#: ../../source/apis_protocols.rst:500
+msgid ""
+"To authenticate a user do we bind as them (seems to be common for AD) or do "
+"we use an account and login with that and then check? If the latter, we'll "
+"need details of how to log in"
+msgstr ""
+"認證使用者採用綁定 (AD 常用的) 或以帳號登入並檢查嗎？若為後者，需要登入的詳情"
+
+#: ../../source/apis_protocols.rst:502
+msgid ""
+"Do the existing usernames in Koha match the usernames that we'll be using to "
+"look them up in AD? If so, good. If not, how will we deal with duplicate "
+"users?"
+msgstr ""
+"Koha 內的使用者名稱與 AD 的使用者名稱相符嗎？若然，很好。否則，如何處理重複的"
+"使用者？"
+
+#: ../../source/apis_protocols.rst:504
+msgid "**Steps to set up LDAP with your Koha instance**"
+msgstr "**設定 LDAP 於 Koha 實例**"
+
+#: ../../source/apis_protocols.rst:507
+msgid ""
+"1 In Linux terminal navigate to the directory containing the koha-conf.xml "
+"file which will either be in: * /etc/koha/sites/<instance-name>/ OR *  /etc/"
+"koha/"
+msgstr ""
+"1 從 Linux 終端機進入含有 koha-conf.xml 檔案的目錄，可能在：* /etc/koha/"
+"sites/<instance-name>/ 或 * /etc/koha/"
+
+#: ../../source/apis_protocols.rst:512
+msgid ""
+"2 Open the koha-conf.xml file with root permissions: sudo vi koha-conf.xml"
+msgstr "2 以 root 權限開啟 koha-conf.xml 檔案：sudo vi koha-conf.xml"
+
+#: ../../source/apis_protocols.rst:515
+msgid ""
+"3 Scroll down to the line containing ‘<useldapserver>0</useldapserver>’ and "
+"change it to: <useldapserver>1</useldapserver>"
+msgstr ""
+"3 找到 ‘<useldapserver>0</useldapserver>’ 字樣並更改為：<useldapserver>1</"
+"useldapserver>"
+
+#: ../../source/apis_protocols.rst:518
+msgid ""
+"4 Then in the next line below write in the LDAP configurations below: Note "
+"all fields highlighted in yellow need to be replaced with the appropriate "
+"values for your organisations LDAP server."
+msgstr ""
+"4 然後在下一行寫入以下的 LDAP 組態：以黃色標示的欄位需變更為機構內 LDAP 伺服"
+"器的適當值。"
+
+#: ../../source/apis_protocols.rst:572
+msgid "5 Save and exit the koha-conf.xml file"
+msgstr "5 儲存共離開 koha-conf.xml 檔案"
+
+#: ../../source/apis_protocols.rst:574
+msgid "6 Check the LDAP connection works by writing in:"
+msgstr "6 寫入以下資料檢查 LDAP 的連結功能："
+
+#: ../../source/apis_protocols.rst:576
+msgid "ldapsearch -H ldaps://host.name  -s base -x  -w \"\" -d 1"
+msgstr "ldapsearch -H ldaps://host.name  -s base -x  -w \"\" -d 1"
+
+#: ../../source/apis_protocols.rst:579
+msgid ""
+"Note about hostname Hostname can either be a alphanumerical name or it can "
+"be the LDAP server IP address (its optional to write port number). By "
+"default the ldaps default port number is 636, whilst ldap default port "
+"number is 389"
+msgstr ""
+"主機名稱說明 可以是文木或 LDAP 伺服器的 IP 位址 (可包括寫入的埠號)。LDAP 的預"
+"設埠號為 636，實際上其埠號為 389"
+
+#: ../../source/apis_protocols.rst:583
+msgid ""
+"Note about the replicate and update fields The replicate  LDAP config field "
+"for LDAP in the koha-conf.xml file allow the Koha database to be added to "
+"with a new borrower account whenever a user logs into Koha (either the staff "
+"client or OPAC) with their LDAP username and password (assuming the same "
+"username and password does not already exist in the Koha database)."
+msgstr ""
+"重置與更新欄位說明 重置 LDAP 組態欄位供 koha-conf.xml 檔案內的 LDAP 使用，使"
+"用者以 LDAP 使用者名稱與密碼登入 Koha (館員介面或 OPAC) 時，新增 Koha 資料庫"
+"內的讀者帳號 (假設 Koha 資料庫沒有同名的帳號與密碼)。"
+
+#: ../../source/apis_protocols.rst:586
+msgid ""
+"Whereas the update LDAP config field (in the same file allows) allows for "
+"user information in the LDAP database to be synced down to the Koha "
+"database. e.g. if someone gets married and their surname changes then the "
+"new surname only needs to       be updated in the existing LDAP database and "
+"that will be synced down to the Koha       database automatically if the "
+"update configuration is set to 1."
+msgstr ""
+"更新 LDAP 組態欄位 (允許同檔案) 可以讓 LDAP 資料庫與 Koha 資料庫同步。例如，"
+"若已設定更新組態為 1，同步結婚後冠夫姓祗需更新 LDAP 資料庫就可，系統同步自行"
+"更新 Koha 資料庫。"
+
+#: ../../source/apis_protocols.rst:590
+msgid ""
+"About the mapping fields (the fields highlighted green) <city is=\"l"
+"\">Athens, OH</city>"
+msgstr "關於對映欄位 (以高亮度綠色顯示的欄位) <city is=\"l\">Athens, OH</city>"
+
+#: ../../source/apis_protocols.rst:593
+msgid ""
+"The left hand column name (highlighted yellow) is the name of the column in "
+"the LDAP database."
+msgstr "左邊的欄位名稱 (以高亮黃色顯示) 即是 LDAP 資料庫的同名欄。"
+
+#: ../../source/apis_protocols.rst:595
+msgid ""
+"The column name inside quote marks (highlighted pink) is the name of the "
+"column in the Koha database. NOTE: This can be filled with any value if "
+"there is no equivalent column name in the Koha database as exists in the "
+"LDAP database."
+msgstr ""
+"引號內的欄位名稱 (以高亮粉紅色顯示) 是 Koha 資料庫內的欄名。說明：若在 Koha "
+"資料庫內沒有與 LDAP 資料庫同名的欄位，可以鍵入其他的值。"
+
+#: ../../source/apis_protocols.rst:597
+msgid ""
+"The value highlighted cyan is the default value for the specified Koha and "
+"LDAP columns. So in the above example all user records in the Koha and LDAP "
+"databases  will by default have the city value of ‘Athens, OH’."
+msgstr ""
+"高亮青色的值是 Koha 與 LDAP 的預設值。所以，前例 Koha 與 LDAP的讀者其預設縣市"
+"值都是 ‘Athens, OH’。"
+
+#: ../../source/apis_protocols.rst:599
+msgid "Example of the LDAP configurations:"
+msgstr "LDAP 組態樣本："
+
+#: ../../source/apis_protocols.rst:647
+msgid ""
+"The values in the mapping area are not always the same, and it depends on "
+"what is in your organisations LDAP database. For example some organisations "
+"do not use <userid> instead each user is only identified by the <email> "
+"field and so no <userid> is written."
+msgstr ""
+"對映區塊的值不見得都相同，需依機構的 LDAP 資料庫而定。有些機構不使用 "
+"<userid> 而使用 <email> 欄位所以沒有 <userid> 欄位。"
+
+#: ../../source/apis_protocols.rst:650
+msgid "**Troubleshooting LDAP**"
+msgstr "**故障排除 LDAP**"
+
+#: ../../source/apis_protocols.rst:652
+msgid "The log that LDAP errors are printed to depends on several factors:"
+msgstr "多種因素影響列印 LDAP 錯誤紀錄："
+
+#: ../../source/apis_protocols.rst:654
+msgid ""
+"If plack is not disabled then LDAP errors are displayed in the plack-error."
+"log file If plack is disabled then the location that LDAP errors are printed "
+"to is either the opac-error.log file (if the user is logging into the OPAC) "
+"or the intranet-error.log file (if the user is logging into the staff "
+"client) All of these three log files are accessible in the following "
+"directory:"
+msgstr ""
+"若沒有停用 plack，則將 LDAP 錯誤顯示在 plack-error.log 檔案；若已停用 plack，"
+"則把 LDDA 的錯誤顯示在 opac-error.log 檔案 (若使用者登錄於 OPAC) 或 intranet-"
+"error.log 檔案 (若使用者登錄於館員介面)。這三個檔案都儲存在以下目錄："
+
+#: ../../source/apis_protocols.rst:658
+msgid "/var/log/koha/<instance>/"
+msgstr "/var/log/koha/<instance>/"

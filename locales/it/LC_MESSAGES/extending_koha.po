@@ -1,0 +1,853 @@
+# Compendium of it.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-it\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:52-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/extending_koha.rst:4
+msgid "Extending Koha"
+msgstr "Estendere Koha"
+
+#: ../../source/extending_koha.rst:6
+msgid ""
+"This chapter shows how you can add various enhancements and customizations "
+"in and around Koha by using mostly the existing configuration options."
+msgstr ""
+
+#: ../../source/extending_koha.rst:12
+msgid "Amazon lookup script for Koha libraries"
+msgstr "Script per la ricerca su Amazon ad uso delle biblioteche Koha"
+
+#: ../../source/extending_koha.rst:14
+msgid ""
+"We order most of our materials from Amazon, so I've been looking for a "
+"convenient way to tell if a book under consideration is in our catalog "
+"already."
+msgstr ""
+"Noi ordiniamo la maggior parte dei nostri materiali su Amazon, quindi "
+"cercavo un metodo conveniente per sapere se un libro preso in considerazione "
+"fosse già nel nostro catalogo."
+
+#: ../../source/extending_koha.rst:18
+msgid "Greasemonkey & a custom user script fit the bill nicely:"
+msgstr "Greasemonkey ed uno script personalizzato si adattano bene allo scopo:"
+
+#: ../../source/extending_koha.rst:20
+msgid "https://addons.mozilla.org/en-US/firefox/addon/748"
+msgstr "https://addons.mozilla.org/en-US/firefox/addon/748"
+
+#: ../../source/extending_koha.rst:22
+msgid "http://userscripts.org/scripts/show/56847"
+msgstr "http://userscripts.org/scripts/show/56847"
+
+#: ../../source/extending_koha.rst:24
+msgid "A few caveats:"
+msgstr "Alcune avvertenze:"
+
+#: ../../source/extending_koha.rst:26
+msgid ""
+"Like most scripts, this one was designed to work with Firefox; I haven't "
+"explored getting it to work with other browsers."
+msgstr ""
+"Come molti scriptm questo è stato progettato per funzionare con Firefox; non "
+"ho provato a farlo funzionare con altri browser."
+
+#: ../../source/extending_koha.rst:29
+msgid ""
+"I'm not a JavaScript programmer -- this was adapted from others' work. Just "
+"a few lines would have to be changed to get the script to work with your "
+"catalog."
+msgstr ""
+"Non sono una programmatrice JavaScript -- questo script è stato adattato a "
+"partire dal laovro di altri. Dovrebbe bastare cambiare poche righe per far "
+"funzionare lo script con il vostro catalogo."
+
+#: ../../source/extending_koha.rst:33
+msgid ""
+"It depends on the existence of ISBN for the item in question, so movies, "
+"older books, etc. would not work."
+msgstr ""
+"Lo script si basa sull'esistenza del numero ISBN per l'elemento in "
+"questione; perciò non funziona con libri molto vecchi, film, ecc."
+
+#: ../../source/extending_koha.rst:36
+msgid ""
+"Others have added all sorts of bells & whistles: XISBN lookups to search for "
+"related titles, custom messages based on the status of items (on order, on "
+"hold, etc.), ... just search the UserScripts site for Amazon + library. For "
+"a later date!"
+msgstr ""
+"Altre persone hanno aggiunto accessori di ogni sorta: ricerche XISBN per "
+"cercare titoli correlati, messaggi personalizzati basati sullo stato "
+"dell'elemento (ordinato, prenotato, ecc.)... basta cercare Amazon + library "
+"nel sito UserScripts!"
+
+#: ../../source/extending_koha.rst:44
+msgid "Keyword Clouds"
+msgstr "Nuvola di parole chiave"
+
+#: ../../source/extending_koha.rst:46
+msgid ""
+"In addition to the traditional tag cloud available in Koha, there is a way "
+"to generate clouds for popular subjects within Koha."
+msgstr ""
+"Oltre alla tradizionale nuvola di tag, disponibile in Koha, è possibile "
+"generare nuvole per gli argomenti più gettonati all'interno di Koha."
+
+#: ../../source/extending_koha.rst:49
+msgid ""
+"The :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` is "
+"used to help with this process. This cron job sends its output to files."
+msgstr ""
+"L'operazione pianificata :ref:`Nuvole Argomento/Autore <subject/author-"
+"clouds-label>` è d'aiuto in questo processo. Questo programma invia il suo "
+"output ad ad una serie di file."
+
+#: ../../source/extending_koha.rst:52
+msgid "/home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html"
+msgstr "/home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html"
+
+#: ../../source/extending_koha.rst:54
+msgid "/home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html"
+msgstr "/home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html"
+
+#: ../../source/extending_koha.rst:56
+msgid ""
+"This means that you can produce clouds for authors, collective author, all "
+"kind of subjects, classifications, etc. And since it works on zebra indexes, "
+"it is quick, even on large DBs. Tags clouds are sent to files. It's up to "
+"library webmaster to deal with those files in order to include them in :ref:"
+"`OPACMainUserBlock <opacmainuserblock-label>`, or include them into their "
+"library CMS."
+msgstr ""
+"Ciò significa che si possono produrre nuvole per autori, autori collettivi, "
+"tutti i generi di soggetti, classificazioni, ecc. E siccome il programma "
+"lavora sugli indici Zebra, è veloce, anche su cataloghi molto grossi. Le "
+"nuvole di parole vengono inviate ad alcuni file; sta al webmaster della "
+"biblioteca gestire tali file, per includerli in :ref:`OPACMainUserBlock "
+"<opacmainuserblock-label>`, oppure nel CMS della biblioteca."
+
+#: ../../source/extending_koha.rst:63
+msgid ""
+"Some libraries even send the file into a Samba shared folder where webmaster "
+"take them, eventually clean them a little bit before integrating them into "
+"navigation widgets or pages."
+msgstr ""
+"Alcune biblioteche inviano i file ad una cartella condivisa mediante Samba, "
+"da dove il webmaster li preleva, eventualmente li pulisce un po', e poi li "
+"integra in widget o pagine di navigazione."
+
+#: ../../source/extending_koha.rst:70
+msgid "Newest Titles Pulldown"
+msgstr "Tendina delle novità"
+
+#: ../../source/extending_koha.rst:72
+msgid ""
+"Often we want to add a way for our patrons to do searches for the newest "
+"items. In this example I'll show you how to create a pull down menu of the "
+"newest items by item type. These tips will work (with a couple changes) for "
+"collection codes or shelving locations as well."
+msgstr ""
+"Sovente si desidera dare agli utenti un sistema per cercare gli ultimi "
+"titoli arrivati. In questo esempio si vedrà come si può creare un elenco a "
+"discesa che contiene gli elementi più nuovi, per tipo di elemento. Questi "
+"suggerimenti funzionano anche (con un paio di modifiche) anche per i codici "
+"collezione o le collocazioni a scaffale."
+
+#: ../../source/extending_koha.rst:77
+msgid ""
+"First, it's important to note that every link in Koha is a permanent link. "
+"This means if I do a search for everything of a specific item type sorted by "
+"the acquisitions date and bookmark that URL, whenever I click it I'll see "
+"the newest items of that type on the first few pages of the results."
+msgstr ""
+"Prima, è importante notare che ogni link in Koha è un link permanente. Ciò "
+"significa che se si cerca una cosa qualsiasi di un tipo specifico, ordinata "
+"per data di acquisizione, e poi si mette un segnalibro su quell'URL, "
+"ogniqualvolta si fa clic sul segnalibro si vedono gli elementi più recenti "
+"di quel tipo, sulle prime pagine dei risultati."
+
+#: ../../source/extending_koha.rst:83
+msgid ""
+"I took this knowledge and wrote a form takes this functionality in to "
+"consideration. It basically just does a search of your Koha catalog for a "
+"specific item type and sorts the results by acquisitions date."
+msgstr ""
+"Sapendo questo, ho scritto un modulo che tiene conto di questa funzionalità. "
+"Sostanzialmente, esso esegue una ricerca del catalogo Koha per uno specifico "
+"tipo di elemento e ordina i risultati per data di acquisizione."
+
+#: ../../source/extending_koha.rst:87
+msgid ""
+"The first thing I did was write a MySQL statement to generate a list of item "
+"types for me - why copy and paste when you can use the power of MySQL?"
+msgstr ""
+"La prima cosa che ho fatto è stata di scrivere un'istruzione MySQL che "
+"generasse una lista dei tipi di elemento: perché fare copia-incolla quando "
+"si può usare la potenza di MySQL?"
+
+#: ../../source/extending_koha.rst:95
+msgid ""
+"The above looks at the itemtypes table and slaps the necessary HTML around "
+"each item type for me. I then exported that to CSV and opened it in my text "
+"editor and added the other parts of the form."
+msgstr ""
+"La query soprastante cerca la tabella itemtypes e circonda ogni tipo di "
+"elemento con il necessario HTML. Poi ho esportato il risultato in formato "
+"CSV, l'ho aperto in un editor di testo ed ho aggiunto le altre parti del "
+"modulo."
+
+#: ../../source/extending_koha.rst:119
+msgid "Now, what does all of that mean? The important bits are these:"
+msgstr "Ora, che cosa significa tutto ciò?Le parti importanti sono queste:"
+
+#: ../../source/extending_koha.rst:121
+msgid "First the starting of the form."
+msgstr "Innanzitutto l'inizio del modulo."
+
+#: ../../source/extending_koha.rst:127
+msgid ""
+"This tells the browser to take any value selected and put it at the end of "
+"this http://YOURSITE/cgi-bin/koha/opac-search.pl. If you want to embed this "
+"form on your library website (and not on your OPAC) you can put the full "
+"OPAC URL in there."
+msgstr ""
+"Questo dice al browser di prendere ogni valore selezionato e di metterlo al "
+"fondo di http://VOSTROSITO/cgi-bin/koha/opac-search.pl. Se si desidera "
+"includere questo modulo sul sito web della biblioteca (e non sull'OPAC), "
+"occore immettere l'URL completo dell'OPAC."
+
+#: ../../source/extending_koha.rst:132
+msgid ""
+"Next, there is a hidden value that is telling the search to sort by "
+"acquisitions date descending (newest items at the top):"
+msgstr ""
+"Poi c'è un valore nascosto che dice alla ricerca di ordinare i risultati per "
+"data di acquisizione, in senso discendente (elementi più recenti in cima):"
+
+#: ../../source/extending_koha.rst:139
+msgid ""
+"And finally you have an option for each item type you want people to search."
+msgstr ""
+"E per finire c'è un'opzione per ciascuno dei tipi di elemento per cui si "
+"desidera che gli utenti ricerchino."
+
+#: ../../source/extending_koha.rst:146
+msgid ""
+"These options each include the string \"mc-itype:\" which tells Koha to do "
+"an item type search."
+msgstr ""
+"Ciascuna di queste opzioni include la stringa \"mc-itype:\", che dice a Koha "
+"di eseguire una ricerca per tipo di elemento."
+
+#: ../../source/extending_koha.rst:149
+msgid ""
+"Once you have all of that in place you can copy and paste the form to "
+"somewhere on your OPAC. The `Farmington Public Libraries OPAC <http://"
+"catalog.farmingtonlibraries.org>`__ has a few examples of this on the left."
+msgstr ""
+"Una volta che tutto quanto è a posto, si può copiare ed incollare il modulo "
+"da qualche parte nell'OPAC. L'`OPAC della biblioteca pubblica di Farmington "
+"<http://catalog.farmingtonlibraries.org>`__ ha alcuni esempi di questo tipo "
+"nella sezione di sinistra."
+
+#: ../../source/extending_koha.rst:157
+msgid "New titles slider for OPAC"
+msgstr "Novità bibliografiche come slider dell'Opac"
+
+#: ../../source/extending_koha.rst:159
+msgid ""
+"Often times libraries will want to add a flowing widget with new materials "
+"at the library to their main public catalog page. To do this you can use a "
+"widget from any number of services (usually for a cost) or you can `enable "
+"plugins <#pluginsystem>`__ in Koha and use the `Cover Flow plugin <http://"
+"git.bywatersolutions.com/koha-plugins.git/shortlog/refs/heads/cover_flow>`__ "
+"which is based on the `Flipster <https://github.com/drien/jquery-"
+"flipster>`__, a responsive jQuery coverflow plugin."
+msgstr ""
+"Spesse volte le biblioteche vogliono aggiungere alla pagina principale del "
+"loro catalogo pubblico un'area in cui far scorrere le copertine delle ultime "
+"opere acquisite. Per fare questo si può usare un \"widget\" da uno qualsiasi "
+"di vari fornitori di servizi (di solito a pagamento), oppure si possono "
+"`abilitare i plugin <#pluginsystem>`__ in Koha e quindi utilizzare il `Cover "
+"Flow plugin <http://git.bywatersolutions.com/koha-plugins.git/shortlog/refs/"
+"heads/cover_flow>`__, che è basato su `Flipster <https://github.com/drien/"
+"jquery-flipster>`__, un plugin in jQuery di tipo \"responsive\" (cioè che si "
+"adatta automaticamente alle caratteristiche dello schermo del dispositivo su "
+"cui è visualizzato, N.d.T.) ."
+
+#: ../../source/extending_koha.rst:169
+msgid ""
+"Once the plugin is installed, the steps to get your coverflow to show up are "
+"as follows:"
+msgstr ""
+"Dopo aver installato il plugin, le operazioni per far apparire il riquadro "
+"scorrevole sono le seguenti:"
+
+#: ../../source/extending_koha.rst:172
+msgid ""
+"First, you need to create one or more public reports for your coverflow "
+"widget or widgets to be based on. This is how the plugin knows what the "
+"content of your widget should contain. Each report needs only three columns; "
+"title, biblionumber, and isbn. It is important that you have a good and "
+"valid isbn, as that is the datum used to actually fetch the cover. In the "
+"iteration of the plugin, we are using Amazon cover images, but I believe in "
+"the end I will make the cover image fetcher configurable so we can use any "
+"data source for cover image fetching."
+msgstr ""
+"Dapprima bisogna creare uno o più report pubblici su cui collocare il o i "
+"\"widget\". Questo è il modo in cui il plugin sa quali contenuti il widget "
+"dovrà mostrare. In ogni report sono necessarie solo tre colonne: title, "
+"biblionumber e isbn. E' importante avere dei numeri ISBN validi, poiché "
+"saranno usati per recuperare effettivamente le immagini delle copertine. "
+"Allo stato di sviluppo attuale, il plugin usa le immagini delle copertine "
+"fornite da Amazon, ma nella versione finale il sistema di recupero delle "
+"immagini di copertina sarà configurabile, in modo da una fonte dati "
+"qualsiasi per scaricare le copertine."
+
+#: ../../source/extending_koha.rst:181
+msgid ""
+"Second, we need to configure the plugin. The plugin configuration is a "
+"single text area that uses YAML ( actually, it’s JSON, whcih is a subset of "
+"YAML ) to store the configuration options. In this example it looks like "
+"this:"
+msgstr ""
+"Poi, bisogna configurare il plugin. La configurazione del plugin è una "
+"singola area di testo che usa YAML (di fatto è JSON, che è un sottoinsieme "
+"di YAML) per memorizzare le opzioni di configurazione. Nell'esempio seguente "
+"si presenta così:"
+
+#: ../../source/extending_koha.rst:193
+msgid ""
+"In this example, we are telling the plugin to use the report with id 42, and "
+"use it to create a coverflow widget to replace the HTML element with the id "
+"“coverflow”. The options list is passed directly to Flipster, so any options "
+"supported by Flipster can be set from the plugin configuration! In fact, in "
+"addition to the traditional coverflow, Flipster has a “carousel” mode which "
+"is a much more compact version of the coverflow. You can also configure "
+"which cover the widget will start on, among other options."
+msgstr ""
+"In questo esempio si dice al plugin di utilizzare il report con l'ID 42 e di "
+"usarlo per creare un widget di tipo coverflow che sostituisca l'elemento "
+"HTML avente ID \"coverflow\". La lista delle opzioni è passata direttamente "
+"a Flipster; in questo modo si può impostare nella configurazione del plugin "
+"qualsiasi opzione sia supportata da Flipster! Infatti, Flipster ha anche un "
+"modo \"giostra\", che è molto più compatto del tradizionale \"album\" per "
+"\"sfogliare\" le copertine. Si può anche decidere quale copertina il widget "
+"mostrerà per prima, ed altro ancora."
+
+#: ../../source/extending_koha.rst:202
+msgid ""
+"At the time the plugins options are saved or updated, the plugin will then "
+"generate some minified JavaScript code that is automatically stored in the "
+"Koha system preference OPACUserJS. Here is an example of the output:"
+msgstr ""
+"Nel momento in cui la configurazione viene salvata o aggiornata, il plugin "
+"genera del codice JavaScript \"minimizzato\" (una tecnica per ridurne le "
+"dimensioni, N.d.T.) che viene automaticamente salvato in Koha nella "
+"preferenza di sistema OpacUserJS. Ecco un esempio di ciò che viene prodotto:"
+
+#: ../../source/extending_koha.rst:214
+msgid ""
+"Why do this? For speed! Rather than regenerating this code each and every "
+"time the page loads, we can generate it once, and use it over and over again."
+msgstr ""
+"Perché fare ciò? Per motivi di prestazioni! Piuttosto che rigenerare questo "
+"codice ogni volta che la pagina viene caricata, si può generare una volta "
+"sola e riutilizzarlo tutte le volte che serve."
+
+#: ../../source/extending_koha.rst:218
+msgid ""
+"If you inspect the code closely, you’ll notice it references a script "
+"“coverflow.pl”. This is a script that is included with the coverflow plugin. "
+"Since we need to access this from the OPAC ( and we don’t want to set off "
+"any XSS attack alarms ), we need to modify the web server configuration for "
+"the public catalog and add the followup to it:"
+msgstr ""
+"Se si esamina il codice con attenzione, si nota il riferimento a \"coverflow."
+"pl\", che è uno script fornito insieme al plugin. Poichè bisogna accedere a "
+"questo script dall'OPAC (e non vogliamo far scattare un allarme di attacco "
+"XSS), è necessario modificare la configurazione del web server per il "
+"catalogo pubblico e fare la seguente aggiunta:"
+
+#: ../../source/extending_koha.rst:228
+msgid ""
+"This line gives us access to the coverflow.pl script from the OPAC. This "
+"script retrieves the report data and passes it back to the public catalog "
+"for creating the coverflow widget. Koha::Cache is supported in order to make "
+"the widget load as quickly as possible!"
+msgstr ""
+"Questa riga da accesso al file coverflow.pl dall'OPAC. Lo script legge i "
+"dati del report e li passa al catalogo pubblico per creare il widget. E' "
+"supportata Koha::Cache, per poter caricare la pagina il più velocemente "
+"possibile!"
+
+#: ../../source/extending_koha.rst:233
+msgid ""
+"The final step is to put your selector element somewhere in your public "
+"catalog. In this example, I put the following in the system preference "
+"OpacMainUserBlock:"
+msgstr ""
+"L'ultimo passo è di collocare l'elemento selettore da qualche parte nel "
+"catalogo pubblico. Nell'esempio seguente è stato messo nella preferenzia di "
+"sistema OpacMainUserBlock:"
+
+#: ../../source/extending_koha.rst:241
+msgid ""
+"Once that is in place, you need only refresh your OPAC page, and there you "
+"have it, your very own catalog coverflow widget! Not only do these "
+"coverflows look great on a computer screen, but they look great on mobile "
+"platforms as well, and are even touch responsive!"
+msgstr ""
+"Fatto questo, è sufficiente ricaricare la pagina dell'OPAC, ed ecco apparire "
+"il vostro personalissimo widget per sfogliare le copertine! E non solo si "
+"vede benissimo sullo schermo di un computer, ma anche sui dispositivi "
+"mobili, ed è perfino reattivo ai comandi al tocco!"
+
+#: ../../source/extending_koha.rst:246
+msgid "|image1316|"
+msgstr "|image1316|"
+
+#: ../../source/extending_koha.rst:251
+msgid "Cataloging and Searching by Color"
+msgstr "Catalogazione e ricerca per colore"
+
+#: ../../source/extending_koha.rst:253
+msgid ""
+"One of the icon sets installed in Koha includes a series of colors. This set "
+"can be used to catalog and search by color if you'd like. This guide will "
+"walk you use changing collection code to color in Koha so that you can do "
+"this."
+msgstr ""
+"Uno dei gruppi di icone installati in Koha comprende una serie di colori. "
+"Questo set può essere utilizzato per catalogare e cercare per colore, se si "
+"vuole. Queste istruzioni guideranno nel cambiare i codici di collezione in "
+"colori."
+
+#: ../../source/extending_koha.rst:258
+msgid ""
+"The following SQL could be used to add these colors to the CCODE authorized "
+"value category in a batch. If you wanted to use these colors for another "
+"authorized value you'd have to edit this to use that category:"
+msgstr ""
+"Per aggiungere in blocco i colori alla categoria di valori autorizzati "
+"CCODE, si può usare la seguente istruzione SQL. Se si desiderasse usare "
+"questi colori per un'altra categoria di valori autorizzati, sarebbe "
+"necessario modificarla di conseguenza:"
+
+#: ../../source/extending_koha.rst:310
+msgid ""
+"If you would like to choose the colors manually you can do that via the :ref:"
+"`Authorized Values` administration area."
+msgstr ""
+"Se si desidera scegliere i colori manualmente, si può fare tramite l'area :"
+"ref:`Valori autorizzati <authorized-values-label>` della sezione "
+"Amministrazione."
+
+#: ../../source/extending_koha.rst:313
+msgid "|image1118|"
+msgstr "|image1118|"
+
+#: ../../source/extending_koha.rst:315
+msgid ""
+"Next you'll want to :ref:`update the frameworks <marc-bibliographic-"
+"frameworks-label>` so that the 952$8 (if you're using collection code) label "
+"to says Color."
+msgstr ""
+"Quindi si devono :ref:`aggiornare le griglie di catalogazione <marc-"
+"bibliographic-frameworks-label>` di modo che il campo 952$8 (se si usano i "
+"codici di collezione) mostri la dicitura Colore:"
+
+#: ../../source/extending_koha.rst:318
+msgid "Once you have that in place you can start to catalog items by color."
+msgstr ""
+"Una volta che tutto ciò è a posto, si può inziare a catalogare gli elementi "
+"per colore."
+
+#: ../../source/extending_koha.rst:320
+msgid ""
+"Finally you'll want to add the following JQuery to your preferences so that "
+"it will relabel 'Collection' to 'Color'"
+msgstr ""
+"Per finire, occorre aggiungere il seguente codice JQuery alle proprie "
+"prepreferenze, in modo che sostituisca la parola \"Collezione\" con \"Colore"
+"\""
+
+#: ../../source/extending_koha.rst:323
+msgid ":ref:`IntranetUserJS`"
+msgstr ":ref:`IntranetUserJS`"
+
+#: ../../source/extending_koha.rst:332
+msgid ":ref:`OPACUserJS`"
+msgstr ":ref:`OPACUserJS`"
+
+#: ../../source/extending_koha.rst:345
+msgid "Using Koha as a Content Management System (CMS)"
+msgstr "Usare Koha come un Content Management System (CMS)"
+
+#: ../../source/extending_koha.rst:350
+msgid "Setup"
+msgstr "Setup"
+
+#: ../../source/extending_koha.rst:352
+msgid ""
+"These are instructions for taking a default install of Koha and allowing it "
+"to function as a little content management system. This will allow a library "
+"to publish an arbitrary number of pages based on a template. This example "
+"uses the template for the main opac page, but you could just as well use any "
+"template you wish with a bit more editing. This may be appropriate if you "
+"have a small library, want to allow librarians to easily add pages, and do "
+"not want to support a complete CMS."
+msgstr ""
+"Queste istruzioni spiegano come trasformare un'installazione predefinita di "
+"Koha in modo che funzioni come un piccolo sistema di gestione dei contenuti. "
+"Ciò permette alla biblioteca di pubblicare un numero arbitrario di pagine, "
+"basate su un modello. L'esempio seguente utilizza il modello su cui si basa "
+"la pagina principale dell'OPAC, ma si può utilizzare qualsiasi modello si "
+"voglia, con qualche modifica in più. Questo sistema può essere vantaggioso "
+"se si gestisce una biblioteca di piccole dimensioni, si vuole che i "
+"bibliotecari possano aggiungere agevolmente pagine al sito e non interessa "
+"adoperare un CMS completo."
+
+#: ../../source/extending_koha.rst:360
+msgid ""
+"Copy /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to /usr/share/koha/opac/"
+"cgi-bin/opac/pages.pl (in the same directory)"
+msgstr ""
+"Copiare /usr/share/koha/opac/cgi-bin/opac/opac-main.pl su /usr/share/koha/"
+"opac/cgi-bin/opac/pages.pl (nella stessa cartella)"
+
+#: ../../source/extending_koha.rst:363
+msgid "Edit pages.pl in an editor"
+msgstr "Aprire pages.pl in un editor di testo"
+
+#: ../../source/extending_koha.rst:365
+msgid "At approximately line 33 change this code:"
+msgstr "All'incirca alla riga 33 individuare la riga:"
+
+#: ../../source/extending_koha.rst:371
+msgid "To this code:"
+msgstr "e cambiala in:"
+
+#: ../../source/extending_koha.rst:377
+msgid "At approximately line 62 after this code:"
+msgstr "Approssimativamente a riga 62, dopo il seguente codice:"
+
+#: ../../source/extending_koha.rst:388
+msgid "Add these lines:"
+msgstr "Aggiungere queste righe:"
+
+#: ../../source/extending_koha.rst:396
+msgid ""
+"Note pages.pl file must have Webserver user execution permissions, you can "
+"use `chmod <http://en.wikipedia.org/wiki/Chmod>`__ command if you are "
+"actually logged in as such user:"
+msgstr ""
+"Notare che pages.pl deve avere il permesso di esecuzione per l'utente "
+"Webserver; se si è eseguito l'accesso come Webserver, per assegnare i "
+"permessi richiesti è possibile usare il comando `chmod <http://en.wikipedia."
+"org/wiki/Chmod>`__:"
+
+#: ../../source/extending_koha.rst:404
+msgid ""
+"In the browser go to Home > Administration > System Preferences > Local Use "
+"and add a New Preference called \"page\\_test\""
+msgstr ""
+"Nel browser vai a Home > Amministrazione > Preferenze di sistema > Uso "
+"locale e aggiungi una Nuova Preferenza chiamata \"page\\_test\""
+
+#: ../../source/extending_koha.rst:407
+msgid "Fill it out as so"
+msgstr "Compilare come segue"
+
+#: ../../source/extending_koha.rst:409
+msgid "Explanation: test page for pages tiny cms"
+msgstr "Spiegazione: pagina di prova per il mini-CMS integrato"
+
+#: ../../source/extending_koha.rst:411
+msgid "Variable: page\\_test"
+msgstr "Variabile: page\\_test"
+
+#: ../../source/extending_koha.rst:413
+msgid "Value: Lorem ipsum"
+msgstr "Valore: Lorem ipsum"
+
+#: ../../source/extending_koha.rst:415
+msgid ""
+"Click the TextArea link (or enter \"TextArea\" into the input field below it)"
+msgstr ""
+"Nella lista Tipi di variabile, fare clic sul link Textarea (oppure immettere "
+"\"TextArea\" nella casella di testo sottostante)"
+
+#: ../../source/extending_koha.rst:418
+msgid "variable options (last field): 80\\|50"
+msgstr "opzioni della variabile (è l'ultima casella di testo): 80\\|50"
+
+#: ../../source/extending_koha.rst:420
+msgid ""
+"In a browser go to http://youraddress/cgi-bin/koha/pages.pl?p=test The page "
+"should come up with the words \"Lorem ipsum\" in the main content area of "
+"the page. (replace \"youraddress\" with localhost, 127.0.0.1, or your domain "
+"name depending on how you have Apache set up.)"
+msgstr ""
+"Aprire un browser ed andare all'indirizzo http://indirizzo-di-koha/cgi-bin/"
+"koha/pages.pl?p=test; sostituire indirizzo-di-koha con l'indirizzo del "
+"server di Koha corrispondente alla vostra installazione.Deve apparire la "
+"pagina di prova, con le parole \"Lorem ipsum\" visualizzate nell'area del "
+"contenuto principale."
+
+#: ../../source/extending_koha.rst:426
+msgid ""
+"To add more pages simply create a system preference where the title begins "
+"with \"page\\_\" followed by any arbitrary letters. You can add any markup "
+"you want as the value of the field. Reference the new page by changing the "
+"value of the \"p\" parameter in the URL."
+msgstr ""
+"Per aggiungere altre pagine è sufficiente creare una preferenza di sistema "
+"per ciascuna pagina; assegnare ad ogni preferenza il titolo \"page\\_\", "
+"seguito da qualsiasi sequenza arbitraria di caratteri. Richiamare la nuova "
+"pagina cambiando il valore del parametro \"p\" nell'URL."
+
+#: ../../source/extending_koha.rst:431
+msgid ""
+"To learn more visit the Koha wiki page on this topic: http://wiki.koha-"
+"community.org/wiki/Koha_as_a_CMS"
+msgstr ""
+"Per maggiori informazioni consultare la pagina: http://wiki.koha-community."
+"org/wiki/Koha_as_a_CMS"
+
+#: ../../source/extending_koha.rst:437
+msgid "Editing the pages template"
+msgstr "Modificare il modello delle pagine"
+
+#: ../../source/extending_koha.rst:439
+msgid ""
+"Copy /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main.tt "
+"to /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+msgstr ""
+"Copiare /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main."
+"tt su /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+
+#: ../../source/extending_koha.rst:444
+msgid ""
+"Edit /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+msgstr ""
+"Aprire in un editor di testo /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/"
+"en/modules/pages.tt"
+
+#: ../../source/extending_koha.rst:447
+msgid "At approximately line 61, change this:"
+msgstr "Approssimativamente a riga 61 sostituire il testo:"
+
+#: ../../source/extending_koha.rst:453
+msgid "To this:"
+msgstr "Con:"
+
+#: ../../source/extending_koha.rst:459
+msgid ""
+"Remark: You may wish to disable your News block of these CMS style pages e."
+"g. when you do not want it displayed on the CMS style pages or where the "
+"News block is long enough that it actually makes the 'page\\_test' include "
+"scroll outside the default viewport dimensions. In that case, remove the "
+"following code from your pages.tt template."
+msgstr ""
+"Nota: si potrebbe voler disabilitare il blocco \"News\" dei queste pagine di "
+"stile del CMS (per esempio, perché non lo si vuole mostrare, oppure perché "
+"ha dimensioni così ampie che provoca la fuoriuscita di 'page\\_test' "
+"dall'area visibile). In tal caso, rimuovere il seguente codice dal file "
+"pages.tt."
+
+#: ../../source/extending_koha.rst:483
+msgid "Troubleshooting"
+msgstr "Risoluzione problemi"
+
+#: ../../source/extending_koha.rst:485
+msgid ""
+"If you have problems check file permissions on pages.pl and pages.tt. They "
+"should have the same user and group as other Koha files like opac-main.pl."
+msgstr ""
+"In caso di problemi, verificare innanzitutto i permessi sui file pages.pl e "
+"pages.tt. Devono avere lo stesso utente e lo stesso gruppo degli altri file "
+"di Koha, come ad esempio opac-main.pl."
+
+#: ../../source/extending_koha.rst:492
+msgid "Bonus Points"
+msgstr "Un punto in più"
+
+#: ../../source/extending_koha.rst:494
+msgid ""
+"Instead of using the address http://youraddress/cgi-bin/koha/pages.pl?p=test "
+"you can shorten it to http://youraddress/pages.pl?p=test Just open up /etc/"
+"koha/koha-httpd.conf and add the follow at about line 13:"
+msgstr ""
+"Invece di utilzzare indirizzi del tipo http://indirizzo-di-koha/cgi-bin/koha/"
+"pages.pl?p=test, si può abbreviare l'url in http://indirizzo-di-koha/pages."
+"pl?p=test. Per far ciò, è sufficiente aprire /etc/koha/koha-httpd.con in un "
+"editor e - all'incirca a riga 13 - aggiungere la riga seguente:"
+
+#: ../../source/extending_koha.rst:503
+msgid "Then restart Apache."
+msgstr "Dopo la modifica occorre riavviare Apache."
+
+#: ../../source/extending_koha.rst:508
+msgid "Usage"
+msgstr "Uso del CMS"
+
+#: ../../source/extending_koha.rst:510
+msgid ""
+"After setting up Koha as a CMS you can create new pages following these "
+"instructions:"
+msgstr ""
+"Dopo aver configurato Koha come un CMS, per creare nuove pagine seguire le "
+"istruzioni qui sotto:"
+
+#: ../../source/extending_koha.rst:516
+msgid "Adding Pages"
+msgstr "Aggiungere pagine"
+
+#: ../../source/extending_koha.rst:518
+msgid "To add a new page you need to add a system preference under Local Use."
+msgstr ""
+"Per aggiungere una pagina bisogna aggiungere una preferenza di sistema sotto "
+"Uso locale."
+
+#: ../../source/extending_koha.rst:520
+msgid ""
+"Get there: More > Administration > Global System Preferences > Local Use"
+msgstr ""
+"Portarsi in Più > Amministrazione > Preferenze di sistema globali > Uso "
+"locale"
+
+#: ../../source/extending_koha.rst:523
+msgid "Click 'New Preference'"
+msgstr "Fare clic su \"Nuova preferenza\""
+
+#: ../../source/extending_koha.rst:525
+msgid "Enter in a description in the Explanation field"
+msgstr "Immettere una descrizione nella casella Spiegazione"
+
+#: ../../source/extending_koha.rst:527
+msgid "Enter a value that starts with 'page\\_' in the Variable field"
+msgstr ""
+"Immettere un valore che cominci per \"page\\_\" nella casella Variabile"
+
+#: ../../source/extending_koha.rst:529
+msgid "Enter starting HTML in the Value field"
+msgstr "Immettere l'HTML iniziale nel campo Valore"
+
+#: ../../source/extending_koha.rst:531
+msgid "|image1076|"
+msgstr "|image1076|"
+
+#: ../../source/extending_koha.rst:533
+msgid "Set the Variable Type to Textarea"
+msgstr "Impostare il tipo della variabile a Textarea"
+
+#: ../../source/extending_koha.rst:535
+msgid ""
+"Set the Variable options to something like 20\\|20 for 20 rows and 20 columns"
+msgstr ""
+"Impostare le Opzioni della variabile per esempio a 20\\|20, per indicare 20 "
+"righe e 20 colonne"
+
+#: ../../source/extending_koha.rst:538
+msgid "|image1077|"
+msgstr "|image1077|"
+
+#: ../../source/extending_koha.rst:543
+msgid "Viewing your page"
+msgstr "Visualizzare la nuova pagina"
+
+#: ../../source/extending_koha.rst:545
+msgid ""
+"You can view your new page at http://YOUR-OPAC/cgi-bin/koha/pages.pl?"
+"p=PAGENAME where PAGENAME is the part you entered after 'page\\_' in the "
+"Variable field."
+msgstr ""
+"La nuova pagina è visibile all'indirizzo http://indirizzo-di-koha/cgi-bin/"
+"koha/pages.pl?p=NOMEPAGINA dove NOMEPAGINA è la parte che segue 'page\\_' "
+"nel campo Variabile"
+
+#: ../../source/extending_koha.rst:551
+#, fuzzy
+msgid "**Example**"
+msgstr "Esempio: "
+
+#: ../../source/extending_koha.rst:553
+msgid ""
+"This process can be used to create recommended reading lists within Koha. So "
+"once the code changes have been made per the instructions on 'Koha as a CMS' "
+"you go through the 'Adding a New Page' instructions above to great a page "
+"for 'Recommended Reading Lists'"
+msgstr ""
+"Questo procedimento si può utilizzare per creare in Koha un elenco di "
+"letture consigliate. Così, dopo aver apportato le modifiche specificate "
+"nelle istruzioni su \"Koha come un CMS\", si prosegue con le istruzioni "
+"\"Aggiungere una pagina\", qui sopra, per realizzare una fantastica pagina "
+"'Letture consigliate'"
+
+#: ../../source/extending_koha.rst:558
+msgid "|image1078|"
+msgstr "|image1078|"
+
+#: ../../source/extending_koha.rst:560
+msgid ""
+"Next we need to create pages for our various classes (or categories). To do "
+"this, return to the 'Adding a New Page' section and create a preference for "
+"the first class."
+msgstr ""
+"Fatto questo, bisogna creare creare altre pagine per le varie classi (o "
+"categorie). Per fare ciò, tornare alla sezione \"Aggiungere una pagina\" e "
+"creare una preferenza per la prima classe."
+
+#: ../../source/extending_koha.rst:564
+msgid "|image1079|"
+msgstr "|image1079|"
+
+#: ../../source/extending_koha.rst:566
+msgid ""
+"Next you'll want to link your first page to your new second page, go to the "
+"page\\_recommend preference and click 'Edit.' Now you want to edit the HTML "
+"to include a link to your newest page:"
+msgstr ""
+"Dopo di che si deve collegare la prima pagina alla seconda pagina creata; "
+"andare alla preferenza page\\_recommended e fare clic su Modifica. Ora è "
+"sufficiente modificare l'HTML per includere un link alla seconda pagina:"
+
+#: ../../source/extending_koha.rst:570
+msgid "|image1080|"
+msgstr "|image1080|"
+
+#: ../../source/extending_koha.rst:574
+#, fuzzy
+msgid "**Live Examples**"
+msgstr "Esempi reali"
+
+#: ../../source/extending_koha.rst:576
+msgid ""
+"The Crawford Library at Dallas Christian College is using this method for "
+"their recommended reading lists: http://opac.dallas.edu/"
+msgstr ""
+"La Crawford Library al Dallas Christian College usa questo metodo per il "
+"loro elenco di testi consigliati: http://opac.dallas.edu/"
+
+#: ../../source/extending_koha.rst:580
+msgid "Koha search on your site"
+msgstr "La ricerca di Koha sul tuo sito"
+
+#: ../../source/extending_koha.rst:582
+msgid ""
+"Often you'll want to add a Koha search box to your library website. To do "
+"so, just copy and paste the following code in to your library website and "
+"update the YOURCATALOG bit with your catalog's URL and you're set to go."
+msgstr ""
+"Spesso si vuole aggiungere il box di ricerda di Koha al sito della "
+"biblioteca. Per farlo copia e incolla il seguente codice HTML nel tuo sito "
+"sito. Aggiorna il link per parte YOURCATALOG e poi non c'è altro da fare."

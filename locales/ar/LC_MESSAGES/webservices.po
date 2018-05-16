@@ -1,0 +1,282 @@
+# Compendium of ar.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-ar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:48-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/webservices.rst:4
+msgid "Web Services"
+msgstr "خدمات الويب"
+
+#: ../../source/webservices.rst:9
+msgid "OAI-PMH"
+msgstr "OAI-PMH"
+
+#: ../../source/webservices.rst:11
+msgid ""
+"For the Open Archives Initiative-Protocol for Metadata Harvesting (OAI-PMH) "
+"there are two groups of 'participants': Data Providers and Service "
+"Providers. Data Providers (open archives, repositories) provide free access "
+"to metadata, and may, but do not necessarily, offer free access to full "
+"texts or other resources. OAI-PMH provides an easy to implement, low barrier "
+"solution for Data Providers. Service Providers use the OAI interfaces of the "
+"Data Providers to harvest and store metadata. Note that this means that "
+"there are no live search requests to the Data Providers; rather, services "
+"are based on the harvested data via OAI-PMH."
+msgstr ""
+
+#: ../../source/webservices.rst:22
+msgid ""
+"Koha at present can only act as a Data Provider. It can not harvest from "
+"other repositories. The biggest stumbling block to having Koha harvest from "
+"other repositories is that MARC is the only metadata format that Koha "
+"indexes natively. Visit http://www.oaforum.org/tutorial/english/page3.htm "
+"for diagrams of how OAI-PMH works."
+msgstr ""
+
+# Web services > OAI-PMH
+#: ../../source/webservices.rst:29
+#, fuzzy
+msgid "Learn more about OAI-PMH at: http://www.openarchives.org/pmh/"
+msgstr "<a href=\"http://www.openarchives.org/pmh/\">OAI-PMH</a> server."
+
+#: ../../source/webservices.rst:31
+msgid ""
+"To enable OAI-PMH in Koha edit the :ref:`OAI-PMH` preference. Once enabled "
+"you can visit http://YOURKOHACATALOG/cgi-bin/koha/oai.pl to see your file."
+msgstr ""
+
+#: ../../source/webservices.rst:38
+msgid "Sample OAI Conf File"
+msgstr "عينة الملف OAI Conf "
+
+#: ../../source/webservices.rst:64
+msgid "REST services"
+msgstr "خدمات الويب"
+
+#: ../../source/webservices.rst:66
+msgid ""
+"Koha can now be requested by REST http requests. BibLibre wrotes an external "
+"module to adds more possibilities than ILS-DI can provide.There is no "
+"authentication process, but authorized ips are listed in the config file. "
+"Services have been tested in 3.10, 3.12 and 3.14 koha versions. You can find "
+"more information about it into README file and opac/rest.pl documentation on "
+"http://git.biblibre.com. If you want to add features, send us a patch at dev"
+"\\_patches AT biblibre DOT com."
+msgstr ""
+
+#: ../../source/webservices.rst:74
+msgid "Services provided in 1.4 version are:"
+msgstr ""
+
+#: ../../source/webservices.rst:104
+#, fuzzy
+msgid "SRU server"
+msgstr "خادم SRU جديد"
+
+#: ../../source/webservices.rst:106
+msgid ""
+"Koha implements the Search/Retrieve via URL (SRU) protocol. More information "
+"about the protocol itself can be found at http://www.loc.gov/standards/sru/. "
+"The version implemented is version 1.1."
+msgstr ""
+
+#: ../../source/webservices.rst:114
+msgid "Explain"
+msgstr "التوضيح"
+
+#: ../../source/webservices.rst:116
+msgid ""
+"If you want to have information about the implementation of SRU on a given "
+"server, you should have access to the Explain file using a request to the "
+"server without any parameter. Like <http://myserver.com:9999/biblios/>. The "
+"response from the server is an XML file that should look like the following "
+"and will give you information about the default settings of the SRU server."
+msgstr ""
+
+#: ../../source/webservices.rst:185
+msgid "Search"
+msgstr "بحث"
+
+#: ../../source/webservices.rst:187
+msgid ""
+"This url : http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=reefs is composed of the "
+"following elements:"
+msgstr ""
+
+#: ../../source/webservices.rst:191
+msgid "base url of the SRU server : http://myserver.com:9999/biblios?"
+msgstr "عنوان الرابط الأساسي لمخدم SRU هو  : http://myserver.com:9999/biblios?"
+
+#: ../../source/webservices.rst:193
+msgid ""
+"search part with the 3 required parameters : version, operation and query. "
+"The parameters within the search part should be of the key=value form, and "
+"can be combined with the & character."
+msgstr ""
+
+#: ../../source/webservices.rst:197
+msgid ""
+"One can add optional parameters to the query, for instance maximumRecords "
+"indicating the maximum number of records to be returned by the server. So "
+"http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=reefs&maximumRecords=5 will only "
+"get the first 5 results results from the server."
+msgstr ""
+
+#: ../../source/webservices.rst:203
+msgid ""
+"http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation."
+"html gives more details about the search operations and in particular the "
+"list of optional parameters for searching."
+msgstr ""
+
+#: ../../source/webservices.rst:207
+msgid "The \"operation\" key can take two values: scan or searchRetrieve."
+msgstr "يمكن لمفتاح \"العمليات\" أن يتخذ قيمتين: فحص أو searchRetrieve."
+
+#: ../../source/webservices.rst:209
+msgid ""
+"If operation=searchRetrieve, then the search key should be query. As in : "
+"operation=searchRetrieve&query=reefs"
+msgstr ""
+
+#: ../../source/webservices.rst:212
+msgid ""
+"If operation=scan, then the search key should be scanClause. As in : "
+"operation=scan&scanClause=reefs"
+msgstr ""
+
+#: ../../source/webservices.rst:215
+msgid ""
+"etc/zebradb/biblios/etc/bib1.att defines Zebra/3950 indexes that exist on "
+"your system. For instance you'll see that we have indexes for Subject and "
+"for Title: att 21 Subject and att 4 Title respectively."
+msgstr ""
+"etc/zebradb/biblios/etc/bib1. يحدد Zebra/3950 الفهارس الموجودة على النظام "
+"الخاص بك. على سبيل المثال سترى أن لدينا فهارس عن الموضوع والعنوان: 21 ATT "
+"الموضوع والعنوان ATT 4 على التوالي."
+
+#: ../../source/webservices.rst:219
+msgid ""
+"In the pqf.properties file located under etc/zebradb/pqf.properties I see "
+"that an access point already uses my Subject index (index.dc.subject = 1=21) "
+"while another uses my Title index (index.dc.title = 1=4) I know this is my "
+"Subject index because as I've seen just before in my bib1.att file, it's "
+"called with =1=21 in Z3950: so index.dc.subject = 1=21 correctly points to "
+"my Subject index. And Title was called with 1=4 so index.dc.title = 1=4 "
+"correctly points to my Title index. I can now construct my query just like I "
+"would in a search box, just preceding it with the \"query\" key: "
+"query=Subject=reefs and Title=coral searches \"reefs\" in the subject and "
+"\"coral\" in the title. The full url would be http://myserver.com:9999/"
+"biblios?version=1.1&operation=searchRetrieve&query=Subject=reefs and "
+"Title=coral If I want to limit the result set to just 5 records, I can do "
+"http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=Subject=reefs and "
+"Title=coral&maximumRecords=5"
+msgstr ""
+
+#: ../../source/webservices.rst:235
+msgid ""
+"I can also play with truncate, relations, etc. Those are also defined in my "
+"pqf.properties file. I can see for instance the position properties defined "
+"as:"
+msgstr ""
+"أنا يمكن أن أوؤدية مع إقتطاع, العلاقة, وما الى ذلك. هذه يمكن أن تحدد الملف "
+"pqf.properties الخاص بي. يمكنني ان أرى على سبيل المثال خصائص الوضع كما "
+"هومحدد."
+
+#: ../../source/webservices.rst:247
+msgid ""
+"So as an example if I want \"coral\" to be at the beginning of the title, I "
+"can do this query : http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=Title=coral first"
+msgstr ""
+
+#: ../../source/webservices.rst:255
+msgid "Retrieve"
+msgstr "الإسترجاع"
+
+#: ../../source/webservices.rst:257
+msgid ""
+"My search for http://univ\\_lyon3.biblibre.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=coral reefs&maximumRecords=1 "
+"retrieves just on record. The response looks like this:"
+msgstr ""
+
+#: ../../source/webservices.rst:328
+#, fuzzy
+msgid "JSON reports services"
+msgstr "خدمات الويب"
+
+#: ../../source/webservices.rst:330
+msgid ""
+"Koha implements a JSON reports service for every report saved using the :ref:"
+"`Guided Reports Wizard <guided-report-wizard-label>` or :ref:`Report from "
+"SQL <report-from-sql-label>` features."
+msgstr ""
+
+#: ../../source/webservices.rst:334
+msgid ""
+"By default reports will be non-public and only accessible by authenticated "
+"users. If a report is explicitly set to *public* it will be accessible "
+"without authentication by anyone. This feature should only be used when the "
+"data can be shared safely not containing any patron information."
+msgstr ""
+
+#: ../../source/webservices.rst:339
+#, fuzzy
+msgid "The reports can be accessed using the following URLs:"
+msgstr "يمكن الوصول إلى المؤشرات باستخدام مفتاح \"المؤشر\""
+
+#: ../../source/webservices.rst:341
+#, fuzzy
+msgid "Public reports"
+msgstr "ملاحظات عامة"
+
+#: ../../source/webservices.rst:343
+msgid "OpacBaseURL/cgi-bin/koha/svc/report?id=REPORTID"
+msgstr ""
+
+#: ../../source/webservices.rst:345
+#, fuzzy
+msgid "Non-public reports"
+msgstr "ملاحظات غير عامة"
+
+#: ../../source/webservices.rst:347
+msgid "StaffBaseURL/cgi-bin/koha/svc/report?id=REPORTID"
+msgstr ""
+
+#: ../../source/webservices.rst:349
+#, fuzzy
+msgid "There are also some additional parameters available:"
+msgstr "لا يوجد أي %s متوفر حالياً."
+
+#: ../../source/webservices.rst:351
+msgid ""
+"Instead of accessing the report by REPORTID you can also use the report's "
+"name:"
+msgstr ""
+
+#: ../../source/webservices.rst:354
+msgid ".../cgi-bin/koha/svc/report?name=REPORTNAME"
+msgstr ""
+
+#: ../../source/webservices.rst:356
+msgid ""
+"For easier development there is also an option to generate an annotated "
+"output of the data. It will generate an array of hashes that include the "
+"field names as keys."
+msgstr ""
+
+#: ../../source/webservices.rst:360
+msgid ".../cgi-bin/koha/svc/report?name=REPORTNAME&annotated=1"
+msgstr ""
