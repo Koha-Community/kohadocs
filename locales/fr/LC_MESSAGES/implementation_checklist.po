@@ -1,0 +1,1992 @@
+# Compendium of fr.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-fr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:50-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/implementation_checklist.rst:5
+msgid "Implementation Checklist"
+msgstr "Liste des contrôle d'implémentation"
+
+#: ../../source/implementation_checklist.rst:7
+msgid ""
+"The following guide will walk you through the areas of Koha you need to look "
+"at in order to prepare to start using the system."
+msgstr ""
+"Ce guide va vous conduire à travers les parties de Koha qu'il vous faut "
+"regarder afin de vous préparer à utiliser le système."
+
+#: ../../source/implementation_checklist.rst:13
+msgid "Data Migration"
+msgstr "Migration de données"
+
+#: ../../source/implementation_checklist.rst:15
+msgid ""
+"Before you can start using Koha you'll need to have some data. This can be "
+"done by entering it all by hand, but most people already have their data in "
+"electronic format of some sort and just need to reformat it a bit for "
+"importing into Koha."
+msgstr ""
+"Avant de commencer à utiliser Koha, vous aurez besoin d'avoir quelques "
+"données. Il est possible de les saisir manuellement mais la plupart des gens "
+"ont déjà leurs propres données dans un format électronique quelconque et ont "
+"simplement besoin de les reformater pour les importer dans Koha."
+
+#: ../../source/implementation_checklist.rst:20
+msgid ""
+"Create a list of libraries and enter their info and codes into :ref:"
+"`Libraries & Groups`"
+msgstr ""
+"Créer une liste des sites et saisissez leurs informations et leurs codes "
+"dans :ref:`Libraries & Groups`"
+
+#: ../../source/implementation_checklist.rst:23
+msgid "Define your list of :ref:`Item Types`"
+msgstr "Définir votre liste de :ref:`Item Types`"
+
+#: ../../source/implementation_checklist.rst:25
+msgid ""
+"Define your patron categories and enter the categories and their codes into :"
+"ref:`Patron Categories`"
+msgstr ""
+"Définissez vos catégories d'adhérent et saisissez les catégories et leurs "
+"codes dans :ref:`Patron Categories`"
+
+#: ../../source/implementation_checklist.rst:28
+msgid ""
+"Enter any additional patron information fields you use in your library in "
+"the :ref:`Patron Attributes <patron-attribute-types-label>`"
+msgstr ""
+"Saisissez tous les champs d'information supplémentaires que vous utilisez "
+"dans votre bibliothèque dans :ref:`Patron Attributes <patron-attribute-types-"
+"label>`"
+
+#: ../../source/implementation_checklist.rst:31
+msgid ""
+"Requires that you first set the :ref:`ExtendedPatronAttributes` system "
+"preference if you have custom fields"
+msgstr ""
+"Nécessite que vous fixiez d'abord la préférence système :ref:"
+"`ExtendedPatronAttributes` si vous utilisez des champs personnalisés"
+
+#: ../../source/implementation_checklist.rst:35
+msgid "Define all of your :ref:`Authorized Values`"
+msgstr "Définir toutes vos :ref:`Authorized Values`"
+
+#: ../../source/implementation_checklist.rst:37
+msgid "`Collection codes <#ccode>`__"
+msgstr "`Codes de collection <#ccode>`__"
+
+#: ../../source/implementation_checklist.rst:39
+msgid "`Shelving locations <#shelvelocvals>`__"
+msgstr "`Localisations <#shelvelocvals>`__"
+
+#: ../../source/implementation_checklist.rst:41
+msgid ""
+"Item statuses (`lost <#lost>`__, `not for loan <#notforloan>`__, `damaged "
+"<#damageauth>`__, `withdrawn <#withdrawnauth>`__)"
+msgstr ""
+"Statuts de l'exemplaire (`perdu<#lost>`__, `indisponible <#notforloan>`__, "
+"`endommagé <#damageauth>`__, `retiré <#withdrawnauth>`__)"
+
+#: ../../source/implementation_checklist.rst:44
+msgid "Plus any others that are needed in your library"
+msgstr "Plus tous ceux dont votre bibliothèque a besoin"
+
+#: ../../source/implementation_checklist.rst:46
+msgid ""
+"Optionally define :ref:`City/State/Postal Code <cities-and-towns-label>` "
+"combos"
+msgstr ""
+"Définir facultativement les combinaisons :ref:`City/State/Postal Code "
+"<cities-and-towns-label>`"
+
+#: ../../source/implementation_checklist.rst:48
+msgid ""
+":ref:`Map your bibliographic data <koha-to-marc-mapping-label>` from your "
+"legacy system to Koha fields and migrate (remembering to use the collection, "
+"shelving, item type and library codes you entered in the above setting areas)"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:53
+msgid ""
+":ref:`Map your patron data <patron-import-label>` from your legacy system to "
+"the Koha fields and migrate (remembering to use the patron and library codes "
+"you defined above)"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:57
+msgid ""
+"Test your migrated data to be sure that everything is as you expect it to "
+"be, some things to test include:"
+msgstr ""
+"Testez vos données migrées pour vous assurer que tout fonctionne comme "
+"prévu. Le test prévoit de:"
+
+#: ../../source/implementation_checklist.rst:60
+msgid ""
+"Check some of your titles with diacritics and make sure that they migrated "
+"properly."
+msgstr ""
+"Vérifier quelques-uns de vos titres contenant des signes diacritiques et "
+"vous assurer qu'ils ont été correctement migrés."
+
+#: ../../source/implementation_checklist.rst:63
+msgid ""
+"Check titles in a series and make sure that series information migrated "
+"properly."
+msgstr ""
+"Vérifier les titres de collections et vous assurer que les informations de "
+"collections ont été correctement migrées."
+
+#: ../../source/implementation_checklist.rst:66
+msgid ""
+"Make sure that your patrons have their contact information in the right "
+"fields."
+msgstr ""
+"Vous assurer que les coordonnées des adhérents sont bien remplies et dans "
+"les bons champs."
+
+#: ../../source/implementation_checklist.rst:69
+msgid ""
+"If your serials data was migrated search for these records in the catalog "
+"and confirm that they look right."
+msgstr ""
+"Si les données de vos périodiques ont été migrées, rechercher ces notices "
+"dans le catalogue et vérifier qu'elles sont correctes."
+
+#: ../../source/implementation_checklist.rst:72
+msgid ""
+"If your serials data was migrated search for these records in the serials "
+"module and confirm that they look right."
+msgstr ""
+"Si les données de vos périodiques ont été migrées, rechercher ces notices "
+"dans le module Périodiques et vérifier qu'elles sont correctes."
+
+#: ../../source/implementation_checklist.rst:75
+msgid "Check marc records to verify a variety of items are cataloged correctly"
+msgstr ""
+"Vérifier les notices MARC et s'assurer que les exemplaires des différents "
+"types sont catalogués correctement"
+
+#: ../../source/implementation_checklist.rst:78
+msgid "Check cataloging process to see if all necessary fields are available"
+msgstr ""
+"Vérifier le processus de catalogage pour voir si tous les champs nécessaires "
+"sont disponibles"
+
+#: ../../source/implementation_checklist.rst:81
+msgid "If fines are migrated, check to see that they are applied correctly"
+msgstr ""
+"Si les pénalités ont été migrés, vérifier si elles s'appliquent correctement"
+
+#: ../../source/implementation_checklist.rst:84
+msgid ""
+"If holds are migrated, check to see they are accurate in catalog and patron "
+"record"
+msgstr ""
+"Si les réservations ont été migrées, vérifier qu'elles correspondent dans le "
+"catalogue et la fiche adhérent"
+
+#: ../../source/implementation_checklist.rst:90
+msgid "Admin Configuration"
+msgstr "Configuration de l'administration"
+
+#: ../../source/implementation_checklist.rst:92
+msgid ""
+"Most of these preferences won't need to be changed to use your Koha system, "
+"but there are a few that you might want to customize."
+msgstr ""
+"Pour l'utilisation de votre système Koha, la plupart de ces préférences "
+"système n'auront pas besoin d'être modifiées, mais il y en a quelques unes "
+"que vous souhaiterez peut-être personnaliser."
+
+#: ../../source/implementation_checklist.rst:95
+msgid ""
+"If your library uses CAS Authentication, you'll want to set the various :ref:"
+"`CAS system preferences <cas-authentication-label>`"
+msgstr ""
+"SI votre bibliothèque utilise l'Authentification CAS, vous devrez paramétrer "
+"les différentes :ref:`CAS system preferences <cas-authentication-label>`"
+
+#: ../../source/implementation_checklist.rst:98
+msgid "Administration System Preferences"
+msgstr "Préférences système Administration"
+
+#: ../../source/implementation_checklist.rst:100
+msgid ""
+":ref:`KohaAdminEmailAddress` : This is the email address that will be used "
+"by the system in 'from' lines and to send errors to if there is no email set "
+"for the branch"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:104
+msgid ""
+":ref:`noItemTypeImages` : Decide if you want to show item type icons in the "
+"staff client and opac"
+msgstr ""
+":ref:`noItemTypeImages` : Vous permet de décider d'afficher les icônes des "
+"types de document dans l'interface professionnelle et à l'OPAC"
+
+#: ../../source/implementation_checklist.rst:107
+msgid ""
+":ref:`delimiter` : This value will be put in between fields when exporting "
+"data from Koha"
+msgstr ""
+":ref:`delimiter` : Cette valeur sera rajoutée entre les champs lorsque vous "
+"exportez des données depuis Koha"
+
+#: ../../source/implementation_checklist.rst:110
+msgid ""
+":ref:`virtualshelves` : Decide if you want the staff and/or patrons to use "
+"lists in Koha"
+msgstr ""
+":ref:`virtualshelves` : Vous permet de décider si vous voulez que le "
+"personnel et/ou les adhérents puissent utiliser les listes dans Koha"
+
+#: ../../source/implementation_checklist.rst:113
+msgid ""
+":ref:`AutoLocation` : Require staff to log in to the staff client from a "
+"specific IP range"
+msgstr ""
+":ref:`AutoLocation` : Nécessite que les personnels qui s'identifient dans "
+"l'interface professionnelle le fassent depuis une plage d'adresses IP "
+"spécifique"
+
+#: ../../source/implementation_checklist.rst:116
+msgid ""
+":ref:`IndependentBranches` : Prevent librarians from editing content that "
+"belongs to other branches"
+msgstr ""
+":ref:`IndependentBranches` : Empêche les bibliothécaires de modifier des "
+"contenus qui appartiennent à d'autres sites"
+
+#: ../../source/implementation_checklist.rst:119
+msgid ""
+"Go through the :ref:`Log System Preferences <logs-label>` and decide which "
+"actions you want to keep track of in the logs"
+msgstr ""
+"Parcourez les :ref:`Log System Preferences <logs-label>` et décidez de "
+"quelles actions vous souhaitez garder la trace dans les logs"
+
+#: ../../source/implementation_checklist.rst:122
+msgid ""
+"Decide if you'd like to share your library's information with the Koha "
+"community by setting the :ref:`Sharing system preferences <share-anonymous-"
+"usage-statistics-label>`."
+msgstr ""
+"Décidez si vous partagez les informations de votre bibliothèque avec la "
+"communauté Koha en paramétrant les :ref:`Sharing system preferences <share-"
+"anonymous-usage-statistics-label>`."
+
+#: ../../source/implementation_checklist.rst:126
+msgid "Decide what `cron jobs <#cronjobsch>`__ you need to run and when."
+msgstr ""
+"Décidez quels `cron jobs <#cronjobsch>`__ vous souhaitez exécuter et quand."
+
+#: ../../source/implementation_checklist.rst:128
+msgid ""
+"If you're using the long overdue cron job be sure to set your :ref:"
+"`DefaultLongOverdueChargeValue`, :ref:`DefaultLongOverdueLostValue "
+"<defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` & :ref:"
+"`DefaultLongOverdueDays <defaultlongoverduelostvalue-&-"
+"defaultlongoverduedays-label>` preferences."
+msgstr ""
+"Si vous utilisez le cron job longs retards, assurez-vous de bien paramétrer "
+"vos préférences système :ref:`DefaultLongOverdueChargeValue`, :ref:"
+"`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-"
+"defaultlongoverduedays-label>` et :ref:`DefaultLongOverdueDays "
+"<defaultlongoverduelostvalue-&-defaultlongoverduedays-label>`."
+
+#: ../../source/implementation_checklist.rst:137
+msgid "Localization Configuration"
+msgstr "Configuration de localisation"
+
+#: ../../source/implementation_checklist.rst:139
+msgid ""
+"Koha is used worldwide and so you need to make sure you set your "
+"localization preferences so that options throughout Koha appear properly for "
+"your location/language."
+msgstr ""
+"Koha est utilisé dans le monde entier, c'est pourquoi vous devez vérifier "
+"que vous avez paramétré vos préférences système de localisation afin que les "
+"options de votre localisation/langue s'appliquent partout dans votre Koha."
+
+#: ../../source/implementation_checklist.rst:143
+msgid "Localization/Internationalization System Preferences"
+msgstr "Préférences système Localisation/Internationalisation"
+
+#: ../../source/implementation_checklist.rst:145
+msgid ":ref:`dateformat` : Decide how dates are displayed throughout Koha"
+msgstr ""
+":ref:`dateformat` : Permet de décider comment les dates vont s'afficher dans "
+"Koha"
+
+#: ../../source/implementation_checklist.rst:148
+msgid ""
+":ref:`opaclanguagesdisplay` : Decide if patrons can choose what language the "
+"OPAC appears in"
+msgstr ""
+":ref:`opaclanguagesdisplay` : Permet de décider si les adhérents peuvent "
+"choisir la langue de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:151
+msgid ""
+":ref:`opaclanguages` : Decide which languages the patrons can choose from"
+msgstr ""
+":ref:`opaclanguages` : Permet de décider parmi quelles langues les adhérents "
+"peuvent choisir"
+
+#: ../../source/implementation_checklist.rst:154
+msgid ":ref:`language` : Decide which languages appear in the staff client"
+msgstr ""
+":ref:`language` : Permet de décider quelles langues s'affichent dans "
+"l'interface professionnelle"
+
+#: ../../source/implementation_checklist.rst:157
+msgid ":ref:`CalendarFirstDayOfWeek` : Define your first day of the week"
+msgstr ""
+"ref:`CalendarFirstDayOfWeek` : Permet de définir le premier jour de la "
+"semaine"
+
+#: ../../source/implementation_checklist.rst:163
+msgid "Circulation Configuration"
+msgstr "Configuration de la Circulation"
+
+#: ../../source/implementation_checklist.rst:165
+msgid ""
+"Before you start circulating your collection you'll need to set up your "
+"rules and preferences for circulation."
+msgstr ""
+"Avant de commencer le prêt de documents, vous devez paramétrer vos règles et "
+"préférences système pour la circulation."
+
+#: ../../source/implementation_checklist.rst:168
+msgid ""
+"Define your :ref:`Circulation/Fine rules <circulation-and-fine-rules-label>`"
+msgstr ""
+"Définissez vos :ref:`Circulation/Fine rules <circulation-and-fine-rules-"
+"label>`"
+
+#: ../../source/implementation_checklist.rst:170
+msgid ""
+"Enter the :ref:`days your library is closed <calendar-label>` for fines and "
+"due date calculations"
+msgstr ""
+"Saisissez les :ref:`days your library is closed <calendar-label>` pour le "
+"calcul des pénalités et des dates de retour"
+
+#: ../../source/implementation_checklist.rst:173
+msgid "Circulation System Preferences"
+msgstr "Préférences système pour la Circulation"
+
+#: ../../source/implementation_checklist.rst:175
+msgid ""
+":ref:`CircControl` : Define whether circ rules are based on item's location, "
+"patron's location or transaction location"
+msgstr ""
+":ref:`CircControl` : Permet de définir si les règles de circulation sont "
+"basées sur la localisation de l'exemplaire, sur le site de rattachement de "
+"l'adhérent ou sur le site dans lequel a lieu la transaction"
+
+#: ../../source/implementation_checklist.rst:179
+msgid ":ref:`useDaysMode` : Define how due dates are calculated"
+msgstr ""
+":ref:`useDaysMode` : Permet de définir comment les dates de retour sont "
+"calculées"
+
+#: ../../source/implementation_checklist.rst:182
+msgid ""
+":ref:`finesCalendar` : Define how fines are calculated (for every late date "
+"or only for days the library is open)"
+msgstr ""
+":ref:`finesCalendar` : Permet de définir comment les pénalités sont "
+"calculées (pour tous les jours de retard ou seulement pour les jours où la "
+"bibliothèque est ouverte)"
+
+#: ../../source/implementation_checklist.rst:186
+msgid ""
+":ref:`SpecifyDueDate` : Decide if staff are allowed to override due dates on "
+"checkout"
+msgstr ""
+":ref:`SpecifyDueDate` : Permet de décider si le personnel est autorisé à "
+"outrepasser les dates de retour lors du prêt"
+
+#: ../../source/implementation_checklist.rst:189
+msgid ""
+":ref:`SpecifyReturnDate` : Decide if you want to let the staff specify an "
+"arbitrary return date on checkin"
+msgstr ""
+":ref:`SpecifyReturnDate` : Permet de décider si le personnel est autorisé à "
+"spécifier une date de retour arbitraire lors du prêt"
+
+#: ../../source/implementation_checklist.rst:192
+msgid ""
+":ref:`itemBarcodeFallbackSearch` : Decide if you want staff to be able to "
+"checkout using a keyword search (title, call number, etc)"
+msgstr ""
+":ref:`itemBarcodeFallbackSearch` : Permet de décider si vous autorisez le "
+"personnel à enregistrer les prêts en utilisant la recherche par mot-clef "
+"(titre, numéro de cote, etc)"
+
+#: ../../source/implementation_checklist.rst:196
+msgid ""
+":ref:`AutomaticItemReturn` : Decide if items are sent back to the owning "
+"branch when checked in"
+msgstr ""
+":ref:`AutomaticItemReturn` : Permet de décider si les documents sont "
+"renvoyés au site propriétaire lors de leur retour"
+
+#: ../../source/implementation_checklist.rst:199
+msgid ""
+":ref:`todaysIssuesDefaultSortOrder` : Decide how items checked out today "
+"display on the patron record"
+msgstr ""
+":ref:`todaysIssuesDefaultSortOrder` : Permet de décider comment les retours "
+"du jour s'affichent dans la fiche adhérent"
+
+#: ../../source/implementation_checklist.rst:202
+msgid ""
+":ref:`previousIssuesDefaultSortOrder` : Decide how items checked out prior "
+"to today display on the patron record"
+msgstr ""
+":ref:`previousIssuesDefaultSortOrder` : Permet de décider comment les "
+"documents retournés les jours précédents s'affichent dans la fiche adhérent"
+
+#: ../../source/implementation_checklist.rst:206
+msgid ""
+":ref:`noissuescharge` : Define the maximum amount a patron can owe before "
+"checkouts are blocked"
+msgstr ""
+":ref:`noissuescharge` : Permet de définir le montant maximum de dette qu'un "
+"adhérent peut atteindre avant que ses droits de prêts ne soient bloqués"
+
+#: ../../source/implementation_checklist.rst:209
+msgid ""
+":ref:`ReturnBeforeExpiry` : Decide if patrons need to return items before "
+"their accounts expire"
+msgstr ""
+":ref:`ReturnBeforeExpiry` : Permet de décider si la date de retour des "
+"documents doit être antérieure à la date d'expiration du compte de l'adhérent"
+
+#: ../../source/implementation_checklist.rst:212
+msgid ""
+":ref:`AllowHoldsOnDamagedItems` : Decide if patrons can place holds on items "
+"that are marked as damaged"
+msgstr ""
+":ref:`AllowHoldsOnDamagedItems` : Permet de décider si les adhérents peuvent "
+"faire des réservations sur des exemplaires signalés comme endommagés"
+
+#: ../../source/implementation_checklist.rst:215
+#: ../../source/implementation_checklist.rst:222
+#: ../../source/implementation_checklist.rst:229
+msgid ""
+":ref:`AllowHoldPolicyOverride` : Decide if you want the staff to be able to "
+"override the setting for the above at checkout"
+msgstr ""
+":ref:`AllowHoldPolicyOverride` : Permet de décider si vous autorisez le "
+"personnel à outrepasser les paramétrages ci-dessus lors du prêt"
+
+#: ../../source/implementation_checklist.rst:219
+msgid ""
+":ref:`maxreserves` : Decide how many items a patron can have on hold at once"
+msgstr ""
+":ref:`maxreserves` : Permet de décider combien de documents un adhérent peut "
+"réserver au maximum"
+
+#: ../../source/implementation_checklist.rst:226
+msgid ""
+":ref:`maxoutstanding` : Define the maximum amount a patron can owe before "
+"holds are blocked"
+msgstr ""
+":ref:`maxoutstanding` : Permet de définir le montant maximum de dette qu'un "
+"adhérent peut atteindre avant que ses droits de réservation soit bloqués"
+
+#: ../../source/implementation_checklist.rst:233
+msgid ""
+":ref:`ReservesMaxPickUpDelay` : Define the number of days before a hold "
+"expires"
+msgstr ""
+":ref:`ReservesMaxPickUpDelay` : Permet de définir le nombre de jours avant "
+"qu'une réservation n'expire"
+
+#: ../../source/implementation_checklist.rst:236
+msgid ""
+":ref:`WebBasedSelfCheck` : Decide if you want to use the built in web-based "
+"self-checkout system"
+msgstr ""
+":ref:`WebBasedSelfCheck` : Permet de décider si vous voulez utiliser le "
+"système de prêt en self-service en ligne"
+
+#: ../../source/implementation_checklist.rst:239
+msgid ""
+":ref:`AutoSelfCheckAllowed <autoselfcheckallowed,-autoselfcheckid-&-"
+"autoselfcheckpass-label>` : Decide if the self-checkout system requires login"
+msgstr ""
+":ref:`AutoSelfCheckAllowed <autoselfcheckallowed,-autoselfcheckid-&-"
+"autoselfcheckpass-label>` : Permet de décider si le système de prêt en self-"
+"service nécessite de s'authentifier"
+
+#: ../../source/implementation_checklist.rst:242
+msgid ""
+":ref:`ShowPatronImageInWebBasedSelfCheck` : Decide if you want patron images "
+"to show on the self checkout screen"
+msgstr ""
+":ref:`ShowPatronImageInWebBasedSelfCheck` : Permet de décider si vous voulez "
+"que les photos des usagers s'affichent sur l'écran de prêt en self-service"
+
+#: ../../source/implementation_checklist.rst:246
+#, fuzzy
+msgid ""
+":ref:`AllowNotForLoanOverride` : Decide if you want the staff to be able to "
+"checkout items marked as 'not for loan'"
+msgstr ""
+":ref:`AllowTooManyOverride` : Permet de décider si vous autorisez le "
+"personnel à prêter des exemplaires au-delà du nombre maximal de prêts "
+"autorisés"
+
+#: ../../source/implementation_checklist.rst:250
+msgid ""
+":ref:`AllowRenewalLimitOverride` : Decide if you want staff to override the "
+"limit put on renewals"
+msgstr ""
+":ref:`AllowRenewalLimitOverride` : Permet de décider si vous autorisez le "
+"personnel à outrepasser la limite du nombre de renouvellements"
+
+#: ../../source/implementation_checklist.rst:253
+msgid ""
+":ref:`AllowFineOverride` : Decide if you want staff to be able to override "
+"fine limits"
+msgstr ""
+":ref:`AllowFineOverride` : Permet de décider si vous autorisez le personnel "
+"à outrepasser les limites définies pour les amendes"
+
+#: ../../source/implementation_checklist.rst:256
+msgid ""
+":ref:`AllowTooManyOverride` : Descide if you want staff to be able to check "
+"out more than the limit to a patron"
+msgstr ""
+":ref:`AllowTooManyOverride` : Permet de décider si vous autorisez le "
+"personnel à prêter des exemplaires au-delà du nombre maximal de prêts "
+"autorisés"
+
+#: ../../source/implementation_checklist.rst:259
+msgid ":ref:`RenewalPeriodBase` : Decide what date renewals are based on"
+msgstr ""
+":ref:`RenewalPeriodBase` : Permet de décider à partir de quelle date sont "
+"calculés les renouvellements"
+
+#: ../../source/implementation_checklist.rst:262
+msgid ""
+":ref:`finesMode` : Switch to 'Calculate and Charge' before go live if you "
+"charge fines"
+msgstr ""
+":ref:`finesMode` : Basculez sur 'Calculer et Faire payer' si vous faites "
+"payer des amendes"
+
+#: ../../source/implementation_checklist.rst:265
+msgid ""
+"`OverdueNoticeBcc <#OverdueNoticeBcc>`__ : If you want to receive a copy of "
+"every overdue notice sent out, enter your email address here"
+msgstr ""
+"`OverdueNoticeBcc <#OverdueNoticeBcc>`__  : Si vous souhaitez recevoir une "
+"copie pour chaque notification de retard envoyée, saisissez votre adresse "
+"mail ici"
+
+#: ../../source/implementation_checklist.rst:269
+msgid ""
+":ref:`emailLibrarianWhenHoldIsPlaced` : Decide if you want an email every "
+"time a hold is placed"
+msgstr ""
+":ref:`emailLibrarianWhenHoldIsPlaced` : Permet de décider si vous souhaitez "
+"recevoir un e-mail chaque fois qu'une réservation est faite"
+
+#: ../../source/implementation_checklist.rst:272
+msgid ""
+":ref:`ReservesControlBranch` : Decide which branch's hold rules are "
+"considered first"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:275
+msgid ""
+":ref:`soundon <audioalerts-label>` : Decide if you want to have sounds on "
+"for circulation actions"
+msgstr ""
+":ref:`soundon <audioalerts-label>` : Permet de décider si vous voulez avoir "
+"des sons lors des transactions de prêt"
+
+#: ../../source/implementation_checklist.rst:278
+msgid ""
+":ref:`FilterBeforeOverdueReport` : If you have a large amount of overdues, "
+"you might want to turn this preference on so as to allow you to filter "
+"before results appear"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:282
+msgid ""
+":ref:`DisplayClearScreenButton` : If you have a lot of staff members sharing "
+"one circ computer you might want to enable this so that staff can clear the "
+"screen in between checkouts to protect patron's privacy"
+msgstr ""
+":ref:`DisplayClearScreenButton` : Si beaucoup de membres du personnel "
+"partagent le même ordinateur pour le prêt, vous pouvez activer cette "
+"préférence système afin qu'ils puissent effacer l'écran entre les "
+"transactions de prêts et ainsi protéger les données personnelles des "
+"adhérents"
+
+#: ../../source/implementation_checklist.rst:287
+msgid ""
+":ref:`CircAutoPrintQuickSlip` : Decide how you want Koha to react if you "
+"scan in a blank barcode on the checkout screen"
+msgstr ""
+":ref:`CircAutoPrintQuickSlip` : Permet de décider de la réaction de Koha "
+"lorsque vous scannez un code à barres vierge sur l'écran de prêt"
+
+#: ../../source/implementation_checklist.rst:291
+msgid ""
+":ref:`SuspendHoldsIntranet` and/or :ref:`SuspendHoldsOpac` : Decide if you "
+"want patrons and/or staff to be able to suspend holds"
+msgstr ""
+":ref:`SuspendHoldsIntranet` and/or :ref:`SuspendHoldsOpac` : Permet de "
+"décider si vous autorisez les adhérents et/ou le personnel à suspendre les "
+"réservations"
+
+#: ../../source/implementation_checklist.rst:295
+msgid ""
+":ref:`AutoResumeSuspendedHolds` : If you allow holds to be suspended decide "
+"if you want them to automatically resume on the date entered by the staff "
+"and/or patron"
+msgstr ""
+"ref:`AutoResumeSuspendedHolds` : Si vous autorisez la suspension des "
+"réservations, décidez si vous voulez qu'elles reprennent automatiquement à "
+"la date saisie par le personnel et/ou l'adhérent"
+
+#: ../../source/implementation_checklist.rst:300
+msgid ""
+":ref:`OnSiteCheckouts` : Decide if you want to allow items to be checked out "
+"for use within the library"
+msgstr ""
+":ref:`OnSiteCheckouts` : Permet de décider si vous autorisez les adhérents à "
+"emprunter des exemplaires pour un usage sur place au sein de la bibliothèque"
+
+#: ../../source/implementation_checklist.rst:303
+msgid ""
+":ref:`RecordLocalUseOnReturn` : Set this to record local use of items when "
+"you check them in"
+msgstr ""
+":ref:`RecordLocalUseOnReturn` : Paramétrez cette préférence système pour "
+"enregistrer une utilisation sur place des documents lorsque vous les "
+"retournez"
+
+#: ../../source/implementation_checklist.rst:306
+msgid "Customize your :ref:`Notices & Slips`"
+msgstr "Personnalisez vos :ref:`Notices & Slips`"
+
+#: ../../source/implementation_checklist.rst:308
+msgid ""
+"Define your :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-"
+"label>`"
+msgstr ""
+"Définissez vos :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-"
+"label>`"
+
+#: ../../source/implementation_checklist.rst:310
+#: ../../source/implementation_checklist.rst:403
+#: ../../source/implementation_checklist.rst:468
+#: ../../source/implementation_checklist.rst:504
+#: ../../source/implementation_checklist.rst:520
+#: ../../source/implementation_checklist.rst:688
+msgid "Set up your :ref:`cron jobs <cron-jobs-label>`"
+msgstr "Paramétrez vos :ref:`cron jobs <cron-jobs-label>`"
+
+#: ../../source/implementation_checklist.rst:312
+msgid "Populate :ref:`your holds queue <holds-queue-label>` (every 1-4 hours)"
+msgstr ""
+"Peuplez votre :ref:`your holds queue <holds-queue-label>` (toutes les 1-4 "
+"heures)"
+
+#: ../../source/implementation_checklist.rst:314
+msgid "Decide :ref:`when holds expire <expired-holds-label>` (daily)"
+msgstr ""
+"Décidez :ref:`when holds expire <expired-holds-label>` (quotidiennement)"
+
+#: ../../source/implementation_checklist.rst:316
+msgid ":ref:`Calculate fines due <fines-label>` (daily)"
+msgstr ":ref:`Calculate fines due <fines-label>` (quotidiennement)"
+
+#: ../../source/implementation_checklist.rst:318
+msgid "Fines on hourly loans will calculate when you check the items in"
+msgstr ""
+"Les amendes des prêts horaires seront calculées au retour des exemplaires"
+
+#: ../../source/implementation_checklist.rst:321
+msgid ":ref:`Mark long overdue items as lost <long-overdues-label>` (daily)"
+msgstr ""
+":ref:`Mark long overdue items as lost <long-overdues-label>` "
+"(quotidiennement)"
+
+#: ../../source/implementation_checklist.rst:323
+msgid ""
+"Decide when the system :ref:`sends out messages <message-queue-label>` (1-4 "
+"hours)"
+msgstr ""
+"Décidez quand le système :ref:`sends out messages <message-queue-label>` "
+"(toutes les 1-4 heures)"
+
+#: ../../source/implementation_checklist.rst:326
+msgid ""
+"Decide when the system :ref:`queues overdue notices <overdue-notice-label>` "
+"(daily)"
+msgstr ""
+"Décidez quand le système  :ref:`queues overdue notices <overdue-notice-"
+"label>` (quotidiennement)"
+
+#: ../../source/implementation_checklist.rst:329
+msgid ""
+"Set up :ref:`hold notices that didn't send for printing <print-hold-notices-"
+"label>` (daily after overdues and message queue)"
+msgstr ""
+"Paramétrez les :ref:`hold notices that didn't send for printing <print-hold-"
+"notices-label> (quotidiennement après la mise en file d'attente des retards "
+"et message)"
+
+#: ../../source/implementation_checklist.rst:333
+msgid ""
+"Decide when the system :ref:`queues the advanced notice of items due "
+"<advanced-notice-label>` (daily)"
+msgstr ""
+"Décidez quand le système :ref:`queues the advanced notice of items due "
+"<advanced-notice-label>` (quotidiennement)"
+
+#: ../../source/implementation_checklist.rst:336
+msgid ""
+"Find holds that need to be :ref:`resumed and remove suspension <unsuspend-"
+"holds-label>` (daily)"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:339
+msgid ""
+"If you're allowing automatic renewal of items :ref:`set them to renew "
+"<automatic-renewal-label>` (nightly)"
+msgstr ""
+"Si vous autorisez le renouvellement automatique des documents  :ref:`set "
+"them to renew <automatic-renewal-label>` (toutes les nuits)"
+
+#: ../../source/implementation_checklist.rst:345
+msgid "Patron Configuration"
+msgstr "Configuration des adhérents"
+
+#: ../../source/implementation_checklist.rst:347
+msgid ""
+"You have already imported patron data from your old system, but there are "
+"plenty of options available to you regarding patrons and their accounts."
+msgstr ""
+"Vous avez déjà importé les données des adhérents depuis l'ancien système, "
+"mais il y a beaucoup d'options disponibles pour vous quant aux adhérents et "
+"leurs comptes."
+
+#: ../../source/implementation_checklist.rst:351
+msgid "Enter your :ref:`staff members as patrons <add-a-staff-patron-label>`"
+msgstr ""
+"Saisissez les :ref:`staff members as patrons <add-a-staff-patron-label>`"
+
+#: ../../source/implementation_checklist.rst:353
+msgid ""
+"Define :ref:`staff members access permissions <patron-permissions-label>`"
+msgstr ""
+"Définissez les :ref:`staff members access permissions <patron-permissions-"
+"label>`"
+
+#: ../../source/implementation_checklist.rst:355
+msgid "Patron System Preferences"
+msgstr "Préférences système des adhérents"
+
+#: ../../source/implementation_checklist.rst:357
+msgid ""
+":ref:`autoMemberNum` : Decide if the patrons barcodes are auto-generated or "
+"if you enter them yourself"
+msgstr ""
+":ref:`autoMemberNum` : Permet de décider si les codes à barre des adhérents "
+"sont auto-générés ou si vous les saisissez vous-même"
+
+#: ../../source/implementation_checklist.rst:360
+msgid ""
+":ref:`MaxFine` : Determine the maximum amount that people can owe in fines"
+msgstr ":ref:`MaxFine` : Détermine le montant maximum des amendes"
+
+#: ../../source/implementation_checklist.rst:363
+msgid ""
+":ref:`NotifyBorrowerDeparture` : Decide when to warn staff that the patron "
+"account is about to expire"
+msgstr ""
+":ref:`NotifyBorrowerDeparture` : Permet de d'avertir le personnel que le "
+"compte de l'adhérent est sur le point d'expirer"
+
+#: ../../source/implementation_checklist.rst:366
+msgid ""
+":ref:`intranetreadinghistory` : Decide if the staff can see the patron's "
+"reading/checkout history"
+msgstr ""
+":ref:`intranetreadinghistory` : Permet de décider si le personnel peut voir "
+"l'historique de lecture/des emprunts de l'adhérent"
+
+#: ../../source/implementation_checklist.rst:369
+msgid ""
+":ref:`BorrowerMandatoryField` : List fields that you want to appear as "
+"mandatory on the patron add/edit form"
+msgstr ""
+":ref:`BorrowerMandatoryField` : Liste les champs obligatoires que vous "
+"voulez voir apparaître sur le formulaire d'ajout/modification de l'adhérent"
+
+#: ../../source/implementation_checklist.rst:372
+msgid ":ref:`BorrowersTitles` : Add or change the titles for your patrons"
+msgstr ":ref:`BorrowersTitles` : Ajoute ou modifie la civilité des adhérents"
+
+#: ../../source/implementation_checklist.rst:375
+msgid ""
+":ref:`borrowerRelationship` : Add or change borrower relationships (child to "
+"adult and professional to organization)"
+msgstr ""
+":ref:`borrowerRelationship` : Ajoute ou modifie les relations entre les "
+"adhérents (un adulte pour un enfant et un professionnel pour une "
+"organisation)"
+
+#: ../../source/implementation_checklist.rst:379
+msgid ""
+":ref:`AutoEmailPrimaryAddress` : Determine if the patrons get an email "
+"confirming the creation of their account"
+msgstr ""
+":ref:`AutoEmailPrimaryAddress` : Détermine si les adhérents reçoivent un "
+"courriel confirmant la création de leur compte"
+
+#: ../../source/implementation_checklist.rst:383
+#, fuzzy
+msgid ""
+":ref:`EnhancedMessagingPreferences` : Decide if staff can choose from a "
+"series of notices (other than overdues) for patrons"
+msgstr ""
+":ref:`EnhancedMessagingPreferencesOPAC`: Permet de décider si les adhérents "
+"peuvent sélectionner les notifications (autres que les avis de retard) "
+"qu'ils reçoivent"
+
+#: ../../source/implementation_checklist.rst:387
+msgid ""
+":ref:`EnhancedMessagingPreferencesOPAC`: Decide if patrons can choose from a "
+"series of notices (other than ovedues) for themselves"
+msgstr ""
+":ref:`EnhancedMessagingPreferencesOPAC`: Permet de décider si les adhérents "
+"peuvent sélectionner les notifications (autres que les avis de retard) "
+"qu'ils reçoivent"
+
+#: ../../source/implementation_checklist.rst:391
+msgid ""
+":ref:`patronimages` : Decide if you want to save patron images in your system"
+msgstr ""
+"ref:`patronimages` : Permet de décider si vous voulez enregistrer les photos "
+"des adhérents dans votre système"
+
+#: ../../source/implementation_checklist.rst:394
+msgid ""
+":ref:`ExtendedPatronAttributes` : Decide if you want to enable custom patron "
+"fields"
+msgstr ""
+":ref:`ExtendedPatronAttributes` : Permet de décider si vous voulez autoriser "
+"l'utilisation de champs personnalisés pour les adhérents"
+
+#: ../../source/implementation_checklist.rst:397
+msgid ""
+":ref:`minPasswordLength` : Enter the minimum number of characters you want "
+"passwords to have"
+msgstr ""
+":ref:`minPasswordLength` : Saisissez le nombre minimum de caractères pour "
+"les mots de passe"
+
+#: ../../source/implementation_checklist.rst:400
+msgid ""
+":ref:`BorrowerUnwantedField` : Decide what fields your library doesn't need "
+"to see on the patron entry form"
+msgstr ""
+":ref:`BorrowerUnwantedField` : Permet de décider quels champs votre "
+"bibliothèque sont inutiles dans le formulaire de création d'un adhérent"
+
+#: ../../source/implementation_checklist.rst:405
+msgid ""
+"Decide if you would like :ref:`children to automatically be come adults "
+"<update-child-to-adult-patron-type-label>`"
+msgstr ""
+"Décidez si vous souhaitez que :ref:`children to automatically be come adults "
+"<update-child-to-adult-patron-type-label>`"
+
+#: ../../source/implementation_checklist.rst:411
+msgid "Cataloging Configuration"
+msgstr "Configuration du catalogage"
+
+#: ../../source/implementation_checklist.rst:413
+msgid ""
+"Before you start cataloging in Koha you'll want to set up your preferences "
+"and other rules."
+msgstr ""
+"Avant de commencer à cataloguer dans Koha, il vous faut paramétrer vos "
+"préférences système et certaines règles."
+
+#: ../../source/implementation_checklist.rst:416
+msgid ""
+"Define your cataloging templates aka :ref:`MARC Bibliographic Frameworks "
+"<marc-bibliographic-frameworks-label>`"
+msgstr ""
+"Définissez vos modèles de catalogage également connus sous le nom de :ref:"
+"`MARC Bibliographic Frameworks <marc-bibliographic-frameworks-label>`"
+
+#: ../../source/implementation_checklist.rst:419
+msgid ""
+"Run the :ref:`MARC Bibliographic Framework Test <marc-bibliographic-"
+"framework-test-label>` to be sure your changes are valid"
+msgstr ""
+"Lancez le :ref:`MARC Bibliographic Framework Test <marc-bibliographic-"
+"framework-test-label>` pour être sûr que vos changements sont valides"
+
+#: ../../source/implementation_checklist.rst:422
+msgid ""
+"Define any :ref:`authorized values <authorized-values-label>` you might want "
+"to use in cataloging"
+msgstr ""
+"Définissez toutes les :ref:`authorized values <authorized-values-label>` que "
+"vous souhaitez utiliser en catalogage"
+
+#: ../../source/implementation_checklist.rst:425
+msgid ""
+"Set up :ref:`custom classification sources <classification-sources-label>` "
+"(if you use something other than the defaults)"
+msgstr ""
+"Paramétrez les :ref:`custom classification sources <classification-sources-"
+"label>` (si vous en utilisez d'autres que celles par défaut)"
+
+#: ../../source/implementation_checklist.rst:428
+msgid ""
+"Set up :ref:`MARC matching rules <record-matching-rules-label>` for "
+"importing records from mrc files or Z39.50"
+msgstr ""
+"Paramétrez les :ref:`MARC matching rules <record-matching-rules-label>` pour "
+"importer des notices depuis des fichiers mrc ou depuis Z39.50"
+
+#: ../../source/implementation_checklist.rst:431
+msgid ""
+"Set up :ref:`Koha to Keyword mapping <keywords-to-marc-mapping-label>` for "
+"deciding how to display marc fields to the screen (still in beta - only one "
+"field)"
+msgstr ""
+"Paramétrez les:ref:`Koha to Keyword mapping <keywords-to-marc-mapping-"
+"label>` pour décider de la manière dont les champs MARC sont affichés à "
+"l'écran (encore en beta - seulement un champ)"
+
+#: ../../source/implementation_checklist.rst:434
+msgid ""
+"Set up the :ref:`Z39.50 targets <z39.50/sru-servers-label>` you want to "
+"search for cataloging (and acquisitions)"
+msgstr ""
+"Paramétrez les :ref:`Z39.50 targets <z39.50/sru-servers-label>` que vous "
+"voulez pour le catalogage (et les acquisitions)"
+
+#: ../../source/implementation_checklist.rst:437
+#: ../../source/implementation_checklist.rst:846
+msgid "Cataloging System Preferences"
+msgstr "Préférences système pour le catalogage"
+
+#: ../../source/implementation_checklist.rst:439
+msgid ""
+":ref:`URLLinkText` : Enter text to display when 856 fields do not have pre-"
+"defined labels"
+msgstr ""
+":ref:`URLLinkText` : Saisissez le texte à afficher lorsque les champs 856 "
+"n'ont pas d'étiquettes pré-définies"
+
+#: ../../source/implementation_checklist.rst:442
+msgid ""
+":ref:`hide\\_marc <hide\\_marc-label>` : If you are unfamiliar with MARC you "
+"can have the MARC fields number hidden"
+msgstr ""
+":ref:`hide\\_marc <hide\\_marc-label>` : Si vous n'êtes pas familier avec le "
+"langage MARC, vous pouvez masquer le numéro des champs MARC"
+
+#: ../../source/implementation_checklist.rst:445
+msgid ""
+":ref:`LabelMARCView` : Choose how you want duplicate fields to appear on the "
+"editor"
+msgstr ""
+":ref:`LabelMARCView` : Permet de choisir comment les champs dupliqués "
+"apparaissent dans l'éditeur MARC"
+
+#: ../../source/implementation_checklist.rst:448
+msgid ""
+":ref:`DefaultClassificationSource` : Choose which classification source is "
+"the default in your library"
+msgstr ""
+":ref:`DefaultClassificationSource` : Permet de choisir la source de "
+"classification par défaut de votre bibliothèque"
+
+#: ../../source/implementation_checklist.rst:451
+msgid ""
+":ref:`advancedMARCeditor` : Decide if you need labels to appear on your MARC "
+"editor"
+msgstr ""
+":ref:`advancedMARCeditor` : Permet de décider s'il faut afficher les "
+"étiquettes dans l'éditeur MARC"
+
+#: ../../source/implementation_checklist.rst:454
+msgid ":ref:`marcflavour` : Choose your MARC format"
+msgstr ":ref:`marcflavour` : Permet de choisir votre format MARC"
+
+#: ../../source/implementation_checklist.rst:456
+msgid ""
+":ref:`itemcallnumber` : Enter which field and subfields to look into for the "
+"call number"
+msgstr ""
+"ref:`itemcallnumber` : Permet de saisir les champs et sous-champs où se "
+"trouve la cote"
+
+#: ../../source/implementation_checklist.rst:459
+msgid ""
+":ref:`MARCOrgCode` : Enter your MARC Organizational Code (not the same as "
+"your OCLC number)"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:462
+msgid ":ref:`autoBarcode` : Decide if Koha generates item barcodes for you"
+msgstr ""
+":ref:`autoBarcode` : Permet de décider si Koha génère les codes-barres "
+"d'exemplaires automatiquement"
+
+#: ../../source/implementation_checklist.rst:465
+msgid ""
+":ref:`OpacSuppression <opacsuppression,-opacsuppressionbyiprange,-"
+"opacsuppressionredirect,-and-opacsuppressionmessage-label>` : Decide if you "
+"want to hide items marked as suppressed from the OPAC search results"
+msgstr ""
+":ref:`OpacSuppression <opacsuppression,-opacsuppressionbyiprange,-"
+"opacsuppressionredirect,-and-opacsuppressionmessage-label>` : Permet de "
+"décider si vous voulez cacher les documents marqués comme supprimés dans les "
+"résultats de recherche à l'OPAC."
+
+#: ../../source/implementation_checklist.rst:470
+msgid ""
+"Decide when the system :ref:`checks URLs in catalog records <check-urls-"
+"label>` to see if they are still valid"
+msgstr ""
+"Permet de décider quand le système :ref:`checks URLs in catalog records "
+"<check-urls-label>` pour voir si elles sont toujours valides"
+
+#: ../../source/implementation_checklist.rst:476
+msgid "Authorities Configuration"
+msgstr "Configuration des autorités"
+
+#: ../../source/implementation_checklist.rst:478
+msgid ""
+"Koha has the ability to keep track of your authority records and how they're "
+"linked to your bibliographic records. Before using authorities you should "
+"configure several preferences."
+msgstr ""
+"Koha peut réaliser le suivi des notices d'autorité ainsi que les liens avec "
+"les notices bibliographiques. Avant d'utiliser les autorités, vous devez "
+"configurer plusieurs préférences système."
+
+#: ../../source/implementation_checklist.rst:482
+msgid "Set :ref:`Authority Frameworks <authority-types-label>` aka templates"
+msgstr ""
+"Paramétrez les :ref:`Authority Frameworks <authority-types-label>`, "
+"autrement dit les modèles"
+
+#: ../../source/implementation_checklist.rst:484
+msgid "Authority System Preferences"
+msgstr "Préférences système pour les autorités"
+
+#: ../../source/implementation_checklist.rst:486
+msgid ""
+":ref:`BiblioAddsAuthorities` : Decide if Koha creates authorities when "
+"cataloging"
+msgstr ""
+":ref:`BiblioAddsAuthorities` : Permet de décider si Koha crée des autorités "
+"lors de l'édition d'une notice bibliographique"
+
+#: ../../source/implementation_checklist.rst:489
+msgid ""
+"`dontmerge <#dontmerge>`__ : Decide if updates to authorities trigger "
+"updates to the bibliographic records that link to them"
+msgstr ""
+"`dontmerge <#dontmerge>`__ : Permet de décider si Koha modifie les notices "
+"bibliographiques lorsque les notices d'autorité liées sont modifiées"
+
+#: ../../source/implementation_checklist.rst:492
+msgid ":ref:`AutoCreateAuthorities` : Decide when authorities are created"
+msgstr ""
+":ref:`AutoCreateAuthorities` : Permet de décider quand les autorités sont "
+"crées"
+
+#: ../../source/implementation_checklist.rst:495
+msgid ""
+":ref:`LinkerModule` : Decide which match the authority linker should use"
+msgstr ""
+"ref:`LinkerModule` : Permet de décider quelle correspondance le créateur de "
+"liens d'autorités devra utiliser"
+
+#: ../../source/implementation_checklist.rst:498
+msgid ""
+":ref:`LinkerOptions` : Decide if you want authority linking to be broader or "
+"more specific"
+msgstr ""
+":ref:`LinkerOptions` : Permet de décider si le créateur de liens d'autorités "
+"doit être générique ou plus spécifique"
+
+#: ../../source/implementation_checklist.rst:501
+msgid ""
+":ref:`CatalogModuleRelink` : Decide if you want to enable authority linking "
+"while cataloging"
+msgstr ""
+":ref:`CatalogModuleRelink` : Permet de décider si vous autorisez les liens "
+"vers les autorités pendant le catalogage"
+
+#: ../../source/implementation_checklist.rst:506
+msgid ""
+"Choose when the system looks for authorities updates to :ref:`merge changes "
+"into bibliographic records <update-authorities-label>`"
+msgstr ""
+"Choisissez quand le système doit rechercher les mises à jour des autorités "
+"pour :ref:`merge changes into bibliographic records <update-authorities-"
+"label>`"
+
+#: ../../source/implementation_checklist.rst:512
+msgid "Searching Configuration"
+msgstr "Configuration de le recherche"
+
+#: ../../source/implementation_checklist.rst:514
+msgid ""
+"There are several system preferences related to searching, it is not always "
+"recommended to make too many changes to these preferences since they are set "
+"to get you the most relevant results. If you would like to change the "
+"default way that Koha handles searching, view the :ref:`Searching system "
+"preferences <searching-label>` tab."
+msgstr ""
+"Il y a plusieurs préférences système liées à la recherche. Il est recommandé "
+"de ne pas effectuer trop de changements sur ces préférences système puisque "
+"elles sont paramétrées pour vous permettre d'obtenir les résultats les plus "
+"pertinents possibles. Si vous souhaitez changer la manière dont Koha gère la "
+"recherche par défaut, consultez l'onglet :ref:`Searching system preferences "
+"<searching-label>` tab."
+
+#: ../../source/implementation_checklist.rst:522
+msgid ""
+"Decide how often your :ref:`system rebuilds the search index <rebuild-index-"
+"label>` (4-10 min)"
+msgstr ""
+"Permet de décider la fréquence à laquelle votre :ref:`system rebuilds the "
+"search index <rebuild-index-label>` (toutes les 4-10 min)"
+
+#: ../../source/implementation_checklist.rst:525
+msgid "Searching System Preferences"
+msgstr "Préférences système pour la recherche"
+
+#: ../../source/implementation_checklist.rst:527
+#, fuzzy
+msgid ""
+":ref:`AdvancedSearchTypes` : Decide which authorized value fields you want "
+"patrons and staff to be able to limit their advanced searches by"
+msgstr ""
+":ref:`AdvancedSearchLanguages` : Permet de décider à quelles langues vous "
+"souhaitez que les adhérents et le personnel puissent limiter leur recherche"
+
+#: ../../source/implementation_checklist.rst:531
+msgid ""
+":ref:`AdvancedSearchLanguages` : Decide which languages you want people to "
+"be able to limit to via the search engine"
+msgstr ""
+":ref:`AdvancedSearchLanguages` : Permet de décider à quelles langues vous "
+"souhaitez que les adhérents et le personnel puissent limiter leur recherche"
+
+#: ../../source/implementation_checklist.rst:535
+msgid ""
+":ref:`UseAuthoritiesForTracings` : Decide how you want Koha to handle "
+"subject searches in the OPAC"
+msgstr ""
+":ref:`UseAuthoritiesForTracings` : Permet de décider comment vous souhaitez "
+"que Koha gère les recherches par sujets dans l'OPAC"
+
+#: ../../source/implementation_checklist.rst:538
+#, fuzzy
+msgid ""
+":ref:`TraceCompleteSubfields` : Decide how you want Koha to handle subject "
+"searches in the OPAC"
+msgstr ""
+":ref:`UseAuthoritiesForTracings` : Permet de décider comment vous souhaitez "
+"que Koha gère les recherches par sujets dans l'OPAC"
+
+#: ../../source/implementation_checklist.rst:541
+#, fuzzy
+msgid ""
+":ref:`TraceSubjectSubdivisions` : Decide how you want Koha to handle subject "
+"searches in the OPAC"
+msgstr ""
+":ref:`UseAuthoritiesForTracings` : Permet de décider comment vous souhaitez "
+"que Koha gère les recherches par sujets dans l'OPAC"
+
+#: ../../source/implementation_checklist.rst:544
+msgid ""
+":ref:`displayFacetCount` : Decide whether to show facet counts on search "
+"results"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:550
+msgid "OPAC Configuration"
+msgstr "Configuration de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:552
+msgid "There are a lot of ways you can customize your OPAC in Koha."
+msgstr "Il y a diverses façons de personnaliser votre OPAC dans Koha."
+
+#: ../../source/implementation_checklist.rst:554
+msgid ""
+"Decide how you want your OPAC to look & what content you want on the main "
+"page"
+msgstr ""
+"Choisissez l'apparence de votre OPAC et le contenu que vous souhaitez sur la "
+"page principale"
+
+#: ../../source/implementation_checklist.rst:557
+msgid "Create a library branded stylesheet using CSS"
+msgstr ""
+"Créez une feuille de style propre à votre bibliothèque en utilisant CSS"
+
+#: ../../source/implementation_checklist.rst:559
+msgid "**Important**"
+msgstr "**Important**"
+
+#: ../../source/implementation_checklist.rst:561
+msgid ""
+"Do not edit the default CSS files, instead create a new one, that way the "
+"system can always fall back on the original CSS."
+msgstr ""
+"Ne modifiez pas les fichiers CSS par défaut, créez-en un nouveau. De cette "
+"manière, le système peut toujours recourir aux feuilles CSS originales."
+
+#: ../../source/implementation_checklist.rst:564
+msgid ""
+"Create a custom XSLT stylesheet to change the way search results and bib "
+"records appear in the OPAC"
+msgstr ""
+"Créez une feuille de style XSLT personnalisée pour changer la manière dont "
+"les résultats de recherche et les notices bibliographiques apparaissent dans "
+"l'OPAC."
+
+#: ../../source/implementation_checklist.rst:567
+msgid "OPAC System preferences"
+msgstr "Préférences système pour l'OPAC"
+
+#: ../../source/implementation_checklist.rst:569
+msgid ":ref:`OPACBaseURL` : Enter your library's url"
+msgstr ":ref:`OPACBaseURL` : Saisissez l'url de votre bibliothèque"
+
+#: ../../source/implementation_checklist.rst:571
+msgid ""
+":ref:`opacuserlogin` : Decide if you want to allow patrons to login to the "
+"OPAC to access customized functionality (searching will be allowed without "
+"logging in)"
+msgstr ""
+":ref:`opacuserlogin` : Permet de décider si vous autorisez les adhérents à "
+"se connecter à leur compte à l'OPAC pour accéder aux fonctions "
+"personnalisées (la recherche sera autorisée sans connexion)"
+
+#: ../../source/implementation_checklist.rst:575
+msgid ":ref:`RequestOnOpac` : Decide if patrons can place holds via the OPAC"
+msgstr ""
+"ref:`RequestOnOpac` : Permet de décider si les adhérents peuvent faire des "
+"réservations via l'OPAC"
+
+#: ../../source/implementation_checklist.rst:578
+msgid ""
+":ref:`OpacPasswordChange` : Decide if patrons can change their password "
+"(don't allow this if you're using LDAP)"
+msgstr ""
+":ref:`OpacPasswordChange` : Permet de décider si les adhérents peuvent "
+"changer leur mot de passe (n'autorisez pas cela si vous utilisez LDAP)"
+
+#: ../../source/implementation_checklist.rst:582
+msgid ""
+":ref:`OpacRenewalAllowed` : Decide if patrons can renew their checked out "
+"items via the OPAC"
+msgstr ""
+":ref:`OpacRenewalAllowed` : Décide si les adhérents peuvent renouveler eux-"
+"même leurs emprunts via l'OPAC"
+
+#: ../../source/implementation_checklist.rst:585
+msgid ""
+":ref:`opacreadinghistory` : Decide if patrons can view their reading/"
+"checkout history via the OPAC"
+msgstr ""
+":ref:`opacreadinghistory` : Permet de décider si les adhérents peuvent voir "
+"leur historique de lecture / de prêts via l'OPAC"
+
+#: ../../source/implementation_checklist.rst:588
+#, fuzzy
+msgid ""
+":ref:`reviewson` : Decide if you want to allow patrons to comment on bib "
+"records via the OPAC"
+msgstr ""
+":ref:`hidelostitems` : Permet de décider si vous voulez afficher les "
+"documents signalés comme perdus"
+
+#: ../../source/implementation_checklist.rst:591
+#, fuzzy
+msgid ":ref:`OpacStarRatings` : Decide if patrons can leave star ratings"
+msgstr ""
+":ref:`opacbookbag` : Permet de décider si les adhérents peuvent sauvegarder "
+"des documents dans leur panier"
+
+#: ../../source/implementation_checklist.rst:594
+msgid ""
+":ref:`virtualshelves` : Decide if you want patrons to be able to create Lists"
+msgstr ""
+":ref:`virtualshelves` : Permet de décider si les adhérents sont autorisés à "
+"créer des listes"
+
+#: ../../source/implementation_checklist.rst:597
+msgid ""
+":ref:`OpacAllowPublicListCreation` : If patrons can create lists then decide "
+"if they are allowed to create public lists"
+msgstr ""
+":ref:`OpacAllowPublicListCreation` : Si les adhérents peuvent créer des "
+"listes, permet de décider s'ils sont autorisés à créer des listes publiques"
+
+#: ../../source/implementation_checklist.rst:601
+msgid ""
+":ref:`suggestion` : Decide if you want patrons to be able to submit purchase "
+"suggestions"
+msgstr ""
+":ref:`suggestion` : Permet de décider si les adhérents sont autorisés à "
+"soumettre des suggestions d'achat à l'OPAC"
+
+#: ../../source/implementation_checklist.rst:604
+msgid ""
+":ref:`OPACViewOthersSuggestions` : Decide if you want patrons to be able to "
+"see purchase suggestions made by other patrons"
+msgstr ""
+":ref:`OPACViewOthersSuggestions` : Permet de décider si vous autorisez les "
+"adhérents à voir les suggestions d'achat soumises par d'autres adhérents"
+
+#: ../../source/implementation_checklist.rst:608
+msgid ":ref:`opacbookbag` : Decide if patrons can save items into their cart"
+msgstr ""
+":ref:`opacbookbag` : Permet de décider si les adhérents peuvent sauvegarder "
+"des documents dans leur panier"
+
+#: ../../source/implementation_checklist.rst:611
+msgid ""
+":ref:`AnonSuggestions` : Decide if you want non logged in users to be able "
+"to make purchase suggestions"
+msgstr ""
+":ref:`AnonSuggestions` : Permet de décider si vous autorisez les adhérents "
+"qui ne sont pas connectés à faire des suggestions d'achat"
+
+#: ../../source/implementation_checklist.rst:614
+msgid ""
+":ref:`LibraryName` : Enter your library name for display in the <title> tag "
+"and on the top of the OPAC"
+msgstr ""
+":ref:`LibraryName` : Saisissez le nom de votre bibliothèque pour qu'il "
+"s'affiche dans le champ <title> en haut de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:617
+msgid ""
+":ref:`opaccredits` : Enter HTML to appear at the bottom of every page in the "
+"OPAC"
+msgstr ""
+":ref:`opaccredits` : Permet de saisir le code HTML qui apparaîtra dans le "
+"pied de page de tout l'OPAC"
+
+#: ../../source/implementation_checklist.rst:620
+msgid ""
+":ref:`OpacMainUserBlock` : Enter HTML that will appear in the center of the "
+"main OPAC page"
+msgstr ""
+":ref:`OpacMainUserBlock` : Permet de saisir le code HTML qui apparaîtra au "
+"centre de la page principale de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:623
+#, fuzzy
+msgid ""
+":ref:`OpacNav` : Enter HTML that will appear to the left on the main OPAC "
+"page"
+msgstr ""
+":ref:`OpacMainUserBlock` : Permet de saisir le code HTML qui apparaîtra au "
+"centre de la page principale de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:626
+#, fuzzy
+msgid ":ref:`OpacNavBottom` : Enter HTML that will appear below OpacNav"
+msgstr ""
+":ref:`OpacMainUserBlock` : Permet de saisir le code HTML qui apparaîtra au "
+"centre de la page principale de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:629
+#, fuzzy
+msgid ""
+":ref:`OpacNavRight` : Enter HTML that will appear below the login box on the "
+"right"
+msgstr ""
+":ref:`OpacMainUserBlock` : Permet de saisir le code HTML qui apparaîtra au "
+"centre de la page principale de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:632
+#, fuzzy
+msgid ""
+":ref:`opacheader` : Enter the HTML that will appear above the search box on "
+"the OPAC"
+msgstr ""
+":ref:`OpacMainUserBlock` : Permet de saisir le code HTML qui apparaîtra au "
+"centre de la page principale de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:635
+msgid ""
+":ref:`OPACNoResultsFound` : Enter the HTML that will appear when no results "
+"are found"
+msgstr ""
+":ref:`OPACNoResultsFound` : Permet de saisir le code HTML qui apparaîtra "
+"lorsqu'aucun résultat n'est trouvé pour une recherche"
+
+#: ../../source/implementation_checklist.rst:638
+msgid ""
+":ref:`OPACResultsSidebar` : Enter the HTML that will appear below the facets "
+"on your search results"
+msgstr ""
+":ref:`OPACResultsSidebar` : Permet de saisir le code HTML qui apparaîtra "
+"sous les facettes des résultats de recherche"
+
+#: ../../source/implementation_checklist.rst:641
+msgid ""
+":ref:`OPACMySummaryHTML` : Enter the HTML that will appear in the far right "
+"of the circulation summary in the OPAC"
+msgstr ""
+":ref:`OPACMySummaryHTML` : Permet de saisir le code HTML qui apparaîtra à "
+"droite du résumé de circulation de l'OPAC"
+
+#: ../../source/implementation_checklist.rst:645
+msgid "Customize your stylesheets:"
+msgstr "Personnalisez vos feuilles de style:"
+
+#: ../../source/implementation_checklist.rst:647
+msgid ""
+":ref:`OPACUserCSS` : Enter any additional fields you want to define styles "
+"for"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:650
+msgid ":ref:`opaclayoutstylesheet` : Point to a CSS file on your Koha server"
+msgstr ""
+":ref:`opaclayoutstylesheet` : Permet de pointer vers un fichier CSS sur "
+"votre serveur Koha"
+
+#: ../../source/implementation_checklist.rst:653
+msgid ""
+":ref:`OpacHighlightedWords <opachighlightedwords-&-nothighlightedwords-"
+"label>` : Decide if you want search terms to be highlighted on the search "
+"results"
+msgstr ""
+":ref:`OpacHighlightedWords <opachighlightedwords-&-nothighlightedwords-"
+"label>` : Permet de décider si vous voulez que les termes recherchés soient "
+"surlignés dans la page des résultats"
+
+#: ../../source/implementation_checklist.rst:656
+msgid ""
+":ref:`hidelostitems` : Decide if you want to show patrons items you have "
+"marked as lost"
+msgstr ""
+":ref:`hidelostitems` : Permet de décider si vous voulez afficher les "
+"documents signalés comme perdus"
+
+#: ../../source/implementation_checklist.rst:659
+msgid ""
+":ref:`BiblioDefaultView` : Decide what view is the default for bib records "
+"on the OPAC"
+msgstr ""
+":ref:`BiblioDefaultView` : Permet de décider quelle vue par défaut vous "
+"souhaitez pour les notices bibliographiques à l'OPAC"
+
+#: ../../source/implementation_checklist.rst:662
+msgid ""
+":ref:`OPACShelfBrowser` : Decide if you want to enable the shelf browse "
+"functionality"
+msgstr ""
+":ref:`OPACShelfBrowser` : Permet de décider si vous voulez activer la "
+"fonction de parcours des étagères"
+
+# OPAC > Appearance
+#: ../../source/implementation_checklist.rst:665
+#, fuzzy
+msgid ""
+":ref:`OPACURLOpenInNewWindow` : Decide if URLs clicked in the OPAC are "
+"opened in a new window"
+msgstr "le site web dans une nouvelle fenêtre."
+
+#: ../../source/implementation_checklist.rst:668
+msgid ""
+":ref:`SearchMyLibraryFirst` : If you have a multi-branch system decide if "
+"you want patrons to search their library first"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:672
+#, fuzzy
+msgid ""
+":ref:`OpacAuthorities` : Decide if you want patrons to be able to search "
+"your authority file"
+msgstr ""
+":ref:`virtualshelves` : Permet de décider si les adhérents sont autorisés à "
+"créer des listes"
+
+#: ../../source/implementation_checklist.rst:675
+#, fuzzy
+msgid ""
+":ref:`OpacBrowser` : Decide if you want patrons to browse your authority "
+"file (French libraries only)"
+msgstr ""
+"Si votre préférence système :ref:`OpacBrowser` est paramétrée, décidez :ref:"
+"`quand vous souhaitez que les contenus se reconstruisent <authorities-"
+"browser-label>` (bibliothèques françaises seulement)"
+
+#: ../../source/implementation_checklist.rst:678
+#, fuzzy
+msgid ""
+":ref:`OPACSearchForTitleIn` : Choose which libraries you want patrons to be "
+"able to re-run their search in"
+msgstr ""
+":ref:`AdvancedSearchLanguages` : Permet de décider à quelles langues vous "
+"souhaitez que les adhérents et le personnel puissent limiter leur recherche"
+
+#: ../../source/implementation_checklist.rst:681
+msgid ""
+":ref:`OpacAddMastheadLibraryPulldown` : If you're a multi-branch system you "
+"can add a pull down to the search bar for patrons to search which library to "
+"search"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:685
+#, fuzzy
+msgid ""
+":ref:`EnableOpacSearchHistory` : Decide if you want the system to keep a "
+"search history"
+msgstr ""
+":ref:`intranetreadinghistory` : Permet de décider si le personnel peut voir "
+"l'historique de lecture/des emprunts de l'adhérent"
+
+#: ../../source/implementation_checklist.rst:690
+msgid ""
+"If you have the :ref:`OpacBrowser` preference set decide :ref:`when you want "
+"the contents to rebuild <authorities-browser-label>` (French libraries only)"
+msgstr ""
+"Si votre préférence système :ref:`OpacBrowser` est paramétrée, décidez :ref:"
+"`quand vous souhaitez que les contenus se reconstruisent <authorities-"
+"browser-label>` (bibliothèques françaises seulement)"
+
+#: ../../source/implementation_checklist.rst:694
+msgid ""
+"If you have :ref:`custom RSS feeds <custom-rss-feeds-label>`, decide when "
+"you want the :ref:`feed to be populated <rss-feeds-label>`"
+msgstr ""
+"Si vous avez des :ref:`flux RSS personnalisés <custom-rss-feeds-label>`, "
+"décidez quand vous souhaitez que le ref:`flux soit rempli <rss-feeds-label>`"
+
+#: ../../source/implementation_checklist.rst:700
+msgid "Editable OPAC Regions"
+msgstr "Régions de l'OPAC modifiables"
+
+#: ../../source/implementation_checklist.rst:702
+msgid ""
+"Using the OPAC system preferences you can customize various regions, the "
+"following graphic will define what preferences update each of the regions in "
+"the Bootstrap theme."
+msgstr ""
+"En utilisant les préférences système de l'OPAC, vous pouvez personnaliser "
+"plusieurs régions. Le graphique suivant définit quelles préférences système "
+"mettre à jour pour chaque région du thème Bootstrap."
+
+#: ../../source/implementation_checklist.rst:706
+msgid "|image1068|"
+msgstr "|image1068|"
+
+#: ../../source/implementation_checklist.rst:711
+msgid "Enhanced Content Configuration"
+msgstr "Configuration du contenu enrichi"
+
+#: ../../source/implementation_checklist.rst:713
+msgid ""
+"Koha allows you to pull in content from outside sources to enhance your bib "
+"records. All of this content can be toggled on and off using the enhanced "
+"content system preferences."
+msgstr ""
+"Koha vous autorise à ajouter du contenu provenant de sources extérieures "
+"pour enrichir vos notices bibliographiques. Tout ce contenu peut être activé "
+"et désactivé en utilisant les préférences système du contenu enrichi."
+
+#: ../../source/implementation_checklist.rst:717
+msgid ":ref:`FRBR/Editions <frbrizeeditions-label>`"
+msgstr ":ref:`FRBR/Éditions <frbrizeeditions-label>`"
+
+#: ../../source/implementation_checklist.rst:719
+msgid ""
+"If you would like to have your OPAC and/or staff client show an 'Editions' "
+"tab on the bib record, you want to enable one or the other FRBR preferences "
+"and then either one or both of the ISBN services (XISBN and ThingISBN)."
+msgstr ""
+"Si vous souhaitez que votre OPAC et/ou votre interface professionnelle "
+"s'affichent dans un onglet 'Editions' dans la notice bibliographique, vous "
+"devrez activer l'un ou l'autre dans les préférences système ainsi qu'un ou "
+"les deux services ISBN (XISBN et ThingISBN)."
+
+#: ../../source/implementation_checklist.rst:724
+msgid ""
+":ref:`Amazon <amazon-label>` : This service is free and just requires that "
+"you visit http://aws.amazon.com to sign up"
+msgstr ""
+":ref:`Amazon <amazon-label> : Ce service est gratuit, il faut simplement "
+"s'inscrire sur le site http://aws.amazon.com"
+
+#: ../../source/implementation_checklist.rst:727
+msgid ""
+"Using the Amazon preferences you can choose to show cover images from Amazon."
+msgstr ""
+"Si vous utilisez les préférences système Amazon, vous pouvez choisir "
+"d'afficher les images de couverture d'Amazon."
+
+#: ../../source/implementation_checklist.rst:730
+msgid ":ref:`Babelthèque`"
+msgstr ":ref:`Babelthèque`"
+
+#: ../../source/implementation_checklist.rst:732
+msgid ""
+"This is a pay service. Contact Babelthèque to learn how to enable this "
+"content in the OPAC."
+msgstr ""
+"Ceci est un service payant. Contactez Babelthèque pour pouvoir activer ce "
+"contenu dans l'OPAC."
+
+#: ../../source/implementation_checklist.rst:735
+msgid ":ref:`Baker and Taylor <baker-&-taylor-label>`"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:737
+msgid ""
+"This is a pay service from Baker & Taylor. Contact Baker & Taylor for the "
+"information to enter into these preferences."
+msgstr ""
+"Il s'agit d'un service payant. Contactez Baker &amp; Taylor pour avoir les "
+"informations nécessaires au paramétrage de ces préférences système."
+
+#: ../../source/implementation_checklist.rst:740
+msgid ":ref:`HTML5 Media`"
+msgstr ":ref:`HTML5 Media`"
+
+#: ../../source/implementation_checklist.rst:742
+msgid "This allows libraries to embed streaming media in their catalog"
+msgstr ""
+"Cela autorise les bibliothèques à intégrer le média streaming dans leur "
+"catalogue"
+
+#: ../../source/implementation_checklist.rst:744
+msgid ":ref:`Google`"
+msgstr ":ref:`Google`"
+
+#: ../../source/implementation_checklist.rst:746
+msgid ""
+"This service is free and does not require registration, simply enable "
+"GoogleJackets and you're set to go."
+msgstr ""
+"Ce service est gratuit et ne requiert pas d'inscription. Activez simplement "
+"GoogleJackets et cela fonctionnera."
+
+#: ../../source/implementation_checklist.rst:749
+msgid ":ref:`I Deam Books <idreamlibraries-label>`"
+msgstr ":ref:`I Deam Books <idreamlibraries-label>`"
+
+#: ../../source/implementation_checklist.rst:751
+msgid ""
+"This is a free service that compiles reviews for popular titles from many "
+"different sources."
+msgstr ""
+"C'est un service gratuit qui compile tous les commentaires provenant de "
+"différentes sources sur les titres les plus populaires."
+
+#: ../../source/implementation_checklist.rst:754
+#, fuzzy
+msgid ":ref:`LibraryThing`"
+msgstr "LibraryThing"
+
+#: ../../source/implementation_checklist.rst:756
+msgid ""
+"With the exception of ThingISBN, you will need to contact LibraryThing for "
+"the information to enter into these preferences"
+msgstr ""
+"Avec l'exception de ThingISBN, il vous faudra contacter LibraryThing pour "
+"l'inclure dans vos préférences sytème"
+
+#: ../../source/implementation_checklist.rst:759
+msgid ""
+"Enabling ThingISBN will help to populate the editions tab on the bib record "
+"display if you have enabled FRBR."
+msgstr ""
+"En activant ThingISBN, cela aidera à remplir l'onglet 'Editions' dans "
+"l'affichage de la notice bibliographique seulement si vous avez activé FRBR."
+
+#: ../../source/implementation_checklist.rst:762
+msgid ":ref:`Novelist <novelist-select-label>`"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:764
+msgid ""
+"This is a pay service from Ebsco. Contact Ebsco for the information to enter "
+"into these preferences"
+msgstr ""
+"Ceci est un service payant d'Ebsco. Contactez Ebsco pour l'inclure dans vos "
+"préférences système"
+
+#: ../../source/implementation_checklist.rst:767
+msgid ":ref:`OCLC`"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:769
+msgid ""
+"XISBN is used to populate the editions tab on the bib record display if you "
+"have enabled FRBR. This service is free for up to 999 queries a day."
+msgstr ""
+"XISBN est utilisé pour remplir l'onglet 'Editions' dans l'affichage de la "
+"notice bibliographique si vous avez activé FRBR. Ce service est gratuit mais "
+"il y a une limitation de 999 requêtes par jour."
+
+#: ../../source/implementation_checklist.rst:773
+#, fuzzy
+msgid ":ref:`Open Library`"
+msgstr "Open Library: "
+
+#: ../../source/implementation_checklist.rst:775
+msgid ""
+"Open Library project is an open system that you can pull cover images (and "
+"in the future additional content) from"
+msgstr ""
+"Le projet Open Library est un logiciel ouvert qui fourni des images de "
+"couverture (dans le futur contenu supplémentaire)"
+
+#: ../../source/implementation_checklist.rst:778
+#, fuzzy
+msgid ":ref:`Overdrive`"
+msgstr "Overdrive"
+
+#: ../../source/implementation_checklist.rst:780
+msgid ""
+"This is a pay service that libraries can subscribe to for ebook content. If "
+"the library subscribes to Overdrive they can integrate that content in to "
+"Koha for free."
+msgstr ""
+"C'est un service payant auquel les bibliothèques peuvent souscrire pour le "
+"contenu de livres électroniques. Si la bibliothèque s'abonne à Overdrive, "
+"elle peut intégrer le contenu dans Koha gratuitement."
+
+#: ../../source/implementation_checklist.rst:784
+#, fuzzy
+msgid ":ref:`Syndetics`"
+msgstr "Syndetics"
+
+#: ../../source/implementation_checklist.rst:786
+msgid ""
+"This is a pay service from Syndetics to add content for your bib records. "
+"Contact Syndetics for the information to enter into these preferences."
+msgstr ""
+"C'est un service payant de Syndetics pour ajouter du contenu à vos notices "
+"bibliographiques. Contactez Syndetics pour l'inclure dans vos préférences "
+"système."
+
+#: ../../source/implementation_checklist.rst:790
+msgid ":ref:`Tagging <tagging-label>`"
+msgstr ":ref:`Mots-clés <tagging-label>`"
+
+#: ../../source/implementation_checklist.rst:792
+msgid ""
+"Choose whether or not you want to allow patrons to add tags to records in "
+"Koha."
+msgstr ""
+"Choisissez si vous souhaitez autoriser les adhérents à ajouter des tags aux "
+"notices."
+
+#: ../../source/implementation_checklist.rst:798
+msgid "Acquisitions Configuration"
+msgstr "Configuration des acquisitions"
+
+#: ../../source/implementation_checklist.rst:800
+msgid "When using acquisitions in Koha you first need to define some defaults."
+msgstr ""
+"Avant de faire des acquisitions dans Koha, vous devrez d'abord en définir "
+"certaines par défaut."
+
+#: ../../source/implementation_checklist.rst:802
+msgid "Set up your :ref:`funds & budgets <budgets-label>`"
+msgstr "Paramétrez vos :ref:`postes budgétaires et budgets <budgets-label>`"
+
+#: ../../source/implementation_checklist.rst:804
+msgid ""
+"Choose your :ref:`default currency <currencies-and-exchange-rates-label>` "
+"and enter others if you order from multiple countries"
+msgstr ""
+"Choisissez votre :ref:`devise par défaut <currencies-and-exchange-rates-"
+"label>` et saisissez-en d'autres si vous passez des commandes dans plusieurs "
+"pays"
+
+#: ../../source/implementation_checklist.rst:807
+msgid "Enter in your :ref:`vendor information <vendors-label>`"
+msgstr "Saisissez les :ref:`informations sur vos fournisseurs <vendors-label>`"
+
+#: ../../source/implementation_checklist.rst:809
+msgid ""
+"Create an :ref:`Framework with the code ACQ <marc-bibliographic-frameworks-"
+"label>` (if you're going to enter item records at the time of ordering or "
+"receiving)"
+msgstr ""
+"Créez une :ref:`Grille de catalogage avec le code ACQ <marc-bibliographic-"
+"frameworks-label>` (si vous pensez créer les notices d'exemplaire au moment "
+"de la création ou de la réception de la commande)"
+
+#: ../../source/implementation_checklist.rst:813
+msgid "Acquisitions System preferences"
+msgstr "Préférences système des acquisitions"
+
+#: ../../source/implementation_checklist.rst:815
+msgid ""
+":ref:`AcqCreateItem` : Decide if an item record is created during acquisition"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:818
+msgid ":ref:`CurrencyFormat` : Decide how you want monetary amounts to display"
+msgstr ""
+":ref:`CurrencyFormat` : Permet de décider le format d'affichage des monnaies"
+
+#: ../../source/implementation_checklist.rst:821
+msgid ":ref:`gist` : Enter your sales tax (if you are billed for tax)"
+msgstr ""
+":ref:`gist` : Permet de saisir les taxes (si vous êtes soumis aux taxes)"
+
+#: ../../source/implementation_checklist.rst:824
+msgid ""
+":ref:`OrderPdfFormat` : Decide what format you want your print orders to use"
+msgstr ""
+":ref:`OrderPdfFormat` : Permet de décider quel format vous souhaitez "
+"utiliser pour l'impression de vos commandes"
+
+#: ../../source/implementation_checklist.rst:830
+msgid "Serials Configuration"
+msgstr "Configuration des périodiques"
+
+#: ../../source/implementation_checklist.rst:832
+msgid "When you use serials there are a few options you can set before hand."
+msgstr ""
+"Avant d'utiliser le module Périodiques, il y a quelques options à paramétrer "
+"d'abord."
+
+#: ../../source/implementation_checklist.rst:834
+msgid "Serials System Preferences"
+msgstr "Préférences système des périodiques"
+
+#: ../../source/implementation_checklist.rst:836
+#, fuzzy
+msgid ""
+":ref:`RenewSerialAddsSuggestion` : Decide if you want renewing serials to "
+"add a suggestion for easy purchasing"
+msgstr ""
+":ref:`AnonSuggestions` : Permet de décider si vous autorisez les adhérents "
+"qui ne sont pas connectés à faire des suggestions d'achat"
+
+#: ../../source/implementation_checklist.rst:840
+msgid ""
+":ref:`RoutingSerials` : Decide if you want to route serials around your "
+"library"
+msgstr ""
+":ref:`RoutingSerials` : Permet de décider si vous voulez utiliser la liste "
+"de routage dans le module Périodiques"
+
+#: ../../source/implementation_checklist.rst:843
+msgid ""
+":ref:`RoutingListAddReserves` : Decide if holds are placed on serials when "
+"there is a routing list in place"
+msgstr ""
+":ref:`RoutingListAddReserves` : Permet de décider si les réservations "
+"peuvent être faites sur des périodiques qui figurent sur une liste de routage"
+
+#: ../../source/implementation_checklist.rst:848
+msgid ""
+":ref:`StaffSerialIssueDisplayCount` : Decide how many of the most recent "
+"issues to display in the staff client"
+msgstr ""
+":ref:`StaffSerialIssueDisplayCount` : Permet de décider combien de "
+"fascicules nouvellement parus peuvent s'afficher dans l'interface "
+"professionnelle"
+
+#: ../../source/implementation_checklist.rst:852
+msgid ""
+":ref:`OPACSerialIssueDisplayCount` : Decide how many of the most recent "
+"issues to display in the OPAC"
+msgstr ""
+":ref:`OPACSerialIssueDisplayCount` : Permet de décider combien de fascicules "
+"nouvellement parus peuvent s'afficher dans l'OPAC"
+
+#: ../../source/implementation_checklist.rst:855
+msgid ""
+":ref:`SubscriptionHistory` : Decide how you want the subscription "
+"information to display in the OPAC"
+msgstr ""
+"ref:`SubscriptionHistory` : Permet de décider comment vous souhaitez que les "
+"informations d'abonnement s'affichent dans l'OPAC"
+
+#: ../../source/implementation_checklist.rst:861
+msgid "Planning for Go-Live"
+msgstr "Gestion de la mise en ligne"
+
+#: ../../source/implementation_checklist.rst:863
+msgid ""
+"Once you have all of your settings ready, you need to prepare for making "
+"your system live:"
+msgstr ""
+"Une fois tous vos paramétres réglés, vous devrez vous préparer à faire "
+"fonctionner votre système:"
+
+#: ../../source/implementation_checklist.rst:866
+msgid ""
+"Decide if you need training by an outside service or if your staff can do "
+"the training themselves."
+msgstr ""
+"Voyez si vous avez besoin d'une formation donnée par un prestataire "
+"extérieur, ou si le personnel peut se former lui-même."
+
+#: ../../source/implementation_checklist.rst:869
+msgid ""
+"Make sure that there is time for your staff to play with your test system "
+"and get comfortable with it"
+msgstr ""
+"Assurez-vous qu'il y ait des temps mis en place pour que le personnel "
+"pratique la base de test du système et se familiarise avec"
+
+#: ../../source/implementation_checklist.rst:872
+msgid ""
+"If this is a migration, work with your previous company to extract data "
+"right before you go live"
+msgstr ""
+"S'il doit y avoir une migration, voyez avec votre ancien prestataire pour "
+"extraire les données avant d'effectuer cette migration"
+
+#: ../../source/implementation_checklist.rst:875
+msgid "Come up with URLs for your new Koha OPAC & Staff Client"
+msgstr ""
+
+#: ../../source/implementation_checklist.rst:877
+msgid "Make sure that if you're hosting your own system you have a backup plan"
+msgstr ""
+"Si vous hébergez votre propre système, assurez-vous d'avoir un plan de "
+"secours de sauvegarde"

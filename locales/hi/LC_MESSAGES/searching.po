@@ -1,0 +1,2835 @@
+# Compendium of hi.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-hi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:51-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/searching.rst:4
+msgid "Searching"
+msgstr "खोज रहा है"
+
+#: ../../source/searching.rst:9
+msgid "Advanced Search Prefixes"
+msgstr "उन्नत खोज उपसर्ग"
+
+#: ../../source/searching.rst:11
+msgid ""
+"The following prefixes can be added to search terms in the keyword search "
+"box to limit items returned"
+msgstr ""
+"निम्नलिखित उपसर्ग दिए जाने वाले आइटम्स को सीमित करने के लिए खोजशब्द खोज बॉक्स में खोज "
+"शब्दों को जोड़ा जा सकता"
+
+#: ../../source/searching.rst:14
+msgid "ti: title search"
+msgstr "ti: शीर्षक खोज"
+
+#: ../../source/searching.rst:16
+msgid "ex. ti:hamlet"
+msgstr "ex. ti:हेमलेट"
+
+#: ../../source/searching.rst:18
+msgid "su: subject search"
+msgstr "su: विषय खोज"
+
+#: ../../source/searching.rst:20
+msgid "ex. su:cooking"
+msgstr "ex. su:पाक कला"
+
+#: ../../source/searching.rst:22
+msgid "pb: publisher search"
+msgstr "pb: प्रकाशक खोज"
+
+#: ../../source/searching.rst:24
+msgid "ex. pb:penguin"
+msgstr "ex. pb:पेंन्गिंन"
+
+#: ../../source/searching.rst:26
+msgid "au: author search"
+msgstr "au: लेखक खोज"
+
+#: ../../source/searching.rst:28
+msgid "ex. au:rowling"
+msgstr "उदा. au:रोइंग"
+
+#: ../../source/searching.rst:30
+msgid "su-geo: geographic subjects"
+msgstr "su-geo: भौगोलिक विषयों"
+
+#: ../../source/searching.rst:32
+msgid "ex. su-geo:wales and kw:description and kw:travel"
+msgstr "ex. su-geo:वेल्स और kw:विवरण और kw:यात्रा"
+
+#: ../../source/searching.rst:34
+msgid "bc: barcode"
+msgstr "bc: बारको़ड"
+
+#: ../../source/searching.rst:36
+msgid "ex. bc:502326000912"
+msgstr "ex. bc:502326000912"
+
+#: ../../source/searching.rst:38
+msgid "lex: lexile"
+msgstr "lex: lexile"
+
+#: ../../source/searching.rst:40
+msgid "levels lex:510"
+msgstr "स्तर lex:510"
+
+#: ../../source/searching.rst:45
+msgid "Guide to Searching"
+msgstr "खोज करने के लिए गाइड"
+
+#: ../../source/searching.rst:47 ../../source/searching.rst:76
+msgid ""
+"This brief guide will explain a chart that shows a sample of how a MARC21 "
+"database can be configured, as well as a brief introductory searching guide. "
+"The indexing fields described in this document relate to the bibliographic "
+"data and does not address authority database indexing."
+msgstr ""
+"इस संक्षिप्त गाइड एक चार्ट है कि कैसे एक MARC21 डेटाबेस विन्यस्त किया जा सकता है की एक "
+"नमूना दिखाता है, साथ ही एक संक्षिप्त परिचयात्मक खोज गाइड समझा जाएगा। अनुक्रमण खेतों इस "
+"दस्तावेज़ में वर्णित ग्रंथ सूची डेटा से संबंधित हैं और अधिकार डेटाबेस अनुक्रमण का पता नहीं है।"
+
+#: ../../source/searching.rst:56
+msgid "Indexing and Searching Description"
+msgstr "इंडेक्सिंग और सर्चिंग विवरण"
+
+#: ../../source/searching.rst:58
+msgid ""
+"Koha's databases are indexed by the Zebra open-source software. The overview "
+"to the documentation describes Zebra as:"
+msgstr ""
+"कोहा के डेटाबेस ज़ेबरा खुला स्रोत सॉफ्टवेयर द्वारा अनुक्रमित रहे हैं। प्रलेखन के अवलोकन के रूप में "
+"ज़ेबरा का वर्णन करता है:"
+
+#: ../../source/searching.rst:61
+msgid ""
+"\"...Zebra is a high-performance, general-purpose structured text indexing "
+"and retrieval engine. It reads records in a variety of input formats (eg. "
+"email, XML, MARC) and provides access to them through a powerful combination "
+"of Boolean search expressions and relevance-ranked free-text queries."
+msgstr ""
+"\"... ज़ेबरा एक उच्च प्रदर्शन, सामान्य प्रयोजन संरचित पाठ अनुक्रमण और पुनर्प्राप्ति इंजन है। "
+"यह इनपुट प्रारूपों के एक किस्म में रिकॉर्ड पढ़ता है (जैसे। ईमेल, एक्सएमएल, मार्क) और बूलियन "
+"का एक शक्तिशाली संयोजन के माध्यम से उन तक पहुँच प्रदान करता है खोज का भाव और "
+"प्रासंगिकता रैंकिंग पर काबिज मुक्त पाठ प्रश्नों।"
+
+#: ../../source/searching.rst:67
+msgid ""
+"Zebra supports large databases (tens of millions of records, tens of "
+"gigabytes of data). It allows safe, incremental database updates on live "
+"systems. Because Zebra supports the industry-standard information retrieval "
+"protocol, Z39.50, you can search Zebra databases using an enormous variety "
+"of programs and toolkits, both commercial and free, which understands this "
+"protocol...\" Zebra - User's Guide and Reference, p. 1, http://www.indexdata."
+"dk/zebra/doc/zebra.pdf"
+msgstr ""
+"ज़ेबरा बड़े डेटाबेस का समर्थन करता है (दसियों रिकॉर्ड के दसियों, डेटा के गीगाबाइट के दसियों) "
+"यह लाइव सिस्टम पर सुरक्षित, वृद्धिशील डेटाबेस अपडेट की अनुमति देता है। क्योंकि ज़ेबरा उद्योग-"
+"मानक सूचना पुनर्प्राप्ति प्रोटोकॉल, Z39.50 का समर्थन करता है, इसलिए आप ज़ेबरा डेटाबेस को "
+"वाणिज्यिक और निशुल्क दोनों प्रकार के कार्यक्रमों और टूलकिटों का उपयोग करके खोज सकते हैं, जो "
+"इस प्रोटोकॉल को समझता है ... \"ज़ेबरा - उपयोगकर्ता का मार्गदर्शिका और संदर्भ, p. 1, "
+"http://www.indexdata.dk/zebra/doc/zebra.pdf"
+
+#: ../../source/searching.rst:82
+msgid "**Note**"
+msgstr "**नोट**"
+
+#: ../../source/searching.rst:84
+msgid ""
+"The indexing described in this document is the set used by SouthEastern "
+"University. Your local indexing may vary."
+msgstr ""
+"अनुक्रमण इस दस्तावेज़ में वर्णित दक्षिण विश्वविद्यालय द्वारा इस्तेमाल के लिए तैयार है। आपका "
+"स्थानीय अनुक्रमण भिन्न हो सकते हैं।"
+
+#: ../../source/searching.rst:90
+msgid "Indexing Configuration"
+msgstr "अनुक्रमणिका विन्यास"
+
+#: ../../source/searching.rst:92
+msgid "There are three configuration files that Koha uses while indexing."
+msgstr "अनुक्रमण के लिए कोहा का उपयोग करता है, जबकि  तीन विन्यास फाइल कर रहे हैं।"
+
+#: ../../source/searching.rst:94
+msgid ""
+"The first configuration file (etc/zebradb/biblios/etc/bib1.att) contains the "
+"Z39.50 bib-1 attribute list, plus the Koha local use attributes for Biblio "
+"Indexes, Items Index, and Fixed Fields and other special indexes. The Z39.50 "
+"Bib-1 profile is made up of several different types of attributes: Use, "
+"Relation, Position, Structure, Truncation, and Completeness. The bib-1 'Use' "
+"attribute is represented on the chart; the other attributes are used "
+"primarily when doing searches. While there are over 150+ use attributes that "
+"could be used to define your indexing set, it's unlikely that you will "
+"choose to use them all. The attributes you elect to use are those that "
+"become the indexing rules for your database. The other five attribute sets "
+"define the various ways that a search can be further defined, and will not "
+"specifically be addressed in this document. For a complete list of the "
+"standard Bib-1 attributes, go to http://www.loc.gov/z3950/agency/defns/bib1."
+"html."
+msgstr ""
+"पहली कॉन्फ़िगरेशन फ़ाइल (etc/zebradb/biblios/etc/bib1.att) में Z39.50 bib-1 विशेषता "
+"सूची है, साथ ही बाइबल इंडेक्स, आइटम इंडेक्स और निश्चित फ़ील्ड और अन्य विशेष अनुक्रमित के लिए "
+"कोहा स्थानीय उपयोग विशेषताएँ हैं। Z39.50 बीबी -1 प्रोफाइल कई अलग-अलग प्रकार के "
+"विशेषताओं से बना है: उपयोग, संबंध, स्थिति, संरचना, कटौती, और पूर्णता। चार्ट पर बिब -1 "
+"'यूज़' विशेषता का प्रतिनिधित्व किया जाता है; अन्य विशेषताओं का प्रयोग मुख्यतः किया जाता "
+"है जब खोजों को करते हैं जबकि 150 से अधिक उपयोग के गुण हैं, जिनका इस्तेमाल आपके अनुक्रमणिका "
+"सेट को परिभाषित करने के लिए किया जा सकता है, यह संभव नहीं है कि आप उन सभी का उपयोग "
+"करने के लिए चुन लेंगे। आपके द्वारा उपयोग किए जाने वाले गुण जो आपके डेटाबेस के लिए अनुक्रमण "
+"नियम बन जाते हैं अन्य पांच विशेषता सेट विभिन्न तरीकों को परिभाषित करते हैं जो एक खोज को "
+"और परिभाषित किया जा सकता है, और विशेष रूप से इस दस्तावेज़ में संबोधित नहीं किया जाएगा। "
+"मानक बीबी -1 विशेषताओं की पूरी सूची के लिए, पर जाएं http://www.loc.gov/z3950/"
+"agency/defns/bib1.html."
+
+#: ../../source/searching.rst:109
+msgid ""
+"The second file is etc/zebradb/marc\\_defs/[marc21\\|unimarc]/biblios/record."
+"abs if you use grs1 indexing [the default until 3.16] or etc/zebradb/marc"
+"\\_defs/[marc21\\|unimarc]/biblios/biblio-koha-indexdefs.xml if you use dom "
+"indexing [the default from 3.18]. Either files contains the abstract syntax "
+"which maps the MARC21 tags to the set of Use Attributes you choose to use. "
+"To be more precise the xml file to be activate needs to be transform into "
+"biblio-zebra-indexdefs.xsl, read the head of biblio-zebra-indexdefs.xsl to "
+"know more about this topic. The rules established in this file provides a "
+"passable Bath level 0 and 1 service, which includes author, title, subject, "
+"keyword and exact services such as standard identifiers (LCCN, ISBN, ISSN, "
+"etc.)"
+msgstr ""
+"दूसरी फ़ाइल है etc/zebradb/marc\\_defs/[marc21\\|unimarc]/biblios/record.abs "
+"यदि आप grs1 अनुक्रमण [डिफ़ॉल्ट 3.16 तक] या etc/zebradb/marc\\_defs/[marc21\\|"
+"unimarc]/biblios/biblio-koha-indexdefs.xml का उपयोग करते हैं, अगर आप डॉम् इंडेक्सिंग "
+"[डिफ़ॉल्ट से 3.18] का उपयोग करते हैं। या तो फ़ाइलों में सार सिंटैक्स होता है जो उपयोग करने "
+"के लिए आपके द्वारा उपयोग किए जाने वाले उपयोग के गुणों के सेट में MARC21 टैग को मैप करता है। "
+"सक्रिय करने के लिए एक्सएमएल फाइल को और अधिक सटीक बनाने के लिए बाइबिलो-ज़ेबरा-इंडेक्सडेफेस "
+"एक्सएसएसएल में परिवर्तित होने की आवश्यकता है, इस विषय के बारे में अधिक जानने के लिए "
+"बाइबिलो-ज़ेबरा-इंडेक्सडेफेस एक्सएसएल के प्रमुख को पढ़ें। इस फाइल में स्थापित नियम एक प्रचलित "
+"स्नान स्तर 0 और 1 सेवा प्रदान करता है, जिसमें लेखक, शीर्षक, विषय, कीवर्ड और सटीक सेवाओं "
+"जैसे मानक पहचानकर्ता (एलसीसीएन, आईएसबीएन, आईएसएसएन, आदि) शामिल हैं।"
+
+#: ../../source/searching.rst:122
+msgid ""
+"The third file (etc/zebradb/ccl.properties) is the Common Command Language "
+"(CCL) field mappings. This file combines the bib-1 attribute set file and "
+"the abstract file and adds the qualifiers, usually known as index names. The "
+"qualifiers, or indexes, for this database are: pn, cpn, cfn, ti, se, ut, nb, "
+"ns, sn, lcn, callnum, su, su-to, su-geo, su-ut, yr,pubdate, acqdate, ln, pl, "
+"ab, nt, rtype, mc-rtype, mus, au, su-na, kw, pb, ctype, and an."
+msgstr ""
+"तीसरे फ़ाइल (etc/zebradb/ccl.properties) आम कमान भाषा (सीसीएल) क्षेत्र मैपिंग है। इस "
+"फ़ाइल में बिब -1 विशेषता सेट फ़ाइल और अमूर्त फ़ाइल को जोड़ती है और क्वालिफायर, आम तौर पर "
+"सूचकांक के नाम के रूप में जाना कहते हैं। क्वालिफायर, या अनुक्रमणिका, इस डेटाबेस के लिए कर रहे "
+"हैं: pn, cpn, cfn, ti, se, ut, nb, ns, sn, lcn, callnum, su, su-to, su-geo, su-"
+"ut, yr,pubdate, acqdate, ln, pl, ab, nt, rtype, mc-rtype, mus, au, su-na, "
+"kw, pb, ctype, and an."
+
+#: ../../source/searching.rst:130
+msgid ""
+"The :ref:`Koha Indexing Chart <koha-search-indexes-label>` summarizes the "
+"contents of all three of these files in a more readable format. The first "
+"two columns labeled Z39.50 attribute and Z39.50 name matches the Z39.50 "
+"bib-1 attributes file. The third column labeled MARC tags indexed is where "
+"you find which MARC tags are mapped to an attribute. The fourth column "
+"labeled Qualifiers identifies the search abbreviations used in the internal "
+"CCL query. The following description provides a definition for the word "
+"'qualifiers'."
+msgstr ""
+"द: रेफर: `कोहा इंडेक्सिंग चार्ट <koha-search-indexes-label>` अधिक पढ़ें पन्ने में इन सभी "
+"तीन फाइलों की सामग्री का सारांश देता है। पहले दो कॉलम जो Z39.50 विशेषता को लेबल करते "
+"हैं और Z39.50 नाम Z39.50 बीबी -1 विशेषताओं फ़ाइल से मेल खाता है। तीसरे कॉलम में सूचीबद्ध "
+"एमएआरसी टैग इंडेक्स है, जहां आप पाते हैं कि कौन सी मार्को टैग एक विशेषता के लिए मैप किए गए "
+"हैं। क्वालिफ़ायर लेबल वाला चौथा स्तंभ आंतरिक सीसीएल क्वेरी में उपयोग किए जाने वाले खोज "
+"संक्षिप्त नाम की पहचान करता है। निम्नलिखित विवरण शब्द 'क्वालिफायर' के लिए एक परिभाषा "
+"प्रदान करता है"
+
+#: ../../source/searching.rst:139
+msgid ""
+"*Qualifiers are used to direct the search to a particular searchable index, "
+"such as title (ti) and author indexes (au). The CCL standard itself doesn't "
+"specify a particular set of qualifiers, but it does suggest a few shorthand "
+"notations. You can customize the CCL parser to support a particular set of "
+"qualifiers to reflect the current target profile. Traditionally, a qualifier "
+"would map to a particular use-attribute within the BIB-1attribute set. It is "
+"also possible to set other attributes, such as the structure attribute.*"
+msgstr ""
+"*क्वालिफाईर का उपयोग किसी विशेष खोज योग्य अनुक्रमणिका, जैसे शीर्षक (टीआई) और लेखक "
+"इंडेक्स (एयू) को निर्देशित करने के लिए किया जाता है। सीसीएल मानक ही क्वालिफायर का एक "
+"विशिष्ट सेट निर्दिष्ट नहीं करता है, लेकिन यह कुछ शॉर्टहैंड नोटों का सुझाव देता है। मौजूदा "
+"लक्ष्य प्रोफ़ाइल को प्रदर्शित करने के लिए आप क्वालिफायर के किसी विशेष समूह का समर्थन करने "
+"के लिए सीसीएल पार्सर को अनुकूलित कर सकते हैं। परंपरागत रूप से, एक योग्यता "
+"BIB-1attribute सेट के भीतर एक विशेष उपयोग-विशेषता को मैप करेगा। अन्य विशेषताओं को सेट "
+"करना संभव है, जैसे कि संरचना विशेषता.*"
+
+#: ../../source/searching.rst:148
+msgid ""
+"In the MARC tags indexed column, there are some conventions used that have "
+"specific meanings. They are:"
+msgstr ""
+"मार्क टैग अनुक्रमणित स्तंभ में, वहाँ विशेष अर्थ है कि इस्तेमाल किया कुछ सम्मेलनों कर रहे हैं। वो "
+"हैं:"
+
+#: ../../source/searching.rst:151
+msgid ""
+"A three digit tag (100) means that all subfields in the tag can be used in a "
+"search query. So, if you enter a search for 'Jackson' as an author, you will "
+"retrieve records where Jackson could be the last name or the first name."
+msgstr ""
+"एक तीन अंकों टैग (100) का अर्थ है कि टैग में सभी उपक्षेत्रों एक खोज क्वेरी में इस्तेमाल किया "
+"जा सकता है। तो, अगर आप एक लेखक के रूप में 'जैक्सन' के लिए एक खोज में प्रवेश, आप रिकॉर्ड "
+"जहां जैक्सन अंतिम नाम या पहला नाम हो सकता है पुनः प्राप्त होगा।"
+
+#: ../../source/searching.rst:156
+msgid ""
+"A three digit tag that has a '$' followed by a letter (600$a) means that a "
+"search query will only search the 'a' subfield."
+msgstr ""
+"एक तीन अंकों टैग एक '$' एक पत्र के द्वारा पीछा किया गया है कि (600 $ क) का मतलब है "
+"कि एक खोज क्वेरी केवल 'ए' subfield खोज करेंगे।"
+
+#: ../../source/searching.rst:159
+msgid ""
+"A three digit tag that is followed by a ':' and a letter (240:w) means that "
+"a search query can be further qualified. The letter following the ':' "
+"identifies how to conduct the search. The most common values you'll see are "
+"'w' (word), 'p' (phrase), 's' (sort), and 'n' (numeric)."
+msgstr ""
+"एक तीन अंकों टैग द्वारा पीछा किया जाता है एक ':' और एक पत्र (240: डब्ल्यू) का अर्थ है "
+"कि एक खोज क्वेरी आगे योग्य हो सकता है। निम्नलिखित पत्र ':' पहचानती खोज का संचालन करने "
+"के लिए कैसे। सबसे आम मूल्यों आप देखेंगे 'डब्ल्यू' (शब्द), 'पी' (वाक्यांश), 'स' (प्रकार), और "
+"'एन' (अंकीय)।"
+
+#: ../../source/searching.rst:165
+msgid ""
+"The contents of the MARC tags, subfields, and/or fixed field elements that "
+"are listed in this chart are all indexed. You'll see that every attribute "
+"line is not mapped to a specific qualifier (index)-LC card number, line 9 is "
+"one example. However, every indexed word (a string of characters preceded "
+"and succeeded by a space) can be searched using a keyword (kw) search. So, "
+"although an LC card number specific index doesn't exist, you can still "
+"search by the LCCN since tag 010 is assigned to the LC-card-number "
+"attribute. To verify this, enter 72180055 in the persistent search box. You "
+"should retrieve The gods themselves, by Isaac Asimov."
+msgstr ""
+"इस चार्ट में सूचीबद्ध मार्स टैग, सबफील्ड, और / या निश्चित फ़ील्ड तत्वों की सामग्री सभी "
+"अनुक्रमित हैं। आप देखेंगे कि प्रत्येक विशेषता पंक्ति को विशिष्ट क्वालीफायर (एलएसी) कार्ड नंबर "
+"पर मैप नहीं किया गया है, लाइन 9 एक उदाहरण है। हालांकि, प्रत्येक अनुक्रमित शब्द (एक स्थान "
+"से पहले और सफल होने वाले वर्णों का एक स्ट्रिंग) एक कीवर्ड (केडब्ल्यू) खोज का उपयोग करके "
+"खोजा जा सकता है। इसलिए, हालांकि एक एलसी कार्ड नंबर विशिष्ट इंडेक्स मौजूद नहीं है, आप "
+"अभी भी एलसीसीएन द्वारा खोज कर सकते हैं क्योंकि टैग 010 को एलसी-कार्ड-नंबर विशेषता को "
+"सौंपा गया है। इसे सत्यापित करने के लिए, लगातार खोज बॉक्स में 72180055 दर्ज करें। आपको "
+"ईश्वर असिमोव द्वारा खुद देवताओं को पुनः प्राप्त करना चाहिए."
+
+#: ../../source/searching.rst:176
+msgid ""
+"Examples of fixed field elements indexing can be seen on the chart between "
+"Attribute 8822 and Attribute 8703. These attributes are most commonly used "
+"for limiting. The fixed field attributes currently represent the BK codes. "
+"Other format codes, if needed, could be defined."
+msgstr ""
+"तय क्षेत्र तत्वों अनुक्रमण के उदाहरण इन विशेषताओं सबसे अधिक सीमित करने के लिए उपयोग किया "
+"जाता है गुण 8822 और विशेषता 8703. के बीच चार्ट पर देखा जा सकता है। निश्चित क्षेत्र "
+"वर्तमान में बीके कोड का प्रतिनिधित्व जिम्मेदार बताते हैं। अन्य प्रारूप कोड, अगर जरूरत है, में "
+"परिभाषित किया जा सकता है।"
+
+#: ../../source/searching.rst:184
+msgid "Basic Searching"
+msgstr "बेसिक खोज"
+
+#: ../../source/searching.rst:186
+msgid ""
+"The search box that library staff and library patrons will see most often is "
+"the persistent search box at the top of the page. Koha interprets the "
+"searches as keyword searches."
+msgstr ""
+"खोज बॉक्स कि पुस्तकालय के कर्मचारियों और पुस्तकालय संरक्षक सबसे अधिक बार देखेंगे पेज के शीर्ष "
+"पर लगातार खोज बॉक्स है। कोहा कीवर्ड खोजों के रूप में खोजें व्याख्या।"
+
+#: ../../source/searching.rst:190
+msgid "|image1037|"
+msgstr "|छवि1037|"
+
+#: ../../source/searching.rst:192
+msgid ""
+"To start a search, you enter a word or multiple words in the search box. "
+"When a single word is entered, a keyword search is performed. You can check "
+"this out by typing one word into the form and note the number of results "
+"located. Then, repeat the search with a minor change. In front of the search "
+"word, type 'kw=' followed by the same search term. The results will be "
+"identical."
+msgstr ""
+"एक खोज शुरू करने के लिए, आप एक शब्द या खोज बॉक्स में कई शब्दों दर्ज करें। जब एक शब्द भी "
+"दर्ज किया जाता है, कोई कीवर्ड सर्च किया जाता है। आप प्रपत्र में एक शब्द टाइप करके इस "
+"जाँच से बाहर और स्थित परिणामों की संख्या नोट कर सकते हैं। फिर, एक मामूली परिवर्तन के साथ "
+"खोज को दोहराएँ। खोज शब्द, प्रकार  'kw=' के सामने एक ही खोज पद के द्वारा पीछा किया। "
+"परिणाम समान हो जाएगा।"
+
+#: ../../source/searching.rst:199
+msgid ""
+"When you have more than one word in the search box, Koha will still do a "
+"keyword search, but a bit differently. Each word will be searched on its "
+"own, then the Boolean connector 'and' will narrow your search to those items "
+"with all words contained in matching records."
+msgstr ""
+"आप खोज बॉक्स में एक से अधिक शब्द है, कोहा अभी भी थोड़ा अलग ढंग से मूल शब्द खोज करते हैं, "
+"लेकिन जाएगा। प्रत्येक शब्द अपने आप ही है, तो बूलियन कनेक्टर पर खोजा जाएगा 'और' मिलान "
+"अभिलेखों में निहित सभी शब्दों के साथ उन वस्तुओं के लिए अपनी खोज को संकीर्ण जाएगा।"
+
+#: ../../source/searching.rst:204
+msgid ""
+"Suppose you want to find material about how libraries are using mashups. "
+"You'll select the major words and enter them into the persistent search box."
+msgstr ""
+"आप कैसे पुस्तकालयों मैशप उपयोग कर रहे हैं के बारे में सामग्री खोजने के लिए चाहता हूँ। आप प्रमुख "
+"शब्दों का चयन और उन्हें लगातार सर्च बॉक्स में प्रवेश करेंगे।"
+
+#: ../../source/searching.rst:208
+msgid "|image1038|"
+msgstr "|छवि1038|"
+
+#: ../../source/searching.rst:210
+msgid "The response to this search is:"
+msgstr "इस खोज के लिए प्रतिक्रिया है:"
+
+#: ../../source/searching.rst:212
+msgid "|image1039|"
+msgstr "|छवि1039|"
+
+#: ../../source/searching.rst:214
+msgid ""
+"The order of the words does not affect the retrieval results, so you could "
+"also enter the search as \"mashups library\". The response to this search is "
+"results"
+msgstr ""
+"शब्दों के आदेश पुनः प्राप्ति के परिणाम को प्रभावित नहीं करता है, तो आप भी \"मैशप पुस्तकालय"
+"\" खोज में प्रवेश कर सकता है। इस खोज के लिए प्रतिक्रिया परिणाम है"
+
+#: ../../source/searching.rst:218
+msgid "|image1040|"
+msgstr "|छवि 1040|"
+
+#: ../../source/searching.rst:220
+msgid ""
+"Too many words in the search box will find very few matches, as the "
+"following example illustrates:"
+msgstr ""
+"खोज बॉक्स में बहुत सारे शब्द बहुत कुछ मैचों मिल जाएगा, जैसा कि निम्न उदाहरण दिखाता है:"
+
+#: ../../source/searching.rst:223
+msgid "|image1041|"
+msgstr "|छवि 1041|"
+
+#: ../../source/searching.rst:228
+msgid "Advanced Searching"
+msgstr "उन्नत खोज"
+
+#: ../../source/searching.rst:230
+msgid ""
+"When you can't find the most appropriate material with a general search, you "
+"can move to the Advanced Search page by clicking on the Search option on the "
+"persistent toolbar."
+msgstr ""
+"आप एक सामान्य खोज के साथ सबसे उपयुक्त सामग्री नहीं मिल सकता है, जब आप लगातार उपकरण "
+"पट्टी पर खोजें विकल्प पर क्लिक करके उन्नत खोज पृष्ठ के लिए स्थानांतरित कर सकते हैं।"
+
+#: ../../source/searching.rst:234
+msgid "|image1042|"
+msgstr "|छवि 1042|"
+
+#: ../../source/searching.rst:236
+msgid ""
+"The Advanced Search page offers many ways to limit the results of your "
+"search. You can search using the Boolean operators AND, OR, and NOT; limit "
+"by item type; limit by year and language; limit by subtypes audience, "
+"content, format, or additional content types; by location and by "
+"availability."
+msgstr ""
+"उन्नत खोज पृष्ठ अपनी खोज के परिणामों को सीमित करने के लिए कई तरीके प्रदान करता है। आप "
+"बूलियन ऑपरेटरों का उपयोग कर खोज सकते हैं और, या, और नहीं; आइटम प्रकार से सीमा; साल और "
+"भाषा के अनुसार सीमा; उपप्रकार दर्शकों, सामग्री, स्वरूप, या अतिरिक्त सामग्री प्रकार से "
+"सीमा; स्थान के आधार पर और उपलब्धता के द्वारा।"
+
+#: ../../source/searching.rst:242
+msgid ""
+"The first limiting section on the Advanced Search page provides a quick and "
+"simple way to use the Boolean operators in your search. Note that this "
+"display depends on a system preference setting. This option can be found on "
+"the Administration > System Preferences > Searching page. The option called :"
+"ref:`expandedSearchOption` must be set to 'show' to see the following "
+"display."
+msgstr ""
+"उन्नत खोज पृष्ठ पर पहले सीमित खंड आपकी खोज में बूलियन ऑपरेटरों का उपयोग करने का एक तेज़ "
+"और आसान तरीका प्रदान करता है। ध्यान दें कि यह प्रदर्शन सिस्टम प्राथमिकता सेटिंग पर "
+"निर्भर करता है। यह विकल्प प्रशासन> सिस्टम प्राथमिकताएं> खोज पेज पर पाया जा सकता है। "
+"इस विकल्प को बुलाया गया: रेफरी: 'डिस्प्लेज्ड सर्चऑप्शन' को निम्न डिस्प्ले देखने के लिए 'शो' "
+"पर सेट होना चाहिए."
+
+#: ../../source/searching.rst:249
+msgid "|image1043|"
+msgstr "|छवि 1043|"
+
+#: ../../source/searching.rst:251
+msgid ""
+"In this section you can choose among the many indexes by clicking on the "
+"arrow in the first box. The blank box that follows is where you enter your "
+"first search term or terms. On the second line, you can choose the Boolean "
+"operator you want to use in your search. The options are 'and', 'or', and "
+"'not'. Then, you would again choose the index to search, followed by the "
+"second term or terms. If you have more concepts you want to include in your "
+"search, you can click the [+] to add another line for your search."
+msgstr ""
+"इस अनुभाग में आप पहले बॉक्स में तीर पर क्लिक करके कई अनुक्रमणिका के बीच चयन कर सकते हैं। "
+"खाली बॉक्स है कि इस प्रकार है, जहां आप अपनी पहली खोज पद या शब्दों दर्ज करें। दूसरी लाइन "
+"पर, आप बूलियन ऑपरेटर आप अपनी खोज में उपयोग करना चाहते हैं चुन सकते हैं। विकल्प हैं 'और', "
+"'या', और 'नहीं'। फिर, आप फिर से खोज करने के लिए सूचकांक, दूसरे कार्यकाल या शब्दों के "
+"द्वारा पीछा चुनाव होगा। आप और अधिक अवधारणाओं आप अपनी खोज में शामिल करना चाहते है, "
+"तो आप क्लिक कर सकते हैं [+] अपनी खोज के लिए एक और लाइन जोड़ने के लिए।"
+
+#: ../../source/searching.rst:260
+msgid "A sample search is shown next, followed by its results:"
+msgstr "एक नमूना खोज अगले दिखाया गया है, इसके परिणाम के बाद है:"
+
+#: ../../source/searching.rst:262
+msgid "|image1044|"
+msgstr "|छवि1044|"
+
+#: ../../source/searching.rst:264
+msgid "|image1045|"
+msgstr "|छवि1045|"
+
+#: ../../source/searching.rst:266
+msgid ""
+"When you use the Boolean operators to broaden or narrow a search, remember "
+"the action of each operator. The 'and' operator narrows the results you'll "
+"retrieve because the search will retrieve the records that include all your "
+"search terms. The 'or' operator expands the results because the search will "
+"look for occurrences of all of your search terms. The 'not' operator "
+"excludes records with the term that follows the operator."
+msgstr ""
+"आप व्यापक बनाने या एक खोज को संकीर्ण बूलियन ऑपरेटरों का उपयोग करते हैं, प्रत्येक ऑपरेटर की "
+"कार्रवाई के लिए याद है। 'और' ऑपरेटर परिणाम है क्योंकि खोज रिकॉर्ड है कि अपने सभी खोज "
+"शब्द शामिल पुनः प्राप्त होगा आप प्राप्त करेंगे संकरी। 'या' ऑपरेटर परिणाम फैलता है क्योंकि "
+"खोज अपने खोज शब्दों के सभी की घटनाओं के लिए दिखेगा। 'नहीं' ऑपरेटर शब्द है कि ऑपरेटर इस "
+"प्रकार के साथ रिकॉर्ड शामिल नहीं है।"
+
+#: ../../source/searching.rst:274
+msgid ""
+"Note: If you leave this :ref:`expandedSearchOption` set to 'don't show', "
+"this is the display you will see:"
+msgstr ""
+"नोट: यदि आप इसे छोड़ देते हैं: रेफर: 'expandedSearchOption` सेट न करें' पर, यह वह "
+"प्रदर्शन है जिसे आप देखेंगे:"
+
+#: ../../source/searching.rst:277
+msgid "|image1046|"
+msgstr "|छवि 1046|"
+
+#: ../../source/searching.rst:279
+msgid ""
+"The Advanced Search page then shows the multiple kinds of limits that can be "
+"applied to your search results. Either check a box or select from the drop "
+"down menus to narrow your search. You will type the year, year range, or a "
+"'greater than (>)' or 'less than (<)' year."
+msgstr ""
+"उन्नत खोज पृष्ठ तब कई प्रकार की सीमा दिखाता है जो आपके खोज परिणामों पर लागू हो सकते "
+"हैं। या तो अपनी खोज को कम करने के लिए किसी बॉक्स को चेक करें या ड्रॉप डाउन मेनू से चुनें आप "
+"वर्ष, वर्ष सीमा टाइप करेंगे, या '(>) से अधिक' या 'से कम (<)' वर्ष"
+
+#: ../../source/searching.rst:284
+msgid "|image1047|"
+msgstr "|छवि1047|"
+
+#: ../../source/searching.rst:286
+msgid ""
+"Finally, you can choose how the results will be sorted. The pre-defined sort "
+"options are in the final area of the Advanced Search screen."
+msgstr ""
+"अंत में, आप चुन सकते हैं कि परिणाम सुलझा लिया जाएगा। पूर्व निर्धारित प्रकार का विकल्प नई "
+"खोज स्क्रीन के अंतिम क्षेत्र में हैं।"
+
+#: ../../source/searching.rst:289
+msgid "|image1048|"
+msgstr "|छवि1048|"
+
+#: ../../source/searching.rst:291
+msgid ""
+"The default sort is by relevance, although you can choose to sort by author, "
+"by title, by call number, by dates, or by popularity (which uses the "
+"information on total issues found in the items table). If you would prefer a "
+"different default sort, you can set :ref:`defaultSortField <defaultsortfield-"
+"&-defaultsortorder-label>` to one of the other choices in Administration > "
+"System Preferences > Searching."
+msgstr ""
+"डिफ़ॉल्ट सॉर्ट प्रासंगिकता के आधार पर है, हालांकि आप लेखक, शीर्षक, कॉल नंबर, तारीखों, या "
+"लोकप्रियता के आधार पर सॉर्ट करने का विकल्प चुन सकते हैं (जो आइटम तालिका में पाए गए कुल "
+"मुद्दों की जानकारी का उपयोग करता है)। यदि आप एक भिन्न डिफ़ॉल्ट सॉर्ट पसंद करते हैं, तो "
+"आप सेट कर सकते हैं: रेफरी: `डिफ़ॉल्टSortField <defaultsortfield-&-defaultsortorder-"
+"label>` प्रशासन में अन्य विकल्पों में से एक> सिस्टम वरीयताएँ> खोज"
+
+#: ../../source/searching.rst:301
+msgid "Item Searching"
+msgstr "आइटम खोजें"
+
+#: ../../source/searching.rst:303
+msgid ""
+"If you are looking for specific items you can use the item search engine in "
+"the staff client to find them."
+msgstr ""
+"आप उन्हें खोजने के लिए कर्मचारियों को ग्राहक में आइटम खोज इंजन का उपयोग कर सकते हैं आप देख "
+"रहे हैं, विशेष आइटम के लिए।"
+
+#: ../../source/searching.rst:306
+msgid "*Get there:* Search > Go to item search"
+msgstr "* वहां जाओ: * खोज> आइटम खोज पर जाएं"
+
+#: ../../source/searching.rst:308
+msgid ""
+"At the top of the advanced search page in the staff client you will see a "
+"link to 'Go to item search'"
+msgstr ""
+"स्टाफ ग्राहक में उन्नत खोज पृष्ठ के शीर्ष पर आप एक कड़ी के लिए 'आइटम खोजने के लिए जाएं' देखेंगे"
+
+#: ../../source/searching.rst:311
+msgid "|image1313|"
+msgstr "|छवि 1313|"
+
+#: ../../source/searching.rst:313
+msgid "Clicking that link will open up a item specific search engine."
+msgstr "उस लिंक पर क्लिक एक आइटम विशिष्ट खोज इंजन खुल जाएगा।"
+
+#: ../../source/searching.rst:315
+msgid "|image1314|"
+msgstr "|छवि 1314|"
+
+#: ../../source/searching.rst:317
+msgid ""
+"Using the search form that is presented you can find a list of specific "
+"items that can be output to the screen or to a CSV file. If your results are "
+"printed to the screen you will have the option to narrow your search further "
+"using filters at the top."
+msgstr ""
+"प्रयुक्त किया है खोज फ़ॉर्म कि आप विशिष्ट आइटम है कि स्क्रीन करने के लिए या एक सीएसवी "
+"फाइल करने के लिए उत्पादन किया जा सकता है की एक सूची पा सकते हैं । अपने परिणामों को "
+"स्क्रीन करने के लिए मुद्रित कर रहे हैं, तो आप आगे शीर्ष पर फिल्टर का उपयोग अपनी खोज को "
+"संकीर्ण करने का विकल्प होगा।"
+
+#: ../../source/searching.rst:322
+msgid "|image1315|"
+msgstr "|छवि 1315|"
+
+#: ../../source/searching.rst:327
+msgid "Common Command Language Searching"
+msgstr "आम कमांड भाषा खोज"
+
+#: ../../source/searching.rst:329
+msgid ""
+"Koha uses the Common Command Language (CCL) (ISO 8777) as its internal "
+"search protocol. Searches initiated in the graphical interface use this "
+"protocol as well, although the searcher doesn't know which indexes, "
+"operators and limiters are available and being used to conduct their search. "
+"The searcher can use the Advanced Search when more precise results set are "
+"desired and where the search indexes are somewhat known. However, some "
+"library users and many library staff prefer using a command based structure. "
+"This part of the document will present and explain the use of the Koha "
+"command based structure. The indexes, operators, and limiters used are "
+"identical to those used in the graphical interface."
+msgstr ""
+"कोहा अपने आंतरिक खोज प्रोटोकॉल के रूप में आम कमांड भाषा (सीसीएल) (आईएसओ 8777) का "
+"उपयोग करता है। चित्रमय इंटरफेस में शुरू की खोजों के रूप में अच्छी तरह से इस प्रोटोकॉल का "
+"उपयोग करें, हालांकि खोजकर्ता पता नहीं है जो अनुक्रमणिका, ऑपरेटरों और limiters उपलब्ध है "
+"और उनकी खोज का संचालन करने के लिए इस्तेमाल किया जा रहा है। खोजकर्ता उन्नत खोज का "
+"उपयोग करते समय और अधिक सटीक परिणाम सेट वांछित हैं और जहाँ खोज अनुक्रमित कुछ हद तक जाने "
+"जाते हैं कर सकते हैं। हालांकि, कुछ पुस्तकालय उपयोगकर्ताओं और कई पुस्तकालय के कर्मचारियों के "
+"लिए एक कमांड आधारित संरचना का उपयोग पसंद करते हैं। दस्तावेज़ के इस भाग को प्रस्तुत करते हैं "
+"और कोहा आदेश आधारित संरचना का उपयोग समझा जाएगा। अनुक्रमणिका, ऑपरेटर, और इस्तेमाल "
+"किया limiters चित्रमय इंटरफेस में इस्तेमाल उन लोगों के लिए समान हैं।"
+
+#: ../../source/searching.rst:344
+msgid "Indexes"
+msgstr "अनुक्रमणिका"
+
+#: ../../source/searching.rst:346
+msgid ""
+"The CCL standard itself doesn't specify a particular set of qualifiers "
+"(indexes), but it does suggest a few short-hand notations such as 'ti', "
+"'au', and 'su'. Koha has a default set of indexes; it's possible to "
+"customize that set by adding needed indexes based on local requirements. A "
+"qualifier (index) maps to a particular use-attribute within the Z39.50 BIB-1 "
+"attribute set. The complete Z39.50 Bib-1 Attribute can be viewed at http://"
+"www.loc.gov/z3950/agency/defns/bib1.html."
+msgstr ""
+"सीसीएल मानक ही क्वालिफायर (इंडेक्स) के किसी विशेष सेट को निर्दिष्ट नहीं करता है, लेकिन "
+"यह'ti', 'au', और 'su'' जैसे कुछ छोटे-छोटे नोटों का सुझाव देता है। कोहा में अनुक्रमित का "
+"एक डिफ़ॉल्ट सेट है; स्थानीय आवश्यकताओं के आधार पर आवश्यक अनुक्रमित जोड़कर सेट को अनुकूलित "
+"करना संभव है। एक क्वालीफायर (इंडेक्स) नक्शे को एक विशेष उपयोग-सुविधा के लिए Z39.50 "
+"BIB-1 विशेषता सेट में। पूर्ण Z39.50 Bib-1 विशेषता को यहां पर देखा जा सकता हैhttp://www."
+"loc.gov/z3950/agency/defns/bib1.html."
+
+#: ../../source/searching.rst:354
+msgid ""
+"The standard Koha set of indexes is a fairly common example of MARC21 "
+"indexing rules. The indexes that are defined in Koha are indexes typically "
+"used by other integrated library systems. The defined Z39.50 Bib-1 Attribute "
+"mapped to the indexes include:"
+msgstr ""
+"अनुक्रमित के मानक कोहा सेट MARC21 अनुक्रमण नियमों का एक बहुत ही आम उदाहरण है। अनुक्रमित "
+"कि कोहा में परिभाषित कर रहे हैं अनुक्रमित आम तौर पर अन्य एकीकृत पुस्तकालय सिस्टम के द्वारा "
+"किया जाता है। परिभाषित Z39.50 बिब -1 गुण अनुक्रमित करने के लिए मैप में शामिल हैं:"
+
+#: ../../source/searching.rst:360
+msgid "Bib-1 Attribute"
+msgstr "Bib-1 गुण"
+
+#: ../../source/searching.rst:360
+msgid "Qualifier (index)"
+msgstr "क्वालीफायर (सूचकांक)"
+
+#: ../../source/searching.rst:362
+msgid "Personal-name"
+msgstr "व्यक्तिगत-नाम"
+
+#: ../../source/searching.rst:362
+msgid "pn"
+msgstr "pn"
+
+#: ../../source/searching.rst:364
+msgid "Corporate-name"
+msgstr "कॉर्पोरेट-नाम"
+
+#: ../../source/searching.rst:364
+msgid "cpn"
+msgstr "cpn"
+
+#: ../../source/searching.rst:366 ../../source/searching.rst:863
+msgid "Conference-name"
+msgstr "सम्मेलन-नाम"
+
+#: ../../source/searching.rst:366
+msgid "cfn"
+msgstr "cfn"
+
+#: ../../source/searching.rst:368 ../../source/searching.rst:831
+#: ../../source/searching.rst:957
+msgid "Title"
+msgstr "शीर्षक"
+
+#: ../../source/searching.rst:368
+msgid "ti"
+msgstr "ti"
+
+#: ../../source/searching.rst:370
+msgid "Title-series"
+msgstr "शीर्षक-सीरिज"
+
+#: ../../source/searching.rst:370
+msgid "se"
+msgstr "se"
+
+#: ../../source/searching.rst:372
+msgid "Title-uniform"
+msgstr "शीर्षक-सार्वभौम"
+
+#: ../../source/searching.rst:372
+msgid "ut"
+msgstr "ut"
+
+#: ../../source/searching.rst:374
+msgid "ISBN"
+msgstr "आईऍसबीऍन"
+
+#: ../../source/searching.rst:374
+msgid "nb"
+msgstr "nb"
+
+#: ../../source/searching.rst:376
+msgid "ISSN"
+msgstr "ISSN"
+
+#: ../../source/searching.rst:376
+msgid "ns"
+msgstr "ns"
+
+#: ../../source/searching.rst:378
+msgid "Local number"
+msgstr "स्थानीय नंबर:"
+
+#: ../../source/searching.rst:378
+msgid "sn"
+msgstr "sn"
+
+#: ../../source/searching.rst:380
+msgid "Local-classification"
+msgstr "स्थानीय-वर्गीकरण"
+
+#: ../../source/searching.rst:380
+msgid "lcn and callnum"
+msgstr "lcn and callnum"
+
+#: ../../source/searching.rst:382 ../../source/searching.rst:879
+#: ../../source/searching.rst:897 ../../source/searching.rst:901
+#: ../../source/searching.rst:905 ../../source/searching.rst:909
+msgid "Subject"
+msgstr "विषय"
+
+#: ../../source/searching.rst:382
+msgid "su, su-to, su-geo, su-ut"
+msgstr "su, su-to, su-geo, su-ut"
+
+#: ../../source/searching.rst:384
+msgid "Pubdate"
+msgstr "Pubdate"
+
+#: ../../source/searching.rst:384
+msgid "yr,pubdate"
+msgstr "yr,pubdate"
+
+#: ../../source/searching.rst:386
+msgid "Date-of-Acquisition"
+msgstr "अधिग्रहण-की-तारीख"
+
+#: ../../source/searching.rst:386
+msgid "acqdate"
+msgstr "acqdate"
+
+#: ../../source/searching.rst:388
+msgid "Language"
+msgstr "भाषा"
+
+#: ../../source/searching.rst:388 ../../source/searching.rst:699
+msgid "ln"
+msgstr "ln"
+
+#: ../../source/searching.rst:390
+msgid "Place-of-publication"
+msgstr "प्रकाशन-का-स्थान"
+
+#: ../../source/searching.rst:390
+msgid "pl"
+msgstr "pl"
+
+#: ../../source/searching.rst:392
+msgid "Abstract"
+msgstr "सार"
+
+#: ../../source/searching.rst:392
+msgid "ab"
+msgstr "ab"
+
+#: ../../source/searching.rst:394
+msgid "Notes"
+msgstr "नोट्स"
+
+#: ../../source/searching.rst:394
+msgid "nt"
+msgstr "nt"
+
+#: ../../source/searching.rst:396
+msgid "Record-type"
+msgstr "रिकार्ड-प्रकार"
+
+#: ../../source/searching.rst:396
+msgid "rtype, mc-rtype, mus"
+msgstr "rtype, mc-rtype, mus"
+
+#: ../../source/searching.rst:398 ../../source/searching.rst:829
+msgid "Author"
+msgstr "लेखक"
+
+#: ../../source/searching.rst:398
+msgid "au, aut"
+msgstr "au, aut"
+
+#: ../../source/searching.rst:400
+msgid "Subject-person-name"
+msgstr "विषय-व्यक्ति-नाम"
+
+#: ../../source/searching.rst:400
+msgid "su-na"
+msgstr "su-na"
+
+#: ../../source/searching.rst:402
+msgid "Any (keyword)"
+msgstr "कोई भी (खोजशब्द)"
+
+#: ../../source/searching.rst:402
+msgid "kw"
+msgstr "kw"
+
+#: ../../source/searching.rst:404
+msgid "Publisher"
+msgstr "प्रकाशक"
+
+#: ../../source/searching.rst:404
+msgid "pb"
+msgstr "pb"
+
+#: ../../source/searching.rst:406
+msgid "Content-type"
+msgstr "सामग्री-प्रकार"
+
+#: ../../source/searching.rst:406
+msgid "ctype"
+msgstr "ctype"
+
+#: ../../source/searching.rst:408 ../../source/searching.rst:725
+#: ../../source/searching.rst:729 ../../source/searching.rst:737
+#: ../../source/searching.rst:791 ../../source/searching.rst:801
+#: ../../source/searching.rst:815 ../../source/searching.rst:823
+#: ../../source/searching.rst:851 ../../source/searching.rst:859
+#: ../../source/searching.rst:869 ../../source/searching.rst:877
+#: ../../source/searching.rst:881 ../../source/searching.rst:885
+#: ../../source/searching.rst:889 ../../source/searching.rst:891
+#: ../../source/searching.rst:895 ../../source/searching.rst:899
+#: ../../source/searching.rst:903 ../../source/searching.rst:907
+#: ../../source/searching.rst:911 ../../source/searching.rst:933
+#: ../../source/searching.rst:941 ../../source/searching.rst:949
+#: ../../source/searching.rst:973 ../../source/searching.rst:981
+#: ../../source/searching.rst:987 ../../source/searching.rst:993
+msgid "Koha-Auth-Number"
+msgstr "कोहा-Auth-नंबर"
+
+#: ../../source/searching.rst:408
+msgid "an"
+msgstr "an"
+
+#: ../../source/searching.rst:410
+msgid "Author-personal-bibliography"
+msgstr "लेखक-व्यक्तिगत-ग्रंथ सूची"
+
+#: ../../source/searching.rst:410
+msgid "aub"
+msgstr "aub"
+
+#: ../../source/searching.rst:412
+msgid "Author-in-order"
+msgstr "लेखक-में-आदेश"
+
+#: ../../source/searching.rst:412
+msgid "auo"
+msgstr "auo"
+
+#: ../../source/searching.rst:415
+msgid "Table: Attributes"
+msgstr "तालिका: विशेषताएं"
+
+#: ../../source/searching.rst:417
+msgid ""
+"Refer to the :ref:`Koha Indexing Chart <koha-search-indexes-label>` for the "
+"MARC21 tags mapped to each Bib-1 Attribute and index combination."
+msgstr ""
+"संदर्भ: रेफर: `कोहा इंडेक्सिंग चार्ट <koha-search-indexes-label>` प्रत्येक Bib-1 "
+"एट्रिब्यूट और इंडेक्स संयोजन के लिए मार्क 21 टैग के लिए मैप किया गया है।"
+
+#: ../../source/searching.rst:423
+msgid "Audience Examples"
+msgstr "ऑडियंस के उदाहरण"
+
+#: ../../source/searching.rst:425
+msgid "aud:a Preschool"
+msgstr "aud: एक प्रीस्कूल"
+
+#: ../../source/searching.rst:427
+msgid "aud:b Primary"
+msgstr "aud: b प्राथमिक"
+
+#: ../../source/searching.rst:429
+msgid "aud:c Pre-Adolescent"
+msgstr "aud: c पूर्व किशोर"
+
+#: ../../source/searching.rst:431
+msgid "aud:d Adolescent"
+msgstr "aud: d किशोर"
+
+#: ../../source/searching.rst:433
+msgid "aud:e Adult"
+msgstr "aud: e प्रौढ़"
+
+#: ../../source/searching.rst:435
+msgid "aud:f Specialized"
+msgstr "aud: f विशेष"
+
+#: ../../source/searching.rst:437
+msgid "aud:g General"
+msgstr "aud: g जनरल"
+
+#: ../../source/searching.rst:439
+msgid "aud:j Juvenile"
+msgstr "aud: j किशोर"
+
+#: ../../source/searching.rst:444
+msgid "Contents Examples"
+msgstr "सामग्री उदाहरण"
+
+#: ../../source/searching.rst:446
+msgid "fic:1 Fiction"
+msgstr "fic: 1 गल्प"
+
+#: ../../source/searching.rst:448
+msgid "fic:0 Non Fiction"
+msgstr "fic:0 नॉन फिक्सन"
+
+#: ../../source/searching.rst:450
+msgid "bio:b Biography"
+msgstr "bio:b बायोग्राफी"
+
+#: ../../source/searching.rst:452
+msgid "mus:j Musical recording"
+msgstr "mus:j संगीतमय रिकॉर्डिंग"
+
+#: ../../source/searching.rst:454
+msgid "mus:I Non musical record"
+msgstr "mus:I गैर संगीतमय रिकॉर्ड"
+
+#: ../../source/searching.rst:459
+msgid "Search Syntax"
+msgstr "खोज सिंटेक्स"
+
+#: ../../source/searching.rst:461
+msgid ""
+"In the persistent search box, single words generally retrieve large sets. To "
+"narrow a search, you can use multiple words. Koha automatically uses the "
+"'and' Boolean operator to create a set of records matching your input. When "
+"you want to narrow the search to an author or a title or a subject or some "
+"other specific field or use a Boolean operator, there isn't an obvious way "
+"to accomplish that specificity. The library user can, of course, go to the "
+"Advanced Search page; however, if you know how to construct a CCL search, "
+"you can achieve more specificity while using the persistent search box on "
+"any page."
+msgstr ""
+"लगातार खोज बॉक्स में, एक शब्द आम तौर पर बड़े सेट निकालते हैं। एक खोज को संकीर्ण करने के "
+"लिए, आप कई शब्दों का प्रयोग कर सकते हैं। कोहा स्वचालित रूप से अपने इनपुट मिलान अभिलेखों "
+"का एक सेट बनाने के लिए 'और' बूलियन ऑपरेटर का उपयोग करता है। आप एक लेखक के लिए खोज या "
+"एक शीर्षक या एक विषय या कुछ अन्य विशिष्ट क्षेत्र संकीर्ण या एक बूलियन ऑपरेटर का उपयोग "
+"करना चाहते हैं, वहाँ एक स्पष्ट तरीका है कि विशिष्टता हासिल करने के लिए नहीं है। पुस्तकालय "
+"उपयोगकर्ता, ज़ाहिर है, उन्नत खोज पृष्ठ पर जा सकते हैं; हालांकि, अगर आप जानते हैं कि एक "
+"सीसीएल खोज का निर्माण करने के लिए कैसे, आप और अधिक विशिष्टता के किसी भी पृष्ठ पर "
+"लगातार खोज बॉक्स का उपयोग करते समय प्राप्त कर सकते हैं।"
+
+#: ../../source/searching.rst:471
+msgid ""
+"There is a specific order to the CCL search syntax. Although it can be used "
+"for simple searches, it is an especially effective way to perform complex "
+"searches, as it affords you a great deal of control over your search "
+"results. To construct a CCL search, first enter a desired index code, then "
+"an equal sign, followed by your search word(s). Following are examples of "
+"simple CCL searches."
+msgstr ""
+"वहाँ सीसीएल खोज वाक्य रचना के लिए एक विशेष आदेश है। यह सरल खोजों के लिए इस्तेमाल किया "
+"जा सकता है, यह जटिल खोजों प्रदर्शन करने के लिए एक विशेष रूप से प्रभावी तरीका है, क्योंकि "
+"यह आप अपने खोज परिणामों पर नियंत्रण का एक बड़ा सौदा देता है। एक सीसीएल खोज का "
+"निर्माण करने के लिए, पहली बार एक वांछित सूचकांक कोड, तो एक बराबर चिह्न, अपने खोज शब्द "
+"(ओं) द्वारा पीछा दर्ज करें। निम्नलिखित सरल सीसीएल खोजों के उदाहरण हैं।"
+
+#: ../../source/searching.rst:478
+msgid "ti=principles of accounting"
+msgstr "ti=लेखा के सिद्धांत"
+
+#: ../../source/searching.rst:480
+msgid "au=brown joseph"
+msgstr "au=ब्राउन जोसेफ"
+
+#: ../../source/searching.rst:482
+msgid "su=poetry"
+msgstr "su=कविता"
+
+#: ../../source/searching.rst:484
+msgid "su-na=Shakespeare"
+msgstr "su-na=शेक्सपीयर"
+
+#: ../../source/searching.rst:486
+msgid "kw=marlin"
+msgstr "kw=मार्लिन"
+
+#: ../../source/searching.rst:488
+msgid ""
+"You can refine your search by combining search terms with Boolean operators "
+"'and', 'or', or 'not'. Following are examples of searches using Boolean "
+"operators."
+msgstr ""
+"आप बूलियन ऑपरेटरों 'और', 'या', या 'नहीं' के साथ खोज शब्दों के संयोजन के द्वारा अपनी खोज "
+"को परिष्कृत कर सकते हैं। बाद बूलियन ऑपरेटरों का उपयोग कर खोजों के उदाहरण हैं।"
+
+#: ../../source/searching.rst:492
+msgid "ti=principles of accounting and au=brown joseph"
+msgstr "ti=लेखा के सिद्धांत and au=ब्राउन जोसेफ"
+
+#: ../../source/searching.rst:494
+msgid "su=poetry not su-na=Shakespeare"
+msgstr "su=कविता not su-na=शेक्सपीयर"
+
+#: ../../source/searching.rst:496
+msgid "kw=communication and su=debate"
+msgstr "kw=संप्रेषण and su=चर्चा"
+
+#: ../../source/searching.rst:498
+msgid ""
+"You can also choose to search for things that start with a character or "
+"series of characters"
+msgstr ""
+"तुम भी चीजें हैं जो एक चरित्र या वर्ण की श्रृंखला के साथ शुरू करने के लिए खोज करने के लिए चुन "
+"सकते हैं"
+
+#: ../../source/searching.rst:501
+msgid ""
+"ti,first-in-subfield=C (will show you all titles that start with the letter "
+"'C')"
+msgstr "ti, फर्स्ट-इन-subfield = सी (आप सभी खिताब उस पत्र 'सी' के साथ शुरू दिखाएगा)"
+
+#: ../../source/searching.rst:504
+msgid ""
+"Other string location searches can be performed with the following keywords:"
+msgstr "अन्य स्ट्रिंग स्थान खोजों निम्नांकित खोजशब्दों के साथ प्रदर्शन किया जा सकता है:"
+
+#: ../../source/searching.rst:507
+msgid "rtrn : right truncation"
+msgstr "rtrn : बाँई ट्रंकेशन"
+
+#: ../../source/searching.rst:509
+msgid "ltrn : left truncation"
+msgstr "ltrn : दाय़ी ट्रंकेशन"
+
+#: ../../source/searching.rst:511
+msgid "lrtrn : left and right truncation"
+msgstr "lrtrn : बाएँ और दाएँ ट्रंकेशन"
+
+#: ../../source/searching.rst:513
+msgid "st-date : type date"
+msgstr "st-दिनांक : प्रकार दिनांक"
+
+#: ../../source/searching.rst:515
+msgid "st-numeric : type number (integer)"
+msgstr "st-संख्यात्मक: प्रकार संख्या (पूर्णांक)"
+
+#: ../../source/searching.rst:517
+msgid "ext : exact search on whole subfield (does not work with icu)"
+msgstr "ext : पूरे उपक्षेत्र पर सटीक खोज (आईसीयू के साथ काम नहीं करता है)"
+
+#: ../../source/searching.rst:519
+msgid "phr : search on phrase anywhere in the subfield"
+msgstr "phr : उपक्षेत्र में कहीं भी वाक्यांश पर खोज"
+
+#: ../../source/searching.rst:521
+msgid "startswithnt : subfield starts with"
+msgstr "startswithnt : उपक्षेत्र साथ शुरू होता है"
+
+#: ../../source/searching.rst:523
+msgid ""
+"Using specific indexes and Boolean operators are not the only way a search "
+"can be refined. You can also refine your search as a phrase when looking for "
+"a title, author, or subject. The syntax for this search is *index,phr=search "
+"words*."
+msgstr ""
+"विशिष्ट अनुक्रमित और बूलियन ऑपरेटरों का उपयोग करना एकमात्र तरीका नहीं है जो खोज को "
+"परिष्कृत किया जा सकता है। शीर्षक, लेखक या विषय की खोज करते समय आप अपनी खोज को "
+"वाक्यांश के रूप में परिष्कृत भी कर सकते हैं। इस खोज के लिए वाक्यविन्यास है *index,"
+"phr=search words*."
+
+#: ../../source/searching.rst:528
+msgid ""
+"To illustrate the results of various search types, a search was done for the "
+"words 'supreme court'. The results illustrate that the search index and the "
+"word order make a difference in search results. Only the results count and "
+"the search itself is in these examples. The search executed will always be "
+"between the single quotes."
+msgstr ""
+"विभिन्न खोज प्रकार के परिणामों के उदाहरण देकर स्पष्ट करने के लिए, एक खोज शब्द 'सुप्रीम "
+"कोर्ट' के लिए किया गया था। परिणाम है कि खोज सूचकांक और शब्द क्रम खोज परिणामों में एक "
+"फर्क को दर्शाते हैं। केवल परिणाम गिनती और खोज ही इन उदाहरणों में है। खोज निष्पादित हमेशा "
+"एक उद्धरण के बीच होगा।"
+
+#: ../../source/searching.rst:534
+msgid "|image1049|"
+msgstr "|छवि1049|"
+
+#: ../../source/searching.rst:536
+msgid "|image1050|"
+msgstr "|छवि 1050|"
+
+#: ../../source/searching.rst:538
+msgid "|image1051|"
+msgstr "|छवि 1051|"
+
+#: ../../source/searching.rst:540
+msgid "|image1052|"
+msgstr "|छवि 1052|"
+
+#: ../../source/searching.rst:542
+msgid "|image1053|"
+msgstr "|छवि 1053|"
+
+#: ../../source/searching.rst:544
+msgid "|image1054|"
+msgstr "|छवि 1054|"
+
+#: ../../source/searching.rst:546
+msgid "|image1055|"
+msgstr "|छवि 1055|"
+
+#: ../../source/searching.rst:548
+msgid "|image1056|"
+msgstr "|छवि 1056|"
+
+#: ../../source/searching.rst:550
+msgid "|image1057|"
+msgstr "|छवि1057|"
+
+#: ../../source/searching.rst:552
+msgid ""
+"You can also choose to use limiters in your search query. Some common "
+"limiters include dates, languages, record types, and item types. In the "
+"Advance Search, you can either click a box or key in data to limit your "
+"search. You can also apply the same limits with CCL by using the syntax in "
+"the following examples. In all"
+msgstr ""
+"आप भी अपनी खोज क्वेरी में limiters का उपयोग करने के लिए चुन सकते हैं। कुछ आम limiters "
+"दिनांक, भाषाओं, रिकॉर्ड प्रकार, और आइटम प्रकार शामिल हैं। एडवांस में खोजें, या तो आप डेटा "
+"में एक बॉक्स या कुंजी क्लिक करें अपनी खोज को सीमित करने के लिए कर सकते हैं। तुम भी निम्न "
+"उदाहरण में सिंटेक्स के उपयोग से सीसीएल के साथ ही सीमा लागू कर सकते हैं। सभी में"
+
+#: ../../source/searching.rst:558
+msgid "*By Date: su=supreme court and yr,st-numeric=>2000*"
+msgstr "*तिथि से: su = सर्वोच्च न्यायालय और yr,st-numeric => 2000*"
+
+#: ../../source/searching.rst:560
+msgid "|image1058|"
+msgstr "|छवि 1058|"
+
+#: ../../source/searching.rst:562
+msgid ""
+"When you limit by date, you can use the '>' (greater than), '<' (less than), "
+"'=' (equal), or 'yyyy-yyyy' (range) symbols."
+msgstr ""
+"जब आप तिथि तक सीमित करते हैं, तो आप इसका उपयोग कर सकते हैं '>' (से अधिक), '<' (से "
+"कम), '=' (समान), या 'yyyy-yyyy' (सीमा) प्रतीकों."
+
+#: ../../source/searching.rst:565
+msgid "*By Item Type: su=nursing and itype:BK*"
+msgstr "*द्वाराआइटम टाइप: su=नर्सिगand itype:BK*"
+
+#: ../../source/searching.rst:567
+msgid "|image1059|"
+msgstr "|छवि 1059|"
+
+#: ../../source/searching.rst:569
+msgid ""
+"Each library will have a different set of item types defined in their "
+"circulation configuration. When you set up item types, you define a code and "
+"a name for each one. The name will appear on the Advance Search page. The "
+"code you assigned is used as a CCL search limit, formatted as 'itype:x', "
+"where 'x' is the assigned code. The initial set of item types in Koha will "
+"usually be edited to reflect your collections, so your item type limiters "
+"may be different than the initial ones. The initial item type limiters "
+"follow."
+msgstr ""
+"प्रत्येक पुस्तकालय मद प्रकार उनके प्रचलन विन्यास में परिभाषित करने का एक अलग सेट होगा। जब "
+"आप आइटम प्रकार सेट करें, आपको एक कोड और हर एक के लिए एक नाम को परिभाषित। नाम "
+"एडवांस खोज पृष्ठ पर दिखाई देगा। ': एक्स itype' है, जहां 'एक्स' सौंपा कोड है कोड आपको "
+"सौंपा के रूप में स्वरूपित, एक सीसीएल खोज सीमा के रूप में प्रयोग किया जाता है। कोहा में आइटम "
+"प्रकार की प्रारंभिक सेट आमतौर पर अपने संग्रह प्रतिबिंबित करने के लिए संपादित किया जाएगा, "
+"तो अपने आइटम प्रकार limiters प्रारंभिक लोगों की तुलना में अलग हो सकता है। प्रारंभिक "
+"आइटम प्रकार limiters का पालन करें।"
+
+#: ../../source/searching.rst:578
+msgid "itype:BKS Books, Booklets, Workbooks"
+msgstr "itype:BKS पुस्तकें, Booklets, वर्कबुक"
+
+#: ../../source/searching.rst:580
+msgid "itype:SR Audio Cassettes, CDs"
+msgstr "itype:SR ऑडियो कैसेट, सीडी"
+
+#: ../../source/searching.rst:582
+msgid "itype:IR Binders"
+msgstr "itype:IR बाइंडर"
+
+#: ../../source/searching.rst:584
+msgid "itype:CF CD-ROMs, DVD-ROMs, General Online Resources"
+msgstr "itype:CF सीडी-रोम, डीवीडी-रोम, जनरल ऑनलाइन संसाधन"
+
+#: ../../source/searching.rst:586
+msgid "itype:VR DVDs, VHS"
+msgstr "itype:VR डीवीडी, वीएचएस"
+
+#: ../../source/searching.rst:588
+msgid "itype:KT Kit"
+msgstr "itype:KT किट"
+
+#: ../../source/searching.rst:590
+msgid "itype:AR Models"
+msgstr "itype:AR मॉडल"
+
+#: ../../source/searching.rst:592
+msgid "itype:SER Serials"
+msgstr "itype:SER सीरियलों"
+
+#: ../../source/searching.rst:594
+msgid "*By format: su=supreme court not l-format:sr*"
+msgstr "*प्रारूप द्वारा: su=सुप्रीम कोर्ट not l-format:sr*"
+
+#: ../../source/searching.rst:596
+msgid "|image1060|"
+msgstr "|छवि 1060|"
+
+#: ../../source/searching.rst:598
+msgid ""
+"The format limiters are derived from a combination of LDR, 006 and 007 "
+"positions. The formats that are currently defined are the following."
+msgstr ""
+"प्रारूप limiters लीडर, 006 और 007 पदों के मेल से निकाली गई है। स्वरूपों है कि वर्तमान में "
+"परिभाषित कर रहे हैं अनुसरण कर रहे हैं।"
+
+#: ../../source/searching.rst:601
+msgid "l-format:ta Regular print"
+msgstr "l-format:ta नियमित प्रिंट"
+
+#: ../../source/searching.rst:603
+msgid "l-format:tb Large print"
+msgstr "l-format:tb बड़े प्रिंट"
+
+#: ../../source/searching.rst:605
+msgid "l-format:fk Braille"
+msgstr "l-format:fk ब्रेल"
+
+#: ../../source/searching.rst:607
+msgid "l-format:sd CD audio"
+msgstr "l-format:sd ऑडियो सीडी"
+
+#: ../../source/searching.rst:609
+msgid "l-format:ss Cassette recording"
+msgstr "l-format:ss कैसेट रिकॉर्डिंग"
+
+#: ../../source/searching.rst:611
+msgid "l-format:vf VHS tape"
+msgstr "l-प्रारूप:vf वीएचएस टेपe"
+
+#: ../../source/searching.rst:613
+msgid "l-format:vd DVD video"
+msgstr "l-प्रारूप:vd डीवीडी विडियो"
+
+#: ../../source/searching.rst:615
+msgid "l-format:co CD software"
+msgstr "l-प्रारूप:co सीडी सोफ्टवेयर"
+
+#: ../../source/searching.rst:617
+msgid "l-format:cr Website"
+msgstr "l-format:cr वेबसाइट"
+
+#: ../../source/searching.rst:619
+msgid "*By content type: su=supreme court not ctype:l*"
+msgstr "*By सामग्री प्रकार: su=सर्वोच्च न्यायालय नहीं ctype:l*"
+
+#: ../../source/searching.rst:621
+msgid "|image1061|"
+msgstr "|छवि 1061|"
+
+#: ../../source/searching.rst:623
+msgid "The content types are taken from the 008 MARC tag, positions 24-27."
+msgstr "सामग्री प्रकार 008 मार्क टैग से ले रहे हैं, 24-27 स्थिति."
+
+#: ../../source/searching.rst:625
+msgid ""
+"There are two other limiter types that are not described in this document. "
+"They are: Audience and Content. The only difference in the syntax of the CCL "
+"is the actual limiter. They are reproduced here just in case you would like "
+"to use these limiters."
+msgstr ""
+"वहाँ दो अन्य सीमक प्रकार है कि इस दस्तावेज़ में वर्णित नहीं कर रहे हैं। वे हैं: दर्शक और "
+"सामग्री। सीसीएल की वाक्य रचना में फर्क सिर्फ इतना वास्तविक सीमक है। वे यहाँ प्रतिलिपि हैं "
+"सिर्फ मामले में आप इन limiters का उपयोग करना चाहते हैं।"
+
+#: ../../source/searching.rst:633
+msgid "Koha Search Indexes"
+msgstr "कोहा खोज बॉक्स"
+
+#: ../../source/searching.rst:635
+msgid ""
+"By default, not all fields are indexed in the Zebra search engine, but many "
+"are. Below are the MARC21 fields that are indexed in Zebra."
+msgstr ""
+"डिफ़ॉल्ट रूप से, नहीं सभी क्षेत्रों ज़ेबरा खोज इंजन में अनुक्रमित रहे हैं, लेकिन कई हैं। नीचे "
+"MARC21 क्षेत्रों है कि ज़ेबरा में अनुक्रमित रहे हैं।"
+
+#: ../../source/searching.rst:639
+msgid "Field"
+msgstr "क्षेत्र"
+
+#: ../../source/searching.rst:639
+msgid "Description"
+msgstr "विवरण"
+
+#: ../../source/searching.rst:641
+msgid "Leader/06"
+msgstr "लीडर/06"
+
+#: ../../source/searching.rst:641
+msgid "Record-type, rtype"
+msgstr "रिकार्ड-प्रकार, rtype"
+
+#: ../../source/searching.rst:643
+msgid "Leader/07"
+msgstr "लीडर/07"
+
+#: ../../source/searching.rst:643
+msgid "Bib-level"
+msgstr "बिब-स्तर"
+
+#: ../../source/searching.rst:645
+msgid "Leader/06-07"
+msgstr "लीडर/06-07"
+
+#: ../../source/searching.rst:645 ../../source/searching.rst:827
+msgid "Material-type"
+msgstr "सामग्री-प्रकार"
+
+#: ../../source/searching.rst:647
+msgid "001"
+msgstr "001"
+
+#: ../../source/searching.rst:647
+msgid "Control-number"
+msgstr "नियंत्रण-संख्या"
+
+#: ../../source/searching.rst:649
+msgid "005"
+msgstr "005"
+
+#: ../../source/searching.rst:649
+msgid "Date/time-last-modified, dtlm, date-time-last-modified"
+msgstr "दिनांक/समय-अंतिम संशोधित, dtlm, दिनांक-समय-अंतिम संशोधित"
+
+#: ../../source/searching.rst:651
+msgid "007"
+msgstr "007"
+
+#: ../../source/searching.rst:651
+msgid ""
+"Microform-generation:n:range(data,11,1), Material-type,ff7-00:w:"
+"range(data,0,1), ff7-01:w:range(data,1,1), ff7-02:w:range(data,2,1), "
+"ff7-01-02:w:range(data,0,2)"
+msgstr ""
+"माइक्रोफॉर्म-पीढ़ी:n:range(data,11,1), सामग्री-प्रकार,ff7-00:w:range(data,0,1), "
+"ff7-01:w:range(data,1,1), ff7-02:w:range(data,2,1), ff7-01-02:w:"
+"range(data,0,2)"
+
+#: ../../source/searching.rst:653
+msgid "008"
+msgstr "008"
+
+#: ../../source/searching.rst:653
+msgid ""
+"date-entered-on-file:n:range(data,0,5), date-entered-on-file:s:"
+"range(data,0,5), pubdate:w:range(data,7,4), pubdate:n:range(data,7,4), "
+"pubdate:y:range(data,7,4), pubdate:s:range(data,7,4), pl:w:range(data,15,3), "
+"ta:w:range(data,22,1), ff8-23:w:range(data,23,1), ff8-29:w:range(data,29,1), "
+"lf:w:range(data,33,1), bio:w:range(data,34,1), ln:n:range(data,35,3), ctype:"
+"w:range(data,24,4), Record-source:w:range(data,39,0)"
+msgstr ""
+"date-entered-on-file:n:range(data,0,5), date-entered-on-file:s:"
+"range(data,0,5), pubdate:w:range(data,7,4), pubdate:n:range(data,7,4), "
+"pubdate:y:range(data,7,4), pubdate:s:range(data,7,4), pl:w:range(data,15,3), "
+"ta:w:range(data,22,1), ff8-23:w:range(data,23,1), ff8-29:w:range(data,29,1), "
+"lf:w:range(data,33,1), bio:w:range(data,34,1), ln:n:range(data,35,3), ctype:"
+"w:range(data,24,4), Record-source:w:range(data,39,0)"
+
+#: ../../source/searching.rst:655
+msgid "010"
+msgstr "010"
+
+#: ../../source/searching.rst:655 ../../source/searching.rst:657
+msgid "LC-card-number, Identifier-standard"
+msgstr "LC-कार्ड नंबर, पहचानकर्ता-मानक"
+
+#: ../../source/searching.rst:657
+msgid "011"
+msgstr "011"
+
+#: ../../source/searching.rst:659
+msgid "015"
+msgstr "015"
+
+#: ../../source/searching.rst:659
+msgid ""
+"BNB-card-number, BGF-number, Number-db, Number-natl-biblio, Identifier-"
+"standard"
+msgstr ""
+"BNB-card-number, BGF-number, Number-db, Number-natl-biblio, Identifier-"
+"standard"
+
+#: ../../source/searching.rst:661
+msgid "017"
+msgstr "017"
+
+#: ../../source/searching.rst:661
+msgid "Number-legal-deposit, Identifier-standard"
+msgstr "संख्या-कानूनी जमा, पहचानकर्ता मानक"
+
+#: ../../source/searching.rst:663
+msgid "018"
+msgstr "018"
+
+#: ../../source/searching.rst:663 ../../source/searching.rst:667
+#: ../../source/searching.rst:671 ../../source/searching.rst:673
+#: ../../source/searching.rst:677 ../../source/searching.rst:679
+msgid "Identifier-standard"
+msgstr "पहचानकर्ता-मानक"
+
+#: ../../source/searching.rst:665
+msgid "020$a"
+msgstr "020$a"
+
+#: ../../source/searching.rst:665
+msgid "ISBN:w, Identifier-standard:w"
+msgstr "ISBN:w, Identifier-standard:w"
+
+#: ../../source/searching.rst:667
+msgid "020"
+msgstr "020"
+
+#: ../../source/searching.rst:669
+msgid "022$a"
+msgstr "022$a"
+
+#: ../../source/searching.rst:669
+msgid "ISSN:w, Identifier-standard:w"
+msgstr "ISSN:w, Identifier-standard:w"
+
+#: ../../source/searching.rst:671
+msgid "022"
+msgstr "022"
+
+#: ../../source/searching.rst:673
+msgid "023"
+msgstr "023"
+
+#: ../../source/searching.rst:675
+msgid "024$a"
+msgstr "024$a"
+
+#: ../../source/searching.rst:675
+msgid "Identifier-other"
+msgstr "पहचानकर्ता-दूसरे को"
+
+#: ../../source/searching.rst:677
+msgid "024"
+msgstr "024"
+
+#: ../../source/searching.rst:679
+msgid "025"
+msgstr "025"
+
+#: ../../source/searching.rst:681
+msgid "027"
+msgstr "027"
+
+#: ../../source/searching.rst:681
+msgid "Report-number, Identifier-standard"
+msgstr "रिपोर्ट-संख्या, पहचानकर्ता मानक"
+
+#: ../../source/searching.rst:683
+msgid "028"
+msgstr "028"
+
+#: ../../source/searching.rst:683
+msgid "Number-music-publisher, Identifier-standard"
+msgstr "संख्या-संगीत-प्रकाशक, पहचानकर्ता मानक"
+
+#: ../../source/searching.rst:685
+msgid "030"
+msgstr "030"
+
+#: ../../source/searching.rst:685
+msgid "CODEN, Identifier-standard"
+msgstr "CODEN, पहचानकर्ता मानक"
+
+#: ../../source/searching.rst:687
+msgid "034"
+msgstr "034"
+
+#: ../../source/searching.rst:687
+msgid "Map-scale"
+msgstr "मानचित्र-पैमाना"
+
+#: ../../source/searching.rst:689
+msgid "037"
+msgstr "037"
+
+#: ../../source/searching.rst:689
+msgid "Identifier-standard, Stock-number"
+msgstr "पहचानकर्ता-मानक, शेयर नंबर"
+
+#: ../../source/searching.rst:691
+msgid "040"
+msgstr "040"
+
+#: ../../source/searching.rst:691
+msgid "Code-institution, Record-source"
+msgstr "कोड-संस्था, रिकॉर्ड स्रोत"
+
+#: ../../source/searching.rst:693
+msgid "041$a"
+msgstr "041$a"
+
+#: ../../source/searching.rst:693
+msgid "ln-audio"
+msgstr "ln-ऑडियो"
+
+#: ../../source/searching.rst:695
+msgid "041$h"
+msgstr "041$h"
+
+#: ../../source/searching.rst:695
+msgid "language-original"
+msgstr "भाषा-मूल"
+
+#: ../../source/searching.rst:697
+msgid "041$j"
+msgstr "041$j"
+
+#: ../../source/searching.rst:697
+msgid "ln-subtitle"
+msgstr "ln-उपशीर्षक"
+
+#: ../../source/searching.rst:699
+msgid "041"
+msgstr "041"
+
+#: ../../source/searching.rst:701
+msgid "043"
+msgstr "043"
+
+#: ../../source/searching.rst:701
+msgid "Code-geographic"
+msgstr "कोड-भौगोलिक"
+
+#: ../../source/searching.rst:703
+msgid "050$b"
+msgstr "050$b"
+
+#: ../../source/searching.rst:703 ../../source/searching.rst:705
+msgid "LC-call-number:w, LC-call-number:p, LC-call-number:s"
+msgstr ""
+"नियंत्रण रेखा फोन नंबर: डब्ल्यू, नियंत्रण रेखा फोन नंबर: पी, नियंत्रण रेखा फोन नंबर: एस"
+
+#: ../../source/searching.rst:705
+msgid "050"
+msgstr "050"
+
+#: ../../source/searching.rst:707
+msgid "052"
+msgstr "052"
+
+#: ../../source/searching.rst:707
+msgid "Geographic-class"
+msgstr "भौगोलिक-क्लास"
+
+#: ../../source/searching.rst:709
+msgid "060"
+msgstr "060"
+
+#: ../../source/searching.rst:709
+msgid "NLM-call-number"
+msgstr "NLM-कॉल-नंबर"
+
+#: ../../source/searching.rst:711
+msgid "070"
+msgstr "070"
+
+#: ../../source/searching.rst:711
+msgid "NAL-call-number"
+msgstr "NAL-कॉल-नंबर"
+
+#: ../../source/searching.rst:713
+msgid "080"
+msgstr "080"
+
+#: ../../source/searching.rst:713
+msgid "UDC-classification"
+msgstr "यूडीसी-वर्गीकरण"
+
+#: ../../source/searching.rst:715
+msgid "082"
+msgstr "082"
+
+#: ../../source/searching.rst:715
+msgid "Dewey-classification:w, Dewey-classification:s"
+msgstr "डेवी-वर्गीकरण: डब्ल्यू, डेवी-वर्गीकरण: एस"
+
+#: ../../source/searching.rst:717
+msgid "086"
+msgstr "086"
+
+#: ../../source/searching.rst:717
+msgid "Number-govt-pub"
+msgstr "संख्या-सरकार-पब"
+
+#: ../../source/searching.rst:719
+msgid "100$9"
+msgstr "100$9"
+
+#: ../../source/searching.rst:719 ../../source/searching.rst:767
+msgid "Cross-Reference:w, Koha-Auth-Number"
+msgstr "पार-संदर्भ: डब्ल्यू, कोहा-प्रमाणीकरण संख्या"
+
+#: ../../source/searching.rst:721
+msgid "100$a"
+msgstr "100$a"
+
+#: ../../source/searching.rst:721
+msgid ""
+"Author,Author:p, Author:s, Editor, Author-personal-bibliography, Author-"
+"personal-bibliography:p, Author-personal-bibliography:s"
+msgstr ""
+"लेखक, लेखक: पी, लेखक: एस, संपादक, लेखक-व्यक्तिगत-ग्रंथ सूची, लेखक-व्यक्तिगत-ग्रंथ सूची: पी, "
+"लेखक-व्यक्तिगत-ग्रंथ सूची: एस"
+
+#: ../../source/searching.rst:723
+msgid "100"
+msgstr "100"
+
+#: ../../source/searching.rst:723
+msgid ""
+"Author, Author-title, Author-name-personal, Name, Name-and-title, Personal-"
+"name"
+msgstr "लेखक, लेखक-शीर्षक, लेखक-नाम-व्यक्तिगत, नाम, नाम और शीर्षक, व्यक्तिगत नाम"
+
+#: ../../source/searching.rst:725
+msgid "110$9"
+msgstr "110$9"
+
+#: ../../source/searching.rst:727
+msgid "110"
+msgstr "110"
+
+#: ../../source/searching.rst:727
+msgid ""
+"Author, Author-title, Author-name-corporate, Name, Name-and-title, Corporate-"
+"name"
+msgstr "लेखक, लेखक-शीर्षक, लेखक-नाम-कॉर्पोरेट, नाम, नाम और शीर्षक, कॉर्पोरेट नाम"
+
+#: ../../source/searching.rst:729
+msgid "111$9"
+msgstr "111$9"
+
+#: ../../source/searching.rst:731
+msgid "111"
+msgstr "111"
+
+#: ../../source/searching.rst:731
+msgid ""
+"Author, Author-title, Author-name-corporate, Name, Name-and-title, "
+"Conference-name"
+msgstr "लेखक, लेखक-शीर्षक, लेखक-नाम-कॉर्पोरेट, नाम, नाम और शीर्षक, सम्मेलन-नाम"
+
+#: ../../source/searching.rst:733
+msgid "130$n"
+msgstr "130$n"
+
+#: ../../source/searching.rst:733 ../../source/searching.rst:753
+#: ../../source/searching.rst:757 ../../source/searching.rst:873
+#: ../../source/searching.rst:919 ../../source/searching.rst:945
+msgid "Thematic-number"
+msgstr "विषयगत-संख्या"
+
+#: ../../source/searching.rst:735
+msgid "130$r"
+msgstr "130$r"
+
+#: ../../source/searching.rst:735 ../../source/searching.rst:751
+#: ../../source/searching.rst:759 ../../source/searching.rst:875
+#: ../../source/searching.rst:921 ../../source/searching.rst:947
+msgid "Music-key"
+msgstr "संगीत-कुंजी"
+
+#: ../../source/searching.rst:737
+msgid "130$9"
+msgstr "130$9"
+
+#: ../../source/searching.rst:739
+msgid "130"
+msgstr "130"
+
+#: ../../source/searching.rst:739 ../../source/searching.rst:951
+msgid "Title, Title-uniform"
+msgstr "शीर्षक, शीर्षक-वर्दी"
+
+#: ../../source/searching.rst:741
+msgid "210"
+msgstr "210"
+
+#: ../../source/searching.rst:741 ../../source/searching.rst:743
+msgid "Title, Title-abbreviated"
+msgstr "शीर्षक, शीर्षक-संक्षिप्त"
+
+#: ../../source/searching.rst:743
+msgid "211"
+msgstr "211"
+
+#: ../../source/searching.rst:745
+msgid "212"
+msgstr "212"
+
+#: ../../source/searching.rst:745 ../../source/searching.rst:953
+msgid "Title, Title-other-variant"
+msgstr "शीर्षक, शीर्षक-दूसरे संस्करण"
+
+#: ../../source/searching.rst:747
+msgid "214"
+msgstr "214"
+
+#: ../../source/searching.rst:747
+msgid "Title, Title-expanded"
+msgstr "शीर्षक, शीर्षक-का विस्तार"
+
+#: ../../source/searching.rst:749
+msgid "222"
+msgstr "222"
+
+#: ../../source/searching.rst:749
+msgid "Title, Title-key"
+msgstr "शीर्षक, शीर्षक-कुंजी"
+
+#: ../../source/searching.rst:751
+msgid "240$r"
+msgstr "240$r"
+
+#: ../../source/searching.rst:753
+msgid "240$n"
+msgstr "240$n"
+
+#: ../../source/searching.rst:755
+msgid "240"
+msgstr "240"
+
+#: ../../source/searching.rst:755
+msgid "Title:w, Title:p, Title-uniform"
+msgstr "शीर्षक:w, शीर्षक:p, शीर्षक वर्दी"
+
+#: ../../source/searching.rst:757
+msgid "243$n"
+msgstr "243$n"
+
+#: ../../source/searching.rst:759
+msgid "243$r"
+msgstr "243$r"
+
+#: ../../source/searching.rst:761
+msgid "243"
+msgstr "243"
+
+#: ../../source/searching.rst:761
+msgid "Title:w, Title:p, Title-collective"
+msgstr "शीर्षक:w, शीर्षक:p, शीर्षक-सामूहिक"
+
+#: ../../source/searching.rst:763
+msgid "245$a"
+msgstr "245$a"
+
+#: ../../source/searching.rst:763
+msgid "Title-cover:w, Title-cover:p, Title-cover:s, Title:w, Title:p, Title:s"
+msgstr ""
+"शीर्षक कवर: डब्ल्यू, शीर्षक से कवर: पी, शीर्षक से कवर: एस, शीर्षक: डब्ल्यू, शीर्षक: पी, "
+"शीर्षक: एस"
+
+#: ../../source/searching.rst:765
+msgid "245$c"
+msgstr "245$c"
+
+#: ../../source/searching.rst:765
+msgid "Author, Author-in-order:w, Author-in-order:p, Author-in-order:s"
+msgstr "लेखक, लेखक-में-आदेश: डब्ल्यू, लेखक-में-आदेश: पी, लेखक-में-आदेश: एस"
+
+#: ../../source/searching.rst:767
+msgid "245$9"
+msgstr "245$9"
+
+#: ../../source/searching.rst:769
+msgid "245"
+msgstr "245"
+
+#: ../../source/searching.rst:769
+msgid "Title:w, Title:p"
+msgstr "शीर्षक:w, शीर्षक:p"
+
+#: ../../source/searching.rst:771
+msgid "246"
+msgstr "246"
+
+#: ../../source/searching.rst:771
+msgid "Title, Title:p, Title-abbreviated, Title-expanded, Title-former"
+msgstr "शीर्षक, शीर्षक: पी, शीर्षक-संक्षिप्त, शीर्षक-विस्तार किया है, शीर्षक-पूर्व"
+
+#: ../../source/searching.rst:773
+msgid "247"
+msgstr "247"
+
+#: ../../source/searching.rst:773
+msgid "Title, Title:p, Title-former, Title-other-variant, Related-periodical"
+msgstr "शीर्षक, शीर्षक: पी, शीर्षक-पूर्व, शीर्षक-अन्य-संस्करण, संबंधित पत्रिका"
+
+#: ../../source/searching.rst:775
+msgid "260$a"
+msgstr "260$a"
+
+#: ../../source/searching.rst:775
+msgid "pl:w, pl:p"
+msgstr "pl:w, pl:p"
+
+#: ../../source/searching.rst:777
+msgid "260$b"
+msgstr "260$b"
+
+#: ../../source/searching.rst:777
+msgid "Publisher:w, Publisher:p"
+msgstr "प्रकाशक: डब्ल्यू, प्रकाशक: पी"
+
+#: ../../source/searching.rst:779
+msgid "260$c"
+msgstr "260$c"
+
+#: ../../source/searching.rst:779
+msgid "copydate, copydate:s"
+msgstr "copydate, copydate:s"
+
+#: ../../source/searching.rst:781
+msgid "260"
+msgstr "260"
+
+#: ../../source/searching.rst:781
+msgid "Provider, pl"
+msgstr "प्रदाता, pl"
+
+#: ../../source/searching.rst:783
+msgid "264"
+msgstr "264"
+
+#: ../../source/searching.rst:783
+msgid "Provider"
+msgstr "प्रदाता"
+
+#: ../../source/searching.rst:785
+msgid "300"
+msgstr "300"
+
+#: ../../source/searching.rst:785
+msgid "Extent:w, Extent:p"
+msgstr "Extent:w, Extent:p"
+
+#: ../../source/searching.rst:787
+msgid "400$a"
+msgstr "400$a"
+
+#: ../../source/searching.rst:787 ../../source/searching.rst:797
+#: ../../source/searching.rst:807 ../../source/searching.rst:855
+#: ../../source/searching.rst:865 ../../source/searching.rst:931
+#: ../../source/searching.rst:937 ../../source/searching.rst:969
+#: ../../source/searching.rst:977 ../../source/searching.rst:985
+msgid "Name-and-title"
+msgstr "नाम-और-शीर्षक"
+
+#: ../../source/searching.rst:789
+msgid "400$t"
+msgstr "400$t"
+
+#: ../../source/searching.rst:789 ../../source/searching.rst:971
+#: ../../source/searching.rst:979 ../../source/searching.rst:989
+msgid "Author-title, Name-and-title, Title, Title-series"
+msgstr "लेखक-शीर्षक, नाम और शीर्षक, शीर्षक, शीर्षक सीरीज"
+
+#: ../../source/searching.rst:791
+msgid "400$9"
+msgstr "400$9"
+
+#: ../../source/searching.rst:793
+msgid "400"
+msgstr "400"
+
+#: ../../source/searching.rst:793 ../../source/searching.rst:975
+msgid "Author, Author-name-personal, Name, Personal-name"
+msgstr "लेखक, लेखक-नाम-व्यक्तिगत, नाम, व्यक्तिगत नाम"
+
+#: ../../source/searching.rst:795 ../../source/searching.rst:803
+msgid "410"
+msgstr "410"
+
+#: ../../source/searching.rst:795 ../../source/searching.rst:927
+msgid "Author, Corporate-name"
+msgstr "लेखक, कॉर्पोरेट-नाम"
+
+#: ../../source/searching.rst:797
+msgid "410$a"
+msgstr "410$a"
+
+#: ../../source/searching.rst:799
+msgid "410$t"
+msgstr "410$t"
+
+#: ../../source/searching.rst:799
+msgid "Author-title, Title, Title-series"
+msgstr "लेखक-शीर्षक, शीर्षक, शीर्षक सीरीज"
+
+#: ../../source/searching.rst:801
+msgid "410$9"
+msgstr "410$9"
+
+#: ../../source/searching.rst:803 ../../source/searching.rst:811
+msgid "Author-name-corporate, Name"
+msgstr "लेखक-नाम-कॉर्पोरेट, नाम"
+
+#: ../../source/searching.rst:805 ../../source/searching.rst:811
+msgid "411"
+msgstr "411"
+
+#: ../../source/searching.rst:805
+msgid "Author, Conference-name"
+msgstr "लेखक, सम्मेलन-नाम"
+
+#: ../../source/searching.rst:807
+msgid "411$a"
+msgstr "411$a"
+
+#: ../../source/searching.rst:809
+msgid "411$t"
+msgstr "411$t"
+
+#: ../../source/searching.rst:809
+msgid "Author-title, Title-series"
+msgstr "लेखक-शीर्षक, शीर्षक सीरीज"
+
+#: ../../source/searching.rst:813
+msgid "440$a"
+msgstr "440$a"
+
+#: ../../source/searching.rst:813 ../../source/searching.rst:819
+msgid "Title-series:w, Title-series:p"
+msgstr "शीर्षक सीरीज: डब्ल्यू, शीर्षक सीरीज: p"
+
+#: ../../source/searching.rst:815
+msgid "440$9"
+msgstr "440$9"
+
+#: ../../source/searching.rst:817
+msgid "440"
+msgstr "440"
+
+#: ../../source/searching.rst:817
+msgid "Title-series:w, Title-series:p, Title, Title-series"
+msgstr "शीर्षक सीरीज: डब्ल्यू, शीर्षक सीरीज: पी, शीर्षक, शीर्षक सीरीज"
+
+#: ../../source/searching.rst:819
+msgid "490$a"
+msgstr "490$a"
+
+#: ../../source/searching.rst:821
+msgid "490"
+msgstr "490"
+
+#: ../../source/searching.rst:821 ../../source/searching.rst:995
+#: ../../source/searching.rst:997
+msgid "Title, Title-series"
+msgstr "शीर्षक, शीर्षक सीरीज"
+
+#: ../../source/searching.rst:823
+msgid "490$9"
+msgstr "490$9"
+
+#: ../../source/searching.rst:825
+msgid "500"
+msgstr "500"
+
+#: ../../source/searching.rst:825 ../../source/searching.rst:833
+#: ../../source/searching.rst:845 ../../source/searching.rst:1079
+msgid "Note:w, Note:p"
+msgstr "Note:w, Note:p"
+
+#: ../../source/searching.rst:827
+msgid "502"
+msgstr "502"
+
+#: ../../source/searching.rst:829
+msgid "505$r"
+msgstr "505$r"
+
+#: ../../source/searching.rst:831
+msgid "505$t"
+msgstr "505$t"
+
+#: ../../source/searching.rst:833
+msgid "505"
+msgstr "505"
+
+#: ../../source/searching.rst:835
+msgid "510"
+msgstr "510"
+
+#: ../../source/searching.rst:835
+msgid "Indexed-by"
+msgstr "अनुक्रमित-से"
+
+#: ../../source/searching.rst:837
+msgid "520"
+msgstr "520"
+
+#: ../../source/searching.rst:837
+msgid "Abstract:w, Abstract:p"
+msgstr "Abstract:w, Abstract:p"
+
+#: ../../source/searching.rst:839
+msgid "521$a"
+msgstr "521$a"
+
+#: ../../source/searching.rst:839
+msgid "lex:n"
+msgstr "lex:n"
+
+#: ../../source/searching.rst:841
+msgid "526$c"
+msgstr "526$c"
+
+#: ../../source/searching.rst:841
+msgid "arl, arl:n"
+msgstr "arl, arl:n"
+
+#: ../../source/searching.rst:843
+msgid "526$d"
+msgstr "526$d"
+
+#: ../../source/searching.rst:843
+msgid "arp, arp:n"
+msgstr "arp, arp:n"
+
+#: ../../source/searching.rst:845
+msgid "590"
+msgstr "590"
+
+#: ../../source/searching.rst:847
+msgid "600$a"
+msgstr "600$a"
+
+#: ../../source/searching.rst:847
+msgid "Name-and-title, Name, Personal-name, Subject-name-personal, Subject"
+msgstr "नाम और शीर्षक, नाम, व्यक्तिगत नाम, विषय नाम-व्यक्तिगत, विषय"
+
+#: ../../source/searching.rst:849
+msgid "600$t"
+msgstr "600$t"
+
+#: ../../source/searching.rst:849
+msgid "Name-and-title, Title, Subject"
+msgstr "नाम और शीर्षक, शीर्षक, विषय"
+
+#: ../../source/searching.rst:851
+msgid "600$9"
+msgstr "600$9"
+
+#: ../../source/searching.rst:853
+msgid "600"
+msgstr "600"
+
+#: ../../source/searching.rst:853
+msgid "Name, Personal-name, Subject-name-personal, Subject"
+msgstr "नाम, व्यक्तिगत नाम, विषय-नाम-व्यक्तिगत, विषय"
+
+#: ../../source/searching.rst:855
+msgid "610$a"
+msgstr "610$a"
+
+#: ../../source/searching.rst:857
+msgid "610$t"
+msgstr "610$t"
+
+#: ../../source/searching.rst:857 ../../source/searching.rst:867
+msgid "Name-and-title, Title"
+msgstr "नाम और शीर्षक, शीर्षक"
+
+#: ../../source/searching.rst:859
+msgid "610$9"
+msgstr "610$9"
+
+#: ../../source/searching.rst:861
+msgid "610"
+msgstr "610"
+
+#: ../../source/searching.rst:861
+msgid "Name, Subject, Corporate-name"
+msgstr "नाम, विषय, कॉर्पोरेट नाम"
+
+#: ../../source/searching.rst:863 ../../source/searching.rst:871
+msgid "611"
+msgstr "611"
+
+#: ../../source/searching.rst:865
+msgid "611$a"
+msgstr "611$a"
+
+#: ../../source/searching.rst:867
+msgid "611$t"
+msgstr "611$t"
+
+#: ../../source/searching.rst:869
+msgid "611$9"
+msgstr "611$9"
+
+#: ../../source/searching.rst:871
+msgid "Name, Subject"
+msgstr "नाम, विषय"
+
+#: ../../source/searching.rst:873
+msgid "630$n"
+msgstr "630$n"
+
+#: ../../source/searching.rst:875
+msgid "630$r"
+msgstr "630$r"
+
+#: ../../source/searching.rst:877
+msgid "630$9"
+msgstr "630$9"
+
+#: ../../source/searching.rst:879
+msgid "630"
+msgstr "630"
+
+#: ../../source/searching.rst:881
+msgid "650$9"
+msgstr "650$9"
+
+#: ../../source/searching.rst:883
+msgid "650"
+msgstr "650"
+
+#: ../../source/searching.rst:883 ../../source/searching.rst:893
+#: ../../source/searching.rst:913
+msgid "Subject, Subject:p"
+msgstr "विषय, विषय:p"
+
+#: ../../source/searching.rst:885
+msgid "651$9"
+msgstr "651$9"
+
+#: ../../source/searching.rst:887
+msgid "651"
+msgstr "651"
+
+#: ../../source/searching.rst:887
+msgid "Name-geographic, Subject,Subject:p"
+msgstr "नाम-भौगोलिक, विषय, विषय: पी"
+
+#: ../../source/searching.rst:889
+msgid "652$9"
+msgstr "652$9"
+
+#: ../../source/searching.rst:891
+msgid "653$9"
+msgstr "653$9"
+
+#: ../../source/searching.rst:893
+msgid "653"
+msgstr "653"
+
+#: ../../source/searching.rst:895
+msgid "654$9"
+msgstr "654$9"
+
+#: ../../source/searching.rst:897
+msgid "654"
+msgstr "654"
+
+#: ../../source/searching.rst:899
+msgid "655$9"
+msgstr "655$9"
+
+#: ../../source/searching.rst:901
+msgid "655"
+msgstr "655"
+
+#: ../../source/searching.rst:903
+msgid "656$9"
+msgstr "656$9"
+
+#: ../../source/searching.rst:905
+msgid "656"
+msgstr "656"
+
+#: ../../source/searching.rst:907
+msgid "657$9"
+msgstr "657$9"
+
+#: ../../source/searching.rst:909
+msgid "657"
+msgstr "657"
+
+#: ../../source/searching.rst:911
+msgid "690$9"
+msgstr "690$9"
+
+#: ../../source/searching.rst:913
+msgid "690"
+msgstr "690"
+
+#: ../../source/searching.rst:915
+msgid "700$9"
+msgstr "700$9"
+
+#: ../../source/searching.rst:915
+msgid "Cross-Reference, Koha-Auth-Number"
+msgstr "पार संदर्भ, कोहा-प्रमाणीकरण संख्या"
+
+#: ../../source/searching.rst:917
+msgid "700$a"
+msgstr "700$a"
+
+#: ../../source/searching.rst:917
+msgid "Author, Author:p"
+msgstr "लेखक, लेखक: पी"
+
+#: ../../source/searching.rst:919
+msgid "700$n"
+msgstr "700$n"
+
+#: ../../source/searching.rst:921
+msgid "700$r"
+msgstr "700$r"
+
+#: ../../source/searching.rst:923
+msgid "700$t"
+msgstr "700$t"
+
+#: ../../source/searching.rst:923 ../../source/searching.rst:929
+msgid "Author-title, Name-and-title, Title, Title-uniform"
+msgstr "लेखक-शीर्षक, नाम और शीर्षक, शीर्षक, शीर्षक वर्दी"
+
+#: ../../source/searching.rst:925
+msgid "700"
+msgstr "700"
+
+#: ../../source/searching.rst:925
+msgid ""
+"Author, Author-name-corporate, Author-name-personal, Name, Editor, Personal-"
+"name"
+msgstr "लेखक, लेखक-नाम-कॉर्पोरेट, लेखक-नाम-व्यक्तिगत, नाम, संपादक, व्यक्तिगत नाम"
+
+#: ../../source/searching.rst:927 ../../source/searching.rst:935
+msgid "710"
+msgstr "710"
+
+#: ../../source/searching.rst:929
+msgid "710$t"
+msgstr "710$t"
+
+#: ../../source/searching.rst:931
+msgid "710$a"
+msgstr "710$a"
+
+#: ../../source/searching.rst:933
+msgid "710$9"
+msgstr "710$9"
+
+#: ../../source/searching.rst:935
+msgid "Author, Name"
+msgstr "लेखक, नाम"
+
+#: ../../source/searching.rst:937
+msgid "711$a"
+msgstr "711$a"
+
+#: ../../source/searching.rst:939
+msgid "711$t"
+msgstr "711$t"
+
+#: ../../source/searching.rst:939
+msgid "Author-title, Title, Title-uniform"
+msgstr "लेखक-शीर्षक, शीर्षक, शीर्षक वर्दी"
+
+#: ../../source/searching.rst:941
+msgid "711$9"
+msgstr "711$9"
+
+#: ../../source/searching.rst:943
+msgid "711"
+msgstr "711"
+
+#: ../../source/searching.rst:943
+msgid "Author-name-corporate, Name, Conference-name"
+msgstr "लेखक-नाम-कॉर्पोरेट, नाम, सम्मेलन-नाम"
+
+#: ../../source/searching.rst:945
+msgid "730$n"
+msgstr "730$n"
+
+#: ../../source/searching.rst:947
+msgid "730$r"
+msgstr "730$r"
+
+#: ../../source/searching.rst:949
+msgid "730$9"
+msgstr "730$9"
+
+#: ../../source/searching.rst:951
+msgid "730"
+msgstr "730"
+
+#: ../../source/searching.rst:953
+msgid "740"
+msgstr "740"
+
+#: ../../source/searching.rst:955
+msgid "773$t"
+msgstr "773$t"
+
+#: ../../source/searching.rst:955
+msgid "Host-item"
+msgstr "मेजबान-आइटम"
+
+#: ../../source/searching.rst:957
+msgid "780$t"
+msgstr "780$t"
+
+#: ../../source/searching.rst:959
+msgid "780$w"
+msgstr "780$w"
+
+#: ../../source/searching.rst:959 ../../source/searching.rst:963
+#: ../../source/searching.rst:967
+msgid "Record-control-number"
+msgstr "रिकॉर्ड-नियंत्रण-संख्या"
+
+#: ../../source/searching.rst:961
+msgid "780"
+msgstr "780"
+
+#: ../../source/searching.rst:961
+msgid "Title, Title-former, Related-periodical"
+msgstr "शीर्षक, शीर्षक-पूर्व, संबंधित-पत्रिका"
+
+#: ../../source/searching.rst:963
+msgid "785$w"
+msgstr "785$w"
+
+#: ../../source/searching.rst:965
+msgid "785"
+msgstr "785"
+
+#: ../../source/searching.rst:965
+msgid "Related-periodical"
+msgstr "संबंधित-पत्रिका"
+
+#: ../../source/searching.rst:967
+msgid "787$w"
+msgstr "787$w"
+
+#: ../../source/searching.rst:969
+msgid "800$a"
+msgstr "800$a"
+
+#: ../../source/searching.rst:971
+msgid "800$t"
+msgstr "800$t"
+
+#: ../../source/searching.rst:973
+msgid "800$9"
+msgstr "800$9"
+
+#: ../../source/searching.rst:975
+msgid "800"
+msgstr "800"
+
+#: ../../source/searching.rst:977
+msgid "810$a"
+msgstr "810$a"
+
+#: ../../source/searching.rst:979
+msgid "810$t"
+msgstr "810$t"
+
+#: ../../source/searching.rst:981
+msgid "810$9"
+msgstr "810$9"
+
+#: ../../source/searching.rst:983
+msgid "810"
+msgstr "810"
+
+#: ../../source/searching.rst:983
+msgid "Author, Corporate-name, Author-name-corporate, Name"
+msgstr "लेखक, कॉर्पोरेट-नाम, लेखक-नाम-कॉर्पोरेट, नाम"
+
+#: ../../source/searching.rst:985
+msgid "811$a"
+msgstr "811$a"
+
+#: ../../source/searching.rst:987
+msgid "811$9"
+msgstr "811$9"
+
+#: ../../source/searching.rst:989
+msgid "811$t"
+msgstr "811$t"
+
+#: ../../source/searching.rst:991
+msgid "811"
+msgstr "811"
+
+#: ../../source/searching.rst:991
+msgid "Author, Author-name-corporate, Name, Conference-name"
+msgstr "लेखक, लेखक-नाम-कॉर्पोरेट, नाम, सम्मेलन-नाम"
+
+#: ../../source/searching.rst:993
+msgid "830$9"
+msgstr "830$9"
+
+#: ../../source/searching.rst:995
+msgid "830"
+msgstr "830"
+
+#: ../../source/searching.rst:997
+msgid "840"
+msgstr "840"
+
+#: ../../source/searching.rst:999
+msgid "942$0"
+msgstr "942$0"
+
+#: ../../source/searching.rst:999
+msgid "totalissues:n, totalissues:s"
+msgstr "totalissues:n, totalissues:s"
+
+#: ../../source/searching.rst:1001
+msgid "942$2"
+msgstr "942$2"
+
+#: ../../source/searching.rst:1001
+msgid "cn-bib-source"
+msgstr "cn-बिब-स्रोत"
+
+#: ../../source/searching.rst:1003
+msgid "942$6"
+msgstr "942$6"
+
+#: ../../source/searching.rst:1003
+msgid "cn-bib-sort:n, cn-bib-sort:s"
+msgstr "cn-bib-sort:n, cn-bib-sort:s"
+
+#: ../../source/searching.rst:1005
+msgid "942$c"
+msgstr "942$c"
+
+#: ../../source/searching.rst:1005
+msgid "itemtype:w"
+msgstr "itemtype:w"
+
+#: ../../source/searching.rst:1007
+msgid "942$n"
+msgstr "942$n"
+
+#: ../../source/searching.rst:1007
+msgid "Suppress:w, Suppress:n"
+msgstr "Suppress:w, Suppress:n"
+
+#: ../../source/searching.rst:1009
+msgid "942$h"
+msgstr "942$h"
+
+#: ../../source/searching.rst:1009
+msgid "cn-class"
+msgstr "cn-वर्ग"
+
+#: ../../source/searching.rst:1011
+msgid "942$i"
+msgstr "942$i"
+
+#: ../../source/searching.rst:1011
+msgid "cn-item"
+msgstr "cn-आइटम"
+
+#: ../../source/searching.rst:1013
+msgid "942$k"
+msgstr "942$k"
+
+#: ../../source/searching.rst:1013
+msgid "cn-prefix"
+msgstr "cn-उपसर्ग"
+
+#: ../../source/searching.rst:1015
+msgid "942$m"
+msgstr "942$m"
+
+#: ../../source/searching.rst:1015
+msgid "cn-suffix"
+msgstr "cn-प्रत्यय"
+
+#: ../../source/searching.rst:1017
+msgid "952$0"
+msgstr "952$0"
+
+#: ../../source/searching.rst:1017
+msgid "withdrawn:n, withdrawn:w"
+msgstr "निकालना:n, निकालना:w"
+
+#: ../../source/searching.rst:1019
+msgid "952$1"
+msgstr "952$1"
+
+#: ../../source/searching.rst:1019
+msgid "lost, lost:n"
+msgstr "लापता, लापता:n"
+
+#: ../../source/searching.rst:1021
+msgid "952$2"
+msgstr "952$2"
+
+#: ../../source/searching.rst:1021
+msgid "classification-source"
+msgstr "वर्गीकरण-स्त्रोत"
+
+#: ../../source/searching.rst:1023
+msgid "952$3"
+msgstr "952$3"
+
+#: ../../source/searching.rst:1023
+msgid "materials-specified"
+msgstr "सामग्री-निर्दिष्ट"
+
+#: ../../source/searching.rst:1025
+msgid "952$4"
+msgstr "952$4"
+
+#: ../../source/searching.rst:1025
+msgid "damaged:n, damaged:w"
+msgstr "क्षतिग्रस्त:n, क्षतिग्रस्त:w"
+
+#: ../../source/searching.rst:1027
+msgid "952$5"
+msgstr "952$5"
+
+#: ../../source/searching.rst:1027
+msgid "restricted:n, restricted:w"
+msgstr "प्रतिबन्धित:n, प्रतिबन्धित:w"
+
+#: ../../source/searching.rst:1029
+msgid "952$6"
+msgstr "952$6"
+
+#: ../../source/searching.rst:1029
+msgid "cn-sort:n, cn-sort:s"
+msgstr "cn-छटाई:n, cn-छटाई:s"
+
+#: ../../source/searching.rst:1031
+msgid "952$7"
+msgstr "952$7"
+
+#: ../../source/searching.rst:1031
+msgid "notforloan:n, notforloan:w"
+msgstr "notforloan:n, notforloan:w"
+
+#: ../../source/searching.rst:1033
+msgid "952$8"
+msgstr "952$8"
+
+#: ../../source/searching.rst:1033
+msgid "ccode"
+msgstr "ccode"
+
+#: ../../source/searching.rst:1035
+msgid "952$9"
+msgstr "952$9"
+
+#: ../../source/searching.rst:1035
+msgid "itemnumber:n, itemnumber:s"
+msgstr "itemnumber:n, itemnumber:s"
+
+#: ../../source/searching.rst:1037
+msgid "952$a"
+msgstr "952$a"
+
+#: ../../source/searching.rst:1037
+msgid "homebranch"
+msgstr "होमशाखा"
+
+#: ../../source/searching.rst:1039
+msgid "952$b"
+msgstr "952$b"
+
+#: ../../source/searching.rst:1039
+msgid "holdingbranch"
+msgstr "होल्डिंगशाखा"
+
+#: ../../source/searching.rst:1041
+msgid "952$c"
+msgstr "952$c"
+
+#: ../../source/searching.rst:1041
+msgid "location"
+msgstr "स्थान"
+
+#: ../../source/searching.rst:1043
+msgid "952$d"
+msgstr "952$d"
+
+#: ../../source/searching.rst:1043
+msgid "Date-of-acquisition, Date-of-acquisition:d, Date-of-acquisition:s"
+msgstr "दिनांक के-अधिग्रहण, दिनांक-की-अधिग्रहण: तिथि के-अधिग्रहण: एस"
+
+#: ../../source/searching.rst:1045
+msgid "952$e"
+msgstr "952$e"
+
+#: ../../source/searching.rst:1045
+msgid "acqsource"
+msgstr "acqsource"
+
+#: ../../source/searching.rst:1047
+msgid "952$f"
+msgstr "952$f"
+
+#: ../../source/searching.rst:1047
+msgid "coded-location-qualifier"
+msgstr "कोडित-स्थान-क्वालीफायर"
+
+#: ../../source/searching.rst:1049
+msgid "952$g"
+msgstr "952$g"
+
+#: ../../source/searching.rst:1049
+msgid "price"
+msgstr "मूल्य "
+
+#: ../../source/searching.rst:1051
+msgid "952$j"
+msgstr "952$j"
+
+#: ../../source/searching.rst:1051
+msgid "stack:n, stack:w"
+msgstr "stack:n, stack:w"
+
+#: ../../source/searching.rst:1053
+msgid "952$l"
+msgstr "952$l"
+
+#: ../../source/searching.rst:1053
+msgid "issues:n, issues:w, issues:s"
+msgstr "issues:n, issues:w, issues:s"
+
+#: ../../source/searching.rst:1055
+msgid "952$m"
+msgstr "952$m"
+
+#: ../../source/searching.rst:1055
+msgid "renewals:n, renewals:w"
+msgstr "नवीकरण: एन, नवीनीकरण: w"
+
+#: ../../source/searching.rst:1057
+msgid "952$n"
+msgstr "952$n"
+
+#: ../../source/searching.rst:1057
+msgid "reserves:n, reserves:w"
+msgstr "रिजर्व:n, रिजर्व:w"
+
+#: ../../source/searching.rst:1059
+msgid "952$o"
+msgstr "952$o"
+
+#: ../../source/searching.rst:1059
+msgid "Local-classification:w, Local-classification:p, Local-classification:s"
+msgstr "स्थानीय वर्गीकरण: डब्ल्यू, स्थानीय वर्गीकरण: पी, स्थानीय वर्गीकरण"
+
+#: ../../source/searching.rst:1061
+msgid "952$p"
+msgstr "952$p"
+
+#: ../../source/searching.rst:1061
+msgid "barcode, barcode:n"
+msgstr "बारकोड, बारकोड:n"
+
+#: ../../source/searching.rst:1063
+msgid "952$q"
+msgstr "952$q"
+
+#: ../../source/searching.rst:1063
+msgid "onloan:n, onloan:w"
+msgstr "ऋणपर:n, ऋणपर:w"
+
+#: ../../source/searching.rst:1065
+msgid "952$r"
+msgstr "952$r"
+
+#: ../../source/searching.rst:1065
+msgid "datelastseen"
+msgstr "datelastseen"
+
+#: ../../source/searching.rst:1067
+msgid "952$s"
+msgstr "952$s"
+
+#: ../../source/searching.rst:1067
+msgid "datelastborrowed"
+msgstr "datelastborrowed"
+
+#: ../../source/searching.rst:1069
+msgid "952$t"
+msgstr "952$t"
+
+#: ../../source/searching.rst:1069
+msgid "copynumber"
+msgstr "कॉपीनंबर"
+
+#: ../../source/searching.rst:1071
+msgid "952$u"
+msgstr "952$u"
+
+#: ../../source/searching.rst:1071
+msgid "uri:u"
+msgstr "uri:u"
+
+#: ../../source/searching.rst:1073
+msgid "952$v"
+msgstr "952$v"
+
+#: ../../source/searching.rst:1073
+msgid "replacementprice"
+msgstr "replacementprice"
+
+#: ../../source/searching.rst:1075
+msgid "952$w"
+msgstr "952$w"
+
+#: ../../source/searching.rst:1075
+msgid "replacementpricedate"
+msgstr "replacementpricedate"
+
+#: ../../source/searching.rst:1077
+msgid "952$y"
+msgstr "952$y"
+
+#: ../../source/searching.rst:1077
+msgid "itype:w"
+msgstr "itype:w"
+
+#: ../../source/searching.rst:1079
+msgid "952$z"
+msgstr "952$z"
+
+#: ../../source/searching.rst:1081
+msgid "999$c"
+msgstr "999$c"
+
+#: ../../source/searching.rst:1081
+msgid "Local-Number:n, Local-Number:w, Local-Number:s"
+msgstr "स्थानीय संख्या: एन, स्थानीय संख्या: डब्ल्यू, स्थानीय-गिनती"
+
+#: ../../source/searching.rst:1083
+msgid "999$d"
+msgstr "999$d"
+
+#: ../../source/searching.rst:1083
+msgid "biblioitemnumber:n, biblioitemnumber:w, biblioitemnumber:s"
+msgstr "biblioitemnumber:n, biblioitemnumber:w, biblioitemnumber:s"
+
+#: ../../source/searching.rst:1086
+msgid "Table: Indexes"
+msgstr "तालिका: इंडेक्स"

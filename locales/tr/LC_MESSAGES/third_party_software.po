@@ -1,0 +1,917 @@
+# Compendium of tr.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:53-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/third_party_software.rst:4
+msgid "Using third party software with Koha"
+msgstr ""
+
+#: ../../source/third_party_software.rst:9
+msgid "MarcEdit"
+msgstr "MarcEdit"
+
+#: ../../source/third_party_software.rst:11
+msgid ""
+"Many libraries like to use MarcEdit for modifications or data cleanup. If "
+"you'd like to do this you will need to download it at: http://marcedit."
+"reeset.net/"
+msgstr ""
+"Çoğu kütüphane değiştirme veya veri temizliği için MarcEdit programını "
+"kullanmaktadır. Bunu yapmak isterseniz programı şu adresten "
+"indirebilirsiniz: http://marcedit.reeset.net/"
+
+#: ../../source/third_party_software.rst:15
+msgid "**Important**"
+msgstr "**Önemli**"
+
+#: ../../source/third_party_software.rst:17
+msgid ""
+"Many of the actions described in this chapter can be done in Koha using :ref:"
+"`Marc Modification Templates <marc-modification-templates-label>`, but this "
+"section is here for those who are used to MarcEdit."
+msgstr ""
+"Bu bölümde açıklanan çoğu eylem Koha'da :ref:`Marc Modifikasyon Şablonları "
+"<marc-modification-templates-label>` kullanılarak yapılabilir, ancak "
+"buradaki bölüm MarcEdit kullananlar içindir."
+
+#: ../../source/third_party_software.rst:24
+msgid "Adding a prefix to call numbers"
+msgstr "Yer numaralarına ön ek ekleme"
+
+#: ../../source/third_party_software.rst:26
+msgid ""
+"When bringing data into Koha, you may want to first clean it up. One common "
+"action among Koha users is to add a prefix to the call number."
+msgstr ""
+"Koha'ya veri getirirken, öncelikle bu verileri temizlemeniz gerekebilir. "
+"Koha kullanıcıları arasında yaygın bir eylem yer numarasına bir önek "
+"eklemektir."
+
+#: ../../source/third_party_software.rst:29
+msgid "Open MarcEdit"
+msgstr "MarcEdit'i Aç"
+
+#: ../../source/third_party_software.rst:31
+msgid "|image1089|"
+msgstr "|image1089|"
+
+#: ../../source/third_party_software.rst:33
+msgid "Click 'MarcEditor'"
+msgstr "'MarcEditör'e tıkla"
+
+#: ../../source/third_party_software.rst:35
+msgid "Go to Tools > Edit Subfield Data"
+msgstr "Araçlar > Alt Alan Verisi Düzenle'ye gidin"
+
+#: ../../source/third_party_software.rst:37
+msgid "|image1090|"
+msgstr "|image1090|"
+
+#: ../../source/third_party_software.rst:39
+msgid ""
+"To prepend data the special character is: ^b  To simply prepend data to the "
+"beginning of a subfield, add ^b to the Field Data: textbox and the data to "
+"be appended in the Replace"
+msgstr ""
+"Başa veri eklemek için özel karakter: ^b Sadece bir alt alanın başlangıcına "
+"veri eklemek için, Alan Verisinin başına: metin kutusu ve değiştirme de başa "
+"eklenecek veriye ^b karakterini eklemeniz yeterlidir"
+
+#: ../../source/third_party_software.rst:43
+msgid "|image1091|"
+msgstr "|image1091|"
+
+#: ../../source/third_party_software.rst:45
+msgid ""
+"To prepend data to the beginning of the subfield while replacing a text "
+"string, add ^b[string to replace] to the Field Data textbox and the data to "
+"be appended in the Replace With textbox."
+msgstr ""
+"Bir metin dizesi değiştirirken alt alan başlangıcına veri eklemek için, Alan "
+"Verisi Metin kutusunun başına ve metin kutusu ile değişimde başa eklenecek "
+"olan veriye ^b karakterini ekleyin [değiştirme dizesi]."
+
+#: ../../source/third_party_software.rst:52
+msgid "Importing Excel data into Koha"
+msgstr "Excel verilerini Koha'ya aktarma"
+
+#: ../../source/third_party_software.rst:54
+msgid ""
+"Suppose you have records of your library in excel data sheet format and want "
+"them to import into Koha. But how will you do this? Koha will not let you "
+"import excel records directly. Well here is a very simple solution for you "
+"which will let you import your excel records in Koha easily. First, we will "
+"convert excel file into Marc file and then will import it into Koha."
+msgstr ""
+"Excel veri sayfası formatında kütüphaneye kayıtlarınız olduğunu ve bunları "
+"Koha'ya aktarmak istediğinizi varsayalım. Fakat bunu nasıl yapacaksınız? "
+"Koha, excel kayıtlarını doğrudan aktarmanıza izin vermez. Ama burada excel "
+"kayıtlarınızı kolaylıkla Koha'ya aktarmanızın çok basit bir çözümü var. "
+"Yapmamız gereken öncelikle excel dosyasını Marc dosyasına dönüştürmektir ve "
+"ondan sonra dönüştürdüğümüz bu dosyaları Koha'ya aktaracağız."
+
+#: ../../source/third_party_software.rst:61
+msgid "Follow the given steps to import your excel records into Koha"
+msgstr "Excel kayıtlarınızı Koha'ya aktarmak için verilen adımları izleyin"
+
+#: ../../source/third_party_software.rst:66
+msgid "Converting from Excel format into .mrk format"
+msgstr "Excel biçiminden .mrk biçimine dönüştürmek"
+
+#: ../../source/third_party_software.rst:68
+msgid ""
+"First, we will convert excel format into .mrk format. For this we will use "
+"MarcEdit. You can download it from http://marcedit.reeset.net/"
+msgstr ""
+"Öcelikle, excel biçimini .mrk biçimine dönüştüreceğiz. Bunun için MarcEdit "
+"kullanacağız. MarcEdit programını http://marcedit.reeset.net/ adresinden "
+"indirebilirsiniz"
+
+#: ../../source/third_party_software.rst:71
+msgid "Now open it and select Add-ins-->Delimited Text Translator."
+msgstr ""
+"Şimdi bunu açın ve Eklentiler-->Sınırlandırılmış Metin Çevirmeni'ni seçin."
+
+#: ../../source/third_party_software.rst:73
+msgid "|image1092|"
+msgstr "|image1092|"
+
+#: ../../source/third_party_software.rst:75
+msgid "Click Next when the following window appears."
+msgstr "Aşağıdaki pencere görüntülendiğinde İleri'yi tıklayın."
+
+#: ../../source/third_party_software.rst:77
+msgid "|image1093|"
+msgstr "|image1093|"
+
+#: ../../source/third_party_software.rst:79
+msgid "Browse for your excel file."
+msgstr "Excel dosyasını bulun."
+
+#: ../../source/third_party_software.rst:81
+msgid "|image1094|"
+msgstr "|image1094|"
+
+#: ../../source/third_party_software.rst:83
+msgid "Locate your excel file by choosing the format Excel File(\\*.xls)."
+msgstr "Excel dosyanızı, Excel Dosya biçimini (*.\\xls) seçerek bulun."
+
+#: ../../source/third_party_software.rst:85
+msgid "|image1095|"
+msgstr "|image1095|"
+
+#: ../../source/third_party_software.rst:87
+msgid ""
+"Similarly, fill all the other entries such as Output File, Excel Sheet Name "
+"and check UTF-8 Encoded (if required) and Click Next."
+msgstr ""
+"Benzer şekilde çıktı dosyası, Excel sayfa adı gibi diğer girdileri doldurun "
+"ve UTF-8 kodlu seçeneğini işaretleyin (gerekirse) ve İleri'yi tıklayın."
+
+#: ../../source/third_party_software.rst:90
+msgid "|image1096|"
+msgstr "|image1096|"
+
+#: ../../source/third_party_software.rst:92
+msgid ""
+"Now you will be prompted for mapping the fields to recognise the fields by "
+"standard marc format."
+msgstr ""
+"Şimdi alanları standart marc formatında tanımak için alanları eşleştirmeniz "
+"istenecektir."
+
+#: ../../source/third_party_software.rst:95
+msgid ""
+"Suppose for Field 0 that is first column I entered Map to: 022$a( Valid ISSN "
+"for the continuing resource) and then click on Apply."
+msgstr ""
+"Girdiğim ilk sütun olan 0 alanının şununla eşleştiğini var sayalım: "
+"022$a(süreğen kaynak için geçerli ISSN) ve sonra uygula üzerine tıklayalım."
+
+#: ../../source/third_party_software.rst:98
+msgid "|image1097|"
+msgstr "|image1097|"
+
+#: ../../source/third_party_software.rst:100
+#: ../../source/third_party_software.rst:272
+msgid "**Note**"
+msgstr "**Not**"
+
+#: ../../source/third_party_software.rst:102
+msgid ""
+"You can customize Indicators and all other things, for more information on "
+"marc21 format visit the `official library of congress site <http://www.loc."
+"gov/marc/bibliographic/>`__."
+msgstr ""
+"İndikatörleri ve diğer tüm öğeleri özelleştirebilirsiniz, marc21 formatı "
+"hakkında daha fazla bilgi edinmek için `resmi kongre kütüphanesi sitesini "
+"<http://www.loc.gov/marc/bibliographic/>`__ ziyaret edin."
+
+#: ../../source/third_party_software.rst:106
+msgid "Similarly map all other fields and then Click on Finish."
+msgstr ""
+"Benzer şekilde diğer tüm alanları eşleştirin ve daha sonra Bitir üzerine "
+"tıklayın."
+
+#: ../../source/third_party_software.rst:108
+msgid "|image1098|"
+msgstr "|image1098|"
+
+#: ../../source/third_party_software.rst:110
+msgid ""
+"And then a window will appear indicating that your Marc Text File(\\*.mrk) "
+"has been created."
+msgstr ""
+"Ve sonra Marc Metin Dosyanızın (\\*.mrk) oluşturulduğunu belirten bir "
+"pencere ekrana gelecektir."
+
+#: ../../source/third_party_software.rst:113
+msgid "|image1099|"
+msgstr "|image1099|"
+
+#: ../../source/third_party_software.rst:115
+msgid ""
+"Click Close and we have created a .mrk file from .xls file in this step. You "
+"can view the file by double clicking on it."
+msgstr ""
+"Kapat'ı tıklayın ve bu adımda .xls dosyasından bir .mrk dosyası oluşturduk. "
+"Dosyayı çift tıklatarak görüntüleyebilirsiniz."
+
+#: ../../source/third_party_software.rst:121
+msgid "Convert .mrk file to .mrc"
+msgstr ".mrk dosyasını .mrc dosyasına dönüştür"
+
+#: ../../source/third_party_software.rst:123
+msgid ""
+"We will convert .mrk file that we have created in the above step into raw "
+"Marc format that can be directly imported into Koha."
+msgstr ""
+"Yukarıdaki adımda oluşturduğumuz .mrk dosyasını, doğrudan Koha'ya "
+"aktarılabilen ham Marc formatına dönüştüreceğiz."
+
+#: ../../source/third_party_software.rst:126
+msgid "For this again open MarcEdit and Select MARC Tools."
+msgstr "Bunun için yeniden MarcEdit'i açın ve MARC Araçlarını seçin."
+
+#: ../../source/third_party_software.rst:128
+msgid "|image1100|"
+msgstr "|image1100|"
+
+#: ../../source/third_party_software.rst:130
+msgid "Next Select MarcMaker to convert .mrk file into .mrc format."
+msgstr ""
+"daha sonra .mrk dosyasını .mrc formatına dönüştürmek için MarcMaker'ı seçin."
+
+#: ../../source/third_party_software.rst:132
+msgid "|image1101|"
+msgstr "|image1101|"
+
+#: ../../source/third_party_software.rst:134
+msgid "Locate your input file and name your output file. Then Click Execute."
+msgstr ""
+"Giriş dosyanızı bulun ve çıkış dosyanızı adlandırın. Sonra Çalıştır butonuna "
+"tıklayın."
+
+#: ../../source/third_party_software.rst:136
+msgid "|image1102|"
+msgstr "|image1102|"
+
+#: ../../source/third_party_software.rst:138
+msgid "And it will show you the Result."
+msgstr "Ve size sonucu gösterecektir."
+
+#: ../../source/third_party_software.rst:140
+msgid "|image1103|"
+msgstr "|image1103|"
+
+#: ../../source/third_party_software.rst:142
+msgid "Click Close and now we have raw Marc records with us (.mrc file)."
+msgstr ""
+"Kapat'ı tıklayın ve artık elimizde işlenmemiş Marc kayıtları olacaktır (.mrc "
+"dosyası)"
+
+#: ../../source/third_party_software.rst:147
+msgid "Import .mrc into Koha"
+msgstr ".mrc dosyasını Koha'ya aktar"
+
+#: ../../source/third_party_software.rst:149
+msgid ""
+"More information on importing records into Koha can be found in the ':ref:"
+"`Stage MARC Records for Import`' section of this manual."
+msgstr ""
+"Bu kılavuzun ':ref:`Stage MARC Records for Import`bölümünde Kayıtların "
+"Koha'ya aktarılması hakkında daha fazla bilgi bulabilirsiniz."
+
+#: ../../source/third_party_software.rst:152
+msgid "Finally we will import above created .mrc file into Koha."
+msgstr "Son olarak yukarıda oluşturduğumuz .mrc dosyasını Koha'ya aktaracağız."
+
+#: ../../source/third_party_software.rst:154
+msgid "Click on Tools in your Koha staff client."
+msgstr "Koha personel istemcinizde Araçlar üzerine tıklayın."
+
+#: ../../source/third_party_software.rst:156
+msgid "|image1104|"
+msgstr "|image1104|"
+
+#: ../../source/third_party_software.rst:158
+msgid "Next Click on Stage MARC Records for Import."
+msgstr "Sonra, MARC Kayıtlarını İçe Aktarmak İçin Hazırla üzerine tıklayın."
+
+#: ../../source/third_party_software.rst:160
+msgid "|image1105|"
+msgstr "|image1105|"
+
+#: ../../source/third_party_software.rst:162
+msgid ""
+"After this, choose your previously created .mrc file and click on Upload."
+msgstr ""
+"Bu işlemden sonra, daha önce oluşturduğunuz .mrc dosyasını seçin ve Karşıya "
+"yükle üzerine tıklayın."
+
+#: ../../source/third_party_software.rst:165
+msgid "|image1106|"
+msgstr "|image1106|"
+
+#: ../../source/third_party_software.rst:167
+msgid ""
+"You can also add comment about file and finally click on Stage For Import."
+msgstr ""
+"Aynı zamanda dosya hakında yorum eklebilir ve son olarak İçe Aktarmak İçin "
+"Hazırla üzerine tıklayabilirsiniz."
+
+#: ../../source/third_party_software.rst:170
+msgid "|image1107|"
+msgstr "|image1107|"
+
+#: ../../source/third_party_software.rst:172
+msgid "When the import is done, you will get a result something like this"
+msgstr "İçe aktarma tamamlanınca, şöyle bir sonuç elde edeceksiniz"
+
+#: ../../source/third_party_software.rst:174
+msgid "|image1108|"
+msgstr "|image1108|"
+
+#: ../../source/third_party_software.rst:176
+msgid "Next, click on Manage staged records."
+msgstr "Sonra, Hazırlanmış kayıtları yönet üzerine tıklayın."
+
+#: ../../source/third_party_software.rst:178
+msgid "Here you can even change matching rules."
+msgstr "Burada eşleştirme kurallarını bile değiştirebilirsiniz."
+
+#: ../../source/third_party_software.rst:180
+msgid "|image1109|"
+msgstr "|image1109|"
+
+#: ../../source/third_party_software.rst:182
+msgid "Click on Import this batch into catalog when you are done."
+msgstr "İşiniz bitince Bu grubu kataloğa aktar üzerine tıklayın."
+
+#: ../../source/third_party_software.rst:184
+msgid ""
+"Thats it. After all the records get imported, check Status and it should "
+"read \"imported\""
+msgstr ""
+"Hepsi bu kadar. Tüm kayıtlar içe aktarıldıktan sonra Durum'u konrol edin, "
+"\"aktarıldı\" yazmalıdır."
+
+#: ../../source/third_party_software.rst:187
+msgid "|image1110|"
+msgstr "|image1110|"
+
+#: ../../source/third_party_software.rst:189
+msgid "You can even undo the Import operation."
+msgstr "Hatta içe aktarma işlemini geri alabilirsiniz."
+
+#: ../../source/third_party_software.rst:191
+msgid "And within few minutes, we have imported around 10,000 records in Koha"
+msgstr ""
+"Ve bir kaç dakika içerisinde, Koha'da 10,000 civarında kayıt içe aktardık"
+
+#: ../../source/third_party_software.rst:196
+msgid "OCLC Connexion Gateway"
+msgstr "OCLC Connexion Geçidi"
+
+#: ../../source/third_party_software.rst:198
+msgid ""
+"Koha can be set to work with the OCLC Connextion Gateway. This allows "
+"libraries to use OCLC Connexion as their cataloging tool and simply send "
+"those records to Koha with a single click. The following instructions will "
+"help you set up the OCLC Connexion Gateway, if you have a system "
+"administrator you will want to consult with them on this process."
+msgstr ""
+"Koha, OCLC Connextion ağ geçidi ile çalışmak için ayarlanabilir. Bu, "
+"kütüphanelerin kataloglama aracı olarak OCLC Connexion'u kullanmalarını ve "
+"sadece tek bir tıklama ile bu kayıtları Koha'ya göndermelerini sağlar. "
+"Aşağıdaki talimatlar OCLC Connexion Geçidi kurmanıza yardımcı olacaktır, "
+"Eğer bir sistem yöneticiniz varsa bu süreçte ona danışmanız gerekebilir."
+
+#: ../../source/third_party_software.rst:207
+msgid "Setting up OCLC service on Koha"
+msgstr "Koha'da OCLC hizmetini kurma"
+
+#: ../../source/third_party_software.rst:209
+msgid ""
+"First, you'll need to create a file somewhere on your system with "
+"configuration information.  You could put this anywhere that is visible to "
+"the account that will be running the service."
+msgstr ""
+"İlk olarak sisteminiz içerisinde bir yerde konfigürasyon bilgileri ile bir "
+"dosya oluşturmanız gerekir. Bunu, hizmeti çalıştıracak olan hesap için "
+"görünür olan herhangi bir yere koyabilirsiniz."
+
+#: ../../source/third_party_software.rst:213
+msgid "The file contains 11 lines. The first 6 will be about your Koha system:"
+msgstr "Dosya 11 satır içerir. İlk 6 satır Koha sisteminiz hakkındadır:"
+
+#: ../../source/third_party_software.rst:224
+msgid "The remaining lines describe how to do the staging:"
+msgstr "Geriye kalan satırlar hazırlamanın nasıl yapılacağını açıklar:"
+
+#: ../../source/third_party_software.rst:234
+msgid "A sample file would look like this:"
+msgstr "Örnek bir dosya bu şekilde görünecektir:"
+
+#: ../../source/third_party_software.rst:250
+msgid ""
+"When choosing an 'import\\_mode' if you use \"direct\" then the staged "
+"record will be immediately imported into Koha, and should be searchable "
+"after your indexes catch up.  If you choose \"stage\", then the record will "
+"be placed in a staged batch for you to later go the :ref:`Manage Staged MARC "
+"Records <staged-marc-record-management-label>` tool to finish the import."
+msgstr ""
+"Bir 'import\\_mode' seçerken, \"direct\" opsiyonunu kullanmanız halinde "
+"hazırlanmış kayıtlar derhal Koha'ya aktarılır, ve dizinlerinizle aynı düzeye "
+"geldikten sonra aranabilir olmalıdır. \"stage\" opsiyonunu seçerseniz, "
+"kayıtlar daha sonra :ref:`Managed Staged MARC Records <staged-marc-record-"
+"management-label>` aracına gidip aktarımı tamamlamanız için toplu bir "
+"şekilde hazırlanmış olarak yerleştirilir."
+
+#: ../../source/third_party_software.rst:256
+msgid ""
+"If you import multiple records, they'll be in the same batch, until that "
+"batch is imported, then a new batch will be created."
+msgstr ""
+"Birden çok kayıt aktarırsanız, bu kayıtlar aktarılana kadar aynı grup "
+"içerisinde yer alacaktır, daha sonra yeni bir grup oluşturulacaktır."
+
+#: ../../source/third_party_software.rst:259
+msgid "In \"direct\" mode, each record will be in its' own batch."
+msgstr "\"direkt\" modunda, her kayıt kendi grubu içerisinde olacaktır."
+
+#: ../../source/third_party_software.rst:261
+msgid "To start the service, run the script:"
+msgstr "Hizmeti başlatmak için komut dosyasını çalıştırın:"
+
+#: ../../source/third_party_software.rst:270
+msgid "Setting up your OCLC desktop client"
+msgstr "OCLC masaüstü istemcinizi kurma"
+
+#: ../../source/third_party_software.rst:274
+msgid "Screenshots are OCLC Connexion Client v.2.50, Koha v.3.12"
+msgstr ""
+"Ekran görüntüleri OCLC Connexion Client v.2.50, Koha v.3.12 sürümlerindendir"
+
+#: ../../source/third_party_software.rst:276
+msgid ""
+"To set up the OCLC Connexion desktop client to connect to Koha, go to Tools "
+"> Options, then choose the Export tab."
+msgstr ""
+"OCLC masaüstü istemcisinin Koha'ya bağlantısını ayarlamak için, Araçlar > "
+"Seçenekler yolunu izleyin ve daha sonra Sekmeyi içe aktar seçeneğini seçin."
+
+#: ../../source/third_party_software.rst:279
+msgid "|image1317|"
+msgstr "|image1317|"
+
+#: ../../source/third_party_software.rst:281
+msgid ""
+"Click the \"Create...\" button to set up a new destination, then choose "
+"\"OCLC Gateway Export\" and click OK."
+msgstr ""
+"Yeni bir varış noktası kurmak için \"Oluştur...\" butonuna tıklayın, daha "
+"sonra \"OCLC Ağ Geçidi Dışa Aktar\"ı seçin ve TAMAM'ı tıklayın."
+
+#: ../../source/third_party_software.rst:284
+msgid "Enter the following information:"
+msgstr "Aşağıdaki bilgiyi girin:"
+
+#: ../../source/third_party_software.rst:286
+msgid ""
+"\"Host Name:\" Your catalog’s appropriate IP address (from your :ref:`config "
+"file above <setting-up-oclc-service-on-koha-label>`)"
+msgstr ""
+"\"Host Name:\" Kataloğunuzun uygun IP adresi (:ref:`yukarıdaki yapılandırma "
+"dosyanızdan <setting-up-oclc-service-on-koha-label>`)"
+
+#: ../../source/third_party_software.rst:289
+msgid ""
+"\"Port:\" Your catalog's appropriate port number (from your :ref:`config "
+"file above <setting-up-oclc-service-on-koha-label>`)"
+msgstr ""
+"\"Port:\" Kataloğunuzun uygun bağlantı noktası numarası (:ref:`yukarıdaki "
+"yapılandırma dosyanızdan <setting-up-oclc-service-on-koha-label>`)"
+
+#: ../../source/third_party_software.rst:292
+msgid "\"Login ID:\" The cataloger's Koha login"
+msgstr "\"Oturum açma kimliği:\" Katalogcu'nun Koha girişi"
+
+#: ../../source/third_party_software.rst:294
+msgid "\"Password:\" The cataloger's Koha password"
+msgstr "\"Parola:\" Katalogcu'nun Koha parolası"
+
+#: ../../source/third_party_software.rst:296
+msgid "\"Notify Host Before Disconnect\" = checked,"
+msgstr "\"Notify Host Before Disconnect\" = checked,"
+
+#: ../../source/third_party_software.rst:298
+msgid "\"Timeout\" = 100, \"Retries\" = 3, \"Delay\" = 0 (zero),"
+msgstr "\"Timeout\" = 100, \"Retries\" = 3, \"Delay\" = 0 (zero),"
+
+#: ../../source/third_party_software.rst:300
+msgid "\"Send Local System Logon ID Password\" = checked."
+msgstr "\"Send Local System Logon ID Password\" = checked."
+
+#: ../../source/third_party_software.rst:302
+msgid "|image1111|"
+msgstr "|image1111|"
+
+#: ../../source/third_party_software.rst:304
+msgid ""
+"Select \"OK\" when finished, and you should see your new \"Gateway Export\" "
+"option listed (The catalog's IP address and port are blacked out in the "
+"following screenshot)"
+msgstr ""
+"Bittiğinde \"TAMAM\"ı seçin ve yeni \"Ağ Geçidi Dışa Aktarma\" seçeneğinin "
+"listelendiğini görebiliyor olmalısınız (Katalog IP adresi ve bağlantı "
+"noktası aşağıdaki ekran görüntüsünde karartılmıştır)"
+
+#: ../../source/third_party_software.rst:308
+msgid "Gateway Export Added"
+msgstr "Ağ Geçidi Dışa Aktarma Eklendi"
+
+#: ../../source/third_party_software.rst:310
+msgid ""
+"Click on \"Record Characteristics\" and make sure that the bibliographic "
+"records are using MARC21, UTF-8 Unicode, and click OK to save."
+msgstr ""
+"\"Kayıt Özellikleri\" üzerine tıklayın ve bibliyografik kayıtların MARC21, "
+"UTF-8 Unicode kullandığından emin olun, ve kaydetmek için Tamam'a tıklayın."
+
+#: ../../source/third_party_software.rst:314
+msgid "Record Characteristics"
+msgstr "Kayıt Özellikleri"
+
+#: ../../source/third_party_software.rst:316
+msgid ""
+"You should be ready to go!  To export a record from OCLC Connexion Client to "
+"Koha, just press F5 while the record is on-screen.  The export dialog will "
+"pop up, and you'll see Connexion attempting to talk to Koha.  You should get "
+"a message that the record was added or overlaid, including its biblio "
+"number, and a URL that you can copy into your web browser to jump straight "
+"to the record."
+msgstr ""
+"Artık başlamaya hazır olmalısınız! OCLC Connection İstemcisinden Koha'ya bir "
+"kayıt aktarmak için, kayıt ekranda açık durumda iken F5 tuşuna basın. Bir "
+"aktarım açılır diyalog penceresinin ekrana geldiğini ve Connexion "
+"programının Koha ile iletişime geçmeye çalıştığını göreceksiniz. Kaynakça "
+"numarası ve kayda doğrudan geçmek için web tarayıcınıza kopyalayabileceğiniz "
+"bir URL dahil olacak şekilde kaydın eklendiği ya da üzerine yazıldığına dair "
+"bir bildirim almalısınız."
+
+#: ../../source/third_party_software.rst:326
+msgid "Using the OCLC Connexion Gateway"
+msgstr "OCLC Connexion Geçidini Kullanma"
+
+#: ../../source/third_party_software.rst:328
+msgid "Records can be exported from Connexion either in a batch or one by one."
+msgstr "Kayıtlar Connexion'dan tek tek ya da toplu olarak aktarılabilir."
+
+#: ../../source/third_party_software.rst:333
+msgid "Exporting records one by one"
+msgstr "Kayıtları tek tek aktarmak"
+
+#: ../../source/third_party_software.rst:335
+msgid ""
+"To export bibliographic records one by one, be sure your \"Batch\" options "
+"are correct: from the \"Tools\" menu, select \"Options\", and select the "
+"\"Batch\" tab. In the \"Perform local actions in batch\" area, "
+"\"Bibliographic Record Export\" should be unchecked"
+msgstr ""
+"Bibliyografik kayıtları tek tek dışa aktarmak için \"Toplu\" "
+"seçeneklerinizin doğru olduğundan emin olun: \"Araçlar\" menüsünden "
+"\"Seçenekler\"i seçin, ve \"Toplu\" sekmesini seçin. \"Toplu lokal eylemler "
+"gerçekleştirin\" alanında, \"Bibliyografik Kayıtları Dışa Aktar\" "
+"işaretlenmemiş durumda olmalıdır."
+
+#: ../../source/third_party_software.rst:340
+msgid "|image1318|"
+msgstr "|image1318|"
+
+#: ../../source/third_party_software.rst:342
+msgid ""
+"When ready to export, from the \"Action\" menu, select \"Export\" or use the "
+"F5 key. You will see a screen similar to the following if the import is "
+"successful and if the record is new to the Catalog; you may copy & paste the "
+"resulting URL into your Koha catalog to see the new record."
+msgstr ""
+"Dışa aktarmaya hazır olduğunuzda, \"Eylem\" menüsünde \"Dışa Aktar\" "
+"opsiyonunu seçin ya da F5 tuşuna basın. Alma işlemi başarılı olursa ve kayıt "
+"kataloğunuz için yeni ise aşağıdakine benzer bir ekran göreceksiniz; yeni "
+"kaydı görmek için ortaya çıkan URL'yi Koha kataloğunuza kopyalayıp & "
+"yapıştırabilirsiniz."
+
+#: ../../source/third_party_software.rst:347
+#: ../../source/third_party_software.rst:352
+msgid "|image1319|"
+msgstr "|image1319|"
+
+#: ../../source/third_party_software.rst:349
+msgid ""
+"If the record was overlaid, you will see a message to that effect in the "
+"\"OCLC Gateway Export Status\" window"
+msgstr ""
+"Kayıt overlaid ise \"OCLC Geçidi Aktarım Durumu\" penceresinde bu efekti "
+"gösteren bir ileti göreceksiniz"
+
+#: ../../source/third_party_software.rst:357
+msgid "Exporting records in a batch"
+msgstr "Kayıtların toplu olarak aktarımı"
+
+#: ../../source/third_party_software.rst:359
+msgid ""
+"To export bibliographic records in a batch, be sure your \"Batch\" options "
+"are correct: from the \"Tools\" menu, select \"Options\", and select the "
+"\"Batch\" tab. In the \"Perform local actions in batch\" area, "
+"\"Bibliographic Record Export\" should be checkedOCLC"
+msgstr ""
+"Bibliyografik kayıtları toplu olarak dışa aktarmak için \"Toplu\" "
+"seçeneklerinizin doğru olduğundan emin olun: \"Araçlar\" menüsünden "
+"\"Seçenekler\"i seçin, ve \"Toplu\" sekmesini seçin. \"Toplu lokal eylemler "
+"gerçekleştirin\" alanında, \"Bibliyografik Kayıtları Dışa Aktar\" "
+"işaretlenmiş durumda olmalıdır. OCLC"
+
+#: ../../source/third_party_software.rst:364
+msgid "|image1320|"
+msgstr "|image1320|"
+
+#: ../../source/third_party_software.rst:366
+msgid ""
+"When a record is ready to export, from the \"Action\" menu, select \"Export"
+"\" or use the F5 key, and it’s export status will be \"ready.\""
+msgstr ""
+"Bir kayıt dışa aktarılmaya hazır olduğunda, 'Eylem' menüsünden \"Dışa Aktar"
+"\" seçeneğini seçin ya da F5 tuşunu kullanın ve dışa aktarma durumu \"hazır"
+"\" olacaktır."
+
+#: ../../source/third_party_software.rst:369
+msgid ""
+"When ready to export the batch, from the \"Batch\" menu, select \"Process "
+"batch\" and check the appropriate \"Path\" and \"Export\" boxes"
+msgstr ""
+"Toplu olarak aktarmaya hazır olduğunuzda, \"Toplu\" menüsünden \"Toplu işlem"
+"\"i seçin ve uygun \"Yol\" ve \"Dışa Aktar\" kutularını işaretleyin"
+
+#: ../../source/third_party_software.rst:372
+msgid "|image1321|"
+msgstr "|image1321|"
+
+#: ../../source/third_party_software.rst:374
+msgid ""
+"The export will begin, and the bib records will be exported & imported into "
+"Koha one by one; you will see \"OCLC Gateway Export Status\" windows, as "
+"above, showing you the results of each export. That window will stay there "
+"until you select \"Close,\" and then the next record’s export/import will "
+"begin. The process will continue until all records in the batch are "
+"completed. Then you may or may not see the Connexion Client export report "
+"(depending on your Client options for that)."
+msgstr ""
+"Aktarma işlemi başlayacaktır, ve bibliyografik kayıtlar Koha'ya tek tek dışa "
+"ve içe aktarılacaktır; Yukarıdaki gibi her aktarım işleminin sonucunu size "
+"gösteren \"OCLC Geçidi Aktarım Durumu\" penceresini göreceksiniz. Bu "
+"pencere, siz \"Kapat\" opsiyonunu seçene kadar orada kalacaktır, ve daha "
+"sonra bir sonraki kaydın içe/dışa aktarma işlemi başlayacaktır. Bu işlem, "
+"toplu işlem grubundaki tüm kayıtlar tamamlanıncaya kadar devam edecektir. "
+"Daha sonra Connexion İstemcisi aktarım raporunu görebilir ya da "
+"görmeyebilirsiniz (Bununla ilgili olan istemci seçeneklerinize bağlı olarak)"
+
+#: ../../source/third_party_software.rst:385
+msgid "Items in OCLC"
+msgstr "OCLC'de ki materyaller"
+
+#: ../../source/third_party_software.rst:387
+msgid ""
+"If you'd like to create your item records in OCLC you can do so by addding a "
+"952 for each item to the bib record you're cataloging. The :ref:`Item/"
+"Holdings Cataloging Guide <item/holdings-record-cataloging-guide-label>` "
+"will break down what subfields you can use in the 952, but at the minimum "
+"you want to have subfield 2, a, b, and y on your items."
+msgstr ""
+"Eğer OCLC içinde materyal kayıtları oluşturmak istiyorsanız, kataloglamakta "
+"olduğunuz her bibliyografik kayda her materyal için bir 952 alanı ekleyerek "
+"bunu yapabilirsiniz. :ref:`Materyal/Holdings Kataloglama Kılavuzu <item/"
+"holdings-record-cataloging-guide-label>` 952 içinde kullanabileceğiniz alt "
+"alanları ayıracaktır, ancak materyalleriniz üzerinde en az 2, a, b, ve y alt "
+"alanlarının olmasını isteyeceksiniz."
+
+#: ../../source/third_party_software.rst:393
+msgid ""
+"952 \\\\\\\\$2CLASSIFICATION$aHOMEBRANCHCODE$bHOLDINGBRANCHCODE$yITEMTYPECODE"
+msgstr ""
+"952\\\\\\\\$2CLASSIFICATION$aHOMEBRANCHCODE$bHOLDINGBRANCHCODE$yITEMTYPECODE"
+
+#: ../../source/third_party_software.rst:396
+msgid ""
+"The subfield 2 holds the classification code. This can be ddc for Dewey or "
+"lcc for Library of Congress or z for Custom. Other classification sources "
+"can be found in the :ref:`Classification Sources <classification-sources-"
+"label>` area in administration"
+msgstr ""
+"2 alt alanında sınıflama kodu yer alır. Bu kod Dewey için ddc, Kongre "
+"Kütüphanesi için lcc veya özel bir sistem için z olabilir. Diğer sınıflama "
+"kaynakları yönetim içinde :ref:`Sınıflama Kaynakları <classification-sources-"
+"label>`alanında bulunabilir."
+
+#: ../../source/third_party_software.rst:401
+msgid ""
+"Subfield a is your home library and needs to be the code for your home "
+"library, not the library name. You can find these codes in the :ref:"
+"`Libraries & Groups` administration area."
+msgstr ""
+"a alt alanı ana kütüphanenizdir ve burada kütüphane adı değil, ana "
+"kütüphanenin kodu yer almalıdır. Bu kodları :ref:`Kütüphaneler & Gruplar` "
+"yönetim alanında bulabilirsiniz."
+
+#: ../../source/third_party_software.rst:405
+msgid ""
+"Subfield b is your holding library and needs to be the code for your holding "
+"library, not the library name. You can find these codes in the :ref:"
+"`Libraries & Groups` administration area."
+msgstr ""
+"b alt alanı ayırtma kütüphanenizdir ve burada kütüphane adı değil, ayırtma "
+"kütüphanesinin kodu yer almalıdır. Bu kodları `Kütüphaneler & Gruplar` "
+"yönetim alanında bulabilirsiniz."
+
+#: ../../source/third_party_software.rst:409
+msgid ""
+"Subfield y is your item type code. It needs to be the code, not the item "
+"type name. You can find these codes in the :ref:`Item Types <item-types-"
+"label>` administration area."
+msgstr ""
+"y alt alanı materyal türü kodudur. Burada materyal türü değil, materyal kodu "
+"yer almalıdır. Bu kodları `Materyal Türleri <item-types-label>` yönetim "
+"alanında bulabilirsiniz."
+
+#: ../../source/third_party_software.rst:413
+msgid "952 \\\\\\\\$2ddc$aMAIN$bMAIN$yBOOK"
+msgstr "952 \\\\\\\\$2ddc$aMAIN$bMAIN$yBOOK"
+
+#: ../../source/third_party_software.rst:415
+msgid ""
+"In addition to these required fields you can enter any other subfield you'd "
+"like. Most libraries will enter a call number in subfield o and a barcode in "
+"subfield p as well. Review the :ref:`Item/Holdings Cataloging Guide <item/"
+"holdings-record-cataloging-guide-label>` for a full list of subfields and "
+"values."
+msgstr ""
+"Zorunlu olan bu alanlara ilave olarak istediğiniz diğer herhangi bir alt "
+"alanı girebilirsiniz. Çoğu kütüphane o alt alanına yer numarası ve p alt "
+"alanına barkod numarasını da girmektedir. Alt alanların ve değerlerin tam "
+"listesi için :ref:`Materyal/Holdings Kataloglama Kılavuzunu <item/holdings-"
+"record-cataloging-guide-label>` gözden geçiriniz."
+
+#: ../../source/third_party_software.rst:423
+msgid "Talking Tech"
+msgstr "Talking Tech"
+
+#: ../../source/third_party_software.rst:425
+msgid ""
+"Talking Tech I-tiva is a third party, proprietary, product that libraries "
+"can subscribe to. Learn more here: http://www.talkingtech.com/solutions/"
+"library."
+msgstr ""
+"Talking Tech I-tiva, kütüphanelerin abone olabileceği üçüncü parti, özel bir "
+"üründür. Bu adreste daha fazla bilgi edinin: `http://www.talkingtech.com/"
+"solutions/library."
+
+#: ../../source/third_party_software.rst:432
+msgid "Installation and Setup Instructions"
+msgstr "Yükleme ve Kurulum Talimatları"
+
+#: ../../source/third_party_software.rst:434
+msgid ""
+"Be sure you've run installer/data/mysql/atomicupdate/Bug-4246-Talking-Tech-"
+"itiva-phone-notifications.pl to install the required data pack (new syspref, "
+"notice placeholders and messaging transport preferences)"
+msgstr ""
+"Gerekli veri paketini yüklemek için installer/data/mysql/atomicupdate/"
+"Bug-4246-Talking-Tech-itiva-phone-notifications.pl kurulumunu "
+"çalıştırdığınıza emin olun (new syspref, notice placeholders and messaging "
+"transport tercihleri)"
+
+#: ../../source/third_party_software.rst:439
+msgid ""
+"To use, :ref:`TalkingTechItivaPhoneNotification` syspref must be turned on."
+msgstr ""
+"Kullanmak için :ref:`TalkingTechItivaPhoneNotification` sistem tercihi "
+"açılmış olmalıdır."
+
+#: ../../source/third_party_software.rst:443
+msgid ""
+"If you wish to process PREOVERDUE or RESERVES messages, you'll need the :ref:"
+"`EnhancedMessagingPreferences` system preference turned on, and patrons to "
+"have filled in a preference for receiving these notices by phone."
+msgstr ""
+"PREOVERDUE ya da RESERVES iletilerini işlemek isterseniz, :ref:"
+"`EnhancedMessagingPreferences` sistem tercihini açmanız ve kullanıcılarınıza "
+"telefonla bu gibi bildirimleri almaları için bir tercih doldurtmanız "
+"gerekecektir."
+
+#: ../../source/third_party_software.rst:448
+msgid ""
+"For OVERDUE messages, overdue notice triggers must be configured under Koha -"
+"> Tools -> :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-"
+"label>`. Either branch-specific triggers or the default level triggers may "
+"be used (script will select whichever is appropriate)."
+msgstr ""
+"GECİKME bildirimleri için, gecikme bildirimi tetikleyicileri Koha -> Araçlar "
+"-> :ref:`Gecikme Bildirimi Tetikleyicileri <overdue-notice/status-triggers-"
+"label>` altında yapılandırılmalıdır. Birimlere özgü tetikleyiciler ya da "
+"varsayılan düzeyde tetikleyiciler kullanılabilir (hangisinin uygun olduğunu "
+"betik seçecektir)."
+
+#: ../../source/third_party_software.rst:456
+msgid "Sending Notices File"
+msgstr "Bildirimler Dosyası Gönderme"
+
+#: ../../source/third_party_software.rst:458
+msgid ""
+"Add the :ref:`TalkingTech\\_itiva\\_outbound.pl <sending-notices-file-"
+"label>` script to your crontab"
+msgstr ""
+":ref:`TalkingTech\\_itiva\\_outbound.pl <sending-notices-file-label>__ komut "
+"dizisini crontab'a ekleyin"
+
+#: ../../source/third_party_software.rst:461
+msgid ""
+"Add an FTP/SFTP or other transport method to send the output file to the I-"
+"tiva server"
+msgstr ""
+"Çıktı dosyasını I-tiva sunucusuna göndermek için bir FTP/SFTP veya diğer bir "
+"taşıma yöntemi ekleyin"
+
+#: ../../source/third_party_software.rst:464
+msgid ""
+"If you wish, archive the sent notices file in another directory after sending"
+msgstr ""
+"Eğer isterseniz, gönderdikten sonra gönderilen bildirimler dosyasını başka "
+"bir dizinde arşivleyebilirsiniz"
+
+#: ../../source/third_party_software.rst:467
+msgid "Run TalkingTech\\_itiva\\_outbound.pl --help for more information"
+msgstr ""
+"\\TalkingTech_\\itiva_outbound.pl komut dosyasını çalıştırın, daha fazla "
+"bilgi için bkz. --help"
+
+#: ../../source/third_party_software.rst:472
+msgid "Receiving Results File"
+msgstr "Sonuçlar Dosyası Alma"
+
+#: ../../source/third_party_software.rst:474
+msgid ""
+"Add an FTP/SFTP or other transport method to send the Results file to a "
+"known directory on your Koha server"
+msgstr ""
+"Koha sunucunuz üzerinde bilinen bir dizine sonuçlar dosyasını göndermek için "
+"bir FTP/SFTP veya diğer bir taşıma yöntemi ekleyin"
+
+#: ../../source/third_party_software.rst:477
+msgid ""
+"Add the :ref:`TalkingTech\\_itiva\\_inbound.pl <receiving-notices-file-"
+"label>` script to your crontab, aimed at that directory"
+msgstr ""
+"o dizine yönelik olarak :ref: \\`TalkingTech\\_itiva_inbound.p <receiving-"
+"notices-file-label>`__ komut dosyasını crontab'a ekleyin"
+
+#: ../../source/third_party_software.rst:480
+msgid ""
+"If you wish, archive the results file in another directory after processing"
+msgstr ""
+"Eğer isterseniz, sonuçlar dosyasını işlendikten sonra başka bir dizinde "
+"arşivleyebilirsiniz"
+
+#: ../../source/third_party_software.rst:483
+msgid "Run TalkingTech\\_itiva\\_inbound.pl --help for more information"
+msgstr ""
+"\\TalkingTech\\_itiva_inbound.pl komut dosyasını çalıştırın, daha fazla "
+"bilgi için bkz. --help"

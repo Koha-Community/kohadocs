@@ -1,0 +1,1423 @@
+# Compendium of fr.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-fr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:50-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/apis_protocols.rst:4
+msgid "Other APIs and protocols"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:9
+msgid "SIP2"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:11
+msgid ""
+"SIP2 (Session Initiation Protocol) is a protocol for communication between "
+"devices."
+msgstr ""
+"SIP2 (Session Initiation Protocol) est un protocole de communication entre "
+"appareils."
+
+#: ../../source/apis_protocols.rst:13
+msgid ""
+"In the context of Koha SIP2 is used for communication between Self Check "
+"(SC) machines i.e. self checkout machines, and the Automated Circulation "
+"System (also known as ACS which in this case is the server running Koha)."
+msgstr ""
+"Dans le contexte de Koha, SIP2 est utilisé pour la communication entre les "
+"bornes d'auto-prêt et le Système Automatisé de Circulation (ACS qui dans ce "
+"cas-ci est le serveur qui roule Koha)."
+
+#: ../../source/apis_protocols.rst:15
+msgid "SIP2 communications consist of requests and responses."
+msgstr "Les communications SIP2 consistent en requêtes et réponses."
+
+#: ../../source/apis_protocols.rst:17
+msgid ""
+"The self checkout machines are ‘dumb’ and so they send requests to the Koha "
+"server which runs logic which determines a particular outcome which is sent "
+"as a response message back to the client self checkout machine, and this is "
+"then conveyed to the user."
+msgstr ""
+"Les bornes d'auto-prêt sont \"stupides\" en ce sens qu'elles envoient des "
+"requêtes au serveur Koha qui exécute une logique de traitement pour "
+"déterminer le résultat qui est renvoyé en tant que message à la borne d'auto-"
+"prêt qui relaie ce message à l'utilisateur."
+
+#: ../../source/apis_protocols.rst:19
+msgid ""
+"Security notice regarding using SIP2 service: To ensure that your SIP2 "
+"traffic is secure as it passes over the internet you need to make sure that "
+"you are using a VPN or   stunnel."
+msgstr ""
+"Note de sécurité concernant l'usage du service SIP2 : Pour vous assurer que "
+"votre trafic SIP2 est sécurisé lorsqu'il passe par Internet, utilisez un VPN "
+"ou stunnel."
+
+#: ../../source/apis_protocols.rst:26
+msgid "Setting up SIP2"
+msgstr "Mise en place de SIP2"
+
+#: ../../source/apis_protocols.rst:28
+msgid ""
+"If you installed Koha using Debian packages then SIP2 setup is easy, simply "
+"follow these steps:"
+msgstr ""
+"Si vous avez installé Koha avec les paquets Debian, la mise en place de SIP2 "
+"se fait aisément. Veuillez simplement suivre les étapes suivantes : "
+
+#: ../../source/apis_protocols.rst:31
+msgid ""
+"1. In your terminal (in the root Koha directory) write in: *sudo koha-enable-"
+"sip <instancename>*"
+msgstr ""
+"1. Dans votre terminal (à la racine du répertoire Koha), écrivez : *sudo "
+"koha-enable-sip <instancename>*"
+
+#: ../../source/apis_protocols.rst:35
+msgid ""
+"2. Now you need to configure the SIP2 settings, to do this you need to edit "
+"the SIPconfig.xml file which exists in the /etc/koha/sites/<instancename>/ "
+"directory. You will need to edit this file as root because it contains "
+"passwords (to do so write ‘sudo’  at the start of your command)."
+msgstr ""
+"2. Vous devez maintenant configurer les paramètres de SIP2, pour ce faire, "
+"vous devez modifier le fichier SIPconfig.xml qui se trouve dans le "
+"répertoire /etc/koha/sites/<instancename>/. Vous devez modifier ce fichier "
+"en tant qu'utilisateur root puisqu'il contient des mots de passe (écrivez "
+"simplement \"sudo\" au début de votre commande)."
+
+#: ../../source/apis_protocols.rst:38
+msgid "e.g. *sudo vi /etc/koha/sites/<instancename>/SIPconfig.xml*"
+msgstr "par exemple *sudo vi /etc/koha/sites/<instancename>/SIPconfig.xml*"
+
+#: ../../source/apis_protocols.rst:41
+msgid ""
+"Important note: There are three areas of interest in the SIPconfig.xml file "
+"that you need to change. These are: service, account and institution."
+msgstr ""
+"Note importante : Il y a trois zones dans le fichier SIPconfig.xml que vous "
+"devez modifier. Elles sont : service, account et institution."
+
+#: ../../source/apis_protocols.rst:44
+msgid "**Service**"
+msgstr "**Service**"
+
+#: ../../source/apis_protocols.rst:47
+msgid ""
+"2.1 Change the port value near the top of the SIPconfig.xml file (identified "
+"by the number 1 in the below screen shot), so it has the same IP address as "
+"set further down the SIPconfig.xml file identified by 2."
+msgstr ""
+"2.1 Changez la valeur du port vers le début du fichier SIPconfig.xml "
+"(identifié par le numéro 1 dans la capture d'écran), pour qu'il ait la même "
+"adresse IP que plus loin dans le fichier SIPconfig.xml, identifiée par le "
+"numéro 2."
+
+#: ../../source/apis_protocols.rst:49
+msgid ""
+"Make sure the two port values don’t have the same port number as you cannot "
+"have the same port being listened to by two different services. When "
+"deciding upon the port number make sure it is a high number (i.e. above "
+"1000) because all ports below 1000 require root permissions."
+msgstr ""
+"Assurez-vous que les deux valeurs n'ont pas le même numéro de port puisqu'un "
+"même port ne peut servir à deux services différents. Lorsque vous décidez du "
+"numéro de port à assigner, assurez-vous que ce soit un nombre élevé (c'est à "
+"dire plus élevé que 1000) parce que tous les ports sous 1000 requièrent les "
+"permissions root."
+
+#: ../../source/apis_protocols.rst:51
+msgid "|image1122|"
+msgstr "|image1122|"
+
+#: ../../source/apis_protocols.rst:55
+msgid "**Account**"
+msgstr "**Account**"
+
+#: ../../source/apis_protocols.rst:57
+#, fuzzy
+msgid ""
+"The account(s) you define in the SIPconfig.xml file are simply account(s) "
+"permitted to use the SIP2 service i.e. you're defining who can send and "
+"receive SIP2 commands."
+msgstr ""
+"Les comptes définis dans le fichier SIPconfig.xml sont simplement des "
+"comptes qui peuvent utiliser le service SIP2, c'est-à-dire que vous "
+"définissez qui peut envoyer et recevoir des commandes SIP2."
+
+#: ../../source/apis_protocols.rst:59
+msgid ""
+"Account information that you write here must also exist in the Koha database "
+"i.e. you need to create a patron in the Koha staff interface with the same "
+"username, password (making sure to assign them circulate permissions) as the "
+"user account you write into the SIPconfig.xml file."
+msgstr ""
+"Les informations de compte que vous inscrivez ici doivent également exister "
+"dans la base de données de Koha, c'est-à-dire que vous devez créer un "
+"adhérent dans l'interface professionnelle de Koha avec le même identifiant "
+"et mot de passe (sans oublier de lui assigner les permissions de "
+"circulation) que le compte d'utilisateur que vous notez dans le fichier "
+"SIPconfig.xml."
+
+#: ../../source/apis_protocols.rst:61
+msgid ""
+"It is highly recommended that you only write in Koha user accounts with "
+"circulate permissions."
+msgstr ""
+"Il est fortement recommandé de n'inscrire que des utilisateurs Koha avec les "
+"permissions de circulation."
+
+#: ../../source/apis_protocols.rst:63
+msgid ""
+"The reason we want SIP2 users to only have circulate permissions rather than "
+"superlibrarian permissions is to reduce the access SIP2 users have to "
+"confidential patron data in case the system was compromised."
+msgstr ""
+"La raison pour laquelle nous recommandons que les utilisateurs SIP2 n'aient "
+"que les permissions de circulation plutôt que les permissions de "
+"superbibliothécaire est afin de réduire l'accès des utilisateurs SIP2 aux "
+"informations confidentielles des adhérents, dans le cas où le système serait "
+"compromis."
+
+#: ../../source/apis_protocols.rst:65
+msgid ""
+"If the ACS or the SC were compromised then having all SIP2 users only having "
+"circulation permissions means that an intruder would only be able to access "
+"patron data via the terminal rather than the web interface as well (which "
+"would be available with superlibrarian permissions). So it is simply a "
+"matter of protecting your users."
+msgstr ""
+"Si le ACS ou la borne d'auto-prêt était compromis, le fait que les "
+"utilisateurs SIP2 n'aient que les permissions de circulation signifie que "
+"l'intrus ne pourrait accéder aux données des adhérents que par le terminal "
+"plutôt que par l'interface web (qui n'est accessible qu'avec les permissions "
+"de superbibliothécaire). Il s'agit simplement de protection pour vos "
+"adhérents."
+
+#: ../../source/apis_protocols.rst:67
+msgid "|image1119|"
+msgstr "|image1119|"
+
+#: ../../source/apis_protocols.rst:70
+msgid "**Account value definitions:**"
+msgstr "**Définition des valeurs de compte :**"
+
+#: ../../source/apis_protocols.rst:73
+msgid "Login id: This is the account username. - Modify this accordingly"
+msgstr ""
+"Login id : Ceci est l'identifiant du compte. - Modifiez-le en conséquence"
+
+#: ../../source/apis_protocols.rst:74
+msgid "Password: Account password - Modify this accordingly"
+msgstr "Password : Le mot de passe du compte - Modifiez-le en conséquence"
+
+#: ../../source/apis_protocols.rst:75
+msgid ""
+"Delimiter: The type of delimiter for account information - Leave as default"
+msgstr ""
+"Delimiter : Il s'agit du type de délimiteur pour l'information du compte - "
+"Laissez tel quel"
+
+#: ../../source/apis_protocols.rst:76
+msgid "error-detect -  Leave as default"
+msgstr "error-detect - Laissez tel quel"
+
+#: ../../source/apis_protocols.rst:77
+msgid ""
+"Institution: This is the branchcode for the library that the user belongs "
+"to. NOTE: This institution needs to be defined further down in the "
+"institution area of the SIPconfig.xml file and it must also exist in the "
+"Koha database. i.e. you need to create a library with the same branchcode in "
+"Koha staff interface."
+msgstr ""
+"Institution : Il s'agit du branchcode de la bibliothèque d'appartenance de "
+"l'utilisateur. NOTE : Cette institution doit être définie plut loin dans la "
+"section institution du fichier SIPconfig.xml et doit également exister dans "
+"la base de données de Koha. Vous devez donc créer un site avec le même "
+"branchcode dans l'interface professionnelle de Koha."
+
+#: ../../source/apis_protocols.rst:78
+msgid "encoding: This is the standard used to encode the account data"
+msgstr ""
+"encoding : Il s'agit du standard utilisé pour encoder les données du compte"
+
+#: ../../source/apis_protocols.rst:79
+msgid ""
+"Terminator: This needs to match the terminator value of the SIP2 server. - "
+"Modify this if you know the terminator value of the SIP2 server."
+msgstr ""
+"Terminator : Doit correspondre au caractère d'arrêt du serveur SIP2. - "
+"Modifiez-le si vous connaissez le caractère d'arrêt du serveur SIP2."
+
+#: ../../source/apis_protocols.rst:81
+msgid "**Institution**"
+msgstr "**Institution**"
+
+#: ../../source/apis_protocols.rst:84
+msgid ""
+"The institution information you define here must match a library created in "
+"the Koha staff interface."
+msgstr ""
+"Les informations d'organisation que vous définissez ici doivent correspondre "
+"à un site créé dans l'interface professionnelle de Koha."
+
+#: ../../source/apis_protocols.rst:86
+msgid ""
+"You need to make sure all the institutions that accounts are assigned to "
+"further up in the SIPconfig.xml file are also defined in the institution "
+"area of the same file."
+msgstr ""
+"Vous devez vous assurer que toutes les organisations auxquelles des comptes "
+"d'utilisateurs ont été assignés précédemment dans le fichier SIPconfig.xml "
+"sont aussi définies dans la section institution du même fichier."
+
+#: ../../source/apis_protocols.rst:88
+msgid "|image1120|"
+msgstr "|image1120|"
+
+#: ../../source/apis_protocols.rst:90
+msgid "**Institution value definitions:**"
+msgstr "**Définitions des valeurs d'institution :**"
+
+#: ../../source/apis_protocols.rst:93
+msgid ""
+"1. Institution id: The branchcode of the library. - Modify this accordingly. "
+"Must be the same as created in Koha and the account area."
+msgstr ""
+"1. Institution id : Le branchcode de la bibliothèeque. - Modifiez-le en "
+"conséquence. Doit être le même que celui créé dans Koha et la section "
+"account."
+
+#: ../../source/apis_protocols.rst:96
+msgid "Implementation: Defines the code that will be run. - Leave as default"
+msgstr "Implementation : Définit le code qui sera envoyé. - Laissez tel quel"
+
+#: ../../source/apis_protocols.rst:98
+msgid ""
+"3. Policy: Policy defines the permitted SIP2 commands allowed from SC’s in "
+"this institution. For example: renewal=”true” means that SC’s at that "
+"institution have permission to send renewal item SIP2 commands."
+msgstr ""
+"3. Policy : Il s'agit des commandes SIP2 permises pour les bornes d'auto-"
+"prêt de cette institution. Par exemple : renewal=\"true\" signifie que les "
+"bornes d'auto-prêt de cette institution peuvent envoyer des commandes de "
+"renouvellement d'exemplaires."
+
+#: ../../source/apis_protocols.rst:101
+msgid ""
+"4. Starting SIP2 Simply write in the command: *sudo koha-start-sip "
+"<instancename>*"
+msgstr ""
+"4. Démarrer SIP2 Écrivez simplement la commande : *sudo koha-start-sip "
+"<instancename>*"
+
+#: ../../source/apis_protocols.rst:105
+msgid "Now you have a running SIP2 server."
+msgstr "Vous avez maintenant un serveur SIP2 opérationnel."
+
+#: ../../source/apis_protocols.rst:111
+msgid "Using SIP2"
+msgstr "Utiliser SIP2"
+
+#: ../../source/apis_protocols.rst:113
+msgid ""
+"SIP2 is a communication protocol. The messages sent in SIP2 are either "
+"requests or responses. The SC’s send request messages to the ACS which will "
+"run some logic and send back the resulting value to the SC as a response "
+"message."
+msgstr ""
+"SIP2 est un protocole de communication. Les messages envoyés en SIP2 sont "
+"soit des requêtes ou des répondes. Les bornes d'auto-prêt envoient des "
+"messages de requête au système automatisé de circulation qui effectuera un "
+"traitement logique et renverra le résultat à la borne d'auto-prêt en tant "
+"que message de réponse."
+
+#: ../../source/apis_protocols.rst:115
+msgid ""
+"The request messages contain arguments, which are data values used by the "
+"ACS in its functions to perform the required task such as renewing items."
+msgstr ""
+"Le message de requête contient des arguments qui sont des données utilisées "
+"par le système automatisé de circulation dans ses fonctions pour exécuter la "
+"tâche requise comme renouveler des exemplaires."
+
+#: ../../source/apis_protocols.rst:117
+msgid "**SIP2 commands**"
+msgstr "**Commandes SIP2**"
+
+#: ../../source/apis_protocols.rst:119
+msgid ""
+"If you want to manually use/test SIP2 then you will be writing and receiving "
+"messages via the Linux terminal."
+msgstr ""
+"Si vous souhaitez utiliser ou tester SIP2 manuellement, vous devrez écrire "
+"et recevoir des messages à travers le terminal de Linux."
+
+#: ../../source/apis_protocols.rst:121
+msgid ""
+"To be able to send and receive messages with the SIP2 server you need to use "
+"telnet to open a SIP2 connection. You need to specify the port number you "
+"want telnet to use."
+msgstr ""
+"Pour envoyer et recevoir des messages du serveur SIP2 vous devez utiliser "
+"telnet pour ouvrir une connexion SIP2. Vous devez spécifier le numéro de "
+"port que telnet doit utiliser."
+
+#: ../../source/apis_protocols.rst:123
+msgid ""
+"To find this information look at the service area at the top of the "
+"SIPconfig.xml file (look for the port number as pointed out by the arrow in "
+"the below screenshot)."
+msgstr ""
+"Vous trouverez cette information au début du fichier SIPconfig.xml (cherchez "
+"le numéro de port, tel qu'indiqué par une flèche dans la capture d'écran ci-"
+"dessous)."
+
+#: ../../source/apis_protocols.rst:125
+msgid "|image1121|"
+msgstr "|image1121|"
+
+#: ../../source/apis_protocols.rst:128
+msgid "Write into the terminal"
+msgstr "Écrivez dans le terminal"
+
+#: ../../source/apis_protocols.rst:130 ../../source/apis_protocols.rst:138
+msgid "*telnet localhost <portnumber>*"
+msgstr "*telnet localhost <portnumber>*"
+
+#: ../../source/apis_protocols.rst:132
+msgid "e.g. *telnet localhost 8023*"
+msgstr "par exemple *telnet localhost 8023*"
+
+#: ../../source/apis_protocols.rst:134
+msgid ""
+"Now write in the username and password set in one of the accounts in the     "
+"SIPconfig.xml file."
+msgstr ""
+"Écrivez l'identifiant et le mot de passe d'un des comptes du fichier "
+"SIPconfig.xml."
+
+#: ../../source/apis_protocols.rst:136
+msgid ""
+"Now you are connected to the SIP2 server you can start writing and sending "
+"request commands. The connection to the SIP2 server does time out fast so if "
+"haven’t finished writing and receiving commands simply write in:"
+msgstr ""
+"Vous êtez maintenant connecté au serveur SIP2 et vous pouvez commencer à "
+"écrire et envoyer des commandes de requête. La connexion au serveur SIP2 "
+"arrive rapidement au bout de son délai, donc si vous n'avez pas terminé "
+"d'écrire et de recevoir des commandes, écrivez :"
+
+#: ../../source/apis_protocols.rst:140
+msgid "to restart the SIP2 connection."
+msgstr "pour redémarrer la connexion SIP2."
+
+#: ../../source/apis_protocols.rst:142
+msgid "**SIP2 command syntax**"
+msgstr "**Syntaxe de commande SIP2**"
+
+#: ../../source/apis_protocols.rst:144
+msgid ""
+"Every SIP2 command has a 2 digit numerical prefix which defines what the "
+"command is doing."
+msgstr ""
+"Chaque commande SIP2 a un préfixe de 2 chiffres qui définit ce que la "
+"commande fait."
+
+#: ../../source/apis_protocols.rst:146
+msgid ""
+"e.g. To get information about a patron you start your command with the "
+"prefix: 63. The response from the server also has a corresponding numerical "
+"prefix."
+msgstr ""
+"Par exemple, pour avoir de l'information à propos d'un adhérent, vous "
+"commencez votre commande par le préfixe 63. La réponse du serveur aura un "
+"préfixe numérique correspondant."
+
+#: ../../source/apis_protocols.rst:148
+msgid ""
+"Below is an example of a SIP2 request message to request patron information "
+"(in this example a Koha patron account with the user name ‘joe’, password "
+"‘joes’, and card number ‘y76t5r43’ has been created in the Koha staff "
+"interface)."
+msgstr ""
+"Vous trouverez ci-dessous un exemple de message de requête pour avoir des "
+"information d'adhérent (dans cet exemple, une fiche d'adhérent a été créée "
+"dans l'interface professionnelle de Koha avec l'identifiant \"joe\", le mot "
+"de passe \"joes\" et le numéro de carte \"y76t5r43\")."
+
+#: ../../source/apis_protocols.rst:150
+msgid ""
+"Additionally a library with the branchcode of ‘WEL’ has been created in the "
+"Koha staff interface and is also defined in the institution area of the "
+"SIPconfig.xml file):"
+msgstr ""
+"De plus, un site avec le branchcode \"WEL\" a été créé dans l'interface "
+"professionnelle de Koha et est également défini dans la section institution "
+"du fichier SIPconfig.xml) :"
+
+#: ../../source/apis_protocols.rst:152
+msgid "|image1123|"
+msgstr "|image1123|"
+
+#: ../../source/apis_protocols.rst:154
+msgid "So the format of this SIP2 request message is:"
+msgstr "Le format de ce message de requête SIP2 est :"
+
+#: ../../source/apis_protocols.rst:156
+msgid "|image1124|"
+msgstr "|image1124|"
+
+#: ../../source/apis_protocols.rst:158
+msgid ""
+"The summary value is a 10 character value. If a Y is written in for the "
+"summary value then you will be able to get both a summary and more detailed "
+"informational output."
+msgstr ""
+"La valeur summary est une valeur de 10 caractères. Si Y est inscrit comme "
+"valeur summary vous pourrez obtenir un sommaire ainsi que des informations "
+"plus détaillées comme résultat."
+
+#: ../../source/apis_protocols.rst:160
+msgid ""
+"The value in the <YYYYMMDD>       <HHMMSS> is the current datetime, by "
+"leaving a 4 space gap between the YYYYMMDD and HHMMSS this indicates you "
+"want to use local time rather than UTC."
+msgstr ""
+"La valeur dans <YYYYMMDD>       <HHMMSS> correspond à la date et l'heure "
+"actuelles, en laissant 4 espaces entre YYYYMMDD et HHMMSS vous indiquez que "
+"vous désirez utiliser l'heure locale plutôt que UTC."
+
+#: ../../source/apis_protocols.rst:162
+msgid ""
+"In this manual letter codes for the various fields are used where possible "
+"in describing the SIP2 message fields e.g. AO<institutionid>."
+msgstr ""
+"Dans ce manuel, dans la mesure du possible, les codes alphabétiques pour les "
+"champs sont utilisés dans la description des champs des messages SIP2, par "
+"exemple AO<institutionid>."
+
+#: ../../source/apis_protocols.rst:164
+msgid ""
+"These letter codes can be written in the SIP2 commands into the Linux "
+"terminal, but make sure when substituting values in for the fields (values "
+"inside the <>) that you do not write in the <> brackets."
+msgstr ""
+"Ces codes alphabétiques peuvent être écrits dans les commandes SIP2 dans le "
+"terminal Linux, mais lorsque vous substituez des valeurs (valeurs entre <>), "
+"assurez-vous de ne pas écrire les chevrons <>."
+
+#: ../../source/apis_protocols.rst:167
+msgid "**SIP2 messages:**"
+msgstr "**Messages SIP2 :**"
+
+#: ../../source/apis_protocols.rst:170
+msgid "**Block patron**"
+msgstr "**Bloquer un adhérent**"
+
+#: ../../source/apis_protocols.rst:172
+msgid ""
+"This uses the prefix 01 for request messages and 24 for response messages."
+msgstr ""
+"Ceci utilise le préfixe 01 pour les messages de requêtes et 24 pour les "
+"messages de réponses."
+
+#: ../../source/apis_protocols.rst:174 ../../source/apis_protocols.rst:195
+#: ../../source/apis_protocols.rst:226 ../../source/apis_protocols.rst:243
+#: ../../source/apis_protocols.rst:257 ../../source/apis_protocols.rst:273
+#: ../../source/apis_protocols.rst:291 ../../source/apis_protocols.rst:301
+#: ../../source/apis_protocols.rst:332 ../../source/apis_protocols.rst:344
+#: ../../source/apis_protocols.rst:365 ../../source/apis_protocols.rst:381
+#: ../../source/apis_protocols.rst:397 ../../source/apis_protocols.rst:424
+msgid "Request message:"
+msgstr "Message de requête :"
+
+#: ../../source/apis_protocols.rst:176
+msgid "|image1125|"
+msgstr "|image1125|"
+
+#: ../../source/apis_protocols.rst:179
+msgid ""
+"Card retained is a single character field of either ‘Y’ or ‘N’  which tells "
+"the ACS that a card has been retained by the self checkout machine."
+msgstr ""
+"Card retained est un champ d'un seul caractère, \"Y\" ou \"N\", qui indique "
+"au système automatisé de circulation qu'une carte a été retenue par la borne "
+"d'auto-prêt."
+
+#: ../../source/apis_protocols.rst:181 ../../source/apis_protocols.rst:205
+#: ../../source/apis_protocols.rst:232 ../../source/apis_protocols.rst:251
+#: ../../source/apis_protocols.rst:263 ../../source/apis_protocols.rst:277
+#: ../../source/apis_protocols.rst:295 ../../source/apis_protocols.rst:313
+#: ../../source/apis_protocols.rst:336 ../../source/apis_protocols.rst:354
+#: ../../source/apis_protocols.rst:369 ../../source/apis_protocols.rst:385
+#: ../../source/apis_protocols.rst:436
+msgid "Response message:"
+msgstr "Message de réponse :"
+
+#: ../../source/apis_protocols.rst:183
+msgid "|image1126|"
+msgstr "|image1126|"
+
+#: ../../source/apis_protocols.rst:185
+msgid ""
+"<patronstatus> is a 14 character long value. The value Y in the string means "
+"true. Each position in this string (starting at 0) has a single "
+"corresponding value (Y or N) in the string."
+msgstr ""
+"<patronstatus> est une valeur de 14 caractères. La valeur Y dans la chaîne "
+"veut dire vrai. Chaque position dans cette chaîne (commençant par 0) a une "
+"seule valeur correspondante (Y ou N) dans la chaîne."
+
+#: ../../source/apis_protocols.rst:187
+msgid ""
+"e.g. a Y at position 1 (the second value in the string) means that the "
+"patrons renewal privileges are denied."
+msgstr ""
+"par exemple, un Y à la position 1 (la deuxième valeur de la chaîne) signifie "
+"que les privilèges de renouvellement de l'adhérent sont refusés."
+
+#: ../../source/apis_protocols.rst:190
+msgid "**Check-in items**"
+msgstr "**Retourner des documents**"
+
+#: ../../source/apis_protocols.rst:193
+msgid ""
+"This uses the request message (messages sent to the ACS) prefix of 09 and "
+"the response prefix of 10 (sent to the SC)."
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:197
+msgid "|image1127|"
+msgstr "|image1127|"
+
+#: ../../source/apis_protocols.rst:199
+msgid ""
+"<no block (Offline)> is a single character field of either ‘Y’ or ‘N’ which "
+"indicates if the transaction is being performed offline. As offline "
+"transactions are not supported you need to write ‘N’ if you are testing this "
+"message out manually."
+msgstr ""
+"<no block (Offline)> est un champ d'un seul caractère, soit \"Y\" ou \"N\", "
+"qui indique si la transaction est exécutée hors-ligne. Comme les "
+"transactions hors-ligne ne sont pas supportées, vous devez écrire \"N\" si "
+"vous testez ce message manuellement."
+
+#: ../../source/apis_protocols.rst:201
+msgid ""
+"<transactiondate> this is a 18 character field with the date is the format: "
+"YYYYMMDDZZZZHHMMSS."
+msgstr ""
+"<transactiondate> est un champ de date de 18 caractères au format : "
+"AAAAMMJJZZZZHHMMSS."
+
+#: ../../source/apis_protocols.rst:203
+msgid ""
+"ZZZZ is the timezone, if you want to set it to local you need to leave 4 "
+"blank spaces, but if you want to set it to the UTC (Coordinated Universal "
+"Time) then you need to write in 3 blank spaces and a Z."
+msgstr ""
+"ZZZZ indique le fuseau horaire, si vous souhaitez utiliser votre fuseau "
+"horaire local, vous devez laisser 4 espaces, mais si vous voulez utiliser "
+"UTC (Temps Universel Coordonné), vous devez alors laisser 3 espaces vides et "
+"un Z."
+
+#: ../../source/apis_protocols.rst:207
+msgid "|image1128|"
+msgstr "|image1128|"
+
+#: ../../source/apis_protocols.rst:209
+msgid ""
+"Alert type could have one of several values: 00 : Unknown 01: local hold 02: "
+"remote hold 03: ILL Transfer 04: transfer 99: Other"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:217
+msgid ""
+"If an item is resensitized then the value of <resentitize> should be Y "
+"otherwise it should be N. Rensensitizing items is done to ensure that if "
+"someone tries to steal the item they are detected."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:219
+#, fuzzy
+msgid "**Checkout items**"
+msgstr "**Retourner des documents**"
+
+#: ../../source/apis_protocols.rst:221
+msgid ""
+"This uses the request message prefix of 11 and the response message prefix "
+"of 12. It has similar syntax to the check-in command, outlined above except "
+"the prefixes are different."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:224
+msgid ""
+"**Hold** – May not yet be supported on some systems. This has a request "
+"message numerical prefix of 15 and a response message prefix of 16."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:228
+#, fuzzy
+msgid "|image1129|"
+msgstr "|image1120|"
+
+#: ../../source/apis_protocols.rst:230
+msgid ""
+"<holdmode> is a single character value. + means add a hold, - means delete a "
+"hold and * means change a hold."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:234
+#, fuzzy
+msgid "|image1130|"
+msgstr "|image1100|"
+
+#: ../../source/apis_protocols.rst:236
+msgid ""
+"<ok> is a single length value which is either 0 (for hold is not permitted "
+"or was not successful) or 1 (for hold is permitted and was successful)."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:238
+msgid ""
+"<available> is a single length value which is either Y or N. Y means the "
+"item is currently in the library, whilst N means the item is currently on "
+"loan/someone else has created a hold on the item."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:241
+#, fuzzy
+msgid ""
+"**Item information: This uses the request command prefix of 17, and the "
+"response command prefix of 18**"
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:245
+#, fuzzy
+msgid "|image1131|"
+msgstr "|image1101|"
+
+#: ../../source/apis_protocols.rst:247
+msgid ""
+"See the check-in items command (described above) to find out what the "
+"<xact_date> value is."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:249
+#, fuzzy
+msgid "The terminal password is optional."
+msgstr "Les mots de passe saisis ne correspondent pas"
+
+#: ../../source/apis_protocols.rst:253
+#, fuzzy
+msgid "|image1132|"
+msgstr "|image1102|"
+
+#: ../../source/apis_protocols.rst:255
+#, fuzzy
+msgid ""
+"**Item status update  This uses the request message prefix of 19 and the "
+"response message prefix of 20**"
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:259
+#, fuzzy
+msgid "|image1133|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:261
+msgid ""
+"<itemproperties> is not a fixed length value, and you can optionally write "
+"in values such as item size and these values will be stored in the Koha "
+"database for the item."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:265
+#, fuzzy
+msgid "|image1134|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:267
+msgid ""
+"<itempropertiesok> is a single length character value which is either 0 or "
+"1. 1 identifies that the <itemproperties> value defined in the item status "
+"update request message was successfully stored in the Koha database."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:269
+#, fuzzy
+msgid "**Patron status**"
+msgstr "Statut adhérent"
+
+#: ../../source/apis_protocols.rst:271
+#, fuzzy
+msgid ""
+"This uses the request message prefix 23 and the response message prefix of "
+"24."
+msgstr ""
+"Ceci utilise le préfixe 01 pour les messages de requêtes et 24 pour les "
+"messages de réponses."
+
+#: ../../source/apis_protocols.rst:275
+#, fuzzy
+msgid "|image1135|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:279
+#, fuzzy
+msgid "|image1136|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:281
+msgid ""
+"The value displayed for <patronvalidity> is Y (valid) and N (invalid) The "
+"value in the <YYYYMMDD>    < HHMMSS> is the current date/time."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:284
+msgid ""
+"The reason for the gap between the two values is to define that you want to "
+"use localtime rather than UTC."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:287
+msgid ""
+"**Patron enable - This is not yet supported. This uses the request message "
+"prefix of 25 and the response message prefix of 26**"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:289
+msgid "This command undoes the block patron command."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:293
+#, fuzzy
+msgid "|image1137|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:297
+#, fuzzy
+msgid "|image1138|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:299
+#, fuzzy
+msgid ""
+"**Renew This uses the request message prefix of 29 and the response message "
+"prefix of 30**"
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:303
+#, fuzzy
+msgid "|image1139|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:305
+msgid ""
+"<thirdpartyallowed> is  a single character value which is either Y or N. If "
+"it is Y then third parties can renew items."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:307
+msgid ""
+"<noblock> is a single character value which is either Y or N. If it is Y "
+"then this means that the item was checkin/out when the ACS was offline."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:309
+msgid ""
+"<nbduedate> is the transaction date of checkin/checkout when the ACS was "
+"offline."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:311
+msgid ""
+"<feeacknowledged> is a single character value which is either Y or N. This "
+"indicates if the user accepts the fee associated with the item they are "
+"renewing."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:315
+#, fuzzy
+msgid "|image1140|"
+msgstr "|image1100|"
+
+#: ../../source/apis_protocols.rst:317
+msgid ""
+"<ok> is a single character value which is either 0 or 1. A value of 1 means "
+"the item was successfully renewed, 0 means item was not successfully renewed."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:319
+msgid ""
+"<renewalok> is a single character value which is either Y or N. The logic "
+"for the setting of the value of <renewalok> is Y is set when the item is "
+"already checkout by the user and so it should be desensitized thereby "
+"renewing it, whereas N is set if the item is not already checkout to the "
+"patron and so it should not be renewed."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:321
+msgid ""
+"In other words don’t let patrons renew books when they are not currently "
+"checked out to them."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:323
+msgid ""
+"<magneticmedia> is a single character value which is either Y (for yes), N "
+"( for no), or U (for unknown)."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:325
+msgid ""
+"<mediatype> is a three numerical character long value. For a list of the "
+"values go to: http://multimedia.3m.com/mws/media/355361O/sip2-protocol.pdf"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:328
+#, fuzzy
+msgid "**End session**"
+msgstr "sessions"
+
+#: ../../source/apis_protocols.rst:330
+#, fuzzy
+msgid ""
+"This uses the request message prefix of 35 and the response message prefix "
+"of 36"
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:334
+#, fuzzy
+msgid "|image1141|"
+msgstr "|image1101|"
+
+#: ../../source/apis_protocols.rst:338
+#, fuzzy
+msgid "|image1142|"
+msgstr "|image1102|"
+
+#: ../../source/apis_protocols.rst:340
+msgid "<success_or_failure> is either Y for success or N for failure."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:342
+msgid ""
+"**Fee Paid – May not be implemented yet. This uses a request message prefix "
+"of 37 and a response message prefix of 38**"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:346
+#, fuzzy
+msgid "|image1143|"
+msgstr "|image1103|"
+
+#: ../../source/apis_protocols.rst:348
+msgid ""
+"<feetype> is a two numerical character value which is between 01 and 99. To "
+"see a list of fee type values go to http://multimedia.3m.com/mws/"
+"media/355361O/sip2-protocol.pdf"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:350
+msgid ""
+"<paymenttype> is a two character numerical value between 00 and 99. 00 is "
+"cash, 01 is Visa, and 02 is credit card."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:352
+msgid ""
+"<currencytype> is a 3 alphanumeric character long value identifying the "
+"currency the fee paid was in."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:356
+#, fuzzy
+msgid "|image1144|"
+msgstr "|image1104|"
+
+#: ../../source/apis_protocols.rst:358
+msgid ""
+"<paymentaccepted> is a single alphanumeric character long value which is "
+"either Y (payment has been accepted) or N (payment has not been accepted)."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:361
+#, fuzzy
+msgid "**Patron information**"
+msgstr "Informations adhérent"
+
+#: ../../source/apis_protocols.rst:363
+#, fuzzy
+msgid ""
+"This uses the request message prefix of 63 and the response message prefix "
+"of 64"
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:367
+#, fuzzy
+msgid "|image1145|"
+msgstr "|image1104|"
+
+#: ../../source/apis_protocols.rst:371
+#, fuzzy
+msgid "|image1146|"
+msgstr "|image1104|"
+
+#: ../../source/apis_protocols.rst:373
+msgid "<valid patron> is Y for valid and N for not valid."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:375
+msgid ""
+"<hold "
+"itemcount><overdueitemcount><chargeditemscount><fienitemscount><recallitemscount><unavaliableholdscount> "
+"are all 4 numerical character long values."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:377
+#, fuzzy
+msgid "**Renew all**"
+msgstr "Tout renouveler"
+
+#: ../../source/apis_protocols.rst:379
+#, fuzzy
+msgid ""
+"This uses the request message prefix of 65 and the  response message prefix "
+"of 66."
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:383
+#, fuzzy
+msgid "|image1147|"
+msgstr "|image1104|"
+
+#: ../../source/apis_protocols.rst:387
+#, fuzzy
+msgid "|image1148|"
+msgstr "|image1104|"
+
+#: ../../source/apis_protocols.rst:389
+msgid ""
+"<renewedcount> is a 4 numerical character long value denoting the number of "
+"items that were renewed."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:391
+msgid ""
+"<unrenewedcount>, has the same format as the <renewedcount> but it denotes "
+"the number of items not renewed."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:393
+#, fuzzy
+msgid "**Login**"
+msgstr "Connexion"
+
+#: ../../source/apis_protocols.rst:395
+#, fuzzy
+msgid ""
+"This uses the request message prefix of 93, and the response message prefix "
+"of 94."
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:399
+#, fuzzy
+msgid "|image1149|"
+msgstr "|image1104|"
+
+#: ../../source/apis_protocols.rst:401
+msgid ""
+"<UIDalgorithm> and <PWDalgorithm> are one character long values indicating "
+"the type of algorithm to use to encrypt the loginuserid and loginpassword "
+"respectively."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:403
+msgid "Writing in the value of 0 means these values will not be encrypted."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:405
+msgid ""
+"Response message: *941* is a successful login. *940* is an unsuccessful "
+"login *[connection closed by foreign host.]* is a unsuccessful login"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:411
+#, fuzzy
+msgid "**Resend**"
+msgstr "Renvoyer"
+
+#: ../../source/apis_protocols.rst:413
+msgid "This requests the receiving device to resend its last message."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:415
+msgid "SC -> ACS resend request is *97*"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:417
+msgid "ACS -> SC resend request is *96*"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:420
+msgid "**Status of the ACS and SC**"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:422
+#, fuzzy
+msgid ""
+"This has the request message prefix of 99 and the response message prefix of "
+"98."
+msgstr ""
+"Ceci utilise le préfixe 09 pour le message de requête (message envoyé au "
+"système automatisé de circulation) et le préfixe 10 pour le message de "
+"réponse (message envoyé à la borne d'auto-prêt)."
+
+#: ../../source/apis_protocols.rst:426
+#, fuzzy
+msgid "|image1150|"
+msgstr "|image1152|"
+
+#: ../../source/apis_protocols.rst:429
+msgid ""
+"The status code is one of 3 values. * 0: SC is ok * 1: SC is out of paper * "
+"2: SC is shutting down max print width is a 3 character long value which is "
+"the integer number of characters the client can print Protocol version is a "
+"4 character value in the format x.xx"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:438
+#, fuzzy
+msgid "|image1151|"
+msgstr "|image1152|"
+
+#: ../../source/apis_protocols.rst:440
+msgid ""
+"If you get the response message ‘96’ this means that the request message is "
+"not valid/understood."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:443
+#, fuzzy
+msgid "**Troubleshooting SIP2**"
+msgstr "Problème"
+
+#: ../../source/apis_protocols.rst:445
+msgid ""
+"Can’t connect to remote host when writing in the command telnet localhost "
+"<portnumber>"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:447
+msgid "3 solutions for this issue to try are:"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:449
+msgid ""
+"1. Check the portnumber your writing in the above command is the port number "
+"written in the SIPconfig.xml file at the location indicated by the number 1. "
+"i.e. in the below example because the portnumber is 6001 the correct command "
+"would be: telnet localhost 6001"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:453
+msgid ""
+"2. Check if any userid is written more than once in the SIPconfig.xml file. "
+"The userid (which is simply the username of the Koha user)  needs to be "
+"unique within the SIPconfig.xml file. If you have the same userid multiple "
+"times in your SIPconfig.xml file this will cause the connection to SIP2 to "
+"fail before you get a chance to authenticate."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:456
+msgid ""
+"3. Check the account defined in the SIPconfig.xml file also exists in the "
+"Koha database with the same username, password and has circulate "
+"permissions. If you have dropped and recreated the Koha database after "
+"creating the patron account in the Koha staff interface and the SIPconfig."
+"xml file then that patron account will not exist in the Koha database and so "
+"you will need to recreate them in the Koha staff interface."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:459
+msgid ""
+"To access the SIP2 logs in your Koha home directory navigate to the "
+"following directory: /var/log/koha/<instancename>"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:462
+msgid ""
+"Then view the output of the sip-error.log and the sip-output.log files which "
+"give more detailed information about the SIP2 error."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:464
+msgid "cat sip-error.log"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:465
+msgid "cat sip-output.log"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:468
+#, fuzzy
+msgid "**Useful links on SIP2 commands:**"
+msgstr "**Commandes SIP2**"
+
+#: ../../source/apis_protocols.rst:470
+msgid "http://multimedia.3m.com/mws/media/355361O/sip2-protocol.pdf"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:475
+msgid "LDAP"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:477
+msgid ""
+"Setting up LDAP (Lightweight Directory Access Protocol) for Koha allows you "
+"to store all user information in a central database which is accessed both "
+"by your organisations Koha instance and for users to authenticate on other "
+"existing systems."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:479
+msgid ""
+"LDAP is a protocol used for file discovery over networks and network "
+"authentication."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:481
+msgid ""
+"LDAP configurations are powerful allowing you to customise how Koha and LDAP "
+"interact. LDAP  can be configured so that new accounts created in LDAP can "
+"be synced down into the Koha database, additionally updates to the LDAP user "
+"account are synced down to the Koha database."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:483
+msgid ""
+"However Koha cannot sync data up to the LDAP server, thus the data traffic "
+"when using LDAP is only one directional."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:485
+msgid ""
+"Auth_By_Bind is set to 1 where a Microsoft Windows Active Directory system "
+"is in use in the LDAP database."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:487
+msgid ""
+"**Before going through the steps to configure LDAP you will need the "
+"following information/actions from the organisation**"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:490
+msgid ""
+"The organisation will need to open a port to allow access to their AD from "
+"the server."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:492
+msgid ""
+"Information on the access to the AD server (IP address/hostname, port, SSL "
+"info)"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:494
+msgid ""
+"Information on the configuration of the AD server (relevant OUs, DCs, CN "
+"formats relative to usernames)"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:496
+msgid "Mapping between AD fields and Koha fields, including defaults"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:498
+msgid ""
+"Default values for things not provided by AD (categorycode, branchcode for "
+"example)"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:500
+msgid ""
+"To authenticate a user do we bind as them (seems to be common for AD) or do "
+"we use an account and login with that and then check? If the latter, we'll "
+"need details of how to log in"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:502
+msgid ""
+"Do the existing usernames in Koha match the usernames that we'll be using to "
+"look them up in AD? If so, good. If not, how will we deal with duplicate "
+"users?"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:504
+msgid "**Steps to set up LDAP with your Koha instance**"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:507
+msgid ""
+"1 In Linux terminal navigate to the directory containing the koha-conf.xml "
+"file which will either be in: * /etc/koha/sites/<instance-name>/ OR *  /etc/"
+"koha/"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:512
+msgid ""
+"2 Open the koha-conf.xml file with root permissions: sudo vi koha-conf.xml"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:515
+msgid ""
+"3 Scroll down to the line containing ‘<useldapserver>0</useldapserver>’ and "
+"change it to: <useldapserver>1</useldapserver>"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:518
+msgid ""
+"4 Then in the next line below write in the LDAP configurations below: Note "
+"all fields highlighted in yellow need to be replaced with the appropriate "
+"values for your organisations LDAP server."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:572
+#, fuzzy
+msgid "5 Save and exit the koha-conf.xml file"
+msgstr "ENV and koha-conf.xml"
+
+#: ../../source/apis_protocols.rst:574
+msgid "6 Check the LDAP connection works by writing in:"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:576
+msgid "ldapsearch -H ldaps://host.name  -s base -x  -w \"\" -d 1"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:579
+msgid ""
+"Note about hostname Hostname can either be a alphanumerical name or it can "
+"be the LDAP server IP address (its optional to write port number). By "
+"default the ldaps default port number is 636, whilst ldap default port "
+"number is 389"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:583
+msgid ""
+"Note about the replicate and update fields The replicate  LDAP config field "
+"for LDAP in the koha-conf.xml file allow the Koha database to be added to "
+"with a new borrower account whenever a user logs into Koha (either the staff "
+"client or OPAC) with their LDAP username and password (assuming the same "
+"username and password does not already exist in the Koha database)."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:586
+msgid ""
+"Whereas the update LDAP config field (in the same file allows) allows for "
+"user information in the LDAP database to be synced down to the Koha "
+"database. e.g. if someone gets married and their surname changes then the "
+"new surname only needs to       be updated in the existing LDAP database and "
+"that will be synced down to the Koha       database automatically if the "
+"update configuration is set to 1."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:590
+msgid ""
+"About the mapping fields (the fields highlighted green) <city is=\"l"
+"\">Athens, OH</city>"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:593
+msgid ""
+"The left hand column name (highlighted yellow) is the name of the column in "
+"the LDAP database."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:595
+msgid ""
+"The column name inside quote marks (highlighted pink) is the name of the "
+"column in the Koha database. NOTE: This can be filled with any value if "
+"there is no equivalent column name in the Koha database as exists in the "
+"LDAP database."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:597
+msgid ""
+"The value highlighted cyan is the default value for the specified Koha and "
+"LDAP columns. So in the above example all user records in the Koha and LDAP "
+"databases  will by default have the city value of ‘Athens, OH’."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:599
+#, fuzzy
+msgid "Example of the LDAP configurations:"
+msgstr "Exporter la configuration"
+
+#: ../../source/apis_protocols.rst:647
+msgid ""
+"The values in the mapping area are not always the same, and it depends on "
+"what is in your organisations LDAP database. For example some organisations "
+"do not use <userid> instead each user is only identified by the <email> "
+"field and so no <userid> is written."
+msgstr ""
+
+#: ../../source/apis_protocols.rst:650
+#, fuzzy
+msgid "**Troubleshooting LDAP**"
+msgstr "Problème"
+
+#: ../../source/apis_protocols.rst:652
+msgid "The log that LDAP errors are printed to depends on several factors:"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:654
+msgid ""
+"If plack is not disabled then LDAP errors are displayed in the plack-error."
+"log file If plack is disabled then the location that LDAP errors are printed "
+"to is either the opac-error.log file (if the user is logging into the OPAC) "
+"or the intranet-error.log file (if the user is logging into the staff "
+"client) All of these three log files are accessible in the following "
+"directory:"
+msgstr ""
+
+#: ../../source/apis_protocols.rst:658
+msgid "/var/log/koha/<instance>/"
+msgstr ""

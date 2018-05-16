@@ -1,0 +1,366 @@
+# Compendium of tr.
+msgid ""
+msgstr ""
+"Project-Id-Version: compendium-tr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-15 19:31-0300\n"
+"PO-Revision-Date: 2018-05-15 19:53-0300\n"
+"Language-Team: Koha Translation Team \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/webservices.rst:4
+msgid "Web Services"
+msgstr "Web Hizmetleri"
+
+#: ../../source/webservices.rst:9
+msgid "OAI-PMH"
+msgstr "OAI-PMH"
+
+#: ../../source/webservices.rst:11
+msgid ""
+"For the Open Archives Initiative-Protocol for Metadata Harvesting (OAI-PMH) "
+"there are two groups of 'participants': Data Providers and Service "
+"Providers. Data Providers (open archives, repositories) provide free access "
+"to metadata, and may, but do not necessarily, offer free access to full "
+"texts or other resources. OAI-PMH provides an easy to implement, low barrier "
+"solution for Data Providers. Service Providers use the OAI interfaces of the "
+"Data Providers to harvest and store metadata. Note that this means that "
+"there are no live search requests to the Data Providers; rather, services "
+"are based on the harvested data via OAI-PMH."
+msgstr ""
+"Metadata Harvesting (OAI-PMH) için Açık Arşivler Girişimi-Protokolü için iki "
+"'katılımcı' grup vardır: Veri Sağlayıcıları ve Servis Sağlayıcıları. Veri "
+"Sağlayıcıları (açık arşivler, yazılım havuzu) metadata için ücretsiz erişim "
+"sağlar ve çok gerekli olmasa da diğer kaynaklara ya da tam metinlere de "
+"ücretsiz erişim imkanı sunabilir. OAI-PHM Veri Sağlayıcılar için kolay "
+"uygulanabilir, düşük bariyerli çözüm sağlar. Servis Sağlayıcılar metadata "
+"harvest etmek ve depolamak için Veri Sağlayıcılarının OAI arayüzlerini "
+"kullanırlar. Bunun Veri Sağlayıcılarına hiç bir canlı arama isteği "
+"olmayacağı anlamına geldiğini, hatta, hizmetlerin OAI-PMH aracılığıyla "
+"harvest edilen verilere dayandığını unutmayın."
+
+#: ../../source/webservices.rst:22
+msgid ""
+"Koha at present can only act as a Data Provider. It can not harvest from "
+"other repositories. The biggest stumbling block to having Koha harvest from "
+"other repositories is that MARC is the only metadata format that Koha "
+"indexes natively. Visit http://www.oaforum.org/tutorial/english/page3.htm "
+"for diagrams of how OAI-PMH works."
+msgstr ""
+"Koha halihazırda bir Veri Sağlayıcı olarak hareket edebilir. Diğer "
+"depolardan harvest edemez. Koha'nın diğer depolardan harvest etmesinin en "
+"büyük engeli, Koha'nın doğal olarak endeksleyen tek meta veri biçiminin MARC "
+"olmasıdır. OAI-PMH'nin nasıl çalıştığının diyagramları için http://www."
+"oaforum.org/tutorial/english/page3.htm adresini ziyaret edin."
+
+#: ../../source/webservices.rst:29
+msgid "Learn more about OAI-PMH at: http://www.openarchives.org/pmh/"
+msgstr ""
+"Bu sayfada OAI-PMH hakkında daha fazla bilgi edinebilirsiniz: `http://www."
+"openarchives.org/pmh/ "
+
+#: ../../source/webservices.rst:31
+msgid ""
+"To enable OAI-PMH in Koha edit the :ref:`OAI-PMH` preference. Once enabled "
+"you can visit http://YOURKOHACATALOG/cgi-bin/koha/oai.pl to see your file."
+msgstr ""
+"Koha'da OAI-PMH etkinleştirmek için `OAI-PMH` tercihini düzenleyin. Bir kez "
+"etkinleştirildikten sonra dosyanızı görmek için http://YOURKOHACATALOG/cgi-"
+"bin/koha/oai.pl adresine gidebilirsiniz."
+
+#: ../../source/webservices.rst:38
+msgid "Sample OAI Conf File"
+msgstr "Örnek OAI Yapılandırma Dosyası"
+
+#: ../../source/webservices.rst:64
+msgid "REST services"
+msgstr "REST hizmetleri"
+
+#: ../../source/webservices.rst:66
+msgid ""
+"Koha can now be requested by REST http requests. BibLibre wrotes an external "
+"module to adds more possibilities than ILS-DI can provide.There is no "
+"authentication process, but authorized ips are listed in the config file. "
+"Services have been tested in 3.10, 3.12 and 3.14 koha versions. You can find "
+"more information about it into README file and opac/rest.pl documentation on "
+"http://git.biblibre.com. If you want to add features, send us a patch at dev"
+"\\_patches AT biblibre DOT com."
+msgstr ""
+"Koha artık REST http istekleri tarafından talep edilebilir. BibLibre, ILS-"
+"DI'nın sağlayabileceğinden daha fazla olanak ekleyen harici bir modül sunar. "
+"Kimlik doğrulama işlemi yoktur, ancak yetkili IP'ler yapılandırma dosyasında "
+"listelenir. Hizmetler 3.10, 3.12 ve 3.14 koha sürümlerinde test edilmiştir. "
+"Bu konuda daha fazla bilgiyi http://git.biblibre.com adresindeki README "
+"dosyası ve opac/rest.pl dokümanlarında bulabilirsiniz. Özellik eklemek "
+"isterseniz dev\\_patches AT biblibre DOT com adresine bir düzeltme gönderin."
+
+#: ../../source/webservices.rst:74
+msgid "Services provided in 1.4 version are:"
+msgstr "1.4 sürümünde sağlanan hizmetler şunlardır:"
+
+#: ../../source/webservices.rst:104
+#, fuzzy
+msgid "SRU server"
+msgstr "Yeni Z39.50 sunucusu"
+
+#: ../../source/webservices.rst:106
+msgid ""
+"Koha implements the Search/Retrieve via URL (SRU) protocol. More information "
+"about the protocol itself can be found at http://www.loc.gov/standards/sru/. "
+"The version implemented is version 1.1."
+msgstr ""
+"Koha, URL (SRU) protokolü üzerinden Arama/Getirme eylemini uygular. http://"
+"www.loc.gov/standards/sru/ adresinde protokolün kendisi hakkında daha fazla "
+"bilgi bulunabilir. Uygulanan sürüm 1.1 sürümüdür."
+
+#: ../../source/webservices.rst:114
+msgid "Explain"
+msgstr "Açıkla"
+
+#: ../../source/webservices.rst:116
+msgid ""
+"If you want to have information about the implementation of SRU on a given "
+"server, you should have access to the Explain file using a request to the "
+"server without any parameter. Like <http://myserver.com:9999/biblios/>. The "
+"response from the server is an XML file that should look like the following "
+"and will give you information about the default settings of the SRU server."
+msgstr ""
+"Belirli bir sunucuda SRU uygulanması konusunda daha fazla bilgi edinmek "
+"istiyorsanız, hiçbir parametre olmadan sunucuya bir sorgu göndererek Explain "
+"(Açıklama) dosyasına erişmeniz gerekir. <http://myserver.com:9999/biblios/>; "
+"örneğinde olduğu gibi. Sunucudan gelen yanıt SRU sunucusunun varsayılan "
+"ayarları hakkında bilgi verecek bir XML dosyasıdır ve aşağıdaki gibi "
+"görünmelidir."
+
+#: ../../source/webservices.rst:185
+msgid "Search"
+msgstr "Ara"
+
+#: ../../source/webservices.rst:187
+msgid ""
+"This url : http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=reefs is composed of the "
+"following elements:"
+msgstr ""
+"Bu url : http://myserver.com:9999/biblios?version=1.1&amp;"
+"operation=searchRetrieve&amp;query=reefs aşağıdaki unsurlardan oluşur:"
+
+#: ../../source/webservices.rst:191
+msgid "base url of the SRU server : http://myserver.com:9999/biblios?"
+msgstr "SRU sunucusunun temel url'si: http://myserver.com:9999/biblios?"
+
+#: ../../source/webservices.rst:193
+msgid ""
+"search part with the 3 required parameters : version, operation and query. "
+"The parameters within the search part should be of the key=value form, and "
+"can be combined with the & character."
+msgstr ""
+"3 gerekli parametre ile arama bölümü : sürüm, işlem ve sorgulama. Arama "
+"bölümü içerisindeki parametreler anahtar=değer biçiminde olmalı ve & "
+"karakteri ile kombine edilebilir olmalıdır."
+
+#: ../../source/webservices.rst:197
+msgid ""
+"One can add optional parameters to the query, for instance maximumRecords "
+"indicating the maximum number of records to be returned by the server. So "
+"http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=reefs&maximumRecords=5 will only "
+"get the first 5 results results from the server."
+msgstr ""
+"Bir sunucu tarafından döndürülecek kayıtların sayısını gösteren örneğin "
+"maximumRecords için, sorguya isteğe bağlı parametreler eklenebilir. Böylece "
+"http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=reefs&maximumRecords=5, sunucudan "
+"yalnızca ilk 5 sonucu alacaktır."
+
+#: ../../source/webservices.rst:203
+msgid ""
+"http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation."
+"html gives more details about the search operations and in particular the "
+"list of optional parameters for searching."
+msgstr ""
+"http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-operation."
+"html <#http://www.loc.gov/standards/sru/sru1-1archive/search-retrieve-"
+"operation.html adresinde bilgi arama işlemleri hakkında daha ayrıntılı bilgi "
+"ve özellikle arama için isteğe bağlı parametrelerinin listesini "
+"bulabilirsiniz."
+
+#: ../../source/webservices.rst:207
+msgid "The \"operation\" key can take two values: scan or searchRetrieve."
+msgstr "\"Operation\" anahtarı iki değer alabilir: scan ya da searchRetrieve."
+
+#: ../../source/webservices.rst:209
+msgid ""
+"If operation=searchRetrieve, then the search key should be query. As in : "
+"operation=searchRetrieve&query=reefs"
+msgstr ""
+"operation=searchRetrieve ise, arama anahtarı sorgu olmalıdır. Şu şekilde : "
+"operation=searchRetrieve&query=reefs"
+
+#: ../../source/webservices.rst:212
+msgid ""
+"If operation=scan, then the search key should be scanClause. As in : "
+"operation=scan&scanClause=reefs"
+msgstr ""
+"If operation=scan ise, arama anahtarı scanClause olmalıdır. Şu şekilde : "
+"operation=scan&scanClause=reefs"
+
+#: ../../source/webservices.rst:215
+msgid ""
+"etc/zebradb/biblios/etc/bib1.att defines Zebra/3950 indexes that exist on "
+"your system. For instance you'll see that we have indexes for Subject and "
+"for Title: att 21 Subject and att 4 Title respectively."
+msgstr ""
+"etc/zebradb/biblios/etc/bib1.att sisteminizde mevcut olan Zebra/3950 "
+"dizinlerini tanımlar. Örneğin Konu ve Başlık dizinleri olduğunu "
+"göreceksiniz: att 21 konu ve att 4 başlık anılan sıraya göre."
+
+#: ../../source/webservices.rst:219
+msgid ""
+"In the pqf.properties file located under etc/zebradb/pqf.properties I see "
+"that an access point already uses my Subject index (index.dc.subject = 1=21) "
+"while another uses my Title index (index.dc.title = 1=4) I know this is my "
+"Subject index because as I've seen just before in my bib1.att file, it's "
+"called with =1=21 in Z3950: so index.dc.subject = 1=21 correctly points to "
+"my Subject index. And Title was called with 1=4 so index.dc.title = 1=4 "
+"correctly points to my Title index. I can now construct my query just like I "
+"would in a search box, just preceding it with the \"query\" key: "
+"query=Subject=reefs and Title=coral searches \"reefs\" in the subject and "
+"\"coral\" in the title. The full url would be http://myserver.com:9999/"
+"biblios?version=1.1&operation=searchRetrieve&query=Subject=reefs and "
+"Title=coral If I want to limit the result set to just 5 records, I can do "
+"http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=Subject=reefs and "
+"Title=coral&maximumRecords=5"
+msgstr ""
+"etc/zebradb/pqf.properties altında bulunan pqf.properties dosyasında bir "
+"erişim noktasının zaten Konu dizinimi (index.dc.title = 1=4) kullandığını ve "
+"diğer bir tanesinin Başlık dizinimi (index.dc.title = 1=4) kullanmakta "
+"olduğunu görüyorum. Bunun benim Konu dizinim olduğunu bilmekteyim çünkü daha "
+"önce bib1.att dosyamda bunun =1=21 in Z3950: ile çağrıldığını gördüm, bu "
+"nedenle index.dc.subject = 1=21 doğru şekilde benim Konu dizinimi işaret "
+"etmektedir. Şimdi sorgumu, sadece kendisinden önce \"query\" (sorgu) "
+"anahtarı ile bir arama kutusunda yapacağım gibi oluşturabilirim:  "
+"query=Subject=reefs ve Title=coral, konu içinde \"reefs\" araması ve başlık "
+"içinde \"coral\" araması yapar. Tam url şu şekildedir http://myserver."
+"com:9999/biblios?version=1.1&amp;"
+"operation=searchRetrieve&query=Subject=reefs and Title=coral Eğer sonuçları "
+"sadece 5 kayıt ile sınrlandırmak istersem, şöyle yapabilirim http://myserver."
+"com:9999/biblios?version=1.1&amp;"
+"operation=searchRetrieve&query=Subject=reefs and Title=coral&amp;"
+"maximumRecords=5"
+
+#: ../../source/webservices.rst:235
+msgid ""
+"I can also play with truncate, relations, etc. Those are also defined in my "
+"pqf.properties file. I can see for instance the position properties defined "
+"as:"
+msgstr ""
+"Aynı zamanda kesme, ilişkiler, vs. gibi ayarları da inceleyebilirim. Bunlar "
+"pqf.properties dosyamda tanımlıdır. Örneğin şu şekilde tanımlanmış konum "
+"özelliklerini görebilirim:"
+
+#: ../../source/webservices.rst:247
+msgid ""
+"So as an example if I want \"coral\" to be at the beginning of the title, I "
+"can do this query : http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=Title=coral first"
+msgstr ""
+"Yani, örnek olarak \"coral\" kelimesinin başlığın başında olmasını "
+"istiyorsam, şu sorguyu yapabilirim: http://myserver.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=Title=coral first"
+
+#: ../../source/webservices.rst:255
+msgid "Retrieve"
+msgstr "Retrieve"
+
+#: ../../source/webservices.rst:257
+msgid ""
+"My search for http://univ\\_lyon3.biblibre.com:9999/biblios?"
+"version=1.1&operation=searchRetrieve&query=coral reefs&maximumRecords=1 "
+"retrieves just on record. The response looks like this:"
+msgstr ""
+"http://univ\\_lyon3.biblibre.com:9999/biblios?version=1.1&amp;"
+"operation=searchRetrieve&query=coral reefs&maximumRecords=1 için yaptığım "
+"arama sadece bir kayıt getirdi. Yanıt şu şekilde görünür:"
+
+#: ../../source/webservices.rst:328
+#, fuzzy
+msgid "JSON reports services"
+msgstr "Web servisleri"
+
+#: ../../source/webservices.rst:330
+#, fuzzy
+msgid ""
+"Koha implements a JSON reports service for every report saved using the :ref:"
+"`Guided Reports Wizard <guided-report-wizard-label>` or :ref:`Report from "
+"SQL <report-from-sql-label>` features."
+msgstr ""
+"Koha verileri bir MySQL veri tabanında depolanır, bu demek oluyor ki "
+"kütüphaneciler ya :ref:`Guided Reports Wizard <guided-report-wizard-label>` "
+"kullanarak ya da kendi :ref:`SQL sorgularını <report-from-sql-label>` "
+"yazarak neredeyse istedikleri her raporu oluşturabilmektedirler."
+
+#: ../../source/webservices.rst:334
+msgid ""
+"By default reports will be non-public and only accessible by authenticated "
+"users. If a report is explicitly set to *public* it will be accessible "
+"without authentication by anyone. This feature should only be used when the "
+"data can be shared safely not containing any patron information."
+msgstr ""
+
+#: ../../source/webservices.rst:339
+#, fuzzy
+msgid "The reports can be accessed using the following URLs:"
+msgstr "Göstergelere 'gösterge' anahtarı kullanılarak erişilebilir."
+
+#: ../../source/webservices.rst:341
+#, fuzzy
+msgid "Public reports"
+msgstr "Açık notlar"
+
+#: ../../source/webservices.rst:343
+#, fuzzy
+msgid "OpacBaseURL/cgi-bin/koha/svc/report?id=REPORTID"
+msgstr "%s/cgi-bin/koha/svc/report?id=%s"
+
+#: ../../source/webservices.rst:345
+#, fuzzy
+msgid "Non-public reports"
+msgstr "Umuma kapalı notlar"
+
+#: ../../source/webservices.rst:347
+#, fuzzy
+msgid "StaffBaseURL/cgi-bin/koha/svc/report?id=REPORTID"
+msgstr "%s/cgi-bin/koha/svc/report?id=%s"
+
+#: ../../source/webservices.rst:349
+#, fuzzy
+msgid "There are also some additional parameters available:"
+msgstr "Şu anda %s kullanılamaz."
+
+#: ../../source/webservices.rst:351
+msgid ""
+"Instead of accessing the report by REPORTID you can also use the report's "
+"name:"
+msgstr ""
+
+#: ../../source/webservices.rst:354
+#, fuzzy
+msgid ".../cgi-bin/koha/svc/report?name=REPORTNAME"
+msgstr "%s/cgi-bin/koha/svc/report?id=%s"
+
+#: ../../source/webservices.rst:356
+msgid ""
+"For easier development there is also an option to generate an annotated "
+"output of the data. It will generate an array of hashes that include the "
+"field names as keys."
+msgstr ""
+
+#: ../../source/webservices.rst:360
+#, fuzzy
+msgid ".../cgi-bin/koha/svc/report?name=REPORTNAME&annotated=1"
+msgstr "%s/cgi-bin/koha/svc/report?id=%s"
