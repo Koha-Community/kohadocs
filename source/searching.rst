@@ -295,6 +295,121 @@ prefer a different default sort, you can set
 :ref:`defaultSortField <defaultsortfield-&-defaultsortorder-label>` to one of the other choices in
 Administration > System Preferences > Searching.
 
+.. _search-results-label:
+
+Search results
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After performing a search the number of results found for your search will
+appear above the results.
+
+|image1329|
+
+To the left, you will find filters, or facets, to refine your search. Currently 
+available facets include:
+
+-  Availability
+
+-  Authors
+
+-  Home library, holding library or both
+
+    **Note**
+
+    This depends on your setting for the :ref:`DisplayLibraryFacets 
+    <displaylibraryfacets-label>` system preference.
+
+-  Locations
+
+-  Topics (subject headings)
+
+When there are more than five facets in a category, a 'Show more' link
+will appear. You can control the display of the facets using the following
+systempreferences: :ref:`displayFacetCount <displayfacetcount-label>`, :ref:
+`isplayLibraryFacets <displaylibraryfacets-label>`, :ref:`FacetLabelTruncationLength
+ <facetlabeltruncationlength-label>`, :ref:`FacetMaxCount <facetmaxcount-label>`, 
+:ref:`maxRecordsForFacets <maxrecordsforfacets-label>`, and :ref:`UNIMARCAuthorsFacetsSeparator
+ <unimarcauthorsfacetsseparator-label>`.
+
+Along the top, under the number of results, there are buttons to do different actions
+on selected records.
+
+-  'Select all': selects all the records on the page.
+
+-  'Clear all': unselects all the records that were selected.
+
+-  'Unhighlight': removes the red/yellow highlighting of the search term(s).
+
+-  'Add to cart': adds selected record(s) to the :ref:`cart <cart-label>`.
+
+    **Note**
+    
+    The :ref:`intranetbookbag <intranetbookbag-label>` system preference needs to be
+    set to 'Show' in order for that button to appear.
+
+-  'Add to list': adds selected record(s) to the chosen :ref:`list <lists-label>`.
+
+-  'Place hold': places a hold on the selected record(s).
+
+-  'Browse selected records': goes to the detailed record page of the selected record(s).
+   Clicking on 'Next' or 'Previous' from the detailed record will bring you to the next
+   selected record. 
+
+    **Note**
+
+    The :ref:`BrowseResultSelection <browseresultselection-label>` system preference
+    needs to be enabled in order for that button to appear.
+
+-  'Z39.50/SRU search': opens the Z39.50/SRU search popup window with the fields
+   pre-filled with the search terms.
+
+-  'Sort': lets you choose a sorting field and order.
+
+    **Note**
+
+    By default your search results will be sorted based on your :ref:
+    `defaultSortField and defaultSortOrder <defaultsortfield-&-defaultsortorder-label>` 
+    system preferences values.
+
+|image1330|
+
+Under each title on your results list a series of values from your leader 
+will appear. It is important to note that this has nothing to do with the 
+item types or collection codes you have applied to your records, this data 
+is all pulled from your fixed fields. This can be turned on or off with the 
+:ref:`DisplayIconsXSLT <displayiconsxslt-label>` system preference.
+
+At the bottom, under each record, there are more action links:
+
+-  'Holds': brings you to that record's :ref:`'Holds' tab <placing-holds-in-staff-client-label>`.
+
+-  'Request article': brings you to that record's :ref:`'Article requests' tab <article-requests-label>`.
+
+-  'Edit record': brings you to that record's MARC framework for editing.
+
+-  'Edit items': brings you to that record's item list for editing.
+
+-  'OPAC view': brings you to that record's detail page in the OPAC.
+
+    **Note**
+
+    'OPAC view' needs the :ref:`OPACBaseURL <opacbaseurl-label>` system preference to 
+    be properly set.
+
+To the right of each record are the holdings information and availability.
+
+    **Note**
+
+    Even if you filtered on one library location all locations that hold the item 
+    will appear on the search results.
+
+    **Important**
+
+    An item’s hold status doesn’t not affect whether or not the item is 'available' 
+    until the item is in 'waiting' status. Items with on-shelf holds will show as 
+    available until a librarian has pulled them from the shelf and checked the item 
+    in make it show 'waiting'.
+
 .. _item-searching-label:
 
 Item Searching

@@ -1319,3 +1319,5 @@
 .. |image1326| image:: images/patrons/mergepatrons1.png
 .. |image1327| image:: images/patrons/mergepatrons2.png
 .. |image1328| image:: images/patrons/mergepatrons3.png
+.. |image1329| image:: images/searching/searchresults.png
+.. |image1330| image:: images/searching/searchresultssort.png
