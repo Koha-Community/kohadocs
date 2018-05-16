@@ -181,9 +181,9 @@ record the form will include the bib info).
 -  'Location' is for the shelving location
 
 -  The 'Grace period' is the number of days before an issue is
-   automatically moved from 'Expected' status to 'Waiting' and how many
-   days before an issue is automatically moved from 'Waiting' status to
-   'Late'
+   automatically moved from 'Expected' status to 'Late'.
+   This mechanism requires that the :ref:`SerialsUpdate.pl cron job
+   <serials-update-label>` is set up to run regularly.
 
 -  The Staff and OPAC Display options allow you to control how many
    issues appear by default on bibliographic records in the Staff Client
