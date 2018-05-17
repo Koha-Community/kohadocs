@@ -11883,6 +11883,10 @@ Values:
 
 -  Enable
 
+Description:
+
+-  Enabling this system preference makes a button appear in the intranet search
+   results page to browse the selected records.
 
 .. _enablesearchhistory-label:
 
