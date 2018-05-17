@@ -4012,7 +4012,7 @@ Description:
    ahead of time.
 
 The calendar is defined on a branch by branch basis. To learn more about
-the calendar, check out the ^:ref:`Calendar & Holidays <calendar-label>`^
+the calendar, check out the ^:ref:`Calendar & Holidays <calendar-label>`
 section of this manual.
 
 .. _finesincludegraceperiod-label:

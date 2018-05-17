@@ -5,7 +5,7 @@ Administration
 
 .. _administration-label:
 
-Basic Parameters
+Basic parameters
 -----------------------------------
 
 *Get there:* More > Administration
@@ -32,12 +32,12 @@ When visiting this page you are presented with a list of the libraries that have
 
 .. _adding-a-library-label:
 
-Adding a Library
+Adding a library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new library:
 
--  Click 'New Library'
+-  Click 'New library'
 
 -  The top of the form asks for some basics about the library
 
@@ -115,7 +115,7 @@ To add a new library:
 
 .. _editing/deleting-a-library-label:
 
-Editing/Deleting a Library
+Editing/deleting a library
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will be unable to delete any library that has patrons or items
@@ -133,11 +133,13 @@ link to edit/alter details associated with the library in question.
 Library groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Library groups are used in searches to limit the search to a group of libraries (for example in a neigbourhood).
+Library groups are used in searches to limit the search to a group of 
+libraries (for example in a neigbourhood).
 
 -  *Get there:* More > Administration > Basic Parameters > Library groups
 
-When visiting this page you are presented with a list of the groups that have already been added to the system.
+When visiting this page you are presented with a list of the groups 
+that have already been added to the system.
 
 |image123|
 
@@ -150,13 +152,25 @@ Click the 'Add Group' button at the top of the screen
 
 |image129|
 
-- Give the group a title and a description. Only the title is mandatory as it will show up in the staff client and in the OPAC. The description is only used in this page to give an idea of what the group is used for.
+- Give the group a title and a description. Only the title is mandatory 
+  as it will show up in the staff client and in the OPAC. The description 
+  is only used in this page to give an idea of what the group is used for.
 
-- You can limit staff from seeing other groups' patrons by checking the box next to the 'Limit patron data access by group' option.
+- You can limit staff from seeing other groups' patrons by checking the 
+  box next to the 'Limit patron data access by group' option.
 
-- If you would like the group to show up in the library pulldown menu at the top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add') and on the advanced search page you can check the 'Use for OPAC search groups' box.
+    **Note**
 
-- If you want the group to appear in the library pulldown in the staff client advanced search, check the 'Use for staff search groups' box.
+    This can be overriden with the :ref:`user permission view_borrower_infos_
+    from_any_libraries <patron-permissions-defined-label>`.
+
+- If you would like the group to show up in the library pulldown menu at the 
+  top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add') 
+  and on the advanced search page you can check the 'Use for OPAC search 
+  groups' box.
+
+- If you want the group to appear in the library pulldown in the staff 
+  client advanced search, check the 'Use for staff search groups' box.
 
 |image131|
 
@@ -165,7 +179,9 @@ Click the 'Add Group' button at the top of the screen
 Adding a library to a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Click on the 'Add library' button next to the group to add a library to this group. You will be presented with a list of the libraries that are not already in the group.
+Click on the 'Add library' button next to the group to add a library to 
+this group. You will be presented with a list of the libraries that are 
+not already in the group.
 
 |image133|
 
@@ -174,7 +190,10 @@ Click on the 'Add library' button next to the group to add a library to this gro
 Adding a sub-group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If your system is very large, you can create sub-groups. Click on the 'Actions' button next to the group and select the 'Add a sub-group' option. Fill in the title and the description (optional) of the sub-group. The features will be inherited from the parent group.
+If your system is very large, you can create sub-groups. Click on the 
+'Actions' button next to the group and select the 'Add a sub-group' 
+option. Fill in the title and the description (optional) of the sub-group. 
+The features will be inherited from the parent group.
 
 |image1323|
 
@@ -183,7 +202,8 @@ If your system is very large, you can create sub-groups. Click on the 'Actions' 
 Deleting a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To delete a group, click on the 'Actions' button next to the group and select the 'Delete' option.
+To delete a group, click on the 'Actions' button next to the group and select 
+the 'Delete' option.
 
 |image1324|
 
@@ -191,13 +211,13 @@ To delete a group, click on the 'Actions' button next to the group and select th
 
 .. _item-types-label:
 
-Item Types
+Item types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Koha allows you to organize your collection by item types and collection
 codes.
 
--  *Get there:* More > Administration > Basic Parameters > Item Types
+-  *Get there:* More > Administration > Basic parameters > Item types
 
 Item types typically refer to the material type (book, cd, dvd, etc),
 but can be used in any way that works for your library.
@@ -206,15 +226,16 @@ but can be used in any way that works for your library.
 
 .. _adding-item-types-label:
 
-Adding Item Types
+Adding item types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a new item type, simply click the 'New Item Type' button at the
-top of the Item Types page.
+To add a new item type, simply click the 'New item type' button at the
+top of the Item types page.
 
 |image135|
 
--  In the 'Item Type' field, enter a short code for your item type (maximum of 10 characters)
+-  In the 'Item type' field, enter a short code for your item type (maximum 
+   of 10 characters)
 
 -  The description is the plain text definition of the item type (for
    those with multiple languages installed you can translate the item
@@ -239,8 +260,8 @@ top of the Item Types page.
           To have your item type images appear in the OPAC you need to
           set :ref:`noItemTypeImages` to 'Show'
 
-      -  *Get there:*\ More > Administration > Global System Preferences
-         > :ref:`Admin <administration-label>`
+      -  *Get there:*\ More > Administration > Global system preferences
+         > :ref:`Administration <administration-label>`
 
 -  For items that you are suppressing from the OPAC you can hide their
    item type from being searched in the OPAC
@@ -258,7 +279,9 @@ top of the Item Types page.
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
 
--  You can add a default replacement cost for this type of item. If left blank, the replacement price of the item itelf will be cherged to the user when the item is lost.
+-  You can add a default replacement cost for this type of item. If left 
+   blank, the replacement price of the item itelf will be cherged to the 
+   user when the item is lost.
 
     -  **Important**
           Do not enter symbols in this field, only numbers and decimal
@@ -293,12 +316,12 @@ top of the Item Types page.
    if you use a device like this you'll want to enter the SIP media
    type.
 
--  When finished, click 'Save Changes'
+-  When finished, click 'Save changes'
 
    -  **Note**
 
-          All fields, with the exception of the 'Item Type' will be
-          editable from the Item Types list
+          All fields, with the exception of the 'Item type' will be
+          editable from the Item types list
 
 -  Your new item type will now appear on the list
 
@@ -306,7 +329,7 @@ top of the Item Types page.
 
 .. _editing-item-types-label:
 
-Editing Item Types
+Editing item types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each item type has an Edit button beside it. To edit an item simply
@@ -315,11 +338,11 @@ click the 'Edit' link.
     **Important**
 
     You will not be able to edit the code you assigned as the 'Item
-    Type' but you will be able to edit the description for the item.
+    type' but you will be able to edit the description for the item.
 
 .. _deleting-item-types-label:
 
-Deleting Item Types
+Deleting item types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each item has a Delete button beside it. To delete an item type, simply click
@@ -334,19 +357,19 @@ the 'Delete' link.
 
 .. _authorized-values-label:
 
-Authorized Values
+Authorized values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Authorized values can be used in several areas of Koha. One reason you
 would add an authorized value category would be to control the values
 that can be entered into MARC fields by catalogers.
 
--  *Get there:* More > Administration > Basic Parameters > Authorized
-   Values
+-  *Get there:* More > Administration > Basic parameters > Authorized
+   values
 
 .. _existing-values-label:
 
-Existing Values
+Existing values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Koha installs with pre-defined values that your library is likely to
@@ -392,42 +415,43 @@ use, for instance 'Lost'.
 
 -  HINGS\_AS
 
-   -  General Holdings: Acquisition Status Designator :: This data
+   -  General holdings: acquisition status designator :: This data
       element specifies acquisition status for the unit at the time of
       the holdings report.
 
 -  HINGS\_C
 
-   -  General Holdings: Completeness Designator
+   -  General holdings: completeness designator
 
 -  HINGS\_PF
 
-   -  Physical Form Designators
+   -  Physical form designators
 
 -  HINGS\_RD
 
-   -  General Holdings: Retention Designator :: This data element
+   -  General holdings: retention designator :: This data element
       specifies the retention policy for the unit at the time of the
       holdings report.
 
 -  HINGS\_UT
 
-   -  General Holdings: Type of Unit Designator
+   -  General holdings: type of unit designator
 
 -  ITEMTYPECAT
 
-   - Allows multiple Item Types to be searched in a category.  Categories can be
-     entered into the Authorized Value ITEMTYPECAT. To combine Item Types to this
-     category, enter this Search Category to any Item Types.
+   - Allows multiple Item types to be searched in a category.  Categories can be
+     entered into the Authorized value ITEMTYPECAT. To combine Item types to this
+     category, enter this Search category to any Item types.
 
-     For example, an ITEMTYPECAT could be NEW, then in the Item Type
+     For example, an ITEMTYPECAT could be NEW, then in the Item type
      for NEW BOOKS NEW DVDS, etc the search category could be added NEW.
-     This is helpful when a patron chooses the Search Category of NEW, they could
-     get Koha to search multiple Item Types with a single search.
+     This is helpful when a patron chooses the Search category of NEW, they could
+     get Koha to search multiple Item types with a single search.
 
 -  LOC
 
-   Shelving location (usually appears when adding or editing an item). LOC maps to items.location in the Koha database.
+   Shelving location (usually appears when adding or editing an item). LOC maps to 
+   items.location in the Koha database.
 
    -  CART
 
@@ -458,9 +482,9 @@ use, for instance 'Lost'.
 
    -  **Important**
 
-          The value set as the Authorized Value for the MANUAL\_INV
+          The value set as the Authorized value for the MANUAL\_INV
           authorized value category will appear as the Description and
-          the Authorized Value Description will be used as the amount.
+          the Authorized value description will be used as the amount.
           Enter monetary amounts in the description without currency
           symbols.
 
@@ -521,15 +545,15 @@ use, for instance 'Lost'.
 
  -  SUGGEST_FORMAT
 
-   - List of Item Types to display in a drop down menu on the Purchase Suggestion
+   - List of Item types to display in a drop down menu on the Purchase suggestion
      form on the OPAC. When creating the authorized values for SUGGEST_FORMAT,
      enter a description into this form so it is visible on the OPAC to patrons.
 
  -  TERM
 
-   - Terms to be used in Course Reserves Module.  Enter Terms that will show
-     in the drop down menu when setting up a Course Reserve.  (For example:
-     Spring, Summer, Winter, Fall).
+   - Terms to be used in `Course Reserves <#coursereserves>`__ module.
+     Enter Terms that will show in the drop down menu when setting up a Course 
+     reserve.  (For example: Spring, Summer, Winter, Fall).
 
 -  WITHDRAWN
 
@@ -543,14 +567,14 @@ use, for instance 'Lost'.
 
 .. _add-new-authorized-value-category-label:
 
-Add new Authorized Value Category
+Add new authorized value category
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In addition to the existing categories that come by default with Koha,
 librarians can add their own authorized value categories to control data
 that is entered into the system. To add a new category:
 
--  Click 'New Category'
+-  Click 'New category'
 
    |image144|
 
@@ -565,7 +589,7 @@ that is entered into the system. To add a new category:
 -  When adding a new category you're asked to create at least one
    authorized value
 
-   -  Enter a code for your Authorized Value into the 'Authorized value'
+   -  Enter a code for your Authorized value into the 'Authorized value'
       field
 
       -  **Important**
@@ -592,13 +616,13 @@ that is entered into the system. To add a new category:
 -  Click 'Save'
 
 -  Your new category and value will appear on the list of Authorized
-   Values
+   values
 
    |image145|
 
 .. _add-new-authorized-value-label:
 
-Add new Authorized Value
+Add new authorized value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 New authorized values can be added to any existing or new category. To
@@ -608,7 +632,7 @@ add a value:
 
    |image146|
 
--  Enter a code for your Authorized Value into the 'Authorized value'
+-  Enter a code for your authorized value into the 'Authorized value'
    field
 
    -  **Important**
@@ -639,21 +663,21 @@ add a value:
 
 .. _patrons-&-circulation-label:
 
-Patrons & Circulation
+Patrons and circulation
 -------------------------------------
 
 Settings for controlling circulation and patron information.
 
 .. _patron-categories-label:
 
-Patron Categories
+Patron categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Patron categories allow you to organize your patrons into different
 roles, age groups, and patron types.
 
--  *Get there:* More > Administration > Patrons & Circulation > Patron
-   Categories
+-  *Get there:* More > Administration > Patrons and circulation > Patron
+   categories
 
 |image148|
 
@@ -694,11 +718,11 @@ Patrons are assigned to one of six main categories:
 Adding a patron category
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a new patron category click 'New Category' at the top of the page
+To add a new patron category click 'New category' at the top of the page
 
 |image149|
 
--  The 'Category Code' is an identifier for your new code.
+-  The 'Category code' is an identifier for your new code.
 
    -  **Important**
 
@@ -805,7 +829,7 @@ To add a new patron category click 'New Category' at the top of the page
 
           |image155|
 
--  The Branch Limitations let you limit this patron category to only
+-  The Branch limitations let you limit this patron category to only
    some branches in your library system. Select 'All branches' if you
    would like any library to be able to use this category.
 
@@ -849,13 +873,13 @@ To add a new patron category click 'New Category' at the top of the page
 
 .. _circulation-and-fine-rules-label:
 
-Circulation and Fine Rules
+Circulation and fines rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These rules define how your items are circulated, how/when fines are
 calculated and how holds are handled.
 
--  *Get there:* More > Administration > Patrons & Circulation >
+-  *Get there:* More > Administration > Patrons and circulation >
    Circulation and fines rules
 
 The rules are applied from most specific to less specific, using the
@@ -881,13 +905,13 @@ The :ref:`CircControl` and
 :ref:`HomeOrHoldingBranch` also come in to play when
 figuring out which circulation rule to follow.
 
--  If CircControl is set to "the library you are logged in at" circ
+-  If CircControl is set to "the library you are logged in at" circulation
    rules will be selected based on the library you are logged in at
 
--  If CircControl is set to "the library the patron is from" circ rules
+-  If CircControl is set to "the library the patron is from" circulation rules
    will be selected based on the patron's library
 
--  If CircControl is set to "the library the item is from" circ rules
+-  If CircControl is set to "the library the item is from" circulation rules
    will be selected based on the item's library where
    HomeOrHoldingBranch chooses if item's home library is used or holding
    library is used.
@@ -918,7 +942,7 @@ figuring out which circulation rule to follow.
 
 .. _default-circulation-rules-label:
 
-Default Circulation Rules
+Default circulation rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the issuing rules matrix you can define rules that depend on
@@ -1106,7 +1130,7 @@ message.
 
 .. _default-checkouts-and-hold-policy-label:
 
-Default Checkouts and Hold Policy
+Default checkout, hold and return policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can set a default maximum number of checkouts and hold policy that
@@ -1167,7 +1191,7 @@ patrons in the library if no other option is set in the forms below.
 
 .. _checkouts-per-patron-label:
 
-Checkouts Per Patron
+Default checkout limit by patron cateogry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For this library, you can specify the maximum number of loans that a
@@ -1187,9 +1211,19 @@ patrons only have a total of 12 things checked out at once. If you enter
 12 here and the patron has 10 books out already they will only be
 allowed 2 DVDs to equal the 12 total they're allowed.
 
+.. _item-fee-refund-on-return-label:
+
+Default lost item fee refund on return policy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Here, you can specify the default policy for lost item fees on return. 
+This policy will apply to this library. This rule is to be used with the 
+:ref:`RefundLostOnReturnControl <refundlostonreturncontrol-label>` 
+system preference.
+
 .. _item-hold-policies-label:
 
-Item Hold Policies
+Default holds policy by item type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For this library, you can edit hold and return policies for a given item
@@ -1197,15 +1231,15 @@ type, regardless of the patron's category.
 
 |image163|
 
-The various Hold Policies have the following effects:
+The various hold policies have the following effects:
 
--  From Any Library: Patrons from any library may put this item on hold.
+-  From any library: Patrons from any library may put this item on hold.
    (default if none is defined)
 
--  From Home Library: Only patrons from the item's home library may put
+-  From home library: Only patrons from the item's home library may put
    this book on hold.
 
--  No Holds Allowed: No patron may put this book on hold.
+-  No holds allowed: No patron may put this book on hold.
 
     **Important**
 
@@ -1233,7 +1267,7 @@ library
        place the hold, instead the hold will only be fillable when an
        item matching the pickup location becomes available.
 
-The various Return Policies have the following effects:
+The various return policies have the following effects:
 
 -  Item returns home: The item will prompt the librarian to transfer the
    item to its home library
@@ -1267,7 +1301,7 @@ types and types that remain with their home library.
 
 .. _patron-attribute-types-label:
 
-Patron Attribute Types
+Patron attribute types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Patron attributes can be used to define custom fields to associate with
@@ -1275,7 +1309,7 @@ your patron records. In order to enable the use of custom fields you
 need to set the :ref:`ExtendedPatronAttributes`
 system preference.
 
--  *Get there:* More > Administration > Patrons & Circulation > Patron
+-  *Get there:* More > Administration > Patrons and circulation > Patron
    attribute types
 
 A common use for this field would be for a student ID number or a
@@ -1285,11 +1319,11 @@ Driver's license number.
 
 .. _adding-patron-attributes-label:
 
-Adding Patron Attributes
+Adding patron attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a new Patron Attribute Type, click the 'New Patron Attribute
-Type' button at the top of the page
+To add a new patron attribute type, click the 'New patron attribute
+type' button at the top of the page
 
 |image165|
 
@@ -1348,8 +1382,8 @@ Type' button at the top of the page
    -  You will first need to add an authorized value list for it to
       appear in this menu
 
-      -  *Get there:*\ More > Administration > Basic Parameters >
-         :ref:`Authorized Values`
+      -  *Get there:*\ More > Administration > Basic parameters >
+         :ref:`Authorized values <authorized_values-label>`
 
    -  **Important**
 
@@ -1373,7 +1407,7 @@ Type' button at the top of the page
 
 -  If you have a lot of attributes it might be handy to group them so
    that you can easily find them for editing. If you create an
-   :ref:`Authorized Value <authorized-values-label>` for PA\_CLASS it will show
+   :ref:`Authorized value <authorized-values-label>` for PA\_CLASS it will show
    in the 'Class' pull down and you can then change your attributes page
    to have sections of attributes
 
@@ -1393,7 +1427,7 @@ that way on the add/edit patron form
 
 .. _editing/deleting-patron-attributes-label:
 
-Editing/Deleting Patron Attributes
+Editing/deleting patron attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each patron attribute has an edit and a delete link beside it on the
@@ -1413,15 +1447,15 @@ You will be unable to delete an attribute if it's in use.
 
 .. _library-transfer-limits-label:
 
-Library Transfer Limits
+Library transfer limits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Limit the ability to transfer items between libraries based on the
 library sending, the library receiving, and the collection code
 involved.
 
--  *Get there:* More > Administration > Patrons & Circulation > Library
-   Transfer Limits
+-  *Get there:* More > Administration > Patrons and circulation > Library
+   transfer limits
 
 These rules only go into effect if the preference
 :ref:`UseBranchTransferLimits <usebranchtransferlimits-&-branchtransferlimitstype-label>` is set to
@@ -1433,7 +1467,7 @@ these limits for.
 |image171|
 
 Transfer limits are set based on the collections codes you have applied
-via the :ref:`Authorized Value <authorized-values-label>` administration area.
+via the :ref:`Authorized value <authorized-values-label>` administration area.
 
 |image172|
 
@@ -1454,7 +1488,7 @@ items from all libraries except Liberty and Franklin to their branch.
 Transport cost matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Transport cost matrix lets a library system define relative costs to
+The transport cost matrix lets a library system define relative costs to
 transport books to one another. In order for the system to use this
 matrix you must first set the
 :ref:`UseTransportCostMatrix` preference to
@@ -1462,7 +1496,7 @@ matrix you must first set the
 
     **Important**
 
-    The Transport cost matrix takes precedence in controlling where
+    The transport cost matrix takes precedence in controlling where
     holds are filled from, if the matrix is not used then Koha checks
     the :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
 
@@ -1493,14 +1527,14 @@ After entering in your cost, hit 'Enter' on your keyboard or click the
 
 .. _item-circulation-alerts-label:
 
-Item Circulation Alerts
+Item circulation alerts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Libraries can decide if they want to have patrons automatically notified
 of circulation events (check ins and check outs).
 
--  *Get there:* More > Administration > Patrons & Circulation > Item
-   Circulation Alerts
+-  *Get there:* More > Administration > Patrons and circulation > Item
+   circulation alerts
 
 These preferences are set based on patron types and item types.
 
@@ -1529,7 +1563,7 @@ To set up circulation alerts:
 
 .. _cities-and-towns-label:
 
-Cities and Towns
+Cities and towns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To standardize patron input you can define cities or towns within your
@@ -1537,21 +1571,21 @@ region so that when new patrons are added librarians simply have to
 select the town from a list instead of having to type the town and zip
 (or postal) code information.
 
--  *Get there:* More > Administration > Patrons & Circulation > Cities
-   and Towns
+-  *Get there:* More > Administration > Patrons and circulation > Cities
+   and towns
 
 .. _adding-a-city-label:
 
-Adding a City
+Adding a city
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a new city, click the 'New City' button at the top of the page
+To add a new city, click the 'New city' button at the top of the page
 and enter the city name, state, zip/postal code and country.
 
 |image178|
 
 One you click Submit, your city will be saved and will be listed on the
-Cities and Towns page
+Cities and towns page
 
 |image179|
 
@@ -1559,10 +1593,10 @@ Cities can be edited or deleted at any time.
 
 .. _viewing-cities-on-patron-add-form-label:
 
-Viewing Cities on Patron Add Form
+Viewing cities on patron add form
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have defined local cities using the New city form, then when
+If you have defined local cities using the 'New city' form, then when
 adding or editing a patron record you will see those cities in a pull
 down menu to make city selection easy.
 
@@ -1573,7 +1607,7 @@ without risking the potential for typos or mistaken zip/postal codes.
 
 .. _catalog-administration-label:
 
-Catalog Administration
+Catalog administration
 --------------------------------------
 
 Set these controls before you start cataloging on your Koha system.
@@ -1582,24 +1616,24 @@ Set these controls before you start cataloging on your Koha system.
 
 .. _marc-bibliographic-frameworks-label:
 
-MARC Bibliographic Frameworks
+MARC bibliographic frameworks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Think of Frameworks as templates for creating new bibliographic records.
+Think of frameworks as templates for creating new bibliographic records.
 Koha comes with some predefined frameworks that can be edited or
 deleted, and librarians can create their own frameworks for content
 specific to their libraries.
 
--  *Get there:* More > Administration > Catalog > MARC Bibliographic
-   Frameworks
+-  *Get there:* More > Administration > Catalog > MARC bibliographic
+   frameworks
 
 |image181|
 
     **Important**
 
-    Do not delete or edit the Default Framework since this will cause
+    Do not delete or edit the Default framework since this will cause
     problems with your cataloging records - always create a new template
-    based on the Default Framework, or alter the other Frameworks.
+    based on the Default framework, or alter the other frameworks.
 
 After clicking the 'MARC structure' link to the right of each framework
 you can decide how many fields you want to see on one screen by using
@@ -1609,12 +1643,12 @@ the pagination options at the top of the table.
 
 .. _add-new-framework-label:
 
-Add New Framework
+Add new framework
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new framework
 
--  Click 'New Framework'
+-  Click 'New framework'
 
    |image183|
 
@@ -1625,39 +1659,39 @@ To add a new framework
 
 -  Click 'Submit'
 
--  Once your Framework is added click 'MARC structure' to the right of
-   it on the list of Frameworks
+-  Once your framework is added click 'MARC structure' to the right of
+   it on the list of frameworks
 
    |image184|
 
-   -  You will be asked to choose a Framework to base your new Framework
+   -  You will be asked to choose a framework to base your new framework
       off of, this will make it easier than starting from scratch
 
--  Once your Framework appears on the screen you can edit or delete each
+-  Once your framework appears on the screen you can edit or delete each
    field by following the instructions for :ref:`editing
    subfields <edit-framework-subfields-label>`
 
 .. _edit-existing-frameworks-label:
 
-Edit Existing Frameworks
+Edit existing frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Clicking 'Edit' to the right of a Framework will only allow you to edit
-the Description for the Framework:
+Clicking 'Edit' to the right of a framework will only allow you to edit
+the description for the framework:
 
 |image185|
 
-To make edits to the fields associated with the Framework you must first
+To make edits to the fields associated with the framework you must first
 click 'MARC Structure' and then follow the instructions for :ref:`editing
 subfields <edit-framework-subfields-label>`
 
 .. _add-subfields-to-frameworks-label:
 
-Add subfields to Frameworks
+Add subfields to frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a field to a Framework click the 'New Tag' button at the top of
-the Framework definition
+To add a field to a framework click the 'New tag' button at the top of
+the framework definition
 
 |image186|
 
@@ -1682,7 +1716,7 @@ Enter the information about your new tag:
 -  If you want this field to be a pull down with limited possible
    answers, choose which 'Authorized value' list you want to use
 
-When you're finished, click 'Save Changes' and you will be presented
+When you're finished, click 'Save changes' and you will be presented
 with your new field
 
 |image188|
@@ -1695,11 +1729,11 @@ section of this manual.
 
 .. _edit-framework-subfields-label:
 
-Edit Framework Subfields
+Edit framework subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Frameworks are made up of MARC fields and subfields. To make edits to
-most Frameworks you must edit the fields and subfields. Clicking 'Edit'
+most frameworks you must edit the fields and subfields. Clicking 'Edit'
 to the right of each subfield will allow you to make changes to the text
 associated with the field
 
@@ -1730,9 +1764,9 @@ right of the tag on the 'MARC Structure' listing
 -  From the list of subfields you can click 'Delete' to the right of
    each to delete the subfields
 
--  To edit the subfields click 'Edit Subfields'
+-  To edit the subfields click 'Edit subfields'
 
--  For each subfield you can set the following Basic constraint values
+-  For each subfield you can set the following basic constraint values
 
    |image190|
 
@@ -1762,7 +1796,7 @@ right of the tag on the 'MARC Structure' listing
          given field must be in the same tab or ignored. Ignore means
          that the subfield is not managed.
 
--  For each subfield you can set the following Advanced constraint
+-  For each subfield you can set the following advanced constraint
    values
 
    |image191|
@@ -1838,7 +1872,7 @@ right of the tag on the 'MARC Structure' listing
          value <authorized-values-label>` list
 
       -  In the example above, the 504a field will show the MARC504
-         Authorized Values when cataloging
+         authorized values when cataloging
 
          |image194|
 
@@ -1871,12 +1905,12 @@ right of the tag on the 'MARC Structure' listing
             unimarc\_plugin\_225a that can "magically" find the editor
             from an ISBN, and the collection list for the editor)
 
--  To save your changes simply click the 'Save Changes' button at the
+-  To save your changes simply click the 'Save changes' button at the
    top of the screen
 
 .. _import/export-frameworks-label:
 
-Import/Export Frameworks
+Import/export frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next to each framework is a link to either import or export the
@@ -1884,7 +1918,7 @@ framework.
 
 .. _export-framework-label:
 
-Export Framework
+Export framework
 ''''''''''''''''''''''''''''''''''''''''
 
 To export a framework simply click the 'Export' link to the right of
@@ -1902,7 +1936,7 @@ installation using the import framework option.
 
 .. _import-framework-label:
 
-Import Framework
+Import framework
 ''''''''''''''''''''''''''''''''''''''''
 
 An easy way to create a new framework is to import one created for your
@@ -1936,53 +1970,58 @@ imported.
 
 .. _koha-to-marc-mapping-label:
 
-Koha to MARC Mapping
+Koha to MARC mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 While Koha stores the entire MARC record, it also stores common fields
-for easy access in various tables in the database. Koha to MARC Mapping
+for easy access in various tables in the database. Koha to MARC mapping
 is used to tell Koha where to find these values in the MARC record. In
 many cases you will not have to change the default values set by in this
 tool on installation, but it is important to know that the tool is here
 and can be used at any time.
 
--  *Get there:* More > Administration > Catalog > Koha to MARC Mapping
+-  *Get there:* More > Administration > Catalog > Koha to MARC mapping
 
-The Koha to MARC Mapping page offers you the option of choosing from one
-of three tables in the database to assign values to.
+The table shows all the database fields that can be mapped to MARC fields.
 
 |image201|
 
-After choosing the table you would like to view, click 'OK.' To edit any
-mapping click on the 'Koha Filed' or the 'Edit' link.
+To add a new mapping, click on the 'Add' button to the right of the 
+appropriate field.
 
 |image202|
 
-Choose which MARC field you would like to map to this Koha Field and
-click the 'OK' button. If you would like to clear all mappings, click
-the 'Click to "Unmap"' button.
+Write in the MARC field and subfield you would like to map, separated 
+by a comma, to this Koha field and click the 'OK' button. 
 
-    **Important**
+    **Note**
 
-    At this time you can map only 1 MARC field to 1 Koha field. This
-    means that you won't be able to map both the 100a and the 700a to
-    the author field, you need to choose one or the other.
+    It is possible to link more than one MARC field to a database field.
+    For example, you could link both 260$a and 264$a to the biblioitems.place
+    field.
+
+If you would like to clear the mapping for a database field, click
+the 'Remove' button.
+
+    **Note**
+
+    All changes are immediate.
 
 .. _keywords-to-marc-mapping-label:
 
-Keywords to MARC Mapping
+Keywords to MARC mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tool will allow you to map MARC fields to a set of predefined
 keywords.
 
 -  *Get there:* More > Administration > Catalog > Keywords to MARC
-   Mapping
+   mapping
 
     **Important**
 
-    This tool only effects sites that are not using the XSLT
-    Stylesheets.
+    This tool only affects sites that are not using the XSLT
+    stylesheets.
 
 At this time the only keyword in use is 'subtitle.'
 
@@ -1990,7 +2029,7 @@ Using this tool you can define what MARC field prints to the detail
 screen of the bibliographic record using keywords. The following example
 will use the subtitle field.
 
-Using the Framework pull down menu, choose the
+Using the framework pull down menu, choose the
 :ref:`Framework <marc-bibliographic-frameworks-label>` you would like to apply this rule to.
 For example, the subtitle for books can be found in the 245$b field.
 
@@ -2018,42 +2057,41 @@ Future developments will include additional keyword assigned fields.
 
 .. _marc-bibliographic-framework-test-label:
 
-MARC Bibliographic Framework Test
+MARC bibliographic framework test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Checks the MARC structure.
 
--  *Get there:* More > Administration > Catalog > MARC Bibliographic
-   Framework Test
+-  *Get there:* More > Administration > Catalog > MARC bibliographic
+   framework test
 
-If you change your MARC Bibliographic framework it's recommended that
+If you change your MARC bibliographic framework it's recommended that
 you run this tool to test for errors in your definition.
 
 |image206|
 
 .. _authority-types-label:
 
-Authority Types
+Authority types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Authority Types are basically MARC Frameworks for Authority records and
+Authority types are basically MARC frameworks for authority records and
 because of that they follow the same editing rules found in the :ref:`MARC
-Bibliographic Frameworks <marc-bibliographic-frameworks-label>` section of this manual.
-Koha comes with many of the necessary Authority frameworks already
-installed. To learn how to add and edit Authority Types, simply review
-the :ref:`MARC Bibliographic Frameworks` section of
-this manual.
+bibliographic frameworks <marc-bibliographic-frameworks-label>` section of this manual.
+Koha comes with many of the necessary authority frameworks already
+installed. To learn how to add and edit authority types, simply review
+the :ref:`MARC bibliographic frameworks` section of this manual.
 
--  *Get there:* More > Administration > Catalog > Authority Types
+-  *Get there:* More > Administration > Catalog > Authority types
 
 .. _classification-sources-label:
 
-Classification Sources
+Classification sources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Source of classification or shelving scheme is an :ref:`Authorized
-Values <authorized-values-label>` category that is mapped to field 952$2 and
-942$2 in Koha's MARC Bibliographic frameworks and stored in the
+values <authorized-values-label>` category that is mapped to field 952$2 and
+942$2 in Koha's MARC bibliographic frameworks and stored in the
 items.cn\_source field in the database.
 
 -  *Get there:* More > Administration > Catalog > Classification sources
@@ -2079,11 +2117,11 @@ installation, you would see other values too:
 
 .. _adding/editing-classification-sources-label:
 
-Adding/Editing Classification Sources
+Adding/editing classification sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can add your own source of classification by using the New
-Classification Source button. To edit use the Edit link.
+You can add your own source of classification by using the 'New
+classification source' button. To edit use the 'Edit' button.
 
 |image208|
 
@@ -2099,7 +2137,7 @@ When creating or editing:
 
 .. _classification-filing-rules-label:
 
-Classification Filing Rules
+Classification filing rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Filing rules determine the order in which items are placed on shelves.
@@ -2113,8 +2151,9 @@ Values that are pre-configured in Koha are:
 -  Generic
 
 Filing rules are mapped to :ref:`Classification
-sources <adding/editing-classification-sources-label>`. You can setup new filing rules by using
-the New Filing Rule button. To edit use the Edit link.
+sources <adding/editing-classification-sources-label>`. You can setup new 
+filing rules by using the 'New filing rule' button. To edit use the 'Edit' 
+button.
 
 When creating or editing:
 
@@ -2124,41 +2163,41 @@ When creating or editing:
 
 .. _record-matching-rules-label:
 
-Record Matching Rules
+Record matching rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Record matching rules are used when importing MARC records into Koha.
 
--  *Get there:* More > Administration > Catalog > Record Matching Rules
+-  *Get there:* More > Administration > Catalog > Record matching rules
 
 The rules that you set up here will be referenced with you :ref:`Stage MARC
-Records for Import <stage-marc-records-for-import-label>`.
+records for import <stage-marc-records-for-import-label>`.
 
-It is important to understand the difference between Match Points and
-Match Checks before adding new matching rules to Koha.
+It is important to understand the difference between 'Match points' and
+'Match checks' before adding new matching rules to Koha.
 
-Match Points are the criteria that you enter that must be met in order
+Match points are the criteria that you enter that must be met in order
 for an incoming record to match an existing MARC record in your catalog.
 You can have multiple match points on an import rule each with its own
 score. An incoming record will be compared against your existing records
 ('one record at a time') and given a score for each match point. When
-the total score of the matchpoints matches or exceeds the threshold
+the total score of the match points matches or exceeds the threshold
 given for the matching rule, Koha assumes a good match and
 imports/overlays according your specifications in the import process. An
-area to watch out for here is the sum of the match points. Doublecheck
+area to watch out for here is the sum of the match points. Double check
 that the matches you want will add up to a successful match.
 
 Example:
 
 Threshold of 1000
 
-Match Point on 020$a 1000
+Match point on 020$a 1000
 
-Match Point on 022$a 1000
+Match point on 022$a 1000
 
-Match Point on 245$a 500
+Match point on 245$a 500
 
-Match Point on 100$a 100
+Match point on 100$a 100
 
 In the example above, a match on either the 020$a or the 022$a will
 result in a successful match. A match on 245$a title and 100$a author
@@ -2171,21 +2210,21 @@ of 500 to the 100$a Match Point, a match on 245$a title and 100$a author
 will be considered a successful match (total of 1000) even if the 020$a
 is not a match.
 
-Match Checks are not commonly used in import rules. However, they can
+Match checks are not commonly used in import rules. However, they can
 serve a couple of purposes in matching records. First, match checks can
 be used as the matching criteria instead of the match points if your
 indexes are stale and out of date. The match checks go right for the
 data instead of relying on the data in the indexes. (If you fear your
 indexes are out of date, a rebuild of your indexes would be a great idea
-and solve that situation!) The other use for a Match Check is as a
+and solve that situation!) The other use for a match check is as a
 'double check' or 'veto' of your matching rule. For example, if you have
 a matching rule as below:
 
 Threshold of 1000
 
-Match Point on 020$a 1000
+Match point on 020$a 1000
 
-Match Check on 245$a
+Match check on 245$a
 
 Koha will first look at the 020$a tag/subfield to see if the incoming
 record matches an existing record. If it does, it will then move on to
@@ -2200,7 +2239,7 @@ When looking to create matching rules for your authority records the
 following indexes will be of use:
 
 +--------------------------+--------------------+
-| Index name               | Matches Marc Tag   |
+| Index name               | Matches MARC tag   |
 +==========================+====================+
 | LC-cardnumber            | 010$a              |
 +--------------------------+--------------------+
@@ -2221,16 +2260,16 @@ following indexes will be of use:
 | Term-genre-form          | 155$a              |
 +--------------------------+--------------------+
 
-Table: Authority Indexes
+Table: Authority indexes
 
 .. _adding-matching-rules-label:
 
-Adding Matching Rules
+Adding matching rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create a new matching rule :
 
--  Click 'New Record Matching Rule'
+-  Click 'New record matching rule'
 
    |image209|
 
@@ -2250,8 +2289,8 @@ To create a new matching rule :
 
    -  'Search index' can be found by looking at the ccl.properties file
       on your system which tells the zebra indexing what data to search
-      for in the MARC data".  Or you can review the index for standard
-      index names used.  :ref:`Koha Search Indexes`
+      for in the MARC data". Or you can review the index for standard
+      index names used. :ref:`Koha Search Indexes`
 
    -  'Score' - The number of 'points' a match on this field is worth.
       If the sum of each score is greater than the match threshold, the
@@ -2272,9 +2311,9 @@ To create a new matching rule :
 
    -  'Required match checks' - ??
 
-.. _sample-bibliographic-record-matching-rule:-control-number-label:
+.. _sample-bibliographic-record-matching-rule-control-number-label:
 
-Sample Bibliographic Record Matching Rule: Control Number
+Sample bibliographic record matching rule: Control number
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |image210|
@@ -2310,13 +2349,13 @@ Sample Bibliographic Record Matching Rule: Control Number
 
 -  Normalization rule: Control-number
 
--  Required Match checks: none (remove the blank one)
+-  Required match checks: none (remove the blank one)
 
    |image211|
 
 .. _oai-sets-configuration-label:
 
-OAI Sets Configuration
+OAI sets configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On this page you can create, modify and delete OAI-PMH sets
@@ -2340,7 +2379,7 @@ To create a set:
 
 .. _modify/delete-a-set-label:
 
-Modify/Delete a set
+Modify/delete a set
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To modify a set, just click on the link 'Modify' on the same line of the
@@ -2435,7 +2474,7 @@ make sure that you have completed all of the set up.
 
 .. _currencies-and-exchange-rates-label:
 
-Currencies and Exchange Rates
+Currencies and exchange rates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you place orders from more than one country you will want to input
@@ -2443,7 +2482,7 @@ currency exchange rates so that your acquisitions module will properly
 calculate totals.
 
 -  *Get there:* More > Administration > Acquisitions > Currencies and
-   Exchange Rates
+   exchange rates
 
 |image212|
 
@@ -2469,7 +2508,7 @@ Budgets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Budgets are used for tracking accounting values related to acquisitions.
-For example you could create a Budget for the current year (ex. 2015)
+For example you could create a budget for the current year (ex. 2015)
 and then break that into :ref:`Funds` for different areas of the
 library (ex. Books, Audio, etc).
 
@@ -2496,14 +2535,14 @@ Add a new budget
 
 If you haven't used Koha before for acquisitions then you'll need to
 start fresh with a new budget. To add a new budget click the 'New
-Budget' button.
+budget' button.
 
 |image215|
 
 -  Choose the time period this budget is for, whether it's an academic
    year, a fiscal year, a quarter, etc.
 
--  The Description should be something that will help you identify the
+-  The description should be something that will help you identify the
    budget when ordering
 
 -  In the amount box do not use any symbols, simply enter the amount of
@@ -2514,10 +2553,10 @@ Budget' button.
    date. This will allow you to record orders that were places in a
    previous budget period.
 
--  Locking a budget means that Funds will not be able to be modified by
+-  Locking a budget means that funds will not be able to be modified by
    librarians
 
-Once you have made your edits, click the 'Save Changes' button. You will
+Once you have made your edits, click the 'Save changes' button. You will
 be brought to a list of your existing budgets.
 
 |image216|
@@ -2532,8 +2571,8 @@ budget name from the list of budgets
 
 |image217|
 
-On the screen listing the budget breakdown click the Edit button at the
-top and choose to Duplicate budget
+On the screen listing the budget breakdown click the 'Edit' button at the
+top and choose to 'Duplicate budget'
 
 |image218|
 
@@ -2631,7 +2670,7 @@ A fund is added to a budget.
     A :ref:`budget <adding-budgets-label>` must be defined before a fund can be
     created.
 
-To add a new fund click the New button and then choose which Budget you
+To add a new fund click the 'New' button and then choose which budget you
 would like to add the fund to.
 
 |image221|
@@ -2642,9 +2681,9 @@ In the form that appears you want to enter the basics about your fund.
 
 The three first fields are required, the rest are optional
 
--  Fund Code is a unique identifier for your fund
+-  Fund code is a unique identifier for your fund
 
--  The Fund Name should be something that librarians will understand
+-  The fund name should be something that librarians will understand
 
 -  Amount should be entered with only numbers and decimals, no other
    characters
@@ -2654,7 +2693,7 @@ The three first fields are required, the rest are optional
    budget. This will prevent you from overspending.
 
 -  You can choose to assign this fund to a librarian. Doing so will make
-   it so that only that librarian can make changes to the Fund
+   it so that only that librarian can make changes to the fund
 
 -  Choose which library will be using this fund
 
@@ -2678,7 +2717,7 @@ The three first fields are required, the rest are optional
    option from the dropdown lists for the Statiscal 1 done on: and
    Statistical 2 done on: fields.
 
--  To learn more about planning categories, check out the :ref:`Planning Category
+-  To learn more about planning categories, check out the :ref:`Planning category
    FAQ <planning-categories-label>`.
 
 When complete, click 'Submit' and you will be brought to a list of all
@@ -2688,7 +2727,7 @@ of the funds for the budget.
 
 The monetary columns in the fund table break down as follows:
 
-1. Base-level allocated is the "Amount" value you defined when creating
+1. Base-level allocated is the 'Amount' value you defined when creating
    the fund
 
 2. Base-level ordered is the ordered amount for this fund (without child
@@ -2708,13 +2747,13 @@ The monetary columns in the fund table break down as follows:
 7. Total available is 1 - 3
 
 To the right of each fund you will find the 'Actions' button under which
-you will find the 'Edit,' 'Delete,' and 'Add Child Fund' options.
+you will find the 'Edit,' 'Delete,' and 'Add child fund' options.
 
 |image225|
 
 A child fund simply a sub-fund of the fund listed. An example would be
 to have a fund for 'Fiction' and under that have a fund for 'New
-Releases' and a fund for 'Science Fiction.' It is an optional way to
+releases' and a fund for 'Science Fiction.' It is an optional way to
 further organize your finances.
 
 Funds with children will show with a small arrow to the left. Clicking
@@ -2724,7 +2763,7 @@ that will show you the children funds.
 
 .. _budget-planning-label:
 
-Budget Planning
+Budget planning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When viewing the list of funds click the 'Planning' button and choose
@@ -2739,7 +2778,7 @@ down by months:
 
 To hide some of the columns you can click the 'hide' link to the right
 (or below as in the screenshot above) the dates. To add more columns you
-can click the 'Show a column' link found below the 'Fund Remaining'
+can click the 'Show a column' link found below the 'Fund remaining'
 heading.
 
 |image229|
@@ -2759,7 +2798,7 @@ in the 'Output to a file named' field and clicking the 'Output' button.
 
 .. _edi-accounts-label:
 
-EDI Accounts
+EDI accounts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From here you can set up the information needed to connect to your
@@ -2795,14 +2834,14 @@ New EAN
 
 In the form that appears enter the information provided by your vendor.
 
-New EAN Form
+New EAN form
 
 .. _additional-parameters-label:
 
-Additional Parameters
+Additional parameters
 --------------------------------------------
 
--  *Get there:* More > Administration > Additional Parameters
+-  *Get there:* More > Administration > Additional parameters
 
 .. _z39.50/sru-servers-label:
 
@@ -2821,8 +2860,8 @@ Using Koha you can connect to any Z39.50 or SRU target that is publicly
 available or that you have the log in information to and copy both
 bibliographic and/or authority records from that source.
 
--  *Get there:* More > Administration > Additional Parameters >
-   Z39.50/SRU Servers
+-  *Get there:* More > Administration > Additional parameters >
+   Z39.50/SRU servers
 
 Koha comes with a default list of Z39.50/SRU targets set up that you can
 add to, edit or delete
@@ -2831,14 +2870,14 @@ add to, edit or delete
 
 To find additional Z39.50 targets you use IndexData's IRSpy:
 `http://irspy.indexdata.com <http://irspy.indexdata.com/>`__ or the
-Library of Congress's List of Targets http://www.loc.gov/z3950/
+Library of Congress's list of targets http://www.loc.gov/z3950/
 
 .. _add-a-z39.50-target-label:
 
-Add a Z39.50 Target
+Add a Z39.50 target
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  From the main Z39.50 page, click 'New Z39.50 Server'
+-  From the main Z39.50 page, click 'New Z39.50 server'
 
    |image233|
 
@@ -2893,7 +2932,7 @@ Add a Z39.50 Target
 
 .. _suggested-bibliographic-z39.50-targets-label:
 
-Suggested Bibliographic Z39.50 Targets
+Suggested bibliographic Z39.50 targets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Koha libraries with open Z39.50 targets can share and find connection
@@ -2962,10 +3001,10 @@ libraries (in the Americas):
 
 .. _add-a-sru-target-label:
 
-Add a SRU Target
+Add a SRU target
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  From the main Z39.50/SRU page, click 'New SRU Server'
+-  From the main Z39.50/SRU page, click 'New SRU server'
 
    |image234|
 
@@ -3025,7 +3064,7 @@ Add a SRU Target
          | Standard ID   | bath.standardIdentifier   |
          +---------------+---------------------------+
 
-         Table: SRU Mapping
+         Table: SRU mapping
 
    -  'XSLT file(s)' lets enter one or more (comma-separated) XSLT file
       names that you want to apply on the search results.
@@ -3050,7 +3089,7 @@ Add a SRU Target
 Did you mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Get there:* More > Administration > Additional Parameters > Did you
+*Get there:* More > Administration > Additional parameters > Did you
 mean?
 
 Koha can offer 'Did you mean?' options on searches based on values in
@@ -3058,7 +3097,7 @@ your :ref:`authorities <authorities-label>`.
 
     **Important**
 
-    Did you mean? only works in the OPAC at this time. The Intranet
+    Did you mean? only works in the OPAC at this time. The intranet
     options are here for future development.
 
 Using this page you can control which options Koha gives patrons on
@@ -3101,7 +3140,7 @@ Column settings
 This administration area will help you hide or display columns on fixed
 tables throughout the staff client.
 
--  *Get there:* Administration > Additional Parameters > Column settings
+-  *Get there:* Administration > Additional parameters > Column settings
 
 |image239|
 
@@ -3128,7 +3167,7 @@ And hidden when you view the table.
 
 |image243|
 
-You can also toggle columns using the 'Show/Hide Columns button in the
+You can also toggle columns using the 'Show/hide columns' button in the
 top right of the page
 
 |image244|
@@ -3142,7 +3181,7 @@ If you have your :ref:`AudioAlerts` preference set to
 'Enable' you will be able to control the various alert sounds that Koha
 uses from this area.
 
--  *Get there:* More > Administration > Additional Parameters > Audio
+-  *Get there:* More > Administration > Additional parameters > Audio
    alerts
 
 Each dialog box in Koha has a CSS class assigned to it that can be used
@@ -3211,7 +3250,7 @@ Some examples in the US are:
 | Virgin Mobile       | vmobl.com                   |
 +---------------------+-----------------------------+
 
-Table: SMS Provider Examples
+Table: SMS provider examples
 
 To add new providers enter the details in the form and click 'Add new'
 to save.
