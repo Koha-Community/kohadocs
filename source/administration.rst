@@ -133,11 +133,13 @@ link to edit/alter details associated with the library in question.
 Library groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Library groups are used in searches to limit the search to a group of libraries (for example in a neigbourhood).
+Library groups are used in searches to limit the search to a group of 
+libraries (for example in a neigbourhood).
 
 -  *Get there:* More > Administration > Basic Parameters > Library groups
 
-When visiting this page you are presented with a list of the groups that have already been added to the system.
+When visiting this page you are presented with a list of the groups 
+that have already been added to the system.
 
 |image123|
 
@@ -150,13 +152,25 @@ Click the 'Add Group' button at the top of the screen
 
 |image129|
 
-- Give the group a title and a description. Only the title is mandatory as it will show up in the staff client and in the OPAC. The description is only used in this page to give an idea of what the group is used for.
+- Give the group a title and a description. Only the title is mandatory 
+  as it will show up in the staff client and in the OPAC. The description 
+  is only used in this page to give an idea of what the group is used for.
 
-- You can limit staff from seeing other groups' patrons by checking the box next to the 'Limit patron data access by group' option.
+- You can limit staff from seeing other groups' patrons by checking the 
+  box next to the 'Limit patron data access by group' option.
 
-- If you would like the group to show up in the library pulldown menu at the top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add') and on the advanced search page you can check the 'Use for OPAC search groups' box.
+    **Note**
 
-- If you want the group to appear in the library pulldown in the staff client advanced search, check the 'Use for staff search groups' box.
+    This can be overriden with the :ref:`user permission view_borrower_infos_
+    from_any_libraries <patron-permissions-defined-label>`.
+
+- If you would like the group to show up in the library pulldown menu at the 
+  top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add') 
+  and on the advanced search page you can check the 'Use for OPAC search 
+  groups' box.
+
+- If you want the group to appear in the library pulldown in the staff 
+  client advanced search, check the 'Use for staff search groups' box.
 
 |image131|
 
@@ -165,7 +179,9 @@ Click the 'Add Group' button at the top of the screen
 Adding a library to a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Click on the 'Add library' button next to the group to add a library to this group. You will be presented with a list of the libraries that are not already in the group.
+Click on the 'Add library' button next to the group to add a library to 
+this group. You will be presented with a list of the libraries that are 
+not already in the group.
 
 |image133|
 
@@ -174,7 +190,10 @@ Click on the 'Add library' button next to the group to add a library to this gro
 Adding a sub-group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If your system is very large, you can create sub-groups. Click on the 'Actions' button next to the group and select the 'Add a sub-group' option. Fill in the title and the description (optional) of the sub-group. The features will be inherited from the parent group.
+If your system is very large, you can create sub-groups. Click on the 
+'Actions' button next to the group and select the 'Add a sub-group' 
+option. Fill in the title and the description (optional) of the sub-group. 
+The features will be inherited from the parent group.
 
 |image1323|
 
@@ -183,7 +202,8 @@ If your system is very large, you can create sub-groups. Click on the 'Actions' 
 Deleting a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To delete a group, click on the 'Actions' button next to the group and select the 'Delete' option.
+To delete a group, click on the 'Actions' button next to the group and select 
+the 'Delete' option.
 
 |image1324|
 

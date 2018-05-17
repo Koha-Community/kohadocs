@@ -499,7 +499,7 @@ type <add-a-staff-patron-label>` open
 
 .. _patron-permissions-defined-label:
 
-Patron Permissions Defined
+Patron permissions defined
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  superlibrarian
@@ -537,6 +537,8 @@ Patron Permissions Defined
 -  borrowers
 
    -  Add or modify patrons
+
+   -  This section can be expanded (:ref:`Learn more <
 
 -  permissions
 
@@ -707,6 +709,28 @@ permissions on a more granular level choose from these options:
 
    -  The ability to access all areas in Administration (other than the
       Circulation and fine rules)
+
+.. _granular-borrowers-permissions-label:
+
+Granular borrowers permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the staff member has 'borrowers' permissions they have the ability 
+to perform all of these actions. If you would like to control borrowers 
+permissions on a more granular level choose from these options:
+
+-  edit\_borrowers
+
+   -  Add, modify and view patron information
+
+   -  The ability to access the Patrons module to view patron files, 
+      as well as adding new patrons and editing patron files
+
+-  view\_borrower\_infos\_from\_any\_libraries
+
+   -  View patron infos from any libraries. If not set the logged in user 
+      could only access patron infos from its own library or group of libraries.
+
 
 .. _granular-holds-permissions-label:
 
