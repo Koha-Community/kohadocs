@@ -483,10 +483,7 @@ client.
 Setting Patron Permissions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To set patron permissions, you must first :ref:`have a patron of the 'Staff'
-type <add-a-staff-patron-label>` open
-
--  On the patron record click More and choose Set Permissions to alter
+-  On the patron record click 'More' and choose 'Set permissions' to alter
    patron permissions
 
    |image440|
@@ -506,10 +503,10 @@ Patron permissions defined
 
    -  Access to all librarian functions
 
-      -  **Note**
+      **Note**
 
-             With this selected there is no need to choose any other
-             permissions
+      With this selected there is no need to choose any other
+      permissions
 
 -  circulate
 
@@ -522,14 +519,14 @@ Patron permissions defined
    -  **Required for staff login.** Staff access, allows viewing the
       catalogue in staff client
 
-      -  **Important**
+      **Important**
 
-             Must be given to all staff members to allow them to login
-             to the staff client
+      Must be given to all staff members to allow them to login
+      to the staff client
 
 -  parameters
 
-   -  Manage Koha system systems (Administration panel)
+   -  Manage Koha system settings (Administration panel)
 
    -  This section can be expanded (:ref:`Learn
       more <granular-parameters-permissions-label>`)
@@ -538,7 +535,7 @@ Patron permissions defined
 
    -  Add or modify patrons
 
-   -  This section can be expanded (:ref:`Learn more <
+   -  This section can be expanded (:ref:`Learn more <granular-borrowers-permissions-label>`)
 
 -  permissions
 
@@ -574,9 +571,9 @@ Patron permissions defined
 
    -  Set library management params (deprecated)
 
-      -  **Important**
+      **Important**
 
-             This permission level no longer controls anything.
+      This permission level no longer controls anything.
 
 -  tools
 
@@ -607,9 +604,17 @@ Patron permissions defined
 
    -  Allow staff members to modify permissions for other staff members
 
-   -  **Important**
+      **Important**
 
-          Requires the borrowers permission above
+      Requires the borrowers permission above
+
+-  coursereserves
+
+   -  Course reserves
+
+   -  Allow access to the :ref:`course reserves module <course-reserves-label>`
+
+   -  This section can be expanded (:ref:`Learn more <granular-course-reserves-label>`)
 
 -  plugins
 
@@ -619,20 +624,40 @@ Patron permissions defined
 
 -  lists
 
-   -  Koha Lists
+   -  Lists
 
-   -  **Important**
+      **Important**
 
-          All staff have permission to create and modify their own
-          lists, this permission is only necessary if you'd like to give
-          a staff member permission to delete public lists that they
-          have not created.
+      All staff have permission to create and modify their own
+      lists, this permission is only necessary if you'd like to give
+      a staff member permission to delete public lists that they
+      have not created.
 
    -  This section can be expanded (:ref:`Learn more <granular-lists-permissions-label>`)
 
+-  clubs
+
+   -  Patron clubs
+
+   -  Allows access to the :ref:`Patron clubs feature <Patron-clubs-label>`
+
+   -  This section can be expanded (:ref:`Learn more <granular-clubs-permissions-label>`)
+
+-  ill
+
+   -  Create and modify interlibrary loan requests
+
+-  self\_check
+
+   -  Self check modules
+
+   -  Used for self checkin/self checkout kiosks
+
+   -  This section can be expanded (:ref:`Learn more <granular-self-check-permissions-label>`)
+
 .. _granular-circulate-permissions-label:
 
-Granular Circulate Permissions
+Granular circulate permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'circulate' permissions they have the ability to
@@ -689,7 +714,7 @@ permissions on a more granular level choose from these options:
 
 .. _granular-parameters-permissions-label:
 
-Granular Parameters Permissions
+Granular parameters permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'parameters' permissions they have the ability
@@ -734,7 +759,7 @@ permissions on a more granular level choose from these options:
 
 .. _granular-holds-permissions-label:
 
-Granular Holds Permissions
+Granular holds permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'reserveforothers' permissions they have the
@@ -754,7 +779,7 @@ holds permissions on a more granular level choose from these options:
 
 .. _granular-cataloging-permissions-label:
 
-Granular Cataloging Permissions
+Granular cataloging permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'editcatalogue' permissions they have the
@@ -789,21 +814,21 @@ options:
       :ref:`SubfieldsToAllowForRestrictedEditing`
       preference
 
-   -  **Note**
+      **Note**
 
-          Please note that edit\_items permission is still required
+      Please note that edit\_items permission is still required
 
 -  fast\_cataloging
 
    -  Fast cataloging
 
-   -  The ability to catalog using only the :ref:`Fast Add
-      Framework <fast-add-cataloging-label>` found on the
+   -  The ability to catalog using only the :ref:`Fast add
+      framework <fast-add-cataloging-label>` found on the
       `Circulation <#circulation>`__ page
 
 .. _granular-fines-and-charges-permissions-label:
 
-Granular Fines and Charges Permissions
+Granular fines and charges permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a staff member has 'updatecharges' permission they have the ability
@@ -821,7 +846,7 @@ charges permissions on a more granular level choose from these options:
 
 .. _granular-acquisitions-permissions-label:
 
-Granular Acquisitions Permissions
+Granular acquisitions permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'acquisition' permissions they have the ability
@@ -879,7 +904,7 @@ options:
 
 .. _granular-serials-permissions-label:
 
-Granular Serials Permissions
+Granular serials permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'serials' permissions they have the ability to
@@ -932,7 +957,7 @@ permissions on a more granular level choose from these options:
 
 .. _granular-tools-permissions-label:
 
-Granular Tools Permissions
+Granular tools permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'tools' permissions they have the ability to
@@ -940,73 +965,98 @@ access and use all items under the Tools menu. If you would like to
 control which tools staff members have access to on a more granular
 level choose from these options:
 
+-  access\_files
+
+   -  Access to the files stored on the server
+
+   -  Access to the :ref:`Upload tool <upload-label>`
+
 -  batch\_upload\_patron\_images
 
    -  Upload patron images in batch or one at a time
 
-   -  Access to the :ref:`Image Upload Tool <upload-patron-images-label>`
+   -  Access to the :ref:`Image upload tool <upload-patron-images-label>`
 
 -  delete\_anonymize\_patrons
 
    -  Delete old borrowers and anonymize circulation/reading history
       (deletes borrower reading history)
 
-   -  Access to the :ref:`Anonymize Patron Tool <patrons-(anonymize,-bulk-delete)-label>`
+   -  Access to the :ref:`Anonymize patron tool <patrons-(anonymize,-bulk-
+      delete)-label>`
 
 -  edit\_calendar
 
    -  Define days when the library is closed
 
-   -  Access to the :ref:`Calendar/Holidays Tool <calendar-label>`
+   -  Access to the :ref:`Calendar/holidays tool <calendar-label>`
 
 -  edit\_news
 
    -  Write news for the OPAC and staff interfaces
 
-   -  Access to the :ref:`News Tool <news-label>`
+   -  Access to the :ref:`News tool <news-label>`
 
 -  edit\_notice\_status\_triggers
 
    -  Set notice/status triggers for overdue items
 
-   -  Access to the :ref:`Overdue Notice Status/Triggers
-      Tool <overdue-notice/status-triggers-label>`
+   -  Access to the :ref:`Overdue notice status/triggers
+      tool <overdue-notice/status-triggers-label>`
 
 -  edit\_notices
 
    -  Define notices
 
-   -  Access to the :ref:`Notices Tool <notices-&-slips-label>`
+   -  Access to the :ref:`Notices and slips tool <notices-&-slips-label>`
+
+.. -  edit\_pages
+
+..    -  What tool does this give access to?
+
+-  edit\_patrons
+
+   -  Perform batch modification of patrons
+
+   -  Access to the :ref:`Batch patron modification tool <batch-patron-
+      modification-label>`
+
+-  edit\_quotes
+
+   -  Edit quotes for the quote-of-the-day feature
+
+   -  Access to the :ref:`Quote of the Day (QOTD) Editor <quote-of-the-day-
+      (qotd)-editor-label>`
 
 -  export\_catalog
 
    -  Export bibliographic, authorities and holdings data
 
-   -  Access to the :ref:`Export Data Tool <export-data-(marc-&-authorities)-label>`
+   -  Access to the :ref:`Export data tool <export-data-(marc-&-authorities)-label>`
 
 -  import\_patrons
 
    -  Import patron data
 
-   -  Access to the :ref:`Import Patrons Tool <patron-import-label>`
+   -  Access to the :ref:`Import patrons tool <patron-import-label>`
 
 -  inventory
 
    -  Perform inventory (stocktaking) of your catalog
 
-   -  Access to the :ref:`Inventory Tool <inventory/stocktaking-label>`
+   -  Access to the :ref:`Inventory tool <inventory/stocktaking-label>`
 
 -  items\_batchdel
 
    -  Perform batch deletion of items
 
-   -  Access to the :ref:`Batch Item Deletion Tool <batch-item-deletion-label>`
+   -  Access to the :ref:`Batch item deletion tool <batch-item-deletion-label>`
 
 -  items\_batchmod
 
    -  Perform batch modification of items
 
-   -  Access to the :ref:`Batch Item Modification Tool <batch-item-modification-label>`
+   -  Access to the :ref:`Batch item modification tool <batch-item-modification-label>`
 
 -  items\_batchmod\_restricted
 
@@ -1015,85 +1065,105 @@ level choose from these options:
       :ref:`SubfieldsToAllowForRestrictedBatchmod`
       preference
 
-   -  **Note**
+      **Note**
 
-          Please note that items\_batchmod permission is still required
+      Please note that items\_batchmod permission is still required
 
 -  label\_creator
 
    -  Create printable labels and barcodes from catalog and patron data
 
-   -  Access to the :ref:`Label Creator` and :ref:`Quick Label
-      Creator <quick-spine-label-creator-label>` Tools
+   -  Access to the :ref:`Label creator <label-creator-label>` and 
+      :ref:`Quick label creator <quick-spine-label-creator-label>` Tools
 
 -  manage\_csv\_profiles
 
    -  Manage CSV export profiles
 
-   -  Access to the :ref:`CSV Profiles Tool <csv-profiles-label>`
+   -  Access to the :ref:`CSV profiles tool <csv-profiles-label>`
+
+-  manage\_patron\_lists
+
+   -  Add, edit and delete patron lists and their contents
+
+   -  Access to the :ref:`Patron lists tool <patron-lists-label>`
 
 -  manage\_staged\_marc
 
    -  Manage staged MARC records, including completing and reversing
       imports
 
-   -  Access to the :ref:`Manage Staged MARC Records Tool <staged-marc-record-management-label>`
+   -  Access to the :ref:`Manage Staged MARC Records Tool <staged-marc-record
+      -management-label>`
+
+-  marc\_modification\_templates
+
+   -  Manage MARC modification templates
+
+   -  Access to the :ref:`MARC modification templates tool <marc-modification-templates-
+      label>`
 
 -  moderate\_comments
 
    -  Moderate patron comments
 
-   -  Access to the :ref:`Comments Tool <comments-label>`
+   -  Access to the :ref:`Comments tool <comments-label>`
 
 -  moderate\_tags
 
    -  Moderate patron tags
 
-   -  Access to the :ref:`Tags Tool <tag-moderation-label>`
+   -  Access to the :ref:`Tags tool <tag-moderation-label>`
 
 -  records\_batchdel
 
    -  Perform batch deletion of records (bibliographic or authority)
 
-   -  Access to the :ref:`Batch Record Deletion Tool <batch-record-deletion-label>`
+   -  Access to the :ref:`Batch record deletion tool <batch-record-deletion-label>`
+
+-  records\_batchmod
+
+   -  Perform batch modification of records (bibliographic or authorities)
+
+   -  Access to the :ref:`Batch record modification tool <batch-record-modification-label>`
 
 -  rotating\_collections
 
    -  Manage rotating collections
 
-   -  Access to the :ref:`Rotating Collections Tool <rotating-collections-label>`
+   -  Access to the :ref:`Rotating collections tool <rotating-collections-label>`
 
 -  schedule\_tasks
 
    -  Schedule tasks to run
 
-   -  Access to the :ref:`Task Scheduler Tool <task-scheduler-label>`
+   -  Access to the :ref:`Task scheduler tool <task-scheduler-label>`
 
 -  stage\_marc\_import
 
    -  Stage MARC records into the reservoir
 
-   -  Access to the :ref:`Stage MARC Records Tool <stage-marc-records-for-import-label>`
+   -  Access to the :ref:`Stage MARC records tool <stage-marc-records-for-import-label>`
 
 -  upload\_general\_files
 
    -  Upload any file
 
-   -  Access to upload files via the :ref:`Upload Tool <upload-label>`
+   -  Access to upload files via the :ref:`Upload tool <upload-label>`
 
 -  upload\_local\_cover\_images
 
    -  Upload local cover images
 
-   -  Access to the :ref:`Upload Local Cover Image
-      Tool <upload-local-cover-image-label>` as well as permission to add and
-      delete local cover images from the bib detail page
+   -  Access to the :ref:`Upload local cover image
+      tool <upload-local-cover-image-label>` as well as permission to add and
+      delete local cover images from the record detail page
 
 -  upload\_manage
 
    -  Manage uploaded files
 
-   -  Access to uploaded files via the :ref:`Upload Tool <upload-label>`
+   -  Access to uploaded files via the :ref:`Upload tool <upload-label>`
 
           **Note**
 
@@ -1104,11 +1174,11 @@ level choose from these options:
 
    -  Browse the system logs
 
-   -  Access to the :ref:`Log Viewer Tool <log-viewer-label>`
+   -  Access to the :ref:`Log viewer tool <log-viewer-label>`
 
 .. _granular-reports-permissions-label:
 
-Granular Reports Permissions
+Granular reports permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'reports' permissions they have the ability to
@@ -1117,23 +1187,49 @@ permissions on a more granular level choose from these options:
 
 -  create\_reports
 
-   -  Create SQL Reports
+   -  Create SQL reports
 
    -  The ability to create and edit but not run SQL reports
 
+-  delete\_reports
+
+   -  Delete SQL reports
+
 -  execute\_reports
 
-   -  Execute SQL Reports
+   -  Execute SQL reports
 
    -  The ability to run but not create or edit SQL reports
 
+.. _granular-course-reserves-permissions-label:
+
+Granular course reserves permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the staff member has 'course reserves' permissions they have the ability to
+perform all of these actions. If you would like to control course reserves
+permissions on a more granular level choose from these options:
+
+-  add\_reserves
+
+   -  Add course reserves
+
+-  delete\_reserves
+
+   -  Remove course reserves
+
+-  manage\_courses
+
+   -  Add, edit and delete courses
+
+
 .. _granular-plugins-permissions-label:
 
-Granular Plugins Permissions
+Granular plugins permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the staff member has 'plugins' permissions they have the ability to
-perform all of these actions. If you would like to control reports
+perform all of these actions. If you would like to control plugins
 permissions on a more granular level choose from these options:
 
 -  configure
@@ -1161,9 +1257,10 @@ permissions on a more granular level choose from these options:
 
    -  The ability to use tool plugins
 
+
 .. _granular-lists-permissions-label:
 
-Granular Lists Permissions
+Granular lists permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All staff members have permission to access lists. This section only
@@ -1173,6 +1270,63 @@ to delete public lists that they have no created themselves.
 -  delete\_public\_lists
 
    -  Delete public lists
+
+   -  The ability to delete public lists created by someone else
+
+.. _granular-clubs-permissions-label:
+
+Granular patron clubs permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the staff member has 'clubs' permissions they have the ability to
+perform all of these actions. If you would like to control patron clubs
+permissions on a more granular level choose from these options:
+
+-  edit\_clubs
+
+   -  Create and edit clubs
+
+   -  Create and edit patron clubs using the :ref:`Patron clubs tool <Patron-clubs-label>`
+
+-  edit\_templates
+
+   -  Create and edit club templates
+
+   -  Create and edit club templates using the :ref:`Patron clubs tool <Patron-clubs-label>`
+
+-  enroll
+
+   -  Enroll patrons in clubs
+
+   -  Enroll patrons from the patron file
+
+.. _granular-self-check-permissions-label:
+
+Granular self check permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the user has 'self check' permissions they have the ability to
+perform all of these actions. If you would like to control self check
+permissions on a more granular level choose from these options:
+
+-  self\_checkin\_module
+
+   -  Log into the self check-in module.
+
+      ** Note**
+
+      This permission prevents the patron from using any other OPAC 
+      functionality
+
+-  self\_checkout\_module
+
+   -  Perform self checkout at the OPAC.
+
+      **Note**
+
+      This permission should be used for the patron matching the
+      :ref:`AutoSelfCheckID <autoselfcheckallowed,-autoselfcheckid-
+      &-autoselfcheckpass-label>` system preference
 
 .. _patron-information-label:
 

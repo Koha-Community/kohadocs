@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _course-reserves-label:
+
 Course Reserves
 ===============
 
