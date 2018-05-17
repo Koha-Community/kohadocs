@@ -65,7 +65,8 @@ Koha version and the machine you have installed Koha on. This
 information is very important for debugging problems. When reporting
 issues to your support provider or to the various other support avenues
 (mailing lists, chat room, etc), it's always good to give the
-information from this screen.
+information from this screen. The time zone is handled via Koha or
+server configuration.
 
 |image1065|
 
