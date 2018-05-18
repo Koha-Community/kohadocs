@@ -2068,6 +2068,25 @@ Description:
    new menu options to the staff cataloging detail pages to allow that
    to happen.
 
+.. _enableadvancedcatalogingeditor-label:
+
+EnableAdvancedCatalogingEditor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Default: Don't enable
+
+Asks: \_\_\_ the advanced cataloging editor.
+
+Description:
+
+-  This preference will allow you to choose between a basic editor and a
+   advanced editor for cataloging.
+
+    **Note**
+
+    This feature does not currently include any support for
+    UNIMARC or NORMARC fixed fields.
+
 .. _record-structure-label:
 
 Record Structure
