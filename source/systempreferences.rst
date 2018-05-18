@@ -5713,6 +5713,82 @@ Values:
 Enabling this preference will allow access to the :ref:`self
 checkout <self-checkout-label>` module in Koha.
 
+Self Checkin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _selfcheckinmainuserblock-label:
+
+SelfCheckInMainUserBlock 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Include the following HTML on the self check-in screen
+
+Description:
+
+-  HTML entered in this field will appear in the center of the main page
+   of your self checkin screen
+
+.. _selfscheckinmodule-label:
+
+SelfCheckInModule 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't enable
+
+Asks: \_\_\_ the standalone self check-in module (available at:
+/cgi-bin/koha/sci/sci-main.pl
+
+Values:
+
+-  Don't enable
+
+-  Enable
+
+Description:
+
+-  This system preference will activate (or deactivate) the self check-
+   in module
+
+.. _selfcheckintimeout-label:
+
+SelfCheckInTimeout
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: 120
+
+Asks: Reset the current self check-in screen after \_\_\_ seconds
+
+Description:
+
+-  Enter the number of seconds after which you want the self check-in 
+   screen to refresh and go back to the main page (for example, if a
+   patron forgot to log out).
+
+.. _selfcheckinusercss-label:
+
+SelfCheckInUserCSS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Include the following CSS on all the self check-in screens
+
+Description:
+
+-  The CSS code entered here will override any CSS on the self check-in
+   screens
+
+.. _selfcheckinuserjs-label:
+
+SelfCheckInUserJS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Include the following JavaScript on all the self check-in screens
+
+Description: 
+
+-  The JavaScript entered here will override any other JavaScript on
+   the self check-in screens
+
+
 .. _enhanced-content-label:
 
 Enhanced Content
