@@ -1382,7 +1382,7 @@ Self check-in
 ------------------------------------------------
 
 In order to use the self check-in module, you must first set the :ref:
-`SelfCheckInModule <_selfscheckinmodule-label>` system preference to
+`SelfCheckInModule <selfscheckinmodule-label>` system preference to
 'Enable'.
 
 Then, you will have to :ref:`create a patron <add-a-staff-patron-label>` 
