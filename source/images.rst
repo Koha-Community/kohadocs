@@ -1321,3 +1321,6 @@
 .. |image1328| image:: images/patrons/mergepatrons3.png
 .. |image1329| image:: images/searching/searchresults.png
 .. |image1330| image:: images/searching/searchresultssort.png
+.. |image1331| image:: images/circ/selfcheckin.png
+.. |image1332| image:: images/circ/selfcheckinaddbarcode.png
+.. |image1333| image:: images/circ/selfcheckincheckin.png

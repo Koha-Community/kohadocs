@@ -1305,13 +1305,13 @@ permanent location.)
 
 .. _self-checkout-label:
 
-Self Checkout
+Self checkout
 ---------------------------------
 
 Koha comes with a very basic self checkout module. To enable this module
-you need to set the :ref:`WebBasedSelfCheck`
+you need to set the :ref:`WebBasedSelfCheck <webbasedselfcheck-label>` system
 preference to 'Enable.' To use this module you have to log in as a
-:ref:`staff member <add-a-staff-patron-label>` with :ref:`circulation
+:ref:`staff member <add-a-staff-patron-label>` with :ref:`self\_check
 permissions <patron-permissions-label>`.
 
     **Note**
@@ -1320,7 +1320,7 @@ permissions <patron-permissions-label>`.
     action so that you don't leave a real staff client logged into a
     computer all day
 
-There is no link to the Self Checkout module, but a simple addition to
+There is no link to the Self checkout module, but a simple addition to
 the :ref:`IntranetUserJS` system preference can add one.
 
 ::
@@ -1340,16 +1340,16 @@ The link will then appear at the bottom of the log in page:
 
 |image591|
 
-You can also access this module by going to :
+You can also access this module by going to:
 http://YOUR\_KOHA\_OPAC\_URL/cgi-bin/koha/sco/sco-main.pl
 
 When on the self checkout page depending on your value in the
-:ref:`SelfCheckoutByLogin` preference you will be
-asked to enter you cardnumber
+:ref:`SelfCheckoutByLogin <selfcheckoutbylogin-label>` system preference 
+you will be asked to enter you cardnumber
 
 |image592|
 
-or your username and password:
+or your username and password
 
 |image593|
 
@@ -1375,6 +1375,88 @@ functions. Only a librarian can override a circulation block and so
 patrons must go to the librarian for help in these situations.
 
 |image597|
+
+.. _self-checkin-label:
+
+Self check-in
+------------------------------------------------
+
+In order to use the self check-in module, you must first set the :ref:
+`SelfCheckInModule <_selfscheckinmodule-label>` system preference to
+'Enable'.
+
+Then, you will have to :ref:`create a patron <add-a-staff-patron-label>` 
+with the :ref:`self\_checkin\_module permission <granular-self-check-
+permissions-label>`.
+
+    **Note**
+
+    Create a :ref:`staff patron <add-a-staff-patron-label>` specifically for this
+    action so that you don't leave a real staff client logged into a
+    computer all day. You can give this patron only the aforementionned 
+    permission so it cannot be used for anything else.
+
+Once this is done, you can head over to the self check-in page:
+http://YOUR\_KOHA\_OPAC\_URL/cgi-bin/koha/sci/sci-main.pl
+
+Log in with your staff patron with self check-in permissions
+
+Once the computer or kiosk is set and the self check-in user logged in,
+patrons will be able to check-in their items themselves.
+
+|image1331|
+
+The patron will either scan the item's barcode, if the computer is 
+attached to a barcode scanner, or type in their item's barcode in the box
+and click 'Add' or press enter.
+
+    **Note**
+
+    Most barcode scanners will automatically hit return after scanning.
+
+Once they have scanned or entered all their items' barcodes, they can 
+click on the 'Check-in' button to return all the items at once.
+
+    **Important**
+
+    If the patron doesn't click the 'Check-in' button, the items will not
+    be returned and will stay in their account.
+
+    **Important**
+
+    The self check-in module will not warn user if the item is late, if 
+    they have fines, if the item is on hold for someone else, or if they 
+    have messages in their account.
+
+|image1332|
+
+They can then click 'Finish' to return to the main self check-in page.
+
+|image1333|
+
+    **Note**
+
+    If the patron doesn't click 'Finish', the screen will refresh after the
+    timeout period specified in the :ref:`SelfCheckInTimeout <selfcheckintimeout
+    -label>` system preference. 
+
+    **Note**
+
+    Even if the patron doesn't click 'Finish' the item will still be checked 
+    in from their account.
+
+You can cutomize the look of your self check-in screens by using the 
+:ref:`SelfCheckInUserCSS <selfcheckinusercss-label>` system preference or
+the :ref:`SelfCheckInUserJS <selfcheckinuserjs-label>` system preference.
+
+You can add content, like instructions on how to use the self check-in system
+for example, by using the :ref:`SelfCheckInMainUserBlock <selfcheckinmainuserblock
+-label>` system preference.
+
+Statistics about the transactions made through the self check-in module
+are logged into the action\_logs table in the Koha database. You can therefore
+:ref:`build a custom report <custom-reports-label>` to get the statistics you
+need.
 
 .. _offline-circulation-utilities-label:
 
