@@ -11235,26 +11235,6 @@ Description:
    :ref:`BorrowerMandatoryField` list, the
    minimum length, if not specified here, defaults to one.
 
-.. _checkdigit-label:
-
-checkdigit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Default: Don't
-
-Asks: \_\_\_ check and construct borrower card numbers in the Katipo
-style.
-
-Values:
-
--  Do
-
--  Don't
-
-    **Important**
-
-    This overrides :ref:`autoMemberNum` if on.
-
 .. _checkprevcheckout-label:
 
 CheckPrevCheckout
