@@ -19,7 +19,7 @@ Patrons and Circulation
 Patron lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Patron lists
+-  *Get there:* More > Tools > Patrons and circulation > Patron lists
 
 Patron lists are a way to store a group of patrons for easy modification
 via the :ref:`batch patron modification tool <batch-patron-modification-label>` or
@@ -46,6 +46,9 @@ menu.
 
 Enter the patron's name or cardnumber in the search box and click on the
 right result to add the patron.
+
+Alternatively, you can click on the 'Enter multiple card numbers' link and 
+scan (or type in) barcodes in the box.
 
 |image249|
 
