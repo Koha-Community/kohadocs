@@ -25,8 +25,8 @@ Bibliographic records
 In Koha the bibliographic record contains the main information related
 to the material. This includes things like the title, author, ISBN, etc.
 This information is stored in Koha in Marc (different flavors of Marc
-are supported in Koha). Once this information is saved, :ref:`Item Records`
-can be attached.
+are supported in Koha). Once this information is saved, :ref:`item records 
+<item-records-label>` can be attached.
 
 .. _adding-records-label:
 
@@ -664,7 +664,7 @@ attached you will see that the delete option is grayed out.
 
 .. _item-records-label:
 
-Item Records
+Item records
 ----------------------------
 
 In Koha each bibliographic record can have one or more items attached.
@@ -673,18 +673,18 @@ information to the physical copy the library has.
 
 .. _adding-items-label:
 
-Adding Items
+Adding items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After saving a new bibliographic record, you will be redirected to a
 blank item record so that you can attach an item to the bibliographic
-record. You can also click 'Add/Edit Items' from the cataloging search
+record. You can also click 'Add/Edit items' from the cataloging search
 results
 
 |image674|
 
 or you can add new item at any time by clicking 'New' on the
-bibliographic record and choosing 'New Item'
+bibliographic record and choosing 'New item'
 
 |image675|
 
@@ -728,22 +728,22 @@ save until the required fields are filled in.
 
 |image677|
 
--  **Note**
+    **Note**
 
-       To make item subfields required in a framework you'll want to
-       edit the 952 field in the :ref:`framework
-       editor <marc-bibliographic-frameworks-label>`.
+    To make item subfields required in a framework you'll want to
+    edit the 952 field in the :ref:`framework
+    editor <marc-bibliographic-frameworks-label>`.
 
 Below the add form there are 3 buttons for adding the item
 
 |image678|
 
--  Add Item will add just the one item
+-  'Add item' will add just the one item
 
--  Add & Duplicate will add the item and fill in a new form with the
-   same values for your to alter
+-  'Add & duplicate' will add the item and fill in a new form with the
+   same values for you to alter
 
--  Add Multiple items will ask how many items and will then add that
+-  'Add multiple items' will ask how many items and will then add that
    number of items adding +1 to the barcode so each barcode is unique
 
 Your added items will appear above the add form once submitted
@@ -770,12 +770,12 @@ type in any column to filter the results in the table.
 
 .. _editing-items-label:
 
-Editing Items
+Editing items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Items can be edited in several ways.
 
--  Clicking 'Edit' and 'Edit Items' from the bibliographic record
+-  Clicking 'Edit' and 'Edit items' from the bibliographic record
 
    |image683|
 
@@ -785,7 +785,7 @@ Items can be edited in several ways.
 
    |image684|
 
--  Clicking 'Edit Items' beside the item on the 'Items' tab
+-  Clicking 'Edit items' beside the item on the 'Items' tab
 
    |image685|
 
@@ -819,12 +819,12 @@ Items can be edited in several ways.
 
    |image1269|
 
--  Finally you can use the :ref:`Batch Item
-   Modification <batch-item-modification-label>` tool
+-  Finally you can use the :ref:`batch item
+   modification <batch-item-modification-label>` tool
 
 .. _quick-item-status-updates-label:
 
-Quick Item Status Updates
+Quick item status updates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Often circulation staff need to change the status of an item to Lost or
@@ -836,18 +836,18 @@ summary by clicking on the Items tab to the left of the bib detail page.
 |image689|
 
 From this view you can mark an item lost by choosing a lost status from
-the pull down and clicking the 'Set Status' button.
+the pull down and clicking the 'Set status' button.
 
 |image690|
 
 You can also mark an item as damaged by choosing a damaged status from
-the pull down and clicking the 'Set Status' button.
+the pull down and clicking the 'Set status' button.
 
 |image691|
 
 .. _duplicating-items-label:
 
-Duplicating Items
+Duplicating items
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can easily duplicate each item by clicking the 'Action' button the
@@ -860,7 +860,7 @@ the form with the values from the item you chose.
 
 .. _item-information-label:
 
-Item Information
+Item information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To the left of every bibliographic record there is a tab to view the
@@ -876,7 +876,7 @@ lost or withdrawn you will also see the date that status was applied.
 
 |image1270|
 
-In the History section you will see information about the check out
+In the 'History' section you will see information about the check out
 history of the item and if you ordered the item via the acquisitions
 module then this section will include information about the order.
 
@@ -887,16 +887,16 @@ the acquisitions information for that item.
 
 .. _moving-items-label:
 
-Moving Items
+Moving items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Items can be moved from one bibliographic record to another using the
-Attach Item option
+'Attach item' option
 
 |image695|
 
 Visit the bibliographic record you want to attach the item to and choose
-'Attach Item' from the 'Edit' menu.
+'Attach item' from the 'Edit' menu.
 
 |image696|
 
@@ -909,7 +909,7 @@ tool <merging-bibliographic-records-via-lists-label>` instead.
 
 .. _deleting-items-label:
 
-Deleting Items
+Deleting items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are many ways to delete item records. If you only need to delete
@@ -942,7 +942,7 @@ delete a batch of items.
 
 .. _item-specific-circulation-history-label:
 
-Item Specific Circulation History
+Item specific circulation history
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each bibliographic record keeps a circulation history (with or without
