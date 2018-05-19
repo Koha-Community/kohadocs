@@ -414,6 +414,13 @@ To add a new notice or slip
              slips or notice you can enter data in the Other name or
              Initials field for each patron and use that value instead.
 
+   -  The system preference :ref:`TranslateNotices` will add tabs for each
+      installed language to the notices editor. The notice defined in the
+      'Default' tab will be used if there is no preferred language set
+      for a patron.
+
+      |image1335|
+
 .. _overdue-notice-markup-label:
 
 Overdue Notice Markup
