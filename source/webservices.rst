@@ -26,6 +26,10 @@ Koha indexes natively. Visit
 http://www.oaforum.org/tutorial/english/page3.htm for diagrams of how
 OAI-PMH works.
 
+By default Koha won't include item information in OAI-PMH result sets,
+but they can be added by using the include_items option in the a
+configuration file linked from :ref:`OAI-PMH:ConfFile`.
+
 Learn more about OAI-PMH at: http://www.openarchives.org/pmh/
 
 To enable OAI-PMH in Koha edit the :ref:`OAI-PMH` preference.
@@ -39,64 +43,22 @@ Sample OAI Conf File
 
 ::
 
-           format:
-             vs:
-               metadataPrefix: vs
-               metadataNamespace: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs
-               schema: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs.xsd
-               xsl_file: /usr/local/koha/xslt/vs.xsl
-             marcxml:
-               metadataPrefix: marxml
-               metadataNamespace: http://www.loc.gov/MARC21/slim
-    http://www.loc.gov/standards/marcxml/schema/MARC21slim
-               schema: http://www.loc.gov/MARC21/slim
-    http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
-             oai_dc:
-               metadataPrefix: oai_dc
-               metadataNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/
-               schema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd
-               xsl_file:
-    /usr/local/koha/koha-tmpl/intranet-tmpl/xslt/UNIMARCslim2OAIDC.xsl
-
-.. _rest-services-label:
-
-REST services
-----------------------------------
-
-Koha can now be requested by REST http requests. BibLibre wrotes an
-external module to adds more possibilities than ILS-DI can provide.There
-is no authentication process, but authorized ips are listed in the
-config file. Services have been tested in 3.10, 3.12 and 3.14 koha
-versions. You can find more information about it into README file and
-opac/rest.pl documentation on http://git.biblibre.com. If you want to
-add features, send us a patch at dev\_patches AT biblibre DOT com.
-
-Services provided in 1.4 version are:
-
-::
-
-               GET branches
-               GET user/byid/:borrowernumber/holds
-               GET user/:user_name/holds
-               GET user/byid/:borrowernumber/issues
-               GET user/:user_name/issues
-               GET user/:user_name/issues_history
-               GET user/byid/:borrowernumber/issues_history
-               GET user/today
-               GET user/all
-               POST user
-               PUT user/:user_name
-               GET biblio/:biblionumber/items
-               GET biblio/:biblionumber/holdable
-               GET biblio/:biblionumber/items_holdable_status
-               GET item/:itemnumber/holdable
-               PUT auth/change_password
-               GET /suggestions
-               GET /suggestions/:suggestionid
-               POST /suggestions
-               PUT /suggestions/:suggestionid
-               DELETE /suggestions/:suggestionid
-
+  format:
+    vs:
+      metadataPrefix: vs
+      metadataNamespace: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs
+      schema: http://veryspecial.tamil.fr/vs/format-pivot/1.1/vs.xsd
+      xsl_file: /usr/local/koha/xslt/vs.xsl
+    marcxml:
+       metadataPrefix: marxml
+       metadataNamespace: http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim
+       schema: http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd
+       include_items: 1
+    oai_dc:
+       metadataPrefix: oai_dc
+       metadataNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/
+       schema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd
+       xsl_file: /usr/local/koha/koha-tmpl/intranet-tmpl/xslt/UNIMARCslim2OAIDC.xsl
 
 .. _sru-server-label:
 
@@ -116,7 +78,7 @@ Explain
 If you want to have information about the implementation of SRU on a
 given server, you should have access to the Explain file using a request
 to the server without any parameter. Like
-<http://myserver.com:9999/biblios/>. The response from the server is an
+http://myserver.com:9999/biblios/. The response from the server is an
 XML file that should look like the following and will give you
 information about the default settings of the SRU server.
 
