@@ -387,8 +387,7 @@ hold, download the list contents, email the list or print the list out.
    choose the format you'd like to download the list in
 
 -  To email the list contents to someone, click the 'Send List' link and
-   enter in your email details in the form that pops up (:ref:`view a sample
-   Lists email <example-email-from-list-label>`)
+   enter in your email details in the form that pops up
 
    |image972|
 
@@ -487,8 +486,7 @@ Next is the option to send the contents of your cart to an email
 address. This is handy if you want to send the resources you found at
 the library to your home email account to refer to later or to send to a
 patron researching a specific topic. Clicking this link will open up a
-new window that asks for the email address and message to send. :ref:`View a
-sample Cart email <example-email-from-cart-label>`.
+new window that asks for the email address and message to send.
 
 |image980|
 
