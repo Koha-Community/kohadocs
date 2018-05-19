@@ -19,18 +19,18 @@ setup Appendix.
 
 .. _bibliographic-records-label:
 
-Bibliographic Records
+Bibliographic records
 ------------------------------------
 
 In Koha the bibliographic record contains the main information related
 to the material. This includes things like the title, author, ISBN, etc.
 This information is stored in Koha in Marc (different flavors of Marc
-are supported in Koha). Once this information is saved, :ref:`Item Records`
-can be attached.
+are supported in Koha). Once this information is saved, :ref:`item records 
+<item-records-label>` can be attached.
 
 .. _adding-records-label:
 
-Adding Records
+Adding records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Records can be added to Koha via original or copy cataloging. You can
@@ -40,7 +40,7 @@ your work.
 If you would like to catalog a record using a blank template in the
 basic editor
 
--  Click 'New Record'
+-  Click 'New record'
 
    |image627|
 
@@ -74,16 +74,10 @@ library in the editor you last used (basic or advanced)
    -  Search targets can be altered by using the :ref:`Z39.50
       Admin <z39.50/sru-servers-label>` area.
 
-   -  From the results you can view the MARC or Card view for the
-      records or choose to Import them into Koha
+   -  From the results' 'Action' button you can view the MARC or Card 
+      view for the record or choose to import it into Koha
 
       |image629|
-
-      -  In addition to the Import link to the right of each title, you
-         can click on the title you're interested in and a menu will pop
-         up with links to preview the record and import it
-
-         |image630|
 
       -  If you don't find the title you need in your Z39.50 search
          results you can click the 'Try Another Search' button at the
@@ -93,7 +87,7 @@ library in the editor you last used (basic or advanced)
 
 .. _basic-editor-cataloging-label:
 
-Basic Editor Cataloging
+Basic editor cataloging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the basic editor once you've opened a blank framework or imported a
@@ -108,7 +102,7 @@ cataloging
 
 -  To expand a collapsed tag click on the tag description
 
--  To get help from the Library of Congress on a Marc tag click the
+-  To get help from the Library of Congress on a MARC tag click the
    question mark (?) to the right of each field number
 
    -  It is possible to change the source of the MARC documentation using the
@@ -153,7 +147,7 @@ cataloging
    -  To remove a subfield (if there is more than one of the same type),
       click the - (minus sign) to the right of the field
 
--  To use a plugin click on the icon to the right of the filed
+-  To use a plugin click on the icon to the right of the field
 
    |image638|
 
@@ -185,19 +179,17 @@ cataloging
 
 .. _advanced-editor-cataloging-label:
 
-Advanced Editor Cataloging
+Advanced editor cataloging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to use the Advanced cataloging editor you need to enable the
-:ref:`EnableAdvancedCatalogingEditor`
+:ref:`EnableAdvancedCatalogingEditor <enableadvancedcatalogingeditor-label>`
 preference.
 
-    **Important**
+    **Note**
 
-    This feature is currently experimental, and may have bugs that cause
-    corruption of records. It also does not include any support for
-    UNIMARC or NORMARC fixed fields. Please help us test it and report
-    any bugs, but do so at your own risk.
+    This feature does not currently include any support for
+    UNIMARC or NORMARC fixed fields.
 
 In the advanced editor once you've opened a blank framework or imported
 a record via Z39.50 you will be presented with the form to continue
@@ -240,7 +232,7 @@ commands
 
 .. _advanced-cataloging-keyboard-shortcuts-label:
 
-Advanced Cataloging Keyboard Shortcuts
+Advanced cataloging keyboard shortcuts
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The following keyboard shortcuts can be used in the advanced cataloging
@@ -249,9 +241,16 @@ module to save time and clicking.
 +----------------+--------------------------------+
 | Shortcut       | Behavior                       |
 +================+================================+
+| Alt-C          | Insert copyright symbol (©)    |
++----------------+--------------------------------+
+| Alt-P          | Insert copyright symbol (℗)    |
+|                | (sound recordings)             |
++----------------+--------------------------------+
 | Ctrl-D         | Insert delimiter (‡)           |
 +----------------+--------------------------------+
 | Ctrl-H         | Get help on current subfield   |
++----------------+--------------------------------+
+| Ctrl-Shift-L   | Link field to authorities      |
 +----------------+--------------------------------+
 | Ctrl-S         | Save record                    |
 +----------------+--------------------------------+
@@ -270,12 +269,12 @@ module to save time and clicking.
 
 .. _macros-in-advanced-cataloging-label:
 
-Macros in Advanced Cataloging
+Macros in advanced cataloging
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 To record a new macro:
 
--  Select the "> Macros..." button
+-  Select the "Macros..." button
 
 -  A window will pop up. In this window, select "New macro...," key the
    new macro's name in the pop-up box and select OK.
@@ -291,7 +290,7 @@ To record a new macro:
 
 To edit an existing macro:
 
--  Select the "> Macros..." button
+-  Select the "Macros..." button
 
 -  A window will pop up. In this window, select the macro that you wish
    to edit & make your changes.
@@ -342,7 +341,7 @@ The basic syntax of the macro language:
 
 .. _adding-analytic-records-label:
 
-Adding Analytic Records
+Adding analytic records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Libraries sometimes make journal articles and articles within monographs
@@ -360,18 +359,18 @@ other is the :ref:`Analytics Enhanced Workflow`.
 
 .. _easy-analytics-label:
 
-Easy Analytics
+Easy analytics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Easy Analytics feature makes linking analytic records together
+The easy analytics feature makes linking analytic records together
 easier. The first thing you need to do is set the
 :ref:`EasyAnalyticalRecords` preference to
 'Display' and the :ref:`UseControlNumber` preference to
 'Don't use.'
 
 After cataloging your analytic record (see :ref:`Adding
-Records <adding-records-label>` for more on creating records) click 'Edit' from
-the normal view and choose to 'Link to Host Item'
+records <adding-records-label>` for more on creating records) click 'Edit' from
+the normal view and choose to 'Link to host item'
 
 |image646|
 
@@ -391,18 +390,18 @@ the link.
 |image649|
 
 To view all of the items tied to the host record, do a search for the
-record, click the Analytics tab on the left and the analytics tied to
-each barcode will be shown under the "Used in" column.
+record, click the 'Analytics' tab on the left and the analytics tied to
+each barcode will be shown under the 'Used in' column.
 
 |image650|
 
     **Note**
 
     It is also possible to create analytic records from this screen by
-    clicking on "Create Analytics"
+    clicking on 'Create analytics'
 
 You can also see the analytics attached to this record by clicking the
-'Show Analytic' link towards the top of the record in the normal view.
+'Show analytic' link towards the top of the record in the normal view.
 
 |image651|
 
@@ -414,17 +413,17 @@ the 'Analytics' tab.
 
 .. _analytics-enhanced-workflow-label:
 
-Analytics Enhanced Workflow
+Analytics enhanced workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To use the Enhanced Workflow method of adding analytics, the first thing
+To use the enhanced workflow method of adding analytics, the first thing
 you need to do is set the
 :ref:`EasyAnalyticalRecords` preference to 'Don't
 display' and the :ref:`UseControlNumber` preference to
 'Use.'
 
 After cataloging your original record (see :ref:`Adding
-Records <adding-records-label>` for more on creating records) click 'New' from
+records <adding-records-label>` for more on creating records) click 'New' from
 the normal view and choose to 'New child record.'
 
 |image653|
@@ -436,13 +435,13 @@ record is saved.
 |image654|
 
 To view all of the items tied to the host record, do a search for the
-record, click the Analytics tab on the left and the analytics tied to
-each barcode will be shown under the "Used in" column.
+record, click the 'Analytics' tab on the left and the analytics tied to
+each barcode will be shown under the 'Used in' column.
 
 |image655|
 
 You can also see the analytics attached to this record by clicking the
-'Show Analytic' link towards the top of the record in the normal view.
+'Show analytic' link towards the top of the record in the normal view.
 
 |image656|
 
@@ -454,7 +453,7 @@ the 'Analytics' tab.
 
 .. _editing-analytics-label:
 
-Editing Analytics
+Editing analytics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have linked an analytic record incorrectly you can remove that
@@ -465,7 +464,7 @@ options.
 
 |image658|
 
--  Clicking 'Edit in Host' will allow you to edit the item on the host
+-  Clicking 'Edit in host' will allow you to edit the item on the host
    record.
 
 -  Clicking 'Delink' will remove the 773 field and the link between the
@@ -473,11 +472,11 @@ options.
 
 .. _editing-records-label:
 
-Editing Records
+Editing records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To edit a record you can click 'Edit Biblio' from the search results on
-the cataloging page
+To edit a record you can click the 'Actions' button and choose 'Edit biblio' 
+from the search results on the cataloging search page
 
 |image659|
 
@@ -492,11 +491,11 @@ The record will open in the MARC editor
 
 The alternative is to search via Z39.50 to overlay your record with a
 fuller record found at another library. You can do this by choosing
-'Replace Record via Z39.50' from the Edit menu.
+'Replace record via Z39.50/SRU' from the 'Edit' menu.
 
 |image662|
 
-Once you choose that you will be brought to a Z39.50 search window to
+Once you choose that, you will be brought to a Z39.50 search window to
 search other libraries for the record in question.
 
 Once you have made your edits (via either method) you can click 'Save'
@@ -505,34 +504,34 @@ at the top left of the editor.
 You can also use the edit menu to add your own custom cover image if you
 have either :ref:`OPACLocalCoverImages` and/or
 :ref:`LocalCoverImages` set to 'Display' by choosing
-'Upload Image' from the menu.
+'Upload image' from the menu.
 
 |image663|
 
-Choosing to 'Upload Image' will take you to the :ref:`Upload Local Cover
+Choosing 'Upload image' will take you to the :ref:`Upload Local Cover
 Image Tool <upload-local-cover-image-label>`.
 
 .. _duplicating-records-label:
 
-Duplicating Records
+Duplicating records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes a copy of the record you need to catalog can't be found via
 Z39.50. In these cases you can create a duplicate of similar record and
 edit the necessary pieces to create a new record. To duplicate an
-existing record click 'Edit as New (Duplicate)' from the Edit menu on
-the Bibliographic Record
+existing record click 'Edit as new (duplicate)' from the 'Edit' menu on
+the bibliographic record.
 
 |image664|
 
 This will open a new MARC record with the fields filled in with the
-values from the original Bibliographic Record.
+values from the original bibliographic record.
 
 |image665|
 
 .. _attaching-files-to-records-label:
 
-Attaching files to Records
+Attaching files to records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to upload files to Koha you can do so with a few
@@ -543,7 +542,7 @@ settings.
    stored
 
    -  You can see if your upload path is set correctly by visiting About
-      Koha > System Information. If there is an error you will see it
+      Koha > System information. If there is an error you will see it
       there.
 
       |image1264|
@@ -569,9 +568,17 @@ the search results you can choose which file to attach.
 Once the file is chosen it will appear as a link in the MARC record and
 on the detail display.
 
+|image1334|
+
+    **Note**
+
+    If the file is a PDF, it will be opened directly in the user's browser 
+    whereas if the file is an image or another type of file, the user will 
+    be prompted to download it.
+
 .. _merging-records-label:
 
-Merging Records
+Merging records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To merge bibliographic records together you will want to go to the
@@ -641,7 +648,7 @@ be deleted.
 
 .. _deleting-records-label:
 
-Deleting Records
+Deleting records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To delete a bibliographic record simply choose the 'Edit' button and
@@ -649,7 +656,7 @@ select 'Delete record'
 
 |image672|
 
-Bibliographic records can only be deleted one all items have been
+Bibliographic records can only be deleted once all items have been
 deleted. If you try to delete a bibliographic record with items still
 attached you will see that the delete option is grayed out.
 
@@ -657,7 +664,7 @@ attached you will see that the delete option is grayed out.
 
 .. _item-records-label:
 
-Item Records
+Item records
 ----------------------------
 
 In Koha each bibliographic record can have one or more items attached.
@@ -666,18 +673,18 @@ information to the physical copy the library has.
 
 .. _adding-items-label:
 
-Adding Items
+Adding items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After saving a new bibliographic record, you will be redirected to a
 blank item record so that you can attach an item to the bibliographic
-record. You can also click 'Add/Edit Items' from the cataloging search
+record. You can also click 'Add/Edit items' from the cataloging search
 results
 
 |image674|
 
 or you can add new item at any time by clicking 'New' on the
-bibliographic record and choosing 'New Item'
+bibliographic record and choosing 'New item'
 
 |image675|
 
@@ -721,22 +728,22 @@ save until the required fields are filled in.
 
 |image677|
 
--  **Note**
+    **Note**
 
-       To make item subfields required in a framework you'll want to
-       edit the 952 field in the :ref:`framework
-       editor <marc-bibliographic-frameworks-label>`.
+    To make item subfields required in a framework you'll want to
+    edit the 952 field in the :ref:`framework
+    editor <marc-bibliographic-frameworks-label>`.
 
 Below the add form there are 3 buttons for adding the item
 
 |image678|
 
--  Add Item will add just the one item
+-  'Add item' will add just the one item
 
--  Add & Duplicate will add the item and fill in a new form with the
-   same values for your to alter
+-  'Add & duplicate' will add the item and fill in a new form with the
+   same values for you to alter
 
--  Add Multiple items will ask how many items and will then add that
+-  'Add multiple items' will ask how many items and will then add that
    number of items adding +1 to the barcode so each barcode is unique
 
 Your added items will appear above the add form once submitted
@@ -763,12 +770,12 @@ type in any column to filter the results in the table.
 
 .. _editing-items-label:
 
-Editing Items
+Editing items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Items can be edited in several ways.
 
--  Clicking 'Edit' and 'Edit Items' from the bibliographic record
+-  Clicking 'Edit' and 'Edit items' from the bibliographic record
 
    |image683|
 
@@ -778,7 +785,7 @@ Items can be edited in several ways.
 
    |image684|
 
--  Clicking 'Edit Items' beside the item on the 'Items' tab
+-  Clicking 'Edit items' beside the item on the 'Items' tab
 
    |image685|
 
@@ -812,12 +819,12 @@ Items can be edited in several ways.
 
    |image1269|
 
--  Finally you can use the :ref:`Batch Item
-   Modification <batch-item-modification-label>` tool
+-  Finally you can use the :ref:`batch item
+   modification <batch-item-modification-label>` tool
 
 .. _quick-item-status-updates-label:
 
-Quick Item Status Updates
+Quick item status updates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Often circulation staff need to change the status of an item to Lost or
@@ -829,18 +836,18 @@ summary by clicking on the Items tab to the left of the bib detail page.
 |image689|
 
 From this view you can mark an item lost by choosing a lost status from
-the pull down and clicking the 'Set Status' button.
+the pull down and clicking the 'Set status' button.
 
 |image690|
 
 You can also mark an item as damaged by choosing a damaged status from
-the pull down and clicking the 'Set Status' button.
+the pull down and clicking the 'Set status' button.
 
 |image691|
 
 .. _duplicating-items-label:
 
-Duplicating Items
+Duplicating items
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can easily duplicate each item by clicking the 'Action' button the
@@ -853,7 +860,7 @@ the form with the values from the item you chose.
 
 .. _item-information-label:
 
-Item Information
+Item information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To the left of every bibliographic record there is a tab to view the
@@ -869,7 +876,7 @@ lost or withdrawn you will also see the date that status was applied.
 
 |image1270|
 
-In the History section you will see information about the check out
+In the 'History' section you will see information about the check out
 history of the item and if you ordered the item via the acquisitions
 module then this section will include information about the order.
 
@@ -880,16 +887,16 @@ the acquisitions information for that item.
 
 .. _moving-items-label:
 
-Moving Items
+Moving items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Items can be moved from one bibliographic record to another using the
-Attach Item option
+'Attach item' option
 
 |image695|
 
 Visit the bibliographic record you want to attach the item to and choose
-'Attach Item' from the 'Edit' menu.
+'Attach item' from the 'Edit' menu.
 
 |image696|
 
@@ -902,7 +909,7 @@ tool <merging-bibliographic-records-via-lists-label>` instead.
 
 .. _deleting-items-label:
 
-Deleting Items
+Deleting items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are many ways to delete item records. If you only need to delete
@@ -935,7 +942,7 @@ delete a batch of items.
 
 .. _item-specific-circulation-history-label:
 
-Item Specific Circulation History
+Item specific circulation history
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each bibliographic record keeps a circulation history (with or without
@@ -962,11 +969,11 @@ headings, personal names and places.
 
 .. _adding-authorities-label:
 
-Adding Authorities
+Adding authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add a new authority record you can either choose the authority type
-from the 'New Authority' button or search another library by clicking
+from the 'New authority' button or search another library by clicking
 the 'New from Z39.50' button.
 
 |image702|
@@ -1011,7 +1018,7 @@ saving it to your system
 
 .. _searching-authorities-label:
 
-Searching Authorities
+Searching authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From the authorities page you can search for existing terms and the
@@ -1027,12 +1034,12 @@ attached).
 
 |image710|
 
-Clicking on the Details link to the right of the authority record
+Clicking on the 'Details' link to the right of the authority record
 summary will open the full record and the option to edit the record.
 
 |image711|
 
-If the authority has See Alsos in it you will see those broken out on
+If the authority has 'See also's in it you will see those broken out on
 the search results, clicking the linked headings will run a search for
 that heading instead.
 
@@ -1040,7 +1047,7 @@ that heading instead.
 
 .. _editing-authorities-label:
 
-Editing Authorities
+Editing authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Authorities can be edited by clicking on the authority summary from the
@@ -1065,7 +1072,7 @@ summary of the authority record.
 
 .. _merging-authorities-label:
 
-Merging Authorities
+Merging authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have duplicate authority records you can merge them together by
@@ -1104,12 +1111,12 @@ record will be deleted.
 
 .. _cataloging-guides-label:
 
-Cataloging Guides
+Cataloging guides
 ----------------------------------
 
 .. _bibliographic-record-cataloging-cheat-sheet-label:
 
-Bibliographic Record Cataloging Cheat Sheet
+Bibliographic record cataloging cheat sheet
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1119,7 +1126,7 @@ Bibliographic Record Cataloging Cheat Sheet
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 001   | CONTROL NUMBER                      | Accession number.                                                                                                                                    | Enter the accession number written inside the item here. For articles and items which do not have accession numbers, leave blank.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 003   | CONTROL NUMBER IDENTIFIER           | Your MARC Organizational Code                                                                                                                        | Click in this field to fill it in (will auto fill if you have your :ref:`MARCOrgCode` preference set).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 003   | CONTROL NUMBER IDENTIFIER           | Your MARC organizational code                                                                                                                        | Click in this field to fill it in (will auto fill if you have your :ref:`MARCOrgCode` preference set).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 005   | D & T LATEST TRANSACTION            | Current date and time.                                                                                                                               | Click in this field to fill it in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 +-------+-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
