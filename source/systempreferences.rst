@@ -578,8 +578,7 @@ Values:
 Description:
 
 -  This preference controls the default value in the branch pull down
-   found at the top of the :ref:`Circulation and Fine
-   Rules`.
+   found at the top of the :ref:`Circulation and fines rules`.
 
 .. _defaulttologgedinlibrarynoticesslips-label:
 
@@ -768,7 +767,7 @@ specified by their library (if any).
 
 -  Set IP address range in the library administration area
 
-   -  *Get there:* More > Administration > Basic Parameters > :ref:`Libraries & Groups`
+   -  *Get there:* More > Administration > Basic Parameters > :ref:`Libraries <libraries-label>`
 
 Values:
 
@@ -1612,7 +1611,7 @@ Description:
 ISBD
 ^^^^^^^^^^^^^^^^^^^^
 
-Default: See :ref:`ISBD view configuration
+Default: See `ISBD view configuration
 <https://wiki.koha-community.org/wiki/ISBD_view_configuration>` on the wiki.
 
 Asks: Use the following as the ISBD template:
@@ -3081,7 +3080,7 @@ Description:
 
 -  If this preference is set to "Allow" then staff all will be presented
    with an option to checkout more items to a patron than are normally
-   allowed in the :ref:`Circulation and Fine Rules`. If
+   allowed in the :ref:`Circulation and fines rules`. If
    this preference is set to "Don't allow" then no staff member will be
    able to check out more than the circulation limit.
 
@@ -3495,7 +3494,7 @@ Values:
 Description:
 
 -  This preference allows you to control how the 'No renewal before"
-   option in the :ref:`Circulation and fine rules <circulation-and-fine-rules-label>`
+   option in the :ref:`Circulation and fines rules`
    administration area.
 
 .. _noticebcc-label:
@@ -5549,7 +5548,7 @@ Description:
    allowed to return items through your self check machines. By default
    Koha's self check interface is simply for checking items out.
 
-.. _autoselfcheckallowed,-autoselfcheckid-&-autoselfcheckpass-label:
+.. _autoselfcheckallowed-autoselfcheckid-&-autoselfcheckpass-label:
 
 AutoSelfCheckAllowed, AutoSelfCheckID & AutoSelfCheckPass
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -8225,7 +8224,7 @@ Values:
 
     **Note**
 
-    See the :ref:`XSLT material type icons <_material-type-cataloging-guide-label>` 
+    See the :ref:`XSLT material type icons <material-type-cataloging-guide-label>`
     for more information on these icons.
 
 .. _googleindictransliteration-label:
@@ -9655,7 +9654,7 @@ Values:
 OPACISBD
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Default: See :ref:`ISBD view configuration 
+Default: See `ISBD view configuration
 <https://wiki.koha-community.org/wiki/ISBD_view_configuration>` on the wiki.
 
 Asks: Use the following as the OPAC ISBD template:
@@ -12988,7 +12987,7 @@ Values:
 
     **Note**
 
-    See the :ref:`XSLT material type icons <_material-type-cataloging-guide-label>` 
+    See the :ref:`XSLT material type icons <material-type-cataloging-guide-label>`
     for more information on these icons.
 
 .. _intranet\_includes-label:

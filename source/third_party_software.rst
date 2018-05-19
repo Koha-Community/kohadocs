@@ -400,11 +400,11 @@ subfield 2, a, b, and y on your items.
 
 -  Subfield a is your home library and needs to be the code for your
    home library, not the library name. You can find these codes in the
-   :ref:`Libraries & Groups` administration area.
+   :ref:`Libraries <libraries-label>` administration area.
 
 -  Subfield b is your holding library and needs to be the code for your
    holding library, not the library name. You can find these codes in
-   the :ref:`Libraries & Groups` administration area.
+   the :ref:`Libraries <libraries-label>` administration area.
 
 -  Subfield y is your item type code. It needs to be the code, not the
    item type name. You can find these codes in the :ref:`Item

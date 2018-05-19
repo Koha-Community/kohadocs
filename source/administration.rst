@@ -1,9 +1,11 @@
 .. include:: images.rst
 
+.. _administration-label:
+
 Administration
 ==============
 
-.. _administration-label:
+.. _basic-parameters-label:
 
 Basic parameters
 -----------------------------------
@@ -1383,7 +1385,7 @@ type' button at the top of the page
       appear in this menu
 
       -  *Get there:*\ More > Administration > Basic parameters >
-         :ref:`Authorized values <authorized_values-label>`
+         :ref:`Authorized values <authorized-values-label>`
 
    -  **Important**
 

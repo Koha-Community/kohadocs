@@ -495,7 +495,7 @@ Here you are creating a rule which applies the pre-defined organisational decisi
 8. **Renewals Allowed:** Number of times a item can be renewed. Set to 10 by default.
 9. **Renewals Period:** Number of days or hours that a renewal lasts for. Set to 14 by default.
 10. *On shelf holds allowed* dropdown box: If items can be held whilst they are on the shelf.
-11. **Path to create circulation rule:** Circulation rules can be created or altered by going to Administration -> Circulation and fine rules
+11. **Path to create circulation rule:** Circulation rules can be created or altered by going to Administration -> Circulation and fines rules
 12. Click the *Submit* button to create the circulation rule.
 
 

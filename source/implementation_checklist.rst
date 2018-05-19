@@ -18,7 +18,7 @@ data in electronic format of some sort and just need to reformat it a
 bit for importing into Koha.
 
 -  Create a list of libraries and enter their info and codes into
-   :ref:`Libraries & Groups`
+   :ref:`Libraries <libraries-label>`
 
 -  Define your list of :ref:`Item Types`
 
@@ -236,7 +236,7 @@ rules and preferences for circulation.
    -  :ref:`WebBasedSelfCheck` : Decide if you want to
       use the built in web-based self-checkout system
 
-      -  :ref:`AutoSelfCheckAllowed <autoselfcheckallowed,-autoselfcheckid-&-autoselfcheckpass-label>` : Decide if
+      -  :ref:`AutoSelfCheckAllowed <autoselfcheckallowed-autoselfcheckid-&-autoselfcheckpass-label>` : Decide if
          the self-checkout system requires login
 
       -  :ref:`ShowPatronImageInWebBasedSelfCheck`

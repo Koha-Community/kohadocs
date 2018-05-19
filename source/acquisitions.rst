@@ -1111,7 +1111,7 @@ steps:
       from the vendor
 
 -  Share with your vendor/bookseller/jobber your :ref:`library
-   codes <libraries-&-groups-label>`, :ref:`item type codes <item-types-label>`, :ref:`fund
+   codes <libraries-label>`, :ref:`item type codes <item-types-label>`, :ref:`fund
    codes <funds-label>`, and any other codes or :ref:`authorized
    values <authorized-values-label>` they might need for creating your MARC
    order records

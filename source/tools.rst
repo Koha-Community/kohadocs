@@ -1300,7 +1300,7 @@ side of the page.
 To delete one or multiple of these images, click the checkbox to the
 right of each image you want to delete and click the 'Delete' button.
 
-.. _patrons-(anonymize,-bulk-delete)-label:
+.. _patrons-anonymize-bulk-delete-label:
 
 Patrons (anonymize, bulk-delete)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1934,7 +1934,7 @@ authority records' tab.
 
 -  Click 'Export authority records'
 
-.. _inventory-label:
+.. _inventory-tool-label:
 
 Inventory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
