@@ -909,13 +909,6 @@ items
    Tech service <talkingtechitivaphonenotification-label>`), Print and SMS
    (if you have set your :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>`).
 
-   -  **Note**
-
-          The Feed option is not yet a feature in Koha, it is there for
-          future development.
-
--  See a `Sample Overdue Notice <#samplenotice>`__
-
 .. _patron-card-creator-label:
 
 Patron Card Creator
