@@ -45,8 +45,6 @@ follows:
 
 -  :ref:`SuspendHoldsOpac` = Allow
 
--  :ref:`OPACShowBarcode` = Don't show
-
 -  :ref:`OpacSeparateHoldings <opacseparateholdings-&-opacseparateholdingsbranch-label>` = Don't separate
 
 -  :ref:`OpacSeparateHoldingsBranch <opacseparateholdings-&-opacseparateholdingsbranch-label>` = home library
