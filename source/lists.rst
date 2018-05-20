@@ -114,8 +114,7 @@ From this list of items you can perform several actions
 -  'Edit' will allow you to edit the description and permissions for
    this list
 
--  'Send list' will send the list to the email address you enter (:ref:`view
-   sample List email <example-email-from-list-label>`)
+-  'Send list' will send the list to the email address you enter
 
 -  'Download list' will allow you to download the cart using one of 3
    default formats or your :ref:`CSV Profiles`
@@ -170,8 +169,7 @@ From this list of items you can perform several actions
 
 -  'More details' will show more information about the items in the cart
 
--  'Send' will send the list to the email address you enter (:ref:`view
-   sample Cart email <example-email-from-cart-label>`)
+-  'Send' will send the list to the email address you enter
 
 -  'Download' will allow you to download the cart using one of 3 default
    formats or your :ref:`CSV Profiles`

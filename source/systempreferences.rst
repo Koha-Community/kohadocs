@@ -7675,37 +7675,6 @@ Values:
 
 -  Allow
 
-.. _labs-label:
-
-Labs
----------------------
-
-*Get there:* More > Administration > Global System Preferences > Labs
-
-The preferences in this section are for experimental features that need
-additional testing and debugging.
-
-.. _enableadvancedcatalogingeditor-label:
-
-EnableAdvancedCatalogingEditor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Default: Don't enable
-
-Asks: \_\_\_ the advanced cataloging editor.
-
-Description:
-
--  This preference will allow you to choose between a basic editor and a
-   advanced editor for cataloging.
-
-    **Important**
-
-    This feature is currently experimental, and may have bugs that cause
-    corruption of records. It also does not include any support for
-    UNIMARC or NORMARC fixed fields. Please help us test it and report
-    any bugs, but do so at your own risk.
-
 .. _local-use-label:
 
 Local Use
