@@ -414,6 +414,13 @@ To add a new notice or slip
              slips or notice you can enter data in the Other name or
              Initials field for each patron and use that value instead.
 
+   -  The system preference :ref:`TranslateNotices` will add tabs for each
+      installed language to the notices editor. The notice defined in the
+      'Default' tab will be used if there is no preferred language set
+      for a patron.
+
+      |image1335|
+
 .. _overdue-notice-markup-label:
 
 Overdue Notice Markup
@@ -582,6 +589,17 @@ information in these notices. Here are some of what those notices do:
          -  *Get there:*\ Staff Client > Patron Record >
             :ref:`Notices`
 
+-  DISCHARGE
+
+  -  This notice is used to generate a PDF to document a successful
+     discharge request
+
+  -  The PDF can either be downloaded by the patron from their patron
+     account or from the staff interface when discharging a patron
+
+  -  The discharge feature is controlled by the :ref:`useDischarge`
+     system preference.
+
 -  DUE
 
    -  This notice is sent as the 'Item due' for an item is due
@@ -653,11 +671,13 @@ information in these notices. Here are some of what those notices do:
       :ref:`MembershipExpiryDaysNotice` set
       and the :ref:`related cron job <notify-patrons-of-expiration-label>` set.
 
--  ODUE (Overdue Notice)
+-  ODUE (Overdue notice)
 
-   -  This notice is used to send Overdue Notices to Patrons
+   -  This notice is used to send Overdue Notices to patrons
 
-   -  See a `Sample Overdue Notice <#samplenotice>`__
+   -  ODUE is the code of the sample notice, but it's possible to use
+      any code and define multiple different messages for different
+      patron categories and notice levels
 
    -  Requires that you set :ref:`Overdue Notice/Status
       Triggers <overdue-notice/status-triggers-label>`
@@ -668,6 +688,14 @@ information in these notices. Here are some of what those notices do:
       'from a suggestion' option is used to create an order from it.
 
    -  Note: If you don't want to send this notice, just delete it.
+
+-  PASSWORD_RESET
+
+   -  This notice is sent when a patron requests a new password from the
+      OPAC in order to validate the email address.
+
+   -  The password reset feature is controlled by the :ref:`OpacResetPassword`
+      system preference.
 
 -  PREDUE
 
@@ -887,13 +915,6 @@ items
    can choose from Email, Phone (if you are using the :ref:`iTiva Talking
    Tech service <talkingtechitivaphonenotification-label>`), Print and SMS
    (if you have set your :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>`).
-
-   -  **Note**
-
-          The Feed option is not yet a feature in Koha, it is there for
-          future development.
-
--  See a `Sample Overdue Notice <#samplenotice>`__
 
 .. _patron-card-creator-label:
 
