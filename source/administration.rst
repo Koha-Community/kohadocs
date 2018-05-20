@@ -439,6 +439,11 @@ use, for instance 'Lost'.
 
    -  General holdings: type of unit designator
 
+-  HSBND\_FREQ
+
+   -  Frequencies used by the housebound module. They are displayed on
+      the housebound tab in the patron account in staff.
+
 -  ITEMTYPECAT
 
    - Allows multiple Item types to be searched in a category.  Categories can be
@@ -489,6 +494,10 @@ use, for instance 'Lost'.
           the Authorized value description will be used as the amount.
           Enter monetary amounts in the description without currency
           symbols.
+
+-  OPAC\_SUG
+
+   -  A list of reasons displayed in the suggestion form on the OPAC.
 
 -  NOT\_LOAN
 
@@ -545,17 +554,22 @@ use, for instance 'Lost'.
    -  List of patron suggestion reject or accept reasons (appears when
       managing suggestions)
 
- -  SUGGEST_FORMAT
+-  SUGGEST\_FORMAT
 
-   - List of Item types to display in a drop down menu on the Purchase suggestion
-     form on the OPAC. When creating the authorized values for SUGGEST_FORMAT,
-     enter a description into this form so it is visible on the OPAC to patrons.
+   -  List of Item types to display in a drop down menu on the Purchase suggestion
+      form on the OPAC. When creating the authorized values for SUGGEST_FORMAT,
+      enter a description into this form so it is visible on the OPAC to patrons.
 
- -  TERM
+-  SUGGEST\_STATUS
 
-   - Terms to be used in `Course Reserves <#coursereserves>`__ module.
-     Enter Terms that will show in the drop down menu when setting up a Course 
-     reserve.  (For example: Spring, Summer, Winter, Fall).
+   -  A list of additional custom status values for suggestions that can 
+      be used in addition to the default values.
+
+-  TERM
+
+   -  Terms to be used in `Course Reserves <#coursereserves>`__ module.
+      Enter Terms that will show in the drop down menu when setting up a Course 
+      reserve.  (For example: Spring, Summer, Winter, Fall).
 
 -  WITHDRAWN
 
