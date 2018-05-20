@@ -614,7 +614,7 @@ Patron permissions defined
 
    -  Allow access to the :ref:`course reserves module <course-reserves-label>`
 
-   -  This section can be expanded (:ref:`Learn more <granular-course-reserves-label>`)
+   -  This section can be expanded (:ref:`Learn more <granular-course-reserves-permissions-label>`)
 
 -  plugins
 
@@ -733,7 +733,7 @@ permissions on a more granular level choose from these options:
    -  Remaining system parameters permissions
 
    -  The ability to access all areas in Administration (other than the
-      Circulation and fine rules)
+      Circulation and fines rules)
 
 .. _granular-borrowers-permissions-label:
 
@@ -982,8 +982,8 @@ level choose from these options:
    -  Delete old borrowers and anonymize circulation/reading history
       (deletes borrower reading history)
 
-   -  Access to the :ref:`Anonymize patron tool <patrons-(anonymize,-bulk-
-      delete)-label>`
+   -  Access to the :ref:`Anonymize patron tool
+      <patrons-anonymize-bulk-delete-label>`
 
 -  edit\_calendar
 
@@ -1018,15 +1018,15 @@ level choose from these options:
 
    -  Perform batch modification of patrons
 
-   -  Access to the :ref:`Batch patron modification tool <batch-patron-
-      modification-label>`
+   -  Access to the :ref:`Batch patron modification tool
+      <batch-patron-modification-label>`
 
 -  edit\_quotes
 
    -  Edit quotes for the quote-of-the-day feature
 
-   -  Access to the :ref:`Quote of the Day (QOTD) Editor <quote-of-the-day-
-      (qotd)-editor-label>`
+   -  Access to the :ref:`Quote of the Day (QOTD) Editor
+      <quote-of-the-day-(qotd)-editor-label>`
 
 -  export\_catalog
 
@@ -1044,7 +1044,7 @@ level choose from these options:
 
    -  Perform inventory (stocktaking) of your catalog
 
-   -  Access to the :ref:`Inventory tool <inventory/stocktaking-label>`
+   -  Access to the :ref:`Inventory tool <inventory-tool-label>`
 
 -  items\_batchdel
 
@@ -1093,15 +1093,15 @@ level choose from these options:
    -  Manage staged MARC records, including completing and reversing
       imports
 
-   -  Access to the :ref:`Manage Staged MARC Records Tool <staged-marc-record
-      -management-label>`
+   -  Access to the :ref:`Manage Staged MARC Records Tool
+      <staged-marc-record-management-label>`
 
 -  marc\_modification\_templates
 
    -  Manage MARC modification templates
 
-   -  Access to the :ref:`MARC modification templates tool <marc-modification-templates-
-      label>`
+   -  Access to the :ref:`MARC modification templates tool
+      <marc-modification-templates-label>`
 
 -  moderate\_comments
 
@@ -1325,8 +1325,8 @@ permissions on a more granular level choose from these options:
       **Note**
 
       This permission should be used for the patron matching the
-      :ref:`AutoSelfCheckID <autoselfcheckallowed,-autoselfcheckid-
-      &-autoselfcheckpass-label>` system preference
+      :ref:`AutoSelfCheckID <autoselfcheckallowed-autoselfcheckid-&-autoselfcheckpass-label>`
+      system preference
 
 .. _patron-information-label:
 

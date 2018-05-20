@@ -192,7 +192,7 @@ will take you directly to the authority record.
 If you have your :ref:`DisplayOPACiconsXSLT`
 preference set to 'show' you will see a material type that is determined
 by values in your fixed fields (learn more in the :ref:`XSLT material 
-type icons <_material-type-cataloging-guide-label>` catalouging guide.
+type icons <material-type-cataloging-guide-label>` catalouging guide.
 
 |image949|
 
@@ -776,7 +776,7 @@ immediately. For this reason it is recommended that you:
    preference
 
 -  give this patron category minimal circulation privileges in the
-   :ref:`Circulation and Fine Rules` (such as allowing a
+   :ref:`Circulation and fines rules` (such as allowing a
    couple holds, but no check outs)
 
 That way patrons will either have to come in to the library to verify
