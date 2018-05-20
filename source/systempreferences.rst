@@ -4692,6 +4692,11 @@ Default: blank
 Asks: Patron categories not affected by :ref:`OPACHoldsIfAvailableAtPickup`
 \_\_\_ (list of patron categories separated with a pipe ^|^)
 
+Description:
+
+-  Patron category codes listed here separated by a pipe ^|^ are unaffected by
+   :ref:`OPACHoldsIfAvailableAtPickup`.
+
 .. _reservescontrolbranch-label:
 
 ReservesControlBranch
