@@ -383,9 +383,26 @@ Asks: \_\_\_ CAS for login authentication.
 casLogout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Default: Don't logout
+Asks: Logout of CAS when logging out of Koha: \_\_\_
 
-Asks: \_\_\_ of CAS when logging out of Koha.
+Default: No
+
+Values:
+
+-  No
+
+-  Yes
+
+Description:
+
+-  CAS single logout means that a user gets logged out not only from the CAS
+   server but also from all visited CAS client applications when logged out
+   in one of them or after reaching a timeout.
+
+       **Note**
+       
+       The CAS server has to be set up to allow single logout for this to take
+       effect, otherwise the behavior will remain unchanged
 
 .. _casserverurl-label:
 
