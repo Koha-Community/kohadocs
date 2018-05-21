@@ -1032,6 +1032,10 @@ are available at the library for pulling. If the items are available at
 multiple branches then all branches with that item available will see
 the hold to pull until one library triggers the hold.
 
+If enabled, clicking the *Mark item as lost* button will mark item as lost and notify
+the requesting patron depending on the value of the :ref:`CanMarkHoldsAwaitingPickupAsLost`
+system preference.
+
 |image578|
 
 You can limit the results you see by using the Refine box on the left
