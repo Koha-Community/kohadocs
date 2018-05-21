@@ -66,7 +66,9 @@ information is very important for debugging problems. When reporting
 issues to your support provider or to the various other support avenues
 (mailing lists, chat room, etc), it's always good to give the
 information from this screen. The time zone is handled via Koha or
-server configuration.
+server configuration. For more information how to specify time zones per
+instance, see
+https://wiki.koha-community.org/wiki/Time_Zone_Configuration
 
 |image1065|
 
