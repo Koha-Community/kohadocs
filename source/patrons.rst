@@ -1548,6 +1548,9 @@ Fines' tab.
 -  Writeoff a single fine
 
    -  Click "Writeoff" next to the fine you wish to writeoff.
+   
+   -  A confirmation box will appear to specify a total amount to writeoff.
+      This box allows a partial writeoff of fines.
 
    -  The fine will be removed from outstanding fines, and displayed as
       written off.
