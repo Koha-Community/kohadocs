@@ -5039,7 +5039,7 @@ Values:
 Description:
 
 -  Enabling this system preference allows staff to scan a patron barcode instead
-   of an item barcode in the checkout box to switch patron files.
+   of an item barcode in the checkout box to switch patron records.
 
 .. _circautocompl-label:
 
