@@ -62,6 +62,24 @@ Sample OAI Conf File
 
 .. _sru-server-label:
 
+.. _api-spec-label:
+
+API Specification
+-----------------------------
+
+Koha provides a REST interface to accept http requests.
+BibLibre wrote an external module to add more possibilities than ILS-DI can provide.
+There is no authentication process, but authorized ips are listed in the config file.
+
+OAuth2 client credentials grant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Koha supports the OAuth2 client credentials grant as a means to secure the API
+for using it from other systems to adhere to current industry standards.
+More information on the OAuth2 client credentials grant standard `can be found here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
+
+.. _sru-server-label:
+
 SRU server
 -----------------------------
 
