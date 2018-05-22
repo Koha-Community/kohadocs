@@ -71,12 +71,39 @@ Koha provides a REST interface to accept http requests.
 BibLibre wrote an external module to add more possibilities than ILS-DI can provide.
 There is no authentication process, but authorized ips are listed in the config file.
 
+.. _oauth2-client-credentials-grant-label:
+
 OAuth2 client credentials grant
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Koha supports the OAuth2 client credentials grant as a means to secure the API
 for using it from other systems to adhere to current industry standards.
 More information on the OAuth2 client credentials grant standard `can be found here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
+
+API key management interface for patrons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order for API keys to be create for patrons, the system preference :ref:`RESTOAuth2ClientCredentials`
+**must** be enabled for the option to appear in a patron record.
+
+1. Navigate to a patron record and select *More > Manage API keys*
+
+  |image1336|
+  
+2. If no API keys exist for a patron there will be a message prompting to generate a client id/secret pair
+
+  |image1337|
+  
+3. Enter a description for the client id/secret pair and click Save
+
+  |image1338|
+  
+4. Koha will generate a client id/secret pair for use to connect to Koha from
+   other third-party systems as an authenticated client
+   
+   |image1339|
+   
+5. Clicking the Revoke button next to an API credential pair will render the specific credential pair inactive until reactivated
 
 .. _sru-server-label:
 
