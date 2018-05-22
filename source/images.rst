@@ -1330,3 +1330,4 @@
 .. |image1338| image:: images/webservices/clientid-secret-description.png
 .. |image1339| image:: images/webservices/sample-api-key.png
 .. |image1340| image:: images/tools/accessfiles/accessfiles.png
+.. |image1341| image:: images/opac/emojipicker.png
