@@ -1326,3 +1326,4 @@
 .. |image1334| image:: images/cataloging/uploadedfiledetail.png
 .. |image1335| image:: images/tools/notices/notice_translation.png
 .. |image1336| image:: images/webservices/manageapikeysmenu.png
+.. |image1337| image:: images/webservices/noapikeysdefined.png
