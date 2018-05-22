@@ -3386,13 +3386,25 @@ uploaded you will be presented with a confirmation.
 
 .. _search-files-label:
 
-Search Files
+Search files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All uploaded files are searchable from below the upload form. Using the
 form you can search any part of the filename and/or the Hashvalue.Search
 uploaded files
 
-You will be presened with the results of your search.
+You will be presented with the results of your search.
 
 |image1245|
+
+Access files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  *Get there:* More > Tools > Additional Tools > Access files
+
+This option allows access to files stored on the server from the staff interface.
+The directories where the files are stored need to be defined in the koha-conf.xml
+file. In order to be able to access the tool, a staff patron requires the superlibrarian
+or access_files patron permission
+
+|image1340|
