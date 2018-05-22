@@ -3188,6 +3188,11 @@ top right of the page
 
 |image244|
 
+       **Note**
+      
+       Any tables with columns listed here have the option to export to Excel, export to CSV,
+       copy, or print within the table header
+
 .. _audio-alerts-label:
 
 Audio alerts
