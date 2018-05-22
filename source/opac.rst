@@ -628,6 +628,10 @@ add tags to all of the items you have selected.
 
 |image990|
 
+Emojis can also be included using the emoji picker when adding tags
+
+|image1341|
+
 .. _comments-label:
 
 Comments
