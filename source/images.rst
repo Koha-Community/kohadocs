@@ -1328,3 +1328,4 @@
 .. |image1336| image:: images/webservices/manageapikeysmenu.png
 .. |image1337| image:: images/webservices/noapikeysdefined.png
 .. |image1338| image:: images/webservices/clientid-secret-description.png
+.. |image1339| image:: images/webservices/sample-api-key.png
