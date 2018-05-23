@@ -7870,6 +7870,10 @@ Values:
 
 -  Log
 
+       **Note**
+       
+       Enabling this preference allows the tracking of cardnumber changes for patrons 
+
 .. _cataloguinglog-label:
 
 CataloguingLog
