@@ -332,6 +332,13 @@ the results next to the 'Download the report' label and clicking
     A Comma Separated Text file is a CSV file and it can be opened by
     any spreadsheet application.
 
+.. _send-itemnumbers-to-batch-item-modification-label:
+
+Send itemnumbers to batch item modification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|image1343|
+
 .. _statistics-reports-label:
 
 Statistics Reports
