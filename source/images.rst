@@ -1332,3 +1332,4 @@
 .. |image1340| image:: images/tools/accessfiles/accessfiles.png
 .. |image1341| image:: images/opac/emojipicker.png
 .. |image1342| image:: images/tools/notices/preview-data.png
+.. |image1343| image:: images/reports/senditemnumberstobatch.png
