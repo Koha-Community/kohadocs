@@ -420,6 +420,23 @@ To add a new notice or slip
       for a patron.
 
       |image1335|
+      
+.. _preview-notice-templates-label:
+
+Preview notice templates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For some notices it is possible to preview the notice template showing how
+it would look to a specified patron for a particular item or record.
+
+If a notice template is previewable the notice template header will contain a
+field to enter preview data
+
+|image1342|
+
+Fill in the necessary information for the template then click the Preview button
+below the message body. The preview dialog will indicate if there are any problems
+generating the notice template preview.
 
 .. _overdue-notice-markup-label:
 
