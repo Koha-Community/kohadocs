@@ -333,7 +333,7 @@ There are also some additional parameters available:
 
    -  .../cgi-bin/koha/svc/report?name=REPORTNAME&annotated=1
 
-.. _api-spec-label:
+.. _api-rest-label:
 
 Versioned RESTful API Effort
 ----------------------------
@@ -349,19 +349,22 @@ OAuth2 client credentials grant
 
 Koha supports the OAuth2 client credentials grant as a means to secure the API
 for using it from other systems to adhere to current industry standards.
-More information on the OAuth2 client credentials grant standard `can be found here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
+More information on the OAuth2 client credentials grant standard `can be found
+here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
 
 API key management interface for patrons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order for API keys to be create for patrons, the system preference :ref:`RESTOAuth2ClientCredentials`
-**must** be enabled for the option to appear in a patron record.
+In order for API keys to be create for patrons, the system preference 
+:ref:`RESTOAuth2ClientCredentials` **must** be enabled for the option to appear
+in a patron record.
 
 1. Navigate to a patron record and select *More > Manage API keys*
 
   |image1336|
   
-2. If no API keys exist for a patron there will be a message prompting to generate a client id/secret pair
+2. If no API keys exist for a patron there will be a message prompting to 
+   generate a client id/secret pair
 
   |image1337|
   
@@ -374,5 +377,5 @@ In order for API keys to be create for patrons, the system preference :ref:`REST
    
    |image1339|
    
-5. Clicking the Revoke button next to an API credential pair will render the specific credential pair inactive until reactivated
-
+5. Clicking the Revoke button next to an API credential pair will render the 
+   specific credential pair inactive until reactivated
