@@ -337,6 +337,10 @@ the results next to the 'Download the report' label and clicking
 Send itemnumbers to batch item modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+After running a report that contains itemnumbers the list of numbers can be imported
+directly into :ref:`Batch item modification` by clicking the batch modify button
+in the report results.
+
 |image1343|
 
 .. _statistics-reports-label:
