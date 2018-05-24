@@ -292,8 +292,9 @@ ILS-DI
 ------
 
 As of writing, the self documenting ILS-DI is the most complete interface and 
-after it has been enabled as described in the system preferences chapter the 
-documentation should be available at https://*your_opac_url*/cgi-bin/koha/ilsdi.pl.
+after it has been enabled as described in the :ref:`ils-di-label`system 
+preferences section the documentation should be available at 
+https://YOURKOHACATALOG/cgi-bin/koha/ilsdi.pl
 
 .. _json-reports-services-label:
 
