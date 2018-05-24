@@ -340,7 +340,7 @@ Versioned RESTful API Effort
 
 There is an ongoing effort to converge the API's above into a single versioned 
 set of modern RESTful endpoints documented using the OpenAPI standard and 
-available by default under https://*your_opac_url*/api/v1/ 
+available by default under https://YOURKOHACATALOG/api/v1/ 
 
 .. _oauth2-client-credentials-grant-label:
 
