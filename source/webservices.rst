@@ -3,6 +3,8 @@
 Web Services
 ============
 
+Koha provides a number of APIs allowing access to it's data and functions. 
+
 .. _oai-pmh-label:
 
 OAI-PMH
@@ -59,51 +61,6 @@ Sample OAI Conf File
        metadataNamespace: http://www.openarchives.org/OAI/2.0/oai_dc/
        schema: http://www.openarchives.org/OAI/2.0/oai_dc.xsd
        xsl_file: /usr/local/koha/koha-tmpl/intranet-tmpl/xslt/UNIMARCslim2OAIDC.xsl
-
-.. _sru-server-label:
-
-.. _api-spec-label:
-
-API Specification
------------------------------
-
-Koha provides a REST interface to accept http requests.
-BibLibre wrote an external module to add more possibilities than ILS-DI can provide.
-There is no authentication process, but authorized ips are listed in the config file.
-
-.. _oauth2-client-credentials-grant-label:
-
-OAuth2 client credentials grant
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Koha supports the OAuth2 client credentials grant as a means to secure the API
-for using it from other systems to adhere to current industry standards.
-More information on the OAuth2 client credentials grant standard `can be found here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
-
-API key management interface for patrons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In order for API keys to be create for patrons, the system preference :ref:`RESTOAuth2ClientCredentials`
-**must** be enabled for the option to appear in a patron record.
-
-1. Navigate to a patron record and select *More > Manage API keys*
-
-  |image1336|
-  
-2. If no API keys exist for a patron there will be a message prompting to generate a client id/secret pair
-
-  |image1337|
-  
-3. Enter a description for the client id/secret pair and click Save
-
-  |image1338|
-  
-4. Koha will generate a client id/secret pair for use to connect to Koha from
-   other third-party systems as an authenticated client
-   
-   |image1339|
-   
-5. Clicking the Revoke button next to an API credential pair will render the specific credential pair inactive until reactivated
 
 .. _sru-server-label:
 
@@ -329,6 +286,16 @@ this:
     </zs:records>
     </zs:searchRetrieveResponse>
 
+.. _ils-di-label:
+
+ILS-DI
+------
+
+As of writing, the self documenting ILS-DI is the most complete interface and 
+after it has been enabled as described in the :ref:`ils-di-label`system 
+preferences section the documentation should be available at 
+https://YOURKOHACATALOG/cgi-bin/koha/ilsdi.pl
+
 .. _json-reports-services-label:
 
 JSON reports services
@@ -365,3 +332,50 @@ There are also some additional parameters available:
    that include the field names as keys.
 
    -  .../cgi-bin/koha/svc/report?name=REPORTNAME&annotated=1
+
+.. _api-rest-label:
+
+Versioned RESTful API Effort
+----------------------------
+
+There is an ongoing effort to converge the APIs above into a single versioned 
+set of modern RESTful endpoints documented using the OpenAPI standard and 
+available by default under https://YOURKOHACATALOG/api/v1/ 
+
+.. _oauth2-client-credentials-grant-label:
+
+OAuth2 client credentials grant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Koha supports the OAuth2 client credentials grant as a means to secure the API
+for using it from other systems to adhere to current industry standards.
+More information on the OAuth2 client credentials grant standard `can be found
+here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
+
+API key management interface for patrons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order for API keys to be create for patrons, the system preference 
+:ref:`RESTOAuth2ClientCredentials` **must** be enabled for the option to appear
+in a patron record.
+
+1. Navigate to a patron record and select *More > Manage API keys*
+
+  |image1336|
+  
+2. If no API keys exist for a patron there will be a message prompting to 
+   generate a client id/secret pair
+
+  |image1337|
+  
+3. Enter a description for the client id/secret pair and click Save
+
+  |image1338|
+  
+4. Koha will generate a client id/secret pair for use to connect to Koha from
+   other third-party systems as an authenticated client
+   
+   |image1339|
+   
+5. Clicking the Revoke button next to an API credential pair will render the 
+   specific credential pair inactive until reactivated
