@@ -78,6 +78,12 @@ The account(s) you define in the SIPconfig.xml file are simply account(s) permit
 6. encoding: This is the standard used to encode the account data
 7.  Terminator: This needs to match the terminator value of the SIP2 server. - Modify this if you know the terminator value of the SIP2 server.
 
+It is also possible to add custom patron attributes to SIP2 profiles using the format such as:
+
+    <patron_attribute field="XX" code="CODE1" />
+    <patron_attribute field="XY" code="CODE2" />
+    <patron_attribute field="XZ" code="CODE3" />
+
 **Institution**
 
 
