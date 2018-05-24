@@ -3,7 +3,7 @@
 Web Services
 ============
 
-Koha provides a number of API's allowing access to it's data and functions. 
+Koha provides a number of APIs allowing access to it's data and functions. 
 
 .. _oai-pmh-label:
 
@@ -338,7 +338,7 @@ There are also some additional parameters available:
 Versioned RESTful API Effort
 ----------------------------
 
-There is an ongoing effort to converge the API's above into a single versioned 
+There is an ongoing effort to converge the APIs above into a single versioned 
 set of modern RESTful endpoints documented using the OpenAPI standard and 
 available by default under https://YOURKOHACATALOG/api/v1/ 
 
