@@ -518,6 +518,10 @@ use, for instance 'Lost'.
 
    -  Reasons why an order might have been cancelled
 
+-  PAYMENT\_TYPE
+
+   -  Populates a dropdown list of custom payment types when paying fines
+
 -  REPORT\_GROUP
 
    -  A way to sort and filter your reports, the default values in this
