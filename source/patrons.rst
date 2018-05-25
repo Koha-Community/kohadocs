@@ -1445,6 +1445,8 @@ The table will show you the following columns:
 
 -  The ability to reverse a payment
 
+-  The ability to void a payment
+
 -  A link to print a receipt for that line item
 
 At the top of the table you can click the 'Filter paid transaction' to
