@@ -1492,6 +1492,10 @@ Fines' tab.
 
    -  The full amount of the fine will be populated for you in the
       "Collect From Patron" box
+      
+   -  If one or more values are defined under the PAYMENT\_TYPE authorized value
+      category a dropdown selection box will be displayed to specify a custom
+      payment type
 
       |image452|
 
