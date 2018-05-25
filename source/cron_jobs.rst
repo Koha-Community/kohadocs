@@ -756,6 +756,11 @@ Script path: misc/cronjobs/purge\_suggestions.pl
 Does: Removes old (defined by you) suggestions from the suggestion
 management area.
 
+       **Note**
+       
+       The system preference :ref:`PurgeSuggestionsOlderThan` defines the number
+       of days used in the script
+
 .. _email-suggestions-to-process-label:
 
 Email suggestions to process
