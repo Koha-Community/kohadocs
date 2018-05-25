@@ -59,7 +59,7 @@ follow they will all read USD for U.S. Dollars.
 Acquisitions
 ----------------------------
 
-*Get there:* More > Administration > Global System Preferences >
+*Get there:* More > Administration > Global system preferences >
 Acquisitions
 
 .. _acquisitions-policy-label:
@@ -318,6 +318,30 @@ For example:
        public_note: 975$z
        loc: 975$c
 
+.. _purgesuggestionsolderthan-label:
+
+PurgeSuggestionsOlderThan
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Keep accepted or rejected purchase suggestions for a period of \_\_\_ days.
+
+    **Important**
+
+    WARNING - Leave this field empty if you don't want to activate this automatic feature.
+
+Description:
+
+-  Enter the number of days after which you want to automatically
+   delete accepted or rejected purchase suggestions.
+
+-  For example: [30] Sets purgation of suggestions for those older than 30 days.
+
+    **Note**
+
+    This system preference is used when the cronjob purge_suggestions.pl is 
+    active and called without a specific number of days.
+
+
 .. _uniqueitemfields-label:
 
 UniqueItemFields
@@ -335,6 +359,26 @@ Description:
    there will be no check for uniqueness. This means that a duplicate
    barcode can be created in acquisitions which will cause errors later
    when checking items in and out.
+
+.. _useacqframeworkforbibliorecords-label:
+
+UseACQFrameworkForBiblioRecords
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't use
+
+Asks: \_\_\_ the framework 'ACQ' for bibliographic records fields
+
+Values:
+
+-  Don't use
+
+-  Use
+
+Description:
+
+-  This system preference allows you to use the ACQ framework to customize
+   the bibliographic record fields that are shown when ordering from acquisitions
 
 .. _printing-label:
 
@@ -4363,6 +4407,29 @@ Description:
     The holds will become unsuspended the date after that entered by the
     patron.
 
+.. _canmarkholdstopullaslost-label:
+
+CanMarkHoldsToPullAsLost
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Do not allow to mark items as lost
+
+Asks: \_\_\_ from the 'Holds to pull' screen
+
+Values:
+
+-  Allow to mark items as lost
+
+-  Allow to mark items as lost and notify the patron
+
+-  Do not allow to mark items as lot
+
+Description:
+
+-  This preference lets you choose whether the staff can mark items
+   as lost directly from the 'Holds to pull' list if they can't
+   find the item on the shelf.
+
 .. _canreservefromotherbranches-label:
 
 canreservefromotherbranches
@@ -4930,6 +4997,20 @@ Description:
    to staff as to what items are at the library or where they need to
    go. When that system preference set to "Transfer", branch transfers
    are created, so the holds may be cancelled.
+
+.. _updateitemwhenlostfromholdlist-label:
+
+UpdateItemWhenLostFromHoldList
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Update item's values when marked as lost from the hold to pull screen. 
+
+Description:
+
+-  This is a list of values to update an item when it is marked as lost from 
+   the holds to pull screen. For example, write "itemlost: 1" to set the items.
+   itemlost value to 1 when the item is marked as lost. This will use the authorized
+   value 1 from the LOST authorized value list. 
 
 .. _housebound-module-label:
 
@@ -8040,11 +8121,11 @@ Values:
 OPAC
 ---------------------
 
-*Get there:* More > Administration > Global System Preferences > OPAC
+*Get there:* More > Administration > Global system preferences > OPAC
 
 .. _advanced-search-options-label:
 
-Advanced Search Options
+Advanced search options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _opacadvsearchmoreoptions-label:
@@ -8052,7 +8133,7 @@ Advanced Search Options
 OpacAdvSearchMoreOptions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Default: Select All
+Default: Select all
 
 Asks: Show search options for the expanded view \_\_\_
 
@@ -8134,7 +8215,7 @@ Values:
 -  Show
 
 *Get there:* More > Administration > :ref:`Authorized
-Values <authorized-values-label>`
+values <authorized-values-label>`
 
 .. _bibliodefaultview-label:
 
@@ -8321,31 +8402,6 @@ Asks: Show \_\_\_ as the name of the library on the OPAC.
 
 |image64|
 
-.. _nologininstructions-label:
-
-NoLoginInstructions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Asks: Show the following HTML on the OPAC login form when a patron is
-not logged in:
-
-Description:
-
--  This preference allows you to override the default text seen on the
-   log in page in the Koha OPAC. The default HTML is:
-
-   ::
-
-       <h5>Don't have a password yet?</h5>
-       <p> If you don't have a password yet, stop by the circulation desk the next time you're in the library. We'll happily set one up for you.</p>
-       <h5>Don't have a library card?</h5>
-       <p> If you don't have a library card, stop by your local library to sign up.</p>
-
-   Any HTML in this box will replace the above text below the log in
-   box.
-
-   |image1189|
-
 .. _opacadditionalstylesheet-label:
 
 OpacAdditionalStylesheet
@@ -8457,7 +8513,7 @@ Description:
    HTML format. This is static information and any updates must be
    entered manually.
 
-Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
+Learn more in the :ref:`OPAC editable regions <editable-opac-regions-label>` section.
 
 .. _opaccustomsearch-label:
 
@@ -8560,9 +8616,7 @@ Asks: Use the \_\_\_ theme as the fallback theme on the OPAC.
 
 Description:
 
--  This preference has no use right now, as Koha has only one theme, but
-   if your library has a custom theme it will show here as an option.
-   The purpose of this preference is to provide a way to choose to what
+-  The purpose of this preference is to provide a way to choose to what
    theme to fallback on when you have a partial theme in place.
 
 .. _opacfavicon-label:
@@ -8609,7 +8663,7 @@ Asks: Include the following HTML in the header of all pages in the OPAC
     Edit ^:ref:`LibraryName`^ if you'd like to edit the
     contents of the <title> tag
 
-Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
+Learn more in the :ref:`OPAC editable regions <editable-opac-regions-label>` section.
 
 .. _opachighlightedwords-&-nothighlightedwords-label:
 
@@ -8770,6 +8824,23 @@ Description:
 -  Defines where the shelving location should be displayed, under the
    home library, the holding library, or both, or in a separate column.
 
+.. _opaclogininstructions-label:
+
+OpacLoginInstructions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Show the following HTML on the OPAC login form when a patron is not logged in:
+
+Description:
+
+-  HTML entered in this field will appear under the login form on the main page
+   of your OPAC, when the user is not logged in
+
+|image1344|
+
+Learn more in the :ref:`OPAC editable regions <editable-opac-regions-label>` section.
+
+
 .. _opacmaintenance-label:
 
 OpacMaintenance
@@ -8835,7 +8906,7 @@ Description:
 
 |image77|
 
-Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
+Learn more in the :ref:`OPAC editable regions <editable-opac-regions-label>` section.
 
 .. _opacmaxitemstodisplay-label:
 
@@ -8909,7 +8980,7 @@ and patron account on the OPAC (generally navigation links)
 
 |image79|
 
-Learn more in the :ref:`OPAC Editable Regions <editable-opac-regions-label>` section.
+Learn more in the :ref:`OPAC editable regions <editable-opac-regions-label>` section.
 
 .. _opacnavbottom-label:
 
@@ -8920,11 +8991,13 @@ Asks: Show the following HTML on the left hand column of the main page
 and patron account on the OPAC, after :ref:`OpacNav`, and before
 patron account links if available:
 
-Description: When a patron is logged in to their account they see a
-series of tabs to access their account information.
-:ref:`OpacNav` appears above this list of tabs and OpacNavBottom
-will appear below them. When not on the patron account pages the HTML in
-OpacNavBottom will just appear right below :ref:`OpacNav`.
+Description: 
+
+-  When a patron is logged in to their account they see a
+   series of tabs to access their account information.
+   :ref:`OpacNav` appears above this list of tabs and OpacNavBottom
+   will appear below them. When not on the patron account pages the HTML in
+   OpacNavBottom will just appear right below :ref:`OpacNav`.
 
 |image80|
 
@@ -8936,9 +9009,11 @@ OpacNavRight
 Asks: Show the following HTML in the right hand column of the main page
 under the main login form.
 
-Description: HTML entered in this preference will appear on the right
-hand side of the OPAC under the log in form. If the log in form is not
-visible this content will move up on the right column.
+Description: 
+
+-  HTML entered in this preference will appear on the right
+   hand side of the OPAC under the log in form. If the log in form is not
+   visible this content will move up on the right column.
 
 |image81|
 
@@ -9533,7 +9608,7 @@ Values:
 Description:
 
 -  This preference allows the user to temporarily save a list of items
-   found on the catalog. By using the Book Bag, or Cart, the user can
+   found on the catalog. By using the book bag, or cart, the user can
    print out or email a list of items found. The user does not need to
    be logged in. This list is temporary and will be emptied, or cleared,
    at the end of the session.
@@ -9559,7 +9634,7 @@ Values:
 
     **Important**
 
-    run the :ref:`Authorities Browser Cron Job <authorities-browser-label>` to
+    run the :ref:`authorities browser cron job <authorities-browser-label>` to
     create the browser list
 
 .. _opacbrowseresults-label:
@@ -9606,7 +9681,7 @@ Values:
 
     **Important**
 
-    run the :ref:`Authorities Browser Cron Job <authorities-browser-label>` to
+    run the :ref:`authorities browser cron job <authorities-browser-label>` to
     create the browser list
 
 .. _opacfinestab-label:
@@ -9918,7 +9993,7 @@ Description:
 
 -  This feature will allow you to enter a series of quotes that will
    then show on the OPAC homepage in random order. To add/edit quotes,
-   visit the :ref:`Quote of the Day Editor <quote-of-the-day-(qotd)-editor-label>` under Tools.
+   visit the :ref:`Quote of the Day editor <quote-of-the-day-(qotd)-editor-label>` under Tools.
 
 .. _requestonopac-label:
 
@@ -10087,7 +10162,7 @@ online payments from your patrons via the OPAC.
 EnablePayPalOpacPayments & PayPalSandboxMode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-EnablePayPalOpacPayments Default: Don't all
+EnablePayPalOpacPayments Default: Don't allow
 
 PayPalSandboxMode Default: Sandbox
 
@@ -10137,7 +10212,7 @@ Asks: The patron should see the charge description as \_\_\_
 Description
 
 -  This preference controls what the patron will see on their PayPal
-   account/Bank account for this charge.
+   account/bank account for this charge.
 
 .. _paypalpwd-label:
 
@@ -10573,7 +10648,7 @@ Values:
 Description:
 
 -  The default privacy setting for each patron category can be set in
-   the :ref:`Patrons Categories <patron-categories-label>` area. If you set this
+   the :ref:`patrons categories <patron-categories-label>` area. If you set this
    preference to 'allow' then patrons can change that for themselves via
    the OPAC.
 
@@ -10598,7 +10673,7 @@ past.
 
     Enabling this will make it so that patrons can view their
     circulation history in the OPAC unless you have
-    :ref:`OPACPrivacy` set to 'Allow.^
+    :ref:`OPACPrivacy` set to 'Allow'.
 
     **Important**
 
@@ -10692,7 +10767,7 @@ authenticated
 
 Description:
 
--  You can enter individual IPS as a comma separated list (ex:
+-  You can enter individual IPs as a comma separated list (ex:
    '127.0.0,127.0.1') or just the beginning of the IP range allowed (ex:
    '127.0.^)
 
@@ -10753,8 +10828,8 @@ Values:
 Description:
 
 -  Setting this preference to 'Allow' will provide a link on the OPAC to
-   register for a new account. Using the other :ref:`Self
-   Registration <self-registration-label>` system preferences you
+   register for a new account. Using the other :ref:`self
+   registration <self-registration-label>` system preferences you
    can control how this preference will function.
 
    |image103|
@@ -12896,11 +12971,11 @@ Description:
 
 .. _staff-client-label:
 
-Staff Client
+Staff client
 ------------------------------
 
-*Get there:* More > Administration > Global System Preferences > Staff
-Client
+*Get there:* More > Administration > Global system preferences > Staff
+client
 
 .. _staffappearance-label:
 
@@ -13016,7 +13091,7 @@ settings from the default stylesheet
 Description:
 
 -  This preference is used to set the background color and style of the
-   Staff Client. The value is a .css file. The system administrator
+   staff client. The value is a .css file. The system administrator
    should determine which file is appropriate. Enter just a filename, a
    full local path or a complete URL starting with http:// (if the file
    lives on a remote server). Please note that if you just enter a
@@ -13033,7 +13108,7 @@ Description:
 IntranetFavicon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Use the image at \_\_\_ for the Staff Client's favicon.
+Asks: Use the image at \_\_\_ for the staff client's favicon.
 
     **Important**
 
@@ -13134,7 +13209,7 @@ interface
 Description:
 
 -  This preference allows the administrator to enter JavaScript or
-   JQuery that will be embedded across all pages of the Staff Client.
+   JQuery that will be embedded across all pages of the staff client.
    Administrators may use this preference to customize some of the
    interactive sections of Koha, customizing the text for the login
    prompts, for example. Sample JQuery scripts used by Koha libraries
@@ -13181,6 +13256,20 @@ Values:
 -  only footer
 
 -  top
+
+.. _stafflogininstructions-label:
+
+StaffLoginInstructions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Show the following HTML on the staff client login page
+
+Description:
+
+-  HTML entered in this field will appear above the login form 
+   of your staff client
+
+|image1345|
 
 .. _template-label:
 
@@ -13616,11 +13705,11 @@ cleanup_database cron job.
 
 .. _web-services-label:
 
-Web Services
+Web services
 -----------------------------------
 
-*Get there:* More > Administration > Global System Preferences > Web
-Services
+*Get there:* More > Administration > Global system preferences > Web
+services
 
 .. _ils-di-label:
 
@@ -13647,7 +13736,16 @@ Values:
 ILS-DI:AuthorizedIPs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: \_\_\_ allowed IPs to use the ILS-DI services
+Asks: Allow IP addresses \_\_\_ to use the ILS-DI services (when enabled).
+
+    **Note**
+
+    Separate the IP addresses with commas and without spaces.
+    For example: 15.78.193.62,197.85.10.1
+
+    **Important**
+
+    Leave the field blank to allow any IP address. 
 
 .. _idref-pref-label:
 
@@ -13814,6 +13912,42 @@ Description:
    ListRecord or ListIdentifier queries from harvesters. ListRecords
    harvest the entire records while the ListIdentifier is an abbreviated
    form of ListRecords, retrieving only headers rather than records.
+
+.. _rest-api-prefs-label:
+
+REST API
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _restdefaultpagesize-label:
+
+RESTdefaultPageSize
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: 20
+
+Asks: Set the default number of results returned by the REST API endpoints 
+to \_\_\_ per page.
+
+Description:
+
+-  This preference lets you choose the number of results per page you want
+
+.. _restoauth2clientcredentials-label:
+
+RESTOAuth2ClientCredentials 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Disable
+
+Asks: \_\_\_ the OAuth2 client credentials grant for the REST API. 
+
+    **Note**
+ 
+    Requires Net::OAuth2::AuthorizationServer installed. 
+
+    **Important**
+
+    This system preference is experimental. 
 
 .. _reporting-label:
 
