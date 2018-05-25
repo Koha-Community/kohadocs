@@ -11688,6 +11688,20 @@ Description:
 -  This preference will let you define how many patrons to show on
    patron search results pages.
 
+ProtectSuperLibrarianPrivileges
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Allow only superlibrarians
+
+Asks: \_\_\_ to access/change superlibrarian privileges. Note: A permitted user
+      needs to have the 'permissions' flag (if no superlibrarian)
+      
+Values:
+
+-  Allow all permitted users
+
+-  Allow only superlibrarians
+
 .. _requirestrongpassword-label:
 
 RequireStrongPassword
