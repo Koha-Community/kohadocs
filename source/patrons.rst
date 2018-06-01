@@ -324,7 +324,7 @@ change.
 
 .. _add-patron-images-label:
 
-Add Patron Images
+Add patron images
 ----------------------------------------
 
 If you would like you can add patron images to help identify patrons. To
@@ -337,7 +337,7 @@ contact information.
 
 |image425|
 
-In the 'Upload Patron Image' box click 'Browse' to find the image on
+In the 'Upload patron image' box click 'Browse' to find the image on
 your computer and 'Upload' to load the image on to the patron record.
 
 |image426|
@@ -350,7 +350,7 @@ your computer and 'Upload' to load the image on to the patron record.
 
 .. _editing-patrons-label:
 
-Editing Patrons
+Editing patrons
 ----------------------------------
 
 Patrons in Koha can be edited using one of many edit buttons.
@@ -364,7 +364,7 @@ Patrons in Koha can be edited using one of many edit buttons.
    detail next to the Password label are always there even if a password
    isn't set. If a patron forgets their password the only option is to
    reset their password. To change the patron's password, click the
-   'Change Password' button
+   'Change password' button.
 
    |image428|
 
@@ -376,35 +376,35 @@ Patrons in Koha can be edited using one of many edit buttons.
       suggestion. Passwords will be displayed as text."
 
 -  To edit a specific section of the patron record (for example the
-   Library Use section) click the 'Edit' link below the section
+   'Library use' section) click the 'Edit' link below the section.
 
    |image429|
 
 -  A patron image can be added by browsing for the image on your machine
-   from the 'Manage Patron Image' section
+   from the 'Manage patron image' section.
 
    |image430|
 
    -  This form will not appear if you have the
       :ref:`patronimages` system preference to not allow
-      patron images
+      patron images.
 
-   -  To add patron images in bulk, use the :ref:`Upload Patron
-      Images <upload-patron-images-label>` Tool
+   -  To add patron images in bulk, use the :ref:`Upload patron
+      images <upload-patron-images-label>` tool.
 
 -  Patrons can also be blocked from checking items out by setting Patron
-   Flags
+   flags
 
    |image431|
 
    -  If you would like your circulation staff to confirm a patron's
       address before checking items out to the patron, you can see the
-      'Gone no Address' flag
+      'Gone no address' flag
 
       |image432|
 
    -  If the patron reports that they have lost their card you can set
-      the 'Lost Card' flag to prevent someone else from using that card
+      the 'Lost card' flag to prevent someone else from using that card
       to check items out
 
       |image433|
@@ -416,8 +416,8 @@ Patrons in Koha can be edited using one of many edit buttons.
 
       -  **Note**
 
-             This flag can automatically be set with the :ref:`Overdue/Notice
-             Status Triggers <overdue-notice/status-triggers-label>`
+             This flag can automatically be set with the :ref:`Overdue/notice
+             status triggers <overdue-notice/status-triggers-label>`
 
    -  If you enter in a date and/or note related to the restriction you
       will see that in the restricted message as well
@@ -425,9 +425,9 @@ Patrons in Koha can be edited using one of many edit buttons.
       |image435|
 
 -  Children patrons do not become adults automatically in Koha unless
-   you have :ref:`Juvenile to Adult cron job <update-child-to-adult-patron-type-label>` running. To
+   you have :ref:`Juvenile to adult cron job <update-child-to-adult-patron-type-label>` running. To
    upgrade a child patron to and adult patron category manually go to
-   the 'More' menu and choose 'Update Child to Adult Patron'
+   the 'More' menu and choose 'Update child to adult patron'
 
    |image436|
 
@@ -438,7 +438,7 @@ Patrons in Koha can be edited using one of many edit buttons.
 
 .. _managing-patron-self-edits-label:
 
-Managing Patron Self Edits
+Managing patron self edits
 --------------------------------------------------
 
 If you are allowing patrons to edit their accounts via the OPAC with the
@@ -469,7 +469,7 @@ If you would like to see the entire patron record you can click the
 'Patron details' links to the right of the buttons. This will open in a
 new tab.
 
-Merging Patron Records
+Merging patron records
 -----------------------------------
 
 If you accidentally end up with one patron with two cards it is possible
@@ -497,10 +497,10 @@ the other one will be deleted.
 
 .. _patron-permissions-label:
 
-Patron Permissions
+Patron permissions
 -------------------------------------------
 
-Patron Permissions are used to allow staff members access to the staff
+Patron permissions are used to allow staff members access to the staff
 client.
 
     **Important**
@@ -511,7 +511,7 @@ client.
 
 .. _setting-patron-permissions-label:
 
-Setting Patron Permissions
+Setting patron permissions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  On the patron record click 'More' and choose 'Set permissions' to alter
@@ -1361,7 +1361,7 @@ permissions on a more granular level choose from these options:
 
 .. _patron-information-label:
 
-Patron Information
+Patron information
 -------------------------------------------
 
 When viewing a patron record you have the option to view information
@@ -1372,11 +1372,11 @@ from one of many tabs found on the left hand side of the record.
 
 .. _check-out-label:
 
-Check Out
+Check out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For instruction on checking items out, view the :ref:`Checking
-Out <check-out-(issuing)-label>` section of this manual.
+out <check-out-(issuing)-label>` section of this manual.
 
 Staff members can access their own check out screen by clicking their
 username in the top right of the staff client and choosing 'My
@@ -1412,7 +1412,7 @@ their Guarantors additional information will appear on their record.
 
 .. _circulation-summary-label:
 
-Circulation Summary
+Circulation summary
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Below the patron's information on the details screen is a tabbed display
@@ -1486,31 +1486,31 @@ to find a specific charge or payment.
 
 .. _charging-fines/fees-label:
 
-Charging Fines/Fees
+Charging fines/fees
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Most fees and fines will be charged automatically if the :ref:`fines cron
 job <fines-label>` is running:
 
--  Fines will be charged based on your :ref:`Circulation & Fines
-   Rules <circulation-and-fine-rules-label>`
+-  Fines will be charged based on your :ref:`Circulation & fines
+   rules <circulation-and-fine-rules-label>`
 
 -  Hold fees will be charged based on the rules you set in the :ref:`Patron
-   Types & Categories <patron-categories-label>` administration area
+   types & categories <patron-categories-label>` administration area
 
 -  Rental fees will be charged based on the settings in your :ref:`Item
-   Types <item-types-label>` administration area
+   iypes <item-types-label>` administration area
 
 -  Marking an item 'Lost' via the cataloging module will automatically
    charge the patron the replacement cost for that item
 
 .. _pay/reverse-fines-label:
 
-Pay/Reverse Fines
+Pay/reverse fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each line item can be paid in full (or written off) using the 'Pay
-Fines' tab.
+fines' tab.
 
 |image451|
 
@@ -1524,7 +1524,7 @@ Fines' tab.
    -  Click "Pay" next to the fine you want to pay in full
 
    -  The full amount of the fine will be populated for you in the
-      "Collect From Patron" box
+      "Collect from patron" box
       
    -  If one or more values are defined under the PAYMENT\_TYPE authorized value
       category a dropdown selection box will be displayed to specify a custom
@@ -1542,22 +1542,22 @@ Fines' tab.
    -  Click "Pay" next to the fine you want to partially pay
 
    -  Enter the amount you are collecting from the patron in the
-      "Collect From Patron" box
+      "Collect from patron" box
 
       |image453|
 
    -  Click "Confirm"
 
-   -  The fine will be updated to show the original Amount, and the
-      current Amount Outstanding
+   -  The fine will be updated to show the original amount, and the
+      current amount outstanding
 
 -  Pay an amount towards all fines
 
-   -  Click the "Pay Amount" button
+   -  Click the "Pay amount" button
 
    -  Enter the amount you are collecting from the patron in "Collect
-      from Patron." The sum of all fines is shown in "Total Amount
-      Outstanding"
+      from patron." The sum of all fines is shown in "Total amount
+      outstanding"
 
       |image454|
 
@@ -1566,10 +1566,10 @@ Fines' tab.
    -  The fine totals will be updated with the payment applied to oldest
       fines first.
 
--  Pay Selected fines
+-  Pay selected fines
 
    -  Check the selection boxes next to the fines you wish to pay, click
-      "Pay Selected"
+      "Pay selected"
 
       |image455|
 
@@ -1592,9 +1592,9 @@ Fines' tab.
    -  The fine will be removed from outstanding fines, and displayed as
       written off.
 
--  Writeoff All fines
+-  Writeoff all fines
 
-   -  Click the "Writeoff All" button
+   -  Click the "Writeoff all" button
 
    -  All fines will be removed from outstanding fines, and displayed as
       written off.
@@ -1611,7 +1611,7 @@ Fines' tab.
 
 .. _creating-manual-invoices-label:
 
-Creating Manual Invoices
+Creating manual invoices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For fees that are not automatically charged, librarians can create a
@@ -1622,14 +1622,14 @@ manual invoice
 -  First choose the type of invoice you would like to create
 
    -  To add additional values to the manual invoice type pull down
-      menu, add them to the `MANUAL\_INV <#manualinvvals>`__ Authorized
-      Value
+      menu, add them to the `MANUAL\_INV <#manualinvvals>`__ authorized
+      values
 
    -  **Important**
 
-          The value set as the Authorized Value for the MANUAL\_INV
-          authorized value category will appear as the Description and
-          the Authorized Value Description will be used as the amount.
+          The value set as the authorized value for the MANUAL\_INV
+          authorized value category will appear as the description and
+          the authorized value description will be used as the amount.
 
 -  If the fee is associated with an item you can enter its barcode so
    that the line item shows a link to that item
@@ -1642,7 +1642,7 @@ manual invoice
 
 .. _creating-manual-credits-label:
 
-Creating Manual Credits
+Creating manual credits
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Manual credits can be used to pay off parts of fines, or to forgive a
@@ -1663,7 +1663,7 @@ fine amount.
 
 .. _printing-invoices-label:
 
-Printing Invoices
+Printing invoices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To the right of each account line there is a print link. Clicking that
@@ -1675,11 +1675,11 @@ account.
 
 .. _routing-lists-label:
 
-Routing Lists
+Routing lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A list of all of the serial routing lists the patron belongs to will be
-accessible via the 'Routing Lists' tab on the patron record.
+accessible via the 'Routing lists' tab on the patron record.
 
 |image462|
 
@@ -1690,7 +1690,7 @@ that this patron is on.
 
 .. _circulation-history-label:
 
-Circulation History
+Circulation history
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The circulation history tab will appear if you have set the
@@ -1712,11 +1712,11 @@ This will generate a text file with one barcode per line.
 
 .. _modification-log-label:
 
-Modification Log
+Modification log
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have set your :ref:`BorrowersLog` to track changes
-to patron records, then this tab will appear. The Modification Log will
+to patron records, then this tab will appear. The Modification log will
 show when changes were made to the patron record. If you also have
 turned on the :ref:`IssueLog` and :ref:`ReturnLog`
 you will see checkins and outs on this screen as well.
@@ -1751,7 +1751,7 @@ text of the message that was sent.
 |image468|
 
 If the message has a status of sent or failed you will have the option
-to 'resend' the message to the patron by clicking the 'resentd button
+to 'resend' the message to the patron by clicking the 'resend' button
 found under the status.
 
 |image469|
@@ -1788,7 +1788,7 @@ files can be uploaded from.
 
 .. _purchase-suggestions-label:
 
-Purchase Suggestions
+Purchase suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the patron has made any purchase suggestions you will see a purchase
@@ -1800,7 +1800,7 @@ From here you can see all suggestions made by the patron and their
 status, you can also create a purchase suggestion on the patron's behalf
 by clicking the 'New purchase suggestion' button at the top.
 
-Learn more about :ref:`Purchase suggestions <purchase-suggestions-label>` in the
+Learn more about :ref:`purchase suggestions <purchase-suggestions-label>` in the
 `Acquisitions <#acqmodule>`__ chapter of this manual.
 
 .. _patron-discharges-label:
@@ -1816,7 +1816,7 @@ system preference to 'Allow'.
     **Note**
 
     In France a "quitus" ("discharge") is needed if you want to register
-    for an account in a library or a university).
+    for an account in a library or a university.
 
     **Note**
 
