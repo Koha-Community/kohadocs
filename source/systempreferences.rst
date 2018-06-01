@@ -11287,12 +11287,6 @@ Description:
     (or both) is set, a button labeled "Quick add new patron" will be displayed
     in the "Patrons" toolbar.
 
-    **Note**
-
-    If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
-    (or both) is set, a button labeled "Quick add new patron" will be displayed
-    in the "Patrons" toolbar.
-
 .. _borrowerrelationship-label:
 
 borrowerRelationship

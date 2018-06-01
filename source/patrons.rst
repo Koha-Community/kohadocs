@@ -218,6 +218,37 @@ have selected:
 
 |image419|
 
+.. _quick-add-patron-label:
+
+Quick add a patron
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If your circulation desk is very busy and you want to register patron quickly, 
+you can use the 'quick add' feature. It's a shortened version of the add 
+patron form with only a couple of necessary fields to fill out.
+
+This feature uses two system preferences: :ref:`BorrowerMandatoryField` 
+and :ref:`PatronQuickAddFields`. These are the two system preferences that
+control which fields are in the quick add form.
+
+To quick add a patron, go to the Patrons module
+
+-  *Get there:* Patrons
+
+Click on the 'Quick add new patron' button.
+
+You will be asked to choose a patron category.
+
+Then, you will be presented with a shortened form.
+
+|image1346|
+
+Once the form is filled out, click on 'Save'.
+
+If you need to access the full form, you can click on 'Show full form' 
+above the 'Save' button.
+
+
 .. _add-a-staff-patron-label:
 
 Add a Staff Patron
