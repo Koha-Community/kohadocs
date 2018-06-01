@@ -81,7 +81,7 @@ Once there you can add a new patron.
 
    |image410|
 
-   -  Click 'Set to Patron' to search your system for an existing patron
+   -  Click 'Set to patron' to search your system for an existing patron
 
    -  If the Guarantor is not in the system, you can enter the first and
       last name in the fields available
@@ -94,7 +94,7 @@ Once there you can add a new patron.
 
    |image411|
 
-   -  Click 'Set to Patron to search your system for an existing patron
+   -  Click 'Set to patron' to search your system for an existing patron
 
 -  Each patron can have an alternate contact
 
@@ -124,7 +124,7 @@ Once there you can add a new patron.
 
    -  Sort 1 and 2 are used for statistical purposes within your library
 
--  Next, the Library Setup section includes additional library settings
+-  Next, the library set-up section includes additional library settings
 
    |image414|
 
@@ -132,13 +132,13 @@ Once there you can add a new patron.
       date
 
    -  If your patron cards expire (based on your :ref:`patron category
-      settings <patron-categories-label>`) the Expiry date will automatically be
+      settings <patron-categories-label>`) the expiry date will automatically be
       calculated
 
-   -  The OPAC Note is a note for the patron - it will appear in the
+   -  The OPAC note is a note for the patron - it will appear in the
       OPAC on the patron's record
 
-   -  The Circulation Note is meant solely for your library staff and
+   -  The Circulation note is meant solely for your library staff and
       will appear when the circulation staff goes to check an item out
       to the patron
 
@@ -165,20 +165,20 @@ Once there you can add a new patron.
 
    -  These notices are:
 
-      -  Advanced notice : A notice in advance of the patron's items
-         being due (The patron can choose the number of days in advance)
+      -  Advanced notice: A notice in advance of the patron's items
+         being due (the patron can choose the number of days in advance)
 
-      -  Item checkout : A notice that lists all the of the items the
+      -  Item checkout: A notice that lists all the of the items the
          patron has just checked out and/or renewed, this is an
          electronic form of the checkout receipt
 
-      -  Hold filled : A notice when you have confirmed the hold is
+      -  Hold filled: A notice when you have confirmed the hold is
          waiting for the patron
 
-      -  Item due : A notice on the day and item is due back at the
+      -  Item due: A notice on the day and item is due back at the
          library
 
-      -  Item check-in : A notice that lists all the of the items the
+      -  Item check-in: A notice that lists all the of the items the
          patron has just checked in
 
    -  Patrons can choose to receive their notices as a digest by
@@ -251,13 +251,13 @@ above the 'Save' button.
 
 .. _add-a-staff-patron-label:
 
-Add a Staff Patron
+Add a staff patron
 ----------------------------------------
 
 All staff members must be entered into Koha as patrons of the 'Staff'
 type. Follow the steps in :ref:`Add a Patron <add-a-new-patron-label>` to add a
 staff member. To give the staff member permissions to access the staff
-client, follow the steps in :ref:`Patron Permissions`
+client, follow the steps in :ref:`patron permissions <patron-permissions-label>`
 
     **Important**
 
@@ -266,32 +266,32 @@ client, follow the steps in :ref:`Patron Permissions`
 
 .. _add-a-statistical-patron-label:
 
-Add a Statistical Patron
+Add a statistical patron
 ----------------------------------------------
 
 One way to track use of in house items is to "check out" the materials
 to a statistical patron. The "check out" process doesn’t check the book
 out, but instead tracks an in house use of the item. To use this method
 for tracking in house use you first will need a :ref:`patron
-category <patron-categories-label>` set up for your Statistical patron.
+category <patron-categories-label>` set up for your statistical patron.
 
 |image420|
 
-Next, you will need to create a new patron of the statistical type
+Next, you will need to create a new patron of the statistical type.
 
 |image421|
 
 Next, follow the steps put forth in the ':ref:`Add a new
-Patron <add-a-new-patron-label>`' section of this manual. Since this patron is
+patron <add-a-new-patron-label>`' section of this manual. Since this patron is
 not a real person, simply fill in the required fields, the correct
 library and nothing else.
 
 To learn about other methods of tracking in house use visit the
-:ref:`Tracking inhouse use <tracking-in-house-use-label>` section of this manual.
+:ref:`tracking inhouse use <tracking-in-house-use-label>` section of this manual.
 
 .. _duplicate-a-patron-label:
 
-Duplicate a Patron
+Duplicate a patron
 -----------------------------------------
 
 Sometimes when you're adding a new family to your system you don't want
