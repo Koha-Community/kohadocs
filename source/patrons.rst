@@ -1869,7 +1869,7 @@ tab
 
 .. _patron-search-label:
 
-Patron Search
+Patron search
 ---------------------------------
 
 Clicking on the link to the Patron module will bring you to a
