@@ -160,10 +160,10 @@ by choosing the 'Approved comments' tab
 
 .. _patron-import-label:
 
-Patron Import
+Patron import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Import Patrons
+-  *Get there:* More > Tools > Patrons and circulation > Import patrons
 
 The patron import tool can be used at any time to add patrons in bulk.
 It is commonly used in universities and schools when a new batch of
@@ -171,27 +171,21 @@ students registers.
 
 .. _creating-patron-file-label:
 
-Creating Patron File
+Creating a patron import file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your Koha installation comes with a blank CSV file that you can use as a
-template for your patron records. If you would like to create the file
-yourself, make sure that your file has the following fields in this
-order as the header row:
+You can download a blank CSV file with a header from the start page
+of the patron import tool that you can use as a template for your
+patron import. The header contains all fields that can be used with
+the patron import tool. You can delete fields and columns you don't need
+with the exception of a few mandatory ones.
 
-cardnumber, surname, firstname, title, othernames, initials,
-streetnumber, streettype, address, address2, city, state, zipcode,
-country, email, phone, mobile, fax, emailpro, phonepro, B\_streetnumber,
-B\_streettype, B\_address, B\_address2, B\_city, B\_state, B\_zipcode,
-B\_country, B\_email, B\_phone, dateofbirth, branchcode, categorycode,
-dateenrolled, dateexpiry, gonenoaddress, lost, debarred,
-debarredcomment, contactname, contactfirstname, contacttitle,
-guarantorid, borrowernotes, relationship, ethnicity, ethnotes, sex,
-password, flags, userid, opacnote, contactnote, sort1, sort2,
-altcontactfirstname, altcontactsurname, altcontactaddress1,
-altcontactaddress2, altcontactaddress3, altcontactstate,
-altcontactzipcode, altcontactcountry, altcontactphone, smsalertnumber,
-privacy, patron\_attributes
+    **Important**
+
+    cardnumber, surname, and all fields you have
+    defined in the :ref:`BorrowerMandatoryField`
+    preference are required and must match valid entries in your
+    database.
 
     **Important**
 
@@ -204,14 +198,8 @@ privacy, patron\_attributes
     **Important**
 
     Date formats should match your :ref:`system preference <dateformat-label>`,
-    and must be zero-padded, e.g. '01/02/2008'.
-
-    **Important**
-
-    The fields 'branchcode', 'categorycode' and all fields you have
-    defined in the :ref:`BorrowerMandatoryField`
-    preference are required and must match valid entries in your
-    database.
+    and must be zero-padded, e.g. '01/02/2008'. Alternatively you can supply
+    dates in ISO format (e.g. '2008-12-01').
 
     **Note**
 
@@ -231,24 +219,29 @@ privacy, patron\_attributes
 
           -  "INSTID:12345,BASEBALL:Cubs,""BASEBALL:White Sox"""
 
-       -  When replacing a patron record, any attributes specified in
-          the input file replace all of the attribute values of any type
-          that were previously assigned to the patron record.
+    **Note**
+
+    It's possible to set restrictions using the patron import
+    tool. If the expiration date and comment match an existing restriction,
+    the one in the import file will be skipped. So a patron import can be
+    repeated multiple times without creating duplicate restrictions.
+    But if one of the criteria is different, a new restriction will be added.
 
 .. _importing-patrons-label:
 
 Importing Patrons
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once you have created your file, you can use the Patron Import Tool to
+Once you have created your file, you can use the patron import tool to
 bring the data into Koha.
 
 -  Choose your CSV file
 
    |image255|
 
--  Choose to match on 'Cardnumber' or 'Username' to prevent adding of
-   duplicate card numbers to the system
+-  Choose to match on 'cardnumber' or 'username' to prevent adding of
+   duplicate card numbers to the system. Additional matchpoints can be
+   set up using patron attributes marked as unique.
 
    |image256|
 
@@ -256,20 +249,24 @@ bring the data into Koha.
    importing
 
    -  ex. If you're importing patrons specific to one branch you can use
-      the field on the Import form to apply the branch code to all those
+      the field on the import form to apply the branch code to all those
       you are importing.
 
 -  Finally you need to decide on what data you want to replace if there
    are duplicates.
 
-   |image257|
-
    -  A matching record is found using the field you chose for matching
       criteria to prevent duplication
 
-   -  If you included patron attributes in your file you can decide
-      whether to add your values to existing values or erase existing
-      values and enter only your new values.
+     |image257|
+
+   -  When using patron attributes in your installation, you can choose how 
+      they are handled on import. You can either decide to always overlay all
+      patron attributes or you choose to only replace patron attributes
+      included in your import file. This will leave other attributes
+      untouched.
+   
+     |image1347|
 
 .. _notices-&-slips-label:
 
