@@ -11287,12 +11287,6 @@ Description:
     (or both) is set, a button labeled "Quick add new patron" will be displayed
     in the "Patrons" toolbar.
 
-    **Note**
-
-    If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
-    (or both) is set, a button labeled "Quick add new patron" will be displayed
-    in the "Patrons" toolbar.
-
 .. _borrowerrelationship-label:
 
 borrowerRelationship
@@ -11745,9 +11739,24 @@ and fields specified here. If applicable, the guarantor form will be shown
 as well, individual fields in that form will be ignored.
 
     **Note**
+
+    See the :ref:`database schema (borrowers table) <http://schema.koha-
+    community.org/>`_ to know the field names.
+
+    **Note**
     If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
     (or both) is set, a button labeled "Quick add new patron" will be displayed
     in the "Patrons" toolbar.
+
+    **Note**
+
+    It is possible to add custom :ref:`patron attributes <patron-attribute-types-
+    label>` in the quick add form with the following syntax: patron_attr_N 
+    (for example patron_attr_2). The N refers to the id of the attribute and 
+    requires a bit of guesswork (normally it will be the order in which you
+    entered them in the :ref:`patron attribute types section of the administration 
+    module <patron-attribute-types-label>`).
+
 
 .. _patronsperpage-label:
 

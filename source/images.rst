@@ -1334,3 +1334,4 @@
 .. |image1343| image:: images/reports/senditemnumberstobatch.png
 .. |image1344| image:: images/admin/globalprefs/opaclogininstructions.png
 .. |image1345| image:: images/admin/globalprefs/stafflogininstructions.png
+.. |image1346| image:: inages/patrons/quickadd.png
