@@ -2568,6 +2568,12 @@ relation to rotas and the option to mark items as 'in demand' or immediately
 progress them.  You can also remove items from rotation and add items to rotas
 here too.
 
+Managing rota items - EDI
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Items may also be automatically added to rota's at aquisition time by utilising
+the LRP (Library Rotation Plan) field in EDI.
+
 Managing rotation notices
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
