@@ -504,7 +504,7 @@ Notify Patrons of Expiration
 Script path: misc/cronjobs/membership\_expiry.pl
 
 Does: Sends messages to warn patrons of their card expiration to the
-:ref:`messaage queue <message-queue-label>` cron.
+:ref:`message queue <message-queue-label>` cron.
 
 Requires: :ref:`MembershipExpiryDaysNotice`
 
