@@ -625,7 +625,8 @@ Does: updates biblio data with changes to authorities records
     bibliographic records that use that authority when this script is
     run.
 
-Required by: `dontmerge <#dontmerge>`__ system preference
+Required by: :ref:`AuthorityMergeLimit <authoritymergelimit-label>` 
+system preference
 
 Frequency suggestion: nightly
 
