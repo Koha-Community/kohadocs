@@ -2,7 +2,7 @@
 
 .. _cron-jobs-label:
 
-Cron Jobs
+Cron jobs
 =========
 
 A cron job is a Linux command for scheduling a command or script on your
@@ -23,7 +23,7 @@ commonly-used cronjobs.
 
 .. _cron-jobs-subchapter-label:
 
-Cron Jobs
+Cron jobs
 -------------------------
 
 The locations below assume a dev install which puts the crons in misc/,
@@ -35,12 +35,12 @@ files if you cannot find them in misc/
 Backup
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Daily Backup
+Daily backup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/backup.sh
 
-Does: Creates a daily backup of the Koha database.
+Does: creates a daily backup of the Koha database.
 
 Frequency suggestion: daily
 
@@ -56,7 +56,7 @@ Sitemap
 
 Script path: misc/cronjobs/sitemap.pl
 
-Does: Processes all biblio records from a Koha instance and generates sitemap files
+Does: processes all biblio records from a Koha instance and generates sitemap files
 complying with the protocol as described on http://sitemaps.org. The goal of this
 script is to be able to provide to search engines direct access to biblio records.
 It avoids leaving search engines browsing Koha's OPAC which would generate a lot
@@ -77,12 +77,12 @@ of site traffic and server workload.
 
 .. _rebuild-index-label:
 
-Rebuild Index
+Rebuild index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/migration\_tools/rebuild\_zebra.pl
 
-Does: Updates Zebra indexes with recently changed data.
+Does: updates Zebra indexes with recently changed data.
 
 Required by: Zebra
 
@@ -96,14 +96,14 @@ Circulation
 
 .. _holds-queue-label:
 
-Holds Queue
+Holds queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/holds/build\_holds\_queue.pl
 
-Does: Updates holds queue report
+Does: updates holds queue report
 
-Required by: :ref:`Holds Queue Report <holds-queue-label>`
+Required by: :ref:`Holds queue report <holds-queue-label>`
 
 Frequency suggestion: every 1-4 hours
 
@@ -151,12 +151,12 @@ Description:
 
 .. _expired-holds-label:
 
-Expired Holds
+Expired holds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/holds/cancel\_expired\_holds.pl
 
-Does: By default, this cron job will only automatically cancel holds
+Does: cancels holds
 where the user has set an expiration date. If the library is using the
 :ref:`ExpireReservesMaxPickUpDelay` and
 :ref:`ExpireReservesMaxPickUpDelayCharge`
@@ -168,12 +168,12 @@ Frequency suggestion: daily
 
 .. _unsuspend-holds-label:
 
-Unsuspend Holds
+Unsuspend holds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/holds/auto\_unsuspend\_holds.pl
 
-Does: This script checks to find holds that should no longer be
+Does: checks to find holds that should no longer be
 suspended and removes the suspension if the
 :ref:`AutoResumeSuspendedHolds` preference is
 set to 'allow'. This puts the patron back in to the queue where they
@@ -188,7 +188,7 @@ Fines
 
 Script path: misc/cronjobs/fines.pl
 
-Does: Calculates and posts fines to patron accounts.
+Does: calculates and posts fines to patron accounts.
 
 Required by: :ref:`finesMode` system preference
 
@@ -201,10 +201,10 @@ Static Fines
 
 Script path: misc/cronjobs/staticfines.pl
 
-Does: this script calculates and charges overdue fines to patron accounts
+Does: calculates and charges overdue fines to patron accounts
 
     **Note**
-    If the Koha System Preference 'finesMode' is set to 'production', the fines
+    If the Koha system preference 'finesMode' is set to 'production', the fines
     are charged to the patron accounts. If set to 'test', the fines are calculated but not applied.
     
     **Note**
@@ -212,7 +212,7 @@ Does: this script calculates and charges overdue fines to patron accounts
 
 .. _long-overdues-label:
 
-Long Overdues
+Long overdues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/longoverdue.pl
@@ -233,7 +233,7 @@ Frequency suggestion: nightly
 
 .. _track-total-checkouts-label:
 
-Track Total Checkouts
+Track total checkouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/update\_totalissues.pl
@@ -257,13 +257,13 @@ Frequency suggestion: nightly
 
 .. _generate-patron-file-for-offline-circulation-label:
 
-Generate Patron File for Offline Circulation
+Generate patron file for offline circulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/create\_koc\_db.pl
 
-Does: Generates the borrowers.db file for use with the :ref:`Koha Offline
-Circulation <offline-circ-tool-for-windows-label>` tool
+Does: generates the borrowers.db file for use with the :ref:`Koha offline
+circulation <offline-circ-tool-for-windows-label>` tool
 
 Frequency suggestion: weekly
 
@@ -274,7 +274,7 @@ Automatic renewal
 
 Script path: misc/cronjobs/automatic\_renewals.pl
 
-Does: Will automatically renew items if you're allowing automatic
+Does: renews items if you're allowing automatic
 renewal with your :ref:`circulation and fine rules <circulation-and-fine-rules-label>`.
 
 Frequency suggestion: nightly
@@ -286,22 +286,22 @@ Patrons
 
 .. _delete-patrons-label:
 
-Batch Delete Patrons
+Batch delete patrons
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_patrons.pl
 
-Does: Deletes patron records in batch based on date not borrowed since,
+Does: deletes patron records in batch based on date not borrowed since,
 expired before, last seen, category code, or library branch.
 
 .. _unverified-registrations-label:
 
-Unverified Registrations
+Unverified registrations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_expired\_opac\_registrations.pl
 
-Does: Deletes patron registrations that were submitted via the OPAC but
+Does: deletes patron registrations that were submitted via the OPAC but
 not reviewed by the library within the number of days entered in the
 :ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay`
 preference.
@@ -310,12 +310,12 @@ Frequency suggestion: nightly
 
 .. _unconfirmed-registrations-label:
 
-Unconfirmed Registrations
+Unconfirmed registrations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_unverified\_opac\_registrations.pl
 
-Does: Deletes patron self registrations that were submitted via the OPAC
+Does: deletes patron self registrations that were submitted via the OPAC
 but not confirmed via email within 24 hours. This is only necessary if
 you are requiring patrons to confirm their registrations via email with
 the
@@ -326,23 +326,23 @@ Frequency suggestion: hourly
 
 .. _anonymize-patron-data-label:
 
-Anonymize Patron Data
+Anonymize patron data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/batch\_anonymise.pl
 
-Does: Used to anonymize patron data. This will remove borrowernumbers
+Does: removes borrowernumbers
 from circulation history so that the stats are kept, but the patron
 information is removed for privacy reasons.
 
 .. _update-child-to-adult-patron-type-label:
 
-Update Child to Adult Patron Type
+Update child to adult patron type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/j2a.pl
 
-Does: Convert juvenile/child patrons from juvenile patron category and
+Does: converts juvenile/child patrons from juvenile patron category and
 category code to corresponding adult patron category and category code
 when they reach the upper age limit defined in the Patron Categories.
 
@@ -374,7 +374,7 @@ Notices
 
 .. _message-queue-label:
 
-Message Queue
+Message queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/process\_message\_queue.pl
@@ -394,7 +394,7 @@ Frequency suggestion: 1-4 hours
 
 .. _advanced-notice-label:
 
-Advanced Notice
+Advanced notice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/advance\_notices.pl
@@ -414,7 +414,7 @@ Frequency suggestion: nightly
 
 .. _overdue-notice-label:
 
-Overdue Notice
+Overdue notice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/overdue\_notices.pl
@@ -438,7 +438,7 @@ Frequency suggestion: nightly
 
 .. _printoverdues-label:
 
-Print Overdues
+Print overdues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/printoverdues.sh
@@ -447,7 +447,7 @@ Does: generates PDF files from HTML files in directories and prints them
 
 .. _print-hold-notices-label:
 
-Print Hold Notices
+Print hold notices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/gather\_print\_notices.pl
@@ -468,12 +468,12 @@ To learn more about setting up this third party product view the
 
 .. _sending-notices-file-label:
 
-Sending Notices File
+Sending notices file
 '''''''''''''''''''''''''''''''''''''''''''''''
 
 Script path: misc/cronjobs/thirdparty/TalkingTech\_itiva\_outbound.pl
 
-Does: Script to generate Spec C outbound notifications file for Talking
+Does: generates Spec C outbound notifications file for Talking
 Tech i-tiva phone notification system.
 
 Required by:
@@ -483,12 +483,12 @@ Frequency suggestion: nightly
 
 .. _receiving-notices-file-label:
 
-Receiving Notices File
+Receiving notices file
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Script path: misc/cronjobs/thirdparty/TalkingTech\_itiva\_inbound.pl
 
-Does: Script to process received Results files for Talking Tech i-tiva
+Does: processes received results files for Talking Tech i-tiva
 phone notification system.
 
 Required by:
@@ -498,12 +498,12 @@ Frequency suggestion: nightly
 
 .. _notify-patrons-of-expiration-label:
 
-Notify Patrons of Expiration
+Notify patrons of expiration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/membership\_expiry.pl
 
-Does: Sends messages to warn patrons of their card expiration to the
+Does: sends messages to warn patrons of their card expiration to the
 :ref:`message queue <message-queue-label>` cron.
 
 Requires: :ref:`MembershipExpiryDaysNotice`
@@ -512,12 +512,12 @@ Frequency: nightly
 
 .. _in-processing/book-cart-label:
 
-In Processing/Book Cart
+In processing/book cart
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Script path: misc/cronjobs/cart\_to\_shelf.pl
 
-Does: Updates all items with a location of CART to the item's permanent
+Does: updates all items with a location of CART to the item's permanent
 location.
 
 Required by: :ref:`NewItemsDefaultLocation`,
@@ -533,12 +533,12 @@ Catalog
 
 .. _import-webservice-batch-label:
 
-Import Webservice Batch
+Import webservice batch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/import\_webservice\_batch.pl
 
-Does: A cron job for processing import bach queues of type 'webservice'.
+Does: processes import bach queues of type 'webservice'.
 Batches can also be processed through the UI.
 
     **Note**
@@ -547,12 +547,12 @@ Batches can also be processed through the UI.
     
 .. _connexion-import-daemon-label:
 
-Connexion Import Daemon
+Connexion import daemon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/bin/connexion\_import\_daemon.pl
 
-Does: A daemon that listens for OCLC Connexion requests and is compliant with
+Does: listens for OCLC Connexion requests and is compliant with
 OCLC Gateway specification. It takes requests with MARC XML and import batch
 parameters from a configuration file and forwards it to svc/import_bib
 
@@ -562,23 +562,23 @@ parameters from a configuration file and forwards it to svc/import_bib
 
 .. _delete-items-label:
 
-Batch Item Deletion
+Batch item deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_items.pl
 
-Does: A batch item deletion tool, which generates a query against the items
+Does: generates a query against the items
 database and deletes the items matching the criteria specified in the
 command line arguments.
 
 .. _check-url-quick-label:
 
-Check URL Quick
+Check URL quick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/check-url-quick.pl
 
-Does: Check URLs from biblio records.
+Does: checks URLs from biblio records.
 
     **Note**
     
@@ -601,21 +601,21 @@ Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements
 
 .. _delete-records-via-leader-label:
 
-Delete Records via Leader
+Delete records via leader
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/delete\_records\_via\_leader.pl
 
-Does: Attempt to delete any MARC records where the leader character 5 equals 'd'
+Does: attempts to delete any MARC records where the leader character 5 equals 'd'
 
 .. _update-authorities-label:
 
-Update Authorities
+Update authorities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/merge\_authorities.pl
 
-Does: Updates biblio data with changes to authorities records
+Does: updates biblio data with changes to authorities records
 
     **Note**
 
@@ -631,7 +631,7 @@ Frequency suggestion: nightly
 
 .. _serials-update-label:
 
-Serials Update
+Serials update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/serialsUpdate.pl
@@ -663,24 +663,24 @@ OPAC
 
 .. _rss-feeds-label:
 
-RSS Feeds
+RSS feeds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/rss/rss.pl
 
-Does: Produces an RSS XML document for any SQL query (not used for
+Does: produces an RSS XML document for any SQL query (not used for
 search results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`.
 
 Frequency suggestion: hourly
 
 .. _authorities-browser-label:
 
-Authorities Browser
+Authorities browser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/build\_browser\_and\_cloud.pl
 
-Does: Generate content for authorities browse in OPAC
+Does: generates content for authorities browse in OPAC
 
 Required by: :ref:`OpacBrowser` system preference
 
@@ -690,12 +690,12 @@ Required by: :ref:`OpacBrowser` system preference
 
 .. _subject/author-clouds-label:
 
-Subject/Author Clouds
+Subject/author clouds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/cloud-kw.pl
 
-Does: Generates HTML keywords clouds from Koha Zebra indexes.
+Does: generates HTML keywords clouds from Koha Zebra indexes.
 misc/cronjobs/cloud-sample.conf has a sample of how this script
 operates.
 
@@ -704,12 +704,12 @@ the content generated isn't going to change very much over time.
 
 .. _system-administration-label:
 
-System Administration
+System administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _services-throttle-label:
 
-Services Throttle
+Services throttle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/services\_throttle.pl
@@ -720,24 +720,25 @@ Frequency suggestion: nightly
 
 .. _clean-up-database-label:
 
-Clean up Database
+Clean up database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/cleanup\_database.pl
 
-Does: Truncates the sessions table, cleans out old zebraqueue entries,
+Does: truncates the sessions table, cleans out old zebraqueue entries,
 action logs and staged MARC files.
 
 .. _share-usage-stats-label:
 
-Share Usage Stats
+Share usage stats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/share\_usage\_with\_koha\_community.pl
 
-Does: If you're sharing information via the :ref:`UsageStats`
-feature this will send your info to the `Hea
-website <http://hea.koha-community.org/>`__.
+Does: sends your info to the `Hea
+website <http://hea.koha-community.org/>`__
+if you're sharing information via the :ref:`UsageStats`
+feature 
 
 Frequency: monthly
 
@@ -753,7 +754,7 @@ Clean up old suggestions
 
 Script path: misc/cronjobs/purge\_suggestions.pl
 
-Does: Removes old (defined by you) suggestions from the suggestion
+Does: removes old (defined by you) suggestions from the suggestion
 management area.
 
        **Note**
@@ -768,23 +769,23 @@ Email suggestions to process
 
 Script path: misc/cronjobs/notice\_unprocessed\_suggestions.pl
 
-Does: Generates a notice to the fund owner that there are suggestions in
+Does: generates a notice to the fund owner that there are suggestions in
 need of processing
 
 .. _edi-message-processing-label:
 
-EDI Message Processing
+EDI message processing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/edi\_cron.pl
 
-Does: Sends and received EDI messages
+Does: sends and received EDI messages
 
 Frequency: Every 15 minutes
 
 .. _remove-temporary-edi-files-label:
 
-Remove Temporary EDI Files
+Remove temporary EDI files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/remove\_temporary\_edifiles.pl
@@ -798,12 +799,12 @@ Does: removes temporary EDI files that are older than 5 days
 Reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Run Report
+Run report
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/runreport.pl
 
-Does: run pre-existing saved reports
+Does: runs pre-existing saved reports
 
 Norwegian patron database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -813,7 +814,7 @@ NL sync to Koha
 
 Script path: misc/cronjobs/nl-sync-to-koha.pl
 
-Does: sync patrons from the Norwegian national patron database (NL) to Koha
+Does: syncs patrons from the Norwegian national patron database (NL) to Koha
 
     **Note**
     Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences
@@ -823,7 +824,7 @@ NL sync from Koha
 
 Script path: misc/cronjobs/nl-sync-from-koha.pl
 
-Does: sync patrons from Koha to the Norwegian national patron database (NL)
+Does: syncs patrons from Koha to the Norwegian national patron database (NL)
 
     **Note**
     Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences
