@@ -1809,7 +1809,7 @@ Patron discharges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A discharge is a certificate that says the patron has no current
-checkouts, no holds and owe no money. To enable this option on the
+checkouts, no holds and owe no money. To enable this opti`on on the
 patron record you need to set the :ref:`useDischarge`
 system preference to 'Allow'.
 
@@ -1866,6 +1866,82 @@ And a history of discharges will be added to the 'Discharge'
 tab
 
 |image1252|
+
+.. _housebound-patrons-label:
+
+Housebound patrons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are three roles a patron can have in regard to housebound
+circulation: borrower, chooser or deliverer.
+
+.. _housebound-chooser-label:
+
+Chooser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. adding chooser extended attribute to a patron record
+
+.. _housebound-deliverer-label:
+
+Deliverer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. adding deliverer extended attribute to a patron record
+
+.. _housebound-borrower-label:
+
+Housebound borrowers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To create a housebound profile for an housebound patron, click on
+the 'Housebound' tab in their record.
+
+|image1347|
+
+From there, you can edit their housebound profile information.
+
+|image1348|
+
+- Delivery day: choose which day (or 'Any') the patron prefers to
+  receive their delivery.
+- Frequency: choose the frequency at which they want to receive
+  their deliveries.
+
+    **Note**
+
+    The frequencies are managed through the HSBND\_FREQ list of
+    :ref:`authorized values <existing-values-label>`.
+
+- Preferred materials: enter notes that will help the chooser
+  choose appropriate documents for the housebound patron.
+
+  For example: books, dvds, magazines, etc.
+
+- Subjects: if the housebound patron has a preference for
+  particular subjects, enter it here. This will help the
+  chooser choose interesting documents for the patron.
+
+  For example: romance, cookbooks, thrillers, etc.
+
+- Authors: if the housebound patron has favorite authors,
+  enter them here.
+
+  For example: Danielle Steel, James Patterson, etc.
+
+- Referral: if the housebound patron has a referral, enter
+  it here.
+- Notes: enter any other notes that may help the chooser or
+  the deliverer.
+
+Click the 'Save changes' button to save the housebound profile.
+
+.. _housebound-deliveries-label:
+
+Coordinating deliveries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. creating deliveries from the housebound profile
 
 .. _patron-search-label:
 
