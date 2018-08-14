@@ -11813,6 +11813,10 @@ SMSSendDriver, SMSSendUsername, and SMSSendPassword
 Asks: Use the SMS::Send:: \_\_\_ driver to send SMS messages. Define a
 username/login \_\_\_ and a password \_\_\_.
 
+    **Note**
+
+    This may not work with all providers.
+
     **Important**
 
     Please refer to your national laws concerning the sending of bulk
