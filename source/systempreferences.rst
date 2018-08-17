@@ -8549,7 +8549,13 @@ Values:
 
    -  **Important**
 
-          Not implemented yet
+          Both :ref:`OPACXSLTDetailsDisplay` and 
+          :ref:`OPACXSLTResultsDisplay` need to
+          have values in order for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
 -  Detail page only
 
@@ -8557,6 +8563,10 @@ Values:
 
           :ref:`OPACXSLTDetailsDisplay` needs to
           have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
    |image70|
 
@@ -8566,7 +8576,12 @@ Values:
 
    -  **Important**
 
-          Not yet implemented
+          :ref:`OPACXSLTResultsDisplay` needs to
+          have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
 Description:
 
@@ -13024,14 +13039,24 @@ Values:
 
    -  **Important**
 
-          Not implemented yet
+          Both :ref:`XSLTDetailsDisplay` and 
+          :ref:`XSLTResultsDisplay` need to
+          have values in order for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21.
 
 -  Detail page only
 
    -  **Important**
 
-          :ref:`XSLTDetailsDisplay` needs to be on
-          for this preference to work.
+          :ref:`XSLTDetailsDisplay` needs to
+          have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and UNIMARC.
 
    |image113|
 
@@ -13041,7 +13066,12 @@ Values:
 
    -  **Important**
 
-          Not yet implemented
+          :ref:`XSLTResultsDisplay` needs to
+          have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
 Description:
 
@@ -13052,9 +13082,7 @@ Description:
    the field. When all of the requirements are met, an image file will
    be displayed instead of the standard link text. Clicking on the image
    will open it in the same way as clicking on the link text. When you
-   click on the image it should open to full size, in the current window
-   or in a new window depending on the value in the system pref
-   :ref:`OPACURLOpenInNewWindow`.
+   click on the image it should open to full size, in the current window.
 
    |image114|
 
