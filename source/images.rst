@@ -1334,7 +1334,6 @@
 .. |image1344| image:: images/admin/globalprefs/opaclogininstructions.png
 .. |image1345| image:: images/admin/globalprefs/stafflogininstructions.png
 .. |image1346| image:: images/patrons/quickadd.png
-<<<<<<< d16e2b0576f44b71c0d5146bca39acb52352c860
 .. |image1347| image:: images/patrons/houseboundtab.png
 .. |image1348| image:: images/patrons/houseboundprofile.png
 .. |image1349| image:: images/patrons/houseboundroles.png
@@ -1347,8 +1346,3 @@
 .. |image1356| image:: images/serials/batchrenew.png
 .. |image1357| image:: images/coursereserves/additem.png
 .. |image1358| image:: images/coursereserves/batchadditems.png
-=======
-.. |image1347| image:: images/patrons/patrondetails.png
-.. |image1348| image:: images/patrons/finescharges.png
-.. |image1349| image:: images/patron/articlesrequests.png
->>>>>>> Bug 13228: Documentation of restrictions tab does not show OVERDUE restriction
