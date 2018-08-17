@@ -1389,23 +1389,27 @@ checkouts'
 Details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Staff members can access their own account details by clicking their
-username in the top right of the staff client and choosing 'My account'
+     **Note**
 
-|image442|
+     Staff members can access their own account details by clicking their
+     username in the top right of the staff client and choosing 'My account'
 
-All patron information will appear on the Details tab. This includes all
+     |image442|
+
+All patron information will appear in the Details tab. This includes all
 the contact information, notes, custom patron attributes, messaging
-preferences, etc entered when adding the patron.
+preferences, etc. entered when adding the patron.
+
+|image1347|
 
 In the case of patrons who are marked as 'Child' or 'Professional' and
-their Guarantors additional information will appear on their record.
+their guarantors additional information will appear on their record.
 
--  A child patron will list their Guarantor
+-  A child patron will list their guarantor
 
    |image443|
 
--  On the Guarantor's record, all children and/or professionals will be
+-  On the guarantor's record, all children and/or professionals will be
    listed
 
    |image444|
@@ -1418,12 +1422,76 @@ Circulation summary
 Below the patron's information on the details screen is a tabbed display
 of the items they have checked out, overdue, and on hold.
 
+Checkouts
+''''''''''''''''''''''''''''''''''''''''''
+
+The first tab shows the items the patron currently has checked out.
+
 |image445|
 
-If they have family at the library staff can see what the other family
+Relatives' checkouts
+''''''''''''''''''''''''''''''''''''''''''
+
+If they have family at the library, staff can see what the other family
 members have checked out.
 
 |image446|
+
+Fines & charges
+'''''''''''''''''''''''''''''''''''''''''
+
+The Fines & charges tab will show for all patrons, even those who
+don't owe anything.
+
+If the patron does owe money to the library, the tab will show the
+total amount, without any details. To see the details, go to the
+:ref:`fines tabs <fines-label>`.
+
+|image1348|
+
+Holds
+'''''''''''''''''''''''''''''''''''''''''
+
+If the patron has holds, the number of holds will appear on this tab's
+title and the details will appear in the tab.
+
+|image490|
+
+     **Note**
+
+     The barcode and call number will only appear on item-level holds or
+     holds that have been confirmed. Record-level holds that are not
+     waiting to be picked up will not have barocdes or call numbers.
+
+From here you can manage the patron's holds: change the pickup library,
+cancel or suspend holds.
+
+     **Note**
+
+     You will only be able to suspend holds if the :ref:`SuspendHoldsIntranet`
+     system preference is set to "Allow".
+
+     **Note**
+
+     If, when suspending a hold, you want to be able to set a date at which to
+     automatically resume the hold, set the :ref:`AutoResumeSuspendedHolds`
+     system preference to "Allow" and make sure the :ref:`unsuspend_holds cron
+     job <unsuspend-holds-label>` is activated.
+
+Article requests
+'''''''''''''''''''''''''''''''''''''''''''''
+
+If the :ref:`ArticleRequests` system preference is enabled, and the circulation
+rules allow it, the patrons will be able to request articles, either through the
+OPAC or in the staff interface.
+
+The details of the patron's request, and its status, are visible in this
+tab.
+
+|image1349|
+
+Restrictions
+''''''''''''''''''''''''''''''''''''''''''''
 
 The Restrictions tab will show for all patrons. If the patron has no
 restrictions you will see that on the tab.
@@ -1439,6 +1507,15 @@ Using the 'Add manual restriction' button you can add a restriction to
 the patron record from here.
 
 |image449|
+
+Clubs
+'''''''''''''''''''''''''''''''''''''''''''
+
+If you use :ref:`patron clubs <Patron-clubs-label>, patrons will have a tab
+in their record indicating which club they are enrolled in, if any.
+
+|image1350|
+
 
 .. _fines-label:
 
