@@ -318,12 +318,6 @@ To add a new notice or slip
 
 -  The Code is limited to 20 characters
 
-   -  **Important**
-
-          When working with the overdue notices you want each notice at
-          each branch to have a unique code. Think about using the
-          branch code in front of the notice code for each branch.
-
 -  Use the name field to expand on your Code
 
    -  **Note**
