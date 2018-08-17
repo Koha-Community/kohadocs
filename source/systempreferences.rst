@@ -8553,12 +8553,20 @@ Values:
           :ref:`OPACXSLTResultsDisplay` need to
           have values in order for this preference to work.
 
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
+
 -  Detail page only
 
    -  **Important**
 
           :ref:`OPACXSLTDetailsDisplay` needs to
           have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
    |image70|
 
@@ -8570,6 +8578,10 @@ Values:
 
           :ref:`OPACXSLTResultsDisplay` needs to
           have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
 Description:
 
@@ -13027,12 +13039,20 @@ Values:
           :ref:`XSLTResultsDisplay` need to
           have values in order for this preference to work.
 
+   -  **Important**
+
+          This is only implemented for MARC21.
+
 -  Detail page only
 
    -  **Important**
 
           :ref:`XSLTDetailsDisplay` needs to
           have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and UNIMARC.
 
    |image113|
 
@@ -13044,6 +13064,10 @@ Values:
 
           :ref:`XSLTResultsDisplay` needs to
           have a value in it for this preference to work.
+
+   -  **Important**
+
+          This is only implemented for MARC21 and NORMARC.
 
 Description:
 
