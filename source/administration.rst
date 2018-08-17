@@ -282,7 +282,7 @@ top of the Item types page.
           points (ex. $5.00 should be entered as 5 or 5.00)
 
 -  You can add a default replacement cost for this type of item. If left 
-   blank, the replacement price of the item itelf will be cherged to the 
+   blank, the replacement price of the item itself will be charged to the 
    user when the item is lost.
 
     -  **Important**
