@@ -1501,12 +1501,62 @@ restrictions you will see that on the tab.
 If the patron has restrictions on their account the tab will show the
 number and the description.
 
-|image448|
+There are four kinds of restrictions:
+  - Manual
+  - Overdues
+  - Fines
+  - Discharge
 
 Using the 'Add manual restriction' button you can add a restriction to
-the patron record from here.
+the patron record from here. This can be used for any type of restriction
+you need to put manually on a patron record.
 
 |image449|
+
+|image448|
+
+The overdues restrictions are automatically set when overdue notices are sent
+if you specified you wanted the patron restricted in the :ref:`Overdue notice
+/status triggers tool <overdue-notice/status-triggers-label>`.
+
+This restriction will not be removed automatically when the overdue items are
+returned unless the :ref:`AutoRemoveOverduesRestrictions` system preference
+is set to "Do".
+
+Restrictions on a patron record will block circulation transactions. In fact,
+a message will appear in red when going to the checkout page.
+
+|image1352|
+
+Restrictions may also prevent renewing items if the :ref:`RestrictionBlockRenewing`
+system preference is set to "block".
+
+If you have patrons that have more than one restriction, you can choose to
+cumulate their restriction periods or not through the :ref:`CumulativeRestrictionPeriods`
+system preference.
+
+     **Note**
+
+     If you want to restrict patrons from doing various actions if their record
+     is not pristine, check the following system preferences:
+
+     - Set the :ref:`OverduesBlockCirc` system preference to "Block" to prevent
+       patrons who have overdue materials from checking out other materials.
+     - Set the :ref:`OverduesBlockRenewing` system preference to "block renewing
+       for all the patron's items" or "block renewing only for this item" to prevent
+       patrons who have overdue materials from renewing their loans.
+     - Enter values in the :ref:`noissuescharge` and :ref:`NoIssuesChargeGuarantees`
+       system preferences in order to block checking out to patrons who have more
+       than a certain amount in fines or to patrons whose guarantees owe more than
+       a certain amount.
+     - Enter a value in the :ref:`maxoutstanding` system preference to prevent
+       patron from placing holds on the OPAC if they owe more than a certain amount.
+     - Enter a value in the :ref:`OPACFineNoRenewals` system preference to prevent
+       patron who owe more than a certain amount to renew their loans from the OPAC.
+     - Set the :ref:`BlockExpiredPatronOpacActions` system preference to "Block" if
+       you want to prevent patron whose membership has expired to place hold or
+       renew their loans from the OPAC.
+
 
 Clubs
 '''''''''''''''''''''''''''''''''''''''''''
