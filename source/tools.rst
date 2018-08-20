@@ -266,7 +266,7 @@ bring the data into Koha.
       included in your import file. This will leave other attributes
       untouched.
    
-     |image1347|
+     |image1355|
 
 .. _notices-&-slips-label:
 
