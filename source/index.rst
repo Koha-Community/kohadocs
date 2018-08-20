@@ -25,6 +25,7 @@ Koha 18.05 Manual (en)
    opac
    searching
    plugins
+   about
    implementation_checklist
    cron_jobs
    webservices

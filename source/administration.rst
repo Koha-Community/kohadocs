@@ -282,7 +282,7 @@ top of the Item types page.
           points (ex. $5.00 should be entered as 5 or 5.00)
 
 -  You can add a default replacement cost for this type of item. If left 
-   blank, the replacement price of the item itelf will be cherged to the 
+   blank, the replacement price of the item itself will be charged to the 
    user when the item is lost.
 
     -  **Important**
@@ -405,6 +405,10 @@ use, for instance 'Lost'.
 
    -  Collection codes (appears when cataloging and working with items)
 
+-  COUNTRY
+
+   -  Used in UNIMARC 102 $a
+
 -  DAMAGED
 
    -  Descriptions for items marked as damaged (appears when cataloging
@@ -414,6 +418,11 @@ use, for instance 'Lost'.
 
    -  Departments are required by and will be used in the `Course
       Reserves <#coursereserves>`__ module
+
+-  ETAT
+
+   -  Used in French UNIMARC installations in field 995 $o to identify item status.
+      Similar to NOT_LOAN
 
 -  HINGS\_AS
 
@@ -454,6 +463,10 @@ use, for instance 'Lost'.
      for NEW BOOKS NEW DVDS, etc the search category could be added NEW.
      This is helpful when a patron chooses the Search category of NEW, they could
      get Koha to search multiple Item types with a single search.
+
+-  LANG
+
+   -  ISO 639-2 standard language codes
 
 -  LOC
 
@@ -518,6 +531,19 @@ use, for instance 'Lost'.
 
    -  Reasons why an order might have been cancelled
 
+-  PAYMENT\_TYPE
+
+   -  Populates a dropdown list of custom payment types when paying fines
+
+-  qualif
+
+   -  Function codes (author, editor, collaborator, etc.) used in UNIMARC 7XX $4
+      (French)
+      
+-  RELTERMS
+
+   -  French terms of relations
+
 -  REPORT\_GROUP
 
    -  A way to sort and filter your reports, the default values in this
@@ -564,6 +590,10 @@ use, for instance 'Lost'.
 
    -  A list of additional custom status values for suggestions that can 
       be used in addition to the default values.
+      
+-  STACK
+
+   -  Shelving control number
 
 -  TERM
 

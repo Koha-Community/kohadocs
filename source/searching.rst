@@ -3,6 +3,27 @@
 Searching
 =========
 
+.. _search-history-label:
+
+Search history
+---------------------------------------------
+
+If you have your :ref:`EnableSearchHistory`
+preference set to keep your search history then you can access this
+information by clicking on your username in the top right of the staff
+client and choosing 'Search history'.
+
+|image1062|
+
+From this page you will see your bibliographic search history
+
+|image1063|
+
+And your authority search history.
+
+|image1064|
+
+
 .. _advanced-search-prefixes-label:
 
 Advanced Search Prefixes
