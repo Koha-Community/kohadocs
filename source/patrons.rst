@@ -1504,7 +1504,7 @@ number and the description.
 There are four kinds of restrictions:
   - Manual
   - Overdues
-  - Fines
+  - Suspension
   - Discharge
 
 Using the 'Add manual restriction' button you can add a restriction to
@@ -1516,20 +1516,28 @@ you need to put manually on a patron record.
 |image448|
 
 The overdues restrictions are automatically set when overdue notices are sent
-if you specified you wanted the patron restricted in the :ref:`Overdue notice
-/status triggers tool <overdue-notice/status-triggers-label>`.
+if you specified you wanted the patron restricted in the
+:ref:`Overdue notice/status triggers tool <overdue-notice/status-triggers-label>`.
 
 This restriction will not be removed automatically when the overdue items are
 returned unless the :ref:`AutoRemoveOverduesRestrictions` system preference
-is set to "Do".
+is set to 'Do'.
 
-Restrictions on a patron record will block circulation transactions. In fact,
+In the :ref:`circulation rules <circulation-and-fine-rules-label>`, you can choose
+to fine users by suspending them instead of (or in addition to) fining them money.
+In that case, returning an overdue document will trigger a suspension restriction.
+
+Patrons may also be restricted if you have issued a :ref:`discharge <patron-
+discharges-label>` for them. Once the discharge is validated, the patron is
+automatically restricted.
+
+Restrictions on a patron record will block checkouts. In fact,
 a message will appear in red when going to the checkout page.
 
 |image1352|
 
 Restrictions may also prevent renewing items if the :ref:`RestrictionBlockRenewing`
-system preference is set to "block".
+system preference is set to 'block'.
 
 If you have patrons that have more than one restriction, you can choose to
 cumulate their restriction periods or not through the :ref:`CumulativeRestrictionPeriods`
@@ -1540,10 +1548,10 @@ system preference.
      If you want to restrict patrons from doing various actions if their record
      is not pristine, check the following system preferences:
 
-     - Set the :ref:`OverduesBlockCirc` system preference to "Block" to prevent
+     - Set the :ref:`OverduesBlockCirc` system preference to 'Block' to prevent
        patrons who have overdue materials from checking out other materials.
-     - Set the :ref:`OverduesBlockRenewing` system preference to "block renewing
-       for all the patron's items" or "block renewing only for this item" to prevent
+     - Set the :ref:`OverduesBlockRenewing` system preference to 'block renewing
+       for all the patron's items' or 'block renewing only for this item' to prevent
        patrons who have overdue materials from renewing their loans.
      - Enter values in the :ref:`noissuescharge` and :ref:`NoIssuesChargeGuarantees`
        system preferences in order to block checking out to patrons who have more
@@ -1553,7 +1561,7 @@ system preference.
        patron from placing holds on the OPAC if they owe more than a certain amount.
      - Enter a value in the :ref:`OPACFineNoRenewals` system preference to prevent
        patron who owe more than a certain amount to renew their loans from the OPAC.
-     - Set the :ref:`BlockExpiredPatronOpacActions` system preference to "Block" if
+     - Set the :ref:`BlockExpiredPatronOpacActions` system preference to 'Block' if
        you want to prevent patron whose membership has expired to place hold or
        renew their loans from the OPAC.
 
