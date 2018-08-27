@@ -578,11 +578,45 @@ Check URL quick
 
 Script path: misc/cronjobs/check-url-quick.pl
 
-Does: checks URLs from biblio records.
+Does: checks URLs from biblio records; scans all URLs found by default in 
+856$u of bibliographic records and displays if resources are available or 
+not.
 
     **Note**
     
     This script replaces the check-url.pl script
+
+    **PARAMETERS**
+
+    -  --host=http://default.tld
+       Server host used when URL doesn't have one, ie doesn't begin with 
+       'http:'. For example, if --host=mylib.com, then when 856$u contains 
+       'img/image.jpg', the url checked is: http://www.mylib.com/image.jpg.
+
+    -  --tags
+       Tags containing URLs in $u subfields. If not provided, 856 tag is 
+       checked. Multiple tags can be specified, for example:
+
+       check-url-quick.pl --tags 310 410 856
+
+    -  --verbose|v
+       Outputs both successful and failed URLs.
+
+    -  --html 
+       Formats output in HTML. The result can be redirected to a file 
+       accessible by http. This way, it's possible to link directly to the 
+       bibliographic record in edit mode. With this parameter --host-intranet 
+       is required.
+
+    -  --host-intranet=http://koha-pro.tld
+       Server host used to link to bibliographic record editing page in 
+       Koha intranet interface.
+
+    -  --timeout=10
+       Timeout for fetching URLs. By default 10 seconds.
+
+    -  --maxconn=1000
+       Number of simulaneous HTTP requests. By default 200 connexions.
 
 .. _check-urls-label:
 
