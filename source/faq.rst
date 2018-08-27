@@ -10,7 +10,7 @@ Display
 
 .. _custom-item-type/authorized-value-icons-label:
 
-Custom Item Type/Authorized Value Icons
+Custom item type/Authorized value icons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:** Can I have my own set of item type images (or authorized
@@ -30,7 +30,7 @@ the folders.
 
 .. _customizing-koha-images-label:
 
-Customizing Koha Images
+Customizing Koha images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Can I customize the images in the OPAC?
@@ -41,7 +41,7 @@ misc/interface\_customization/ directory.
 
 .. _opac-display-fields-label:
 
-OPAC Display Fields
+OPAC display fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What MARC fields print to the different OPAC screens in
@@ -120,7 +120,7 @@ The OPAC Details page shows:
 
 .. _subtitle-display-on-bib-records-label:
 
-Subtitle Display on Bib Records
+Subtitle display on bibliographic records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: How do I get the subtitle to display on the detail pages
@@ -168,7 +168,7 @@ Circulation/Notices
 
 .. _book-drop-date-label:
 
-Book drop Date
+Book drop date
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: How is the book drop date is determined? Is it the last
@@ -185,7 +185,7 @@ book drop mode is to modify the calendar.
 
 .. _holds-to-pull-and-holds-queue-label:
 
-Holds to Pull and Holds Queue
+Holds to pull and holds queue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What is the difference between the :ref:`Holds
@@ -202,7 +202,7 @@ different pull lists to each library.
 
 .. _duplicate-overdue-notices-label:
 
-Duplicate Overdue Notices
+Duplicate overdue notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why are patrons getting two overdue notices?
@@ -214,7 +214,7 @@ the notification will be generated twice. A quick fix is to discard
 
 .. _printing-overdue-notices-label:
 
-Printing Overdue Notices
+Printing overdue notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Can I print overdue notices for patrons without email
@@ -256,7 +256,7 @@ The cron entry is gather\_print\_notices.pl /tmp/noticedir
 
 .. _unable-to-renew-items-label:
 
-Unable to Renew Items
+Unable to renew items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: We're trying to renew some items for our patron. One of
@@ -275,7 +275,7 @@ utilize.
 
 .. _unable-to-place-holds-label:
 
-Unable to Place Holds
+Unable to place holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why can't I place holds when I have all of the preferences
@@ -291,7 +291,7 @@ patrons getting blocked from placing holds.
 
 .. _keyboard-shortcuts-label:
 
-Keyboard Shortcuts
+Keyboard shortcuts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Do I have to use my mouse to access the checkout, checkin
@@ -315,7 +315,7 @@ available):
 
 .. _sms-notices/messages-label:
 
-SMS Notices/Messages
+SMS notices/Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: I want Koha to send notices via SMS, what do I need to do?
@@ -357,7 +357,7 @@ Cataloging
 
 .. _authority-fields-label:
 
-Authority Fields
+Authority fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:**\ Why can't I edit 1xx, 6xx, or 7xx fields in my catalog
@@ -378,7 +378,7 @@ field with. To allow typing in these authority fields set
 
 .. _faq-koha-to-marc-mapping-label:
 
-Koha to MARC Mapping
+Koha to MARC mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What's the relationship between 'Koha to MARC Mapping' and
@@ -393,7 +393,7 @@ from existing in Koha).
 
 .. _number-of-items-per-bib-record-label:
 
-Number of Items Per Bib Record
+Number of items per bibliographic record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Is there a limit on the number of items I can attach to a
@@ -426,7 +426,7 @@ Acquisitions
 
 .. _planning-categories-label:
 
-Planning Categories
+Planning categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What is a planning category?
@@ -470,7 +470,7 @@ Serials
 
 .. _advanced-patterns-label:
 
-Advanced Patterns
+Advanced patterns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What is the 'inner counter' on the advanced serials
@@ -517,12 +517,12 @@ Reports
 
 .. _define-codes-stored-in-db-label:
 
-Define Codes Stored in DB
+Define codes stored in database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _fines-table-label:
 
-Fines Table
+Fines table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question:** What do the codes in the accounttype field in the
@@ -554,7 +554,7 @@ accountlines table stand for?
 
 .. _statistics-table-label:
 
-Statistics Table
+Statistics table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question:**\ What are the possible codes for the type field in the
@@ -584,7 +584,7 @@ statistics table?
 
 .. _reserves-table-label:
 
-Reserves Table
+Reserves table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the found field in the
@@ -605,7 +605,7 @@ reserves and old\_reserves tables?
 
 .. _reports-dictionary-table-label:
 
-Reports Dictionary Table
+Reports dictionary table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the area field in the
@@ -625,7 +625,7 @@ reports\_dictionary table?
 
 .. _messages-table-label:
 
-Messages Table
+Messages table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the message\_type field in
@@ -639,7 +639,7 @@ the messages table?
 
 .. _serial-table-label:
 
-Serial Table
+Serial table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the status field in the
@@ -673,7 +673,7 @@ serial table?
 
 .. _borrowers-table-label:
 
-Borrowers Table
+Borrowers table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes for the privacy field in the
@@ -686,10 +686,31 @@ borrowers table?
 -  1 = Default
 
 -  2 = Never
+   
+.. _patron-categories-table-label:
+
+Patron categories table
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Question**: What are the possible codes for the category types?
+
+**Answer**:
+
+-  A = Adult
+
+-  C = Child
+
+-  I = Organization
+   
+-  P = Professional
+   
+-  S = Staff
+   
+-  X = Statistical
 
 .. _messaging-preferences-label:
 
-Messaging Preferences
+Messaging preferences
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What are the possible codes in the message\_attribute\_id
@@ -709,7 +730,7 @@ field in the borrower\_message\_preferences table?
 
 .. _runtime-parameters-label:
 
-Runtime Parameters
+Runtime parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Is there a way to filter my custom SQL reports before they
@@ -779,7 +800,7 @@ Examples:
 
 .. _results-limited-label:
 
-Results Limited
+Results limited
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: When I download my report it's limited to 10,000 results,
@@ -796,12 +817,12 @@ Searching
 
 .. _advanced-search-label:
 
-Advanced Search
+Advanced search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _scan-indexes-label:
 
-Scan Indexes
+Scan indexes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: What does 'scan indexes' on the advanced search page mean?
@@ -815,7 +836,7 @@ It works only for one index at once, and only with no limit in Location
 
 .. _searching-for-terms-that-start-with-a-character-label:
 
-Searching for Terms that Start With a Character
+Searching for terms that start with a character
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: How do I search for all titles that start with the letter
@@ -828,7 +849,7 @@ character or series of characters by using the CCL 'first-in-subfield'
 
 .. _wildcard-searching-label:
 
-Wildcard Searching
+Wildcard searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**:What is the difference between a keyword search using the
@@ -860,7 +881,7 @@ The bottom line in searching with wildcards: '\*' is more exact while
 
 .. _title-searching-label:
 
-Title Searching
+Title searching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why does my Zebra title search for 'Help' not turn up 'The
@@ -917,12 +938,12 @@ Replacing YOURLIBRARY with your Koha installation name.
 
 .. _enhanced-content-label:
 
-Enhanced Content
+Enhanced content
 ------------------------------------------
 
 .. _frbrizing-content-label:
 
-FRBRizing Content
+FRBRizing content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:**\ At our public library we are running a Koha installation
@@ -943,7 +964,7 @@ Amazon
 
 .. _all-amazon-content-label:
 
-All Amazon Content
+All Amazon content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: I have all of the Amazon preferences turned on and have
@@ -960,12 +981,12 @@ proper date and time for your timezone).
 
 .. _system-administration-label:
 
-System Administration
+System administration
 --------------------------------------
 
 .. _errors-in-zebra-cron-label:
 
-Errors in Zebra Cron
+Errors in Zebra cron
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: I am noticing some errors in the
@@ -1001,7 +1022,7 @@ great deal of the problems that come up with zebra.
 
 .. _making-z39.50-target-public-label:
 
-Making Z39.50 Target Public
+Making Z39.50 target public
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Could someone tell me the exact steps I need to take to
@@ -1020,7 +1041,7 @@ Then restart zebasrv and connect on the port specified (9999).
 
 .. _shelving-location-authorized-values-label:
 
-Shelving Location Authorized Values
+Shelving location authorized values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: When editing an item, the new shelving location I created
@@ -1035,13 +1056,13 @@ the value the library meant it to be.
 
 .. _why-do-i-need-authorized-values?-label:
 
-Why do I need Authorized Values?
+Why do I need authorized values?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: Why would I want to define authorized values for MARC
 tags?
 
-**Answer**: Authorized Values create a 'controlled vocabulary' for your
+**Answer**: Authorized values create a 'controlled vocabulary' for your
 staff. As an example, let us assume that your Koha installation is used
 by several libraries, and you use MARC 21. You might want to restrict
 the 850a MARC subfield to the institution codes for just those
@@ -1080,7 +1101,7 @@ Hardware
 
 .. _barcode-scanners-label:
 
-Barcode Scanners
+Barcode scanners
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: What barcode scanners have been known to work with Koha?
@@ -1143,7 +1164,7 @@ Printers used by Koha libraries
 
 .. _braille-support-label:
 
-Braille Support
+Braille support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Question**: Are there any braille embosser or printer which has
@@ -1154,7 +1175,7 @@ inbuilt braille converter and it is accessible with UNIX environment?
 
 .. _additional-support-label:
 
-Additional Support
+Additional support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  http://www.nexpresslibrary.org/go-live/configure-your-receipt-printers/
