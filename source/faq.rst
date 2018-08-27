@@ -686,6 +686,27 @@ borrowers table?
 -  1 = Default
 
 -  2 = Never
+   
+.. _patron-categories-table-label:
+
+Patron categories table
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Question**: What are the possible codes for the category types?
+
+**Answer**:
+
+-  A = Adult
+
+-  C = Child
+
+-  I = Organization
+   
+-  P = Professional
+   
+-  S = Staff
+   
+-  X = Statistical
 
 .. _messaging-preferences-label:
 
