@@ -919,6 +919,49 @@ Script path: misc/cronjobs/runreport.pl
 
 Does: runs pre-existing saved reports
 
+     **PARAMETERS**
+
+     -  -v|--verbose
+        Verbose output
+
+     -  --format=s
+        Selects format. Choice of text, html, csv or tsv
+
+     -  -e|--email 
+        Whether or not to use e-mail (implied by --to or --from)
+
+     -  -a|--attachment
+        Attach the report as a file. Cannot be used with html format
+
+     -  --username
+        Username to pass to the SMTP server for authentication
+
+     -  --password
+        Password to pass to the SMTP server for authentication
+
+     -  --method
+        The type of authentication. Ie. LOGIN, DIGEST-MD5, etc.
+
+     -  --to=s
+        E-mail address to send report to
+
+     -  --from=s
+        E-mail address to send report from
+
+     -  --subject=s
+        Subject for the e-mail
+
+     -  --store-results
+        Store the result of the report
+
+     -  --csv-header
+        Add column names as first line of csv output
+
+     **ARGUMENTS**
+
+     -  reportID 
+        Report ID Number from saved_sql.id, multiple ID's may be specified
+
 Norwegian patron database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
