@@ -294,6 +294,44 @@ Script path: misc/cronjobs/delete\_patrons.pl
 Does: deletes patron records in batch based on date not borrowed since,
 expired before, last seen, category code, or library branch.
 
+     **Note**
+
+     Dates should be in ISO format, e.g., 2013-07-19, and can be 
+     generated with date -d '-3 month' "+%Y-%m-%d".
+
+     **Important**
+
+     The options to select the patron records to delete are **cumulative**. 
+     For example, supplying both --expired_before and --library specifies 
+     that patron records must meet *both* conditions to be selected for deletion.
+
+     **PARAMETERS**
+
+     -  --not_borrowed_since
+        Delete patrons who have not borrowed since this date.
+
+     -  --expired_before
+        Delete patrons with an account expired before this date.
+
+     -  --last_seen
+        Delete patrons who have not been connected since this date. 
+        The system preference :ref:`TrackLastPatronActivity` must be 
+        enabled to use this option.
+
+     -  --category_code
+        Delete patrons who have this category code.
+
+     -  --library
+        Delete patrons in this library.
+
+     -  -c|--confirm
+        This flag must be provided in order for the script to actually 
+        delete patron records. If it is not supplied, the script will 
+        only report on the patron records it would have deleted.
+
+     -  -v|--verbose
+        Verbose mode.
+
 .. _unverified-registrations-label:
 
 Unverified registrations
