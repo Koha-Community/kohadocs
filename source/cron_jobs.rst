@@ -701,7 +701,24 @@ Delete records via leader
 
 Script path: misc/cronjobs/delete\_records\_via\_leader.pl
 
-Does: attempts to delete any MARC records where the leader character 5 equals 'd'
+Does: attempts to delete any MARC records where the leader character 5 equals 'd'.
+
+     **PARAMETERS**
+
+     -  -c|--confirm
+        Script will do nothing without this parameter
+
+     -  -v|--verbose
+        Verbose mode
+
+     -  -t|--test
+        Test mode, does not delete records. Test mode cannot determine 
+        if a record/item will be deleted successfully, it will only tell 
+        you what records and items the script will attempt to delete.
+
+     -  -i|--delete-items
+        Try deleting items before deleting record. 
+        Records with items cannot be deleted.
 
 .. _update-authorities-label:
 
