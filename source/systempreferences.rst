@@ -8607,8 +8607,8 @@ Default:
 
     |image1192|
 
-Asks: List export options that should be available from OPAC detail page
-: \_\_\_
+Asks: Select export options that should be available from OPAC detail 
+page: \_\_\_
 
 Description:
 
