@@ -12611,7 +12611,7 @@ OPACItemsResultsDisplay
 
 Default: Don't show
 
-Asks: \_\_\_ an item's branch, location and call number in OPAC search
+Asks: \_\_\_ an item's library, location and call number in OPAC search results.
 results.
 
 Values:
