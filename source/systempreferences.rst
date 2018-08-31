@@ -12386,7 +12386,7 @@ defaultSortField Default: author
 defaultSortOrder Default: ascending
 
 Asks: By default, sort search results in the staff client by \_\_\_,
-\_\_\_\_
+\_\_\_
 
 Description:
 
