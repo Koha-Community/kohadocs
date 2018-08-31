@@ -49,7 +49,7 @@ follow they will all read USD for U.S. Dollars.
     have search terms highlighted in results you set the
     OpacHighlightedWords preference to 'Highlight' then edit the
     koha-http.conf for the library that wants this turned off by adding
-    'SetEnv OVERRIDE\_SYSPREF\_OpacHighlightedWords "0"^. After
+    'SetEnv OVERRIDE\_SYSPREF\_OpacHighlightedWords "0"'. After
     restarting the web server that one library will no longer see
     highlighted terms. Consult with your system administrator for more
     information.
