@@ -9761,7 +9761,7 @@ OpacItemLocation
 
 Default: call number only
 
-Asks: Show \_\_\_\_ for items on the OPAC search results.
+Asks: Show \_\_\_ for items on the OPAC search results.
 
 Values:
 
