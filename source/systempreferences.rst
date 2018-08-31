@@ -7725,7 +7725,7 @@ opaclanguagesdisplay
 
 Default: Don't allow
 
-Asks: \_\_\_ patrons to select their language on the OPAC.
+Asks: \_\_\_ patrons to change the language they see on the OPAC.
 
 Values:
 
