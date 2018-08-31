@@ -13293,7 +13293,16 @@ Description:
 staffClientBaseURL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: The staff client is located at http:// \_\_\_
+Asks: The staff client is located at \_\_\_
+
+    **Important**
+
+    This should be a complete URL, starting with http:// or https://. 
+    Do not include a trailing slash in the URL.
+
+    **Note**
+
+    This must be filled in correctly for CAS, svc, and load_testing to work.
 
 .. _stafflangselectormode-label:
 
