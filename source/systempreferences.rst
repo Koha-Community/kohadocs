@@ -11623,7 +11623,7 @@ intranetreadinghistory
 
 Default: Allow
 
-Asks: \_\_\_ staff to access a patron's checkout history.
+Asks: \_\_\_ staff to access a patron's checkout and hold history.
 
     **Important**
 
