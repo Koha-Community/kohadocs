@@ -530,6 +530,15 @@ further or renew it in one click.
 
 |image774|
 
+If there is more than one subscription, you can check the boxes and 
+click on 'Renew selected subscriptions' to renew all the serials. 
+The serials will be renewed for the same amount of time as their previous 
+subscription (i.e. if the last subscription for that serial lasted one 
+year, the serial will be renewed for one year; if the last subscription 
+was for 16 issues, it will be renewed for another 16 issues).
+
+|image1356|
+
 .. _renewing-serials-label:
 
 Renewing Serials
