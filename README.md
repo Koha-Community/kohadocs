@@ -1,6 +1,5 @@
 Koha Documentation
 ==================
 
-IMPORTANT: This project has been moved to https://gitlab.com/koha-community/koha-manual
-
-This repository is obsolete and should no longer be used!
+This is the main repository for the Koha manual
+It is mirrored at git.koha-community.org also
