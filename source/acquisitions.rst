@@ -53,7 +53,7 @@ this manual.
 Vendors
 -------------------------
 
-Before any orders can be places you must first enter at least one
+Before any orders can be placed you must first enter at least one
 vendor.
 
 .. _add-a-vendor-label:
