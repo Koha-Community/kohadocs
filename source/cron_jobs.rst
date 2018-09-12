@@ -2,16 +2,27 @@
 
 .. _cron-jobs-label:
 
-Cron jobs
-=========
+Cron jobs and Daemons
+=====================
+
+Koha is supported by a number of background tasks.  These tasks can either
+be periodically executed tasks (cron jobs) or continuously running task called
+daemons.
 
 A cron job is a Linux command for scheduling a command or script on your
 server to complete repetitive tasks automatically. Scripts executed as a
 cron job are typically used to modify files or databases; however, they
 can perform other tasks that do not modify data on the server, like
-sending out email notifications. Koha has many cron jobs in place that
-you can enable (search engine indexing, overdue notice generation, data
-cleanup and more), this chapter will explain those for you.
+sending out email notifications.
+
+A daemon is a Linux command that is typically started when the system is
+booted and runs in the background doing some function.  The database used
+by Koha (either mysql or mariadb) is a daemon as is the webserver (typically
+Apache).
+
+Koha has many cron jobs in place that you can enable
+(search engine indexing, overdue notice generation, data
+cleanup and more), and a few daemons.  This chapter will explain those for you.
 
 Crontab example
 -------------------------
@@ -88,6 +99,11 @@ Required by: Zebra
 
 Frequency suggestion: every x minutes, (between 5-15 minutes) depending
 on performance needs
+
+    **Note**
+    On newer Koha installations, this cron job has been replaced by  the
+    :ref:'koha-indexer daemon <_koha-indexer-label>' which indexes new
+    and modified Koha data every 30 seconds.
 
 .. _cron-circulation-label:
 
@@ -1004,8 +1020,39 @@ Script path: misc/cronjobs/social_data/update\_social\_data.pl
 
 Does: updates OPAC records with Babelthèque social data
 
+.. _daemons-subchapter-label:
+
+Daemons
+-------------------------
+
+Daemons are continuously running tasks that help support Koha
+operation.  Your database and webserver are run as daemons.
+Newer versions of Koha start two different daemons for most koha instances:
+
+  - zebra - this is the index server
+
+  - koha-indexer - this daemon updates the index server with
+    new and modified data (biblios and authorities)
+
+These daemons are started by the script /etc/init.d/koha-common.
+
+.. _koha-indexer-label:
+
+Zebra indexer daemon
+~~~~~~~~~~~~~~~~~~~~
+
+Script path: /usr/sbin/koha-indexer (invoked from /etc/init.d/koha-common)
+
+The koha-indexer script invokes rebuild_zebra.pl in daemon mode.
+In this mode, the script will run continuously and check the database
+for new or modified data every 30 seconds.  New or modified records
+are then sent to Zebra for indexing, which only takes a second or so.
+The advantage of this approach is a search system which is much more
+responsive to changes, compared to the
+:ref:'cron job approach <_rebuild-index-label>'.
+
 Deprecated scripts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 These should not be run without modification:
 
