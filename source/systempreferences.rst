@@ -49,7 +49,7 @@ follow they will all read USD for U.S. Dollars.
     have search terms highlighted in results you set the
     OpacHighlightedWords preference to 'Highlight' then edit the
     koha-http.conf for the library that wants this turned off by adding
-    'SetEnv OVERRIDE\_SYSPREF\_OpacHighlightedWords "0"^. After
+    'SetEnv OVERRIDE\_SYSPREF\_OpacHighlightedWords "0"'. After
     restarting the web server that one library will no longer see
     highlighted terms. Consult with your system administrator for more
     information.
@@ -7725,7 +7725,7 @@ opaclanguagesdisplay
 
 Default: Don't allow
 
-Asks: \_\_\_ patrons to select their language on the OPAC.
+Asks: \_\_\_ patrons to change the language they see on the OPAC.
 
 Values:
 
@@ -8607,8 +8607,8 @@ Default:
 
     |image1192|
 
-Asks: List export options that should be available from OPAC detail page
-: \_\_\_
+Asks: Select export options that should be available from OPAC detail 
+page: \_\_\_
 
 Description:
 
@@ -9761,7 +9761,7 @@ OpacItemLocation
 
 Default: call number only
 
-Asks: Show \_\_\_\_ for items on the OPAC search results.
+Asks: Show \_\_\_ for items on the OPAC search results.
 
 Values:
 
@@ -11623,7 +11623,7 @@ intranetreadinghistory
 
 Default: Allow
 
-Asks: \_\_\_ staff to access a patron's checkout history.
+Asks: \_\_\_ staff to access a patron's checkout and hold history.
 
     **Important**
 
@@ -12386,7 +12386,7 @@ defaultSortField Default: author
 defaultSortOrder Default: ascending
 
 Asks: By default, sort search results in the staff client by \_\_\_,
-\_\_\_\_
+\_\_\_
 
 Description:
 
@@ -12611,7 +12611,7 @@ OPACItemsResultsDisplay
 
 Default: Don't show
 
-Asks: \_\_\_ an item's branch, location and call number in OPAC search
+Asks: \_\_\_ an item's library, location and call number in OPAC search results.
 results.
 
 Values:
@@ -13293,7 +13293,16 @@ Description:
 staffClientBaseURL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: The staff client is located at http:// \_\_\_
+Asks: The staff client is located at \_\_\_
+
+    **Important**
+
+    This should be a complete URL, starting with http:// or https://. 
+    Do not include a trailing slash in the URL.
+
+    **Note**
+
+    This must be filled in correctly for CAS, svc, and load_testing to work.
 
 .. _stafflangselectormode-label:
 
