@@ -1325,14 +1325,13 @@ permissions <patron-permissions-label>`.
     computer all day
 
 There is no link to the Self checkout module, but a simple addition to
-the :ref:`IntranetUserJS` system preference can add one.
+the :ref:`OPACUserJS` system preference can add one.
 
 ::
 
-    $(document).ready(function(){ $("#login
-          #submit").parent().after("<p><a
-          href=\"http://YOUR_KOHA_OPAC_URL/cgi-bin/koha/sco/sco-main.pl\"
-          target=\"_blank\">Self-Checkout</a></p>"); });
+    $(document).ready(function(){ 
+        $("#login .btn").parent().after("<p><a href=\"http://YOUR_KOHA_OPAC_URL/cgi-bin/koha/sco/sco-main.pl\" target=\"_blank\">Self-Checkout</a></p>");
+    });
 
     **Important**
 
