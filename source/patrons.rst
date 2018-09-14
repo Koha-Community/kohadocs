@@ -1592,6 +1592,14 @@ fines' tab.
    -  The fine will be removed from outstanding fines, and displayed as
       written off.
 
+-  Writeoff selected fines
+
+    -  Check the selection boxes next to the fines you wish to pay, click "Writeoff selected".
+    
+    -  Click "Confirm".
+    
+    -  The fine will be removed from outstanding fines, and displayed as written off.
+
 -  Writeoff all fines
 
    -  Click the "Writeoff all" button
