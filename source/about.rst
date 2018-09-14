@@ -8,10 +8,10 @@ as general information about Koha.
 
 .. _server-information-label:
 
-Server Information
+Server information
 -------------------------------------
 
-Under the 'Server Information' tab you will find information about the
+Under the 'Server information' tab you will find information about the
 Koha version and the machine you have installed Koha on. This
 information is very important for debugging problems. When reporting
 issues to your support provider or to the various other support avenues
@@ -25,11 +25,11 @@ https://wiki.koha-community.org/wiki/Time_Zone_Configuration
 
 .. _perl-modules-label:
 
-Perl Modules
+Perl modules
 -----------------------------------
 
 In order to take advantage of all of the functionalities of Koha, you
-will need to keep your Perl modules up to date. The 'Perl Modules' tab
+will need to keep your Perl modules up to date. The 'Perl modules' tab
 will show you all of the modules required by Koha, the version you have
 installed and whether you need to upgrade certain modules.
 
@@ -41,7 +41,7 @@ upgraded.
 
 .. _system-information-label:
 
-System Information
+System information
 -------------------------------------
 
 This tab will provide you with warnings if you are using system
