@@ -352,7 +352,9 @@ about the order:
 -  The notes fields are optional and can contain any type of information
 
 -  If you're ordering standing items (items which arrive regularly) then
-   you will want to check the 'Orders are standing' box for this basket
+   you will want to check the 'Orders are standing' box for this basket.
+   
+   -  Note that any one basket cannot contain both firm and standing orders.   
 
 If you have :ref:`added contracts <add-a-contract-label>` to the vendor
 you're ordering from, you will also have an option to choose which
