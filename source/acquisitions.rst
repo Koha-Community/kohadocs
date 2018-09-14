@@ -868,6 +868,22 @@ will be highlighted in yellow. Enter any different billing information
 in the fields provided and click 'Merge'. The two invoices will become
 one.
 
+.. _cancelling-an-order-label:
+
+Canceling an order
+------------------------------------
+
+       **Note**
+       
+       Whilst it is possible to re-open your basket, cancel one or more orders and re-close the basket, this is not recommended. This procedure will update the Basket Closed date, which in turn will cause your 'late order' caclulations to be incorrect. Instead, follow the procedure below.
+
+To cancel an order:
+
+#. locate the vendor and click on Receive Shipment;
+#. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
+#. so on the next page you'll get a warning box in which you click on 'receive';
+#. on the next page (at right) you can click on 'Cancel Order'.
+
 .. _claims-&-late-orders-label:
 
 Claims & Late Orders
