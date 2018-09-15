@@ -90,10 +90,25 @@ for the reserve item.
 
 |image733|
 
+For each item, you can change the item type, collection code, shelving location 
+or holding library. These changes will only apply while the course is 
+active. When you deactivate the course, the items will go back to their original 
+settings.
+
+|image1357|
+
 After you are done scanning the barcodes to add to the course you can
 see them on the course page
 
 |image734|
+
+You also have the possibility of adding several items at the same time. 
+Click on 'Batch add reserves'. 
+
+|image1358|
+
+Scan the barcodes of the items you want to add to the reserve and change the 
+item type, collection code, shelving location or holding library, if needed.
 
 .. _course-reserves-in-the-opac-label:
 

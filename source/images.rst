@@ -1345,3 +1345,5 @@
 .. |image1354| image:: images/patrons/houseboundrolesdeliveries2.png
 .. |image1355| image:: images/tools/importpatrons/patronattributes.png
 .. |image1356| image:: images/serials/batchrenew.png
+.. |image1357| image:: images/coursereserves/additem.png
+.. |image1358| image:: images/coursereserves/batchadditems.png
