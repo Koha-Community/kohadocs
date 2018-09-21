@@ -62,67 +62,116 @@ Once you have all of the patrons you would like to add you can click the
 Patron clubs
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Patron clubs
+-  *Get there:* More > Tools > Patrons and circulation > Patron clubs
 
-Patron clubs create clubs which patrons may be enrolled in. It is
+Patron clubs create clubs in which patrons may be enrolled. It is
 useful for tracking summer reading programs, book clubs and other such clubs.
 
     **Important**
-    Staff will need permission to edit clubs, templates and enroll patrons. Go
-    to your staff members account tab and click on the More drop down menu.
-    Select Set Permissions and make sure patron clubs have checkmarks next to
-    each of the functions you want your staff to have. Remember if your staff
-    is a superlibrarian, they will have the permission.
+
+    Staff will need the :ref:`clubs permissions<granular-clubs-permissions-label>` 
+    to edit clubs, templates and enroll patrons. To learn how to set patron 
+    permissions, go to the :ref:`patron permissions section<setting-patron-permissions-label>` 
+    of this manual.
 
 Creating a new club template
-Here you can add fields that can be filled out at the time a new club is
-created based on the template, or a new enrollment is created for a given club
-based on the template. Click on the New Club template button
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Name is required. This could be something like Adult Book Club, Children’s
-Book Club or Summer Reading Program. Remember these templates will be starting
+Click on the 'New Club template' button. Here you can add fields that can be 
+filled out at the time a new club is created based on the template, or a new 
+enrollment is created for a given club based on the template. 
+
+|image1364|
+
+The name is required. This could be something like 'Adult Book Club', 'Children’s
+Book Club' or 'Summer Reading Program'. Remember these templates will be starting
 point for each club you create.
 
-Description can be any additional information
+The description can be any additional information.
 
 Allow Public Enrollment: if this box is checked it will allow patrons to enroll
-in a club based on this template from the OPAC
+in a club based on this template from the OPAC.
 
-Require valid email address: if this box is checked only patrons with a patrons
+Require valid email address: if this box is checked only patrons 
 with a valid email address can enroll. So they will need a email address
 to enroll.
 
-The library drop down gives you the flexibility to enroll patrons from specific
-branches. If you let it set to blank, all branches will be able to enroll.
+The library drop down gives you the flexibility to let staff from specific
+branches create clubs with this template. If you let it set to blank, staff 
+from any branch will be able to create a new club using this template.
 
-Club Fields: these fields will be used when creating a club based on this
-template you can connect authorized values here
-Enrollment Fields: you can add any additional fields you want to have filled
-out by your patrons like you can connect authorized values here.
+Club fields: these fields will be used when creating a club based on this
+template. For example, this can be the name of the club, the name of the animator, the theme, etc.
+
+|image1365|
+
+  'Name' is the label of the field
+
+  'Description' is additional information about this field. 
+
+  You can connect authorized values here. 
+
+Enrollment fields: you can add any additional fields you want to have filled
+out by your patrons when they enroll in a club base on this template. 
+
+|image1366|
+
+  'Name' is the label of the field
+
+  'Description' is additional information about this field. 
+
+  You can connect authorized values here.
 
 Creating a new club based on a template
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Click on the 'New club' dropdown menu and select the template you want to use.
 Here you can add information about a new club using a template you created.
-Click on the New Club dropdown menu and select the template you want to use.
 
-Name is required, this will be the name of the specific club using the
-template you created. For example, if I used my Kids Club template, I can
-create Kids Club 2017
+|image1367|
 
-Description – any additional information
+The name is required, this will be the name of the specific club using the
+template you created. For example, 'Summer 2018 reading club'.
 
-Start  and End date will depict when this club runs, the entire duration
-of the club. Once the club expires, it will be removed from the OPAC for users
-to enroll if that option is selected.
+The description can be any additional information.
+
+Start and End date will depict when this club runs, the entire duration
+of the club. Once the club expires, enrollment will not be possible.
 
 The library drop down gives you the flexibility to enroll patrons from specific
-branches. If you let it set to blank, all branches will be able to enroll.
+branches. If you let it set to blank, patrons from any branch will be able to enroll.
 
-Enrolling a patron in a club
-    pull up a patron account
-    click on the checkout tab on the left hand side
-    click on the tab for club
-    add the patron to the selected club by selecting the enroll button
-    you can also cancel enrollment by clicking on the cancel enrollment
+Enrolling a patron in a club from the staff client
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To enroll a patron in a club from the staff client, go to the patron's account.
+
+On the 'Details' page or the 'Check out' page, click on the 'Clubs' tab. All 
+ongoing clubs will be displayed in this tab.
+
+|image1368|
+
+Click on the 'Enroll' button and fill in the fields. 
+
+You can also cancel enrollment by clicking on the cancel enrollment.
+
+Enrolling a patron in a club from the OPAC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you allow public enrollment, the club will be visible on the OPAC.
+
+Patrons have to sign into their account. In the 'Your summary' section, they 
+will be able to click on the 'Clubs' tab and enroll.
+
+|image1369|
+
+Viewing enrollments
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can monitor the enrollments in each club by going to the 'Patron clubs' tool page 
+and choosing 'Enrollment' from the 'Actions' button.
+
+|image1370|
 
 .. _comments-label:
 

@@ -1572,7 +1572,7 @@ system preference.
 Clubs
 '''''''''''''''''''''''''''''''''''''''''''
 
-If you use :ref:`patron clubs <Patron-clubs-label>, patrons will have a tab
+If you use :ref:`patron clubs <Patron-clubs-label>`, patrons will have a tab
 in their record indicating which club they are enrolled in, if any.
 
 |image1362|
