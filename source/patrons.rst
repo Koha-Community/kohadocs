@@ -1389,23 +1389,27 @@ checkouts'
 Details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Staff members can access their own account details by clicking their
-username in the top right of the staff client and choosing 'My account'
+     **Note**
 
-|image442|
+     Staff members can access their own account details by clicking their
+     username in the top right of the staff client and choosing 'My account'
 
-All patron information will appear on the Details tab. This includes all
+     |image442|
+
+All patron information will appear in the Details tab. This includes all
 the contact information, notes, custom patron attributes, messaging
-preferences, etc entered when adding the patron.
+preferences, etc. entered when adding the patron.
+
+|image1359|
 
 In the case of patrons who are marked as 'Child' or 'Professional' and
-their Guarantors additional information will appear on their record.
+their guarantors additional information will appear on their record.
 
--  A child patron will list their Guarantor
+-  A child patron will list their guarantor
 
    |image443|
 
--  On the Guarantor's record, all children and/or professionals will be
+-  On the guarantor's record, all children and/or professionals will be
    listed
 
    |image444|
@@ -1418,12 +1422,76 @@ Circulation summary
 Below the patron's information on the details screen is a tabbed display
 of the items they have checked out, overdue, and on hold.
 
+Checkouts
+''''''''''''''''''''''''''''''''''''''''''
+
+The first tab shows the items the patron currently has checked out.
+
 |image445|
 
-If they have family at the library staff can see what the other family
+Relatives' checkouts
+''''''''''''''''''''''''''''''''''''''''''
+
+If they have family at the library, staff can see what the other family
 members have checked out.
 
 |image446|
+
+Fines & charges
+'''''''''''''''''''''''''''''''''''''''''
+
+The Fines & charges tab will show for all patrons, even those who
+don't owe anything.
+
+If the patron does owe money to the library, the tab will show the
+total amount, without any details. To see the details, go to the
+:ref:`fines tabs <fines-label>`.
+
+|image1360|
+
+Holds
+'''''''''''''''''''''''''''''''''''''''''
+
+If the patron has holds, the number of holds will appear on this tab's
+title and the details will appear in the tab.
+
+|image490|
+
+     **Note**
+
+     The barcode and call number will only appear on item-level holds or
+     holds that have been confirmed. Record-level holds that are not
+     waiting to be picked up will not have barocdes or call numbers.
+
+From here you can manage the patron's holds: change the pickup library,
+cancel or suspend holds.
+
+     **Note**
+
+     You will only be able to suspend holds if the :ref:`SuspendHoldsIntranet`
+     system preference is set to "Allow".
+
+     **Note**
+
+     If, when suspending a hold, you want to be able to set a date at which to
+     automatically resume the hold, set the :ref:`AutoResumeSuspendedHolds`
+     system preference to "Allow" and make sure the :ref:`unsuspend_holds cron
+     job <unsuspend-holds-label>` is activated.
+
+Article requests
+'''''''''''''''''''''''''''''''''''''''''''''
+
+If the :ref:`ArticleRequests` system preference is enabled, and the circulation
+rules allow it, the patrons will be able to request articles, either through the
+OPAC or in the staff interface.
+
+The details of the patron's request, and its status, are visible in this
+tab.
+
+|image1361|
+
+Restrictions
+''''''''''''''''''''''''''''''''''''''''''''
 
 The Restrictions tab will show for all patrons. If the patron has no
 restrictions you will see that on the tab.
@@ -1433,12 +1501,82 @@ restrictions you will see that on the tab.
 If the patron has restrictions on their account the tab will show the
 number and the description.
 
-|image448|
+There are four kinds of restrictions:
+  - Manual
+  - Overdues
+  - Suspension
+  - Discharge
 
 Using the 'Add manual restriction' button you can add a restriction to
-the patron record from here.
+the patron record from here. This can be used for any type of restriction
+you need to put manually on a patron record.
 
 |image449|
+
+|image448|
+
+The overdues restrictions are automatically set when overdue notices are sent
+if you specified you wanted the patron restricted in the
+:ref:`Overdue notice/status triggers tool <overdue-notice/status-triggers-label>`.
+
+This restriction will not be removed automatically when the overdue items are
+returned unless the :ref:`AutoRemoveOverduesRestrictions` system preference
+is set to 'Do'.
+
+In the :ref:`circulation rules <circulation-and-fine-rules-label>`, you can choose
+to fine users by suspending them instead of (or in addition to) fining them money.
+In that case, returning an overdue document will trigger a suspension restriction.
+
+Patrons may also be restricted if you have issued a :ref:`discharge <patron-
+discharges-label>` for them. Once the discharge is validated, the patron is
+automatically restricted.
+
+Restrictions on a patron record will block checkouts. In fact,
+a message will appear in red when going to the checkout page.
+
+|image1363|
+
+Restrictions may also prevent renewing items if the :ref:`RestrictionBlockRenewing`
+system preference is set to 'block'.
+
+On the OPAC, patrons will get a message saying their account is frozen. They will
+not be able to place holds from the OPAC.
+
+If you have patrons that have more than one restriction, you can choose to
+cumulate their restriction periods or not through the :ref:`CumulativeRestrictionPeriods`
+system preference.
+
+     **Note**
+
+     If you want to restrict patrons from doing various actions if their record
+     is not pristine, check the following system preferences:
+
+     - Set the :ref:`OverduesBlockCirc` system preference to 'Block' to prevent
+       patrons who have overdue materials from checking out other materials.
+     - Set the :ref:`OverduesBlockRenewing` system preference to 'block renewing
+       for all the patron's items' or 'block renewing only for this item' to prevent
+       patrons who have overdue materials from renewing their loans.
+     - Enter values in the :ref:`noissuescharge` and :ref:`NoIssuesChargeGuarantees`
+       system preferences in order to block checking out to patrons who have more
+       than a certain amount in fines or to patrons whose guarantees owe more than
+       a certain amount.
+     - Enter a value in the :ref:`maxoutstanding` system preference to prevent
+       patron from placing holds on the OPAC if they owe more than a certain amount.
+     - Enter a value in the :ref:`OPACFineNoRenewals` system preference to prevent
+       patron who owe more than a certain amount to renew their loans from the OPAC.
+     - Set the :ref:`BlockExpiredPatronOpacActions` system preference to 'Block' if
+       you want to prevent patron whose membership has expired to place hold or
+       renew their loans from the OPAC.
+
+
+Clubs
+'''''''''''''''''''''''''''''''''''''''''''
+
+If you use :ref:`patron clubs <Patron-clubs-label>, patrons will have a tab
+in their record indicating which club they are enrolled in, if any.
+
+|image1362|
+
 
 .. _fines-label:
 
