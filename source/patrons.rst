@@ -1400,7 +1400,7 @@ All patron information will appear in the Details tab. This includes all
 the contact information, notes, custom patron attributes, messaging
 preferences, etc. entered when adding the patron.
 
-|image1347|
+|image1359|
 
 In the case of patrons who are marked as 'Child' or 'Professional' and
 their guarantors additional information will appear on their record.
@@ -1447,7 +1447,7 @@ If the patron does owe money to the library, the tab will show the
 total amount, without any details. To see the details, go to the
 :ref:`fines tabs <fines-label>`.
 
-|image1348|
+|image1360|
 
 Holds
 '''''''''''''''''''''''''''''''''''''''''
@@ -1488,7 +1488,7 @@ OPAC or in the staff interface.
 The details of the patron's request, and its status, are visible in this
 tab.
 
-|image1349|
+|image1361|
 
 Restrictions
 ''''''''''''''''''''''''''''''''''''''''''''
@@ -1534,7 +1534,7 @@ automatically restricted.
 Restrictions on a patron record will block checkouts. In fact,
 a message will appear in red when going to the checkout page.
 
-|image1352|
+|image1363|
 
 Restrictions may also prevent renewing items if the :ref:`RestrictionBlockRenewing`
 system preference is set to 'block'.
@@ -1575,7 +1575,7 @@ Clubs
 If you use :ref:`patron clubs <Patron-clubs-label>, patrons will have a tab
 in their record indicating which club they are enrolled in, if any.
 
-|image1350|
+|image1362|
 
 
 .. _fines-label:
