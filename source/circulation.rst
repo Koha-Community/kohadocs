@@ -836,7 +836,7 @@ information.
 Once confirmed the hold will show on the patron record and on the
 checkout screen under the 'Hold' tab.
 
-|image562|
+|image490|
 
 From here if the patron would like you suspend their holds you can do so
 one by one or in bulk.
