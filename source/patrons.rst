@@ -1539,6 +1539,9 @@ a message will appear in red when going to the checkout page.
 Restrictions may also prevent renewing items if the :ref:`RestrictionBlockRenewing`
 system preference is set to 'block'.
 
+On the OPAC, patrons will get a message saying their account is frozen. They will
+not be able to place holds from the OPAC.
+
 If you have patrons that have more than one restriction, you can choose to
 cumulate their restriction periods or not through the :ref:`CumulativeRestrictionPeriods`
 system preference.
