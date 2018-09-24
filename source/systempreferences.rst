@@ -2828,6 +2828,31 @@ Values:
 
 -  Cumulate
 
+.. _hidepersonalpatrondetailoncirculation-label:
+
+HidePersonalPatronDetailOnCirculation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't
+
+Asks: \_\_\_ hide patrons phone number, email address, street address 
+and city in the circulation page 
+
+Values:
+
+-  Don't
+
+-  Do
+
+Description:
+
+-  This preference controls the display of the patron's phone number, 
+   email address, and physical address from the left side of the screen 
+   (under their picture, if they have one). 
+
+-  Set to 'Do' these informations will only be visible on the patron's 
+   detail page.
+
 .. _updatenotforloanstatusoncheckin-label:
 
 UpdateNotForLoanStatusOnCheckin
