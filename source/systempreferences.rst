@@ -6746,6 +6746,52 @@ Description:
    cover images to bib records and display them on the detail page and
    search results in the OPAC.
 
+.. _manual-sysprefs-label:
+
+Manual 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _kohamanualbaseurl-label:
+
+KohaManualBaseURL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: https://koha-community.org/manual/
+
+Asks: Location of the Koha manual \_\_\_
+
+Description:
+
+-  You can specify the location of the Koha manual to use. This is the 
+   URL that will be used for the help pages when you click 'Help' at 
+   the top right corner of the page.
+
+-  By default, the Koha manual is used, but you can use this system 
+   preference to substitute for your own help pages.
+
+-  If the URL starts with '/', the value of :ref:`staffClientBaseURL` 
+   will be used as a prefix. 
+
+-  Note that it will be suffixed by the version / the language / the 
+   format (/17.11/en/html) 
+
+.. _kohamanuallanguage-label:
+
+KohaManualLanguage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: English
+
+Asks: Language of the online manual ­\_\_\_
+
+Description: 
+
+-  By default, the language of the Koha interface will be used 
+   as the manual language. However, if the manual is not translated 
+   in that language, this system preference specifies the fallback 
+   language.
+
+
 .. _novelist-select-label:
 
 Novelist Select
