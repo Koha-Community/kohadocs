@@ -1195,8 +1195,8 @@ in one email) in to one email instead of multiple emails for each alert.
 My Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, if your library has the :ref:`virtualshelves`
-set to 'Allow' then the last tab will by 'my lists.' From here your
+If your library has the :ref:`virtualshelves`
+set to 'Allow' they will see the 'my lists' tab. From here your
 patrons can review public lists and create or edit their own private
 lists.
 
@@ -1221,6 +1221,13 @@ And will receive confirmation of their request.
 |image1032|
 
 .. _purchase-suggestions-label:
+
+My interlibrary loan requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons will have the option to make ILL requests when logged in to their OPAC account.  From here they can view their existing requests and place new ones.
+
+|image1371|
 
 Purchase Suggestions
 -------------------------------------------
