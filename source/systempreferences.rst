@@ -2606,6 +2606,28 @@ Description:
 
 -  This preference controls whether or not article requests are allowed to be placed by patrons in the OPAC.
 
+.. _articlerequestslinkcontrol-label:
+
+ArticleRequestsLinkControl 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Use algorithm to show or hide
+
+Asks: \_\_\_ article request link on search results.
+
+Values:
+
+-  Always show
+
+-  Use algorithm to show or hide
+   
+Description:
+
+-  On the OPAC results page, either always show the 'Request article' link 
+   or check the branch, patron and item type combination to determine 
+   whether or not an article can be requested from this particular record 
+   before displaying the link. 
+
 .. _articlerequestsmandatoryfields-label:
 
 ArticleRequestsMandatoryFields
