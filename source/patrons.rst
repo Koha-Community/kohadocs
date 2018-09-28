@@ -1755,6 +1755,11 @@ fines' tab.
 
       |image458|
 
+      **Note**
+
+      - You can enable email receipts for payment and writeoff transactions 
+        with the :ref:`UseEmailReceipts` system preference.
+
 .. _creating-manual-invoices-label:
 
 Creating manual invoices

@@ -12137,6 +12137,33 @@ Values:
 -  Do
 
 -  Don't
+   
+.. _useemailreceipts-label:
+
+UseEmailReceipts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't send
+
+Asks: \_\_\_ email receipts to patrons for payments and writeoffs.
+
+Values:
+
+-  Don't send
+   
+-  Send
+   
+Description:
+
+-  If set to 'Send', Koha will send emails to the patrons for each 
+   payment or writeoff done in their account.
+
+     **Note**
+
+     -  The letters used are ACCOUNT\_PAYMENT and ACCOUNT\_WRITEOFF
+        
+     -  You can edit them in the :ref:`Notices and slips<notices-&-slips-label>` 
+        tool.
 
 .. _usedischarge-label:
 

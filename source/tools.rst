@@ -533,6 +533,18 @@ information in these notices. Here are some of what those notices do:
    -  This notice is sent when a patron's suggestion is accepted.
 
    -  *Note:* If you don't want to send this notice, just delete it.
+      
+-  ACCOUNT\_PAYMENT
+
+   -  This notice is sent for each payment transaction in a patron's 
+      account if the :ref:`UseEmailReceipts` system preference is set 
+      to 'Send'.
+
+-  ACCOUNT\_WRITEOFF
+
+   -  This notice is sent for each writeoff transaction in a patron's 
+      account if the :ref:`UseEmailReceipts` system preference is set 
+      to 'Send'.
 
 -  ACCTDETAILS
 
