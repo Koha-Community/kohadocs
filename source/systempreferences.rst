@@ -2853,6 +2853,49 @@ Description:
 -  Set to 'Do' these informations will only be visible on the patron's 
    detail page.
 
+.. _holdsautofill-label:
+
+HoldsAutoFill
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't
+
+Asks: \_\_\_ automatically fill holds instead of asking the librarian.
+
+Values:
+
+-  Do
+   
+-  Don't
+   
+Description:
+
+-  If set to 'Do', the holds confirmation pop-up will not appear upon checking 
+   in a reserved item.
+
+.. _holdsautofillprintslip-label:
+
+HoldsAutoFillPrintSlip 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't
+
+Asks: \_\_\_ automatically display the holds slip dialog for auto-filled holds.
+
+Values:
+
+-  Do
+
+-  Don't
+   
+Description:
+
+-  If set to 'Do', the holds slip print pop-up will appear automatically 
+   upon checking in a reserved item.
+
+-  :ref:`HoldsAutoFill` must be set to 'do' for this preference to have any 
+   effect. 
+
 .. _updatenotforloanstatusoncheckin-label:
 
 UpdateNotForLoanStatusOnCheckin
