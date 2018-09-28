@@ -1052,10 +1052,6 @@ level choose from these options:
 
    -  Access to the :ref:`Notices and slips tool <notices-&-slips-label>`
 
-.. -  edit\_pages
-
-..    -  What tool does this give access to?
-
 -  edit\_patrons
 
    -  Perform batch modification of patrons
