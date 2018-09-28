@@ -4688,6 +4688,57 @@ Values:
 -  Allow
 
 -  Don't allow
+   
+.. _holdssplitqueue-label:
+
+HoldsSplitQueue
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: nothing
+
+Asks: In the staff client, split the holds queue into separate tables by \_\_\_
+
+Values:
+
+-  pickup library
+   
+-  pickup library & itemtype
+   
+-  hold itemtype
+   
+-  nothing
+   
+Description: 
+
+-  This feature allows to separate holds by pickup library or itemtype in the 
+   holds page of a record (not in the global holds queue found on the circuation 
+   page).
+
+-  When using the up and down arrows, the priorities will be changed only in 
+   in the group the holds belongs to.
+
+.. _holdssplitqueuenumbering-label:
+
+HoldsSplitQueueNumbering
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: the actual priority, which may be out of order
+
+Asks: If the holds queue is split, show librarians \_\_\_
+
+Values:
+
+-  the actual priority, which may be out of order
+
+-  'virtual' priorities, where each group is numbered separately
+   
+Description:
+
+-  This system preference is only effective if :ref:`HoldsSplitQueue` is set to 
+   any value except 'nothing'.
+
+-  This system preference controls the priority numbering on the holds page 
+   of a record (not in the global holds queue found on the circulation page). 
 
 .. _localholdspriority,-localholdsprioritypatroncontrol,-localholdspriorityitemcontrol-label:
 
