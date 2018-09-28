@@ -598,14 +598,6 @@ Patron permissions defined
 
    -  This section can be expanded (:ref:`Learn more <granular-acquisitions-permissions-label>`)
 
--  management
-
-   -  Set library management params (deprecated)
-
-      **Important**
-
-      This permission level no longer controls anything.
-
 -  tools
 
    -  Use all tools
