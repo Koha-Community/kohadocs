@@ -714,6 +714,13 @@ permissions on a more granular level choose from these options:
       -  the item is a high demand item
 
       -  the item is on hold
+         
+-  manage\_checkout\_notes
+   
+   -  Mark checkout notes as seen\/not seen
+      
+   -  The permission to manage the checkout notes written by users 
+      through the OPAC
 
 -  manage\_restrictions
 
