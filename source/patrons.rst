@@ -905,6 +905,14 @@ options:
 
    -  Manage contracts
 
+-  currencies\_manage
+   
+   -  Manage currencies and exchange rates
+      
+-  edi\_manage
+   
+   -  Manage EDIFACT transmissions
+
 -  group\_manage
 
    -  Manage orders and basket groups
@@ -928,6 +936,10 @@ options:
 -  planning\_manage
 
    -  Manage budget planning
+      
+-  suggestions\_manage
+   
+   -  Manage purchase suggestions
 
 -  vendors\_manage
 
