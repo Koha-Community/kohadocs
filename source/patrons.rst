@@ -598,14 +598,6 @@ Patron permissions defined
 
    -  This section can be expanded (:ref:`Learn more <granular-acquisitions-permissions-label>`)
 
--  management
-
-   -  Set library management params (deprecated)
-
-      **Important**
-
-      This permission level no longer controls anything.
-
 -  tools
 
    -  Use all tools
@@ -722,6 +714,13 @@ permissions on a more granular level choose from these options:
       -  the item is a high demand item
 
       -  the item is on hold
+         
+-  manage\_checkout\_notes
+   
+   -  Mark checkout notes as seen\/not seen
+      
+   -  The permission to manage the checkout notes written by users 
+      through the OPAC
 
 -  manage\_restrictions
 
@@ -905,6 +904,14 @@ options:
 
    -  Manage contracts
 
+-  currencies\_manage
+   
+   -  Manage currencies and exchange rates
+      
+-  edi\_manage
+   
+   -  Manage EDIFACT transmissions
+
 -  group\_manage
 
    -  Manage orders and basket groups
@@ -928,6 +935,10 @@ options:
 -  planning\_manage
 
    -  Manage budget planning
+      
+-  suggestions\_manage
+   
+   -  Manage purchase suggestions
 
 -  vendors\_manage
 
@@ -1040,10 +1051,6 @@ level choose from these options:
    -  Define notices
 
    -  Access to the :ref:`Notices and slips tool <notices-&-slips-label>`
-
-.. -  edit\_pages
-
-..    -  What tool does this give access to?
 
 -  edit\_patrons
 
