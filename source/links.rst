@@ -18,8 +18,6 @@ Koha Related
 
 -  Koha as a CMS - http://wiki.koha-community.org/wiki/Koha_as_a_CMS
 
--  Kyles's Koha Tools - http://kylehall.info/index.php/projects/koha/
-
 -  Koha Bibliography - http://www.zotero.org/groups/koha
 
 -  Koha Shared Links - http://groups.diigo.com/group/everything-koha
@@ -110,14 +108,14 @@ Reports Related
 Installation Guides
 ---------------------------------------
 
--  Installing Koha 3 on Ubuntu -
-   http://www.blazingmoon.org/guides/k3-on-u810-1.html
+-  Installing Koha on Debian - 
+   https://wiki.koha-community.org/wiki/Koha_on_Debian
 
--  Koha on Debian installation documentation -
-   http://openlib.org/home/krichel/courses/lis508/doc/koha_installation_overview.html
+-  Installing Koha on Raspberry Pi 2 -
+   https://wiki.koha-community.org/wiki/Koha_on_a_Raspberry_Pi_2
 
--  Koha 3.2 on Debian Squeeze -
-   http://wiki.koha-community.org/wiki/Koha_3.2_on_Debian_Squeeze
+-  Installing Koha on Ubuntu -
+   https://wiki.koha-community.org/wiki/Koha_on_Ubuntu
 
 .. _misc-label:
 

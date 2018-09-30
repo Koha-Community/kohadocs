@@ -32,7 +32,7 @@ box at the top of the screen by using the following hot keys:
 
 .. _check-out-(issuing)-label:
 
-Check Out (Issuing)
+Check out (issuing)
 --------------------------------------
 
 To begin the checkout process you must enter the patron barcode or part
@@ -57,7 +57,7 @@ of their name. The checkout option appears in three main places:
 
 .. _checking-items-out-label:
 
-Checking Items Out
+Checking items out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To check an item out to a patron, first search for that patron using one
@@ -71,13 +71,13 @@ see the list of checkouts below the check out box.
 
 |image486|
 
-At the top of the Check Out screen is a box for you to type or scan the
+At the top of the Check out screen is a box for you to type or scan the
 item's barcode into.
 
 -  **Important**
 
        Many modern barcode scanners will send a 'return' to the browser,
-       making it so that the 'Check Out' button is automatically clicked
+       making it so that the 'Check out' button is automatically clicked
 
 -  If the barcode is not found you will be prompted to use fast
    cataloging to add the item. Learn more about :ref:`fast
@@ -139,7 +139,7 @@ in red in the checkout summary.
 
 If you have set your `ExportWithCsvProfile <#ExportWithCsvProfile>`__
 preference, you will also see the option to export the patron's current
-checkout information using a CSV Profile or ISO2709 (MARC21) format.
+checkout information using a CSV profile or ISO2709 (MARC21) format.
 
 |image489|
 
@@ -178,7 +178,7 @@ staff client as well.
 
 .. _printing-receipts-label:
 
-Printing Receipts
+Printing receipts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have checked out all of the items for the patron you can print
@@ -209,7 +209,7 @@ templates under the :ref:`Notices & Slips` tool.
 
 .. _clear-patron-information-label:
 
-Clear Patron Information
+Clear patron information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you're done checking an item out if you have the
@@ -227,7 +227,7 @@ patron.
 
 .. _batch-checkouts-label:
 
-Batch Checkouts
+Batch checkouts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you would like to perform a batch check out you can do so by turning
@@ -252,7 +252,7 @@ use was recorded for each item you scanned.
 
 .. _check-out-messages-label:
 
-Check Out Messages
+Check out messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you check out an item that has multiple pieces and you have cataloged
@@ -302,7 +302,7 @@ notifying the librarian of why the patron cannot check items out.
 
 .. _check-out-warnings-label:
 
-Check Out Warnings
+Check out warnings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes checkouts will trigger warning messages that will appear in a
@@ -405,7 +405,7 @@ their checkout summary at the bottom.
 
 In the Renew column you will see how many times each item has been
 renewed and a checkbox to renew the item for the patron. Check the boxed
-of the items you would like to renew and click the 'Renew or Return
+of the items you would like to renew and click the 'Renew or return
 checked items' button, or to renew all items checked out to the patron
 simply click the 'Renew all' button.
 
@@ -446,7 +446,7 @@ If the item is not actually checked out you will also receive an error.
 
 .. _check-in-(returning)-label:
 
-Check In (Returning)
+Check in (returning)
 --------------------------------------
 
 Checking in items can be performed from various different locations
@@ -470,7 +470,7 @@ Checking in items can be performed from various different locations
 
 .. _checking-items-in-label:
 
-Checking Items In
+Checking items in
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To check an item in scan the barcode for the item into the box provided.
@@ -484,7 +484,7 @@ scanning items. This will effectively roll back the returned date to the
 last date the library was open.
 
 -  This requires that you have your closings added to the :ref:`Holidays &
-   Calendar Tool <calendar-label>`
+   calendar tool <calendar-label>`
 
 You can also choose to forgive all overdue charges for items you are
 checking in by checking the 'Forgive overdue charges' box before
@@ -498,7 +498,7 @@ below the check in box.
 
 .. _check-in-messages-label:
 
-Check In Messages
+Check in messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several messages that can appear when checking items in:
@@ -539,7 +539,7 @@ There are several messages that can appear when checking items in:
 
       |image536|
 
-   -  Clicking the Print Slip and Confirm button will mark the item as
+   -  Clicking the 'Print slip and confirm' button will mark the item as
       waiting for pickup at the library and present the library with a
       receipt to print and place on the book with the patron's
       information
@@ -552,12 +552,12 @@ There are several messages that can appear when checking items in:
 
    |image537|
 
-   -  Clicking the Confirm hold and Transfer button will mark the item
+   -  Clicking the 'Confirm hold and transfer' button will mark the item
       as in transit to the library where the hold was placed
 
       |image538|
 
-   -  Clicking the Print Slip, Transfer and Confirm button will mark the
+   -  Clicking the 'Print slip, transfer and confirm' button will mark the
       item as in transit to the library where the hold was placed and
       present the library with a receipt to print and place on the book
       with the patron's information
@@ -574,7 +574,7 @@ There are several messages that can appear when checking items in:
 
 .. _circulation-messages-label:
 
-Circulation Messages
+Circulation messages
 ----------------------------------------
 
 Circulation messages are short messages that librarians can leave for
@@ -583,11 +583,11 @@ circulation.
 
 .. _setting-up-messages-label:
 
-Setting up Messages
+Setting up messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Circulation messages are set up as :ref:`Authorized
-Values <authorized-values-label>`. To add or edit Circulation Messages you
+Circulation messages are set up as :ref:`authorized
+values <authorized-values-label>`. To add or edit circulation messages you
 want to work with the `BOR\_NOTES <#bornotes>`__ value.
 
 |image540|
@@ -603,7 +603,7 @@ appear on the patron's record.
 
 .. _adding-a-message-label:
 
-Adding a Message
+Adding a message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When on the patron's check out tab you will see a link to 'Add a new
@@ -624,7 +624,7 @@ would like to leave.
 
 .. _viewing-messages-label:
 
-Viewing Messages
+Viewing messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Circulation messages meant for the staff and/or the patron will appear
@@ -653,16 +653,16 @@ library at a later date/time.
 
 .. _placing-holds-in-staff-client-label:
 
-Placing Holds in Staff Client
+Placing holds in staff client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several ways to place holds from the staff client. The most
-obvious is using the 'Place Hold' button at the top of any bibliographic
+obvious is using the 'Place hold' button at the top of any bibliographic
 record.
 
 |image545|
 
-You can also click the smaller 'Place Hold' link found at the top of
+You can also click the smaller 'Place hold' link found at the top of
 your catalog search results, or the 'Holds' link found below each
 result.
 
@@ -722,7 +722,7 @@ place a hold on.
    expiration date for the hold in the 'Hold expires on date'
 
    -  To have expired holds cancelled automatically you will need to have
-      the :ref:`Expired Holds` cron job set to run on a
+      the :ref:`Expired holds` cron job set to run on a
       regular basis.
 
 -  Next choose if you want to place a hold on the next available item or
@@ -736,18 +736,18 @@ hold it will say so on the confirmation screen.
 |image552|
 
 Once your hold is placed, if you'd like to have Koha forget that you
-used the 'Search to Hold' function, you can choose to have Koha 'forget'
-the patron's name by clicking the arrow to the right of the 'Place Hold'
+used the 'Search to hold' function, you can choose to have Koha 'forget'
+the patron's name by clicking the arrow to the right of the 'Place hold'
 button on the search results and choosing the 'Forget' option.
 
 |image553|
 
 .. _managing-holds-label:
 
-Managing Holds
+Managing holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Holds can be altered and cancelled from the Holds tab found on the left
+Holds can be altered and cancelled from the holds tab found on the left
 of the bibliographic record.
 
 |image554|
@@ -768,7 +768,7 @@ location, suspend and/or cancel the hold.
 
     Depending on how you have your :ref:`HidePatronName`
     system preference set the list may show card numbers instead of
-    names in the Patron column like in the image above.
+    names in the patron column like in the image above.
 
 To rearrange or delete holds, simply make a selection from the
 'Priority' pull down or click the arrows to the right of the priority
@@ -793,7 +793,7 @@ wanted to read that book has already done so.
 
 If a patron asks to have their hold suspended and you have the
 :ref:`SuspendHoldsIntranet` system preference set
-to 'allow' you can do so by clicking the Suspend button to far right. If
+to 'allow' you can do so by clicking the 'Suspend' button to far right. If
 the patron gives you a date for the items to become unsuspended you can
 enter that in the date box and click the 'Update hold(s)' button to save
 your changes.
@@ -809,7 +809,7 @@ bottom of the list.
 
 .. _receiving-holds-label:
 
-Receiving Holds
+Receiving holds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When items that are on hold are :ref:`checked in <check-in-(returning)-label>` or
@@ -825,7 +825,7 @@ or just confirm the hold
 
 |image561|
 
-Clicking the Confirm button will mark the item as on hold for the
+Clicking the 'Confirm' button will mark the item as on hold for the
 patron. If the item needs to be transferred the item will also be marked
 as in transit to the proper branch. Clicking 'Ignore' will retain the
 hold, but allow you to check the item out to another patron. Choosing to
@@ -891,16 +891,16 @@ To transfer an item
 
    |image568|
 
-   -  The item shows the same 'Home Library' but has updated the
-      'Current Location' to note where it resides at this time
+   -  The item shows the same 'Home library' but has updated the
+      'Current location' to note where it resides at this time
 
 .. _set-library-label:
 
-Set Library
+Set library
 -----------------------------
 
 By default you will enter the staff client as if you are at your home
-library. This library will appear in the top right of the Staff Client.
+library. This library will appear in the top right of the staff client.
 
 |image569|
 
@@ -916,12 +916,12 @@ right.
 
 .. _fast-add-cataloging-label:
 
-Fast Add Cataloging
+Fast add cataloging
 -------------------------------------
 
 Sometimes circulation librarians need to quickly add a record to the
 system for an item they are about to check out. This is called 'Fast
-Add.' To allow circulation librarians access to the Fast Add Cataloging
+add'. To allow circulation librarians access to the Fast add cataloging
 tool, simply make sure they have the
 `fast\_cataloging <#fastaddpermissions>`__ permissions. There are two
 ways to add titles via fast add. If you know that you're about to check
@@ -963,7 +963,7 @@ originally.
 
 .. _circulation-reports-label:
 
-Circulation Reports
+Circulation reports
 --------------------------------------
 
 Most reports can be found via the Reports module, but some of the more
@@ -974,14 +974,14 @@ module.
 
 .. _holds-queue-label:
 
-Holds Queue
+Holds queue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will show you all of the holds at your library.
 
 |image577|
 
-To generate this report, you must have the :ref:`Build Holds Queue cron
+To generate this report, you must have the :ref:`Build holds queue cron
 job <holds-queue-label>` running. This cron job is a script that should
 be run periodically if your library system allows borrowers to place
 on-shelf holds. This script decides which library should be responsible
@@ -1002,12 +1002,12 @@ first attempt to hold fulfillment using items already at the pickup
 library if possible. If there are no items available at the pickup
 library to fill a hold, build\_holds\_queue.pl will then use the list of
 libraries defined in StaticHoldsQueueWeight. If
-RandomizeHoldsQueueWeight is disabled ( which it is by default ), the
+RandomizeHoldsQueueWeight is disabled (which it is by default), the
 script will assign fulfillment requests in the order the branches are
 placed in the StaticHoldsQueueWeight system preference.
 
 For example, if your system has three libraries, of varying sizes (
-small, medium and large ) and you want the burden of holds fulfillment
+small, medium and large) and you want the burden of holds fulfillment
 to be on larger libraries before smaller libraries, you would want
 StaticHoldsQueueWeight to look something like "LRG,MED,SML".
 
@@ -1055,7 +1055,7 @@ pick them up.
 
 Items that have been on the hold shelf longer than you normally allow
 (based on the :ref:`ReservesMaxPickUpDelay`
-preference value) will appear on the 'Holds Over' tab, they will not
+preference value) will appear on the 'Holds over' tab, they will not
 automatically be cancelled unless you have set the :ref:`cron
 job <expired-holds-label>` to do that for you, but you can cancel all
 holds using the button at the top of the list.
@@ -1099,12 +1099,12 @@ message stating how late your items are.
     
 .. _article-requests-label:
 
-Article Requests
+Article requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First enable your system preference for ArticleRequests. 
+First enable your system preference for :ref:`ArticleRequests`. 
 
-Set to Enable patrons to place article requests.
+Set to 'Enable' patrons to place article requests.
 
 Next you will need to decide how your patrons will make requests, 
 either record only, item only, or both record and item level.
@@ -1112,13 +1112,13 @@ either record only, item only, or both record and item level.
 You can set 3 different system preferences for mandatory fields to be filled 
 in dependent on how your records are requested.
 
-ArticleRequestsMandatoryFields: make the following fields
+:ref:`ArticleRequestsMandatoryFields`: make the following fields
 mandatory for records that are record level or item level requestable
 
-ArticleRequestsMandatoryFieldsItemOnly make the following
+:ref:`ArticleRequestsMandatoryFieldsItemOnly` make the following
 fields mandatory for records that are only item level requestable
 
-ArticleRequestsMandatoryFieldsRecordOnly make the
+:ref:`ArticleRequestsMandatoryFieldsRecordOnly` make the
 following fields mandatory for records that are only record level
 requestable
 
@@ -1126,7 +1126,7 @@ Next you will want to go into your circulation and fine rules matrix and select
 each rule that you want to allow requests.
 
 You can allow requests to be made at the record level, item level, 
-(Yes which means both) and no (none).
+yes (which means both) and no (none).
 
 Now you can place requests on both the staff client and OPAC.
 
@@ -1219,16 +1219,16 @@ information and what library the item is at.
 
 .. _tracking-in-house-use-label:
 
-Tracking In house Use
+Tracking in-house use
 -----------------------------------------
 
 Many libraries track the use of items within the library.
 
     **Note**
 
-    This is different from tracking on site usage. In house use is the
+    This is different from tracking on-site usage. In-house use is the
     use of items in the library by patrons without them having to check
-    them out. On site use is the use of items on site that must first be
+    them out. On-site use is the use of items on site that must first be
     checked out. To learn more about on site usage please review the
     :ref:`OnSiteCheckouts` preference.
 
@@ -1263,20 +1263,20 @@ not on hold a local use will be recorded.
 
 .. _in-processing-/-book-cart-locations-label:
 
-In Processing / Book Cart Locations
+In processing / book cart locations
 --------------------------------------------------------------
 
 Koha allows for handling temporary locations like the processing center
 and/or book carts throughout the library. For this feature to work you
 must first make sure you have :ref:`authorized values <authorized-values-label>`
-set in the `LOC <#shelvelocvals>`__ category for PROC (Processing
-Center) and CART (Book Cart).
+set in the `LOC <#shelvelocvals>`__ category for PROC (processing
+center) and CART (book cart).
 
 |image590|
 
 Next you need to set the
 :ref:`NewItemsDefaultLocation` system preference
-to PROC. This will set the new items to the Processing Center as their
+to PROC. This will set the new items to the processing center as their
 default location.
 
 When creating items you enter in their desired final shelving location
@@ -1315,7 +1315,7 @@ Self checkout
 Koha comes with a very basic self checkout module. To enable this module
 you need to set the :ref:`WebBasedSelfCheck <webbasedselfcheck-label>` system
 preference to 'Enable.' To use this module you have to log in as a
-:ref:`staff member <add-a-staff-patron-label>` with :ref:`self\_check
+:ref:`staff member <add-a-staff-patron-label>` with :ref:`self\_check 
 permissions <patron-permissions-label>`.
 
     **Note**
@@ -1463,7 +1463,7 @@ need.
 
 .. _offline-circulation-utilities-label:
 
-Offline Circulation Utilities
+Offline circulation utilities
 ------------------------------------------------
 
 Koha allows for you to continue circulation actions while offline by
@@ -1471,7 +1471,7 @@ using any one of three utilities.
 
 .. _offline-circulation-in-koha-label:
 
-Offline Circulation in Koha
+Offline circulation in Koha
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the :ref:`AllowOfflineCirculation` preference
@@ -1555,11 +1555,11 @@ Once the item is checked out it will appear below the patron's info.
 
 .. _koha-offline-uploading-label:
 
-Koha Offline Uploading
+Koha offline uploading
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the system is back online visit the Synchronize page on the Offline
-Circulation module and click 'Upload transactions'
+Once the system is back online visit the 'Synchronize' page on the Offline
+circulation module and click 'Upload transactions'
 
 |image604|
 
@@ -1578,7 +1578,7 @@ brought to a summary of all of the actions you loaded in to Koha in your
    you will be able to check them all or select just those you want to
    process into Koha.
 
--  Click on the Process button and Koha will record every stored
+-  Click on the 'Process' button and Koha will record every stored
    transaction one by one. For each transaction, the status will change
    to:
 
@@ -1596,7 +1596,7 @@ Once finished you will have a summary of all of your transactions
 
 .. _firefox-plugin-label:
 
-Firefox Plugin
+Firefox plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is an offline circulation tool that you can add to your Firefox
@@ -1617,11 +1617,11 @@ A click on the logo will open the tool in its own window.
 
 The plugin consists of four tabs:
 
--  The Check Out tab is where you check out items
+-  The 'Check out' tab is where you check out items
 
--  The Check In tab is where you check in items
+-  The 'Check in' tab is where you check in items
 
--  The Log tab keeps track of every transaction done while in offline
+-  The 'Log' tab keeps track of every transaction done while in offline
    mode
 
    -  The log will keep information until you empty it. Each time you
@@ -1634,10 +1634,10 @@ The plugin consists of four tabs:
       keep the items in the log and let you continue working with the
       tool.
 
--  The Param tab is to set up the plugin
+-  The 'Param' tab is to set up the plugin
 
 The first thing you want to do then is to set up the plugin. Go to the
-Param tab to set up the plugin
+'Param' tab to set up the plugin
 
 |image611|
 
@@ -1645,7 +1645,7 @@ Answer the 4 questions presented:
 
 -  Server = the URL of the librarian interface
 
--  Branch Code = the code for the branch where you are located
+-  Branch code = the code for the branch where you are located
 
 -  Username = your staff account login
 
@@ -1669,7 +1669,7 @@ Checking out:
 
 |image612|
 
--  Go to the Check Out tab
+-  Go to the 'Check out' tab
 
 -  Scan the patron barcode
 
@@ -1681,16 +1681,16 @@ Checking in:
 
 |image613|
 
--  Go to the Check In tab
+-  Go to the 'Check in' tab
 
 -  Scan the item barcode
 
--  Click Save
+-  Click 'Save'
 
 Each time, you check out or check in an item, a new transaction is
 recorded in the local plugin database and you will see, at the bottom of
 the plugin how many transactions has been made during the offline
-circulation. For example, "10 Row(s) Added" means you did 10
+circulation. For example, "10 row(s) added" means you did 10
 transactions.
 
 |image614|
@@ -1715,7 +1715,7 @@ while offline has a hold, the hold is kept on the item. Since, you can't
 confirm holds found during the processing of every check in, the holds
 stay on the item and will need to be managed later. If you only checked
 in a few items you can just keep a record of them all. If you checked in
-a lot of items you can use the Holds Queue once it rebuilds to see what
+a lot of items you can use the Holds queue once it rebuilds to see what
 holds made it to the shelf erroneously.
 
 Similarly, if an patron card was expired, the offline circulation tool
@@ -1786,16 +1786,16 @@ You have two options for adding this data to Koha
       |image619|
 
 Once you are done you can clear the log by clicking Clear. If you don't
-you will be warned the next time you open the Offline Circulation tool.
+you will be warned the next time you open the Offline circulation tool.
 
 |image620|
 
 .. _offline-circ-tool-for-windows-label:
 
-Offline Circ Tool for Windows
+Offline circ tool for Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Offline Circulation Utility can be downloaded at:
+The Offline circulation utility can be downloaded at:
 https://github.com/bywatersolutions/koha-offline-circulation/releases
 
 To generate a borrowers.db file for loading in to the Windows tool you
@@ -1804,7 +1804,7 @@ job <generate-patron-file-for-offline-circulation-label>`.
 
 .. _upload-offline-circ-file-label:
 
-Upload Offline Circ File
+Upload offline circ file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :ref:`offline circulation tool for Windows <offline-circ-tool-for-windows-label>` will
