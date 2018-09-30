@@ -2606,6 +2606,28 @@ Description:
 
 -  This preference controls whether or not article requests are allowed to be placed by patrons in the OPAC.
 
+.. _articlerequestslinkcontrol-label:
+
+ArticleRequestsLinkControl 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Use algorithm to show or hide
+
+Asks: \_\_\_ article request link on search results.
+
+Values:
+
+-  Always show
+
+-  Use algorithm to show or hide
+   
+Description:
+
+-  On the OPAC results page, either always show the 'Request article' link 
+   or check the branch, patron and item type combination to determine 
+   whether or not an article can be requested from this particular record 
+   before displaying the link. 
+
 .. _articlerequestsmandatoryfields-label:
 
 ArticleRequestsMandatoryFields
@@ -2852,6 +2874,49 @@ Description:
 
 -  Set to 'Do' these informations will only be visible on the patron's 
    detail page.
+
+.. _holdsautofill-label:
+
+HoldsAutoFill
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't
+
+Asks: \_\_\_ automatically fill holds instead of asking the librarian.
+
+Values:
+
+-  Do
+   
+-  Don't
+   
+Description:
+
+-  If set to 'Do', the holds confirmation pop-up will not appear upon checking 
+   in a reserved item.
+
+.. _holdsautofillprintslip-label:
+
+HoldsAutoFillPrintSlip 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't
+
+Asks: \_\_\_ automatically display the holds slip dialog for auto-filled holds.
+
+Values:
+
+-  Do
+
+-  Don't
+   
+Description:
+
+-  If set to 'Do', the holds slip print pop-up will appear automatically 
+   upon checking in a reserved item.
+
+-  :ref:`HoldsAutoFill` must be set to 'do' for this preference to have any 
+   effect. 
 
 .. _updatenotforloanstatusoncheckin-label:
 
@@ -4688,6 +4753,57 @@ Values:
 -  Allow
 
 -  Don't allow
+   
+.. _holdssplitqueue-label:
+
+HoldsSplitQueue
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: nothing
+
+Asks: In the staff client, split the holds queue into separate tables by \_\_\_
+
+Values:
+
+-  pickup library
+   
+-  pickup library & itemtype
+   
+-  hold itemtype
+   
+-  nothing
+   
+Description: 
+
+-  This feature allows to separate holds by pickup library or itemtype in the 
+   holds page of a record (not in the global holds queue found on the circuation 
+   page).
+
+-  When using the up and down arrows, the priorities will be changed only in 
+   in the group the holds belongs to.
+
+.. _holdssplitqueuenumbering-label:
+
+HoldsSplitQueueNumbering
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: the actual priority, which may be out of order
+
+Asks: If the holds queue is split, show librarians \_\_\_
+
+Values:
+
+-  the actual priority, which may be out of order
+
+-  'virtual' priorities, where each group is numbered separately
+   
+Description:
+
+-  This system preference is only effective if :ref:`HoldsSplitQueue` is set to 
+   any value except 'nothing'.
+
+-  This system preference controls the priority numbering on the holds page 
+   of a record (not in the global holds queue found on the circulation page). 
 
 .. _localholdspriority,-localholdsprioritypatroncontrol,-localholdspriorityitemcontrol-label:
 
@@ -12021,6 +12137,33 @@ Values:
 -  Do
 
 -  Don't
+   
+.. _useemailreceipts-label:
+
+UseEmailReceipts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't send
+
+Asks: \_\_\_ email receipts to patrons for payments and writeoffs.
+
+Values:
+
+-  Don't send
+   
+-  Send
+   
+Description:
+
+-  If set to 'Send', Koha will send emails to the patrons for each 
+   payment or writeoff done in their account.
+
+     **Note**
+
+     -  The letters used are ACCOUNT\_PAYMENT and ACCOUNT\_WRITEOFF
+        
+     -  You can edit them in the :ref:`Notices and slips<notices-&-slips-label>` 
+        tool.
 
 .. _usedischarge-label:
 
