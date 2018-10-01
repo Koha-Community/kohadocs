@@ -13,13 +13,13 @@ orders placed with vendors and manage purchase budgets.
 Setup
 ---------------------
 
-Before using the Acquisitions Module you will want to make sure that you
+Before using the Acquisitions module you will want to make sure that you
 have completed all of the set up.
 
-First, set your :ref:`Acquisitions System Preferences <acquisitions-label>` and
-:ref:`Acquisitions Administration <acquisitions-label>` to match your library's
-workflow. Before setting your :ref:`EDI Accounts` and
-:ref:`Library EANs` you will need to have :ref:`entered your
+First, set your :ref:`Acquisitions system preferences <acquisitions-label>` and
+:ref:`acquisitions administration <acquisitions-label>` to match your library's
+workflow. Before setting your :ref:`EDI accounts` and
+:ref:`library EANs` you will need to have :ref:`entered your
 vendors <add-a-vendor-label>`.
 
 On the main acquisitions page you will see your library's funds listed.
@@ -45,7 +45,7 @@ amount and it will run a search for you.
 
 |image782|
 
-Learn more in the :ref:`Budget/Fund Tracking` section of
+Learn more in the :ref:`Budget/fund tracking` section of
 this manual.
 
 .. _vendors-label:
@@ -58,25 +58,25 @@ vendor.
 
 .. _add-a-vendor-label:
 
-Add a Vendor
+Add a vendor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To add a vendor click the 'New Vendor' button on the Acquisitions page
+To add a vendor click the 'New vendor' button on the Acquisitions page
 
 |image783|
 
 The vendor add form is broken into three pieces
 
--  The first section is for basic information about the Vendor
+-  The first section is for basic information about the vendor
 
    |image784|
 
-   -  Of these fields, only the Vendor name is required, the rest of the
+   -  Of these fields, only the vendor name is required, the rest of the
       information should be added to help with generating claim letters
       and invoices
 
 -  The second section is for information regarding your contact at the
-   Vendor's office
+   vendor's office
 
    |image785|
 
@@ -101,12 +101,12 @@ The vendor add form is broken into three pieces
 
    -  To be able to order from a vendor you must make them 'Active'
 
-   -  For List Prices and Invoice Prices choose the currency
+   -  For list prices and invoice prices choose the currency
 
-      -  Currencies are assigned in the :ref:`Currencies & Exchange
-         Rates <currencies-and-exchange-rates-label>` admin area
+      -  Currencies are assigned in the :ref:`Currencies & exchange
+         rates <currencies-and-exchange-rates-label>` admin area
 
-   -  If your library is charged tax mark your Tax Number as registered
+   -  If your library is charged tax mark your tax number as registered
 
    -  Note if you list prices and/or invoice prices include tax
 
@@ -126,12 +126,12 @@ The vendor add form is broken into three pieces
 
 .. _view/edit-a-vendor-label:
 
-View/Edit a Vendor
+View/edit a vendor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To view a vendor's information page you must search for the vendor from
 the Acquisitions home page. Your search can be for any part of the
-Vendor's name:
+vendor's name:
 
 |image787|
 
@@ -150,7 +150,7 @@ will see a 'Receive shipment' button.
 
 .. _vendor-contracts-label:
 
-Vendor Contracts
+Vendor contracts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can define contracts (with a start and end date) and attach them to
@@ -160,10 +160,10 @@ contracts are set up with a minimum and maximum yearly amount.
 
 .. _add-a-contract-label:
 
-Add a Contract
+Add a contract
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At the top of a Vendor Information Page, you will see a 'New Contract'
+At the top of a vendor information Page, you will see a 'New contract'
 button.
 
 |image790|
@@ -188,7 +188,7 @@ It will also be an option when creating a basket
 
 .. _managing-suggestions-label:
 
-Managing Suggestions
+Managing suggestions
 -----------------------------------------
 
 Purchase suggestions can be generated in one of two ways. You can create
@@ -286,7 +286,7 @@ You can also assign this suggestion to a fund.
 |image1280|
 
 This edit can trigger a notice (defined in the :ref:`Notices &
-Slips <notices-&-slips-label>` tool with the `TO\_PROCESS <#toprocessnotice>`__
+slips <notices-&-slips-label>` tool with the `TO\_PROCESS <#toprocessnotice>`__
 notice) to the fund owner that there is a suggestion ready for them to
 manage if you have turned on the :ref:`cron job to generate these
 notices <email-suggestions-to-process-label>`.
@@ -300,7 +300,7 @@ using the template that matches the status you have chosen.
 
 .. _placing-orders-label:
 
-Placing Orders
+Placing orders
 -------------------------------------
 
 To place an order you must first search for the vendor or bookseller you
@@ -309,7 +309,7 @@ want to send the order to.
     **Important**
 
     If you are planning on using EDIFACT to submit your order you will
-    need to first set up your library's :ref:`EDI Accounts`
+    need to first set up your library's :ref:`EDI accounts`
     and :ref:`EANs <library-eans-label>`.
 
 .. _create-a-basket-label:
@@ -343,7 +343,7 @@ about the order:
 -  When adding a basket you want to give it a name that will help you
    identify it later
 
--  Enter in the Billing Place and Delivery Place (this will default the
+-  Enter in the billing place and delivery place (this will default the
    library you're logged in at)
 
 -  If you would like to change the vendor you're ordering from you can
@@ -383,7 +383,7 @@ adding items to the order.
          listed under 'Catalog details.'
 
 -  If you allow patrons to make purchase suggestions (learn more in the
-   :ref:`Managing Suggestions` section of this manual),
+   :ref:`Managing suggestions` section of this manual),
    then you can place orders from those suggestions. In order to keep
    track of suggestions that have been ordered and received you must
    place the order using this link.
@@ -396,7 +396,7 @@ adding items to the order.
 
       |image812|
 
-      -  From this form you can make changes to the Catalog Details if
+      -  From this form you can make changes to the catalog details if
          necessary.
 
       -  When the item appears in your basket it will include a link to
@@ -497,7 +497,7 @@ Order from a staged file
 
       |image1282|
 
-   -  In the 'Item Information' tab you can enter information that will
+   -  In the 'Item information' tab you can enter information that will
       be added to every ordered item such as item type, collection code
       and not for loan status.
 
@@ -513,7 +513,7 @@ Order from a staged file
 -  The final option for ordering is to order from a list of titles with
    the highest hold ratios
 
-   -  This option will take you to the Holds Ratio report where you can
+   -  This option will take you to the holds ratio report where you can
       find items with a high hold ratio and order additional copies.
       Next to each title will be a link with the number of items to
       order, click that and it will add the item to your basket.
@@ -522,7 +522,7 @@ Order from a staged file
 
 With any of the above ordering options you're presented with an option
 to notify patrons of the new item when it's received. The contents of
-that notification can be edited in the :ref:`Notices & Slips`
+that notification can be edited in the :ref:`Notices & slips`
 tool and will have the code of ACQ\_NOTIF\_ON\_RECEIV. In the 'Patrons'
 section you will see an option to 'Add user'. Click that button to add
 patrons who will be notified of the new issue.
@@ -565,11 +565,11 @@ Accounting information.
           below the item form to add as many items as you're ordering.
 
 -  The list of funds is populated by the :ref:`funds <funds-label>` you have
-   assigned in the Acquisitions Administration area.
+   assigned in the Acquisitions administration area.
 
 -  The currency pull down will have the
    :ref:`currencies <currencies-and-exchange-rates-label>` you set up in the :ref:`Acquisitions
-   Administration <acquisitions-label>` area.
+   administration <acquisitions-label>` area.
 
 -  The vendor price is the price before any taxes or discounts are
    applied.
@@ -593,9 +593,9 @@ Accounting information.
    
 -  Total is the budgeted cost multiplied by the quantity of items ordered.
 
--  If you added Planning Values when :ref:`creating the
+-  If you added planning values when :ref:`creating the
    Fund <add-a-fund-label>`, those values will appear in the two
-   Planning Value fields.
+   planning value fields.
 
 Once you have filled in all of the fields click 'Save' to add the item
 to your basket. If your price goes over the amount available in the fund
@@ -673,7 +673,7 @@ can print a PDF of the order.
 
     |image833|
 
-Clicking the 'Uncertain Prices' button will call up a list of items with
+Clicking the 'Uncertain prices' button will call up a list of items with
 uncertain prices to quick editing. From that list, you can quickly edit
 the items by entering new prices and quantities.
 
@@ -681,7 +681,7 @@ the items by entering new prices and quantities.
 
     **Important**
 
-    The Uncertain Prices page is independent of the basket. It is linked
+    The Uncertain prices page is independent of the basket. It is linked
     to the vendor so you will see all items on order with uncertain
     prices for that vendor.
 
@@ -709,7 +709,7 @@ Printing baskets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you are finished adding items to your basket, click 'Close this
-Basket.'
+basket.'
 
 |image835|
 
@@ -719,7 +719,7 @@ able to print PDFs of your orders.
 
 |image836|
 
-Your completed order will be listed on the Basket Grouping page for
+Your completed order will be listed on the basket grouping page for
 printing or further modification.
 
 |image837|
@@ -727,7 +727,7 @@ printing or further modification.
 If you closed the basket before generating the EDIFACT order you can do
 so from the basket grouping page.
 
-Basket Grouping EDIFACT
+Basket grouping EDIFACT
 
 Clicking the 'Print' button next to your order will generate a PDF for
 printing, which will have all of your library information followed by
@@ -737,7 +737,7 @@ the items in your order.
 
 .. _receiving-orders-label:
 
-Receiving Orders
+Receiving orders
 ---------------------------------------
 
     **Important**
@@ -886,18 +886,18 @@ Canceling an order
 
        **Note**
        
-       Whilst it is possible to re-open your basket, cancel one or more orders and re-close the basket, this is not recommended. This procedure will update the Basket Closed date, which in turn will cause your 'late order' caclulations to be incorrect. Instead, follow the procedure below.
+       Whilst it is possible to re-open your basket, cancel one or more orders and re-close the basket, this is not recommended. This procedure will update the 'basket closed' date, which in turn will cause your 'late order' caclulations to be incorrect. Instead, follow the procedure below.
 
 To cancel an order:
 
-#. locate the vendor and click on Receive Shipment;
+#. locate the vendor and click on 'Receive shipment';
 #. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
-#. so on the next page you'll get a warning box in which you click on 'receive';
-#. on the next page (at right) you can click on 'Cancel Order'.
+#. so on the next page you'll get a warning box in which you click on 'Receive';
+#. on the next page (at right) you can click on 'Cancel order'.
 
 .. _claims-&-late-orders-label:
 
-Claims & Late Orders
+Claims & late orders
 -------------------------------------
 
 If you have entered in an email address for the vendors in your system
@@ -905,7 +905,7 @@ you can send them claim emails when an order is late. Before you can
 send claims you will need to set up an `acquisitions claim
 notice <#ACQCLAIM>`__.
 
-Upon clicking on the link to 'Late Orders' from the Acquisitions page
+Upon clicking on the link to 'Late orders' from the Acquisitions page
 you will be presented with a series of filter options on the left hand
 side. These filters will be applied only closed baskets.
 
@@ -922,13 +922,13 @@ late you will be presented with a list of these items.
 |image858|
 
 To the right of each late title you will be see a checkbox. Check off
-the ones you want a claim letter sent to and click 'Claim Order' at the
+the ones you want a claim letter sent to and click 'Claim order' at the
 bottom right of the list. This will automatically send an email to the
 vendor at the email address you have on file.
 
     **Note**
 
-    The Estimated Delivery Date is based on the Delivery time value
+    The estimated delivery date is based on the delivery time value
     entered on the vendor record.
 
 If you would rather use a different acquisition claim letter (other than
@@ -939,20 +939,20 @@ and choose it from the menu above the list of late items.
 
 .. _acquisition-searches-label:
 
-Acquisition Searches
+Acquisition searches
 -------------------------------------
 
 At the top of the various Acquisition pages there is a quick search box
-where you can perform either a Vendor Search or an Order Search.
+where you can perform either a Vendor search or an Order search.
 
 |image860|
 
-In the Vendor Search you can enter any part of the vendor name to get
+In the Vendor search you can enter any part of the vendor name to get
 results.
 
 |image861|
 
-Using the Orders Search you can search for items that have been ordered
+Using the Orders search you can search for items that have been ordered
 with or without the vendor.
 
 |image862|
@@ -967,14 +967,14 @@ the search and allow you to search for additional fields.
 
 |image864|
 
-Clicking Advanced Search to the right of the search button will give you
+Clicking Advanced search to the right of the search button will give you
 all of the order search options available.
 
 |image865|
 
 .. _budget/fund-tracking-label:
 
-Budget/Fund Tracking
+Budget/fund tracking
 ----------------------------------------
 
 On the main acquisitions page there will be a table showing you all of
@@ -990,7 +990,7 @@ summary of the titles ordered/received on that budget.
 
 .. _edi-process-label:
 
-EDI Process
+EDI process
 -----------------------------
 
 Previous sections explain all ordering options, this section pulls out
@@ -1004,14 +1004,14 @@ using EDI for ordering.
 
 .. _edi-questions-for-vendors-label:
 
-EDI Questions for Vendors
+EDI questions for vendors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will want to gather the following information from your vendors
 before beginning the set up process in Koha.
 
-**EDI Accounts:** *This is the basic connection information for your
-vendor. This will be used to fill in the :ref:`EDI Accounts`
+**EDI accounts:** *This is the basic connection information for your
+vendor. This will be used to fill in the :ref:`EDI accounts`
 section.*
 
 -  **Vendor:** The name of the vendor
@@ -1105,7 +1105,7 @@ EANs <library-eans-label>` setting.*
 
       (92) Assigned by buyer
 
-**MARC Order Fields or Grid Ordering:** *These values will fill in the
+**MARC order fields or grid ordering:** *These values will fill in the
 :ref:`MarcFieldsToOrder` preference.*
 
 -  **price:** MARC21 field that contains the item price
@@ -1125,7 +1125,7 @@ EANs <library-eans-label>` setting.*
 
 .. _edi-setup-label:
 
-EDI Setup
+EDI setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before you begin ordering using EDI you will want to take the following
@@ -1166,7 +1166,7 @@ steps:
 
 .. _edi-ordering-label:
 
-EDI Ordering
+EDI ordering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first step in ordering using EDI happens on the book vendor's
@@ -1176,7 +1176,7 @@ Some language that you might see included "basket", "order", "cart",
 and/or "MARC order." Once you have this MARC file downloaded to your
 computer you will want to log in to Koha and continue the process there.
 
-Visit the :ref:`Stage MARC Records for Import` tool and upload
+Visit the :ref:`Stage MARC records for import` tool and upload
 your file. Once presented with the confirmation screen proceed to
 Acquisitions.
 
@@ -1193,28 +1193,28 @@ and quantity filled in then be sure to confirm that your
 Once you have added all of the items to the basket you can click the
 'Create EDIFACT order' button.
 
-EDIFACT Order
+EDIFACT order
 
 This will generate a pending file in the :ref:`EDIFACT
-Messages <edifact-messages-label>` in Koha. The pending files will be processed
-by the :ref:`EDI Cron Job <edi-message-processing-label>` and sent to your vendor.
+messages <edifact-messages-label>` in Koha. The pending files will be processed
+by the :ref:`EDI cron job <edi-message-processing-label>` and sent to your vendor.
 
 .. _edi-invoicing-label:
 
-EDI Invoicing
+EDI invoicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When the book vendor is done processing your files they will send an
-invoice via EDI as well. The :ref:`EDI Cron Job <edi-message-processing-label>` will grab
+invoice via EDI as well. The :ref:`EDI cron job <edi-message-processing-label>` will grab
 invoices and mark items found in the invoice as received and update your
 funds without any need for manual intervention.
 
 .. _edifact-messages-label:
 
-EDIFACT Messages
+EDIFACT messages
 ----------------------------------
 
 A log of all messages sent and received via EDIFACT can be found under
-EDIFACT Messages.
+EDIFACT messages.
 
 |image1291|
