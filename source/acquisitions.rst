@@ -584,6 +584,15 @@ Accounting information.
    you enter this, hit tab and Koha will populate the rest of the cost
    fields below.
 
+-  Retail price is the recommended retail price (RRP), the price set 
+   by the publisher or the manufacturer as a recommendation to booksellers. 
+
+-  Replacement cost is the price it will cost to replace the item. 
+   
+-  Budgeted cost is the amount that will be removed from the 'spent' budget.
+   
+-  Total is the budgeted cost multiplied by the quantity of items ordered.
+
 -  If you added Planning Values when :ref:`creating the
    Fund <add-a-fund-label>`, those values will appear in the two
    Planning Value fields.
