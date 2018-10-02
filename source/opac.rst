@@ -1229,6 +1229,38 @@ If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons 
 
 |image1371|
 
+Placing a new interlibrary loan request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Click on ‘Create a new request’ and choose a request form. 
+
+|image1372|
+
+    **Note**
+
+    The options displayed are dependent on your ILL configuration.  See the ILL backends wiki page at https://wiki.koha-community.org/wiki/ILL_backends for further explanation.
+
+    **Note**
+
+    If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance` preference the text displays here and you need to click ‘Yes’ to accept before continuing.
+    
+Complete the publication details as fully as possible.  Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
+
+|image1373|
+
+Click on 'Create' to submit your request to the library for processing.
+
+Your submitted request will be listed with a status of ‘New request’.  Once processed the status will be updated to ‘Requested’.
+
+Editing requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Click on ‘View’ to make changes or cancel your request.
+
+You cannot edit the form details but you can add a note to request a modification and then click on ‘Submit modifications’ at the bottom of the screen.  Your modification will be sent to the library for processing. 
+
+For New requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
+
 Purchase Suggestions
 -------------------------------------------
 
