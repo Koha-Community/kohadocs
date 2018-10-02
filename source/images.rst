@@ -1358,3 +1358,6 @@
 .. |image1368| image:: images/tools/patronclubs/enrollpatronstaff.png
 .. |image1369| image:: images/tools/patronclubs/enrollpatronopac.png
 .. |image1370| image:: images/tools/patronclubs/clubenrollments.png
+.. |image1371| image:: images/opac/MyILLrequests.png
+.. |image1372| image:: images/opac/ILLformpicker.png
+.. |image1373| image:: images/opac/ILLform.png
