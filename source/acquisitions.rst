@@ -850,6 +850,38 @@ invoice or 'Close' to note that the invoice is closed/paid for.
 
 |image853|
 
+In the Adjustments section, you can add adjustments to your invoices. 
+These adjustments can be for adjusting the price that is offset by rounding 
+or adding a credit to the invoice, for example.
+
+|image1371|
+
+-  Click on 'Add an adjustment'
+
+-  Enter the amount of the adjustment
+   
+-  Choose a reason, if needed
+   
+       **Note**
+
+       The reasons are :ref:`authorized values<authorized-values-label>`. 
+       Use the category ADJ\_REASON to add custom reasons for adjustments.
+
+-  Enter a note, if needed
+   
+-  Choose the fund from which the adjustment amount should be taken
+   
+-  If 'Encumber while invoice open' is checked, the amount of the adjustment 
+   will be taken out of the fund immediately. If it isn't checked, the amount 
+   will be subtracted only when the invoice is closed.
+
+-  Click on 'Update adjustments' to save your adjustments
+   
+If you need to change the adjustment afterwards, you can do so in the table 
+and click on 'Update adjustments'.
+
+|image1372|
+
 If you're allowing the uploading of acquisitions files with the
 :ref:`AcqEnableFiles` preference you will see the option
 to manage invoice files next to the link to 'Go to receipt
