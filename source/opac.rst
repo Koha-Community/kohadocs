@@ -1227,14 +1227,14 @@ My interlibrary loan requests
 
 If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons will have the option to make ILL requests when logged in to their OPAC account.  From here they can view their existing requests and place new ones.
 
-|image1371|
+|image1373|
 
 Placing a new interlibrary loan request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Click on ‘Create a new request’ and choose a request form. 
 
-|image1372|
+|image1374|
 
     **Note**
 
@@ -1246,7 +1246,7 @@ Click on ‘Create a new request’ and choose a request form.
     
 Complete the publication details as fully as possible.  Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
 
-|image1373|
+|image1375|
 
 Click on 'Create' to submit your request to the library for processing.
 
