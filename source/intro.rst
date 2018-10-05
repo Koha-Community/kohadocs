@@ -3,7 +3,7 @@ Introduction
 
 .. _koha-basics-label:
 
-Koha Basics
+Koha basics
 ------------------------------
 
 Koha is the first free and open source software library automation
@@ -15,7 +15,7 @@ http://koha-community.org
 
 .. _koha-recommendations-label:
 
-Koha Recommendations
+Koha recommendations
 ------------------------------------------
 
 Full system recommendations can be found on the official Koha wiki along
@@ -28,11 +28,11 @@ especially older versions.
 
 .. _using-this-manual-label:
 
-Using this Manual
+Using this manual
 ------------------------------------
 
 This manual is always changing and suggestions for edits can be sent to
-the Koha Documentation Team as a merge request via gitlab or via the 
+the Koha documentation team as a merge request via gitlab or via the 
 `koha-docs mailing list 
 <https://lists.koha-community.org/cgi-bin/mailman/listinfo/koha-docs>`__.
 
@@ -45,10 +45,8 @@ The manual is organized by Koha module. At the start of most sections
 (and throughout) you will find 'Get there' tips. These lines tell you
 how to get to the section in Koha.
 
-For example: *Get there:* More > Administration > Global system
-preferences
-
-Get there: More > Administration > Global system preferences
+For example: 
+*Get there:* More > Administration > Global system preferences
 
 The instruction tells you where to find the necessary menu option at the
 top of the Koha staff client.
@@ -58,14 +56,14 @@ manual and images will depict what should be seen on the screen.
 
 .. _contributing-to-the-manual-label:
 
-Contributing to the Manual
+Contributing to the manual
 ----------------------------------------------
 
 This manual is an ever-changing document and edits to the manual are
 welcome at any time.
 
-The `Koha Manual <http://manual.koha-community.org/>`__ is managed by
-the Documentation Team, but that doesn't mean we can't all
+The `Koha manual <http://manual.koha-community.org/>`__ is managed by
+the documentation team, but that doesn't mean we can't all
 participate in making the best manual possible.
 
 The manual is stored in git at: 
