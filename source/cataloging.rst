@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _cataloging-label:
+
 Cataloging
 ==========
 

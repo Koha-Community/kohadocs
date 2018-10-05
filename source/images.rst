@@ -1366,3 +1366,5 @@
 .. |image1376| image:: images/serials/editsubscription.png
 .. |image1377| image:: images/serials/editselectedserials.png
 .. |image1378| image:: images/serials/editbatch.png
+.. |image1379| image:: images/serials/addmarcfield.png
+.. |image1380| image:: images/serials/showfieldsmarc.png
