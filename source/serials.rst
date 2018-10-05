@@ -302,6 +302,48 @@ pattern information.
 Click 'Save subscription' to save the information you have entered.
 `Find sample serial examples in the serial pattern library on the wiki <https://wiki.koha-community.org/wiki/Serial_Pattern_Library>`__.
 
+.. _edit-subscription-label:
+
+Edit a subscription
+-----------------------------------
+
+To edit a subscription, click on 'Edit' and 'Edit subscription' from the 
+subscription page. This will take you back to the same form as the one 
+used when :ref:`creating a new subscription <add-a-subscription-label>`.
+
+|image1376|
+
+You can also batch edit subscriptions. To do so, search for the subscriptions 
+you want to change. In the results, check the boxes next to the subscriptions 
+to edit. The link 'Edit selected serials' will appear.
+
+|image1377|
+
+From there, you can change: 
+
+-  the vendor
+   
+-  the shelving location
+   
+-  the library
+   
+-  the item type
+   
+-  the public note
+   
+-  the nonpublic note
+   
+-  whether or not to create an item when receiving an issue
+   
+-  the expiration date
+
+|image1378|
+
+      **Note**
+
+      Leave the field unchanged to keep the original values.
+
+
 .. _receive-issues-label:
 
 Receive issues

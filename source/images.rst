@@ -1363,3 +1363,6 @@
 .. |image1373| image:: images/opac/MyILLrequests.png
 .. |image1374| image:: images/opac/ILLformpicker.png
 .. |image1375| image:: images/opac/ILLform.png
+.. |image1376| image:: images/serials/editsubscription.png
+.. |image1377| image:: images/serials/editselectedserials.png
+.. |image1378| image:: images/serials/editbatch.png
