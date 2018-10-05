@@ -268,6 +268,25 @@ Examples:
    -  SELECT title, author FROM biblio WHERE frameworkcode=<<Enter the
       frameworkcode\|biblio\_framework>>
 
+
+.. ****************************************
+.. **************    TODO    **************
+.. ****************************************
+
+.. **Querying MARC**
+
+.. It is possible to query the MARC records with the ExtractValue function.
+
+.. **Links**
+
+.. **Runtime variables**
+
+.. **See more results**
+
+.. There is a limit of 10,000 records put on SQL statements entered in 
+   Koha. To get around this you want to add 'LIMIT 100000' to the end
+   of your SQL statement (or any other number above 10,000).
+
 .. _duplicate-report-label:
 
 Duplicate report
