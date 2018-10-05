@@ -176,76 +176,6 @@ Fill in the form presented
 
 -  In the 'SQL' box you will type or paste the SQL for the report
 
--  If you feel that your report might be too resource intensive you
-   might want to consider using runtime parameters to your query.
-   Runtime parameters basically make a filter appear before the report
-   is run to save your system resources.
-
-   There is a specific syntax that Koha will understand as 'ask for
-   values when running the report'. The syntax is <<Question to
-   ask\|authorized\_value>>.
-
-   -  The << and >> are just delimiters. You must put << at the
-      beginning and >> at the end of your parameter
-
-   -  The 'Question to ask' will be displayed on the left of the string
-      to enter.
-
-   -  The authorized\_value can be omitted if not applicable. If it
-      contains an authorized value category, or branches or itemtype or
-      categorycode or biblio\_framework, a list with the Koha authorized
-      values will be displayed instead of a free field Note that you can
-      have more than one parameter in a given SQL Note that entering
-      nothing at run time won't probably work as you expect. It will be
-      considered as "value empty" not as "ignore this parameter". For
-      example entering nothing for : "title=<<Enter title>>" will
-      display results with title='' (no title). If you want to have to
-      have something not mandatory, use "title like <<Enter title>>" and
-      enter a % at run time instead of nothing
-
-   Examples:
-
-   -  SELECT surname,firstname FROM borrowers WHERE branchcode=<<Enter
-      patrons library\|branches>> AND surname like <<Enter filter for
-      patron surname (% if none)>>
-
-   -  SELECT \* FROM items WHERE homebranch = <<Pick your
-      branch\|branches>> and barcode like <<Partial barcode value here>>
-
-   -  SELECT title , author FROM biblio WHERE frameworkcode=<<Enter the
-      frameworkcode\|biblio\_framework>>
-
-       **Note**
-
-       To generate a date picker calendar to the right of the field when
-       running a report you can use the 'date' keyword like this:
-       <<Enter Date\|date>>
-
-       |image893|
-
-       **Note**
-
-       You have to put "%" in a text box to 'leave it blank'. Otherwise,
-       it literally looks for "" (empty string) as the value for the
-       field.
-
-       **Important**
-
-       In addition to using any authorized value code to generate a
-       dropdown, you can use the following values as well: Framework
-       codes (biblio\_framework), Branches (branches), Item Types
-       (itemtypes) and Patron Categories (categorycode). For example a
-       branch pull down would be generated like this
-       <<Branch\|branches>>
-
-       |image894|
-
-    **Note**
-
-    There is a limit of 10,000 records put on SQL statements entered in
-    Koha. To get around this you want to add 'LIMIT 100000' to the end
-    of your SQL statement (or any other number above 10,000).
-
     **Note**
 
     If your system administrator has set up memcache on your server you
@@ -260,6 +190,83 @@ Once everything is entered click the 'Save report' button and you'll be
 presented with options to run it. Once a report is saved you do not have
 to recreate it you can simply find it on the Saved Reports page and
 :ref:`run <running-custom-reports-label>` or :ref:`edit <edit-custom-reports-label>` it.
+
+.. _report-writing-tips-label:
+
+Report writing tips
+'''''''''''''''''''''''''''''''''''''
+
+**Runtime parameters**
+
+
+If you feel that your report might be too resource intensive you
+might want to consider using runtime parameters to your query.
+Runtime parameters basically make a filter appear before the report
+is run to save your system resources.
+
+There is a specific syntax that Koha will understand as 'ask for
+values when running the report'. The syntax is <<Question to
+ask\|authorized\_value>>.
+
+-  The << and >> are just delimiters. You must put << at the
+   beginning and >> at the end of your parameter
+
+-  The 'Question to ask' will be displayed on the left of the string
+   to enter.
+
+-  The authorized\_value can be omitted if not applicable. If it
+   contains an authorized value category, 'branches', 'itemtype', 
+   'categorycode', 'biblio\_framework', a list with the Koha authorized
+   values will be displayed instead of a free field.
+
+       **Note**
+
+       You can have more than one parameter in a given SQL query.
+
+       **Note**
+
+       You have to put "%" in a text box to 'leave it blank'. Otherwise,
+       it literally looks for "" (empty string) as the value for the
+       field.
+       For example entering nothing for: "title=<<Enter title>>" will 
+       display results with title='' (no title).
+       If you want to have to have something not mandatory, use 
+       "title like <<Enter title>>" and enter a % at run time instead 
+       of nothing.
+
+       **Note**
+
+       To generate a date picker calendar to the right of the field when
+       running a report you can use the 'date' keyword like this:
+       <<Enter Date\|date>>
+
+       |image893|
+
+List of parameters that can be used in runtime parameters
+
++-------------------------+---------------------------------------------------+------------------------------+
+| Parameter               | What the user sees                                | What gets inserted in query  |
++-------------------------+---------------------------------------------------+------------------------------+
+| date                    | date picker                                       | validly formatted date       |
+| branches                | drop down of branch names                         | branch code                  |            
+| itemtypes               | drop down of item type names                      | item type                    |
+| categorycode            | drop down of patron category descriptions         | borrower category code       | 
+| biblio\_framework       | drop down of MARC bibliographic frameworks        | framework code               |
+| (auth-value-category)   | drop down of auth-value descriptions in category  | authorized value             |
+| (nothing)               | text box                                          | entered text                 |
++-------------------------+---------------------------------------------------+------------------------------+
+
+Examples:
+
+   -  SELECT surname, firstname FROM borrowers WHERE branchcode=<<Enter
+      patron's library\|branches>> AND surname like <<Enter filter for
+      patron surname (% if none)>>
+
+   -  SELECT \* FROM items WHERE homebranch = <<Pick your
+      branch\|branches>> and barcode like <<Partial barcode value here>>
+
+   -  SELECT title, author FROM biblio WHERE frameworkcode=<<Enter the
+      frameworkcode\|biblio\_framework>>
 
 .. _duplicate-report-label:
 

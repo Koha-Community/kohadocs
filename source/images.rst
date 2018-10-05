@@ -889,7 +889,6 @@
 .. |image891| image:: images/reports/reportfromsql.png
 .. |image892| image:: images/reports/reportsubgroup.png
 .. |image893| image:: images/reports/datepicker.png
-.. |image894| image:: images/reports/branchpulldown.png
 .. |image895| image:: images/reports/duplicatereport.png
 .. |image896| image:: images/reports/savedreports.png
 .. |image897| image:: images/reports/editreportoption.png
