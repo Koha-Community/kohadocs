@@ -11,22 +11,22 @@ database.
 
 .. _custom-reports-label:
 
-Custom Reports
+Custom reports
 -----------------------------------
 
 Koha's data is stored in a MySQL database which means that librarians
 can generate nearly any report they would like by either using the
-:ref:`Guided Reports Wizard <guided-report-wizard-label>` or writing their own
+:ref:`guided reports wizard <guided-report-wizard-label>` or writing their own
 :ref:`SQL query <report-from-sql-label>`.
 
 .. _add-custom-report-label:
 
-Add Custom Report
+Add custom report
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _guided-report-wizard-label:
 
-Guided Report Wizard
+Guided report wizard
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The guided report wizard will walk you through a six step process to
@@ -58,24 +58,24 @@ available.
 |image882|
 
 Step 3: Choose the fields you want in your report. You can select
-multiple fields and add them all at once by using CTRL+Click on each
+multiple fields and add them all at once by using CTRL+click on each
 item you want to add before clicking the Add button.
 
 |image883|
 
 Step 4: Choose any limits you might want to apply to your report (such
 as item types or branches). If you don't want to apply any limits,
-simply click Next instead of making an option.
+simply click 'Next' instead of choosing an option.
 
 |image884|
 
 Step 5: Perform math functions. If you don't want to do any
-calculations, simply click Next instead of making an option.
+calculations, simply click 'Next' instead of choosing an option.
 
 |image885|
 
 Step 6: Choose data order. If you want the data to print out in the
-order it's found in the database, simply click Finish.
+order it's found in the database, simply click 'Finish'.
 
 |image886|
 
@@ -90,7 +90,7 @@ sort it in to groups and subgroups and enter any notes regarding it.
 
 |image888|
 
-Once your report is saved it will appear on the 'Use Saved' page with
+Once your report is saved it will appear on the 'Use saved' page with
 all other saved reports.
 
 |image889|
@@ -109,7 +109,7 @@ Report from SQL
 
 In addition to the report wizard, you have the option to write your own
 queries using SQL. To find reports written by other Koha users, visit
-the Koha Wiki: http://wiki.koha-community.org/wiki/SQL_Reports_Library.
+the Koha wiki: http://wiki.koha-community.org/wiki/SQL_Reports_Library.
 You can also find your database structure in
 /installer/data/mysql/kohastructure.sql or online at:
 `http://schema.koha-community.org <http://schema.koha-community.org/>`__.
@@ -149,10 +149,10 @@ Fill in the form presented
    that you can easily filter reports by groups and subgroups. Report
    subgroups are set in the `REPORT\_SUBGROUP <#reportsubgroup>`__
    authorized value category or can be added on the fly when creating
-   the report by choosing the 'or create' radio button.  Report Subgroups
-   are set up with unique values in Authorised Value, and Description. 
-   The Description (OPAC) field needs to contain the authorised value for 
-   the Report Group that the Subgroup falls under.
+   the report by choosing the 'or create' radio button.  Report subgroups
+   are set up with unique values in 'Authorised value', and 'Description'. 
+   The 'Description (OPAC)'' field needs to contain the authorised value for 
+   the report group that the subgroup falls under.
 
    |image892|
 
@@ -167,7 +167,7 @@ Fill in the form presented
     A public report can be accessed using the :ref:`JSON reports services 
     <json-reports-services-label>` by anyone and without authentication.
 
--  'Notes' will also appear on the Saved Reports page, this can be used
+-  'Notes' will also appear on the saved reports page, this can be used
    to provide more details about the report or tips on how to enter
    values when it runs
 
@@ -175,76 +175,6 @@ Fill in the form presented
    formats have not been implemented
 
 -  In the 'SQL' box you will type or paste the SQL for the report
-
--  If you feel that your report might be too resource intensive you
-   might want to consider using runtime parameters to your query.
-   Runtime parameters basically make a filter appear before the report
-   is run to save your system resources.
-
-   There is a specific syntax that Koha will understand as 'ask for
-   values when running the report'. The syntax is <<Question to
-   ask\|authorized\_value>>.
-
-   -  The << and >> are just delimiters. You must put << at the
-      beginning and >> at the end of your parameter
-
-   -  The 'Question to ask' will be displayed on the left of the string
-      to enter.
-
-   -  The authorized\_value can be omitted if not applicable. If it
-      contains an authorized value category, or branches or itemtype or
-      categorycode or biblio\_framework, a list with the Koha authorized
-      values will be displayed instead of a free field Note that you can
-      have more than one parameter in a given SQL Note that entering
-      nothing at run time won't probably work as you expect. It will be
-      considered as "value empty" not as "ignore this parameter". For
-      example entering nothing for : "title=<<Enter title>>" will
-      display results with title='' (no title). If you want to have to
-      have something not mandatory, use "title like <<Enter title>>" and
-      enter a % at run time instead of nothing
-
-   Examples:
-
-   -  SELECT surname,firstname FROM borrowers WHERE branchcode=<<Enter
-      patrons library\|branches>> AND surname like <<Enter filter for
-      patron surname (% if none)>>
-
-   -  SELECT \* FROM items WHERE homebranch = <<Pick your
-      branch\|branches>> and barcode like <<Partial barcode value here>>
-
-   -  SELECT title , author FROM biblio WHERE frameworkcode=<<Enter the
-      frameworkcode\|biblio\_framework>>
-
-       **Note**
-
-       To generate a date picker calendar to the right of the field when
-       running a report you can use the 'date' keyword like this:
-       <<Enter Date\|date>>
-
-       |image893|
-
-       **Note**
-
-       You have to put "%" in a text box to 'leave it blank'. Otherwise,
-       it literally looks for "" (empty string) as the value for the
-       field.
-
-       **Important**
-
-       In addition to using any authorized value code to generate a
-       dropdown, you can use the following values as well: Framework
-       codes (biblio\_framework), Branches (branches), Item Types
-       (itemtypes) and Patron Categories (categorycode). For example a
-       branch pull down would be generated like this
-       <<Branch\|branches>>
-
-       |image894|
-
-    **Note**
-
-    There is a limit of 10,000 records put on SQL statements entered in
-    Koha. To get around this you want to add 'LIMIT 100000' to the end
-    of your SQL statement (or any other number above 10,000).
 
     **Note**
 
@@ -256,14 +186,110 @@ Fill in the form presented
 
     |image1294|
 
-Once everything is entered click the 'Save Report' button and you'll be
+Once everything is entered click the 'Save report' button and you'll be
 presented with options to run it. Once a report is saved you do not have
 to recreate it you can simply find it on the Saved Reports page and
 :ref:`run <running-custom-reports-label>` or :ref:`edit <edit-custom-reports-label>` it.
 
+.. _report-writing-tips-label:
+
+Report writing tips
+'''''''''''''''''''''''''''''''''''''
+
+**Runtime parameters**
+
+
+If you feel that your report might be too resource intensive you
+might want to consider using runtime parameters to your query.
+Runtime parameters basically make a filter appear before the report
+is run to save your system resources.
+
+There is a specific syntax that Koha will understand as 'ask for
+values when running the report'. The syntax is <<Question to
+ask\|authorized\_value>>.
+
+-  The << and >> are just delimiters. You must put << at the
+   beginning and >> at the end of your parameter
+
+-  The 'Question to ask' will be displayed on the left of the string
+   to enter.
+
+-  The authorized\_value can be omitted if not applicable. If it
+   contains an authorized value category, 'branches', 'itemtype', 
+   'categorycode', 'biblio\_framework', a list with the Koha authorized
+   values will be displayed instead of a free field.
+
+       **Note**
+
+       You can have more than one parameter in a given SQL query.
+
+       **Note**
+
+       You have to put "%" in a text box to 'leave it blank'. Otherwise,
+       it literally looks for "" (empty string) as the value for the
+       field.
+       For example entering nothing for: "title=<<Enter title>>" will 
+       display results with title='' (no title).
+       If you want to have to have something not mandatory, use 
+       "title like <<Enter title>>" and enter a % at run time instead 
+       of nothing.
+
+       **Note**
+
+       To generate a date picker calendar to the right of the field when
+       running a report you can use the 'date' keyword like this:
+       <<Enter Date\|date>>
+
+       |image893|
+
+List of parameters that can be used in runtime parameters
+
++-------------------------+---------------------------------------------------+------------------------------+
+| Parameter               | What the user sees                                | What gets inserted in query  |
++-------------------------+---------------------------------------------------+------------------------------+
+| date                    | date picker                                       | validly formatted date       |
+| branches                | drop down of branch names                         | branch code                  |            
+| itemtypes               | drop down of item type names                      | item type                    |
+| categorycode            | drop down of patron category descriptions         | borrower category code       | 
+| biblio\_framework       | drop down of MARC bibliographic frameworks        | framework code               |
+| (auth-value-category)   | drop down of auth-value descriptions in category  | authorized value             |
+| (nothing)               | text box                                          | entered text                 |
++-------------------------+---------------------------------------------------+------------------------------+
+
+Examples:
+
+   -  SELECT surname, firstname FROM borrowers WHERE branchcode=<<Enter
+      patron's library\|branches>> AND surname like <<Enter filter for
+      patron surname (% if none)>>
+
+   -  SELECT \* FROM items WHERE homebranch = <<Pick your
+      branch\|branches>> and barcode like <<Partial barcode value here>>
+
+   -  SELECT title, author FROM biblio WHERE frameworkcode=<<Enter the
+      frameworkcode\|biblio\_framework>>
+
+
+.. ****************************************
+.. **************    TODO    **************
+.. ****************************************
+
+.. **Querying MARC**
+
+.. It is possible to query the MARC records with the ExtractValue function.
+
+.. **Links**
+
+.. **Runtime variables**
+
+.. **See more results**
+
+.. There is a limit of 10,000 records put on SQL statements entered in 
+   Koha. To get around this you want to add 'LIMIT 100000' to the end
+   of your SQL statement (or any other number above 10,000).
+
 .. _duplicate-report-label:
 
-Duplicate Report
+Duplicate report
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Reports can also be added by duplicating an existing report. Visit the
@@ -279,11 +305,11 @@ existing SQL for easy editing and resaving.
 
 .. _edit-custom-reports-label:
 
-Edit Custom Reports
+Edit custom reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Every report can be edited from the reports lists. To see the list of
-reports already stored in Koha, click 'Use Saved.'
+reports already stored in Koha, click 'Use saved.'
 
 |image896|
 
@@ -303,7 +329,7 @@ The form to edit the report will appear.
 
 .. _running-custom-reports-label:
 
-Running Custom Reports
+Running custom reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once custom reports are saved to Koha, you can run them by going to the
@@ -329,7 +355,7 @@ the results next to the 'Download the report' label and clicking
 
     **Note**
 
-    A Comma Separated Text file is a CSV file and it can be opened by
+    A comma separated text file is a CSV file and it can be opened by
     any spreadsheet application.
 
 .. _send-itemnumbers-to-batch-item-modification-label:
@@ -345,19 +371,19 @@ in the report results.
 
 .. _statistics-reports-label:
 
-Statistics Reports
+Statistics reports
 --------------------------------------
 
 Statistic reports will show you counts and sums. These reports are all
 about numbers and statistics, for reports that return more detailed
-data, use the :ref:`Guided Report Wizard`. These
+data, use the :ref:`guided report wizard`. These
 reports are limited in what data they can look at, so it's often
 recommended to use :ref:`custom reports <custom-reports-label>` for official end
 of the year statistics.
 
 .. _acquisitions-statistics-label:
 
-Acquisitions Statistics
+Acquisitions statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -367,7 +393,7 @@ Acquisitions Statistics
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
-the Column and which will appear in the Row.
+the column and which will appear in the row.
 
 |image902|
 
@@ -391,7 +417,7 @@ amounts spent.
 
 .. _patron-statistics-label:
 
-Patron Statistics
+Patron statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -401,7 +427,7 @@ Patron Statistics
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
-the Column and which will appear in the Row.
+the column and which will appear in the row.
 
 |image906|
 
@@ -416,7 +442,7 @@ manipulate to your needs.
 
 .. _catalog-statistics-label:
 
-Catalog Statistics
+Catalog statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -426,7 +452,7 @@ Catalog Statistics
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
-the Column and which will appear in the Row.
+the column and which will appear in the row.
 
 |image908|
 
@@ -440,7 +466,7 @@ needs.
 
 .. _circulation-statistics-label:
 
-Circulation Statistics
+Circulation statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -450,7 +476,7 @@ Circulation Statistics
     official end of the year statistics.
 
 Using the form provided, choose which value you would like to appear in
-the Column and which will appear in the Row.
+the column and which will appear in the row.
 
 |image910|
 
@@ -492,14 +518,14 @@ Tracking in house use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using the Circulation statistics reporting wizard you can run reports on
-in house usage of items simply by choosing 'Local Use' from the 'Type'
+in house usage of items simply by choosing 'Local use' from the 'Type'
 pull down:
 
 |image912|
 
 .. _serials-statistics-label:
 
-Serials Statistics
+Serials statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -523,7 +549,7 @@ needs.
 
 .. _holds-statistics-label:
 
-Holds Statistics
+Holds statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **Note**
@@ -566,7 +592,7 @@ needs.
 
 .. _most-circulated-items-label:
 
-Most Circulated Items
+Most circulated items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will simply list the items that have the been checked out
@@ -620,7 +646,7 @@ needs.
 
 .. _catalog-by-item-type-label:
 
-Catalog by Item Type
+Catalog by item type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list the total number of items of each item type per
@@ -638,7 +664,7 @@ needs.
 
 .. _lost-items-label:
 
-Lost Items
+Lost items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will allow you to generate a list of items that have been
@@ -648,7 +674,7 @@ marked as Lost within the system
 
 .. _average-loan-time-label:
 
-Average Loan Time
+Average loan time
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This report will list the average time items are out on loan based on
@@ -666,13 +692,13 @@ needs.
 
 .. _report-dictionary-label:
 
-Report Dictionary
+Report dictionary
 ----------------------------------
 
 The report dictionary is a way to pre-define common filters you'd like
 to apply to your reports. This is a good way to add in filters that the
 report wizard doesn't include by default. To add a new definition, or
-filter, click 'New Definition' on the Reports Dictionary page and follow
+filter, click 'New definition' on the reports dictionary page and follow
 the 4 step process.
 
 Step 1: Name the definition and provide a description if necessary
