@@ -3,19 +3,19 @@
 Serials
 =======
 
-Serials actions can be accessed by going to the More menu at the top of
-your screen and choosing Serials or by clicking Serials on the main Koha
+Serials actions can be accessed by going to the 'More' menu at the top of
+your screen and choosing 'Serials' or by clicking 'Serials' on the main Koha
 staff client page. The Serials module in Koha is used for keeping track
 of journals, newspapers and other items that come on a regular schedule.
 As with all modules, make sure you go through the related
-:ref:`Implementation Checklist <serials-configuration-label>` before using the Serials
+:ref:`implementation checklist <serials-configuration-label>` before using the Serials
 module.
 
 -  *Get there:* More > Serials
 
 .. _manage-serial-frequencies-label:
 
-Manage Serial Frequencies
+Manage serial frequencies
 -------------------------------------------
 
 Koha keeps a record of publication frequencies for easy management and
@@ -34,12 +34,12 @@ and create new ones.
 
 .. _manage-serial-numbering-patterns-label:
 
-Manage Serial Numbering Patterns
+Manage serial numbering patterns
 ------------------------------------------------------
 
 Everytime you create a new numbering pattern in serials you can save it
-for later use. These patters are accessible via the Manage numbering
-patterns page.
+for later use. These patters are accessible via the 'Manage numbering
+patterns' page.
 
 -  *Get there:* More > Serials > Manage numbering patterns
 
@@ -63,7 +63,7 @@ pattern' at the top of the list of patterns.
 
 .. _custom-subscription-fields-label:
 
-Custom Subscription Fields
+Custom subscription fields
 ----------------------------------------------
 
 This module will allow you to add custom fields to your serial
@@ -72,33 +72,94 @@ subscriptions for reporting and searching.
 -  *Get there:* Serials > Add subscription fields
 
 To add custom fields simply click the 'Add subscription fields' link on
-the left of the Serial page and choose the 'New field' button
+the left of the Serial page and choose the 'New fields' button
 
 |image1271|
 
-The form that appears will ask for either an authorized value or a marc
+The form that appears will ask for either an authorized value or a MARC
 field to populate the field with
+
+-  Name: enter the name of the field
+   
+-  Authorized value category: you can use :ref:`authorized values <authorized-values-label>` 
+   to fill in this field. 
+
+-  MARC field: enter a MARC field that will be used to fill in this new 
+   field
+
+      **Note**
+
+      You can only choose one of the two options.
+
+      If you choose the authorized value option, you will be able to 
+      fill in the new field upon the :ref:`creation <add-a-subscription-label>` 
+      or :ref:`modification <edit-subscription-label>` of the subscription.
+
+      If you choose the MARC option, the field will be automatically 
+      populated with the corresponding record's value for this MARC 
+      field.
+
+      **Important**
+
+      If you choose the MARC field, make sure you enter it in this 
+      format: field$subfield
+
+      For example: 515$a
+
+-  Searchable: check this box if you want to be able to search your 
+   subscriptions using this field
 
 |image1272|
 
-For example you might want to track which department you're ordering for
-or the collection code for this serial
+**Example 1:** Additional field using :ref:`authorized values <authorized-values-label>`
 
+You might want to track which department you're ordering this serial for
+
+-  In the 'Name' field, enter 'Department'
+   
+-  In the 'Authorized value category' field, choose DEPARTMENT 
+   
+-  Check the 'Searchable' box
+   
 |image1273|
 
-This data will then show when you are adding a subscriptionAdd field
-value
+When you are adding a subscription, the field will be in the 'Additional 
+fields' section with its authorized values drop-down menu.
 
 |image1274|
 
-and when you view the subscription
+When you view the subscription, the field will appear under 'Additional 
+fields'.
 
 |image1275|
 
-and when you search subscriptions (if you chose to make it
-'searchable')
+Because we made the field searchable, it will also be in the serials 
+subscription search.
 
 |image1276|
+
+**Example 2:** Additional field using MARC field
+
+This is particularly useful if you want to view bibliographic 
+information in the subscription detail page. In this example, we will 
+add the 521$a field, which is, in MARC21, the target audience note.
+
+- In the 'Name' field, enter 'Target audience'
+  
+- In the 'MARC field' field, enter '521$a'
+  
+|image1379|
+
+      **Note**
+
+      You will not be able to edit this field from the subscription 
+      form. If you need to add or change the value in this field, 
+      you must go through the :ref:`cataloging module <cataloging-label>`.
+
+When you view the subscription, the field and the information from the 
+bibliographic record will appear under 'Additional fields'.
+
+|image1380|
 
 .. _add-a-subscription-label:
 
@@ -110,7 +171,7 @@ bibliographic record
 
 |image742|
 
-Or by visiting the Serials module and clicking 'New Subscription'
+Or by visiting the Serials module and clicking 'New subscription'
 
 |image743|
 
@@ -135,8 +196,8 @@ record the form will include the bib info).
 -  'Biblio' is the MARC record you'd like to link this subscription to
 
    -  This can be done by searching for an existing record by clicking
-      on the 'Search for Biblio' link below the boxes or by entering the
-      bib number for a record in the first box. Only if you search will
+      on the 'Search for record' link below the boxes or by entering the
+      biblionumber for a record in the first box. Only if you search will
       the field between the parenthesis be filled in.
 
 -  Next you can choose whether a new item is created when receiving an
@@ -153,30 +214,30 @@ record the form will include the bib info).
 
    |image1277|
 
--  'Call Number' is for your item's call number or call number prefix
+-  'Call number' is for your item's call number or call number prefix
 
 -  'Library' is the branch that owns this subscription.
 
    -  If more than one library subscribes to this serial you will need
       to create a subscription for each library
 
-   -  This can be done easily by using the 'Edit as New (Duplicate)'
+   -  This can be done easily by using the 'Edit as new (duplicate)'
       option found on the subscription information page and changing
       only the 'Library' field
 
       |image746|
 
--  Use the 'Public Note' for any notes you would like to appear in the
+-  Use the 'Public note' for any notes you would like to appear in the
    OPAC for the patrons
 
--  'Nonpublic Note' should be used for notes that are only visible to
+-  'Nonpublic note' should be used for notes that are only visible to
    the librarians via the staff client
 
 -  The 'Patron notification' option lets you pick a notice to send to
    patrons who subscribe to updates on this serial via the OPAC.
 
    -  For this option to appear you need to make sure that you have a
-      Routing List notice set up in the :ref:`Notices Tool <notices-&-slips-label>`
+      Routing list notice set up in the :ref:`Notices Tool <notices-&-slips-label>`
 
 -  'Location' is for the shelving location
 
@@ -185,7 +246,7 @@ record the form will include the bib info).
    This mechanism requires that the :ref:`SerialsUpdate.pl cron job
    <serials-update-label>` is set up to run regularly.
 
--  The Staff and OPAC Display options allow you to control how many
+-  The Staff and OPAC display options allow you to control how many
    issues appear by default on bibliographic records in the Staff Client
    and the OPAC
 
@@ -264,7 +325,7 @@ pattern information.
       publication' field
 
    -  You can choose to create your own numbering pattern by choosing
-      'None of the above' and clicking the 'Show/Hide Advanced Pattern'
+      'None of the above' and clicking the 'Show/hide advanced pattern'
       button at the bottom of the form
 
       |image748|
@@ -300,12 +361,54 @@ pattern information.
 
    |image1274|
 
-Click 'Save Subscription' to save the information you have entered.
-`Find sample serial examples in the Serial Pattern Library on the wiki <https://wiki.koha-community.org/wiki/Serial_Pattern_Library>`__.
+Click 'Save subscription' to save the information you have entered.
+`Find sample serial examples in the serial pattern library on the wiki <https://wiki.koha-community.org/wiki/Serial_Pattern_Library>`__.
+
+.. _edit-subscription-label:
+
+Edit a subscription
+-----------------------------------
+
+To edit a subscription, click on 'Edit' and 'Edit subscription' from the 
+subscription page. This will take you back to the same form as the one 
+used when :ref:`creating a new subscription <add-a-subscription-label>`.
+
+|image1376|
+
+You can also batch edit subscriptions. To do so, search for the subscriptions 
+you want to change. In the results, check the boxes next to the subscriptions 
+to edit. The link 'Edit selected serials' will appear.
+
+|image1377|
+
+From there, you can change: 
+
+-  the vendor
+   
+-  the shelving location
+   
+-  the library
+   
+-  the item type
+   
+-  the public note
+   
+-  the nonpublic note
+   
+-  whether or not to create an item when receiving an issue
+   
+-  the expiration date
+
+|image1378|
+
+      **Note**
+
+      Leave the field unchanged to keep the original values.
+
 
 .. _receive-issues-label:
 
-Receive Issues
+Receive issues
 -----------------------------------
 
 Issues can be marked as received from several locations. To find a
@@ -314,18 +417,18 @@ search for the serial you'd like to receive issues for:
 
 |image750|
 
-From the search results you can click the 'Serial Receive' link or you
+From the search results you can click the 'Serial receive' link or you
 can click on the subscription title and then click the 'Receive' button.
 
 |image751|
 
-The final way to receive serials is from the 'Serial Collection' page.
+The final way to receive serials is from the 'Serial collection' page.
 To the left of the Subscription summary page there is a menu with a link
-to 'Serial Collection'
+to 'Serial collection'
 
 |image752|
 
-From the page that opens up you can click 'Edit Serial' with the issue
+From the page that opens up you can click 'Edit serial' with the issue
 you want to receive checked.
 
 |image753|
@@ -343,7 +446,7 @@ All three of these options will open up the issue receive form:
    |image755|
 
 -  If your issue has a supplemental issue with it, fill in the
-   Supplemental Issue information.
+   Supplemental issue information.
 
    -  Key the entire numbering in the box after "Supplemental issue" no
       numbering will be inherited/auto-filled from the main issue, and
@@ -361,7 +464,7 @@ All three of these options will open up the issue receive form:
 -  Once you have entered your info you can click 'Save'
 
 If you are receiving multiple issues at once, or have marked an issue as
-'Late' or 'Missing' there you can click the 'Generate Next' button below
+'Late' or 'Missing' there you can click the 'Generate next' button below
 the list of issues.
 
 |image756|
@@ -373,7 +476,7 @@ multiple issues at once.
 
 .. _create-a-routing-list-label:
 
-Create a Routing List
+Create a routing list
 ----------------------------------------
 
 A routing list is a list of people who receive the serial before it goes
@@ -381,7 +484,7 @@ to the shelf. To enable routing lists you want to set your
 :ref:`RoutingSerials` preference to 'Add'.
 
 When on the subscription page you will see a link to the left that reads
-'Create Routing List' or 'Edit Routing List'
+'Create routing list' or 'Edit routing list'
 
 |image757|
 
@@ -413,11 +516,11 @@ then patrons listed in the routing list will automatically be added to
 the holds list for the issue.
 
 To see a list of all of the routing lists a specific patron is on visit
-the :ref:`Routing Lists tab <routing-lists-label>` on their patron record.
+the :ref:`Routing lists tab <routing-lists-label>` on their patron record.
 
 .. _subscriptions-in-staff-client-label:
 
-Subscriptions in Staff Client
+Subscriptions in staff client
 -----------------------------------------------------
 
 Subscription information will appear on bibliographic records under the
@@ -425,7 +528,7 @@ Subscription information will appear on bibliographic records under the
 
 |image762|
 
-Clicking the 'Subscription Details' link will take you to the
+Clicking the 'Subscription details' link will take you to the
 Subscription summary page in the staff client.
 
 |image763|
@@ -482,7 +585,7 @@ regarding the subscription
 
 .. _claim-late-serials-label:
 
-Claim Late Serials
+Claim late serials
 --------------------------------------
 
 Koha can send email messages to your serial vendors if you have late
@@ -512,7 +615,7 @@ button.
 
 .. _check-serial-expiration-label:
 
-Check Serial Expiration
+Check serial expiration
 -----------------------------------------------
 
 When adding serials you enter a subscription length, using the check
@@ -541,7 +644,7 @@ was for 16 issues, it will be renewed for another 16 issues).
 
 .. _renewing-serials-label:
 
-Renewing Serials
+Renewing serials
 -----------------------------------
 
 If your serial subscription has expired you won't be able to receive
@@ -551,7 +654,7 @@ the top of your subscription detail page.
 |image775|
 
 Another option is to click the 'Renew' link to the right of the
-subscription on the Serial Collection page.
+subscription on the Serial collection page.
 
 |image776|
 
@@ -563,14 +666,14 @@ renewal options.
 -  The start date should be the date your subscription period starts.
 
 -  For the subscription length you'll want to fill in one of the three
-   fields presented: Number of num (issues), Number of months or Number
+   fields presented: Number of issues, Number of months or Number
    of weeks.
 
 -  Finally enter any notes you might have about this renewal.
 
 .. _searching-serials-label:
 
-Searching Serials
+Searching serials
 -------------------------------------
 
 Once in the Serials module there is basic search box at the top that you
@@ -578,7 +681,7 @@ can use to find subscriptions using any part of the ISSN and/or title.
 
 |image778|
 
-You can also click the 'Advanced Search' link to the right of the
+You can also click the 'Advanced search' link to the right of the
 'Submit' button to do a more thorough search of your serials.
 
 |image779|
