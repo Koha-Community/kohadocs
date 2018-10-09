@@ -62,7 +62,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Koha Manual'
-copyright = '2017, Koha Community'
+copyright = '2018, Koha Community'
 author = 'Koha Community'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -178,7 +178,7 @@ html_static_path = ['_static']
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.
 #
-# html_last_updated_fmt = None
+html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
