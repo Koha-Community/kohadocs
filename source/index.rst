@@ -26,6 +26,7 @@ Koha 18.11 Manual (en)
    searching
    plugins
    about
+   ILL_requests
    implementation_checklist
    cron_jobs
    webservices
