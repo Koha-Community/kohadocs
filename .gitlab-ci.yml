@@ -36,10 +36,10 @@ image: debian:unstable
 production:
     artifacts:
        paths:
-        - build/
+        - build/en/html
     cache:
        paths:
-        - build/
+        - build/en/html
     stage: deploy
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make rsync
