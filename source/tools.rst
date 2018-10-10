@@ -1677,6 +1677,115 @@ collection, also letting them know where the item needs to be sent.
 
 |image292|
 
+.. _patrons-stock_rotation
+
+Stock Rotation
+~~~~~~~~~~~~~~
+
+The stock rotation tool allows library staff to create rotation plans and add 
+items to them. A cronjob is then used to cycle these items round the specified 
+libraries on the rotation plan, moving them to the next stage after the 
+prescribed period of time has passed at the current stage. Email notices may be
+used to provide the library branches with a list of items to be put in-transit 
+to the next branch and if an item is found to be on loan at the time that it 
+should be transfered then an alert will be displayed when it is next returned.
+
+From the stock rotation tool page you can add new rotation plans and see a 
+summary of your currently configured rotation plans. You can then edit plan 
+details, activate and deactivate plans and manage stages and items on a given 
+rotation plan.
+
+|image1381|
+
+This tool utilises a cron job that must be configured to run on a daily basis.
+
+Editing rota details
+^^^^^^^^^^^^^^^^^^^^
+
+|image1382|
+
+Name: A clear name or code to identify the rota
+
+Cyclical: Denotes whether items remain (No) at the last library on the rotation
+plan upon reaching the end of the rota or whether they continue (Yes) to rotate,
+returning back to the first library on the rotation plan once they have
+completed their alloted time at the last library, indefinitely until manually
+removed from the rota.
+
+Active: Denotes whether a rota is active and as such whether items on it are
+rotating. It also governs whether items may be added to and removed from the
+rota.  A rota may be switched between active and inactive at any time allowing
+for rota maintanence.
+
+Description: One may optionally add an expanded description of the rota for
+display in summary views.
+
+
+Managing rota stages
+^^^^^^^^^^^^^^^^^^^^
+
+|image1383|
+
+Stages may be edited, added, removed and re-ordered at any time from this page.
+
+Library: The library the item will be at during this stage
+
+Duration: The amount of time the item should stage at this stage
+
+
+Managing rota items - Tool view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|image1384|
+
+Items can be added to a rota individually (by barcode) or in bulk (via the
+upload of a line delimited barcode file) on this page.
+
+You will also be presented with a summary of all items on the rota with their
+current location and you have the options to immediately progress items, mark
+items as 'in demand' and remove an item from rotation.
+
+In demand: If an item is marked as 'in demand' then the duration the item will
+stay at it's current stage will be doubled compared to what is set in the
+rota. This is often used for items that are found to be unexpectedly popular at
+a particular library.
+
+Managing rota items - Catalog view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|image1385|
+
+Rotating items may also be managed from the catalog view: When stock rotation is
+enabled a new menu tab 'Rota' will appear on a catalog records detail view.
+
+All attached items will appear in the summary view with their current status in
+relation to rotas and the option to mark items as 'in demand' or immediately
+progress them.  You can also remove items from rotation and add items to rotas
+here too.
+
+Managing rotation notices
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Stock rotation can send email notices to branch libraries to aid in selecting
+the items due for rotation. Branch 'Reply-to' addresses will be used in
+preference to 'Email' addresses for the notice recipients.
+
+The contents of the notices can be customised in the normal manor through the
+notices tool and the relevant notice has the code SR_SLIP.
+
+Permissions
+^^^^^^^^^^^
+
+The stock rotation tool uses two distinct permissions:
+
+manage_rotas:
+  this governs a users ability to create, update and delete a rota.
+
+manate_rota_items:
+  this governs a users ability to add, remove and progress
+items on a rota.
+
+
 .. _catalog-label:
 
 Catalog
