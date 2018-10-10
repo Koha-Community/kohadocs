@@ -1,4 +1,3 @@
-
 before_script:
   # Install ssh-agent if not already installed, it is required by Docker.
   # (change apt-get to yum if you use a CentOS-based image)
@@ -36,6 +35,9 @@ image: debian:unstable
 
 production:
     artifacts:
+       paths:
+        - build/
+    cache:
        paths:
         - build/
     stage: deploy
