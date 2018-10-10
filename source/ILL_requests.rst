@@ -29,51 +29,65 @@ Create ILL requests
 
 -  *Get there:* More > ILL requests
 
-|image|
+|image1381|
 
 -  Choose ‘New ILL request’ and then Freeform.
 
-**Note:** 
+    **Note**
 The images shown here are for the FreeFrom backend only.
 
-|image|
+|image1382|
 
 -  Enter a Type: Book, Article, Journal, Other.
+
 -  In the next two sections enter as much as information as you can including chapter/article/part if applicable.
 
-|image|
+|image1383|
 
 -  Add custom fields, for example if you wished to add a note.
+
 -  Under the borrower options enter the library branch you would like the request to be sent to.
 
 Click on ‘Create’ and you will be shown a Request details summary page.  Click on the ‘Confirm request’ button and you will see the following confirmation message:
 
-|image|
+|image1384|
 
 Click ‘Confirm request’ again.  From the main ILL requests screen you can see all of your ILL requests and their status.  Alternatively you can click on ‘View requests’ at any time. The request will have the status ‘New request’. 
 
 .. _managing-ILL-requests-label:
 
 Managing ILL requests
-----------------------
+------------------------
 
 Click on the ‘Manage request’ button in the final column. Depending on the current status of the request you may see some or all of the following buttons:
 
--  Edit request - you can edit the borrowernumber, biblionumber, branch and can add notes.
--  Confirm request - place the request with a document supply service using a backend such as BLDSS.
--  Place request with partners -  place the request via email with a :ref:`partner library <place-request-with-partners-label>`
--  Delete - fully delete the request.  Details of deleted requests are not retained in Koha.
--  Revert request – following a status of ‘Requested’ or ‘Requested from partners’ library staff can cancel the request from the external source.  The status reverts to ‘New’
--  Mark completed - used when the ILL request has been fulfilled. 
+-  Edit request
 
-The full list of ILL statuses are:
+   -  you can edit the borrowernumber, biblionumber, branch and can add notes.
+-  Confirm request
 
--  New request
--  Requested
--  Requested from partners 
--  Request reverted 
--  Cancellation requested – a patron has requested cancellation from the OPAC.
--  Completed
+   -  place the request with a document supply service using a backend such as BLDSS.
+-  Place request with partners
+
+   -  place the request via email with a :ref:`partner library <place-request-with-partners-label>`
+-  Delete
+
+   -  fully delete the request.  Details of deleted requests are not retained in Koha.
+-  Revert request
+
+   -  following a status of ‘Requested’ or ‘Requested from partners’ library staff can cancel the request from the external source.  The status reverts to ‘New’
+-  Mark completed
+
+   -  used when the ILL request has been fulfilled. 
+
+-  The full list of ILL statuses are:
+
+   -  New request
+   -  Requested
+   -  Requested from partners 
+   -  Request reverted 
+   -  Cancellation requested – a patron has requested cancellation from the OPAC.
+   -  Completed
 
 .. _place-request-with-partners-label:
 
@@ -83,7 +97,9 @@ Place request with partners
 If you have a network of partner libraries which permit ILL requests you can manage this through Koha.  First you need to create your partner library accounts:
 
 -  You will need to set up a :ref:`patron category <patron-categories-label>` with the code ILLLIBS.
+
 -  You will need to create a patron account with this category for each partner library.  
+
 -  Each library must have an email address as this will be the mechanism for sending the inter-library loan request.
 
 You can now use the 'Place request with partners' option when processing requests. 
