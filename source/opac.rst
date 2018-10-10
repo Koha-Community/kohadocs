@@ -1222,7 +1222,7 @@ And will receive confirmation of their request.
 
 .. _my-interlibrary-loan-requests-label:
 
-My interlibrary loan requests
+My Interlibrary Loan Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons will have the option to make ILL requests when logged in to their OPAC account.  From here they can view their existing requests and place new ones.
