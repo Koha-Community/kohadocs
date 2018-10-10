@@ -1,6 +1,3 @@
-artifacts:
-  paths:
-    - build/
 
 before_script:
   # Install ssh-agent if not already installed, it is required by Docker.
@@ -38,6 +35,9 @@ image: debian:unstable
 #  - master
 
 production:
+    artifacts:
+       paths:
+        - build/
     stage: deploy
     script:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling make rsync
