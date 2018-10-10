@@ -29,20 +29,20 @@ Create ILL requests
 
 -  *Get there:* More > ILL requests
 
-|image1381|
+|image1386|
 
 -  Choose ‘New ILL request’ and then Freeform.
 
     **Note**
 The images shown here are for the FreeFrom backend only.
 
-|image1382|
+|image1387|
 
 -  Enter a Type: Book, Article, Journal, Other.
 
 -  In the next two sections enter as much as information as you can including chapter/article/part if applicable.
 
-|image1383|
+|image1388|
 
 -  Add custom fields, for example if you wished to add a note.
 
@@ -50,7 +50,7 @@ The images shown here are for the FreeFrom backend only.
 
 Click on ‘Create’ and you will be shown a Request details summary page.  Click on the ‘Confirm request’ button and you will see the following confirmation message:
 
-|image1384|
+|image1389|
 
 Click ‘Confirm request’ again.  From the main ILL requests screen you can see all of your ILL requests and their status.  Alternatively you can click on ‘View requests’ at any time. The request will have the status ‘New request’. 
 
