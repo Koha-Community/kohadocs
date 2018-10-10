@@ -1220,7 +1220,7 @@ And will receive confirmation of their request.
 
 |image1032|
 
-.. _purchase-suggestions-label:
+.. _my-interlibrary-loan-requests-label:
 
 My interlibrary loan requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1229,10 +1229,7 @@ If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons 
 
 |image1373|
 
-Placing a new interlibrary loan request
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Click on ‘Create a new request’ and choose a request form. 
+To place a new interlibrary loan request click on ‘Create a new request’ and choose a request form. 
 
 |image1374|
 
@@ -1251,9 +1248,6 @@ Complete the publication details as fully as possible.  Depending on the form in
 Click on 'Create' to submit your request to the library for processing.
 
 Your submitted request will be listed with a status of ‘New request’.  Once processed the status will be updated to ‘Requested’.
-
-Editing requests
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Click on ‘View’ to make changes or cancel your request.
 
