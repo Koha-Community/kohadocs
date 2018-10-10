@@ -1372,3 +1372,7 @@
 .. |image1383| image:: images/tools/stockrotation/sr_manage_stages.png
 .. |image1384| image:: images/tools/stockrotation/sr_manage_items.png
 .. |image1385| image:: images/tools/stockrotation/sr_catalog_view.png
+.. |image1386| image:: images/ILLrequests/ILLformpickerstaff.png
+.. |image1387| image:: images/ILLrequests/CreateILLstaff1.png
+.. |image1388| image:: images/ILLrequests/CreateILLstaff2.png
+.. |image1389| image:: images/ILLrequests/Confirmrequeststaff.png
