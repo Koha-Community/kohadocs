@@ -1367,3 +1367,7 @@
 .. |image1378| image:: images/serials/editbatch.png
 .. |image1379| image:: images/serials/addmarcfield.png
 .. |image1380| image:: images/serials/showfieldsmarc.png
+.. |image1381| image:: images/ILLrequests/ILLformpickerstaff.png
+.. |image1382| image:: images/ILLrequests/CreateILLstaff1.png
+.. |image1383| image:: images/ILLrequests/CreateILLstaff2.png
+.. |image1384| image:: images/ILLrequests/Confirmrequeststaff.png
