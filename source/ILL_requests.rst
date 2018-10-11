@@ -1,3 +1,5 @@
+.. include:: images.rst
+
 ILL requests / Interlibrary loans
 ===================================
 

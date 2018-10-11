@@ -1,3 +1,5 @@
+.. include:: images.rst
+
 About Koha
 ==========
 
@@ -21,7 +23,7 @@ server configuration. For more information how to specify time zones per
 instance, see
 https://wiki.koha-community.org/wiki/Time_Zone_Configuration
 
-|image1065|
+ |image1065|
 
 .. _perl-modules-label:
 
