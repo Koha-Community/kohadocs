@@ -1682,13 +1682,23 @@ collection, also letting them know where the item needs to be sent.
 Stock Rotation
 ~~~~~~~~~~~~~~
 
-The stock rotation tool allows library staff to create rotation plans and add 
-items to them. A cronjob is then used to cycle these items round the specified 
-libraries on the rotation plan, moving them to the next stage after the 
-prescribed period of time has passed at the current stage. Email notices may be
-used to provide the library branches with a list of items to be put in-transit 
-to the next branch and if an item is found to be on loan at the time that it 
-should be transfered then an alert will be displayed when it is next returned.
+Stock Rotation helps to spread resources more fairly amongst library branches
+and allows patrons to see a wider range of titles.
+
+Items are popular whilst they are new at a particular branch. However, their
+use often tails off over time. This tool empowers librarians to automate the
+movement of items on to another branch before usage declines and thereby
+extends the items useful life.
+
+Library staff create rotation plans and then assign them to items. A cronjob
+is then used to cycle these items round the specified libraries on the
+rotation plan, moving them to the next stage after the prescribed period
+of time has passed at the current stage.
+
+Email notices may be used to provide the library branches with a list of
+items to be put in-transit to the next branch and if an item is found to be
+on loan at the time that it should be transfered then an alert will be
+displayed when it is next returned.
 
 From the stock rotation tool page you can add new rotation plans and see a 
 summary of your currently configured rotation plans. You can then edit plan 
