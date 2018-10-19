@@ -11620,7 +11620,7 @@ When the value of this system preference is set to 'do', Koha will look at the
 patron's circulation history to see if they have checked this item out before.
 An alert will show up on the screen indicating that patron has indeed checked
 this item out.  Staff will be prompted to allow the checkout to occur.
-If the vaulue is set to 'don't', Koha will not check the patron's circulation
+If the value is set to 'don't', Koha will not check the patron's circulation
 history. When the value is set to 'Unless overridden, do', this will check the
 patron's circulation history even if there are fines, fees, and/or holds on the
 patron's account.  Lastly, if the value is set to 'Unless overridden, don't',
