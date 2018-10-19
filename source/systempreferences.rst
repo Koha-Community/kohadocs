@@ -11625,10 +11625,12 @@ Description:
 
 -  If the value is set to 'do not', Koha will not check the patron's circulation
    history.
+
 -  When the value is set to 'Unless overridden, do', this will check the
    patron's circulation history unless the patron's :ref:`personal setting 
    <add-a-new-patron>` or the :ref:`patron category setting <adding-a-patron-category>` 
    specifically say not to.
+   
 -  Lastly, if the value is set to 'Unless overridden, do not',
    Koha will not check circulation history unless the patron's :ref:`personal 
    setting <add-a-new-patron>` or the :ref:`patron category setting <adding-a-
