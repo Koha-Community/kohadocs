@@ -894,6 +894,10 @@ To add a new patron category click 'New category' at the top of the page
 
     |image1204|
 
+-  You can set the preference for checking the patron's circulation history 
+   when checking out an item. The default value for this is set in the 
+   :ref:`CheckPrevCheckout` system preference.
+
 -  Finally you can assign advanced messaging preferences by default to a
    patron category
 
