@@ -123,6 +123,12 @@ Once there you can add a new patron.
       beginning you can fix that here
 
    -  Sort 1 and 2 are used for statistical purposes within your library
+      
+   -  'Check for previous checkouts' is used to set the patron's personal preference 
+      regarding checking their circulation history before checking out an item, 
+      letting them know if they have already borrowed this item. This overrides 
+      the setting of the :ref:`patron category <adding-a-patron-category>` and of 
+      the :ref:`CheckPrevCheckout` system preference.
 
 -  Next, the library set-up section includes additional library settings
 
