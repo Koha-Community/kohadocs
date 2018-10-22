@@ -246,13 +246,7 @@ which meant some notices were running onto multiple pages. That syspref
 says to truncate the print notice at that page length and put in a
 message about go check your OPAC account for the full list.
 
-The print and email overdues use the same notice file. The print notices
-for holds are different -- there's a separate HOLD\_PRINT notice file
-and the system uses it if there's no email address. Then a nightly cron
-job runs to gather those up from the message queue and put them in an
-HTML file in the notice directory, as above.
-
-The cron entry is gather\_print\_notices.pl /tmp/noticedir
+The cron entry is :ref:`gather\_print\_notices.pl <print-hold-notices>` /tmp/noticedir
 
 .. _unable-to-renew-items-label:
 
