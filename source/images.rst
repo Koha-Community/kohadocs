@@ -1376,3 +1376,4 @@
 .. |image1387| image:: images/ILLrequests/CreateILLstaff1.png
 .. |image1388| image:: images/ILLrequests/CreateILLstaff2.png
 .. |image1389| image:: images/ILLrequests/Confirmrequeststaff.png
+.. |image1390| image:: images/circ/prevcheckout.png
