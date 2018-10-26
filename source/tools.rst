@@ -2460,12 +2460,12 @@ collection, also letting them know where the item needs to be sent.
 
 |image292|
 
-.. _patrons-stock_rotation
+.. _stock-rotation-label:
 
-Stock Rotation
+Stock rotation
 ~~~~~~~~~~~~~~
 
-Stock Rotation helps to spread resources more fairly amongst library branches
+Stock rotation helps to spread resources more fairly amongst library branches
 and allows patrons to see a wider range of titles.
 
 Items are popular whilst they are new at a particular branch. However, their
