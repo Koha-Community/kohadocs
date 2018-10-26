@@ -178,7 +178,7 @@ and choosing 'Enrollment' from the 'Actions' button.
 Comments
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Comments
+-  *Get there:* More > Tools > Patrons and circulation > Comments
 
 All comments added by patrons via the OPAC to bibliographic records
 require moderation by the librarians. If there are comments awaiting
@@ -187,12 +187,12 @@ below the module list:
 
 |image251|
 
-and next to the Comments tool on the Tools Module
+and next to the Comments tool on the Tools page
 
 |image1219|
 
 To moderate comments click on the notification on the main dashboard or
-go directly to the Comments Tool and click 'Approve' or 'Delete' to the
+go directly to the Comments tool and click 'Approve' or 'Delete' to the
 right of the comments awaiting moderation.
 
 |image252|
