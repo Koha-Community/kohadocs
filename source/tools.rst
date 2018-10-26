@@ -987,14 +987,14 @@ items
 
 .. _patron-card-creator-label:
 
-Patron Card Creator
+Patron card creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patron Card Creator
+-  *Get there:* More > Tools > Patron card creator
 
-The Patron Card Creator allow you to use layouts and templates which you
+The patron card creator allow you to use layouts and templates which you
 design to print your custom patron cards on your printer. Here are some
-of the features of the Patron Card Creator module:
+of the features of the patron card creator module:
 
 -  Customize patron card layouts with text retrieved from the Koha
    patron data
@@ -1013,7 +1013,7 @@ of the features of the Patron Card Creator module:
 Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Patron Card Creator > Manage > Layouts
+-  *Get there:* More > Tools > Patron card creator > Manage > Layouts
 
 A layout defines the text and images that will be printed on to the card
 and where it will appear.
@@ -1025,7 +1025,7 @@ and where it will appear.
 
 .. _patron-add-a-layout-label:
 
-Add a Layout
+Add a layout
 '''''''''''''''''''''''''''''''''
 
 If you have no layouts defined, you will add a new layout by clicking
@@ -1049,10 +1049,10 @@ at the top of the page there is still the 'New layout' button.
 
    -  **Note**
 
-          A Postscript Point is 1/72" an Adobe Agate is 1/64", an Inch
+          A Postscript Point is 1/72", an Adobe Agate is 1/64", an Inch
           is 25.4 SI Millimeters
 
--  Next note if this layout is for the front or the back of the patron
+-  Next, note if this layout is for the front or the back of the patron
    card
 
    -  **Note**
@@ -1076,10 +1076,10 @@ at the top of the page there is still the 'New layout' button.
    location of the text on the card using the lower X and Y coordinates
 
 -  In order to show the barcode and the patron card number you will need
-   to check the 'Print Card Number as Barcode' option. This will turn
+   to check the 'Print card number as barcode' option. This will turn
    the patron card number into a barcode. If you want the number to
-   print in human readable format you will need to check the 'Print Card
-   Number as Text Under Barcode' option.
+   print in human readable format you will need to check the 'Print card
+   number as text under barcode' option.
 
 -  Finally you can choose up to two images to print on the card.
 
@@ -1087,8 +1087,8 @@ at the top of the page there is still the 'New layout' button.
       can resize to meet your needs.
 
    -  The other image can be something like a library logo or symbol
-      that you uploaded using the ':ref:`Manage
-      Images <manage-images-label>`' module of the Patron Card Creator
+      that you uploaded using the ':ref:`manage
+      images <manage-images-label>`' module of the patron card creator
       Tool.
 
     **Important**
@@ -1105,7 +1105,7 @@ After saving, your layouts will appear on the 'Manage layouts' page.
 Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Patron Card Creator > Manage > Card
+-  *Get there:* More > Tools > Patron card creator > Manage > Card
    templates
 
 A template describes the arrangement of labels on the label sheet/card
@@ -1118,7 +1118,7 @@ sample sheet.
 
 .. _patron-add-a-template-label:
 
-Add a Template
+Add a template
 '''''''''''''''''''''''''''''''''''''
 
 To add a new template click on the 'New template' button at the top of
@@ -1130,16 +1130,16 @@ But in the top of the page there is still the 'New template' button.
 |image264|
 
 Using the form that appears after pressing either 'Edit' or 'New
-template'you can define the template for your sheet of labels or cards.
+template' you can define the template for your sheet of labels or cards.
 
 |image265|
 
 -  Template ID is simply a system generated unique id
 
--  Template Code should be the name of this template to identify it on a
+-  Template code should be the name of this template to identify it on a
    list of templates
 
--  You can use the Template Description to add additional information
+-  You can use the template description to add additional information
    about the template
 
 -  The Units pull down is used to define what measurement scale you're
@@ -1149,7 +1149,7 @@ template'you can define the template for your sheet of labels or cards.
 
    -  **Note**
 
-          A Postscript Point is 1/72" an Adobe Agate is 1/64", an Inch
+          A Postscript Point is 1/72", an Adobe Agate is 1/64", an Inch
           is 25.4 SI Millimeters
 
 -  The measurements (page height, page width, card width, card height)
@@ -1189,7 +1189,7 @@ After saving, your templates will appear on the 'Manage templates' page.
 Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Patron Card Creator > Manage > Profiles
+-  *Get there:* More > Tools > Patron card creator > Manage > Profiles
 
 A profile is a set of "adjustments" applied to a given
 :ref:`template <patron-templates-label>` just prior to printing which compensates
@@ -1205,11 +1205,11 @@ profile.
 
 .. _patron-add-a-profile-label:
 
-Add a Profile
+Add a profile
 '''''''''''''''''''''''''''''''''''
 
 To add a new profile, you want to click on the 'Profiles' button at the
-top of your page and choose 'New Profile'
+top of your page and choose 'New profile'
 
 |image268|
 
@@ -1221,7 +1221,7 @@ currently available profiles for editing.
 
 |image269|
 
--  The Printer Name and Paper Bin do not have to match your printer
+-  The Printer name and Paper bin do not have to match your printer
    exactly, they are for your reference so you can remember what printer
    you have set the profile for.
 
@@ -1241,7 +1241,7 @@ currently available profiles for editing.
 
    -  **Note**
 
-          A Postscript Point is 1/72" an Adobe Agate is 1/64", an Inch
+          A Postscript Point is 1/72", an Adobe Agate is 1/64", an Inch
           is 25.4 SI Millimeters
 
 -  Offset should be used when the entire image is off center either
@@ -1259,7 +1259,7 @@ currently available profiles for editing.
       horizontal creep should be set to (minus) -0.03 " to make up for
       this difference.
 
-After saving, your profiles will appear on the 'Manage Printer Profiles'
+After saving, your profiles will appear on the 'Manage printer profiles'
 page.
 
 |image271|
@@ -1272,14 +1272,14 @@ templates and choose to edit the template that this profile is for.
 Batches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Patron Card Creator > Manage > Card
+-  *Get there:* More > Tools > Patron card creator > Manage > Card
    batches
 
 A batch is a collection of patrons for whom you want to generate cards.
 
 .. _patron-add-a-batch-label:
 
-Add a Batch
+Add a batch
 '''''''''''''''''''''''''''''''
 
 To add a new batch, you want to click on the 'New batches' button at the
@@ -1294,7 +1294,7 @@ be processed in this batch.
 
 |image1225|
 
-After choosing the 'Add item(s)' button the Patron Search window pops
+After choosing the 'Add item(s)' button the patron search window pops
 up.
 
 |image1226|
@@ -1353,10 +1353,10 @@ will not be able to print to the right place per your templates.
 
 .. _manage-images-label:
 
-Manage Images
+Manage images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Patron Card Creator > Manage > Images
+-  *Get there:* More > Tools > Patron card creator > Manage > Images
 
 Images uploaded using this tool will appear on the menu when creating
 :ref:`patron card layouts <patron-card-layouts-label>`. You are limited in how many
