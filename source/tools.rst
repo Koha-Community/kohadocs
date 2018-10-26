@@ -1813,10 +1813,10 @@ save your changes.
 
 .. _export-data-(marc-&-authorities)-label:
 
-Export Data (MARC & Authorities)
+Export data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Catalog > Export Data
+-  *Get there:* More > Tools > Catalog > Export data
 
 Koha comes with a tool that will allow you to export your bibliographic,
 holdings and/or authority data in bulk. This can be used to send your
@@ -1825,7 +1825,7 @@ backup purposes.
 
 .. _export-bibliographic-records-label:
 
-Export Bibliographic Records
+Export bibliographic records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At the top of the screen you need to pick what data you're exporting. If
@@ -1901,7 +1901,7 @@ information you want to click the 'Export bibliographic records' tab.
 
 .. _export-authority-records-label:
 
-Export Authority Records
+Export authority records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 At the top of the screen you need to pick what data you're exporting. If
