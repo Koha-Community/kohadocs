@@ -748,7 +748,7 @@ information in these notices. Here are some of what those notices do:
       any code and define multiple different messages for different
       patron categories and notice levels
 
-   -  Requires that you set :ref:`Overdue notice/Status
+   -  Requires that you set :ref:`Overdue notice/status
       triggers <overdue-notice/status-triggers-label>`
 
 -  ORDERED
@@ -930,11 +930,11 @@ those slips are used for:
 
 .. _overdue-notice/status-triggers-label:
 
-Overdue Notice/Status Triggers
+Overdue notice/status triggers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Overdue
-   Notice/Status Triggers
+-  *Get there:* More > Tools > Patrons and circulation > Overdue
+   notice/status triggers
 
 In order to send the overdue notices that you defined using the
 :ref:`Notices <notices-&-slips-label>` tool, you need to first set the triggers to have
@@ -953,7 +953,7 @@ these messages.
     delay may or may not include days the library is closed based on the
     :ref:`holiday calendar <calendar-label>`.
 
-The Overdue Notice/Status Triggers tool gives the librarian the power to
+The Overdue notice/status triggers tool gives the librarian the power to
 send up to three notices to each patron type notifying them of overdue
 items
 
