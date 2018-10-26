@@ -1552,11 +1552,11 @@ Finally you can find tags by using the filters on the left.
 
 .. _upload-patron-images-label:
 
-Upload Patron Images
+Upload patron images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Upload Patron
-   Images
+-  *Get there:* More > Tools > Patrons and circulation > Upload patron
+   images
 
 Patron images can be uploaded in bulk if you are :ref:`allowing patron
 images <patronimages-label>` to be attached to patron records. These images
@@ -1573,7 +1573,7 @@ can also be used when creating :ref:`patron cards <patron-card-creator-label>`.
 
 -  Zip up the text file and the image files
 
--  Go to the Upload Patron Images Tool
+-  Go to the Upload patron images tool
 
    |image290|
 
