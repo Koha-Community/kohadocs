@@ -1592,209 +1592,6 @@ can also be used when creating :ref:`patron cards <patron-card-creator-label>`.
     is recommended that the image be 200x300 pixels, but smaller images
     will work as well.
 
-.. _rotating-collections-label:
-
-Rotating Collections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  *Get there:* More > Tools > Catalog > Rotating Collections
-
-Rotating Collections is a tool for managing collections of materials
-that frequently get shifted from library to library. It adds the ability
-to store not only an item's home library and current location but also
-information about where it is supposed to be transferred to next to
-ensure that all items in the collection are sent to the correct library.
-When an item in a rotating collection is checked in, library staff is
-notified that the item is part of a rotating collection and which branch
-it should be sent to if it is not at the correct one.
-
-    **Important**
-
-    The :ref:`AutomaticItemReturn` system preference
-    must be set to "Don't automatically transfer items to their home
-    library when they are returned" for Rotating Collections to function
-    properly.
-
--  To create a new rotating collection, click the "New Collection"
-   button, fill in the Title and Description, and click Submit. Once
-   submitted you'll see "Collection Name added successfully"; click
-   "Return to rotating collections home" to return to the main Rotating
-   Collections management page (or click Rotating Collections in the
-   sidebar).
-
--  To add items to a collection, click "Add or remove items" next to the
-   collection's name in the list of collections. Under "Add or remove
-   items" scan or type in the barcode of the item you wish to add to the
-   collection, and hit Enter or click Submit if necessary.
-
--  To remove an item from a collection, either click Remove next to the
-   item's barcode in the list of items within the collection or check
-   the "Remove item from collection" box next to the Barcode text box
-   under "Add or remove items, and scan or type in the barcode, clicking
-   Submit or hitting Enter if necessary. Note: The "Remove item from
-   collection" checkbox will remain checked as long as you are on the
-   "Add or remove items" page, unless you uncheck it, to facilitate
-   quickly removing a number of items at a time by scanning their
-   barcodes.
-
-.. _transfer-a-rotating-collection-label:
-
-Transfer a Rotating Collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Transferring a collection will:
-
--  Change the current location of the items in that collection to the
-   library it is to be transferred to
-
--  Initiate a transfer from its original current location/holding
-   library to the current location/holding library it is to be rotated
-   to. When a library receives a collection they will need to check in
-   the items to complete the transfer.
-
-You can transfer a collection in one of two ways:
-
--  From the main Rotating Collections page, click on Transfer next to
-   the title of the collection you wish to transfer; choose the library
-   you wish to transfer the collection to and click "Transfer
-   collection".
-
--  Or, from the "add or remove items" page for a collection, you can
-   click the Transfer button, choose the library you wish to transfer
-   the collection to and click "Transfer Collection".
-
-    **Important**
-
-    In order to complete the transfer process, the library receiving the
-    rotating collection should check in all items from the collection as
-    they receive them. This will clear the transfer so that the items
-    are no longer shown as being "in transit".
-
-If an item in a rotating collection is checked in at a library other
-than the one it is supposed to be transferred to, a notification will
-appear notifying library staff that the item is part of a rotating
-collection, also letting them know where the item needs to be sent.
-
-|image292|
-
-.. _patrons-stock_rotation
-
-Stock Rotation
-~~~~~~~~~~~~~~
-
-Stock Rotation helps to spread resources more fairly amongst library branches
-and allows patrons to see a wider range of titles.
-
-Items are popular whilst they are new at a particular branch. However, their
-use often tails off over time. This tool empowers librarians to automate the
-movement of items on to another branch before usage declines and thereby
-extends the items useful life.
-
-Library staff create rotation plans and then assign them to items. A cronjob
-is then used to cycle these items round the specified libraries on the
-rotation plan, moving them to the next stage after the prescribed period
-of time has passed at the current stage.
-
-Email notices may be used to provide the library branches with a list of
-items to be put in-transit to the next branch and if an item is found to be
-on loan at the time that it should be transfered then an alert will be
-displayed when it is next returned.
-
-From the stock rotation tool page you can add new rotation plans and see a 
-summary of your currently configured rotation plans. You can then edit plan 
-details, activate and deactivate plans and manage stages and items on a given 
-rotation plan.
-
-|image1381|
-
-This tool utilises a cron job that must be configured to run on a daily basis.
-
-Editing rota details
-^^^^^^^^^^^^^^^^^^^^
-
-|image1382|
-
-Name: A clear name or code to identify the rota
-
-Cyclical: Denotes whether items remain (No) at the last library on the rotation
-plan upon reaching the end of the rota or whether they continue (Yes) to rotate,
-returning back to the first library on the rotation plan once they have
-completed their alloted time at the last library, indefinitely until manually
-removed from the rota.
-
-Active: Denotes whether a rota is active and as such whether items on it are
-rotating. It also governs whether items may be added to and removed from the
-rota.  A rota may be switched between active and inactive at any time allowing
-for rota maintanence.
-
-Description: One may optionally add an expanded description of the rota for
-display in summary views.
-
-
-Managing rota stages
-^^^^^^^^^^^^^^^^^^^^
-
-|image1383|
-
-Stages may be edited, added, removed and re-ordered at any time from this page.
-
-Library: The library the item will be at during this stage
-
-Duration: The amount of time the item should stage at this stage
-
-
-Managing rota items - Tool view
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|image1384|
-
-Items can be added to a rota individually (by barcode) or in bulk (via the
-upload of a line delimited barcode file) on this page.
-
-You will also be presented with a summary of all items on the rota with their
-current location and you have the options to immediately progress items, mark
-items as 'in demand' and remove an item from rotation.
-
-In demand: If an item is marked as 'in demand' then the duration the item will
-stay at it's current stage will be doubled compared to what is set in the
-rota. This is often used for items that are found to be unexpectedly popular at
-a particular library.
-
-Managing rota items - Catalog view
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|image1385|
-
-Rotating items may also be managed from the catalog view: When stock rotation is
-enabled a new menu tab 'Rota' will appear on a catalog records detail view.
-
-All attached items will appear in the summary view with their current status in
-relation to rotas and the option to mark items as 'in demand' or immediately
-progress them.  You can also remove items from rotation and add items to rotas
-here too.
-
-Managing rotation notices
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Stock rotation can send email notices to branch libraries to aid in selecting
-the items due for rotation. Branch 'Reply-to' addresses will be used in
-preference to 'Email' addresses for the notice recipients.
-
-The contents of the notices can be customised in the normal manor through the
-notices tool and the relevant notice has the code SR_SLIP.
-
-Permissions
-^^^^^^^^^^^
-
-The stock rotation tool uses two distinct permissions:
-
-manage_rotas:
-  this governs a users ability to create, update and delete a rota.
-
-manate_rota_items:
-  this governs a users ability to add, remove and progress
-items on a rota.
-
 
 .. _catalog-label:
 
@@ -2576,6 +2373,210 @@ To use this tool you simply need the barcode for the book you'd like to
 print the spine label for.
 
 |image337|
+
+.. _rotating-collections-label:
+
+Rotating collections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  *Get there:* More > Tools > Catalog > Rotating collections
+
+Rotating collections is a tool for managing collections of materials
+that frequently get shifted from library to library. It adds the ability
+to store not only an item's home library and current location but also
+information about where it is supposed to be transferred to next to
+ensure that all items in the collection are sent to the correct library.
+When an item in a rotating collection is checked in, library staff is
+notified that the item is part of a rotating collection and which branch
+it should be sent to if it is not at the correct one.
+
+    **Important**
+
+    The :ref:`AutomaticItemReturn` system preference
+    must be set to "Don't automatically transfer items to their home
+    library when they are returned" for rotating collections to function
+    properly.
+
+-  To create a new rotating collection, click the "New collection"
+   button, fill in the title and description, and click "Submit". Once
+   submitted you'll see "Collection name added successfully"; click
+   "Return to rotating collections home" to return to the main Rotating
+   collections management page (or click Rotating collections in the
+   sidebar).
+
+-  To add items to a collection, click "Actions" and choose "Add or 
+   remove items" next to the collection's name in the list of 
+   collections. Under "Add or remove items" scan or type in the barcode 
+   of the item you wish to add to the collection, and hit enter or click 
+   'Submit' if necessary.
+
+-  To remove an item from a collection, either click 'Remove' next to the
+   item's barcode in the list of items within the collection or check
+   the "Remove item from collection" box next to the Barcode text box
+   under "Add or remove items", and scan or type in the barcode, clicking
+   "Submit" or hitting Enter if necessary. Note: The "Remove item from
+   collection" checkbox will remain checked as long as you are on the
+   "Add or remove items" page, unless you uncheck it, to facilitate
+   quickly removing a number of items at a time by scanning their
+   barcodes.
+
+.. _transfer-a-rotating-collection-label:
+
+Transfer a rotating collection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Transferring a collection will:
+
+-  Change the current location of the items in that collection to the
+   library it is to be transferred to
+
+-  Initiate a transfer from its original current location/holding
+   library to the current location/holding library it is to be rotated
+   to. When a library receives a collection they will need to check in
+   the items to complete the transfer.
+
+You can transfer a collection in one of two ways:
+
+-  From the main Rotating collections page, click on "Actions" and choose 
+   "Transfer" next to the title of the collection you wish to transfer; 
+   choose the library you wish to transfer the collection to and click "Transfer
+   collection".
+
+-  Or, from the "add or remove items" page for a collection, you can
+   click the "Transfer" button, choose the library you wish to transfer
+   the collection to and click "Transfer Collection".
+
+    **Important**
+
+    In order to complete the transfer process, the library receiving the
+    rotating collection should check in all items from the collection as
+    they receive them. This will clear the transfer so that the items
+    are no longer shown as being "in transit".
+
+If an item in a rotating collection is checked in at a library other
+than the one it is supposed to be transferred to, a notification will
+appear notifying library staff that the item is part of a rotating
+collection, also letting them know where the item needs to be sent.
+
+|image292|
+
+.. _patrons-stock_rotation
+
+Stock Rotation
+~~~~~~~~~~~~~~
+
+Stock Rotation helps to spread resources more fairly amongst library branches
+and allows patrons to see a wider range of titles.
+
+Items are popular whilst they are new at a particular branch. However, their
+use often tails off over time. This tool empowers librarians to automate the
+movement of items on to another branch before usage declines and thereby
+extends the items useful life.
+
+Library staff create rotation plans and then assign them to items. A cronjob
+is then used to cycle these items round the specified libraries on the
+rotation plan, moving them to the next stage after the prescribed period
+of time has passed at the current stage.
+
+Email notices may be used to provide the library branches with a list of
+items to be put in-transit to the next branch and if an item is found to be
+on loan at the time that it should be transfered then an alert will be
+displayed when it is next returned.
+
+From the stock rotation tool page you can add new rotation plans and see a 
+summary of your currently configured rotation plans. You can then edit plan 
+details, activate and deactivate plans and manage stages and items on a given 
+rotation plan.
+
+|image1381|
+
+This tool utilises a cron job that must be configured to run on a daily basis.
+
+Editing rota details
+^^^^^^^^^^^^^^^^^^^^
+
+|image1382|
+
+Name: A clear name or code to identify the rota
+
+Cyclical: Denotes whether items remain (No) at the last library on the rotation
+plan upon reaching the end of the rota or whether they continue (Yes) to rotate,
+returning back to the first library on the rotation plan once they have
+completed their alloted time at the last library, indefinitely until manually
+removed from the rota.
+
+Active: Denotes whether a rota is active and as such whether items on it are
+rotating. It also governs whether items may be added to and removed from the
+rota.  A rota may be switched between active and inactive at any time allowing
+for rota maintanence.
+
+Description: One may optionally add an expanded description of the rota for
+display in summary views.
+
+
+Managing rota stages
+^^^^^^^^^^^^^^^^^^^^
+
+|image1383|
+
+Stages may be edited, added, removed and re-ordered at any time from this page.
+
+Library: The library the item will be at during this stage
+
+Duration: The amount of time the item should stage at this stage
+
+
+Managing rota items - Tool view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|image1384|
+
+Items can be added to a rota individually (by barcode) or in bulk (via the
+upload of a line delimited barcode file) on this page.
+
+You will also be presented with a summary of all items on the rota with their
+current location and you have the options to immediately progress items, mark
+items as 'in demand' and remove an item from rotation.
+
+In demand: If an item is marked as 'in demand' then the duration the item will
+stay at it's current stage will be doubled compared to what is set in the
+rota. This is often used for items that are found to be unexpectedly popular at
+a particular library.
+
+Managing rota items - Catalog view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|image1385|
+
+Rotating items may also be managed from the catalog view: When stock rotation is
+enabled a new menu tab 'Rota' will appear on a catalog records detail view.
+
+All attached items will appear in the summary view with their current status in
+relation to rotas and the option to mark items as 'in demand' or immediately
+progress them.  You can also remove items from rotation and add items to rotas
+here too.
+
+Managing rotation notices
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Stock rotation can send email notices to branch libraries to aid in selecting
+the items due for rotation. Branch 'Reply-to' addresses will be used in
+preference to 'Email' addresses for the notice recipients.
+
+The contents of the notices can be customised in the normal manor through the
+notices tool and the relevant notice has the code SR_SLIP.
+
+Permissions
+^^^^^^^^^^^
+
+The stock rotation tool uses two distinct permissions:
+
+manage_rotas:
+  this governs a users ability to create, update and delete a rota.
+
+manate_rota_items:
+  this governs a users ability to add, remove and progress
+items on a rota.
 
 .. _marc-modification-templates-label:
 
