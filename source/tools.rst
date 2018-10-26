@@ -1724,8 +1724,8 @@ Batch record modification
 -  *Get there:* More > Tools > Catalog > Batch record modification
 
 This tool will allow you to edit batches of bibliographic and/or
-authority records using :ref:`MARC Modification
-Templates <marc-modification-templates-label>`. Before visiting this tool you will
+authority records using :ref:`MARC modification
+templates <marc-modification-templates-label>`. Before visiting this tool you will
 want to set up at least one MARC modification template.
 
 |image303|
@@ -1740,7 +1740,7 @@ When you visit the tool it will ask you:
 
    -  Enter the numbers (one per line) in the box provided
 
--  Finally choose the MARC Modification Template you'd like to use to
+-  Finally choose the MARC modification template you'd like to use to
    edit these records.
 
 Once you've entered your criteria click 'Continue'
@@ -1751,7 +1751,7 @@ You will be presented with a list of records that will be edited. Next
 to each one is a checkbox so you can uncheck any items you would rather
 not edit at this time.
 
-Clicking Preview MARC will allow you to see what edits will be made when
+Clicking 'Preview MARC' will allow you to see what edits will be made when
 you finalize the edit.
 
 |image1234|
