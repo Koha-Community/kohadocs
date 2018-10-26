@@ -2054,14 +2054,14 @@ will return the number of items updated and a list of problematic items.
 
 .. _label-creator-label:
 
-Label Creator
+Label creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Catalog > Label Creator
+-  *Get there:* More > Tools > Catalog > Label creator
 
-The Label Creator allow you to use layouts and templates which you
+The label creator tool allow you to use layouts and templates which you
 design to print a nearly unlimited variety of labels including barcodes.
-Here are some of the features of the Label Creator module:
+Here are some of the features of the label creator tool:
 
 -  Customize label layouts
 
@@ -2088,7 +2088,7 @@ Here are some of the features of the Label Creator module:
 Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Label Creator > Manage > Label templates
+-  *Get there:* More > Tools > Label creator > Manage > Label templates
 
 A template is based on the label/card stock you are using. This might be
 Avery 5160 for address labels, Gaylord 47-284 for spine labels or Avery
@@ -2099,11 +2099,11 @@ usually be found on the vendor's website.
 
 .. _label-add-a-template-label:
 
-Add a Template
+Add a template
 ''''''''''''''''''''''''''''''''''''''
 
 To add a new template, you want to click on the 'New' button at the top
-of the Label Creator and choosing 'Label template'.
+of the label creator page and choosing 'Label template'.
 
 |image318|
 
@@ -2118,7 +2118,7 @@ of labels or cards.
 -  Template Code should be something you can use to identify your
    template on a list of templates
 
--  You can use the Template Description to add additional information
+-  You can use the template Description to add additional information
    about the template
 
 -  The Units pull down is used to define what measurement scale you're
@@ -2157,7 +2157,7 @@ After saving, your templates will appear on the 'Manage' area under
 Profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Label Creator > Manage > Printer Profiles
+-  *Get there:* More > Tools > Label creator > Manage > Printer profiles
 
 A profile is a set of "adjustments" applied to a given
 :ref:`template <label-add-a-template-label>` just prior to printing which
@@ -2173,11 +2173,11 @@ profile.
 
 .. _label-add-a-profile-label:
 
-Add a Profile
+Add a profile
 ''''''''''''''''''''''''''''''''''''
 
 To add a new profile, you want to click on the 'New' button at the top
-of the Label Creator tool and choose 'Printer profile'.
+of the label creator tool and choose 'Printer profile'.
 
 |image322|
 
@@ -2226,17 +2226,17 @@ templates and choose to edit the template that this profile is for.
 Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Label Creator > Manage > Layouts
+-  *Get there:* More > Tools > Label creator > Manage > Layouts
 
 A layout is used to define the fields you want to appear on your labels.
 
 .. _label-add-a-layout-label:
 
-Add a Layout
+Add a layout
 ''''''''''''''''''''''''''''''''''
 
 To add a new layout, you want to click on the 'New' button at the top of
-the Label Creator tool and choose 'Layout'.
+the Label creator tool and choose 'Layout'.
 
 |image326|
 
@@ -2256,16 +2256,16 @@ with your template.
    whereas a label for your circulation staff to use to checkout the
    book would probably be Biblio/Barcode.
 
--  The Bibliographic Data to Print includes any of the data fields that
+-  The Bibliographic data to print includes any of the data fields that
    may be mapped to your MARC frameworks. You can choose from the preset
    list of fields or you can click on 'List Fields' and enter your own
-   data. In 'List Fields', you can specify MARC subfields as a
-   4-character tag-subfield string: (ie. 254a for the title field), You
+   data. In 'List fields', you can specify MARC subfields as a
+   4-character tag-subfield string, for example 254a for the title field. You
    can also enclose a whitespace-separated list of fields to concatenate
-   on one line in double quotes. (ie. "099a 099b" or "itemcallnumber
-   barcode"). The fields available are from the database tables list
-   below. Finally you could add in static text strings in single-quote
-   (ie. 'Some static text here.')
+   on one line in double quotes, for example "099a 099b" or "itemcallnumber
+   barcode". The fields available are from the database tables list
+   below. Finally you could add in static text strings in single-quote, 
+   for example 'Some static text here.'
 
    -  You can use the schema viewer (http://schema.koha-community.org)
       with the following tables to find field names to use:
@@ -2279,19 +2279,19 @@ with your template.
    label
 
 -  Choose if you'd like Koha to try to split your call numbers (usually
-   used on Spine Labels)
+   used on spine labels)
 
 -  Finally choose your text settings such as alignment, font type and
    size.
 
-After saving, your layouts will appear on the 'Manage Layouts' page.
+After saving, your layouts will appear on the 'Manage layouts' page.
 
 .. _label-batches-label:
 
 Batches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  *Get there:* More > Tools > Label Creator > Manage > Label batches
+-  *Get there:* More > Tools > Label creator > Manage > Label batches
 
 Batches are made up of the barcodes you would like to print. Once in
 this tool you can search for the item records you would like to print
@@ -2299,12 +2299,12 @@ out labels for.
 
 .. _label-add-a-batch-label:
 
-Add a Batch
+Add a batch
 ''''''''''''''''''''''''''''''''
 
 Batches can be created in one of two ways. The first is to click the
-'Create Label Batch' link on the ':ref:`Staged MARC
-Management <staged-marc-record-management-label>`' page:
+'Create label batch' link on the ':ref:`Staged MARC
+management <staged-marc-record-management-label>`' page:
 
 |image329|
 
@@ -2353,10 +2353,10 @@ your library.
 
 .. _quick-spine-label-creator-label:
 
-Quick Spine Label Creator
+Quick spine label creator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Catalog > Quick Spine Label Creator
+-  *Get there:* More > Tools > Catalog > Quick spine label creator
 
     **Note**
 
