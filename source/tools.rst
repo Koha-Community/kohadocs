@@ -11,7 +11,7 @@ management systems.
 
 .. _patrons-and-circulation-label:
 
-Patrons and Circulation
+Patrons and circulation
 ------------------------------------------
 
 .. _patron-lists-label:
@@ -77,19 +77,19 @@ useful for tracking summer reading programs, book clubs and other such clubs.
 Creating a new club template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Click on the 'New Club template' button. Here you can add fields that can be 
+Click on the 'New club template' button. Here you can add fields that can be 
 filled out at the time a new club is created based on the template, or a new 
 enrollment is created for a given club based on the template. 
 
 |image1364|
 
-The name is required. This could be something like 'Adult Book Club', 'Children’s
-Book Club' or 'Summer Reading Program'. Remember these templates will be starting
+The name is required. This could be something like 'Adult book club', 'Children’s
+book club' or 'Summer reading program'. Remember these templates will be starting
 point for each club you create.
 
 The description can be any additional information.
 
-Allow Public Enrollment: if this box is checked it will allow patrons to enroll
+Allow public enrollment: if this box is checked it will allow patrons to enroll
 in a club based on this template from the OPAC.
 
 Require valid email address: if this box is checked only patrons 
