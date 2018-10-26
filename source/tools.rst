@@ -1491,14 +1491,14 @@ will present you with the changed patron records.
 
 .. _tag-moderation-label:
 
-Tag Moderation
+Tag moderation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Tags
+-  *Get there:* More > Tools > Patrons and circulation > Tags
 
 Depending on your :ref:`tagging system preferences <tagging-label>`,
 librarians may need to approve tags before they are published on the
-OPAC. This is done via the Tag Moderation Tool. If there are tags
+OPAC. This is done via the tag moderation tool. If there are tags
 awaiting moderation they will be listed on the main staff dashboard
 under the module labels:
 
