@@ -266,7 +266,7 @@ with the exception of a few mandatory ones.
        -  Since values can contain spaces, additional doubled-quotes may
           be required:
 
-          -  "INSTID:12345,BASEBALL:Cubs,""BASEBALL:White Sox"""
+          -  "INSTID:12345,BASEBALL:Cubs,""BASEBALL:White Sox""
 
     **Note**
 
@@ -278,7 +278,7 @@ with the exception of a few mandatory ones.
 
 .. _importing-patrons-label:
 
-Importing Patrons
+Importing patrons
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have created your file, you can use the patron import tool to
@@ -297,11 +297,11 @@ bring the data into Koha.
 -  Next you can choose default values to apply to all patrons you are
    importing
 
-   -  ex. If you're importing patrons specific to one branch you can use
+   -  For example, if you're importing patrons specific to one branch you can use
       the field on the import form to apply the branch code to all those
       you are importing.
 
--  Finally you need to decide on what data you want to replace if there
+-  Finally, you need to decide on what data you want to replace if there
    are duplicates.
 
    -  A matching record is found using the field you chose for matching
