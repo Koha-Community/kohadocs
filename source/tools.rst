@@ -2583,7 +2583,7 @@ items on a rota.
 MARC modification templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The MARC Modification Templates system gives Koha users the power to
+The MARC modification templates system gives Koha users the power to
 make alterations to MARC records automatically while staging MARC
 records for import.
 
@@ -2639,7 +2639,7 @@ number to the item record if it's not already there.
 
 -  Click 'Add action'
 
-The Copy & Move actions also support Regular Expressions, which can be
+The Copy & Move actions also support regular expressions, which can be
 used to automatically modify field values during the copy/move. An
 example would be to strip out the '$' character in field 020$c.
 
@@ -2737,7 +2737,7 @@ template to start with.
 |image342|
 
 Once your template is saved you will be able to pick it when using the
-:ref:`Stage MARC Records for Import` tool.
+:ref:`Stage MARC records for import` tool.
 
 |image343|
 
