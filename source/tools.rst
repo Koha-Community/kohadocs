@@ -1392,11 +1392,11 @@ right of each image you want to delete and click the 'Delete' button.
 
 .. _patrons-anonymize-bulk-delete-label:
 
-Patrons (anonymize, bulk-delete)
+Batch patron deletion/anonymization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Patrons
-   (anonymize, bulk-delete)
+-  *Get there:* More > Tools > Patrons and circulation > Batch patron 
+   deletion/anonymization
 
 This tool allows you to bulk anonymize circulation histories (this means
 that you keep records of how many times items were checked out - but not
@@ -1425,8 +1425,8 @@ them from the system completely).
 
 To either delete or anonymize patrons
 
--  Check the 'Verify' box on the task you would like to complete (Delete
-   or Anonymize)
+-  Check the 'Verify' box on the task you would like to complete (delete
+   or anonymize)
 
 -  Enter a date before which you want to alter the data
 
