@@ -1456,7 +1456,7 @@ To either delete or anonymize patrons
 Batch patron modification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and Circulation > Batch patron
+-  *Get there:* More > Tools > Patrons and circulation > Batch patron
    modification
 
 With this tool you can make edits to a batch of patron records. Simply
