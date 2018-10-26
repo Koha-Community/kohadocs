@@ -2743,7 +2743,7 @@ Once your template is saved you will be able to pick it when using the
 
 .. _stage-marc-records-for-import-label:
 
-Stage MARC Records for Import
+Stage MARC records for import
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *Get there:* More > Tools > Catalog > Stage MARC records for import
@@ -2762,7 +2762,7 @@ steps. The first is to stage records for import.
    |image345|
 
    -  Enter 'Comments about this file' to identify your upload when
-      going to the ':ref:`Manage Staged MARC Records <staged-marc-record-management-label>`' tool
+      going to the ':ref:`Manage staged MARC records <staged-marc-record-management-label>`' tool
 
    -  Tell Koha which type of file this is, bibliographic or authority
 
@@ -2772,8 +2772,8 @@ steps. The first is to stage records for import.
 
       |image347|
 
-   -  Choose if you would like to use a :ref:`MARC Modification
-      Template <marc-modification-templates-label>` to alter the data you're about to
+   -  Choose if you would like to use a :ref:`MARC modification
+      template <marc-modification-templates-label>` to alter the data you're about to
       import
 
       |image348|
@@ -2817,15 +2817,15 @@ steps. The first is to stage records for import.
 
    |image352|
 
--  To complete the process continue to the :ref:`Manage Staged MARC Records
+-  To complete the process continue to the :ref:`Manage staged MARC records
    Tool <staged-marc-record-management-label>`
 
 .. _staged-marc-record-management-label:
 
-Staged MARC Record Management
+Staged MARC record management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Catalog > Staged MARC Record Management
+-  *Get there:* More > Tools > Catalog > Staged MARC record management
 
 Once you have :ref:`staged <stage-marc-records-for-import-label>` your records for import you can
 complete the import using this tool.
@@ -2888,7 +2888,7 @@ are cleaned. These items will appear when searching the catalog from the
 
 To clean items out of the 'reservoir':
 
--  Visit the main screen of the Manage Staged MARC Records tool
+-  Visit the main screen of the manage staged MARC records tool
 
    |image361|
 
