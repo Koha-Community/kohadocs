@@ -88,8 +88,7 @@ Description can be any additional information
 Allow Public Enrollment: if this box is checked it will allow patrons to enroll
 in a club based on this template from the OPAC
 
-Require valid email address: if this box is checked only patrons with a patrons
-with a valid email address can enroll. So they will need a email address
+Require valid email address: if this box is checked only patrons with a valid email address can enroll. So they will need a email address
 to enroll.
 
 The library drop down gives you the flexibility to enroll patrons from specific
