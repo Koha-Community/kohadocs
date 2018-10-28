@@ -2157,6 +2157,8 @@ Fill out the information :
 
 |image1354|
 
+Choosers and Deliverers can be notified of planned deliveries via reports.  Example reports be found in the SQL Reports Library at https://wiki.koha-community.org/wiki/SQL_Reports_Patrons#Patron_Characteristics.
+
 .. _patron-search-label:
 
 Patron search
