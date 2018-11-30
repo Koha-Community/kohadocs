@@ -30,27 +30,21 @@ The new list form offers several options for creating your list:
 
 -  You can also choose how to sort the list
 
--  Next decide if your list is going to be private or public
+-  Next, decide if your list is going to be private or public
 
-   -  A private list is managed by you and can be seen only by you
-      (depending on your permissions settings below)
+   -  A private list can be seen only by you
 
-   -  A public list can be seen by everybody, but managed only by you
-      (depending on your permissions settings below)
+   -  A public list can be seen by everybody
 
 -  Finally decide what your permissions will be on the list. You can allow
-   or disallow:
+   changes to the list from:
 
-   -  anyone else to add entries
+   -  Nobody: this will close the list to contributions
 
-   -  anyone to remove his own contributed entries
+   -  Owner only: only you will be able to add or remove items from the list
 
-      -  **Note**
-
-             The owner of a list is always allowed to add entries, but
-             needs permission to remove.
-
-   -  anyone to remove other contributed entries    
+   -  Anyone seeing this list: other users will be able to add or remove 
+      items from the list
 
 A list can also be created from the catalog search results
 
@@ -59,15 +53,18 @@ A list can also be created from the catalog search results
 -  Check the box to the left of the titles you want to add to the new
    list
 
--  Choose [New list] from the 'Add to:' pull down menu
+-  Choose 'New list' from the 'Add to:' pull down menu
 
    |image871|
 
    -  Name the list and choose what type of list this is
 
-      -  A private list is managed by you and can be seen only by you
+      -  A private list can be seen only by you
 
-      -  A public list can be seen by everybody, but managed only by you
+      -  A public list can be seen by everybody
+         
+   -  The list will have the default sort (title) and the default modification 
+      permissions (owner only).
 
 Once the list is saved it will accessible from the Lists page and from
 the 'Add to' menu at the top of the search results.
@@ -112,17 +109,16 @@ From this list of items you can perform several actions
 -  'New list' will allow you to create another list
 
 -  'Edit' will allow you to edit the description and permissions for
-   this list
-
--  'Send list' will send the list to the email address you enter
+   this list, or delete this list
 
 -  'Download list' will allow you to download the cart using one of 3
    default formats or your :ref:`CSV Profiles`
 
+-  'Send list' will send the list to the email address you enter
+
 -  'Print list' will present you with a printable version of the list
 
-Using the filters at the top of each column you can find specific items
-in your list.
+You can sort the columns by clicking on the column header.
 
 .. _merging-bibliographic-records-via-lists-label:
 
@@ -151,8 +147,8 @@ be printed or emailed to yourself or a patron.
 If you would like to enable the cart in the staff client, you need to
 set the :ref:`intranetbookbag` system preference to
 'Show.' To add things to the cart, search the catalog and select the
-items you would like added to your cart and choose 'Cart' from the 'Add
-to' menu
+items you would like added to your cart and click on the 'Add to cart' 
+button.
 
 |image878|
 
