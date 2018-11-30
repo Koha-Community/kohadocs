@@ -31,7 +31,12 @@ To create a new list of patrons click the 'New patron list' button
 
 |image246|
 
-Enter a list name and save the list.
+Enter a list name.
+
+Checking the 'Shared' box will make this list visible to all users with 
+the :ref:`manage_patron_lists permission <granular-tools-permissions-label>`.
+
+Save the list.
 
 |image247|
 
