@@ -1377,3 +1377,4 @@
 .. |image1388| image:: images/illrequests/createILLstaff2.png
 .. |image1389| image:: images/illrequests/confirmrequeststaff.png
 .. |image1390| image:: images/circ/prevcheckout.png
+.. |image1391| image:: images/opac/checkoutnote.png
