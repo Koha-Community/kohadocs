@@ -44,5 +44,5 @@ production:
     - make all_html # build/LANG/html
     - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/18.11/
     only:
-        - master
+        - manual18.11.x
     environment: production
