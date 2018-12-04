@@ -1242,10 +1242,10 @@ Description:
 -  Used when merging authorities.
 
 -  Controls how the indicators of linked authority records affect the
-   corresponding biblio indicators. Currently, the default valueis fine-tuned
+   corresponding biblio indicators. Currently, the default value is fine-tuned
    for MARC21 and copies the authority indicators for UNIMARC.
 
--  For example,a MARC21 field 100 in a biblio record should pick its first
+-  For example, a MARC21 field 100 in a biblio record should pick its first
    indicator from the linked authority record. The second indicator is not
    controlled by the authority. This report supports such MARC conventions.
 
