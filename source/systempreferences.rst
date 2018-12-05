@@ -752,7 +752,7 @@ Values:
 Description:
 
 -  This preference allows the system administrator to determine if users
-   will be able to set and see an item type icon
+   will be able to set and see an item type icon in 
    the catalog on both the OPAC and the Staff Client. The images will
    display in both the OPAC and the Staff Client/Intranet. If images of
    item types are disabled, text labels for item types will still appear
