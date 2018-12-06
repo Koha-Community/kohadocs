@@ -9131,13 +9131,13 @@ Description:
 OPACMySummaryHTML
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Include a "Links" column on the "my summary" tab when a user is
+Asks: Include a "Links" column on the "your summary" tab when a user is
 logged in to the OPAC, with the following HTML (leave blank to disable).
 
 Description:
 
 -  In this preference you can enter HTML that will appear on the
-   'Checked Out' tab on the 'My Summary' section when logged in to the
+   'Checked Out' tab on the 'your summary' section when logged in to the
    OPAC. The placeholders {BIBLIONUMBER}, {TITLE}, {ISBN} and {AUTHOR}
    will be replaced with information from the displayed record. This can
    be used to enter in 'share' links for social networks or generate
@@ -9166,7 +9166,7 @@ Description:
 
 -  This preference will display text above the patron's summary and
    below the welcome message when the patron logs in to the OPAC and
-   view their 'my summary' tab.
+   view their 'your summary' tab.
 
     |image1193|
 
@@ -9499,7 +9499,7 @@ Values:
 Description:
 
 -  If you're :ref:`allowing patrons to make purchase
-   suggestions <suggestion-label>` then they will see the 'my
+   suggestions <suggestion-label>` then they will see the 'your purchase
    suggestions' tab when logged in. This tab shows the patron the
    librarian who approved or rejected the purchase suggestion. This
    preference controls if the patron sees the librarian's name or not.
@@ -9893,7 +9893,7 @@ OPACFinesTab
 
 Default: Allow
 
-Asks: \_\_\_ patrons to access the Fines tab on the My Account page on
+Asks: \_\_\_ patrons to access the Fines tab on the 'your summary' page on
 the OPAC.
 
 Values:
@@ -11838,7 +11838,7 @@ Values:
 
     Reading history is still stored, regardless of staff being allowed
     access or not unless the patron has chosen to have their history
-    anonymized via their :ref:`privacy page <my-privacy-label>`.
+    anonymized via their :ref:`privacy page <your-privacy-label>`.
 
 .. _maxfine-label:
 
