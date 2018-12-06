@@ -756,19 +756,187 @@ If the staff member has 'parameters' permissions they have the ability
 to perform all of these actions. If you would like to control parameter
 permissions on a more granular level choose from these options:
 
+-  manage\_audio\_alerts 
+
+   - Manage audio alerts
+
+   - The ability to access the :ref:`Audio alerts <audio-alerts-label>` 
+     configuration in the administration module.
+
+-  manage\_auth\_values
+
+   - Manage authorized value categories and authorised values
+
+   - The ability to access the :ref:`Auhorized values <authorized-values-label>`
+     configuration in the administration module.
+
 -  manage\_circ\_rules
 
    -  Manage circulation rules
 
    -  The ability to access the :ref:`Circulation and fines
-      rules <circulation-and-fine-rules-label>` in the administration area
+      rules <circulation-and-fine-rules-label>` configuration
+      in the administration module.
+
+-  manage\_circ\_rules\_from\_any\_libraries
+
+   - Manage circulation rules form any library. If not set the logged in user can
+     only edit circulation rules from their own library (please note that
+     manage\_circ\_rules is still required).
+
+-  manage\_cities
+
+   -  Manage cities and towns
+
+   -  The ability to access the :ref:`Cities and towns <cities-and-towns-label>`
+      configuration in the administration module.
+
+-  manage\_classifications
+
+   -  Manage classification sources and filing rules
+   
+   -  The ability to access the :ref:`Classification sources <classification-sources-label>`
+      configuration in the administration module.
+
+-  manage\_column\_config
+
+   -  Manage column configuration
+
+   -  The ability the access the :ref:`Configure columns <column-settings-label>` 
+      page in the administration module.
+
+-  manage\_didyoumean
+
+   -  Manage Did you mean? configuration
+
+   -  The ability to access the :ref:`Did you mean? <did-you-mean?-label>`
+      configuration in the administration module.
+
+-  manage\_item\_circ\_alerts
+
+   -  Manage item circulation alerts
+
+   -  The ability to access the :ref:`Item circulation alerts <item-circulation-alerts-label>`
+      configuration in the administration module.
+
+-  manage\_item\_search\_fields
+
+   -  Manage item search fields
+
+   -  The ability to access the :ref:`Item search fields <item-search-fields-label>`
+      configuration in the administration module.
+
+-  manage\_itemtypes
+
+   -  Manage item types
+
+   -  The ability to access the :ref:`Item types <item-types-label>`
+      configuration in the administratoin module.
+
+-  manage\_keywords2koha\_mappings
+
+   -  Manage Keywords to Koha mappings
+
+   -  The ability to access the :ref:`Keywords to MARC mapping <keywords-to-marc-mapping-label>`
+      configuration in the administration module.
+
+-  manage\_libraries
+
+   -  Manage libraries and library groups
+
+   -  The ability to access the :ref:`Libraries <libraries-label>` and
+      :ref:`Library groups <library-groups-label>` configuration pages
+      in the administration module.
+
+-  manage\_marc\_frameworks
+
+   -  Manage MARC bibliographic and authority frameworks and test them
+
+   -  The ability to access the 
+      :ref:`MARC bibliographic framework <marc-bibliographic-frameworks-label>`, 
+      :ref:`Authority types <authority-types-label>`, 
+      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label> `, and 
+      :ref:`MARC Bibliographic framework test <marc-bibliographic-framework-test-label>`
+      configuration areas in the administration module.
+
+-  manage\_matching\_rules
+
+   -  Manage record matching rules
+
+   -  The ability to access the :ref:`Record matching rules <record-matching-rules-label>`
+      configuration in the administration module.
+
+-  manage\_oai\_sets
+
+   -  Manage OAI sets
+
+   -  The ability to access the :ref:`OAI sets <oai-sets-configuration-label>`
+      configuration in the administration module.
+
+-  manage\_patron\_attributes
+
+   -  Manage extened patron attributes
+   
+   -  The ability to access the :ref:`Patron attribute types <patron-attribute-types-label>`
+      configuration in the administration module.
+
+-  manage\_patron\_categories
+
+   -  Manage patron categories
+
+   - The ability to access the :ref:`Patron categories <patron-categories-label>`
+     configuration in the administration module.
+
+-  manage\_search\_engine\_config
+
+   -  Manage search engine configuration
+
+   -  The ability to access the Search engine configuraton in the
+      administration module. Note: This area will only be visible when
+      the :ref:`SearchEngine` system preference is set to 'Elasticsearch'.
+
+-  manage\_search\_targets
+
+   -  Manage Z39.50 and SRU server configuration
+
+   -  The ability to access the :ref:`Z39.50/SRU servers <z39.50/sru-servers-label>`
+      configuration in the administration module.
+
+-  manage\_sms_providers
+
+   -  Manage SMS cellular providers
+
+   -  The ability to access the :ref:`SMS cellular providers <sms-cellular-providers-label>` configuration
+      in the administration module. Note: This area will only be visible when
+      the :ref:`SMSSendDriver` system preference is set to 'Email'.
+
+-  manage\_sysprefs
+
+   -  Manage global system preferences
+
+   -  The ability to access the :ref:`Global system preferences <administration-label>`
+      in the administration module.
+
+-  manage\_transfers
+
+   -  Manage library transfer limits and transport cost matrix
+
+   -  The ability to access the :ref:`Library transfer limits <library-transfer-limits-label>`
+      and :ref:`Transport cost matrix <transport-cost-matrix-label>` 
+      configuration pages in the administration module.
+
+-  manage\_usage\_stats
+
+   -  Manage usage statistics settings
+
+   -  Ability to access the :ref:`Share your usage statistics <share-anonymous-usage-statistics-label>` 
+      configuration in the administration module.
 
 -  parameters\_remaining\_permissions
 
    -  Remaining system parameters permissions
 
-   -  The ability to access all areas in Administration (other than the
-      Circulation and fines rules)
+   -  The ability to access all remaining areas in the administration module.
 
 .. _granular-borrowers-permissions-label:
 
