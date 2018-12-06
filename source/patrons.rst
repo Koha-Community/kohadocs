@@ -1059,27 +1059,30 @@ options:
 
 -  budget\_add\_del
 
-   -  Add and delete budgets (but can't modify budgets)
+   -  Add and delete funds (but can't modify funds)
 
 -  budget\_manage
 
-   -  Manage budgets
+   -  Manage funds
 
 -  budget\_manage\_all
 
-   -  Manage all budgets
+   -  Manage all funds
 
    budget\_modify
 
-   -  Modify budget (can't create lines, but can modify existing ones)
+   -  Modify funds (can't create lines, but can modify existing ones)
 
 -  contracts\_manage
 
    -  Manage contracts
 
 -  currencies\_manage
-   
+
    -  Manage currencies and exchange rates
+   
+   -  The ability to access the :ref:`Currencies and exchange rates <currencies-and-exchange-rates-label>`
+      configuration page.
       
 -  edi\_manage
    
@@ -1087,27 +1090,27 @@ options:
 
 -  group\_manage
 
-   -  Manage orders and basket groups
+   -  Manage basket groups
 
 -  order\_manage
 
-   -  Manage orders and baskets
+   -  Manage baskets and order lines
 
 -  order\_manage\_all
 
-   -  Manage all orders and baskets, regardless of restrictions on them
+   -  Manage all baskets and order lines, regardless of restrictions on them
 
 -  order\_receive
 
-   -  Manage orders and baskets
+   -  Receive orders and manage shipments
 
 -  period\_manage
 
-   -  Manage periods
+   -  Manage budgets
 
 -  planning\_manage
 
-   -  Manage budget planning
+   -  Manage budget plannings
       
 -  suggestions\_manage
    
@@ -1116,6 +1119,8 @@ options:
 -  vendors\_manage
 
    -  Manage vendors
+   
+   -  Note: Vendors are used in the acquisition and the serials module.
 
 .. _granular-serials-permissions-label:
 
