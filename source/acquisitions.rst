@@ -406,7 +406,7 @@ adding items to the order.
 
    -  Orders added to the basket in this way will notify the patron via
       email that their suggestion has been ordered and will update the
-      patron's ':ref:`My purchase suggestions <my-purchase-suggestions-label>`' page
+      patron's ':ref:`your purchase suggestions <your-purchase-suggestions-label>`' page
       in the OPAC.
 
 -  If you're using the `Serials <#serials>`__ module you can link your

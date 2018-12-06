@@ -640,7 +640,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -658,7 +658,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -686,7 +686,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -703,7 +703,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice as a digest
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -718,7 +718,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -783,7 +783,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -801,7 +801,7 @@ information in these notices. Here are some of what those notices do:
 
       2. The patron has requested to receive this notice as a digest
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
@@ -828,7 +828,7 @@ information in these notices. Here are some of what those notices do:
 
       3. The patron has requested to receive the checkout notice
 
-         -  *Get there:*\ OPAC > Login > my messaging
+         -  *Get there:*\ OPAC > Login > your messaging
 
          -  *Get there:*\ Staff client > Patron record >
             :ref:`Notices`
