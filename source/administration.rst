@@ -405,6 +405,15 @@ use, for instance 'Lost'.
 
    -  Collection codes (appears when cataloging and working with items)
 
+- CONTROL\_NUM\_SEQUENCE
+
+   - Used to generate control numbers in the advanced cataloguing editor.
+     Enter a string ending with a number as the authorized value and use
+     the description to describe the type of number. For example: 'sprLib0001'
+     'Springfield library'. In the advanced editor this will activate a
+     new widget that will allow you to choose the type of number and
+     generate the next number in the sequence.
+
 -  COUNTRY
 
    -  Used in UNIMARC 102 $a
