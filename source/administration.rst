@@ -3325,7 +3325,7 @@ to save.
     |image1216|
 
 These options will appear in the OPAC for patrons to choose from on the
-:ref:`messaging tab <my-messaging-label>` if you have
+:ref:`messaging tab <your-messaging-label>` if you have
 :ref:`EnhancedMessagingPreferences`
 enabled.
 

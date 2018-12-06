@@ -287,7 +287,7 @@ manual.
 Lists
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Patrons can manage their own private lists by visiting the 'my lists'
+Patrons can manage their own private lists by visiting the 'your lists'
 section of their account.
 
 |image965|
@@ -397,7 +397,7 @@ Managing Lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the list is saved patrons can begin adding items to it. From the
-'my lists' tab on the patron record the patron can edit and delete the
+'your lists' tab on the patron record the patron can edit and delete the
 lists they have created by clicking the appropriate link to the right of
 the list name.
 
@@ -787,9 +787,9 @@ Once this is done the library can change the category to one that is
 more appropriate (be it an adult, resident, non resident, student, etc)
 and add a cardnumber/barcode.
 
-.. _my-account-label:
+.. _your-account-label:
 
-My Account
+Your account
 -------------------------------
 
 From the OPAC patrons can log in and access their account if you have
@@ -820,14 +820,14 @@ password.
 
 |image1303|
 
-.. _my-summary-label:
+.. _your-summary-label:
 
-My Summary
+Your summary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image1003|
 
-From the 'my summary' tab, patrons will see all of the items they have
+From the 'your summary' tab, patrons will see all of the items they have
 checked out with the overdue items highlighted in red. If you have
 :ref:`OpacRenewalAllowed` set to 'Allow' then your
 patrons will be able to renew their books right from the OPAC. If you
@@ -864,7 +864,7 @@ at the bottom of the staff interface's home page, and also when the item is chec
 |image1391|
 
 If their guarantee has allowed it via :ref:`their
-privacy <my-privacy-label>`, when the guarantor logs in they will see a
+privacy <your-privacy-label>`, when the guarantor logs in they will see a
 tab labeled "Relatives' checkouts" on their summary tab.
 
 |image1304|
@@ -874,7 +874,7 @@ Clicking on the 'Overdue' tab will show only the items that are overdue.
 |image1008|
 
 The 'Fines' tab will show just a total of what the patron owes. Clicking
-on the total will take them to the 'my fines' tab where they will see a
+on the total will take them to the 'your fines' tab where they will see a
 complete breakdown of their fines and bills. If you don't charge fines
 at your library you can turn the display of these tabs off by setting
 the :ref:`OPACFinesTab` preference to 'Don't Allow.'
@@ -931,12 +931,12 @@ see one of the following error messages at the top of their account.
 
    |image1013|
 
-.. _my-fines-label:
+.. _your-fines-label:
 
-My Fines
+Your fines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your library charges fines the next tab on the left is 'my fines.'
+If your library charges fines the next tab on the left is 'your fines'.
 Opening this tab will show the patron an entire history of their
 accounting at the library.
 
@@ -963,14 +963,14 @@ side.
 
 |image1308|
 
-.. _my-details-label:
+.. _your-details-label:
 
-My Details
+Your personal details
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have your :ref:`OPACPatronDetails` preference
 set to 'Allow', your patrons will see a form filled in with their
-contacting information by clicking on the 'my personal details' tab. You
+contacting information by clicking on the 'Your personal details' tab. You
 can control what fields patrons see and can modify via the OPAC by
 setting the
 :ref:`PatronSelfRegistrationBorrowerMandatoryField`
@@ -993,40 +993,40 @@ stating that they should contact the library for changes.
 
 |image1018|
 
-.. _my-tags-label:
+.. _your-tags-label:
 
-My Tags
+Your tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library has :ref:`TagsEnabled` set to 'Allowed' then
-the next tab on the left will be 'my tags.' This tab will show patrons
+the next tab on the left will be 'your tags'. This tab will show patrons
 all of the tags in the system as a cloud and then all of the tags they
 have applied in a list format. From here patrons have the ability to
 remove tags that they have added if they want.
 
 |image1019|
 
-.. _change-my-password-label:
+.. _change-your-password-label:
 
-Change My Password
+Change your password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Next, if you have :ref:`OpacPasswordChange` set to
-'Allow' the next tab will be 'change my password,' where patrons can
+'Allow' the next tab will be 'change your password,' where patrons can
 change their password for logging into the OPAC. Patrons will be
 presented with a standard form asking them to enter their old password
 and then their new password twice.
 
 |image1020|
 
-.. _my-search-history-label:
+.. _your-search-history-label:
 
-My Search History
+Your search history
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have your :ref:`EnableOpacSearchHistory`
 preference set to 'Allow' then your patrons can access their search
-history via the 'my search history' tab.
+history via the 'your search history' tab.
 
 |image1021|
 
@@ -1039,16 +1039,16 @@ at the top right of the OPAC.
 
 |image1022|
 
-.. _my-reading-history-label:
+.. _your-reading-history-label:
 
-My Reading History
+Your reading history
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Depending on your library's setting for
 :ref:`opacreadinghistory` your patrons may see the
-'my reading history' tab next. This will show the patron their entire
+'your reading history' tab next. This will show the patron their entire
 reading history unless they have asked the library to not keep that
-information via the 'my privacy' tab which will appear if you have the
+information via the 'your privacy' tab which will appear if you have the
 :ref:`OPACPrivacy` preference set to 'Allow.'
 
 |image1023|
@@ -1057,12 +1057,12 @@ If you have HTML entered in the
 :ref:`OPACMySummaryHTML` preference then you will see
 that to the right of the 'Date' column.
 
-.. _my-privacy-label:
+.. _your-privacy-label:
 
-My Privacy
+Your privacy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The 'my privacy' tab will appear if you have both the
+The 'your privacy' tab will appear if you have both the
 :ref:`opacreadinghistory` and the
 :ref:`OPACPrivacy` preferences set to 'Allow.' This tab will
 allow the patrons to decide how the library keeps their circulation
@@ -1082,8 +1082,8 @@ The patron can choose from three options:
 -  Never: Delete my reading history immediately. This will delete all
    record of the item that was checked-out upon check-in.
 
-Depending on the patron's suggestions the contents of the ':ref:`my reading
-history <my-reading-history-label>`' tab and the ':ref:`Circulation
+Depending on the patron's suggestions the contents of the ':ref:`Your reading
+history <your-reading-history-label>`' tab and the ':ref:`Circulation
 History <circulation-history-label>`' tab in the staff client may change.
 
 Regardless of the patron's choice they can delete their reading history
@@ -1113,9 +1113,9 @@ checkouts" on their summary tab.
 
 |image1310|
 
-.. _my-purchase-suggestions-label:
+.. _your-purchase-suggestions-label:
 
-My Purchase Suggestions
+Your purchase suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library allows patrons to make purchase suggestions the next tab
@@ -1129,9 +1129,9 @@ If you have :ref:`OPACViewOthersSuggestions`
 set to 'Show' then patrons will be able to search suggestions from the
 top of this list.
 
-.. _my-messaging-label:
+.. _your-messaging-label:
 
-My Messaging
+Your messaging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library has the
@@ -1192,13 +1192,13 @@ in one email) in to one email instead of multiple emails for each alert.
     'Digest only?' if you would like to receive a digest of the
     messages.
 
-.. _my-lists-label:
+.. _your-lists-label:
 
-My Lists
+Your lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library has the :ref:`virtualshelves`
-set to 'Allow' they will see the 'my lists' tab. From here your
+set to 'Allow' they will see the 'your lists' tab. From here your
 patrons can review public lists and create or edit their own private
 lists.
 
@@ -1222,9 +1222,9 @@ And will receive confirmation of their request.
 
 |image1032|
 
-.. _my-interlibrary-loan-requests-label:
+.. _your-interlibrary-loan-requests-label:
 
-My Interlibrary Loan Requests
+Your interlibrary loan requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons will have the option to make ILL requests when logged in to their OPAC account.  From here they can view their existing requests and place new ones.
@@ -1275,8 +1275,8 @@ There will be a link when the patron finds nothing for their search.
 
 |image1034|
 
-And there will be a link on the patron's :ref:`My Purchase
-Suggestions <my-purchase-suggestions-label>` tab.
+And there will be a link on the patron's :ref:`Your purchase
+suggestions <your-purchase-suggestions-label>` tab.
 
 |image1035|
 
