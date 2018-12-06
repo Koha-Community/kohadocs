@@ -132,6 +132,8 @@ link to edit/alter details associated with the library in question.
 
     You will be unable to edit the 'Library code'
 
+.. _library-groups-label:
+
 Library groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
