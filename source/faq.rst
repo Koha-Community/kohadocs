@@ -5,10 +5,55 @@
 FAQs
 ====
 
-.. _display-label:
+.. _faq-installation-label:
 
-Display
+Installation
+------------------------
+
+**Question:** How can I find out what version of Koha I am using?
+
+**Answer:** The easiest way to find out your Koha version is taking a look
+at the About page of the staff interface.
+
+You can also find out from the OPAC by taking a look at the HTML source. 
+It will look something like:
+
+::
+
+    <meta name="generator" content="Koha 18.1200000" /> <!-- leave this for stats -->
+
+**Question:** Should I use the Debian packages or the tarball to install Koha?
+
+**Answer:** For the beginning user, it is highly recommended to use the 
+package install of Koha - it provides many simple commands to do powerful 
+things to your Koha installation. Packages should almost always be your 
+choice of install on an ordinary production Koha install. 
+A relative minimum of system administration skill is required to install 
+Koha using the Debian packages.
+
+Instructions for using the packages with `Debian <https://wiki.koha-community.org/wiki/Debian>`_.
+
+Installing from tarball or git is the only option for people not installing on Debian or Ubuntu.
+
+Developers should give the `KohaDevBox <https://gitlab.com/koha-community/kohadevbox>`_ 
+a look, it's the easiest, quickest way to get a Developer instance of Koha going.
+
+.. _faq-opac-and-staff-interface-label:
+
+OPAC and staff interface
 -------------------------
+
+.. _faq-cookies-label:
+
+**Question:** What cookies does Koha use?
+
+**Answer:** The cookies Koha uses on the OPAC and in the staff interface
+are documented in the Koha Community wiki: 
+
+https://wiki.koha-community.org/wiki/Use_of_Cookies
+
+Cookies
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _custom-item-type/authorized-value-icons-label:
 
@@ -153,9 +198,28 @@ Clicking on the 'Overdue' tab will show only the items that are overdue.
 Circulation/Notices
 ----------------------------------
 
+.. _faq-fees-and-fines-label:
+
+Fees & fines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Question**: Why am I getting fined 5.00 for every loan?
+
+**Answer**: The money you are seeing on your patron's account isn't a fine, 
+but a rental fee. The optional default item types that come with the Koha sample data 
+might contain a rental fee. To remove this fee, do the following:
+
+-  Click More > Administration
+
+-  Click Item types
+
+-  Note which item types have a 5.00 fee associated with them, select them for editing
+
+-  Remove the fee, and save the item type
+
 .. _book-drop-date-label:
 
-Book drop date
+Book drop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question**: How is the book drop date determined? Is it the last
@@ -268,11 +332,17 @@ Unable to place holds
 **Question**: Why can't I place holds when I have all of the preferences
 turned on.
 
-**Answer**: You probably need to set a default circulation rule. At the
+**Answer**: You probably need to set a default circulation rule in your
+:ref:`Circulation and fines rules <circulation-and-fines-rules-label>`. At the
 very least you will need to set a default circulation rule. his rule should be as
 standard rule for all libraries, 'All' itemtype', and 'All' patron category. 
 That will catch all instances that do not match a specific
 rule.
+
+The ability to place holds also depends on the 'On shelf holds allowed' setting
+in the used circulation rule. Depending on the setting, it might not be
+possible to place a hold, unless all or at least one item of the record
+is checked out.
 
 .. _keyboard-shortcuts-label:
 
@@ -350,9 +420,9 @@ sent/received per users per day. India specific drivers include:
 Cataloging
 ------------------------
 
-.. _authority-fields-label:
+.. _faq-authorities-label:
 
-Authority fields
+Authorities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Question:** Why can't I edit 1xx, 6xx, or 7xx fields in my catalog
@@ -369,11 +439,15 @@ field with. To allow typing in these authority fields set
 
     Fields affected by this preference will show a lock symbol in them
 
-If you don't want to create authorities for your reacords at all, you can
-remove the authority link by removing the Thesaurus setting for the fields
-in your MARC bibliographic frameworks.
-
 |image1115|
+
+
+**Question:** Can I use Koha without creating authority records?
+
+**Answer:** If you don't want to create authorities for your reacords at all, you can
+remove the authority link by blanking the Thesaurus setting for the fields
+in your MARC bibliographic frameworks. See also: 
+:ref:`Edit framework subfields <edit-framework-subfields-label>`
 
 .. _faq-koha-to-marc-mapping-label:
 
@@ -513,6 +587,24 @@ issue of the year write nothing or 0.
 
 Reports
 -------------------------
+
+.. _faq-sql-help-label:
+
+SQL help
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Question:** I don't know SQL, but I want to write a report that does X. 
+Can you tell me how?
+
+**Answer:** The `Koha reports library <https://wiki.koha-community.org/wiki/SQL_Reports_Library>`_ on the Koha wiki is a good starting point
+and contains a lot of SQL reports shared by other libraries that can be
+reused and adapted.
+
+`Koha's database schema <https://schema.koha-community.org>`_ is also publicly documented and contains helpful
+notes on how the columns in the various tables are used.
+
+If you get stuck people on the community mailing lists will often be
+willing to help you.
 
 .. _define-codes-stored-in-db-label:
 
@@ -939,46 +1031,17 @@ change in made Amazon content should appear immediately.
 On Debian the the command is *date -s "2010-06-30 17:21"* (with the
 proper date and time for your timezone).
 
+Amazon also requires an ISBN for displaying book covers - make sure that 
+you have the correct ISBN for your title. If you are having trouble with 
+a book that seems like it should have a cover but doesn't turn one up, 
+give it a try with the 10 digit ISBN in the first 020a. If you have a 
+10 digit and it's not turning up, try with the 13 digit ISBN in the first 
+020a. 
+
 .. _system-administration-label:
 
 Server administration
 --------------------------------------
-
-.. _errors-in-zebra-cron-label:
-
-Errors in Zebra cron
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Question**: I am noticing some errors in the
-koha-zebradaemon-output.log file. When new records are added it takes a
-bit longer to index than we think they should. Running rebuild zebra is
-often faster. Zebra ends up indexing and search works, but I am
-concerned about the errors. Any ideas?
-
-**Answer**: Rebuild\_zebra.pl -r deletes all of the files in the Zebra
-db directories (such as reci-0.mf) and then recreates them. Thus,
-permissions will be lost, and the files will be owned by the user who
-ran rebuild\_zebra.pl. If one rebuilds the zebra indexes as root, the
-daemons, which typically run under the user Koha, will not be able to
-update the indexes. Thus, it's important then that the zebra rebuilds
-are put in the cronjob file of the user Koha, and not root. Also
-important is that other users, such as root, don't manually execute
-rebuilds.
-
-If one desires that another user be able to execute rebuild\_zebra.pl,
-he should be given the permission to execute 'sudo -u Koha
-.../rebuild\_zebra.pl,' (if you want to do this, you also have to edit
-the sudoers file to pass the PERL5LIB variable with the env\_keep option
-as by default sudo strips away almost all environment variables). Or, as
-root user, one can use a simple 'su koha' and then the rebuild\_zebra.pl
-command.
-
-I've also tried to set the sticky bit on rebuild\_zebra.pl, but for
-whatever reason it didn't seem to work due to some problem with the
-PERL5LIB variable that I wasn't able to figure. That seems to me the
-easiest thing to do, if anybody has any idea how to make it work. If it
-worked and were the default, I think it would help folks to avoid a
-great deal of the problems that come up with zebra.
 
 .. _making-z39.50-target-public-label:
 
@@ -1130,8 +1193,7 @@ Braille support
 **Question**: Are there any braille embossers or printers which have
 inbuilt braille converters and are accessible within the UNIX environment?
 
-**Answer**: You may want to look into BRLTTY
-(http://www.emptech.info/product_details.php?ID=1232).
+**Answer**: You may want to look into `BRLTTY <http://mielke.cc/brltty/>`_.
 
 .. _additional-support-label:
 
