@@ -1378,3 +1378,5 @@
 .. |image1389| image:: images/illrequests/confirmrequeststaff.png
 .. |image1390| image:: images/circ/prevcheckout.png
 .. |image1391| image:: images/opac/checkoutnote.png
+.. |image1392| image:: images/patrons/account_renewal_date.png
+.. |image1393| image:: images/patrons/renew_account.png

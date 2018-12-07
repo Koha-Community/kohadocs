@@ -366,15 +366,15 @@ Patrons in Koha can be edited using one of many edit buttons.
    |image427|
 
 -  Patron passwords are not recoverable. The stars show on the patron
-   detail next to the Password label are always there even if a password
+   detail next to the password label are always there even if a password
    isn't set. If a patron forgets their password the only option is to
    reset their password. To change the patron's password, click the
    'Change password' button.
 
    |image428|
 
-   -  Koha cannot display existing passwords. Leave the field blank to
-      leave password unchanged.
+   -  Koha cannot display existing passwords as they are encrypted in the
+      database. Leave the field blank to leave password unchanged.
 
    -  This form can automatically generate a random password if you
       click the link labeled "Click to fill with a randomly generated
@@ -440,6 +440,32 @@ Patrons in Koha can be edited using one of many edit buttons.
       of your adult patron categories this Child should be updated to
 
       |image437|
+
+.. _renew-patron-account-label:
+
+Renew patron account
+----------------------------------
+
+When renewing a patron account you can either edit the the expiry date
+manually in the patron record or use the 'Renew patron' option from the
+More menu in the toolbar at the top.
+
+|image1393|
+
+Using the latter the new expiry date will be calculated using the 
+enrollment period configured for the patron category of the user.
+The system preference :ref:`BorrowerRenewalPeriodBase` determines if
+the new expiry date will be calculated from the current date or from the 
+old expiry date.
+
+One advantage of using the 'Renew patron' option is that it will be logged
+as a membership renewal in the action_logs table and be visible as such
+when using the :ref:`Log viewer <log-viewer-label>` or the 
+:ref:`Modificaton log <modification-log-label>` from the patron account.
+
+The renewal date of the patron account will be visible on the details tab.
+
+|image1392|
 
 .. _managing-patron-self-edits-label:
 
