@@ -3244,7 +3244,7 @@ Column settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This administration area will help you hide or display columns on fixed
-tables throughout the staff client.
+tables throughout the staff client and OPAC.
 
 -  *Get there:* Administration > Additional parameters > Column settings
 
@@ -3278,10 +3278,54 @@ top right of the page
 
 |image244|
 
-       **Note**
-      
-       Any tables with columns listed here have the option to export to Excel, export to CSV,
-       copy, or print within the table header
+
++------------------+-----------------------------------------+
+| Module           | Tables                                  |
++==================+=========================================+
+| Acquisitions     | - Late orders                           |
+|                  | - Order search results                  |
+|                  | - Basket summary                        |
++------------------+-----------------------------------------+
+| Administration   | - Currencies                            |
++------------------+-----------------------------------------+
+| Catalog          | - Acquisition details                   |
+|                  | - Checkout history                      |
++------------------+-----------------------------------------+
+| Cataloging       | - Item table above edit item form       |
++------------------+-----------------------------------------+
+| Circulation      | - Checkins                              |
+|                  | - Checkouts                             |
+|                  | - Holds to pull                         |
+|                  | - Holds queue                           |
++------------------+-----------------------------------------+
+| Course reserves  | - Courses                               |
+|                  | - Reserves                              |
++------------------+-----------------------------------------+
+| Patrons          | - Holds history                         |
+|                  | - Fines > Account                       |
+|                  | - Details > Checkouts                   |
+|                  | - Patron search results                 |
++------------------+-----------------------------------------+
+| Tools            | - Notices and slips                     |
++------------------+-----------------------------------------+
+| OPAC             | - Holdings/items                        |
+|                  | - Serials issues on subscription tab    |
++------------------+-----------------------------------------+
+| Reports          | - Items lost                            |
+|                  | - Saved SQL reports                     |
++------------------+-----------------------------------------+
+| Serials          | - Acquisition details                   |
++------------------+-----------------------------------------+
+
+**Note** 
+
+  Patrons in the OPAC can't change the column visibility. For OPAC tables
+  this feature only allows to control the visibility of columns.   
+
+**Note**
+
+  Any tables with columns listed here also have the option to export to Excel, export to CSV,
+  copy, or print within the table header.
 
 .. _audio-alerts-label:
 
