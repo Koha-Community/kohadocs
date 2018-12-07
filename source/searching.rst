@@ -333,6 +333,8 @@ available facets include:
 
 -  Authors
 
+-  Collections
+
 -  Home library, holding library or both
 
     **Note**
@@ -340,9 +342,17 @@ available facets include:
     This depends on your setting for the :ref:`DisplayLibraryFacets 
     <displaylibraryfacets-label>` system preference.
 
+-  Item types
+
 -  Locations
 
+-  Series
+
+-  Places (geographic name headings)
+
 -  Topics (subject headings)
+
+-  Titles (uniform title headings)
 
 When there are more than five facets in a category, a 'Show more' link
 will appear. You can control the display of the facets using the following
