@@ -1231,10 +1231,11 @@ message.
 
 .. _default-checkouts-and-hold-policy-label:
 
-Default checkout, hold and return policy
+Default checkout, hold, and return policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can set a default maximum number of checkouts and hold policy that
+You can set a default maximum number of checkouts, a default maximum number
+of holds and a hold policy that
 will be used if none is defined below for a particular item type or
 category. This is the fall back rule for defaults.
 
@@ -1249,6 +1250,9 @@ patrons in the library if no other option is set in the forms below.
 -  In 'Total current on-site checkouts allowed' enter the total number
    of items patrons can have checked out on site at a time
    (:ref:`OnSiteCheckouts` needs to be set to 'Enable')
+
+-  In 'Maximum total holds allowed (count)' enter the total number
+   of pending holds patrons can have at the same time.
 
 -  Control where patrons can place holds from using the 'Hold Policy'
    menu
@@ -1290,21 +1294,22 @@ patrons in the library if no other option is set in the forms below.
 -  Once your policy is set, you can unset it by clicking the 'Unset'
    link to the right of the rule
 
-.. _checkouts-per-patron-label:
+.. _default-checkouts-and-hold-by-category-label:
 
-Default checkout limit by patron cateogry
+Default checkout and hold policy by patron cateogry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For this library, you can specify the maximum number of loans that a
-patron of a given category can make, regardless of the item type.
+For this library, you can specify the maximum number of checkouts, 
+on-site checkouts and holds that a patron of a given category can have, 
+regardless of the item type.
 
 |image162|
 
     **Note**
 
-    If the total amount loanable for a given patron category is left
-    blank, no limit applies, except possibly for a limit you define for
-    a specific item type.
+    If the total amount of checkouts, on-site checkout and holds
+    for a given patron category is left blank, no limit applies, 
+    except possibly for a limit you define in the circulation rules above.
 
 For example, if you have a rule in the matrix that says Board patrons
 are allowed 10 books and 5 DVDs but you want to make it so that Board
