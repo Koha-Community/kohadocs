@@ -1092,7 +1092,7 @@ EANs <library-eans-label>` setting.*
 -  **discount:** MARC21 field the contains the discount as a percentage
    the the price will be discounted by
 
--  **sort2:** MARC21 field that will populate custom field sort1
+-  **sort1:** MARC21 field that will populate custom field sort1
 
 -  **sort2:** MARC21 field that will populate custom field sort2
 
