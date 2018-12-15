@@ -1529,7 +1529,7 @@ rejection by a librarian
    'Approve' below the table.
 
 -  To reject a tag, you can either click the 'Reject' button in line
-   with the term, or check all terms you want to approve and click
+   with the term, or check all terms you want to reject and click
    'Reject' below the table.
 
 Once a tag has been approved or rejected it will be moved to the
