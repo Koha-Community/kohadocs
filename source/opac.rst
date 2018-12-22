@@ -827,7 +827,7 @@ The 'Fines' tab will show just a total of what the patron owes. Clicking
 on the total will take them to the 'your fines' tab where they will see a
 complete breakdown of their fines and bills. If you don't charge fines
 at your library you can turn the display of these tabs off by setting
-the :ref:`OPACFinesTab` preference to 'Don't Allow.'
+the :ref:`OPACFinesTab` preference to 'Don't allow.'
 
 |image1009|
 
@@ -857,7 +857,7 @@ bottom of the page.
 
 .. _patron-flags-label:
 
-Patron Flags
+Patron flags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have `flagged your patron's account <#patronflags>`__ they may
@@ -929,7 +929,7 @@ preferences.
 
 |image1016|
 
-Patrons can edit their details in this form and click 'Submit Changes'
+Patrons can edit their details in this form and click 'Submit changes'
 to have their edits sent to the library for review before their record
 is updated. Staff will see all patrons requesting modification to their
 record listed below the modules on the main dashboard along with
@@ -1116,19 +1116,19 @@ additional column to receive these messages via Phone.
 
 -  These notices are:
 
-   -  Advanced notice : A notice in advance of the patron's items being
+   -  Advanced notice: A notice in advance of the patron's items being
       due (The patron can choose the number of days in advance)
 
-   -  Item checkout : A notice that lists all the of the items the
+   -  Item checkout: A notice that lists all the of the items the
       patron has just checked out and/or renewed, this is an electronic
       form of the checkout receipt
 
-   -  Hold filled : A notice when you have confirmed the hold is waiting
+   -  Hold filled: A notice when you have confirmed the hold is waiting
       for the patron
 
-   -  Item due : A notice on the day and item is due back at the library
+   -  Item due: A notice on the day and item is due back at the library
 
-   -  Item check-in : A notice that lists all the of the items the
+   -  Item check-in: A notice that lists all the of the items the
       patron has just checked in
 
 Patrons can choose to receive their notices as a digest by checking the
@@ -1138,7 +1138,7 @@ in one email) in to one email instead of multiple emails for each alert.
 
     **Important**
 
-    You must choose a delivery method (SMS or Email or Phone) along with
+    You must choose a delivery method (SMS or email or phone) along with
     'Digest only?' if you would like to receive a digest of the
     messages.
 
@@ -1156,7 +1156,7 @@ lists.
 
 .. _ask-for-a-discharge-label:
 
-Ask for a Discharge
+Ask for a discharge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have enabled the :ref:`useDischarge` preference then
@@ -1193,7 +1193,7 @@ To place a new interlibrary loan request click on ‘Create a new request’ and
 
     If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance` preference the text displays here and you need to click ‘Yes’ to accept before continuing.
     
-Complete the publication details as fully as possible.  Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
+Complete the publication details as fully as possible. Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
 
 |image1375|
 
@@ -1205,7 +1205,7 @@ Click on ‘View’ to make changes or cancel your request.
 
 You cannot edit the form details but you can add a note to request a modification and then click on ‘Submit modifications’ at the bottom of the screen.  Your modification will be sent to the library for processing. 
 
-For New requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
+For new requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
 
 Purchase Suggestions
 -------------------------------------------
