@@ -461,7 +461,7 @@ when performing them in the OPAC.
 
 .. _placing-holds-label:
 
-Placing Holds
+Placing holds
 ----------------------------------
 
 Patrons can place holds on items via the OPAC if they're logged in and
@@ -471,7 +471,7 @@ hold will appear in several different places.
 
 -  When viewing a list or search results page you'll see the option to
    place hold on multiple items by checking the boxes to the left of the
-   results and clicking 'Place Hold' at the top
+   results and clicking 'Place hold' at the top
 
    |image982|
 
@@ -504,7 +504,7 @@ be brought to the same hold screen.
 -  If you would like to see more options you can click 'Show more
    options'
 
-   Place Hold Form with More Options
+   Place hold form with more options
 
    -  If you have the
       :ref:`AllowHoldItemTypeSelection`
@@ -516,17 +516,17 @@ be brought to the same hold screen.
 
 -  If allowed by your
    :ref:`OPACAllowHoldDateInFuture`
-   preference, the 'Hold Starts on Date' column will show. This field
+   preference, the 'Hold starts on date' column will show. This field
    allows the patron to have their hold start on a future date.
 
 -  By default holds placed in the system remain until canceled, but if
-   the patron fills in a 'Hold Not Needed After' date then the hold has
+   the patron fills in a 'Hold not needed after' date then the hold has
    an expiration date.
 
    -  **Important**
 
-          Expired holds are removed by the :ref:`Expired Holds Cron
-          Job <expired-holds-label>`, this is not an automatic process
+          Expired holds are removed by the :ref:`expired holds cron
+          job <expired-holds-label>`, this is not an automatic process
           and must be set up by your system administrator
 
 -  If allowed by the :ref:`OpacHoldNotes` preference then
@@ -542,7 +542,7 @@ be brought to the same hold screen.
 
    |image987|
 
-After clicking the Place Hold button the patron will be brought to their
+After clicking the 'Place hold' button the patron will be brought to their
 account page where they'll see all of the items they have on hold.
 
 .. _enhanced-content-label:
