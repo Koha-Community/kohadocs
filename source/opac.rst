@@ -547,7 +547,7 @@ account page where they'll see all of the items they have on hold.
 
 .. _enhanced-content-label:
 
-Enhanced Content
+Enhanced content
 -------------------------------------------
 
 .. _opac-tagging-label:
@@ -653,11 +653,11 @@ opening your Zotero library.
 
 .. _custom-rss-feeds-label:
 
-Custom RSS Feeds
+Custom RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using misc/cronjobs/rss/rss.pl you can generate an RSS feed for any SQL
-query (for example a new acquisitions RSS feed). rss.pl is run on the
+Using the :ref:`RSS feeds cron job<rss-feeds-label>` you can generate an RSS feed for any SQL
+query (for example a new acquisitions RSS feed). The cron job is run on the
 command line to produce an RSS XML document.
 
 The output should be placed in a directory accessible to the OPAC (or
@@ -666,7 +666,7 @@ staff) web interface so that users can download the RSS feed.
 An example of usage can be found at: misc/cronjobs/rss.pl
 lastAcquired.conf
 
-Normally rss.pl should be run periodically (e.g., daily) to keep the
+Normally the RSS cron job should be run periodically (e.g., daily) to keep the
 feed up-to-date.
 
 The configuration file (e.g., lastAcquired.conf) lists
@@ -677,12 +677,12 @@ The configuration file (e.g., lastAcquired.conf) lists
 
 -  SQL query
 
-rss.pl runs the SQL query, then feeds the output of the query through
+The RSS cron job runs the SQL query, then feeds the output of the query through
 the template to produce the output file.
 
     **Important**
 
-    To use custom RSS feeds you need to turn on the rss.pl cron job.
+    To use custom RSS feeds you need to turn on the :ref:`RSS cron job<rss-feeds-label>`.
 
 .. _opac-self-registration-label:
 
