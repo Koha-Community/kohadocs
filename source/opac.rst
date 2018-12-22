@@ -686,7 +686,7 @@ the template to produce the output file.
 
 .. _opac-self-registration-label:
 
-OPAC Self Registration
+OPAC self registration
 ----------------------------------------------
 
 If you allow it, patrons can register for their own accounts via the
