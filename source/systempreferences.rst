@@ -2582,7 +2582,7 @@ Circulation
 
 
 
-.. _article-requests-label:
+.. _article-requests-sysprefs-label:
 
 Article Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -7076,78 +7076,6 @@ Values:
 -  in an OPAC tab
 
 -  under the Save Record dropdown on the right
-
-.. _oclc-label:
-
-OCLC
-~~~~~~~~~~~~~~~~~~~~~
-
-.. _oclcaffiliateid-label:
-
-OCLCAffiliateID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Asks: Use the OCLC affiliate ID \_\_\_ to access the xISBN service.
-
-Description:
-
--  This setting is only applicable if the library has an OCLC Affiliate
-   ID. This allows WorldCat searching in the OPAC via the XISBN
-   programming interface. Simply enter the library's OCLC Affiliate ID
-   in the box provided. Please note that using this data is only
-   necessary if :ref:`FRBRizeEditions` and/or
-   :ref:`OPACFRBRizeEditions` and :ref:`XISBN`
-   settings are enabled. For more information on this service please
-   visit the OCLC website:
-   http://www.worldcat.org/affiliate/default.jsp.
-
-    **Important**
-
-    Unless you have signed up for an ID with OCLC, you are limited to
-    1000 requests per day. Available at:
-    http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
-
-.. _xisbn-label:
-
-XISBN
-^^^^^^^^^^^^^^^^^^
-
-Default: Don't use
-
-Asks: \_\_\_ the OCLC xISBN service to show other editions of a title
-
-Description:
-
--  Set to 'Use' to display an "Editions" tab on the item's detail page.
-   Editions are listed, complete with cover art and bibliographic
-   information. The feed comes from OCLC's xISBN web service. The feed
-   limit for non-commercial sites is 1000 requests per day.
-
-Values:
-
--  Don't use
-
--  Use
-
-    **Important**
-
-    Requires :ref:`FRBRizeEditions` and/or
-    :ref:`OPACFRBRizeEditions` set to 'show'
-
-.. _xisbndailylimit-label:
-
-XISBNDailyLimit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Default: 999
-
-Asks: Only use the xISBN service \_\_\_ times a day.
-
-    **Important**
-
-    Unless you have signed up for an ID with OCLC, you are limited to
-    1000 requests per day. Available at:
-    http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
 
 .. _open-library-label:
 
