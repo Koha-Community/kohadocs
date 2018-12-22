@@ -5,11 +5,11 @@ OPAC
 
 .. _search-results-label:
 
-Search Results
+Search results
 ---------------------------------------
 
 To search the OPAC you can either choose to enter your search words in
-the box at the top of the OPAC or click on the 'Advanced Search' link to
+the box at the top of the OPAC or click on the 'Advanced search' link to
 perform a more detailed search.
 
 |image937|
@@ -19,7 +19,7 @@ this manual.
 
 .. _results-overview-label:
 
-Results Overview
+Results overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After performing a search the number of results found for your search
@@ -60,7 +60,7 @@ the record.
 
 |image941|
 
-If you have turned on :ref:`Enhanced Content`
+If you have turned on :ref:`Enhanced content system preferences<enhanced-content-label>
 preferences you may have book jackets on your search results.
 
 |image942|
@@ -81,7 +81,7 @@ edit your advanced search blow the list of results pages.
 Filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To filter your results click on the links below the 'Refine Your Search'
+To filter your results click on the links below the 'Refine your search'
 menu on the left of your screen
 
 |image944|
@@ -99,7 +99,7 @@ clicking the small 'x' that appears to the right of the facet.
 
 .. _search-rss-feeds-label:
 
-Search RSS Feeds
+Search RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will be able to subscribe to your search results as an RSS feed by
