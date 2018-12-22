@@ -1207,7 +1207,7 @@ You cannot edit the form details but you can add a note to request a modificatio
 
 For new requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
 
-Purchase Suggestions
+Purchase suggestions
 -------------------------------------------
 
 If your library has the :ref:`suggestion` preference set
@@ -1234,9 +1234,9 @@ Clicking any one of these links will open the purchase suggestion form.
 
 |image1036|
 
--  From the form on the 'Title' is required by the library.
+-  From the form only the 'Title' is required by the library.
 
--  The Item type list can be edited by editing the SUGGEST\_FORMAT
+-  The item type list can be edited by editing the SUGGEST\_FORMAT
    :ref:`authorized value <authorized-values-label>`.
 
 -  If you would like the 'Reason for suggestion' menu shown in the
