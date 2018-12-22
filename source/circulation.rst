@@ -1102,6 +1102,12 @@ message stating how late your items are.
 Article requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Article requests are somewhat similar to holds, but are not requests 
+for an item to check out. Instead, article requests are requests for a 
+photocopy of a particular section of a book or an article from a serial 
+issue. This is very common in academic libraries where researchers may 
+request a copy of a single article found in a journal.
+
 First enable your system preference for :ref:`ArticleRequests`. 
 
 Set to 'Enable' patrons to place article requests.
@@ -1110,29 +1116,30 @@ Next you will need to decide how your patrons will make requests,
 either record only, item only, or both record and item level.
 
 You can set 3 different system preferences for mandatory fields to be filled 
-in dependent on how your records are requested.
+in depending on how your records are requested.
 
-:ref:`ArticleRequestsMandatoryFields`: make the following fields
-mandatory for records that are record level or item level requestable
+  - :ref:`ArticleRequestsMandatoryFields`: make the following fields
+    mandatory for records that are record level or item level requestable
 
-:ref:`ArticleRequestsMandatoryFieldsItemOnly` make the following
-fields mandatory for records that are only item level requestable
+  - :ref:`ArticleRequestsMandatoryFieldsItemOnly` make the following
+    fields mandatory for records that are only item level requestable
 
-:ref:`ArticleRequestsMandatoryFieldsRecordOnly` make the
-following fields mandatory for records that are only record level
-requestable
+  - :ref:`ArticleRequestsMandatoryFieldsRecordOnly` make the
+    following fields mandatory for records that are only record level
+    requestable
 
-Next you will want to go into your circulation and fine rules matrix and select 
-each rule that you want to allow requests.
+Next you will want to go into your circulation and fine rules matrix and 
+select each rule that you want to allow requests.
 
 You can allow requests to be made at the record level, item level, 
-yes (which means both) and no (none).
+yes (which means both) and no (which means no article requests may 
+be placed).
 
 Now you can place requests on both the staff client and OPAC.
 
-Once the article request has been placed, staff will see new requests at the 
-bottom of the home page on the staff client. (In the same location as tags, 
-comments and modifications).
+Once the article request has been placed, staff will see new requests at 
+the bottom of the home page on the staff client. (In the same location 
+as tags, comments and modifications).
 
 From there staff will be able to select requests to process.
 
