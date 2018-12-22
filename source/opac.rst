@@ -229,7 +229,7 @@ A cart is a temporary holding place for records you're interested in
 finding during this session. That means that once you log out of the
 OPAC or close the browser you lose the items in your cart. A list is a
 more permanent location for saving items. To learn more about lists,
-check the `Lists in the Staff Client <#stafflists>`__ chapter of this
+check the `Lists in the staff client <#stafflists>`__ chapter of this
 manual.
 
 .. _lists-label:
@@ -244,27 +244,27 @@ section of their account.
 
 .. _creating-lists-label:
 
-Creating Lists
+Creating lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Lists can also be created by choosing the 'New List' option in the 'Add
+Lists can also be created by choosing the 'New list' option in the 'Add
 to' menu on the search results
 
 |image966|
 
-To create a list the patron simply needs to click the 'New List' link
+To create a list the patron simply needs to click the 'New list' link
 and populate the form that appears
 
 |image967|
 
-The only field required is the 'List Name,' but the patron can also
+The only field required is the 'List name,' but the patron can also
 choose how they want the list sorted and if the list is public or
 private.
 
--  A Private List is managed by you and can be seen only by you
+-  A private list is managed by you and can be seen only by you
    (depending on your permissions settings below)
 
--  A Public List can be seen by everybody, but managed only by you
+-  A public list can be seen by everybody, but managed only by you
    (depending on your permissions settings below)
 
     **Important**
@@ -291,7 +291,7 @@ private.
 
 .. _adding-titles-to-lists-label:
 
-Adding titles to Lists
+Adding titles to lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Titles can be added to lists from the search results and/or from the
@@ -300,7 +300,7 @@ list appear below each result and across the top of the results page
 
 |image969|
 
-To add a single title to a list, click the 'Save to Lists' option and
+To add a single title to a list, click the 'Save to lists' option and
 then choose the list you'd like to add the title to. To add multiple
 titles to a list check the boxes on the left of the titles you want to
 add and then choose the list you want to add the titles to from the 'Add
@@ -308,10 +308,10 @@ too' pull down at the top of the screen.
 
 .. _viewing-lists-contents-label:
 
-Viewing Lists Contents
+Viewing lists contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To view the contents of a list, click on the list name under the Lists
+To view the contents of a list, click on the list name under the 'Lists'
 button.
 
 |image970|
@@ -329,21 +329,21 @@ Using the menu options above the list you can place multiple items on
 hold, download the list contents, email the list or print the list out.
 
 -  To place a hold on one or more list items check the box to the left
-   of the item and click the 'Place Hold' link at the top
+   of the item and click the 'Place hold' link at the top
 
--  To download the list contents click the 'Download List' link and
+-  To download the list contents click the 'Download list' link and
    choose the format you'd like to download the list in
 
--  To email the list contents to someone, click the 'Send List' link and
+-  To email the list contents to someone, click the 'Send list' link and
    enter in your email details in the form that pops up
 
    |image972|
 
--  To print the contents of your list out click the 'Print List' link
+-  To print the contents of your list out click the 'Print list' link
 
 .. _managing-lists-label:
 
-Managing Lists
+Managing lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the list is saved patrons can begin adding items to it. From the
@@ -388,7 +388,7 @@ Cart
 
 .. _adding-titles-to-the-cart-label:
 
-Adding titles to the Cart
+Adding titles to the cart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Titles can be added to the cart from the search results and/or from the
@@ -397,7 +397,7 @@ cart appear below each result and across the top of the results page
 
 |image977|
 
-Clicking the 'Add to Cart' button will add the one title to your cart.
+Clicking the 'Add to cart' button will add the one title to your cart.
 To add multiple titles at once, check the box to the left of each result
 and then choose 'Cart' from the 'Add to' pull down at the top of the
 screen. Once titles are added to the cart you will be presented with a
@@ -412,7 +412,7 @@ able to remove those items by clicking '(remove)'.
 
 .. _managing-the-cart-label:
 
-Managing the Cart
+Managing the cart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have titles in your cart you can manage the contents by
@@ -425,8 +425,8 @@ From this window you are presented with several options. Across the top
 of the cart are several buttons.
 
 First is the 'More details' button. Clicking this will show you
-additional information about the titles in your cart (ISBNs, Subjects,
-Publisher Info, Notes and more).
+additional information about the titles in your cart (ISBNs, subjects,
+publisher info, notes and more).
 
 |image1300|
 
@@ -445,7 +445,7 @@ new window that asks for the email address and message to send.
 
 In addition to sending your cart you can download the contents of your
 cart in several pre-defined formats or using a :ref:`CSV
-Profile <csv-profiles-label>` that you defined in the Tools module.
+profile <csv-profiles-label>` that you defined in the tools module.
 
 |image981|
 
@@ -455,7 +455,7 @@ Finally you can print out the contents of your cart by choosing the
 In addition to the various different ways to save the contents of your
 cart, there are ways to add value to the data in your cart. By selecting
 one or more titles from the cart you can add them to a list (click 'Add
-to a List'), place hold(s) (click 'Place hold'), or tag them (click
+to a list'), place hold(s) (click 'Place hold'), or tag them (click
 'Tag'). All of these operations follow the same procedure as they do
 when performing them in the OPAC.
 
