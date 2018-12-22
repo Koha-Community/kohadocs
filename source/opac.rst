@@ -3,56 +3,6 @@
 OPAC
 ====
 
-This chapter assumes that you have the following preferences set as
-follows:
-
--  :ref:`opacthemes` = bootstrap
-
--  :ref:`OPACXSLTResultsDisplay` = default
-
--  :ref:`OPACXSLTDetailsDisplay` = default
-
--  :ref:`DisplayOPACiconsXSLT` = show
-
--  :ref:`TagsEnabled` = Allow
-
--  :ref:`TagsInputOnDetail` =Allow
-
--  :ref:`TagsInputOnList` = Allow
-
--  :ref:`reviewson` = Allow
-
--  :ref:`ShowReviewer` = Allow
-
--  :ref:`ShowReviewerPhoto` =Allow
-
--  :ref:`OPACFRBRizeEditions` = Show
-
--  :ref:`OPACAmazonCoverImages` = Show
-
--  :ref:`XISBN` = Use
-
--  :ref:`OPACSearchForTitleIn` = Default set of
-   links
-
--  :ref:`OPACShowCheckoutName` = Don't show
-
--  :ref:`RequestOnOpac` = Allow
-
--  :ref:`AutoResumeSuspendedHolds` = Allow
-
--  :ref:`OpacBrowseResults` = Enable
-
--  :ref:`SuspendHoldsOpac` = Allow
-
--  :ref:`OpacSeparateHoldings <opacseparateholdings-&-opacseparateholdingsbranch-label>` = Don't separate
-
--  :ref:`OpacSeparateHoldingsBranch <opacseparateholdings-&-opacseparateholdingsbranch-label>` = home library
-
--  :ref:`DisplayLibraryFacets` = holding library
-
-If your system preferences are set differently your displays may differ.
-
 .. _search-results-label:
 
 Search Results
