@@ -33,8 +33,7 @@ A few caveats:
 -  It depends on the existence of ISBN for the item in question, so
    movies, older books, etc. would not work.
 
-Others have added all sorts of bells & whistles: XISBN lookups to search
-for related titles, custom messages based on the status of items (on
+Others have added all sorts of bells & whistles: custom messages based on the status of items (on
 order, on hold, etc.), ... just search the UserScripts site for Amazon +
 library. For a later date!
 

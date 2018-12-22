@@ -3,63 +3,13 @@
 OPAC
 ====
 
-This chapter assumes that you have the following preferences set as
-follows:
-
--  :ref:`opacthemes` = bootstrap
-
--  :ref:`OPACXSLTResultsDisplay` = default
-
--  :ref:`OPACXSLTDetailsDisplay` = default
-
--  :ref:`DisplayOPACiconsXSLT` = show
-
--  :ref:`TagsEnabled` = Allow
-
--  :ref:`TagsInputOnDetail` =Allow
-
--  :ref:`TagsInputOnList` = Allow
-
--  :ref:`reviewson` = Allow
-
--  :ref:`ShowReviewer` = Allow
-
--  :ref:`ShowReviewerPhoto` =Allow
-
--  :ref:`OPACFRBRizeEditions` = Show
-
--  :ref:`OPACAmazonCoverImages` = Show
-
--  :ref:`XISBN` = Use
-
--  :ref:`OPACSearchForTitleIn` = Default set of
-   links
-
--  :ref:`OPACShowCheckoutName` = Don't show
-
--  :ref:`RequestOnOpac` = Allow
-
--  :ref:`AutoResumeSuspendedHolds` = Allow
-
--  :ref:`OpacBrowseResults` = Enable
-
--  :ref:`SuspendHoldsOpac` = Allow
-
--  :ref:`OpacSeparateHoldings <opacseparateholdings-&-opacseparateholdingsbranch-label>` = Don't separate
-
--  :ref:`OpacSeparateHoldingsBranch <opacseparateholdings-&-opacseparateholdingsbranch-label>` = home library
-
--  :ref:`DisplayLibraryFacets` = holding library
-
-If your system preferences are set differently your displays may differ.
-
 .. _search-results-label:
 
-Search Results
+Search results
 ---------------------------------------
 
 To search the OPAC you can either choose to enter your search words in
-the box at the top of the OPAC or click on the 'Advanced Search' link to
+the box at the top of the OPAC or click on the 'Advanced search' link to
 perform a more detailed search.
 
 |image937|
@@ -69,7 +19,7 @@ this manual.
 
 .. _results-overview-label:
 
-Results Overview
+Results overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After performing a search the number of results found for your search
@@ -110,7 +60,7 @@ the record.
 
 |image941|
 
-If you have turned on :ref:`Enhanced Content`
+If you have turned on :ref:`Enhanced content system preferences<enhanced-content-label>
 preferences you may have book jackets on your search results.
 
 |image942|
@@ -131,7 +81,7 @@ edit your advanced search blow the list of results pages.
 Filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To filter your results click on the links below the 'Refine Your Search'
+To filter your results click on the links below the 'Refine your search'
 menu on the left of your screen
 
 |image944|
@@ -149,7 +99,7 @@ clicking the small 'x' that appears to the right of the facet.
 
 .. _search-rss-feeds-label:
 
-Search RSS Feeds
+Search RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will be able to subscribe to your search results as an RSS feed by
@@ -164,7 +114,7 @@ new item is added to the catalog in your area of interest.
 
 .. _bibliographic-record-label:
 
-Bibliographic Record
+Bibliographic record
 --------------------------------------
 
 When you click on a title from the search results, you're brought to the
@@ -190,7 +140,7 @@ will take you directly to the authority record.
 If you have your :ref:`DisplayOPACiconsXSLT`
 preference set to 'show' you will see a material type that is determined
 by values in your fixed fields (learn more in the :ref:`XSLT material 
-type icons <material-type-cataloging-guide-label>` catalouging guide.
+type icons <material-type-cataloging-guide-label>` cataloging guide.
 
 |image949|
 
@@ -204,12 +154,12 @@ clicked to search for other titles on similar topics
 |image951|
 
 If your record has a table of contents or summary it will appear next to
-the 'Summary' or 'Table of Contents' label
+the 'Summary' or 'Table of contents' label
 
 |image952|
 
 If your record has data in the 856 fields you'll see the links to the
-right of the 'Online Resources' label
+right of the 'Online resources' label
 
 |image953|
 
@@ -224,7 +174,7 @@ In the tabs below the details you will find your holdings data
 |image955|
 
 Any notes (5xx fields) that have been cataloged will appear under 'Title
-Notes'
+notes'
 
 |image956|
 
@@ -244,7 +194,7 @@ results.
 
 |image959|
 
-Clicking Browse Results at the top of the right column will open up your
+Clicking 'Browse results' at the top of the right column will open up your
 search results on the detail page
 
 |image960|
@@ -254,12 +204,12 @@ the record, save the record to your lists, or add it to your cart
 
 |image961|
 
-Clicking 'More Searches' will show the list of libraries you entered in
+Clicking 'More searches' will show the list of libraries you entered in
 your :ref:`OPACSearchForTitleIn` preference
 
 |image962|
 
-Under the 'Save Record' label you will find a series of file formats you
+Under the 'Save record' label you will find a series of file formats you
 can save the record as. This list can be customized by altering the
 :ref:`OpacExportOptions` system preference.
 
@@ -279,7 +229,7 @@ A cart is a temporary holding place for records you're interested in
 finding during this session. That means that once you log out of the
 OPAC or close the browser you lose the items in your cart. A list is a
 more permanent location for saving items. To learn more about lists,
-check the `Lists in the Staff Client <#stafflists>`__ chapter of this
+check the `Lists in the staff client <#stafflists>`__ chapter of this
 manual.
 
 .. _lists-label:
@@ -294,27 +244,27 @@ section of their account.
 
 .. _creating-lists-label:
 
-Creating Lists
+Creating lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Lists can also be created by choosing the 'New List' option in the 'Add
+Lists can also be created by choosing the 'New list' option in the 'Add
 to' menu on the search results
 
 |image966|
 
-To create a list the patron simply needs to click the 'New List' link
+To create a list the patron simply needs to click the 'New list' link
 and populate the form that appears
 
 |image967|
 
-The only field required is the 'List Name,' but the patron can also
+The only field required is the 'List name,' but the patron can also
 choose how they want the list sorted and if the list is public or
 private.
 
--  A Private List is managed by you and can be seen only by you
+-  A private list is managed by you and can be seen only by you
    (depending on your permissions settings below)
 
--  A Public List can be seen by everybody, but managed only by you
+-  A public list can be seen by everybody, but managed only by you
    (depending on your permissions settings below)
 
     **Important**
@@ -341,7 +291,7 @@ private.
 
 .. _adding-titles-to-lists-label:
 
-Adding titles to Lists
+Adding titles to lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Titles can be added to lists from the search results and/or from the
@@ -350,7 +300,7 @@ list appear below each result and across the top of the results page
 
 |image969|
 
-To add a single title to a list, click the 'Save to Lists' option and
+To add a single title to a list, click the 'Save to lists' option and
 then choose the list you'd like to add the title to. To add multiple
 titles to a list check the boxes on the left of the titles you want to
 add and then choose the list you want to add the titles to from the 'Add
@@ -358,10 +308,10 @@ too' pull down at the top of the screen.
 
 .. _viewing-lists-contents-label:
 
-Viewing Lists Contents
+Viewing lists contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To view the contents of a list, click on the list name under the Lists
+To view the contents of a list, click on the list name under the 'Lists'
 button.
 
 |image970|
@@ -379,21 +329,21 @@ Using the menu options above the list you can place multiple items on
 hold, download the list contents, email the list or print the list out.
 
 -  To place a hold on one or more list items check the box to the left
-   of the item and click the 'Place Hold' link at the top
+   of the item and click the 'Place hold' link at the top
 
--  To download the list contents click the 'Download List' link and
+-  To download the list contents click the 'Download list' link and
    choose the format you'd like to download the list in
 
--  To email the list contents to someone, click the 'Send List' link and
+-  To email the list contents to someone, click the 'Send list' link and
    enter in your email details in the form that pops up
 
    |image972|
 
--  To print the contents of your list out click the 'Print List' link
+-  To print the contents of your list out click the 'Print list' link
 
 .. _managing-lists-label:
 
-Managing Lists
+Managing lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the list is saved patrons can begin adding items to it. From the
@@ -438,7 +388,7 @@ Cart
 
 .. _adding-titles-to-the-cart-label:
 
-Adding titles to the Cart
+Adding titles to the cart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Titles can be added to the cart from the search results and/or from the
@@ -447,7 +397,7 @@ cart appear below each result and across the top of the results page
 
 |image977|
 
-Clicking the 'Add to Cart' button will add the one title to your cart.
+Clicking the 'Add to cart' button will add the one title to your cart.
 To add multiple titles at once, check the box to the left of each result
 and then choose 'Cart' from the 'Add to' pull down at the top of the
 screen. Once titles are added to the cart you will be presented with a
@@ -462,7 +412,7 @@ able to remove those items by clicking '(remove)'.
 
 .. _managing-the-cart-label:
 
-Managing the Cart
+Managing the cart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have titles in your cart you can manage the contents by
@@ -475,8 +425,8 @@ From this window you are presented with several options. Across the top
 of the cart are several buttons.
 
 First is the 'More details' button. Clicking this will show you
-additional information about the titles in your cart (ISBNs, Subjects,
-Publisher Info, Notes and more).
+additional information about the titles in your cart (ISBNs, subjects,
+publisher info, notes and more).
 
 |image1300|
 
@@ -495,7 +445,7 @@ new window that asks for the email address and message to send.
 
 In addition to sending your cart you can download the contents of your
 cart in several pre-defined formats or using a :ref:`CSV
-Profile <csv-profiles-label>` that you defined in the Tools module.
+profile <csv-profiles-label>` that you defined in the tools module.
 
 |image981|
 
@@ -505,13 +455,13 @@ Finally you can print out the contents of your cart by choosing the
 In addition to the various different ways to save the contents of your
 cart, there are ways to add value to the data in your cart. By selecting
 one or more titles from the cart you can add them to a list (click 'Add
-to a List'), place hold(s) (click 'Place hold'), or tag them (click
+to a list'), place hold(s) (click 'Place hold'), or tag them (click
 'Tag'). All of these operations follow the same procedure as they do
 when performing them in the OPAC.
 
 .. _placing-holds-label:
 
-Placing Holds
+Placing holds
 ----------------------------------
 
 Patrons can place holds on items via the OPAC if they're logged in and
@@ -521,7 +471,7 @@ hold will appear in several different places.
 
 -  When viewing a list or search results page you'll see the option to
    place hold on multiple items by checking the boxes to the left of the
-   results and clicking 'Place Hold' at the top
+   results and clicking 'Place hold' at the top
 
    |image982|
 
@@ -554,7 +504,7 @@ be brought to the same hold screen.
 -  If you would like to see more options you can click 'Show more
    options'
 
-   Place Hold Form with More Options
+   Place hold form with more options
 
    -  If you have the
       :ref:`AllowHoldItemTypeSelection`
@@ -566,17 +516,17 @@ be brought to the same hold screen.
 
 -  If allowed by your
    :ref:`OPACAllowHoldDateInFuture`
-   preference, the 'Hold Starts on Date' column will show. This field
+   preference, the 'Hold starts on date' column will show. This field
    allows the patron to have their hold start on a future date.
 
 -  By default holds placed in the system remain until canceled, but if
-   the patron fills in a 'Hold Not Needed After' date then the hold has
+   the patron fills in a 'Hold not needed after' date then the hold has
    an expiration date.
 
    -  **Important**
 
-          Expired holds are removed by the :ref:`Expired Holds Cron
-          Job <expired-holds-label>`, this is not an automatic process
+          Expired holds are removed by the :ref:`expired holds cron
+          job <expired-holds-label>`, this is not an automatic process
           and must be set up by your system administrator
 
 -  If allowed by the :ref:`OpacHoldNotes` preference then
@@ -592,12 +542,12 @@ be brought to the same hold screen.
 
    |image987|
 
-After clicking the Place Hold button the patron will be brought to their
+After clicking the 'Place hold' button the patron will be brought to their
 account page where they'll see all of the items they have on hold.
 
 .. _enhanced-content-label:
 
-Enhanced Content
+Enhanced content
 -------------------------------------------
 
 .. _opac-tagging-label:
@@ -703,11 +653,11 @@ opening your Zotero library.
 
 .. _custom-rss-feeds-label:
 
-Custom RSS Feeds
+Custom RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using misc/cronjobs/rss/rss.pl you can generate an RSS feed for any SQL
-query (for example a new acquisitions RSS feed). rss.pl is run on the
+Using the :ref:`RSS feeds cron job<rss-feeds-label>` you can generate an RSS feed for any SQL
+query (for example a new acquisitions RSS feed). The cron job is run on the
 command line to produce an RSS XML document.
 
 The output should be placed in a directory accessible to the OPAC (or
@@ -716,7 +666,7 @@ staff) web interface so that users can download the RSS feed.
 An example of usage can be found at: misc/cronjobs/rss.pl
 lastAcquired.conf
 
-Normally rss.pl should be run periodically (e.g., daily) to keep the
+Normally the RSS cron job should be run periodically (e.g., daily) to keep the
 feed up-to-date.
 
 The configuration file (e.g., lastAcquired.conf) lists
@@ -727,16 +677,16 @@ The configuration file (e.g., lastAcquired.conf) lists
 
 -  SQL query
 
-rss.pl runs the SQL query, then feeds the output of the query through
+The RSS cron job runs the SQL query, then feeds the output of the query through
 the template to produce the output file.
 
     **Important**
 
-    To use custom RSS feeds you need to turn on the rss.pl cron job.
+    To use custom RSS feeds you need to turn on the :ref:`RSS cron job<rss-feeds-label>`.
 
 .. _opac-self-registration-label:
 
-OPAC Self Registration
+OPAC self registration
 ----------------------------------------------
 
 If you allow it, patrons can register for their own accounts via the
@@ -877,7 +827,7 @@ The 'Fines' tab will show just a total of what the patron owes. Clicking
 on the total will take them to the 'your fines' tab where they will see a
 complete breakdown of their fines and bills. If you don't charge fines
 at your library you can turn the display of these tabs off by setting
-the :ref:`OPACFinesTab` preference to 'Don't Allow.'
+the :ref:`OPACFinesTab` preference to 'Don't allow.'
 
 |image1009|
 
@@ -907,7 +857,7 @@ bottom of the page.
 
 .. _patron-flags-label:
 
-Patron Flags
+Patron flags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have `flagged your patron's account <#patronflags>`__ they may
@@ -979,7 +929,7 @@ preferences.
 
 |image1016|
 
-Patrons can edit their details in this form and click 'Submit Changes'
+Patrons can edit their details in this form and click 'Submit changes'
 to have their edits sent to the library for review before their record
 is updated. Staff will see all patrons requesting modification to their
 record listed below the modules on the main dashboard along with
@@ -1166,19 +1116,19 @@ additional column to receive these messages via Phone.
 
 -  These notices are:
 
-   -  Advanced notice : A notice in advance of the patron's items being
+   -  Advanced notice: A notice in advance of the patron's items being
       due (The patron can choose the number of days in advance)
 
-   -  Item checkout : A notice that lists all the of the items the
+   -  Item checkout: A notice that lists all the of the items the
       patron has just checked out and/or renewed, this is an electronic
       form of the checkout receipt
 
-   -  Hold filled : A notice when you have confirmed the hold is waiting
+   -  Hold filled: A notice when you have confirmed the hold is waiting
       for the patron
 
-   -  Item due : A notice on the day and item is due back at the library
+   -  Item due: A notice on the day and item is due back at the library
 
-   -  Item check-in : A notice that lists all the of the items the
+   -  Item check-in: A notice that lists all the of the items the
       patron has just checked in
 
 Patrons can choose to receive their notices as a digest by checking the
@@ -1188,7 +1138,7 @@ in one email) in to one email instead of multiple emails for each alert.
 
     **Important**
 
-    You must choose a delivery method (SMS or Email or Phone) along with
+    You must choose a delivery method (SMS or email or phone) along with
     'Digest only?' if you would like to receive a digest of the
     messages.
 
@@ -1206,7 +1156,7 @@ lists.
 
 .. _ask-for-a-discharge-label:
 
-Ask for a Discharge
+Ask for a discharge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have enabled the :ref:`useDischarge` preference then
@@ -1243,7 +1193,7 @@ To place a new interlibrary loan request click on ‘Create a new request’ and
 
     If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance` preference the text displays here and you need to click ‘Yes’ to accept before continuing.
     
-Complete the publication details as fully as possible.  Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
+Complete the publication details as fully as possible. Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
 
 |image1375|
 
@@ -1255,9 +1205,9 @@ Click on ‘View’ to make changes or cancel your request.
 
 You cannot edit the form details but you can add a note to request a modification and then click on ‘Submit modifications’ at the bottom of the screen.  Your modification will be sent to the library for processing. 
 
-For New requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
+For new requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
 
-Purchase Suggestions
+Purchase suggestions
 -------------------------------------------
 
 If your library has the :ref:`suggestion` preference set
@@ -1284,9 +1234,9 @@ Clicking any one of these links will open the purchase suggestion form.
 
 |image1036|
 
--  From the form on the 'Title' is required by the library.
+-  From the form only the 'Title' is required by the library.
 
--  The Item type list can be edited by editing the SUGGEST\_FORMAT
+-  The item type list can be edited by editing the SUGGEST\_FORMAT
    :ref:`authorized value <authorized-values-label>`.
 
 -  If you would like the 'Reason for suggestion' menu shown in the

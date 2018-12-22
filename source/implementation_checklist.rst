@@ -717,9 +717,9 @@ enhanced content system preferences.
 -  :ref:`FRBR/Editions <frbrizeeditions-label>`
 
    -  If you would like to have your OPAC and/or staff client show an
-      'Editions' tab on the bib record, you want to enable one or the
-      other FRBR preferences and then either one or both of the ISBN
-      services (XISBN and ThingISBN).
+      'Editions' tab on the bibliographic record, you want to enable one or the
+      other FRBR preferences and then the ISBN
+      service ThingISBN.
 
 -  :ref:`Amazon <amazon-label>` : This service is free and just requires
    that you visit http://aws.amazon.com to sign up
@@ -763,12 +763,6 @@ enhanced content system preferences.
 
    -  This is a pay service from Ebsco. Contact Ebsco for the
       information to enter into these preferences
-
--  :ref:`OCLC`
-
-   -  XISBN is used to populate the editions tab on the bib record
-      display if you have enabled FRBR. This service is free for up to
-      999 queries a day.
 
 -  :ref:`Open Library`
 

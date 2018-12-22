@@ -74,8 +74,6 @@ Enhanced Content Related
 -  WorldCat Affiliate Tools -
    http://www.worldcat.org/wcpa/do/AffiliateUserServices?method=initSelfRegister
 
--  XISBN - http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp
-
 -  LibraryThing for Libraries - http://www.librarything.com/forlibraries
 
 .. _design-related-label:
