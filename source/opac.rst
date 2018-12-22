@@ -114,7 +114,7 @@ new item is added to the catalog in your area of interest.
 
 .. _bibliographic-record-label:
 
-Bibliographic Record
+Bibliographic record
 --------------------------------------
 
 When you click on a title from the search results, you're brought to the
@@ -140,7 +140,7 @@ will take you directly to the authority record.
 If you have your :ref:`DisplayOPACiconsXSLT`
 preference set to 'show' you will see a material type that is determined
 by values in your fixed fields (learn more in the :ref:`XSLT material 
-type icons <material-type-cataloging-guide-label>` catalouging guide.
+type icons <material-type-cataloging-guide-label>` cataloging guide.
 
 |image949|
 
@@ -154,12 +154,12 @@ clicked to search for other titles on similar topics
 |image951|
 
 If your record has a table of contents or summary it will appear next to
-the 'Summary' or 'Table of Contents' label
+the 'Summary' or 'Table of contents' label
 
 |image952|
 
 If your record has data in the 856 fields you'll see the links to the
-right of the 'Online Resources' label
+right of the 'Online resources' label
 
 |image953|
 
@@ -174,7 +174,7 @@ In the tabs below the details you will find your holdings data
 |image955|
 
 Any notes (5xx fields) that have been cataloged will appear under 'Title
-Notes'
+notes'
 
 |image956|
 
@@ -194,7 +194,7 @@ results.
 
 |image959|
 
-Clicking Browse Results at the top of the right column will open up your
+Clicking 'Browse results' at the top of the right column will open up your
 search results on the detail page
 
 |image960|
@@ -204,12 +204,12 @@ the record, save the record to your lists, or add it to your cart
 
 |image961|
 
-Clicking 'More Searches' will show the list of libraries you entered in
+Clicking 'More searches' will show the list of libraries you entered in
 your :ref:`OPACSearchForTitleIn` preference
 
 |image962|
 
-Under the 'Save Record' label you will find a series of file formats you
+Under the 'Save record' label you will find a series of file formats you
 can save the record as. This list can be customized by altering the
 :ref:`OpacExportOptions` system preference.
 
