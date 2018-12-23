@@ -1108,6 +1108,11 @@ photocopy of a particular section of a book or an article from a serial
 issue. This is very common in academic libraries where researchers may 
 request a copy of a single article found in a journal.
 
+.. _setting-up-article-requests-label:
+
+Setting up article requests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 First enable your system preference for :ref:`ArticleRequests`. 
 
 Set to 'Enable' patrons to place article requests.
@@ -1128,14 +1133,51 @@ in depending on how your records are requested.
     following fields mandatory for records that are only record level
     requestable
 
-Next you will want to go into your circulation and fine rules matrix and 
-select each rule that you want to allow requests.
+Next you will want to go into your :ref:`circulation and fine rules 
+matrix<circulation-and-fine-rules-label>` and select each rule for which  
+you want to allow requests.
 
 You can allow requests to be made at the record level, item level, 
 yes (which means both) and no (which means no article requests may 
 be placed).
 
+.. _placing-article-requests-label:
+
+Placing article requests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Now you can place requests on both the staff client and OPAC.
+
+In the staff client, on the record details page, you will see a 
+'Request article' button at the top and an 'Article requests' tab 
+to the left. The two options lead to the same page.
+
+|image1394|
+
+Just like a hold, you will be prompted to enter the patron's card 
+number or name.
+
+|image1395|
+
+Fill in the form.
+
+|image1396|
+
+       **Note**
+
+       Remember, the mandatory fields are set through the three system 
+       preferences :ref:`ArticleRequestsMandatoryFields`, 
+       :ref:`ArticleRequestsMandatoryFieldsItemOnly`, and 
+       :ref:`ArticleRequestsMandatoryFieldsRecordOnly`.
+
+If allowed, choose the item to which the request applies.
+
+Then click on 'Place request'.
+
+From the OPAC, patrons can place requests themselves by going to the 
+detailed record.
+
+.. RENDUE ICI!!
 
 Once the article request has been placed, staff will see new requests at 
 the bottom of the home page on the staff client. (In the same location 
