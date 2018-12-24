@@ -1391,3 +1391,5 @@
 .. |image1402| image:: images/circ/articlerequests/staffinterfacenotification.png
 .. |image1403| image:: images/circ/articlerequests/requestmanagement.png
 .. |image1404| image:: images/circ/articlerequests/actionsmenu.png
+.. |image1405| image:: images/circ/articlerequests/batchprocess.png
+

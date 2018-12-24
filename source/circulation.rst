@@ -1240,6 +1240,14 @@ letting them know the request is ready for pickup.
 
 This removes the article request from the processing tab.
 
+     **Note**
+
+     Actions can also be made in bulk by checking the boxes next to the 
+     requests to process or by clicking 'Select all', and choosing the new 
+     status from the actions menu on top of the table.
+
+     |image1405|
+
 .. _overdues-label:
 
 Overdues
