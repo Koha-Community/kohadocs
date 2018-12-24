@@ -1113,7 +1113,7 @@ request a copy of a single article found in a journal.
 Setting up article requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First enable your system preference for :ref:`ArticleRequests`. 
+First, enable your system preference for :ref:`ArticleRequests`. 
 
 Set to 'Enable' patrons to place article requests.
 
@@ -1170,31 +1170,69 @@ Fill in the form.
        :ref:`ArticleRequestsMandatoryFieldsItemOnly`, and 
        :ref:`ArticleRequestsMandatoryFieldsRecordOnly`.
 
-If allowed, choose the item to which the request applies.
+If allowed, choose the specific item to request.
 
-Then click on 'Place request'.
+Then, click on 'Place request'.
 
-From the OPAC, patrons can place requests themselves by going to the 
-detailed record.
+From the OPAC, patrons can place requests themselves either from the 
+results list 
 
-.. RENDUE ICI!!
+|image1397|
+
+or by going to the detailed record.
+
+|image1398|
+
+As with a hold, if the patron is not logged in, they will be 
+asked to do so.
+
+The form is the same as the one in the staff interface.
+
+|image1399|
+
+If allowed, the patron chan choose the specific item to request.
+
+From their acocunt, the patron will be able to follow the progress 
+of their request from 'pending'
+
+|image1400|
+
+to 'processing'.
+
+|image1401|
+
+The patron will also receive an email notification when the status of 
+the request changes.
+
+Once the request is completed the patron will receive an email notification 
+and the article request will no longer appear in their account.
+
+Managing article requests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the article request has been placed, staff will see new requests at 
 the bottom of the home page on the staff client. (In the same location 
 as tags, comments and modifications).
 
+|image1402|
+
 From there staff will be able to select requests to process.
+
+|image1403|
 
 The first step would be for a staff member to process the request, that moves 
 the request to the processing tab and alerts other staff members that the 
-request is in process. On the actions column, click on the dropdown menu and 
-select process request. This will move the request to the processing tab.
+request is in process. In the actions column, click on the dropdown menu and 
+select 'Process request'. This will move the request to the processing tab.
+
+|image1404|
 
 Next staff will go to the shelf and make a copy of the requested article.
 
-Once that is complete, staff can print the Article request slip (this can be 
-customized in notices and slips) and staple or paper clip it to the article. 
-In the actions column, you can select the dropdown and select print slip.
+Once that is complete, staff can print the article request slip (this can be 
+customized in :ref:`notices and slips<notices-&-slips-label>` under AR\_SLIP) 
+and staple or paper clip it to the article. In the actions column, you can 
+select the dropdown and select print slip.
 
 Finally, staff will select the complete article request from the actions 
 dropdown menu which will send a notice to the patron who made the request 
