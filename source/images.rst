@@ -1380,3 +1380,16 @@
 .. |image1391| image:: images/opac/checkoutnote.png
 .. |image1392| image:: images/patrons/account_renewal_date.png
 .. |image1393| image:: images/patrons/renew_account.png
+.. |image1394| image:: images/circ/articlerequests/placingrequest1.png
+.. |image1395| image:: images/circ/articlerequests/placingrequest2.png
+.. |image1396| image:: images/circ/articlerequests/placingrequest3.png
+.. |image1397| image:: images/circ/articlerequests/opacresults.png
+.. |image1398| image:: images/circ/articlerequests/opacdetails.png
+.. |image1399| image:: images/circ/articlerequests/opacform.png
+.. |image1400| image:: images/circ/articlerequests/opacarticlerequestpending.png
+.. |image1401| image:: images/circ/articlerequests/opacarticlerequestprocessing.png
+.. |image1402| image:: images/circ/articlerequests/staffinterfacenotification.png
+.. |image1403| image:: images/circ/articlerequests/requestmanagement.png
+.. |image1404| image:: images/circ/articlerequests/actionsmenu.png
+.. |image1405| image:: images/circ/articlerequests/batchprocess.png
+
