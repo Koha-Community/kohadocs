@@ -1,5 +1,5 @@
 ======================
-Koha 18.11 Manual (en)
+Koha 19.05 Manual (en)
 ======================
 
 :Author: The Koha Community
