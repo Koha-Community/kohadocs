@@ -3564,19 +3564,27 @@ Description:
 MarkLostItemsAsReturned
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Default: Mark
+Default: Disable
 
 Asks: \_\_\_ items as returned when flagged as lost.
 
 Values:
 
--  Do not mark
+-  [Select All]
 
--  Mark
+-  From the batch item modification tool
+
+-  From the items tab of the catalog module
+
+-  From the longoverdue cronjob
+
+-  When cataloging an item
 
 Description:
 
--  This preference lets you decide if an item marked as lost is automatically returned from the user's file or not.
+-  The library can choose which of these actions or all of these actions, does an 
+item gets automatically returned from the patron's account or not. 
+
 
 .. _maxoutstanding-label:
 
