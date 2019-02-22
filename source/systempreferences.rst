@@ -2311,6 +2311,9 @@ Description:
    090, 852 are all common in MARC21) and the subfield codes without the
    delimiters ($a, $b would be ab).
 
+-  If you want several fields to be the source of the item's call number, 
+   simply separate the fields with 'or'. See examples below.
+
 Examples:
 
 -  Dewey: 082ab or 092ab; LOC: 050ab or 090ab; from the item record:
