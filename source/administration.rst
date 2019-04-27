@@ -1875,6 +1875,8 @@ associated with the field
    -  If you check 'Mandatory' the record will not be allowed to save
       unless you have a value assigned to this tag
 
+   -  If you add default values for indicators these will be pre-filled to save time when cataloguing but can still be edited if required  
+   
    -  'Authorized value' is where you define an :ref:`authorized
       value <authorized-values-label>` that your catalogers can choose from
       a pull down to fill this field in
