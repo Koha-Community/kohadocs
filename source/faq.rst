@@ -415,7 +415,7 @@ sent/received per users per day. India specific drivers include:
 
 -  Unicel Technologies Pvt Ltd (`unicel.in <http://unicel.in>`__)
 
-.. _cataloging-label:
+.. _email_notices/messages-label:
 
 Email notices/messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -449,6 +449,7 @@ If you have the above configured correctly and your emails are still being
 treated as spam then you likely need to contact your email service provider/dns 
 provider and look into MX, SPF and DKIM records.
 
+.. _cataloging-label:
 
 Cataloging
 ------------------------
