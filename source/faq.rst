@@ -417,6 +417,39 @@ sent/received per users per day. India specific drivers include:
 
 .. _cataloging-label:
 
+Email notices/messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Question**: How do I prevent my libraries notices ending up marked as spam?
+
+**Answer**: This is a complicated topic, but thankfully Koha gives you a good 
+degree of control via various system preferences.
+
+For every email sent out from Koha there are three important addresses for the 
+system to get correct, *From*, *Reply-to* and *Sender*. These are configurable 
+at both the system and library level and should fallback in a suitable manor if 
+any of them are not defined.
+
+* KohaAdminEmailAddress - This will act as the *From* address and should be an 
+address in the same domain as the koha server [for example noreply@koha-hosting.org]
+* ReplytoDefault - This will act as the *Reply-to* address and can be in any 
+domain [for example librarian@mylibrary.com] and this is the address which will 
+be used if/when a patron hits 'Reply' in their email client. Note: This will 
+fall back to KohaAdminEmailAddress when it is not set.
+* ReturnpathDefault - This will act as the *Sender* address and also needs to be 
+within the koha/email servers domain [for example postmaster@koha-hosting.org] 
+and this is the address which will be used to report if an email bounces for any 
+reason.
+
+There are parallels to all the above preferences at the per branch level which 
+fall back in the same order as mentioned aboved before falling back to the system 
+level preferences above when required.
+
+If you have the above configured correctly and your emails are still being 
+treated as spam then you likely need to contact your email service provider/dns 
+provider and look into MX, SPF and DKIM records.
+
+
 Cataloging
 ------------------------
 
