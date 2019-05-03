@@ -56,8 +56,7 @@ To add a new library:
 -  Next you can enter basic contact info about the branch
 
    |image125|
-   .. screenshot is missing the OPAC info box
-
+ 
    -  The address and contact fields can be used to make notices custom
       for each library
 
@@ -108,9 +107,11 @@ To add a new library:
 
    -  If this library has a specific `MARC organization code <http://www.loc.gov/marc/organizations/orgshome.html>`_, you can enter it   here. If left blank, the code entered in the :ref:`MARCOrgCode` preference will be used for this library.
 
-   -  Finally, if you have any notes you can put them here. These will
+   -  If you have any notes you can put them here. These will
       not show in the OPAC
-
+     
+   -  Finally, you can choose whether the library will display as an available pickup location for holds
+   
     **Note**
 
     Of the fields listed, only 'Library code' and 'Name' are required
@@ -1874,6 +1875,8 @@ associated with the field
    -  If you check 'Mandatory' the record will not be allowed to save
       unless you have a value assigned to this tag
 
+   -  If you add default values for indicators these will be pre-filled to save time when cataloguing but can still be edited if required  
+   
    -  'Authorized value' is where you define an :ref:`authorized
       value <authorized-values-label>` that your catalogers can choose from
       a pull down to fill this field in
