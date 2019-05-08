@@ -5062,11 +5062,6 @@ Descriptions:
    the order in which libraries will be requested to fulfill an on-shelf
    hold will be randomized each time the list is regenerated.
 
-   Leaving StaticHoldsQueueWeight empty is contraindicated at this time.
-   Doing so will cause the build\_holds\_queue script to ignore
-   RandomizeHoldsQueueWeight, causing the script to request hold
-   fulfillment not randomly, but by alphabetical order.
-
     **Important**
 
     The :ref:`Transport Cost Matrix <transport-cost-matrix-label>` takes
