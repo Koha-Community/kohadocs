@@ -72,3 +72,21 @@ https://gitlab.com/koha-community/koha-manual (see a summary
 
 The instructions for contributing to the manual are on the Koha wiki 
 https://wiki.koha-community.org/wiki/Editing_the_Koha_Manual
+
+.. _contributing-to-koha-label:
+
+Contributing to Koha
+----------------------------------------------
+
+As an open source project, contributions are of course not limited to the 
+documentation, but are also welcomed and encouraged for all aspects of the 
+project.
+
+If you're interesting in contributing new features, bugfixes or even just
+bug reports to koha it's worth familiarizing yourself with our release and 
+development procedures as outlined at the following places:
+
+* `Code of Conduct <https://koha-community.org/about/policy/code-of-conduct/>`_
+* `Release Cycle <https://koha-community.org/about/release-schedule/>`_
+* `Developer Handbook <https://wiki.koha-community.org/wiki/Developer_handbook>`_
+* `Development Workflow <https://wiki.koha-community.org/wiki/Development_workflow>`_
