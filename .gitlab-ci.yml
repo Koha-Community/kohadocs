@@ -1,4 +1,6 @@
 before_script:
+  only:
+    - master@koha-community/koha-manual
   # Install ssh-agent if not already installed, it is required by Docker.
   # (change apt-get to yum if you use a CentOS-based image)
   - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
@@ -34,7 +36,8 @@ image: debian:unstable
 #  - master
 
 production:
-    only: - master@koha-community/koha-manual
+    only:
+      - master@koha-community/koha-manual
     cache:
        paths:
         - build/en/html
