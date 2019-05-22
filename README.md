@@ -1,7 +1,7 @@
 Koha Documentation
 ==================
 
-This is the main repository for the Koha manual.
+This is the main repository for the Koha manual.   
 It is mirrored at git.koha-community.org.
 
 The manual is generated with Sphinx.
