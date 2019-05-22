@@ -3151,22 +3151,22 @@ the question mark next to various different options on the form
 
 .. _csv-profiles-label:
 
-CSV Profiles
+CSV profiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Additional Tools > CSV Profiles
+-  *Get there:* More > Tools > Additional tools > CSV profiles
 
-CSV Profiles are created to define how you would like your cart or list
+CSV profiles are created to define how you would like your cart or list
 to export.
 
 .. _add-csv-profiles-label:
 
-Add CSV Profiles
+Add CSV profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add a CSV Profile
+To add a CSV profile
 
--  Click 'CSV Profiles' from the Tools menu
+-  Click 'CSV profiles' from the Tools menu
 
 -  The 'Profile type' determines what type of fields you plan to use
    (MARC or SQL) to define your profile
@@ -3234,10 +3234,10 @@ To add a CSV Profile
 
 .. _modify-csv-profiles-label:
 
-Modify CSV Profiles
+Modify CSV profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once you have created at least one CSV Profile an 'Edit profile' tab
+Once you have created at least one CSV profile an 'Edit profile' tab
 will appear next to the 'New profile' button.
 
 |image381|
@@ -3257,7 +3257,7 @@ will appear next to the 'New profile' button.
 
 .. _using-csv-profiles-label:
 
-Using CSV Profiles
+Using CSV profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your CSV Profiles will appear on the export list or cart menu under the
