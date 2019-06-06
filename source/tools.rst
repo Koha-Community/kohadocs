@@ -3260,21 +3260,21 @@ will appear next to the 'New profile' button.
 Using CSV profiles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your CSV Profiles will appear on the export list or cart menu under the
+Your CSV profiles will appear on the export list or cart menu under the
 'Download' button in both the staff client and the OPAC
 
 |image384|
 
 .. _log-viewer-label:
 
-Log Viewer
+Log viewer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Additional Tools > Log Viewer
+-  *Get there:* More > Tools > Additional tools > Log viewer
 
 Actions within the Koha system are tracked in log files. Your :ref:`system
 preferences <logs-label>` can be changed to prevent the logging of
-different actions. These logs can be viewed using the Log Viewer Tool.
+different actions. These logs can be viewed using the log viewer.
 
 |image385|
 
