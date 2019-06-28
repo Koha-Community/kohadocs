@@ -366,8 +366,10 @@ When finished, click 'Save'
 
 |image808|
 
-Once your basket is created you are presented with several options for
-adding items to the order.
+Once your basket is created, click on 'Add to basket'. You are presented 
+with several options for adding items to the order.
+
+|image1407|
 
 -  If you are ordering another copy of an existing item, you can simply
    search for the record in your system.
@@ -383,7 +385,7 @@ adding items to the order.
          listed under 'Catalog details.'
 
 -  If you allow patrons to make purchase suggestions (learn more in the
-   :ref:`Managing suggestions` section of this manual),
+   :ref:`Managing suggestions <managing-suggestions-label>` section of this manual),
    then you can place orders from those suggestions. In order to keep
    track of suggestions that have been ordered and received you must
    place the order using this link.
@@ -443,6 +445,17 @@ adding items to the order.
       place an order, enable the :ref:`UseACQFrameworkForBiblioRecords` preference
       which will allow the ACQ MARC framework to customize the display of fields
       when ordering.
+
+-  You can duplicate an existing order line by choosing the 'From existing 
+   orders (copy)' option.
+
+   -  You will be presented with a search form to search your existing orders.
+
+      |image1408|
+
+   -  Check the boxes next to the order(s) you want to duplicate.
+
+      |image1409|
 
 -  If you want to search other libraries for an item to purchase, you
    can use the 'From an external source' option that will allow you to
