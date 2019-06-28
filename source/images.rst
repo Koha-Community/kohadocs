@@ -1392,4 +1392,5 @@
 .. |image1403| image:: images/circ/articlerequests/requestmanagement.png
 .. |image1404| image:: images/circ/articlerequests/actionsmenu.png
 .. |image1405| image:: images/circ/articlerequests/batchprocess.png
-
+.. |image1406| image:: images/acquisitions/addtobasket.png
+.. |image1407| image:: images/acquisitions/addtobasketoptions.png
