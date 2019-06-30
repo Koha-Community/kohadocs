@@ -331,9 +331,11 @@ And click the 'New basket' button to the right of the vendor name.
 
     **Note**
 
-    You can also add to an existing basket by clicking the 'Add to
-    basket' link to the far right of each basket's information in the
-    results table.
+    You can also add to an existing basket by clicking the arrow next to 
+    the 'View' button at the far right of each basket's information in 
+    the results table, and choosing 'Add to basket'.
+
+    |image1406|
 
 After clicking 'New basket' you will be asked to enter some information
 about the order:
@@ -354,7 +356,13 @@ about the order:
 -  If you're ordering standing items (items which arrive regularly) then
    you will want to check the 'Orders are standing' box for this basket.
    
-   -  Note that any one basket cannot contain both firm and standing orders.   
+   -  Note that any one basket cannot contain both firm and standing orders. 
+
+-  You can choose to create items either upon placing the order, upon 
+   receiving the order, or upon cataloging the item. If you choose an 
+   option other than the default, it will apply only to this basket. 
+   The default is set by the :ref:`AcqCreateItem <acqcreateitem-label>` 
+   system preference.  
 
 If you have :ref:`added contracts <add-a-contract-label>` to the vendor
 you're ordering from, you will also have an option to choose which
@@ -362,12 +370,16 @@ contract you're ordering these items under.
 
 |image807|
 
-When finished, click 'Save'
+When finished, click 'Save'.
 
 |image808|
 
-Once your basket is created you are presented with several options for
-adding items to the order.
+Once your basket is created, click on 'Add to basket' you are presented 
+with several options for adding items to the order.
+
+|image1408|
+
+..Caroline was here
 
 -  If you are ordering another copy of an existing item, you can simply
    search for the record in your system.
@@ -383,7 +395,7 @@ adding items to the order.
          listed under 'Catalog details.'
 
 -  If you allow patrons to make purchase suggestions (learn more in the
-   :ref:`Managing suggestions` section of this manual),
+   :ref:`Managing suggestions <managing-suggestions-label>` section of this manual),
    then you can place orders from those suggestions. In order to keep
    track of suggestions that have been ordered and received you must
    place the order using this link.
@@ -443,6 +455,17 @@ adding items to the order.
       place an order, enable the :ref:`UseACQFrameworkForBiblioRecords` preference
       which will allow the ACQ MARC framework to customize the display of fields
       when ordering.
+
+-  You can duplicate an existing order line by choosing the 'From existing 
+   orders (copy)' option.
+
+   -  You will be presented with a search form to search your existing orders.
+
+      |image1408|
+
+   -  Check the boxes next to the order(s) you want to duplicate.
+
+      |image1409|
 
 -  If you want to search other libraries for an item to purchase, you
    can use the 'From an external source' option that will allow you to
