@@ -3289,23 +3289,22 @@ A query for all logs related to the Circulation module produces a result
 News
 ~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Additional Tools > News
+-  *Get there:* More > Tools > Additional tools > News
 
 Koha's news module allows librarians to post news to the OPAC, staff
 interface and circulation receipts.
 
 |image387|
 
-To add news to either the OPAC, the Staff Client or a Circulation
+To add news to either the OPAC, the Staff Client or a circulation
 receipt:
 
--  Click 'New Entry'
+-  Click 'New entry'
 
    |image388|
 
-   -  Under 'Display Location' choose whether to put the news on the
-      OPAC, Slip (circulation receipt) or the Librarian (Staff)
-      Interface.
+   -  Under 'Display location' choose whether to put the news on the
+      OPAC (OPAC news), Slip (circulation receipt) or the Librarian interface.
 
       |image1240|
 
@@ -3316,14 +3315,14 @@ receipt:
    -  Using the publication and expiration date fields you can control
       from which date and for how long your news item appears
 
-      -  Examples: (these assume today's date as 07-May-2015)
+      -  Examples: (these assume today's date as 7 May 2019)
 
-         -  Publish on current date: set publication date as 07-May-2015
+         -  Publish on current date: set publication date as 7 May 2019
 
          -  Schedule for publishing in future: set date later than
-            07-May-2015
+            7 May 2019
 
-         -  Backdate the news item: set date earlier than 07-May-2015
+         -  Backdate the news item: set date earlier than 7 May 2019
 
    -  'Appear in position' lets you decide what order your news items
       appear in
