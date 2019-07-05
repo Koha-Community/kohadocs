@@ -377,9 +377,10 @@ When finished, click 'Save'.
 Once your basket is created, click on 'Add to basket' you are presented 
 with several options for adding items to the order.
 
-|image1408|
+|image1407|
 
-..Caroline was here
+Order from an existing record
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  If you are ordering another copy of an existing item, you can simply
    search for the record in your system.
@@ -394,11 +395,18 @@ with several options for adding items to the order.
       -  All of the details associated with the item will already be
          listed under 'Catalog details.'
 
+Order from a purchase suggestion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 -  If you allow patrons to make purchase suggestions (learn more in the
    :ref:`Managing suggestions <managing-suggestions-label>` section of this manual),
    then you can place orders from those suggestions. In order to keep
    track of suggestions that have been ordered and received you must
    place the order using this link.
+
+     **Important**
+
+     Suggestions must be accepted before you can order them.
 
    |image811|
 
@@ -417,9 +425,13 @@ with several options for adding items to the order.
          |image813|
 
    -  Orders added to the basket in this way will notify the patron via
-      email that their suggestion has been ordered and will update the
-      patron's ':ref:`your purchase suggestions <your-purchase-suggestions-label>`' page
-      in the OPAC.
+      email that their suggestion has been ordered (with the 'ORDERED' notice 
+      in Tools > :ref:`Notices & slips <existing-notices-&-slips-label>`) and will 
+      update the patron's ':ref:`your purchase suggestions 
+      <your-purchase-suggestions-label>`' page in the OPAC.
+
+Order from a serial subscription
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  If you're using the `Serials <#serials>`__ module you can link your
    subscription order information to acquisitions by choosing to order
@@ -441,8 +453,11 @@ with several options for adding items to the order.
 
       |image816|
 
+Order from a new (empty) record
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 -  To order from a record that can't be found anywhere else, choose the
-   'From a new (empty) record.'
+   'From a new (empty) record' option.
 
    |image817|
 
@@ -453,8 +468,11 @@ with several options for adding items to the order.
       
       If the default form does not have catalog details fields necessary to
       place an order, enable the :ref:`UseACQFrameworkForBiblioRecords` preference
-      which will allow the ACQ MARC framework to customize the display of fields
-      when ordering.
+      which will allow the ACQ :ref:`MARC framework <marc-bibliographic-frameworks-label>` 
+      to customize the display of fields when ordering.
+
+Duplicate orders (order from existing orders)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  You can duplicate an existing order line by choosing the 'From existing 
    orders (copy)' option.
@@ -467,13 +485,16 @@ with several options for adding items to the order.
 
       |image1409|
 
+Order from an external source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 -  If you want to search other libraries for an item to purchase, you
    can use the 'From an external source' option that will allow you to
    order from a MARC record found via a Z39.50 search.
 
    |image818|
 
-   -  From the results, click the Order link next to the item you want
+   -  From the results, click the 'Order' button next to the item you want
       to purchase.
 
       |image819|
@@ -485,36 +506,39 @@ with several options for adding items to the order.
       |image820|
 
       -  From the warning, you can choose to order another copy on the
-         existing bib record, create a new bib record, or cancel your
-         order of this item.
+         existing bibliographic record, create a new bibliographic 
+         record, or cancel your order of this item.
 
    -  In the order form that pops up, you will not be able to edit the
       catalog details.
 
       |image821|
 
--  The next option for ordering is to order from a staged record (:ref:`learn
-   more about staging records <stage-marc-records-for-import-label>`).
+Order from a new file
+^^^^^^^^^^^^^^^^^^^^^
 
-       **Note**
+-  If your vendor sent you a record file (a .mrc file for example), you can 
+   add orders using the records in that file. Choose the 'From a new file' 
+   option.
 
-       This is the option you will choose if you have an order file from
-       your vendor.
+     **Note**
 
-Order from a staged file
-~~~~~~~~~~~~~~~~~~~~~~~~
+     Note that you need the stage_marc_import :ref:`tool permission <granular-tools-permissions-label>` 
+     in order to be able order from a new file.
 
-   |image822|
+    - You will be taken to the :ref:`Stage MARC records for import 
+      <stage-marc-records-for-import-label>` tool. Stage your file as described 
+      in that section. 
 
-   -  From the list of files you are presented with, choose the 'Add
-      orders' link to add the records in the staged file to your order.
+    - Once the files are staged, you can click on the 'Add staged files to basket' 
+      button.
 
-      |image1281|
+      |image1410|
 
    -  Next to each title is a checkbox, check the items you would like
-      to order, or choose 'Check all' at the top. Depending on your
+      to order, or choose 'Select all' at the top. Depending on your
       settings in the :ref:`MarcFieldsToOrder`
-      preference Koha will populate the next screen with with the
+      preference, Koha will populate the next screen with with the
       relevant Quantity, Price, Fund, Statistic 1, and Statistic 2 found
       within the staged file.
 
@@ -533,12 +557,55 @@ Order from a staged file
 
       |image1284|
 
+Order from a staged file
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  This option is the same as the previous one, but in this case, your file has already 
+   been :ref:`staged <stage-marc-records-for-import-label>`. Whether you choose to 'order 
+   from a new file' or 'order from a staged file' will depend on your acquisitions 
+   workflow or your :ref:`permissions <patron-permissions-label>.
+
+   -  Once you click on 'From a staged file', you will get a list of all the
+      staged files in your system.
+
+      |image822|
+
+   -  From the list of files you are presented with, click on the 'Add
+      orders' button to add the records in the staged file to your order.
+
+      |image1281|
+
+   -  Next to each title is a checkbox, check the items you would like
+      to order, or choose 'Select all' at the top. Depending on your
+      settings in the :ref:`MarcFieldsToOrder`
+      preference, Koha will populate the next screen with with the
+      relevant Quantity, Price, Fund, Statistic 1, and Statistic 2 found
+      within the staged file.
+
+      |image1282|
+
+   -  In the 'Item information' tab you can enter information that will
+      be added to every ordered item such as item type, collection code
+      and not for loan status.
+
+      |image1283|
+
+   -  If no information is imported in the fund information from the MARC
+      with the :ref:`MarcFieldsToOrder` preference, 
+      the 'Default accounting details' tab can be used to
+      apply values related to the accounting.
+
+      |image1284|
+
+Order from titles with highest hold ratios
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 -  The final option for ordering is to order from a list of titles with
    the highest hold ratios
 
    -  This option will take you to the holds ratio report where you can
       find items with a high hold ratio and order additional copies.
-      Next to each title will be a link with the number of items to
+      Next to each title will be a button with the number of items to
       order, click that and it will add the item to your basket.
 
       |image1285|
@@ -553,18 +620,20 @@ patrons who will be notified of the new issue.
 Patron notification search
 
 -  In the window that pops up search for the patrons you'd like to
-   notify and click 'Select'
+   notify and click 'Add'
+
+   |image1411|
 
 -  Once you're done you can close the window and you'll see the list of
    patrons under the 'Patrons' section
 
    |image1286|
 
-After bringing in the bib information (for all import methods except for
-the staged file), if your :ref:`AcqCreateItem` system
+After bringing in the record information (for all order methods except for
+the staged files), if your :ref:`AcqCreateItem` system
 preference is set to add an item when ordering you will enter the item
-info next. You need to fill out at least one item record and then click
-the 'Add' button at the bottom left of the item form.
+information next. You need to fill out at least one item record and then click
+the 'Add item' button at the bottom left of the item form.
 
 |image823|
 
@@ -573,6 +642,12 @@ appear above the form and then you can enter your next item the same way
 (if ordering more than one item).
 
 |image824|
+
+If you are ordering several items, you can click on the 'Add multiple items' 
+instead of adding them one by one. This will ask you how many items you want to add.
+Simply enter that number in the box and click on 'Add'.
+
+|image1412|
 
 Once you have entered the info about the item, you need to enter the
 Accounting information.
@@ -584,24 +659,28 @@ Accounting information.
 
    -  **Important**
 
-          You cannot edit the quantity manually, you must click 'Add'
-          below the item form to add as many items as you're ordering.
+          If the item is created upon orderinf, you will not be able to 
+          edit the quantity manually, you must click 'Add item' below 
+          the item form to add as many items as you're ordering.
 
 -  The list of funds is populated by the :ref:`funds <funds-label>` you have
-   assigned in the Acquisitions administration area.
+   assigned in the :ref:`Acquisitions administration <acquisitions-module-label>` area.
 
 -  The currency pull down will have the
-   :ref:`currencies <currencies-and-exchange-rates-label>` you set up in the :ref:`Acquisitions
-   administration <acquisitions-label>` area.
+   :ref:`currencies <currencies-and-exchange-rates-label>` you set 
+   up in the :ref:`Acquisitions administration <acquisitions-module-label>` area.
 
 -  The vendor price is the price before any taxes or discounts are
    applied.
 
 -  If the price is uncertain, check the uncertain price box.
 
-   -  A basket with at least one uncertain price can't be closed.
+   **Note**
 
--  If you are charged sales tax, choose that from the gstrate field
+   A basket with at least one uncertain price can't be closed.
+
+-  If you are charged sales tax, choose that from the 'Tax rate' field. 
+   This field is populated by the :ref:`gist system preference <gist-label>`.
 
 -  Enter the percentage discount you're receiving on this order, once
    you enter this, hit tab and Koha will populate the rest of the cost
@@ -610,15 +689,26 @@ Accounting information.
 -  Retail price is the recommended retail price (RRP), the price set 
    by the publisher or the manufacturer as a recommendation to booksellers. 
 
--  Replacement cost is the price it will cost to replace the item. 
+-  Replacement cost is the price it will cost to replace the item. This is the 
+   price charged to the user when an item is declared lost (if the :ref:`WhenLostChargeReplacementFee` 
+   system preference is set to 'Charge').
    
 -  Budgeted cost is the amount that will be removed from the 'spent' budget.
+   Whether this number includes or excludes taxes will depend on the 'List price' 
+   setting for your :ref:`vendor <vendors-label>`.
    
 -  Total is the budgeted cost multiplied by the quantity of items ordered.
 
--  If you added planning values when :ref:`creating the
+-  You can add an internal note. This will only appear in the acquisitions module 
+   and in the staff interface catalog, under the 'Acquisitions details' tab 
+   in the detailed record.
+
+-  You can also add a vendor note. This will appear in the acquisitions module 
+   as well as on the order when exported as CSV.
+
+-  If you added statistical categories when :ref:`creating the
    Fund <add-a-fund-label>`, those values will appear in the two
-   planning value fields.
+   statistics fields.
 
 Once you have filled in all of the fields click 'Save' to add the item
 to your basket. If your price goes over the amount available in the fund
@@ -634,17 +724,12 @@ summary.
 
 |image827|
 
-If you would like to see more details you can check the 'Show all
-details' checkbox
-
-|image828|
-
 From here, you can edit or remove the items that you have added.
 
--  Choosing to 'Delete the order' will delete the order line but leave
+-  Choosing to 'Cancel the order' will delete the order line but leave
    the record in the catalog.
 
--  Choosing to 'Delete order and catalog record' removes both the order
+-  Choosing to 'Cancel order and delete catalog record' removes both the order
    line and the record in the catalog.
 
    -  The catalog record cannot always be deleted. You might see notes
@@ -652,13 +737,40 @@ From here, you can edit or remove the items that you have added.
 
       |image829|
 
-On the summary page, you also have the option to edit the information
-that you entered about the basket by clicking the 'Edit basket header
-information' button, to delete the basket altogether by clicking the
-'Delete this basket' button, or to export your basket as a CSV file by
-clicking the 'Export this basket as CSV' button.
+On the summary page, you also have the several option through the buttons 
+at the top of the basket header.
 
 |image830|
+
+  - Edit basket: edit the basket information, such as the name or the billing 
+    place.
+
+  - Delete this basket: if the basket is empty, you will get a simple 
+    confirmation message before deleting the basket. If the basket contains orders, 
+    you will get a confirmation message with several options.
+
+    |image1413|
+
+    - Delete basket and orders: this will delete the basket, cancel the orders, 
+      refund the used funds, and delete the items (ordered or received).
+
+    - Delete basket, orders, and records: this will delete all of the above 
+      plus the bibliographic records associated with the orders (except the 
+      ones which can't be deleted because they have remaining items, orders 
+      or subscriptions attached).
+
+  - Close this basket: closing the basket will enable you to add it to a basket 
+    group (this is optional) and receive its items.
+
+  - Export as CSV: this will create a CSV file with all your orders from this basket. 
+    You can add several CSV profiles options by going to the :ref:`CSV profiles 
+    tool <csv-profiles-label>`.
+
+  - E-mail order: this will send the order information to your contact for this 
+    vendor. Make sure your contact has a email address in the :ref:`vendor 
+    profile <vendors-label>`.
+
+.. Caroline was here
 
 If you're using EDI for your order you can click the 'Create EDIFACT
 order' button when you're done to send the file to the vendor and close
