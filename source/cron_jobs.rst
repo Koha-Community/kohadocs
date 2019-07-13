@@ -2,11 +2,11 @@
 
 .. _cron-jobs-label:
 
-Cron jobs and Daemons
+Cron jobs and daemons
 =====================
 
 Koha is supported by a number of background tasks.  These tasks can either
-be periodically executed tasks (cron jobs) or continuously running task called
+be periodically executed tasks (cron jobs) or continuously running tasks called
 daemons.
 
 A cron job is a Linux command for scheduling a command or script on your
@@ -16,8 +16,8 @@ can perform other tasks that do not modify data on the server, like
 sending out email notifications.
 
 A daemon is a Linux command that is typically started when the system is
-booted and runs in the background doing some function.  The database used
-by Koha (either mysql or mariadb) is a daemon as is the webserver (typically
+booted and runs in the background doing some function. The database used
+by Koha (either MySQL or MariaDB) is a daemon as is the web server (typically
 Apache).
 
 Koha has many cron jobs in place that you can enable
@@ -29,8 +29,8 @@ Crontab example
 
 An example of a Koha crontab can be found in misc/cronjobs/crontab.example
 
-The example includes sample boilerplate cronjob entries for the most
-commonly-used cronjobs.
+The example includes sample boilerplate cron job entries for the most
+commonly-used cron jobs.
 
 .. _cron-jobs-subchapter-label:
 
@@ -204,24 +204,42 @@ Fines
 
 Script path: misc/cronjobs/fines.pl
 
-Does: calculates and posts fines to patron accounts.
+Does: calculates and charges (or increments) overdue fines per item to patron 
+accounts. The fine calculation is done using the grace period, fine interval, 
+fine amount and other parameters from the :ref:`circulation and fines rules <circulation-and-fine-rules-label>`.
 
 Required by: :ref:`finesMode` system preference
 
 Frequency suggestion: nightly
 
+    **Note**
+    If the Koha system preference 'finesMode' is set to 'production', the fines
+    are charged to the patron accounts. If set to 'test', the fines are calculated 
+    but not applied.
+    
+    **Note**
+    Fines will not be applied on a holiday.
+
 .. _staticfines-label:
 
-Static Fines
+Static fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Script path: misc/cronjobs/staticfines.pl
 
-Does: calculates and charges overdue fines to patron accounts
+Does: charges a single static fine for any/all overdues a patron currently has 
+outstanding. The charge amount is either defined on the command line per 
+borrower category or will use the circulation rules associated with the oldest 
+overdue item the patron has currently checked out (for the first fine period only)
+Once charged, the fine is static: No new fines will be added until the existing 
+fine is paid off in full.
+
+Frequency suggestion: nightly
 
     **Note**
     If the Koha system preference 'finesMode' is set to 'production', the fines
-    are charged to the patron accounts. If set to 'test', the fines are calculated but not applied.
+    are charged to the patron accounts. If set to 'test', the fines are calculated 
+    but not applied.
     
     **Note**
     Fines won't be applied on a holiday.
