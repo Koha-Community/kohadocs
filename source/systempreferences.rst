@@ -13711,6 +13711,21 @@ Values:
 
 -  Show
 
+.. _showLastPatron-label:
+
+showLastPatron
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't Show
+
+Asks: \_\_\_ a link to the last searched patron in the staff client.
+
+Values: 
+
+-  Don't show
+
+-  Show
+
 .. _staffdetailitemselection-label:
 
 StaffDetailItemSelection
