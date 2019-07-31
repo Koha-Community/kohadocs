@@ -92,7 +92,7 @@ overview to the documentation describes Zebra as:
     databases using an enormous variety of programs and toolkits, both
     commercial and free, which understands this protocol..." Zebra -
     User's Guide and Reference, p. 1,
-    http://www.indexdata.dk/zebra/doc/zebra.pdf
+    https://software.indexdata.com/zebra/doc/idzebra.pdf
 
 This brief guide will explain a chart that shows a sample of how a
 MARC21 database can be configured, as well as a brief introductory
