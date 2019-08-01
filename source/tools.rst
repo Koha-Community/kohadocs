@@ -33,7 +33,7 @@ To create a new list of patrons click the 'New patron list' button
 
 Enter a list name.
 
-Checking the 'Shared' box will make this list visible to all users with 
+Checking the 'Shared' box will make this list visible to all users with
 the :ref:`manage_patron_lists permission <granular-tools-permissions-label>`.
 
 Save the list.
@@ -52,7 +52,7 @@ menu.
 Enter the patron's name or cardnumber in the search box and click on the
 right result to add the patron.
 
-Alternatively, you can click on the 'Enter multiple card numbers' link and 
+Alternatively, you can click on the 'Enter multiple card numbers' link and
 scan (or type in) barcodes in the box.
 
 |image249|
@@ -74,17 +74,17 @@ useful for tracking summer reading programs, book clubs and other such clubs.
 
     **Important**
 
-    Staff will need the :ref:`clubs permissions<granular-clubs-permissions-label>` 
-    to edit clubs, templates and enroll patrons. To learn how to set patron 
-    permissions, go to the :ref:`patron permissions section<setting-patron-permissions-label>` 
+    Staff will need the :ref:`clubs permissions<granular-clubs-permissions-label>`
+    to edit clubs, templates and enroll patrons. To learn how to set patron
+    permissions, go to the :ref:`patron permissions section<setting-patron-permissions-label>`
     of this manual.
 
 Creating a new club template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Click on the 'New club template' button. Here you can add fields that can be 
-filled out at the time a new club is created based on the template, or a new 
-enrollment is created for a given club based on the template. 
+Click on the 'New club template' button. Here you can add fields that can be
+filled out at the time a new club is created based on the template, or a new
+enrollment is created for a given club based on the template.
 
 |image1364|
 
@@ -97,12 +97,12 @@ The description can be any additional information.
 Allow public enrollment: if this box is checked it will allow patrons to enroll
 in a club based on this template from the OPAC.
 
-Require valid email address: if this box is checked only patrons 
+Require valid email address: if this box is checked only patrons
 with a valid email address can enroll. So they will need a email address
 to enroll.
 
 The library drop down gives you the flexibility to let staff from specific
-branches create clubs with this template. If you let it set to blank, staff 
+branches create clubs with this template. If you let it set to blank, staff
 from any branch will be able to create a new club using this template.
 
 Club fields: these fields will be used when creating a club based on this
@@ -112,18 +112,18 @@ template. For example, this can be the name of the club, the name of the animato
 
   'Name' is the label of the field
 
-  'Description' is additional information about this field. 
+  'Description' is additional information about this field.
 
-  You can connect authorized values here. 
+  You can connect authorized values here.
 
 Enrollment fields: you can add any additional fields you want to have filled
-out by your patrons when they enroll in a club base on this template. 
+out by your patrons when they enroll in a club base on this template.
 
 |image1366|
 
   'Name' is the label of the field
 
-  'Description' is additional information about this field. 
+  'Description' is additional information about this field.
 
   You can connect authorized values here.
 
@@ -151,12 +151,12 @@ Enrolling a patron in a club from the staff client
 
 To enroll a patron in a club from the staff client, go to the patron's account.
 
-On the 'Details' page or the 'Check out' page, click on the 'Clubs' tab. All 
+On the 'Details' page or the 'Check out' page, click on the 'Clubs' tab. All
 ongoing clubs will be displayed in this tab.
 
 |image1368|
 
-Click on the 'Enroll' button and fill in the fields. 
+Click on the 'Enroll' button and fill in the fields.
 
 You can also cancel enrollment by clicking on the cancel enrollment.
 
@@ -165,7 +165,7 @@ Enrolling a patron in a club from the OPAC
 
 If you allow public enrollment, the club will be visible on the OPAC.
 
-Patrons have to sign into their account. In the 'Your summary' section, they 
+Patrons have to sign into their account. In the 'Your summary' section, they
 will be able to click on the 'Clubs' tab and enroll.
 
 |image1369|
@@ -173,7 +173,7 @@ will be able to click on the 'Clubs' tab and enroll.
 Viewing enrollments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can monitor the enrollments in each club by going to the 'Patron clubs' tool page 
+You can monitor the enrollments in each club by going to the 'Patron clubs' tool page
 and choosing 'Enrollment' from the 'Actions' button.
 
 |image1370|
@@ -314,12 +314,12 @@ bring the data into Koha.
 
      |image257|
 
-   -  When using patron attributes in your installation, you can choose how 
+   -  When using patron attributes in your installation, you can choose how
       they are handled on import. You can either decide to always overlay all
       patron attributes or you choose to only replace patron attributes
       included in your import file. This will leave other attributes
       untouched.
-   
+
      |image1355|
 
 .. _notices-&-slips-label:
@@ -346,7 +346,7 @@ notices, using the :ref:`NoticeCSS` preference to define a
 stylesheet.
 
 You will also want to review the `Customising notices and slips
-<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_
 wiki page for more information on formatting these notices.
 
 .. _adding-notices-&-slips-label:
@@ -365,7 +365,7 @@ To add a new notice or slip
    -  **Important**
 
           Not all notices can be branch specific for more information
-          review the `Customising notices and slips <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+          review the `Customising notices and slips <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_
           wiki page.
 
 -  Choose the module this notice is related to
@@ -418,7 +418,7 @@ To add a new notice or slip
 
       -  **Note**
 
-             Review the `Customising notices and slips <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+             Review the `Customising notices and slips <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_
              wiki page for more information.
 
       -  **Important**
@@ -465,7 +465,7 @@ To add a new notice or slip
       for a patron.
 
       |image1335|
-      
+
 .. _preview-notice-templates-label:
 
 Preview notice templates
@@ -491,7 +491,7 @@ Overdue notice markup
 When creating your overdue notices there are two tags in addition to the
 various database fields that you can use in your notices. You will also
 want to review the `Customising notices and slips
-<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_
 wiki page for information on formatting item information in these notices.
 
     **Important**
@@ -529,7 +529,7 @@ Koha. All of these notices can be customized by altering their text via
 the Notices & slips tool and their style using the
 :ref:`NoticeCSS` preference to define a stylesheet. You will
 also want to review the `Customising notices and slips
-<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_ 
+<https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_
 wiki page for information on formatting item
 information in these notices. Here are some of what those notices do:
 
@@ -538,17 +538,17 @@ information in these notices. Here are some of what those notices do:
    -  This notice is sent when a patron's suggestion is accepted.
 
    -  *Note:* If you don't want to send this notice, just delete it.
-      
+
 -  ACCOUNT\_PAYMENT
 
-   -  This notice is sent for each payment transaction in a patron's 
-      account if the :ref:`UseEmailReceipts` system preference is set 
+   -  This notice is sent for each payment transaction in a patron's
+      account if the :ref:`UseEmailReceipts` system preference is set
       to 'Send'.
 
 -  ACCOUNT\_WRITEOFF
 
-   -  This notice is sent for each writeoff transaction in a patron's 
-      account if the :ref:`UseEmailReceipts` system preference is set 
+   -  This notice is sent for each writeoff transaction in a patron's
+      account if the :ref:`UseEmailReceipts` system preference is set
       to 'Send'.
 
 -  ACCTDETAILS
@@ -578,7 +578,7 @@ information in these notices. Here are some of what those notices do:
 
       #. The staff patron triggering the email has a valid email address.
 
-      #. The vendor contact marked as 'Contact about late orders?' has 
+      #. The vendor contact marked as 'Contact about late orders?' has
          a valid email address.
 
 -  ACQORDER (Acquisition order)
@@ -598,7 +598,7 @@ information in these notices. Here are some of what those notices do:
 -  ACQ_NOTIF_ON_RECEIV
 
    -  Used in the acquisition module to inform patrons on receiving orders
-      they have been added to. 
+      they have been added to.
 
 -  AR\_CANCELED
 
@@ -916,7 +916,7 @@ those slips are used for:
 
    -  Used to print a holds slip
 
-   -  The holds slip is generated when a hold is confirmed and set to 
+   -  The holds slip is generated when a hold is confirmed and set to
       waiting.
 
 -  OVERDUE\_SLIP
@@ -1400,7 +1400,7 @@ right of each image you want to delete and click the 'Delete' button.
 Batch patron deletion/anonymization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Patrons and circulation > Batch patron 
+-  *Get there:* More > Tools > Patrons and circulation > Batch patron
    deletion/anonymization
 
 This tool allows you to bulk anonymize circulation histories (this means
@@ -2013,7 +2013,7 @@ the three buttons to continue:
 
 If you have a portable scanner (or a laptop and USB scanner) you can
 walk through the library with the scanner in hand and scan barcodes as
-you come across them (on a laptop, scan the barcodes into a text file). Once 
+you come across them (on a laptop, scan the barcodes into a text file). Once
 finished you can then upload the text file generated by the scanner to Koha.
 
 |image317|
@@ -2027,11 +2027,11 @@ items scanned during inventory' before clicking 'Submit'.
 
 Alternatively, you can combine the two methods to automatically compare a list
 of scanned barcodes with a generated list. First, upload you barcode file and
-choose the date you want to appear in the items' 'last seen' field. The 'Compare 
-barcodes list to results' checkbox should automatically be checked. If you do 
-not want the scanned items to be automatically checked-in if they are checked-out, 
-make sure you check the 'Do not check in items scanned during inventory' checkbox. 
-Choose the filters (library, shelving location, callnumbers or statuses) to generate a 
+choose the date you want to appear in the items' 'last seen' field. The 'Compare
+barcodes list to results' checkbox should automatically be checked. If you do
+not want the scanned items to be automatically checked-in if they are checked-out,
+make sure you check the 'Do not check in items scanned during inventory' checkbox.
+Choose the filters (library, shelving location, callnumbers or statuses) to generate a
 list with which to compare your barcodes. Click on 'Submit'.
 
     **Note**
@@ -2269,7 +2269,7 @@ with your template.
    can also enclose a whitespace-separated list of fields to concatenate
    on one line in double quotes, for example "099a 099b" or "itemcallnumber
    barcode". The fields available are from the database tables list
-   below. Finally you could add in static text strings in single-quote, 
+   below. Finally you could add in static text strings in single-quote,
    for example 'Some static text here.'
 
    -  You can use the schema viewer (http://schema.koha-community.org)
@@ -2409,10 +2409,10 @@ it should be sent to if it is not at the correct one.
    collections management page (or click Rotating collections in the
    sidebar).
 
--  To add items to a collection, click "Actions" and choose "Add or 
-   remove items" next to the collection's name in the list of 
-   collections. Under "Add or remove items" scan or type in the barcode 
-   of the item you wish to add to the collection, and hit enter or click 
+-  To add items to a collection, click "Actions" and choose "Add or
+   remove items" next to the collection's name in the list of
+   collections. Under "Add or remove items" scan or type in the barcode
+   of the item you wish to add to the collection, and hit enter or click
    'Submit' if necessary.
 
 -  To remove an item from a collection, either click 'Remove' next to the
@@ -2442,8 +2442,8 @@ Transferring a collection will:
 
 You can transfer a collection in one of two ways:
 
--  From the main Rotating collections page, click on "Actions" and choose 
-   "Transfer" next to the title of the collection you wish to transfer; 
+-  From the main Rotating collections page, click on "Actions" and choose
+   "Transfer" next to the title of the collection you wish to transfer;
    choose the library you wish to transfer the collection to and click "Transfer
    collection".
 
@@ -2488,9 +2488,9 @@ items to be put in-transit to the next branch and if an item is found to be
 on loan at the time that it should be transfered then an alert will be
 displayed when it is next returned.
 
-From the stock rotation tool page you can add new rotation plans and see a 
-summary of your currently configured rotation plans. You can then edit plan 
-details, activate and deactivate plans and manage stages and items on a given 
+From the stock rotation tool page you can add new rotation plans and see a
+summary of your currently configured rotation plans. You can then edit plan
+details, activate and deactivate plans and manage stages and items on a given
 rotation plan.
 
 |image1381|
@@ -2908,97 +2908,101 @@ To clean items out of the 'reservoir':
 
 .. _upload-local-cover-image-label:
 
-Upload Local Cover Image
+Upload local cover image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  *Get there:* More > Tools > Catalog > Upload Local Cover Image
+-  *Get there:* More > Tools > Catalog > Upload local cover image
 
-This tool will allow you to upload cover images for the materials in
-your catalog. To access this tool, staff will need the
-:ref:`upload\_local\_cover\_images permission <granular-tools-permissions-label>`. In
-order for images to show in the staff client and/or OPAC you will need
-to set your :ref:`LocalCoverImages` and/or
-:ref:`OPACLocalCoverImages` preferences to
-'Display.' Images can be uploaded in batches or one by one.
+This tool allows you to upload cover images for the materials in
+your catalog.
 
-    **Note**
+To access this tool staff need the
+:ref:`upload\_local\_cover\_images permission <granular-tools-permissions-label>`.
+
+For images to show in the staff client and OPAC you need to set
+:ref:`LocalCoverImages` and :ref:`OPACLocalCoverImages` preferences to
+'Display'.
+
+Images can be uploaded in batches or individually.
+
+    **Notes**
 
     Koha does not have a maximum file size limit for this tool, but
-    Apache may limit the maximum size of uploads (talk to your sys
-    admin).
+    the webserver (such as Apache) may limit the maximum size of uploads
+    (talk to your system administrator).
 
-    **Note**
-
-    When you want to upload multiple images onto a bib record, they will
-    display left to right (then top to bottom, depending on screen real
-    estate) in order of uploading, and the one on the left (the first
-    one uploaded) will be the one used as a thumbnail cover in search
-    results and on the detail page. There is no way to reorder cover
+    Where there are multiple images for a record they will
+    display left to right (then top to bottom, depending on screen
+    size) in the order they were uploaded. The image on the left (the first
+    one uploaded) is used as a thumbnail cover in search
+    results and on the details page. There is no way to reorder cover
     images uploaded in this way, so be sure to upload them in the order
     you'd like them to appear.
 
     |image1239|
 
-If uploading a single image:
+To upload a single image:
 
--  Visit the tool and click the 'Browse' button to browse to the image
+-  Go to the tool, click the 'Browse' button, and find the image
    on your local machine.
 
    |image363|
 
--  Click 'Upload file'
+-  Click 'Upload file'.
 
--  Choose 'Image file' under the 'File type' section
+-  Choose 'Image file' under the 'File type' section.
 
 -  Enter the biblionumber for the record you're attaching this image to.
    This is not the same as the barcode, this is the system generated
    number assigned by Koha.
 
    -  Find the biblionumber by looking at the end of the URL in the
-      address bar when on the detail page
+      address bar when on the details page
 
       |image364|
 
-   -  or by clicking on the MARC tab on the detail page in the staff
-      client
+   -  or by clicking on the MARC tab on the details page in the staff
+      client.
 
       |image365|
 
 -  If you would like to replace any other cover images you may have
    uploaded in the past, check the 'Replace existing covers' box under
-   the 'Options' section
+   the 'Options' section.
 
--  Click 'Process images'
+-  Click 'Process images'.
 
--  You will be presented with a summary of the upload and a link to the
-   record you have just added the image to
+-  You are presented with a summary of the upload and a link to the
+   record you have just added the image to.
 
-If uploading a batch of images at once you will need to prepare a ZIP
-file first.
+To upload a batch of images:
 
--  Enter in to the ZIP file all the images you are uploading
+-  Create a folder with the images to upload in it.
 
--  Also include a text file (\*.TXT) named either datalink.txt or
+-  Create a text file (\*.txt) named either datalink.txt or
    idlink.txt listing the biblionumber followed by the image name for
-   each image one per line
+   each image, one per line.
 
-   -  ex. 4091,image4091.jpg
+   -  For example: 4091,image4091.jpg
 
       |image366|
 
--  Browse your local computer to the ZIP file
+-  Create a ZIP file that includes all the images to upload and the text file.
 
--  Click 'Upload file'
+-  Go to the tool, click the 'Browse' button, and browse to the ZIP
+   file on your computer.
+
+-  Click 'Upload file'.
 
 -  Choose 'Zip file' under the 'File type' section
 
 -  If you would like to replace any other cover images you may have
    uploaded in the past, check the 'Replace existing covers' box under
-   the 'Options' section
+   the 'Options' section.
 
 -  Click 'Process images'
 
--  You will be presented with a summary of the upload
+-  You are presented with a summary of the upload.
 
    |image367|
 
@@ -3006,18 +3010,19 @@ file first.
 
     The source image is used to generate a 140 x 200 px thumbnail image
     and a 600 x 800 px full-size image. The original sized image
-    uploaded will not be stored by Koha
+    uploaded is not kept by Koha.
 
-You will be able to see your cover images in the staff client on the
-detail page under the 'Image' tab in the holdings table at the bottom
+In the staff client the cover images appear on the
+details page under the 'Images' tab in the holdings table at the bottom.
 
 |image368|
 
-In the OPAC the cover images will also appear in the images tab, as well
+In the OPAC the cover images appear in the 'Images' tab, as well
 as next to the title and on the search results.
 
-If you would like to remove a cover image you can click 'Delete image'
-below the image if you have the :ref:`upload\_local\_cover\_images
+To remove a cover image click 'Delete image'
+below the image in the staff client if you have the
+:ref:`upload\_local\_cover\_images
 permission <granular-tools-permissions-label>`.
 
 .. _additional-tools-label:
