@@ -4880,7 +4880,7 @@ OPACAllowUserToChooseBranch
 
 Default: Allow
 
-Asks: \_\_\_ a user to choose the branch to pick up a hold from.
+Asks: \_\_\_ a user to choose the library to pick up a hold from.
 
 Values:
 
@@ -4891,9 +4891,12 @@ Values:
 Description:
 
 -  Changing this preference will not prevent staff from being able to
-   transfer titles from one branch to another to fill a hold, it will
+   transfer titles from one library to another to fill a hold, it will
    only prevent patrons from saying they plan on picking a book up at a
-   branch other than their home branch.
+   library other than their home library.
+
+-  The list of available pickup locations will include all libraries that
+   have 'Pickup location' set to 'Yes' on the library configuration page.
 
 .. _opacholdsifavailableatpickup-label:
 
