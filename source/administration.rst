@@ -91,13 +91,13 @@ To add a new library:
 
       |image126|
 
-   -  The OPAC Info box is for you to put information about the library
-      that will appear in the OPAC when the branch name is moused over
+   -  The OPAC info box is for you to put information about the library
+      that will appear in the OPAC when the library name is moused over
       in the holdings table
 
       |image127|
 
-   -  IP Address does not have be filled in unless you plan on limiting
+   -  IP does not have be filled in unless you plan on limiting
       access to your staff client to a specific IP Address
 
       -  **Important**

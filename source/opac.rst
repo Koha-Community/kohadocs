@@ -499,7 +499,8 @@ be brought to the same hold screen.
 -  If allowed by your
    :ref:`OPACAllowUserToChooseBranch`
    preference the patron can choose where they'd like to pick up their
-   hold
+   hold. The list of available pickup locations will include all libraries that
+   have 'Pickup location' set to 'Yes' on the library configuration page.
 
 -  If you would like to see more options you can click 'Show more
    options'
