@@ -13729,6 +13729,13 @@ Values:
 
 -  Show
 
+Description
+
+- If this preference is set to 'Show' then a link to the last patron account
+  you consulted will appear in the right hand corner of the KOHA interface. 
+  This link will be cleared when you log out.
+
+
 .. _staffdetailitemselection-label:
 
 StaffDetailItemSelection
