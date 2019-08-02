@@ -770,8 +770,6 @@ at the top of the basket header.
     vendor. Make sure your contact has a email address in the :ref:`vendor 
     profile <vendors-label>`.
 
-.. Caroline was here
-
 If you're using EDI for your order you can click the 'Create EDIFACT
 order' button when you're done to send the file to the vendor and close
 the basket.
@@ -781,6 +779,8 @@ the basket.
 Once you're sure your basket is complete, you can click 'Close this
 basket' button to indicate that this basket is complete and has been
 sent to the vendor.
+
+|image835|
 
     **Important**
 
@@ -792,19 +792,19 @@ If you have your :ref:`BasketConfirmations`
 preference set to show a confirmation, you will be asked if you are sure
 about closing the basket.
 
-|image831|
+|image836|
 
 When closing the basket you can choose to add the basket to a group for
 easy printing and retrieval. If you check the box to 'Attach this basket
 to a new basket group' you will be brought to the group list where you
-can print a PDF of the order.
+can export a PDF of the order.
 
 |image832|
 
     **Important**
 
     A basket with at least one item marked as 'uncertain price' will not
-    be able to be closed.
+    be allowed to be closed.
 
     |image833|
 
@@ -835,38 +835,38 @@ Create a basket group
 A basket group is simply a group of baskets. In some libraries, you have
 several staff members that create baskets, and, at the end of a period
 of time, someone then groups them together to send to the vendor in
-bulk. That said, it is possible to have one basket in a basket group if
-that's the workflow used in your library.
+bulk. That said, it is possible to have one basket in a basket group, 
+or no basket groups at all if that's the workflow used in your library.
 
-.. _printing-baskets-label:
+To create a basket group, go to the vendor detail page and click on the 
+'Basket groups' tab on the left side.
 
-Printing baskets
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|image788|
 
-When you are finished adding items to your basket, click 'Close this
-basket.'
+|image1414|
 
-|image835|
+Click on the 'New basket group' button.
 
-You will be asked if you want to 'Attach this basket to a new basket
-group with the same name'. A basket group is necessary if you want to be
-able to print PDFs of your orders.
+|image1415|
 
-|image836|
+  -  Basket group name: this is the name the basket group will go by in Koha
+  -  Billing place: this is the billing address that will appear on the 
+     basket group order 
+  -  Delivery place: pick a library where these orders should be sent, this
+     will appear on the basket group order under delivery address
+     You can also enter a different address
+  -  Delivery comment: this comment will appear on the basket group order
+  -  Close basket group: if you know that once you're done with this basket 
+     group, you will not be modifying it anymore, you can close it right away
 
-Your completed order will be listed on the basket grouping page for
-printing or further modification.
+Drag the ungrouped baskets to the 'Baskets in this group' box to add baskets 
+to the basket group.
 
-|image837|
+|image1416|
 
-If you closed the basket before generating the EDIFACT order you can do
-so from the basket grouping page.
+Click on 'Save' to finish creating your basket.
 
-Basket grouping EDIFACT
-
-Clicking the 'Print' button next to your order will generate a PDF for
-printing, which will have all of your library information followed by
-the items in your order.
+From there, you can export your order as a PDF file to send to your vendor.
 
 |image838|
 
@@ -890,7 +890,7 @@ or the vendor search results page
 |image840|
 
 After clicking 'Receive shipment' you will be asked to enter a vendor
-invoice number, a shipment received date, a shipping cost and a budget
+invoice number, a shipment received date, a shipping cost and a fund
 to subtract that shipping amount from.
 
 |image841|
@@ -900,26 +900,86 @@ regardless of the basket the item is from.
 
 |image842|
 
+     **Note**
+
+     If you have a lot of orders, you can filter the orders using the 'Filter' 
+     box on the left, the 'Search' box just above the table, of the filter 
+     boxes at the top of each table column.
+
+     |image1417|
+
+     |image1418|
+
+     You could, for example, scan the ISBN of the book you are receiving in the 
+     filter box and the table will only show the corresponding orders. 
+
+     Just make sure to clear the filter boxes when you're done, otherwise, 
+     the other items won't appear.
+
 To receive a specific item, click the 'Receive' link to the right of the
 item.
 
 |image843|
 
-From this form you can alter the cost information. You can also choose
-to mark only part of the order as received if the vendor didn't send
-your entire order by checking only the boxes next to the items on the
-left that you want to receive. The values you enter in the 'Replacement
-cost' and 'Actual cost' will automatically populate the item record by
+Depending on when you chose to create the item (either in the 
+:ref:`AcqCreateItem <acqcreateitem-label>` system preference, or upon 
+:ref:`creating your basket <create-a-basket-label>`), the form will look 
+slightly different.
+
+If you chose to create your item when placing the order, you will have your 
+item information on the left side and financial information on the right side.
+
+|image1419|
+
+You can check the box next to the item to receive it, or fill out the 
+'Quantity received' field on the left side.
+
+     **Note**
+     You can choose to mark only part of the order as received if he vendor 
+     didn't send your entire order by checking only the boxes next to the 
+     items on the left that you want to receive or by entering the right 
+     amount in the 'Quantity received' field.
+
+You can edit the item if needed by clicking on the 'Edit' link. This will 
+allow you to enter in accurate call numbers and barcodes if you'd like to 
+do that at the point of receipt.
+
+You can also alter the cost information (replacement cost and actual cost). 
+The values you enter there will automatically populate the item record by
 filling in subfield v (Cost, replacement price) and subfield g (Cost,
 normal purchase price) on the item record after saving.
 
-|image844|
+If you chose to create your item when receiving the order, you will see 
+the item creation form on the left side and the financial information on 
+the right side.
 
-You can also make edits to the item record from this form by clicking
-the 'Edit' link next to each item. This will allow you to enter in
-accurate call numbers and barcodes if you'd like to do that at the point
-of receipt. Once you have made any changes necessary (to the order
-and/or items, click 'Save' to mark the item(s) as received.
+|image1420|
+
+  **Important**
+  You must fill out the item form and click on 'Add item' or 'Add multiple items' 
+  in order to receive the order. You will not be able to simply change the 
+  'Quantity received' amount.
+
+You can alter the cost information (replacement cost and actual cost). 
+The values you enter there will automatically populate the item record by
+filling in subfield v (Cost, replacement price) and subfield g (Cost,
+normal purchase price) on the item record after saving.
+
+Finally, if you chose to create your item when cataloging the record, you 
+will only see the financial information on the right.
+
+|image843|
+
+You can alter the cost information (replacement cost and actual cost). 
+
+     **Note**
+     The financial information will not be transferred to the item if the 
+     item is created when cataloging.
+
+Once you have made any changes necessary (to the order and/or items, click 
+'Save' to mark the item(s) as received.
+
+|image845|
 
     **Note**
 
@@ -928,7 +988,26 @@ and/or items, click 'Save' to mark the item(s) as received.
     preference set to add or change values on received items those
     changes will take place after you hit 'Save'.
 
-|image845|
+When you're finished receiving items you can navigate away from this
+page or click the 'Finish receiving' button at the bottom of the screen.
+
+Received orders will have '(rcvd)' before the title in the basket view.
+
+|image850|
+
+     **Note**
+     When all the orders in a basket have been received, the basket will be removed 
+     from the list of baskets for that vendor. You can click 'Show all baskets' 
+     to view the inactive baskets.
+
+     |image1421|
+
+     |image1422|
+
+.. _transferring-orders-label:
+
+Transferring orders
+---------------------------------------
 
 If the item is no longer available from this vendor you can transfer the
 order to another vendor's basket by clicking the 'Transfer' link to the
@@ -951,8 +1030,14 @@ Once you have chosen you will be presented with a confirmation message.
 
 |image849|
 
-When you're finished receiving items you can navigate away from this
-page or click the 'Finish receiving' button at the bottom of the screen.
+You will see transferred orders when viewing the basket.
+
+|image850|
+
+.. _cancelling-an-order-label:
+
+Cancelling orders
+---------------------------------------
 
 If the item cannot be found anywhere you can cancel the order by
 clicking 'Delete order' to the far right. This will prompt you to enter
@@ -960,10 +1045,25 @@ your reason and confirm cancellation.
 
 |image1289|
 
-You will also see that the item is received and/or cancelled if you view
-the basket.
+You will also see that the item is cancelled if you view the basket.
 
 |image850|
+
+     **Note**
+       
+     Whilst it is possible to re-open your basket, cancel one or more orders 
+     and re-close the basket, this is not recommended. This procedure will 
+     update the 'basket closed' date, which in turn will cause your 'late 
+     order' caclulations to be incorrect. 
+.. Instead, follow the procedure below.
+.. Is this still valid?
+..To cancel an order:
+
+..#. locate the vendor and click on 'Receive shipment';
+..#. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
+..#. so on the next page you'll get a warning box in which you click on 'Receive';
+..#. on the next page (at right) you can click on 'Cancel order'.
+
 
 .. _invoices-label:
 
@@ -980,7 +1080,7 @@ options.
 
 |image852|
 
-From the results you can click the 'Details' link to see the full
+From the 'Actions' button, you can click the 'Details' link to see the full
 invoice or 'Close' to note that the invoice is closed/paid for.
 
 |image853|
@@ -1017,6 +1117,9 @@ and click on 'Update adjustments'.
 
 |image1372|
 
+Attaching files to invoices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If you're allowing the uploading of acquisitions files with the
 :ref:`AcqEnableFiles` preference you will see the option
 to manage invoice files next to the link to 'Go to receipt
@@ -1033,6 +1136,9 @@ already attached.
 
 |image855|
 
+Merging two invoices
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 From the invoice search results you can also merge together two invoices
 should you need to. Simply click the checkbox to the left of the
 invoices you would like to merge and click the 'Merge selected invoices'
@@ -1046,21 +1152,7 @@ will be highlighted in yellow. Enter any different billing information
 in the fields provided and click 'Merge'. The two invoices will become
 one.
 
-.. _cancelling-an-order-label:
-
-Canceling an order
-------------------------------------
-
-       **Note**
-       
-       Whilst it is possible to re-open your basket, cancel one or more orders and re-close the basket, this is not recommended. This procedure will update the 'basket closed' date, which in turn will cause your 'late order' caclulations to be incorrect. Instead, follow the procedure below.
-
-To cancel an order:
-
-#. locate the vendor and click on 'Receive shipment';
-#. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
-#. so on the next page you'll get a warning box in which you click on 'Receive';
-#. on the next page (at right) you can click on 'Cancel order'.
+.. Caroline was here
 
 .. _claims-&-late-orders-label:
 
