@@ -3296,43 +3296,53 @@ top right of the page
 |image244|
 
 
-+------------------+-----------------------------------------+
-| Module           | Tables                                  |
-+==================+=========================================+
-| Acquisitions     | - Late orders                           |
-|                  | - Order search results                  |
-|                  | - Basket summary                        |
-+------------------+-----------------------------------------+
-| Administration   | - Currencies                            |
-+------------------+-----------------------------------------+
-| Catalog          | - Acquisition details                   |
-|                  | - Checkout history                      |
-+------------------+-----------------------------------------+
-| Cataloging       | - Item table above edit item form       |
-+------------------+-----------------------------------------+
-| Circulation      | - Checkins                              |
-|                  | - Checkouts                             |
-|                  | - Holds to pull                         |
-|                  | - Holds queue                           |
-+------------------+-----------------------------------------+
-| Course reserves  | - Courses                               |
-|                  | - Reserves                              |
-+------------------+-----------------------------------------+
-| Patrons          | - Holds history                         |
-|                  | - Fines > Account                       |
-|                  | - Details > Checkouts                   |
-|                  | - Patron search results                 |
-+------------------+-----------------------------------------+
-| Tools            | - Notices and slips                     |
-+------------------+-----------------------------------------+
-| OPAC             | - Holdings/items                        |
-|                  | - Serials issues on subscription tab    |
-+------------------+-----------------------------------------+
-| Reports          | - Items lost                            |
-|                  | - Saved SQL reports                     |
-+------------------+-----------------------------------------+
-| Serials          | - Acquisition details                   |
-+------------------+-----------------------------------------+
++---------------------+-----------------------------------------+
+| Module              | Tables                                  |
++=====================+=========================================+
+| Acquisitions        | - Late orders                           |
+|                     | - Order search results                  |
+|                     | - Basket summary                        |
++---------------------+-----------------------------------------+
+| Administration      | - Currencies                            |
+|                     | - Patron categories                     |
+|                     | - Libraries                             |
++---------------------+-----------------------------------------+
+| Catalog             | - Acquisition details                   |
+|                     | - Checkout history                      |
++---------------------+-----------------------------------------+
+| Cataloging          | - Item table above edit item form       |
++---------------------+-----------------------------------------+
+| Circulation         | - Checkins                              |
+|                     | - Checkouts                             |
+|                     | - Holds to pull                         |
+|                     | - Holds queue                           |
+|                     | - Hold ratios                           |
+|                     | - Patron search results                 |
++---------------------+-----------------------------------------+
+| Course reserves     | - Courses                               |
+|                     | - Reserves                              |
++---------------------+-----------------------------------------+
+| Interlibrary loans  | - Requests                              |
++---------------------+-----------------------------------------+
+| Patrons             | - Holds history                         |
+|                     | - Details > Checkouts                   |
+|                     | - Accounting > Transactions             |
+|                     | - Accounting > Make a payment           |
+|                     | - Patron search results                 |
+|                     | - Patron lists                          |
++---------------------+-----------------------------------------+
+| Tools               | - Notices and slips                     |
+|                     | - Stock rotation rotas                  |
+|                     | - Stock rotation items                  |
++---------------------+-----------------------------------------+
+| OPAC                | - Holdings/items                        |
+|                     | - Serials issues on subscription tab    |
++---------------------+-----------------------------------------+
+| Reports             | - Items lost                            |
+|                     | - Saved SQL reports                     |
++---------------------+-----------------------------------------+
+| Serials             | - Acquisition details                   |
++---------------------+-----------------------------------------+
 
 **Note** 
 
