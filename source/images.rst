@@ -1405,3 +1405,4 @@
 .. |image1420| image:: images/acquisitions/receiveitem2.png
 .. |image1421| image:: images/acquisitions/showactivebaskets.png
 .. |image1422| image:: images/acquisitions/showallbaskets.png
+.. |image1423| image:: images/admin/globalprefs/lastpatron.png
