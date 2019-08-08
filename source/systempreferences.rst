@@ -13734,6 +13734,8 @@ Description
 - If this preference is set to 'Show' then a link to the last patron account
   you consulted will appear in the right hand corner of the Koha staff client. 
   This link will be cleared when you log out.
+  
+  |image1423|
 
 
 .. _staffdetailitemselection-label:
