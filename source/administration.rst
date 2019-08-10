@@ -2130,54 +2130,6 @@ the 'Remove' button.
 
     All changes are immediate.
 
-.. _keywords-to-marc-mapping-label:
-
-Keywords to MARC mapping
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This tool will allow you to map MARC fields to a set of predefined
-keywords.
-
--  *Get there:* More > Administration > Catalog > Keywords to MARC
-   mapping
-
-    **Important**
-
-    This tool only affects sites that are not using the XSLT
-    stylesheets.
-
-At this time the only keyword in use is 'subtitle.'
-
-Using this tool you can define what MARC field prints to the detail
-screen of the bibliographic record using keywords. The following example
-will use the subtitle field.
-
-Using the framework pull down menu, choose the
-:ref:`Framework <marc-bibliographic-frameworks-label>` you would like to apply this rule to.
-For example, the subtitle for books can be found in the 245$b field.
-
-|image203|
-
-However the subtitle for DVDs appears in 245$p
-
-|image204|
-
-Using this tool you can tell Koha to print the right field as the
-subtitle when viewing the bibliographic record in the OPAC.
-
-|image205|
-
-This tool can be used to chain together pieces of the record as well. If
-you want the series number to show in the title on your search results
-you simply have to map 490 $v to 'subtitle' along with the 245 $b.
-
-    **Note**
-
-    Chain together the fields you want to show after the item title in
-    the order in which you want them to appear.
-
-Future developments will include additional keyword assigned fields.
-
 .. _marc-bibliographic-framework-test-label:
 
 MARC bibliographic framework test

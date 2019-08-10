@@ -859,13 +859,6 @@ permissions on a more granular level choose from these options:
    -  The ability to access the :ref:`Item types <item-types-label>`
       configuration in the administratoin module.
 
--  manage\_keywords2koha\_mappings
-
-   -  Manage Keywords to Koha mappings
-
-   -  The ability to access the :ref:`Keywords to MARC mapping <keywords-to-marc-mapping-label>`
-      configuration in the administration module.
-
 -  manage\_libraries
 
    -  Manage libraries and library groups

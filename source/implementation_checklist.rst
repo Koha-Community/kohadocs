@@ -428,9 +428,6 @@ preferences and other rules.
 -  Set up :ref:`MARC matching rules <record-matching-rules-label>` for importing
    records from mrc files or Z39.50
 
--  Set up :ref:`Koha to Keyword mapping <keywords-to-marc-mapping-label>` for deciding how
-   to display marc fields to the screen (still in beta - only one field)
-
 -  Set up the :ref:`Z39.50 targets <z39.50/sru-servers-label>` you want to search for
    cataloging (and acquisitions)
 
