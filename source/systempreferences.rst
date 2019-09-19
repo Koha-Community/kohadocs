@@ -10534,6 +10534,20 @@ Description:
    locations STAFF and ISO are in Authorized Values for category=LOC
    STAFF means it's assigned to the staff reading room and ISO means it
    is in the isolation room.
+   
+.. _opachiddenitemsexceptions-label:
+
+OpacHiddenItemsExceptions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: blank
+
+Asks: List of borrower categories, separated by (pipe) |, that can see items 
+otherwise hidden by OpacHiddenItems
+
+Description: Patron category codes listed here separated by a pipe
+| will be able to view items on the OPAC that would otherwise be hidden by the 
+OpacHiddenItems system preference.
 
 .. _opacrenewalallowed-label:
 
