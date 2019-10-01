@@ -3397,3 +3397,121 @@ These options will appear in the OPAC for patrons to choose from on the
 enabled.
 
     |image1217|
+
+.. _additional-fields-label:
+
+Additional fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This section is used to add custom fields to serial subscriptions or 
+order baskets.
+
+To add a new field, first choose which table you want to add it to.
+
+- Order baskets (aqbasket): a field added to aqbasket will appear upon 
+  the :ref:`creation of a new order basket <create-a-basket-label> 
+  or the modification of an existing order basket in the acquisitions module
+
+  |image1424|
+
+- Subscriptions (subscription): a field added to subscription will appear 
+  when :ref:`creating a new subscription <add-a-subscription-label>` or 
+  editing an existing subscription in the serials module
+
+  |image1425|
+
+Click on "Create field"
+
+Fill out the form
+
+|image1272|
+
+- Name: this is the name of the field as you want it to appear
+
+- Authorized value category: if you want to add a drop-down menu to the field 
+  choose an authorized value category here (you can also :ref:`create a new 
+  authorized value category <add-new-authorized-value-category-label>` if you 
+  need to)
+
+- MARC field: for additional subscription fields, it is possible to link 
+  the field to a MARC field. The additional field will be automatically 
+  populated with the corresponding record's value for this MARC field.
+
+     **Note**
+
+      You can only choose one of the two options (authorized value OR MARC field)
+
+  **Important**
+
+      If you choose the MARC field, make sure you enter it in this 
+      format: field$subfield
+
+      For example: 590$a
+
+- Searchable: check this box if you want to be able to search baskets or 
+  subscriptions based on this field
+
+  - Order basket searchable additional fields will be available in the 
+    :ref:`orders advanced search <acquisition-searches-label>` form 
+
+  - Subscription searchable additional fields will be available in the 
+    :ref:`subscription advanced search <searching-serials-label>` form
+
+.. _additional-fields-examples-label:
+
+Examples of additional fields
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Example 1:** Additional subscription field using :ref:`authorized 
+values <authorized-values-label>`
+
+You might want to track which department you're ordering this serial for
+
+-  In the 'Name' field, enter 'Department'
+   
+-  In the 'Authorized value category' field, choose DEPARTMENT 
+   
+-  Check the 'Searchable' box
+   
+|image1273|
+
+When you are :ref:`adding a subscription <add-a-subscription-label>`, 
+the field will be in the 'Additional fields' section with its 
+authorized values drop-down menu.
+
+|image1274|
+
+When you view the subscription, the field will appear under 'Additional 
+fields'.
+
+|image1275|
+
+Because we made the field searchable, it will also be in the serials 
+subscription search.
+
+|image1276|
+
+**Example 2:** Additional field using MARC field
+
+This is particularly useful if you want to view bibliographic 
+information in the subscription detail page. In this example, we will 
+add the 521$a field, which is, in MARC21, the target audience note.
+
+- In the 'Name' field, enter 'Target audience'
+  
+- In the 'MARC field' field, enter '521$a'
+  
+|image1379|
+
+      **Note**
+
+      You will not be able to edit this field from the subscription 
+      form. If you need to add or change the value in this field, 
+      you must go through the :ref:`cataloging module <cataloging-label>`.
+
+When you view the subscription, the field and the information from the 
+bibliographic record will appear under 'Additional fields'.
+
+|image1380|
+
+.. TO DO: add an example for order basket additional field
