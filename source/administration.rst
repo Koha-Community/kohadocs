@@ -250,7 +250,7 @@ top of the Item types page.
 -  Item types and can grouped together for searching at the same time.
    For example you can put DVDs and Bluray in to a group called Movie
    and then they can be searched together. These groups are defined in
-   the ITEMTYPECAT authorized value.
+   the ITEMTYPECAT :ref:`authorized value category <existing-values-label>`.
 
 -  You can choose to have an image associated with your item type
 
@@ -271,12 +271,21 @@ top of the Item types page.
 -  For items that you are suppressing from the OPAC you can hide their
    item type from being searched in the OPAC
 
+      **Note**
+      This will not prevent those items to appear in search results, it 
+      will simply remove the item type from the advanced search form.
+
+      If you want to completely hide items from a certain item type, let's 
+      say that you have a professional library with books reserved for staff 
+      and you don't want those to appear in the OPAC, use the :ref:`OpacHiddenItems 
+      <opachiddenitems-label>` system preference.
+
 -  For items that do not circulate, check the 'Not for loan' options
 
    -  Items marked 'Not for loan' will appear in the catalog, but cannot
       be checked out to patrons
 
--  For items that you charge a rental fee for, there are two ways that Rental 
+-  For items that you charge a rental fee for, there are two ways that rental 
    fees can be charged to a patron by item type.  A flat rental charge 
    (process fee) or a daily rental charge.
    
