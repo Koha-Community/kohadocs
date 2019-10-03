@@ -287,6 +287,45 @@ Examples:
    Koha. To get around this you want to add 'LIMIT 100000' to the end
    of your SQL statement (or any other number above 10,000).
 
+
+.. _mana-SQL-report-label:
+
+SQL report from Mana
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In the "Create report from SQL", you can search Mana KB for pre-made reports 
+by clicking on "New report" and choosing "New SQL from Mana".
+
+|image1428|
+
+     **Note**
+
+     This option will only appear if you've :ref:`configured Mana KB 
+     <share-with-mana-kb-label>` in the administration module.
+
+You will be prompted to enter keywords to search the knowledge base.
+
+|image1429|
+
+In the search results, you will see
+
+-  the details of the report (name, notes and type)
+
+-  how many people have used this entry (# of users)
+
+-  when it was used for the last time (last import)
+
+-  additional comments made by other Koha users (comments)
+
+|image1430|
+
+.. What does the orange mean??
+
+Click on "Import" to import a copy of the report in your own saved reports.
+
+You can then edit it, duplicate it, delete it, run it as you would any of 
+your own reports.
+
 .. _duplicate-report-label:
 
 Duplicate report
