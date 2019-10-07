@@ -3,7 +3,7 @@
 About Koha
 ==========
 
-The 'About Koha' area will give you important server information as well
+The **About Koha** area will give you important server information as well
 as general information about Koha.
 
 -  *Get there:* More > About Koha
@@ -13,7 +13,7 @@ as general information about Koha.
 Server information
 -------------------------------------
 
-Under the 'Server information' tab you will find information about the
+Under the **Server information** tab you will find information about the
 Koha version and the machine you have installed Koha on. This
 information is very important for debugging problems. When reporting
 issues to your support provider or to the various other support avenues
@@ -31,7 +31,7 @@ Perl modules
 -----------------------------------
 
 In order to take advantage of all of the functionalities of Koha, you
-will need to keep your Perl modules up to date. The 'Perl modules' tab
+will need to keep your Perl modules up to date. The **Perl modules** tab
 will show you all of the modules required by Koha, the version you have
 installed and whether you need to upgrade certain modules.
 
