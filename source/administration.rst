@@ -3407,6 +3407,49 @@ enabled.
 
     |image1217|
 
+.. _share-with-mana-kb-label:
+
+Share content with Mana KB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mana KB is a worldwide knowledge base used to share content specific to libraries.
+Koha is currently connected to Mana Kb in order to share serial subscription 
+models and reports. This section is used to configure your connexion 
+with Mana KB.
+
+*Get there:* More > Administration > Additional parameters > Share 
+content with Mana KB
+
+|image1426|
+
+In the form, choose whether you want to use Mana KB to share content or not.
+The default is "No, let me think about it". If you do want to use Mana KB, 
+change the option to "Yes". If you do not want to share with Mana KB, choose
+"No", this will remove the blue rectangle from the Administration home 
+page.
+
+The rest of this section assumes you chose "Yes".
+
+Choose whether you want to share your subscription models automatically.
+This means that every time you create a subscription in the serials 
+module, it will be automatically shared with Mana KB and other libraries 
+will be able to copy it.
+
+In order to configure Mana KB, you must get a Mana KB token to authenticate 
+your Koha installation on the Mana KB server.
+
+Enter your name or your organization's name in the "Your name" field.
+
+Enter your email in the "Email" field. Make sure you have access to this 
+email inbox since you will receive further information by email.
+
+Once you send your information to Mana KB, you will get a Mana KB token.
+
+|image1427|
+
+In the email your receive, click on the confirmation link and confirm you 
+are not a robot to finish the Mana KB setup.
+
 .. _additional-fields-label:
 
 Additional fields

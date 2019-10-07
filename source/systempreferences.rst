@@ -14097,6 +14097,81 @@ Description:
        The French Sudoc database should not be confused with the US
        Superintendent of Documents (SuDocs) Classification Scheme.
 
+.. _mana-prefs-label:
+
+Mana KB
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _autosharewithmana-label:
+
+AutoShareWithMana
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Fields automatically shared with Mana KB \_\_\_
+
+Default: none
+
+Values:
+
+-  [Select all]
+
+-  Subscriptions
+
+Description:
+
+-  This preference reflects the choice made in the :ref:`Mana KB configuration 
+   <share-with-mana-kb-label>` in the administration module. 
+
+-  Choosing to automatically share content with Mana KB means that every time you 
+   create that type of content, it will be automatically copied in the Mana KB 
+   repository, and it will be instantly available for other libraries to copy.
+
+-  All content shared with Mana KB is shared under the CC0 license, meaning 
+   that there is no (zero) copyright. Anyone using Mana KB can copy, reuse 
+   and change (their copy of) your content. Read more on CC0 on the `Creative 
+   Commons Website <https://creativecommons.org/choose/zero/>`__. This will in 
+   no way change your data in your Koha installation.
+
+.. _mana-pref-label:
+
+Mana
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: \_\_\_ submissions to Mana KB.
+
+Default: No, let me think about it
+
+Values:
+
+-  Disable
+
+-  Enable
+
+-  No, let me think about it
+
+Description:
+
+-  This preference reflects the choice made in the :ref:`Mana KB configuration 
+   <share-with-mana-kb-label>` in the administration module. 
+
+.. _mana-token-label:
+
+ManaToken
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Security token used to authenticate on Mana KB: \_\_\_
+
+Default: empty
+
+Description:
+
+-  This preference will be automatically populated with your unique Mana Token when 
+   you register for one on the :ref:`Mana KB configuration <share-with-mana-kb-label>` 
+   in the administration module. 
+
+-  The Mana Token is unique and associated with your Koha installation. It is used 
+   by Koha to log onto the Mana KB server and prevents intrusions on said server.
+
 .. _oai-pmh-label:
 
 OAI-PMH
