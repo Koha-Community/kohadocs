@@ -46,7 +46,7 @@ basic editor
 
    |image627|
 
-   -  Choose the framework you would like to base your record off of
+   -  Choose the framework you would like to base your record on
 
 If you would like to catalog a record using a blank template in the
 advanced editor
@@ -60,18 +60,20 @@ advanced editor
 |image1262|
 
 If you want to catalog a record based on an existing record at another
-library in the editor you last used (basic or advanced)
+library in the basic or advanced editor
 
 -  Click 'New from Z39.50/SRU'
+
+-  Click on the arrow to pre-select a framework for your imported your catalog 
+record (the Default framework is used if you do not make a selection). 
 
    |image628|
 
    -  Search for the item you would like to catalog
-
-      -  **Note**
-
-             If no results are found, try searching for fewer fields,
-             not all Z39.50 targets can search all of the fields above.
+   
+    **Note**
+    If no results are found, try searching for fewer fields, 
+    not all Z39.50 targets can search all of the fields above.
 
    -  Search targets can be altered by using the :ref:`Z39.50
       Admin <z39.50/sru-servers-label>` area.
@@ -81,11 +83,11 @@ library in the editor you last used (basic or advanced)
 
       |image629|
 
-      -  If you don't find the title you need in your Z39.50 search
-         results you can click the 'Try Another Search' button at the
-         bottom left of your results
-
-         |image631|
+   - If you don't find the title you need in your Z39.50 search
+   results you can click the 'Try Another Search' button at the
+   bottom left of your results
+   
+        |image631|
 
 .. _basic-editor-cataloging-label:
 
