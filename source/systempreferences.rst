@@ -2037,6 +2037,18 @@ to match aggressively by trying all variations of the ISSNs in the imported
 record as a phrase in the ISSN fields of already cataloged records. Note that
 this preference has no effect if :ref:`UseQueryParser` is on.
 
+.. _additionalFieldsInZ3950ResultSearch-label:
+
+AdditionalFieldsInZ3950ResultSearch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Display the MARC field/subfields \_\_\_ in the 'Additional fields' column of Z39.50 search results (use comma as delimiter e.g.: "001, 082$ab, 090$ab")
+details).
+
+Description:
+
+-  This preference lets you define additional fields and subfields to display on the Z39.50 result list.
+
 .. _interface-label:
 
 Interface
