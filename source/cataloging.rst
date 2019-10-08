@@ -77,9 +77,11 @@ record (the Default framework is used if you do not make a selection).
 
    -  Search targets can be altered by using the :ref:`Z39.50
       Admin <z39.50/sru-servers-label>` area.
+      
+   -  The display of extra MARC fields and subfields can be configured via the AdditionalFieldsInZ3950ResultSearch preference. 
 
    -  From the results' 'Action' button you can view the MARC or Card 
-      view for the record or choose to import it into Koha
+      view for the record or choose to import it into Koha.
 
       |image629|
 
