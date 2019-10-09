@@ -1765,11 +1765,6 @@ specific to their libraries.
     problems with your cataloging records - always create a new template
     based on the Default framework, or alter the other frameworks.
 
-After clicking the 'MARC structure' link to the right of each framework
-you can decide how many fields you want to see on one screen by using
-the pagination options at the top of the table.
-
-|image182|
 
 .. _add-new-framework-label:
 
@@ -1789,37 +1784,38 @@ To add a new framework
 
 -  Click 'Submit'
 
--  Once your framework is added click 'MARC structure' to the right of
+-  Once your framework is added click Actions then 'MARC structure' to the right of
    it on the list of frameworks
 
    |image184|
 
    -  You will be asked to choose a framework to base your new framework
-      off of, this will make it easier than starting from scratch
+      on, this will make it easier than starting from scratch
 
 -  Once your framework appears on the screen you can edit or delete each
-   field by following the instructions for :ref:`editing
-   subfields <edit-framework-subfields-label>`
+   field by following the instructions for :ref:`editing fields and 
+   subfields <edit-framework-fields-and-subfields-label>`
 
 .. _edit-existing-frameworks-label:
 
 Edit existing frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Clicking 'Edit' to the right of a framework will only allow you to edit
+Clicking Actions and then 'Edit' to the right of a framework will only allow you to edit
 the description for the framework:
 
 |image185|
 
-To make edits to the fields associated with the framework you must first
-click 'MARC Structure' and then follow the instructions for :ref:`editing
-subfields <edit-framework-subfields-label>`
+To make edits to the fields and subfields associated with the framework you must first
+click 'MARC Structure' and then follow the instructions for :ref:`editing fields and 
+subfields <edit-framework-fields-and-subfields-label>`
 
-.. _add-subfields-to-frameworks-label:
+.. _add-fields-to-frameworks-label:
 
-Add subfields to frameworks
+Add fields to frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+If a framework doesn't contain a field that you require you may need to add it.  
 To add a field to a framework click the 'New tag' button at the top of
 the framework definition
 
@@ -1846,26 +1842,24 @@ Enter the information about your new tag:
 -  If you want this field to be a pull down with limited possible
    answers, choose which 'Authorized value' list you want to use
 
-When you're finished, click 'Save changes' and you will be presented
-with your new field
+When you're finished, click 'Save changes' and your new tag will be displayed in the 
+framework field list
 
 |image188|
 
-To the right of the new field is a link to 'Subfields,' you will need to
+To the right of the new field is a link to Actions and then 'Subfields', you will need to
 add subfields before this tag will appear in your MARC editor. The
 process of entering the settings for the new subfield is the same as
-those found in the :ref:`editing subfields in frameworks <edit-framework-subfields-label>`
-section of this manual.
+those found in the :ref:`editing fields and subfields in frameworks <edit-framework-fields-and-subfields-label>`
+section of this manual
 
-.. _edit-framework-subfields-label:
+.. _edit-framework-fields-and-subfields-label:
 
-Edit framework subfields
+Edit framework fields and subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Frameworks are made up of MARC fields and subfields. To make edits to
-most frameworks you must edit the fields and subfields. Clicking 'Edit'
-to the right of each subfield will allow you to make changes to the text
-associated with the field
+Frameworks are made up of MARC fields (tags) and subfields. To make edits to a MARC **field** click on Actions then 'Edit'
+to the right of the field
 
 |image189|
 
@@ -1878,49 +1872,49 @@ associated with the field
    -  The 'Label for OPAC' is what will show on the MARC view in the
       OPAC
 
-   -  If you check 'Repeatable' then the field will have a plus sign
+   -  If you check 'Repeatable' then the field will have an icon
       next to it allowing you to add multiples of that tag
 
-   -  If you check 'Mandatory' the record will not be allowed to save
-      unless you have a value assigned to this tag
+   -  If you check 'Mandatory' the record cannot be saved unless you 
+      have a value assigned to tag.  A 'Required' flag will display as a prompt
 
-   -  If you add default values for indicators these will be pre-filled to save time when cataloguing but can still be edited if required  
+   -  If you add default values for indicators here these will be 
+      pre-filled to save time when cataloguing but can still be edited if required  
    
    -  'Authorized value' is where you define an :ref:`authorized
-      value <authorized-values-label>` that your catalogers can choose from
-      a pull down to fill this field in
+      value <authorized-values-label>` pull down list for your catalogers
 
-To edit the subfields associated with the tag, click 'Subfields' to the
-right of the tag on the 'MARC Structure' listing
-
--  From the list of subfields you can click 'Delete' to the right of
-   each to delete the subfields
-
--  To edit the subfields click 'Edit subfields'
+To edit the **subfields** associated with the tag, click Actions then 'Subfields' to the
+right of the tag on the framework field list.  Each subfield has its own tab which contains three 
+sections - Basic constraints, Advanced constraints and Other options.
 
 -  For each subfield you can set the following basic constraint values
 
    |image190|
+   
+   -  Subfield code (this wouldn't usually be changed)
 
+      -  The MARC subfield code
+      
    -  Text for librarian
 
       -  what appears before the subfield in the librarian interface
 
    -  Text for OPAC
 
-      -  what appears before the field in the OPAC.
+      -  what appears before the field in the OPAC
 
          -  If left empty, the text for librarian is used instead
 
    -  Repeatable
 
-      -  the field will have a plus sign next to it allowing you to add
-         multiples of that tag
+      -  the field will have an icon next to it allowing you to add
+         multiples of the subfield
 
    -  Mandatory
 
-      -  the record will not be allowed to save unless you have a value
-         assigned to this tag
+      -  the record cannot be saved unless you have a value assigned to this 
+      subfield.  A 'Required' flag will display as a prompt    
 
    -  Managed in tab
 
@@ -1952,6 +1946,13 @@ right of the tag on the 'MARC Structure' listing
          visible/hidden, simply check the boxes where you would like the
          field to show and uncheck the boxes where you would like it
          hidden.
+         
+      -  **Note**
+
+             The Editor tickbox controls whether this subfield will display within 
+             cataloguing editor for this framework.  If you tick Collapsed the 
+             subfield will be hidden in the editor but will be displayed if 
+             the field label is clicked to expand all subfields 
 
          |image192|
 
@@ -1990,7 +1991,7 @@ right of the tag on the 'MARC Structure' listing
          title in MARC21 and UNIMARC). So, in this list you can "map" a
          MARC subfield to its meaning. Koha constantly maintains
          consistency between a subfield and its meaning. When the user
-         want to search on "title", this link is used to find what is
+         wants to search on "title", this link is used to find what is
          searched (245 if you're MARC21, 200 if you're UNIMARC).
 
 -  For each subfield you can set the following Other option values
@@ -1999,7 +2000,7 @@ right of the tag on the 'MARC Structure' listing
 
    -  Authorized value
 
-      -  means the value cannot by typed by the librarian, but must be
+      -  means the value cannot by typed, but must be
          chosen from a pull down generated by the :ref:`authorized
          value <authorized-values-label>` list
 
@@ -2037,8 +2038,7 @@ right of the tag on the 'MARC Structure' listing
             unimarc\_plugin\_225a that can "magically" find the editor
             from an ISBN, and the collection list for the editor)
 
--  To save your changes simply click the 'Save changes' button at the
-   top of the screen
+-  To save your changes simply click the 'Save changes'.
 
 .. _import/export-frameworks-label:
 
@@ -2078,7 +2078,7 @@ above <export-framework-label>` to be available for import here.
 
 To import a framework you first need to create :ref:`a new
 framework <add-new-framework-label>`. Once you have that framework, click
-'Import' to the right of the new framework.
+Actions then 'Import' to the right of the new framework.
 
 |image197|
 
