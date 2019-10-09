@@ -255,6 +255,12 @@ with the exception of a few mandatory ones.
     and must be zero-padded, e.g. '01/02/2008'. Alternatively you can supply
     dates in ISO format (e.g. '2008-12-01').
 
+    **Important**
+
+    If your data contains special characters or diacritics, make sure your file 
+    is encoded in UTF-8. Otherwise, the special characters will not be imported 
+    correctly.
+
     **Note**
 
     If loading :ref:`patron attributes <patron-attribute-types-label>`, the
