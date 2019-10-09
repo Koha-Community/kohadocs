@@ -808,14 +808,12 @@ To add a new patron category click 'New category' at the top of the page
    -  **Important**
 
           The category code is limited to 10 characters (numbers and
-          letters)
+          letters) and must be unique.
 
    -  **Important**
 
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
-
-          |image150|
 
 -  Enter a plain text version of the category in the 'Description'
    field.
@@ -825,11 +823,10 @@ To add a new patron category click 'New category' at the top of the page
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          |image151|
-
 -  Enrollment period (in months) should be filled in if you have a
    limited enrollment period for your patrons (eg. Student cards expire
-   after 9 months or until a specific date)
+   after 9 months), otherwise, you can choose a date when the cards will 
+   expire (until date)
 
    -  **Important**
 
@@ -841,25 +838,11 @@ To add a new patron category click 'New category' at the top of the page
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          |image152|
-
 -  Some patron categories can have a minimum age (in years) requirement
    associated with them, enter this age in the 'Age required'
 
-   -  **Important**
-
-          This value will only be checked if
-          :ref:`BorrowerMandatoryField` defines
-          the dateofbirth as a required field on the patron record
-
 -  Patron categories can also have a maximum age (in years) associated
    with them (such as children), enter this age in the 'Upperage limit'
-
-   -  **Important**
-
-          This value will only be checked if
-          :ref:`BorrowerMandatoryField` defines
-          the dateofbirth as a required field on the patron record
 
 -  If you charge a membership fee for your patrons (such as those who
    live in another region) you can enter that in the 'Enrollment fee'
@@ -877,7 +860,8 @@ To add a new patron category click 'New category' at the top of the page
           as when they are first enrolled.
 
 -  If you want your patron to receive overdue notices, set the 'Overdue
-   notice required' to 'Yes'
+   notice required' to 'Yes'. This will enable you to set the :ref:`overdue notice 
+   triggers<overdue-notice/status-triggers-label>` in the Tools module.
 
 -  You can decide on a patron category basis if lost items are shown in
    the staff client by making a choice from the 'Lost items in staff
@@ -908,11 +892,18 @@ To add a new patron category click 'New category' at the top of the page
           This field is required in order to save your patron category.
           If left blank you will be presented with an error.
 
-          |image155|
-
 -  The Branch limitations let you limit this patron category to only
    some branches in your library system. Select 'All branches' if you
    would like any library to be able to use this category.
+
+-  You can decide whether patrons of this category are allowed to reset 
+   their password through the OPAC's 'Forgotten password' function. By 
+   default, it will follow the rule set in the :ref:`OpacResetPassword` 
+   system preference.
+
+-  You can decide whether patrons of this category are allowed to change 
+   their password through the OPAC. By default, it will follow the rule 
+   set in the :ref:`OpacPasswordChange` system preference.
 
 -  You can decide if this patron category is blocked from performing
    actions in the OPAC if their card is expired using the next option.
@@ -930,9 +921,11 @@ To add a new patron category click 'New category' at the top of the page
     |image1204|
 
 -  You can set the preference for checking the patron's circulation history 
-   when checking out an item. The default value for this is set in the 
-   :ref:`CheckPrevCheckout` system preference. This setting can be 
-   overridden on a per-patron basis in their :ref:`individual file <add-a-new-patron>`.
+   when checking out an item. This option will only be available if the  
+   :ref:`CheckPrevCheckout` system preference is set to 'Unless overridden by 
+   patron category, do' or 'Unless overridden by patron category, do not'. 
+   This setting can be overridden on a per-patron basis in their 
+   :ref:`individual file <add-a-new-patron>`.
 
 -  Finally you can assign advanced messaging preferences by default to a
    patron category
