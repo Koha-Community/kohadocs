@@ -1994,6 +1994,17 @@ Description:
 Importing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _additionalFieldsInZ3950ResultSearch-label:
+
+AdditionalFieldsInZ3950ResultSearch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Display the MARC field/subfields \_\_\_ in the 'Additional fields' column of Z39.50 search results (use comma as delimiter e.g.: "001, 082$ab, 090$ab").
+
+Description:
+
+-  This preference lets you define additional fields and subfields to display on the Z39.50 result list.
+
 .. _aggressivematchonisbn-label:
 
 AggressiveMatchOnISBN
@@ -2036,17 +2047,6 @@ Asks: When matching on ISSN with the record import tool, \_\_\_ attempt
 to match aggressively by trying all variations of the ISSNs in the imported
 record as a phrase in the ISSN fields of already cataloged records. Note that
 this preference has no effect if :ref:`UseQueryParser` is on.
-
-.. _additionalFieldsInZ3950ResultSearch-label:
-
-AdditionalFieldsInZ3950ResultSearch
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Asks: Display the MARC field/subfields \_\_\_ in the 'Additional fields' column of Z39.50 search results (use comma as delimiter e.g.: "001, 082$ab, 090$ab").
-
-Description:
-
--  This preference lets you define additional fields and subfields to display on the Z39.50 result list.
 
 .. _interface-label:
 
@@ -2326,6 +2326,22 @@ Examples:
 
 -  Dewey: 082ab or 092ab; LOC: 050ab or 090ab; from the item record:
    852hi
+
+.. _marcfieldforcreatorid-label:
+
+MarcFieldForCreatorId, MarcFieldForCreatorName, MarcFieldForModifierId, MarcFieldForModifierName
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Store record's creator borrowernumber in MARC subfield \_\_\_ and 
+record's creator name in MARC subfield \_\_\_ Store record's last modifier 
+borrowernumber in MARC subfield \_\_\_ and record's last modifier name in MARC 
+subfield \_\_\_ NOTE: Use a dollar sign between field and subfield like 123$a.
+
+Description:
+
+-  This preference allows you to define which MARC subfields to use to 
+   automatically save the details of the logged in user.  You can save details 
+   for the record creator and the most recent modifier.
 
 .. _marcflavour-label:
 
