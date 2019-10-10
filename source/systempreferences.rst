@@ -12279,6 +12279,18 @@ form but they will not be required to give consent to access their patron
 account. If the preference is set to Disabled then no GDPR consent form will 
 appear when patron logs into the OPAC.
 
+PrivacyPolicyURL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _PrivacyPolicyURL-label:
+
+Default: blank
+
+- Asks:Use the following URL \_\_\_ to refer to your local privacy policy in 
+messages about privacy and data protection. 
+(If you enforce GDPR policy, make sure that this page is not blocked.)
+NOTE: The URL will only be displayed if :ref:`_GDPR\_Policy` is set.
+
 .. _searching-label:
 
 Searching
