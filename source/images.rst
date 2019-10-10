@@ -1410,3 +1410,5 @@
 .. |image1428| image:: images/reports/sqlfrommana.png
 .. |image1429| image:: images/reports/searchmana.png
 .. |image1430| image:: images/reports/manasearchresults.png
+.. |image1431| image:: images/tools/batchitem.png
+.. |image1432| image:: images/tools/Holds_column.png
