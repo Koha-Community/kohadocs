@@ -57,39 +57,40 @@ advanced editor
 
 -  Click the 'Advanced editor' button
 
-|image1262|
+   |image1262|
 
 If you want to catalog a record based on an existing record at another
 library in the basic or advanced editor
 
 -  Click 'New from Z39.50/SRU'
 
--  Click on the arrow to pre-select a framework for your imported your catalog 
-record (the Default framework is used if you do not make a selection). 
+-  Click on the arrow to pre-select a framework for your imported your 
+   catalog record (the Default framework is used if you do not make a selection). 
 
    |image628|
 
    -  Search for the item you would like to catalog
    
-    **Note**
-    If no results are found, try searching for fewer fields, 
-    not all Z39.50 targets can search all of the fields above.
+   **Note**
+    
+   If no results are found, try searching for fewer fields, 
+   not all Z39.50 targets can search all of the fields above.
 
-   -  Search targets can be altered by using the :ref:`Z39.50
-      Admin <z39.50/sru-servers-label>` area.
-      
-   -  The display of extra MARC fields and subfields can be configured via the AdditionalFieldsInZ3950ResultSearch preference. 
+-  Search targets can be altered by using the :ref:`Z39.50 Admin <z39.50/sru-servers-label>` area.
 
-   -  From the results' 'Action' button you can view the MARC or Card 
-      view for the record or choose to import it into Koha.
+-  The display of extra MARC fields and subfields can be configured via 
+   the :ref:`AdditionalFieldsInZ3950ResultSearch <additionalFieldsInZ3950ResultSearch-label>` preference.
+   
+-  From the results' 'Action' button you can view the MARC or Card 
+   view for the record or choose to import it into Koha.
 
-      |image629|
+   |image629|
 
    - If you don't find the title you need in your Z39.50 search
-   results you can click the 'Try Another Search' button at the
-   bottom left of your results
+     results you can click the 'Try Another Search' button at the
+     bottom left of your results
    
-        |image631|
+     |image631|
 
 .. _basic-editor-cataloging-label:
 
