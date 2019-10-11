@@ -1661,7 +1661,7 @@ Batch item modification
 
 This tool will allow you to modify a batch of item records in Koha.
 
-|image293|
+|image1431|
 
 From the tool you can choose to upload a file of barcodes or item ids,
 or you can scan items one by one into the box below the upload tool. You
@@ -1672,7 +1672,7 @@ framework <marc-bibliographic-frameworks-label>`.
 Once you have your file uploaded or the barcodes listed you can click
 'Continue.'
 
-|image294|
+|image1432|
 
 You will be presented with a summary of the items you want to modify.
 From here you can uncheck the items you don't want to modify before
