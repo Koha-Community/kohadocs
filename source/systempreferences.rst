@@ -787,6 +787,26 @@ Description:
    address <#libraries-groups>`__, if you would like to specify a default
    email address for bounces to go to then fill in this preference.
 
+.. _sendallemailsto-label
+
+SendAllEmailsTo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Email to redirect all messages to: \_\_\_ (Leave this field empty to 
+send messages to their normal recipient) 
+
+Description:
+
+-  This system preference is used to override any patron email address with this one 
+   when sending notices. This is meant to be used in a testing environment to 
+   test notices and to avoid spamming patrons.
+
+  **Important**
+
+  This is not to be used in a production environment. Otherwise, no patron 
+  will receive their intended notices.
+
+
 .. _virtualshelves-label:
 
 virtualshelves
@@ -2606,7 +2626,30 @@ Circulation
 *Get there:* More > Administration > Global System Preferences >
 Circulation
 
+.. _accounts-sysprefs-label:
 
+Accounts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _accountautoreconcile-label:
+
+AccountAutoReconcile
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: \_\_\_ reconcile patron balances automatically on each transaction adding debits or credits.
+
+Default: Do not
+
+Values:
+
+-  Do
+
+-  Do not
+
+Description:
+
+-  This preference controls whether or not credits are automatically used to 
+   to reduce the owed amounts in a patron's account.
 
 
 .. _article-requests-sysprefs-label:
@@ -3204,6 +3247,25 @@ Description:
    library staff to use their judgment for overriding the renew limit
    for special cases, setting it to "Don't allow" prevents an
    opportunity for abuse by the library staff.
+
+..  allowrenewalonholdoverride-label:
+
+  AllowRenewalOnHoldOverride 
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Asks: \_\_\_ staff to renew items that are on hold by manually specifying a due date. 
+
+  Default: Don't allow
+
+  Values:
+
+  -  Allow
+
+  -  Don't allow
+
+  Description:
+
+  -  
 
 .. _allowreturntobranch-label:
 
