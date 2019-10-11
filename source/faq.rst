@@ -657,25 +657,37 @@ accountlines table stand for?
 
 -  A = Account management fee
 
--  C = Credit
-
--  F = Overdue fine
+-  C / CR = Credit
 
 -  FOR = Forgiven
 
--  FU = Overdue, still acccruing
+-  HE = Hold waiting for too long
 
 -  L = Lost item
 
--  LR = Lost item returned/refunded
+-  LR = Lost item fee refund
 
 -  M = Sundry
 
 -  N = New card
 
--  PAY = Payment
+-  OVERDUE = Fine
 
--  W = Writeoff
+-  PAY / Pay = Payment
+
+-  Pay00 = Payment (cash via SIP2)
+
+-  Pay01 = Payment (VISA via SIP2)
+
+-  Pay02 = Payment (credit card via SIP2)
+
+-  PF = Lost item processing fee
+
+-  Rent = Rental fee
+
+-  Res = Hold fee
+
+-  W / WO = Writeoff
 
 .. _statistics-table-label:
 
