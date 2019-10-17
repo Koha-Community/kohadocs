@@ -6144,7 +6144,29 @@ Description:
 
 -  The JavaScript entered here will override any other JavaScript on
    the self check-in screens
+   
+   
+Stockrotation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+.. _stockrotation module-label:
 
+StockRotation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Disable
+
+Asks: \_\_\_ the stock rotation module
+
+Values:
+
+-  Disable
+   
+-  Enable
+
+Description: 
+
+-  If set to 'Enable' then the stock rotation module will appear under Tools.
 
 .. _enhanced-content-label:
 
