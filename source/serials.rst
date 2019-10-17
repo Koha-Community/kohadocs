@@ -433,9 +433,9 @@ Subscription summary page in the staff client.
 
 |image763|
 
-If you are using the `Acquisitions <#acqmodule>`__ module to keep `track
-of serial subscriptions <#ordersubscription>`__ you will see that info
-before your subscription details.
+If you are using the :ref:`Acquisitions <Acquisitions>` module to keep track
+of  :ref:`serial subscriptions <order-from-a-serial-subscription-label>` you 
+will see an extra 'Acquisition details' tab in your subscription details.
 
 |image764|
 
