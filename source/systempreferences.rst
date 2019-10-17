@@ -12314,7 +12314,7 @@ GDPR\_Policy
 
 Default: Disabled
 
-Asks: Set GDPR policy to \_\_\_GDPR is the EU General Data Protection 
+Asks: Set GDPR policy to \_\_\_ GDPR is the EU General Data Protection 
 Regulation. When you enforce, patrons need to give consent before using the 
 OPAC. If you set to permissive, Koha will warn but not enforce. NOTE: If you 
 enable this you will also have to set the URL of your public privacy policy 
@@ -12331,15 +12331,15 @@ Values:
 Description:
 
 - This system preference enables a GDPR consent form to appear on the OPAC when 
-a patron attempts to login. If this preference is set as Enforced then when a 
-patron attempts to log into the OPAC a GDPR consent form be presented to them. 
-The patron will have to provide consent to the library's GDPR policy before
-they can gain access to their account details. If the patron does not consent 
-to the GDPR policy they will be logged out of their account. If the preference
-is set to Permissive then the patron will be presented with the GDPR consent 
-form but they will not be required to give consent to access their patron 
-account. If the preference is set to Disabled then no GDPR consent form will 
-appear when patron logs into the OPAC.
+  a patron attempts to login. If this preference is set as Enforced then when a 
+  patron attempts to log into the OPAC a GDPR consent form be presented to them. 
+  The patron will have to provide consent to the library's GDPR policy before
+  they can gain access to their account details. If the patron does not consent 
+  to the GDPR policy they will be logged out of their account. If the preference
+  is set to Permissive then the patron will be presented with the GDPR consent 
+  form but they will not be required to give consent to access their patron 
+  account. If the preference is set to Disabled then no GDPR consent form will 
+  appear when patron logs into the OPAC.
 
 PrivacyPolicyURL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -12349,9 +12349,9 @@ PrivacyPolicyURL
 Default: blank
 
 - Asks:Use the following URL \_\_\_ to refer to your local privacy policy in 
-messages about privacy and data protection. 
-(If you enforce GDPR policy, make sure that this page is not blocked.)
-NOTE: The URL will only be displayed if :ref:`_GDPR\_Policy` is set.
+  messages about privacy and data protection. 
+  (If you enforce GDPR policy, make sure that this page is not blocked.)
+  NOTE: The URL will only be displayed if :ref:`_GDPR\_Policy` is set.
 
 .. _searching-label:
 
