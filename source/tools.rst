@@ -1678,7 +1678,8 @@ You will be presented with a summary of the items you want to modify.
 From here you can uncheck the items you don't want to modify before
 making changes in the form below. You can also hide columns you don't
 need to see to prevent having to scroll from left to right to see the
-entire item form.
+entire item form.  The holds column displays a count of the current holds 
+for the item.
 
     **Note**
 
