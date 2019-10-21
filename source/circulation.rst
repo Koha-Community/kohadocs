@@ -1356,51 +1356,6 @@ not on hold a local use will be recorded.
     to 'Record' you can still use your statistical patrons to record
     local use as well.
 
-.. _in-processing-/-book-cart-locations-label:
-
-In processing / book cart locations
---------------------------------------------------------------
-
-Koha allows for handling temporary locations like the processing center
-and/or book carts throughout the library. For this feature to work you
-must first make sure you have :ref:`authorized values <authorized-values-label>`
-set in the `LOC <#shelvelocvals>`__ category for PROC (processing
-center) and CART (book cart).
-
-|image590|
-
-Next you need to set the
-:ref:`NewItemsDefaultLocation` system preference
-to PROC. This will set the new items to the processing center as their
-default location.
-
-When creating items you enter in their desired final shelving location
-and Koha will temporarily change that to PROC. If
-:ref:`InProcessingToShelvingCart` is set to
-"Don't move" then when an item with a location of PROC is checked in it
-will either automatically update the item to use the permanent location.
-If :ref:`InProcessingToShelvingCart` is set
-to "Move" then when an item is checked in the location is changed from
-PROC to CART.
-
-A :ref:`cron job <in-processing/book-cart-label>` is then set to run at specified intervals
-to age items from CART to the permanent shelving location. (For example,
-an hourly cron entry of cart\_to\_shelf.pl --hours 3 where --hours is
-the amount of time an item should spend on the cart before aging to its
-permanent location.)
-
--  **Note**
-
-       If the :ref:`ReturnToShelvingCart` system
-       preference is set to "Move", any newly checked-in item is also
-       automatically put into the shelving cart, to be covered by the
-       same script run.
-
--  **Important**
-
-       Checkins with confirmed holds will not go into the shelving cart.
-       If items on the shelving cart are checked out, the cart location
-       will be cleared.
 
 .. _self-checkout-label:
 
