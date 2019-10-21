@@ -2988,6 +2988,56 @@ Description:
 -  :ref:`HoldsAutoFill` must be set to 'do' for this preference to have any 
    effect. 
 
+.. _updateitemlocationincheckin-label:
+
+UpdateItemLocationOnCheckin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: This is a list of value pairs. The first value is followed immediately 
+by colon, space, then the second value. 
+
+
+Description:
+
+-  This system preference affects the item's current and permanent locations 
+   when the item is checked in (whether it was checked out or not). 
+
+-  If the location value on the left of the colon (:) matches 
+   the item's current location, it will be updated to match the location value 
+   on the right of the colon (:).
+
+-  The values are the LOC :ref:`authorised values <existing-values-label>`.
+
+-  For example, 'STAFF: GEN' will move an item from the staff office to the 
+   general collection when the item is checked in.
+
+-  Special terms
+
+   -  PROC: Processing center. When using PROC, only the current location will 
+      be affected.
+
+   -  CART: Shelving cart. When using CART, only the current location will be 
+      affected.
+
+   -  \_PERM\_: This will use the item's permanent location, whatever that 
+      location is.
+
+   -  \_BLANK\_: Used on the left as a first value, it will add a location if 
+       there is none. Used on the right as a second value, it will remove the 
+       location.
+
+   -  \_ALL\_: Used on the left as a first value, it will affect all items and
+      override all other rules.
+
+  **Important**
+
+  -  Make sure there is NO space between the first value and the colon
+
+  -  Make sure there IS a space between the colon and the second value
+
+  -  Make sure each pair is on its own line
+
+
 .. _updatenotforloanstatusoncheckin-label:
 
 UpdateNotForLoanStatusOnCheckin
@@ -3519,45 +3569,6 @@ Description:
     of Koha because it will change the behavior of items already checked
     out.
 
-.. _inprocessingtoshelvingcart-label:
-
-InProcessingToShelvingCart
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Default: Don't move
-
-Asks: \_\_\_ items that have the location PROC to the location CART when
-they are checked in.
-
-Values:
-
--  Don't move
-
--  Move
-
-Description:
-
--  This preference is used to manage automatically changing item
-   locations from processing (PROC) to the book cart (CART). A :ref:`cron
-   job <in-processing/book-cart-label>` needs to be set to run at specified intervals
-   to age items from CART to the permanent shelving location. (For
-   example, an hourly cron entry of cart\_to\_shelf.pl --hours 3 where
-   --hours is the amount of time an item should spend on the cart before
-   aging to its permanent location.) More information can be found in
-   the :ref:`related chapter <in-processing-/-book-cart-locations-label>` in this manual.
-
-   -  **Note**
-
-          If the :ref:`ReturnToShelvingCart` system
-          preference is turned on, any newly checked-in item is also
-          automatically put into the shelving cart, to be covered by the
-          same script run.
-
-   -  **Important**
-
-          Checkins with confirmed holds will not go into the shelving
-          cart. If items on the shelving cart are checked out, the cart
-          location will be cleared.
 
 .. _issuelostitem-label:
 
@@ -4047,25 +4058,6 @@ Description:
    left "Don't require" then item check out dates may exceed the
    expiration date for the patron's library card.
 
-.. _returntoshelvingcart-label:
-
-ReturnToShelvingCart
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Default: Don't move
-
-Asks: \_\_\_ all items to the location CART when they are checked in.
-
-Values:
-
--  Don't move
-
--  Move
-
-Description:
-
--  More information can be found in the :ref:`related
-   chapter <in-processing-/-book-cart-locations-label>` in this manual.
 
 .. _staffsearchresultsdisplaybranch-label:
 
