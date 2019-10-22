@@ -1412,3 +1412,5 @@
 .. |image1430| image:: images/reports/manasearchresults.png
 .. |image1431| image:: images/tools/batchitem.png
 .. |image1432| image:: images/tools/Holds_column.png
+.. |image1433| image:: images/admin/globalprefs/autoreturncheckedoutitems-do.png
+.. |image1434| image:: images/admin/globalprefs/autoreturncheckedoutitems-dont.png
