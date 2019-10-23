@@ -3425,6 +3425,36 @@ Description:
    that restriction once the overdue items in question are returned or
    not.
 
+.. _autoreturncheckedoutitems-label:
+
+AutoReturnCheckedOutItems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: \_\_\_ require librarians to manually confirm a checkout where the item 
+is already checked out to another patron.
+
+Values:
+
+-  Do
+
+-  Don't
+
+Default: Do
+
+Description:
+
+-  This preference controls whether Koha asks for a confirmation when trying 
+   to check out an item that is already checked out to another patron.
+
+-  Set to 'Do', Koha will ask the staff member to confirm the check out.
+
+   |image1433|
+
+-  Set to 'Don't', Koha will simply return the item from the previous 
+   patron's file and check it out to the actual patron and show a message.
+
+   |image1434|
+
 .. _circcontrol-label:
 
 CircControl
