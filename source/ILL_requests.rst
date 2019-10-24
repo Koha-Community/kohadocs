@@ -97,7 +97,8 @@ Click on the ‘Manage request’ button in the final column. Depending on the c
    -  fully delete the request.  Details of deleted requests are not retained in Koha.
 -  Revert request
 
-   -  following a status of ‘Requested’ or ‘Requested from partners’ library staff can cancel the request from the external source.  The status reverts to ‘New’
+   -  following a status of ‘Requested’ or ‘Requested from partners’ library 
+      staff can cancel the request from the external source.  The status reverts to ‘New’
 -  Mark completed
 
    -  used when the ILL request has been fulfilled. 
@@ -105,16 +106,17 @@ Click on the ‘Manage request’ button in the final column. Depending on the c
 -  Display supplier metadata
 
    -  Displays any extra metadata that might have been provided by your ILL 
-   supplier that has not been included in the standard request fields. 
+      supplier that has not been included in the standard request fields. 
 
--  The full list of ILL statuses are:
 
-   -  New request
-   -  Requested
-   -  Requested from partners 
-   -  Request reverted 
-   -  Cancellation requested – a patron has requested cancellation from the OPAC.
-   -  Completed
+The full list of ILL statuses are:
+
+-  New request
+-  Requested
+-  Requested from partners 
+-  Request reverted 
+-  Cancellation requested – a patron has requested cancellation from the OPAC.
+-  Completed
 
 .. _place-request-with-partners-label:
 
