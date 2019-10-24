@@ -54,7 +54,27 @@ Click on ‘Create’ and you will be shown a Request details summary page.  Cli
 
 |image1389|
 
-Click ‘Confirm request’ again.  From the main ILL requests screen you can see all of your ILL requests and their status.  Alternatively you can click on ‘View requests’ at any time. The request will have the status ‘New request’. 
+Click ‘Confirm request’ again to create your request. 
+
+.. _viewing-ILL-requests-label:
+
+Viewing ILL requests
+------------------------
+
+From the main ILL requests screen you can see all of your ILL requests.  You 
+can also click on the ‘View requests’ button at any time.  
+
+|image1435|
+
+There is a large amount of data available in the Requests table so it is 
+advisable to make use of column visibility to view only the information you need.
+The first half of the table displays data related to the ILL item itself 
+such as title, volume, page numbers.
+
+|image1436|
+
+The second half of the table displays data related to the request such as notes
+and comments.
 
 .. _managing-ILL-requests-label:
 
@@ -77,19 +97,26 @@ Click on the ‘Manage request’ button in the final column. Depending on the c
    -  fully delete the request.  Details of deleted requests are not retained in Koha.
 -  Revert request
 
-   -  following a status of ‘Requested’ or ‘Requested from partners’ library staff can cancel the request from the external source.  The status reverts to ‘New’
+   -  following a status of ‘Requested’ or ‘Requested from partners’ library 
+      staff can cancel the request from the external source.  The status reverts to ‘New’
 -  Mark completed
 
    -  used when the ILL request has been fulfilled. 
+   
+-  Display supplier metadata
 
--  The full list of ILL statuses are:
+   -  Displays any extra metadata that might have been provided by your ILL 
+      supplier that has not been included in the standard request fields. 
 
-   -  New request
-   -  Requested
-   -  Requested from partners 
-   -  Request reverted 
-   -  Cancellation requested – a patron has requested cancellation from the OPAC.
-   -  Completed
+
+The full list of ILL statuses are:
+
+-  New request
+-  Requested
+-  Requested from partners 
+-  Request reverted 
+-  Cancellation requested – a patron has requested cancellation from the OPAC.
+-  Completed
 
 .. _place-request-with-partners-label:
 
