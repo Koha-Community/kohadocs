@@ -81,7 +81,8 @@ and comments.
 Managing ILL requests
 ------------------------
 
-Click on the ‘Manage request’ button in the final column. Depending on the current status of the request you may see some or all of the following buttons:
+Click on the ‘Manage request’ button in the final column. Depending on the current 
+status of the request you may see some or all of the following options:
 
 -  Edit request
 
@@ -102,12 +103,27 @@ Click on the ‘Manage request’ button in the final column. Depending on the c
 -  Mark completed
 
    -  used when the ILL request has been fulfilled. 
-   
+-  Edit item metadata
+
+   -  Depending on the backend used for the request you may be able to edit, 
+      add or delete some or all of the request metadata.  For example, if the 
+      metdata has originated from a requestor using the FreeForm backend this 
+      may need to be edited, whereas metadata from an external recognised source
+      such as BLDSS should not.
 -  Display supplier metadata
 
    -  Displays any extra metadata that might have been provided by your ILL 
       supplier that has not been included in the standard request fields. 
+-  Comments
 
+   -  It is possible to add comments to an ILL request and these can be used 
+      by ILL staff to keep track of work undertaken.  Comments are read only and are 
+      stored in chronological order.  They display the borrower details and date of the 
+      comment.  If present, the number of comments is displayed in the List 
+      requests view.
+
+Request statuses
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The full list of ILL statuses are:
 
