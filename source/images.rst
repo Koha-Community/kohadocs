@@ -1414,5 +1414,5 @@
 .. |image1432| image:: images/tools/Holds_column.png
 .. |image1433| image:: images/admin/globalprefs/autoreturncheckedoutitems-do.png
 .. |image1434| image:: images/admin/globalprefs/autoreturncheckedoutitems-dont.png
-.. |image1435| image:: images/illrequests/viewillrequests.png
+.. |image1435| image:: images/illrequests/viewillrequests1.png
 .. |image1436| image:: images/illrequests/viewillrequests2.png
