@@ -977,7 +977,7 @@ module.
 Holds queue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This report will show you all of the holds at your library.
+This report will show you all holds waiting to be pulled off the shelf at your library.
 
 |image577|
 
@@ -988,8 +988,9 @@ on-shelf holds. This script decides which library should be responsible
 for fulfilling a given hold request.
 
 It's behavior is controlled by the system preferences
-:ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
-:ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
+:ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`,
+:ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
+:ref:`UseTransportCostMatrix <usetransportcostmatrix-label>.
 
 If you do not want all of your libraries to participate in the on-shelf
 holds fulfillment process, you should list the libraries that \*do\*
@@ -1017,10 +1018,11 @@ When this system preference is enabled, the order in which libraries
 will be requested to fulfill an on-shelf hold will be randomized each
 time the list is regenerated.
 
-Leaving StaticHoldsQueueWeight empty is contraindicated at this time.
-Doing so will cause the build\_holds\_queue script to ignore
-RandomizeHoldsQueueWeight, causing the script to request hold
-fulfillment not randomly, but by alphabetical order.
+An alternative to static and randomized is using the 
+:ref:`Tansport cost matrix <transport-cost-matrix-label>`.
+It takes precedence in controlling where holds are filled from and allows you 
+to define the 'cost' of transport between any two libraries.
+To use the Transport cost matrix simply set your UseTransportCostMatrix preference to 'Use'.
 
 .. _holds-to-pull-label:
 
@@ -1029,7 +1031,7 @@ Holds to pull
 
 This report will show you all of the items that have holds on them that
 are available at the library for pulling. If the items are available at
-multiple branches then all branches with that item available will see
+multiple libraries then all libraries with that item available will see
 the hold to pull until one library triggers the hold.
 
 If enabled, clicking the *Mark item as lost* button will mark item as lost and notify
