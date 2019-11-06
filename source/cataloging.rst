@@ -908,7 +908,10 @@ Visit the bibliographic record you want to attach the item to and choose
 |image696|
 
 Simply enter the barcode for the item you want to move and click
-'Select'
+'Submit'
+
+If this is the last remaining item attached to a bibliographic record 
+you will be presented with a button to delete the original host record.
 
 If you want to move all items to a new record creating only one
 bibliographic record you can use the :ref:`Merge Records
