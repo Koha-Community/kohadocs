@@ -3662,6 +3662,35 @@ patron has $4 in charges already on their account. One of the videos has
 a rental charge of $1, therefore making the total fines on the patron's
 account suddenly $5 (the limit).
 
+.. _itemsdeniedrenewal-label:
+
+ItemsDeniedRenewal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Define custom rules to deny specific items from renewal.
+
+Description:
+
+-  This preference allows you to specify items that should not be renewed 
+   either from the OPAC or staff client.  You can enter any combination of 
+   fields (from the items table in the Koha database) followed by a colon 
+   then a space then a bracketed list of values separated by commas. e.g:
+
+   ::
+
+       ccode: [NEWFIC,NULL,DVD]
+       itype: [NEWBK,""]
+
+    **Note**
+
+    The word 'NULL' can be used to block renewal on undefined fields, 
+    while an empty string "" will block on an empty (but defined) field.
+    
+    **Note**
+
+    If using automatic renewal notices your notice text should be updated to 
+    account for the new reason that renewals may be denied "item_denied_renewal".
+
 .. _maninvinnoissuescharge-label:
 
 ManInvInNoissuesCharge
