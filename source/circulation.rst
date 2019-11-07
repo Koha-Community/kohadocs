@@ -766,6 +766,12 @@ location, suspend and/or cancel the hold.
 
     **Note**
 
+    If you have the :ref:`HoldsSplitQueue` system preference
+    set you will see the holds list split across different tables by either 
+    pickup library, itemtype or both.
+
+    **Note**
+
     Depending on how you have your :ref:`HidePatronName`
     system preference set the list may show card numbers instead of
     names in the patron column like in the image above.
