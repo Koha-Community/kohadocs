@@ -9453,15 +9453,15 @@ Values:
 
 -  Show holds
 
-   |image86|
-
--  Show holds and priority level
+-  Show holds and their priority level
 
 -  Show priority level
 
-   |image87|
+Description:
 
-   -  :ref:`opacuserlogin` needs to be set to 'allow'
+-  This preference allows you to choose the type of hold information to 
+   make available on the OPAC.  If you select to include hold priority 
+   information the holds list will be sorted by default on priority.
 
 .. _opacshowrecentcomments-label:
 
@@ -9480,7 +9480,7 @@ Values:
 
 Description:
 
--  If you have chosen to allow comments in your OPAC by setting
+-  If you have chosen to allow commentsettings in your OPAC by 
    :ref:`reviewson` to 'Allow' you can include a link to the
    recent comments under the search box at the top of your OPAC with
    this preference.
