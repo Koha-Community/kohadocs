@@ -1173,40 +1173,66 @@ And will receive confirmation of their request.
 
 |image1032|
 
+.. _your-routing-lists-label:
+
+Your routing lists
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are named as a recipient on 
+any :ref:`serial routing lists <create-a-routing-list-label:>` you will see them 
+listed here. The following note is displayed "You are subscribed to the 
+routing lists for following serial titles. If you wish to make changes, 
+please contact the library". 
+
 .. _your-interlibrary-loan-requests-label:
 
 Your interlibrary loan requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons will have the option to make ILL requests when logged in to their OPAC account.  From here they can view their existing requests and place new ones.
+If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons 
+will have the option to make ILL requests when logged in to their OPAC 
+account.  From here they can view their existing requests and place new ones.
 
 |image1373|
 
-To place a new interlibrary loan request click on ‘Create a new request’ and choose a request form. 
+To place a new interlibrary loan request click on ‘Create a new request’ and 
+choose a request form. 
 
 |image1374|
 
     **Note**
 
-    The options displayed are dependent on your ILL configuration.  See the ILL backends wiki page at https://wiki.koha-community.org/wiki/ILL_backends for further explanation.
+    The options displayed are dependent on your ILL configuration.  See the 
+    ILL backends wiki page at https://wiki.koha-community.org/wiki/ILL_backends 
+    further explanation.
 
     **Note**
 
-    If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance` preference the text displays here and you need to click ‘Yes’ to accept before continuing.
+    If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance` 
+    preference the text displays here and you need to click ‘Yes’ to accept 
+    before continuing.
     
-Complete the publication details as fully as possible. Depending on the form in use you may see the option to add Custom fields for additional information such as notes.  Destination branch is a required field, this is the branch you would like the request to be sent to.
+Complete the publication details as fully as possible. Depending on the 
+form in use you may see the option to add Custom fields for additional 
+information such as notes.  Destination branch is a required field, this 
+is the branch you would like the request to be sent to.
 
 |image1375|
 
 Click on 'Create' to submit your request to the library for processing.
 
-Your submitted request will be listed with a status of ‘New request’.  Once processed the status will be updated to ‘Requested’.
+Your submitted request will be listed with a status of ‘New request’.  Once 
+processed the status will be updated to ‘Requested’.
 
 Click on ‘View’ to make changes or cancel your request.
 
-You cannot edit the form details but you can add a note to request a modification and then click on ‘Submit modifications’ at the bottom of the screen.  Your modification will be sent to the library for processing. 
+You cannot edit the form details but you can add a note to request a 
+modification and then click on ‘Submit modifications’ at the bottom of 
+the screen.  Your modification will be sent to the library for processing. 
 
-For new requests you will also have the option to ‘Request cancellation’. Your request will be updated with the status ‘Cancellation requested’ and can then be removed by library staff.
+For new requests you will also have the option to ‘Request cancellation’. 
+Your request will be updated with the status ‘Cancellation requested’ and 
+can then be removed by library staff.
 
 Purchase suggestions
 -------------------------------------------
