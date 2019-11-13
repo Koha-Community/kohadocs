@@ -415,8 +415,10 @@ If :ref:`RoutingListAddReserves` is set to on
 then patrons listed in the routing list will automatically be added to
 the holds list for the issue.
 
-To see a list of all of the routing lists a specific patron is on visit
-the :ref:`Routing lists tab <routing-lists-label>` on their patron record.
+To see a list of all of the routing lists for a specific patron is visit
+the :ref:`Routing lists tab <routing-lists-label>` on their patron record.  
+Patrons are able to see a list of their own routing lists when logged 
+into the OPAC in the :ref:`your routing lists <your-routing-lists-label:>` tab. 
 
 .. _subscriptions-in-staff-client-label:
 
