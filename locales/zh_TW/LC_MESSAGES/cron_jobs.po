@@ -1,1252 +1,1279 @@
 # Compendium of zh_TW.
 msgid ""
 msgstr ""
-"Project-Id-Version: compendium-zh_TW\n"
+"Project-Id-Version: Koha man18.05\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 19:31-0300\n"
-"PO-Revision-Date: 2018-05-15 19:54-0300\n"
-"Language-Team: Koha Translation Team \n"
-"Language: zh\n"
+"POT-Creation-Date: 2019-11-12 10:42-0300\n"
+"PO-Revision-Date: 2019-10-26 08:28+0000\n"
+"Last-Translator: Anthony MAO <mao@lins.fju.edu.tw>\n"
+"Language-Team: Koha Translation Team\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1572078481.078232\n"
+"X-Pootle-Path: /zh_TW/man18.05/cron_jobs.po\n"
+"X-Pootle-Revision: 1\n"
 
-#: ../../source/cron_jobs.rst:6 ../../source/cron_jobs.rst:27
-msgid "Cron Jobs"
-msgstr "工作排程"
+#: ../../source/cron_jobs.rst:6
+#, fuzzy
+msgid "Cron jobs and daemons"
+msgstr "工作排程與守護行程"
 
 #: ../../source/cron_jobs.rst:8
-msgid ""
-"A cron job is a Linux command for scheduling a command or script on your "
-"server to complete repetitive tasks automatically. Scripts executed as a "
-"cron job are typically used to modify files or databases; however, they can "
-"perform other tasks that do not modify data on the server, like sending out "
-"email notifications. Koha has many cron jobs in place that you can enable "
-"(search engine indexing, overdue notice generation, data cleanup and more), "
-"this chapter will explain those for you."
-msgstr ""
-"工作排程是安排自動伺服器裡的指令或腳本以完成指定工作的 Linux 指令。以工作排程"
-"方式執行的腳本通常是修改檔案或資料庫；然而，它們也可以執行其他不需修改伺服器"
-"資料的工作，像是送出電子郵件通知。Koha 有很多工作排程供啟用 (搜尋引擎索引、產"
-"生逾期通知、清理資料等)，本章將說明這些。"
+#, fuzzy
+msgid "Koha is supported by a number of background tasks.  These tasks can either be periodically executed tasks (cron jobs) or continuously running tasks called daemons."
+msgstr "Koha 由若干背景工作支援。包括定期執行的工作 (工作排程) 或稱為 daemons 的持續執行的工作。"
 
-#: ../../source/cron_jobs.rst:17
+#: ../../source/cron_jobs.rst:12
+msgid "A cron job is a Linux command for scheduling a command or script on your server to complete repetitive tasks automatically. Scripts executed as a cron job are typically used to modify files or databases; however, they can perform other tasks that do not modify data on the server, like sending out email notifications."
+msgstr "工作排程是安排自動伺服器裡的指令或腳本以完成指定工作的 Linux 指令。以工作排程方式執行的腳本通常是修改檔案或資料庫；然而，它們也可以執行其他不需修改伺服器資料的工作，像是送出電子郵件通知。"
+
+#: ../../source/cron_jobs.rst:18
+#, fuzzy
+msgid "A daemon is a Linux command that is typically started when the system is booted and runs in the background doing some function. The database used by Koha (either MySQL or MariaDB) is a daemon as is the web server (typically Apache)."
+msgstr "daemon 是 Linux 命令，系統啟動後就開始執行，並持續在背景執行若干功能。Koha 用到資料庫(mysql 或 mariadb)及網頁伺服器(通常是Apache)，就是一種 daemon。"
+
+#: ../../source/cron_jobs.rst:23
+msgid "Koha has many cron jobs in place that you can enable (search engine indexing, overdue notice generation, data cleanup and more), and a few daemons.  This chapter will explain those for you."
+msgstr "Koha 含有多個工作排程 (搜尋引擎索引、產生逾期通知、清除資料等) 及若干守護行程。本章將說明它們。"
+
+#: ../../source/cron_jobs.rst:28
 msgid "Crontab example"
 msgstr "Crontab 範例"
 
-#: ../../source/cron_jobs.rst:19
-msgid ""
-"An example of a Koha crontab can be found in misc/cronjobs/crontab.example"
+#: ../../source/cron_jobs.rst:30
+msgid "An example of a Koha crontab can be found in misc/cronjobs/crontab.example"
 msgstr "Koha crontab 在 misc/cronjobs/crontab.example"
 
-#: ../../source/cron_jobs.rst:21
-msgid ""
-"The example includes sample boilerplate cronjob entries for the most "
-"commonly-used cronjobs."
+#: ../../source/cron_jobs.rst:32
+#, fuzzy
+msgid "The example includes sample boilerplate cron job entries for the most commonly-used cron jobs."
 msgstr "此範例包括最常用的 cronjobs 的 boilerplate cronjob 款目的樣本。"
 
-#: ../../source/cron_jobs.rst:29
-msgid ""
-"The locations below assume a dev install which puts the crons in misc/, if "
-"you have a standard install you may want to look in bin/ for these files if "
-"you cannot find them in misc/"
-msgstr ""
-"工作排程應該在 misc/ 之下，若在 misc/ 之下找不到而且以標準方式安裝伺服器時則"
-"可能在 bin/"
+#: ../../source/cron_jobs.rst:38
+msgid "Cron jobs"
+msgstr "工作排程"
 
-#: ../../source/cron_jobs.rst:36
+#: ../../source/cron_jobs.rst:40
+msgid "The locations below assume a dev install which puts the crons in misc/, if you have a standard install you may want to look in bin/ for these files if you cannot find them in misc/"
+msgstr "工作排程應該在 misc/ 之下，若在 misc/ 之下找不到而且以標準方式安裝伺服器時則可能在 bin/"
+
+#: ../../source/cron_jobs.rst:47
 msgid "Backup"
 msgstr "備份"
 
-#: ../../source/cron_jobs.rst:39
-msgid "Daily Backup"
+#: ../../source/cron_jobs.rst:50
+msgid "Daily backup"
 msgstr "每日備份"
 
-#: ../../source/cron_jobs.rst:41
+#: ../../source/cron_jobs.rst:52
 msgid "Script path: misc/cronjobs/backup.sh"
 msgstr "腳本路徑：misc/cronjobs/backup.sh"
 
-#: ../../source/cron_jobs.rst:43
-msgid "Does: Creates a daily backup of the Koha database."
+#: ../../source/cron_jobs.rst:54
+msgid "Does: creates a daily backup of the Koha database."
 msgstr "做：新增 Koha 資料庫逐日備份。"
 
-#: ../../source/cron_jobs.rst:45 ../../source/cron_jobs.rst:167
-#: ../../source/cron_jobs.rst:182
+#: ../../source/cron_jobs.rst:56 ../../source/cron_jobs.rst:183
+#: ../../source/cron_jobs.rst:198
 msgid "Frequency suggestion: daily"
 msgstr "建議頻率：逐日"
 
-#: ../../source/cron_jobs.rst:50
+#: ../../source/cron_jobs.rst:61
 msgid "Search"
 msgstr "搜尋"
 
-#: ../../source/cron_jobs.rst:55
+#: ../../source/cron_jobs.rst:66
 msgid "Sitemap"
 msgstr "站台地圖"
 
-#: ../../source/cron_jobs.rst:57
+#: ../../source/cron_jobs.rst:68
 msgid "Script path: misc/cronjobs/sitemap.pl"
 msgstr "腳本路徑：misc/cronjobs/sitemap.pl"
 
-#: ../../source/cron_jobs.rst:59
-msgid ""
-"Does: Processes all biblio records from a Koha instance and generates "
-"sitemap files complying with the protocol as described on http://sitemaps."
-"org. The goal of this script is to be able to provide to search engines "
-"direct access to biblio records. It avoids leaving search engines browsing "
-"Koha's OPAC which would generate a lot of site traffic and server workload."
-msgstr ""
-"做：從 Koha instance 產生的書目紀錄與產生網站地圖檔案及其通訊協定都描述於 "
-"http://sitemaps.org。此腳本的目標是讓搜尋引擎直接近用書目紀錄。避免搜尋引擎瀏"
-"覽 Koha 的 OPAC 產生不必要的流量增加伺服器的工作量。"
-
-#: ../../source/cron_jobs.rst:65
-msgid ""
-"**Note** A file named sitemapindex.xml is generated. It contains references "
-"to multiple sitemap files. Each file contains at most 50,000 URLs and is "
-"named sitemapXXXX.xml."
-msgstr ""
-"**說明** 產生檔案 sitemapindex.xml。藉此參照至多個網站地圖檔案。每個檔案至多"
-"可以容納 50,000 URL 並命多為 sitemapXXXX.xml。"
-
 #: ../../source/cron_jobs.rst:70
-msgid ""
-"The files must be stored on the Koha OPAC's root directory. In the same "
-"directory a robots.txt file with the following contents is required:"
-msgstr ""
-"檔案必須儲存在 Koha OPAC 的根錄內。就是與 robots.txt 同個目錄包括以下的內容："
+msgid "Does: processes all biblio records from a Koha instance and generates sitemap files complying with the protocol as described on http://sitemaps.org. The goal of this script is to be able to provide to search engines direct access to biblio records. It avoids leaving search engines browsing Koha's OPAC which would generate a lot of site traffic and server workload."
+msgstr "做：從 Koha instance 產生的書目紀錄與產生網站地圖檔案及其通訊協定都描述於 http://sitemaps.org。此腳本的目標是讓搜尋引擎直接近用書目紀錄。避免搜尋引擎瀏覽 Koha 的 OPAC 產生不必要的流量增加伺服器的工作量。"
 
-#: ../../source/cron_jobs.rst:74
+#: ../../source/cron_jobs.rst:76
+msgid "**Note** A file named sitemapindex.xml is generated. It contains references to multiple sitemap files. Each file contains at most 50,000 URLs and is named sitemapXXXX.xml."
+msgstr "**說明** 產生檔案 sitemapindex.xml。藉此參照至多個網站地圖檔案。每個檔案至多可以容納 50,000 URL 並命多為 sitemapXXXX.xml。"
+
+#: ../../source/cron_jobs.rst:81
+msgid "The files must be stored on the Koha OPAC's root directory. In the same directory a robots.txt file with the following contents is required:"
+msgstr "檔案必須儲存在 Koha OPAC 的根錄內。就是與 robots.txt 同個目錄包括以下的內容："
+
+#: ../../source/cron_jobs.rst:85
 msgid "``Sitemap: sitemapindex.xml User-agent: * Disallow: /cgi-bin/``"
 msgstr "``Sitemap: sitemapindex.xml User-agent: * Disallow: /cgi-bin/``"
 
-#: ../../source/cron_jobs.rst:81
-msgid "Rebuild Index"
+#: ../../source/cron_jobs.rst:92
+msgid "Rebuild index"
 msgstr "重建索引"
 
-#: ../../source/cron_jobs.rst:83
+#: ../../source/cron_jobs.rst:94
 msgid "Script path: misc/migration\\_tools/rebuild\\_zebra.pl"
 msgstr "腳本路徑：misc/migration\\_tools/rebuild\\_zebra.pl"
 
-#: ../../source/cron_jobs.rst:85
-msgid "Does: Updates Zebra indexes with recently changed data."
+#: ../../source/cron_jobs.rst:96
+msgid "Does: updates Zebra indexes with recently changed data."
 msgstr "做：納入最近變更的資料更新 Zebra 索引。"
 
-#: ../../source/cron_jobs.rst:87
+#: ../../source/cron_jobs.rst:98
 msgid "Required by: Zebra"
 msgstr "必需用到的：Zebra"
 
-#: ../../source/cron_jobs.rst:89
-msgid ""
-"Frequency suggestion: every x minutes, (between 5-15 minutes) depending on "
-"performance needs"
+#: ../../source/cron_jobs.rst:100
+msgid "Frequency suggestion: every x minutes, (between 5-15 minutes) depending on performance needs"
 msgstr "頻率建議：每隔 x 分鐘，(5-15 分鐘之間) 視執行所需"
 
-#: ../../source/cron_jobs.rst:95
+#: ../../source/cron_jobs.rst:103
+msgid "**Note** On newer Koha installations, this cron job has been replaced by  the :ref:'koha-indexer daemon <_koha-indexer-label>' which indexes new and modified Koha data every 30 seconds."
+msgstr "**說明** 在較新的 Koha 安裝器裡，此工作排程已被 :ref:'koha-indexer daemon <_koha-indexer-label>' 取代，每 30 秒就更新索引及資料。"
+
+#: ../../source/cron_jobs.rst:111
 msgid "Circulation"
 msgstr "流通"
 
-#
-#: ../../source/cron_jobs.rst:100
-msgid "Holds Queue"
+#: ../../source/cron_jobs.rst:116
+msgid "Holds queue"
 msgstr "預約佇列"
 
-#: ../../source/cron_jobs.rst:102
+#: ../../source/cron_jobs.rst:118
 msgid "Script path: misc/cronjobs/holds/build\\_holds\\_queue.pl"
 msgstr "腳本路徑：misc/cronjobs/holds/build\\_holds\\_queue.pl"
 
-#: ../../source/cron_jobs.rst:104
-msgid "Does: Updates holds queue report"
+#: ../../source/cron_jobs.rst:120
+msgid "Does: updates holds queue report"
 msgstr "做：更新預約順位報表"
 
-#: ../../source/cron_jobs.rst:106
-msgid "Required by: :ref:`Holds Queue Report <holds-queue-label>`"
+#: ../../source/cron_jobs.rst:122
+msgid "Required by: :ref:`Holds queue report <holds-queue-label>`"
 msgstr "必須用到：:ref:`預約順位報表 <holds-queue-label>`"
 
-#: ../../source/cron_jobs.rst:108
+#: ../../source/cron_jobs.rst:124
 msgid "Frequency suggestion: every 1-4 hours"
 msgstr "建議頻率：每 1-4 小時"
 
-#: ../../source/cron_jobs.rst:110
+#: ../../source/cron_jobs.rst:126
 msgid "Description:"
 msgstr "說明："
 
-#: ../../source/cron_jobs.rst:112
-msgid ""
-"A script that should be run periodically if your library system allows "
-"borrowers to place on-shelf holds. This script decides which library should "
-"be responsible for fulfilling a given hold request."
-msgstr ""
-"應定期執行腳本若您的圖書館系統允許讀者預約在架的館藏。此腳本決定負責滿足此預"
-"約的圖書館。"
+#: ../../source/cron_jobs.rst:128
+msgid "A script that should be run periodically if your library system allows borrowers to place on-shelf holds. This script decides which library should be responsible for fulfilling a given hold request."
+msgstr "應定期執行腳本若您的圖書館系統允許讀者預約在架的館藏。此腳本決定負責滿足此預約的圖書館。"
 
-#: ../../source/cron_jobs.rst:116
-msgid ""
-"It's behavior is controlled by the system preferences :ref:"
-"`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-"
-"randomizeholdsqueueweight-label>` and :ref:`RandomizeHoldsQueueWeight "
-"<staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-"
-"label>`."
-msgstr ""
-"由系統偏好 :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-"
-"holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` 與 :ref:"
-"`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-"
-"randomizeholdsqueueweight-label>` 負責控制此排程。"
+#: ../../source/cron_jobs.rst:132
+msgid "It's behavior is controlled by the system preferences :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and :ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`."
+msgstr "由系統偏好 :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` 與 :ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` 負責控制此排程。"
 
-#: ../../source/cron_jobs.rst:120
-msgid ""
-"If you do not want all of your libraries to participate in the on-shelf "
-"holds fulfillment process, you should list the the libraries that \\*do\\* "
-"participate in the process here by inputting all the participating library's "
-"branchcodes, separated by commas ( e.g. \"MPL,CPL,SPL,BML\" etc. )."
-msgstr ""
-"不讓所有圖書館參與館藏滿足預約計畫，應列出\\*要\\*參加該計畫的圖書館，包括圖"
-"書館的條碼，並以逗點區隔(如：\"MPL,CPL,SPL,BML\" 等)。"
+#: ../../source/cron_jobs.rst:136
+msgid "If you do not want all of your libraries to participate in the on-shelf holds fulfillment process, you should list the the libraries that \\*do\\* participate in the process here by inputting all the participating library's branchcodes, separated by commas ( e.g. \"MPL,CPL,SPL,BML\" etc. )."
+msgstr "不讓所有圖書館參與館藏滿足預約計畫，應列出\\*要\\*參加該計畫的圖書館，包括圖書館的條碼，並以逗點區隔(如：\"MPL,CPL,SPL,BML\" 等)。"
 
-#: ../../source/cron_jobs.rst:126
-msgid ""
-"By default, the holds queue will be generated such that the system will "
-"first attempt to hold fulfillment using items already at the pickup library "
-"if possible. If there are no items available at the pickup library to fill a "
-"hold, build\\_holds\\_queue.pl will then use the list of libraries defined "
-"in StaticHoldsQueueWeight. If RandomizeHoldsQueueWeight is disabled ( which "
-"it is by default ), the script will assign fulfillment requests in the order "
-"the branches are placed in the StaticHoldsQueueWeight system preference."
-msgstr ""
-"預設，預約順位將先列入提取圖書館。若無法滿足，則 build\\_holds\\_queue.pl 將"
-"取用 StaticHoldsQueueWeight 設定的圖書館。若停用 RandomizeHoldsQueueWeight "
-"(預設值為停用)，則依 StaticHoldsQueueWeight 偏好設定的圖書館順序，逐一取用。"
+#: ../../source/cron_jobs.rst:142
+msgid "By default, the holds queue will be generated such that the system will first attempt to hold fulfillment using items already at the pickup library if possible. If there are no items available at the pickup library to fill a hold, build\\_holds\\_queue.pl will then use the list of libraries defined in StaticHoldsQueueWeight. If RandomizeHoldsQueueWeight is disabled ( which it is by default ), the script will assign fulfillment requests in the order the branches are placed in the StaticHoldsQueueWeight system preference."
+msgstr "預設，預約順位將先列入提取圖書館。若無法滿足，則 build\\_holds\\_queue.pl 將取用 StaticHoldsQueueWeight 設定的圖書館。若停用 RandomizeHoldsQueueWeight (預設值為停用)，則依 StaticHoldsQueueWeight 偏好設定的圖書館順序，逐一取用。"
 
-#: ../../source/cron_jobs.rst:135
-msgid ""
-"For example, if your system has three libraries, of varying sizes ( small, "
-"medium and large ) and you want the burden of holds fulfillment to be on "
-"larger libraries before smaller libraries, you would want "
-"StaticHoldsQueueWeight to look something like \"LRG,MED,SML\"."
-msgstr ""
-"例如，系統內有三個規模不一的圖書館(大型、中型與小型)，希望由大型圖書館承擔較"
-"多的預約責任，StaticHoldsQueueWeight偏好應設為\"LRG,MED,SML\"。"
-
-#: ../../source/cron_jobs.rst:141
-msgid ""
-"If you want the burden of holds fulfillment to be spread out equally "
-"throughout your library system, simply enable RandomizeHoldsQueueWeight. "
-"When this system preference is enabled, the order in which libraries will be "
-"requested to fulfill an on-shelf hold will be randomized each time the list "
-"is regenerated."
-msgstr ""
-"若期望各圖書館平均分擔預約的任務，應啟用RandomizeHoldsQueueWeight偏好，將隨機"
-"將預約分配給各圖書館。"
-
-#: ../../source/cron_jobs.rst:147
-msgid ""
-"Leaving StaticHoldsQueueWeight empty is contraindicated at this time. Doing "
-"so will cause the build\\_holds\\_queue script to ignore "
-"RandomizeHoldsQueueWeight, causing the script to request hold fulfillment "
-"not randomly, but by alphabetical order."
-msgstr ""
-"讓 StaticHoldsQueueWeight 空白是禁忌，將造成 build\\_holds\\_queue 腳本忽略 "
-"RandomizeHoldsQueueWeight，使該腳本要求不是隨機卻採用字順方式填入預約。"
-
-#: ../../source/cron_jobs.rst:155
-msgid "Expired Holds"
-msgstr "預約過期"
+#: ../../source/cron_jobs.rst:151
+msgid "For example, if your system has three libraries, of varying sizes ( small, medium and large ) and you want the burden of holds fulfillment to be on larger libraries before smaller libraries, you would want StaticHoldsQueueWeight to look something like \"LRG,MED,SML\"."
+msgstr "例如，系統內有三個規模不一的圖書館(大型、中型與小型)，希望由大型圖書館承擔較多的預約責任，StaticHoldsQueueWeight偏好應設為\"LRG,MED,SML\"。"
 
 #: ../../source/cron_jobs.rst:157
+msgid "If you want the burden of holds fulfillment to be spread out equally throughout your library system, simply enable RandomizeHoldsQueueWeight. When this system preference is enabled, the order in which libraries will be requested to fulfill an on-shelf hold will be randomized each time the list is regenerated."
+msgstr "若期望各圖書館平均分擔預約的任務，應啟用RandomizeHoldsQueueWeight偏好，將隨機將預約分配給各圖書館。"
+
+#: ../../source/cron_jobs.rst:163
+msgid "Leaving StaticHoldsQueueWeight empty is contraindicated at this time. Doing so will cause the build\\_holds\\_queue script to ignore RandomizeHoldsQueueWeight, causing the script to request hold fulfillment not randomly, but by alphabetical order."
+msgstr "讓 StaticHoldsQueueWeight 空白是禁忌，將造成 build\\_holds\\_queue 腳本忽略 RandomizeHoldsQueueWeight，使該腳本要求不是隨機卻採用字順方式填入預約。"
+
+#: ../../source/cron_jobs.rst:171
+msgid "Expired holds"
+msgstr "預約過期"
+
+#: ../../source/cron_jobs.rst:173
 msgid "Script path: misc/cronjobs/holds/cancel\\_expired\\_holds.pl"
 msgstr "腳本路徑：misc/cronjobs/holds/cancel\\_expired\\_holds.pl"
 
-#: ../../source/cron_jobs.rst:159
-msgid ""
-"Does: By default, this cron job will only automatically cancel holds where "
-"the user has set an expiration date. If the library is using the :ref:"
-"`ExpireReservesMaxPickUpDelay` and :ref:`ExpireReservesMaxPickUpDelayCharge` "
-"preferences then this script will also cancel holds that have been sitting "
-"on the hold shelf for too long and will (if the library does) charge the "
-"patron for not picking up the hold."
-msgstr ""
-"做：預設，此工作排程僅自動執行使用者設定到期日的取消預約。若圖書館使用 :ref:"
-"`ExpireReservesMaxPickUpDelay` 與 :ref:`ExpireReservesMaxPickUpDelayCharge` "
-"偏好則此腳本也取消在預約架太久的預約並將 (若圖書館要的) 向讀者收取未提取預約"
-"到館費用。"
+#: ../../source/cron_jobs.rst:175
+msgid "Does: cancels holds where the user has set an expiration date. If the library is using the :ref:`ExpireReservesMaxPickUpDelay` and :ref:`ExpireReservesMaxPickUpDelayCharge` preferences then this script will also cancel holds that have been sitting on the hold shelf for too long and will (if the library does) charge the patron for not picking up the hold."
+msgstr "做：預設，此工作排程僅自動執行使用者設定到期日的取消預約。若圖書館使用 :ref:`ExpireReservesMaxPickUpDelay` 與 :ref:`ExpireReservesMaxPickUpDelayCharge` 偏好則此腳本也取消在預約架太久的預約並將 (若圖書館要的) 向讀者收取未提取預約到館費用。"
 
-#: ../../source/cron_jobs.rst:172
-msgid "Unsuspend Holds"
+#: ../../source/cron_jobs.rst:188
+msgid "Unsuspend holds"
 msgstr "取消預約"
 
-#: ../../source/cron_jobs.rst:174
+#: ../../source/cron_jobs.rst:190
 msgid "Script path: misc/cronjobs/holds/auto\\_unsuspend\\_holds.pl"
 msgstr "腳本路徑：misc/cronjobs/holds/auto\\_unsuspend\\_holds.pl"
 
-#: ../../source/cron_jobs.rst:176
-msgid ""
-"Does: This script checks to find holds that should no longer be suspended "
-"and removes the suspension if the :ref:`AutoResumeSuspendedHolds` preference "
-"is set to 'allow'. This puts the patron back in to the queue where they were "
-"when the hold was suspended."
-msgstr ""
-"做：若將 :ref:`AutoResumeSuspendedHolds` 偏好設為 '允許' 則此腳本檢查不需保留"
-"的預約並移除它們。此舉將讀者放回保留之前序列。"
+#: ../../source/cron_jobs.rst:192
+msgid "Does: checks to find holds that should no longer be suspended and removes the suspension if the :ref:`AutoResumeSuspendedHolds` preference is set to 'allow'. This puts the patron back in to the queue where they were when the hold was suspended."
+msgstr "做：若將 :ref:`AutoResumeSuspendedHolds` 偏好設為 '允許' 則此腳本檢查不需保留的預約並移除它們。此舉將讀者放回保留之前序列。"
 
-#: ../../source/cron_jobs.rst:187
+#: ../../source/cron_jobs.rst:203
 msgid "Fines"
 msgstr "罰款"
 
-#: ../../source/cron_jobs.rst:189
+#: ../../source/cron_jobs.rst:205
 msgid "Script path: misc/cronjobs/fines.pl"
 msgstr "腳本路徑：misc/cronjobs/fines.pl"
 
-#: ../../source/cron_jobs.rst:191
-msgid "Does: Calculates and posts fines to patron accounts."
-msgstr "做：計算並列出讀者帳戶內的罰款。"
+#: ../../source/cron_jobs.rst:207
+msgid "Does: calculates and charges (or increments) overdue fines per item to patron accounts. The fine calculation is done using the grace period, fine interval, fine amount and other parameters from the :ref:`circulation and fines rules <circulation-and-fine-rules-label>`."
+msgstr ""
 
-#: ../../source/cron_jobs.rst:193
+#: ../../source/cron_jobs.rst:211
 msgid "Required by: :ref:`finesMode` system preference"
 msgstr "必備：:ref:`finesMode` 系統偏好"
 
-#: ../../source/cron_jobs.rst:195 ../../source/cron_jobs.rst:224
-#: ../../source/cron_jobs.rst:244 ../../source/cron_jobs.rst:280
-#: ../../source/cron_jobs.rst:309 ../../source/cron_jobs.rst:349
-#: ../../source/cron_jobs.rst:408 ../../source/cron_jobs.rst:425
-#: ../../source/cron_jobs.rst:459 ../../source/cron_jobs.rst:482
-#: ../../source/cron_jobs.rst:497 ../../source/cron_jobs.rst:630
-#: ../../source/cron_jobs.rst:643 ../../source/cron_jobs.rst:719
-#: ../../source/cron_jobs.rst:836
+#: ../../source/cron_jobs.rst:213 ../../source/cron_jobs.rst:237
+#: ../../source/cron_jobs.rst:258 ../../source/cron_jobs.rst:278
+#: ../../source/cron_jobs.rst:314 ../../source/cron_jobs.rst:381
+#: ../../source/cron_jobs.rst:421 ../../source/cron_jobs.rst:480
+#: ../../source/cron_jobs.rst:497 ../../source/cron_jobs.rst:531
+#: ../../source/cron_jobs.rst:554 ../../source/cron_jobs.rst:569
+#: ../../source/cron_jobs.rst:777 ../../source/cron_jobs.rst:790
+#: ../../source/cron_jobs.rst:866 ../../source/cron_jobs.rst:1032
 msgid "Frequency suggestion: nightly"
 msgstr "建議頻率：每晚"
 
-#: ../../source/cron_jobs.rst:200
-msgid "Static Fines"
+#: ../../source/cron_jobs.rst:215 ../../source/cron_jobs.rst:239
+msgid "**Note** If the Koha system preference 'finesMode' is set to 'production', the fines are charged to the patron accounts. If set to 'test', the fines are calculated but not applied."
+msgstr "**說明** 若 Koha 系統偏好 'finesMode' 已設為 'production'，則向讀者收取罰款。若設為 'test'，則計算罰款但不收取。"
+
+#: ../../source/cron_jobs.rst:220
+#, fuzzy
+msgid "**Note** Fines will not be applied on a holiday."
+msgstr "**說明** 假日不計入罰款。"
+
+#: ../../source/cron_jobs.rst:226
+#, fuzzy
+msgid "Static fines"
 msgstr "固定罰款"
 
-#: ../../source/cron_jobs.rst:202
+#: ../../source/cron_jobs.rst:228
 msgid "Script path: misc/cronjobs/staticfines.pl"
 msgstr "腳本路徑：misc/cronjobs/staticfines.pl"
 
-#: ../../source/cron_jobs.rst:204
-msgid ""
-"Does: this script calculates and charges overdue fines to patron accounts"
-msgstr "做：此腳本計算並列出讀者帳戶內的罰款"
-
-#: ../../source/cron_jobs.rst:206
-msgid ""
-"**Note** If the Koha System Preference 'finesMode' is set to 'production', "
-"the fines are charged to the patron accounts. If set to 'test', the fines "
-"are calculated but not applied."
+#: ../../source/cron_jobs.rst:230
+msgid "Does: charges a single static fine for any/all overdues a patron currently has outstanding. The charge amount is either defined on the command line per borrower category or will use the circulation rules associated with the oldest overdue item the patron has currently checked out (for the first fine period only) Once charged, the fine is static: No new fines will be added until the existing fine is paid off in full."
 msgstr ""
-"**說明** 若 Koha 系統偏好 'finesMode' 已設為 'production'，則向讀者收取罰款。"
-"若設為 'test'，則計算罰款但不收取。"
 
-#: ../../source/cron_jobs.rst:210
+#: ../../source/cron_jobs.rst:244
 msgid "**Note** Fines won't be applied on a holiday."
 msgstr "**說明** 假日不計入罰款。"
 
-#: ../../source/cron_jobs.rst:216
-msgid "Long Overdues"
+#: ../../source/cron_jobs.rst:250
+msgid "Long overdues"
 msgstr "逾期太久"
 
-#: ../../source/cron_jobs.rst:218
+#: ../../source/cron_jobs.rst:252
 msgid "Script path: misc/cronjobs/longoverdue.pl"
 msgstr "腳本路徑：misc/cronjobs/longoverdue.pl"
 
-#: ../../source/cron_jobs.rst:220
-msgid ""
-"Does: allows one to specify delays for changing items to different lost "
-"statuses, and optionally charge for them using the replacement price listed "
-"on the item record."
+#: ../../source/cron_jobs.rst:254
+msgid "Does: allows one to specify delays for changing items to different lost statuses, and optionally charge for them using the replacement price listed on the item record."
 msgstr "做：允許更改不同程度的遺失館藏，並向讀者收取館藏記錄內的重置價格。"
 
-#: ../../source/cron_jobs.rst:226 ../../source/cron_jobs.rst:253
-#: ../../source/cron_jobs.rst:410 ../../source/cron_jobs.rst:427
-#: ../../source/cron_jobs.rst:544 ../../source/cron_jobs.rst:559
-#: ../../source/cron_jobs.rst:583 ../../source/cron_jobs.rst:620
+#: ../../source/cron_jobs.rst:260 ../../source/cron_jobs.rst:287
+#: ../../source/cron_jobs.rst:331 ../../source/cron_jobs.rst:482
+#: ../../source/cron_jobs.rst:499 ../../source/cron_jobs.rst:616
+#: ../../source/cron_jobs.rst:631 ../../source/cron_jobs.rst:680
+#: ../../source/cron_jobs.rst:766 ../../source/cron_jobs.rst:907
 msgid "**Note**"
 msgstr "**說明**"
 
-#: ../../source/cron_jobs.rst:228
-msgid ""
-"Staff can control some of the parameters for the longoverdue cron job with "
-"the :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-"
-"defaultlongoverduedays-label>` and :ref:`DefaultLongOverdueChargeValue` "
-"preferences."
-msgstr ""
-"館員可以經由 :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-"
-"&-defaultlongoverduedays-label>` 與 :ref:`DefaultLongOverdueChargeValue` 偏好"
-"控制逾期太久的工作排程。"
+#: ../../source/cron_jobs.rst:262
+msgid "Staff can control some of the parameters for the longoverdue cron job with the :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` and :ref:`DefaultLongOverdueChargeValue` preferences."
+msgstr "館員可以經由 :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` 與 :ref:`DefaultLongOverdueChargeValue` 偏好控制逾期太久的工作排程。"
 
-#: ../../source/cron_jobs.rst:237
-msgid "Track Total Checkouts"
+#: ../../source/cron_jobs.rst:271
+msgid "Track total checkouts"
 msgstr "追蹤借出總數"
 
-#: ../../source/cron_jobs.rst:239
+#: ../../source/cron_jobs.rst:273
 msgid "Script path: misc/cronjobs/update\\_totalissues.pl"
 msgstr "腳本路徑：misc/cronjobs/update\\_totalissues.pl"
 
-#: ../../source/cron_jobs.rst:241
-msgid ""
-"Does: updates the biblioitems.totalissues field in the database with the "
-"latest tally of checkouts based on historical issue statistics."
+#: ../../source/cron_jobs.rst:275
+msgid "Does: updates the biblioitems.totalissues field in the database with the latest tally of checkouts based on historical issue statistics."
 msgstr "做：以最新的借出現況更新資料庫內 biblioitems.totalissues 欄位的內容。"
 
-#: ../../source/cron_jobs.rst:246
+#: ../../source/cron_jobs.rst:280
 msgid "**Warning**"
 msgstr "**警示**"
 
-#: ../../source/cron_jobs.rst:248
-msgid ""
-"If the time on your database server does not match the time on your Koha "
-"server you will need to take that into account, and probably use the --since "
-"argument instead of the --interval argument for incremental updating."
-msgstr ""
-"需考量資料庫伺服器與 Koha 伺服器的時間不同步的狀況，並使用 --since 參數取代 "
-"--interval 參數做為新增性更新的依據。"
+#: ../../source/cron_jobs.rst:282
+msgid "If the time on your database server does not match the time on your Koha server you will need to take that into account, and probably use the --since argument instead of the --interval argument for incremental updating."
+msgstr "需考量資料庫伺服器與 Koha 伺服器的時間不同步的狀況，並使用 --since 參數取代 --interval 參數做為新增性更新的依據。"
 
-#: ../../source/cron_jobs.rst:255
-msgid ""
-"This cronjob can be used if there is a performance concern. Otherwise, use "
-"the UpdateTotalIssuesOnCirc System Preference."
+#: ../../source/cron_jobs.rst:289
+msgid "This cronjob can be used if there is a performance concern. Otherwise, use the UpdateTotalIssuesOnCirc System Preference."
 msgstr "可以使用此工作排程。也可使用 UpdateTotalIssuesOnCirc 系統偏好。"
 
-#: ../../source/cron_jobs.rst:261
-msgid "Generate Patron File for Offline Circulation"
+#: ../../source/cron_jobs.rst:295
+msgid "Generate patron file for offline circulation"
 msgstr "產生讀者檔供離線流通之用"
 
-#: ../../source/cron_jobs.rst:263
+#: ../../source/cron_jobs.rst:297
 msgid "Script path: misc/cronjobs/create\\_koc\\_db.pl"
 msgstr "腳本路徑：misc/cronjobs/create\\_koc\\_db.pl"
 
-#: ../../source/cron_jobs.rst:265
-msgid ""
-"Does: Generates the borrowers.db file for use with the :ref:`Koha Offline "
-"Circulation <offline-circ-tool-for-windows-label>` tool"
-msgstr ""
-"做：從 :ref:`Koha 離線流通 <offline-circ-tool-for-windows-label>` 工具產生 "
-"borrowers.db 檔案"
+#: ../../source/cron_jobs.rst:299
+msgid "Does: generates the borrowers.db file for use with the :ref:`Koha offline circulation <offline-circ-tool-for-windows-label>` tool"
+msgstr "做：從 :ref:`Koha 離線流通 <offline-circ-tool-for-windows-label>` 工具產生 borrowers.db 檔案"
 
-#: ../../source/cron_jobs.rst:268
+#: ../../source/cron_jobs.rst:302
 msgid "Frequency suggestion: weekly"
 msgstr "建議頻率：每週"
 
-#: ../../source/cron_jobs.rst:273
+#: ../../source/cron_jobs.rst:307
 msgid "Automatic renewal"
 msgstr "自動續借"
 
-#: ../../source/cron_jobs.rst:275
+#: ../../source/cron_jobs.rst:309
 msgid "Script path: misc/cronjobs/automatic\\_renewals.pl"
 msgstr "腳本路徑：misc/cronjobs/automatic\\_renewals.pl"
 
-#: ../../source/cron_jobs.rst:277
-msgid ""
-"Does: Will automatically renew items if you're allowing automatic renewal "
-"with your :ref:`circulation and fine rules <circulation-and-fine-rules-"
-"label>`."
-msgstr ""
-"做：若在 :ref:`流通與罰款規則 <circulation-and-fine-rules-label>` 裡允許自動"
-"續借，將自動續借。"
+#: ../../source/cron_jobs.rst:311
+msgid "Does: renews items if you're allowing automatic renewal with your :ref:`circulation and fine rules <circulation-and-fine-rules-label>`."
+msgstr "做：若在 :ref:`流通與罰款規則 <circulation-and-fine-rules-label>` 裡允許自動續借，將自動續借。"
 
-#: ../../source/cron_jobs.rst:285
+#: ../../source/cron_jobs.rst:319
 msgid "Patrons"
 msgstr "讀者"
 
-#: ../../source/cron_jobs.rst:290
-msgid "Batch Delete Patrons"
+#: ../../source/cron_jobs.rst:324
+msgid "Batch delete patrons"
 msgstr "批次刪除讀者"
 
-#: ../../source/cron_jobs.rst:292
+#: ../../source/cron_jobs.rst:326
 msgid "Script path: misc/cronjobs/delete\\_patrons.pl"
 msgstr "腳本路徑：misc/cronjobs/delete\\_patrons.pl"
 
-#: ../../source/cron_jobs.rst:294
-msgid ""
-"Does: Deletes patron records in batch based on date not borrowed since, "
-"expired before, last seen, category code, or library branch."
-msgstr ""
-"做：依照未曾借出日期、到期日、上網日期、屬性、或所屬圖書館，批次刪除讀者紀"
-"錄。"
+#: ../../source/cron_jobs.rst:328
+msgid "Does: deletes patron records in batch based on date not borrowed since, expired before, last seen, category code, or library branch."
+msgstr "做：依照未曾借出日期、到期日、上網日期、屬性、或所屬圖書館，批次刪除讀者紀錄。"
 
-#: ../../source/cron_jobs.rst:300
-msgid "Unverified Registrations"
-msgstr "未確認的註冊"
+#: ../../source/cron_jobs.rst:333
+msgid "Dates should be in ISO format, e.g., 2013-07-19, and can be generated with date -d '-3 month' \"+%Y-%m-%d\"."
+msgstr "應採用 ISO 格式的日期，如 2013-07-19，可以用指令產生 date -d '-3 month' \"+%Y-%m-%d\"。"
 
-#: ../../source/cron_jobs.rst:302
-msgid "Script path: misc/cronjobs/delete\\_expired\\_opac\\_registrations.pl"
-msgstr "腳本路徑：misc/cronjobs/delete\\_expired\\_opac\\_registrations.pl"
-
-#: ../../source/cron_jobs.rst:304
-msgid ""
-"Does: Deletes patron registrations that were submitted via the OPAC but not "
-"reviewed by the library within the number of days entered in the :ref:"
-"`PatronSelfRegistrationExpireTemporaryAccountsDelay` preference."
-msgstr ""
-"做：從 :ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay` 偏好內設定讀"
-"者經由 OPAC 自行刪除註冊資料但等待館員核准的期間。"
-
-#: ../../source/cron_jobs.rst:314
-msgid "Unconfirmed Registrations"
-msgstr "未確認註冊"
-
-#: ../../source/cron_jobs.rst:316
-msgid ""
-"Script path: misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
-msgstr "腳本路徑：misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
-
-#: ../../source/cron_jobs.rst:318
-msgid ""
-"Does: Deletes patron self registrations that were submitted via the OPAC but "
-"not confirmed via email within 24 hours. This is only necessary if you are "
-"requiring patrons to confirm their registrations via email with the :ref:"
-"`PatronSelfRegistrationVerifyByEmail` preference."
-msgstr ""
-"做：24 小時內讀者經由 OPAC 自行刪除註冊資料未經館員核准即自動刪除。必須先從 :"
-"ref:`PatronSelfRegistrationVerifyByEmail` 偏好設定由讀者的電子郵件確認。"
-
-#: ../../source/cron_jobs.rst:325 ../../source/cron_jobs.rst:527
-#: ../../source/cron_jobs.rst:674
-msgid "Frequency suggestion: hourly"
-msgstr "建議頻率：每小時"
-
-#: ../../source/cron_jobs.rst:330
-msgid "Anonymize Patron Data"
-msgstr "匿名讀者資料"
-
-#: ../../source/cron_jobs.rst:332
-msgid "Script path: misc/cronjobs/batch\\_anonymise.pl"
-msgstr "腳本路徑：misc/cronjobs/batch\\_anonymise.pl"
-
-#: ../../source/cron_jobs.rst:334
-msgid ""
-"Does: Used to anonymize patron data. This will remove borrowernumbers from "
-"circulation history so that the stats are kept, but the patron information "
-"is removed for privacy reasons."
-msgstr ""
-"做：用於匿名讀者資料。此腳本將從流通記錄裡移除讀者號，一方面保護讀者的隱私同"
-"時又保持原有的流通記錄。"
-
-#: ../../source/cron_jobs.rst:341
-msgid "Update Child to Adult Patron Type"
-msgstr "更新兒童為成人讀者類型"
-
-#: ../../source/cron_jobs.rst:343
-msgid "Script path: misc/cronjobs/j2a.pl"
-msgstr "腳本路徑：misc/cronjobs/j2a.pl"
-
-#: ../../source/cron_jobs.rst:345
-msgid ""
-"Does: Convert juvenile/child patrons from juvenile patron category and "
-"category code to corresponding adult patron category and category code when "
-"they reach the upper age limit defined in the Patron Categories."
-msgstr ""
-"做：當青少年/兒童讀者的年齡達到另個讀者類型的標準時將其轉換為對映的該讀者類"
-"型。"
-
-#: ../../source/cron_jobs.rst:351
-msgid "**DESCRIPTION**"
-msgstr "**DESCRIPTION**"
-
-#: ../../source/cron_jobs.rst:353
-msgid ""
-"This script is designed to update patrons from juvenile to adult patron "
-"types, remove the guarantor, and update their category codes appropriately "
-"when they reach the upper age limit defined in the Patron Categories."
-msgstr ""
-"此腳本係供青少年讀者類型昇級至成人讀者類型之用，移除保證人，到讀指定讀者類型"
-"的年齡下限時昇級至適合的代碼。"
-
-#: ../../source/cron_jobs.rst:358
-msgid "**USAGE EXAMPLES**"
-msgstr "**USAGE EXAMPLES**"
-
-#: ../../source/cron_jobs.rst:360
-msgid "\"juv2adult.pl\""
-msgstr "\"juv2adult.pl\""
-
-#: ../../source/cron_jobs.rst:362
-msgid ""
-"\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> "
-"(Processes a single branch, and updates the patron categories from category "
-"to category)"
-msgstr ""
-"\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> (處理單"
-"一分館，並逐一更新讀者類型)"
-
-#: ../../source/cron_jobs.rst:366
-msgid ""
-"\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (Processes all "
-"branches, shows all messages, and reports the patrons who would be affected. "
-"Takes no action on the database)"
-msgstr ""
-"\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (處理所有分館、顯"
-"示全部訊息、報告受影響的讀者。不修改資料庫)"
-
-#: ../../source/cron_jobs.rst:373
-msgid "Notices"
-msgstr "通知"
-
-#
-#: ../../source/cron_jobs.rst:378
-msgid "Message Queue"
-msgstr "信件佇列："
-
-#: ../../source/cron_jobs.rst:380
-msgid "Script path: misc/cronjobs/process\\_message\\_queue.pl"
-msgstr "腳本路徑：misc/cronjobs/process\\_message\\_queue.pl"
-
-#: ../../source/cron_jobs.rst:382
-msgid ""
-"Does: processes the message queue to send the check out, check in and hold "
-"filled emails and SMS message to users and sends outgoing emails to patrons. "
-"requires :ref:`EnhancedMessagingPreferences` to be on"
-msgstr ""
-"做：處理訊息佇列納入發送給讀者的借出、還入與預約歸檔電子郵件與簡訊以及送給讀"
-"者的電子郵件。必須將 :ref:`EnhancedMessagingPreferences` 偏好設為開啟"
-
-#: ../../source/cron_jobs.rst:388
-msgid "Frequency suggestion: 1-4 hours"
-msgstr "建議頻率：1-4小時"
-
-#: ../../source/cron_jobs.rst:390 ../../source/cron_jobs.rst:687
+#: ../../source/cron_jobs.rst:336 ../../source/cron_jobs.rst:462
+#: ../../source/cron_jobs.rst:834
 msgid "**Important**"
 msgstr "**重要**"
 
-#: ../../source/cron_jobs.rst:392
-msgid ""
-"Item due and Advanced due notices are controlled by the :ref:`advance"
-"\\_notices cron <advanced-notice-label>`."
+#: ../../source/cron_jobs.rst:338
+msgid "The options to select the patron records to delete are **cumulative**. For example, supplying both --expired_before and --library specifies that patron records must meet *both* conditions to be selected for deletion."
 msgstr ""
-"到期館藏與到期提前通知由 :ref:`advance\\_notices cron <advanced-notice-"
-"label>` 控制。"
 
-#: ../../source/cron_jobs.rst:398
-msgid "Advanced Notice"
+#: ../../source/cron_jobs.rst:342 ../../source/cron_jobs.rst:646
+#: ../../source/cron_jobs.rst:684 ../../source/cron_jobs.rst:740
+#: ../../source/cron_jobs.rst:956
+msgid "**PARAMETERS**"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:344
+msgid "--not_borrowed_since Delete patrons who have not borrowed since this date."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:347
+msgid "--expired_before Delete patrons with an account expired before this date."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:350
+msgid "--last_seen Delete patrons who have not been connected since this date. The system preference :ref:`TrackLastPatronActivity` must be enabled to use this option."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:355
+msgid "--category_code Delete patrons who have this category code."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:358
+msgid "--library Delete patrons in this library."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:361
+msgid "-c|--confirm This flag must be provided in order for the script to actually delete patron records. If it is not supplied, the script will only report on the patron records it would have deleted."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:366
+msgid "-v|--verbose Verbose mode."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:372
+#, fuzzy
+msgid "Unverified registrations"
+msgstr "未確認的註冊"
+
+#: ../../source/cron_jobs.rst:374
+msgid "Script path: misc/cronjobs/delete\\_expired\\_opac\\_registrations.pl"
+msgstr "腳本路徑：misc/cronjobs/delete\\_expired\\_opac\\_registrations.pl"
+
+#: ../../source/cron_jobs.rst:376
+#, fuzzy
+msgid "Does: deletes patron registrations that were submitted via the OPAC but not reviewed by the library within the number of days entered in the :ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay` preference."
+msgstr "做：從 :ref:`PatronSelfRegistrationExpireTemporaryAccountsDelay` 偏好內設定讀者經由 OPAC 自行刪除註冊資料但等待館員核准的期間。"
+
+#: ../../source/cron_jobs.rst:386
+#, fuzzy
+msgid "Unconfirmed registrations"
+msgstr "未確認註冊"
+
+#: ../../source/cron_jobs.rst:388
+msgid "Script path: misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
+msgstr "腳本路徑：misc/cronjobs/delete\\_unverified\\_opac\\_registrations.pl"
+
+#: ../../source/cron_jobs.rst:390
+#, fuzzy
+msgid "Does: deletes patron self registrations that were submitted via the OPAC but not confirmed via email within 24 hours. This is only necessary if you are requiring patrons to confirm their registrations via email with the :ref:`PatronSelfRegistrationVerifyByEmail` preference."
+msgstr "做：24 小時內讀者經由 OPAC 自行刪除註冊資料未經館員核准即自動刪除。必須先從 :ref:`PatronSelfRegistrationVerifyByEmail` 偏好設定由讀者的電子郵件確認。"
+
+#: ../../source/cron_jobs.rst:397 ../../source/cron_jobs.rst:599
+#: ../../source/cron_jobs.rst:821
+msgid "Frequency suggestion: hourly"
+msgstr "建議頻率：每小時"
+
+#: ../../source/cron_jobs.rst:402
+#, fuzzy
+msgid "Anonymize patron data"
+msgstr "匿名讀者資料"
+
+#: ../../source/cron_jobs.rst:404
+msgid "Script path: misc/cronjobs/batch\\_anonymise.pl"
+msgstr "腳本路徑：misc/cronjobs/batch\\_anonymise.pl"
+
+#: ../../source/cron_jobs.rst:406
+#, fuzzy
+msgid "Does: removes borrowernumbers from circulation history so that the stats are kept, but the patron information is removed for privacy reasons."
+msgstr "做：用於匿名讀者資料。此腳本將從流通記錄裡移除讀者號，一方面保護讀者的隱私同時又保持原有的流通記錄。"
+
+#: ../../source/cron_jobs.rst:413
+#, fuzzy
+msgid "Update child to adult patron type"
+msgstr "更新兒童為成人讀者類型"
+
+#: ../../source/cron_jobs.rst:415
+msgid "Script path: misc/cronjobs/j2a.pl"
+msgstr "腳本路徑：misc/cronjobs/j2a.pl"
+
+#: ../../source/cron_jobs.rst:417
+#, fuzzy
+msgid "Does: converts juvenile/child patrons from juvenile patron category and category code to corresponding adult patron category and category code when they reach the upper age limit defined in the Patron Categories."
+msgstr "做：當青少年/兒童讀者的年齡達到另個讀者類型的標準時將其轉換為對映的該讀者類型。"
+
+#: ../../source/cron_jobs.rst:423
+msgid "**DESCRIPTION**"
+msgstr "**DESCRIPTION**"
+
+#: ../../source/cron_jobs.rst:425
+msgid "This script is designed to update patrons from juvenile to adult patron types, remove the guarantor, and update their category codes appropriately when they reach the upper age limit defined in the Patron Categories."
+msgstr "此腳本係供青少年讀者類型昇級至成人讀者類型之用，移除保證人，到讀指定讀者類型的年齡下限時昇級至適合的代碼。"
+
+#: ../../source/cron_jobs.rst:430
+msgid "**USAGE EXAMPLES**"
+msgstr "**USAGE EXAMPLES**"
+
+#: ../../source/cron_jobs.rst:432
+msgid "\"juv2adult.pl\""
+msgstr "\"juv2adult.pl\""
+
+#: ../../source/cron_jobs.rst:434
+msgid "\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> (Processes a single branch, and updates the patron categories from category to category)"
+msgstr "\"juv2adult.pl\" -b=<branchcode> -f=<categorycode> -t=<categorycode> (處理單一分館，並逐一更新讀者類型)"
+
+#: ../../source/cron_jobs.rst:438
+msgid "\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (Processes all branches, shows all messages, and reports the patrons who would be affected. Takes no action on the database)"
+msgstr "\"juv2adult.pl\" -f=<categorycode> -t=<categorycode> -v -n (處理所有分館、顯示全部訊息、報告受影響的讀者。不修改資料庫)"
+
+#: ../../source/cron_jobs.rst:445
+msgid "Notices"
+msgstr "通知"
+
+#: ../../source/cron_jobs.rst:450
+#, fuzzy
+msgid "Message queue"
+msgstr "信件佇列："
+
+#: ../../source/cron_jobs.rst:452
+msgid "Script path: misc/cronjobs/process\\_message\\_queue.pl"
+msgstr "腳本路徑：misc/cronjobs/process\\_message\\_queue.pl"
+
+#: ../../source/cron_jobs.rst:454
+msgid "Does: processes the message queue to send the check out, check in and hold filled emails and SMS message to users and sends outgoing emails to patrons. requires :ref:`EnhancedMessagingPreferences` to be on"
+msgstr "做：處理訊息佇列納入發送給讀者的借出、還入與預約歸檔電子郵件與簡訊以及送給讀者的電子郵件。必須將 :ref:`EnhancedMessagingPreferences` 偏好設為開啟"
+
+#: ../../source/cron_jobs.rst:460
+msgid "Frequency suggestion: 1-4 hours"
+msgstr "建議頻率：1-4小時"
+
+#: ../../source/cron_jobs.rst:464
+msgid "Item due and Advanced due notices are controlled by the :ref:`advance\\_notices cron <advanced-notice-label>`."
+msgstr "到期館藏與到期提前通知由 :ref:`advance\\_notices cron <advanced-notice-label>` 控制。"
+
+#: ../../source/cron_jobs.rst:470
+#, fuzzy
+msgid "Advanced notice"
 msgstr "提前通知"
 
-#: ../../source/cron_jobs.rst:400
+#: ../../source/cron_jobs.rst:472
 msgid "Script path: misc/cronjobs/advance\\_notices.pl"
 msgstr "腳本路徑：misc/cronjobs/advance\\_notices.pl"
 
-#: ../../source/cron_jobs.rst:402
-msgid ""
-"Does: prepares \"pre-due\" notices and \"item due\" notices for patrons who "
-"request them prepares notices for patrons for items just due or coming due "
-"soon. requires :ref:`EnhancedMessagingPreferences` to be on"
-msgstr ""
-"做：應讀者的要求提供 \"到期提前\" 通知與 \"到期館藏\" 通知給需要的讀者。需"
-"將 :ref:`EnhancedMessagingPreferences` 偏好設為開啟"
+#: ../../source/cron_jobs.rst:474
+msgid "Does: prepares \"pre-due\" notices and \"item due\" notices for patrons who request them prepares notices for patrons for items just due or coming due soon. requires :ref:`EnhancedMessagingPreferences` to be on"
+msgstr "做：應讀者的要求提供 \"到期提前\" 通知與 \"到期館藏\" 通知給需要的讀者。需將 :ref:`EnhancedMessagingPreferences` 偏好設為開啟"
 
-#: ../../source/cron_jobs.rst:412
-msgid ""
-"This script does not actually send the notices. It queues them in the :ref:"
-"`message queue <message-queue-label>` for later"
-msgstr ""
-"此腳本不會真的送出通知。祗把通知置於 :ref:`訊息佇列 <message-queue-label>` 供"
-"以後使用"
+#: ../../source/cron_jobs.rst:484
+msgid "This script does not actually send the notices. It queues them in the :ref:`message queue <message-queue-label>` for later"
+msgstr "此腳本不會真的送出通知。祗把通知置於 :ref:`訊息佇列 <message-queue-label>` 供以後使用"
 
-#: ../../source/cron_jobs.rst:418
-msgid "Overdue Notice"
+#: ../../source/cron_jobs.rst:490
+#, fuzzy
+msgid "Overdue notice"
 msgstr "逾期通知"
 
-#: ../../source/cron_jobs.rst:420
+#: ../../source/cron_jobs.rst:492
 msgid "Script path: misc/cronjobs/overdue\\_notices.pl"
 msgstr "腳本路徑：Script path: misc/cronjobs/overdue\\_notices.pl"
 
-#: ../../source/cron_jobs.rst:422
-msgid ""
-"Does: prepares messages to alert patrons of overdue messages (both via email "
-"and print)"
+#: ../../source/cron_jobs.rst:494
+msgid "Does: prepares messages to alert patrons of overdue messages (both via email and print)"
 msgstr "做：準備讀者逾期的訊息 (經電子郵件或列印)"
 
-#: ../../source/cron_jobs.rst:429
-msgid ""
-"This script does not actually send the notices. It queues them in the :ref:"
-"`message queue <message-queue-label>` for later or generates the HTML for "
-"later printing"
-msgstr ""
-"此腳本不會真的送出通知。它把通知列入 :ref:`訊息佇列 <message-queue-label>` 內"
-"供列印之用"
+#: ../../source/cron_jobs.rst:501
+msgid "This script does not actually send the notices. It queues them in the :ref:`message queue <message-queue-label>` for later or generates the HTML for later printing"
+msgstr "此腳本不會真的送出通知。它把通知列入 :ref:`訊息佇列 <message-queue-label>` 內供列印之用"
 
-#: ../../source/cron_jobs.rst:433
+#: ../../source/cron_jobs.rst:505
 msgid "**See also**"
 msgstr "**參見**"
 
-#: ../../source/cron_jobs.rst:435
-msgid ""
-"The misc/cronjobs/advance\\_notices.pl program allows you to send messages "
-"to patrons in advance of their items becoming due, or to alert them of items "
-"that have just become due."
-msgstr ""
-"此 misc/cronjobs/advance\\_notices.pl 程式允許您送出訊息給逾期的讀者，或警示"
-"他們即將逾期。"
+#: ../../source/cron_jobs.rst:507
+msgid "The misc/cronjobs/advance\\_notices.pl program allows you to send messages to patrons in advance of their items becoming due, or to alert them of items that have just become due."
+msgstr "此 misc/cronjobs/advance\\_notices.pl 程式允許您送出訊息給逾期的讀者，或警示他們即將逾期。"
 
-#: ../../source/cron_jobs.rst:442
-msgid "Print Overdues"
+#: ../../source/cron_jobs.rst:514
+#, fuzzy
+msgid "Print overdues"
 msgstr "印出逾期通知"
 
-#: ../../source/cron_jobs.rst:444
+#: ../../source/cron_jobs.rst:516
 msgid "Script path: misc/cronjobs/printoverdues.sh"
 msgstr "腳本路徑：misc/cronjobs/printoverdues.sh"
 
-#: ../../source/cron_jobs.rst:446
-msgid ""
-"Does: generates PDF files from HTML files in directories and prints them"
+#: ../../source/cron_jobs.rst:518
+msgid "Does: generates PDF files from HTML files in directories and prints them"
 msgstr "做：從目錄的 HTML 檔案產生 PDF 並列印"
 
-#: ../../source/cron_jobs.rst:451
-msgid "Print Hold Notices"
+#: ../../source/cron_jobs.rst:523
+#, fuzzy
+msgid "Print hold notices"
 msgstr "列印保留通知"
 
-#: ../../source/cron_jobs.rst:453
+#: ../../source/cron_jobs.rst:525
 msgid "Script path: misc/cronjobs/gather\\_print\\_notices.pl"
 msgstr "腳本路徑：misc/cronjobs/gather\\_print\\_notices.pl"
 
-#: ../../source/cron_jobs.rst:455
-msgid ""
-"Does: looks through the message queue for hold notices that didn't go "
-"through because the patron didn't have an email address and generates a "
-"print notice"
+#: ../../source/cron_jobs.rst:527
+msgid "Does: looks through the message queue for hold notices that didn't go through because the patron didn't have an email address and generates a print notice"
 msgstr "做：檢視因為讀者未留電子郵件地址而保留的訊息並產生列印通知"
 
-#: ../../source/cron_jobs.rst:464
+#: ../../source/cron_jobs.rst:536
 msgid "Talking Tech"
 msgstr "Talking Tech"
 
-#: ../../source/cron_jobs.rst:466
-#, fuzzy
-msgid ""
-"To learn more about setting up this third party product view the :ref:"
-"`Talking Tech <talking-tech-label>` chapter."
-msgstr ""
-"設定的詳情參見附錄的 `Talking Tech 附錄 <#talkingtechappendix>`__ 的第三方產"
-"品說明。"
+#: ../../source/cron_jobs.rst:538
+msgid "To learn more about setting up this third party product view the :ref:`Talking Tech <talking-tech-label>` chapter."
+msgstr "設定此第三方產品的詳情參見 :ref:`Talking Tech <talking-tech-label>`。"
 
-#: ../../source/cron_jobs.rst:472
-msgid "Sending Notices File"
+#: ../../source/cron_jobs.rst:544
+#, fuzzy
+msgid "Sending notices file"
 msgstr "送出通知檔"
 
-#: ../../source/cron_jobs.rst:474
+#: ../../source/cron_jobs.rst:546
 msgid "Script path: misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_outbound.pl"
 msgstr "腳本路徑：misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_outbound.pl"
 
-#: ../../source/cron_jobs.rst:476
-msgid ""
-"Does: Script to generate Spec C outbound notifications file for Talking Tech "
-"i-tiva phone notification system."
+#: ../../source/cron_jobs.rst:548
+#, fuzzy
+msgid "Does: generates Spec C outbound notifications file for Talking Tech i-tiva phone notification system."
 msgstr "做：以腳本產生 Spec C 的通知檔案供 Talking Tech i-tiva 電話通知系統。"
 
-#: ../../source/cron_jobs.rst:479 ../../source/cron_jobs.rst:494
+#: ../../source/cron_jobs.rst:551 ../../source/cron_jobs.rst:566
 msgid "Required by: :ref:`TalkingTechItivaPhoneNotification`"
 msgstr "必備於：:ref:`TalkingTechItivaPhoneNotification`"
 
-#: ../../source/cron_jobs.rst:487
-msgid "Receiving Notices File"
+#: ../../source/cron_jobs.rst:559
+#, fuzzy
+msgid "Receiving notices file"
 msgstr "收到通知檔案"
 
-#: ../../source/cron_jobs.rst:489
+#: ../../source/cron_jobs.rst:561
 msgid "Script path: misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_inbound.pl"
 msgstr "腳本路徑：misc/cronjobs/thirdparty/TalkingTech\\_itiva\\_inbound.pl"
 
-#: ../../source/cron_jobs.rst:491
-msgid ""
-"Does: Script to process received Results files for Talking Tech i-tiva phone "
-"notification system."
+#: ../../source/cron_jobs.rst:563
+#, fuzzy
+msgid "Does: processes received results files for Talking Tech i-tiva phone notification system."
 msgstr "做：腳本處理收到來自Talking Tech i-tiva 電話通知系統的結果檔案。"
 
-#: ../../source/cron_jobs.rst:502
-msgid "Notify Patrons of Expiration"
+#: ../../source/cron_jobs.rst:574
+#, fuzzy
+msgid "Notify patrons of expiration"
 msgstr "告知讀者證有效日期"
 
-#: ../../source/cron_jobs.rst:504
+#: ../../source/cron_jobs.rst:576
 msgid "Script path: misc/cronjobs/membership\\_expiry.pl"
 msgstr "腳本路徑：misc/cronjobs/membership\\_expiry.pl"
 
-#: ../../source/cron_jobs.rst:506
-msgid ""
-"Does: Sends messages to warn patrons of their card expiration to the :ref:"
-"`messaage queue <message-queue-label>` cron."
-msgstr ""
-"做：把借書證到期的警示通知置於 :ref:`訊息佇列 <message-queue-label>` 工作排"
-"程。"
+#: ../../source/cron_jobs.rst:578
+#, fuzzy
+msgid "Does: sends messages to warn patrons of their card expiration to the :ref:`message queue <message-queue-label>` cron."
+msgstr "做：把借書證到期的警示通知置於 :ref:`訊息佇列 <message-queue-label>` 工作排程。"
 
-#: ../../source/cron_jobs.rst:509
+#: ../../source/cron_jobs.rst:581
 msgid "Requires: :ref:`MembershipExpiryDaysNotice`"
 msgstr "必備：:ref:`MembershipExpiryDaysNotice`"
 
-#: ../../source/cron_jobs.rst:511
+#: ../../source/cron_jobs.rst:583
 msgid "Frequency: nightly"
 msgstr "頻率：每天"
 
-#: ../../source/cron_jobs.rst:516
-msgid "In Processing/Book Cart"
+#: ../../source/cron_jobs.rst:588
+#, fuzzy
+msgid "In processing/book cart"
 msgstr "處理中/圖書車"
 
-#: ../../source/cron_jobs.rst:518
+#: ../../source/cron_jobs.rst:590
 msgid "Script path: misc/cronjobs/cart\\_to\\_shelf.pl"
 msgstr "腳本路徑：misc/cronjobs/cart\\_to\\_shelf.pl"
 
-#: ../../source/cron_jobs.rst:520
-msgid ""
-"Does: Updates all items with a location of CART to the item's permanent "
-"location."
+#: ../../source/cron_jobs.rst:592
+#, fuzzy
+msgid "Does: updates all items with a location of CART to the item's permanent location."
 msgstr "做：以 CART 位置做為館藏永久位置而更新所有館藏。"
 
-#: ../../source/cron_jobs.rst:523
-msgid ""
-"Required by: :ref:`NewItemsDefaultLocation`, :ref:"
-"`InProcessingToShelvingCart`, & :ref:`ReturnToShelvingCart` system "
-"preferences"
-msgstr ""
-"必備：:ref:`NewItemsDefaultLocation`、:ref:`InProcessingToShelvingCart` & "
-"`ReturnToShelvingCart` 系統偏好"
+#: ../../source/cron_jobs.rst:595
+msgid "Required by: :ref:`NewItemsDefaultLocation`, :ref:`InProcessingToShelvingCart`, & :ref:`ReturnToShelvingCart` system preferences"
+msgstr "必備：:ref:`NewItemsDefaultLocation`、:ref:`InProcessingToShelvingCart` & `ReturnToShelvingCart` 系統偏好"
 
-#: ../../source/cron_jobs.rst:532
+#: ../../source/cron_jobs.rst:604
 msgid "Catalog"
 msgstr "目錄"
 
-#: ../../source/cron_jobs.rst:537
-msgid "Import Webservice Batch"
+#: ../../source/cron_jobs.rst:609
+#, fuzzy
+msgid "Import webservice batch"
 msgstr "批次匯入網頁服務"
 
-#: ../../source/cron_jobs.rst:539
+#: ../../source/cron_jobs.rst:611
 msgid "Script path: misc/cronjobs/import\\_webservice\\_batch.pl"
 msgstr "腳本路徑：misc/cronjobs/import\\_webservice\\_batch.pl"
 
-#: ../../source/cron_jobs.rst:541
-msgid ""
-"Does: A cron job for processing import bach queues of type 'webservice'. "
-"Batches can also be processed through the UI."
+#: ../../source/cron_jobs.rst:613
+#, fuzzy
+msgid "Does: processes import bach queues of type 'webservice'. Batches can also be processed through the UI."
 msgstr "做：處理批次匯入 '網頁服務' 屬性佇列的工作排程。也可經由 UI 處理批次。"
 
-#: ../../source/cron_jobs.rst:546 ../../source/cron_jobs.rst:561
+#: ../../source/cron_jobs.rst:618 ../../source/cron_jobs.rst:633
 msgid "This script is used for OCLC Connexion"
 msgstr "此腳本適用於 OCLC Connexion"
 
-#: ../../source/cron_jobs.rst:551
-msgid "Connexion Import Daemon"
+#: ../../source/cron_jobs.rst:623
+#, fuzzy
+msgid "Connexion import daemon"
 msgstr "Connexion Import Daemon"
 
-#: ../../source/cron_jobs.rst:553
+#: ../../source/cron_jobs.rst:625
 msgid "Script path: misc/bin/connexion\\_import\\_daemon.pl"
 msgstr "腳本路徑：misc/bin/connexion\\_import\\_daemon.pl"
 
-#: ../../source/cron_jobs.rst:555
-msgid ""
-"Does: A daemon that listens for OCLC Connexion requests and is compliant "
-"with OCLC Gateway specification. It takes requests with MARC XML and import "
-"batch parameters from a configuration file and forwards it to svc/import_bib"
-msgstr ""
-"做：daemon 聽取 OCLC Connexion 的請求並回應 OCLC Gateway 規格。讀取 MARC XML "
-"的請求並從組態檔匯入參數轉交給 svc/import_bib"
+#: ../../source/cron_jobs.rst:627
+#, fuzzy
+msgid "Does: listens for OCLC Connexion requests and is compliant with OCLC Gateway specification. It takes requests with MARC XML and import batch parameters from a configuration file and forwards it to svc/import_bib"
+msgstr "做：daemon 聽取 OCLC Connexion 的請求並回應 OCLC Gateway 規格。讀取 MARC XML 的請求並從組態檔匯入參數轉交給 svc/import_bib"
 
-#: ../../source/cron_jobs.rst:566
-msgid "Batch Item Deletion"
+#: ../../source/cron_jobs.rst:638
+#, fuzzy
+msgid "Batch item deletion"
 msgstr "批次刪除館藏"
 
-#: ../../source/cron_jobs.rst:568
+#: ../../source/cron_jobs.rst:640
 msgid "Script path: misc/cronjobs/delete\\_items.pl"
 msgstr "腳本路徑：misc/cronjobs/delete\\_items.pl"
 
-#: ../../source/cron_jobs.rst:570
-msgid ""
-"Does: A batch item deletion tool, which generates a query against the items "
-"database and deletes the items matching the criteria specified in the "
-"command line arguments."
+#: ../../source/cron_jobs.rst:642
+#, fuzzy
+msgid "Does: generates a query against the items database and deletes the items matching the criteria specified in the command line arguments."
 msgstr "做：批次刪除館藏工具向館藏資料庫提出請求，刪除符合條件的館藏。"
 
-#: ../../source/cron_jobs.rst:577
-msgid "Check URL Quick"
+#: ../../source/cron_jobs.rst:648
+msgid "--verbose Send the \"WHERE\" clause generated by the collected C<--where> arguments, as well as items affected to Standard Out."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:652
+msgid "--where The C<--where> option may called multiple times. The following argument must be a syntactically valid SQL statement which is part of the C<WHERE> clause querying the items table. These are joined by C<AND>."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:658
+msgid "--commit No items will be deleted unless the C<--commit> flag is present."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:661
+#, fuzzy
+msgid "**EXAMPLES**"
+msgstr "**USAGE EXAMPLES**"
+
+#: ../../source/cron_jobs.rst:663
+msgid "The following are examples of this script:"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:665
+msgid "delete_items.pl --where \"items.withdrawn ! 0\" --where \"items.withdrawn_on < $(date --date=\"13 month ago\" --rfc-3339=date)\" --commit"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:667
+msgid "delete_items.pl --where \"itemlost >= '1'\" --where \"itemlost <='4'\" --where \"itemlost_on < '2014-04-28'\" --commit"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:672
+#, fuzzy
+msgid "Check URL quick"
 msgstr "快速檢查 URL"
 
-#: ../../source/cron_jobs.rst:579
+#: ../../source/cron_jobs.rst:674
 msgid "Script path: misc/cronjobs/check-url-quick.pl"
 msgstr "腳本路徑：misc/cronjobs/check-url-quick.pl"
 
-#: ../../source/cron_jobs.rst:581
-msgid "Does: Check URLs from biblio records."
-msgstr "做：檢查書目紀錄的 URL。"
+#: ../../source/cron_jobs.rst:676
+msgid "Does: checks URLs from biblio records; scans all URLs found by default in 856$u of bibliographic records and displays if resources are available or not."
+msgstr ""
 
-#: ../../source/cron_jobs.rst:585
+#: ../../source/cron_jobs.rst:682
 msgid "This script replaces the check-url.pl script"
 msgstr "此腳本用以重置 check-url.pl"
 
-#: ../../source/cron_jobs.rst:590
+#: ../../source/cron_jobs.rst:686
+msgid "--host=http://default.tld Server host used when URL doesn't have one, ie doesn't begin with 'http:'. For example, if --host=mylib.com, then when 856$u contains 'img/image.jpg', the url checked is: http://www.mylib.com/image.jpg."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:691
+msgid "--tags Tags containing URLs in $u subfields. If not provided, 856 tag is checked. Multiple tags can be specified, for example:"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:695
+msgid "check-url-quick.pl --tags 310 410 856"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:697
+msgid "--verbose|v Outputs both successful and failed URLs."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:700
+msgid "--html Formats output in HTML. The result can be redirected to a file accessible by http. This way, it's possible to link directly to the bibliographic record in edit mode. With this parameter --host-intranet is required."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:706
+msgid "--host-intranet=http://koha-pro.tld Server host used to link to bibliographic record editing page in Koha intranet interface."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:710
+msgid "--timeout=10 Timeout for fetching URLs. By default 10 seconds."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:713
+msgid "--maxconn=1000 Number of simulaneous HTTP requests. By default 200 connexions."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:719
 msgid "Check URLs"
 msgstr "檢查 URL"
 
-#: ../../source/cron_jobs.rst:592
+#: ../../source/cron_jobs.rst:721
 msgid "Script path: misc/cronjobs/check-url.pl"
 msgstr "腳本路徑：misc/cronjobs/check-url.pl"
 
-#: ../../source/cron_jobs.rst:594
-msgid ""
-"Does: checks URLs in 856$u field. Script output can now be formatted in CSV "
-"or HTML. The HTML version links directly to MARC biblio record editor."
-msgstr ""
-"做：檢查 856$u 欄位裡的 URL。腳本的輸出是 CSV 或 HTML 格式。HTML 版本直接連結"
-"至 MARC 書目記錄編輯器。"
+#: ../../source/cron_jobs.rst:723
+msgid "Does: checks URLs in 856$u field. Script output can now be formatted in CSV or HTML. The HTML version links directly to MARC biblio record editor."
+msgstr "做：檢查 856$u 欄位裡的 URL。腳本的輸出是 CSV 或 HTML 格式。HTML 版本直接連結至 MARC 書目記錄編輯器。"
 
-#: ../../source/cron_jobs.rst:598
+#: ../../source/cron_jobs.rst:727
 msgid "Frequency suggestion: monthly"
 msgstr "建議頻率：每月"
 
-#: ../../source/cron_jobs.rst:600
+#: ../../source/cron_jobs.rst:729
 msgid "Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements"
 msgstr "詳情見：http://wiki.koha-community.org/wiki/Check-url_enhancements"
 
-#: ../../source/cron_jobs.rst:605
-msgid "Delete Records via Leader"
+#: ../../source/cron_jobs.rst:734
+#, fuzzy
+msgid "Delete records via leader"
 msgstr "經由紀錄標示刪除紀錄"
 
-#: ../../source/cron_jobs.rst:607
+#: ../../source/cron_jobs.rst:736
 msgid "Script path: misc/cronjobs/delete\\_records\\_via\\_leader.pl"
 msgstr "腳本路徑：misc/cronjobs/delete\\_records\\_via\\_leader.pl"
 
-#: ../../source/cron_jobs.rst:609
-msgid ""
-"Does: Attempt to delete any MARC records where the leader character 5 equals "
-"'d'"
+#: ../../source/cron_jobs.rst:738
+#, fuzzy
+msgid "Does: attempts to delete any MARC records where the leader character 5 equals 'd'."
 msgstr "做：刪除紀錄標示位置 5 的內容為 'd' 的 MARC 紀錄"
 
-#: ../../source/cron_jobs.rst:614
-msgid "Update Authorities"
+#: ../../source/cron_jobs.rst:742
+msgid "-c|--confirm Script will do nothing without this parameter"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:745
+msgid "-v|--verbose Verbose mode"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:748
+msgid "-t|--test Test mode, does not delete records. Test mode cannot determine if a record/item will be deleted successfully, it will only tell you what records and items the script will attempt to delete."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:753
+msgid "-i|--delete-items Try deleting items before deleting record. Records with items cannot be deleted."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:760
+#, fuzzy
+msgid "Update authorities"
 msgstr "更新權威記錄"
 
-#: ../../source/cron_jobs.rst:616
+#: ../../source/cron_jobs.rst:762
 msgid "Script path: misc/cronjobs/merge\\_authorities.pl"
 msgstr "腳本路徑：misc/cronjobs/merge\\_authorities.pl"
 
-#: ../../source/cron_jobs.rst:618
-msgid "Does: Updates biblio data with changes to authorities records"
+#: ../../source/cron_jobs.rst:764
+#, fuzzy
+msgid "Does: updates biblio data with changes to authorities records"
 msgstr "做：依照權威記錄的變動更新對應的書目資料"
 
-#: ../../source/cron_jobs.rst:622
-msgid ""
-"The name of this script is misleading. This script does not merge "
-"authorities together it instead merges authority data with linked bib "
-"records. Edits to authority records will be applied to bibliographic records "
-"that use that authority when this script is run."
-msgstr ""
-"此腳本的名稱是誤導。此腳本並未合併權威記錄反而合併與其連結的書目記錄。執行腳"
-"本時編輯權威記錄將適用於使用權威記錄的書目記錄。"
+#: ../../source/cron_jobs.rst:768
+msgid "The name of this script is misleading. This script does not merge authorities together it instead merges authority data with linked bib records. Edits to authority records will be applied to bibliographic records that use that authority when this script is run."
+msgstr "此腳本的名稱是誤導。此腳本並未合併權威記錄反而合併與其連結的書目記錄。執行腳本時編輯權威記錄將適用於使用權威記錄的書目記錄。"
 
-#: ../../source/cron_jobs.rst:628
-msgid "Required by: `dontmerge <#dontmerge>`__ system preference"
-msgstr "必備於：`dontmerge <#dontmerge>`__ 系統偏好"
+#: ../../source/cron_jobs.rst:774
+msgid "Required by: :ref:`AuthorityMergeLimit <authoritymergelimit-label>` system preference"
+msgstr "必備於： :ref:`AuthorityMergeLimit <authoritymergelimit-label>` 系統偏好"
 
-#: ../../source/cron_jobs.rst:635
-msgid "Serials Update"
+#: ../../source/cron_jobs.rst:782
+#, fuzzy
+msgid "Serials update"
 msgstr "更新期刊"
 
-#: ../../source/cron_jobs.rst:637
+#: ../../source/cron_jobs.rst:784
 msgid "Script path: misc/cronjobs/serialsUpdate.pl"
 msgstr "腳本路徑：misc/cronjobs/serialsUpdate.pl"
 
-#: ../../source/cron_jobs.rst:639
-msgid ""
-"Does: checks if there is a \"late\" issue on active subscriptions, and if "
-"there is, the script will set it as late, and add the next one as expected."
-msgstr ""
-"做：檢查訂閱中的期刊是否有 \"遲到\" 的刊期，若有，此腳本設定它為遲到，並把下"
-"一期列為期待簽收。"
+#: ../../source/cron_jobs.rst:786
+msgid "Does: checks if there is a \"late\" issue on active subscriptions, and if there is, the script will set it as late, and add the next one as expected."
+msgstr "做：檢查訂閱中的期刊是否有 \"遲到\" 的刊期，若有，此腳本設定它為遲到，並把下一期列為期待簽收。"
 
-#: ../../source/cron_jobs.rst:648
+#: ../../source/cron_jobs.rst:795
 msgid "Automatic item update"
 msgstr "自動更新館藏"
 
-#: ../../source/cron_jobs.rst:650
-msgid ""
-"Script path: misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
+#: ../../source/cron_jobs.rst:797
+msgid "Script path: misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
 msgstr "腳本路徑：misc/cronjobs/automatic\\_item\\_modification\\_by\\_age.pl"
 
-#: ../../source/cron_jobs.rst:652
-msgid ""
-"Does: updates items based on the list of rules set forth in the :ref:"
-"`Automatic item modifications by age` tool"
+#: ../../source/cron_jobs.rst:799
+msgid "Does: updates items based on the list of rules set forth in the :ref:`Automatic item modifications by age` tool"
 msgstr "做：根據在 :ref:`依年齡自動修改館藏` 工具的規則更新館藏"
 
-#: ../../source/cron_jobs.rst:655
+#: ../../source/cron_jobs.rst:802
 msgid "Required by: :ref:`Automatic item modifications by age`"
 msgstr "使用到的是：:ref:`依年齡自動修改館藏`"
 
-#: ../../source/cron_jobs.rst:657
+#: ../../source/cron_jobs.rst:804
 msgid "Frequency suggestions: nightly"
 msgstr "建議頻率：每晚"
 
-#: ../../source/cron_jobs.rst:662
+#: ../../source/cron_jobs.rst:809
 msgid "OPAC"
 msgstr "OPAC"
 
-#: ../../source/cron_jobs.rst:667
-msgid "RSS Feeds"
+#: ../../source/cron_jobs.rst:814
+#, fuzzy
+msgid "RSS feeds"
 msgstr "RSS Feeds"
 
-#: ../../source/cron_jobs.rst:669
+#: ../../source/cron_jobs.rst:816
 msgid "Script path: misc/cronjobs/rss/rss.pl"
 msgstr "腳本路徑：misc/cronjobs/rss/rss.pl"
 
-#: ../../source/cron_jobs.rst:671
-msgid ""
-"Does: Produces an RSS XML document for any SQL query (not used for search "
-"results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`."
-msgstr ""
-"做：給任何 SQL 詢問使用的 RSS XML 文件 (不是供搜尋結果 RSS feed 使用)。:ref:`"
-"詳情 <custom-rss-feeds-label>`。"
+#: ../../source/cron_jobs.rst:818
+#, fuzzy
+msgid "Does: produces an RSS XML document for any SQL query (not used for search results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`."
+msgstr "做：給任何 SQL 詢問使用的 RSS XML 文件 (不是供搜尋結果 RSS feed 使用)。:ref:`詳情 <custom-rss-feeds-label>`。"
 
-#: ../../source/cron_jobs.rst:679
-msgid "Authorities Browser"
+#: ../../source/cron_jobs.rst:826
+#, fuzzy
+msgid "Authorities browser"
 msgstr "權威瀏覽器"
 
-#: ../../source/cron_jobs.rst:681
+#: ../../source/cron_jobs.rst:828
 msgid "Script path: misc/cronjobs/build\\_browser\\_and\\_cloud.pl"
 msgstr "腳本路徑：misc/cronjobs/build\\_browser\\_and\\_cloud.pl"
 
-#: ../../source/cron_jobs.rst:683
-msgid "Does: Generate content for authorities browse in OPAC"
+#: ../../source/cron_jobs.rst:830
+#, fuzzy
+msgid "Does: generates content for authorities browse in OPAC"
 msgstr "做：在 OPAC 產生權威瀏覽的內容"
 
-#: ../../source/cron_jobs.rst:685
+#: ../../source/cron_jobs.rst:832
 msgid "Required by: :ref:`OpacBrowser` system preference"
 msgstr "必備於：:ref:`OpacBrowser` 系統偏好"
 
-#: ../../source/cron_jobs.rst:689
+#: ../../source/cron_jobs.rst:836
 msgid "This preference and cron job should only be used on French systems."
 msgstr "此偏好與工作排程應祗適用於法語系統。"
 
-#: ../../source/cron_jobs.rst:694
-msgid "Subject/Author Clouds"
+#: ../../source/cron_jobs.rst:841
+#, fuzzy
+msgid "Subject/author clouds"
 msgstr "主題/著者雲"
 
-#: ../../source/cron_jobs.rst:696
+#: ../../source/cron_jobs.rst:843
 msgid "Script path: misc/cronjobs/cloud-kw.pl"
 msgstr "腳本路徑：misc/cronjobs/cloud-kw.pl"
 
-#: ../../source/cron_jobs.rst:698
-msgid ""
-"Does: Generates HTML keywords clouds from Koha Zebra indexes. misc/cronjobs/"
-"cloud-sample.conf has a sample of how this script operates."
-msgstr ""
-"做：從 Koha Zebra 索引產生 HTML 鍵詞雲。misc/cronjobs/cloud-sample.conf 有若"
-"干此腳本運算元的範例。"
+#: ../../source/cron_jobs.rst:845
+#, fuzzy
+msgid "Does: generates HTML keywords clouds from Koha Zebra indexes. misc/cronjobs/cloud-sample.conf has a sample of how this script operates."
+msgstr "做：從 Koha Zebra 索引產生 HTML 鍵詞雲。misc/cronjobs/cloud-sample.conf 有若干此腳本運算元的範例。"
 
-#: ../../source/cron_jobs.rst:702
-msgid ""
-"Frequency: This is the type of script you can run once a month or so, the "
-"content generated isn't going to change very much over time."
+#: ../../source/cron_jobs.rst:849
+msgid "Frequency: This is the type of script you can run once a month or so, the content generated isn't going to change very much over time."
 msgstr "頻率：這是您可每月執行一次的腳本類型，其內容並不常變動。"
 
-#: ../../source/cron_jobs.rst:708
-msgid "System Administration"
+#: ../../source/cron_jobs.rst:855
+#, fuzzy
+msgid "System administration"
 msgstr "系統管理"
 
-#: ../../source/cron_jobs.rst:713
-msgid "Services Throttle"
+#: ../../source/cron_jobs.rst:860
+#, fuzzy
+msgid "Services throttle"
 msgstr "服務量"
 
-#: ../../source/cron_jobs.rst:715
+#: ../../source/cron_jobs.rst:862
 msgid "Script path: misc/cronjobs/services\\_throttle.pl"
 msgstr "腳本路徑：misc/cronjobs/services\\_throttle.pl"
 
-#: ../../source/cron_jobs.rst:717
+#: ../../source/cron_jobs.rst:864
 msgid "Does: resets the xISBN services throttle"
 msgstr "做：重設 xISBN 服務量"
 
-#: ../../source/cron_jobs.rst:724
-msgid "Clean up Database"
+#: ../../source/cron_jobs.rst:871
+#, fuzzy
+msgid "Clean up database"
 msgstr "清理資料庫"
 
-#: ../../source/cron_jobs.rst:726
+#: ../../source/cron_jobs.rst:873
 msgid "Script path: misc/cronjobs/cleanup\\_database.pl"
 msgstr "腳本路徑：misc/cronjobs/cleanup\\_database.pl"
 
-#: ../../source/cron_jobs.rst:728
-msgid ""
-"Does: Truncates the sessions table, cleans out old zebraqueue entries, "
-"action logs and staged MARC files."
-msgstr ""
-"做：截切 sessions 表單、清理 zebra 序列款目、作為記錄與待處理 MARC 檔案。"
+#: ../../source/cron_jobs.rst:875
+#, fuzzy
+msgid "Does: truncates the sessions table, cleans out old zebraqueue entries, action logs and staged MARC files."
+msgstr "做：截切 sessions 表單、清理 zebra 序列款目、作為記錄與待處理 MARC 檔案。"
 
-#: ../../source/cron_jobs.rst:734
-msgid "Share Usage Stats"
+#: ../../source/cron_jobs.rst:881
+#, fuzzy
+msgid "Share usage stats"
 msgstr "共享使用統計"
 
-#: ../../source/cron_jobs.rst:736
+#: ../../source/cron_jobs.rst:883
 msgid "Script path: misc/cronjobs/share\\_usage\\_with\\_koha\\_community.pl"
 msgstr "路徑腳本：misc/cronjobs/share\\_usage\\_with\\_koha\\_community.pl"
 
-#: ../../source/cron_jobs.rst:738
-msgid ""
-"Does: If you're sharing information via the :ref:`UsageStats` feature this "
-"will send your info to the `Hea website <http://hea.koha-community.org/>`__."
+#: ../../source/cron_jobs.rst:885
+msgid "Does: sends your info to the `Hea website <http://hea.koha-community.org/>`__ if you're sharing information via the :ref:`UsageStats` feature"
 msgstr ""
-"做：經由 :ref:`UsageStats` 功能共享資訊將把您的資訊送至 `Hea website <http://"
-"hea.koha-community.org/>`__。"
 
-#: ../../source/cron_jobs.rst:742
+#: ../../source/cron_jobs.rst:890
 msgid "Frequency: monthly"
 msgstr "頻率：每月"
 
-#: ../../source/cron_jobs.rst:747
+#: ../../source/cron_jobs.rst:895
 msgid "Acquisitions"
 msgstr "採訪"
 
-#: ../../source/cron_jobs.rst:752
+#: ../../source/cron_jobs.rst:900
 msgid "Clean up old suggestions"
 msgstr "清除舊的建議"
 
-#: ../../source/cron_jobs.rst:754
+#: ../../source/cron_jobs.rst:902
 msgid "Script path: misc/cronjobs/purge\\_suggestions.pl"
 msgstr "腳本路徑：misc/cronjobs/purge\\_suggestions.pl"
 
-#: ../../source/cron_jobs.rst:756
-msgid ""
-"Does: Removes old (defined by you) suggestions from the suggestion "
-"management area."
+#: ../../source/cron_jobs.rst:904
+#, fuzzy
+msgid "Does: removes old (defined by you) suggestions from the suggestion management area."
 msgstr "做：從建議管理區塊移除舊的 (由您定義) 建議。"
 
-#: ../../source/cron_jobs.rst:762
+#: ../../source/cron_jobs.rst:909
+msgid "The system preference :ref:`PurgeSuggestionsOlderThan` defines the number of days used in the script"
+msgstr "系統偏好 :ref:`PurgeSuggestionsOlderThan` 設定在腳本使用的日數"
+
+#: ../../source/cron_jobs.rst:915
 msgid "Email suggestions to process"
 msgstr "將建議以電郵送入程序"
 
-#: ../../source/cron_jobs.rst:764
+#: ../../source/cron_jobs.rst:917
 msgid "Script path: misc/cronjobs/notice\\_unprocessed\\_suggestions.pl"
 msgstr "腳本路徑：misc/cronjobs/notice\\_unprocessed\\_suggestions.pl"
 
-#: ../../source/cron_jobs.rst:766
-msgid ""
-"Does: Generates a notice to the fund owner that there are suggestions in "
-"need of processing"
+#: ../../source/cron_jobs.rst:919
+#, fuzzy
+msgid "Does: generates a notice to the fund owner that there are suggestions in need of processing"
 msgstr "做：將待處理的採訪建議告知基金擁有者"
 
-#: ../../source/cron_jobs.rst:772
-msgid "EDI Message Processing"
+#: ../../source/cron_jobs.rst:925
+#, fuzzy
+msgid "EDI message processing"
 msgstr "EDI 訊息處理"
 
-#: ../../source/cron_jobs.rst:774
+#: ../../source/cron_jobs.rst:927
 msgid "Script path: misc/cronjobs/edi\\_cron.pl"
 msgstr "腳本路徑：misc/cronjobs/edi\\_cron.pl"
 
-#: ../../source/cron_jobs.rst:776
-msgid "Does: Sends and received EDI messages"
+#: ../../source/cron_jobs.rst:929
+#, fuzzy
+msgid "Does: sends and received EDI messages"
 msgstr "做：送出與接收 EDI 訊息"
 
-#: ../../source/cron_jobs.rst:778
+#: ../../source/cron_jobs.rst:931
 msgid "Frequency: Every 15 minutes"
 msgstr "頻率：每 15 分鐘"
 
-#: ../../source/cron_jobs.rst:783
-msgid "Remove Temporary EDI Files"
+#: ../../source/cron_jobs.rst:936
+#, fuzzy
+msgid "Remove temporary EDI files"
 msgstr "移除暫存 EDI 檔案"
 
-#: ../../source/cron_jobs.rst:785
+#: ../../source/cron_jobs.rst:938
 msgid "Script path: misc/cronjobs/remove\\_temporary\\_edifiles.pl"
 msgstr "腳本路徑：misc/cronjobs/remove\\_temporary\\_edifiles.pl"
 
-#: ../../source/cron_jobs.rst:787
+#: ../../source/cron_jobs.rst:940
 msgid "Does: removes temporary EDI files that are older than 5 days"
 msgstr "做：移除 5 天前的暫存 EDI 檔案"
 
-#: ../../source/cron_jobs.rst:794
+#: ../../source/cron_jobs.rst:947
 msgid "Reports"
 msgstr "報表"
 
-#: ../../source/cron_jobs.rst:797
-msgid "Run Report"
+#: ../../source/cron_jobs.rst:950
+#, fuzzy
+msgid "Run report"
 msgstr "執行報表"
 
-#: ../../source/cron_jobs.rst:799
+#: ../../source/cron_jobs.rst:952
 msgid "Script path: misc/cronjobs/runreport.pl"
 msgstr "腳本路徑：misc/cronjobs/runreport.pl"
 
-#: ../../source/cron_jobs.rst:801
-msgid "Does: run pre-existing saved reports"
+#: ../../source/cron_jobs.rst:954
+#, fuzzy
+msgid "Does: runs pre-existing saved reports"
 msgstr "做：執行已經儲存的報表"
 
-#: ../../source/cron_jobs.rst:804
+#: ../../source/cron_jobs.rst:958
+msgid "-v|--verbose Verbose output"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:961
+msgid "--format=s Selects format. Choice of text, html, csv or tsv"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:964
+msgid "-e|--email Whether or not to use e-mail (implied by --to or --from)"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:967
+msgid "-a|--attachment Attach the report as a file. Cannot be used with html format"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:970
+msgid "--username Username to pass to the SMTP server for authentication"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:973
+msgid "--password Password to pass to the SMTP server for authentication"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:976
+msgid "--method The type of authentication. Ie. LOGIN, DIGEST-MD5, etc."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:979
+msgid "--to=s E-mail address to send report to"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:982
+msgid "--from=s E-mail address to send report from"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:985
+msgid "--subject=s Subject for the e-mail"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:988
+msgid "--store-results Store the result of the report"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:991
+msgid "--csv-header Add column names as first line of csv output"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:994
+msgid "**ARGUMENTS**"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:996
+msgid "reportID Report ID Number from saved_sql.id, multiple ID's may be specified"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1000
 msgid "Norwegian patron database"
 msgstr "挪威讀者資料庫"
 
-#: ../../source/cron_jobs.rst:807
+#: ../../source/cron_jobs.rst:1003
 msgid "NL sync to Koha"
 msgstr "NL 同步於 Koha"
 
-#: ../../source/cron_jobs.rst:809
+#: ../../source/cron_jobs.rst:1005
 msgid "Script path: misc/cronjobs/nl-sync-to-koha.pl"
 msgstr "腳本路徑：misc/cronjobs/nl-sync-to-koha.pl"
 
-#: ../../source/cron_jobs.rst:811
-msgid ""
-"Does: sync patrons from the Norwegian national patron database (NL) to Koha"
+#: ../../source/cron_jobs.rst:1007
+#, fuzzy
+msgid "Does: syncs patrons from the Norwegian national patron database (NL) to Koha"
 msgstr "做：同步挪威讀者資料庫 (NL) 於 Koha"
 
-#: ../../source/cron_jobs.rst:813 ../../source/cron_jobs.rst:823
-msgid ""
-"**Note** Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword "
-"system preferences"
-msgstr ""
-"**說明** 回應 NorwegianPatronDBUsername 與 NorwegianPatronDBPassword 系統偏好"
+#: ../../source/cron_jobs.rst:1009 ../../source/cron_jobs.rst:1019
+msgid "**Note** Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences"
+msgstr "**說明** 回應 NorwegianPatronDBUsername 與 NorwegianPatronDBPassword 系統偏好"
 
-#: ../../source/cron_jobs.rst:817
+#: ../../source/cron_jobs.rst:1013
 msgid "NL sync from Koha"
 msgstr "NL 同步自 Koha"
 
-#: ../../source/cron_jobs.rst:819
+#: ../../source/cron_jobs.rst:1015
 msgid "Script path: misc/cronjobs/nl-sync-from-koha.pl"
 msgstr "腳本路徑：misc/cronjobs/nl-sync-from-koha.pl"
 
-#: ../../source/cron_jobs.rst:821
-msgid ""
-"Does: sync patrons from Koha to the Norwegian national patron database (NL)"
+#: ../../source/cron_jobs.rst:1017
+#, fuzzy
+msgid "Does: syncs patrons from Koha to the Norwegian national patron database (NL)"
 msgstr "做：同步 Koha 至挪威全國讀者資料庫 (NL)"
 
-#: ../../source/cron_jobs.rst:827
+#: ../../source/cron_jobs.rst:1023
 msgid "Social data"
 msgstr "社會資料"
 
-#: ../../source/cron_jobs.rst:830
+#: ../../source/cron_jobs.rst:1026
 msgid "Get report social data"
 msgstr "取得社會資料報表"
 
-#: ../../source/cron_jobs.rst:832
+#: ../../source/cron_jobs.rst:1028
 msgid "Script path: misc/cronjobs/social_data/get\\_report\\_social\\_data.pl"
 msgstr "腳本路徑：misc/cronjobs/social_data/get\\_report\\_social\\_data.pl"
 
-#: ../../source/cron_jobs.rst:834
+#: ../../source/cron_jobs.rst:1030
 msgid "Does: downloads data from Babelthèque to add to OPAC records"
 msgstr "做：從 Babelthèque 下載資料加入 OPAC 紀錄"
 
-#: ../../source/cron_jobs.rst:839
+#: ../../source/cron_jobs.rst:1035
 msgid "Update social data"
 msgstr "更新社會資料"
 
-#: ../../source/cron_jobs.rst:841
+#: ../../source/cron_jobs.rst:1037
 msgid "Script path: misc/cronjobs/social_data/update\\_social\\_data.pl"
 msgstr "腳本路徑：misc/cronjobs/social_data/update\\_social\\_data.pl"
 
-#: ../../source/cron_jobs.rst:843
+#: ../../source/cron_jobs.rst:1039
 msgid "Does: updates OPAC records with Babelthèque social data"
 msgstr "做：以 Babelthèque 資料更新 OPAC 紀錄"
 
-#: ../../source/cron_jobs.rst:846
+#: ../../source/cron_jobs.rst:1044
+msgid "Daemons"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1046
+msgid "Daemons are continuously running tasks that help support Koha operation.  Your database and webserver are run as daemons. Newer versions of Koha start two different daemons for most koha instances:"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1050
+msgid "zebra - this is the index server"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1052
+msgid "koha-indexer - this daemon updates the index server with new and modified data (biblios and authorities)"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1055
+msgid "These daemons are started by the script /etc/init.d/koha-common."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1060
+msgid "Zebra indexer daemon"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1062
+msgid "Script path: /usr/sbin/koha-indexer (invoked from /etc/init.d/koha-common)"
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1064
+msgid "The koha-indexer script invokes rebuild_zebra.pl in daemon mode. In this mode, the script will run continuously and check the database for new or modified data every 30 seconds.  New or modified records are then sent to Zebra for indexing, which only takes a second or so. The advantage of this approach is a search system which is much more responsive to changes, compared to the :ref:'cron job approach <_rebuild-index-label>'."
+msgstr ""
+
+#: ../../source/cron_jobs.rst:1073
 msgid "Deprecated scripts"
 msgstr "不適用的腳本"
 
-#: ../../source/cron_jobs.rst:848
+#: ../../source/cron_jobs.rst:1075
 msgid "These should not be run without modification:"
 msgstr "不應在未修改前執行這些："
 
-#: ../../source/cron_jobs.rst:850
+#: ../../source/cron_jobs.rst:1077
 msgid "Script path: misc/cronjobs/update\\_items.pl"
 msgstr "腳本路徑：misc/cronjobs/update\\_items.pl"
 
-#: ../../source/cron_jobs.rst:852
+#: ../../source/cron_jobs.rst:1079
 msgid "Script path:misc/cronjobs/smsoverdues.pl"
 msgstr "腳本路徑：misc/cronjobs/smsoverdues.pl"
 
-#: ../../source/cron_jobs.rst:854
+#: ../../source/cron_jobs.rst:1081
 msgid "Script path:misc/cronjobs/notifyMailsOp.pl"
 msgstr "腳本路徑：misc/cronjobs/notifyMailsOp.pl"
 
-#: ../../source/cron_jobs.rst:856
+#: ../../source/cron_jobs.rst:1083
 msgid "Script path:misc/cronjobs/reservefix.pl"
 msgstr "腳本路徑：misc/cronjobs/reservefix.pl"
 
-#: ../../source/cron_jobs.rst:858
+#: ../../source/cron_jobs.rst:1085
 msgid "Script path:misc/cronjobs/zebraqueue\\_start.pl"
 msgstr "腳本路徑：misc/cronjobs/zebraqueue\\_start.pl"
+
+#~ msgid "Does: calculates and posts fines to patron accounts."
+#~ msgstr "做：計算並列出讀者帳戶內的罰款。"
+
+#~ msgid "Does: calculates and charges overdue fines to patron accounts"
+#~ msgstr "做：此腳本計算並列出讀者帳戶內的罰款"
+
+#~ msgid "Does: Check URLs from biblio records."
+#~ msgstr "做：檢查書目紀錄的 URL。"
+
+#~ msgid "Does: If you're sharing information via the :ref:`UsageStats` feature this will send your info to the `Hea website <http://hea.koha-community.org/>`__."
+#~ msgstr "做：經由 :ref:`UsageStats` 功能共享資訊將把您的資訊送至 `Hea website <http://hea.koha-community.org/>`__。"
+
