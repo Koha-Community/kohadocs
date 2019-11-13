@@ -12178,6 +12178,21 @@ Description:
     You must allow
     :ref:`EnhancedMessagingPreferences` for
     this to work.
+    
+.. _smssendusername,-smssendpassword,-and-emailsmssenddriverfromaddress-label:
+    
+SMSSendUsername, SMSSendPassword and EmailSMSSendDriverFromAddress
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Define a username/login \_\_\_ and a password \_\_\_.  Override 
+from address with \_\_\_ for emails sent using "Email" send driver.
+
+Description:
+
+-  Some SMS gateway providers require username and password credentials 
+   and these can be entered here.  Additionally, one specific email address 
+   may be required as sender (from address) for all emails sent by the 
+   Email SMS send driver.
 
 .. _statisticsfields-label:
 
