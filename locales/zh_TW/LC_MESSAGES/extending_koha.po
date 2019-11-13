@@ -1,38 +1,37 @@
 # Compendium of zh_TW.
 msgid ""
 msgstr ""
-"Project-Id-Version: compendium-zh_TW\n"
+"Project-Id-Version: Koha man18.05\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 19:31-0300\n"
-"PO-Revision-Date: 2018-05-15 19:54-0300\n"
-"Language-Team: Koha Translation Team \n"
-"Language: zh\n"
+"POT-Creation-Date: 2019-03-13 12:07-0300\n"
+"PO-Revision-Date: 2019-03-21 06:20+0000\n"
+"Last-Translator: Anthony MAO <mao@lins.fju.edu.tw>\n"
+"Language-Team: Koha Translation Team\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.8\n"
+"X-Pootle-Path: /zh_TW/man18.05/extending_koha.po\n"
+"X-Pootle-Revision: 1\n"
+"X-POOTLE-MTIME: 1553149207.832450\n"
 
 #: ../../source/extending_koha.rst:4
 msgid "Extending Koha"
 msgstr "擴展 Koha"
 
 #: ../../source/extending_koha.rst:6
-msgid ""
-"This chapter shows how you can add various enhancements and customizations "
-"in and around Koha by using mostly the existing configuration options."
-msgstr ""
+msgid "This chapter shows how you can add various enhancements and customizations in and around Koha by using mostly the existing configuration options."
+msgstr "本章顯示以既有的組態選項新增強化及客製化的功能。"
 
 #: ../../source/extending_koha.rst:12
 msgid "Amazon lookup script for Koha libraries"
 msgstr "Amazon 為 Koha 圖書館的查詢程式"
 
 #: ../../source/extending_koha.rst:14
-msgid ""
-"We order most of our materials from Amazon, so I've been looking for a "
-"convenient way to tell if a book under consideration is in our catalog "
-"already."
-msgstr ""
-"我們向 Amazon 購買大部份的東西，所以我已經找到簡潔的方法若圖書已經在我們的目"
-"錄內。"
+msgid "We order most of our materials from Amazon, so I've been looking for a convenient way to tell if a book under consideration is in our catalog already."
+msgstr "我們向 Amazon 購買大部份的東西，所以我已經找到簡潔的方法若圖書已經在我們的目錄內。"
 
 #: ../../source/extending_koha.rst:18
 msgid "Greasemonkey & a custom user script fit the bill nicely:"
@@ -51,695 +50,418 @@ msgid "A few caveats:"
 msgstr "幾個警示："
 
 #: ../../source/extending_koha.rst:26
-msgid ""
-"Like most scripts, this one was designed to work with Firefox; I haven't "
-"explored getting it to work with other browsers."
-msgstr ""
-"如同大部份的程式，這個也是設計與 Firefox 共用；我還沒有把它擴展至其他的瀏覽"
-"器。"
+msgid "Like most scripts, this one was designed to work with Firefox; I haven't explored getting it to work with other browsers."
+msgstr "如同大部份的程式，這個也是設計與 Firefox 共用；我還沒有把它擴展至其他的瀏覽器。"
 
 #: ../../source/extending_koha.rst:29
-msgid ""
-"I'm not a JavaScript programmer -- this was adapted from others' work. Just "
-"a few lines would have to be changed to get the script to work with your "
-"catalog."
-msgstr ""
-"我不是 JavaScript 程式設計師 -- 這是別人的工作。祗改了幾行程式讓它與我的目錄"
-"共同工作。"
+msgid "I'm not a JavaScript programmer -- this was adapted from others' work. Just a few lines would have to be changed to get the script to work with your catalog."
+msgstr "我不是 JavaScript 程式設計師 -- 這是別人的工作。祗改了幾行程式讓它與我的目錄共同工作。"
 
 #: ../../source/extending_koha.rst:33
-msgid ""
-"It depends on the existence of ISBN for the item in question, so movies, "
-"older books, etc. would not work."
+msgid "It depends on the existence of ISBN for the item in question, so movies, older books, etc. would not work."
 msgstr "視作品是否有 ISBN，所以電影、舊書等就不適用。"
 
 #: ../../source/extending_koha.rst:36
-msgid ""
-"Others have added all sorts of bells & whistles: XISBN lookups to search for "
-"related titles, custom messages based on the status of items (on order, on "
-"hold, etc.), ... just search the UserScripts site for Amazon + library. For "
-"a later date!"
-msgstr ""
-"其他人會加入各種花俏的東西：XISBN 查找相關的題名、館藏狀態的客製化訊息(採購"
-"中、預約中等)，...祗要搜尋 Amazon + library 的 UserScripts 即可。供後續使用！"
+msgid "Others have added all sorts of bells & whistles: custom messages based on the status of items (on order, on hold, etc.), ... just search the UserScripts site for Amazon + library. For a later date!"
+msgstr "其他人曾加入各種花俏的東西：根據館藏狀態 (採購中、預約中等) 發送客製化訊息，... 祗要搜尋 Amazon + library 的 UserScripts 網站即可得知。供後續使用！"
 
-#: ../../source/extending_koha.rst:44
+#: ../../source/extending_koha.rst:43
 msgid "Keyword Clouds"
 msgstr "鍵詞雲"
 
-#: ../../source/extending_koha.rst:46
-msgid ""
-"In addition to the traditional tag cloud available in Koha, there is a way "
-"to generate clouds for popular subjects within Koha."
+#: ../../source/extending_koha.rst:45
+msgid "In addition to the traditional tag cloud available in Koha, there is a way to generate clouds for popular subjects within Koha."
 msgstr "除了傳統的標籤雲之外，Koha 還產生常用的主題雲。"
 
-#: ../../source/extending_koha.rst:49
-msgid ""
-"The :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` is "
-"used to help with this process. This cron job sends its output to files."
-msgstr ""
-"將 :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` 用於說"
-"明此程序。此例行性工作排程送出其內容至檔案。"
+#: ../../source/extending_koha.rst:48
+msgid "The :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` is used to help with this process. This cron job sends its output to files."
+msgstr "將 :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` 用於說明此程序。此例行性工作排程送出其內容至檔案。"
 
-#: ../../source/extending_koha.rst:52
+#: ../../source/extending_koha.rst:51
 msgid "/home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html"
 msgstr "/home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html"
 
-#: ../../source/extending_koha.rst:54
+#: ../../source/extending_koha.rst:53
 msgid "/home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html"
 msgstr "/home/koha/yourlibrary/koharoot/koha-tmpl/cloud-subject.html"
 
-#: ../../source/extending_koha.rst:56
-msgid ""
-"This means that you can produce clouds for authors, collective author, all "
-"kind of subjects, classifications, etc. And since it works on zebra indexes, "
-"it is quick, even on large DBs. Tags clouds are sent to files. It's up to "
-"library webmaster to deal with those files in order to include them in :ref:"
-"`OPACMainUserBlock <opacmainuserblock-label>`, or include them into their "
-"library CMS."
-msgstr ""
-"表示您可產生著者、合著者、主題、分類等各種雲。它們係經由 zebra 索引做出來的，"
-"即使碰到大型的資料庫，其速度也很快。標籤雲送至檔案。由圖書館網管決定把這些檔"
-"案納入 :ref:`OPACMainUserBlock <opacmainuserblock-label>`，或納入圖書館的 "
-"CMS。"
+#: ../../source/extending_koha.rst:55
+msgid "This means that you can produce clouds for authors, collective author, all kind of subjects, classifications, etc. And since it works on zebra indexes, it is quick, even on large DBs. Tags clouds are sent to files. It's up to library webmaster to deal with those files in order to include them in :ref:`OPACMainUserBlock <opacmainuserblock-label>`, or include them into their library CMS."
+msgstr "表示您可產生著者、合著者、主題、分類等各種雲。它們係經由 zebra 索引做出來的，即使碰到大型的資料庫，其速度也很快。標籤雲送至檔案。由圖書館網管決定把這些檔案納入 :ref:`OPACMainUserBlock <opacmainuserblock-label>`，或納入圖書館的 CMS。"
 
-#: ../../source/extending_koha.rst:63
-msgid ""
-"Some libraries even send the file into a Samba shared folder where webmaster "
-"take them, eventually clean them a little bit before integrating them into "
-"navigation widgets or pages."
-msgstr ""
-"有些圖書館甚至把檔案送網管掌控的 Samba 共享資料夾，將其整合入網頁之前還先清理"
-"它們。"
+#: ../../source/extending_koha.rst:62
+msgid "Some libraries even send the file into a Samba shared folder where webmaster take them, eventually clean them a little bit before integrating them into navigation widgets or pages."
+msgstr "有些圖書館甚至把檔案送網管掌控的 Samba 共享資料夾，將其整合入網頁之前還先清理它們。"
 
-#: ../../source/extending_koha.rst:70
+#: ../../source/extending_koha.rst:69
 msgid "Newest Titles Pulldown"
 msgstr "最新題名下拉"
 
-#: ../../source/extending_koha.rst:72
-msgid ""
-"Often we want to add a way for our patrons to do searches for the newest "
-"items. In this example I'll show you how to create a pull down menu of the "
-"newest items by item type. These tips will work (with a couple changes) for "
-"collection codes or shelving locations as well."
-msgstr ""
-"通常我們想讓讀者能夠搜尋最新的館藏。在此例裡依館藏類型建置最新館藏的下拉選"
-"單。這些秘訣 (再加上若干變化) 可供館藏代碼或排架之用。"
+#: ../../source/extending_koha.rst:71
+msgid "Often we want to add a way for our patrons to do searches for the newest items. In this example I'll show you how to create a pull down menu of the newest items by item type. These tips will work (with a couple changes) for collection codes or shelving locations as well."
+msgstr "通常我們想讓讀者能夠搜尋最新的館藏。在此例裡依館藏類型建置最新館藏的下拉選單。這些秘訣 (再加上若干變化) 可供館藏代碼或排架之用。"
 
-#: ../../source/extending_koha.rst:77
-msgid ""
-"First, it's important to note that every link in Koha is a permanent link. "
-"This means if I do a search for everything of a specific item type sorted by "
-"the acquisitions date and bookmark that URL, whenever I click it I'll see "
-"the newest items of that type on the first few pages of the results."
-msgstr ""
-"首先，Koha內 的所有連結都是永久性連結。把特定館藏類型依採訪日期排序並標記其 "
-"URL，下回再點選此網址就把最新的館藏列在前幾頁。"
+#: ../../source/extending_koha.rst:76
+msgid "First, it's important to note that every link in Koha is a permanent link. This means if I do a search for everything of a specific item type sorted by the acquisitions date and bookmark that URL, whenever I click it I'll see the newest items of that type on the first few pages of the results."
+msgstr "首先，Koha內 的所有連結都是永久性連結。把特定館藏類型依採訪日期排序並標記其 URL，下回再點選此網址就把最新的館藏列在前幾頁。"
 
-#: ../../source/extending_koha.rst:83
-msgid ""
-"I took this knowledge and wrote a form takes this functionality in to "
-"consideration. It basically just does a search of your Koha catalog for a "
-"specific item type and sorts the results by acquisitions date."
-msgstr ""
-"我寫上這些內容做為以後之用。就是搜尋我的 Koha 目錄裡的特定館藏類型並依採訪日"
-"期排序。"
+#: ../../source/extending_koha.rst:82
+msgid "I took this knowledge and wrote a form takes this functionality in to consideration. It basically just does a search of your Koha catalog for a specific item type and sorts the results by acquisitions date."
+msgstr "我寫上這些內容做為以後之用。就是搜尋我的 Koha 目錄裡的特定館藏類型並依採訪日期排序。"
 
-#: ../../source/extending_koha.rst:87
-msgid ""
-"The first thing I did was write a MySQL statement to generate a list of item "
-"types for me - why copy and paste when you can use the power of MySQL?"
-msgstr ""
-"首要之事先寫一個 MySQL 敘述產生館藏類型清單 - 可以使用功能強大的 MySQL 時何必"
-"複製貼上呢？"
+#: ../../source/extending_koha.rst:86
+msgid "The first thing I did was write a MySQL statement to generate a list of item types for me - why copy and paste when you can use the power of MySQL?"
+msgstr "首要之事先寫一個 MySQL 敘述產生館藏類型清單 - 可以使用功能強大的 MySQL 時何必複製貼上呢？"
 
-#: ../../source/extending_koha.rst:95
-msgid ""
-"The above looks at the itemtypes table and slaps the necessary HTML around "
-"each item type for me. I then exported that to CSV and opened it in my text "
-"editor and added the other parts of the form."
-msgstr ""
-"以上的館藏類型表與其必要的 HTML 都很有用。接著匯出為 CSV 格式並在文字編輯器打"
-"開它再新增表格的其他部份。"
+#: ../../source/extending_koha.rst:94
+msgid "The above looks at the itemtypes table and slaps the necessary HTML around each item type for me. I then exported that to CSV and opened it in my text editor and added the other parts of the form."
+msgstr "以上的館藏類型表與其必要的 HTML 都很有用。接著匯出為 CSV 格式並在文字編輯器打開它再新增表格的其他部份。"
 
-#: ../../source/extending_koha.rst:119
+#: ../../source/extending_koha.rst:118
 msgid "Now, what does all of that mean? The important bits are these:"
 msgstr "現在，究竟什麼意思呢？重要的是："
 
-#: ../../source/extending_koha.rst:121
+#: ../../source/extending_koha.rst:120
 msgid "First the starting of the form."
 msgstr "首先從表單開始。"
 
-#: ../../source/extending_koha.rst:127
-msgid ""
-"This tells the browser to take any value selected and put it at the end of "
-"this http://YOURSITE/cgi-bin/koha/opac-search.pl. If you want to embed this "
-"form on your library website (and not on your OPAC) you can put the full "
-"OPAC URL in there."
-msgstr ""
-"告知瀏覽器提取選定的值，並把它放在 http://YOURSITE/cgi-bin/koha/opac-search."
-"pl 最後面。若想把它嵌入您的網頁 (不是 OPAC)，可把完整的 OPAC URL 置於此。"
+#: ../../source/extending_koha.rst:126
+msgid "This tells the browser to take any value selected and put it at the end of this http://YOURSITE/cgi-bin/koha/opac-search.pl. If you want to embed this form on your library website (and not on your OPAC) you can put the full OPAC URL in there."
+msgstr "告知瀏覽器提取選定的值，並把它放在 http://YOURSITE/cgi-bin/koha/opac-search.pl 最後面。若想把它嵌入您的網頁 (不是 OPAC)，可把完整的 OPAC URL 置於此。"
 
-#: ../../source/extending_koha.rst:132
-msgid ""
-"Next, there is a hidden value that is telling the search to sort by "
-"acquisitions date descending (newest items at the top):"
-msgstr ""
-"接著，有個隱藏值告知搜尋結果以採訪日期排序的降羃排序(最新的館藏在上面)："
+#: ../../source/extending_koha.rst:131
+msgid "Next, there is a hidden value that is telling the search to sort by acquisitions date descending (newest items at the top):"
+msgstr "接著，有個隱藏值告知搜尋結果以採訪日期排序的降羃排序(最新的館藏在上面)："
 
-#: ../../source/extending_koha.rst:139
-msgid ""
-"And finally you have an option for each item type you want people to search."
+#: ../../source/extending_koha.rst:138
+msgid "And finally you have an option for each item type you want people to search."
 msgstr "最後您可指定讓讀者搜尋的館藏類型。"
 
-#: ../../source/extending_koha.rst:146
-msgid ""
-"These options each include the string \"mc-itype:\" which tells Koha to do "
-"an item type search."
+#: ../../source/extending_koha.rst:145
+msgid "These options each include the string \"mc-itype:\" which tells Koha to do an item type search."
 msgstr "每個選項包括字串 \"mc-itype:\" 告知 Koha 搜尋各館藏類型。"
 
-#: ../../source/extending_koha.rst:149
-msgid ""
-"Once you have all of that in place you can copy and paste the form to "
-"somewhere on your OPAC. The `Farmington Public Libraries OPAC <http://"
-"catalog.farmingtonlibraries.org>`__ has a few examples of this on the left."
-msgstr ""
-"全部就緒後就可以複製貼上表單至您的 OPAC 內。:ref:`Farmington Public "
-"Libraries OPAC <http://catalog.farmingtonlibraries.org>` 左方有若干範例。"
+#: ../../source/extending_koha.rst:148
+msgid "Once you have all of that in place you can copy and paste the form to somewhere on your OPAC. The `Farmington Public Libraries OPAC <http://catalog.farmingtonlibraries.org>`__ has a few examples of this on the left."
+msgstr "全部就緒後就可以複製貼上表單至您的 OPAC 內。:ref:`Farmington Public Libraries OPAC <http://catalog.farmingtonlibraries.org>` 左方有若干範例。"
 
-#: ../../source/extending_koha.rst:157
+#: ../../source/extending_koha.rst:156
 msgid "New titles slider for OPAC"
 msgstr "OPAC 使用的新題名封面"
 
-#: ../../source/extending_koha.rst:159
-msgid ""
-"Often times libraries will want to add a flowing widget with new materials "
-"at the library to their main public catalog page. To do this you can use a "
-"widget from any number of services (usually for a cost) or you can `enable "
-"plugins <#pluginsystem>`__ in Koha and use the `Cover Flow plugin <http://"
-"git.bywatersolutions.com/koha-plugins.git/shortlog/refs/heads/cover_flow>`__ "
-"which is based on the `Flipster <https://github.com/drien/jquery-"
-"flipster>`__, a responsive jQuery coverflow plugin."
-msgstr ""
-"圖書館多半在其公共目錄頁面新增其他功能。可從其他服務取得 (多半需付費) 該等功"
-"能或者從 Koha 內 :ref:`啟用外掛 <#pluginsystem>`__ 並使用 `封面外掛 <http://"
-"git.bywatersolutions.com/koha-plugins.git/shortlog/refs/heads/cover_flow>`__ "
-"係依照 `Flipster <https://github.com/drien/jquery-flipster>`__ 而來，一個 "
-"jQuery 的外掛。"
+#: ../../source/extending_koha.rst:158
+msgid "Often times libraries will want to add a flowing widget with new materials at the library to their main public catalog page. To do this you can use a widget from any number of services (usually for a cost) or you can `enable plugins <#pluginsystem>`__ in Koha and use the `Cover Flow plugin <http://git.bywatersolutions.com/koha-plugins.git/shortlog/refs/heads/cover_flow>`__ which is based on the `Flipster <https://github.com/drien/jquery-flipster>`__, a responsive jQuery coverflow plugin."
+msgstr "圖書館多半在其公共目錄頁面新增其他功能。可從其他服務取得 (多半需付費) 該等功能或者從 Koha 內 :ref:`啟用外掛 <#pluginsystem>`__ 並使用 `封面外掛 <http://git.bywatersolutions.com/koha-plugins.git/shortlog/refs/heads/cover_flow>`__ 係依照 `Flipster <https://github.com/drien/jquery-flipster>`__ 而來，一個 jQuery 的外掛。"
 
-#: ../../source/extending_koha.rst:169
-msgid ""
-"Once the plugin is installed, the steps to get your coverflow to show up are "
-"as follows:"
+#: ../../source/extending_koha.rst:168
+msgid "Once the plugin is installed, the steps to get your coverflow to show up are as follows:"
 msgstr "安裝外掛之後，依照下面的步驟取得封面："
 
-#: ../../source/extending_koha.rst:172
-msgid ""
-"First, you need to create one or more public reports for your coverflow "
-"widget or widgets to be based on. This is how the plugin knows what the "
-"content of your widget should contain. Each report needs only three columns; "
-"title, biblionumber, and isbn. It is important that you have a good and "
-"valid isbn, as that is the datum used to actually fetch the cover. In the "
-"iteration of the plugin, we are using Amazon cover images, but I believe in "
-"the end I will make the cover image fetcher configurable so we can use any "
-"data source for cover image fetching."
-msgstr ""
-"首先，新增封面的機制。讓外掛知道您的機制應包括的內容。每個報表祗需三個欄位；"
-"題名、書目號與國際標準書號。必須包括正確的國際標準書號，才能夠抓取到封面。英"
-"文封面的外掛中，我們最常用 Amazon 封面圖像，不過我相信以後可以建置抓取封面的"
-"組態檔讓我們從其他的來源抓取封面。"
+#: ../../source/extending_koha.rst:171
+msgid "First, you need to create one or more public reports for your coverflow widget or widgets to be based on. This is how the plugin knows what the content of your widget should contain. Each report needs only three columns; title, biblionumber, and isbn. It is important that you have a good and valid isbn, as that is the datum used to actually fetch the cover. In the iteration of the plugin, we are using Amazon cover images, but I believe in the end I will make the cover image fetcher configurable so we can use any data source for cover image fetching."
+msgstr "首先，新增封面的機制。讓外掛知道您的機制應包括的內容。每個報表祗需三個欄位；題名、書目號與國際標準書號。必須包括正確的國際標準書號，才能夠抓取到封面。英文封面的外掛中，我們最常用 Amazon 封面圖像，不過我相信以後可以建置抓取封面的組態檔讓我們從其他的來源抓取封面。"
 
-#: ../../source/extending_koha.rst:181
-msgid ""
-"Second, we need to configure the plugin. The plugin configuration is a "
-"single text area that uses YAML ( actually, it’s JSON, whcih is a subset of "
-"YAML ) to store the configuration options. In this example it looks like "
-"this:"
-msgstr ""
-"第二，我們需組態外掛。外掛組態是使用 YAML 的純文字區塊 (實際上，它是 JSON，"
-"YAML 的子集合) 儲存組態選項。在此例中看來像這樣："
+#: ../../source/extending_koha.rst:180
+msgid "Second, we need to configure the plugin. The plugin configuration is a single text area that uses YAML ( actually, it’s JSON, whcih is a subset of YAML ) to store the configuration options. In this example it looks like this:"
+msgstr "第二，我們需組態外掛。外掛組態是使用 YAML 的純文字區塊 (實際上，它是 JSON，YAML 的子集合) 儲存組態選項。在此例中看來像這樣："
 
-#: ../../source/extending_koha.rst:193
-msgid ""
-"In this example, we are telling the plugin to use the report with id 42, and "
-"use it to create a coverflow widget to replace the HTML element with the id "
-"“coverflow”. The options list is passed directly to Flipster, so any options "
-"supported by Flipster can be set from the plugin configuration! In fact, in "
-"addition to the traditional coverflow, Flipster has a “carousel” mode which "
-"is a much more compact version of the coverflow. You can also configure "
-"which cover the widget will start on, among other options."
-msgstr ""
-"在上例裡，於 id 42 的外掛裡使用報表，並以其新增封面取代 id 為 \"封面\"。把選"
-"單直接交給 Flipster，支援 Flipster 的選項就能夠納入外掛中！事實上，除了傳統的"
-"封面外，還有 “carousel” 模式更精簡地處理封面。還可從多個選項裡，組態指定的封"
-"面。"
+#: ../../source/extending_koha.rst:192
+msgid "In this example, we are telling the plugin to use the report with id 42, and use it to create a coverflow widget to replace the HTML element with the id “coverflow”. The options list is passed directly to Flipster, so any options supported by Flipster can be set from the plugin configuration! In fact, in addition to the traditional coverflow, Flipster has a “carousel” mode which is a much more compact version of the coverflow. You can also configure which cover the widget will start on, among other options."
+msgstr "在上例裡，於 id 42 的外掛裡使用報表，並以其新增封面取代 id 為 \"封面\"。把選單直接交給 Flipster，支援 Flipster 的選項就能夠納入外掛中！事實上，除了傳統的封面外，還有 “carousel” 模式更精簡地處理封面。還可從多個選項裡，組態指定的封面。"
 
-#: ../../source/extending_koha.rst:202
-msgid ""
-"At the time the plugins options are saved or updated, the plugin will then "
-"generate some minified JavaScript code that is automatically stored in the "
-"Koha system preference OPACUserJS. Here is an example of the output:"
-msgstr ""
-"儲存或更新外掛選項時，會產生自動儲存在 Koha 的 OpacUserJS 系統偏好內的 "
-"JavaScript 程式碼。以下是範例："
+#: ../../source/extending_koha.rst:201
+msgid "At the time the plugins options are saved or updated, the plugin will then generate some minified JavaScript code that is automatically stored in the Koha system preference OPACUserJS. Here is an example of the output:"
+msgstr "儲存或更新外掛選項時，會產生自動儲存在 Koha 的 OpacUserJS 系統偏好內的 JavaScript 程式碼。以下是範例："
 
-#: ../../source/extending_koha.rst:214
-msgid ""
-"Why do this? For speed! Rather than regenerating this code each and every "
-"time the page loads, we can generate it once, and use it over and over again."
-msgstr ""
-"為什麼要做這個？速度！載入頁面時不必每次產生相同的程式碼，產生一次後，就能重"
-"複使用。"
+#: ../../source/extending_koha.rst:213
+msgid "Why do this? For speed! Rather than regenerating this code each and every time the page loads, we can generate it once, and use it over and over again."
+msgstr "為什麼要做這個？速度！載入頁面時不必每次產生相同的程式碼，產生一次後，就能重複使用。"
 
-#: ../../source/extending_koha.rst:218
-msgid ""
-"If you inspect the code closely, you’ll notice it references a script "
-"“coverflow.pl”. This is a script that is included with the coverflow plugin. "
-"Since we need to access this from the OPAC ( and we don’t want to set off "
-"any XSS attack alarms ), we need to modify the web server configuration for "
-"the public catalog and add the followup to it:"
-msgstr ""
-"仔細檢視程式碼，會發現它指向 “coverflow.pl” 腳本。此腳本包括外封面。需從 "
-"OPAC (我們不要關閉任何 XSS 攻擊警示) 近用它，我們需修改網頁伺服器組態供公共目"
-"錄使用並加入以下："
+#: ../../source/extending_koha.rst:217
+msgid "If you inspect the code closely, you’ll notice it references a script “coverflow.pl”. This is a script that is included with the coverflow plugin. Since we need to access this from the OPAC ( and we don’t want to set off any XSS attack alarms ), we need to modify the web server configuration for the public catalog and add the followup to it:"
+msgstr "仔細檢視程式碼，會發現它指向 “coverflow.pl” 腳本。此腳本包括外封面。需從 OPAC (我們不要關閉任何 XSS 攻擊警示) 近用它，我們需修改網頁伺服器組態供公共目錄使用並加入以下："
 
-#: ../../source/extending_koha.rst:228
-msgid ""
-"This line gives us access to the coverflow.pl script from the OPAC. This "
-"script retrieves the report data and passes it back to the public catalog "
-"for creating the coverflow widget. Koha::Cache is supported in order to make "
-"the widget load as quickly as possible!"
-msgstr ""
-"這段外掛讓我們從 OPAC 近用 coverflow.pl 腳本。此腳本提取報表資料並交給公共目"
-"錄產生封面。支援 Koha::Cache 快速載入封面！"
+#: ../../source/extending_koha.rst:227
+msgid "This line gives us access to the coverflow.pl script from the OPAC. This script retrieves the report data and passes it back to the public catalog for creating the coverflow widget. Koha::Cache is supported in order to make the widget load as quickly as possible!"
+msgstr "這段外掛讓我們從 OPAC 近用 coverflow.pl 腳本。此腳本提取報表資料並交給公共目錄產生封面。支援 Koha::Cache 快速載入封面！"
 
-#: ../../source/extending_koha.rst:233
-msgid ""
-"The final step is to put your selector element somewhere in your public "
-"catalog. In this example, I put the following in the system preference "
-"OpacMainUserBlock:"
-msgstr ""
-"最後一個步驟是把選擇細目置於公共目錄的某處。在上例中，我把它置於系統偏好 "
-"OpacMainUserBlock 內："
+#: ../../source/extending_koha.rst:232
+msgid "The final step is to put your selector element somewhere in your public catalog. In this example, I put the following in the system preference OpacMainUserBlock:"
+msgstr "最後一個步驟是把選擇細目置於公共目錄的某處。在上例中，我把它置於系統偏好 OpacMainUserBlock 內："
 
-#: ../../source/extending_koha.rst:241
-msgid ""
-"Once that is in place, you need only refresh your OPAC page, and there you "
-"have it, your very own catalog coverflow widget! Not only do these "
-"coverflows look great on a computer screen, but they look great on mobile "
-"platforms as well, and are even touch responsive!"
-msgstr ""
-"置入後，祗需刷新您的 OPAC 頁面，就能夠有它，非常個人化的封面！不祗是在電腦螢"
-"幕上看起來很酷，在行動裝置上也極佳，觸控螢幕也可以！"
+#: ../../source/extending_koha.rst:240
+msgid "Once that is in place, you need only refresh your OPAC page, and there you have it, your very own catalog coverflow widget! Not only do these coverflows look great on a computer screen, but they look great on mobile platforms as well, and are even touch responsive!"
+msgstr "置入後，祗需刷新您的 OPAC 頁面，就能夠有它，非常個人化的封面！不祗是在電腦螢幕上看起來很酷，在行動裝置上也極佳，觸控螢幕也可以！"
 
-#: ../../source/extending_koha.rst:246
+#: ../../source/extending_koha.rst:245
 msgid "|image1316|"
 msgstr "|image1316|"
 
-#: ../../source/extending_koha.rst:251
+#: ../../source/extending_koha.rst:250
 msgid "Cataloging and Searching by Color"
 msgstr "依顏色編目與搜尋"
 
-#: ../../source/extending_koha.rst:253
-msgid ""
-"One of the icon sets installed in Koha includes a series of colors. This set "
-"can be used to catalog and search by color if you'd like. This guide will "
-"walk you use changing collection code to color in Koha so that you can do "
-"this."
-msgstr ""
-"Koha 安裝的圖示集包括一組色塊。可以當成目錄與搜尋之用。本指南教您將 Koha 的館"
-"藏代碼變更為顏色以便使用它。"
+#: ../../source/extending_koha.rst:252
+msgid "One of the icon sets installed in Koha includes a series of colors. This set can be used to catalog and search by color if you'd like. This guide will walk you use changing collection code to color in Koha so that you can do this."
+msgstr "Koha 安裝的圖示集包括一組色塊。可以當成目錄與搜尋之用。本指南教您將 Koha 的館藏代碼變更為顏色以便使用它。"
 
-#: ../../source/extending_koha.rst:258
-msgid ""
-"The following SQL could be used to add these colors to the CCODE authorized "
-"value category in a batch. If you wanted to use these colors for another "
-"authorized value you'd have to edit this to use that category:"
-msgstr ""
-"以下的 SQL 可用於批次控制 CCODE 的顏色容許值。更改它們就能夠用於另個容許值"
-"了："
+#: ../../source/extending_koha.rst:257
+msgid "The following SQL could be used to add these colors to the CCODE authorized value category in a batch. If you wanted to use these colors for another authorized value you'd have to edit this to use that category:"
+msgstr "以下的 SQL 可用於批次控制 CCODE 的顏色容許值。更改它們就能夠用於另個容許值了："
 
-#: ../../source/extending_koha.rst:310
-msgid ""
-"If you would like to choose the colors manually you can do that via the :ref:"
-"`Authorized Values` administration area."
+#: ../../source/extending_koha.rst:309
+msgid "If you would like to choose the colors manually you can do that via the :ref:`Authorized Values` administration area."
 msgstr "可以經由 :ref:`容許值` 管理區塊手動選取色塊。"
 
-#: ../../source/extending_koha.rst:313
+#: ../../source/extending_koha.rst:312
 msgid "|image1118|"
 msgstr "|image1118|"
 
-#: ../../source/extending_koha.rst:315
-msgid ""
-"Next you'll want to :ref:`update the frameworks <marc-bibliographic-"
-"frameworks-label>` so that the 952$8 (if you're using collection code) label "
-"to says Color."
-msgstr ""
-"接著您可 :ref:`更新框架 <marc-bibliographic-frameworks-label>` 讓 952$8 (若您"
-"使用館藏代碼) 標示以色塊顯示。"
+#: ../../source/extending_koha.rst:314
+msgid "Next you'll want to :ref:`update the frameworks <marc-bibliographic-frameworks-label>` so that the 952$8 (if you're using collection code) label to says Color."
+msgstr "接著您可 :ref:`更新框架 <marc-bibliographic-frameworks-label>` 讓 952$8 (若您使用館藏代碼) 標示以色塊顯示。"
 
-#: ../../source/extending_koha.rst:318
+#: ../../source/extending_koha.rst:317
 msgid "Once you have that in place you can start to catalog items by color."
 msgstr "就緒後就可以色塊編目館藏。"
 
-#: ../../source/extending_koha.rst:320
-msgid ""
-"Finally you'll want to add the following JQuery to your preferences so that "
-"it will relabel 'Collection' to 'Color'"
+#: ../../source/extending_koha.rst:319
+msgid "Finally you'll want to add the following JQuery to your preferences so that it will relabel 'Collection' to 'Color'"
 msgstr "最後您可新增以下的 JQuery 至偏好把 'Collection' 標示為 'Color'"
 
-#: ../../source/extending_koha.rst:323
+#: ../../source/extending_koha.rst:322
 msgid ":ref:`IntranetUserJS`"
 msgstr ":ref:`IntranetUserJS`"
 
-#: ../../source/extending_koha.rst:332
+#: ../../source/extending_koha.rst:331
 msgid ":ref:`OPACUserJS`"
 msgstr ":ref:`OPACUserJS`"
 
-#: ../../source/extending_koha.rst:345
+#: ../../source/extending_koha.rst:344
 msgid "Using Koha as a Content Management System (CMS)"
 msgstr "把 Koha 當成內容管理系統(CMS)使用"
 
-#: ../../source/extending_koha.rst:350
+#: ../../source/extending_koha.rst:349
 msgid "Setup"
 msgstr "設定"
 
-#: ../../source/extending_koha.rst:352
-msgid ""
-"These are instructions for taking a default install of Koha and allowing it "
-"to function as a little content management system. This will allow a library "
-"to publish an arbitrary number of pages based on a template. This example "
-"uses the template for the main opac page, but you could just as well use any "
-"template you wish with a bit more editing. This may be appropriate if you "
-"have a small library, want to allow librarians to easily add pages, and do "
-"not want to support a complete CMS."
-msgstr ""
-"安裝 Koha 時可以預設當成內容管理系統使用。將允許圖書館以模版方式出版任意頁數"
-"的作品。此範例使用線上公用目錄的模版，但您可隨意使用其他的模版。小型圖書館尤"
-"其適用於此功能，允許圖書館員新增頁面，不需採用完整版的 CMS。"
+#: ../../source/extending_koha.rst:351
+msgid "These are instructions for taking a default install of Koha and allowing it to function as a little content management system. This will allow a library to publish an arbitrary number of pages based on a template. This example uses the template for the main opac page, but you could just as well use any template you wish with a bit more editing. This may be appropriate if you have a small library, want to allow librarians to easily add pages, and do not want to support a complete CMS."
+msgstr "安裝 Koha 時可以預設當成內容管理系統使用。將允許圖書館以模版方式出版任意頁數的作品。此範例使用線上公用目錄的模版，但您可隨意使用其他的模版。小型圖書館尤其適用於此功能，允許圖書館員新增頁面，不需採用完整版的 CMS。"
 
-#: ../../source/extending_koha.rst:360
-msgid ""
-"Copy /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to /usr/share/koha/opac/"
-"cgi-bin/opac/pages.pl (in the same directory)"
-msgstr ""
-"複製 /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to /usr/share/koha/opac/"
-"cgi-bin/opac/pages.pl (在同個資料夾)"
+#: ../../source/extending_koha.rst:359
+msgid "Copy /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to /usr/share/koha/opac/cgi-bin/opac/pages.pl (in the same directory)"
+msgstr "複製 /usr/share/koha/opac/cgi-bin/opac/opac-main.pl to /usr/share/koha/opac/cgi-bin/opac/pages.pl (在同個資料夾)"
 
-#: ../../source/extending_koha.rst:363
+#: ../../source/extending_koha.rst:362
 msgid "Edit pages.pl in an editor"
 msgstr "以編輯器編輯 pages.pl"
 
-#: ../../source/extending_koha.rst:365
+#: ../../source/extending_koha.rst:364
 msgid "At approximately line 33 change this code:"
 msgstr "大約在第 33 列更改此原始碼："
 
-#: ../../source/extending_koha.rst:371
+#: ../../source/extending_koha.rst:370
 msgid "To this code:"
 msgstr "至此碼："
 
-#: ../../source/extending_koha.rst:377
+#: ../../source/extending_koha.rst:376
 msgid "At approximately line 62 after this code:"
 msgstr "大約在此碼之後的第 62 列："
 
-#: ../../source/extending_koha.rst:388
+#: ../../source/extending_koha.rst:387
 msgid "Add these lines:"
 msgstr "新增這些列："
 
-#: ../../source/extending_koha.rst:396
-msgid ""
-"Note pages.pl file must have Webserver user execution permissions, you can "
-"use `chmod <http://en.wikipedia.org/wiki/Chmod>`__ command if you are "
-"actually logged in as such user:"
-msgstr ""
-"注意 pages.pl 檔案必須有網站伺服器的執行權限，以使用者登入後您可使用 `chmod "
-"<http://en.wikipedia.org/wiki/Chmod>`__ 指令："
+#: ../../source/extending_koha.rst:395
+msgid "Note pages.pl file must have Webserver user execution permissions, you can use `chmod <http://en.wikipedia.org/wiki/Chmod>`__ command if you are actually logged in as such user:"
+msgstr "注意 pages.pl 檔案必須有網站伺服器的執行權限，以使用者登入後您可使用 `chmod <http://en.wikipedia.org/wiki/Chmod>`__ 指令："
 
-#: ../../source/extending_koha.rst:404
-msgid ""
-"In the browser go to Home > Administration > System Preferences > Local Use "
-"and add a New Preference called \"page\\_test\""
-msgstr ""
-"從瀏覽器進入 首頁 &gt; 管理 &gt; 系統偏好 &gt; 在地使用並新增名為 \"page"
-"\\_test\" 的偏好"
+#: ../../source/extending_koha.rst:403
+msgid "In the browser go to Home > Administration > System Preferences > Local Use and add a New Preference called \"page\\_test\""
+msgstr "從瀏覽器進入 首頁 &gt; 管理 &gt; 系統偏好 &gt; 在地使用並新增名為 \"page\\_test\" 的偏好"
 
-#: ../../source/extending_koha.rst:407
+#: ../../source/extending_koha.rst:406
 msgid "Fill it out as so"
 msgstr "照樣填入"
 
-#: ../../source/extending_koha.rst:409
+#: ../../source/extending_koha.rst:408
 msgid "Explanation: test page for pages tiny cms"
 msgstr "說明：測試頁面供微型 CMS 之用"
 
-#: ../../source/extending_koha.rst:411
+#: ../../source/extending_koha.rst:410
 msgid "Variable: page\\_test"
 msgstr "變數：page\\_test"
 
-#: ../../source/extending_koha.rst:413
+#: ../../source/extending_koha.rst:412
 msgid "Value: Lorem ipsum"
 msgstr "值：Lorem ipsum"
 
-#: ../../source/extending_koha.rst:415
-msgid ""
-"Click the TextArea link (or enter \"TextArea\" into the input field below it)"
+#: ../../source/extending_koha.rst:414
+msgid "Click the TextArea link (or enter \"TextArea\" into the input field below it)"
 msgstr "勾選 TextArea 連結 (或鍵入 \"TextArea\" 於輸入欄之下)"
 
-#: ../../source/extending_koha.rst:418
+#: ../../source/extending_koha.rst:417
 msgid "variable options (last field): 80\\|50"
 msgstr "變數選項 (最後的欄位)：80\\|50"
 
-#: ../../source/extending_koha.rst:420
-msgid ""
-"In a browser go to http://youraddress/cgi-bin/koha/pages.pl?p=test The page "
-"should come up with the words \"Lorem ipsum\" in the main content area of "
-"the page. (replace \"youraddress\" with localhost, 127.0.0.1, or your domain "
-"name depending on how you have Apache set up.)"
-msgstr ""
-"從瀏覽器進入 http://youraddress/cgi-bin/koha/pages.pl?p=test 該頁面的主內容區"
-"應出現下列字句 \"Lorem ipsum\"。(以 127.0.0.1 取代 \"youraddress\" 做為主機"
-"名。)"
+#: ../../source/extending_koha.rst:419
+msgid "In a browser go to http://youraddress/cgi-bin/koha/pages.pl?p=test The page should come up with the words \"Lorem ipsum\" in the main content area of the page. (replace \"youraddress\" with localhost, 127.0.0.1, or your domain name depending on how you have Apache set up.)"
+msgstr "從瀏覽器進入 http://youraddress/cgi-bin/koha/pages.pl?p=test 該頁面的主內容區應出現下列字句 \"Lorem ipsum\"。(以 127.0.0.1 取代 \"youraddress\" 做為主機名。)"
 
-#: ../../source/extending_koha.rst:426
-msgid ""
-"To add more pages simply create a system preference where the title begins "
-"with \"page\\_\" followed by any arbitrary letters. You can add any markup "
-"you want as the value of the field. Reference the new page by changing the "
-"value of the \"p\" parameter in the URL."
-msgstr ""
-"新增系統偏好以 \"page\\_\" 開頭及若干字母，就能夠新增其他頁面。您可新增欄位的"
-"任何值。祗要改變網址的 \"p\" 參數，就能夠參照至新頁面。"
+#: ../../source/extending_koha.rst:425
+msgid "To add more pages simply create a system preference where the title begins with \"page\\_\" followed by any arbitrary letters. You can add any markup you want as the value of the field. Reference the new page by changing the value of the \"p\" parameter in the URL."
+msgstr "新增系統偏好以 \"page\\_\" 開頭及若干字母，就能夠新增其他頁面。您可新增欄位的任何值。祗要改變網址的 \"p\" 參數，就能夠參照至新頁面。"
 
-#: ../../source/extending_koha.rst:431
-msgid ""
-"To learn more visit the Koha wiki page on this topic: http://wiki.koha-"
-"community.org/wiki/Koha_as_a_CMS"
-msgstr ""
-"詳情說進入 Koha 共筆頁面：http://wiki.koha-community.org/wiki/Koha_as_a_CMS"
+#: ../../source/extending_koha.rst:430
+msgid "To learn more visit the Koha wiki page on this topic: http://wiki.koha-community.org/wiki/Koha_as_a_CMS"
+msgstr "詳情說進入 Koha 共筆頁面：http://wiki.koha-community.org/wiki/Koha_as_a_CMS"
 
-#: ../../source/extending_koha.rst:437
+#: ../../source/extending_koha.rst:436
 msgid "Editing the pages template"
 msgstr "編輯模版頁面"
 
-#: ../../source/extending_koha.rst:439
-msgid ""
-"Copy /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main.tt "
-"to /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
-msgstr ""
-"複製 /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main.tt "
-"to /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+#: ../../source/extending_koha.rst:438
+msgid "Copy /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main.tt to /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+msgstr "複製 /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/opac-main.tt to /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
 
-#: ../../source/extending_koha.rst:444
-msgid ""
-"Edit /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
-msgstr ""
-"編輯 /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+#: ../../source/extending_koha.rst:443
+msgid "Edit /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
+msgstr "編輯 /usr/share/koha/opac/htdocs/opac-tmpl/bootstrap/en/modules/pages.tt"
 
-#: ../../source/extending_koha.rst:447
+#: ../../source/extending_koha.rst:446
 msgid "At approximately line 61, change this:"
 msgstr "在第 61 列附近，改變它："
 
-#: ../../source/extending_koha.rst:453
+#: ../../source/extending_koha.rst:452
 msgid "To this:"
 msgstr "至這裡："
 
-#: ../../source/extending_koha.rst:459
-msgid ""
-"Remark: You may wish to disable your News block of these CMS style pages e."
-"g. when you do not want it displayed on the CMS style pages or where the "
-"News block is long enough that it actually makes the 'page\\_test' include "
-"scroll outside the default viewport dimensions. In that case, remove the "
-"following code from your pages.tt template."
-msgstr ""
-"備註：或許不需要在 CMS 樣式頁面使用最新消息區，例如：不顯示於 CMS 樣式頁面或"
-"最新消息區太長超出 'page\\_test' 的預設區塊。在這情況下，從 pages.tt 模版裡移"
-"除以下的程式碼。"
+#: ../../source/extending_koha.rst:458
+msgid "Remark: You may wish to disable your News block of these CMS style pages e.g. when you do not want it displayed on the CMS style pages or where the News block is long enough that it actually makes the 'page\\_test' include scroll outside the default viewport dimensions. In that case, remove the following code from your pages.tt template."
+msgstr "備註：或許不需要在 CMS 樣式頁面使用最新消息區，例如：不顯示於 CMS 樣式頁面或最新消息區太長超出 'page\\_test' 的預設區塊。在這情況下，從 pages.tt 模版裡移除以下的程式碼。"
 
-#: ../../source/extending_koha.rst:483
+#: ../../source/extending_koha.rst:482
 msgid "Troubleshooting"
 msgstr "解決問題"
 
-#: ../../source/extending_koha.rst:485
-msgid ""
-"If you have problems check file permissions on pages.pl and pages.tt. They "
-"should have the same user and group as other Koha files like opac-main.pl."
-msgstr ""
-"若檢視 pages.pl 與 pages.tt 檔案的權限有困難。它們應與其他像 opac-main.pl 之"
-"類的 Koha 檔案有相同的使用者與群組。"
+#: ../../source/extending_koha.rst:484
+msgid "If you have problems check file permissions on pages.pl and pages.tt. They should have the same user and group as other Koha files like opac-main.pl."
+msgstr "若檢視 pages.pl 與 pages.tt 檔案的權限有困難。它們應與其他像 opac-main.pl 之類的 Koha 檔案有相同的使用者與群組。"
 
-#: ../../source/extending_koha.rst:492
+#: ../../source/extending_koha.rst:491
 msgid "Bonus Points"
 msgstr "額外點數"
 
-#: ../../source/extending_koha.rst:494
-msgid ""
-"Instead of using the address http://youraddress/cgi-bin/koha/pages.pl?p=test "
-"you can shorten it to http://youraddress/pages.pl?p=test Just open up /etc/"
-"koha/koha-httpd.conf and add the follow at about line 13:"
-msgstr ""
-"使用 http://youraddress/cgi-bin/koha/pages.pl?p=test 網址外，也可以把它簡化"
-"為 http://youraddress/pages.pl?p=test 祗要開啟 /etc/koha/koha-httpd.conf 並在"
-"第 13 列左右新增以下的內容："
+#: ../../source/extending_koha.rst:493
+msgid "Instead of using the address http://youraddress/cgi-bin/koha/pages.pl?p=test you can shorten it to http://youraddress/pages.pl?p=test Just open up /etc/koha/koha-httpd.conf and add the follow at about line 13:"
+msgstr "使用 http://youraddress/cgi-bin/koha/pages.pl?p=test 網址外，也可以把它簡化為 http://youraddress/pages.pl?p=test 祗要開啟 /etc/koha/koha-httpd.conf 並在第 13 列左右新增以下的內容："
 
-#: ../../source/extending_koha.rst:503
+#: ../../source/extending_koha.rst:502
 msgid "Then restart Apache."
 msgstr "然後重新啟動 Apache。"
 
-#: ../../source/extending_koha.rst:508
+#: ../../source/extending_koha.rst:507
 msgid "Usage"
 msgstr "使用"
 
-#: ../../source/extending_koha.rst:510
-msgid ""
-"After setting up Koha as a CMS you can create new pages following these "
-"instructions:"
+#: ../../source/extending_koha.rst:509
+msgid "After setting up Koha as a CMS you can create new pages following these instructions:"
 msgstr "設定 Koha 為 CMS 之後依照下列的指示可以新增其他頁面："
 
-#: ../../source/extending_koha.rst:516
+#: ../../source/extending_koha.rst:515
 msgid "Adding Pages"
 msgstr "新增頁面"
 
-#: ../../source/extending_koha.rst:518
+#: ../../source/extending_koha.rst:517
 msgid "To add a new page you need to add a system preference under Local Use."
 msgstr "您需要於在地使用下新增一個系統偏好。"
 
-#: ../../source/extending_koha.rst:520
-msgid ""
-"Get there: More > Administration > Global System Preferences > Local Use"
+#: ../../source/extending_koha.rst:519
+msgid "Get there: More > Administration > Global System Preferences > Local Use"
 msgstr "至那兒：其他 &gt; 管理 &gt; 整體系統偏好 &gt; 在地使用"
 
-#: ../../source/extending_koha.rst:523
+#: ../../source/extending_koha.rst:522
 msgid "Click 'New Preference'"
 msgstr "點選 '新增偏好'"
 
-#: ../../source/extending_koha.rst:525
+#: ../../source/extending_koha.rst:524
 msgid "Enter in a description in the Explanation field"
 msgstr "於 Explanation 欄位鍵入說明"
 
-#: ../../source/extending_koha.rst:527
+#: ../../source/extending_koha.rst:526
 msgid "Enter a value that starts with 'page\\_' in the Variable field"
 msgstr "以 'page\\_' 開始鍵入值於 Variable 欄位"
 
-#: ../../source/extending_koha.rst:529
+#: ../../source/extending_koha.rst:528
 msgid "Enter starting HTML in the Value field"
 msgstr "新增起始 HTML 於 Value 欄位"
 
-#: ../../source/extending_koha.rst:531
+#: ../../source/extending_koha.rst:530
 msgid "|image1076|"
 msgstr "|image1076|"
 
-#: ../../source/extending_koha.rst:533
+#: ../../source/extending_koha.rst:532
 msgid "Set the Variable Type to Textarea"
 msgstr "設定變數類型於 Textarea"
 
-#: ../../source/extending_koha.rst:535
-msgid ""
-"Set the Variable options to something like 20\\|20 for 20 rows and 20 columns"
+#: ../../source/extending_koha.rst:534
+msgid "Set the Variable options to something like 20\\|20 for 20 rows and 20 columns"
 msgstr "設定變數選項如 20\\|20 表示 20 列與 20 欄"
 
-#: ../../source/extending_koha.rst:538
+#: ../../source/extending_koha.rst:537
 msgid "|image1077|"
 msgstr "|image1077|"
 
-#: ../../source/extending_koha.rst:543
+#: ../../source/extending_koha.rst:542
 msgid "Viewing your page"
 msgstr "檢視您的頁面"
 
-#: ../../source/extending_koha.rst:545
-msgid ""
-"You can view your new page at http://YOUR-OPAC/cgi-bin/koha/pages.pl?"
-"p=PAGENAME where PAGENAME is the part you entered after 'page\\_' in the "
-"Variable field."
-msgstr ""
-"可在 http://YOUR-OPAC/cgi-bin/koha/pages.pl?p=PAGENAME 檢視您的新增頁面 "
-"PAGENAME 是您在 'page\\_' 之後鍵入在 Variable 欄位內的值。"
+#: ../../source/extending_koha.rst:544
+msgid "You can view your new page at http://YOUR-OPAC/cgi-bin/koha/pages.pl?p=PAGENAME where PAGENAME is the part you entered after 'page\\_' in the Variable field."
+msgstr "可在 http://YOUR-OPAC/cgi-bin/koha/pages.pl?p=PAGENAME 檢視您的新增頁面 PAGENAME 是您在 'page\\_' 之後鍵入在 Variable 欄位內的值。"
 
-#: ../../source/extending_koha.rst:551
-#, fuzzy
+#: ../../source/extending_koha.rst:550
 msgid "**Example**"
-msgstr "範例"
+msgstr "**範例**"
 
-#: ../../source/extending_koha.rst:553
-msgid ""
-"This process can be used to create recommended reading lists within Koha. So "
-"once the code changes have been made per the instructions on 'Koha as a CMS' "
-"you go through the 'Adding a New Page' instructions above to great a page "
-"for 'Recommended Reading Lists'"
-msgstr ""
-"此程序可用於新增 Koha 的建議閱讀清單。所以改變程式碼就是經由 '建議閱讀清單' "
-"頁面上方的 '新增頁面' 指令改變 'Koha 做為 CMS' 的指令"
+#: ../../source/extending_koha.rst:552
+msgid "This process can be used to create recommended reading lists within Koha. So once the code changes have been made per the instructions on 'Koha as a CMS' you go through the 'Adding a New Page' instructions above to great a page for 'Recommended Reading Lists'"
+msgstr "此程序可用於新增 Koha 的建議閱讀清單。所以改變程式碼就是經由 '建議閱讀清單' 頁面上方的 '新增頁面' 指令改變 'Koha 做為 CMS' 的指令"
 
-#: ../../source/extending_koha.rst:558
+#: ../../source/extending_koha.rst:557
 msgid "|image1078|"
 msgstr "|image1078|"
 
-#: ../../source/extending_koha.rst:560
-msgid ""
-"Next we need to create pages for our various classes (or categories). To do "
-"this, return to the 'Adding a New Page' section and create a preference for "
-"the first class."
-msgstr ""
-"接著我們需要新增頁面供我們的類別(或範圍)使用。做法是，回到 '新增頁面' 區塊並"
-"新增第一級類別的偏好。"
+#: ../../source/extending_koha.rst:559
+msgid "Next we need to create pages for our various classes (or categories). To do this, return to the 'Adding a New Page' section and create a preference for the first class."
+msgstr "接著我們需要新增頁面供我們的類別(或範圍)使用。做法是，回到 '新增頁面' 區塊並新增第一級類別的偏好。"
 
-#: ../../source/extending_koha.rst:564
+#: ../../source/extending_koha.rst:563
 msgid "|image1079|"
 msgstr "|image1079|"
 
-#: ../../source/extending_koha.rst:566
-msgid ""
-"Next you'll want to link your first page to your new second page, go to the "
-"page\\_recommend preference and click 'Edit.' Now you want to edit the HTML "
-"to include a link to your newest page:"
-msgstr ""
-"接著您要將第一頁連結至新增的第二頁，進入 page\\_recommend 偏好再點選 '編輯'。"
-"於是您要編輯 HTML 加入連結至最新的頁面："
+#: ../../source/extending_koha.rst:565
+msgid "Next you'll want to link your first page to your new second page, go to the page\\_recommend preference and click 'Edit.' Now you want to edit the HTML to include a link to your newest page:"
+msgstr "接著您要將第一頁連結至新增的第二頁，進入 page\\_recommend 偏好再點選 '編輯'。於是您要編輯 HTML 加入連結至最新的頁面："
 
-#: ../../source/extending_koha.rst:570
+#: ../../source/extending_koha.rst:569
 msgid "|image1080|"
 msgstr "|image1080|"
 
-#: ../../source/extending_koha.rst:574
-#, fuzzy
+#: ../../source/extending_koha.rst:573
 msgid "**Live Examples**"
-msgstr "實例"
+msgstr "**實例**"
 
-#: ../../source/extending_koha.rst:576
-msgid ""
-"The Crawford Library at Dallas Christian College is using this method for "
-"their recommended reading lists: http://opac.dallas.edu/"
-msgstr ""
-"美國達拉斯基督學院克勞佛圖圕館採用此方法於推薦閱讀清單：http://opac.dallas."
-"edu/"
+#: ../../source/extending_koha.rst:575
+msgid "The Crawford Library at Dallas Christian College is using this method for their recommended reading lists: http://opac.dallas.edu/"
+msgstr "美國達拉斯基督學院克勞佛圖圕館採用此方法於推薦閱讀清單：http://opac.dallas.edu/"
 
-#: ../../source/extending_koha.rst:580
+#: ../../source/extending_koha.rst:579
 msgid "Koha search on your site"
 msgstr "在您的網站搜尋 Koha"
 
-#: ../../source/extending_koha.rst:582
-msgid ""
-"Often you'll want to add a Koha search box to your library website. To do "
-"so, just copy and paste the following code in to your library website and "
-"update the YOURCATALOG bit with your catalog's URL and you're set to go."
-msgstr ""
-"通常需要將 Koha 的搜尋盒納入您的網站，祗需將以下的程式碼置入您的圖書館網站，"
-"並更新其中的目錄網址即可。"
+#: ../../source/extending_koha.rst:581
+msgid "Often you'll want to add a Koha search box to your library website. To do so, just copy and paste the following code in to your library website and update the YOURCATALOG bit with your catalog's URL and you're set to go."
+msgstr "通常需要將 Koha 的搜尋盒納入您的網站，祗需將以下的程式碼置入您的圖書館網站，並更新其中的目錄網址即可。"
+
