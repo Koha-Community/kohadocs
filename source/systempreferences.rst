@@ -3681,10 +3681,8 @@ Description:
        ccode: [NEWFIC,NULL,DVD]
        itype: [NEWBK,""]
 
-    **Note**
-
-    The word 'NULL' can be used to block renewal on undefined fields, 
-    while an empty string "" will block on an empty (but defined) field.
+-  The word 'NULL' can be used to block renewal on undefined fields, 
+   while an empty string "" will block on an empty (but defined) field.
     
     **Note**
 
@@ -4923,11 +4921,11 @@ Values:
    
 Description: 
 
--  This feature allows to separate holds by pickup library or itemtype in the 
-   holds page of a record (not in the global holds queue found on the circuation 
+-  This feature allows you to separate holds by pickup library or itemtype in the 
+   holds page of a record (not in the global holds queue found on the circulation 
    page).
 
--  When using the up and down arrows, the priorities will be changed only in 
+-  When using the up and down arrows the priorities will be changed only
    in the group the holds belongs to.
 
 .. _holdssplitqueuenumbering-label:
@@ -9489,8 +9487,9 @@ Values:
 Description:
 
 -  This preference allows you to choose the type of hold information to 
-   make available on the OPAC.  If you select to include hold priority 
-   information the holds list will be sorted by default on priority.
+   make available to patrons when logged in to their account on the OPAC.  If 
+   you select to include hold priority information the list of holds will 
+   initially be sorted by priority.
 
 .. _opacshowrecentcomments-label:
 
@@ -12127,13 +12126,12 @@ Description:
 
 -  If set to 'require' this system preference will require patron and staff passwords to contain at least one digit, one lowercase and one uppercase.
 
-.. _smssenddriver,-smssendusername,-and-smssendpassword-label:
+.. _smssenddriver-label:
 
-SMSSendDriver, SMSSendUsername, and SMSSendPassword
+SMSSendDriver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Use the SMS::Send:: \_\_\_ driver to send SMS messages. Define a
-username/login \_\_\_ and a password \_\_\_.
+Asks: Use the SMS::Send:: \_\_\_ driver to send SMS messages.
 
     **Note**
 
