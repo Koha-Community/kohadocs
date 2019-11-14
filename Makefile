@@ -60,7 +60,7 @@ html:
 all_html:
 	for l in $$(echo "en `ls locales`");                                   \
 	do                                                                     \
-		make -e SPHINXOPTS="-D language='$$l' -d build/doctrees" BUILDDIR="build/$$l" html ; \
+		make -e SPHINXOPTS="-q -D language='$$l' -d build/doctrees" BUILDDIR="build/$$l" html ; \
 	done;
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/LANG/html."
 
@@ -68,7 +68,7 @@ all_html:
 all_epub:
 	for l in $$(echo "en `ls locales`");                                   \
 	do                                                                     \
-		make -e SPHINXOPTS="-D language='$$l' -d build/doctrees" BUILDDIR="build/$$l" epub ; \
+		make -e SPHINXOPTS="-q -D language='$$l' -d build/doctrees" BUILDDIR="build/$$l" epub ; \
 	done;
 	@echo "Build finished. The epub files are in $(BUILDDIR)/LANG/epub."
 
