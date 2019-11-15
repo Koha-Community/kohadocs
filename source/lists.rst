@@ -175,3 +175,13 @@ From this list of items you can perform several actions
 -  'Empty and close' will empty the list and close the window
 
 -  'Hide window' will close the window
+
+Modifying bibliographic records via the cart
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bibliographic records can be modified in batch from the records added to a cart.
+Select the records in the cart you wish to modify and click 'Batch modify'.
+
+You will be taken to the 'Batch record modification tool' and from there the 
+process to modify the bibliographic records is the same as if you had chosen to 
+:ref:`modify via Tools <batch-record-modification-label>`.
