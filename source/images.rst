@@ -1416,3 +1416,6 @@
 .. |image1434| image:: images/admin/globalprefs/autoreturncheckedoutitems-dont.png
 .. |image1435| image:: images/illrequests/viewillrequests1.png
 .. |image1436| image:: images/illrequests/viewillrequests2.png
+.. |image1437| image:: images/serials/serialsmenu.png
+.. |image1438| image:: images/serials/serialcollection.png
+.. |image1439| image:: images/serials/multireceiving.png

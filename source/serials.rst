@@ -357,23 +357,43 @@ All three of these options will open up the issue receive form:
       -  E.g., key this in its entirety if it's what you would like
          displayed: "v.69 no.3 (Mar. 2015) suppl."
 
+
 -  If you have decided to have an item record created for each issue an
    :ref:`item add form <adding-items-label>` will appear for your supplement and
    for the issue itself
 
 -  Once you have entered your info you can click 'Save'
 
-If you are receiving multiple issues at once, or have marked an issue as
-'Late' or 'Missing' there you can click the 'Generate next' button below
-the list of issues.
+.. _serial-collection-label:
 
-|image756|
+Serial collection
+-----------------------------------
 
-Clicking this button will generate the next issue for you and mark the
-previously expected issue as 'Late' automatically. You can then check
-the 'Edit' box to the right of each issue and edit the status on
-multiple issues at once.
+Each subscription has a Serial collection page available from the main Serials 
+menu.
 
+   |image1437|
+
+From this page you can manage additional tasks related to subscription 
+issues such as multi receiving and editing.
+
+   |image1438|
+
+Click on the Multi receiving button to bulk receive future issues of 
+a subscription. 
+   
+   |image1439|
+
+-  You can choose how many issues to receive and whether to set the 
+   received date to the current date.
+
+Clicking the Generate next button will generate the next issue for you and 
+mark the previously expected issue as ‘Late’ automatically.
+   
+Tick the box in the Edit column for one or more previous issues and 
+then click the Edit serials button.  You can edit the numbering, dates, 
+status and add notes.
+   
 .. _create-a-routing-list-label:
 
 Create a routing list
