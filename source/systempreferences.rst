@@ -9508,7 +9508,7 @@ Values:
 
 Description:
 
--  If you have chosen to allow commentsettings in your OPAC by 
+-  If you have chosen to allow comments in your OPAC by setting
    :ref:`reviewson` to 'Allow' you can include a link to the
    recent comments under the search box at the top of your OPAC with
    this preference.
