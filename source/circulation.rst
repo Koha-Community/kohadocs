@@ -996,7 +996,7 @@ for fulfilling a given hold request.
 It's behavior is controlled by the system preferences
 :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`,
 :ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
-:ref:`UseTransportCostMatrix <usetransportcostmatrix-label>.
+:ref:`UseTransportCostMatrix <usetransportcostmatrix-label>'.
 
 If you do not want all of your libraries to participate in the on-shelf
 holds fulfillment process, you should list the libraries that \*do\*
