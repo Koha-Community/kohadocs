@@ -257,8 +257,8 @@ with the exception of a few mandatory ones.
 
     **Important**
 
-    If your data contains special characters or diacritics, make sure your file 
-    is encoded in UTF-8. Otherwise, the special characters will not be imported 
+    If your data contains special characters or diacritics, make sure your file
+    is encoded in UTF-8. Otherwise, the special characters will not be imported
     correctly.
 
     **Note**
@@ -1678,7 +1678,7 @@ You will be presented with a summary of the items you want to modify.
 From here you can uncheck the items you don't want to modify before
 making changes in the form below. You can also hide columns you don't
 need to see to prevent having to scroll from left to right to see the
-entire item form.  The holds column displays a count of the current holds 
+entire item form.  The holds column displays a count of the current holds
 for the item.
 
     **Note**
@@ -2571,8 +2571,8 @@ here too.
 Managing rota items - EDI
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Items may also be automatically added to rota's at aquisition time by utilising
-the LRP (Library Rotation Plan) field in EDI.
+Items can be automatically added to rotas at aquisition time by using the LRP
+(Library Rotation Plan) field in EDI.
 
 Managing rotation notices
 ^^^^^^^^^^^^^^^^^^^^^^^^^
