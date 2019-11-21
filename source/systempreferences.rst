@@ -6444,6 +6444,8 @@ Value:
 
 -  German
 
+-  Indian
+
 -  Japanese
 
 .. _opacamazoncoverimages-label:
