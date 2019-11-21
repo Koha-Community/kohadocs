@@ -6238,6 +6238,36 @@ Enhanced Content
     multiple cover images. Instead choose only one source for cover
     images.
 
+.. _adlibris-label:
+
+Adlibris
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _adlibriscoversenabled-label:
+
+AdlibrisCoversEnabled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't show
+
+Asks: \_\_\_ cover images in OPAC results and detail listing from Swedish 
+retailer Adlibris.
+
+Values:
+
+-  Don't show
+
+-  Show
+
+.. _adlibriscoversurl-label:
+
+AdlibrisCoversURL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: http://www.adlibris.com/se/organisationer/showimagesafe.aspx
+
+Asks: \_\_\_ for the Adlibris cover service.
+
 .. _all-label:
 
 All
