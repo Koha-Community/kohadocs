@@ -147,7 +147,7 @@ The library drop down gives you the flexibility to enroll patrons from specific
 branches. If you let it set to blank, patrons from any branch will be able to enroll.
 
 Enrolling a patron in a club from the staff client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To enroll a patron in a club from the staff client, go to the patron's account.
 
@@ -2588,7 +2588,7 @@ manage_rotas:
 
 manate_rota_items:
   this governs a users ability to add, remove and progress
-items on a rota.
+  items on a rota.
 
 .. _marc-modification-templates-label:
 

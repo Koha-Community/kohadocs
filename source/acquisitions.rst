@@ -563,7 +563,7 @@ Order from a staged file
 -  This option is the same as the previous one, but in this case, your file has already 
    been :ref:`staged <stage-marc-records-for-import-label>`. Whether you choose to 'order 
    from a new file' or 'order from a staged file' will depend on your acquisitions 
-   workflow or your :ref:`permissions <patron-permissions-label>.
+   workflow or your :ref:`permissions <patron-permissions-label>`.
 
    -  Once you click on 'From a staged file', you will get a list of all the
       staged files in your system.
@@ -1054,15 +1054,16 @@ You will also see that the item is cancelled if you view the basket.
      Whilst it is possible to re-open your basket, cancel one or more orders 
      and re-close the basket, this is not recommended. This procedure will 
      update the 'basket closed' date, which in turn will cause your 'late 
-     order' caclulations to be incorrect. 
+     order' calculations to be incorrect.
+
 .. Instead, follow the procedure below.
 .. Is this still valid?
-..To cancel an order:
+.. To cancel an order:
 
-..#. locate the vendor and click on 'Receive shipment';
-..#. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
-..#. so on the next page you'll get a warning box in which you click on 'Receive';
-..#. on the next page (at right) you can click on 'Cancel order'.
+.. #. locate the vendor and click on 'Receive shipment';
+.. #. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
+.. #. so on the next page you'll get a warning box in which you click on 'Receive';
+.. #. on the next page (at right) you can click on 'Cancel order'.
 
 
 .. _invoices-label:

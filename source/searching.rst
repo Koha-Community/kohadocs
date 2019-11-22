@@ -356,11 +356,12 @@ available facets include:
 
 When there are more than five facets in a category, a 'Show more' link
 will appear. You can control the display of the facets using the following
-systempreferences: :ref:`displayFacetCount <displayfacetcount-label>`, :ref:
-`isplayLibraryFacets <displaylibraryfacets-label>`, :ref:`FacetLabelTruncationLength
- <facetlabeltruncationlength-label>`, :ref:`FacetMaxCount <facetmaxcount-label>`, 
-:ref:`maxRecordsForFacets <maxrecordsforfacets-label>`, and :ref:`UNIMARCAuthorsFacetsSeparator
- <unimarcauthorsfacetsseparator-label>`.
+systempreferences: :ref:`displayFacetCount <displayfacetcount-label>`,
+:ref:`isplayLibraryFacets <displaylibraryfacets-label>`,
+:ref:`FacetLabelTruncationLength <facetlabeltruncationlength-label>`,
+:ref:`FacetMaxCount <facetmaxcount-label>`,
+:ref:`maxRecordsForFacets <maxrecordsforfacets-label>`,
+and :ref:`UNIMARCAuthorsFacetsSeparator <unimarcauthorsfacetsseparator-label>`.
 
 Along the top, under the number of results, there are buttons to do different actions
 on selected records.
