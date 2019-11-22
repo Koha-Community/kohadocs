@@ -1078,7 +1078,7 @@ item types to apply the rules to
           Enter only numbers and decimal points (no currency symbols).
 
 -  Enter the 'Fine charging interval' in the unit you set (ex. charge
-   fines every 1 day, or every 2 hours). The :ref:`finesCalendar`system
+   fines every 1 day, or every 2 hours). The :ref:`finesCalendar` system
    preference controls wether the days the library is closed will be taken
    into account or not.
 
@@ -1314,7 +1314,7 @@ patrons in the library if no other option is set in the forms below.
 .. _default-checkouts-and-hold-by-category-label:
 
 Default checkout and hold policy by patron cateogry
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For this library, you can specify the maximum number of checkouts, 
 on-site checkouts and holds that a patron of a given category can have, 
@@ -1907,7 +1907,7 @@ sections - Basic constraints, Advanced constraints and Other options.
    -  Mandatory
 
       -  the record cannot be saved unless you have a value assigned to this 
-      subfield.  A 'Required' flag will display as a prompt    
+         subfield.  A 'Required' flag will display as a prompt
 
    -  Managed in tab
 
@@ -3454,7 +3454,7 @@ order baskets.
 To add a new field, first choose which table you want to add it to.
 
 - Order baskets (aqbasket): a field added to aqbasket will appear upon 
-  the :ref:`creation of a new order basket <create-a-basket-label> 
+  the :ref:`creation of a new order basket <create-a-basket-label>`
   or the modification of an existing order basket in the acquisitions module
 
   |image1424|

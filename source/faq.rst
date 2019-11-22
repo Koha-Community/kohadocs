@@ -431,15 +431,15 @@ at both the system and library level and should fallback in a suitable manor if
 any of them are not defined.
 
 * KohaAdminEmailAddress - This will act as the *From* address and should be an 
-address in the same domain as the koha server [for example noreply@koha-hosting.org]
+  address in the same domain as the koha server [for example noreply@koha-hosting.org]
 * ReplytoDefault - This will act as the *Reply-to* address and can be in any 
-domain [for example librarian@mylibrary.com] and this is the address which will 
-be used if/when a patron hits 'Reply' in their email client. Note: This will 
-fall back to KohaAdminEmailAddress when it is not set.
+  domain [for example librarian@mylibrary.com] and this is the address which will
+  be used if/when a patron hits 'Reply' in their email client. Note: This will
+  fall back to KohaAdminEmailAddress when it is not set.
 * ReturnpathDefault - This will act as the *Sender* address and also needs to be 
-within the koha/email servers domain [for example postmaster@koha-hosting.org] 
-and this is the address which will be used to report if an email bounces for any 
-reason.
+  within the koha/email servers domain [for example postmaster@koha-hosting.org]
+  and this is the address which will be used to report if an email bounces for any
+  reason.
 
 There are parallels to all the above preferences at the per branch level which 
 fall back in the same order as mentioned aboved before falling back to the system 
@@ -880,7 +880,7 @@ run.
 
 There is a specific syntax that Koha will understand as 'ask for values
 when running the report'. The syntax is <<Question to
-ask\[|type]>>.
+ask\[\|type]>>.
 
 -  The << and >> are just delimiters. You must put << at the beginning
    and >> at the end of your parameter

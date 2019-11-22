@@ -60,7 +60,7 @@ the record.
 
 |image941|
 
-If you have turned on :ref:`Enhanced content system preferences<enhanced-content-label>
+If you have turned on :ref:`Enhanced content system preferences <enhanced-content-label>`
 preferences you may have book jackets on your search results.
 
 |image942|

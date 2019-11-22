@@ -36,7 +36,8 @@ Create ILL requests
 -  Choose ‘New ILL request’ and then Freeform.
 
     **Note**
-The images shown here are for the FreeFrom backend only.
+
+    The images shown here are for the FreeFrom backend only.
 
 |image1387|
 
