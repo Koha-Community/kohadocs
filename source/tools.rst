@@ -1713,13 +1713,25 @@ This tool will take a batch of record numbers for either bibliographic
 records or authority records and allow you to delete all those records
 and any items attached to them in a batch.
 
-|image1231|
-
 First you need to tell the tool if you're deleting bibliographic or
-authority records. Next you can load a file with biblionumbers or
-authids or enter a list of those numbers in the box provided. Once you
-submit the form you will be presented with a summary of the records you
-are trying to delete.
+authority records. 
+
+Next, you can 
+
+  -  load a file with biblionumbers or authids;
+
+     |image1231|
+
+  -  use a :ref:`list<lists-label>`, or;
+
+     |image1442|
+
+  -  enter the list of numbers in the box provided. 
+
+     |image1443|
+
+Once you submit the form you will be presented with a summary of the records 
+you are trying to delete.
 
 |image1232|
 
@@ -1735,12 +1747,10 @@ Batch record modification
 
 -  *Get there:* More > Tools > Catalog > Batch record modification
 
-This tool will allow you to edit batches of bibliographic and/or
+This tool will allow you to edit batches of bibliographic or
 authority records using :ref:`MARC modification
 templates <marc-modification-templates-label>`. Before visiting this tool you will
 want to set up at least one MARC modification template.
-
-|image303|
 
 When you visit the tool it will ask you:
 
@@ -1748,9 +1758,17 @@ When you visit the tool it will ask you:
 
 -  Enter the biblionumbers or authids
 
-   -  You can upload a file of these numbers or
+   -  You can upload a file of these numbers;
 
-   -  Enter the numbers (one per line) in the box provided
+      |image303|
+
+   -  You can use a :ref:`list<lists-label>`, or;
+
+      |image1440|
+
+   -  Enter the numbers (one per line) in the box provided.
+      
+      |image1441|
 
 -  Finally choose the MARC modification template you'd like to use to
    edit these records.
