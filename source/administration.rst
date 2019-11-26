@@ -1169,7 +1169,7 @@ item types to apply the rules to
 
 -  If you are using automatic renewals, you can use the 'No automatic
    renewals after' to limit the time a patron can have the item independent:
-   Exampple: Don't allow automatic renewals after a checkout period of 80 days.
+   Example: Don't allow automatic renewals after a checkout period of 80 days.
    
 -  Similar to the hard due date setting, you can also stop automatic renwals
    after a specific date using the 'No automatic renwal after (hard limit)' 
