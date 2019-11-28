@@ -196,7 +196,15 @@ suggestions via the staff client either for the library or :ref:`on the
 patron's behalf <purchase-suggestions-label>` from their record. Depending on
 your settings in the :ref:`suggestion` system
 preference, patrons may also be able to make purchase suggestions via
-the OPAC. When a suggestion is waiting for library review, it will
+the OPAC. 
+
+    **Note**
+
+    You need to be logged in as a staff member with the 
+    suggestions_manage :ref:`acquisitions permission <granular-acquisitions-permissions-label>` 
+    in order to view and work with purchase suggestions.
+
+When a suggestion is waiting for library review, it will
 appear on the Acquisitions home page next to the vendor search.
 
 |image794|
@@ -258,7 +266,7 @@ the item was purchased.
 
 |image800|
 
-Clicking 'edit' to the right of the suggested title or at the to pof the
+Clicking 'edit' to the right of the suggested title or at the top of the
 suggestion detail page will open a suggestion editing page.
 
 |image801|
