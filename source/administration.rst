@@ -56,7 +56,7 @@ To add a new library:
 -  Next you can enter basic contact info about the branch
 
    |image125|
- 
+
    -  The address and contact fields can be used to make notices custom
       for each library
 
@@ -109,9 +109,9 @@ To add a new library:
 
    -  If you have any notes you can put them here. These will
       not show in the OPAC
-     
+
    -  Finally, you can choose whether the library will display as an available pickup location for holds
-   
+
     **Note**
 
     Of the fields listed, only 'Library code' and 'Name' are required
@@ -138,12 +138,12 @@ link to edit/alter details associated with the library in question.
 Library groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Library groups are used in searches to limit the search to a group of 
+Library groups are used in searches to limit the search to a group of
 libraries (for example in a neigbourhood).
 
 -  *Get there:* More > Administration > Basic Parameters > Library groups
 
-When visiting this page you are presented with a list of the groups 
+When visiting this page you are presented with a list of the groups
 that have already been added to the system.
 
 |image123|
@@ -157,11 +157,11 @@ Click the 'Add Group' button at the top of the screen
 
 |image129|
 
-- Give the group a title and a description. Only the title is mandatory 
-  as it will show up in the staff client and in the OPAC. The description 
+- Give the group a title and a description. Only the title is mandatory
+  as it will show up in the staff client and in the OPAC. The description
   is only used in this page to give an idea of what the group is used for.
 
-- You can limit staff from seeing other groups' patrons by checking the 
+- You can limit staff from seeing other groups' patrons by checking the
   box next to the 'Limit patron data access by group' option.
 
     **Note**
@@ -169,12 +169,12 @@ Click the 'Add Group' button at the top of the screen
     This can be overriden with the :ref:`user permission view_borrower_infos_
     from_any_libraries <patron-permissions-defined-label>`.
 
-- If you would like the group to show up in the library pulldown menu at the 
-  top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add') 
-  and on the advanced search page you can check the 'Use for OPAC search 
+- If you would like the group to show up in the library pulldown menu at the
+  top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add')
+  and on the advanced search page you can check the 'Use for OPAC search
   groups' box.
 
-- If you want the group to appear in the library pulldown in the staff 
+- If you want the group to appear in the library pulldown in the staff
   client advanced search, check the 'Use for staff search groups' box.
 
 |image131|
@@ -184,8 +184,8 @@ Click the 'Add Group' button at the top of the screen
 Adding a library to a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Click on the 'Add library' button next to the group to add a library to 
-this group. You will be presented with a list of the libraries that are 
+Click on the 'Add library' button next to the group to add a library to
+this group. You will be presented with a list of the libraries that are
 not already in the group.
 
 |image133|
@@ -195,9 +195,9 @@ not already in the group.
 Adding a sub-group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If your system is very large, you can create sub-groups. Click on the 
-'Actions' button next to the group and select the 'Add a sub-group' 
-option. Fill in the title and the description (optional) of the sub-group. 
+If your system is very large, you can create sub-groups. Click on the
+'Actions' button next to the group and select the 'Add a sub-group'
+option. Fill in the title and the description (optional) of the sub-group.
 The features will be inherited from the parent group.
 
 |image1323|
@@ -207,7 +207,7 @@ The features will be inherited from the parent group.
 Deleting a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To delete a group, click on the 'Actions' button next to the group and select 
+To delete a group, click on the 'Actions' button next to the group and select
 the 'Delete' option.
 
 |image1324|
@@ -239,7 +239,7 @@ top of the Item types page.
 
 |image135|
 
--  In the 'Item type' field, enter a short code for your item type (maximum 
+-  In the 'Item type' field, enter a short code for your item type (maximum
    of 10 characters)
 
 -  The description is the plain text definition of the item type (for
@@ -272,32 +272,32 @@ top of the Item types page.
    item type from being searched in the OPAC
 
       **Note**
-      This will not prevent those items to appear in search results, it 
+      This will not prevent those items to appear in search results, it
       will simply remove the item type from the advanced search form.
 
-      If you want to completely hide items from a certain item type, let's 
-      say that you have a professional library with books reserved for staff 
-      and you don't want those to appear in the OPAC, use the :ref:`OpacHiddenItems 
-      <opachiddenitems-label>` system preference.
+      If you want to completely hide items from a certain item type, let's
+      say that you have a professional library with books reserved for staff
+      and you don't want those to appear in the OPAC, use the
+      :ref:`OpacHiddenItems <opachiddenitems-label>` system preference.
 
 -  For items that do not circulate, check the 'Not for loan' options
 
    -  Items marked 'Not for loan' will appear in the catalog, but cannot
       be checked out to patrons
 
--  For items that you charge a rental fee for, there are two ways that rental 
-   fees can be charged to a patron by item type.  A flat rental charge 
+-  For items that you charge a rental fee for, there are two ways that rental
+   fees can be charged to a patron by item type.  A flat rental charge
    (process fee) or a daily rental charge.
-   
-    -  For items that a library would charge a flat rental charge (process fee) 
-       for, enter the total fee you charge in the ‘Rental charge’ field. 
+
+    -  For items that a library would charge a flat rental charge (process fee)
+       for, enter the total fee you charge in the ‘Rental charge’ field.
        This will charge the patron on checkout (and renewal).
-       
-    - For items that a rental charge will be charged by the number of days 
-      the item is checked out for, enter the daily fee in the 'Daily Rental 
-      Charge' .  This will be charged to the patron upon checkout - 
-      the cost per day and how many days this item can be checked out to the 
-      patron.  This daily rental charge will also be applied if/when a renewal 
+
+    - For items that a rental charge will be charged by the number of days
+      the item is checked out for, enter the daily fee in the 'Daily Rental
+      Charge' .  This will be charged to the patron upon checkout -
+      the cost per day and how many days this item can be checked out to the
+      patron.  This daily rental charge will also be applied if/when a renewal
       occurs
 
  - Each amount will charge the patron on checkout.
@@ -307,8 +307,8 @@ top of the Item types page.
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
 
--  You can add a default replacement cost for this type of item. If left 
-   blank, the replacement price of the item itself will be charged to the 
+-  You can add a default replacement cost for this type of item. If left
+   blank, the replacement price of the item itself will be charged to the
    user when the item is lost.
 
     -  **Important**
@@ -505,7 +505,7 @@ use, for instance 'Lost'.
 
 -  LOC
 
-   Shelving location (usually appears when adding or editing an item). LOC maps to 
+   Shelving location (usually appears when adding or editing an item). LOC maps to
    items.location in the Koha database.
 
    -  CART
@@ -574,7 +574,7 @@ use, for instance 'Lost'.
 
    -  Function codes (author, editor, collaborator, etc.) used in UNIMARC 7XX $4
       (French)
-      
+
 -  RELTERMS
 
    -  French terms of relations
@@ -623,9 +623,9 @@ use, for instance 'Lost'.
 
 -  SUGGEST\_STATUS
 
-   -  A list of additional custom status values for suggestions that can 
+   -  A list of additional custom status values for suggestions that can
       be used in addition to the default values.
-      
+
 -  STACK
 
    -  Shelving control number
@@ -633,7 +633,7 @@ use, for instance 'Lost'.
 -  TERM
 
    -  Terms to be used in `Course Reserves <#coursereserves>`__ module.
-      Enter Terms that will show in the drop down menu when setting up a Course 
+      Enter Terms that will show in the drop down menu when setting up a Course
       reserve.  (For example: Spring, Summer, Winter, Fall).
 
 -  WITHDRAWN
@@ -825,7 +825,7 @@ To add a new patron category click 'New category' at the top of the page
 
 -  Enrollment period (in months) should be filled in if you have a
    limited enrollment period for your patrons (eg. Student cards expire
-   after 9 months), otherwise, you can choose a date when the cards will 
+   after 9 months), otherwise, you can choose a date when the cards will
    expire (until date)
 
    -  **Important**
@@ -860,7 +860,7 @@ To add a new patron category click 'New category' at the top of the page
           as when they are first enrolled.
 
 -  If you want your patron to receive overdue notices, set the 'Overdue
-   notice required' to 'Yes'. This will enable you to set the :ref:`overdue notice 
+   notice required' to 'Yes'. This will enable you to set the :ref:`overdue notice
    triggers<overdue-notice/status-triggers-label>` in the Tools module.
 
 -  You can decide on a patron category basis if lost items are shown in
@@ -896,20 +896,19 @@ To add a new patron category click 'New category' at the top of the page
    some branches in your library system. Select 'All branches' if you
    would like any library to be able to use this category.
 
--  You can decide whether patrons of this category are allowed to reset 
-   their password through the OPAC's 'Forgotten password' function. By 
-   default, it will follow the rule set in the :ref:`OpacResetPassword` 
+-  You can decide whether patrons of this category are allowed to reset
+   their password through the OPAC's 'Forgotten password' function. By
+   default, it will follow the rule set in the :ref:`OpacResetPassword`
    system preference.
 
--  You can decide whether patrons of this category are allowed to change 
-   their password through the OPAC. By default, it will follow the rule 
+-  You can decide whether patrons of this category are allowed to change
+   their password through the OPAC. By default, it will follow the rule
    set in the :ref:`OpacPasswordChange` system preference.
 
 -  You can decide if this patron category is blocked from performing
    actions in the OPAC if their card is expired using the next option.
    By default it will follow the rule set in the
-   :ref:`BlockExpiredPatronOpacActions`
-   preference
+   :ref:`BlockExpiredPatronOpacActions` preference
 
     |image1203|
 
@@ -920,11 +919,11 @@ To add a new patron category click 'New category' at the top of the page
 
     |image1204|
 
--  You can set the preference for checking the patron's circulation history 
-   when checking out an item. This option will only be available if the  
-   :ref:`CheckPrevCheckout` system preference is set to 'Unless overridden by 
-   patron category, do' or 'Unless overridden by patron category, do not'. 
-   This setting can be overridden on a per-patron basis in their 
+-  You can set the preference for checking the patron's circulation history
+   when checking out an item. This option will only be available if the
+   :ref:`CheckPrevCheckout` system preference is set to 'Unless overridden by
+   patron category, do' or 'Unless overridden by patron category, do not'.
+   This setting can be overridden on a per-patron basis in their
    :ref:`individual file <add-a-new-patron>`.
 
 -  Finally you can assign advanced messaging preferences by default to a
@@ -980,8 +979,7 @@ first found in this order:
 
 -  default (all libraries), all patron categories, all item types
 
-The :ref:`CircControl` and
-:ref:`HomeOrHoldingBranch` also come in to play when
+The :ref:`CircControl` and :ref:`HomeOrHoldingBranch` also come in to play when
 figuring out which circulation rule to follow.
 
 -  If CircControl is set to "the library you are logged in at" circulation
@@ -1032,7 +1030,7 @@ item types to apply the rules to
 
 -  Choose the item type you would like this rule to apply to. If you
    leave this to 'All' it will apply to all item types
-   
+
 -  Add notes about your circulation rule into the notes field. This can
    be helpful to remember why and when something was last changed.
 
@@ -1058,14 +1056,14 @@ item types to apply the rules to
 
 -  You can also define a hard due date for a specific patron category
    and item type. The hard due date offers three options:
-   
+
    -  Exactly on: The due date of any item checked out with this rule
       will be set to the hard due date.
 
    -  Before: Koha will calculate the normal loan period. If the calculated
-      due date would be after or on the hard due date, the hard due date 
+      due date would be after or on the hard due date, the hard due date
       will be used instead.
-      
+
    -  After: Koha will calculate the normal loan period. If the calculated
       due date would be before the hard due date, the hard due date will
       be used instead.
@@ -1103,7 +1101,7 @@ item types to apply the rules to
 
           This can only be set for the Day unit, not in Hours
 
--  The 'Overdue fines cap' is the maximum fine per item for this patron 
+-  The 'Overdue fines cap' is the maximum fine per item for this patron
    and item type combination.
 
    -  **Important**
@@ -1170,21 +1168,21 @@ item types to apply the rules to
 -  If you are using automatic renewals, you can use the 'No automatic
    renewals after' to limit the time a patron can have the item independent:
    Example: Don't allow automatic renewals after a checkout period of 80 days.
-   
+
 -  Similar to the hard due date setting, you can also stop automatic renwals
-   after a specific date using the 'No automatic renwal after (hard limit)' 
+   after a specific date using the 'No automatic renwal after (hard limit)'
    setting.
 
 -  If the patron can place holds on this item type, enter the total
    numbers of items (of this type) that can be put on hold in the 'Holds
    allowed' field.
-   
+
 -  You can also set a daily limit on the number of holds a patron can place.
 
 -  While the two settings before limit the holds that can be placed across
    various records, the next setting is used to limit the number of holds
    that can be placed on one record at the same time.
-   Example: For fiction books you might want to allow only one item to be placed 
+   Example: For fiction books you might want to allow only one item to be placed
    on hold at the same time by the same user. But for serials where items
    represent different issues more than one hold at the same time is fine.
 
@@ -1195,7 +1193,7 @@ item types to apply the rules to
       matter if they are available or checked out.
 
    -  If any unavailable: This will allow to place a hold as soon as one
-      or more items of the record are checked out. It doesn't matter if 
+      or more items of the record are checked out. It doesn't matter if
       there are still one or more items available on the shelf.
 
    -  If all unavailable: This will allow to place a hold as soon as all
@@ -1213,12 +1211,12 @@ item types to apply the rules to
 
    -  Force: Will only allow patrons to choose a specific item.
 
--  If you want to allow patrons to be able to place article requests, you 
+-  If you want to allow patrons to be able to place article requests, you
 
-   -  **Important** 
+   -  **Important**
 
           If you want to use the article request functionality
-          you need to enable it using the :ref:`ArticleRequests` system 
+          you need to enable it using the :ref:`ArticleRequests` system
           preference and configure the form using the other related preferences.
 
 -  Finally, if you charge a `rental fee <#rentalcharge>`__ for the item
@@ -1316,8 +1314,8 @@ patrons in the library if no other option is set in the forms below.
 Default checkout and hold policy by patron cateogry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For this library, you can specify the maximum number of checkouts, 
-on-site checkouts and holds that a patron of a given category can have, 
+For this library, you can specify the maximum number of checkouts,
+on-site checkouts and holds that a patron of a given category can have,
 regardless of the item type.
 
 |image162|
@@ -1325,7 +1323,7 @@ regardless of the item type.
     **Note**
 
     If the total amount of checkouts, on-site checkout and holds
-    for a given patron category is left blank, no limit applies, 
+    for a given patron category is left blank, no limit applies,
     except possibly for a limit you define in the circulation rules above.
 
 For example, if you have a rule in the matrix that says Board patrons
@@ -1339,9 +1337,9 @@ allowed 2 DVDs to equal the 12 total they're allowed.
 Default lost item fee refund on return policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Here, you can specify the default policy for lost item fees on return. 
-This policy will apply to this library. This rule is to be used with the 
-:ref:`RefundLostOnReturnControl <refundlostonreturncontrol-label>` 
+Here, you can specify the default policy for lost item fees on return.
+This policy will apply to this library. This rule is to be used with the
+:ref:`RefundLostOnReturnControl <refundlostonreturncontrol-label>`
 system preference.
 
 .. _item-hold-policies-label:
@@ -1786,7 +1784,7 @@ To add a new framework
       on, this will make it easier than starting from scratch
 
 -  Once your framework appears on the screen you can edit or delete each
-   field by following the instructions for :ref:`editing fields and 
+   field by following the instructions for :ref:`editing fields and
    subfields <edit-framework-fields-and-subfields-label>`
 
 .. _edit-existing-frameworks-label:
@@ -1800,7 +1798,7 @@ the description for the framework:
 |image185|
 
 To make edits to the fields and subfields associated with the framework you must first
-click 'MARC Structure' and then follow the instructions for :ref:`editing fields and 
+click 'MARC Structure' and then follow the instructions for :ref:`editing fields and
 subfields <edit-framework-fields-and-subfields-label>`
 
 .. _add-fields-to-frameworks-label:
@@ -1808,7 +1806,7 @@ subfields <edit-framework-fields-and-subfields-label>`
 Add fields to frameworks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If a framework doesn't contain a field that you require you may need to add it.  
+If a framework doesn't contain a field that you require you may need to add it.
 To add a field to a framework click the 'New tag' button at the top of
 the framework definition
 
@@ -1835,7 +1833,7 @@ Enter the information about your new tag:
 -  If you want this field to be a pull down with limited possible
    answers, choose which 'Authorized value' list you want to use
 
-When you're finished, click 'Save changes' and your new tag will be displayed in the 
+When you're finished, click 'Save changes' and your new tag will be displayed in the
 framework field list
 
 |image188|
@@ -1868,27 +1866,27 @@ to the right of the field
    -  If you check 'Repeatable' then the field will have an icon
       next to it allowing you to add multiples of that tag
 
-   -  If you check 'Mandatory' the record cannot be saved unless you 
+   -  If you check 'Mandatory' the record cannot be saved unless you
       have a value assigned to tag.  A 'Required' flag will display as a prompt
 
-   -  If you add default values for indicators here these will be 
-      pre-filled to save time when cataloguing but can still be edited if required  
-   
+   -  If you add default values for indicators here these will be
+      pre-filled to save time when cataloguing but can still be edited if required
+
    -  'Authorized value' is where you define an :ref:`authorized
       value <authorized-values-label>` pull down list for your catalogers
 
 To edit the **subfields** associated with the tag, click Actions then 'Subfields' to the
-right of the tag on the framework field list.  Each subfield has its own tab which contains three 
+right of the tag on the framework field list.  Each subfield has its own tab which contains three
 sections - Basic constraints, Advanced constraints and Other options.
 
 -  For each subfield you can set the following basic constraint values
 
    |image190|
-   
+
    -  Subfield code (this wouldn't usually be changed)
 
       -  The MARC subfield code
-      
+
    -  Text for librarian
 
       -  what appears before the subfield in the librarian interface
@@ -1906,7 +1904,7 @@ sections - Basic constraints, Advanced constraints and Other options.
 
    -  Mandatory
 
-      -  the record cannot be saved unless you have a value assigned to this 
+      -  the record cannot be saved unless you have a value assigned to this
          subfield.  A 'Required' flag will display as a prompt
 
    -  Managed in tab
@@ -1939,13 +1937,13 @@ sections - Basic constraints, Advanced constraints and Other options.
          visible/hidden, simply check the boxes where you would like the
          field to show and uncheck the boxes where you would like it
          hidden.
-         
+
       -  **Note**
 
-             The Editor tickbox controls whether this subfield will display within 
-             cataloguing editor for this framework.  If you tick Collapsed the 
-             subfield will be hidden in the editor but will be displayed if 
-             the field label is clicked to expand all subfields 
+             The Editor tickbox controls whether this subfield will display within
+             cataloguing editor for this framework.  If you tick Collapsed the
+             subfield will be hidden in the editor but will be displayed if
+             the field label is clicked to expand all subfields
 
          |image192|
 
@@ -2111,13 +2109,13 @@ The table shows all the database fields that can be mapped to MARC fields.
 
 |image201|
 
-To add a new mapping, click on the 'Add' button to the right of the 
+To add a new mapping, click on the 'Add' button to the right of the
 appropriate field.
 
 |image202|
 
-Write in the MARC field and subfield you would like to map, separated 
-by a comma, to this Koha field and click the 'OK' button. 
+Write in the MARC field and subfield you would like to map, separated
+by a comma, to this Koha field and click the 'OK' button.
 
     **Note**
 
@@ -2228,8 +2226,8 @@ Values that are pre-configured in Koha are:
 -  Generic
 
 Filing rules are mapped to :ref:`Classification
-sources <adding/editing-classification-sources-label>`. You can setup new 
-filing rules by using the 'New filing rule' button. To edit use the 'Edit' 
+sources <adding/editing-classification-sources-label>`. You can setup new
+filing rules by using the 'New filing rule' button. To edit use the 'Edit'
 button.
 
 When creating or editing:
@@ -3298,10 +3296,10 @@ top right of the page
 | Serials             | - Acquisition details                   |
 +---------------------+-----------------------------------------+
 
-**Note** 
+**Note**
 
   Patrons in the OPAC can't change the column visibility. For OPAC tables
-  this feature only allows to control the visibility of columns.   
+  this feature only allows to control the visibility of columns.
 
 **Note**
 
@@ -3406,41 +3404,41 @@ Share content with Mana KB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mana KB is a worldwide knowledge base used to share content specific to libraries.
-Koha is currently connected to Mana Kb in order to share serial subscription 
-models and reports. This section is used to configure your connexion 
+Koha is currently connected to Mana Kb in order to share serial subscription
+models and reports. This section is used to configure your connexion
 with Mana KB.
 
-*Get there:* More > Administration > Additional parameters > Share 
+*Get there:* More > Administration > Additional parameters > Share
 content with Mana KB
 
 |image1426|
 
 In the form, choose whether you want to use Mana KB to share content or not.
-The default is "No, let me think about it". If you do want to use Mana KB, 
+The default is "No, let me think about it". If you do want to use Mana KB,
 change the option to "Yes". If you do not want to share with Mana KB, choose
-"No", this will remove the blue rectangle from the Administration home 
+"No", this will remove the blue rectangle from the Administration home
 page.
 
 The rest of this section assumes you chose "Yes".
 
 Choose whether you want to share your subscription models automatically.
-This means that every time you create a subscription in the serials 
-module, it will be automatically shared with Mana KB and other libraries 
+This means that every time you create a subscription in the serials
+module, it will be automatically shared with Mana KB and other libraries
 will be able to copy it.
 
-In order to configure Mana KB, you must get a Mana KB token to authenticate 
+In order to configure Mana KB, you must get a Mana KB token to authenticate
 your Koha installation on the Mana KB server.
 
 Enter your name or your organization's name in the "Your name" field.
 
-Enter your email in the "Email" field. Make sure you have access to this 
+Enter your email in the "Email" field. Make sure you have access to this
 email inbox since you will receive further information by email.
 
 Once you send your information to Mana KB, you will get a Mana KB token.
 
 |image1427|
 
-In the email your receive, click on the confirmation link and confirm you 
+In the email your receive, click on the confirmation link and confirm you
 are not a robot to finish the Mana KB setup.
 
 .. _additional-fields-label:
@@ -3448,19 +3446,19 @@ are not a robot to finish the Mana KB setup.
 Additional fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section is used to add custom fields to serial subscriptions or 
+This section is used to add custom fields to serial subscriptions or
 order baskets.
 
 To add a new field, first choose which table you want to add it to.
 
-- Order baskets (aqbasket): a field added to aqbasket will appear upon 
+- Order baskets (aqbasket): a field added to aqbasket will appear upon
   the :ref:`creation of a new order basket <create-a-basket-label>`
   or the modification of an existing order basket in the acquisitions module
 
   |image1424|
 
-- Subscriptions (subscription): a field added to subscription will appear 
-  when :ref:`creating a new subscription <add-a-subscription-label>` or 
+- Subscriptions (subscription): a field added to subscription will appear
+  when :ref:`creating a new subscription <add-a-subscription-label>` or
   editing an existing subscription in the serials module
 
   |image1425|
@@ -3473,13 +3471,13 @@ Fill out the form
 
 - Name: this is the name of the field as you want it to appear
 
-- Authorized value category: if you want to add a drop-down menu to the field 
-  choose an authorized value category here (you can also :ref:`create a new 
-  authorized value category <add-new-authorized-value-category-label>` if you 
+- Authorized value category: if you want to add a drop-down menu to the field
+  choose an authorized value category here (you can also :ref:`create a new
+  authorized value category <add-new-authorized-value-category-label>` if you
   need to)
 
-- MARC field: for additional subscription fields, it is possible to link 
-  the field to a MARC field. The additional field will be automatically 
+- MARC field: for additional subscription fields, it is possible to link
+  the field to a MARC field. The additional field will be automatically
   populated with the corresponding record's value for this MARC field.
 
      **Note**
@@ -3488,18 +3486,18 @@ Fill out the form
 
   **Important**
 
-      If you choose the MARC field, make sure you enter it in this 
+      If you choose the MARC field, make sure you enter it in this
       format: field$subfield
 
       For example: 590$a
 
-- Searchable: check this box if you want to be able to search baskets or 
+- Searchable: check this box if you want to be able to search baskets or
   subscriptions based on this field
 
-  - Order basket searchable additional fields will be available in the 
-    :ref:`orders advanced search <acquisition-searches-label>` form 
+  - Order basket searchable additional fields will be available in the
+    :ref:`orders advanced search <acquisition-searches-label>` form
 
-  - Subscription searchable additional fields will be available in the 
+  - Subscription searchable additional fields will be available in the
     :ref:`subscription advanced search <searching-serials-label>` form
 
 .. _additional-fields-examples-label:
@@ -3507,54 +3505,54 @@ Fill out the form
 Examples of additional fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Example 1:** Additional subscription field using :ref:`authorized 
+**Example 1:** Additional subscription field using :ref:`authorized
 values <authorized-values-label>`
 
 You might want to track which department you're ordering this serial for
 
 -  In the 'Name' field, enter 'Department'
-   
--  In the 'Authorized value category' field, choose DEPARTMENT 
-   
+
+-  In the 'Authorized value category' field, choose DEPARTMENT
+
 -  Check the 'Searchable' box
-   
+
 |image1273|
 
-When you are :ref:`adding a subscription <add-a-subscription-label>`, 
-the field will be in the 'Additional fields' section with its 
+When you are :ref:`adding a subscription <add-a-subscription-label>`,
+the field will be in the 'Additional fields' section with its
 authorized values drop-down menu.
 
 |image1274|
 
-When you view the subscription, the field will appear under 'Additional 
+When you view the subscription, the field will appear under 'Additional
 fields'.
 
 |image1275|
 
-Because we made the field searchable, it will also be in the serials 
+Because we made the field searchable, it will also be in the serials
 subscription search.
 
 |image1276|
 
 **Example 2:** Additional field using MARC field
 
-This is particularly useful if you want to view bibliographic 
-information in the subscription detail page. In this example, we will 
+This is particularly useful if you want to view bibliographic
+information in the subscription detail page. In this example, we will
 add the 521$a field, which is, in MARC21, the target audience note.
 
 - In the 'Name' field, enter 'Target audience'
-  
+
 - In the 'MARC field' field, enter '521$a'
-  
+
 |image1379|
 
       **Note**
 
-      You will not be able to edit this field from the subscription 
-      form. If you need to add or change the value in this field, 
+      You will not be able to edit this field from the subscription
+      form. If you need to add or change the value in this field,
       you must go through the :ref:`cataloging module <cataloging-label>`.
 
-When you view the subscription, the field and the information from the 
+When you view the subscription, the field and the information from the
 bibliographic record will appear under 'Additional fields'.
 
 |image1380|

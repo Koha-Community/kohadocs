@@ -77,11 +77,10 @@ of site traffic and server workload.
     A file named sitemapindex.xml is generated. It contains references to multiple
     sitemap files. Each file contains at most 50,000 URLs and is named
     sitemapXXXX.xml.
-    
+
     The files must be stored on the Koha OPAC's root directory. In the same directory
     a robots.txt file with the following contents is required:
-    
-    
+
     ``Sitemap: sitemapindex.xml
     User-agent: *
     Disallow: /cgi-bin/``
@@ -204,8 +203,8 @@ Fines
 
 Script path: misc/cronjobs/fines.pl
 
-Does: calculates and charges (or increments) overdue fines per item to patron 
-accounts. The fine calculation is done using the grace period, fine interval, 
+Does: calculates and charges (or increments) overdue fines per item to patron
+accounts. The fine calculation is done using the grace period, fine interval,
 fine amount and other parameters from the :ref:`circulation and fines rules <circulation-and-fine-rules-label>`.
 
 Required by: :ref:`finesMode` system preference
@@ -214,9 +213,9 @@ Frequency suggestion: nightly
 
     **Note**
     If the Koha system preference 'finesMode' is set to 'production', the fines
-    are charged to the patron accounts. If set to 'test', the fines are calculated 
+    are charged to the patron accounts. If set to 'test', the fines are calculated
     but not applied.
-    
+
     **Note**
     Fines will not be applied on a holiday.
 
@@ -227,20 +226,20 @@ Static fines
 
 Script path: misc/cronjobs/staticfines.pl
 
-Does: charges a single static fine for any/all overdues a patron currently has 
-outstanding. The charge amount is either defined on the command line per 
-borrower category or will use the circulation rules associated with the oldest 
+Does: charges a single static fine for any/all overdues a patron currently has
+outstanding. The charge amount is either defined on the command line per
+borrower category or will use the circulation rules associated with the oldest
 overdue item the patron has currently checked out (for the first fine period only)
-Once charged, the fine is static: No new fines will be added until the existing 
+Once charged, the fine is static: No new fines will be added until the existing
 fine is paid off in full.
 
 Frequency suggestion: nightly
 
     **Note**
     If the Koha system preference 'finesMode' is set to 'production', the fines
-    are charged to the patron accounts. If set to 'test', the fines are calculated 
+    are charged to the patron accounts. If set to 'test', the fines are calculated
     but not applied.
-    
+
     **Note**
     Fines won't be applied on a holiday.
 
@@ -330,13 +329,13 @@ expired before, last seen, category code, or library branch.
 
      **Note**
 
-     Dates should be in ISO format, e.g., 2013-07-19, and can be 
+     Dates should be in ISO format, e.g., 2013-07-19, and can be
      generated with date -d '-3 month' "+%Y-%m-%d".
 
      **Important**
 
-     The options to select the patron records to delete are **cumulative**. 
-     For example, supplying both --expired_before and --library specifies 
+     The options to select the patron records to delete are **cumulative**.
+     For example, supplying both --expired_before and --library specifies
      that patron records must meet *both* conditions to be selected for deletion.
 
      **PARAMETERS**
@@ -348,8 +347,8 @@ expired before, last seen, category code, or library branch.
         Delete patrons with an account expired before this date.
 
      -  --last_seen
-        Delete patrons who have not been connected since this date. 
-        The system preference :ref:`TrackLastPatronActivity` must be 
+        Delete patrons who have not been connected since this date.
+        The system preference :ref:`TrackLastPatronActivity` must be
         enabled to use this option.
 
      -  --category_code
@@ -359,8 +358,8 @@ expired before, last seen, category code, or library branch.
         Delete patrons in this library.
 
      -  -c|--confirm
-        This flag must be provided in order for the script to actually 
-        delete patron records. If it is not supplied, the script will 
+        This flag must be provided in order for the script to actually
+        delete patron records. If it is not supplied, the script will
         only report on the patron records it would have deleted.
 
      -  -v|--verbose
@@ -421,20 +420,20 @@ when they reach the upper age limit defined in the Patron Categories.
 Frequency suggestion: nightly
 
     **DESCRIPTION**
-    
+
     This script is designed to update patrons from juvenile to adult patron
     types, remove the guarantor, and update their category codes
     appropriately when they reach the upper age limit defined in the Patron
     Categories.
 
     **USAGE EXAMPLES**
-    
+
     "juv2adult.pl"
-    
-    "juv2adult.pl" -b=<branchcode> -f=<categorycode> -t=<categorycode> 
+
+    "juv2adult.pl" -b=<branchcode> -f=<categorycode> -t=<categorycode>
     (Processes a single branch, and updates the patron categories from
     category to category)
-    
+
     "juv2adult.pl" -f=<categorycode> -t=<categorycode> -v -n (Processes all
     branches, shows all messages, and reports the patrons who would be
     affected. Takes no action on the database)
@@ -503,7 +502,7 @@ Frequency suggestion: nightly
     HTML for later printing
 
     **See also**
-    
+
     The misc/cronjobs/advance\_notices.pl program allows you to send
     messages to patrons in advance of their items becoming due, or to alert
     them of items that have just become due.
@@ -614,9 +613,9 @@ Does: processes import bach queues of type 'webservice'.
 Batches can also be processed through the UI.
 
     **Note**
-    
+
     This script is used for OCLC Connexion
-    
+
 .. _connexion-import-daemon-label:
 
 Connexion import daemon
@@ -629,7 +628,7 @@ OCLC Gateway specification. It takes requests with MARC XML and import batch
 parameters from a configuration file and forwards it to svc/import_bib
 
     **Note**
-    
+
     This script is used for OCLC Connexion
 
 .. _delete-items-label:
@@ -644,15 +643,15 @@ database and deletes the items matching the criteria specified in the
 command line arguments.
 
     **PARAMETERS**
-    
+
     -  --verbose
-       Send the "WHERE" clause generated by the collected C<--where> 
+       Send the "WHERE" clause generated by the collected C<--where>
        arguments, as well as items affected to Standard Out.
 
     -  --where
-       The C<--where> option may called multiple times. The following 
-       argument must be a syntactically valid SQL statement which is 
-       part of the C<WHERE> clause querying the items table. 
+       The C<--where> option may called multiple times. The following
+       argument must be a syntactically valid SQL statement which is
+       part of the C<WHERE> clause querying the items table.
        These are joined by C<AND>.
 
     -  --commit
@@ -673,23 +672,23 @@ Check URL quick
 
 Script path: misc/cronjobs/check-url-quick.pl
 
-Does: checks URLs from biblio records; scans all URLs found by default in 
-856$u of bibliographic records and displays if resources are available or 
+Does: checks URLs from biblio records; scans all URLs found by default in
+856$u of bibliographic records and displays if resources are available or
 not.
 
     **Note**
-    
+
     This script replaces the check-url.pl script
 
     **PARAMETERS**
 
     -  --host=http://default.tld
-       Server host used when URL doesn't have one, ie doesn't begin with 
-       'http:'. For example, if --host=mylib.com, then when 856$u contains 
+       Server host used when URL doesn't have one, ie doesn't begin with
+       'http:'. For example, if --host=mylib.com, then when 856$u contains
        'img/image.jpg', the url checked is: http://www.mylib.com/image.jpg.
 
     -  --tags
-       Tags containing URLs in $u subfields. If not provided, 856 tag is 
+       Tags containing URLs in $u subfields. If not provided, 856 tag is
        checked. Multiple tags can be specified, for example:
 
        check-url-quick.pl --tags 310 410 856
@@ -697,14 +696,14 @@ not.
     -  --verbose|v
        Outputs both successful and failed URLs.
 
-    -  --html 
-       Formats output in HTML. The result can be redirected to a file 
-       accessible by http. This way, it's possible to link directly to the 
-       bibliographic record in edit mode. With this parameter --host-intranet 
+    -  --html
+       Formats output in HTML. The result can be redirected to a file
+       accessible by http. This way, it's possible to link directly to the
+       bibliographic record in edit mode. With this parameter --host-intranet
        is required.
 
     -  --host-intranet=http://koha-pro.tld
-       Server host used to link to bibliographic record editing page in 
+       Server host used to link to bibliographic record editing page in
        Koha intranet interface.
 
     -  --timeout=10
@@ -746,12 +745,12 @@ Does: attempts to delete any MARC records where the leader character 5 equals 'd
         Verbose mode
 
      -  -t|--test
-        Test mode, does not delete records. Test mode cannot determine 
-        if a record/item will be deleted successfully, it will only tell 
+        Test mode, does not delete records. Test mode cannot determine
+        if a record/item will be deleted successfully, it will only tell
         you what records and items the script will attempt to delete.
 
      -  -i|--delete-items
-        Try deleting items before deleting record. 
+        Try deleting items before deleting record.
         Records with items cannot be deleted.
 
 .. _update-authorities-label:
@@ -771,7 +770,7 @@ Does: updates biblio data with changes to authorities records
     bibliographic records that use that authority when this script is
     run.
 
-Required by: :ref:`AuthorityMergeLimit <authoritymergelimit-label>` 
+Required by: :ref:`AuthorityMergeLimit <authoritymergelimit-label>`
 system preference
 
 Frequency suggestion: nightly
@@ -885,7 +884,7 @@ Script path: misc/cronjobs/share\_usage\_with\_koha\_community.pl
 Does: sends your info to the `Hea
 website <http://hea.koha-community.org/>`__
 if you're sharing information via the :ref:`UsageStats`
-feature 
+feature
 
 Frequency: monthly
 
@@ -905,7 +904,7 @@ Does: removes old (defined by you) suggestions from the suggestion
 management area.
 
        **Note**
-       
+
        The system preference :ref:`PurgeSuggestionsOlderThan` defines the number
        of days used in the script
 
@@ -961,7 +960,7 @@ Does: runs pre-existing saved reports
      -  --format=s
         Selects format. Choice of text, html, csv or tsv
 
-     -  -e|--email 
+     -  -e|--email
         Whether or not to use e-mail (implied by --to or --from)
 
      -  -a|--attachment
@@ -993,7 +992,7 @@ Does: runs pre-existing saved reports
 
      **ARGUMENTS**
 
-     -  reportID 
+     -  reportID
         Report ID Number from saved_sql.id, multiple ID's may be specified
 
 Norwegian patron database
@@ -1008,7 +1007,7 @@ Does: syncs patrons from the Norwegian national patron database (NL) to Koha
 
     **Note**
     Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences
-    
+
 NL sync from Koha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1018,7 +1017,7 @@ Does: syncs patrons from Koha to the Norwegian national patron database (NL)
 
     **Note**
     Relies on NorwegianPatronDBUsername and NorwegianPatronDBPassword system preferences
-    
+
 Social data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

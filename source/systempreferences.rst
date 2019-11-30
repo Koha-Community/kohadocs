@@ -338,9 +338,8 @@ Description:
 
     **Note**
 
-    This system preference is used when the cronjob purge_suggestions.pl is 
+    This system preference is used when the cronjob purge_suggestions.pl is
     active and called without a specific number of days.
-
 
 .. _uniqueitemfields-label:
 
@@ -444,7 +443,7 @@ Description:
    in one of them or after reaching a timeout.
 
        **Note**
-       
+
        The CAS server has to be set up to allow single logout for this to take
        effect, otherwise the behavior will remain unchanged
 
@@ -560,7 +559,6 @@ Values:
 
 GoogleOpenIDConnectDefaultBranch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 Asks: \_\_\_ Use this branchcode when automatically registering a Google
 Open ID patron.
@@ -752,7 +750,7 @@ Values:
 Description:
 
 -  This preference allows the system administrator to determine if users
-   will be able to set and see an item type icon in 
+   will be able to set and see an item type icon in
    the catalog on both the OPAC and the Staff Client. The images will
    display in both the OPAC and the Staff Client/Intranet. If images of
    item types are disabled, text labels for item types will still appear
@@ -792,20 +790,19 @@ Description:
 SendAllEmailsTo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Email to redirect all messages to: \_\_\_ (Leave this field empty to 
-send messages to their normal recipient) 
+Asks: Email to redirect all messages to: \_\_\_ (Leave this field empty to
+send messages to their normal recipient)
 
 Description:
 
--  This system preference is used to override any patron email address with this one 
-   when sending notices. This is meant to be used in a testing environment to 
+-  This system preference is used to override any patron email address with this one
+   when sending notices. This is meant to be used in a testing environment to
    test notices and to avoid spamming patrons.
 
   **Important**
 
-  This is not to be used in a production environment. Otherwise, no patron 
+  This is not to be used in a production environment. Otherwise, no patron
   will receive their intended notices.
-
 
 .. _virtualshelves-label:
 
@@ -2352,15 +2349,15 @@ Examples:
 MarcFieldForCreatorId, MarcFieldForCreatorName, MarcFieldForModifierId, MarcFieldForModifierName
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Store record's creator borrowernumber in MARC subfield \_\_\_ and 
-record's creator name in MARC subfield \_\_\_ Store record's last modifier 
-borrowernumber in MARC subfield \_\_\_ and record's last modifier name in MARC 
+Asks: Store record's creator borrowernumber in MARC subfield \_\_\_ and
+record's creator name in MARC subfield \_\_\_ Store record's last modifier
+borrowernumber in MARC subfield \_\_\_ and record's last modifier name in MARC
 subfield \_\_\_ NOTE: Use a dollar sign between field and subfield like 123$a.
 
 Description:
 
--  This preference allows you to define which MARC subfields to use to 
-   automatically save the details of the logged in user.  You can save details 
+-  This preference allows you to define which MARC subfields to use to
+   automatically save the details of the logged in user.  You can save details
    for the record creator and the most recent modifier.
 
 .. _marcflavour-label:
@@ -2648,9 +2645,8 @@ Values:
 
 Description:
 
--  This preference controls whether or not credits are automatically used to 
+-  This preference controls whether or not credits are automatically used to
    to reduce the owed amounts in a patron's account.
-
 
 .. _article-requests-sysprefs-label:
 
@@ -2678,7 +2674,7 @@ Description:
 
 .. _articlerequestslinkcontrol-label:
 
-ArticleRequestsLinkControl 
+ArticleRequestsLinkControl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Use algorithm to show or hide
@@ -2690,13 +2686,13 @@ Values:
 -  Always show
 
 -  Use algorithm to show or hide
-   
+
 Description:
 
--  On the OPAC results page, either always show the 'Request article' link 
-   or check the branch, patron and item type combination to determine 
-   whether or not an article can be requested from this particular record 
-   before displaying the link. 
+-  On the OPAC results page, either always show the 'Request article' link
+   or check the branch, patron and item type combination to determine
+   whether or not an article can be requested from this particular record
+   before displaying the link.
 
 .. _articlerequestsmandatoryfields-label:
 
@@ -2799,7 +2795,6 @@ Description:
    for a record level request only. Choosing [Select all] indicates that all fields
    listed (Author, Chapters, Date, Issue, Pages, Title, Volume) must be completed before the article
    request can be placed.
-
 
 .. _batch-checkout-label:
 
@@ -2927,8 +2922,8 @@ HidePersonalPatronDetailOnCirculation
 
 Default: Don't
 
-Asks: \_\_\_ hide patrons phone number, email address, street address 
-and city in the circulation page 
+Asks: \_\_\_ hide patrons phone number, email address, street address
+and city in the circulation page
 
 Values:
 
@@ -2938,11 +2933,11 @@ Values:
 
 Description:
 
--  This preference controls the display of the patron's phone number, 
-   email address, and physical address from the left side of the screen 
-   (under their picture, if they have one). 
+-  This preference controls the display of the patron's phone number,
+   email address, and physical address from the left side of the screen
+   (under their picture, if they have one).
 
--  Set to 'Do' these informations will only be visible on the patron's 
+-  Set to 'Do' these informations will only be visible on the patron's
    detail page.
 
 .. _holdsautofill-label:
@@ -2957,17 +2952,17 @@ Asks: \_\_\_ automatically fill holds instead of asking the librarian.
 Values:
 
 -  Do
-   
+
 -  Don't
-   
+
 Description:
 
--  If set to 'Do', the holds confirmation pop-up will not appear upon checking 
+-  If set to 'Do', the holds confirmation pop-up will not appear upon checking
    in a reserved item.
 
 .. _holdsautofillprintslip-label:
 
-HoldsAutoFillPrintSlip 
+HoldsAutoFillPrintSlip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't
@@ -2979,51 +2974,50 @@ Values:
 -  Do
 
 -  Don't
-   
+
 Description:
 
--  If set to 'Do', the holds slip print pop-up will appear automatically 
+-  If set to 'Do', the holds slip print pop-up will appear automatically
    upon checking in a reserved item.
 
--  :ref:`HoldsAutoFill` must be set to 'do' for this preference to have any 
-   effect. 
+-  :ref:`HoldsAutoFill` must be set to 'do' for this preference to have any
+   effect.
 
 .. _updateitemlocationincheckin-label:
 
 UpdateItemLocationOnCheckin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: This is a list of value pairs. The first value is followed immediately 
-by colon, space, then the second value. 
-
+Asks: This is a list of value pairs. The first value is followed immediately
+by colon, space, then the second value.
 
 Description:
 
--  This system preference affects the item's current and permanent locations 
-   when the item is checked in (whether it was checked out or not). 
+-  This system preference affects the item's current and permanent locations
+   when the item is checked in (whether it was checked out or not).
 
--  If the location value on the left of the colon (:) matches 
-   the item's current location, it will be updated to match the location value 
+-  If the location value on the left of the colon (:) matches
+   the item's current location, it will be updated to match the location value
    on the right of the colon (:).
 
 -  The values are the LOC :ref:`authorised values <existing-values-label>`.
 
--  For example, 'STAFF: GEN' will move an item from the staff office to the 
+-  For example, 'STAFF: GEN' will move an item from the staff office to the
    general collection when the item is checked in.
 
 -  Special terms
 
-   -  PROC: Processing center. When using PROC, only the current location will 
+   -  PROC: Processing center. When using PROC, only the current location will
       be affected.
 
-   -  CART: Shelving cart. When using CART, only the current location will be 
+   -  CART: Shelving cart. When using CART, only the current location will be
       affected.
 
-   -  \_PERM\_: This will use the item's permanent location, whatever that 
+   -  \_PERM\_: This will use the item's permanent location, whatever that
       location is.
 
-   -  \_BLANK\_: Used on the left as a first value, it will add a location if 
-       there is none. Used on the right as a second value, it will remove the 
+   -  \_BLANK\_: Used on the left as a first value, it will add a location if
+       there is none. Used on the right as a second value, it will remove the
        location.
 
    -  \_ALL\_: Used on the left as a first value, it will affect all items and
@@ -3036,7 +3030,6 @@ Description:
   -  Make sure there IS a space between the colon and the second value
 
   -  Make sure each pair is on its own line
-
 
 .. _updatenotforloanstatusoncheckin-label:
 
@@ -3300,10 +3293,10 @@ Description:
 
 ..  allowrenewalonholdoverride-label:
 
-  AllowRenewalOnHoldOverride 
+  AllowRenewalOnHoldOverride
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Asks: \_\_\_ staff to renew items that are on hold by manually specifying a due date. 
+  Asks: \_\_\_ staff to renew items that are on hold by manually specifying a due date.
 
   Default: Don't allow
 
@@ -3315,7 +3308,7 @@ Description:
 
   Description:
 
-  -  
+  -
 
 .. _allowreturntobranch-label:
 
@@ -3430,7 +3423,7 @@ Description:
 AutoReturnCheckedOutItems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: \_\_\_ require librarians to manually confirm a checkout where the item 
+Asks: \_\_\_ require librarians to manually confirm a checkout where the item
 is already checked out to another patron.
 
 Values:
@@ -3443,14 +3436,14 @@ Default: Do
 
 Description:
 
--  This preference controls whether Koha asks for a confirmation when trying 
+-  This preference controls whether Koha asks for a confirmation when trying
    to check out an item that is already checked out to another patron.
 
 -  Set to 'Do', Koha will ask the staff member to confirm the check out.
 
    |image1433|
 
--  Set to 'Don't', Koha will simply return the item from the previous 
+-  Set to 'Don't', Koha will simply return the item from the previous
    patron's file and check it out to the actual patron and show a message.
 
    |image1434|
@@ -3599,7 +3592,6 @@ Description:
     of Koha because it will change the behavior of items already checked
     out.
 
-
 .. _issuelostitem-label:
 
 IssueLostItem
@@ -3671,9 +3663,9 @@ Asks: Define custom rules to deny specific items from renewal.
 
 Description:
 
--  This preference allows you to specify items that should not be renewed 
-   either from the OPAC or staff client.  You can enter any combination of 
-   fields (from the items table in the Koha database) followed by a colon 
+-  This preference allows you to specify items that should not be renewed
+   either from the OPAC or staff client.  You can enter any combination of
+   fields (from the items table in the Koha database) followed by a colon
    then a space then a bracketed list of values separated by commas. e.g:
 
    ::
@@ -3681,12 +3673,12 @@ Description:
        ccode: [NEWFIC,NULL,DVD]
        itype: [NEWBK,""]
 
--  The word 'NULL' can be used to block renewal on undefined fields, 
+-  The word 'NULL' can be used to block renewal on undefined fields,
    while an empty string "" will block on an empty (but defined) field.
-    
+
     **Note**
 
-    If using automatic renewal notices your notice text should be updated to 
+    If using automatic renewal notices your notice text should be updated to
     account for the new reason that renewals may be denied "item_denied_renewal".
 
 .. _maninvinnoissuescharge-label:
@@ -3739,9 +3731,8 @@ Values:
 
 Description:
 
--  The library can choose which of these actions or all of these actions, does an 
+-  The library can choose which of these actions or all of these actions, does an
    item gets automatically returned from the patron's account or not.
-
 
 .. _maxoutstanding-label:
 
@@ -4114,7 +4105,6 @@ Description:
    which falls after the patron's card expiration. If the setting is
    left "Don't require" then item check out dates may exceed the
    expiration date for the patron's library card.
-
 
 .. _staffsearchresultsdisplaybranch-label:
 
@@ -4899,7 +4889,7 @@ Values:
 -  Allow
 
 -  Don't allow
-   
+
 .. _holdssplitqueue-label:
 
 HoldsSplitQueue
@@ -4912,17 +4902,17 @@ Asks: In the staff client, split the holds queue into separate tables by \_\_\_
 Values:
 
 -  pickup library
-   
--  pickup library & itemtype
-   
--  hold itemtype
-   
--  nothing
-   
-Description: 
 
--  This feature allows you to separate holds by pickup library or itemtype in the 
-   holds page of a record (not in the global holds queue found on the circulation 
+-  pickup library & itemtype
+
+-  hold itemtype
+
+-  nothing
+
+Description:
+
+-  This feature allows you to separate holds by pickup library or itemtype in the
+   holds page of a record (not in the global holds queue found on the circulation
    page).
 
 -  When using the up and down arrows the priorities will be changed only
@@ -4942,14 +4932,14 @@ Values:
 -  the actual priority, which may be out of order
 
 -  'virtual' priorities, where each group is numbered separately
-   
+
 Description:
 
--  This system preference is only effective if :ref:`HoldsSplitQueue` is set to 
+-  This system preference is only effective if :ref:`HoldsSplitQueue` is set to
    any value except 'nothing'.
 
--  This system preference controls the priority numbering on the holds page 
-   of a record (not in the global holds queue found on the circulation page). 
+-  This system preference controls the priority numbering on the holds page
+   of a record (not in the global holds queue found on the circulation page).
 
 .. _localholdspriority,-localholdsprioritypatroncontrol,-localholdspriorityitemcontrol-label:
 
@@ -5288,14 +5278,14 @@ Description:
 UpdateItemWhenLostFromHoldList
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Update item's values when marked as lost from the hold to pull screen. 
+Asks: Update item's values when marked as lost from the hold to pull screen.
 
 Description:
 
--  This is a list of values to update an item when it is marked as lost from 
+-  This is a list of values to update an item when it is marked as lost from
    the holds to pull screen. For example, write "itemlost: 1" to set the items.
    itemlost value to 1 when the item is marked as lost. This will use the authorized
-   value 1 from the LOST authorized value list. 
+   value 1 from the LOST authorized value list.
 
 .. _housebound-module-label:
 
@@ -5910,7 +5900,6 @@ ILLModuleCopyrightClearance
 Asks: Adding text will enable the copyright clearance stage in request creation.
 The text you enter will be the text displayed.
 
-
 Self Checkout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -6124,7 +6113,7 @@ Self Checkin
 
 .. _selfcheckinmainuserblock-label:
 
-SelfCheckInMainUserBlock 
+SelfCheckInMainUserBlock
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Asks: Include the following HTML on the self check-in screen
@@ -6136,7 +6125,7 @@ Description:
 
 .. _selfscheckinmodule-label:
 
-SelfCheckInModule 
+SelfCheckInModule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Don't enable
@@ -6166,7 +6155,7 @@ Asks: Reset the current self check-in screen after \_\_\_ seconds
 
 Description:
 
--  Enter the number of seconds after which you want the self check-in 
+-  Enter the number of seconds after which you want the self check-in
    screen to refresh and go back to the main page (for example, if a
    patron forgot to log out).
 
@@ -6189,15 +6178,14 @@ SelfCheckInUserJS
 
 Asks: Include the following JavaScript on all the self check-in screens
 
-Description: 
+Description:
 
 -  The JavaScript entered here will override any other JavaScript on
    the self check-in screens
-   
-   
+
 Stockrotation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   
+
 .. _stockrotation module-label:
 
 StockRotation
@@ -6210,10 +6198,10 @@ Asks: \_\_\_ the stock rotation module
 Values:
 
 -  Disable
-   
+
 -  Enable
 
-Description: 
+Description:
 
 -  If set to 'Enable' then the stock rotation module will appear under Tools.
 
@@ -6250,7 +6238,7 @@ AdlibrisCoversEnabled
 
 Default: Don't show
 
-Asks: \_\_\_ cover images in OPAC results and detail listing from Swedish 
+Asks: \_\_\_ cover images in OPAC results and detail listing from Swedish
 retailer Adlibris.
 
 Values:
@@ -6476,7 +6464,6 @@ Description:
    all other cover image services must be disabled. If they are not
    disabled, they will prevent AmazonCoverImages from functioning
    properly.
-
 
 Babelthèque
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -7086,7 +7073,7 @@ Description:
 
 .. _manual-sysprefs-label:
 
-Manual 
+Manual
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _kohamanualbaseurl-label:
@@ -7100,18 +7087,18 @@ Asks: Location of the Koha manual \_\_\_
 
 Description:
 
--  You can specify the location of the Koha manual to use. This is the 
-   URL that will be used for the help pages when you click 'Help' at 
+-  You can specify the location of the Koha manual to use. This is the
+   URL that will be used for the help pages when you click 'Help' at
    the top right corner of the page.
 
--  By default, the Koha manual is used, but you can use this system 
+-  By default, the Koha manual is used, but you can use this system
    preference to substitute for your own help pages.
 
--  If the URL starts with '/', the value of :ref:`staffClientBaseURL` 
-   will be used as a prefix. 
+-  If the URL starts with '/', the value of :ref:`staffClientBaseURL`
+   will be used as a prefix.
 
--  Note that it will be suffixed by the version / the language / the 
-   format (/17.11/en/html) 
+-  Note that it will be suffixed by the version / the language / the
+   format (/17.11/en/html)
 
 .. _kohamanuallanguage-label:
 
@@ -7122,13 +7109,12 @@ Default: English
 
 Asks: Language of the online manual ­\_\_\_
 
-Description: 
+Description:
 
--  By default, the language of the Koha interface will be used 
-   as the manual language. However, if the manual is not translated 
-   in that language, this system preference specifies the fallback 
+-  By default, the language of the Koha interface will be used
+   as the manual language. However, if the manual is not translated
+   in that language, this system preference specifies the fallback
    language.
-
 
 .. _novelist-select-label:
 
@@ -7219,9 +7205,9 @@ Description:
 -  Without this value being set, Novelist features will be disabled on the staff
    client until a correct profile is obtained from Novelist and entered into
    the field.
-   
+
       **Note**
-      
+
       This value must be set independently of the OPAC profile for Novelist
 
 .. _novelistselectstaffview-label:
@@ -8264,8 +8250,8 @@ Values:
 -  Log
 
        **Note**
-       
-       Enabling this preference allows the tracking of cardnumber changes for patrons 
+
+       Enabling this preference allows the tracking of cardnumber changes for patrons
 
 .. _cataloguinglog-label:
 
@@ -8861,7 +8847,7 @@ Values:
 
    -  **Important**
 
-          Both :ref:`OPACXSLTDetailsDisplay` and 
+          Both :ref:`OPACXSLTDetailsDisplay` and
           :ref:`OPACXSLTResultsDisplay` need to
           have values in order for this preference to work.
 
@@ -8919,7 +8905,7 @@ Default:
 
     |image1192|
 
-Asks: Select export options that should be available from OPAC detail 
+Asks: Select export options that should be available from OPAC detail
 page: \_\_\_
 
 Description:
@@ -9167,7 +9153,6 @@ Description:
 
 Learn more in the :ref:`OPAC editable regions <editable-opac-regions-label>` section.
 
-
 .. _opacmaintenance-label:
 
 OpacMaintenance
@@ -9318,7 +9303,7 @@ Asks: Show the following HTML on the left hand column of the main page
 and patron account on the OPAC, after :ref:`OpacNav`, and before
 patron account links if available:
 
-Description: 
+Description:
 
 -  When a patron is logged in to their account they see a
    series of tabs to access their account information.
@@ -9336,7 +9321,7 @@ OpacNavRight
 Asks: Show the following HTML in the right hand column of the main page
 under the main login form.
 
-Description: 
+Description:
 
 -  HTML entered in this preference will appear on the right
    hand side of the OPAC under the log in form. If the log in form is not
@@ -9517,9 +9502,9 @@ Values:
 
 Description:
 
--  This preference allows you to choose the type of hold information to 
-   make available to patrons when logged in to their account on the OPAC.  If 
-   you select to include hold priority information the list of holds will 
+-  This preference allows you to choose the type of hold information to
+   make available to patrons when logged in to their account on the OPAC.  If
+   you select to include hold priority information the list of holds will
    initially be sorted by priority.
 
 .. _opacshowrecentcomments-label:
@@ -10726,7 +10711,7 @@ Description:
    locations STAFF and ISO are in Authorized Values for category=LOC
    STAFF means it's assigned to the staff reading room and ISO means it
    is in the isolation room.
-   
+
 .. _opachiddenitemsexceptions-label:
 
 OpacHiddenItemsExceptions
@@ -10738,7 +10723,7 @@ Asks: List of borrower categories, separated by (pipe) \|, that can see items
 otherwise hidden by OpacHiddenItems
 
 Description: Patron category codes listed here separated by a pipe
-| will be able to view items on the OPAC that would otherwise be hidden by the 
+| will be able to view items on the OPAC that would otherwise be hidden by the
 OpacHiddenItems system preference.
 
 .. _opacrenewalallowed-label:
@@ -11622,9 +11607,9 @@ Description:
     the database
     structure <http://schema.koha-community.org/tables/borrowers.html>`__
     associated with the borrowers table.
-    
+
     **Note**
-    
+
     If either :ref:`PatronQuickAddFields` or :ref:`BorrowerMandatoryField`
     (or both) is set, a button labeled "Quick add new patron" will be displayed
     in the "Patrons" toolbar.
@@ -11767,12 +11752,11 @@ Description:
    history.
 
 -  When the value is set to 'Unless overridden, do', this will check the
-   patron's circulation history unless the patron's :ref:`personal setting 
-   <add-a-new-patron>` or the :ref:`patron category setting <adding-a-patron-category>` 
-   specifically say not to.
-   
+   patron's circulation history unless the patron's
+   :ref:`personal setting <add-a-new-patron>` or the :ref:`patron category setting <adding-a-patron-category>` specifically say not to.
+
 -  Lastly, if the value is set to 'Unless overridden, do not',
-   Koha will not check circulation history unless the patron's :ref:`personal 
+   Koha will not check circulation history unless the patron's :ref:`personal
    setting <add-a-new-patron>` or the :ref:`patron category setting <adding-a-
    patron-category>` specifically say to check.
 
@@ -12103,12 +12087,10 @@ as well, individual fields in that form will be ignored.
     **Note**
 
     It is possible to add custom :ref:`patron attributes <patron-attribute-types-
-    label>` in the quick add form with the following syntax: patron_attr_N 
-    (for example patron_attr_2). The N refers to the id of the attribute and 
+    label>` in the quick add form with the following syntax: patron_attr_N
+    (for example patron_attr_2). The N refers to the id of the attribute and
     requires a bit of guesswork (normally it will be the order in which you
-    entered them in the :ref:`patron attribute types section of the administration 
-    module <patron-attribute-types-label>`).
-
+    entered them in the :ref:`patron attribute types section of the administration module <patron-attribute-types-label>`).
 
 .. _patronsperpage-label:
 
@@ -12131,7 +12113,7 @@ Default: Allow only superlibrarians
 
 Asks: \_\_\_ to access/change superlibrarian privileges. Note: A permitted user
       needs to have the 'permissions' flag (if no superlibrarian)
-      
+
 Values:
 
 -  Allow all permitted users
@@ -12207,20 +12189,20 @@ Description:
     You must allow
     :ref:`EnhancedMessagingPreferences` for
     this to work.
-    
+
 .. _smssendusername,-smssendpassword,-and-emailsmssenddriverfromaddress-label:
-    
+
 SMSSendUsername, SMSSendPassword and EmailSMSSendDriverFromAddress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Define a username/login \_\_\_ and a password \_\_\_.  Override 
+Asks: Define a username/login \_\_\_ and a password \_\_\_.  Override
 from address with \_\_\_ for emails sent using "Email" send driver.
 
 Description:
 
--  Some SMS gateway providers require username and password credentials 
-   and these can be entered here.  Additionally, one specific email address 
-   may be required as sender (from address) for all emails sent by the 
+-  Some SMS gateway providers require username and password credentials
+   and these can be entered here.  Additionally, one specific email address
+   may be required as sender (from address) for all emails sent by the
    Email SMS send driver.
 
 .. _statisticsfields-label:
@@ -12301,7 +12283,7 @@ Values:
 -  Do
 
 -  Don't
-   
+
 .. _useemailreceipts-label:
 
 UseEmailReceipts
@@ -12314,19 +12296,19 @@ Asks: \_\_\_ email receipts to patrons for payments and writeoffs.
 Values:
 
 -  Don't send
-   
+
 -  Send
-   
+
 Description:
 
--  If set to 'Send', Koha will send emails to the patrons for each 
+-  If set to 'Send', Koha will send emails to the patrons for each
    payment or writeoff done in their account.
 
      **Note**
 
      -  The letters used are ACCOUNT\_PAYMENT and ACCOUNT\_WRITEOFF
-        
-     -  You can edit them in the :ref:`Notices and slips<notices-&-slips-label>` 
+
+     -  You can edit them in the :ref:`Notices and slips<notices-&-slips-label>`
         tool.
 
 .. _usedischarge-label:
@@ -12418,7 +12400,7 @@ Description:
 
 -  You can get these from "Base Bibliotek", which is maintained by the
    Norwegian National Library.
-   
+
 .. _patronsprivacy-label:
 
 Privacy
@@ -12426,15 +12408,15 @@ Privacy
 
 .. _GDPR\_Policy-label:
 
-GDPR\_Policy 
+GDPR\_Policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Disabled
 
-Asks: Set GDPR policy to \_\_\_ GDPR is the EU General Data Protection 
-Regulation. When you enforce, patrons need to give consent before using the 
-OPAC. If you set to permissive, Koha will warn but not enforce. NOTE: If you 
-enable this you will also have to set the URL of your public privacy policy 
+Asks: Set GDPR policy to \_\_\_ GDPR is the EU General Data Protection
+Regulation. When you enforce, patrons need to give consent before using the
+OPAC. If you set to permissive, Koha will warn but not enforce. NOTE: If you
+enable this you will also have to set the URL of your public privacy policy
 with the PrivacyPolicyURL setting.
 
 Values:
@@ -12447,15 +12429,15 @@ Values:
 
 Description:
 
-- This system preference enables a GDPR consent form to appear on the OPAC when 
-  a patron attempts to login. If this preference is set as Enforced then when a 
-  patron attempts to log into the OPAC a GDPR consent form be presented to them. 
+- This system preference enables a GDPR consent form to appear on the OPAC when
+  a patron attempts to login. If this preference is set as Enforced then when a
+  patron attempts to log into the OPAC a GDPR consent form be presented to them.
   The patron will have to provide consent to the library's GDPR policy before
-  they can gain access to their account details. If the patron does not consent 
+  they can gain access to their account details. If the patron does not consent
   to the GDPR policy they will be logged out of their account. If the preference
-  is set to Permissive then the patron will be presented with the GDPR consent 
-  form but they will not be required to give consent to access their patron 
-  account. If the preference is set to Disabled then no GDPR consent form will 
+  is set to Permissive then the patron will be presented with the GDPR consent
+  form but they will not be required to give consent to access their patron
+  account. If the preference is set to Disabled then no GDPR consent form will
   appear when patron logs into the OPAC.
 
 PrivacyPolicyURL
@@ -12465,8 +12447,8 @@ PrivacyPolicyURL
 
 Default: blank
 
-- Asks:Use the following URL \_\_\_ to refer to your local privacy policy in 
-  messages about privacy and data protection. 
+- Asks:Use the following URL \_\_\_ to refer to your local privacy policy in
+  messages about privacy and data protection.
   (If you enforce GDPR policy, make sure that this page is not blocked.)
   NOTE: The URL will only be displayed if :ref:`_GDPR\_Policy` is set.
 
@@ -13468,7 +13450,7 @@ Values:
 
    -  **Important**
 
-          Both :ref:`XSLTDetailsDisplay` and 
+          Both :ref:`XSLTDetailsDisplay` and
           :ref:`XSLTResultsDisplay` need to
           have values in order for this preference to work.
 
@@ -13726,7 +13708,7 @@ Asks: The staff client is located at \_\_\_
 
     **Important**
 
-    This should be a complete URL, starting with http:// or https://. 
+    This should be a complete URL, starting with http:// or https://.
     Do not include a trailing slash in the URL.
 
     **Note**
@@ -13759,7 +13741,7 @@ Asks: Show the following HTML on the staff client login page
 
 Description:
 
--  HTML entered in this field will appear above the login form 
+-  HTML entered in this field will appear above the login form
    of your staff client
 
 |image1345|
@@ -13994,7 +13976,7 @@ Default: Don't Show
 
 Asks: \_\_\_ a link to the last searched patron in the staff client.
 
-Values: 
+Values:
 
 -  Don't show
 
@@ -14003,11 +13985,10 @@ Values:
 Description
 
 - If this preference is set to 'Show' then a link to the last patron account
-  you consulted will appear in the right hand corner of the Koha staff client. 
+  you consulted will appear in the right hand corner of the Koha staff client.
   This link will be cleared when you log out.
-  
-  |image1423|
 
+  |image1423|
 
 .. _staffdetailitemselection-label:
 
@@ -14262,7 +14243,7 @@ Asks: Allow IP addresses \_\_\_ to use the ILS-DI services (when enabled).
 
     **Important**
 
-    Leave the field blank to allow any IP address. 
+    Leave the field blank to allow any IP address.
 
 .. _idref-pref-label:
 
@@ -14337,17 +14318,16 @@ Values:
 
 Description:
 
--  This preference reflects the choice made in the :ref:`Mana KB configuration 
-   <share-with-mana-kb-label>` in the administration module. 
+-  This preference reflects the choice made in the :ref:`Mana KB configuration <share-with-mana-kb-label>` in the administration module.
 
--  Choosing to automatically share content with Mana KB means that every time you 
-   create that type of content, it will be automatically copied in the Mana KB 
+-  Choosing to automatically share content with Mana KB means that every time you
+   create that type of content, it will be automatically copied in the Mana KB
    repository, and it will be instantly available for other libraries to copy.
 
--  All content shared with Mana KB is shared under the CC0 license, meaning 
-   that there is no (zero) copyright. Anyone using Mana KB can copy, reuse 
-   and change (their copy of) your content. Read more on CC0 on the `Creative 
-   Commons Website <https://creativecommons.org/choose/zero/>`__. This will in 
+-  All content shared with Mana KB is shared under the CC0 license, meaning
+   that there is no (zero) copyright. Anyone using Mana KB can copy, reuse
+   and change (their copy of) your content. Read more on CC0 on the `Creative
+   Commons Website <https://creativecommons.org/choose/zero/>`__. This will in
    no way change your data in your Koha installation.
 
 .. _mana-pref-label:
@@ -14369,8 +14349,7 @@ Values:
 
 Description:
 
--  This preference reflects the choice made in the :ref:`Mana KB configuration 
-   <share-with-mana-kb-label>` in the administration module. 
+-  This preference reflects the choice made in the :ref:`Mana KB configuration <share-with-mana-kb-label>` in the administration module.
 
 .. _mana-token-label:
 
@@ -14383,11 +14362,11 @@ Default: empty
 
 Description:
 
--  This preference will be automatically populated with your unique Mana Token when 
-   you register for one on the :ref:`Mana KB configuration <share-with-mana-kb-label>` 
-   in the administration module. 
+-  This preference will be automatically populated with your unique Mana Token when
+   you register for one on the :ref:`Mana KB configuration <share-with-mana-kb-label>`
+   in the administration module.
 
--  The Mana Token is unique and associated with your Koha installation. It is used 
+-  The Mana Token is unique and associated with your Koha installation. It is used
    by Koha to log onto the Mana KB server and prevents intrusions on said server.
 
 .. _oai-pmh-label:
@@ -14517,7 +14496,7 @@ RESTdefaultPageSize
 
 Default: 20
 
-Asks: Set the default number of results returned by the REST API endpoints 
+Asks: Set the default number of results returned by the REST API endpoints
 to \_\_\_ per page.
 
 Description:
@@ -14526,20 +14505,20 @@ Description:
 
 .. _restoauth2clientcredentials-label:
 
-RESTOAuth2ClientCredentials 
+RESTOAuth2ClientCredentials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: Disable
 
-Asks: \_\_\_ the OAuth2 client credentials grant for the REST API. 
+Asks: \_\_\_ the OAuth2 client credentials grant for the REST API.
 
     **Note**
- 
-    Requires Net::OAuth2::AuthorizationServer installed. 
+
+    Requires Net::OAuth2::AuthorizationServer installed.
 
     **Important**
 
-    This system preference is experimental. 
+    This system preference is experimental.
 
 .. _reporting-label:
 

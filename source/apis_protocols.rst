@@ -17,8 +17,7 @@ SIP2 communications consist of requests and responses.
 The self checkout machines are ‘dumb’ and so they send requests to the Koha server which runs logic which determines a particular outcome which is sent as a response message back to the client self checkout machine, and this is then conveyed to the user.
 
 .. warning:: Security notice regarding using SIP2 service:
-	     To ensure that your SIP2 traffic is secure as it passes over the internet you need to make sure that you are using a VPN or   stunnel.
-
+	     To ensure that your SIP2 traffic is secure as it passes over the internet you need to make sure that you are using a VPN or stunnel.
 
 .. _setting-up-sip2-label:
 
@@ -27,10 +26,8 @@ Setting up SIP2
 
 If you installed Koha using Debian packages then SIP2 setup is easy, simply follow these steps:
 
-
 1. In your terminal (in the root Koha directory) write in:
 *sudo koha-enable-sip <instancename>*
-
 
 2. Now you need to configure the SIP2 settings, to do this you need to edit the SIPconfig.xml file which exists in the /etc/koha/sites/<instancename>/ directory.
 You will need to edit this file as root because it contains passwords (to do so write ‘sudo’  at the start of your command).
@@ -40,17 +37,13 @@ e.g.
 
 .. note:: Important note: There are three areas of interest in the SIPconfig.xml file that you need to change. These are: service, account and institution.
 
-
 **Service**
-
 
 	2.1 Change the port value near the top of the SIPconfig.xml file (identified by the number 1 in the below screen shot), so it has the same IP address as set further down the SIPconfig.xml file identified by 2.
 
 	.. note:: Make sure the two port values don’t have the same port number as you cannot have the same port being listened to by two different services. When deciding upon the port number make sure it is a high number (i.e. above 1000) because all ports below 1000 require root permissions.
 
 |image1122|
-
-
 
 **Account**
 
@@ -66,9 +59,7 @@ The account(s) you define in the SIPconfig.xml file are simply account(s) permit
 
 |image1119|
 
-
 **Account value definitions:**
-
 
 1. Login id: This is the account username. - Modify this accordingly
 2. Password: Account password - Modify this accordingly
@@ -86,7 +77,6 @@ It is also possible to add custom patron attributes to SIP2 profiles using the f
 
 **Institution**
 
-
 	The institution information you define here must match a library created in the Koha staff interface.
 
 	.. warning:: You need to make sure all the institutions that accounts are assigned to further up in the SIPconfig.xml file are also defined in the institution area of the same file.
@@ -94,7 +84,6 @@ It is also possible to add custom patron attributes to SIP2 profiles using the f
 |image1120|
 
 **Institution value definitions:**
-
 
 	1. Institution id: The branchcode of the library. - Modify this accordingly.
 	Must be the same as created in Koha and the account area.
@@ -109,7 +98,6 @@ It is also possible to add custom patron attributes to SIP2 profiles using the f
  *sudo koha-start-sip <instancename>*
 
 .. note:: Now you have a running SIP2 server.
-
 
 .. _using-sip2-label:
 
@@ -129,7 +117,6 @@ To be able to send and receive messages with the SIP2 server you need to use tel
 To find this information look at the service area at the top of the SIPconfig.xml file (look for the port number as pointed out by the arrow in the below screenshot).
 
 |image1121|
-
 
 1. Write into the terminal
 
@@ -163,15 +150,13 @@ So the format of this SIP2 request message is:
 
 .. note:: The summary value is a 10 character value. If a Y is written in for the summary value then you will be able to get both a summary and more detailed informational output.
 
-The value in the <YYYYMMDD>       <HHMMSS> is the current datetime, by leaving a 4 space gap between the YYYYMMDD and HHMMSS this indicates you want to use local time rather than UTC.
+The value in the <YYYYMMDD> <HHMMSS> is the current datetime, by leaving a 4 space gap between the YYYYMMDD and HHMMSS this indicates you want to use local time rather than UTC.
 
 .. note:: In this manual letter codes for the various fields are used where possible in describing the SIP2 message fields e.g. AO<institutionid>.
 
 					These letter codes can be written in the SIP2 commands into the Linux terminal, but make sure when substituting values in for the fields (values inside the <>) that you do not write in the <> brackets.
 
-
 **SIP2 messages:**
-
 
 **Block patron**
 
@@ -180,7 +165,6 @@ This uses the prefix 01 for request messages and 24 for response messages.
 Request message:
 
 |image1125|
-
 
 .. note:: Card retained is a single character field of either ‘Y’ or ‘N’  which tells the ACS that a card has been retained by the self checkout machine.
 
@@ -192,9 +176,7 @@ Response message:
 
 					e.g. a Y at position 1 (the second value in the string) means that the patrons renewal privileges are denied.
 
-
 **Check-in items**
-
 
 This uses the request message (messages sent to the ACS) prefix of 09 and the response prefix of 10 (sent to the SC).
 
@@ -330,7 +312,6 @@ Response message:
 
 					* <mediatype> is a three numerical character long value. For a list of the values go to: http://multimedia.3m.com/mws/media/355361O/sip2-protocol.pdf
 
-
 **End session**
 
 This uses the request message prefix of 35 and the response message prefix of 36
@@ -413,7 +394,6 @@ Response message:
 *940* is an unsuccessful login
 *[connection closed by foreign host.]* is a unsuccessful login
 
-
 **Resend**
 
 This requests the receiving device to resend its last message.
@@ -422,7 +402,6 @@ SC -> ACS resend request is *97*
 
 ACS -> SC resend request is *96*
 
-
 **Status of the ACS and SC**
 
 This has the request message prefix of 99 and the response message prefix of 98.
@@ -430,7 +409,6 @@ This has the request message prefix of 99 and the response message prefix of 98.
 Request message:
 
 |image1150|
-
 
 .. note:: The status code is one of 3 values.
  					* 0: SC is ok
@@ -444,7 +422,6 @@ Response message:
 |image1151|
 
 .. note:: If you get the response message ‘96’ this means that the request message is not valid/understood.
-
 
 **Troubleshooting SIP2**
 
@@ -469,7 +446,6 @@ Then view the output of the sip-error.log and the sip-output.log files which giv
 
 * cat sip-error.log
 * cat sip-output.log
-
 
 **Useful links on SIP2 commands:**
 
@@ -508,7 +484,6 @@ information/actions from the organisation**
 * Do the existing usernames in Koha match the usernames that we'll be using to look them up in AD? If so, good. If not, how will we deal with duplicate users?
 
 **Steps to set up LDAP with your Koha instance**
-
 
 1 In Linux terminal navigate to the directory containing the koha-conf.xml file which will either be in:
 * /etc/koha/sites/<instance-name>/
@@ -571,14 +546,13 @@ sudo vi koha-conf.xml
 	</mapping>
 
 	</ldapserver>
-    
+
 
 5 Save and exit the koha-conf.xml file
 
 6 Check the LDAP connection works by writing in:
 
 ldapsearch -H ldaps://host.name  -s base -x  -w "" -d 1
-
 
 .. note:: Note about hostname
 					Hostname can either be a alphanumerical name or it can be the LDAP server IP address (its optional to write port number). By default the ldaps default port number is 636, whilst ldap default port number is 389
@@ -644,9 +618,7 @@ Example of the LDAP configurations:
 
  </ldapserver>
 
-
 The values in the mapping area are not always the same, and it depends on what is in your organisations LDAP database. For example some organisations do not use <userid> instead each user is only identified by the <email> field and so no <userid> is written.
-
 
 **Troubleshooting LDAP**
 

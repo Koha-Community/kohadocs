@@ -1364,7 +1364,6 @@ not on hold a local use will be recorded.
     to 'Record' you can still use your statistical patrons to record
     local use as well.
 
-
 .. _self-checkout-label:
 
 Self checkout
@@ -1442,13 +1441,12 @@ patrons must go to the librarian for help in these situations.
 Self check-in
 ------------------------------------------------
 
-In order to use the self check-in module, you must first set the :ref:
-`SelfCheckInModule <selfscheckinmodule-label>` system preference to
+In order to use the self check-in module, you must first set the
+:ref:`SelfCheckInModule <selfscheckinmodule-label>` system preference to
 'Enable'.
 
 Then, you will have to :ref:`create a patron <add-a-staff-patron-label>`
-with the :ref:`self\_checkin\_module permission
-<granular-self-check-permissions-label>`.
+with the :ref:`self\_checkin\_module permission <granular-self-check-permissions-label>`.
 
     **Note**
 
@@ -1498,8 +1496,7 @@ They can then click 'Finish' to return to the main self check-in page.
     **Note**
 
     If the patron doesn't click 'Finish', the screen will refresh after the
-    timeout period specified in the :ref:`SelfCheckInTimeout
-    <selfcheckintimeout-label>` system preference.
+    timeout period specified in the :ref:`SelfCheckInTimeout <selfcheckintimeout-label>` system preference.
 
     **Note**
 
@@ -1511,8 +1508,7 @@ You can cutomize the look of your self check-in screens by using the
 the :ref:`SelfCheckInUserJS <selfcheckinuserjs-label>` system preference.
 
 You can add content, like instructions on how to use the self check-in system
-for example, by using the :ref:`SelfCheckInMainUserBlock
-<selfcheckinmainuserblock-label>` system preference.
+for example, by using the :ref:`SelfCheckInMainUserBlock <selfcheckinmainuserblock-label>` system preference.
 
 Statistics about the transactions made through the self check-in module
 are logged into the action\_logs table in the Koha database. You can therefore

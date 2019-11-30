@@ -123,10 +123,10 @@ Once there you can add a new patron.
       beginning you can fix that here
 
    -  Sort 1 and 2 are used for statistical purposes within your library
-      
-   -  'Check for previous checkouts' is used to set the patron's personal preference 
-      regarding checking their circulation history to see if they have borrowed this 
-      item in the past. This overrides the setting of the :ref:`patron category 
+
+   -  'Check for previous checkouts' is used to set the patron's personal preference
+      regarding checking their circulation history to see if they have borrowed this
+      item in the past. This overrides the setting of the :ref:`patron category
       <adding-a-patron-category>` and of the :ref:`CheckPrevCheckout` system preference.
 
 -  Next, the library set-up section includes additional library settings
@@ -228,11 +228,11 @@ have selected:
 Quick add a patron
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your circulation desk is very busy and you want to register patron quickly, 
-you can use the 'quick add' feature. It's a shortened version of the add 
+If your circulation desk is very busy and you want to register patron quickly,
+you can use the 'quick add' feature. It's a shortened version of the add
 patron form with only a couple of necessary fields to fill out.
 
-This feature uses two system preferences: :ref:`BorrowerMandatoryField` 
+This feature uses two system preferences: :ref:`BorrowerMandatoryField`
 and :ref:`PatronQuickAddFields`. These are the two system preferences that
 control which fields are in the quick add form.
 
@@ -250,9 +250,8 @@ Then, you will be presented with a shortened form.
 
 Once the form is filled out, click on 'Save'.
 
-If you need to access the full form, you can click on 'Show full form' 
+If you need to access the full form, you can click on 'Show full form'
 above the 'Save' button.
-
 
 .. _add-a-staff-patron-label:
 
@@ -452,15 +451,15 @@ More menu in the toolbar at the top.
 
 |image1393|
 
-Using the latter the new expiry date will be calculated using the 
+Using the latter the new expiry date will be calculated using the
 enrollment period configured for the patron category of the user.
 The system preference :ref:`BorrowerRenewalPeriodBase` determines if
-the new expiry date will be calculated from the current date or from the 
+the new expiry date will be calculated from the current date or from the
 old expiry date.
 
 One advantage of using the 'Renew patron' option is that it will be logged
 as a membership renewal in the action_logs table and be visible as such
-when using the :ref:`Log viewer <log-viewer-label>` or the 
+when using the :ref:`Log viewer <log-viewer-label>` or the
 :ref:`Modificaton log <modification-log-label>` from the patron account.
 
 The renewal date of the patron account will be visible on the details tab.
@@ -745,12 +744,12 @@ permissions on a more granular level choose from these options:
       -  the item is a high demand item
 
       -  the item is on hold
-         
+
 -  manage\_checkout\_notes
-   
+
    -  Mark checkout notes as seen\/not seen
-      
-   -  The permission to manage the checkout notes written by users 
+
+   -  The permission to manage the checkout notes written by users
       through the OPAC
 
 -  manage\_restrictions
@@ -782,11 +781,11 @@ If the staff member has 'parameters' permissions they have the ability
 to perform all of these actions. If you would like to control parameter
 permissions on a more granular level choose from these options:
 
--  manage\_audio\_alerts 
+-  manage\_audio\_alerts
 
    - Manage audio alerts
 
-   - The ability to access the :ref:`Audio alerts <audio-alerts-label>` 
+   - The ability to access the :ref:`Audio alerts <audio-alerts-label>`
      configuration in the administration module.
 
 -  manage\_auth\_values
@@ -820,7 +819,7 @@ permissions on a more granular level choose from these options:
 -  manage\_classifications
 
    -  Manage classification sources and filing rules
-   
+
    -  The ability to access the :ref:`Classification sources <classification-sources-label>`
       configuration in the administration module.
 
@@ -828,7 +827,7 @@ permissions on a more granular level choose from these options:
 
    -  Manage column configuration
 
-   -  The ability the access the :ref:`Configure columns <column-settings-label>` 
+   -  The ability the access the :ref:`Configure columns <column-settings-label>`
       page in the administration module.
 
 -  manage\_didyoumean
@@ -871,10 +870,10 @@ permissions on a more granular level choose from these options:
 
    -  Manage MARC bibliographic and authority frameworks and test them
 
-   -  The ability to access the 
-      :ref:`MARC bibliographic framework <marc-bibliographic-frameworks-label>`, 
-      :ref:`Authority types <authority-types-label>`, 
-      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label> `, and 
+   -  The ability to access the
+      :ref:`MARC bibliographic framework <marc-bibliographic-frameworks-label>`,
+      :ref:`Authority types <authority-types-label>`,
+      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label> `, and
       :ref:`MARC Bibliographic framework test <marc-bibliographic-framework-test-label>`
       configuration areas in the administration module.
 
@@ -895,7 +894,7 @@ permissions on a more granular level choose from these options:
 -  manage\_patron\_attributes
 
    -  Manage extened patron attributes
-   
+
    -  The ability to access the :ref:`Patron attribute types <patron-attribute-types-label>`
       configuration in the administration module.
 
@@ -941,14 +940,14 @@ permissions on a more granular level choose from these options:
    -  Manage library transfer limits and transport cost matrix
 
    -  The ability to access the :ref:`Library transfer limits <library-transfer-limits-label>`
-      and :ref:`Transport cost matrix <transport-cost-matrix-label>` 
+      and :ref:`Transport cost matrix <transport-cost-matrix-label>`
       configuration pages in the administration module.
 
 -  manage\_usage\_stats
 
    -  Manage usage statistics settings
 
-   -  Ability to access the :ref:`Share your usage statistics <share-anonymous-usage-statistics-label>` 
+   -  Ability to access the :ref:`Share your usage statistics <share-anonymous-usage-statistics-label>`
       configuration in the administration module.
 
 -  parameters\_remaining\_permissions
@@ -962,22 +961,21 @@ permissions on a more granular level choose from these options:
 Granular borrowers permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the staff member has 'borrowers' permissions they have the ability 
-to perform all of these actions. If you would like to control borrowers 
+If the staff member has 'borrowers' permissions they have the ability
+to perform all of these actions. If you would like to control borrowers
 permissions on a more granular level choose from these options:
 
 -  edit\_borrowers
 
    -  Add, modify and view patron information
 
-   -  The ability to access the Patrons module to view patron files, 
+   -  The ability to access the Patrons module to view patron files,
       as well as adding new patrons and editing patron files
 
 -  view\_borrower\_infos\_from\_any\_libraries
 
-   -  View patron infos from any libraries. If not set the logged in user 
+   -  View patron infos from any libraries. If not set the logged in user
       could only access patron infos from its own library or group of libraries.
-
 
 .. _granular-holds-permissions-label:
 
@@ -1099,12 +1097,12 @@ options:
 -  currencies\_manage
 
    -  Manage currencies and exchange rates
-   
+
    -  The ability to access the :ref:`Currencies and exchange rates <currencies-and-exchange-rates-label>`
       configuration page.
-      
+
 -  edi\_manage
-   
+
    -  Manage EDIFACT transmissions
 
 -  group\_manage
@@ -1130,15 +1128,15 @@ options:
 -  planning\_manage
 
    -  Manage budget plannings
-      
+
 -  suggestions\_manage
-   
+
    -  Manage purchase suggestions
 
 -  vendors\_manage
 
    -  Manage vendors
-   
+
    -  Note: Vendors are used in the acquisition and the serials module.
 
 .. _granular-serials-permissions-label:
@@ -1221,8 +1219,7 @@ level choose from these options:
    -  Delete old borrowers and anonymize circulation/reading history
       (deletes borrower reading history)
 
-   -  Access to the :ref:`Anonymize patron tool
-      <patrons-anonymize-bulk-delete-label>`
+   -  Access to the :ref:`Anonymize patron tool <patrons-anonymize-bulk-delete-label>`
 
 -  edit\_calendar
 
@@ -1253,15 +1250,13 @@ level choose from these options:
 
    -  Perform batch modification of patrons
 
-   -  Access to the :ref:`Batch patron modification tool
-      <batch-patron-modification-label>`
+   -  Access to the :ref:`Batch patron modification tool <batch-patron-modification-label>`
 
 -  edit\_quotes
 
    -  Edit quotes for the quote-of-the-day feature
 
-   -  Access to the :ref:`Quote of the Day (QOTD) Editor
-      <quote-of-the-day-(qotd)-editor-label>`
+   -  Access to the :ref:`Quote of the Day (QOTD) Editor <quote-of-the-day-(qotd)-editor-label>`
 
 -  export\_catalog
 
@@ -1295,10 +1290,7 @@ level choose from these options:
 
 -  items\_batchmod\_restricted
 
-   -  Limit :ref:`batch item modification <batch-item-modification-label>` to subfields
-      defined in the
-      :ref:`SubfieldsToAllowForRestrictedBatchmod`
-      preference
+   -  Limit :ref:`batch item modification <batch-item-modification-label>` to subfields defined in the :ref:`SubfieldsToAllowForRestrictedBatchmod` preference
 
       **Note**
 
@@ -1308,7 +1300,7 @@ level choose from these options:
 
    -  Create printable labels and barcodes from catalog and patron data
 
-   -  Access to the :ref:`Label creator <label-creator-label>` and 
+   -  Access to the :ref:`Label creator <label-creator-label>` and
       :ref:`Quick label creator <quick-spine-label-creator-label>` Tools
 
 -  manage\_csv\_profiles
@@ -1328,15 +1320,13 @@ level choose from these options:
    -  Manage staged MARC records, including completing and reversing
       imports
 
-   -  Access to the :ref:`Manage Staged MARC Records Tool
-      <staged-marc-record-management-label>`
+   -  Access to the :ref:`Manage Staged MARC Records Tool <staged-marc-record-management-label>`
 
 -  marc\_modification\_templates
 
    -  Manage MARC modification templates
 
-   -  Access to the :ref:`MARC modification templates tool
-      <marc-modification-templates-label>`
+   -  Access to the :ref:`MARC modification templates tool <marc-modification-templates-label>`
 
 -  moderate\_comments
 
@@ -1457,7 +1447,6 @@ permissions on a more granular level choose from these options:
 
    -  Add, edit and delete courses
 
-
 .. _granular-plugins-permissions-label:
 
 Granular plugins permissions
@@ -1491,7 +1480,6 @@ permissions on a more granular level choose from these options:
    -  Use tool plugins
 
    -  The ability to use tool plugins
-
 
 .. _granular-lists-permissions-label:
 
@@ -1550,7 +1538,7 @@ permissions on a more granular level choose from these options:
 
       ** Note**
 
-      This permission prevents the patron from using any other OPAC 
+      This permission prevents the patron from using any other OPAC
       functionality
 
 -  self\_checkout\_module
@@ -1772,7 +1760,6 @@ system preference.
        you want to prevent patron whose membership has expired to place hold or
        renew their loans from the OPAC.
 
-
 Clubs
 '''''''''''''''''''''''''''''''''''''''''''
 
@@ -1780,7 +1767,6 @@ If you use :ref:`patron clubs <Patron-clubs-label>`, patrons will have a tab
 in their record indicating which club they are enrolled in, if any.
 
 |image1362|
-
 
 .. _fines-label:
 
@@ -1867,7 +1853,7 @@ fines' tab.
 
    -  The full amount of the fine will be populated for you in the
       "Collect from patron" box
-      
+
    -  If one or more values are defined under the PAYMENT\_TYPE authorized value
       category a dropdown selection box will be displayed to specify a custom
       payment type
@@ -1927,7 +1913,7 @@ fines' tab.
 -  Writeoff a single fine
 
    -  Click "Writeoff" next to the fine you wish to writeoff.
-   
+
    -  A confirmation box will appear to specify a total amount to writeoff.
       This box allows a partial writeoff of fines.
 
@@ -1937,9 +1923,9 @@ fines' tab.
 -  Writeoff selected fines
 
     -  Check the selection boxes next to the fines you wish to pay, click "Writeoff selected".
-    
+
     -  Click "Confirm".
-    
+
     -  The fine will be removed from outstanding fines, and displayed as written off.
 
 -  Writeoff all fines
@@ -1961,7 +1947,7 @@ fines' tab.
 
       **Note**
 
-      - You can enable email receipts for payment and writeoff transactions 
+      - You can enable email receipts for payment and writeoff transactions
         with the :ref:`UseEmailReceipts` system preference.
 
 .. _creating-manual-invoices-label:

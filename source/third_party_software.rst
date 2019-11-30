@@ -190,8 +190,6 @@ You can even undo the Import operation.
 
 And within few minutes, we have imported around 10,000 records in Koha
 
-
-
 OCLC Connexion Gateway
 --------------------------------------------
 
@@ -274,7 +272,7 @@ Setting up your OCLC desktop client
     Screenshots are OCLC Connexion Client v.2.50, Koha v.3.12
 
 To set up the OCLC Connexion desktop client to connect to Koha, go to
-Tools > Options, then choose the Export tab. 
+Tools > Options, then choose the Export tab.
 
 |image1317|
 

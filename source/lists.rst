@@ -43,7 +43,7 @@ The new list form offers several options for creating your list:
 
    -  Owner only: only you will be able to add or remove items from the list
 
-   -  Anyone seeing this list: other users will be able to add or remove 
+   -  Anyone seeing this list: other users will be able to add or remove
       items from the list
 
 A list can also be created from the catalog search results
@@ -62,8 +62,8 @@ A list can also be created from the catalog search results
       -  A private list can be seen only by you
 
       -  A public list can be seen by everybody
-         
-   -  The list will have the default sort (title) and the default modification 
+
+   -  The list will have the default sort (title) and the default modification
       permissions (owner only).
 
 Once the list is saved it will accessible from the Lists page and from
@@ -147,7 +147,7 @@ be printed or emailed to yourself or a patron.
 If you would like to enable the cart in the staff client, you need to
 set the :ref:`intranetbookbag` system preference to
 'Show.' To add things to the cart, search the catalog and select the
-items you would like added to your cart and click on the 'Add to cart' 
+items you would like added to your cart and click on the 'Add to cart'
 button.
 
 |image878|
@@ -182,6 +182,6 @@ Modifying bibliographic records via the cart
 Bibliographic records can be modified in batch from the records added to a cart.
 Select the records in the cart you wish to modify and click 'Batch modify'.
 
-You will be taken to the 'Batch record modification tool' and from there the 
-process to modify the bibliographic records is the same as if you had chosen to 
+You will be taken to the 'Batch record modification tool' and from there the
+process to modify the bibliographic records is the same as if you had chosen to
 :ref:`modify via Tools <batch-record-modification-label>`.

@@ -143,8 +143,7 @@ record the form will include the bib info).
 
 -  The 'Grace period' is the number of days before an issue is
    automatically moved from 'Expected' status to 'Late'.
-   This mechanism requires that the :ref:`SerialsUpdate.pl cron job
-   <serials-update-label>` is set up to run regularly.
+   This mechanism requires that the :ref:`SerialsUpdate.pl cron job <serials-update-label>` is set up to run regularly.
 
 -  The Staff and OPAC display options allow you to control how many
    issues appear by default on bibliographic records in the Staff Client
@@ -269,34 +268,34 @@ Click 'Save subscription' to save the information you have entered.
 Edit a subscription
 -----------------------------------
 
-To edit a subscription, click on 'Edit' and 'Edit subscription' from the 
-subscription page. This will take you back to the same form as the one 
+To edit a subscription, click on 'Edit' and 'Edit subscription' from the
+subscription page. This will take you back to the same form as the one
 used when :ref:`creating a new subscription <add-a-subscription-label>`.
 
 |image1376|
 
-You can also batch edit subscriptions. To do so, search for the subscriptions 
-you want to change. In the results, check the boxes next to the subscriptions 
+You can also batch edit subscriptions. To do so, search for the subscriptions
+you want to change. In the results, check the boxes next to the subscriptions
 to edit. The link 'Edit selected serials' will appear.
 
 |image1377|
 
-From there, you can change: 
+From there, you can change:
 
 -  the vendor
-   
+
 -  the shelving location
-   
+
 -  the library
-   
+
 -  the item type
-   
+
 -  the public note
-   
+
 -  the nonpublic note
-   
+
 -  whether or not to create an item when receiving an issue
-   
+
 -  the expiration date
 
 |image1378|
@@ -304,7 +303,6 @@ From there, you can change:
       **Note**
 
       Leave the field unchanged to keep the original values.
-
 
 .. _receive-issues-label:
 
@@ -357,7 +355,6 @@ All three of these options will open up the issue receive form:
       -  E.g., key this in its entirety if it's what you would like
          displayed: "v.69 no.3 (Mar. 2015) suppl."
 
-
 -  If you have decided to have an item record created for each issue an
    :ref:`item add form <adding-items-label>` will appear for your supplement and
    for the issue itself
@@ -369,31 +366,31 @@ All three of these options will open up the issue receive form:
 Serial collection
 -----------------------------------
 
-Each subscription has a Serial collection page available from the main Serials 
+Each subscription has a Serial collection page available from the main Serials
 menu.
 
    |image1437|
 
-From this page you can manage additional tasks related to subscription 
+From this page you can manage additional tasks related to subscription
 issues such as multi receiving and editing.
 
    |image1438|
 
-Click on the Multi receiving button to bulk receive future issues of 
-a subscription. 
-   
+Click on the Multi receiving button to bulk receive future issues of
+a subscription.
+
    |image1439|
 
--  You can choose how many issues to receive and whether to set the 
+-  You can choose how many issues to receive and whether to set the
    received date to the current date.
 
-Clicking the Generate next button will generate the next issue for you and 
+Clicking the Generate next button will generate the next issue for you and
 mark the previously expected issue as ‘Late’ automatically.
-   
-Tick the box in the Edit column for one or more previous issues and 
-then click the Edit serials button.  You can edit the numbering, dates, 
+
+Tick the box in the Edit column for one or more previous issues and
+then click the Edit serials button.  You can edit the numbering, dates,
 status and add notes.
-   
+
 .. _create-a-routing-list-label:
 
 Create a routing list
@@ -436,9 +433,9 @@ then patrons listed in the routing list will automatically be added to
 the holds list for the issue.
 
 To see a list of all of the routing lists for a specific patron is visit
-the :ref:`Routing lists tab <routing-lists-label>` on their patron record.  
-Patrons are able to see a list of their own routing lists when logged 
-into the OPAC in the :ref:`your routing lists <your-routing-lists-label:>` tab. 
+the :ref:`Routing lists tab <routing-lists-label>` on their patron record.
+Patrons are able to see a list of their own routing lists when logged
+into the OPAC in the :ref:`your routing lists <your-routing-lists-label:>` tab.
 
 .. _subscriptions-in-staff-client-label:
 
@@ -456,7 +453,7 @@ Subscription summary page in the staff client.
 |image763|
 
 If you are using the :ref:`Acquisitions <Acquisitions>` module to keep track
-of  :ref:`serial subscriptions <order-from-a-serial-subscription-label>` you 
+of  :ref:`serial subscriptions <order-from-a-serial-subscription-label>` you
 will see an extra 'Acquisition details' tab in your subscription details.
 
 |image764|
@@ -555,11 +552,11 @@ further or renew it in one click.
 
 |image774|
 
-If there is more than one subscription, you can check the boxes and 
-click on 'Renew selected subscriptions' to renew all the serials. 
-The serials will be renewed for the same amount of time as their previous 
-subscription (i.e. if the last subscription for that serial lasted one 
-year, the serial will be renewed for one year; if the last subscription 
+If there is more than one subscription, you can check the boxes and
+click on 'Renew selected subscriptions' to renew all the serials.
+The serials will be renewed for the same amount of time as their previous
+subscription (i.e. if the last subscription for that serial lasted one
+year, the serial will be renewed for one year; if the last subscription
 was for 16 issues, it will be renewed for another 16 issues).
 
 |image1356|

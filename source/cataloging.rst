@@ -14,7 +14,7 @@ able to add or remove fields and subfields so your frameworks must be
 ready before you start cataloging.
 
 You can also use OCLC Connexion to send records directly in to Koha. For
-more information on that please review the :ref:`OCLC Connexion Gateway` 
+more information on that please review the :ref:`OCLC Connexion Gateway`
 setup Appendix.
 
 -  *Get there:* More > Cataloging
@@ -27,8 +27,8 @@ Bibliographic records
 In Koha the bibliographic record contains the main information related
 to the material. This includes things like the title, author, ISBN, etc.
 This information is stored in Koha in Marc (different flavors of Marc
-are supported in Koha). Once this information is saved, :ref:`item records 
-<item-records-label>` can be attached.
+are supported in Koha). Once this information is saved,
+:ref:`item records <item-records-label>` can be attached.
 
 .. _adding-records-label:
 
@@ -51,9 +51,7 @@ basic editor
 If you would like to catalog a record using a blank template in the
 advanced editor
 
--  Enable the
-   :ref:`EnableAdvancedCatalogingEditor`
-   preference
+-  Enable the :ref:`EnableAdvancedCatalogingEditor` preference
 
 -  Click the 'Advanced editor' button
 
@@ -64,24 +62,24 @@ library in the basic or advanced editor
 
 -  Click 'New from Z39.50/SRU'
 
--  Click on the arrow to pre-select a framework for your imported your 
-   catalog record (the Default framework is used if you do not make a selection). 
+-  Click on the arrow to pre-select a framework for your imported your
+   catalog record (the Default framework is used if you do not make a selection).
 
    |image628|
 
    -  Search for the item you would like to catalog
-   
+
    **Note**
-    
-   If no results are found, try searching for fewer fields, 
+
+   If no results are found, try searching for fewer fields,
    not all Z39.50 targets can search all of the fields above.
 
 -  Search targets can be altered by using the :ref:`Z39.50 Admin <z39.50/sru-servers-label>` area.
 
--  The display of extra MARC fields and subfields can be configured via 
+-  The display of extra MARC fields and subfields can be configured via
    the :ref:`AdditionalFieldsInZ3950ResultSearch <additionalFieldsInZ3950ResultSearch-label>` preference.
-   
--  From the results' 'Action' button you can view the MARC or Card 
+
+-  From the results' 'Action' button you can view the MARC or Card
    view for the record or choose to import it into Koha.
 
    |image629|
@@ -89,7 +87,7 @@ library in the basic or advanced editor
    - If you don't find the title you need in your Z39.50 search
      results you can click the 'Try Another Search' button at the
      bottom left of your results
-   
+
      |image631|
 
 .. _basic-editor-cataloging-label:
@@ -482,7 +480,7 @@ options.
 Editing records
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To edit a record you can click the 'Actions' button and choose 'Edit biblio' 
+To edit a record you can click the 'Actions' button and choose 'Edit biblio'
 from the search results on the cataloging search page
 
 |image659|
@@ -579,8 +577,8 @@ on the detail display.
 
     **Note**
 
-    If the file is a PDF, it will be opened directly in the user's browser 
-    whereas if the file is an image or another type of file, the user will 
+    If the file is a PDF, it will be opened directly in the user's browser
+    whereas if the file is an image or another type of file, the user will
     be prompted to download it.
 
 .. _merging-records-label:
@@ -762,10 +760,8 @@ record display.
 
 |image680|
 
-If you have
-:ref:`SpineLabelShowPrintOnBibDetails`
-set to 'Display' then there will also be a link to print a quick spine
-label next to each item.
+If you have :ref:`SpineLabelShowPrintOnBibDetails` set to 'Display' then there
+will also be a link to print a quick spine label next to each item.
 
 |image681|
 
@@ -808,8 +804,7 @@ Items can be edited in several ways.
    tool <batch-item-modification-label>` where you can edit all of the items on
    this record as a batch.
 
--  You can also enable
-   :ref:`StaffDetailItemSelection` to have
+-  You can also enable :ref:`StaffDetailItemSelection` to have
    checkboxes appear to the left of each item on the detail display. You
    can then check off the items you would like to edit and click 'Modify
    selected items' at the top of the list.
@@ -910,7 +905,7 @@ Visit the bibliographic record you want to attach the item to and choose
 Simply enter the barcode for the item you want to move and click
 'Submit'
 
-If this is the last remaining item attached to a bibliographic record 
+If this is the last remaining item attached to a bibliographic record
 you will be presented with a button to delete the original host record.
 
 If you want to move all items to a new record creating only one
@@ -939,8 +934,7 @@ If you know that all of the items attached to your record are not
 currently checked out you can use the 'Delete all items' option under
 the 'Edit menu' and it will remove all items from the record.
 
-You can also enable
-:ref:`StaffDetailItemSelection` to have
+You can also enable :ref:`StaffDetailItemSelection` to have
 checkboxes appear to the left of each item on the detail display. You
 can then check off the items you would like to delete and click 'Delete
 selected items' at the top of the list.
