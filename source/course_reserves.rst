@@ -26,11 +26,11 @@ Next you will want to add a couple of new :ref:`authorized
 values <add-new-authorized-value-label>` for Departments and Terms.
 
 You may also want to create new :ref:`item types <adding-item-types-label>`,
-`collection codes <#ccode>`__ and/or `shelving
-locations <#shelvelocvals>`__ to make it clear that the items are on
-reserve to your patrons. You will also want to be sure to confirm that
-your :ref:`circulation and fine rules <circulation-and-fine-rules-label>` are right for your
-new item types (whether they be hourly or daily loans).
+`collection codes <#ccode>`__ and/or `shelving locations <#shelvelocvals>`__
+to make it clear that the items are on reserve to your patrons. You will also
+want to be sure to confirm that your
+:ref:`circulation and fine rules <circulation-and-fine-rules-label>` are right
+for your new item types (whether they be hourly or daily loans).
 
 .. _adding-courses-label:
 
@@ -90,9 +90,9 @@ for the reserve item.
 
 |image733|
 
-For each item, you can change the item type, collection code, shelving location 
-or holding library. These changes will only apply while the course is 
-active. When you deactivate the course, the items will go back to their original 
+For each item, you can change the item type, collection code, shelving location
+or holding library. These changes will only apply while the course is
+active. When you deactivate the course, the items will go back to their original
 settings.
 
 |image1357|
@@ -102,12 +102,12 @@ see them on the course page
 
 |image734|
 
-You also have the possibility of adding several items at the same time. 
-Click on 'Batch add reserves'. 
+You also have the possibility of adding several items at the same time.
+Click on 'Batch add reserves'.
 
 |image1358|
 
-Scan the barcodes of the items you want to add to the reserve and change the 
+Scan the barcodes of the items you want to add to the reserve and change the
 item type, collection code, shelving location or holding library, if needed.
 
 .. _course-reserves-in-the-opac-label:

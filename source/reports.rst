@@ -35,10 +35,10 @@ generate a report.
 Step 1: Choose the module you want to report on. This will determine
 what tables and fields are available for you to query.
 
-'Report is public' should be left to the default of 'No' in most cases 
+'Report is public' should be left to the default of 'No' in most cases
 especially if the report contains patron or other sensitive information.
-A public report can be accessed using the :ref:`JSON reports services 
-<json-reports-services-label>` by anyone and without authentication.
+A public report can be accessed using the
+:ref:`JSON reports services <json-reports-services-label>` by anyone and without authentication.
 
 |image881|
 
@@ -150,8 +150,8 @@ Fill in the form presented
    subgroups are set in the `REPORT\_SUBGROUP <#reportsubgroup>`__
    authorized value category or can be added on the fly when creating
    the report by choosing the 'or create' radio button.  Report subgroups
-   are set up with unique values in 'Authorised value', and 'Description'. 
-   The 'Description (OPAC)'' field needs to contain the authorised value for 
+   are set up with unique values in 'Authorised value', and 'Description'.
+   The 'Description (OPAC)'' field needs to contain the authorised value for
    the report group that the subgroup falls under.
 
    |image892|
@@ -162,10 +162,10 @@ Fill in the form presented
           you code should be fewer than 10 characters and should not
           include special characters or spaces.
 
--  'Report is public' should be left to the default of 'No' in most cases 
+-  'Report is public' should be left to the default of 'No' in most cases
     especially if the report contains patron or other sensitive information.
-    A public report can be accessed using the :ref:`JSON reports services 
-    <json-reports-services-label>` by anyone and without authentication.
+    A public report can be accessed using the
+    :ref:`JSON reports services <json-reports-services-label>` by anyone and without authentication.
 
 -  'Notes' will also appear on the saved reports page, this can be used
    to provide more details about the report or tips on how to enter
@@ -215,7 +215,7 @@ ask\|authorized\_value>>.
    to enter.
 
 -  The authorized\_value can be omitted if not applicable. If it
-   contains an authorized value category, 'branches', 'itemtype', 
+   contains an authorized value category, 'branches', 'itemtype',
    'categorycode', 'biblio\_framework', a list with the Koha authorized
    values will be displayed instead of a free field.
 
@@ -228,10 +228,10 @@ ask\|authorized\_value>>.
        You have to put "%" in a text box to 'leave it blank'. Otherwise,
        it literally looks for "" (empty string) as the value for the
        field.
-       For example entering nothing for: "title=<<Enter title>>" will 
+       For example entering nothing for: "title=<<Enter title>>" will
        display results with title='' (no title).
-       If you want to have to have something not mandatory, use 
-       "title like <<Enter title>>" and enter a % at run time instead 
+       If you want to have to have something not mandatory, use
+       "title like <<Enter title>>" and enter a % at run time instead
        of nothing.
 
        **Note**
@@ -248,9 +248,9 @@ List of parameters that can be used in runtime parameters
 | Parameter               | What the user sees                                | What gets inserted in query  |
 +-------------------------+---------------------------------------------------+------------------------------+
 | date                    | date picker                                       | validly formatted date       |
-| branches                | drop down of branch names                         | branch code                  |            
+| branches                | drop down of branch names                         | branch code                  |
 | itemtypes               | drop down of item type names                      | item type                    |
-| categorycode            | drop down of patron category descriptions         | borrower category code       | 
+| categorycode            | drop down of patron category descriptions         | borrower category code       |
 | biblio\_framework       | drop down of MARC bibliographic frameworks        | framework code               |
 | (auth-value-category)   | drop down of auth-value descriptions in category  | authorized value             |
 | (nothing)               | text box                                          | entered text                 |
@@ -283,7 +283,7 @@ Examples:
 
 .. **See more results**
 
-.. There is a limit of 10,000 records put on SQL statements entered in 
+.. There is a limit of 10,000 records put on SQL statements entered in
    Koha. To get around this you want to add 'LIMIT 100000' to the end
    of your SQL statement (or any other number above 10,000).
 
@@ -293,15 +293,14 @@ Examples:
 SQL report from Mana
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the "Create report from SQL", you can search Mana KB for pre-made reports 
+In the "Create report from SQL", you can search Mana KB for pre-made reports
 by clicking on "New report" and choosing "New SQL from Mana".
 
 |image1428|
 
      **Note**
 
-     This option will only appear if you've :ref:`configured Mana KB 
-     <share-with-mana-kb-label>` in the administration module.
+     This option will only appear if you've :ref:`configured Mana KB <share-with-mana-kb-label>` in the administration module.
 
 You will be prompted to enter keywords to search the knowledge base.
 
@@ -323,7 +322,7 @@ In the search results, you will see
 
 Click on "Import" to import a copy of the report in your own saved reports.
 
-You can then edit it, duplicate it, delete it, run it as you would any of 
+You can then edit it, duplicate it, delete it, run it as you would any of
 your own reports.
 
 .. _duplicate-report-label:

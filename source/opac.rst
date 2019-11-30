@@ -139,7 +139,7 @@ will take you directly to the authority record.
 
 If you have your :ref:`DisplayOPACiconsXSLT`
 preference set to 'show' you will see a material type that is determined
-by values in your fixed fields (learn more in the :ref:`XSLT material 
+by values in your fixed fields (learn more in the :ref:`XSLT material
 type icons <material-type-cataloging-guide-label>` cataloging guide.
 
 |image949|
@@ -657,7 +657,7 @@ opening your Zotero library.
 Custom RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the :ref:`RSS feeds cron job<rss-feeds-label>` you can generate an RSS feed for any SQL
+Using the :ref:`RSS feeds cron job <rss-feeds-label>` you can generate an RSS feed for any SQL
 query (for example a new acquisitions RSS feed). The cron job is run on the
 command line to produce an RSS XML document.
 
@@ -683,7 +683,7 @@ the template to produce the output file.
 
     **Important**
 
-    To use custom RSS feeds you need to turn on the :ref:`RSS cron job<rss-feeds-label>`.
+    To use custom RSS feeds you need to turn on the :ref:`RSS cron job <rss-feeds-label>`.
 
 .. _opac-self-registration-label:
 
@@ -807,10 +807,10 @@ the patrons the barcodes of the items they have checked out.
 If you would like your patrons to leave a note on an item they have checked out
 :ref:`allowcheckoutnotes` preference must be set to allow.
 
-In the patron's summary of checkouts, there will be an added column 
+In the patron's summary of checkouts, there will be an added column
 to allow the patron to leave a note (for example:  missing first page, or DVD is
 scratched).  This note once confirmed by the patron will appear to the staff
-at the bottom of the staff interface's home page, and also when the item is checked in. 
+at the bottom of the staff interface's home page, and also when the item is checked in.
 
 |image1391|
 
@@ -1178,60 +1178,60 @@ And will receive confirmation of their request.
 Your routing lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are named as a recipient on 
-any :ref:`serial routing lists <create-a-routing-list-label:>` you will see them 
-listed here. The following note is displayed "You are subscribed to the 
-routing lists for following serial titles. If you wish to make changes, 
-please contact the library". 
+If you are named as a recipient on
+any :ref:`serial routing lists <create-a-routing-list-label:>` you will see them
+listed here. The following note is displayed "You are subscribed to the
+routing lists for following serial titles. If you wish to make changes,
+please contact the library".
 
 .. _your-interlibrary-loan-requests-label:
 
 Your interlibrary loan requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons 
-will have the option to make ILL requests when logged in to their OPAC 
+If your library has the :ref:`ILLModule` preference set to ‘Enable’ patrons
+will have the option to make ILL requests when logged in to their OPAC
 account.  From here they can view their existing requests and place new ones.
 
 |image1373|
 
-To place a new interlibrary loan request click on ‘Create a new request’ and 
-choose a request form. 
+To place a new interlibrary loan request click on ‘Create a new request’ and
+choose a request form.
 
 |image1374|
 
     **Note**
 
-    The options displayed are dependent on your ILL configuration.  See the 
-    ILL backends wiki page at https://wiki.koha-community.org/wiki/ILL_backends 
+    The options displayed are dependent on your ILL configuration.  See the
+    ILL backends wiki page at https://wiki.koha-community.org/wiki/ILL_backends
     further explanation.
 
     **Note**
 
-    If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance` 
-    preference the text displays here and you need to click ‘Yes’ to accept 
+    If you have entered copyright text in the :ref:`ILLModuleCopyrightClearance`
+    preference the text displays here and you need to click ‘Yes’ to accept
     before continuing.
-    
-Complete the publication details as fully as possible. Depending on the 
-form in use you may see the option to add Custom fields for additional 
-information such as notes.  Destination branch is a required field, this 
+
+Complete the publication details as fully as possible. Depending on the
+form in use you may see the option to add Custom fields for additional
+information such as notes.  Destination branch is a required field, this
 is the branch you would like the request to be sent to.
 
 |image1375|
 
 Click on 'Create' to submit your request to the library for processing.
 
-Your submitted request will be listed with a status of ‘New request’.  Once 
+Your submitted request will be listed with a status of ‘New request’.  Once
 processed the status will be updated to ‘Requested’.
 
 Click on ‘View’ to make changes or cancel your request.
 
-You cannot edit the form details but you can add a note to request a 
-modification and then click on ‘Submit modifications’ at the bottom of 
-the screen.  Your modification will be sent to the library for processing. 
+You cannot edit the form details but you can add a note to request a
+modification and then click on ‘Submit modifications’ at the bottom of
+the screen.  Your modification will be sent to the library for processing.
 
-For new requests you will also have the option to ‘Request cancellation’. 
-Your request will be updated with the status ‘Cancellation requested’ and 
+For new requests you will also have the option to ‘Request cancellation’.
+Your request will be updated with the status ‘Cancellation requested’ and
 can then be removed by library staff.
 
 Purchase suggestions

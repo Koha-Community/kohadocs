@@ -8,7 +8,6 @@ Author: The Koha Community
 .. toctree::
    :maxdepth: 2
 
-
    intro
    installation
    systempreferences
@@ -37,5 +36,3 @@ Author: The Koha Community
    links
    faq
    license
-
-  

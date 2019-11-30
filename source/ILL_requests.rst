@@ -3,7 +3,7 @@
 ILL requests / Interlibrary loans
 ===================================
 
-The ILL (Interlibrary loans) requests module adds the ability to request and manage loans or copies of material from external sources.  Patrons submit a request form via the OPAC for review and processing by library staff.  Alternatively staff can place requests themselves from the staff client.  
+The ILL (Interlibrary loans) requests module adds the ability to request and manage loans or copies of material from external sources.  Patrons submit a request form via the OPAC for review and processing by library staff.  Alternatively staff can place requests themselves from the staff client.
 
 .. _setup-label:
 
@@ -12,13 +12,13 @@ Set up
 
 Before using the ILL requests module you will want to make sure that you have completed all of the set up.
 
-The ILL requests module can be configured for different types of requests and workflows known as backends.   Currently available backends are documented on the Koha community wiki at https://wiki.koha-community.org/wiki/ILL_backends.  You will need to configure at least one backend. 
+The ILL requests module can be configured for different types of requests and workflows known as backends.   Currently available backends are documented on the Koha community wiki at https://wiki.koha-community.org/wiki/ILL_backends.  You will need to configure at least one backend.
 
-Next, set your system preferences.  
+Next, set your system preferences.
 
--  Set the :ref:`ILLModule` preference to ‘Enable’.  
+-  Set the :ref:`ILLModule` preference to ‘Enable’.
 
--  If you wish to include a copyright declaration in your ILL workflow you can this in the :ref:`ILLModuleCopyrightClearance` preference. 
+-  If you wish to include a copyright declaration in your ILL workflow you can this in the :ref:`ILLModuleCopyrightClearance` preference.
 
 Library staff responsible for ILL requests need the following permission set on their account: *ill: Create and modify Interlibrary loan requests*.
 
@@ -55,21 +55,21 @@ Click on ‘Create’ and you will be shown a Request details summary page.  Cli
 
 |image1389|
 
-Click ‘Confirm request’ again to create your request. 
+Click ‘Confirm request’ again to create your request.
 
 .. _viewing-ILL-requests-label:
 
 Viewing ILL requests
 ------------------------
 
-From the main ILL requests screen you can see all of your ILL requests.  You 
-can also click on the ‘View requests’ button at any time.  
+From the main ILL requests screen you can see all of your ILL requests.  You
+can also click on the ‘View requests’ button at any time.
 
 |image1435|
 
-There is a large amount of data available in the Requests table so it is 
+There is a large amount of data available in the Requests table so it is
 advisable to make use of column visibility to view only the information you need.
-The first half of the table displays data related to the ILL item itself 
+The first half of the table displays data related to the ILL item itself
 such as title, volume, page numbers.
 
 |image1436|
@@ -82,7 +82,7 @@ and comments.
 Managing ILL requests
 ------------------------
 
-Click on the ‘Manage request’ button in the final column. Depending on the current 
+Click on the ‘Manage request’ button in the final column. Depending on the current
 status of the request you may see some or all of the following options:
 
 -  Edit request
@@ -99,28 +99,28 @@ status of the request you may see some or all of the following options:
    -  fully delete the request.  Details of deleted requests are not retained in Koha.
 -  Revert request
 
-   -  following a status of ‘Requested’ or ‘Requested from partners’ library 
+   -  following a status of ‘Requested’ or ‘Requested from partners’ library
       staff can cancel the request from the external source.  The status reverts to ‘New’
 -  Mark completed
 
-   -  used when the ILL request has been fulfilled. 
+   -  used when the ILL request has been fulfilled.
 -  Edit item metadata
 
-   -  Depending on the backend used for the request you may be able to edit, 
-      add or delete some or all of the request metadata.  For example, if the 
-      metdata has originated from a requestor using the FreeForm backend this 
+   -  Depending on the backend used for the request you may be able to edit,
+      add or delete some or all of the request metadata.  For example, if the
+      metdata has originated from a requestor using the FreeForm backend this
       may need to be edited, whereas metadata from an external recognised source
       such as BLDSS should not.
 -  Display supplier metadata
 
-   -  Displays any extra metadata that might have been provided by your ILL 
-      supplier that has not been included in the standard request fields. 
+   -  Displays any extra metadata that might have been provided by your ILL
+      supplier that has not been included in the standard request fields.
 -  Comments
 
-   -  It is possible to add comments to an ILL request and these can be used 
-      by ILL staff to keep track of work undertaken.  Comments are read only and are 
-      stored in chronological order.  They display the borrower details and date of the 
-      comment.  If present, the number of comments is displayed in the List 
+   -  It is possible to add comments to an ILL request and these can be used
+      by ILL staff to keep track of work undertaken.  Comments are read only and are
+      stored in chronological order.  They display the borrower details and date of the
+      comment.  If present, the number of comments is displayed in the List
       requests view.
 
 Request statuses
@@ -130,8 +130,8 @@ The full list of ILL statuses are:
 
 -  New request
 -  Requested
--  Requested from partners 
--  Request reverted 
+-  Requested from partners
+-  Request reverted
 -  Cancellation requested – a patron has requested cancellation from the OPAC.
 -  Completed
 
@@ -144,8 +144,8 @@ If you have a network of partner libraries which permit ILL requests you can man
 
 -  You will need to set up a :ref:`patron category <patron-categories-label>` with the code ILLLIBS.
 
--  You will need to create a patron account with this category for each partner library.  
+-  You will need to create a patron account with this category for each partner library.
 
 -  Each library must have an email address as this will be the mechanism for sending the inter-library loan request.
 
-You can now use the 'Place request with partners' option when processing requests. 
+You can now use the 'Place request with partners' option when processing requests.

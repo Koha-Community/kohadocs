@@ -23,7 +23,6 @@ And your authority search history.
 
 |image1064|
 
-
 .. _advanced-search-prefixes-label:
 
 Advanced Search Prefixes
@@ -326,7 +325,7 @@ appear above the results.
 
 |image1329|
 
-To the left, you will find filters, or facets, to refine your search. Currently 
+To the left, you will find filters, or facets, to refine your search. Currently
 available facets include:
 
 -  Availability
@@ -339,8 +338,7 @@ available facets include:
 
     **Note**
 
-    This depends on your setting for the :ref:`DisplayLibraryFacets 
-    <displaylibraryfacets-label>` system preference.
+    This depends on your setting for the :ref:`DisplayLibraryFacets <displaylibraryfacets-label>` system preference.
 
 -  Item types
 
@@ -357,7 +355,7 @@ available facets include:
 When there are more than five facets in a category, a 'Show more' link
 will appear. You can control the display of the facets using the following
 systempreferences: :ref:`displayFacetCount <displayfacetcount-label>`,
-:ref:`isplayLibraryFacets <displaylibraryfacets-label>`,
+:ref:`DisplayLibraryFacets <displaylibraryfacets-label>`,
 :ref:`FacetLabelTruncationLength <facetlabeltruncationlength-label>`,
 :ref:`FacetMaxCount <facetmaxcount-label>`,
 :ref:`maxRecordsForFacets <maxrecordsforfacets-label>`,
@@ -375,7 +373,7 @@ on selected records.
 -  'Add to cart': adds selected record(s) to the :ref:`cart <cart-label>`.
 
     **Note**
-    
+
     The :ref:`intranetbookbag <intranetbookbag-label>` system preference needs to be
     set to 'Show' in order for that button to appear.
 
@@ -385,7 +383,7 @@ on selected records.
 
 -  'Browse selected records': goes to the detailed record page of the selected record(s).
    Clicking on 'Next' or 'Previous' from the detailed record will bring you to the next
-   selected record. 
+   selected record.
 
     **Note**
 
@@ -399,16 +397,14 @@ on selected records.
 
     **Note**
 
-    By default your search results will be sorted based on your :ref:
-    `defaultSortField and defaultSortOrder <defaultsortfield-&-defaultsortorder-label>` 
-    system preferences values.
+    By default your search results will be sorted based on your :ref:`defaultSortField and defaultSortOrder <defaultsortfield-&-defaultsortorder-label>` system preferences values.
 
 |image1330|
 
-Under each title on your results list a series of values from your leader 
-will appear. It is important to note that this has nothing to do with the 
-item types or collection codes you have applied to your records, this data 
-is all pulled from your fixed fields. This can be turned on or off with the 
+Under each title on your results list a series of values from your leader
+will appear. It is important to note that this has nothing to do with the
+item types or collection codes you have applied to your records, this data
+is all pulled from your fixed fields. This can be turned on or off with the
 :ref:`DisplayIconsXSLT <displayiconsxslt-label>` system preference.
 
 At the bottom, under each record, there are more action links:
@@ -425,21 +421,21 @@ At the bottom, under each record, there are more action links:
 
     **Note**
 
-    'OPAC view' needs the :ref:`OPACBaseURL <opacbaseurl-label>` system preference to 
+    'OPAC view' needs the :ref:`OPACBaseURL <opacbaseurl-label>` system preference to
     be properly set.
 
 To the right of each record are the holdings information and availability.
 
     **Note**
 
-    Even if you filtered on one library location all locations that hold the item 
+    Even if you filtered on one library location all locations that hold the item
     will appear on the search results.
 
     **Important**
 
-    An item’s hold status doesn’t not affect whether or not the item is 'available' 
-    until the item is in 'waiting' status. Items with on-shelf holds will show as 
-    available until a librarian has pulled them from the shelf and checked the item 
+    An item’s hold status doesn’t not affect whether or not the item is 'available'
+    until the item is in 'waiting' status. Items with on-shelf holds will show as
+    available until a librarian has pulled them from the shelf and checked the item
     in make it show 'waiting'.
 
 .. _item-searching-label:

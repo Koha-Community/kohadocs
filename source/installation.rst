@@ -20,7 +20,6 @@ The web installer starts with a login screen for you to enter the database admin
 
 The installer will then create the tables and fill the tables with data. The next step in the process is to set up a few mandatory first use settings, via the Onboarding tool.
 
-
 What is the Koha Onboarding tool?
 _________________________________
 
@@ -30,7 +29,6 @@ If you installed sample data for library, patron category, and/or item type then
 
 You will, however, always have to create a patron (to log into the staff interface at the end of the onboarding tool) and a circulation rule.
 
-
 Web Installer
 ====================
 
@@ -39,11 +37,9 @@ ________________________
 
 **Web Installer login**
 
-
 This login screen is the first screen that appears when installing Koha.
 
    |image1152|
-
 
    Web Installer login
 
@@ -55,12 +51,10 @@ This login screen is the first screen that appears when installing Koha.
 
 4. *Log in*: Select this button to login
 
-
 Language picker
 ___________________
 
 **Installer Start screen**
-
 
 This is the first screen of the web installer.
 
@@ -75,7 +69,6 @@ This is the first screen of the web installer.
 
 2. Click the *Continue to the next step* button to load the next stage of the web installer.
 
-
 Installer Perl Modules Installed
 ___________________________________
 
@@ -85,25 +78,19 @@ This screen tells you that the installer has all the dependencies it needs, to c
 
    Perl modules installed
 
-
 Click on the *Continue to the next step* button to load the next stage of the web installer.
-
 
 Database Settings
 __________________________
 
 This screen informs you of the database settings and asks you to confirm them by clicking the *Continue to the next step* button.
 
-
 .. note::
   For the majority of users these settings should be correct, if not then you should contact your support provider.
-
-
 
 |image1168|
 
 Database settings
-
 
 1. **Database Settings:** Check these database settings are correct.
 2. Click the *Continue to the next step* button to confirm the database settings
@@ -111,7 +98,6 @@ Database settings
 ----------------------------------------------------------------------------------------
 
 **Connection Established**
-
 
 After you click the *Next* button the database connection is confirmed:
 
@@ -123,8 +109,6 @@ Database connection established
 2. Click the *Continue to the next step* button to load the next stage
 
 .. Note:: If you have database connection difficulties here, the installer will not proceed. Double check the connection information in your koha-conf.xml file, and verify that the permissions and credentials on the database itself are correct.
-
-
 
 Ready to fill tables with data
 ____________________________________
@@ -140,7 +124,6 @@ Click the *Continue to the next step* button to load the next stage
 .. note::
   This step can take some time. Please be patient.
 
-
 Database tables created
 __________________________
 
@@ -149,7 +132,6 @@ __________________________
    Database tables created
 
 Click the *Continue to the next step* button
-
 
 Ready for basic configurations
 __________________________________
@@ -161,7 +143,6 @@ This screen leads onto installing basic configurations necessary to use Koha.
    Ready for basic configurations
 
 Click the *Continue to the next step* button
-
 
 Select MARC flavour
 __________________________________
@@ -178,8 +159,6 @@ You must choose your MARC flavour (format you want the bibliographic (catalog) r
 
 3. Click the *Continue to the next step* button to confirm your choices
 
-
-
 MARC21 and UNIMARC setup
 ___________________________
 
@@ -187,7 +166,6 @@ ___________________________
 
 MARC21 setup
 _______________
-
 
 |image1174|
 
@@ -253,20 +231,15 @@ MARC21 setup
 
 30. Click the *Import* button to install the default and selected data values.
 
-
-
 Unimarc setup
 __________________________________
-
 
 There are only 2 data values in the Unimarc advanced setup which are unique:
 
 * Authority Structure for UNIMARC in English
 * Default UNIMARC bibliographic framework in English
 
-
 .. note::  Optional values are the same for both Unimarc and MARC21, therefore their definition will not be repeated.
-
 
 |image1175|
 
@@ -277,9 +250,6 @@ Unimarc setup
 2. *Default UNIMARC bibliographic framework in English:* In the previous screen you clicked to use the Unimarc flavour, now by selecting this option you are confirming you want to use that framework.
 
 3. Click the *Import* button to install the sample data
-
-
-
 
 Selected data added
 ____________________
@@ -300,8 +270,6 @@ After you have clicked the *Import* button in either the MARC21 or UNIMARC setup
 
 5. Click the *Set up some of Koha's basic requirements* button to go to a redirection screen, which in turn will take you to the onboarding tool.
 
-
-
 Redirect to onboarding tool
 __________________________________
 
@@ -311,10 +279,8 @@ If you wait for around 10 seconds this screen should redirect you to the onboard
 
    Redirect to onboarding tool
 
-
 .. note::
   If after waiting you are not redirected select the link pointed out by the arrow in the above screenshot.
-
 
 Onboarding tool
 ====================
@@ -329,12 +295,10 @@ A library in Koha is the digital representation of a "physical" place. More libr
 
    Create library
 
-
 1. **Library code:** code consisting of up to 10 letters.
 2. **Name:** Official name of the library, as it is commonly known.
 3. **Create more libraries:** If more libraries are required, or changes need to be made to this freshly created library, go to Administration->Libraries and groups
 4. Click the *Submit* button to create a library.
-
 
 For example:
 
@@ -342,10 +306,7 @@ For example:
 
    Create library example
 
-
 **Library code:** The regular expression that filters the acceptable inputs for library code only accepts up to 10 letters.
-
-
 
 Create a patron category
 _____________________________
@@ -389,9 +350,6 @@ For example:
 
    |image1156|
 
-
-
-
 Create a patron
 ___________________
 
@@ -427,14 +385,11 @@ You will need to input/select:
 12. **Path to create patron:** Patron's can be created or altered by going to Patrons->New patron
 13. **Assign patron permissions:** After creating a patron go More->Set permissions to assign permissions.
 
-
 For example:
 
    |image1158|
 
    Create a patron example
-
-
 
 Create a Item type
 ______________________
@@ -464,11 +419,7 @@ For example:
 
    Create item type example
 
-
 .. note:: The regular expression filtering Item Type code input will only accept letters.
-
-
-
 
 Create a Circulation Rule
 ______________________________
@@ -480,7 +431,6 @@ Here you are creating a rule which applies the pre-defined organisational decisi
    |image1161|
 
    Create circulation rule
-
 
 .. note::
   Numbers are the only valid input for all input fields in this form.
@@ -498,8 +448,6 @@ Here you are creating a rule which applies the pre-defined organisational decisi
 11. **Path to create circulation rule:** Circulation rules can be created or altered by going to Administration -> Circulation and fines rules
 12. Click the *Submit* button to create the circulation rule.
 
-
-
 Onboarding tool complete
 ____________________________
 
@@ -507,12 +455,9 @@ This page tells you if the circulation rule was created successfully, and that t
 
     |image1162|
 
-
 1. **Web installer message:** Indicates if the web installation is complete
 2. **Circulation rule creation message:** Indicates if the circulation rule was created successfully.
 3. **Start using Koha:** Click to login to Koha using the Koha administrator account you created using the onboarding tool.
-
-
 
 Login to access staff interface
 _________________________________
@@ -534,17 +479,14 @@ For example:
 
    Login example
 
-
 Staff interface
 ____________________
-
 
 The staff interface should now appear
 
    |image1165|
 
    Staff interface
-
 
 .. seealso::
   For more information about how to use the staff interface, please visit `<https://koha-community.org/documentation/>`_

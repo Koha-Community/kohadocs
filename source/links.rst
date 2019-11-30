@@ -106,7 +106,7 @@ Reports Related
 Installation Guides
 ---------------------------------------
 
--  Installing Koha on Debian - 
+-  Installing Koha on Debian -
    https://wiki.koha-community.org/wiki/Koha_on_Debian
 
 -  Installing Koha on Raspberry Pi 2 -

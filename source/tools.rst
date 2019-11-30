@@ -74,9 +74,9 @@ useful for tracking summer reading programs, book clubs and other such clubs.
 
     **Important**
 
-    Staff will need the :ref:`clubs permissions<granular-clubs-permissions-label>`
+    Staff will need the :ref:`clubs permissions <granular-clubs-permissions-label>`
     to edit clubs, templates and enroll patrons. To learn how to set patron
-    permissions, go to the :ref:`patron permissions section<setting-patron-permissions-label>`
+    permissions, go to the :ref:`patron permissions section <setting-patron-permissions-label>`
     of this manual.
 
 Creating a new club template
@@ -1603,7 +1603,6 @@ can also be used when creating :ref:`patron cards <patron-card-creator-label>`.
     is recommended that the image be 200x300 pixels, but smaller images
     will work as well.
 
-
 .. _catalog-label:
 
 Catalog
@@ -1714,23 +1713,23 @@ records or authority records and allow you to delete all those records
 and any items attached to them in a batch.
 
 First you need to tell the tool if you're deleting bibliographic or
-authority records. 
+authority records.
 
-Next, you can 
+Next, you can
 
   -  load a file with biblionumbers or authids;
 
      |image1231|
 
-  -  use a :ref:`list<lists-label>`, or;
+  -  use a :ref:`list <lists-label>`, or;
 
      |image1442|
 
-  -  enter the list of numbers in the box provided. 
+  -  enter the list of numbers in the box provided.
 
      |image1443|
 
-Once you submit the form you will be presented with a summary of the records 
+Once you submit the form you will be presented with a summary of the records
 you are trying to delete.
 
 |image1232|
@@ -1762,12 +1761,12 @@ When you visit the tool it will ask you:
 
       |image303|
 
-   -  You can use a :ref:`list<lists-label>`, or;
+   -  You can use a :ref:`list <lists-label>`, or;
 
       |image1440|
 
    -  Enter the numbers (one per line) in the box provided.
-      
+
       |image1441|
 
 -  Finally choose the MARC modification template you'd like to use to
@@ -2543,7 +2542,6 @@ for rota maintanence.
 Description: One may optionally add an expanded description of the rota for
 display in summary views.
 
-
 Managing rota stages
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -2554,7 +2552,6 @@ Stages may be edited, added, removed and re-ordered at any time from this page.
 Library: The library the item will be at during this stage
 
 Duration: The amount of time the item should stage at this stage
-
 
 Managing rota items - Tool view
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

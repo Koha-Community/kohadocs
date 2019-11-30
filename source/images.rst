@@ -1421,4 +1421,3 @@
 .. |image1441| image:: images/tools/batchbibmod/batchbibmod3.png
 .. |image1442| image:: images/tools/batchrecorddel/batchrecorddelete2.png
 .. |image1443| image:: images/tools/batchrecorddel/batchrecorddelete3.png
-

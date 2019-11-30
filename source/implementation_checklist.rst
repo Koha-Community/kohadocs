@@ -1,6 +1,5 @@
 .. include:: images.rst
 
-
 Implementation Checklist
 ========================
 

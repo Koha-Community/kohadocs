@@ -337,7 +337,6 @@ that it will relabel 'Collection' to 'Color'
         $('#item_ccode').text("Color");
         });
 
-
 .. _koha-search-on-your-site-label:
 
 Using Koha as a Content Management System (CMS)
@@ -474,7 +473,6 @@ remove the following code from your pages.tt template.
                           </table>
                           </div>
                          [% END %]
-
 
 .. _troubleshooting-label:
 

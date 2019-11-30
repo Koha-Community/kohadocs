@@ -3,7 +3,7 @@
 Web Services
 ============
 
-Koha provides a number of APIs allowing access to it's data and functions. 
+Koha provides a number of APIs allowing access to it's data and functions.
 
 .. _oai-pmh-label:
 
@@ -142,7 +142,6 @@ information about the default settings of the SRU server.
             </map>
             </index>
 
-
 .. _search-label:
 
 Search
@@ -206,7 +205,6 @@ defined as:
                   # "first in field"
                    position.any                = 3=3 6=1
                      # "any position in field"
-
 
 So as an example if I want "coral" to be at the beginning of the title,
 I can do this query :
@@ -291,9 +289,9 @@ this:
 ILS-DI
 ------
 
-As of writing, the self documenting ILS-DI is the most complete interface and 
+As of writing, the self documenting ILS-DI is the most complete interface and
 after it has been enabled as described in the :ref:`ils-di-label` system
-preferences section the documentation should be available at 
+preferences section the documentation should be available at
 https://YOURKOHACATALOG/cgi-bin/koha/ilsdi.pl
 
 .. _json-reports-services-label:
@@ -322,13 +320,13 @@ The reports can be accessed using the following URLs:
 
 There are also some additional parameters available:
 
--  Instead of accessing the report by REPORTID you can also use the 
+-  Instead of accessing the report by REPORTID you can also use the
    report's name:
 
    -  .../cgi-bin/koha/svc/report?name=REPORTNAME
 
 -  For easier development there is also an option to generate an
-   annotated output of the data. It will generate an array of hashes 
+   annotated output of the data. It will generate an array of hashes
    that include the field names as keys.
 
    -  .../cgi-bin/koha/svc/report?name=REPORTNAME&annotated=1
@@ -338,9 +336,9 @@ There are also some additional parameters available:
 Versioned RESTful API Effort
 ----------------------------
 
-There is an ongoing effort to converge the APIs above into a single versioned 
-set of modern RESTful endpoints documented using the OpenAPI standard and 
-available by default under https://YOURKOHACATALOG/api/v1/ 
+There is an ongoing effort to converge the APIs above into a single versioned
+set of modern RESTful endpoints documented using the OpenAPI standard and
+available by default under https://YOURKOHACATALOG/api/v1/
 
 .. _oauth2-client-credentials-grant-label:
 
@@ -355,27 +353,27 @@ here <https://auth0.com/docs/api-auth/grant/client-credentials>`_.
 API key management interface for patrons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In order for API keys to be create for patrons, the system preference 
+In order for API keys to be create for patrons, the system preference
 :ref:`RESTOAuth2ClientCredentials` **must** be enabled for the option to appear
 in a patron record.
 
 1. Navigate to a patron record and select *More > Manage API keys*
 
   |image1336|
-  
-2. If no API keys exist for a patron there will be a message prompting to 
+
+2. If no API keys exist for a patron there will be a message prompting to
    generate a client id/secret pair
 
   |image1337|
-  
+
 3. Enter a description for the client id/secret pair and click Save
 
   |image1338|
-  
+
 4. Koha will generate a client id/secret pair for use to connect to Koha from
    other third-party systems as an authenticated client
-   
+
    |image1339|
-   
-5. Clicking the Revoke button next to an API credential pair will render the 
+
+5. Clicking the Revoke button next to an API credential pair will render the
    specific credential pair inactive until reactivated

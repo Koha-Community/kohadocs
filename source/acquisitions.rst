@@ -82,17 +82,17 @@ The vendor add form is broken into three pieces
 
    -  None of these fields are required, they should only be entered if
       you want to keep track of your contact's information within Koha
-      
+
         -  Primary acquisitions contact: check this box if this person is your primary contact regarding acquisitions from this vendor
-        
+
         -  Primary serials contact: check this box if this person is your primary contact regarding serial acquisitions from this vendor
-        
+
         -  Contact when ordering? check this box if you want to be able to send your orders by email directly to this person
-        
+
         -  Contact about late orders? check this box if you want to be able to send your acquisitions claims by email directly to this person
-        
+
         -  Contact about late issues? check this box if you want to be able to send your serials claims by email directly to this person
-        
+
    -  You can add more than one contact per vendor by clicking on the 'Add another contact' button
 
 -  The final section is for billing information
@@ -196,12 +196,12 @@ suggestions via the staff client either for the library or :ref:`on the
 patron's behalf <purchase-suggestions-label>` from their record. Depending on
 your settings in the :ref:`suggestion` system
 preference, patrons may also be able to make purchase suggestions via
-the OPAC. 
+the OPAC.
 
     **Note**
 
-    You need to be logged in as a staff member with the 
-    suggestions_manage :ref:`acquisitions permission <granular-acquisitions-permissions-label>` 
+    You need to be logged in as a staff member with the
+    suggestions_manage :ref:`acquisitions permission <granular-acquisitions-permissions-label>`
     in order to view and work with purchase suggestions.
 
 When a suggestion is waiting for library review, it will
@@ -339,8 +339,8 @@ And click the 'New basket' button to the right of the vendor name.
 
     **Note**
 
-    You can also add to an existing basket by clicking the arrow next to 
-    the 'View' button at the far right of each basket's information in 
+    You can also add to an existing basket by clicking the arrow next to
+    the 'View' button at the far right of each basket's information in
     the results table, and choosing 'Add to basket'.
 
     |image1406|
@@ -363,14 +363,14 @@ about the order:
 
 -  If you're ordering standing items (items which arrive regularly) then
    you will want to check the 'Orders are standing' box for this basket.
-   
-   -  Note that any one basket cannot contain both firm and standing orders. 
 
--  You can choose to create items either upon placing the order, upon 
-   receiving the order, or upon cataloging the item. If you choose an 
-   option other than the default, it will apply only to this basket. 
-   The default is set by the :ref:`AcqCreateItem <acqcreateitem-label>` 
-   system preference.  
+   -  Note that any one basket cannot contain both firm and standing orders.
+
+-  You can choose to create items either upon placing the order, upon
+   receiving the order, or upon cataloging the item. If you choose an
+   option other than the default, it will apply only to this basket.
+   The default is set by the :ref:`AcqCreateItem <acqcreateitem-label>`
+   system preference.
 
 If you have :ref:`added contracts <add-a-contract-label>` to the vendor
 you're ordering from, you will also have an option to choose which
@@ -382,7 +382,7 @@ When finished, click 'Save'.
 
 |image808|
 
-Once your basket is created, click on 'Add to basket' you are presented 
+Once your basket is created, click on 'Add to basket' you are presented
 with several options for adding items to the order.
 
 |image1407|
@@ -433,9 +433,9 @@ Order from a purchase suggestion
          |image813|
 
    -  Orders added to the basket in this way will notify the patron via
-      email that their suggestion has been ordered (with the 'ORDERED' notice 
-      in Tools > :ref:`Notices & slips <existing-notices-&-slips-label>`) and will 
-      update the patron's ':ref:`your purchase suggestions 
+      email that their suggestion has been ordered (with the 'ORDERED' notice
+      in Tools > :ref:`Notices & slips <existing-notices-&-slips-label>`) and will
+      update the patron's ':ref:`your purchase suggestions
       <your-purchase-suggestions-label>`' page in the OPAC.
 
 Order from a serial subscription
@@ -473,16 +473,16 @@ Order from a new (empty) record
       necessary details about the item you are ordering.
 
       **Note**
-      
+
       If the default form does not have catalog details fields necessary to
       place an order, enable the :ref:`UseACQFrameworkForBiblioRecords` preference
-      which will allow the ACQ :ref:`MARC framework <marc-bibliographic-frameworks-label>` 
+      which will allow the ACQ :ref:`MARC framework <marc-bibliographic-frameworks-label>`
       to customize the display of fields when ordering.
 
 Duplicate orders (order from existing orders)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  You can duplicate an existing order line by choosing the 'From existing 
+-  You can duplicate an existing order line by choosing the 'From existing
    orders (copy)' option.
 
    -  You will be presented with a search form to search your existing orders.
@@ -514,7 +514,7 @@ Order from an external source
       |image820|
 
       -  From the warning, you can choose to order another copy on the
-         existing bibliographic record, create a new bibliographic 
+         existing bibliographic record, create a new bibliographic
          record, or cancel your order of this item.
 
    -  In the order form that pops up, you will not be able to edit the
@@ -525,20 +525,21 @@ Order from an external source
 Order from a new file
 ^^^^^^^^^^^^^^^^^^^^^
 
--  If your vendor sent you a record file (a .mrc file for example), you can 
-   add orders using the records in that file. Choose the 'From a new file' 
+-  If your vendor sent you a record file (a .mrc file for example), you can
+   add orders using the records in that file. Choose the 'From a new file'
    option.
 
      **Note**
 
-     Note that you need the stage_marc_import :ref:`tool permission <granular-tools-permissions-label>` 
+     Note that you need the stage_marc_import
+     :ref:`tool permission <granular-tools-permissions-label>`
      in order to be able order from a new file.
 
-    - You will be taken to the :ref:`Stage MARC records for import 
-      <stage-marc-records-for-import-label>` tool. Stage your file as described 
-      in that section. 
+    - You will be taken to the :ref:`Stage MARC records for import
+      <stage-marc-records-for-import-label>` tool. Stage your file as described
+      in that section.
 
-    - Once the files are staged, you can click on the 'Add staged files to basket' 
+    - Once the files are staged, you can click on the 'Add staged files to basket'
       button.
 
       |image1410|
@@ -559,7 +560,7 @@ Order from a new file
       |image1283|
 
    -  If no information is imported in the fund information from the MARC
-      with the :ref:`MarcFieldsToOrder` preference, 
+      with the :ref:`MarcFieldsToOrder` preference,
       the 'Default accounting details' tab can be used to
       apply values related to the accounting.
 
@@ -568,9 +569,9 @@ Order from a new file
 Order from a staged file
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
--  This option is the same as the previous one, but in this case, your file has already 
-   been :ref:`staged <stage-marc-records-for-import-label>`. Whether you choose to 'order 
-   from a new file' or 'order from a staged file' will depend on your acquisitions 
+-  This option is the same as the previous one, but in this case, your file has already
+   been :ref:`staged <stage-marc-records-for-import-label>`. Whether you choose to 'order
+   from a new file' or 'order from a staged file' will depend on your acquisitions
    workflow or your :ref:`permissions <patron-permissions-label>`.
 
    -  Once you click on 'From a staged file', you will get a list of all the
@@ -599,7 +600,7 @@ Order from a staged file
       |image1283|
 
    -  If no information is imported in the fund information from the MARC
-      with the :ref:`MarcFieldsToOrder` preference, 
+      with the :ref:`MarcFieldsToOrder` preference,
       the 'Default accounting details' tab can be used to
       apply values related to the accounting.
 
@@ -651,7 +652,7 @@ appear above the form and then you can enter your next item the same way
 
 |image824|
 
-If you are ordering several items, you can click on the 'Add multiple items' 
+If you are ordering several items, you can click on the 'Add multiple items'
 instead of adding them one by one. This will ask you how many items you want to add.
 Simply enter that number in the box and click on 'Add'.
 
@@ -667,15 +668,15 @@ Accounting information.
 
    -  **Important**
 
-          If the item is created upon orderinf, you will not be able to 
-          edit the quantity manually, you must click 'Add item' below 
+          If the item is created upon orderinf, you will not be able to
+          edit the quantity manually, you must click 'Add item' below
           the item form to add as many items as you're ordering.
 
 -  The list of funds is populated by the :ref:`funds <funds-label>` you have
    assigned in the :ref:`Acquisitions administration <acquisitions-module-label>` area.
 
 -  The currency pull down will have the
-   :ref:`currencies <currencies-and-exchange-rates-label>` you set 
+   :ref:`currencies <currencies-and-exchange-rates-label>` you set
    up in the :ref:`Acquisitions administration <acquisitions-module-label>` area.
 
 -  The vendor price is the price before any taxes or discounts are
@@ -687,31 +688,31 @@ Accounting information.
 
    A basket with at least one uncertain price can't be closed.
 
--  If you are charged sales tax, choose that from the 'Tax rate' field. 
+-  If you are charged sales tax, choose that from the 'Tax rate' field.
    This field is populated by the :ref:`gist system preference <gist-label>`.
 
 -  Enter the percentage discount you're receiving on this order, once
    you enter this, hit tab and Koha will populate the rest of the cost
    fields below.
 
--  Retail price is the recommended retail price (RRP), the price set 
-   by the publisher or the manufacturer as a recommendation to booksellers. 
+-  Retail price is the recommended retail price (RRP), the price set
+   by the publisher or the manufacturer as a recommendation to booksellers.
 
--  Replacement cost is the price it will cost to replace the item. This is the 
-   price charged to the user when an item is declared lost (if the :ref:`WhenLostChargeReplacementFee` 
-   system preference is set to 'Charge').
-   
+-  Replacement cost is the price it will cost to replace the item. This is the
+   price charged to the user when an item is declared lost (if the
+   :ref:`WhenLostChargeReplacementFee` system preference is set to 'Charge').
+
 -  Budgeted cost is the amount that will be removed from the 'spent' budget.
-   Whether this number includes or excludes taxes will depend on the 'List price' 
+   Whether this number includes or excludes taxes will depend on the 'List price'
    setting for your :ref:`vendor <vendors-label>`.
-   
+
 -  Total is the budgeted cost multiplied by the quantity of items ordered.
 
--  You can add an internal note. This will only appear in the acquisitions module 
-   and in the staff interface catalog, under the 'Acquisitions details' tab 
+-  You can add an internal note. This will only appear in the acquisitions module
+   and in the staff interface catalog, under the 'Acquisitions details' tab
    in the detailed record.
 
--  You can also add a vendor note. This will appear in the acquisitions module 
+-  You can also add a vendor note. This will appear in the acquisitions module
    as well as on the order when exported as CSV.
 
 -  If you added statistical categories when :ref:`creating the
@@ -745,37 +746,37 @@ From here, you can edit or remove the items that you have added.
 
       |image829|
 
-On the summary page, you also have the several option through the buttons 
+On the summary page, you also have the several option through the buttons
 at the top of the basket header.
 
 |image830|
 
-  - Edit basket: edit the basket information, such as the name or the billing 
+  - Edit basket: edit the basket information, such as the name or the billing
     place.
 
-  - Delete this basket: if the basket is empty, you will get a simple 
-    confirmation message before deleting the basket. If the basket contains orders, 
+  - Delete this basket: if the basket is empty, you will get a simple
+    confirmation message before deleting the basket. If the basket contains orders,
     you will get a confirmation message with several options.
 
     |image1413|
 
-    - Delete basket and orders: this will delete the basket, cancel the orders, 
+    - Delete basket and orders: this will delete the basket, cancel the orders,
       refund the used funds, and delete the items (ordered or received).
 
-    - Delete basket, orders, and records: this will delete all of the above 
-      plus the bibliographic records associated with the orders (except the 
-      ones which can't be deleted because they have remaining items, orders 
+    - Delete basket, orders, and records: this will delete all of the above
+      plus the bibliographic records associated with the orders (except the
+      ones which can't be deleted because they have remaining items, orders
       or subscriptions attached).
 
-  - Close this basket: closing the basket will enable you to add it to a basket 
+  - Close this basket: closing the basket will enable you to add it to a basket
     group (this is optional) and receive its items.
 
-  - Export as CSV: this will create a CSV file with all your orders from this basket. 
-    You can add several CSV profiles options by going to the :ref:`CSV profiles 
+  - Export as CSV: this will create a CSV file with all your orders from this basket.
+    You can add several CSV profiles options by going to the :ref:`CSV profiles
     tool <csv-profiles-label>`.
 
-  - E-mail order: this will send the order information to your contact for this 
-    vendor. Make sure your contact has a email address in the :ref:`vendor 
+  - E-mail order: this will send the order information to your contact for this
+    vendor. Make sure your contact has a email address in the :ref:`vendor
     profile <vendors-label>`.
 
 If you're using EDI for your order you can click the 'Create EDIFACT
@@ -843,10 +844,10 @@ Create a basket group
 A basket group is simply a group of baskets. In some libraries, you have
 several staff members that create baskets, and, at the end of a period
 of time, someone then groups them together to send to the vendor in
-bulk. That said, it is possible to have one basket in a basket group, 
+bulk. That said, it is possible to have one basket in a basket group,
 or no basket groups at all if that's the workflow used in your library.
 
-To create a basket group, go to the vendor detail page and click on the 
+To create a basket group, go to the vendor detail page and click on the
 'Basket groups' tab on the left side.
 
 |image788|
@@ -858,16 +859,16 @@ Click on the 'New basket group' button.
 |image1415|
 
   -  Basket group name: this is the name the basket group will go by in Koha
-  -  Billing place: this is the billing address that will appear on the 
-     basket group order 
+  -  Billing place: this is the billing address that will appear on the
+     basket group order
   -  Delivery place: pick a library where these orders should be sent, this
      will appear on the basket group order under delivery address
      You can also enter a different address
   -  Delivery comment: this comment will appear on the basket group order
-  -  Close basket group: if you know that once you're done with this basket 
+  -  Close basket group: if you know that once you're done with this basket
      group, you will not be modifying it anymore, you can close it right away
 
-Drag the ungrouped baskets to the 'Baskets in this group' box to add baskets 
+Drag the ungrouped baskets to the 'Baskets in this group' box to add baskets
 to the basket group.
 
 |image1416|
@@ -910,18 +911,18 @@ regardless of the basket the item is from.
 
      **Note**
 
-     If you have a lot of orders, you can filter the orders using the 'Filter' 
-     box on the left, the 'Search' box just above the table, of the filter 
+     If you have a lot of orders, you can filter the orders using the 'Filter'
+     box on the left, the 'Search' box just above the table, of the filter
      boxes at the top of each table column.
 
      |image1417|
 
      |image1418|
 
-     You could, for example, scan the ISBN of the book you are receiving in the 
-     filter box and the table will only show the corresponding orders. 
+     You could, for example, scan the ISBN of the book you are receiving in the
+     filter box and the table will only show the corresponding orders.
 
-     Just make sure to clear the filter boxes when you're done, otherwise, 
+     Just make sure to clear the filter boxes when you're done, otherwise,
      the other items won't appear.
 
 To receive a specific item, click the 'Receive' link to the right of the
@@ -929,62 +930,62 @@ item.
 
 |image843|
 
-Depending on when you chose to create the item (either in the 
-:ref:`AcqCreateItem <acqcreateitem-label>` system preference, or upon 
-:ref:`creating your basket <create-a-basket-label>`), the form will look 
+Depending on when you chose to create the item (either in the
+:ref:`AcqCreateItem <acqcreateitem-label>` system preference, or upon
+:ref:`creating your basket <create-a-basket-label>`), the form will look
 slightly different.
 
-If you chose to create your item when placing the order, you will have your 
+If you chose to create your item when placing the order, you will have your
 item information on the left side and financial information on the right side.
 
 |image1419|
 
-You can check the box next to the item to receive it, or fill out the 
+You can check the box next to the item to receive it, or fill out the
 'Quantity received' field on the left side.
 
      **Note**
-     You can choose to mark only part of the order as received if he vendor 
-     didn't send your entire order by checking only the boxes next to the 
-     items on the left that you want to receive or by entering the right 
+     You can choose to mark only part of the order as received if he vendor
+     didn't send your entire order by checking only the boxes next to the
+     items on the left that you want to receive or by entering the right
      amount in the 'Quantity received' field.
 
-You can edit the item if needed by clicking on the 'Edit' link. This will 
-allow you to enter in accurate call numbers and barcodes if you'd like to 
+You can edit the item if needed by clicking on the 'Edit' link. This will
+allow you to enter in accurate call numbers and barcodes if you'd like to
 do that at the point of receipt.
 
-You can also alter the cost information (replacement cost and actual cost). 
+You can also alter the cost information (replacement cost and actual cost).
 The values you enter there will automatically populate the item record by
 filling in subfield v (Cost, replacement price) and subfield g (Cost,
 normal purchase price) on the item record after saving.
 
-If you chose to create your item when receiving the order, you will see 
-the item creation form on the left side and the financial information on 
+If you chose to create your item when receiving the order, you will see
+the item creation form on the left side and the financial information on
 the right side.
 
 |image1420|
 
   **Important**
-  You must fill out the item form and click on 'Add item' or 'Add multiple items' 
-  in order to receive the order. You will not be able to simply change the 
+  You must fill out the item form and click on 'Add item' or 'Add multiple items'
+  in order to receive the order. You will not be able to simply change the
   'Quantity received' amount.
 
-You can alter the cost information (replacement cost and actual cost). 
+You can alter the cost information (replacement cost and actual cost).
 The values you enter there will automatically populate the item record by
 filling in subfield v (Cost, replacement price) and subfield g (Cost,
 normal purchase price) on the item record after saving.
 
-Finally, if you chose to create your item when cataloging the record, you 
+Finally, if you chose to create your item when cataloging the record, you
 will only see the financial information on the right.
 
 |image843|
 
-You can alter the cost information (replacement cost and actual cost). 
+You can alter the cost information (replacement cost and actual cost).
 
      **Note**
-     The financial information will not be transferred to the item if the 
+     The financial information will not be transferred to the item if the
      item is created when cataloging.
 
-Once you have made any changes necessary (to the order and/or items, click 
+Once you have made any changes necessary (to the order and/or items, click
 'Save' to mark the item(s) as received.
 
 |image845|
@@ -1004,8 +1005,8 @@ Received orders will have '(rcvd)' before the title in the basket view.
 |image850|
 
      **Note**
-     When all the orders in a basket have been received, the basket will be removed 
-     from the list of baskets for that vendor. You can click 'Show all baskets' 
+     When all the orders in a basket have been received, the basket will be removed
+     from the list of baskets for that vendor. You can click 'Show all baskets'
      to view the inactive baskets.
 
      |image1421|
@@ -1058,10 +1059,10 @@ You will also see that the item is cancelled if you view the basket.
 |image850|
 
      **Note**
-       
-     Whilst it is possible to re-open your basket, cancel one or more orders 
-     and re-close the basket, this is not recommended. This procedure will 
-     update the 'basket closed' date, which in turn will cause your 'late 
+
+     Whilst it is possible to re-open your basket, cancel one or more orders
+     and re-close the basket, this is not recommended. This procedure will
+     update the 'basket closed' date, which in turn will cause your 'late
      order' calculations to be incorrect.
 
 .. Instead, follow the procedure below.
@@ -1072,7 +1073,6 @@ You will also see that the item is cancelled if you view the basket.
 .. #. on the next page, use a false invoice number (such as 54321. Whatever number you choose will persist in your system as a blank invoice - re-use it for future cancellations to avoid accumulating numerous false, empty invoices);
 .. #. so on the next page you'll get a warning box in which you click on 'Receive';
 .. #. on the next page (at right) you can click on 'Cancel order'.
-
 
 .. _invoices-label:
 
@@ -1094,8 +1094,8 @@ invoice or 'Close' to note that the invoice is closed/paid for.
 
 |image853|
 
-In the Adjustments section, you can add adjustments to your invoices. 
-These adjustments can be for adjusting the price that is offset by rounding 
+In the Adjustments section, you can add adjustments to your invoices.
+These adjustments can be for adjusting the price that is offset by rounding
 or adding a credit to the invoice, for example.
 
 |image1371|
@@ -1103,25 +1103,25 @@ or adding a credit to the invoice, for example.
 -  Click on 'Add an adjustment'
 
 -  Enter the amount of the adjustment
-   
+
 -  Choose a reason, if needed
-   
+
        **Note**
 
-       The reasons are :ref:`authorized values<authorized-values-label>`. 
+       The reasons are :ref:`authorized values<authorized-values-label>`.
        Use the category ADJ\_REASON to add custom reasons for adjustments.
 
 -  Enter a note, if needed
-   
+
 -  Choose the fund from which the adjustment amount should be taken
-   
--  If 'Encumber while invoice open' is checked, the amount of the adjustment 
-   will be taken out of the fund immediately. If it isn't checked, the amount 
+
+-  If 'Encumber while invoice open' is checked, the amount of the adjustment
+   will be taken out of the fund immediately. If it isn't checked, the amount
    will be subtracted only when the invoice is closed.
 
 -  Click on 'Update adjustments' to save your adjustments
-   
-If you need to change the adjustment afterwards, you can do so in the table 
+
+If you need to change the adjustment afterwards, you can do so in the table
 and click on 'Update adjustments'.
 
 |image1372|
