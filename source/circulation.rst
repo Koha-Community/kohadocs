@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _circulation-label:
+
 Circulation
 ===========
 
@@ -11,9 +13,9 @@ which is linked from the top left of every page or from the center of
 the main page.
 
 Before circulating your collection you will want to set your :ref:`Global
-System Preferences <global-system-preferences-label>`, :ref:`Basic
-Parameters <basic-parameters-label>` and :ref:`Patrons & Circulation
-Rules <patrons-&-circulation-label>`.
+system preferences <global-system-preferences-label>`, :ref:`Basic
+parameters <basic-parameters-label>` and :ref:`Patrons and circulation
+rules <patrons-and-circulation-label>`.
 
 While in Circulation you can jump between the tabs on the quick search
 box at the top of the screen by using the following hot keys:
@@ -89,7 +91,7 @@ item's barcode into.
    just a barcode (this will make it possible to check out using title
    and/or call number).
 
--  If you have :ref:`AutoSwitchPatron <autoswitchpatron-label>` set to 'Enable',
+-  If you have :ref:`AutoSwitchPatron` set to 'Enable',
    scanning a patron barcode here will take you to that patron's file.
 
 To see more checkout options click the 'Checkout settings' link to
@@ -106,11 +108,11 @@ the default due date for the item.
 
 Below the box for the barcode you will see a checkbox for 'Automatic
 renewal'. This will allow this item to automatically renew if the
-:ref:`appropriate cron job <automatic-renewal-label>` is running and there are no
+:ref:`appropriate cron job <cron-automatic-renewal-label>` is running and there are no
 holds on the item.
 
 Next is an option to no decrease the loan length based on holds. This
-overrides the :ref:`decreaseLoanHighHolds <decreaseloanhighholds,-decreaseloanhighholdsduration,-decreaseloanhighholdsvalue,-decreaseloanhighholdscontrol,-and-decreaseloanhighholdsignorestatuses-label>`
+overrides the :ref:`decreaseLoanHighHolds <decreaseloanhighholds-preferences-label>`
 preference.
 
 If you're allowing the :ref:`checkout of items on site <onsitecheckouts-label>`
@@ -205,7 +207,7 @@ circulation information and 'Print overdues' will print out a slip that
 lists all items that are overdue.
 
 What prints on the slips can be customized by altering the slip
-templates under the :ref:`Notices & Slips` tool.
+templates under the :ref:`Notices & slips` tool.
 
 .. _clear-patron-information-label:
 
@@ -378,7 +380,7 @@ acknowledged before you will be able to continue checking items out.
    |image516|
 
 -  Item being checked out meets the
-   :ref:`decreaseLoanHighHolds <decreaseloanhighholds,-decreaseloanhighholdsduration,-decreaseloanhighholdsvalue,-decreaseloanhighholdscontrol,-and-decreaseloanhighholdsignorestatuses-label>` system preference
+   :ref:`decreaseLoanHighHolds <decreaseloanhighholds-preferences-label>` system preference
    criteria
 
    |image517|
@@ -389,8 +391,8 @@ Renewing
 -------------------------
 
 Checked out items can be renewed (checked out for another period of
-time) based on your :ref:`circulation rules <circulation-and-fine-rules-label>` and :ref:`renewal
-preferences <renewalperiodbase-label>`.
+time) based on your :ref:`circulation rules <circulation-and-fines-rules-label>`
+and :ref:`renewal preferences <renewalperiodbase-label>`.
 
 If :ref:`you allow it <opacrenewalallowed-label>`, patrons can renew their own
 items via the OPAC, but sometimes you'll need to help them by renewing
@@ -483,8 +485,7 @@ library was closed you can check the 'Book drop mode' box before
 scanning items. This will effectively roll back the returned date to the
 last date the library was open.
 
--  This requires that you have your closings added to the :ref:`Holidays &
-   calendar tool <calendar-label>`
+-  This requires that you have your closings added to the :ref:`calendar tool <calendar-label>`
 
 You can also choose to forgive all overdue charges for items you are
 checking in by checking the 'Forgive overdue charges' box before
@@ -640,14 +641,14 @@ into the OPAC.
 
 |image544|
 
-.. _holds-label:
+.. _holds-circulation-label:
 
 Holds
 ------------------
 
 Koha allows patrons to put things on hold. A 'Hold' is a way to reserve
-an item. Depending on your :ref:`circulation and fine
-rules <circulation-and-fine-rules-label>` and :ref:`hold preference <holds-policy-label>`
+an item. Depending on your :ref:`circulation and fines
+rules <circulation-and-fines-rules-label>` and :ref:`hold preference <holds-policy-label>`
 settings patrons will be able to place items on hold for pickup at the
 library at a later date/time.
 
@@ -988,15 +989,15 @@ This report will show you all holds waiting to be pulled off the shelf at your l
 |image577|
 
 To generate this report, you must have the :ref:`Build holds queue cron
-job <holds-queue-label>` running. This cron job is a script that should
+job <cron-holds-queue-report-label>` running. This cron job is a script that should
 be run periodically if your library system allows borrowers to place
 on-shelf holds. This script decides which library should be responsible
 for fulfilling a given hold request.
 
 It's behavior is controlled by the system preferences
-:ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`,
-:ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
-:ref:`UseTransportCostMatrix <usetransportcostmatrix-label>`.
+:ref:`StaticHoldsQueueWeight <holds-queue-system-preferences-label>`,
+:ref:`RandomizeHoldsQueueWeight <holds-queue-system-preferences-label>` and
+:ref:`UseTransportCostMatrix`.
 
 If you do not want all of your libraries to participate in the on-shelf
 holds fulfillment process, you should list the libraries that \*do\*
@@ -1065,7 +1066,7 @@ Items that have been on the hold shelf longer than you normally allow
 (based on the :ref:`ReservesMaxPickUpDelay`
 preference value) will appear on the 'Holds over' tab, they will not
 automatically be cancelled unless you have set the :ref:`cron
-job <expired-holds-label>` to do that for you, but you can cancel all
+job <cron-expired-holds-label>` to do that for you, but you can cancel all
 holds using the button at the top of the list.
 
 |image581|
@@ -1105,7 +1106,7 @@ message stating how late your items are.
     :ref:`TransfersMaxDaysWarning` system
     preference.
 
-.. _article-requests-label:
+.. _article-requests-circulation-label:
 
 Article requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1134,15 +1135,15 @@ in depending on how your records are requested.
   - :ref:`ArticleRequestsMandatoryFields`: make the following fields
     mandatory for records that are record level or item level requestable
 
-  - :ref:`ArticleRequestsMandatoryFieldsItemOnly` make the following
+  - :ref:`ArticleRequestsMandatoryFieldsItemsOnly` make the following
     fields mandatory for records that are only item level requestable
 
   - :ref:`ArticleRequestsMandatoryFieldsRecordOnly` make the
     following fields mandatory for records that are only record level
     requestable
 
-Next you will want to go into your :ref:`circulation and fine rules
-matrix<circulation-and-fine-rules-label>` and select each rule for which
+Next you will want to go into your :ref:`circulation and fines rules
+matrix <circulation-and-fines-rules-label>` and select each rule for which
 you want to allow requests.
 
 You can allow requests to be made at the record level, item level,
@@ -1175,7 +1176,7 @@ Fill in the form.
 
        Remember, the mandatory fields are set through the three system
        preferences :ref:`ArticleRequestsMandatoryFields`,
-       :ref:`ArticleRequestsMandatoryFieldsItemOnly`, and
+       :ref:`ArticleRequestsMandatoryFieldsItemsOnly`, and
        :ref:`ArticleRequestsMandatoryFieldsRecordOnly`.
 
 If allowed, choose the specific item to request.
@@ -1238,7 +1239,7 @@ select 'Process request'. This will move the request to the processing tab.
 Next staff will go to the shelf and make a copy of the requested article.
 
 Once that is complete, staff can print the article request slip (this can be
-customized in :ref:`notices and slips<notices-&-slips-label>` under AR\_SLIP)
+customized in :ref:`notices and slips <notices-and-slips-label>` under AR\_SLIP)
 and staple or paper clip it to the article. In the actions column, you can
 select the dropdown and select print slip.
 
@@ -1304,7 +1305,7 @@ branch <set-library-label>` or log in at that branch.
     **Important**
 
     If you do not charge fines and/or don't have the :ref:`fines cron
-    job <fines-label>` running you will see no data on this report.
+    job <cron-fines-label>` running you will see no data on this report.
 
 .. _pending-on-site-checkouts-label:
 
@@ -1370,7 +1371,7 @@ Self checkout
 ---------------------------------
 
 Koha comes with a very basic self checkout module. To enable this module
-you need to set the :ref:`WebBasedSelfCheck <webbasedselfcheck-label>` system
+you need to set the :ref:`WebBasedSelfCheck` system
 preference to 'Enable.' To use this module you have to log in as a
 :ref:`staff member <add-a-staff-patron-label>` with :ref:`self\_check
 permissions <patron-permissions-label>`.
@@ -1441,8 +1442,8 @@ patrons must go to the librarian for help in these situations.
 Self check-in
 ------------------------------------------------
 
-In order to use the self check-in module, you must first set the
-:ref:`SelfCheckInModule <selfscheckinmodule-label>` system preference to
+In order to use the self check-in module, you must first set the :ref:
+`SelfCheckInModule <selfscheckinmodule-label>` system preference to
 'Enable'.
 
 Then, you will have to :ref:`create a patron <add-a-staff-patron-label>`
@@ -1496,7 +1497,7 @@ They can then click 'Finish' to return to the main self check-in page.
     **Note**
 
     If the patron doesn't click 'Finish', the screen will refresh after the
-    timeout period specified in the :ref:`SelfCheckInTimeout <selfcheckintimeout-label>` system preference.
+    timeout period specified in the :ref:`SelfCheckInTimeout` system preference.
 
     **Note**
 
@@ -1504,11 +1505,11 @@ They can then click 'Finish' to return to the main self check-in page.
     in from their account.
 
 You can cutomize the look of your self check-in screens by using the
-:ref:`SelfCheckInUserCSS <selfcheckinusercss-label>` system preference or
-the :ref:`SelfCheckInUserJS <selfcheckinuserjs-label>` system preference.
+:ref:`SelfCheckInUserCSS` system preference or
+the :ref:`SelfCheckInUserJS` system preference.
 
 You can add content, like instructions on how to use the self check-in system
-for example, by using the :ref:`SelfCheckInMainUserBlock <selfcheckinmainuserblock-label>` system preference.
+for example, by using the :ref:`SelfCheckInMainUserBlock` system preference.
 
 Statistics about the transactions made through the self check-in module
 are logged into the action\_logs table in the Koha database. You can therefore
@@ -1545,7 +1546,7 @@ to when you are offline.
     :ref:`Windows <offline-circ-tool-for-windows-label>` application for offline
     circulation.
 
-.. _setup-label:
+.. _setup-offline-circulation-label:
 
 Setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1854,7 +1855,7 @@ https://github.com/bywatersolutions/koha-offline-circulation/releases
 
 To generate a borrowers.db file for loading in to the Windows tool you
 will need to run the :ref:`file generator via a cron
-job <generate-patron-file-for-offline-circulation-label>`.
+job <cron-generate-patron-file-for-offline-circulation-label>`.
 
 .. _upload-offline-circ-file-label:
 

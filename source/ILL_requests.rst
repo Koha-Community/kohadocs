@@ -1,18 +1,20 @@
 .. include:: images.rst
 
+.. _ill-requests-label:
+
 ILL requests / Interlibrary loans
 ===================================
 
-The ILL (Interlibrary loans) requests module adds the ability to request and manage loans or copies of material from external sources.  Patrons submit a request form via the OPAC for review and processing by library staff.  Alternatively staff can place requests themselves from the staff client.
+The ILL (Interlibrary loans) requests module adds the ability to request and manage loans or copies of material from external sources. Patrons submit a request form via the OPAC for review and processing by library staff. Alternatively staff can place requests themselves from the staff client.
 
-.. _setup-label:
+.. _setup-ill-requests-label:
 
 Set up
 -------------
 
 Before using the ILL requests module you will want to make sure that you have completed all of the set up.
 
-The ILL requests module can be configured for different types of requests and workflows known as backends.   Currently available backends are documented on the Koha community wiki at https://wiki.koha-community.org/wiki/ILL_backends.  You will need to configure at least one backend.
+The ILL requests module can be configured for different types of requests and workflows known as backends. Currently available backends are documented on the Koha community wiki at https://wiki.koha-community.org/wiki/ILL_backends. You will need to configure at least one backend.
 
 Next, set your system preferences.
 
@@ -22,7 +24,7 @@ Next, set your system preferences.
 
 Library staff responsible for ILL requests need the following permission set on their account: *ill: Create and modify Interlibrary loan requests*.
 
-The ILL requests module uses system defined statuses.  You can add custom statuses to match your ILL workflow as ILLSTATUS :ref:`authorized values <authorized-values-label>`.
+The ILL requests module uses system defined statuses. You can add custom statuses to match your ILL workflow as ILLSTATUS :ref:`authorized values <authorized-values-label>`.
 
 .. _create-ILL-requests-label:
 
@@ -51,7 +53,7 @@ Create ILL requests
 
 -  Under the borrower options enter the library branch you would like the request to be sent to.
 
-Click on ‘Create’ and you will be shown a Request details summary page.  Click on the ‘Confirm request’ button and you will see the following confirmation message:
+Click on ‘Create’ and you will be shown a Request details summary page. Click on the ‘Confirm request’ button and you will see the following confirmation message:
 
 |image1389|
 
@@ -62,7 +64,7 @@ Click ‘Confirm request’ again to create your request.
 Viewing ILL requests
 ------------------------
 
-From the main ILL requests screen you can see all of your ILL requests.  You
+From the main ILL requests screen you can see all of your ILL requests. You
 can also click on the ‘View requests’ button at any time.
 
 |image1435|
@@ -96,11 +98,11 @@ status of the request you may see some or all of the following options:
    -  place the request via email with a :ref:`partner library <place-request-with-partners-label>`
 -  Delete
 
-   -  fully delete the request.  Details of deleted requests are not retained in Koha.
+   -  fully delete the request. Details of deleted requests are not retained in Koha.
 -  Revert request
 
    -  following a status of ‘Requested’ or ‘Requested from partners’ library
-      staff can cancel the request from the external source.  The status reverts to ‘New’
+      staff can cancel the request from the external source. The status reverts to ‘New’
 -  Mark completed
 
    -  used when the ILL request has been fulfilled.
@@ -118,9 +120,9 @@ status of the request you may see some or all of the following options:
 -  Comments
 
    -  It is possible to add comments to an ILL request and these can be used
-      by ILL staff to keep track of work undertaken.  Comments are read only and are
-      stored in chronological order.  They display the borrower details and date of the
-      comment.  If present, the number of comments is displayed in the List
+      by ILL staff to keep track of work undertaken. Comments are read only and are
+      stored in chronological order. They display the borrower details and date of the
+      comment. If present, the number of comments is displayed in the List
       requests view.
 
 Request statuses
@@ -140,7 +142,7 @@ The full list of ILL statuses are:
 Place request with partners
 -----------------------------
 
-If you have a network of partner libraries which permit ILL requests you can manage this through Koha.  First you need to create your partner library accounts:
+If you have a network of partner libraries which permit ILL requests you can manage this through Koha. First you need to create your partner library accounts:
 
 -  You will need to set up a :ref:`patron category <patron-categories-label>` with the code ILLLIBS.
 

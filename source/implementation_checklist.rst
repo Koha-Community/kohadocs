@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _implementation-checklist-label:
+
 Implementation Checklist
 ========================
 
@@ -126,8 +128,8 @@ system, but there are a few that you might want to customize.
 
    -  If you're using the long overdue cron job be sure to set your
       :ref:`DefaultLongOverdueChargeValue`,
-      :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` &
-      :ref:`DefaultLongOverdueDays <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>`
+      :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-and-defaultlongoverduedays-label>` and
+      :ref:`DefaultLongOverdueDays <defaultlongoverduelostvalue-and-defaultlongoverduedays-label>`
       preferences.
 
 .. _localization-configuration-label:
@@ -158,13 +160,13 @@ for your location/language.
 
 .. _circulation-configuration-label:
 
-Circulation Configuration
+Circulation configuration
 ----------------------------------------
 
 Before you start circulating your collection you'll need to set up your
 rules and preferences for circulation.
 
--  Define your :ref:`Circulation/Fine rules <circulation-and-fine-rules-label>`
+-  Define your :ref:`Circulation and fines rules <circulation-and-fines-rules-label>`
 
 -  Enter the :ref:`days your library is closed <calendar-label>` for fines
    and due date calculations
@@ -235,7 +237,7 @@ rules and preferences for circulation.
    -  :ref:`WebBasedSelfCheck` : Decide if you want to
       use the built in web-based self-checkout system
 
-      -  :ref:`AutoSelfCheckAllowed <autoselfcheckallowed-autoselfcheckid-&-autoselfcheckpass-label>` : Decide if
+      -  :ref:`AutoSelfCheckAllowed <autoselfcheck-preferences-label>` : Decide if
          the self-checkout system requires login
 
       -  :ref:`ShowPatronImageInWebBasedSelfCheck`
@@ -302,7 +304,7 @@ rules and preferences for circulation.
    -  :ref:`RecordLocalUseOnReturn` : Set this to
       record local use of items when you check them in
 
--  Customize your :ref:`Notices & Slips`
+-  Customize your :ref:`Notices & slips`
 
 -  Define your :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-label>`
 
@@ -310,33 +312,31 @@ rules and preferences for circulation.
 
    -  Populate :ref:`your holds queue <holds-queue-label>` (every 1-4 hours)
 
-   -  Decide :ref:`when holds expire <expired-holds-label>` (daily)
+   -  Decide :ref:`when holds expire <cron-expired-holds-label>` (daily)
 
-   -  :ref:`Calculate fines due <fines-label>` (daily)
+   -  :ref:`Calculate fines due <cron-fines-label>` (daily)
 
       -  Fines on hourly loans will calculate when you check the items
          in
 
-   -  :ref:`Mark long overdue items as lost <long-overdues-label>` (daily)
+   -  :ref:`Mark long overdue items as lost <cron-long-overdues-label>` (daily)
 
-   -  Decide when the system :ref:`sends out messages <message-queue-label>` (1-4
+   -  Decide when the system :ref:`sends out messages <cron-message-queue-label>` (1-4
       hours)
 
    -  Decide when the system :ref:`queues overdue
-      notices <overdue-notice-label>` (daily)
+      notices <cron-overdue-notice-label>` (daily)
 
-   -  Set up :ref:`hold notices that didn't send for
-      printing <print-hold-notices-label>` (daily after overdues and message
-      queue)
+   -  Set up :ref:`hold notices that didn't send for printing <cron-print-hold-notices-label>` (daily after overdues and message queue)
 
    -  Decide when the system :ref:`queues the advanced notice of items
-      due <advanced-notice-label>` (daily)
+      due <cron-advanced-notice-label>` (daily)
 
    -  Find holds that need to be :ref:`resumed and remove
-      suspension <unsuspend-holds-label>` (daily)
+      suspension <cron-unsuspend-holds-label>` (daily)
 
    -  If you're allowing automatic renewal of items :ref:`set them to
-      renew <automatic-renewal-label>` (nightly)
+      renew <cron-automatic-renewal-label>` (nightly)
 
 .. _patron-configuration-label:
 
@@ -402,7 +402,7 @@ accounts.
 -  Set up your :ref:`cron jobs <cron-jobs-label>`
 
    -  Decide if you would like :ref:`children to automatically be come
-      adults <update-child-to-adult-patron-type-label>`
+      adults <cron-update-child-to-adult-patron-type-label>`
 
 .. _cataloging-configuration-label:
 
@@ -435,7 +435,7 @@ preferences and other rules.
    -  :ref:`URLLinkText` : Enter text to display when 856
       fields do not have pre-defined labels
 
-   -  :ref:`hide\_marc <hide\_marc-label>` : If you are unfamiliar with MARC you
+   -  :ref:`hide\_marc <hide-marc-label>` : If you are unfamiliar with MARC you
       can have the MARC fields number hidden
 
    -  :ref:`LabelMARCView` : Choose how you want duplicate
@@ -458,13 +458,13 @@ preferences and other rules.
    -  :ref:`autoBarcode` : Decide if Koha generates item
       barcodes for you
 
-   -  :ref:`OpacSuppression <opacsuppression,-opacsuppressionbyiprange,-opacsuppressionredirect,-and-opacsuppressionmessage-label>` : Decide if you want to
+   -  :ref:`OpacSuppression <opacsuppression-preferences-label>` : Decide if you want to
       hide items marked as suppressed from the OPAC search results
 
 -  Set up your :ref:`cron jobs <cron-jobs-label>`
 
    -  Decide when the system :ref:`checks URLs in catalog
-      records <check-urls-label>` to see if they are still valid
+      records <cron-check-urls-label>` to see if they are still valid
 
 .. _authorities-configuration-label:
 
@@ -500,7 +500,7 @@ you should configure several preferences.
 -  Set up your :ref:`cron jobs <cron-jobs-label>`
 
    -  Choose when the system looks for authorities updates to :ref:`merge
-      changes into bibliographic records <update-authorities-label>`
+      changes into bibliographic records <cron-update-authorities-label>`
 
 .. _searching-configuration-label:
 
@@ -511,12 +511,12 @@ There are several system preferences related to searching, it is not
 always recommended to make too many changes to these preferences since
 they are set to get you the most relevant results. If you would like to
 change the default way that Koha handles searching, view the :ref:`Searching
-system preferences <searching-label>` tab.
+system preferences <searchingsystem-preferences-label>` tab.
 
 -  Set up your :ref:`cron jobs <cron-jobs-label>`
 
    -  Decide how often your :ref:`system rebuilds the search
-      index <rebuild-index-label>` (4-10 min)
+      index <cron-rebuild-index-label>` (4-10 min)
 
 -  Searching System Preferences
 
@@ -646,7 +646,7 @@ There are a lot of ways you can customize your OPAC in Koha.
       -  :ref:`opaclayoutstylesheet` : Point to a
          CSS file on your Koha server
 
-   -  :ref:`OpacHighlightedWords <opachighlightedwords-&-nothighlightedwords-label>` : Decide if you
+   -  :ref:`OpacHighlightedWords <opachighlightedwords-and-nothighlightedwords-label>` : Decide if you
       want search terms to be highlighted on the search results
 
    -  :ref:`hidelostitems` : Decide if you want to show
@@ -685,10 +685,9 @@ There are a lot of ways you can customize your OPAC in Koha.
 
    -  If you have the :ref:`OpacBrowser` preference set
       decide :ref:`when you want the contents to
-      rebuild <authorities-browser-label>` (French libraries only)
+      rebuild <cron-authorities-browser-label>` (French libraries only)
 
-   -  If you have :ref:`custom RSS feeds <custom-rss-feeds-label>`, decide when you
-      want the :ref:`feed to be populated <rss-feeds-label>`
+   -  If you have :ref:`custom RSS feeds <custom-rss-feeds-label>`, decide when you want the :ref:`feed to be populated <cron-rss-feeds-label>`
 
 .. _editable-opac-regions-label:
 
@@ -717,7 +716,7 @@ enhanced content system preferences.
       other FRBR preferences and then the ISBN
       service ThingISBN.
 
--  :ref:`Amazon <amazon-label>` : This service is free and just requires
+-  :ref:`Amazon <amazon-system-preferences-label>` : This service is free and just requires
    that you visit http://aws.amazon.com to sign up
 
    -  Using the Amazon preferences you can choose to show cover images
@@ -728,7 +727,7 @@ enhanced content system preferences.
    -  This is a pay service. Contact Babelthèque to learn how to enable
       this content in the OPAC.
 
--  :ref:`Baker and Taylor <baker-&-taylor-label>`
+-  :ref:`Baker and Taylor <baker-and-taylor-label>`
 
    -  This is a pay service from Baker & Taylor. Contact Baker & Taylor
       for the information to enter into these preferences.
@@ -742,7 +741,7 @@ enhanced content system preferences.
    -  This service is free and does not require registration, simply
       enable GoogleJackets and you're set to go.
 
--  :ref:`I Deam Books <idreamlibraries-label>`
+-  :ref:`I Dream Books <idreamlibraries-label>`
 
    -  This is a free service that compiles reviews for popular titles
       from many different sources.
@@ -755,7 +754,7 @@ enhanced content system preferences.
    -  Enabling ThingISBN will help to populate the editions tab on the
       bib record display if you have enabled FRBR.
 
--  :ref:`Novelist <novelist-select-label>`
+-  :ref:`Novelist Select`
 
    -  This is a pay service from Ebsco. Contact Ebsco for the
       information to enter into these preferences
@@ -789,7 +788,7 @@ Acquisitions Configuration
 
 When using acquisitions in Koha you first need to define some defaults.
 
--  Set up your :ref:`funds & budgets <budgets-label>`
+-  Set up your :ref:`funds and budgets <budgets-label>`
 
 -  Choose your :ref:`default currency <currencies-and-exchange-rates-label>` and enter
    others if you order from multiple countries

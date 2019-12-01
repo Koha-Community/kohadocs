@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _plugin-system-label:
+
 Plugin System
 =============
 
@@ -11,7 +13,7 @@ necessary to make the plugin work.
 
 The plugin system needs to be turned on by a system administrator.
 
-.. _set-up-label:
+.. _setup-plugin-system-label:
 
 Set up
 -------------------------

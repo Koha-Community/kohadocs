@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _about-koha-label:
+
 About Koha
 ==========
 

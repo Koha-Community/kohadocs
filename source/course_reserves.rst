@@ -29,7 +29,7 @@ You may also want to create new :ref:`item types <adding-item-types-label>`,
 `collection codes <#ccode>`__ and/or `shelving locations <#shelvelocvals>`__
 to make it clear that the items are on reserve to your patrons. You will also
 want to be sure to confirm that your
-:ref:`circulation and fine rules <circulation-and-fine-rules-label>` are right
+:ref:`circulation and fines rules <circulation-and-fines-rules-label>` are right
 for your new item types (whether they be hourly or daily loans).
 
 .. _adding-courses-label:

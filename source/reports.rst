@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _reports-label:
+
 Reports
 =======
 
@@ -198,7 +200,6 @@ Report writing tips
 
 **Runtime parameters**
 
-
 If you feel that your report might be too resource intensive you
 might want to consider using runtime parameters to your query.
 Runtime parameters basically make a filter appear before the report
@@ -268,7 +269,6 @@ Examples:
    -  SELECT title, author FROM biblio WHERE frameworkcode=<<Enter the
       frameworkcode\|biblio\_framework>>
 
-
 .. ****************************************
 .. **************    TODO    **************
 .. ****************************************
@@ -286,7 +286,6 @@ Examples:
 .. There is a limit of 10,000 records put on SQL statements entered in
    Koha. To get around this you want to add 'LIMIT 100000' to the end
    of your SQL statement (or any other number above 10,000).
-
 
 .. _mana-SQL-report-label:
 
@@ -550,7 +549,7 @@ needs.
     -  For a single day, an example would be: 11/15/2009 to 11/16/2009
        to find what circulated on the 15th
 
-.. _tracking-in-house-use-label:
+.. _tracking-in-house-use-reports-label:
 
 Tracking in house use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

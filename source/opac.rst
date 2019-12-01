@@ -1,9 +1,11 @@
 .. include:: images.rst
 
+.. _opac-label:
+
 OPAC
 ====
 
-.. _search-results-label:
+.. _search-results-opac-label:
 
 Search results
 ---------------------------------------
@@ -60,7 +62,7 @@ the record.
 
 |image941|
 
-If you have turned on :ref:`Enhanced content system preferences <enhanced-content-label>`
+If you have turned on :ref:`Enhanced content system preferences <enhanced-content-system-preferences-label>`
 preferences you may have book jackets on your search results.
 
 |image942|
@@ -220,9 +222,9 @@ the Marc or the ISBD you can click the tabs across the top of the record
 
 |image964|
 
-.. _lists-&-cart-label:
+.. _lists-and-cart-opac-label:
 
-Lists & Cart
+Lists and the cart
 ---------------------------------
 
 A cart is a temporary holding place for records you're interested in
@@ -232,7 +234,7 @@ more permanent location for saving items. To learn more about lists,
 check the `Lists in the staff client <#stafflists>`__ chapter of this
 manual.
 
-.. _lists-label:
+.. _lists-opac-label:
 
 Lists
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -381,7 +383,7 @@ confirmation message
 
 and will send a message to that patron.
 
-.. _cart-label:
+.. _cart-opac-label:
 
 Cart
 ~~~~~~~~~~~~~~~~~~~~
@@ -527,7 +529,7 @@ be brought to the same hold screen.
    -  **Important**
 
           Expired holds are removed by the :ref:`expired holds cron
-          job <expired-holds-label>`, this is not an automatic process
+          job <cron-expired-holds-label>`, this is not an automatic process
           and must be set up by your system administrator
 
 -  If allowed by the :ref:`OpacHoldNotes` preference then
@@ -537,16 +539,16 @@ be brought to the same hold screen.
    |image986|
 
 -  Depending on the rules you set regarding item specific holds in your
-   :ref:`circulation and fines rules <circulation-and-fine-rules-label>` the patron will be
+   :ref:`circulation and fines rules <circulation-and-fines-rules-label>` the patron will be
    allowed to choose whether to place the hold on the next available
-   copy and/or a specific copy
+   copy and/or a specific copy.
 
    |image987|
 
 After clicking the 'Place hold' button the patron will be brought to their
 account page where they'll see all of the items they have on hold.
 
-.. _enhanced-content-label:
+.. _enhanced-content-opac-label:
 
 Enhanced content
 -------------------------------------------
@@ -583,7 +585,7 @@ Emojis can also be included using the emoji picker when adding tags
 
 |image1341|
 
-.. _comments-label:
+.. _opac-comments-label:
 
 Comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -657,7 +659,7 @@ opening your Zotero library.
 Custom RSS feeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the :ref:`RSS feeds cron job <rss-feeds-label>` you can generate an RSS feed for any SQL
+Using the :ref:`RSS feeds cron job <cron-rss-feeds-label>` you can generate an RSS feed for any SQL
 query (for example a new acquisitions RSS feed). The cron job is run on the
 command line to produce an RSS XML document.
 
@@ -683,7 +685,7 @@ the template to produce the output file.
 
     **Important**
 
-    To use custom RSS feeds you need to turn on the :ref:`RSS cron job <rss-feeds-label>`.
+    To use custom RSS feeds you need to turn on the :ref:`RSS cron job <cron-rss-feeds-label>`.
 
 .. _opac-self-registration-label:
 
@@ -894,7 +896,7 @@ accounting at the library.
 |image1014|
 
 If you are allowing patrons to pay their fines using PayPal with the
-:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-&-paypalsandboxmode-label>` preference
+:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-and-paypalsandboxmode-label>` preference
 there will be checkboxes to the left of each fine with an outstanding
 amount.
 
@@ -1095,14 +1097,14 @@ overdue notices which the library controls).
 |image1027|
 
 If you use an outside driver for sending text messages set with the
-:ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference, you will see an
+:ref:`SMSSendDriver` preference, you will see an
 additional column to receive these messages as SMS (or text messages)
 and a field for a cell (or SMS) number.
 
 |image1028|
 
 If you are using the Email protocol for sending text messages set with
-the :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference, you will see an
+the :ref:`SMSSendDriver` preference, you will see an
 additional column to receive these messages as SMS (or text messages), a
 field for a cell (or SMS) number, and a pull down listing :ref:`cellular
 providers entered in administration <sms-cellular-providers-label>`.
@@ -1179,7 +1181,7 @@ Your routing lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are named as a recipient on
-any :ref:`serial routing lists <create-a-routing-list-label:>` you will see them
+any :ref:`serial routing lists <create-a-routing-list-label>` you will see them
 listed here. The following note is displayed "You are subscribed to the
 routing lists for following serial titles. If you wish to make changes,
 please contact the library".
@@ -1234,6 +1236,8 @@ For new requests you will also have the option to ‘Request cancellation’.
 Your request will be updated with the status ‘Cancellation requested’ and
 can then be removed by library staff.
 
+.. _purchase-suggestions-opac-label:
+
 Purchase suggestions
 -------------------------------------------
 
@@ -1277,4 +1281,4 @@ Clicking any one of these links will open the purchase suggestion form.
    preference to 'Allow'
 
 Once the form is submitted the data will be saved to the
-:ref:`Acquisitions <managing-suggestions-label>` module for the librarians to manage.
+:ref:`Acquisitions <managing-purchase-suggestions-label>` module for the librarians to manage.
