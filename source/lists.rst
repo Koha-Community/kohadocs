@@ -1,7 +1,9 @@
 .. include:: images.rst
 
-Lists & cart
-============
+.. _lists-and-cart-label:
+
+Lists and cart
+==============
 
 Lists are a way to save a collection of content on a specific topic or
 for a specific purpose. The cart is a session specific storage space.

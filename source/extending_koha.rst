@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _extending-koha-label:
+
 Extending Koha
 ==================
 
@@ -45,8 +47,7 @@ Keyword Clouds
 In addition to the traditional tag cloud available in Koha, there is a
 way to generate clouds for popular subjects within Koha.
 
-The :ref:`Author/Subject Cloud cron job <subject/author-clouds-label>` is used to help
-with this process. This cron job sends its output to files.
+The :ref:`Author/Subject Cloud cron job <cron-subject/author-clouds-label>` is used to help with this process. This cron job sends its output to files.
 
 -  /home/koha/mylibrary/koharoot/koha-tmpl/cloud-author.html
 
@@ -56,7 +57,7 @@ This means that you can produce clouds for authors, collective author,
 all kind of subjects, classifications, etc. And since it works on zebra
 indexes, it is quick, even on large DBs. Tags clouds are sent to files.
 It's up to library webmaster to deal with those files in order to
-include them in :ref:`OPACMainUserBlock <opacmainuserblock-label>`, or include
+include them in :ref:`OPACMainUserBlock`, or include
 them into their library CMS.
 
 Some libraries even send the file into a Samba shared folder where
@@ -342,7 +343,7 @@ that it will relabel 'Collection' to 'Color'
 Using Koha as a Content Management System (CMS)
 -----------------------------------------------
 
-.. _setup-label:
+.. _setup-cms-label:
 
 Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -474,7 +475,7 @@ remove the following code from your pages.tt template.
                           </div>
                          [% END %]
 
-.. _troubleshooting-label:
+.. _cms-troubleshooting-label:
 
 Troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

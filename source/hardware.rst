@@ -1,14 +1,16 @@
 .. include:: images.rst
 
+.. _configuring-receipt-printers-label:
+
 Configuring Receipt Printers
 ============================
 
 The following instructions are for specific receipt printers, but can
 probably be used to help with setup of other brands as well.
 
-.. _for-epson-tm-t88iii-(3)-&-tm-t88iv-(4)-printers-label:
+.. _for-epson-tm-t88iii-(3)-and-tm-t88iv-(4)-printers-label:
 
-For Epson TM-T88III (3) & TM-T88IV (4) Printers
+For Epson TM-T88III (3) and TM-T88IV (4) Printers
 --------------------------------------------------------------------
 
 .. _in-the-print-driver-label:

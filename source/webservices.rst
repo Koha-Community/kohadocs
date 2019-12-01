@@ -1,11 +1,13 @@
 .. include:: images.rst
 
+.. _webservices-label:
+
 Web Services
 ============
 
 Koha provides a number of APIs allowing access to it's data and functions.
 
-.. _oai-pmh-label:
+.. _webservices-oai-pmh-label:
 
 OAI-PMH
 -----------------------------
@@ -142,7 +144,7 @@ information about the default settings of the SRU server.
             </map>
             </index>
 
-.. _search-label:
+.. _webservices-search-label:
 
 Search
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -284,13 +286,13 @@ this:
     </zs:records>
     </zs:searchRetrieveResponse>
 
-.. _ils-di-label:
+.. _webservices-ils-di-label:
 
 ILS-DI
 ------
 
 As of writing, the self documenting ILS-DI is the most complete interface and
-after it has been enabled as described in the :ref:`ils-di-label` system
+after it has been enabled as described in the :ref:`webservices-ils-di-system-preferences-label` system
 preferences section the documentation should be available at
 https://YOURKOHACATALOG/cgi-bin/koha/ilsdi.pl
 

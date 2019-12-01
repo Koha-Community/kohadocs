@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _important-links-label:
+
 Important Links
 ===============
 

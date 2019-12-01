@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _koha-installation-process-label:
+
 Introduction to the Koha Installation Process
 ================================================
 

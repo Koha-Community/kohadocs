@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _other-apis-protocols-label:
+
 Other APIs and protocols
 =============================
 
@@ -225,7 +227,6 @@ Response message:
 
 					* <available> is a single length value which is either Y or N. Y means the item is currently in the library, whilst N means the item is currently on loan/someone else has created a hold on the item.
 
-
 **Item information: This uses the request command prefix of 17, and the response command prefix of 18**
 
 Request message:
@@ -270,7 +271,6 @@ Response message:
 					The value in the <YYYYMMDD>    < HHMMSS> is the current date/time.
 
 					The reason for the gap between the two values is to define that you want to use localtime rather than UTC.
-
 
 **Patron enable - This is not yet supported. This uses the request message prefix of 25 and the response message prefix of 26**
 
@@ -343,7 +343,6 @@ Response message:
 |image1144|
 
 .. note:: <paymentaccepted> is a single alphanumeric character long value which is either Y (payment has been accepted) or N (payment has not been accepted).
-
 
 **Patron information**
 
@@ -429,15 +428,11 @@ Can’t connect to remote host when writing in the command telnet localhost <por
 
 3 solutions for this issue to try are:
 
-	1. Check the portnumber your writing in the above command is the port number written in the SIPconfig.xml file at the location indicated by the number 1.
-	i.e. in the below example because the portnumber is 6001 the correct command would be:
-	telnet localhost 6001
+	1. Check the portnumber your writing in the above command is the port number written in the SIPconfig.xml file at the location indicated by the number 1. i.e. in the below example because the portnumber is 6001 the correct command would be: telnet localhost 6001.
 
-	2. Check if any userid is written more than once in the SIPconfig.xml file.
-	The userid (which is simply the username of the Koha user)  needs to be unique within the SIPconfig.xml file. If you have the same userid multiple times in your SIPconfig.xml file this will cause the connection to SIP2 to fail before you get a chance to authenticate.
+	2. Check if any userid is written more than once in the SIPconfig.xml file. The userid (which is simply the username of the Koha user) needs to be unique within the SIPconfig.xml file. If you have the same userid multiple times in your SIPconfig.xml file this will cause the connection to SIP2 to fail before you get a chance to authenticate.
 
-	3. Check the account defined in the SIPconfig.xml file also exists in the Koha database with the same username, password and has circulate permissions.
-	If you have dropped and recreated the Koha database after creating the patron account in the Koha staff interface and the SIPconfig.xml file then that patron account will not exist in the Koha database and so you will need to recreate them in the Koha staff interface.
+	3. Check the account defined in the SIPconfig.xml file also exists in the Koha database with the same username, password and has circulate permissions. If you have dropped and recreated the Koha database after creating the patron account in the Koha staff interface and the SIPconfig.xml file then that patron account will not exist in the Koha database and so you will need to recreate them in the Koha staff interface.
 
 To access the SIP2 logs in your Koha home directory navigate to the following directory:
 /var/log/koha/<instancename>
@@ -547,7 +542,6 @@ sudo vi koha-conf.xml
 
 	</ldapserver>
 
-
 5 Save and exit the koha-conf.xml file
 
 6 Check the LDAP connection works by writing in:
@@ -557,13 +551,11 @@ ldapsearch -H ldaps://host.name  -s base -x  -w "" -d 1
 .. note:: Note about hostname
 					Hostname can either be a alphanumerical name or it can be the LDAP server IP address (its optional to write port number). By default the ldaps default port number is 636, whilst ldap default port number is 389
 
-
 .. note:: Note about the replicate and update fields
 					The replicate  LDAP config field for LDAP in the koha-conf.xml file allow the Koha database to be added to with a new borrower account whenever a user logs into Koha (either the staff client or OPAC) with their LDAP username and password (assuming the same username and password does not already exist in the Koha database).
 
 					Whereas the update LDAP config field (in the same file allows) allows for user information in the LDAP database to be synced down to the Koha database.
 					e.g. if someone gets married and their surname changes then the new surname only needs to 	be updated in the existing LDAP database and that will be synced down to the Koha 	database automatically if the update configuration is set to 1.
-
 
 About the mapping fields (the fields highlighted green)
 <city is="l">Athens, OH</city>

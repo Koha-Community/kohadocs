@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _searching-label:
+
 Searching
 =========
 
@@ -312,7 +314,7 @@ The default sort is by relevance, although you can choose to sort by
 author, by title, by call number, by dates, or by popularity (which uses
 the information on total issues found in the items table). If you would
 prefer a different default sort, you can set
-:ref:`defaultSortField <defaultsortfield-&-defaultsortorder-label>` to one of the other choices in
+:ref:`defaultSortField <defaultsortfield-and-defaultsortorder-label>` to one of the other choices in
 Administration > System Preferences > Searching.
 
 .. _search-results-label:
@@ -338,7 +340,7 @@ available facets include:
 
     **Note**
 
-    This depends on your setting for the :ref:`DisplayLibraryFacets <displaylibraryfacets-label>` system preference.
+    This depends on your setting for the :ref:`DisplayLibraryFacets` system preference.
 
 -  Item types
 
@@ -354,12 +356,12 @@ available facets include:
 
 When there are more than five facets in a category, a 'Show more' link
 will appear. You can control the display of the facets using the following
-systempreferences: :ref:`displayFacetCount <displayfacetcount-label>`,
-:ref:`DisplayLibraryFacets <displaylibraryfacets-label>`,
-:ref:`FacetLabelTruncationLength <facetlabeltruncationlength-label>`,
-:ref:`FacetMaxCount <facetmaxcount-label>`,
-:ref:`maxRecordsForFacets <maxrecordsforfacets-label>`,
-and :ref:`UNIMARCAuthorsFacetsSeparator <unimarcauthorsfacetsseparator-label>`.
+systempreferences: :ref:`displayFacetCount`,
+:ref:`DisplayLibraryFacets`,
+:ref:`FacetLabelTruncationLength`,
+:ref:`FacetMaxCount`,
+:ref:`maxRecordsForFacets`,
+and :ref:`UNIMARCAuthorsFacetsSeparator`.
 
 Along the top, under the number of results, there are buttons to do different actions
 on selected records.
@@ -374,7 +376,7 @@ on selected records.
 
     **Note**
 
-    The :ref:`intranetbookbag <intranetbookbag-label>` system preference needs to be
+    The :ref:`intranetbookbag` system preference needs to be
     set to 'Show' in order for that button to appear.
 
 -  'Add to list': adds selected record(s) to the chosen :ref:`list <lists-label>`.
@@ -387,7 +389,7 @@ on selected records.
 
     **Note**
 
-    The :ref:`BrowseResultSelection <browseresultselection-label>` system preference
+    The :ref:`BrowseResultSelection` system preference
     needs to be enabled in order for that button to appear.
 
 -  'Z39.50/SRU search': opens the Z39.50/SRU search popup window with the fields
@@ -397,7 +399,7 @@ on selected records.
 
     **Note**
 
-    By default your search results will be sorted based on your :ref:`defaultSortField and defaultSortOrder <defaultsortfield-&-defaultsortorder-label>` system preferences values.
+    By default your search results will be sorted based on your :ref:`defaultSortField and defaultSortOrder <defaultsortfield-and-defaultsortorder-label>` system preferences values.
 
 |image1330|
 
@@ -405,7 +407,7 @@ Under each title on your results list a series of values from your leader
 will appear. It is important to note that this has nothing to do with the
 item types or collection codes you have applied to your records, this data
 is all pulled from your fixed fields. This can be turned on or off with the
-:ref:`DisplayIconsXSLT <displayiconsxslt-label>` system preference.
+:ref:`DisplayIconsXSLT` system preference.
 
 At the bottom, under each record, there are more action links:
 
@@ -421,7 +423,7 @@ At the bottom, under each record, there are more action links:
 
     **Note**
 
-    'OPAC view' needs the :ref:`OPACBaseURL <opacbaseurl-label>` system preference to
+    'OPAC view' needs the :ref:`OPACBaseURL` system preference to
     be properly set.
 
 To the right of each record are the holdings information and availability.

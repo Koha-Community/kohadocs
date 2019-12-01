@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _using-third-party-software-with-koha-label:
+
 Using third party software with Koha
 ====================================
 
@@ -444,7 +446,7 @@ preference turned on, and patrons to have filled in a preference for
 receiving these notices by phone.
 
 For OVERDUE messages, overdue notice triggers must be configured under
-Koha -> Tools -> :ref:`Overdue Notice Triggers <overdue-notice/status-triggers-label>`. Either
+More > Tools > :ref:`Overdue notice/status triggers <overdue-notice/status-triggers-label>`. Either
 branch-specific triggers or the default level triggers may be used
 (script will select whichever is appropriate).
 
@@ -453,7 +455,7 @@ branch-specific triggers or the default level triggers may be used
 Sending Notices File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Add the :ref:`TalkingTech\_itiva\_outbound.pl <sending-notices-file-label>`
+1. Add the :ref:`TalkingTech\_itiva\_outbound.pl <cron-sending-notices-file-label>`
    script to your crontab
 
 2. Add an FTP/SFTP or other transport method to send the output file to
@@ -472,7 +474,7 @@ Receiving Results File
 1. Add an FTP/SFTP or other transport method to send the Results file to
    a known directory on your Koha server
 
-2. Add the :ref:`TalkingTech\_itiva\_inbound.pl <receiving-notices-file-label>`
+2. Add the :ref:`TalkingTech\_itiva\_inbound.pl <cron-receiving-notices-file-label>`
    script to your crontab, aimed at that directory
 
 3. If you wish, archive the results file in another directory after

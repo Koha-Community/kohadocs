@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _patrons-label:
+
 Patrons
 =======
 
@@ -39,7 +41,7 @@ Once there you can add a new patron.
    -  **Note**
 
           If you'd like to prevent full names from printing on
-          :ref:`slips <notices-&-slips-label>` and you're not using the Initials or
+          :ref:`slips <notices-and-slips-label>` and you're not using the Initials or
           Other name fields for anything else, you can use them for
           shortened versions of the name to then be printed on the slip.
 
@@ -127,7 +129,7 @@ Once there you can add a new patron.
    -  'Check for previous checkouts' is used to set the patron's personal preference
       regarding checking their circulation history to see if they have borrowed this
       item in the past. This overrides the setting of the :ref:`patron category
-      <adding-a-patron-category>` and of the :ref:`CheckPrevCheckout` system preference.
+      <adding-a-patron-category-label>` and of the :ref:`CheckPrevCheckout` system preference.
 
 -  Next, the library set-up section includes additional library settings
 
@@ -429,7 +431,7 @@ Patrons in Koha can be edited using one of many edit buttons.
       |image435|
 
 -  Children patrons do not become adults automatically in Koha unless
-   you have :ref:`Juvenile to adult cron job <update-child-to-adult-patron-type-label>` running. To
+   you have :ref:`Juvenile to adult cron job <cron-update-child-to-adult-patron-type-label>` running. To
    upgrade a child patron to and adult patron category manually go to
    the 'More' menu and choose 'Update child to adult patron'
 
@@ -800,7 +802,7 @@ permissions on a more granular level choose from these options:
    -  Manage circulation rules
 
    -  The ability to access the :ref:`Circulation and fines
-      rules <circulation-and-fine-rules-label>` configuration
+      rules <circulation-and-fines-rules-label>` configuration
       in the administration module.
 
 -  manage\_circ\_rules\_from\_any\_libraries
@@ -873,7 +875,7 @@ permissions on a more granular level choose from these options:
    -  The ability to access the
       :ref:`MARC bibliographic framework <marc-bibliographic-frameworks-label>`,
       :ref:`Authority types <authority-types-label>`,
-      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label> `, and
+      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label>`, and
       :ref:`MARC Bibliographic framework test <marc-bibliographic-framework-test-label>`
       configuration areas in the administration module.
 
@@ -932,7 +934,7 @@ permissions on a more granular level choose from these options:
 
    -  Manage global system preferences
 
-   -  The ability to access the :ref:`Global system preferences <administration-label>`
+   -  The ability to access the :ref:`Global system preferences <administration-system-preferences-label>`
       in the administration module.
 
 -  manage\_transfers
@@ -1190,7 +1192,7 @@ permissions on a more granular level choose from these options:
 -  superserials
 
    -  Manage subscriptions from any branch (only applies when
-      :ref:`IndependantBranches <independentbranches-label>` is used)
+      :ref:`IndependentBranches` is used)
 
 .. _granular-tools-permissions-label:
 
@@ -1244,7 +1246,7 @@ level choose from these options:
 
    -  Define notices
 
-   -  Access to the :ref:`Notices and slips tool <notices-&-slips-label>`
+   -  Access to the :ref:`Notices and slips tool <notices-and-slips-label>`
 
 -  edit\_patrons
 
@@ -1262,7 +1264,7 @@ level choose from these options:
 
    -  Export bibliographic, authorities and holdings data
 
-   -  Access to the :ref:`Export data tool <export-data-(marc-&-authorities)-label>`
+   -  Access to the :ref:`Export data tool <export-data-(marc-and-authorities)-label>`
 
 -  import\_patrons
 
@@ -1548,7 +1550,7 @@ permissions on a more granular level choose from these options:
       **Note**
 
       This permission should be used for the patron matching the
-      :ref:`AutoSelfCheckID <autoselfcheckallowed-autoselfcheckid-&-autoselfcheckpass-label>`
+      :ref:`AutoSelfCheckID <autoselfcheck-preferences-label>`
       system preference
 
 .. _patron-information-label:
@@ -1668,7 +1670,9 @@ cancel or suspend holds.
      If, when suspending a hold, you want to be able to set a date at which to
      automatically resume the hold, set the :ref:`AutoResumeSuspendedHolds`
      system preference to "Allow" and make sure the :ref:`unsuspend_holds cron
-     job <unsuspend-holds-label>` is activated.
+     job <cron-unsuspend-holds-label>` is activated.
+
+.. _article-requests-label:
 
 Article requests
 '''''''''''''''''''''''''''''''''''''''''''''
@@ -1715,13 +1719,11 @@ This restriction will not be removed automatically when the overdue items are
 returned unless the :ref:`AutoRemoveOverduesRestrictions` system preference
 is set to 'Do'.
 
-In the :ref:`circulation rules <circulation-and-fine-rules-label>`, you can choose
+In the :ref:`circulation rules <circulation-and-fines-rules-label>`, you can choose
 to fine users by suspending them instead of (or in addition to) fining them money.
 In that case, returning an overdue document will trigger a suspension restriction.
 
-Patrons may also be restricted if you have issued a :ref:`discharge <patron-
-discharges-label>` for them. Once the discharge is validated, the patron is
-automatically restricted.
+Patrons may also be restricted if you have issued a :ref:`discharge <patron-discharges-label>` for them. Once the discharge is validated, the patron is automatically restricted.
 
 Restrictions on a patron record will block checkouts. In fact,
 a message will appear in red when going to the checkout page.
@@ -1793,7 +1795,7 @@ The table will show you the following columns:
 -  Note: any notes about this charge/payment
 
    -  If you're allowing patrons to pay fines via the OPAC with PayPal
-      (:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-&-paypalsandboxmode-label>`) you
+      (:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-and-paypalsandboxmode-label>`) you
       will see a Note that says 'PayPal' for items paid this way
 
       |image1246|
@@ -1818,13 +1820,13 @@ Charging fines/fees
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Most fees and fines will be charged automatically if the :ref:`fines cron
-job <fines-label>` is running:
+job <cron-fines-label>` is running:
 
--  Fines will be charged based on your :ref:`Circulation & fines
-   rules <circulation-and-fine-rules-label>`
+-  Fines will be charged based on your :ref:`circulation and fines
+   rules <circulation-and-fines-rules-label>`
 
 -  Hold fees will be charged based on the rules you set in the :ref:`Patron
-   types & categories <patron-categories-label>` administration area
+   types and categories <patron-categories-label>` administration area
 
 -  Rental fees will be charged based on the settings in your :ref:`Item
    iypes <item-types-label>` administration area
@@ -2141,7 +2143,7 @@ From here you can see all suggestions made by the patron and their
 status, you can also create a purchase suggestion on the patron's behalf
 by clicking the 'New purchase suggestion' button at the top.
 
-Learn more about :ref:`purchase suggestions <purchase-suggestions-label>` in the
+Learn more about :ref:`managing purchase suggestions <managing-purchase-suggestions-label>` in the
 `Acquisitions <#acqmodule>`__ chapter of this manual.
 
 .. _patron-discharges-label:

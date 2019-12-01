@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _acquisitions-label:
+
 Acquisitions
 ============
 
@@ -8,7 +10,7 @@ orders placed with vendors and manage purchase budgets.
 
 -  *Get there:* More > Acquisitions
 
-.. _setup-label:
+.. _setup-acquisitions-label:
 
 Setup
 ---------------------
@@ -16,9 +18,8 @@ Setup
 Before using the Acquisitions module you will want to make sure that you
 have completed all of the set up.
 
-First, set your :ref:`Acquisitions system preferences <acquisitions-label>` and
-:ref:`acquisitions administration <acquisitions-label>` to match your library's
-workflow. Before setting your :ref:`EDI accounts` and
+First, set your :ref:`acquisitions system preferences <acquisitions-system-preferences-label>` and
+:ref:`acquisitions administration <acquisitions-module-label>` to match your library's workflow. Before setting your :ref:`EDI accounts` and
 :ref:`library EANs` you will need to have :ref:`entered your
 vendors <add-a-vendor-label>`.
 
@@ -103,8 +104,7 @@ The vendor add form is broken into three pieces
 
    -  For list prices and invoice prices choose the currency
 
-      -  Currencies are assigned in the :ref:`Currencies & exchange
-         rates <currencies-and-exchange-rates-label>` admin area
+      -  Currencies are assigned in the :ref:`Currencies and exchange rates` admin area
 
    -  If your library is charged tax mark your tax number as registered
 
@@ -124,7 +124,7 @@ The vendor add form is broken into three pieces
 
    -  Notes are for internal use
 
-.. _view/edit-a-vendor-label:
+.. _view-edit-a-vendor-label:
 
 View/edit a vendor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -186,9 +186,9 @@ It will also be an option when creating a basket
 
 |image793|
 
-.. _managing-suggestions-label:
+.. _managing-purchase-suggestions-label:
 
-Managing suggestions
+Managing purchase suggestions
 -----------------------------------------
 
 Purchase suggestions can be generated in one of two ways. You can create
@@ -294,14 +294,14 @@ You can also assign this suggestion to a fund.
 |image1280|
 
 This edit can trigger a notice (defined in the :ref:`Notices &
-slips <notices-&-slips-label>` tool with the `TO\_PROCESS <#toprocessnotice>`__
+slips <notices-and-slips-label>` tool with the `TO\_PROCESS <#toprocessnotice>`__
 notice) to the fund owner that there is a suggestion ready for them to
 manage if you have turned on the :ref:`cron job to generate these
-notices <email-suggestions-to-process-label>`.
+notices <cron-email-suggestions-to-process-label>`.
 
 Once you have clicked 'Submit' the suggestion will be moved to the
 matching tab. The status will also be updated on the patron's account in
-the OPAC and an :ref:`email notice <notices-&-slips-label>` will be sent to the patron
+the OPAC and an :ref:`email notice <notices-and-slips-label>` will be sent to the patron
 using the template that matches the status you have chosen.
 
 |image804|
@@ -407,7 +407,7 @@ Order from a purchase suggestion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  If you allow patrons to make purchase suggestions (learn more in the
-   :ref:`Managing suggestions <managing-suggestions-label>` section of this manual),
+   :ref:`managing purchase suggestions <managing-purchase-suggestions-label>` section of this manual),
    then you can place orders from those suggestions. In order to keep
    track of suggestions that have been ordered and received you must
    place the order using this link.
@@ -434,9 +434,12 @@ Order from a purchase suggestion
 
    -  Orders added to the basket in this way will notify the patron via
       email that their suggestion has been ordered (with the 'ORDERED' notice
-      in Tools > :ref:`Notices & slips <existing-notices-&-slips-label>`) and will
-      update the patron's ':ref:`your purchase suggestions
-      <your-purchase-suggestions-label>`' page in the OPAC.
+      in Tools > :ref:`Notices & slips <existing-notices-and-slips-label>`) and will
+      update the patron's
+      ':ref:`your purchase suggestions <your-purchase-suggestions-label>`'
+      page in the OPAC.
+
+.. _order-from-a-serial-subscription-label:
 
 Order from a serial subscription
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -461,6 +464,8 @@ Order from a serial subscription
 
       |image816|
 
+.. _order-from-a-new-empty-record-label:
+
 Order from a new (empty) record
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -479,6 +484,8 @@ Order from a new (empty) record
       which will allow the ACQ :ref:`MARC framework <marc-bibliographic-frameworks-label>`
       to customize the display of fields when ordering.
 
+.. _duplicate-orders-label:
+
 Duplicate orders (order from existing orders)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -492,6 +499,8 @@ Duplicate orders (order from existing orders)
    -  Check the boxes next to the order(s) you want to duplicate.
 
       |image1409|
+
+.. _order-from-an-external-source-label:
 
 Order from an external source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -522,6 +531,8 @@ Order from an external source
 
       |image821|
 
+.. _order-from-a-new-file-label:
+
 Order from a new file
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -531,13 +542,12 @@ Order from a new file
 
      **Note**
 
-     Note that you need the stage_marc_import
-     :ref:`tool permission <granular-tools-permissions-label>`
+     Note that you need the stage_marc_import :ref:`tool permission <granular-tools-permissions-label>`
      in order to be able order from a new file.
 
-    - You will be taken to the :ref:`Stage MARC records for import
-      <stage-marc-records-for-import-label>` tool. Stage your file as described
-      in that section.
+    - You will be taken to the
+      :ref:`Stage MARC records for import <stage-marc-records-for-import-label>`
+      tool. Stage your file as described in that section.
 
     - Once the files are staged, you can click on the 'Add staged files to basket'
       button.
@@ -565,6 +575,8 @@ Order from a new file
       apply values related to the accounting.
 
       |image1284|
+
+.. _order-from-a-staged-file-label:
 
 Order from a staged file
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -605,6 +617,8 @@ Order from a staged file
       apply values related to the accounting.
 
       |image1284|
+
+.. _order-from-titles-with-highest-holds-ratio-label:
 
 Order from titles with highest hold ratios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -699,8 +713,8 @@ Accounting information.
    by the publisher or the manufacturer as a recommendation to booksellers.
 
 -  Replacement cost is the price it will cost to replace the item. This is the
-   price charged to the user when an item is declared lost (if the
-   :ref:`WhenLostChargeReplacementFee` system preference is set to 'Charge').
+   price charged to the user when an item is declared lost (if the :ref:`WhenLostChargeReplacementFee`
+   system preference is set to 'Charge').
 
 -  Budgeted cost is the amount that will be removed from the 'spent' budget.
    Whether this number includes or excludes taxes will depend on the 'List price'
@@ -1161,11 +1175,9 @@ will be highlighted in yellow. Enter any different billing information
 in the fields provided and click 'Merge'. The two invoices will become
 one.
 
-.. Caroline was here
+.. _claims-and-late-orders-label:
 
-.. _claims-&-late-orders-label:
-
-Claims & late orders
+Claims and late orders
 -------------------------------------
 
 If you have entered in an email address for the vendors in your system
@@ -1200,7 +1212,7 @@ vendor at the email address you have on file.
     entered on the vendor record.
 
 If you would rather use a different acquisition claim letter (other than
-the default) you can :ref:`create that in the notices module <adding-notices-&-slips-label>`
+the default) you can :ref:`create that in the notices module <adding-notices-and-slips-label>`
 and choose it from the menu above the list of late items.
 
 |image859|
@@ -1240,7 +1252,7 @@ all of the order search options available.
 
 |image865|
 
-.. _budget/fund-tracking-label:
+.. _budget-fund-tracking-label:
 
 Budget/fund tracking
 ----------------------------------------
@@ -1421,7 +1433,7 @@ steps:
 -  :ref:`Enter the vendor/bookseller/jobber <add-a-vendor-label>` in
    Acquisitions
 
--  Review your :ref:`Acquisitions system preferences <acquisitions-label>`
+-  Review your :ref:`Acquisitions system preferences <acquisitions-system-preferences-label>`
 
    -  Be sure to fill in the :ref:`MarcFieldsToOrder`
       preference with values for order files
@@ -1430,7 +1442,7 @@ steps:
 
 -  Enter your :ref:`Library EANs`
 
--  Turn on the :ref:`EDI Cron <edi-message-processing-label>` so that it can process files
+-  Turn on the :ref:`EDI Cron <cron-edi-message-processing-label>` so that it can process files
 
 .. _edi-ordering-label:
 
@@ -1465,7 +1477,7 @@ EDIFACT order
 
 This will generate a pending file in the :ref:`EDIFACT
 messages <edifact-messages-label>` in Koha. The pending files will be processed
-by the :ref:`EDI cron job <edi-message-processing-label>` and sent to your vendor.
+by the :ref:`EDI cron job <cron-edi-message-processing-label>` and sent to your vendor.
 
 .. _edi-invoicing-label:
 
@@ -1473,7 +1485,7 @@ EDI invoicing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When the book vendor is done processing your files they will send an
-invoice via EDI as well. The :ref:`EDI cron job <edi-message-processing-label>` will grab
+invoice via EDI as well. The :ref:`EDI cron job <cron-edi-message-processing-label>` will grab
 invoices and mark items found in the invoice as received and update your
 funds without any need for manual intervention.
 

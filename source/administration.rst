@@ -266,7 +266,7 @@ top of the Item types page.
           set :ref:`noItemTypeImages` to 'Show'
 
       -  *Get there:*\ More > Administration > Global system preferences
-         > :ref:`Administration <administration-label>`
+         > :ref:`Administration <administration-system-preferences-label>`
 
 -  For items that you are suppressing from the OPAC you can hide their
    item type from being searched in the OPAC
@@ -278,7 +278,7 @@ top of the Item types page.
       If you want to completely hide items from a certain item type, let's
       say that you have a professional library with books reserved for staff
       and you don't want those to appear in the OPAC, use the
-      :ref:`OpacHiddenItems <opachiddenitems-label>` system preference.
+      :ref:`OpacHiddenItems` system preference.
 
 -  For items that do not circulate, check the 'Not for loan' options
 
@@ -742,7 +742,7 @@ add a value:
 
    |image147|
 
-.. _patrons-&-circulation-label:
+.. _patrons-and-circulation-label:
 
 Patrons and circulation
 -------------------------------------
@@ -860,8 +860,9 @@ To add a new patron category click 'New category' at the top of the page
           as when they are first enrolled.
 
 -  If you want your patron to receive overdue notices, set the 'Overdue
-   notice required' to 'Yes'. This will enable you to set the :ref:`overdue notice
-   triggers<overdue-notice/status-triggers-label>` in the Tools module.
+   notice required' to 'Yes'. This will enable you to set the
+   :ref:`overdue notice triggers <overdue-notice/status-triggers-label>`
+   in the Tools module.
 
 -  You can decide on a patron category basis if lost items are shown in
    the staff client by making a choice from the 'Lost items in staff
@@ -924,7 +925,7 @@ To add a new patron category click 'New category' at the top of the page
    :ref:`CheckPrevCheckout` system preference is set to 'Unless overridden by
    patron category, do' or 'Unless overridden by patron category, do not'.
    This setting can be overridden on a per-patron basis in their
-   :ref:`individual file <add-a-new-patron>`.
+   :ref:`individual file <add-a-new-patron-label>`.
 
 -  Finally you can assign advanced messaging preferences by default to a
    patron category
@@ -949,7 +950,7 @@ To add a new patron category click 'New category' at the top of the page
              *misc/maintenance* folder. Ask your system administrator
              for assistance with this script.
 
-.. _circulation-and-fine-rules-label:
+.. _circulation-and-fines-rules-label:
 
 Circulation and fines rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1158,7 +1159,7 @@ item types to apply the rules to
    -  **Important**
 
           You will need to enable the :ref:`automatic renewal cron
-          job <automatic-renewal-label>` for this to work.
+          job <cron-automatic-renewal-label>` for this to work.
 
    -  **Important**
 
@@ -1339,8 +1340,7 @@ Default lost item fee refund on return policy
 
 Here, you can specify the default policy for lost item fees on return.
 This policy will apply to this library. This rule is to be used with the
-:ref:`RefundLostOnReturnControl <refundlostonreturncontrol-label>`
-system preference.
+:ref:`RefundLostOnReturnControl` system preference.
 
 .. _item-hold-policies-label:
 
@@ -1579,8 +1579,7 @@ involved.
    transfer limits
 
 These rules only go into effect if the preference
-:ref:`UseBranchTransferLimits <usebranchtransferlimits-&-branchtransferlimitstype-label>` is set to
-'enforce'.
+:ref:`UseBranchTransferLimits <usebranchtransferlimits-and-branchtransferlimitstype-label>` is set to 'enforce'.
 
 Before you begin you will want to choose which library you are setting
 these limits for.
@@ -1619,7 +1618,7 @@ matrix you must first set the
 
     The transport cost matrix takes precedence in controlling where
     holds are filled from, if the matrix is not used then Koha checks
-    the :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
+    the :ref:`StaticHoldsQueueWeight <holds-queue-system-preferences-label>`.
 
 Costs are decimal values between some arbitrary maximum value (e.g. 1 or
 100) and 0 which is the minimum (no) cost. For example, you could just
@@ -1798,8 +1797,7 @@ the description for the framework:
 |image185|
 
 To make edits to the fields and subfields associated with the framework you must first
-click 'MARC Structure' and then follow the instructions for :ref:`editing fields and
-subfields <edit-framework-fields-and-subfields-label>`
+click 'MARC Structure' and then follow the instructions for :ref:`editing fields and subfields <edit-framework-fields-and-subfields-label>`
 
 .. _add-fields-to-frameworks-label:
 
@@ -2207,8 +2205,7 @@ When creating or editing:
 -  Check the 'Source in use?' checkbox if you want the value to appear
    in the drop down list for this category.
 
--  Select the appropriate :ref:`filing rule <classification-filing-rules-label>` from the
-   drop down list.
+-  Select the appropriate :ref:`filing rule <classification-filing-rules-label>` from the drop down list.
 
 .. _classification-filing-rules-label:
 
@@ -2792,8 +2789,7 @@ The three first fields are required, the rest are optional
    option from the dropdown lists for the Statiscal 1 done on: and
    Statistical 2 done on: fields.
 
--  To learn more about planning categories, check out the :ref:`Planning category
-   FAQ <planning-categories-label>`.
+-  To learn more about planning categories, check out the :ref:`Planning category FAQ <faq-planning-categories-label>`.
 
 When complete, click 'Submit' and you will be brought to a list of all
 of the funds for the budget.
@@ -3351,7 +3347,7 @@ SMS cellular providers
     **Important**
 
     This option will only appear if the
-    :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference is set to 'Email'
+    :ref:`smssenddriver-label` preference is set to 'Email'
 
 From here you can enter as many cellular providers as you need to send
 SMS notices to your patrons using the email protocol.

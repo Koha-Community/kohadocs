@@ -1,5 +1,7 @@
 .. include:: images.rst
 
+.. _tools-label:
+
 Tools
 =====
 
@@ -9,7 +11,7 @@ management systems.
 
 -  *Get there:* More > Tools
 
-.. _patrons-and-circulation-label:
+.. _tools-patrons-and-circulation-label:
 
 Patrons and circulation
 ------------------------------------------
@@ -328,7 +330,7 @@ bring the data into Koha.
 
      |image1355|
 
-.. _notices-&-slips-label:
+.. _notices-and-slips-label:
 
 Notices & slips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -355,9 +357,9 @@ You will also want to review the `Customising notices and slips
 <https://wiki.koha-community.org/wiki/Customising_Notices_and_Slips>`_
 wiki page for more information on formatting these notices.
 
-.. _adding-notices-&-slips-label:
+.. _adding-notices-and-slips-label:
 
-Adding notices & slips
+Adding notices and slips
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add a new notice or slip
@@ -404,7 +406,7 @@ To add a new notice or slip
       |image1222|
 
    -  If you have enabled SMS notices with the
-      :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>` preference you can set the text
+      :ref:`SMSSendDriver` preference you can set the text
       for your SMS notices next
 
       |image1223|
@@ -525,9 +527,9 @@ Which, assuming two items were overdue, would result in a notice like:
        "A Short History of Western Civilization" by Harrison, John B, 909.09821 H2451, Barcode: 08030003 Fine: 3.50
        "History of Western Civilization" by Hayes, Carlton Joseph Huntley, 909.09821 H3261 v.1, Barcode: 08030004 Fine: 3.50
 
-.. _existing-notices-&-slips-label:
+.. _existing-notices-and-slips-label:
 
-Existing notices & slips
+Existing notices and slips
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Among the default notices are notices for several common actions within
@@ -560,7 +562,7 @@ information in these notices. Here are some of what those notices do:
 -  ACCTDETAILS
 
    -  Sent to patrons when their account is set up if the
-      :ref:`AutoEmailOPACUser <autoemailopacuser-label>` preference is set to
+      :ref:`AutoEmailOPACUser` preference is set to
       'Send'
 
    -  *Important:* The notice will only be sent correctly if a username,
@@ -749,7 +751,7 @@ information in these notices. Here are some of what those notices do:
 
    -  Requires that you have the
       :ref:`MembershipExpiryDaysNotice` set
-      and the :ref:`related cron job <notify-patrons-of-expiration-label>` set.
+      and the :ref:`related cron job <cron-notify-patrons-of-expiration-label>` set.
 
 -  ODUE (Overdue notice)
 
@@ -888,7 +890,7 @@ information in these notices. Here are some of what those notices do:
       moved to the fund they manage
 
    -  Requires the
-      :ref:`notice\_unprocessed\_suggestions <email-suggestions-to-process-label>` cron job
+      :ref:`notice\_unprocessed\_suggestions <cron-email-suggestions-to-process-label>` cron job
 
 There are also a set of predefined slips (or receipts) listed on this
 page. All of these slips can be customized by altering their text via
@@ -948,7 +950,7 @@ Overdue notice/status triggers
    notice/status triggers
 
 In order to send the overdue notices that you defined using the
-:ref:`Notices <notices-&-slips-label>` tool, you need to first set the triggers to have
+:ref:`Notices & slips <notices-and-slips-label>` tool, you need to first set the triggers to have
 these messages.
 
     **Important**
@@ -994,7 +996,7 @@ items
 -  Next you can choose the delivery method for the overdue notice. You
    can choose from Email, Phone (if you are using the :ref:`iTiva Talking
    Tech service <talkingtechitivaphonenotification-label>`), Print and SMS
-   (if you have set your :ref:`SMSSendDriver <smssenddriver,-smssendusername,-and-smssendpassword-label>`).
+   (if you have set your :ref:`SMSSendDriver`).
 
 .. _patron-card-creator-label:
 
@@ -1715,17 +1717,17 @@ and any items attached to them in a batch.
 First you need to tell the tool if you're deleting bibliographic or
 authority records.
 
-Next, you can
+Next, you can:
 
   -  load a file with biblionumbers or authids;
 
      |image1231|
 
-  -  use a :ref:`list <lists-label>`, or;
+  -  use a :ref:`list <lists-label>`;
 
      |image1442|
 
-  -  enter the list of numbers in the box provided.
+  -  or enter the list of numbers in the box provided.
 
      |image1443|
 
@@ -1746,7 +1748,7 @@ Batch record modification
 
 -  *Get there:* More > Tools > Catalog > Batch record modification
 
-This tool will allow you to edit batches of bibliographic or
+This tool will allow you to edit batches of bibliographic and
 authority records using :ref:`MARC modification
 templates <marc-modification-templates-label>`. Before visiting this tool you will
 want to set up at least one MARC modification template.
@@ -1761,11 +1763,11 @@ When you visit the tool it will ask you:
 
       |image303|
 
-   -  You can use a :ref:`list <lists-label>`, or;
+   -  You can use a :ref:`list <lists-label>`;
 
       |image1440|
 
-   -  Enter the numbers (one per line) in the box provided.
+   -  Or enter the numbers (one per line) in the box provided.
 
       |image1441|
 
@@ -1806,7 +1808,7 @@ reaches a certain age.
     **Important**
 
     The settings in this tool will be acted upon by the :ref:`corresponding
-    cron job <automatic-item-update-label>`
+    cron job <cron-automatic-item-update-label>`
 
 If you haven't created any rules you will see the option to 'Add rules'
 on the Tool page. Click this button to create rules.
@@ -1840,7 +1842,7 @@ save your changes.
 
 |image307|
 
-.. _export-data-(marc-&-authorities)-label:
+.. _export-data-(marc-and-authorities)-label:
 
 Export data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

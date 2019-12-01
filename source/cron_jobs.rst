@@ -41,7 +41,7 @@ The locations below assume a dev install which puts the crons in misc/,
 if you have a standard install you may want to look in bin/ for these
 files if you cannot find them in misc/
 
-.. _daily-backup-label:
+.. _cron-daily-backup-label:
 
 Backup
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,12 +55,12 @@ Does: creates a daily backup of the Koha database.
 
 Frequency suggestion: daily
 
-.. _search-label:
+.. _cron-search-label:
 
 Search
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _sitemap-label:
+.. _cron-sitemap-label:
 
 Sitemap
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,7 +85,7 @@ of site traffic and server workload.
     User-agent: *
     Disallow: /cgi-bin/``
 
-.. _rebuild-index-label:
+.. _cron-rebuild-index-label:
 
 Rebuild index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -101,7 +101,7 @@ on performance needs
 
     **Note**
     On newer Koha installations, this cron job has been replaced by  the
-    :ref:'koha-indexer daemon <_koha-indexer-label>' which indexes new
+    :ref:`koha-indexer daemon <cron-koha-indexer-label>` which indexes new
     and modified Koha data every 30 seconds.
 
 .. _cron-circulation-label:
@@ -109,7 +109,7 @@ on performance needs
 Circulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _holds-queue-label:
+.. _cron-holds-queue-report-label:
 
 Holds queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -129,8 +129,8 @@ Description:
    library should be responsible for fulfilling a given hold request.
 
    It's behavior is controlled by the system preferences
-   :ref:`StaticHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>` and
-   :ref:`RandomizeHoldsQueueWeight <staticholdsqueueweight,-holdsqueueskipclosed-&-randomizeholdsqueueweight-label>`.
+   :ref:`StaticHoldsQueueWeight <holds-queue-system-preferences-label>` and
+   :ref:`RandomizeHoldsQueueWeight <holds-queue-system-preferences-label>`.
 
    If you do not want all of your libraries to participate in the
    on-shelf holds fulfillment process, you should list the the libraries
@@ -164,7 +164,7 @@ Description:
    RandomizeHoldsQueueWeight, causing the script to request hold
    fulfillment not randomly, but by alphabetical order.
 
-.. _expired-holds-label:
+.. _cron-expired-holds-label:
 
 Expired holds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -181,7 +181,7 @@ charge the patron for not picking up the hold.
 
 Frequency suggestion: daily
 
-.. _unsuspend-holds-label:
+.. _cron-unsuspend-holds-label:
 
 Unsuspend holds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -196,7 +196,7 @@ were when the hold was suspended.
 
 Frequency suggestion: daily
 
-.. _fines-label:
+.. _cron-fines-label:
 
 Fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -205,7 +205,7 @@ Script path: misc/cronjobs/fines.pl
 
 Does: calculates and charges (or increments) overdue fines per item to patron
 accounts. The fine calculation is done using the grace period, fine interval,
-fine amount and other parameters from the :ref:`circulation and fines rules <circulation-and-fine-rules-label>`.
+fine amount and other parameters from the :ref:`circulation and fines rules <circulation-and-fines-rules-label>`.
 
 Required by: :ref:`finesMode` system preference
 
@@ -219,7 +219,7 @@ Frequency suggestion: nightly
     **Note**
     Fines will not be applied on a holiday.
 
-.. _staticfines-label:
+.. _cron-staticfines-label:
 
 Static fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -243,7 +243,7 @@ Frequency suggestion: nightly
     **Note**
     Fines won't be applied on a holiday.
 
-.. _long-overdues-label:
+.. _cron-long-overdues-label:
 
 Long overdues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -260,11 +260,11 @@ Frequency suggestion: nightly
 
     Staff can control some of the parameters for the longoverdue cron
     job with the
-    :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-&-defaultlongoverduedays-label>` and
+    :ref:`DefaultLongOverdueLostValue <defaultlongoverduelostvalue-and-defaultlongoverduedays-label>` and
     :ref:`DefaultLongOverdueChargeValue`
     preferences.
 
-.. _track-total-checkouts-label:
+.. _cron-track-total-checkouts-label:
 
 Track total checkouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -288,7 +288,7 @@ Frequency suggestion: nightly
     This cronjob can be used if there is a performance concern. Otherwise,
     use the UpdateTotalIssuesOnCirc System Preference.
 
-.. _generate-patron-file-for-offline-circulation-label:
+.. _cron-generate-patron-file-for-offline-circulation-label:
 
 Generate patron file for offline circulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,7 +300,7 @@ circulation <offline-circ-tool-for-windows-label>` tool
 
 Frequency suggestion: weekly
 
-.. _automatic-renewal-label:
+.. _cron-automatic-renewal-label:
 
 Automatic renewal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -308,16 +308,16 @@ Automatic renewal
 Script path: misc/cronjobs/automatic\_renewals.pl
 
 Does: renews items if you're allowing automatic
-renewal with your :ref:`circulation and fine rules <circulation-and-fine-rules-label>`.
+renewal with your :ref:`circulation and fines rules <circulation-and-fines-rules-label>`.
 
 Frequency suggestion: nightly
 
-.. _patrons-label:
+.. _cron-patrons-label:
 
 Patrons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _delete-patrons-label:
+.. _cron-delete-patrons-label:
 
 Batch delete patrons
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -365,7 +365,7 @@ expired before, last seen, category code, or library branch.
      -  -v|--verbose
         Verbose mode.
 
-.. _unverified-registrations-label:
+.. _cron-unverified-registrations-label:
 
 Unverified registrations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -379,7 +379,7 @@ preference.
 
 Frequency suggestion: nightly
 
-.. _unconfirmed-registrations-label:
+.. _cron-unconfirmed-registrations-label:
 
 Unconfirmed registrations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -395,7 +395,7 @@ preference.
 
 Frequency suggestion: hourly
 
-.. _anonymize-patron-data-label:
+.. _cron-anonymize-patron-data-label:
 
 Anonymize patron data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -406,7 +406,7 @@ Does: removes borrowernumbers
 from circulation history so that the stats are kept, but the patron
 information is removed for privacy reasons.
 
-.. _update-child-to-adult-patron-type-label:
+.. _cron-update-child-to-adult-patron-type-label:
 
 Update child to adult patron type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -438,12 +438,12 @@ Frequency suggestion: nightly
     branches, shows all messages, and reports the patrons who would be
     affected. Takes no action on the database)
 
-.. _notices-label:
+.. _cron-notices-label:
 
 Notices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _message-queue-label:
+.. _cron-message-queue-label:
 
 Message queue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -461,9 +461,9 @@ Frequency suggestion: 1-4 hours
     **Important**
 
     Item due and Advanced due notices are controlled by the
-    :ref:`advance\_notices cron <advanced-notice-label>`.
+    :ref:`advance\_notices cron <cron-advanced-notice-label>`.
 
-.. _advanced-notice-label:
+.. _cron-advanced-notice-label:
 
 Advanced notice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -481,9 +481,9 @@ Frequency suggestion: nightly
     **Note**
 
     This script does not actually send the notices. It queues them in
-    the :ref:`message queue <message-queue-label>` for later
+    the :ref:`message queue <cron-message-queue-label>` for later
 
-.. _overdue-notice-label:
+.. _cron-overdue-notice-label:
 
 Overdue notice
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -498,7 +498,7 @@ Frequency suggestion: nightly
     **Note**
 
     This script does not actually send the notices. It queues them in
-    the :ref:`message queue <message-queue-label>` for later or generates the
+    the :ref:`message queue <cron-message-queue-label>` for later or generates the
     HTML for later printing
 
     **See also**
@@ -507,7 +507,7 @@ Frequency suggestion: nightly
     messages to patrons in advance of their items becoming due, or to alert
     them of items that have just become due.
 
-.. _printoverdues-label:
+.. _cron-printoverdues-label:
 
 Print overdues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -516,7 +516,7 @@ Script path: misc/cronjobs/printoverdues.sh
 
 Does: generates PDF files from HTML files in directories and prints them
 
-.. _print-hold-notices-label:
+.. _cron-print-hold-notices-label:
 
 Print hold notices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -529,7 +529,7 @@ print notice
 
 Frequency suggestion: nightly
 
-.. _talking-tech-label:
+.. _cron-talking-tech-label:
 
 Talking Tech
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -537,7 +537,7 @@ Talking Tech
 To learn more about setting up this third party product view the
 :ref:`Talking Tech <talking-tech-label>` chapter.
 
-.. _sending-notices-file-label:
+.. _cron-sending-notices-file-label:
 
 Sending notices file
 '''''''''''''''''''''''''''''''''''''''''''''''
@@ -552,7 +552,7 @@ Required by:
 
 Frequency suggestion: nightly
 
-.. _receiving-notices-file-label:
+.. _cron-receiving-notices-file-label:
 
 Receiving notices file
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -567,7 +567,7 @@ Required by:
 
 Frequency suggestion: nightly
 
-.. _notify-patrons-of-expiration-label:
+.. _cron-notify-patrons-of-expiration-label:
 
 Notify patrons of expiration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -575,13 +575,13 @@ Notify patrons of expiration
 Script path: misc/cronjobs/membership\_expiry.pl
 
 Does: sends messages to warn patrons of their card expiration to the
-:ref:`message queue <message-queue-label>` cron.
+:ref:`message queue <cron-message-queue-label>` cron.
 
 Requires: :ref:`MembershipExpiryDaysNotice`
 
 Frequency: nightly
 
-.. _in-processing/book-cart-label:
+.. _cron-in-processing/book-cart-label:
 
 In processing/book cart
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -592,17 +592,17 @@ Does: updates all items with a location of CART to the item's permanent
 location.
 
 Required by: :ref:`NewItemsDefaultLocation`,
-:ref:`InProcessingToShelvingCart`, &
+:ref:`InProcessingToShelvingCart`, and
 :ref:`ReturnToShelvingCart` system preferences
 
 Frequency suggestion: hourly
 
-.. _catalog-label:
+.. _cron-catalog-label:
 
 Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _import-webservice-batch-label:
+.. _cron-import-webservice-batch-label:
 
 Import webservice batch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -616,7 +616,7 @@ Batches can also be processed through the UI.
 
     This script is used for OCLC Connexion
 
-.. _connexion-import-daemon-label:
+.. _cron-connexion-import-daemon-label:
 
 Connexion import daemon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -631,7 +631,7 @@ parameters from a configuration file and forwards it to svc/import_bib
 
     This script is used for OCLC Connexion
 
-.. _delete-items-label:
+.. _cron-delete-items-label:
 
 Batch item deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -665,7 +665,7 @@ command line arguments.
 
     delete_items.pl --where "itemlost >= '1'" --where "itemlost <='4'" --where "itemlost_on < '2014-04-28'" --commit
 
-.. _check-url-quick-label:
+.. _cron-check-url-quick-label:
 
 Check URL quick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -712,7 +712,7 @@ not.
     -  --maxconn=1000
        Number of simulaneous HTTP requests. By default 200 connexions.
 
-.. _check-urls-label:
+.. _cron-check-urls-label:
 
 Check URLs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -727,7 +727,7 @@ Frequency suggestion: monthly
 
 Learn more: http://wiki.koha-community.org/wiki/Check-url_enhancements
 
-.. _delete-records-via-leader-label:
+.. _cron-delete-records-via-leader-label:
 
 Delete records via leader
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -753,7 +753,7 @@ Does: attempts to delete any MARC records where the leader character 5 equals 'd
         Try deleting items before deleting record.
         Records with items cannot be deleted.
 
-.. _update-authorities-label:
+.. _cron-update-authorities-label:
 
 Update authorities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -770,12 +770,12 @@ Does: updates biblio data with changes to authorities records
     bibliographic records that use that authority when this script is
     run.
 
-Required by: :ref:`AuthorityMergeLimit <authoritymergelimit-label>`
+Required by: :ref:`AuthorityMergeLimit`
 system preference
 
 Frequency suggestion: nightly
 
-.. _serials-update-label:
+.. _cron-serials-update-label:
 
 Serials update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -788,7 +788,7 @@ expected.
 
 Frequency suggestion: nightly
 
-.. _automatic-item-update-label:
+.. _cron-automatic-item-update-label:
 
 Automatic item update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -802,12 +802,12 @@ Required by: :ref:`Automatic item modifications by age`
 
 Frequency suggestions: nightly
 
-.. _opac-label:
+.. _cron-opac-label:
 
 OPAC
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. _rss-feeds-label:
+.. _cron-rss-feeds-label:
 
 RSS feeds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -819,7 +819,7 @@ search results RSS feed). :ref:`Learn more <custom-rss-feeds-label>`.
 
 Frequency suggestion: hourly
 
-.. _authorities-browser-label:
+.. _cron-authorities-browser-label:
 
 Authorities browser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -834,7 +834,7 @@ Required by: :ref:`OpacBrowser` system preference
 
     This preference and cron job should only be used on French systems.
 
-.. _subject/author-clouds-label:
+.. _cron-subject/author-clouds-label:
 
 Subject/author clouds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -848,12 +848,12 @@ operates.
 Frequency: This is the type of script you can run once a month or so,
 the content generated isn't going to change very much over time.
 
-.. _system-administration-label:
+.. _cron-system-administration-label:
 
 System administration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _services-throttle-label:
+.. _cron-services-throttle-label:
 
 Services throttle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -864,7 +864,7 @@ Does: resets the xISBN services throttle
 
 Frequency suggestion: nightly
 
-.. _clean-up-database-label:
+.. _cron-clean-up-database-label:
 
 Clean up database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -874,7 +874,7 @@ Script path: misc/cronjobs/cleanup\_database.pl
 Does: truncates the sessions table, cleans out old zebraqueue entries,
 action logs and staged MARC files.
 
-.. _share-usage-stats-label:
+.. _cron-share-usage-stats-label:
 
 Share usage stats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -888,12 +888,12 @@ feature
 
 Frequency: monthly
 
-.. _acquisitions-label:
+.. _cron-acquisitions-label:
 
 Acquisitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _clean-up-old-suggestions-label:
+.. _cron-clean-up-old-suggestions-label:
 
 Clean up old suggestions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -908,7 +908,7 @@ management area.
        The system preference :ref:`PurgeSuggestionsOlderThan` defines the number
        of days used in the script
 
-.. _email-suggestions-to-process-label:
+.. _cron-email-suggestions-to-process-label:
 
 Email suggestions to process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -918,7 +918,7 @@ Script path: misc/cronjobs/notice\_unprocessed\_suggestions.pl
 Does: generates a notice to the fund owner that there are suggestions in
 need of processing
 
-.. _edi-message-processing-label:
+.. _cron-edi-message-processing-label:
 
 EDI message processing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -929,7 +929,7 @@ Does: sends and received EDI messages
 
 Frequency: Every 15 minutes
 
-.. _remove-temporary-edi-files-label:
+.. _cron-remove-temporary-edi-files-label:
 
 Remove temporary EDI files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -938,7 +938,7 @@ Script path: misc/cronjobs/remove\_temporary\_edifiles.pl
 
 Does: removes temporary EDI files that are older than 5 days
 
-.. _deprecated-scripts-label:
+.. _cron-deprecated-scripts-label:
 
 .. _cron-reports-label:
 
@@ -995,6 +995,8 @@ Does: runs pre-existing saved reports
      -  reportID
         Report ID Number from saved_sql.id, multiple ID's may be specified
 
+.. _cron-norwegian-patron-database-label:
+
 Norwegian patron database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1037,7 +1039,7 @@ Script path: misc/cronjobs/social_data/update\_social\_data.pl
 
 Does: updates OPAC records with Babelthèque social data
 
-.. _daemons-subchapter-label:
+.. _cron-daemons-subchapter-label:
 
 Daemons
 -------------------------
@@ -1053,7 +1055,7 @@ Newer versions of Koha start two different daemons for most koha instances:
 
 These daemons are started by the script /etc/init.d/koha-common.
 
-.. _koha-indexer-label:
+.. _cron-koha-indexer-label:
 
 Zebra indexer daemon
 ~~~~~~~~~~~~~~~~~~~~
@@ -1066,7 +1068,7 @@ for new or modified data every 30 seconds.  New or modified records
 are then sent to Zebra for indexing, which only takes a second or so.
 The advantage of this approach is a search system which is much more
 responsive to changes, compared to the
-:ref:'cron job approach <_rebuild-index-label>'.
+:ref:`cron job approach <cron-rebuild-index-label>`.
 
 Deprecated scripts
 --------------------
