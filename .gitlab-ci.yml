@@ -29,7 +29,7 @@ production:
     - DEBIAN_FRONTEND=noninteractive apt-get install -y python3-sphinx  python3-sphinxcontrib.spelling python3-stemmer make rsync
     - make all_epub # build/LANG/epub
     - make all_html # build/LANG/html
-    - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/19.11/
+    - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/20.05/
     only:
         - master@koha-community/koha-manual
     environment: production
