@@ -1782,7 +1782,7 @@ charge you may have for patrons.
 
 |image450|
 
-The table will show you the following columns:
+The Accounts tab will show you the following columns:
 
 -  Date: the date the charge/payment was posted
 
@@ -1791,6 +1791,9 @@ The table will show you the following columns:
 
 -  Description: a description of the charges including the due date for
    overdue items and a link to the item record where one is available
+   
+-  Home library: if the charge is linked to a particular item the home library 
+   is displayed
 
 -  Note: any notes about this charge/payment
 
@@ -1798,17 +1801,18 @@ The table will show you the following columns:
       (:ref:`EnablePayPalOpacPayments <enablepaypalopacpayments-and-paypalsandboxmode-label>`) you
       will see a Note that says 'PayPal' for items paid this way
 
-      |image1246|
-
 -  Amount: the total amount of the payment or charge
 
 -  Outstanding: the amount still due on charge
 
--  The ability to reverse a payment
+-  Actions column:
 
--  The ability to void a payment
-
--  A link to print a receipt for that line item
+   -  A link to print a receipt for that line item
+   
+   -  A link to show further details about the charge and any payments that 
+      have been made
+   
+   -  A link to void (delete) the payment
 
 At the top of the table you can click the 'Filter paid transaction' to
 hide all completed transaction and above that you can use the search box
@@ -1836,7 +1840,7 @@ job <cron-fines-label>` is running:
 
 .. _pay/reverse-fines-label:
 
-Pay/reverse fines
+Pay/Void fines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each line item can be paid in full (or written off) using the 'Pay
@@ -1934,16 +1938,17 @@ fines' tab.
 
    -  Click the "Writeoff all" button
 
-   -  All fines will be removed from outstanding fines, and displayed as
-      written off.
+   -  All fines will be removed from outstanding fines, and displayed as written off.
+
 
 -  If you accidentally mark and item as paid, you can reverse that line
-   item by clicking 'Reverse' to the right of the line
+   item by clicking 'Void' to the right of the line
 
    |image457|
 
-   -  Once clicked a new line item will be added to the account, showing
-      the payment as reversed
+   -  Once clicked a new line item will be added to the account showing
+      the payment as ‘Voided’.  The payment line is added back to 
+      the Pay fines tab as an outstanding charge. 
 
       |image458|
 
