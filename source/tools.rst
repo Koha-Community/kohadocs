@@ -2619,8 +2619,9 @@ MARC modification templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The MARC modification templates system gives Koha users the power to
-make alterations to MARC records automatically while staging MARC
-records for import.
+make alterations to MARC records automatically while :ref:`staging MARC
+records for import <stage-marc-records-for-import-label>` 
+or :ref:`making batch record modifications <batch-record-modification-label>`.
 
 This tool is useful for altering MARC records from various
 vendors/sources work with your MARC framework. The system essentially
@@ -2638,7 +2639,7 @@ you might want to add the biblio item type of EBOOK to the 942$c.
 
 |image1237|
 
--  Choose 'Add/Update'
+-  Choose 'Add new'
 
 -  Enter the field 942 and subfield c
 
@@ -2647,6 +2648,12 @@ you might want to add the biblio item type of EBOOK to the 942$c.
 -  Provide a description so you can identify this action later
 
 -  Click 'Add action'
+
+    **Note**
+
+    If you wish to update the values in an existing field choose the option
+    ‘Update existing or add new’.  This will update existing values 
+    where found and add a new field if one doesn’t exist.
 
 Each action can also have an optional condition to check the value or
 existence of another field. For example you might want to add the call
