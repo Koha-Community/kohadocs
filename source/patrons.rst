@@ -382,7 +382,7 @@ Patrons in Koha can be edited using one of many edit buttons.
       suggestion. Passwords will be displayed as text."
 
 -  To edit a specific section of the patron record (for example the
-   'Library use' section) click the 'Edit' link below the section.
+   'Library use' section) click the 'Edit' button beside the section.
 
    |image429|
 
