@@ -40,7 +40,7 @@ Manage serial numbering patterns
 ------------------------------------------------------
 
 Everytime you create a new numbering pattern in serials you can save it
-for later use. These patters are accessible via the 'Manage numbering
+for later use. These patterns are accessible via the 'Manage numbering
 patterns' page.
 
 -  *Get there:* More > Serials > Manage numbering patterns
