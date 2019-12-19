@@ -104,7 +104,7 @@ The vendor add form is broken into three pieces
 
    -  For list prices and invoice prices choose the currency
 
-      -  Currencies are assigned in the :ref:`Currencies and exchange rates` admin area
+      -  Currencies are assigned in the :ref:`Currencies and exchange rates <currencies-and-exchange-rates-label>` admin area
 
    -  If your library is charged tax mark your tax number as registered
 
