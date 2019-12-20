@@ -644,50 +644,6 @@ willing to help you.
 Codes stored in the database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _faq-fines-table-label:
-
-Fines table
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Question:** What do the codes in the accounttype field in the
-accountlines table stand for?
-
-**Answer:**
-
--  A = Account management fee
-
--  C / CR = Credit
-
--  FOR = Forgiven
-
--  HE = Hold waiting for too long
-
--  L = Lost item
-
--  LR = Lost item fee refund
-
--  M = Sundry
-
--  N = New card
-
--  OVERDUE = Fine
-
--  PAY / Pay = Payment
-
--  Pay00 = Payment (cash via SIP2)
-
--  Pay01 = Payment (VISA via SIP2)
-
--  Pay02 = Payment (credit card via SIP2)
-
--  PF = Lost item processing fee
-
--  Rent = Rental fee
-
--  Res = Hold fee
-
--  W / WO = Writeoff
-
 .. _faq-statistics-table-label:
 
 Statistics table

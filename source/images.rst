@@ -1420,3 +1420,6 @@
 .. |image1441| image:: images/tools/batchbibmod/batchbibmod3.png
 .. |image1442| image:: images/tools/batchrecorddel/batchrecorddelete2.png
 .. |image1443| image:: images/tools/batchrecorddel/batchrecorddelete3.png
+.. |image1444| image:: images/admin/accounting/debittypes.png
+.. |image1445| image:: images/admin/accounting/alldebittypes.png
+.. |image1446| image:: images/admin/accounting/newdebittype.png

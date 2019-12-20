@@ -1970,14 +1970,8 @@ manual invoice
 -  First choose the type of invoice you would like to create
 
    -  To add additional values to the manual invoice type pull down
-      menu, add them to the `MANUAL\_INV <#manualinvvals>`__ authorized
-      values
-
-   -  **Important**
-
-          The value set as the authorized value for the MANUAL\_INV
-          authorized value category will appear as the description and
-          the authorized value description will be used as the amount.
+      menu, add them to the :ref:`debit types <add-debit-type-label>` 
+      in the Administration module.
 
 -  If the fee is associated with an item you can enter its barcode so
    that the line item shows a link to that item
