@@ -247,7 +247,7 @@ top of the Item types page.
    type description in to all of those languages using the 'Translate in
    to other languages' link)
 
--  Item types and can grouped together for searching at the same time.
+-  Item types can be grouped together for searching at the same time.
    For example you can put DVDs and Bluray in to a group called Movie
    and then they can be searched together. These groups are defined in
    the ITEMTYPECAT :ref:`authorized value category <existing-values-label>`.
@@ -265,7 +265,7 @@ top of the Item types page.
           To have your item type images appear in the OPAC you need to
           set :ref:`noItemTypeImages` to 'Show'
 
-      -  *Get there:*\ More > Administration > Global system preferences
+      -  *Get there:* More > Administration > Global system preferences
          > :ref:`Administration <administration-system-preferences-label>`
 
 -  For items that you are suppressing from the OPAC you can hide their
@@ -293,12 +293,16 @@ top of the Item types page.
        for, enter the total fee you charge in the ‘Rental charge’ field.
        This will charge the patron on checkout (and renewal).
 
-    - For items that a rental charge will be charged by the number of days
-      the item is checked out for, enter the daily fee in the 'Daily Rental
-      Charge' .  This will be charged to the patron upon checkout -
-      the cost per day and how many days this item can be checked out to the
-      patron.  This daily rental charge will also be applied if/when a renewal
-      occurs
+    -  For items that a rental charge will be charged by the number of days
+       the item is checked out for, enter the daily fee in the 'Daily Rental
+       Charge'. This will be charged to the patron upon checkout -
+       the cost per day and how many days this item can be checked out to the
+       patron. This daily rental charge will also be applied if/when a renewal
+       occurs.
+
+    -  For items that are loaned out hourly, enter the cost per hour in 'Hourly 
+       rental charge'. Again, the total (hourly cost * number of hours loaned) 
+       will be charged to the patron upon checkout and renewal.
 
  - Each amount will charge the patron on checkout.
 
@@ -307,14 +311,14 @@ top of the Item types page.
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
 
--  You can add a default replacement cost for this type of item. If left
-   blank, the replacement price of the item itself will be charged to the
-   user when the item is lost.
+-  You can add a default replacement cost for this type of item. This is the
+   amount that will be charged to the patron when lost if the item doesn't have 
+   a replacement cost. If the item has a replacement cost, that is the amount 
+   that will be charged to the patron.
 
     -  **Important**
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
-
 
 - You can also add a processing fee that will be added to the replacement cost.
 
@@ -322,7 +326,6 @@ top of the Item types page.
 
           Do not enter symbols in this field, only numbers and decimal
           points (ex. $5.00 should be entered as 5 or 5.00)
-
 
 -  If you would like a message or alert to appear when items of this
    type are checked in you can enter that in the 'Checkin message' box
@@ -344,6 +347,21 @@ top of the Item types page.
    if you use a device like this you'll want to enter the SIP media
    type.
 
+-  If this item type is only to be used in certain libraries only, you can select 
+   them here. Select 'All libraries' if this item type is used across the library 
+   system.
+
+      **Note** 
+
+      If this is left blank, 'All libraries' is assumed.
+
+      **Note**
+
+      To select more than one library, hold the 'Ctrl' key while selecting the 
+      libraries.
+
+.. add description of 'Summary'
+
 -  When finished, click 'Save changes'
 
    -  **Note**
@@ -361,7 +379,7 @@ Editing item types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each item type has an Edit button beside it. To edit an item simply
-click the 'Edit' link.
+click the 'Edit' button.
 
     **Important**
 
@@ -374,7 +392,7 @@ Deleting item types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each item has a Delete button beside it. To delete an item type, simply click
-the 'Delete' link.
+the 'Delete' button.
 
     **Important**
 
