@@ -3695,7 +3695,7 @@ ManInvInNoissuesCharge
 
 Default: Include
 
-Asks: \_\_\_ MANUAL\_INV charges when summing up charges for
+Asks: \_\_\_ custom debit types when summing up charges for
 noissuescharge.
 
 Values:
@@ -3708,10 +3708,10 @@ Description:
 
 -  This preference lets you decide if charges entered as manual invoices
    are included when calculating the
-   :ref:`noissuescharge`. If this is set to include then
+   :ref:`noissuescharge`. If this is set to 'Include' then
    Koha will include all manual invoices when deciding if the patron
    owes too much money to check anything else out of the library. If
-   it's set to Don't include then Koha will ignore all manual invoice
+   it's set to 'Don't include' then Koha will ignore all manual invoice
    charges when figuring out if the patron owes too much money to
    checkout additional materials.
 

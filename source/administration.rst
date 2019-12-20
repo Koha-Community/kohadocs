@@ -549,18 +549,6 @@ use, for instance 'Lost'.
           Values given to lost statuses should be numeric and not
           alphabetical in order for statuses to appear properly
 
--  MANUAL\_INV
-
-   -  Values for manual invoicing types
-
-   -  **Important**
-
-          The value set as the Authorized value for the MANUAL\_INV
-          authorized value category will appear as the Description and
-          the Authorized value description will be used as the amount.
-          Enter monetary amounts in the description without currency
-          symbols.
-
 -  OPAC\_SUG
 
    -  A list of reasons displayed in the suggestion form on the OPAC.
@@ -1742,6 +1730,196 @@ down menu to make city selection easy.
 
 This will allow for easy entry of local cities into the patron record
 without risking the potential for typos or mistaken zip/postal codes.
+
+.. _accounting-administration-label:
+
+Accounting
+---------------------------------------------------------------------
+
+-  *Get there:* More > Administration > Accounting
+
+This section deals with the parameters used in managing the patron 
+accounts.
+
+.. _debit-types-label:
+
+Debit types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  *Get there:* More > Administration > Accounting > Debit types
+
+This is where you define the manual fees you can charge patrons.
+
+|image1444|
+
+When you first get to the page, you will only see the manual fees that 
+are already defined in your system. 
+
+You can see the default system fees by clicking "Show all debit types".
+
+|image1445|
+
+You can go back to seeing only the manual fees by clicking "Filter 
+system debit types".
+
+.. _system-debit-types-label:
+
+System debit types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Several debit types come installed with Koha. Most of them are 
+automatic fees that are added according to the policies you set up 
+elsewhere in Koha.
+
+-  ACCOUNT (Account creation fee): this is charged to the patron's 
+   account upon registration. The fee can be changed in the 
+   :ref:`patron category settings <adding-a-patron-category-label>` 
+   under 'Enrollment fee'.
+
+-  ACCOUNT\_RENEW (Account renewal fee): this is charged to the 
+   patron's account when their account is renewed. Like the ACCOUNT 
+   debit type above, this can be changed in the 
+   :ref:`patron category settings <adding-a-patron-category-label>` 
+   under 'Enrollment fee'.
+
+-  LOST (Lost item): this is charged to the patron's account when an 
+   item in their file is declared lost. The amount depends on the 
+   :ref:`item's 'replacement cost' field <adding-items-label>` or on 
+   the :ref:`item type's default replacement cost <adding-item-types-label>`. 
+   It can also be added manually in the :ref:`manual invoices 
+   <creating-manual-invoices-label>` tab.
+
+-  MANUAL (Manual fee): this is the default manual fee installed with 
+   Koha. This is not charged automatically by Koha, but can be added 
+   to a patron's account manually in the :ref:`manual invoices 
+   <creating-manual-invoices-label>` tab.
+
+-  NEW\_CARD (New card fee): this is another default manual fee installed 
+   with Koha. This will not be charged automatically by Koha, but can 
+   be added to a patron's account manually in the :ref:`manual invoices 
+   <creating-manual-invoices-label>` tab.
+
+-  OVERDUE (Overdue fine): this is charged automatically to the patron's 
+   account when they have overdue items. The amount for overdue fines are 
+   set in the :ref:`circulation and fines rules <circulation-and-fines-rules-label>`.
+
+-  PROCESSING (Lost item processing fee): this is charged automatically 
+   to the patron's account when an item in their file is declared lost. 
+   The amount is set by :ref:`item type <adding-item-types-label>` under 
+   'Processing fee (when lost)'.
+
+-  RENT (Rental fee): this is charged automatically to the patron's 
+   account upon checkout if the :ref:`item type <adding-item-types-label>` 
+   has a rental charge.
+
+-  RENT\_DAILY (Daily rental fee): this is charged automatically to the 
+   patron's account upon checkout if the :ref:`item type <adding-item-types-label>` 
+   has a daily rental charge.
+
+-  RENT\_DAILY\_RENEW (Renewal of daily rental item): this is charged 
+   automatically to the patron's account upon renewal if the 
+   :ref:`item type <adding-item-types-label>` has a daily rental charge.
+
+-  RENT\_RENEW (Renewal of rental item): this is charged automatically 
+   to the patron's account upon renewal if the :ref:`item type 
+   <adding-item-types-label>` has a rental charge.
+
+-  RESERVE (Hold fee): this is charged automatically to the patron's 
+   account upon placing a hold. The amount depends on the 'Hold fee' 
+   amount in the :ref:`patron's category <adding-a-patron-category-label>` 
+   settings.
+
+-  RESERVE\_EXPIRED (Hold waiting too long): this is charged automatically 
+   to the patron's account if they haven't picked up their hold after the 
+   number of days defined in the :ref:`ExpireReservesMaxPickUpDelay` 
+   system preference. The amount is set in the :ref:`ExpireReservesMaxPickUpDelayCharge` 
+   system preference.
+
+.. _add-debit-type-label:
+
+Adding a new debit type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To add a new debit type:
+
+-  Click 'New debit type'
+
+   |image1446|
+
+   -  Enter a code (limited to 64 letters)
+
+   -  Enter the default amount
+
+      **Note**
+
+      Staff will be able to change this amount when adding the charge 
+      to the patron's account, if necessary
+
+      **Note**
+
+      Do not enter currency symbols. Only write the amount with a decimal 
+      point (for example, 5 or 5.00 instead of $5)
+
+   -  Write a description
+
+      This description will be used in the drop-down menu when adding 
+      a new charge to a patron's account as well as in their transaction 
+      history
+
+   -  If this debit type can be added manually by staff to a patron's 
+      account via the :ref:`manual invoices <creating-manual-invoices-label>`, 
+      check the 'Can be added manually?' check box
+
+   -  If this debit type is only to be used in specific branches, you can 
+      select the libraries in 'Libraries limitation'
+
+      **Note**
+
+      You can select more than one library by pressing the 'Ctrl' key 
+      while selecting.
+
+   -  Click 'Save'
+
+.. _edit-debit-type-label:
+
+Editing an existing debit type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can only modify the debit types you have added, as well as the 
+'Manual fee'.
+
+To edit a debit type:
+
+-  Click the 'Edit' button to the right of the debit type
+
+-  Modify any field
+
+-  Click 'Save'
+
+.. _archive-debit-type-label:
+
+Archiving a debit type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If there is a debit type you don't need anymore, you can archive it. 
+
+  **Note**
+
+  There is no way to delete a debit type since they are used in the 
+  patron's accounting section.
+
+To archive a debit type, simply click the 'Archive' button to the 
+right of the debit type.
+
+.. _restore-debit-type-label:
+
+Restoring an archived debit type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you need to use an archived debit type again, simply click on the 
+'Restore' button to the right of the debit type.
+
+This will make it available again.
 
 .. _catalog-administration-label:
 
