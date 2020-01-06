@@ -1294,25 +1294,27 @@ patrons in the library if no other option is set in the forms below.
    -  From Any Library: Patrons from any library may put this item on
       hold. (default if none is defined)
 
+   -  From Local Hold Group: Only patrons from a library in the item home
+      library’s local hold group may put this book on hold.
+
    -  From Home Library: Only patrons from the item's home library may
       put this book on hold.
 
    -  No Holds Allowed: No patron may put this book on hold.
 
--  Control if there is a limit to filling a hold based on the item's
-   library
+-  Control where patron can pick up holds using the “Hold Pickup Library
+   Match” menu
 
    -  any library
+
+   -  item's hold group
+
+   -  patron's hold group
 
    -  item's home library
 
    -  item's holding library
 
-   -  **Note**
-
-          The patron's home library should not affect whether a patron
-          can place the hold, instead the hold will only be fillable
-          when an item matching the pickup location becomes available.
 
 -  Control where the item returns to once it is checked in
 
@@ -1375,6 +1377,9 @@ The various hold policies have the following effects:
 -  From any library: Patrons from any library may put this item on hold.
    (default if none is defined)
 
+-  From local hold group: Only patrons from libraries in the same item's
+   home library hold groups may put this book on hold.
+   
 -  From home library: Only patrons from the item's home library may put
    this book on hold.
 
@@ -1388,23 +1393,21 @@ The various hold policies have the following effects:
 
     **Important**
 
-    These policies are based on the patron's home branch, not the branch
-    that the reserving staff member is from.
+    These policies are applied based on the ReservesControlBranch
+    system preference.
 
-Control if there is a limit to filling a hold based on the item's
-library
+Control where patron can pick up holds using the “Hold Pickup Library Match”
+menu
 
 -  any library
+
+-  item's hold group
+
+-  patron' hold group
 
 -  item's home library
 
 -  item's holding library
-
--  **Note**
-
-       The patron's home library should not affect whether a patron can
-       place the hold, instead the hold will only be fillable when an
-       item matching the pickup location becomes available.
 
 The various return policies have the following effects:
 
