@@ -138,8 +138,9 @@ link to edit/alter details associated with the library in question.
 Library groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Library groups are used in searches to limit the search to a group of
-libraries (for example in a neigbourhood).
+Library groups can serve four purposes: to limit access to patron data,
+to limit OPAC searches, to limit staff searches, and/or to define holds
+behavior.
 
 -  *Get there:* More > Administration > Basic Parameters > Library groups
 
@@ -169,7 +170,7 @@ Click the 'Add Group' button at the top of the screen
     This can be overriden with the :ref:`user permission view_borrower_infos_
     from_any_libraries <patron-permissions-defined-label>`.
 
-- If you would like the group to show up in the library pulldown menu at the
+- If you want the group to show up in the library pulldown menu at the
   top of the OPAC (with :ref:`OpacAddMastheadLibraryPulldown` set to 'Add')
   and on the advanced search page you can check the 'Use for OPAC search
   groups' box.
@@ -181,6 +182,9 @@ Click the 'Add Group' button at the top of the screen
 
 .. _adding-a-library-to-a-group-label:
 
+- If you want to use this group to define holds rules, check the ‘Is local
+  hold group’ box.
+  
 Adding a library to a group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
