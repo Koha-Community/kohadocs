@@ -463,6 +463,10 @@ Either of those links will open up a item specific search engine.
 
 Using the search form that is presented you can find a list of specific
 items that can be output to the screen, to a CSV file or to a barcode file.
+
+You can add more search fields to this form by going to the :ref:`item search
+fields <item-search-fields-label>` section in the Administration module.
+
 If your results are printed to the screen you will have the option to narrow
 your search further using filters at the top.
 
