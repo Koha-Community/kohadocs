@@ -442,7 +442,7 @@ To the right of each record are the holdings information and availability.
 
 .. _item-searching-label:
 
-Item Searching
+Item search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are looking for specific items you can use the item search engine
