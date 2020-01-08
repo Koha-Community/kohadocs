@@ -448,21 +448,23 @@ Item search
 If you are looking for specific items you can use the item search engine
 in the staff client to find them.
 
--  *Get there:* Search > Go to item search
+-  *Get there:* Search > Item search
 
-At the top of the advanced search page in the staff client you will see
-a link to 'Go to item search'
+|image1447|
+
+You can also access the item search from the link 'Go to item search' at the
+top of the advanced search page in the staff client.
 
 |image1313|
 
-Clicking that link will open up a item specific search engine.
+Either of those links will open up a item specific search engine.
 
 |image1314|
 
 Using the search form that is presented you can find a list of specific
-items that can be output to the screen or to a CSV file. If your results
-are printed to the screen you will have the option to narrow your search
-further using filters at the top.
+items that can be output to the screen, to a CSV file or to a barcode file.
+If your results are printed to the screen you will have the option to narrow
+your search further using filters at the top.
 
 |image1315|
 

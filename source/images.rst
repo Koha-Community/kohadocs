@@ -1423,3 +1423,4 @@
 .. |image1444| image:: images/admin/accounting/debittypes.png
 .. |image1445| image:: images/admin/accounting/alldebittypes.png
 .. |image1446| image:: images/admin/accounting/newdebittype.png
+.. |image1447| image:: images/searching/itemsearchinmenu.png
