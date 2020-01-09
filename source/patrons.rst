@@ -714,7 +714,13 @@ Patron permissions defined
 
   -  Used to access the :ref:`stock rotation tool <stock-rotation-label>`
 
-  -  This section can be expanded (:ref:Learn more <granular-stock-rotation-permissions-label>`)
+  -  This section can be expanded (:ref:`Learn more <granular-stock-rotation-permissions-label>`)
+
+-  Cash management (cash_management)
+
+   -  Used to access the :ref:`cash register administration <cashregisters-label>`
+
+   -  This section can be expanded (:ref:`Learn more <granular-cash-management-permissions-label>`)
 
 .. _granular-circulate-permissions-label:
 
@@ -1577,6 +1583,20 @@ permissions on a more granular level choose from these options:
 
    -  Staff with only this permission will be able to manage the rotas, but not 
       the actual items
+
+.. _granular-cash-management-permissions-label:
+
+Granular cash management permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the staff member has the 'cash management' permission they have the ability 
+to perform all of these actions. If you would like to control cash management
+permissions on a more granular level choose from these options:
+
+-  Add, edit and archive cash registers (manage_cash_registers)
+
+   -  Staff with this permissions will be able to manage the :ref:`cash 
+      registers in the administration module <cashregisters-label>`
 
 .. _patron-information-label:
 
