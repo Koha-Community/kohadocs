@@ -14085,6 +14085,48 @@ Tools
 
 *Get there:* More > Administration > Global System Preferences > Tools
 
+.. _barcodes-label:
+
+Barcodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _barcodeseparators-label:
+
+BarcodeSeparators
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: \\s\\r\\n
+
+Asks: Split barcodes on the following separator chars \_\_\_ in batch item 
+modification and inventory.
+
+Description:
+
+-  When importing barcode files in the :ref:`inventory tool <inventory-tool-label>` 
+   or the :ref:`batch item modification tool <batch-item-modification-label>` 
+   you can decide which character separates each barcode.
+
+   **Important**
+
+   You must use the regular expression codes for the characters.
+
+   -  \\s is used for a whitespace
+
+   -  \\r is used for a carriage return
+
+   -  \\n is used for a new line
+
+   -  \\t is used for a tab
+
+   Make sure you escape the other characters you put in there by preceding 
+   them with a backslash
+
+   -  \\. instead of a dot
+
+   -  \\\ instead of a backslash
+
+   -  \\- instead of a hyphen
+
 .. _batch-item-label:
 
 Batch Item
