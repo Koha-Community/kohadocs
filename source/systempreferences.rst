@@ -9322,22 +9322,6 @@ Description:
 
 |image80|
 
-.. _opacnavright-label:
-
-OpacNavRight
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Asks: Show the following HTML in the right hand column of the main page
-under the main login form.
-
-Description:
-
--  HTML entered in this preference will appear on the right
-   hand side of the OPAC under the log in form. If the log in form is not
-   visible this content will move up on the right column.
-
-|image81|
-
 .. _opacnoresultsfound-label:
 
 OPACNoResultsFound

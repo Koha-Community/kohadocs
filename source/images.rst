@@ -78,7 +78,6 @@
 .. |image78| image:: images/admin/globalprefs/OPACMySummaryHTML.png
 .. |image79| image:: images/admin/globalprefs/OpacNav.png
 .. |image80| image:: images/admin/globalprefs/OpacNavBottom.png
-.. |image81| image:: images/admin/globalprefs/OpacNavRight.png
 .. |image82| image:: images/admin/globalprefs/OPACNoResultsFound.png
 .. |image83| image:: images/admin/globalprefs/OpacSeparateHoldings.png
 .. |image84| image:: images/admin/globalprefs/OPACShowBarcode-noshow.png
