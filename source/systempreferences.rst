@@ -14136,14 +14136,14 @@ These preferences are in reference to the :ref:`Batch item
 modification <batch-item-modification-label>` and :ref:`Batch item deletion 
 <batch-item-deletion-label>` tools.
 
-.. _maxitemsforbatchdel-label:
+.. _maxitemstodisplayforbatchdel-label:
 
-MaxItemsForBatchDel
+MaxItemsToDisplayForBatchDel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: 1000
 
-Asks: Display up to \_\_\_ items in a single deletion batch.
+Asks: Display up to \_\_\_ items in a single item deletion batch.
 
 Description:
 
@@ -14152,9 +14152,25 @@ Description:
    preference, but you will be able to delete more than the number you
    enter here.
 
+.. _maxitemstodisplayforbatchmod-label:
+
+MaxItemsToDisplayForBatchMod
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: 1000
+
+Asks: Display up to \_\_\_ items in a single item modification batch.
+
+Description:
+
+-  In the :ref:`batch item modification tool <batch-item-modification-label>` 
+   this will prevent the display of more than the items you entered in this
+   preference, but you will be able to modify more than the number you
+   enter here (see :ref:`MaxItemsToProcessForBatchMod`).
+
 .. _maxitemsforbatchmod-label:
 
-MaxItemsForBatchMod
+MaxItemsToProcessForBatchMod
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default: 1000
