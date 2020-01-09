@@ -7007,7 +7007,7 @@ Description:
 
 .. _local-cover-images-label:
 
-Local Cover Images
+Local or remote cover images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _allowmultiplecovers-label:
@@ -7036,6 +7036,78 @@ Description:
    'Display.^
 
    |image54|
+
+
+.. _customcoverimages-label:
+
+CustomCoverImages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't display
+
+Asks: \_\_\_ custom remote url images in the staff client.
+
+Values:
+
+-  Display
+
+-  Don't display
+
+Description:
+
+-  If you use :ref:`CustomCoverImagesURL`, this preference indicates if you 
+   want these cover images to appear in the staff interface.
+
+-  Use :ref:`OPACCustomCoverImages` if you want those images to appear in the 
+   OPAC.
+
+.. _opaccustomcoverimages-label:
+
+OPACCustomCoverImages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't display
+
+Asks: \_\_\_ custom remote url images at the OPAC.
+
+Values:
+
+-  Display
+
+-  Don't display
+
+Description:
+
+-  If you use :ref:`CustomCoverImagesURL`, this preference indicates if you 
+   want these cover images to appear in the OPAC.
+
+-  Use :ref:`CustomCoverImages` if you want those images to appear in the 
+   staff interface.
+
+.. _customcoverimagesurl-label:
+
+CustomCoverImagesURL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Using the following URL: \_\_\_ 
+
+Description:
+
+-  You can use codes to substitute bibliographic information in the URL:
+   {isbn}, {issn}, {normalized_isbn}
+
+   For example:
+   http://www.mylibrarysite.com/covers/{isbn}.png
+
+-  You can also use MARC fields and subfields in the URL like so:
+   {024$a}
+
+   For example:
+   http://www.mylibrarysite.com/covers/{024$a}.png
+
+-  Make sure to enable :ref:`CustomCoverImages` if you want those images to 
+   appear in the staff interface and :ref:`OPACCustomCoverImages` if you want 
+   those images to appear in the OPAC.
 
 .. _localcoverimages-label:
 
