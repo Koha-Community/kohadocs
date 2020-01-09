@@ -1424,3 +1424,5 @@
 .. |image1446| image:: images/admin/accounting/newdebittype.png
 .. |image1447| image:: images/searching/itemsearchinmenu.png
 .. |image1448| image:: images/tools/news/opacnavright.png
+.. |image1449| image:: images/admin/accounting/addcashregister.png
+.. |image1450| image:: images/admin/accounting/cashregisters.png
