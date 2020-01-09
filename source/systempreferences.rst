@@ -14129,11 +14129,12 @@ Description:
 
 .. _batch-item-label:
 
-Batch Item
+Batch item
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These preferences are in reference to the :ref:`Batch Item
-Modification <batch-item-modification-label>` tool.
+These preferences are in reference to the :ref:`Batch item
+modification <batch-item-modification-label>` and :ref:`Batch item deletion 
+<batch-item-deletion-label>` tools.
 
 .. _maxitemsforbatchdel-label:
 
