@@ -3345,10 +3345,35 @@ receipt:
 
    |image388|
 
-   -  Under 'Display location' choose whether to put the news on the
-      OPAC (OPAC news), Slip (circulation receipt) or the Librarian interface.
+   -  Under 'Display location' choose where to put the news
 
       |image1240|
+
+      -  Librarian interface: content will appear on the staff interface main 
+         page
+
+         |image390|
+
+      -  Slip: content will appear on the circulation receipts
+
+         |image391|
+
+         **Note** 
+         This can be activated or deactivated in the :ref:`Notices & slips tool
+          <notices-and-slips-label>`
+
+      -  OPAC news: content will appear above the :ref:`OpacMainUserBlock`
+
+         |image389|
+
+         Below the news in the OPAC there will be an RSS icon allowing you
+         to subscribe to library news
+
+         |image1241|
+
+      -  OpacNavRight: content will appear on the right side of the OPAC page
+
+         |image1448|
 
    -  Choose the library this news item will show for
 
@@ -3374,29 +3399,9 @@ receipt:
 
 -  After filling in all of the fields, click 'Submit'
 
--  News in the OPAC will appear above the
-   :ref:`OpacMainUserBlock`
-
-   |image389|
-
-   -  Below the news in the OPAC there will be an RSS icon allowing you
-      to subscribe to library news
-
-    |image1241|
-
--  News in the Staff Client will appear on the far left of the screen
-
-   |image390|
-
--  News on the circulation receipts will appear below the items that are
-   checked out
-
-   |image391|
-
--  Depending on your choice for the
-   :ref:`NewsAuthorDisplay` preference you will also
-   see the person who created the news item (this uses the logged in
-   person)
+Depending on your choice for the :ref:`NewsAuthorDisplay` system preference 
+you will also see the person who created the news item (this uses the logged in
+person)
 
 .. _task-scheduler-label:
 
