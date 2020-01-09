@@ -54,6 +54,63 @@ follow they will all read USD for U.S. Dollars.
     highlighted terms. Consult with your system administrator for more
     information.
 
+.. _accounting-system-preferences-label:
+
+Accounting
+-------------------------------------------------------------------------------
+
+*Get there:* More > Administration > Global system preferences >
+Acquisitions
+
+.. _accounting-policy-label:
+
+Policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _accountautoreconcile-label:
+
+AccountAutoReconcile
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: \_\_\_ reconcile patron balances automatically on each transaction adding debits or credits.
+
+Default: Do not
+
+Values:
+
+-  Do
+
+-  Do not
+
+Description:
+
+-  This preference controls whether or not credits are automatically used to
+   to reduce the owed amounts in a patron's account.
+
+.. _finepaymentautopopup-label:
+
+FinePaymentAutoPopop
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: \_\_\_ automatically display a print dialog for a payment receipt when 
+making a payment
+
+Default: Don't
+
+Value:
+
+-  Do
+
+-  Don't
+
+Description:
+
+-  If activated, when :ref:`making a payment <pay/reverse-fines-label> in a 
+   patron's account, a printing popup will be displayed automatically instead 
+   of having to click on the 'print' button.
+
+
+
 .. _acquisitions-system-preferences-label:
 
 Acquisitions
@@ -2624,31 +2681,6 @@ Circulation
 
 *Get there:* More > Administration > Global System Preferences >
 Circulation
-
-.. _accounts-sysprefs-label:
-
-Accounts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. _accountautoreconcile-label:
-
-AccountAutoReconcile
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Asks: \_\_\_ reconcile patron balances automatically on each transaction adding debits or credits.
-
-Default: Do not
-
-Values:
-
--  Do
-
--  Do not
-
-Description:
-
--  This preference controls whether or not credits are automatically used to
-   to reduce the owed amounts in a patron's account.
 
 .. _article-requests-sysprefs-label:
 
