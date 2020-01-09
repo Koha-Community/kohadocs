@@ -710,6 +710,12 @@ Patron permissions defined
 
    -  This section can be expanded (:ref:`Learn more <granular-self-check-permissions-label>`)
 
+-  Manage stockrotation operations (stockrotation)
+
+  -  Used to access the :ref:`stock rotation tool <stock-rotation-label>`
+
+  -  This section can be expanded (:ref:Learn more <granular-stock-rotation-permissions-label>`)
+
 .. _granular-circulate-permissions-label:
 
 Granular circulate permissions
@@ -1553,6 +1559,25 @@ permissions on a more granular level choose from these options:
       :ref:`AutoSelfCheckID <autoselfcheck-preferences-label>`
       system preference
 
+.. _granular-stock-rotation-permissions-label:
+
+Granular stock rotation permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the staff member has the 'stock rotation' permission they have the ability 
+to perform all of these actions. If you would like to control stock rotation
+permissions on a more granular level choose from these options:
+
+-  Add and remove items from rotas (manage_rota_items)
+
+   -  Staff with only this permission will be able to manage the items in the 
+      rotas, but not the rotas themselves
+
+-  Create, edit and delete rotas (manage_rotas)
+
+   -  Staff with only this permission will be able to manage the rotas, but not 
+      the actual items
+
 .. _patron-information-label:
 
 Patron information
@@ -1865,6 +1890,9 @@ fines' tab.
       payment type
 
       |image452|
+
+   -  If the :ref:`UseCashRegisters` system preference is enabled, you will 
+      have a choice of cash register in which to enter the transaction
 
    -  Click "Confirm"
 
