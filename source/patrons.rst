@@ -552,77 +552,338 @@ Setting patron permissions
    |image440|
 
 -  You will be presented with a list of preferences, some of which can
-   be expanded by clicking the plus sign to the left of the section
+   be expanded by clicking the 'Show details' link on the right
    title.
 
    |image441|
+
+-  In all cases, if the parent permission is checked, the user has all the 
+   child permissions. If you want to set permissions on a more granular level, 
+   expand the section and only check the permissions you want that user to 
+   have.
+
 
 .. _patron-permissions-defined-label:
 
 Patron permissions defined
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  superlibrarian
-
-   -  Access to all librarian functions
+-  Access to all librarian functions (superlibrarian)
 
       **Note**
 
       With this selected there is no need to choose any other
       permissions
 
--  circulate
+-  Check out and check in items (circulate)
 
-   -  Check out and check in items
+   -  Remaining circulation permissions (circulate\_remaining\_permissions)
 
-   -  This section can be expanded (:ref:`Learn more <granular-circulate-permissions-label>`)
+      -  This permission grants all circulation rights except those covered by 
+         permissions listed below
 
--  catalogue
+   -  Force checkout if a limitation exists (force\_checkout)
 
-   -  **Required for staff login.** Staff access, allows viewing the
-      catalogue in staff client
+      -  With this permission a staff member will be allowed to override a
+         check out restriction in the following cases:
+
+         -  age restriction
+
+         -  the item is issued to another patron
+
+         -  the item is not for loan
+
+         -  the patron has overdue items
+
+         -  the item is lost
+
+         -  the item is a high demand item
+
+         -  the item is on hold
+
+   -  Mark checkout notes as seen\/not seen (manage\_checkout\_notes)
+
+      -  The permission to manage the checkout notes written by users
+          through the OPAC
+
+   -  Manage restrictions for accounts (manage\_restrictions)
+
+      -  Grants permission to the staff member to lift a restriction that
+         might be on the patron's record
+
+   -  Execute overdue items report (overdues\_report)
+
+      -  The permission to run the overdues reports found under Circulation
+
+   -  Override blocked renewals (override\_renewals)
+
+      -  With this permission, a staff member can override renewals if there 
+         is a restriction
+
+      -  Requires that the staff member also has
+         circulate\_remaining\_permissions
+
+-  Staff access, allows viewing the catalogue in staff client (catalogue) 
+   **Required for staff login.** 
 
       **Important**
 
       Must be given to all staff members to allow them to login
-      to the staff client
+      to the staff interface
 
--  parameters
+-  Manage Koha system settings (Administration panel) (parameters)
 
-   -  Manage Koha system settings (Administration panel)
+   -  Manage account debit and credit types (manage\_accounts)
 
-   -  This section can be expanded (:ref:`Learn
-      more <granular-parameters-permissions-label>`)
+      -  This gives access to the :ref:`debit types section <debit-types-label>`
 
--  borrowers
+   -  Manage additional fields for baskets or subscriptions (manage\_additional
+      \_fields)
 
-   -  Add or modify patrons
+      -  This gives access to the :ref:`additional fields section <additional-
+         fields-label>`
 
-   -  This section can be expanded (:ref:`Learn more <granular-borrowers-permissions-label>`)
+      -  **Important**
 
--  permissions
+         This permission requires that the staff member also have the 'Edit 
+         an existing subscription' permission from the 'Manage serial 
+         subscriptions' section and the 'Manage basket and order lines' 
+         permission from the 'Acquisition and\/or suggestion management' section
 
-   -  Set user permissions
+   -  Manage audio alerts (manage\_audio\_alerts)
 
--  reserveforothers
+      - The ability to access the :ref:`audio alerts <audio-alerts-label>`
+        configuration in the administration module.
 
-   -  Place and modify holds for patrons
+   -  Manage authorized value categories and authorised values (manage\_auth\_
+      values)
 
-   -  This section can be expanded (:ref:`Learn
-      more <granular-holds-permissions-label>`)
+      - The ability to access the :ref:`auhorized values <authorized-values-label>`
+        configuration in the administration module.
 
--  editcatalogue
+   -  Manage circulation rules (manage\_circ\_rules)
 
-   -  Edit Catalog (Modify bibliographic/holdings data)
+      -  The ability to access the :ref:`circulation and fines rules 
+         <circulation-and-fines-rules-label>` configuration in the 
+         administration module.
 
-   -  This section can be expanded (:ref:`Learn more <granular-cataloging-permissions-label>`)
+   -  Manage circulation rules form any library (manage\_circ\_rules\_from\_
+      any\_libraries)
 
--  updatecharges
+      -  If not set the logged in user can only edit circulation rules from 
+         their own library
 
-   -  Manage patrons fines and fees
+      -  The staff member still has to have the 'Manage circulation rules'
+         permission above.
 
-   -  This section can be expanded (:ref:`Learn
-      more <granular-fines-and-charges-permissions-label>`)
+   -  Manage cities and towns (manage\_cities)
+
+      -  The ability to access the :ref:`cities and towns <cities-and-towns-label>`
+         configuration in the administration module.
+
+   -  Manage classification sources and filing rules (manage\_classifications)
+
+      -  The ability to access the :ref:`classification sources 
+         <classification-sources-label>` configuration in the administration 
+         module.
+
+   -  Manage column configuration (manage\_column\_config)
+
+      -  The ability the access the :ref:`configure columns <column-settings-label>`
+         page in the administration module.
+
+   -  Manage Did you mean? configuration (manage\_didyoumean)
+
+      -  The ability to access the :ref:`Did you mean? <did-you-mean?-label>`
+         configuration in the administration module.
+
+   -  Manage item circulation alerts (manage\_item\_circ\_alerts)
+
+      -  The ability to access the :ref:`item circulation alerts <item-circulation-alerts-label>`
+         configuration in the administration module.
+
+   -  Manage item search fields (manage\_item\_search\_fields)  
+
+      -  The ability to access the :ref:`item search fields <item-search-fields-label>`
+         configuration in the administration module.
+
+   -  Manage item types (manage\_itemtypes)
+
+      -  The ability to access the :ref:`item types <item-types-label>`
+         configuration in the administration module.
+
+   -  Manage keyboard shortcuts for the advanced cataloging editor (manage\_
+      keyboard\_shortcuts)
+
+      -  The ability to access the keyboard shortcuts configuration in the 
+         administration module
+
+   -  Manage libraries and library groups (manage\_libraries)
+
+      -  The ability to access the :ref:`libraries <libraries-label>` and
+         :ref:`library groups <library-groups-label>` configuration pages
+         in the administration module.
+
+   -  Manage Mana KB content sharing (manage\_mana)
+
+      -  The ability to access the :ref:`share content with Mana KB 
+         <share-with-mana-kb-label>` in the administration module
+
+   -  Manage MARC bibliographic and authority frameworks and test them 
+      (manage\_marc\_frameworks)
+
+   -  The ability to access the
+      :ref:`MARC bibliographic framework <marc-bibliographic-frameworks-label>`,
+      :ref:`authority types <authority-types-label>`,
+      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label>`, and
+      :ref:`MARC Bibliographic framework test <marc-bibliographic-framework-test-label>`
+      configuration areas in the administration module.
+
+   -  Manage record matching rules (manage\_matching\_rules)
+
+      -  The ability to access the :ref:`record matching rules <record-matching-rules-label>`
+         configuration in the administration module.
+
+   -  Manage OAI sets (manage\_oai\_sets)
+
+      -  The ability to access the :ref:`OAI sets <oai-sets-configuration-label>`
+         configuration in the administration module.
+
+   -  Manage extened patron attributes (manage\_patron\_attributes)
+
+      -  The ability to access the :ref:`patron attribute types <patron-attribute-types-label>`
+         configuration in the administration module.
+
+   -  Manage patron categories (manage\_patron\_categories)
+
+      -  The ability to access the :ref:`Patron categories <patron-categories-label>`
+         configuration in the administration module.
+
+   -  Manage search engine configuration (manage\_search\_engine\_config)
+
+      -  The ability to access the Search engine configuraton in the
+         administration module. Note: This area will only be visible when
+         the :ref:`SearchEngine` system preference is set to 'Elasticsearch'.
+
+   -  Manage Z39.50 and SRU server configuration (manage\_search\_targets)
+
+      -  The ability to access the :ref:`Z39.50/SRU servers <z39.50/sru-servers-label>`
+         configuration in the administration module.
+
+   -  Manage SMS cellular providers (manage\_sms_providers)
+
+      -  The ability to access the :ref:`SMS cellular providers 
+         <sms-cellular-providers-label>` configuration in the administration 
+         module. Note: This area will only be visible when the 
+         :ref:`SMSSendDriver` system preference is set to 'Email'.
+
+   -  Manage global system preferences (manage\_sysprefs)
+
+      -  The ability to access the :ref:`global system preferences 
+         <administration-system-preferences-label>` in the administration module.
+
+   -  Manage library transfer limits and transport cost matrix (manage\_transfers)
+
+      -  The ability to access the :ref:`library transfer limits <library-transfer-limits-label>`
+         and :ref:`transport cost matrix <transport-cost-matrix-label>`
+         configuration pages in the administration module.
+
+   -  Manage usage statistics settings (manage\_usage\_stats)
+
+      -  The ability to access the :ref:`share your usage statistics <share-anonymous-usage-statistics-label>`
+         configuration in the administration module.
+
+   -  Remaining system parameters permissions (parameters\_remaining\_permissions)
+
+      -  The ability to access all remaining areas in the administration module.
+
+-  Add, modify and view patron information (borrowers)
+
+   -  Add, modify and view patron information (edit\_borrowers)
+
+      -  The ability to access the Patrons module to view patron files,
+         as well as adding new patrons and editing patron files
+
+   -  View patron infos from any libraries (view\_borrower\_infos\_from\_any\_libraries)
+
+   -  If not set the logged in user will only be able to access patron 
+      information from their own library or group of libraries.
+
+-  Set user permissions (permissions)
+
+   -  The ability to set permissions for other staff members
+
+-  Place and modify holds for patrons (reserveforothers)
+
+   -  Modify holds priority (modify\_holds\_priority)
+
+      -  Allows staff members to alter the holds priority (moving patrons up
+         and down the queue)
+
+   -  Place holds for patrons (place\_holds)
+
+      -  Allows staff members to place holds in the staff interface  
+
+-  Edit catalog (Modify bibliographic/holdings data) (editcatalogue)
+
+   -  Use the advanced cataloging editor (advanced\_editor)
+
+      -  Grants the ability to use the advanced cataloging editor in the 
+         cataloging module
+
+      -  **Note**
+
+         Staff members with this permission need to also have the 'Edit catalog 
+         (Modify bibliographic/holdings data)' permission
+
+   -  Delete all items at once (delete\_all\_items)
+
+      -  Ability to use the 'Delete all items' option found under the
+         'Edit' menu in cataloging
+
+   -  Edit catalog (Modify bibliographic/holdings data) (edit\_catalogue)
+
+      -  Ability to access all cataloging functions via the
+         `Cataloging <#cataloging>`__ page
+
+   -  Edit items (edit\_items)
+
+      -  Ability to make :ref:`edits to item/holdings
+         records <editing-items-label>`, but not bibliographic records
+
+   -  Limit item modification to subfields defined in the 
+      :ref:`SubfieldsToAllowForRestrictedEditing` system preference
+      (edit\_items\_restricted)
+
+      -  If checked, the staff member will only be able to modify some 
+         item subfields
+
+      -  **Note**
+
+         Please note that the 'Edit items' permission is still required
+
+   -  Fast cataloging (fast\_cataloging)
+
+      -  The ability to catalog using only the :ref:`Fast add
+         framework <fast-add-cataloging-label>` found on the
+         `Circulation <#circulation>`__ page
+
+-  Manage patrons fines and fees (updatecharges)
+
+   -  Payout credits to patrons (payout)
+
+      -  Grants the ability to reimburse credits to patrons
+
+   -  Remaining permissions for managing fines and fees (remaining\_permissions)
+
+      -  Grant the ability to manage fines and fees other than the actions 
+         described in the other subpermissions (paying out credits and writing 
+         off fees)
+
+   -  Write off fines and fees (writeoff)
+
+      -  Grants the ability to write off patron fees
+
 
 -  acquisition
 
@@ -722,361 +983,8 @@ Patron permissions defined
 
    -  This section can be expanded (:ref:`Learn more <granular-cash-management-permissions-label>`)
 
-.. _granular-circulate-permissions-label:
 
-Granular circulate permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the staff member has 'circulate' permissions they have the ability to
-perform all of these actions. If you would like to control circulation
-permissions on a more granular level choose from these options:
-
--  circulate\_remaining\_permissions
-
-   -  Remaining circulation permissions
-
-   -  All circulation rights except those covered by permissions listed
-      below
-
--  force\_checkout
-
-   -  Force checkout if a limitation exists
-
-   -  With this permission a librarian will be allowed to override a
-      check out restriction in the following cases:
-
-      -  age restriction
-
-      -  the item is issued to another patron
-
-      -  the item is not for loan
-
-      -  the patron has overdue items
-
-      -  the item is lost
-
-      -  the item is a high demand item
-
-      -  the item is on hold
-
--  manage\_checkout\_notes
-
-   -  Mark checkout notes as seen\/not seen
-
-   -  The permission to manage the checkout notes written by users
-      through the OPAC
-
--  manage\_restrictions
-
-   -  Manage restrictions for accounts
-
-   -  Grants permission to the staff member to lift a restriction that
-      might be on the patron's record
-
--  overdues\_report
-
-   -  Execute overdue items report
-
-   -  The permission to run the overdues reports found under Circulation
-
--  override\_renewals
-
-   -  Override blocked renewals
-
-   -  Requires that the staff member also has
-      circulate\_remaining\_permissions
-
-.. _granular-parameters-permissions-label:
-
-Granular parameters permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'parameters' permissions they have the ability
-to perform all of these actions. If you would like to control parameter
-permissions on a more granular level choose from these options:
-
--  manage\_audio\_alerts
-
-   - Manage audio alerts
-
-   - The ability to access the :ref:`Audio alerts <audio-alerts-label>`
-     configuration in the administration module.
-
--  manage\_auth\_values
-
-   - Manage authorized value categories and authorised values
-
-   - The ability to access the :ref:`Auhorized values <authorized-values-label>`
-     configuration in the administration module.
-
--  manage\_circ\_rules
-
-   -  Manage circulation rules
-
-   -  The ability to access the :ref:`Circulation and fines
-      rules <circulation-and-fines-rules-label>` configuration
-      in the administration module.
-
--  manage\_circ\_rules\_from\_any\_libraries
-
-   - Manage circulation rules form any library. If not set the logged in user can
-     only edit circulation rules from their own library (please note that
-     manage\_circ\_rules is still required).
-
--  manage\_cities
-
-   -  Manage cities and towns
-
-   -  The ability to access the :ref:`Cities and towns <cities-and-towns-label>`
-      configuration in the administration module.
-
--  manage\_classifications
-
-   -  Manage classification sources and filing rules
-
-   -  The ability to access the :ref:`Classification sources <classification-sources-label>`
-      configuration in the administration module.
-
--  manage\_column\_config
-
-   -  Manage column configuration
-
-   -  The ability the access the :ref:`Configure columns <column-settings-label>`
-      page in the administration module.
-
--  manage\_didyoumean
-
-   -  Manage Did you mean? configuration
-
-   -  The ability to access the :ref:`Did you mean? <did-you-mean?-label>`
-      configuration in the administration module.
-
--  manage\_item\_circ\_alerts
-
-   -  Manage item circulation alerts
-
-   -  The ability to access the :ref:`Item circulation alerts <item-circulation-alerts-label>`
-      configuration in the administration module.
-
--  manage\_item\_search\_fields
-
-   -  Manage item search fields
-
-   -  The ability to access the :ref:`Item search fields <item-search-fields-label>`
-      configuration in the administration module.
-
--  manage\_itemtypes
-
-   -  Manage item types
-
-   -  The ability to access the :ref:`Item types <item-types-label>`
-      configuration in the administratoin module.
-
--  manage\_libraries
-
-   -  Manage libraries and library groups
-
-   -  The ability to access the :ref:`Libraries <libraries-label>` and
-      :ref:`Library groups <library-groups-label>` configuration pages
-      in the administration module.
-
--  manage\_marc\_frameworks
-
-   -  Manage MARC bibliographic and authority frameworks and test them
-
-   -  The ability to access the
-      :ref:`MARC bibliographic framework <marc-bibliographic-frameworks-label>`,
-      :ref:`Authority types <authority-types-label>`,
-      :ref:`Koha to MARC mapping <koha-to-marc-mapping-label>`, and
-      :ref:`MARC Bibliographic framework test <marc-bibliographic-framework-test-label>`
-      configuration areas in the administration module.
-
--  manage\_matching\_rules
-
-   -  Manage record matching rules
-
-   -  The ability to access the :ref:`Record matching rules <record-matching-rules-label>`
-      configuration in the administration module.
-
--  manage\_oai\_sets
-
-   -  Manage OAI sets
-
-   -  The ability to access the :ref:`OAI sets <oai-sets-configuration-label>`
-      configuration in the administration module.
-
--  manage\_patron\_attributes
-
-   -  Manage extened patron attributes
-
-   -  The ability to access the :ref:`Patron attribute types <patron-attribute-types-label>`
-      configuration in the administration module.
-
--  manage\_patron\_categories
-
-   -  Manage patron categories
-
-   - The ability to access the :ref:`Patron categories <patron-categories-label>`
-     configuration in the administration module.
-
--  manage\_search\_engine\_config
-
-   -  Manage search engine configuration
-
-   -  The ability to access the Search engine configuraton in the
-      administration module. Note: This area will only be visible when
-      the :ref:`SearchEngine` system preference is set to 'Elasticsearch'.
-
--  manage\_search\_targets
-
-   -  Manage Z39.50 and SRU server configuration
-
-   -  The ability to access the :ref:`Z39.50/SRU servers <z39.50/sru-servers-label>`
-      configuration in the administration module.
-
--  manage\_sms_providers
-
-   -  Manage SMS cellular providers
-
-   -  The ability to access the :ref:`SMS cellular providers <sms-cellular-providers-label>` configuration
-      in the administration module. Note: This area will only be visible when
-      the :ref:`SMSSendDriver` system preference is set to 'Email'.
-
--  manage\_sysprefs
-
-   -  Manage global system preferences
-
-   -  The ability to access the :ref:`Global system preferences <administration-system-preferences-label>`
-      in the administration module.
-
--  manage\_transfers
-
-   -  Manage library transfer limits and transport cost matrix
-
-   -  The ability to access the :ref:`Library transfer limits <library-transfer-limits-label>`
-      and :ref:`Transport cost matrix <transport-cost-matrix-label>`
-      configuration pages in the administration module.
-
--  manage\_usage\_stats
-
-   -  Manage usage statistics settings
-
-   -  Ability to access the :ref:`Share your usage statistics <share-anonymous-usage-statistics-label>`
-      configuration in the administration module.
-
--  parameters\_remaining\_permissions
-
-   -  Remaining system parameters permissions
-
-   -  The ability to access all remaining areas in the administration module.
-
-.. _granular-borrowers-permissions-label:
-
-Granular borrowers permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'borrowers' permissions they have the ability
-to perform all of these actions. If you would like to control borrowers
-permissions on a more granular level choose from these options:
-
--  edit\_borrowers
-
-   -  Add, modify and view patron information
-
-   -  The ability to access the Patrons module to view patron files,
-      as well as adding new patrons and editing patron files
-
--  view\_borrower\_infos\_from\_any\_libraries
-
-   -  View patron infos from any libraries. If not set the logged in user
-      could only access patron infos from its own library or group of libraries.
-
-.. _granular-holds-permissions-label:
-
-Granular holds permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'reserveforothers' permissions they have the
-ability to perform all of these actions. If you would like to control
-holds permissions on a more granular level choose from these options:
-
--  modify\_holds\_priority
-
-   -  Modify holds priority
-
-   -  Allow staff members to alter the holds priority (moving patrons up
-      and down the queue)
-
--  place\_holds
-
-   -  Place holds for patrons
-
-.. _granular-cataloging-permissions-label:
-
-Granular cataloging permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'editcatalogue' permissions they have the
-ability to perform all of these actions. If you would like to control
-cataloging permissions on a more granular level choose from these
-options:
-
--  delete\_all\_items
-
-   -  Delete all items at once
-
-   -  Ability to use the 'Delete all items' option found under the
-      'Edit' menu in cataloging
-
--  edit\_catalogue
-
-   -  Edit catalog (Modify bibliographic/holdings data)
-
-   -  Ability to access all cataloging functions via the
-      `Cataloging <#cataloging>`__ page
-
--  edit\_items
-
-   -  Edit items
-
-   -  Ability to make :ref:`edits to item/holdings
-      records <editing-items-label>`, but not bibliographic records
-
--  edit\_items\_restricted
-
-   -  Limit item modification to subfields defined in the
-      :ref:`SubfieldsToAllowForRestrictedEditing`
-      preference
-
-      **Note**
-
-      Please note that edit\_items permission is still required
-
--  fast\_cataloging
-
-   -  Fast cataloging
-
-   -  The ability to catalog using only the :ref:`Fast add
-      framework <fast-add-cataloging-label>` found on the
-      `Circulation <#circulation>`__ page
-
-.. _granular-fines-and-charges-permissions-label:
-
-Granular fines and charges permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If a staff member has 'updatecharges' permission they have the ability
-to perform all of these actions. If you would like to control fines and
-charges permissions on a more granular level choose from these options:
-
--  remaining\_permissions
-
-   -  Remaining permissions for managing fines and fees other than the
-      ability to write off charges
-
--  writeoff
-
-   -  Write off fines and fees
 
 .. _granular-acquisitions-permissions-label:
 
