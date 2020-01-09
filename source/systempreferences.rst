@@ -93,11 +93,11 @@ FinePaymentAutoPopop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Asks: \_\_\_ automatically display a print dialog for a payment receipt when 
-making a payment
+making a payment.
 
 Default: Don't
 
-Value:
+Values:
 
 -  Do
 
@@ -109,7 +109,25 @@ Description:
    patron's account, a printing popup will be displayed automatically instead 
    of having to click on the 'print' button.
 
+.. _usecashregisters-label:
 
+UseCashRegisters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: \_\_\_ cash registers with the accounting system to track payments.
+
+Default: Don't use
+
+Values: 
+
+-  Don't use
+
+-  Use
+
+Description:
+
+-  This preference enables the :ref:`cash registers <cashregisters-label>` 
+   feature in the administration module.
 
 .. _acquisitions-system-preferences-label:
 

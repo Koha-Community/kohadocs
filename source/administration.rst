@@ -1921,6 +1921,50 @@ If you need to use an archived debit type again, simply click on the
 
 This will make it available again.
 
+.. _cashregisters-label:
+
+Cash registers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  *Get there:* More > Administration > Accounting > Cash registers
+
+This feature is enabled through the :ref:`UseCashRegisters` system preference.
+
+If you have no cash registers already defined, you will be invited to create 
+one.
+
+Otherwise, you will see the list of all your cash registers.
+
+|image1450|
+
+In the 'Actions' columns, you can choose to edit your cash registers, make one 
+of them default or remove the default status, and archive or restore an 
+archived register.
+
+The default status is only useful in libraries that have more than one register 
+per branch. The default register will be pre-selected when :ref:`entering a 
+payment <pay/reverse-fines-label>`. If there is only one cash register per 
+branch, the branch's cash register will be selected when paying.
+
+.. _addnewcashregister-label:
+
+Adding a new cash register
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  Click on 'New cash register'
+
+   |image1449|
+
+-  Give your cash register a name
+
+-  Optionally you can also add a description
+
+-  Choose in which library this cash register is located
+
+-  And finally, enter the initial float, i.e. the amount in the cash register
+
+-  Click 'Add'
+
 .. _catalog-administration-label:
 
 Catalog administration
