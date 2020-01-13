@@ -885,62 +885,387 @@ Patron permissions defined
       -  Grants the ability to write off patron fees
 
 
--  acquisition
+-  Acquisition and/or suggestion management (acquisition)
 
-   -  Acquisition and/or suggestion management
+   **Note**
 
-   -  This section can be expanded (:ref:`Learn more <granular-acquisitions-permissions-label>`)
+   All the acquisitions sub-permissions give access to the acquisitions home 
+   page. That means that staff who have one or more of the following permissions 
+   will be able to view the budgets, search and view vendor information, and 
+   view invoices.
 
--  tools
+   -  Add and delete funds (but can't modify funds) (budget\_add\_del)
 
-   -  Use all tools
+      -  Grants the ability to add and delete funds within a budget 
 
-   -  This section can be expanded (:ref:`Learn more <granular-tools-permissions-label>`)
+      -  Note that the budget\_manage and budget\_modify permissions are 
+         required for this one to work correctly
 
--  editauthorities
+   -  Manage funds (budget\_manage)
 
-   -  Edit Authorities
+      -  Grants the ability to acces the :ref:`fund administration page <funds-label>`
 
--  serials
+      -  Note that this only gives viewing access to the page, you will need 
+         to give your staff budget\_add\_del and budget\_modify if you want 
+         them to be able to make changes to the funds
 
-   -  Manage serial subscriptions
+   -  Manage all funds (budget\_manage\_all)
 
-   -  This section can be expanded (:ref:`Learn more <granular-serials-permissions-label>`)
+      -  Grants viewing access to all funds regardless of restrictions on 
+         them (owner, user or library restrictions)  
 
--  reports
+      -  Note that the budget\_manage permission is required
 
-   -  Allow access to the reports module
+   -  Modify funds (can't create lines, but can modify existing ones) (budget\_modify)
 
-   -  Reports found on the Circulation page are not controlled by this
-      permission
+      -  Grants the ability to edit fund information and amounts
 
-   -  This section can be expanded (:ref:`Learn more <granular-reports-permissions-label>`)
+      -  Note that the budget\_add\_del and budget\_manage permissions are 
+         required for this one to work correctly
 
--  staffaccess
+   -  Manage contracts (contracts\_manage)
 
-   -  Allow staff members to modify permissions for other staff members
+      -  Grants the ability to add, edit and delete contracts with vendors
 
-      **Important**
+   -  Manage currencies and exchange rates (currencies\_manage)
 
-      Requires the borrowers permission above
+      -  The ability to access the :ref:`Currencies and exchange rates 
+         <currencies-and-exchange-rates-label>` configuration page.
 
--  coursereserves
+   -  Manage EDIFACT transmissions (edi\_manage)
 
-   -  Course reserves
+      -  Grants the ability to access the :ref:`EDI account <edi-accounts-label>` 
+         adminitration page, the :ref:`library EANs <library-eans-label>` 
+         administration page and access sent :ref:`EDI messages <edifact-messages-label>`
+
+      -  In order to be able to send orders via EDI, your staff member also 
+         needs the 
+
+   -  Manage basket groups (group\_manage)
+
+      -  Grants the ability to :ref:`create, edit, close and delete basket 
+         groups <create-a-basket-group-label>`
+
+   -  Manage baskets and order lines (order\_manage)
+
+      -  Grants the ability to :ref:`place orders <placing-orders-label>`, 
+         including creating baskets, adding order lines, closing baskets, etc.
+
+   -  Manage all baskets and order lines, regardless of restrictions on them 
+      (order\_manage\_all)
+
+      -  Grants the ability to manage all baskets and orders even if they are 
+         restricted to the owner, users or library
+
+      -  Note that the order\_manage permission is required
+
+   -  Receive orders and manage shipments (order\_receive)
+
+      -  Grants the ability to create invoices, receive items and claim late 
+         orders
+
+   -  Manage budgets (period\_manage)
+
+      -  Grants access to the :ref:`budget administration page <budgets-label>` 
+         and the ability to create, edit and delete budgets
+
+      -  This permission does not give the ability to edit budget funds.
+
+   -  Manage budget plannings (planning\_manage)
+
+      -  Grants the ability to view :ref:`budget planning <budget-planning-label>`
+
+      -  Note that the budget\_manage and the period\_manage permissions are 
+         required for this one to work
+
+   -  Manage purchase suggestions (suggestions\_manage)
+
+      -  Grants the ability to :ref:`create and manage purchase suggestions 
+         <managing-purchase-suggestions-label>`, including creating new 
+         suggestions and changing the suggestions' statuses
+
+   -  Manage vendors (vendors\_manage)
+
+      -  Grants the ability to :ref:`add, edit and delete vendors <vendors-label>`
+
+      -  Note that vendors are used in the acquisition and the serials module.
+
+-  Use all tools (tools)
+
+   -  Access to the files stored on the server (access\_files)
+
+      -  Access to the :ref:`Upload tool <upload-label>`
+
+   -  Upload patron images in batch or one at a time (batch\_upload\_patron\_images)
+
+      -  Access to the :ref:`Image upload tool <upload-patron-images-label>`
+
+   -  Delete old borrowers and anonymize circulation/reading history
+      (deletes borrower reading history) (delete\_anonymize\_patrons)
+
+      -  Access to the :ref:`Anonymize patron tool <patrons-anonymize-bulk-delete-label>`
+
+   -  Define days when the library is closed (edit\_calendar)
+
+      -  Access to the :ref:`Calendar/holidays tool <calendar-label>`
+
+   -  Write news for the OPAC and staff interfaces (edit\_news)
+
+      -  Access to the :ref:`News tool <news-label>`
+
+   -  Set notice/status triggers for overdue items (edit\_notice\_status\_triggers)
+
+      -  Access to the :ref:`Overdue notice status/triggers
+         tool <overdue-notice/status-triggers-label>`
+
+   -  Define notices (edit\_notices)
+
+      -  Access to the :ref:`Notices and slips tool <notices-and-slips-label>`
+
+   -  Perform batch modification of patrons (edit\_patrons)
+
+      -  Access to the :ref:`Batch patron modification tool <batch-patron-modification-label>`
+
+   -  Edit quotes for the quote-of-the-day feature (edit\_quotes)
+
+      -  Access to the :ref:`Quote of the Day (QOTD) Editor <quote-of-the-day-(qotd)-editor-label>`
+
+   -  Export bibliographic and holdings data (export\_catalog)
+
+      -  Access to the :ref:`Export data tool <export-data-(marc-and-authorities)-label>`
+
+   -  Import patron data (import\_patrons)
+
+      -  Access to the :ref:`Import patrons tool <patron-import-label>`
+
+   -  Perform inventory of your catalog (inventory)
+
+      -  Access to the :ref:`Inventory tool <inventory-tool-label>`
+
+   -  Perform batch deletion of items (items\_batchdel)
+
+      -  Access to the :ref:`Batch item deletion tool <batch-item-deletion-label>`
+
+   -  Perform batch modification of items (items\_batchmod)
+
+      -  Access to the :ref:`Batch item modification tool <batch-item-modification-label>`
+
+   -  Limit batch item modification to subfields defined in the 
+      SubfieldsToAllowForRestrictedBatchmod preference (items\_batchmod\_restricted)
+
+      -  Restricts the :ref:`batch item modification <batch-item-modification-label>` tool
+         to modify only the subfields defined in the 
+         :ref:`SubfieldsToAllowForRestrictedBatchmod` preference
+
+      -  Please note that items\_batchmod permission is still required
+
+   -  Create printable labels and barcodes from catalog and patron data 
+      (label\_creator)
+
+      -  Access to the :ref:`Patron card creator <patron-card-creator-label>`, 
+         the :ref:`Label creator <label-creator-label>` and the
+         :ref:`Quick label creator <quick-spine-label-creator-label>` tools
+
+   -  Manage CSV export profiles (manage\_csv\_profiles)
+
+      -  Access to the :ref:`CSV profiles tool <csv-profiles-label>`
+
+   -  Add, edit and delete patron lists and their contents (manage\_patron\_lists)
+
+      -  Access to the :ref:`Patron lists tool <patron-lists-label>`
+
+   -  Manage staged MARC records, including completing and reversing imports 
+      (manage\_staged\_marc)
+
+      -  Access to the :ref:`Manage staged MARC records tool <staged-marc-record-management-label>`
+
+   -  Manage MARC modification templates (marc\_modification\_templates)
+
+      -  Access to the :ref:`MARC modification templates tool <marc-modification-templates-label>`
+
+   -  Moderate patron comments (moderate\_comments)
+
+      -  Access to the :ref:`Comments tool <comments-label>`
+
+   -  Moderate patron tags (moderate\_tags)
+
+      -  Access to the :ref:`Tags tool <tag-moderation-label>`
+
+   -  Perform batch deletion of records (bibliographic or authority) 
+      (records\_batchdel)
+
+      -  Access to the :ref:`Batch record deletion tool <batch-record-deletion-label>`
+
+   -  Perform batch modification of records (bibliographic or authorities) 
+      (records\_batchmod)
+
+      -  Access to the :ref:`Batch record modification tool <batch-record-modification-label>`
+
+   -  Manage rotating collections (rotating\_collections)
+
+      -  Access to the :ref:`Rotating collections tool <rotating-collections-label>`
+
+   -  Schedule tasks to run (schedule\_tasks)
+
+      -  Access to the :ref:`Task scheduler tool <task-scheduler-label>`
+
+   -  Stage MARC records into the reservoir (stage\_marc\_import)
+
+      -  Access to the :ref:`Stage MARC records tool <stage-marc-records-for-import-label>`
+
+   -  Upload any file (upload\_general\_files)
+
+      -  Access to upload files via the :ref:`Upload tool <upload-label>`
+
+   -  Upload local cover images (upload\_local\_cover\_images)
+
+      -  Access to the :ref:`Upload local cover image
+         tool <upload-local-cover-image-label>` as well as permission to add and
+         delete local cover images from the record detail page
+
+   -  Manage uploaded files (upload\_manage)
+
+      -  Access to uploaded files via the :ref:`Upload tool <upload-label>`
+
+      -  Note that the upload\_general\_files permission is required for this
+         permission to work
+
+   -  Browse the system logs (view\_system\_logs)
+
+      -  Access to the :ref:`Log viewer tool <log-viewer-label>`
+
+-  Edit authorities (editauthorities)
+
+   -  Grants the ability to create, edit and delete authority records
+
+   -  Note that it is possible to search authority records with only the 
+      catalogue permission
+
+-  Manage serial subscriptions (serials)
+
+   -  Check the expiration of a serial (check\_expiration)
+
+   -  Gives ability to check the :ref:`expiration date of serials
+      <check-serial-expiration-label>`
+
+   -  Claim missing serials (claim\_serials)
+
+      -  Gives the ability to :ref:`claim missing issues <claim-late-serials-label>`
+
+   -  Create a new subscription (create\_subscription)
+
+      -  Gives the ability to :ref:`add new subscriptions <add-a-subscription-label>`
+
+   -  Delete an existing subscription (delete\_subscription)
+
+      -  Gives the ability to delete serial subscriptions
+
+   -  Edit an existing subscription (edit\_subscription)
+
+      -  Gives the ability to :ref:`edit existing serial subscriptions 
+         <edit-subscription-label>`
+
+      -  This permission does not include the ability to delete or create a
+         subscription
+
+   -  Serials receiving (receive\_serials)
+
+      -  Gives the ability to :ref:`receive issues <receive-issues-label>` of 
+         existing subscriptions
+
+   -  Renew a subscription (renew\_subscription)
+
+      -  Gives the ability to :ref:`renew serial subscriptions <renewing-serials-label>`
+
+   -  Routing (routing)
+
+      -  Gives the ability to manage :ref:`routing lists <create-a-routing-list-label>`
+
+   -  Manage subscriptions from any branch (superserials)
+
+      -  This permission is only useful if the :ref:`IndependentBranches` 
+         system preference is used
+
+-  Allow access to the reports module (reports)
+
+   -  Reports found on the :ref:`Circulation page <circulation-reports-label>` 
+      are not controlled by this permission; this only controls access to the 
+      :ref:Reports module <reports-label>`
+
+   -  Reports in the :ref:`Statistics wizard <statistics-reports-label>` section 
+      and the other reports on the main reports page can be run with any one 
+      of the following permissions. They only affect the SQL reports.
+
+   -  Create SQL reports (create\_reports)
+
+      -  The ability to create :ref:`guided reports <guided-report-wizard-label>` 
+         or :ref:`SQL reports <report-from-sql-label>`, but not run saved ones
+
+   -  Delete SQL reports (delete\_reports)
+
+      -  The ability to delete saved :ref:`SQL reports <report-from-sql-label>`
+
+      -  Note that you need execute\_reports in order to be able to delete them
+
+   -  Execute SQL reports (execute\_reports)
+
+      -  The ability to :ref:`run custom SQL reports <running-custom-reports-label>, 
+         but not create or edit them
+
+-  Allow staff members to modify permissions for other staff members (staffaccess)
+
+   -  This permission requires the borrowers permission above
+
+-  Course reserves (coursereserves)
 
    -  Allow access to the :ref:`course reserves module <course-reserves-label>`
 
-   -  This section can be expanded (:ref:`Learn more <granular-course-reserves-permissions-label>`)
+   -  Note that if the :ref:`UseCourseReserves` system preference is not enabled, 
+      these permissions will not have any effect
 
--  plugins
+   -  Add course reserves (add\_reserves)
 
-   -  Koha plugins
+      -  Grants the ability to :ref:`add items to existing courses 
+         <adding-reserve-materials-label>`
 
-   -  This section can be expanded (:ref:`Learn more <granular-plugins-permissions-label>`)
+   -  Remove course reserves (delete\_reserves)
 
--  lists
+      -  Grant the ability to remove items from existing courses
 
-   -  Lists
+   -  Add, edit and delete courses (manage\_courses)
+
+      -  Grants the ability to :ref:`create, edit and delete courses 
+         <adding-courses-label>`, but not manage the items
+
+-  Koha plugins (plugins)
+
+   -  Note that the :ref:`UseKohaPlugins` system preference needs to be enabled 
+      otherwise, these permissions don't have any effect.
+
+   -  Configure plugins (configure)
+
+      -  Gives the ability to run the 'configure' section of a plugin if it has
+         one
+
+      -  Note that the staff member needs either the report permission or the 
+         tool permission (below) in order to be able to access the plugins
+
+   -  Manage plugins (manage)
+
+      -  The ability to install or uninstall plugins
+
+      -  Note that the staff member needs either the report permission or the 
+         tool permission (below) in order to be able to access the plugins
+
+   -  Use report plugins (report)
+
+      -  The ability to use report plugins
+
+   -  Use tool plugins (tool)
+
+      -  The ability to use tool plugins
+
+-  Lists (lists)
 
       **Important**
 
@@ -949,523 +1274,41 @@ Patron permissions defined
       a staff member permission to delete public lists that they
       have not created.
 
-   -  This section can be expanded (:ref:`Learn more <granular-lists-permissions-label>`)
+   -  Delete public lists (delete\_public\_lists)
 
--  clubs
+      -  The ability to delete public lists created by someone else
 
-   -  Patron clubs
+-  Patron clubs (clubs)
 
-   -  Allows access to the :ref:`Patron clubs feature <Patron-clubs-label>`
+   -  Create and edit clubs (edit\_clubs)
 
-   -  This section can be expanded (:ref:`Learn more <granular-clubs-permissions-label>`)
+      -  Create and edit patron clubs using the :ref:`Patron clubs tool <Patron-clubs-label>`
 
--  ill
+   -  Create and edit club templates (edit\_templates)
 
-   -  Create and modify interlibrary loan requests
+      -  Create and edit club templates using the :ref:`Patron clubs tool <Patron-clubs-label>`
 
--  self\_check
+   -  Enroll patrons in clubs (enroll)
 
-   -  Self check modules
+      -  Enroll patrons from the patron file
 
-   -  Used for self checkin/self checkout kiosks
+      -  The borrowers permissions is required in order to enroll patrons in 
+         clubs
 
-   -  This section can be expanded (:ref:`Learn more <granular-self-check-permissions-label>`)
+-  Create and modify interlibrary loan requests (ill)
 
--  Manage stockrotation operations (stockrotation)
+   -  Gives access to the :ref:`Interlibrary loan (ILL) module <ill-requests-label>`
 
-  -  Used to access the :ref:`stock rotation tool <stock-rotation-label>`
+-  Self check modules (self\_check)
 
-  -  This section can be expanded (:ref:`Learn more <granular-stock-rotation-permissions-label>`)
-
--  Cash management (cash_management)
-
-   -  Used to access the :ref:`cash register administration <cashregisters-label>`
-
-   -  This section can be expanded (:ref:`Learn more <granular-cash-management-permissions-label>`)
-
-
-
-
-.. _granular-acquisitions-permissions-label:
-
-Granular acquisitions permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'acquisition' permissions they have the ability
-to perform all of these actions. If you would like to control
-acquisitions permissions on a more granular level choose from these
-options:
-
--  budget\_add\_del
-
-   -  Add and delete funds (but can't modify funds)
-
--  budget\_manage
-
-   -  Manage funds
-
--  budget\_manage\_all
-
-   -  Manage all funds
-
-   budget\_modify
-
-   -  Modify funds (can't create lines, but can modify existing ones)
-
--  contracts\_manage
-
-   -  Manage contracts
-
--  currencies\_manage
-
-   -  Manage currencies and exchange rates
-
-   -  The ability to access the :ref:`Currencies and exchange rates <currencies-and-exchange-rates-label>`
-      configuration page.
-
--  edi\_manage
-
-   -  Manage EDIFACT transmissions
-
--  group\_manage
-
-   -  Manage basket groups
-
--  order\_manage
-
-   -  Manage baskets and order lines
-
--  order\_manage\_all
-
-   -  Manage all baskets and order lines, regardless of restrictions on them
-
--  order\_receive
-
-   -  Receive orders and manage shipments
-
--  period\_manage
-
-   -  Manage budgets
-
--  planning\_manage
-
-   -  Manage budget plannings
-
--  suggestions\_manage
-
-   -  Manage purchase suggestions
-
--  vendors\_manage
-
-   -  Manage vendors
-
-   -  Note: Vendors are used in the acquisition and the serials module.
-
-.. _granular-serials-permissions-label:
-
-Granular serials permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'serials' permissions they have the ability to
-perform all of these actions. If you would like to control serials
-permissions on a more granular level choose from these options:
-
--  check\_expiration
-
-   -  Check the :ref:`expiration of a serial <check-serial-expiration-label>`
-
--  claim\_serials
-
-   -  Claim missing serials via the :ref:`Claims section <claim-late-serials-label>`
-
--  create\_subscription
-
-   -  Create :ref:`a new subscription <add-a-subscription-label>`
-
--  delete\_subscription
-
-   -  Delete an existing subscription
-
--  edit\_subscription
-
-   -  Edit an existing subscription
-
-   -  This permission does not include the ability to delete or create a
-      subscription
-
--  receive\_serials
-
-   -  Serials receiving
-
-   -  Receive serials on existing subscriptions
-
--  renew\_subscription
-
-   -  Renew a subscription
-
--  routing
-
-   -  Routing
-
-   -  Manage :ref:`routing lists <create-a-routing-list-label>`
-
--  superserials
-
-   -  Manage subscriptions from any branch (only applies when
-      :ref:`IndependentBranches` is used)
-
-.. _granular-tools-permissions-label:
-
-Granular tools permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'tools' permissions they have the ability to
-access and use all items under the Tools menu. If you would like to
-control which tools staff members have access to on a more granular
-level choose from these options:
-
--  access\_files
-
-   -  Access to the files stored on the server
-
-   -  Access to the :ref:`Upload tool <upload-label>`
-
--  batch\_upload\_patron\_images
-
-   -  Upload patron images in batch or one at a time
-
-   -  Access to the :ref:`Image upload tool <upload-patron-images-label>`
-
--  delete\_anonymize\_patrons
-
-   -  Delete old borrowers and anonymize circulation/reading history
-      (deletes borrower reading history)
-
-   -  Access to the :ref:`Anonymize patron tool <patrons-anonymize-bulk-delete-label>`
-
--  edit\_calendar
-
-   -  Define days when the library is closed
-
-   -  Access to the :ref:`Calendar/holidays tool <calendar-label>`
-
--  edit\_news
-
-   -  Write news for the OPAC and staff interfaces
-
-   -  Access to the :ref:`News tool <news-label>`
-
--  edit\_notice\_status\_triggers
-
-   -  Set notice/status triggers for overdue items
-
-   -  Access to the :ref:`Overdue notice status/triggers
-      tool <overdue-notice/status-triggers-label>`
-
--  edit\_notices
-
-   -  Define notices
-
-   -  Access to the :ref:`Notices and slips tool <notices-and-slips-label>`
-
--  edit\_patrons
-
-   -  Perform batch modification of patrons
-
-   -  Access to the :ref:`Batch patron modification tool <batch-patron-modification-label>`
-
--  edit\_quotes
-
-   -  Edit quotes for the quote-of-the-day feature
-
-   -  Access to the :ref:`Quote of the Day (QOTD) Editor <quote-of-the-day-(qotd)-editor-label>`
-
--  export\_catalog
-
-   -  Export bibliographic, authorities and holdings data
-
-   -  Access to the :ref:`Export data tool <export-data-(marc-and-authorities)-label>`
-
--  import\_patrons
-
-   -  Import patron data
-
-   -  Access to the :ref:`Import patrons tool <patron-import-label>`
-
--  inventory
-
-   -  Perform inventory (stocktaking) of your catalog
-
-   -  Access to the :ref:`Inventory tool <inventory-tool-label>`
-
--  items\_batchdel
-
-   -  Perform batch deletion of items
-
-   -  Access to the :ref:`Batch item deletion tool <batch-item-deletion-label>`
-
--  items\_batchmod
-
-   -  Perform batch modification of items
-
-   -  Access to the :ref:`Batch item modification tool <batch-item-modification-label>`
-
--  items\_batchmod\_restricted
-
-   -  Limit :ref:`batch item modification <batch-item-modification-label>` to subfields defined in the :ref:`SubfieldsToAllowForRestrictedBatchmod` preference
-
-      **Note**
-
-      Please note that items\_batchmod permission is still required
-
--  label\_creator
-
-   -  Create printable labels and barcodes from catalog and patron data
-
-   -  Access to the :ref:`Label creator <label-creator-label>` and
-      :ref:`Quick label creator <quick-spine-label-creator-label>` Tools
-
--  manage\_csv\_profiles
-
-   -  Manage CSV export profiles
-
-   -  Access to the :ref:`CSV profiles tool <csv-profiles-label>`
-
--  manage\_patron\_lists
-
-   -  Add, edit and delete patron lists and their contents
-
-   -  Access to the :ref:`Patron lists tool <patron-lists-label>`
-
--  manage\_staged\_marc
-
-   -  Manage staged MARC records, including completing and reversing
-      imports
-
-   -  Access to the :ref:`Manage Staged MARC Records Tool <staged-marc-record-management-label>`
-
--  marc\_modification\_templates
-
-   -  Manage MARC modification templates
-
-   -  Access to the :ref:`MARC modification templates tool <marc-modification-templates-label>`
-
--  moderate\_comments
-
-   -  Moderate patron comments
-
-   -  Access to the :ref:`Comments tool <comments-label>`
-
--  moderate\_tags
-
-   -  Moderate patron tags
-
-   -  Access to the :ref:`Tags tool <tag-moderation-label>`
-
--  records\_batchdel
-
-   -  Perform batch deletion of records (bibliographic or authority)
-
-   -  Access to the :ref:`Batch record deletion tool <batch-record-deletion-label>`
-
--  records\_batchmod
-
-   -  Perform batch modification of records (bibliographic or authorities)
-
-   -  Access to the :ref:`Batch record modification tool <batch-record-modification-label>`
-
--  rotating\_collections
-
-   -  Manage rotating collections
-
-   -  Access to the :ref:`Rotating collections tool <rotating-collections-label>`
-
--  schedule\_tasks
-
-   -  Schedule tasks to run
-
-   -  Access to the :ref:`Task scheduler tool <task-scheduler-label>`
-
--  stage\_marc\_import
-
-   -  Stage MARC records into the reservoir
-
-   -  Access to the :ref:`Stage MARC records tool <stage-marc-records-for-import-label>`
-
--  upload\_general\_files
-
-   -  Upload any file
-
-   -  Access to upload files via the :ref:`Upload tool <upload-label>`
-
--  upload\_local\_cover\_images
-
-   -  Upload local cover images
-
-   -  Access to the :ref:`Upload local cover image
-      tool <upload-local-cover-image-label>` as well as permission to add and
-      delete local cover images from the record detail page
-
--  upload\_manage
-
-   -  Manage uploaded files
-
-   -  Access to uploaded files via the :ref:`Upload tool <upload-label>`
-
-          **Note**
-
-          upload\_general\_files permission is required for this
-          permission
-
--  view\_system\_logs
-
-   -  Browse the system logs
-
-   -  Access to the :ref:`Log viewer tool <log-viewer-label>`
-
-.. _granular-reports-permissions-label:
-
-Granular reports permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'reports' permissions they have the ability to
-perform all of these actions. If you would like to control reports
-permissions on a more granular level choose from these options:
-
--  create\_reports
-
-   -  Create SQL reports
-
-   -  The ability to create and edit but not run SQL reports
-
--  delete\_reports
-
-   -  Delete SQL reports
-
--  execute\_reports
-
-   -  Execute SQL reports
-
-   -  The ability to run but not create or edit SQL reports
-
-.. _granular-course-reserves-permissions-label:
-
-Granular course reserves permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'course reserves' permissions they have the ability to
-perform all of these actions. If you would like to control course reserves
-permissions on a more granular level choose from these options:
-
--  add\_reserves
-
-   -  Add course reserves
-
--  delete\_reserves
-
-   -  Remove course reserves
-
--  manage\_courses
-
-   -  Add, edit and delete courses
-
-.. _granular-plugins-permissions-label:
-
-Granular plugins permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'plugins' permissions they have the ability to
-perform all of these actions. If you would like to control plugins
-permissions on a more granular level choose from these options:
-
--  configure
-
-   -  Configure plugins
-
-   -  The ability to run the 'configure' section of a plugin if it has
-      one
-
--  manage
-
-   -  Manage plugins
-
-   -  The ability to install or uninstall plugins
-
--  report
-
-   -  Use report plugins
-
-   -  The ability to use report plugins
-
--  tool
-
-   -  Use tool plugins
-
-   -  The ability to use tool plugins
-
-.. _granular-lists-permissions-label:
-
-Granular lists permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-All staff members have permission to access lists. This section only
-needs to be checked off if you want to give permission to a staff member
-to delete public lists that they have no created themselves.
-
--  delete\_public\_lists
-
-   -  Delete public lists
-
-   -  The ability to delete public lists created by someone else
-
-.. _granular-clubs-permissions-label:
-
-Granular patron clubs permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has 'clubs' permissions they have the ability to
-perform all of these actions. If you would like to control patron clubs
-permissions on a more granular level choose from these options:
-
--  edit\_clubs
-
-   -  Create and edit clubs
-
-   -  Create and edit patron clubs using the :ref:`Patron clubs tool <Patron-clubs-label>`
-
--  edit\_templates
-
-   -  Create and edit club templates
-
-   -  Create and edit club templates using the :ref:`Patron clubs tool <Patron-clubs-label>`
-
--  enroll
-
-   -  Enroll patrons in clubs
-
-   -  Enroll patrons from the patron file
-
-.. _granular-self-check-permissions-label:
-
-Granular self check permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the user has 'self check' permissions they have the ability to
-perform all of these actions. If you would like to control self check
-permissions on a more granular level choose from these options:
-
--  self\_checkin\_module
-
-   -  Log into the self check-in module.
+   -  Log into the self check-in module (self\_checkin\_module)
 
       ** Note**
 
       This permission prevents the patron from using any other OPAC
       functionality
 
--  self\_checkout\_module
-
-   -  Perform self checkout at the OPAC.
+-  Perform self checkout at the OPAC (self\_checkout\_module)
 
       **Note**
 
@@ -1473,38 +1316,24 @@ permissions on a more granular level choose from these options:
       :ref:`AutoSelfCheckID <autoselfcheck-preferences-label>`
       system preference
 
-.. _granular-stock-rotation-permissions-label:
+-  Manage :ref:`stockrotation <stock-rotation-label>` operations (stockrotation)
 
-Granular stock rotation permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   -  Add and remove items from rotas (manage_rota_items)
 
-If the staff member has the 'stock rotation' permission they have the ability 
-to perform all of these actions. If you would like to control stock rotation
-permissions on a more granular level choose from these options:
+      -  Staff with only this permission will be able to manage the items in the 
+         rotas, but not the rotas themselves
 
--  Add and remove items from rotas (manage_rota_items)
+   -  Create, edit and delete rotas (manage_rotas)
 
-   -  Staff with only this permission will be able to manage the items in the 
-      rotas, but not the rotas themselves
+      -  Staff with only this permission will be able to manage the rotas, but not 
+         the actual items
 
--  Create, edit and delete rotas (manage_rotas)
+-  Cash management (cash_management)
 
-   -  Staff with only this permission will be able to manage the rotas, but not 
-      the actual items
+   -  Add, edit and archive cash registers (manage_cash_registers)
 
-.. _granular-cash-management-permissions-label:
-
-Granular cash management permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If the staff member has the 'cash management' permission they have the ability 
-to perform all of these actions. If you would like to control cash management
-permissions on a more granular level choose from these options:
-
--  Add, edit and archive cash registers (manage_cash_registers)
-
-   -  Staff with this permissions will be able to manage the :ref:`cash 
-      registers in the administration module <cashregisters-label>`
+      -  Staff with this permissions will be able to manage the :ref:`cash 
+         registers in the administration module <cashregisters-label>`
 
 .. _patron-information-label:
 
