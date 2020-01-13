@@ -1335,6 +1335,10 @@ Patron permissions defined
       -  Staff with this permissions will be able to manage the :ref:`cash 
          registers in the administration module <cashregisters-label>`
 
+   -  Access the point of sale page and take payments (takepayment)
+
+      -  Grants access to the point of sale module
+
 .. _patron-information-label:
 
 Patron information
