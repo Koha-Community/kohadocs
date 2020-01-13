@@ -12,7 +12,7 @@ production:
 
       # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
       - ssh-add <(echo "$ssh_key")
- 
+
       # For Docker builds disable host key checking. Be aware that by adding that
       - mkdir -p ~/.ssh
       - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
@@ -31,5 +31,5 @@ production:
     - make all_html # build/LANG/html
     - rsync -c -u -r -e "ssh" --progress build/* chrisc@www.koha-community.org:/var/www/manual/19.11/
     only:
-        - master@koha-community/koha-manual
+        - manual19.11.x@koha-community/koha-manual
     environment: production
