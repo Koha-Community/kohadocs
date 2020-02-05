@@ -3612,19 +3612,15 @@ Values:
 HomeOrHoldingBranch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Default: the library the item was checked out from
+Default: the item's home library (homebranch).
 
 Asks: Use the checkout and fines rules of \_\_\_
 
 Values:
 
--  the library the item is from
+-  the item's home library (homebranch).
 
-   -  This is equivalent to 'home library'
-
--  the library the item was checked out from
-
-   -  This is equivalent to 'holding library'
+-  the item's holding library (holdingbranch).
 
 Description:
 
