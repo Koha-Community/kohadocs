@@ -3875,6 +3875,27 @@ notice sent out to patrons.
 
     If you'd like more than one person to receive the blind copy you can
     simply enter in multiple email addresses separated by commas.
+    
+ .. _onsitecheckoutautocheck-label:
+
+OnSiteCheckoutAutoCheck
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't enable
+
+Asks: \_\_\_ onsite checkout by default if last checkout was an onsite one.
+
+Values:
+   
+-  Don't enable
+
+-  Enable
+
+Description:
+
+-  This preference allows you specify that if a preceding checkout was an onsite
+   checkout, then the 'On-site checkout' checkbox will be ticked 
+   ready for the next checkout.
 
 .. _onsitecheckouts-label:
 
