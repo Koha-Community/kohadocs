@@ -425,9 +425,8 @@ UniqueItemFields
 
 Default: barcode
 
-Asks:\_\_\_ (space-separated list of fields that should be unique for
-items, must be valid SQL fields of
-`items <http://schema.koha-community.org/master/tables/items.html>`__ table)
+Asks: The following database columns should be unique in an item: \_\_\_ 
+separate columns with pipe (|).
 
 Description:
 
