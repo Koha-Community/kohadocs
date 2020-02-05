@@ -4487,6 +4487,31 @@ Values:
 
 -  item home branch.
 
+.. _suspensionscalendar-label:
+
+SuspensionsCalendar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: not including the days the library is closed
+
+Asks: Calculate suspension expiration based on days overdue \_\_\_
+
+Values:
+
+-  directly
+
+-  not including the days the library is closed
+
+Description:
+
+-  This system preference determines whether the :ref:`calendar <calendar-label>` is taken into 
+   account when making suspension calculations.  Suspension rules can be 
+   configured within the :ref:`circulation rules <circulation-and-fines-rules-label>`.  
+   If set to ‘directly’ the suspension period will ignore any closed days 
+   that have been added to the calendar.  If set to ‘not including the 
+   days the library is closed’ any days marked as closed within the calendar 
+   will be skipped when calculating the end date for the suspension.
+
 .. _usedefaultreplacementcost-label:
 
 useDefaultReplacementCost
