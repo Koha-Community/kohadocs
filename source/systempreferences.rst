@@ -4278,6 +4278,10 @@ Values:
 
 -  the calendar to skip all days the library is closed.
 
+-  the calendar to push the due date to the next open matching weekday 
+   for weekly loan periods, or the next open day otherwise (Note: This preference 
+   setting only works with loan periods in multiples of 7).
+
 Description:
 
 -  This preference controls how scheduled library closures affect the
@@ -4287,7 +4291,11 @@ Description:
    setting would not consider the scheduled closure at all, and 'the
    calendar to push the due date to the next open day' would only effect
    the due date if the day the item is due would fall specifically on
-   the day of closure.
+   the day of closure.  The final option to use 'the calendar to push 
+   the due date to the next open matching weekday for weekly loan periods, or the 
+   next open day otherwise' allows libraries to accommodate patrons who may 
+   only be able to visit the library on a certain day of the week, such as 
+   part-time students or patrons who rely on public transport. 
 
 Example:
 
@@ -4299,7 +4307,11 @@ Example:
    date to the next open day' then the due date will be December 26th.
    If the preference is set to 'the calendar to skip all days the
    library is closed' then the due date will be pushed to the 27th of
-   December to accommodate for the two closed days.
+   December to accommodate for the two closed days.  If the preference is set 
+   to 'the calendar to push the due date to the next open matching weekday 
+   for weekly loan periods, or the next open day otherwise' the item would be 
+   due back on January 1st.  If January 1st was also a closed day then 
+   the item would be due back on the next available open day. 
 
 The calendar is defined on a branch by branch basis. To learn more about
 the calendar, check out the :ref:`Calendar & Holidays <calendar-label>`
