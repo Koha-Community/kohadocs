@@ -763,7 +763,14 @@ location, suspend and/or cancel the hold.
     If you have your
     :ref:`AutoResumeSuspendedHolds` preference
     set to "Don't allow" then you will not have the option to put an end
-    date on the hold suspension
+    date on the hold suspension.
+    
+    **Note**
+
+    If you have your
+    :ref:`AllowHoldDateInFuture` preference
+    set to "Don't allow" you will not have the option to edit the date the 
+    hold was placed (the column labelled Date).
 
     **Note**
 
