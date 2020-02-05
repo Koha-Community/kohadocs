@@ -10847,6 +10847,36 @@ have less than \_\_\_ USD in fines
     To allow renewals in the OPAC, :ref:`opacuserlogin`
     needs to be set to 'allow'
 
+.. _opacfinenorenewalsincludecredits-label:
+
+OPACFineNoRenewalsIncludeCredits
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Include
+
+Asks: \_\_\_ outstanding/unapplied credits when applying the OPACFineNoRenewals 
+rule to users
+
+Values:
+
+-  Include
+
+-  Don't include
+
+Description:
+
+-  This preference controls whether the :ref:`OPACFineNoRenewals` function uses 
+   the account balance (which combines outstanding credits and debits) or 
+   account amount outstanding (which excludes any credits) to make the calculation.
+
+    **Note**
+
+    Generally you would set this system preference to align with 
+    the :ref:`AccountAutoReconcile` system preference.  If you have 
+    AccountAutoReconcile set to ‘Do’ you should leave this system preference as
+    ‘Include’.  If you have AccountAutoReconcile set to ‘Do not’ it would make 
+    sense to have this set as ‘Don’t include’. 
+    
 .. _opachiddenitems-label:
 
 OpacHiddenItems
