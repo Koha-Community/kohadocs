@@ -393,10 +393,16 @@ Order from an existing record
 -  If you are ordering another copy of an existing item, you can simply
    search for the record in your system.
 
-   |image809|
-
-   -  From the results, simply click 'Order' to be brought to the order
+   -  From the results, you can click 'Add order' to be brought to the order
       form.
+
+      |image809|
+
+   -  From the record's detailed view, you can click on the 'Add order' button.
+
+      |image1451|
+
+-  You will be brought to the order form
 
       |image810|
 
