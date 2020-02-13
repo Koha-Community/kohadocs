@@ -48,6 +48,11 @@ basic editor
 
    -  Choose the framework you would like to base your record on
 
+      **Note**
+
+      You can create or modify frameworks in the :ref:`Administration
+      module <marc-bibliographic-frameworks-label>`.
+
 If you would like to catalog a record using a blank template in the
 advanced editor
 
