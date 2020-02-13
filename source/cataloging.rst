@@ -104,11 +104,13 @@ In the basic editor once you've opened a blank framework or imported a
 record via Z39.50 you will be presented with the form to continue
 cataloging
 
-|image632|
+|image1452|
 
 -  If you would rather not see the MARC tag numbers you can change the
    value in your :ref:`hide\_marc <hide-marc-label>` system preference or each
    user can check the box next to 'Show tags' found under 'Settings'.
+
+   |image632|
 
 -  To expand a collapsed tag click on the tag description
 
