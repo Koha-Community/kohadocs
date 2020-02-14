@@ -2271,8 +2271,7 @@ the Label creator tool and choose 'Layout'.
 
 |image326|
 
-Using the form that appears you can create a profile to fix any problems
-with your template.
+Using the form that appears you can decide what appears on your labels.
 
 |image327|
 
@@ -2286,6 +2285,30 @@ with your template.
    and/or barcode. For example a spine label would just be Biblio
    whereas a label for your circulation staff to use to checkout the
    book would probably be Biblio/Barcode.
+
+   -  Biblio: only bibliographic information will appear on the label (e.g.
+      spine labels)
+
+      |image1456|
+
+   -  Barcode/Biblio: the barcode will appear at the top of the label and the
+      bibliographic information undeneath
+
+      |image1455|
+
+   -  Biblio/Barcode: the bibliographic information will appear at the top of
+      the label and the barcode underneath
+
+      |image1457|
+
+   -  Alternating: the bibliographic information will appear on one label, and
+      the barcode on the next label, alternating for each item
+
+      |image1453|
+
+   -  Barcode: only the barcode will appear on the label
+
+      |image1454|
 
 -  The Bibliographic data to print includes any of the data fields that
    may be mapped to your MARC frameworks. You can choose from the preset
@@ -2312,8 +2335,8 @@ with your template.
 -  Choose if you'd like Koha to try to split your call numbers (usually
    used on spine labels)
 
--  Finally choose your text settings such as alignment, font type and
-   size.
+-  Choose your text settings such as alignment, font type and
+   size. You can also italicize the title by checking the 'Oblique title' box.
 
 After saving, your layouts will appear on the 'Manage layouts' page.
 
