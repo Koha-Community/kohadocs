@@ -2620,7 +2620,7 @@ MARC modification templates
 
 The MARC modification templates system gives Koha users the power to
 make alterations to MARC records automatically while :ref:`staging MARC
-records for import <stage-marc-records-for-import-label>` 
+records for import <stage-marc-records-for-import-label>`
 or :ref:`making batch record modifications <batch-record-modification-label>`.
 
 This tool is useful for altering MARC records from various
@@ -2652,7 +2652,7 @@ you might want to add the biblio item type of EBOOK to the 942$c.
     **Note**
 
     If you wish to update the values in an existing field choose the option
-    ‘Update existing or add new’.  This will update existing values 
+    ‘Update existing or add new’.  This will update existing values
     where found and add a new field if one doesn’t exist.
 
 Each action can also have an optional condition to check the value or
@@ -3349,7 +3349,7 @@ receipt:
 
       |image1240|
 
-      -  Librarian interface: content will appear on the staff interface main 
+      -  Librarian interface: content will appear on the staff interface main
          page
 
          |image390|
@@ -3358,9 +3358,9 @@ receipt:
 
          |image391|
 
-         **Note** 
-         This can be activated or deactivated in the :ref:`Notices & slips tool
-          <notices-and-slips-label>`
+         **Note**
+         This can be activated or deactivated in the
+         :ref:`Notices & slips tool <notices-and-slips-label>`
 
       -  OPAC news: content will appear above the :ref:`OpacMainUserBlock`
 
@@ -3399,7 +3399,7 @@ receipt:
 
 -  After filling in all of the fields, click 'Submit'
 
-Depending on your choice for the :ref:`NewsAuthorDisplay` system preference 
+Depending on your choice for the :ref:`NewsAuthorDisplay` system preference
 you will also see the person who created the news item (this uses the logged in
 person)
 

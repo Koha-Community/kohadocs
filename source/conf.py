@@ -62,7 +62,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Koha Manual'
-copyright = '2019–2020, Koha Community'
+copyright = '2019-2020, Koha Community'
 author = 'Koha Community'
 
 # The version info for the project you're documenting, acts as replacement for
