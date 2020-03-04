@@ -9525,6 +9525,33 @@ found for your search.
     You can insert placeholders {QUERY\_KW} that will be replaced with
     the keywords of the query.
 
+.. _opacplaymusicalinscripts-label:
+
+OPACPlayMusicalInscripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't play
+
+Asks: \_\_\_ MIDI representation of musical inscripts on the OPAC record 
+details page.
+
+Values:
+
+-  Don't play
+
+-  Play
+
+Description:
+
+-  This preference controls whether a short audio clip is available to play 
+   when musical incipits are added to the detailed view of a bibliographic 
+   record.
+   
+    **Note**
+
+    The :ref:`OPACShowMusicalInscripts` preference must be set to 'Show' 
+    for these clips to display.   
+
 .. _opacpublic-label:
 
 OpacPublic
@@ -9682,6 +9709,28 @@ Description:
    make available to patrons when logged in to their account on the OPAC.  If
    you select to include hold priority information the list of holds will
    initially be sorted by priority.
+
+.. _opacshowmusicalinscripts-label:
+
+OPACShowMusicalInscripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't show
+
+Asks: \_\_\_ musical inscripts on the OPAC record details page.
+
+Values:
+
+-  Don't show
+
+-  Show
+
+Description:
+
+-  This preference allows musical incipits to be displayed in the detailed 
+   view of a bibliographic record on the OPAC.  MARC data for the incipit is 
+   added to the 031 MARC21 tag of the record.  Audio clips can also be displayed 
+   if the :ref:`OPACPlayMusicalInscripts` preference set to 'Play'.
 
 .. _opacshowrecentcomments-label:
 
