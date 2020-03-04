@@ -238,7 +238,10 @@ At the bottom of the editor you will see help from the Library of
 Congress for the field you are on. In cases where your MARC is invalid
 you will see red highlighting. To edit the record using only keyboard
 functions the Keyboard shortcuts button will inform you of the necessary
-commands
+commands.
+
+A clipboard is available to copy and paste text between fields.  See the image
+and table below for the shortcuts used with the clipboard.
 
 |image645|
 
@@ -253,6 +256,16 @@ module to save time and clicking.
 +----------------+--------------------------------+
 | Shortcut       | Behavior                       |
 +================+================================+
+| Ctrl-C         | Copy current field             |
++----------------+--------------------------------+
+| Shift-Ctrl-C   | Copy current subfield          |
++----------------+--------------------------------+
+| Ctrl-X         | Delete current field and copy  |
+|                | to 'clipboard'                 |
++----------------+--------------------------------+
+| Shift-Ctrl-X   | Delete current subfield and    |
+|                | copy to 'clipboard'            |
++----------------+--------------------------------+
 | Alt-C          | Insert copyright symbol (©)    |
 +----------------+--------------------------------+
 | Alt-P          | Insert copyright symbol (℗)    |
@@ -260,24 +273,43 @@ module to save time and clicking.
 +----------------+--------------------------------+
 | Ctrl-D         | Insert delimiter (‡)           |
 +----------------+--------------------------------+
-| Ctrl-H         | Get help on current subfield   |
-+----------------+--------------------------------+
-| Ctrl-Shift-L   | Link field to authorities      |
-+----------------+--------------------------------+
-| Ctrl-S         | Save record                    |
-+----------------+--------------------------------+
-| Ctrl-X         | Delete current field           |
-+----------------+--------------------------------+
-| Ctrl-Shift-X   | Delete current subfield        |
-+----------------+--------------------------------+
-| Enter          | New field on next line         |
+| Ctrl-I         | Copy current field on next     |
+|                | line                           |
 +----------------+--------------------------------+
 | Shift-Enter    | Insert line break              |
 +----------------+--------------------------------+
+| Shift-Ctrl-L   | Link field to authorities      |
++----------------+--------------------------------+
+| Enter          | New field on next line         |
++----------------+--------------------------------+
 | Tab            | Move to next position          |
++----------------+--------------------------------+
+| Ctrl-P         | Paste selection from           |
+|                | 'clipboard'                    |
 +----------------+--------------------------------+
 | Shift-Tab      | Move to previous position      |
 +----------------+--------------------------------+
+| Ctrl-H         | Get help on current subfield   |
++----------------+--------------------------------+
+| Shift-Ctrl-K   | Toggle Keyboard                |
++----------------+--------------------------------+
+| Ctrl-S         | Save record (cannot be         |
+|                | remapped)                      |
++----------------+--------------------------------+
+
+
+.. _advanced-cataloging-virtual-keyboard-label:
+
+Advanced cataloging virtual keyboard
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+|image1451|
+
+A virtual keyboard is available for adding diacritics and symbols.  Use the
+shortcut Shift-Ctrl-K to display the keyboard.  A 'Keyboard layouts' button will
+display at the top of the advanced editor that allows you to set the virtual
+keyboard layout for different languages.
+
 
 .. _macros-in-advanced-cataloging-label:
 
