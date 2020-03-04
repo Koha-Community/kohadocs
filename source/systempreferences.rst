@@ -10222,6 +10222,31 @@ Values:
     run the :ref:`authorities browser cron job <cron-authorities-browser-label>` to
     create the browser list
 
+.. _opacdetailqrcode-label:
+
+OPACDetailQRCode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Default: Don't enable
+
+Asks: \_\_\_ the option to show a QR Code on the OPAC bibliographic detail 
+page.
+
+Values:
+
+-  Don't enable
+
+-  Enable
+
+   |image1452|
+
+Description:
+
+-  With this preference enabled a new option 'Send to device' displays in the 
+   list of options on the OPAC details page.  When this link is clicked a 
+   QR code will be displayed which can be scanned using a compatible device 
+   in order to save the bibliographic details to that device.
+
 .. _opacfinestab-label:
 
 OPACFinesTab
