@@ -202,7 +202,8 @@ search results on the detail page
 |image960|
 
 Below the search buttons you'll find the links to place a hold, print
-the record, save the record to your lists, or add it to your cart
+the record, save the record to your lists, add it to your cart or send to a 
+device (using a QR code).
 
 |image961|
 
