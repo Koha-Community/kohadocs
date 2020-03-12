@@ -303,7 +303,7 @@ module to save time and clicking.
 Advanced cataloging virtual keyboard
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-|image1451|
+|image1458|
 
 A virtual keyboard is available for adding diacritics and symbols.  Use the
 shortcut Shift-Ctrl-K to display the keyboard.  A 'Keyboard layouts' button will
