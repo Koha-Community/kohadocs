@@ -53,5 +53,5 @@ If you need to change the cost or the quantity, click on the amount on the
 right side and it will become an input box where you can enter the correct 
 amount.
 
-
+|image1459|
 
