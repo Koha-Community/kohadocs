@@ -1427,13 +1427,11 @@
 .. |image1449| image:: images/admin/accounting/addcashregister.png
 .. |image1450| image:: images/admin/accounting/cashregisters.png
 .. |image1451| image:: images/acquisitions/orderfromexistingrecord.png
-<<<<<<< HEAD
 .. |image1452| image:: images/cataloging/catalogingform.png
 .. |image1453| image:: images/tools/labelcreator/layoutalt.png
 .. |image1454| image:: images/tools/labelcreator/layoutbar.png
 .. |image1455| image:: images/tools/labelcreator/layoutbarbib.png
 .. |image1456| image:: images/tools/labelcreator/layoutbib.png
 .. |image1457| image:: images/tools/labelcreator/layoutbibbar.png
-=======
-.. |image1452| image:: images/cataloging/advancedkeyboard.png
->>>>>>> Update images.rst
+.. |image1458| image:: images/cataloging/advancedkeyboard.png
+.. |image1459| image:: images/pointofsale/changeamount.gif
