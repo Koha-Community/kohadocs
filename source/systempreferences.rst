@@ -10599,13 +10599,17 @@ SocialNetworks
 
 Default: Disable
 
-Asks: \_\_\_ social network links in opac detail pages
+Asks: Show \_\_\_ social network links in opac detail pages
 
-Values:
+Options:
 
--  Disable
+-  Email
 
--  Enable
+-  Facebook
+
+-  LinkedIn
+
+-  Twitter
 
    |image102|
 
