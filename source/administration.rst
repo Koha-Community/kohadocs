@@ -3498,14 +3498,16 @@ top right of the page
 |                     | - Order search results                  |
 |                     | - Basket summary                        |
 +---------------------+-----------------------------------------+
-| Administration      | - Currencies                            |
-|                     | - Patron categories                     |
+| Administration      | - Patron categories                     |
+|                     | - Currencies                            |
+|                     | - Item types                            |
 |                     | - Libraries                             |
 +---------------------+-----------------------------------------+
 | Catalog             | - Acquisition details                   |
 |                     | - Checkout history                      |
 +---------------------+-----------------------------------------+
-| Cataloging          | - Item table above edit item form       |
+| Cataloging          | - Z39.50 search results                 |
+|                     | - Item table above edit item form       |
 +---------------------+-----------------------------------------+
 | Circulation         | - Checkins                              |
 |                     | - Checkouts                             |
@@ -3513,6 +3515,7 @@ top right of the page
 |                     | - Holds queue                           |
 |                     | - Hold ratios                           |
 |                     | - Patron search results                 |
+|                     | - Overdues report                       |
 +---------------------+-----------------------------------------+
 | Course reserves     | - Courses                               |
 |                     | - Reserves                              |
@@ -3524,6 +3527,7 @@ top right of the page
 |                     | - Accounting > Transactions             |
 |                     | - Accounting > Make a payment           |
 |                     | - Patron search results                 |
+|                     | - Patron checkout history               |
 |                     | - Patron lists                          |
 +---------------------+-----------------------------------------+
 | Tools               | - Notices and slips                     |
