@@ -341,7 +341,9 @@ All three of these options will open up the issue receive form:
    received.
 
 -  If you have decided to have an item record created for each issue an
-   :ref:`item add form <adding-items-label>` will appear after choosing 'Arrived'
+   :ref:`item add form <adding-items-label>` will appear after choosing 'Arrived'.
+   You can add multiple copies using the 'Number of copies to be made of this item' 
+   option at the bottom of the form.
 
    |image755|
 
