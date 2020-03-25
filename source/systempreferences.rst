@@ -2414,6 +2414,14 @@ Description:
    (952$o). The value is set by providing the MARC field code (050, 082,
    090, 852 are all common in MARC21) and the subfield codes without the
    delimiters ($a, $b would be ab).
+   
+-  The field can also contain several MARC fields in priority order. 
+   For example, 082ab,050ab,080ab,090ab will look in priority in 082ab, if 
+   082 is not filled in, it will look in 050ab, etc. 
+
+   **Important** 
+   When entering more than one MARC field, separate them with a comma, but do 
+   not put spaces after the commas.
 
 Examples:
 
