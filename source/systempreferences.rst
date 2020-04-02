@@ -92,7 +92,7 @@ Description:
 FinePaymentAutoPopop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: \_\_\_ automatically display a print dialog for a payment receipt when 
+Asks: \_\_\_ automatically display a print dialog for a payment receipt when
 making a payment.
 
 Default: Don't
@@ -105,8 +105,8 @@ Values:
 
 Description:
 
--  If activated, when :ref:`making a payment <pay/reverse-fines-label> in a 
-   patron's account, a printing popup will be displayed automatically instead 
+-  If activated, when :ref:`making a payment <pay/reverse-fines-label> in a
+   patron's account, a printing popup will be displayed automatically instead
    of having to click on the 'print' button.
 
 .. _usecashregisters-label:
@@ -118,7 +118,7 @@ Asks: \_\_\_ cash registers with the accounting system to track payments.
 
 Default: Don't use
 
-Values: 
+Values:
 
 -  Don't use
 
@@ -126,7 +126,7 @@ Values:
 
 Description:
 
--  This preference enables the :ref:`cash registers <cashregisters-label>` 
+-  This preference enables the :ref:`cash registers <cashregisters-label>`
    feature in the administration module.
 
 .. _acquisitions-system-preferences-label:
@@ -425,7 +425,7 @@ UniqueItemFields
 
 Default: barcode
 
-Asks: The following database columns should be unique in an item: \_\_\_ 
+Asks: The following database columns should be unique in an item: \_\_\_
 separate columns with pipe (|).
 
 Description:
@@ -2415,6 +2415,14 @@ Description:
    090, 852 are all common in MARC21) and the subfield codes without the
    delimiters ($a, $b would be ab).
 
+-  The field can also contain several MARC fields in priority order.
+   For example, 082ab,050ab,080ab,090ab will look in priority in 082ab, if
+   082 is not filled in, it will look in 050ab, etc.
+
+   **Important**
+   When entering more than one MARC field, separate them with a comma, but do
+   not put spaces after the commas.
+
 Examples:
 
 -  Dewey: 082ab or 092ab; LOC: 050ab or 090ab; from the item record:
@@ -3870,7 +3878,7 @@ notice sent out to patrons.
 
     If you'd like more than one person to receive the blind copy you can
     simply enter in multiple email addresses separated by commas.
-    
+
  .. _onsitecheckoutautocheck-label:
 
 OnSiteCheckoutAutoCheck
@@ -3881,7 +3889,7 @@ Default: Don't enable
 Asks: \_\_\_ onsite checkout by default if last checkout was an onsite one.
 
 Values:
-   
+
 -  Don't enable
 
 -  Enable
@@ -3889,7 +3897,7 @@ Values:
 Description:
 
 -  This preference allows you specify that if a preceding checkout was an onsite
-   checkout, then the 'On-site checkout' checkbox will be ticked 
+   checkout, then the 'On-site checkout' checkbox will be ticked
    ready for the next checkout.
 
 .. _onsitecheckouts-label:
@@ -4273,8 +4281,8 @@ Values:
 
 -  the calendar to skip all days the library is closed.
 
--  the calendar to push the due date to the next open matching weekday 
-   for weekly loan periods, or the next open day otherwise (Note: This preference 
+-  the calendar to push the due date to the next open matching weekday
+   for weekly loan periods, or the next open day otherwise (Note: This preference
    setting only works with loan periods in multiples of 7).
 
 Description:
@@ -4286,11 +4294,11 @@ Description:
    setting would not consider the scheduled closure at all, and 'the
    calendar to push the due date to the next open day' would only effect
    the due date if the day the item is due would fall specifically on
-   the day of closure.  The final option to use 'the calendar to push 
-   the due date to the next open matching weekday for weekly loan periods, or the 
-   next open day otherwise' allows libraries to accommodate patrons who may 
-   only be able to visit the library on a certain day of the week, such as 
-   part-time students or patrons who rely on public transport. 
+   the day of closure.  The final option to use 'the calendar to push
+   the due date to the next open matching weekday for weekly loan periods, or the
+   next open day otherwise' allows libraries to accommodate patrons who may
+   only be able to visit the library on a certain day of the week, such as
+   part-time students or patrons who rely on public transport.
 
 Example:
 
@@ -4302,11 +4310,11 @@ Example:
    date to the next open day' then the due date will be December 26th.
    If the preference is set to 'the calendar to skip all days the
    library is closed' then the due date will be pushed to the 27th of
-   December to accommodate for the two closed days.  If the preference is set 
-   to 'the calendar to push the due date to the next open matching weekday 
-   for weekly loan periods, or the next open day otherwise' the item would be 
-   due back on January 1st.  If January 1st was also a closed day then 
-   the item would be due back on the next available open day. 
+   December to accommodate for the two closed days.  If the preference is set
+   to 'the calendar to push the due date to the next open matching weekday
+   for weekly loan periods, or the next open day otherwise' the item would be
+   due back on January 1st.  If January 1st was also a closed day then
+   the item would be due back on the next available open day.
 
 The calendar is defined on a branch by branch basis. To learn more about
 the calendar, check out the :ref:`Calendar & Holidays <calendar-label>`
@@ -4511,12 +4519,12 @@ Values:
 
 Description:
 
--  This system preference determines whether the :ref:`calendar <calendar-label>` is taken into 
-   account when making suspension calculations.  Suspension rules can be 
-   configured within the :ref:`circulation rules <circulation-and-fines-rules-label>`.  
-   If set to ‘directly’ the suspension period will ignore any closed days 
-   that have been added to the calendar.  If set to ‘not including the 
-   days the library is closed’ any days marked as closed within the calendar 
+-  This system preference determines whether the :ref:`calendar <calendar-label>` is taken into
+   account when making suspension calculations.  Suspension rules can be
+   configured within the :ref:`circulation rules <circulation-and-fines-rules-label>`.
+   If set to ‘directly’ the suspension period will ignore any closed days
+   that have been added to the calendar.  If set to ‘not including the
+   days the library is closed’ any days marked as closed within the calendar
    will be skipped when calculating the end date for the suspension.
 
 .. _usedefaultreplacementcost-label:
@@ -6009,6 +6017,60 @@ ILLModuleCopyrightClearance
 Asks: Adding text will enable the copyright clearance stage in request creation.
 The text you enter will be the text displayed.
 
+.. _returnclaims-label:
+
+Return claims
+~~~~~~~~~~~~~~~~~
+
+The return claims feature tracks items that patrons claim to have returned.
+
+To use this feature:
+
+1.  Add a new authorized value to the LOST category to represent items claimed as returned.
+
+2.  Enter the authorized value in the ClaimReturnedLostValue system preference - this enables the return claims feature.
+
+3.  Set a value for the ClaimReturnedChargeFee system preference - the default is ask if a lost fee should be charged.
+
+4.  Optional: Set a value for ClaimReturnedWarningThreshold system preference to alert librarians when a patron exceeds a set number of return claims.
+
+Returning a claimed item will notify the librarian that the item has a claim on it. The librarian can then mark checked out items as return claims from the checkout and patron details pages, and modify them from the new claims tab on these pages.
+
+ClaimReturnedChargeFee
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: When marking a checkout as "claims returned”,
+
+Values:
+
+-  Ask if a lost fee should be charged (default)
+
+-  Charge a lost fee
+
+-  Don't charge a lost fee
+
+Description:
+
+-  This preference allows a library to choose if a lost fee is charged at the time an item being claimed is returned. If set to ask, there is a checkbox to either charge or don’t charge per transaction. If set to charge, Koha will charge the patron the replacement price of the item. If set to don’t charge, Koha will not charge the patron.
+
+ClaimReturnedLostValue
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Use the LOST authorised value  \_\_\_ to represent returns claims.
+
+Description:
+
+-  Add a LOST authorized value - this enables the return claims feature. Add a new authorized value to the LOST category to represent the library's return claims.
+
+ClaimReturnedWarningThreshold
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Asks: Warn librarians that a patron has excessive return claims if the patron has claimed the return of more than \_\_\_ items.
+
+Description:
+
+-  Enter a number if a library would like to set a limit to the number of returns claims that the patron can have before showing a warning on the patron's screen.
+
 .. _self-checkout-system-preferences-label:
 
 Self Checkout
@@ -7158,10 +7220,10 @@ Values:
 
 Description:
 
--  If you use :ref:`CustomCoverImagesURL`, this preference indicates if you 
+-  If you use :ref:`CustomCoverImagesURL`, this preference indicates if you
    want these cover images to appear in the staff interface.
 
--  Use :ref:`OPACCustomCoverImages` if you want those images to appear in the 
+-  Use :ref:`OPACCustomCoverImages` if you want those images to appear in the
    OPAC.
 
 .. _opaccustomcoverimages-label:
@@ -7181,10 +7243,10 @@ Values:
 
 Description:
 
--  If you use :ref:`CustomCoverImagesURL`, this preference indicates if you 
+-  If you use :ref:`CustomCoverImagesURL`, this preference indicates if you
    want these cover images to appear in the OPAC.
 
--  Use :ref:`CustomCoverImages` if you want those images to appear in the 
+-  Use :ref:`CustomCoverImages` if you want those images to appear in the
    staff interface.
 
 .. _customcoverimagesurl-label:
@@ -7192,7 +7254,7 @@ Description:
 CustomCoverImagesURL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Asks: Using the following URL: \_\_\_ 
+Asks: Using the following URL: \_\_\_
 
 Description:
 
@@ -7208,8 +7270,8 @@ Description:
    For example:
    http://www.mylibrarysite.com/covers/{024$a}.png
 
--  Make sure to enable :ref:`CustomCoverImages` if you want those images to 
-   appear in the staff interface and :ref:`OPACCustomCoverImages` if you want 
+-  Make sure to enable :ref:`CustomCoverImages` if you want those images to
+   appear in the staff interface and :ref:`OPACCustomCoverImages` if you want
    those images to appear in the OPAC.
 
 .. _localcoverimages-label:
@@ -10665,13 +10727,17 @@ SocialNetworks
 
 Default: Disable
 
-Asks: \_\_\_ social network links in opac detail pages
+Asks: Show \_\_\_ social network links in opac detail pages
 
-Values:
+Options:
 
--  Disable
+-  Email
 
--  Enable
+-  Facebook
+
+-  LinkedIn
+
+-  Twitter
 
    |image102|
 
@@ -10935,7 +11001,7 @@ OPACFineNoRenewalsIncludeCredits
 
 Default: Include
 
-Asks: \_\_\_ outstanding/unapplied credits when applying the OPACFineNoRenewals 
+Asks: \_\_\_ outstanding/unapplied credits when applying the OPACFineNoRenewals
 rule to users
 
 Values:
@@ -10946,18 +11012,18 @@ Values:
 
 Description:
 
--  This preference controls whether the :ref:`OPACFineNoRenewals` function uses 
-   the account balance (which combines outstanding credits and debits) or 
+-  This preference controls whether the :ref:`OPACFineNoRenewals` function uses
+   the account balance (which combines outstanding credits and debits) or
    account amount outstanding (which excludes any credits) to make the calculation.
 
     **Note**
 
-    Generally you would set this system preference to align with 
-    the :ref:`AccountAutoReconcile` system preference.  If you have 
+    Generally you would set this system preference to align with
+    the :ref:`AccountAutoReconcile` system preference.  If you have
     AccountAutoReconcile set to ‘Do’ you should leave this system preference as
-    ‘Include’.  If you have AccountAutoReconcile set to ‘Do not’ it would make 
-    sense to have this set as ‘Don’t include’. 
-    
+    ‘Include’.  If you have AccountAutoReconcile set to ‘Do not’ it would make
+    sense to have this set as ‘Don’t include’.
+
 .. _opachiddenitems-label:
 
 OpacHiddenItems
@@ -14383,13 +14449,13 @@ BarcodeSeparators
 
 Default: \\s\\r\\n
 
-Asks: Split barcodes on the following separator chars \_\_\_ in batch item 
+Asks: Split barcodes on the following separator chars \_\_\_ in batch item
 modification and inventory.
 
 Description:
 
--  When importing barcode files in the :ref:`inventory tool <inventory-tool-label>` 
-   or the :ref:`batch item modification tool <batch-item-modification-label>` 
+-  When importing barcode files in the :ref:`inventory tool <inventory-tool-label>`
+   or the :ref:`batch item modification tool <batch-item-modification-label>`
    you can decide which character separates each barcode.
 
    **Important**
@@ -14404,7 +14470,7 @@ Description:
 
    -  \\t is used for a tab
 
-   Make sure you escape the other characters you put in there by preceding 
+   Make sure you escape the other characters you put in there by preceding
    them with a backslash
 
    -  \\. instead of a dot
@@ -14419,7 +14485,7 @@ Batch item
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These preferences are in reference to the :ref:`Batch item
-modification <batch-item-modification-label>` and :ref:`Batch item deletion 
+modification <batch-item-modification-label>` and :ref:`Batch item deletion
 <batch-item-deletion-label>` tools.
 
 .. _maxitemstodisplayforbatchdel-label:
@@ -14449,7 +14515,7 @@ Asks: Display up to \_\_\_ items in a single item modification batch.
 
 Description:
 
--  In the :ref:`batch item modification tool <batch-item-modification-label>` 
+-  In the :ref:`batch item modification tool <batch-item-modification-label>`
    this will prevent the display of more than the items you entered in this
    preference, but you will be able to modify more than the number you
    enter here (see :ref:`MaxItemsToProcessForBatchMod`).
