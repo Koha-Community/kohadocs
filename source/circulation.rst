@@ -764,12 +764,12 @@ location, suspend and/or cancel the hold.
     :ref:`AutoResumeSuspendedHolds` preference
     set to "Don't allow" then you will not have the option to put an end
     date on the hold suspension.
-    
+
     **Note**
 
     If you have your
     :ref:`AllowHoldDateInFuture` preference
-    set to "Don't allow" you will not have the option to edit the date the 
+    set to "Don't allow" you will not have the option to edit the date the
     hold was placed (the column labelled Date).
 
     **Note**
@@ -820,6 +820,10 @@ down to the left of each line and then click 'Update hold(s)' at the
 bottom of the list.
 
 |image559|
+
+If your library uses the :ref:`patron clubs feature <patron-clubs-label>`, use the clubs tab to place a hold for a club. To place a hold for a club, click the clubs tab, search for and select the club name, and click the 'Place hold' button.
+
+|image1460|
 
 .. _receiving-holds-label:
 

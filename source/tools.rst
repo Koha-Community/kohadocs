@@ -64,7 +64,7 @@ Once you have all of the patrons you would like to add you can click the
 
 |image250|
 
-.. _Patron-clubs-label:
+.. _patron-clubs-label:
 
 Patron clubs
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -179,6 +179,22 @@ You can monitor the enrollments in each club by going to the 'Patron clubs' tool
 and choosing 'Enrollment' from the 'Actions' button.
 
 |image1370|
+
+Placing a hold for a patron club
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can place holds for a patron club - holds are placed for club members in a random order.
+
+To place a hold for a patron club:
+
+1. Go to the patron clubs tool ('Home > Tools > Patron clubs').
+2. Click the 'Actions' button for the club and select 'Search to hold'.
+3. Search for a title and select a record.
+4. Select 'Place hold for [CLUBNAME]' from either the action links for the record, or from the 'Place hold' action in the menu bar.
+5. The place holds page is displayed and lists the club members.
+6. Click the 'Place hold' button.
+
+Result: Holds are placed for all club members.
 
 .. _comments-label:
 
@@ -2619,8 +2635,8 @@ MARC modification templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The MARC modification templates system gives Koha users the power to
-make alterations to MARC records automatically while :ref:`staging MARC
-records for import <stage-marc-records-for-import-label>`
+make alterations to MARC records automatically while
+:ref:`staging MARC records for import <stage-marc-records-for-import-label>`
 or :ref:`making batch record modifications <batch-record-modification-label>`.
 
 This tool is useful for altering MARC records from various

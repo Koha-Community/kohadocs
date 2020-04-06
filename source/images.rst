@@ -1426,3 +1426,4 @@
 .. |image1448| image:: images/tools/news/opacnavright.png
 .. |image1449| image:: images/admin/accounting/addcashregister.png
 .. |image1450| image:: images/admin/accounting/cashregisters.png
+.. |image1460| image:: images/tools/patronclubs/placeclubhold.png

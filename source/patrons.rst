@@ -557,9 +557,9 @@ Setting patron permissions
 
    |image441|
 
--  In all cases, if the parent permission is checked, the user has all the 
-   child permissions. If you want to set permissions on a more granular level, 
-   expand the section and only check the permissions you want that user to 
+-  In all cases, if the parent permission is checked, the user has all the
+   child permissions. If you want to set permissions on a more granular level,
+   expand the section and only check the permissions you want that user to
    have.
 
 
@@ -579,7 +579,7 @@ Patron permissions defined
 
    -  Remaining circulation permissions (circulate\_remaining\_permissions)
 
-      -  This permission grants all circulation rights except those covered by 
+      -  This permission grants all circulation rights except those covered by
          permissions listed below
 
    -  Force checkout if a limitation exists (force\_checkout)
@@ -617,14 +617,14 @@ Patron permissions defined
 
    -  Override blocked renewals (override\_renewals)
 
-      -  With this permission, a staff member can override renewals if there 
+      -  With this permission, a staff member can override renewals if there
          is a restriction
 
       -  Requires that the staff member also has
          circulate\_remaining\_permissions
 
--  Staff access, allows viewing the catalogue in staff client (catalogue) 
-   **Required for staff login.** 
+-  Staff access, allows viewing the catalogue in staff client (catalogue)
+   **Required for staff login.**
 
       **Important**
 
@@ -645,9 +645,9 @@ Patron permissions defined
 
       -  **Important**
 
-         This permission requires that the staff member also have the 'Edit 
-         an existing subscription' permission from the 'Manage serial 
-         subscriptions' section and the 'Manage basket and order lines' 
+         This permission requires that the staff member also have the 'Edit
+         an existing subscription' permission from the 'Manage serial
+         subscriptions' section and the 'Manage basket and order lines'
          permission from the 'Acquisition and\/or suggestion management' section
 
    -  Manage audio alerts (manage\_audio\_alerts)
@@ -663,14 +663,14 @@ Patron permissions defined
 
    -  Manage circulation rules (manage\_circ\_rules)
 
-      -  The ability to access the :ref:`circulation and fines rules 
-         <circulation-and-fines-rules-label>` configuration in the 
+      -  The ability to access the :ref:`circulation and fines rules
+         <circulation-and-fines-rules-label>` configuration in the
          administration module.
 
    -  Manage circulation rules form any library (manage\_circ\_rules\_from\_
       any\_libraries)
 
-      -  If not set the logged in user can only edit circulation rules from 
+      -  If not set the logged in user can only edit circulation rules from
          their own library
 
       -  The staff member still has to have the 'Manage circulation rules'
@@ -683,8 +683,8 @@ Patron permissions defined
 
    -  Manage classification sources and filing rules (manage\_classifications)
 
-      -  The ability to access the :ref:`classification sources 
-         <classification-sources-label>` configuration in the administration 
+      -  The ability to access the :ref:`classification sources
+         <classification-sources-label>` configuration in the administration
          module.
 
    -  Manage column configuration (manage\_column\_config)
@@ -702,7 +702,7 @@ Patron permissions defined
       -  The ability to access the :ref:`item circulation alerts <item-circulation-alerts-label>`
          configuration in the administration module.
 
-   -  Manage item search fields (manage\_item\_search\_fields)  
+   -  Manage item search fields (manage\_item\_search\_fields)
 
       -  The ability to access the :ref:`item search fields <item-search-fields-label>`
          configuration in the administration module.
@@ -715,7 +715,7 @@ Patron permissions defined
    -  Manage keyboard shortcuts for the advanced cataloging editor (manage\_
       keyboard\_shortcuts)
 
-      -  The ability to access the keyboard shortcuts configuration in the 
+      -  The ability to access the keyboard shortcuts configuration in the
          administration module
 
    -  Manage libraries and library groups (manage\_libraries)
@@ -726,10 +726,10 @@ Patron permissions defined
 
    -  Manage Mana KB content sharing (manage\_mana)
 
-      -  The ability to access the :ref:`share content with Mana KB 
+      -  The ability to access the :ref:`share content with Mana KB
          <share-with-mana-kb-label>` in the administration module
 
-   -  Manage MARC bibliographic and authority frameworks and test them 
+   -  Manage MARC bibliographic and authority frameworks and test them
       (manage\_marc\_frameworks)
 
    -  The ability to access the
@@ -772,14 +772,14 @@ Patron permissions defined
 
    -  Manage SMS cellular providers (manage\_sms_providers)
 
-      -  The ability to access the :ref:`SMS cellular providers 
-         <sms-cellular-providers-label>` configuration in the administration 
-         module. Note: This area will only be visible when the 
+      -  The ability to access the :ref:`SMS cellular providers
+         <sms-cellular-providers-label>` configuration in the administration
+         module. Note: This area will only be visible when the
          :ref:`SMSSendDriver` system preference is set to 'Email'.
 
    -  Manage global system preferences (manage\_sysprefs)
 
-      -  The ability to access the :ref:`global system preferences 
+      -  The ability to access the :ref:`global system preferences
          <administration-system-preferences-label>` in the administration module.
 
    -  Manage library transfer limits and transport cost matrix (manage\_transfers)
@@ -806,7 +806,7 @@ Patron permissions defined
 
    -  View patron infos from any libraries (view\_borrower\_infos\_from\_any\_libraries)
 
-   -  If not set the logged in user will only be able to access patron 
+   -  If not set the logged in user will only be able to access patron
       information from their own library or group of libraries.
 
 -  Set user permissions (permissions)
@@ -822,18 +822,18 @@ Patron permissions defined
 
    -  Place holds for patrons (place\_holds)
 
-      -  Allows staff members to place holds in the staff interface  
+      -  Allows staff members to place holds in the staff interface
 
 -  Edit catalog (Modify bibliographic/holdings data) (editcatalogue)
 
    -  Use the advanced cataloging editor (advanced\_editor)
 
-      -  Grants the ability to use the advanced cataloging editor in the 
+      -  Grants the ability to use the advanced cataloging editor in the
          cataloging module
 
       -  **Note**
 
-         Staff members with this permission need to also have the 'Edit catalog 
+         Staff members with this permission need to also have the 'Edit catalog
          (Modify bibliographic/holdings data)' permission
 
    -  Delete all items at once (delete\_all\_items)
@@ -851,11 +851,11 @@ Patron permissions defined
       -  Ability to make :ref:`edits to item/holdings
          records <editing-items-label>`, but not bibliographic records
 
-   -  Limit item modification to subfields defined in the 
+   -  Limit item modification to subfields defined in the
       :ref:`SubfieldsToAllowForRestrictedEditing` system preference
       (edit\_items\_restricted)
 
-      -  If checked, the staff member will only be able to modify some 
+      -  If checked, the staff member will only be able to modify some
          item subfields
 
       -  **Note**
@@ -876,8 +876,8 @@ Patron permissions defined
 
    -  Remaining permissions for managing fines and fees (remaining\_permissions)
 
-      -  Grant the ability to manage fines and fees other than the actions 
-         described in the other subpermissions (paying out credits and writing 
+      -  Grant the ability to manage fines and fees other than the actions
+         described in the other subpermissions (paying out credits and writing
          off fees)
 
    -  Write off fines and fees (writeoff)
@@ -889,30 +889,30 @@ Patron permissions defined
 
    **Note**
 
-   All the acquisitions sub-permissions give access to the acquisitions home 
-   page. That means that staff who have one or more of the following permissions 
-   will be able to view the budgets, search and view vendor information, and 
+   All the acquisitions sub-permissions give access to the acquisitions home
+   page. That means that staff who have one or more of the following permissions
+   will be able to view the budgets, search and view vendor information, and
    view invoices.
 
    -  Add and delete funds (but can't modify funds) (budget\_add\_del)
 
-      -  Grants the ability to add and delete funds within a budget 
+      -  Grants the ability to add and delete funds within a budget
 
-      -  Note that the budget\_manage and budget\_modify permissions are 
+      -  Note that the budget\_manage and budget\_modify permissions are
          required for this one to work correctly
 
    -  Manage funds (budget\_manage)
 
       -  Grants the ability to acces the :ref:`fund administration page <funds-label>`
 
-      -  Note that this only gives viewing access to the page, you will need 
-         to give your staff budget\_add\_del and budget\_modify if you want 
+      -  Note that this only gives viewing access to the page, you will need
+         to give your staff budget\_add\_del and budget\_modify if you want
          them to be able to make changes to the funds
 
    -  Manage all funds (budget\_manage\_all)
 
-      -  Grants viewing access to all funds regardless of restrictions on 
-         them (owner, user or library restrictions)  
+      -  Grants viewing access to all funds regardless of restrictions on
+         them (owner, user or library restrictions)
 
       -  Note that the budget\_manage permission is required
 
@@ -920,7 +920,7 @@ Patron permissions defined
 
       -  Grants the ability to edit fund information and amounts
 
-      -  Note that the budget\_add\_del and budget\_manage permissions are 
+      -  Note that the budget\_add\_del and budget\_manage permissions are
          required for this one to work correctly
 
    -  Manage contracts (contracts\_manage)
@@ -929,44 +929,44 @@ Patron permissions defined
 
    -  Manage currencies and exchange rates (currencies\_manage)
 
-      -  The ability to access the :ref:`Currencies and exchange rates 
+      -  The ability to access the :ref:`Currencies and exchange rates
          <currencies-and-exchange-rates-label>` configuration page.
 
    -  Manage EDIFACT transmissions (edi\_manage)
 
-      -  Grants the ability to access the :ref:`EDI account <edi-accounts-label>` 
-         adminitration page, the :ref:`library EANs <library-eans-label>` 
+      -  Grants the ability to access the :ref:`EDI account <edi-accounts-label>`
+         adminitration page, the :ref:`library EANs <library-eans-label>`
          administration page and access sent :ref:`EDI messages <edifact-messages-label>`
 
-      -  In order to be able to send orders via EDI, your staff member also 
-         needs the 
+      -  In order to be able to send orders via EDI, your staff member also
+         needs the
 
    -  Manage basket groups (group\_manage)
 
-      -  Grants the ability to :ref:`create, edit, close and delete basket 
+      -  Grants the ability to :ref:`create, edit, close and delete basket
          groups <create-a-basket-group-label>`
 
    -  Manage baskets and order lines (order\_manage)
 
-      -  Grants the ability to :ref:`place orders <placing-orders-label>`, 
+      -  Grants the ability to :ref:`place orders <placing-orders-label>`,
          including creating baskets, adding order lines, closing baskets, etc.
 
-   -  Manage all baskets and order lines, regardless of restrictions on them 
+   -  Manage all baskets and order lines, regardless of restrictions on them
       (order\_manage\_all)
 
-      -  Grants the ability to manage all baskets and orders even if they are 
+      -  Grants the ability to manage all baskets and orders even if they are
          restricted to the owner, users or library
 
       -  Note that the order\_manage permission is required
 
    -  Receive orders and manage shipments (order\_receive)
 
-      -  Grants the ability to create invoices, receive items and claim late 
+      -  Grants the ability to create invoices, receive items and claim late
          orders
 
    -  Manage budgets (period\_manage)
 
-      -  Grants access to the :ref:`budget administration page <budgets-label>` 
+      -  Grants access to the :ref:`budget administration page <budgets-label>`
          and the ability to create, edit and delete budgets
 
       -  This permission does not give the ability to edit budget funds.
@@ -975,13 +975,13 @@ Patron permissions defined
 
       -  Grants the ability to view :ref:`budget planning <budget-planning-label>`
 
-      -  Note that the budget\_manage and the period\_manage permissions are 
+      -  Note that the budget\_manage and the period\_manage permissions are
          required for this one to work
 
    -  Manage purchase suggestions (suggestions\_manage)
 
-      -  Grants the ability to :ref:`create and manage purchase suggestions 
-         <managing-purchase-suggestions-label>`, including creating new 
+      -  Grants the ability to :ref:`create and manage purchase suggestions
+         <managing-purchase-suggestions-label>`, including creating new
          suggestions and changing the suggestions' statuses
 
    -  Manage vendors (vendors\_manage)
@@ -1050,19 +1050,19 @@ Patron permissions defined
 
       -  Access to the :ref:`Batch item modification tool <batch-item-modification-label>`
 
-   -  Limit batch item modification to subfields defined in the 
+   -  Limit batch item modification to subfields defined in the
       SubfieldsToAllowForRestrictedBatchmod preference (items\_batchmod\_restricted)
 
       -  Restricts the :ref:`batch item modification <batch-item-modification-label>` tool
-         to modify only the subfields defined in the 
+         to modify only the subfields defined in the
          :ref:`SubfieldsToAllowForRestrictedBatchmod` preference
 
       -  Please note that items\_batchmod permission is still required
 
-   -  Create printable labels and barcodes from catalog and patron data 
+   -  Create printable labels and barcodes from catalog and patron data
       (label\_creator)
 
-      -  Access to the :ref:`Patron card creator <patron-card-creator-label>`, 
+      -  Access to the :ref:`Patron card creator <patron-card-creator-label>`,
          the :ref:`Label creator <label-creator-label>` and the
          :ref:`Quick label creator <quick-spine-label-creator-label>` tools
 
@@ -1074,7 +1074,7 @@ Patron permissions defined
 
       -  Access to the :ref:`Patron lists tool <patron-lists-label>`
 
-   -  Manage staged MARC records, including completing and reversing imports 
+   -  Manage staged MARC records, including completing and reversing imports
       (manage\_staged\_marc)
 
       -  Access to the :ref:`Manage staged MARC records tool <staged-marc-record-management-label>`
@@ -1091,12 +1091,12 @@ Patron permissions defined
 
       -  Access to the :ref:`Tags tool <tag-moderation-label>`
 
-   -  Perform batch deletion of records (bibliographic or authority) 
+   -  Perform batch deletion of records (bibliographic or authority)
       (records\_batchdel)
 
       -  Access to the :ref:`Batch record deletion tool <batch-record-deletion-label>`
 
-   -  Perform batch modification of records (bibliographic or authorities) 
+   -  Perform batch modification of records (bibliographic or authorities)
       (records\_batchmod)
 
       -  Access to the :ref:`Batch record modification tool <batch-record-modification-label>`
@@ -1138,7 +1138,7 @@ Patron permissions defined
 
    -  Grants the ability to create, edit and delete authority records
 
-   -  Note that it is possible to search authority records with only the 
+   -  Note that it is possible to search authority records with only the
       catalogue permission
 
 -  Manage serial subscriptions (serials)
@@ -1162,7 +1162,7 @@ Patron permissions defined
 
    -  Edit an existing subscription (edit\_subscription)
 
-      -  Gives the ability to :ref:`edit existing serial subscriptions 
+      -  Gives the ability to :ref:`edit existing serial subscriptions
          <edit-subscription-label>`
 
       -  This permission does not include the ability to delete or create a
@@ -1170,7 +1170,7 @@ Patron permissions defined
 
    -  Serials receiving (receive\_serials)
 
-      -  Gives the ability to :ref:`receive issues <receive-issues-label>` of 
+      -  Gives the ability to :ref:`receive issues <receive-issues-label>` of
          existing subscriptions
 
    -  Renew a subscription (renew\_subscription)
@@ -1183,22 +1183,22 @@ Patron permissions defined
 
    -  Manage subscriptions from any branch (superserials)
 
-      -  This permission is only useful if the :ref:`IndependentBranches` 
+      -  This permission is only useful if the :ref:`IndependentBranches`
          system preference is used
 
 -  Allow access to the reports module (reports)
 
-   -  Reports found on the :ref:`Circulation page <circulation-reports-label>` 
-      are not controlled by this permission; this only controls access to the 
+   -  Reports found on the :ref:`Circulation page <circulation-reports-label>`
+      are not controlled by this permission; this only controls access to the
       :ref:Reports module <reports-label>`
 
-   -  Reports in the :ref:`Statistics wizard <statistics-reports-label>` section 
-      and the other reports on the main reports page can be run with any one 
+   -  Reports in the :ref:`Statistics wizard <statistics-reports-label>` section
+      and the other reports on the main reports page can be run with any one
       of the following permissions. They only affect the SQL reports.
 
    -  Create SQL reports (create\_reports)
 
-      -  The ability to create :ref:`guided reports <guided-report-wizard-label>` 
+      -  The ability to create :ref:`guided reports <guided-report-wizard-label>`
          or :ref:`SQL reports <report-from-sql-label>`, but not run saved ones
 
    -  Delete SQL reports (delete\_reports)
@@ -1209,7 +1209,7 @@ Patron permissions defined
 
    -  Execute SQL reports (execute\_reports)
 
-      -  The ability to :ref:`run custom SQL reports <running-custom-reports-label>, 
+      -  The ability to :ref:`run custom SQL reports <running-custom-reports-label>,
          but not create or edit them
 
 -  Allow staff members to modify permissions for other staff members (staffaccess)
@@ -1220,12 +1220,12 @@ Patron permissions defined
 
    -  Allow access to the :ref:`course reserves module <course-reserves-label>`
 
-   -  Note that if the :ref:`UseCourseReserves` system preference is not enabled, 
+   -  Note that if the :ref:`UseCourseReserves` system preference is not enabled,
       these permissions will not have any effect
 
    -  Add course reserves (add\_reserves)
 
-      -  Grants the ability to :ref:`add items to existing courses 
+      -  Grants the ability to :ref:`add items to existing courses
          <adding-reserve-materials-label>`
 
    -  Remove course reserves (delete\_reserves)
@@ -1234,12 +1234,12 @@ Patron permissions defined
 
    -  Add, edit and delete courses (manage\_courses)
 
-      -  Grants the ability to :ref:`create, edit and delete courses 
+      -  Grants the ability to :ref:`create, edit and delete courses
          <adding-courses-label>`, but not manage the items
 
 -  Koha plugins (plugins)
 
-   -  Note that the :ref:`UseKohaPlugins` system preference needs to be enabled 
+   -  Note that the :ref:`UseKohaPlugins` system preference needs to be enabled
       otherwise, these permissions don't have any effect.
 
    -  Configure plugins (configure)
@@ -1247,14 +1247,14 @@ Patron permissions defined
       -  Gives the ability to run the 'configure' section of a plugin if it has
          one
 
-      -  Note that the staff member needs either the report permission or the 
+      -  Note that the staff member needs either the report permission or the
          tool permission (below) in order to be able to access the plugins
 
    -  Manage plugins (manage)
 
       -  The ability to install or uninstall plugins
 
-      -  Note that the staff member needs either the report permission or the 
+      -  Note that the staff member needs either the report permission or the
          tool permission (below) in order to be able to access the plugins
 
    -  Use report plugins (report)
@@ -1282,17 +1282,17 @@ Patron permissions defined
 
    -  Create and edit clubs (edit\_clubs)
 
-      -  Create and edit patron clubs using the :ref:`Patron clubs tool <Patron-clubs-label>`
+      -  Create and edit patron clubs using the :ref:`Patron clubs tool <patron-clubs-label>`
 
    -  Create and edit club templates (edit\_templates)
 
-      -  Create and edit club templates using the :ref:`Patron clubs tool <Patron-clubs-label>`
+      -  Create and edit club templates using the :ref:`Patron clubs tool <patron-clubs-label>`
 
    -  Enroll patrons in clubs (enroll)
 
       -  Enroll patrons from the patron file
 
-      -  The borrowers permissions is required in order to enroll patrons in 
+      -  The borrowers permissions is required in order to enroll patrons in
          clubs
 
 -  Create and modify interlibrary loan requests (ill)
@@ -1320,19 +1320,19 @@ Patron permissions defined
 
    -  Add and remove items from rotas (manage_rota_items)
 
-      -  Staff with only this permission will be able to manage the items in the 
+      -  Staff with only this permission will be able to manage the items in the
          rotas, but not the rotas themselves
 
    -  Create, edit and delete rotas (manage_rotas)
 
-      -  Staff with only this permission will be able to manage the rotas, but not 
+      -  Staff with only this permission will be able to manage the rotas, but not
          the actual items
 
 -  Cash management (cash_management)
 
    -  Add, edit and archive cash registers (manage_cash_registers)
 
-      -  Staff with this permissions will be able to manage the :ref:`cash 
+      -  Staff with this permissions will be able to manage the :ref:`cash
          registers in the administration module <cashregisters-label>`
 
 .. _patron-information-label:
@@ -1392,7 +1392,7 @@ their guarantors additional information will appear on their record.
 
 .. _circulation-summary-label:
 
-If the age of the patron is outside the age range defined in their patron 
+If the age of the patron is outside the age range defined in their patron
 category a warning will appear on their record.
 
 Circulation summary
@@ -1550,7 +1550,7 @@ system preference.
 Clubs
 '''''''''''''''''''''''''''''''''''''''''''
 
-If you use :ref:`patron clubs <Patron-clubs-label>`, patrons will have a tab
+If you use :ref:`patron clubs <patron-clubs-label>`, patrons will have a tab
 in their record indicating which club they are enrolled in, if any.
 
 |image1362|
@@ -1576,8 +1576,8 @@ The Accounts tab will show you the following columns:
 
 -  Description: a description of the charges including the due date for
    overdue items and a link to the item record where one is available
-   
--  Home library: if the charge is linked to a particular item the home library 
+
+-  Home library: if the charge is linked to a particular item the home library
    is displayed
 
 -  Note: any notes about this charge/payment
@@ -1593,10 +1593,10 @@ The Accounts tab will show you the following columns:
 -  Actions column:
 
    -  A link to print a receipt for that line item
-   
-   -  A link to show further details about the charge and any payments that 
+
+   -  A link to show further details about the charge and any payments that
       have been made
-   
+
    -  A link to void (delete) the payment
 
 At the top of the table you can click the 'Filter paid transaction' to
@@ -1651,7 +1651,7 @@ fines' tab.
 
       |image452|
 
-   -  If the :ref:`UseCashRegisters` system preference is enabled, you will 
+   -  If the :ref:`UseCashRegisters` system preference is enabled, you will
       have a choice of cash register in which to enter the transaction
 
    -  Click "Confirm"
@@ -1735,8 +1735,8 @@ fines' tab.
    |image457|
 
    -  Once clicked a new line item will be added to the account showing
-      the payment as ‘Voided’.  The payment line is added back to 
-      the Pay fines tab as an outstanding charge. 
+      the payment as ‘Voided’.  The payment line is added back to
+      the Pay fines tab as an outstanding charge.
 
       |image458|
 
@@ -1758,7 +1758,7 @@ manual invoice
 -  First choose the type of invoice you would like to create
 
    -  To add additional values to the manual invoice type pull down
-      menu, add them to the :ref:`debit types <add-debit-type-label>` 
+      menu, add them to the :ref:`debit types <add-debit-type-label>`
       in the Administration module.
 
 -  If the fee is associated with an item you can enter its barcode so
