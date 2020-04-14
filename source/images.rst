@@ -1427,3 +1427,4 @@
 .. |image1449| image:: images/admin/accounting/addcashregister.png
 .. |image1450| image:: images/admin/accounting/cashregisters.png
 .. |image1460| image:: images/tools/patronclubs/placeclubhold.png
+.. |image1461| image:: images/circ/patronagecategory.png
