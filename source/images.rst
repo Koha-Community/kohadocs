@@ -1436,3 +1436,4 @@
 .. |image1458| image:: images/cataloging/advancedkeyboard.png
 .. |image1459| image:: images/pointofsale/changeamount.gif
 .. |image1460| image:: images/tools/patronclubs/placeclubhold.png
+.. |image1461| image:: images/circ/patronagecategory.png

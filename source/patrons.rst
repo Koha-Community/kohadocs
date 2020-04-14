@@ -1399,6 +1399,8 @@ their guarantors additional information will appear on their record.
 If the age of the patron is outside the age range defined in their patron
 category a warning will appear on their record.
 
+   |image1461|
+
 Circulation summary
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
