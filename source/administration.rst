@@ -2778,6 +2778,15 @@ and on the item search page
 
     |image1207|
 
+.. _search-engine-configuration:
+
+Search engine configuration
+----------------------------
+Once you have switched to Elastic Search in your SearchEngine system preference,
+you’ll see a new link for Search engine configuration in the Catalog section of 
+Administration. Here you will manage indexes, facets, and their mappings to MARC
+fields and subfields.
+
 .. _acquisitions-module-label:
 
 Acquisitions
