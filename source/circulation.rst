@@ -823,7 +823,7 @@ bottom of the list.
 
 If your library uses the :ref:`patron clubs feature <patron-clubs-label>`, use the clubs tab to place a hold for a club. To place a hold for a club, click the clubs tab, search for and select the club name, and click the 'Place hold' button.
 
-|imageXXX|
+|image1460|
 
 .. _receiving-holds-label:
 
