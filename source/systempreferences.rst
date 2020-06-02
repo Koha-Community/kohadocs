@@ -11232,7 +11232,7 @@ Description:
    client. This preference will allow guarantees (children) to grant
    permission to guarantors (guardians) to view their current checkouts
    via the public catalog. This preference requires that you allow
-   patrons to se their own privacy with the
+   patrons to choose their own privacy with the
    :ref:`OPACPrivacy` preference.
 
 .. _anonsuggestions-label:
