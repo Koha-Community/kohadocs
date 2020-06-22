@@ -333,6 +333,26 @@ renewal with your :ref:`circulation and fines rules <circulation-and-fines-rules
 
 Frequency suggestion: nightly
 
+    **Important**
+    To run this properly, you must use the --confirm parameter, otherwise it 
+    will only run in test mode
+
+    **PARAMETERS**
+    -  -h|--help
+       get help message
+
+    -  --send-notices
+       sends the AUTO_RENEWALS notice to patrons if the automatic renewal has 
+       been done
+
+    -  -v|--verbose
+       verbose mode
+
+    -  -c|--confirm
+       without this parameter no changes will be made, the script will run in 
+       test mode
+       without this parameter, the script will default to verbose mode as well
+
 .. _cron-patrons-label:
 
 Patrons
