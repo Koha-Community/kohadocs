@@ -464,8 +464,7 @@ To add a new notice or slip
                 <item>"<<biblio.title>>" by <<biblio.author>>,
                 <<items.itemcallnumber>>, Barcode: <<items.barcode>> ,
                 Checkout date: <<issues.issuedate>>, Due date:
-                <<issues.date\_due>> Fine: <<items.fine>> Due date:
-                <<issues.date\_due>> </item>
+                <<issues.date\_due>> Fine: <<items.fine>> </item>
 
       -  **Important**
 
