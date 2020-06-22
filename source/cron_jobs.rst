@@ -219,6 +219,27 @@ Frequency suggestion: nightly
     **Note**
     Fines will not be applied on a holiday.
 
+    **PARAMETERS**
+    -  -h|--help
+       get help message
+
+    -  -l|--log
+       log the output to a file (optional if the -o parameter is given)
+
+    -  -o|--out 
+       ouput directory for logs (defaults to env or /tmp if the directory does 
+       not exist)
+
+    -  -v|--verbose
+       verbose mode
+
+    -  -m|--maxdays
+       how many days back of overdues to process
+       this can improve performance by simply the number of records that need 
+       to be processed. It can be safe to limit the overdues processed to those 
+       under X days overdues given that circulation policy often caps fines at 
+       a maximum after a number of days.
+
 .. _cron-staticfines-label:
 
 Static fines
